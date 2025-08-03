@@ -53,14 +53,18 @@ public constructor        (artificialIntelligenceInterface: Array<ArtificialInte
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
                     var allBinaryLayerManager = allBinaryLayerManager
 
-    var size: Int = this.getArtificialIntelligenceInterface()!!.length
+    var artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?> = this.getArtificialIntelligenceInterface()!!
+            
+
+
+    var size: Int = artificialIntelligenceInterfaceArray!!.size
+                
 
 
 

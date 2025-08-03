@@ -39,10 +39,9 @@ open public class LastKeyAIVisitor : Visitor {
             
 
     private val TRUE: Boolean = BooleanFactory.getInstance()!!.TRUE
-protected constructor        (){}
+public constructor        (){}
 
-
-open fun visit(anyType: Any)
+override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
 

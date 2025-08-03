@@ -63,8 +63,7 @@ this.update()
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -84,6 +83,13 @@ open fun update()
             
 
 
+    var keys: Array<Integer?> = this.keys
+
+
+    var size: Int = keys!!.size
+                
+
+
     
                         if(isOn())
                         
@@ -92,7 +98,7 @@ open fun update()
 
 
 
-                        for (index in 0 until keys!!.length)
+                        for (index in 0 until size)
 
 
         {
@@ -118,7 +124,7 @@ open fun update()
 
 
 
-                        for (index in 0 until keys!!.length)
+                        for (index in 0 until size)
 
 
         {
@@ -143,8 +149,7 @@ open fun update()
 
 
                 @Throws(Exception::class)
-            
-open fun toggle()
+            override fun toggle()
         //nullable = true from not(false or (false and true)) = true
 {
     
@@ -160,8 +165,7 @@ this.update()
 
 
                 @Throws(Exception::class)
-            
-open fun disable()
+            override fun disable()
         //nullable = true from not(false or (false and true)) = true
 {
     
@@ -177,8 +181,7 @@ this.update()
 
 
                 @Throws(Exception::class)
-            
-open fun enable()
+            override fun enable()
         //nullable = true from not(false or (false and true)) = true
 {
     

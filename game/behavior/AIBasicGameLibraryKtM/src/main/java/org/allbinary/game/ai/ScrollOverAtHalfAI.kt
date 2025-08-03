@@ -50,8 +50,7 @@ public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameI
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 

@@ -67,8 +67,7 @@ public constructor        (artificialIntelligenceInterfaceArray: Array<Artificia
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -89,9 +88,10 @@ open fun next()
                         if(artificialIntelligenceInterface!!.getId() == ArtificialIntelligenceTransitionInterface.ID)
                         
                                     {
-                                    artificialIntelligenceInterface = artificialIntelligenceInterfaceartificialIntelligenceInterface as ArtificialIntelligenceTransitionInterface
-artificialIntelligenceInterface.
-                                transition()
+                                    
+    var artificialIntelligenceTransitionInterface: ArtificialIntelligenceTransitionInterface = (artificialIntelligenceInterface as ArtificialIntelligenceTransitionInterface)
+
+artificialIntelligenceTransitionInterface!!.transition()
 
                                     }
                                 
@@ -126,8 +126,7 @@ open fun getSelectedArtificialIntelligenceInterface()
                         return this.getArtificialIntelligenceInterface()[this.index]!!
 }
 
-
-open fun getName()
+override fun getName()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
