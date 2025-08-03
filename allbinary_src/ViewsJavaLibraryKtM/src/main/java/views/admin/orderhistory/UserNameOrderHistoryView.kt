@@ -1,0 +1,306 @@
+
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package views.admin.orderhistory
+
+
+
+        import java.lang.Integer
+        import java.lang.Math
+        import java.lang.Object
+        import java.lang.System
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import java.util.Vector
+import javax.servlet.http.HttpServletRequest
+import org.allbinary.business.user.UserData
+import org.allbinary.business.user.commerce.inventory.order.OrderData
+import org.allbinary.business.user.commerce.inventory.order.OrderHistory
+import org.allbinary.business.user.commerce.inventory.order.OrderHistoryData
+import org.allbinary.business.user.username.UserName
+import org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity
+import org.allbinary.data.tree.dom.DomNodeInterface
+import org.allbinary.data.tree.dom.ModDomHelper
+import org.allbinary.globals.GLOBALS2
+import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.control.validate.ValidationComponentInterface
+import org.allbinary.logic.visual.transform.info.TransformInfoInterface
+import org.w3c.dom.Document
+import org.w3c.dom.Node
+import views.business.context.modules.storefront.HttpStoreComponentView
+
+open public class UserNameOrderHistoryView : HttpStoreComponentView
+                , ValidationComponentInterface
+                , DomNodeInterface {
+        
+
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+            
+
+    private var request: HttpServletRequest
+
+    private var userName: String
+
+    private var shipped: String
+
+    private var partiallyShipped: String
+
+    private var processing: String
+
+    private var preprocessing: String
+
+    private var cancelled: String
+
+    private val ON: String = "on"
+public constructor        (transformInfoInterface: TransformInfoInterface)                        
+
+                            : super(transformInfoInterface){
+
+                    var transformInfoInterface = transformInfoInterface
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
+this.userName= request!!.getParameter(UserData.USERNAME)
+this.preprocessing= request!!.getParameter(OrderHistoryData.PREPROCESSINGNAME)
+this.shipped= request!!.getParameter(OrderHistoryData.SHIPPEDNAME)
+this.partiallyShipped= request!!.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
+this.processing= request!!.getParameter(OrderHistoryData.PROCESSINGNAME)
+this.cancelled= request!!.getParameter(OrderHistoryData.CANCELLEDNAME)
+}
+
+
+open fun addDomNodeInterfaces()
+        //nullable = true from not(false or (false and true)) = true
+{this.addDomNodeInterface(this as DomNodeInterface)
+}
+
+
+                @Throws(Exception::class)
+            
+open fun view()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+        try {
+            this.addDomNodeInterfaces()
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return super.view()
+} catch(e: Exception)
+            {
+    
+                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        
+                                    {
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
+                            "view()", e)
+
+                                    }
+                                
+
+
+
+                            throw e
+}
+
+}
+
+
+open fun toXmlNode(document: Document)
+        //nullable = true from not(false or (false and false)) = true
+: Node{
+
+                    var document = document
+
+        try {
+            
+    var node: Node = document!!.createElement(OrderData.ORDERS)!!
+            
+
+
+    var orderHistoryEntity: OrderHistoryEntity = OrderHistoryEntity()
+
+
+    var orderReviewVector: Vector = orderHistoryEntity!!.getOrders(this.userName)!!
+            
+
+
+    var size: Int = orderReviewVector!!.size!!
+            
+
+
+
+
+
+                        for (index in 0 until size)
+
+
+        {
+    var orderHistory: OrderHistory = orderReviewVector!!.get(index) as OrderHistory
+
+
+    var orderHistoryNode: Node = orderHistory!!.toXmlNode(document)!!
+            
+
+
+    var orderNode: Node = document!!.createElement(orderHistory!!.getPaymentMethod())!!
+            
+
+node!!.appendChild(orderHistory!!.toXmlNode(document))
+}
+
+
+    
+                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        
+                                    {
+                                    logUtil!!.put(
+                            "Attempt to View a users order history", this, 
+                            "view")
+
+                                    }
+                                
+node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PREPROCESSINGNAME, OrderHistoryData.PREPROCESSING))
+node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PROCESSINGNAME, OrderHistoryData.PROCESSING))
+node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.CANCELLEDNAME, OrderHistoryData.CANCELLED))
+node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PARTIALLYSHIPPEDNAME, OrderHistoryData.PARTIALLYSHIPPED))
+node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
+node!!.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return node
+} catch(e: Exception)
+            {
+    
+                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
+                        
+                                    {
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
+                            "toXmlNode", e)
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+}
+
+
+open fun isValid()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+    
+                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        
+                                    {
+                                    logUtil!!.put(
+                            "Started", this, commonStrings!!.IS_VALID)
+
+                                    }
+                                
+
+    
+                        if(UserName.getInstance()!!.isValid(this.userName) == Boolean.TRUE)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Boolean.TRUE
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Boolean.FALSE
+}
+
+
+open fun toValidationInfoDoc()
+        //nullable = true from not(false or (false and true)) = true
+: Document{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+open fun toValidationInfoNode(document: Document)
+        //nullable = true from not(false or (false and false)) = true
+: Node{
+
+                    var document = document
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+open fun validationInfo()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+    
+                        if(this.userName == 
+                                    null
+                                )
+                        
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return "No User Name Specified<br />"
+
+    
+                        if(UserName.getInstance()!!.isValid(this.userName) == Boolean.FALSE)
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return "Invalid User Name<br />"
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return "Unknown Error<br />"
+}
+
+
+}
+                
+            
+

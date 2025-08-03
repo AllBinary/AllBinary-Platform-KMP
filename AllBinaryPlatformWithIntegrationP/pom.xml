@@ -1,0 +1,76 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary</groupId>
+    <artifactId>AllBinaryPlatformWithIntegrationPOMKt</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>AllBinaryPlatformWithIntegrationPOMKt</name>
+    <url>http://www.allbinary.com/</url>
+    
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+
+        <!--
+        -->
+        <module>../../AllBinary-Platform-IntegrationKt</module>
+        
+        <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryKtM</module>
+        <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEPlatformJavaLibraryKtM</module>
+        
+<!--        <module>../j2me/FullScreenJavaLibraryKtM</module>
+
+        <module>../j2me/SWTToJ2MELibraryKtM</module>
+        
+        <module>../j2me/media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>
+        <module>../graphics/opengl/Min3dForNullJavaLibraryKtM</module>
+        <module>../graphics/opengl/OpenGLESFileConfigurationJavaLibraryKtM</module>
+        <module>../graphics/opengl/OpenGLESJavaLibraryKtM</module>
+        <module>../j2me/media/graphics/animation/image/ImageSwtJ2SEJavaLibraryKtM</module>
+
+        <module>../j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>        
+        <module>../j2me/media/graphics/geography/map/GeographicMapLibraryKtM</module>
+        <module>../j2me/media/graphics/geography/GeographicPathFindingLibraryKtM</module>
+        <module>../j2me/media/graphics/geography/map/RaceTrackGeographicMapLibraryKtM</module>
+        <module>../j2me/media/graphics/geography/map/BasicTopViewGeographicMapJavaLibraryKtM</module>
+        <module>../j2me/games/arcade/platformer/TopViewGameBehaviorJavaLibraryKtM</module>
+
+        <module>../j2me/games/GameJ2MEOptionalLibraryPOKtM</module>
+
+        <module>../j2me/media/graphics/geography/map/GraphP</module>
+        <module>../j2me/games/strategy/rts/RTSGameJavaLibraryP</module>-->
+
+    </modules>
+
+    <dependencies>
+        
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-stdlib</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+    </dependencies>
+
+</project>
+

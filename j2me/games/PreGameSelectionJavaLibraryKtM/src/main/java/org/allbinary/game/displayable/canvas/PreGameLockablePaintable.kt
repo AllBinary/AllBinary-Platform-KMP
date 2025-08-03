@@ -1,0 +1,99 @@
+
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.displayable.canvas
+
+
+
+        import java.lang.Integer
+        import java.lang.Math
+        import java.lang.Object
+        import java.lang.System
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import javax.microedition.lcdui.Graphics
+import org.allbinary.image.GameFeatureImageCacheFactory
+import org.allbinary.logic.system.security.licensing.LockedResources
+import org.allbinary.logic.system.security.licensing.LockedUtil
+import org.allbinary.graphics.form.LockablePaintable
+import org.allbinary.graphics.form.ScrollCurrentSelectionForm
+
+open public class PreGameLockablePaintable : LockablePaintable {
+        
+
+    private val halfWidth: Int
+
+    private val paintableForm: ScrollCurrentSelectionForm
+public constructor        (paintableForm: ScrollCurrentSelectionForm, lockedIndex: Int)                        
+
+                            : super(lockedIndex){
+
+                    var paintableForm = paintableForm
+
+
+                    var lockedIndex = lockedIndex
+
+
+                            //For kotlin this is before the body of the constructor.
+                    
+this.paintableForm= paintableForm
+this.halfWidth= GameFeatureImageCacheFactory.getInstance()!!.get(LockedResources.getInstance()!!.LOCKED_DEMO_GAME_FEATURE_RESOURCE)!!.getWidth() /2
+}
+
+
+open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var graphics = graphics
+
+
+                    var currentIndex = currentIndex
+
+
+                    var x = x
+
+
+                    var y = y
+
+    
+                        if(LockedUtil.getInstance()!!.isLockedFeature() && this.getPaintableForm()!!.getSelectedIndex() >= this.getLockedIndex())
+                        
+                                    {
+                                    this.getAnimation()!!.paint(graphics, this.getPaintableForm()!!.getDx() -this.halfWidth, this.getPaintableForm()!!.getDy() +34)
+
+                                    }
+                                
+}
+
+
+open fun getPaintableForm()
+        //nullable = true from not(false or (false and true)) = true
+: ScrollCurrentSelectionForm{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return paintableForm
+}
+
+
+}
+                
+            
+

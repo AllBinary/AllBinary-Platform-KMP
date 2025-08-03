@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.allbinary</groupId>
+    <artifactId>AllBinaryBaseLibraryPOMKt</artifactId>
+    <packaging>pom</packaging>
+    <!-- AllBinary Platform Version Start -->
+    <version>1.0.0-SNAPSHOT</version>
+    <!-- AllBinary Platform Version End -->
+
+    <name>AllBinaryBaseLibraryPOMKt</name>
+    <url>http://www.allbinary.com/</url>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>AllBinary Snapshots Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>nexus-releases</id>
+            <name>AllBinary Releases Nexus</name>
+            <url>https://nexus-allbinary.rhcloud.com/nexus/content/repositories/releases/</url>
+        </repository>
+    </distributionManagement>
+    
+    <properties>
+        <buildLabel>${project.version}</buildLabel>
+        <assemblyPluginVersion>2.2-beta-1</assemblyPluginVersion>
+    </properties>
+
+    <modules>
+        <module>../CommonJavaLibraryKtM</module>
+        
+        <module>../../allbinary_src/LogKtM</module>
+        <module>../../allbinary_src/allbinary_src_designpatterns_srcKtM</module>
+        <module>../../allbinary_src/data/BaseDataJavaLibraryKtM</module>
+        <module>../../allbinary_src/cache/BaseCacheJavaLibraryKtM</module>
+<!--        <module>../../allbinary_src/logic/BasePreloaderJavaLibraryKtM</module>-->
+        <module>../../allbinary_src/logic/BasePreloaderJ2MEJavaLibraryKtM</module>
+
+        <module>../ExceptionHTMLJavaLibraryKtM</module>
+        <module>../J2MEExceptionLibraryKtM</module>
+        <module>../../allbinary_src/J2SEExceptionLibraryKtM</module>
+        <module>../J2MEUtilJavaLibraryKtM</module>
+        <module>../J2MEColorJavaLibraryKtM</module>
+        <module>../EventJ2MELibraryKtM</module>
+
+        <module>../../allbinary_src/LogJ2MEJavaLibraryKtM</module>
+<!--        <module>../../allbinary_src/LogAndroidJavaLibraryKtM</module>-->
+        <module>../logging/LoggingNoneKtM</module>
+        <module>../logging/LoggingJ2MEAllKtM</module>
+        <module>../logging/LoggingJ2MEExceptionKtM</module>
+<!--        <module>../logging/LoggingAndroidAllKtM</module>-->
+        <!--
+        //While it is a possible dependency option it really does not fit here
+        //as such it is actually build in the final POM builds instead
+        <module>../logging/LoggingRemoteExceptionKtM</module>  
+        -->
+        
+        <module>../J2MEWindowingJavaLibraryKtM</module>
+        
+        <module>../lib/BasicMathLibraryKtM</module>
+        
+        <module>../../allbinary_src/ThreadLibraryKtM</module>
+<!--        <module>../../allbinary_src/ThreadHTMLLibraryKtM</module>-->
+        <module>../../allbinary_src/ThreadJ2MELibraryKtM</module>
+        <module>../time/TimeJavaLibraryKtM</module>
+
+        <module>../statistics/ApplicationStatisticsJ2SELibraryKtM</module>
+        <module>../statistics/ApplicationStatisticsJ2MELibraryKtM</module>
+        <module>../statistics/ApplicationStatisticsJavaLibraryKtM</module>
+
+        <module>../../allbinary_src/logging/BasicLogConfigTypeJavaLibraryKtM</module>
+        <module>../../allbinary_src/logging/LogConfigTypeGameClientJavaLibraryKtM</module>
+
+        <module>../../allbinary_src/hardware/HardwareLibraryPOKtM</module>
+
+        <module>../lib/TrigBaseLibraryKtM</module>        
+
+    </modules>
+
+</project>
+

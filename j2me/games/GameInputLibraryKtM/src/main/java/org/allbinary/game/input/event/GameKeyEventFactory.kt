@@ -1,0 +1,149 @@
+
+        /*
+                * 
+                *  AllBinary Open License Version 1
+                *  Copyright (c) 2011 AllBinary
+                *  
+                *  By agreeing to this license you and any business entity you represent are
+                *  legally bound to the AllBinary Open License Version 1 legal agreement.
+                *  
+                *  You may obtain the AllBinary Open License Version 1 legal agreement from
+                *  AllBinary or the root directory of AllBinary's AllBinary Platform repository.
+                *  
+                *  Created By: Travis Berthelot  
+        */
+        
+        /* Generated Code Do Not Modify */
+        package org.allbinary.game.input.event
+
+
+
+        import java.lang.Integer
+        import java.lang.Math
+        import java.lang.Object
+        import java.lang.System
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import org.allbinary.game.input.GameKeyEventSourceInterface
+import org.allbinary.game.input.Input
+import org.allbinary.game.input.InputFactory
+import org.allbinary.logic.NullUtil
+import org.allbinary.logic.communication.log.LogUtil
+
+open public class GameKeyEventFactory
+            : Object
+         {
+        
+
+        companion object {
+
+
+    private val instance: GameKeyEventFactory = GameKeyEventFactory()
+
+open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: GameKeyEventFactory{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return instance
+}
+
+
+
+        }
+            
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+            
+
+    val nullUtil: NullUtil = NullUtil.getInstance()!!
+            
+
+    val TOUCH_BUTTON_SOURCE_ID: Int = 2
+
+    val MOTION_GESTURE_SOURCE_ID: Int = 3
+
+    private val MAX_SOURCES: Int = 4
+
+    private var ARRAY: Array<Array<GameKeyEvent?>?> = arrayOfNulls(MAX_SOURCES)
+private constructor        ()
+            : super()
+        {}
+
+
+open fun init()
+        //nullable = true from not(false or (false and true)) = true
+{
+    var size: Int = InputFactory.getInstance()!!.MAX
+
+
+
+
+
+                        for (index in MAX_SOURCES downTo 0)
+
+
+        {
+
+
+
+                        for (index2 in size downTo 0)
+
+
+        {ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
+}
+
+}
+
+}
+
+
+                @Throws(Exception::class)
+            
+open fun getInstance(anyType: GameKeyEventSourceInterface, key: Int)
+        //nullable =  from not(true or (false and false)) = 
+: GameKeyEvent{
+
+                    var anyType = anyType
+
+
+                    var key = key
+
+    var gameKeyEvent: GameKeyEvent = ARRAY[anyType!!.getSourceId()]!![key]!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return gameKeyEvent
+}
+
+
+                @Throws(Exception::class)
+            
+open fun getInstance(anyType: GameKeyEventSourceInterface, input: Input)
+        //nullable =  from not(true or (false and false)) = 
+: GameKeyEvent{
+
+                    var anyType = anyType
+
+
+                    var input = input
+
+    var gameKeyEvent: GameKeyEvent = ARRAY[anyType!!.getSourceId()]!![input!!.getId()]!!
+
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return gameKeyEvent
+}
+
+
+}
+                
+            
+

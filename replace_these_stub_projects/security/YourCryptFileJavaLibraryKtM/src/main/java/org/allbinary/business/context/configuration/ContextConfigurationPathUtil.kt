@@ -1,0 +1,93 @@
+
+        /* Generated Code Do Not Modify */
+        package org.allbinary.business.context.configuration
+
+
+
+        import java.lang.Integer
+        import java.lang.Math
+        import java.lang.Object
+        import java.lang.System
+        
+        
+        import kotlin.Array
+        import kotlin.reflect.KClass
+        
+import org.allbinary.logic.io.file.AbFile
+import org.allbinary.logic.io.path.AbPath
+
+open public class ContextConfigurationPathUtil
+            : Object
+         {
+        
+
+        companion object {
+
+
+                @Throws(Exception::class)
+            
+open fun getAbFile(contextName: String)
+        //nullable = true from not(false or (false and false)) = true
+: AbFile{
+
+                    var contextName = contextName
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+                @Throws(Exception::class)
+            
+open fun getAbPath(contextName: String)
+        //nullable = true from not(false or (false and false)) = true
+: AbPath{
+
+                    var contextName = contextName
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+                @Throws(Exception::class)
+            
+open fun getPath()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+open fun getFileName(contextName: String)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+
+                    var contextName = contextName
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+
+        }
+            
+            //Auto Generated
+            public constructor() : super()
+            {
+            }            
+        
+}
+                
+            
+
