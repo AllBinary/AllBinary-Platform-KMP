@@ -78,21 +78,22 @@ this.rotationAnimationInterface= rotationAnimationInterfaceCompositeInterface!!.
 this.baseVelocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties()
 this.velocityInterface= baseVelocityInterface as VelocityInterface
 
-    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface = this.rotationAnimationInterfacerotationAnimationInterface as RotationAnimationInterface
-rotationAnimationInterface.
-                                getAngleInfoP()!!.getAngleIncrementInfo()!!
+    var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
+
+
+    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
             
 
 rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIGHT_FRAME.toInt())
 }
 
-
-open fun transition()
+override fun transition()
         //nullable = true from not(false or (false and true)) = true
 {
-    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface = this.rotationAnimationInterfacerotationAnimationInterface as RotationAnimationInterface
-rotationAnimationInterface.
-                                getAngleInfoP()!!.getAngleIncrementInfo()!!
+    var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
+
+
+    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
             
 
 
@@ -108,16 +109,16 @@ allbinaryLayer!!.setPosition(allbinaryLayer!!.getXP(), 1, allbinaryLayer!!.getZP
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
                     var allBinaryLayerManager = allBinaryLayerManager
 
-    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface = this.rotationAnimationInterfacerotationAnimationInterface as RotationAnimationInterface
-rotationAnimationInterface.
-                                getAngleInfoP()!!.getAngleIncrementInfo()!!
+    var rotationAnimationInterface: RotationAnimationInterface = (this.rotationAnimationInterface as RotationAnimationInterface)
+
+
+    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
             
 
 
@@ -192,9 +193,10 @@ this.circularIndexUtil!!.next()
 open fun reverse()
         //nullable = true from not(false or (false and true)) = true
 {
-    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface = this.rotationAnimationInterfacerotationAnimationInterface as RotationAnimationInterface
-rotationAnimationInterface.
-                                getAngleInfoP()!!.getAngleIncrementInfo()!!
+    var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
+
+
+    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
             
 
 
@@ -275,8 +277,7 @@ open fun drop()
 ownerLayerInterface!!.setPosition(ownerLayerInterface!!.getXP(), y, ownerLayerInterface!!.getZP())
 }
 
-
-open fun getId()
+override fun getId()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

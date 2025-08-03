@@ -58,8 +58,7 @@ this.rotationAnimationInterface= rotationAnimationInterfaceCompositeInterface!!.
 this.update()
 }
 
-
-open fun reverse()
+override fun reverse()
         //nullable = true from not(false or (false and true)) = true
 {super.reverse()
 this.update()
@@ -74,9 +73,10 @@ open fun update()
                         
                                     {
                                     
-    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface = this.rotationAnimationInterfacerotationAnimationInterface as RotationAnimationInterface
-rotationAnimationInterface.
-                                getAngleInfoP()!!.getAngleIncrementInfo()!!
+    var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
+
+
+    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
             
 
 
@@ -92,9 +92,10 @@ rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIG
                         
                                     {
                                     
-    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface = this.rotationAnimationInterfacerotationAnimationInterface as RotationAnimationInterface
-rotationAnimationInterface.
-                                getAngleInfoP()!!.getAngleIncrementInfo()!!
+    var rotationAnimationInterface: RotationAnimationInterface = this.rotationAnimationInterface as RotationAnimationInterface
+
+
+    var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
             
 
 

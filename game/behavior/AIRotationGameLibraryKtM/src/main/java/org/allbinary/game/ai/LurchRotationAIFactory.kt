@@ -42,8 +42,7 @@ open public class LurchRotationAIFactory
             public constructor() : super()
             {
             }            
-        
-open fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+        override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface{
 
