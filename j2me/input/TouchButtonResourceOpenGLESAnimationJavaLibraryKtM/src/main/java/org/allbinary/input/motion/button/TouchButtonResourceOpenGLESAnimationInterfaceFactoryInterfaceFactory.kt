@@ -44,8 +44,7 @@ public constructor        ()
 
 
                 @Throws(Exception::class)
-            
-open fun init(level: Int)
+            override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -53,8 +52,7 @@ open fun init(level: Int)
 super.init(OpenGLImageCacheFactory.getInstance(), level)
 }
 
-
-open fun isFeature()
+override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     
