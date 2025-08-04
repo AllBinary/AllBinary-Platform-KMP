@@ -43,9 +43,6 @@ import org.allbinary.util.BasicArrayList
 open public class TerrainPatrolAI : PacePatrolAI {
         
 
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-            
-
     private val terrainEventListener: TerrainEventListener = TerrainEventListener()
 
     private val DOWN: Angle = AngleFactory.getInstance()!!.DOWN
@@ -70,8 +67,7 @@ TerrainEventHandler.getInstance(ownerLayerInterface)!!.addListener(this.terrainE
 this.terrainEventListener!!.onTerrainEvent(TerrainEventCircularStaticPool.getInstance()!!.getInstance(this.CLIFF))
 }
 
-
-open fun update()
+override fun update()
         //nullable = true from not(false or (false and true)) = true
 {super.update()
 this.changeDirectionIfCliffReached()

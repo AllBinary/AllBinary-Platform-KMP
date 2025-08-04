@@ -48,7 +48,8 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>ResourceLibraryKt</artifactId>
+            <artifactId>PCResourceLibraryKt</artifactId>
+<!--            <artifactId>ResourceLibraryKt</artifactId>-->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->

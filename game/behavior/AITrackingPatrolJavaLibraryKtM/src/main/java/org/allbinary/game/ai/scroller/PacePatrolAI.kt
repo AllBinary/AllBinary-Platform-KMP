@@ -74,8 +74,7 @@ this.trackingList= BasicArrayList()
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -103,7 +102,8 @@ this.update()
 
                                     }
                                 
-this.lastKeyDirection= keyDirection= Canvas.LEFT
+keyDirection= Canvas.LEFT
+this.lastKeyDirection= keyDirection
 xTotalDistance= 0
 super.processAI(Canvas.KEY_NUM1)
 
@@ -123,7 +123,8 @@ super.processAI(Canvas.KEY_NUM1)
 
                                     }
                                 
-this.lastKeyDirection= keyDirection= Canvas.RIGHT
+keyDirection= Canvas.RIGHT
+this.lastKeyDirection= keyDirection
 xTotalDistance= 0
 super.processAI(Canvas.KEY_NUM1)
 
@@ -144,11 +145,20 @@ open fun setFiringDirectionForTargetIfInRange()
             
 
 
+    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
+            
+
+
     var direction: Direction = directionFactory!!.NOT_BORDERED_WITH
 
 
-    var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
+    var lastTrackingEvent: TrackingEvent
+
+
+    var lastTrackingLayerInterface: LayerInterface
+
+
+    var directionCompositeInterface: DirectionCompositeInterface
 
 
     var size: Int = this.trackingList!!.size()!!
@@ -161,13 +171,8 @@ open fun setFiringDirectionForTargetIfInRange()
                         for (index in 0 until size)
 
 
-        {
-    var lastTrackingEvent: TrackingEvent = this.trackingList!!.get(0) as TrackingEvent
-
-
-    var lastTrackingLayerInterface: LayerInterface = lastTrackingEvent!!.getLayerInterface()!!
-            
-
+        {lastTrackingEvent= this.trackingList!!.get(0) as TrackingEvent
+lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
     var x: Int = lastTrackingLayerInterface!!.getXP()!!
             
@@ -200,9 +205,7 @@ open fun setFiringDirectionForTargetIfInRange()
                         if(absXDistance < getFiringDistance() /2)
                         
                                     {
-                                    
-    var directionCompositeInterface: DirectionCompositeInterface = this.getOwnerLayerInterface() as DirectionCompositeInterface
-
+                                    directionCompositeInterface= this.getOwnerLayerInterface() as DirectionCompositeInterface
 
     
                         if(xDistance < 0 && directionCompositeInterface!!.getDirection() == directionFactory!!.RIGHT)
@@ -236,13 +239,11 @@ open fun setFiringDirectionForTargetIfInRange()
                         return direction
 }
 
-
-open fun disable()
+override fun disable()
         //nullable = true from not(false or (false and true)) = true
 {}
 
-
-open fun onEvent(eventObject: AllBinaryEventObject)
+override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -250,8 +251,7 @@ open fun onEvent(eventObject: AllBinaryEventObject)
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-
-open fun onMovement(trackingEvent: TrackingEvent)
+override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 

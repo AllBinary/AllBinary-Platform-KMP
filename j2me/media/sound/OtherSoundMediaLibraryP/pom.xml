@@ -38,9 +38,9 @@
         -->
 
         <module>../../sound/NotDeviceSpecificMIDP2JavaLibraryKtM</module>
-        <module>../../sound/J2SEMediaMIDPMinimalJavaLibraryKtM</module>
-        <module>../../sound/MediaMIDP2ForHTMLJavaLibraryKtM</module>
-        <module>../../sound/AndroidMediaMIDPLibraryKtM</module>
+<!--        <module>../../sound/J2SEMediaMIDPMinimalJavaLibraryKtM</module>-->
+<!--        <module>../../sound/MediaMIDP2ForHTMLJavaLibraryKtM</module>-->
+<!--        <module>../../sound/AndroidMediaMIDPLibraryKtM</module>-->
         
         <module>../../../games/Resources/sounds/release/GameSoundsWavResourcesJavaLibraryKtM</module>
         <module>../../../games/Resources/sounds/release/GameSoundsOggResourcesJavaLibraryKtM</module>

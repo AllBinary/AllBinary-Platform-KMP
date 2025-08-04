@@ -46,8 +46,7 @@ open public class PacePatrolAIFactory
             }            
         
                 @Throws(Exception::class)
-            
-open fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
+            override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
 : ArtificialIntelligenceInterface{
 
@@ -58,7 +57,7 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBin
 
 
                     var gameInput = gameInput
-hashtable!!.put(PacePatrolAI.MAX_DISTANCE, SmallIntegerSingletonFactory.getInstance()!!.getInstance(220))
+hashtable!!.put(BasePatrolAI.MAX_DISTANCE, SmallIntegerSingletonFactory.getInstance()!!.getInstance(220))
 
 
 

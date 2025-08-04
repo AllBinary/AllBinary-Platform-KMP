@@ -39,9 +39,9 @@
         <module>../../CombatGameJavaLibraryPOKtM</module>
         <module>../../AdvancedCombatGameJavaLibraryP</module>
         
-        <module>../j2me/AllBinaryOnJ2MEBasePlatformJavaLibraryKtM</module>
+<!--        <module>../j2me/AllBinaryOnJ2MEBasePlatformJavaLibraryKtM</module>-->
         
-        <module>../j2me/AllBinaryOnJ2MEPlatformJavaLibraryKtM</module>
+<!--        <module>../j2me/AllBinaryOnJ2MEPlatformJavaLibraryKtM</module>-->
         
         <module>../j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryKtM</module>
         
