@@ -40,8 +40,7 @@ this.lockedIndex= lockedIndex
 
 
                 @Throws(Exception::class)
-            
-open fun getInstance(paintableForm: PaintableForm)
+            override fun getInstance(paintableForm: PaintableForm)
         //nullable =  from not(true or (false and false)) = 
 : ItemPaintable{
 

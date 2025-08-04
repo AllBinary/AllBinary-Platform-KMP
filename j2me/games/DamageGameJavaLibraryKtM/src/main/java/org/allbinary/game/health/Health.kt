@@ -40,6 +40,8 @@ open public class Health
         companion object {
 
 
+    val NULL_HEALTH: Health = Health(0)
+
     val NAME: String = "Health Resource"
 
     private val HEALTH_LABEL: String = "Health: "

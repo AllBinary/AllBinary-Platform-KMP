@@ -84,11 +84,12 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
 
     private var dive: Boolean= false
 
-    private var directionOfTarget: Direction
+    private var directionOfTarget: Direction = Direction.getInstance(0)!!
+            
 
     private val MIN_DISTANCE: Int = 40
 
-    private var lastTrackingLayerInterface: AllBinaryLayer
+    private var lastTrackingLayerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 
     private val artificialIntelligenceInterface: ArtificialIntelligenceInterface
 
@@ -135,8 +136,7 @@ this.init()
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -628,8 +628,7 @@ open fun isBeyondTarget()
                             
 }
 
-
-open fun onEvent(eventObject: AllBinaryEventObject)
+override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -637,8 +636,7 @@ open fun onEvent(eventObject: AllBinaryEventObject)
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-
-open fun onMovement(trackingEvent: TrackingEvent)
+override fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -646,8 +644,7 @@ open fun onMovement(trackingEvent: TrackingEvent)
 this.list!!.add(trackingEvent)
 }
 
-
-open fun onDestroyed(destroyedEvent: DestroyedEvent)
+override fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -686,8 +683,7 @@ this.lastDirection= lastDirection
                                 
 }
 
-
-open fun setLastKey(lastKey: Int)
+override fun setLastKey(lastKey: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 

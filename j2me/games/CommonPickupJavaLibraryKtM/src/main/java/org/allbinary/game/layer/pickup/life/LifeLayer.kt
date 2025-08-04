@@ -46,16 +46,14 @@ public constructor        ()
                     
 }
 
-
-open fun paint(graphics: Graphics)
+override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 
                     var graphics = graphics
 }
 
-
-open fun visit(lifeInterface: Life)
+override fun visit(lifeInterface: Life)
         //nullable = true from not(false or (false and false)) = true
 {
 

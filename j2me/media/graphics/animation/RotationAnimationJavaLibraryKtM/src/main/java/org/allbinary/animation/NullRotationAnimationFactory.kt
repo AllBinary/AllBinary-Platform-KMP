@@ -42,6 +42,21 @@ open public class NullRotationAnimationFactory
 
     private var NULL_ROTATION_ANIMATION_FACTORY: NullRotationAnimationFactory = NullRotationAnimationFactory()
 
+open fun getFactoryInstance()
+        //nullable = true from not(false or (false and true)) = true
+: NullRotationAnimationFactory{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NULL_ROTATION_ANIMATION_FACTORY
+}
+
+
+
+        }
+            
+    val NULL_ROTATION_ANIMATION_ARRAY: Array<RotationAnimation?> = arrayOfNulls(0)
+
     private val NULL_ANIMATION: Animation = object: NullRotationAnimation(AnimationBehavior.getInstance())
                                 {
                                 override fun paint(graphics: Graphics, x: Int, y: Int)
@@ -59,20 +74,7 @@ open public class NullRotationAnimationFactory
 
                                 }
                             
-
-open fun getFactoryInstance()
-        //nullable = true from not(false or (false and true)) = true
-: NullRotationAnimationFactory{
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NULL_ROTATION_ANIMATION_FACTORY
-}
-
-
-
-        }
-            private constructor        ()
+private constructor        ()
             : super()
         {}
 

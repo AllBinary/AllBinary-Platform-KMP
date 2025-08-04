@@ -50,8 +50,7 @@ public constructor        (points: Int)
 this.points= points
 }
 
-
-open fun paint(graphics: Graphics)
+override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 

@@ -46,8 +46,7 @@ public constructor        (lockedIndex: Int){
 this.lockedIndex= lockedIndex
 }
 
-
-open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
+override fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 

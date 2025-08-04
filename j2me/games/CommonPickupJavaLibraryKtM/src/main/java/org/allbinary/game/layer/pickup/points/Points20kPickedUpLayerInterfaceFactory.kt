@@ -29,6 +29,7 @@
         
 import org.allbinary.animation.FeaturedAnimationInterfaceFactoryInterfaceFactory
 import org.allbinary.game.configuration.GameConfigurationUtil
+import org.allbinary.game.layer.pickup.CountedPickedUpLayerInterfaceFactory
 import org.allbinary.game.layer.pickup.IconLayerFactory
 import org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactory
 import org.allbinary.game.layer.pickup.PickedUpLayerInterfaceFactoryInterface
@@ -43,7 +44,7 @@ open public class Points20kPickedUpLayerInterfaceFactory : PickedUpLayerInterfac
         companion object {
 
 
-    private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface
+    private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
                 @Throws(Exception::class)
             
@@ -87,8 +88,7 @@ open fun getTotal()
 
 
                 @Throws(Exception::class)
-            
-open fun process(sourceLayerInterface: AllBinaryLayer)
+            override fun process(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 

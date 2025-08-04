@@ -34,11 +34,26 @@ open public class Life
                 , LifeInterface {
         
 
+        companion object {
+
+
+    val NO_LIFE: Life = Life()
+
+
+        }
+            
     private var lives: Short
 
     private var startLives: Short
 
     private var maxlives: Short
+public constructor        ()
+            : super()
+        {this.lives= 0
+this.startLives= 0
+this.maxlives= 0
+}
+
 public constructor        (lives: Short, maxlives: Short)
             : super()
         {

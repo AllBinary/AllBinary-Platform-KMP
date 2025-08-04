@@ -34,7 +34,7 @@ import org.allbinary.logic.util.event.AllBinaryEventObject
 open public class TrackingEvent : AllBinaryEventObject {
         
 
-    private var layerInterface: AllBinaryLayer
+    private var layerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 public constructor        ()                        
 
                             : super(TrackingEventHandler.getInstance()){

@@ -62,8 +62,7 @@ public constructor        ()
                     
 }
 
-
-open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
+override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -71,8 +70,7 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
 this.setPosition(this.x, this.y +1, this.z)
 }
 
-
-open fun implmentsTickableInterface()
+override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

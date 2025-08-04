@@ -55,8 +55,7 @@ open fun getInstance()
 
 
                 @Throws(Exception::class)
-            
-open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
+            override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -64,9 +63,10 @@ open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: Even
 
 
                     var eventListenerInterface = eventListenerInterface
-eventListenerInterface = eventListenerInterfaceeventListenerInterface as TrackingEventListenerInterface
-eventListenerInterface.
-                                onMovement(eventObject as TrackingEvent)
+
+    var trackingEventListenerInterface: TrackingEventListenerInterface = eventListenerInterface as TrackingEventListenerInterface
+
+trackingEventListenerInterface!!.onMovement(eventObject as TrackingEvent)
 }
 
 
