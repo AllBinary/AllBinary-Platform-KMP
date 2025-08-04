@@ -79,7 +79,7 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
 
         {
-    var integer: Integer = hashtable!!.get(integerArray[index]!!) as Integer
+    var integer: Integer = hashtable!!.get(integerArray[index]!! as Object) as Integer
 
 
     

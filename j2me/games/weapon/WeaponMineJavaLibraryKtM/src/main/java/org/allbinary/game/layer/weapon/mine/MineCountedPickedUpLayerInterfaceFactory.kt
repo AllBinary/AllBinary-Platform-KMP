@@ -109,10 +109,10 @@ override fun getTotal()
 
                     var z = z
 
-    var sourceLayerInterface: AllBinaryLayer = hashtable!!.get(smallIntegerSingletonFactory!!.getInstance(0)) as AllBinaryLayer
+    var sourceLayerInterface: AllBinaryLayer = hashtable!!.get(smallIntegerSingletonFactory!!.getInstance(0) as Object) as AllBinaryLayer
 
 
-    var angle: Integer = hashtable!!.get(smallIntegerSingletonFactory!!.getInstance(1)) as Integer
+    var angle: Integer = hashtable!!.get(smallIntegerSingletonFactory!!.getInstance(1) as Object) as Integer
 
 
 

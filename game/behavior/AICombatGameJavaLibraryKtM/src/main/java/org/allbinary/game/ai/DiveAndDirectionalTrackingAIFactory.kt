@@ -58,7 +58,7 @@ open public class DiveAndDirectionalTrackingAIFactory
 
                     var gameInput = gameInput
 
-    var visitor: Visitor = hashtable!!.get(BasicAI.AI_VISITOR) as Visitor
+    var visitor: Visitor = hashtable!!.get(BasicAI.AI_VISITOR as Object) as Visitor
 
 
     
