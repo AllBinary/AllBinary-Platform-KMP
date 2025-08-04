@@ -89,7 +89,9 @@ open fun process(imageProcessorInput: ImageProcessorInput, input: String, visito
                         if(input == this.commonStrings!!.UP)
                         
                                     {
-                                    totalAngle= Integer.valueOf( -90)
+                                    totalAngle= .concatToString()
+
+                                
 
                                     }
                                 
@@ -98,12 +100,16 @@ open fun process(imageProcessorInput: ImageProcessorInput, input: String, visito
                         if(input == this.commonStrings!!.DOWN)
                         
                                     {
-                                    totalAngle= Integer.valueOf(90)
+                                    totalAngle= .concatToString()
+
+                                
 
                                     }
                                 
                         else {
-                            totalAngle= Integer.valueOf(input)
+                            totalAngle= input.concatToString()
+
+                                
 
                         }
                             

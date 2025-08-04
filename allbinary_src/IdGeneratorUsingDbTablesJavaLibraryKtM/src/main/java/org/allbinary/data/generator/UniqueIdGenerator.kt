@@ -119,7 +119,9 @@ open fun getNext()
             
 
 
-    var newValue: Long = Long.valueOf(idLong!!.longValue() +1)!!
+    var newValue: Long = .concatToString()
+
+                                !!
             
 
 this.idGeneratorEntity!!.update(name, newValue)

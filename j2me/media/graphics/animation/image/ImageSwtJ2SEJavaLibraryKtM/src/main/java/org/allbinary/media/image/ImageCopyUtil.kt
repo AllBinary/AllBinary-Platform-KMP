@@ -665,9 +665,8 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                         
                                     {
                                     
-    var originalImageData: ImageData = getImage = originalImage!!.getImage()getImage as Image
-getImage.
-                                getImageData()!!
+    var originalImageData: ImageData = 
+                                    (getImage as Image).getImageData()!!
             
 
 

@@ -143,9 +143,8 @@ open fun getTimeBase()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return player = this.playerplayer as TimeBaseInterface
-player.
-                                getTimeBase()
+                        return 
+                                    (player as TimeBaseInterface).getTimeBase()
 }
 
 

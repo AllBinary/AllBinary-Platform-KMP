@@ -110,7 +110,9 @@ this.point= Point(0, 0)
     var locationX: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.point!!.x= Integer.valueOf(locationX)
+this.point!!.x= locationX.concatToString()
+
+                                
 
                                     }
                                 
@@ -123,7 +125,9 @@ this.point!!.x= Integer.valueOf(locationX)
     var locationY: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.point!!.y= Integer.valueOf(locationY)
+this.point!!.y= locationY.concatToString()
+
+                                
 
                                     }
                                 
@@ -315,9 +319,10 @@ open fun shouldProcess(frame: Long)
 
                     var frame = frame
 
-    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = getInstance = CapturedBufferedImagesCacheSingleton.getInstance()getInstance as AutomaticCacheInterface
-getInstance.
-                                get(Long.valueOf(frame)) as BufferedImageFrameCacheable
+    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = 
+                                    (getInstance as AutomaticCacheInterface).get(frame.concatToString()
+
+                                ) as BufferedImageFrameCacheable
 
 
     var bufferedImage: BufferedImage = capturedBufferedImageCacheable!!.getBufferedImage()!!
@@ -328,7 +333,9 @@ getInstance.
             
 
 
-    var colorInteger: Integer = Integer.valueOf(bufferedImage!!.getRGB(this.getPoint()!!.x, this.getPoint()!!.y))!!
+    var colorInteger: Integer = getRGB.concatToString()
+
+                                !!
             
 
 

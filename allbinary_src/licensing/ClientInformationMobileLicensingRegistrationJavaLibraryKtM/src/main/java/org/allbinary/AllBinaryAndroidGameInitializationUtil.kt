@@ -53,8 +53,12 @@ open fun init()
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
             
 
-resourceUtil!!.addResource(licenseInitInfoUtil!!.INITFILENAME, Integer.valueOf(androidResources!!.raw!!.licenseinitdata))
-resourceUtil!!.addResource(PartnerIdentifierFileUtil.getInstance()!!.FILE_NAME, Integer.valueOf(androidResources!!.raw!!.partner))
+resourceUtil!!.addResource(licenseInitInfoUtil!!.INITFILENAME, licenseinitdata.concatToString()
+
+                                )
+resourceUtil!!.addResource(PartnerIdentifierFileUtil.getInstance()!!.FILE_NAME, partner.concatToString()
+
+                                )
 }
 
 

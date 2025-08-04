@@ -181,7 +181,9 @@ this.setDelayBetweenKeys(Integer.valueOf(time)!!.toInt())
     var value: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setPress(Boolean.valueOf(value))
+this.setPress(value.concatToString()
+
+                                )
 
                                     }
                                 
@@ -194,7 +196,9 @@ this.setPress(Boolean.valueOf(value))
     var value: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setRelease(Boolean.valueOf(value))
+this.setRelease(value.concatToString()
+
+                                )
 
                                     }
                                 
@@ -447,7 +451,9 @@ index= index +nextCharString!!.length +3
 
                                     }
                                 
-vector!!.add(KeySingletonFactory.getHashtable()!!.get(String.valueOf(aChar)))
+vector!!.add(KeySingletonFactory.getHashtable()!!.get(aChar.concatToString()
+
+                                ))
 index++
 }
 

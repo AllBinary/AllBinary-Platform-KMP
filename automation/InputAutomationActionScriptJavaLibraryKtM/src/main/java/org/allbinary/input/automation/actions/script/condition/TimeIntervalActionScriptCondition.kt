@@ -99,7 +99,9 @@ public constructor        (node: Node)
     var interval: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setTimeDelayHelper(TimeDelayHelper(Integer.valueOf(interval)))
+this.setTimeDelayHelper(TimeDelayHelper(interval.concatToString()
+
+                                ))
 
                                     }
                                 

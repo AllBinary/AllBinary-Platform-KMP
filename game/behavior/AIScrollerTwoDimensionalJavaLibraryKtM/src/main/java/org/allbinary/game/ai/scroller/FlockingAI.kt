@@ -66,8 +66,7 @@ this.allowedDistance= allowedDistance!!.toInt()
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -76,9 +75,7 @@ open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
     var maxDistance: Int = 0
 
 
-    var farAllbinaryLayer: AllBinaryLayer = 
-                null
-            
+    var farAllbinaryLayer: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 
 
     var groupLayerManagerListener: GroupLayerManagerListener = GroupLayerManagerListener.getInstance()!!
@@ -144,9 +141,7 @@ farAllbinaryLayer= allBinaryLayer
                                     {
                                     
     
-                        if(farAllbinaryLayer != 
-                                    null
-                                )
+                        if(farAllbinaryLayer != AllBinaryLayer.NULL_ALLBINARY_LAYER)
                         
                                     {
                                     

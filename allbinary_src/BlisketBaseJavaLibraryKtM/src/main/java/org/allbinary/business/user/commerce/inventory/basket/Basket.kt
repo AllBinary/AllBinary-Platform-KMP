@@ -66,11 +66,15 @@ open fun addItem(id: String, num: String)
     var oldNumStr: String = .concatToString()
 
 
-    var oldNumInt: Integer = Integer.valueOf(oldNumStr)!!
+    var oldNumInt: Integer = oldNumStr.concatToString()
+
+                                !!
             
 
 
-    var numInt: Integer = Integer.valueOf(num)!!
+    var numInt: Integer = num.concatToString()
+
+                                !!
             
 
 
@@ -225,7 +229,9 @@ open fun getNumberOf(product: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer.valueOf(numStr)
+                        return numStr.concatToString()
+
+                                
 }
 
 

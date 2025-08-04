@@ -423,7 +423,9 @@ this.downloads= value
                         
                                     {
                                     
-    var downloadInteger: Integer = Integer.valueOf(this.downloads)!!
+    var downloadInteger: Integer = downloads.concatToString()
+
+                                !!
             
 
 

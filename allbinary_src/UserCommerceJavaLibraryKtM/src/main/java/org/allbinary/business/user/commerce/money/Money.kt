@@ -228,9 +228,7 @@ open fun convertUsdToUnits(usDollarStr: String)
                         
                                     {
                                     dollarStr= usDollarStr.toCharArray().concatToString()
-centsStr= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+centsStr= "00"
 
                                     }
                                 

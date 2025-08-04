@@ -117,14 +117,10 @@ override fun toString()
 result= FORMBEGIN
 result += METHOD
 result += method
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "\" "
 result += ACTION
 result += action
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "\" "
 result += END
 
 
@@ -134,9 +130,7 @@ result += END
 
 
         {result += inputArray[i]!!.toString()
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += " "
 }
 
 result += FORMEND

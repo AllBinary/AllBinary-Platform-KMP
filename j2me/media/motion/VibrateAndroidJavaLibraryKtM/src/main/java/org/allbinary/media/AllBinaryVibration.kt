@@ -38,7 +38,9 @@ open public class AllBinaryVibration : AllBinaryVibrationME {
         companion object {
 
 
-    private var VIBRATION: AllBinaryVibrationME
+    private var NO_VIBRATION: AllBinaryVibrationME = AllBinaryNoVibration()
+
+    private var VIBRATION: AllBinaryVibrationME = NO_VIBRATION
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -57,7 +59,7 @@ open fun init()
                         if(GameConfigurationCentral.getInstance()!!.VIBRATION.getValue()!!.toInt() == 0)
                         
                                     {
-                                    VIBRATION= AllBinaryNoVibration()
+                                    VIBRATION= NO_VIBRATION
 
                                     }
                                 

@@ -59,7 +59,9 @@ this.timeIntervalActionScriptConditionInterface!!.log()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= Integer.valueOf(this.getTimeIntervalJTextField()!!.getText())
+{this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= getText.concatToString()
+
+                                
 this.timeIntervalActionScriptConditionInterface!!.log()
 }
 

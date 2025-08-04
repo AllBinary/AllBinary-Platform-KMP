@@ -240,8 +240,17 @@ open fun validationInfo()
     var stringBuffer: StringMaker = StringMaker()
 
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            stringBuffer!!.append(
+                            "Error: Data submitted is < ")
+stringBuffer!!.append(BodyData.getInstance()!!.MIN)
+stringBuffer!!.append(
+                            " or > ")
+stringBuffer!!.append(AbSqlData.MAXBLOB)
+
+                            }
+                    
 
 
 

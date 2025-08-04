@@ -64,8 +64,7 @@ open fun updateRandomDistance()
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -85,8 +84,7 @@ this.changedDirection= false
                                 
 }
 
-
-open fun nextDirection()
+override fun nextDirection()
         //nullable = true from not(false or (false and true)) = true
 {super.nextDirection()
 this.changedDirection= true

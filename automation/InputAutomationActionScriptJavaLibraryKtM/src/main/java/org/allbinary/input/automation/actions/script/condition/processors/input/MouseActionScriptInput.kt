@@ -123,7 +123,9 @@ this.setButtonClicks(Integer.valueOf(buttons)!!.toInt())
             
 
 
-    var mouseXInteger: Integer = Integer.valueOf(mouseXString)!!
+    var mouseXInteger: Integer = mouseXString.concatToString()
+
+                                !!
             
 
 
@@ -135,11 +137,13 @@ this.setButtonClicks(Integer.valueOf(buttons)!!.toInt())
             
 
 
-    var mouseYInteger: Integer = Integer.valueOf(mouseYString)!!
+    var mouseYInteger: Integer = mouseYString.concatToString()
+
+                                !!
             
 
 
-    var newPoint: Point = Point(mouseXInteger!!.toInt()mouseYInteger!!.toInt())
+    var newPoint: Point = Point(mouseXInteger!!.toInt(), mouseYInteger!!.toInt())
 
 this.setPoint(newPoint)
 

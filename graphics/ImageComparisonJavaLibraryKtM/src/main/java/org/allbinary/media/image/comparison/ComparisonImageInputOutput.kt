@@ -77,9 +77,8 @@ open fun save(frame: Long)
                         
                                     {
                                     
-    var imageComparisonResultFrameCacheable: ImageComparisonResultFrameCacheable = getInstance = ImageComparisonResultCacheSingleton.getInstance()getInstance as AutomaticCacheInterface
-getInstance.
-                                get(frame) as ImageComparisonResultFrameCacheable
+    var imageComparisonResultFrameCacheable: ImageComparisonResultFrameCacheable = 
+                                    (getInstance as AutomaticCacheInterface).get(frame) as ImageComparisonResultFrameCacheable
 
 
     

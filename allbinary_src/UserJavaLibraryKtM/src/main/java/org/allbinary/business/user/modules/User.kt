@@ -202,9 +202,7 @@ this.permissions= stringUtil!!.getInstance(userHashMap!!.get(UserData.PERMISSION
                                 )
                         
                                     {
-                                    this.permissions= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+                                    this.permissions= "No Permissions"
 
                                     }
                                 

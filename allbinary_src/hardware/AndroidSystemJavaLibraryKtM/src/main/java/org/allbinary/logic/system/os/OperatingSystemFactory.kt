@@ -57,7 +57,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    private var GenericOperatingSystem: GenericOperatingSystem
+    private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
 
     private var hasDetected: Boolean = false
 private constructor        ()
@@ -94,10 +94,10 @@ open fun getOperatingSystemInstance()
                                     {
                                     logUtil!!.put(
                             "Found a Linux OS", this, commonStrings!!.GET_INSTANCE)
-GenericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
+genericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
 logUtil!!.put(StringMaker().
                             append(
-                            "Operating System Info: ")!!.append(GenericOperatingSystem.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            "Operating System Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -115,7 +115,7 @@ logUtil!!.put(StringMaker().
                                     }
                                 
 } catch(e: Exception)
-            {GenericOperatingSystem= NoOperatingSystem.NO_OPERATING_SYSTEM
+            {genericOperatingSystem= NoOperatingSystem.NO_OPERATING_SYSTEM
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 }
 
@@ -123,7 +123,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GenericOperatingSystem
+                        return genericOperatingSystem
 }
 
 

@@ -208,7 +208,11 @@ logUtil!!.put(
 imageUnifierProperties!!.setRows(.valueOf())
 imageUnifierProperties!!.setColumns(columns.valueOf())
 
-    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer.valueOf(cellWidth -(2 *widthReduction)), Integer.valueOf(cellHeight -(2 *heightReduction)))
+    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(.concatToString()
+
+                                .concatToString()
+
+                                )
 
 imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 
@@ -325,7 +329,11 @@ visitor!!.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, ind
 imageUnifierProperties!!.setRows(.valueOf())
 imageUnifierProperties!!.setColumns(columns.valueOf())
 
-    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer.valueOf(cellWidth -(2 *widthReduction)) +increaseWidth, Integer.valueOf(cellHeight -(2 *heightReduction) +increaseHeight))
+    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(.concatToString()
+
+                                 +increaseWidth, .concatToString()
+
+                                )
 
 imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 logUtil!!.put(

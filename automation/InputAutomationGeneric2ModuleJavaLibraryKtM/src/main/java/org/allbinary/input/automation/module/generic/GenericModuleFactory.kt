@@ -60,9 +60,8 @@ open public class GenericModuleFactory : AbstractInputAutomationFactory {
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RunnableInterface{
-    var genericProfile: GenericProfile = getConfigurationJPanel = this.getConfigurationJPanel()getConfigurationJPanel as GenericModuleConfigurationJPanel
-getConfigurationJPanel.
-                                getSelectedGenericProfile()!!
+    var genericProfile: GenericProfile = 
+                                    (getConfigurationJPanel as GenericModuleConfigurationJPanel).getSelectedGenericProfile()!!
             
 
 

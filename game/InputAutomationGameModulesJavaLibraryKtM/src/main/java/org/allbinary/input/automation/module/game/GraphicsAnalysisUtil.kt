@@ -67,7 +67,9 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
 
 
         {
-    var colorInteger: Integer = Integer.valueOf(bufferedImage!!.getRGB(index, y!!.toInt()))!!
+    var colorInteger: Integer = getRGB.concatToString()
+
+                                !!
             
 
 

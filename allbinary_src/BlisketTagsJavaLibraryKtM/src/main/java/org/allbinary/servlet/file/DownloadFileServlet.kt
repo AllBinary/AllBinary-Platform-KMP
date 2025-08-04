@@ -170,9 +170,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                 )
                         
                                     {
-                                    contentType= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+                                    contentType= "application/octet-stream"
 
                                     }
                                 
@@ -180,7 +178,9 @@ response!!.reset()
 response!!.setBufferSize(DEFAULT_BUFFER_SIZE)
 response!!.setContentType(contentType)
 response!!.setHeader(
-                            "Content-Length", String.valueOf(file!!.length))
+                            "Content-Length", length.concatToString()
+
+                                )
 
     var stringBuffer: StringMaker = StringMaker()
 

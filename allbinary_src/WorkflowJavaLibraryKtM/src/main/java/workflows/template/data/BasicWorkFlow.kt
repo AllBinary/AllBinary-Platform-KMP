@@ -138,7 +138,9 @@ open fun process()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer.valueOf(TagSupport.EVAL_BODY_INCLUDE)
+                        return EVAL_BODY_INCLUDE.concatToString()
+
+                                
 
                                     }
                                 
@@ -148,7 +150,9 @@ open fun process()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer.valueOf(TagSupport.SKIP_BODY)
+                        return SKIP_BODY.concatToString()
+
+                                
 
                         }
                             

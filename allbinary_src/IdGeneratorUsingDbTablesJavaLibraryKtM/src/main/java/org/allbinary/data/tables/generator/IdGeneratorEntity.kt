@@ -79,9 +79,8 @@ keysAndValues!!.put(NAME, name)
 
 
     
-                        if(get = hashMap!!.get(NAME as Object?)get as String
-get.
-                                compareTo(name) != 0)
+                        if(
+                                    (get as String).compareTo(name) != 0)
                         
                                     {
                                     

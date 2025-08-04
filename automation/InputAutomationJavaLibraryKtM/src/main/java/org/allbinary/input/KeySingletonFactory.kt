@@ -97,7 +97,9 @@ open fun getInstance(index: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer.valueOf(index)
+                        return index.concatToString()
+
+                                
 }
 
 

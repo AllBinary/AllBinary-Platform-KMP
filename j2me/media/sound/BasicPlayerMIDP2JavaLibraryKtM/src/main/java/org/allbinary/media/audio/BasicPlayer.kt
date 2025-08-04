@@ -32,6 +32,7 @@ import javax.microedition.media.MediaException
 import javax.microedition.media.Player
 import javax.microedition.media.PlayerListener
 import javax.microedition.media.TimeBase
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.util.BasicArrayList
 
 open public class BasicPlayer
@@ -70,7 +71,7 @@ open fun getContentType()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 
@@ -83,7 +84,7 @@ open fun getControl(controlType: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullControl()
 }
 
 

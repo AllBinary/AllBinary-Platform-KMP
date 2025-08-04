@@ -59,7 +59,7 @@ open fun getInstance()
     var nextKey: Integer = keyArray[index]!!
 
 
-    var keyStroke: KeyStroke = KeyStroke.getKeyStroke(nextKey!!.toInt()0)!!
+    var keyStroke: KeyStroke = KeyStroke.getKeyStroke(nextKey!!.toInt(), 0)!!
             
 
 

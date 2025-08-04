@@ -57,8 +57,7 @@ this.layerInterface= layerInterface
 this.velocityInterface= velocityInterfaceCompositeInterface!!.getVelocityProperties() as VelocityInterface
 }
 
-
-open fun getX()
+override fun getX()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -67,8 +66,7 @@ open fun getX()
                         return this.layerInterface!!.getXP()
 }
 
-
-open fun getY()
+override fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -77,8 +75,7 @@ open fun getY()
                         return this.layerInterface!!.getYP()
 }
 
-
-open fun minX()
+override fun minX()
         //nullable = true from not(false or (false and true)) = true
 {
     
@@ -86,8 +83,7 @@ open fun minX()
                         this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiply( -1)
 }
 
-
-open fun maxX()
+override fun maxX()
         //nullable = true from not(false or (false and true)) = true
 {
     
@@ -95,8 +91,7 @@ open fun maxX()
                         this.velocityInterface!!.getVelocityXBasicDecimalP()!!.multiply( -1)
 }
 
-
-open fun minY()
+override fun minY()
         //nullable = true from not(false or (false and true)) = true
 {
     
@@ -104,8 +99,7 @@ open fun minY()
                         this.velocityInterface!!.getVelocityYBasicDecimalP()!!.multiply( -1)
 }
 
-
-open fun maxY()
+override fun maxY()
         //nullable = true from not(false or (false and true)) = true
 {
     

@@ -69,8 +69,11 @@ string= bytes.decodeToString()
             {logUtil!!.put("File: " +fileName, this, 
                             "LineReader", e)
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            
+                            }
+                    
 }
 
 }
@@ -107,8 +110,11 @@ open fun hasNext()
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "hasNext", e)
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            
+                            }
+                    
 
 
 
@@ -157,8 +163,11 @@ index= nextIndex +1
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "next", e)
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            
+                            }
+                    
 
 
 

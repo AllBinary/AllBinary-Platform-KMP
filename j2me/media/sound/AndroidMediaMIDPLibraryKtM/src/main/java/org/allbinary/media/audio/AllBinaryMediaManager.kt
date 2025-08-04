@@ -163,9 +163,8 @@ logUtil!!.put(commonString!!.START, THIS,
                                 )
                         
                                     {
-                                    player2= player = playerplayer as PlayerComposite
-player.
-                                getPlayerP()
+                                    player2= 
+                                    (player as PlayerComposite).getPlayerP()
 
     
                         if(player2 is AndroidMediaPlayerWrapper)

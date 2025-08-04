@@ -114,7 +114,9 @@ open fun update()
             
 
 
-    var imageTypes: ImageTypes = ImageTypes.valueOf(anyType)!!
+    var imageTypes: ImageTypes = anyType.concatToString()
+
+                                !!
             
 
 this.capturedImageActionScriptOutputInterface!!.setImageTypes(imageTypes)

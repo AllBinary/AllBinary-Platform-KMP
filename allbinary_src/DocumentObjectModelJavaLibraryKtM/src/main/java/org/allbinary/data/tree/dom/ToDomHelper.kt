@@ -46,9 +46,7 @@ open fun convertNull(value: String)
                         if(value == 
                                     null
                                 )
-                        value= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+                        value= "null"
 
 
 

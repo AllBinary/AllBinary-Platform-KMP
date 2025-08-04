@@ -58,8 +58,7 @@ public constructor        (name: String)
 
 
                 @Throws(Exception::class)
-            
-open fun init(level: Int)
+            override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -69,8 +68,7 @@ this.init(ImageCacheFactory.getInstance(), level)
 
 
                 @Throws(Exception::class)
-            
-open fun init(imageCache: ImageCache, level: Int)
+            override fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -94,8 +92,7 @@ open fun init(imageCache: ImageCache, level: Int)
 super.init(level)
 }
 
-
-open fun isLoadingLevel(level: Int)
+override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 
@@ -128,8 +125,7 @@ open fun isLoadingLevel(level: Int)
                             
 }
 
-
-open fun isFeature()
+override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     

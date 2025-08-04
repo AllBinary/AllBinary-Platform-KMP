@@ -100,9 +100,7 @@ override fun toString()
 
 result= before
 result += START
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += " "
 
 
 
@@ -124,13 +122,9 @@ result +=
                         
                                     {
                                     result += key
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "=\""
 result += value
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "\" "
 
                                     }
                                 

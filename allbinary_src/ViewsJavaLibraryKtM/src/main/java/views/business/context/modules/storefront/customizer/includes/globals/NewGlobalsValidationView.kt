@@ -71,8 +71,12 @@ open fun isValid()
 : Boolean{
         try {
             
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            CustomizerUtil.getInstance()!!.insert(this.getTransformInfoInterface(), this as DomNodeInterface)
+
+                            }
+                    
 
 
 

@@ -84,7 +84,9 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
             
 
 
-    var colorInteger: Integer = Integer.valueOf(rgb1)!!
+    var colorInteger: Integer = rgb1.concatToString()
+
+                                !!
             
 
 
@@ -95,7 +97,9 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
             
 
 
-    var colorInteger2: Integer = Integer.valueOf(rgb2)!!
+    var colorInteger2: Integer = rgb2.concatToString()
+
+                                !!
             
 
 

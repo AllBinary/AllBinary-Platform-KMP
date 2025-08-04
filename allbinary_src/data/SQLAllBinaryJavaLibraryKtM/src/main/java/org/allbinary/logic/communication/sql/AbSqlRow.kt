@@ -331,8 +331,24 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
     var value: String = whereKeyValuePairs!!.get(key) as String
 
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            stringBuffer!!.append(key)
+stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
+stringBuffer!!.append(this.getValue(value))
+stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
+
+    
+                        if(i < size2 -1)
+                        
+                                    {
+                                    stringBuffer!!.append(sqlStrings!!.AND)
+
+                                    }
+                                
+
+                            }
+                    
 }
 
 

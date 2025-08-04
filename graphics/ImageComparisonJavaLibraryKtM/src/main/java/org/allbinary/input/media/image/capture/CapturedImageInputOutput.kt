@@ -66,9 +66,8 @@ open fun save(frame: Long)
             
 
 
-    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = (getInstance = CapturedBufferedImagesCacheSingleton.getInstance()getInstance as AutomaticCacheInterface
-getInstance.
-                                get(frame) as Object as BufferedImageFrameCacheable)
+    var capturedBufferedImageCacheable: BufferedImageFrameCacheable = (
+                                    (getInstance as AutomaticCacheInterface).get(frame) as Object as BufferedImageFrameCacheable)
 
 logUtil!!.put(("Saving: " +capturedBufferedImageCacheable!!.toString()), this, commonStrings!!.SAVE)
 save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)

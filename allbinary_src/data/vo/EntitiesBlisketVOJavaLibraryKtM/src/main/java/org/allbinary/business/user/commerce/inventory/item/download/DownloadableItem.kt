@@ -79,19 +79,19 @@ this.id= ProductIdGenerator().
                             getNext()
 this.basicItemId= id
 this.enabled= EntryData.getInstance()!!.YES
-this.system= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
-this.platform= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+this.system= "Java"
+this.platform= "Android"
 this.specialName= EMPTY_STRING
 this.version= EMPTY_STRING
 this.changes= EMPTY_STRING
 this.licenseFile= EMPTY_STRING
 this.file= EMPTY_STRING
-this.size= Long.valueOf(0)
-this.validTime= Long.valueOf(0)
+this.size= .concatToString()
+
+                                
+this.validTime= .concatToString()
+
+                                
 this.retries= EMPTY_STRING
 }
 
@@ -118,7 +118,9 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                         if(!StringValidationUtil.getInstance()!!.isEmpty(value))
                         
                                     {
-                                    this.size= Long.valueOf(value)
+                                    this.size= value.concatToString()
+
+                                
 
                                     }
                                 
@@ -135,7 +137,9 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                         if(!StringValidationUtil.getInstance()!!.isEmpty(validTime))
                         
                                     {
-                                    this.validTime= Long.valueOf(validTime)
+                                    this.validTime= validTime.concatToString()
+
+                                
 
                                     }
                                 

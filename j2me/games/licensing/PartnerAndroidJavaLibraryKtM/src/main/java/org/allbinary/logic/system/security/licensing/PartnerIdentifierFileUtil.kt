@@ -100,7 +100,9 @@ open fun get()
                         if(size > 0)
                         
                                     {
-                                    partnerString= String.valueOf(chars, 0, size)
+                                    partnerString= chars.concatToString(0, size)
+
+                                
 
                                     }
                                 

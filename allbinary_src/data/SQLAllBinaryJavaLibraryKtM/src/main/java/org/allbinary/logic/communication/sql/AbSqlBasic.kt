@@ -262,8 +262,34 @@ open fun initialize()
 {
         try {
             
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            
+        try {
+            
+    var loader: ClassLoader = Thread.currentThread()!!.getContextClassLoader()!!
+            
+
+
+    var jdbcDriverClass: KClass<*> = loader!!.loadClass(this.getDatabaseConnectionInfoInterface()!!.getJdbcDriver())!!
+            
+
+jdbcDriverClass!!.newInstance()
+} catch(e: Exception)
+            {
+    
+                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        
+                                    {
+                                    logUtil!!.put(LOAD_JDBC_DRIVER_FAILED_LABEL +this.getDatabaseConnectionInfoInterface()!!.getJdbcDriver(), this, METHOD_INITIALIZE, e)
+
+                                    }
+                                
+}
+
+
+                            }
+                    
 this.createConnection()
 } catch(se: Exception)
             {

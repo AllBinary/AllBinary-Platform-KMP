@@ -121,8 +121,12 @@ open fun doStartTag()
             
 
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            this.pageContext!!.getOut()!!.print(output +"<br />")
+
+                            }
+                    
 
     
                         if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)

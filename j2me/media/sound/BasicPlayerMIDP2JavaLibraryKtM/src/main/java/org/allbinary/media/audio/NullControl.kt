@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2007 AllBinary 
+                *  Copyright (c) 2025 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.input.motion.button
+        package org.allbinary.media.audio
 
 
 
@@ -27,9 +27,12 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import org.allbinary.util.BasicArrayList
+import javax.microedition.media.Control
 
-open public class TouchButtonsListBuilder : BaseTouchInput {
+open public class NullControl
+            : Object
+        
+                , Control {
         
 
             //Auto Generated
@@ -37,40 +40,6 @@ open public class TouchButtonsListBuilder : BaseTouchInput {
             {
             }            
         
-    private val baseTouchInputList: BasicArrayList = BasicArrayList()
-
-open fun add(list: BasicArrayList)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var list = list
-
-    var size: Int = baseTouchInputList!!.size()!!
-            
-
-
-
-
-
-                        for (index in 0 until size)
-
-
-        {list!!.addAll(
-                                    (get as BaseTouchInput).getList())
-}
-
-}
-
-
-open fun add(baseTouchInput: BaseTouchInput)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var baseTouchInput = baseTouchInput
-this.baseTouchInputList!!.add(baseTouchInput)
-}
-
-
 }
                 
             

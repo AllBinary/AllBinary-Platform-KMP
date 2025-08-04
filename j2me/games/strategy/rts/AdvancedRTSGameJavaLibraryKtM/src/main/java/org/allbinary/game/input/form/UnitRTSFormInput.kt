@@ -144,9 +144,8 @@ super.process(layerManager)
             
 
 this.getHashtable()!!.put(Layer.ID, associatedRtsLayer)
-this.getHashtable()!!.put(UnitRTSFormInput.DECAL_ID, rtsPlayerLayerInterface = rtsPlayerLayerInterfacertsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
-rtsPlayerLayerInterface.
-                                getDecalBasicColor())
+this.getHashtable()!!.put(UnitRTSFormInput.DECAL_ID, 
+                                    (rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface).getDecalBasicColor())
 
     
                         if(this.newUnconstructedRTSLayerInterfaceArray[itemIndex] == 

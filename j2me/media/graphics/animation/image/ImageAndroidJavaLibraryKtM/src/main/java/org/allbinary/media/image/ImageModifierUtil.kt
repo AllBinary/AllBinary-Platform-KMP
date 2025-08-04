@@ -75,7 +75,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 
 
                     var basicColor = basicColor
-paint!!.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt()PorterDuff.Mode.SRC_IN))
+paint!!.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
 }
 
 

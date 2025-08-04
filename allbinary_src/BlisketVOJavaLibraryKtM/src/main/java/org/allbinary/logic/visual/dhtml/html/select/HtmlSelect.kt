@@ -221,14 +221,10 @@ result= before
 result += STARTSELECT
 result += NAME
 result += name
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "\" "
 result += SIZE
 result += size
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "\" "
 
 
 
@@ -250,13 +246,9 @@ result +=
                         
                                     {
                                     result += key
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "=\""
 result += value
-result += 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+result += "\" "
 
                                     }
                                 

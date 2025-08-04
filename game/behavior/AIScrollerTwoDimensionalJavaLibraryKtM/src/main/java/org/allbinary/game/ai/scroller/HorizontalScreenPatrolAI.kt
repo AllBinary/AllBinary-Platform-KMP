@@ -107,8 +107,7 @@ this.sound= hashtable!!.get(SOUND as Object?) as Sound
 
 
                 @Throws(Exception::class)
-            
-open fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
+            override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -150,9 +149,10 @@ secondaryPlayerQueue!!.add(this.sound)
                                     {
                                     super.processAI(Canvas.KEY_NUM1)
 
-    var FIRE: Int = (allBinaryLayerManager = allBinaryLayerManagerallBinaryLayerManager as AllBinaryGameLayerManager
-allBinaryLayerManager.
-                                getGameInfo()!!.getCurrentLevel() +12) shr 2
+    var gameLayerManager: AllBinaryGameLayerManager = allBinaryLayerManager as AllBinaryGameLayerManager
+
+
+    var FIRE: Int = (gameLayerManager!!.getGameInfo()!!.getCurrentLevel() +12) shr 2
 
 
     

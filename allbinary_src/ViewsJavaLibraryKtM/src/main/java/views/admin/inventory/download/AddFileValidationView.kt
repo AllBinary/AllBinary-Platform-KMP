@@ -362,9 +362,8 @@ hashMap!!.put(BasicItemData.ID, this.itemInterface!!.getId())
                                 )
                         
                                     {
-                                    hashMap!!.put(DownloadItemData.LICENSE_FILE, licenseObject = licenseObjectlicenseObject as FileItem
-licenseObject.
-                                getName())
+                                    hashMap!!.put(DownloadItemData.LICENSE_FILE, 
+                                    (licenseObject as FileItem).getName())
 
                                     }
                                 
@@ -384,9 +383,8 @@ licenseObject.
                                 )
                         
                                     {
-                                    hashMap!!.put(DownloadItemData.FILE, fileObject = fileObjectfileObject as FileItem
-fileObject.
-                                getName())
+                                    hashMap!!.put(DownloadItemData.FILE, 
+                                    (fileObject as FileItem).getName())
 
                                     }
                                 

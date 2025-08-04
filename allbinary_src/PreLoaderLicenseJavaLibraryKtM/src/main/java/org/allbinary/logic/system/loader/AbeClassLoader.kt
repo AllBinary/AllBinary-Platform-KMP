@@ -141,9 +141,7 @@ open fun loadClass(name: String, resolve: Boolean)
                                     {
                                     
         try {
-            loadedWith= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+            loadedWith= "super.loadClass"
 
     var normalClass: KClass<*> = super.loadClass(name, resolve)!!
             
@@ -355,9 +353,7 @@ open fun oldLoadClass(name: String, resolve: Boolean)
                                     {
                                     
         try {
-            loadedWith= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+            loadedWith= "super.loadClass"
 
     var normalClass: KClass<*> = super.loadClass(name, resolve)!!
             
@@ -414,9 +410,7 @@ open fun oldLoadClass(name: String, resolve: Boolean)
                                 
 }
 
-loadedWith= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+loadedWith= "loadClassBytes"
 
     var classBytes: ByteArray = this.loadClassBytesFromFile(name)!!
             

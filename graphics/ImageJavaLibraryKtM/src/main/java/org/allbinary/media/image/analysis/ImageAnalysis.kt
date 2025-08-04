@@ -92,7 +92,9 @@ open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeIn
 
 
         {
-    var keyInteger: Integer = Integer.valueOf(bufferedImage!!.getRGB(indexX, indexY))!!
+    var keyInteger: Integer = getRGB.concatToString()
+
+                                !!
             
 
 

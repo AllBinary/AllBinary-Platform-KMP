@@ -136,7 +136,8 @@ open fun nextDirection()
                         if(this.lastKeyDirection == Canvas.LEFT)
                         
                                     {
-                                    this.lastKeyDirection= keyDirection= Canvas.RIGHT
+                                    keyDirection= Canvas.RIGHT
+this.lastKeyDirection= keyDirection
 xTotalDistance= 0
 
                                     }
@@ -146,7 +147,8 @@ xTotalDistance= 0
                         if(this.lastKeyDirection == Canvas.RIGHT)
                         
                                     {
-                                    this.lastKeyDirection= keyDirection= Canvas.LEFT
+                                    keyDirection= Canvas.LEFT
+this.lastKeyDirection= keyDirection
 xTotalDistance= 0
 
                                     }

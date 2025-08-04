@@ -73,9 +73,8 @@ open fun save(frame: Long)
             
 
 
-    var motionRectanglesResultsFrameCacheable: MotionRectanglesResultsFrameCacheable = getInstance = AllMotionRectanglesResultsCacheSingleton.getInstance()getInstance as AutomaticCacheInterface
-getInstance.
-                                get(frame) as MotionRectanglesResultsFrameCacheable
+    var motionRectanglesResultsFrameCacheable: MotionRectanglesResultsFrameCacheable = 
+                                    (getInstance as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
 
 
     
@@ -89,14 +88,12 @@ getInstance.
             
 
 this.save(motionRectangles, frame)
-motionRectanglesResultsFrameCacheable= getInstance = ConsolidatedMotionRectanglesResultsCacheSingleton.getInstance()getInstance as AutomaticCacheInterface
-getInstance.
-                                get(frame) as MotionRectanglesResultsFrameCacheable
+motionRectanglesResultsFrameCacheable= 
+                                    (getInstance as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
 motionRectangles= motionRectanglesResultsFrameCacheable!!.getMotionRectangles()
 this.save(motionRectangles, frame)
-motionRectanglesResultsFrameCacheable= getInstance = ConstrainedMotionRectanglesResultsCacheSingleton.getInstance()getInstance as AutomaticCacheInterface
-getInstance.
-                                get(frame) as MotionRectanglesResultsFrameCacheable
+motionRectanglesResultsFrameCacheable= 
+                                    (getInstance as AutomaticCacheInterface).get(frame) as MotionRectanglesResultsFrameCacheable
 motionRectangles= motionRectanglesResultsFrameCacheable!!.getMotionRectangles()
 this.save(motionRectangles, frame)
 

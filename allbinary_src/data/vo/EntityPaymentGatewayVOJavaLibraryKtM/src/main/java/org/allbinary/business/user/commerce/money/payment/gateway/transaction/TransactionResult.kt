@@ -90,9 +90,7 @@ public constructor        (keyValuePairs: HashMap<Any, Any>)
 
                     var keyValuePairs = keyValuePairs
 keyValuePairs= keyValuePairs
-this.result= 
-                                    //Otherwise - expression - AssignExpr - value - StringLiteralExpr
-
+this.result= "Needs to have the hashmap converted to string for other constructor"
 }
 
 override fun toString()

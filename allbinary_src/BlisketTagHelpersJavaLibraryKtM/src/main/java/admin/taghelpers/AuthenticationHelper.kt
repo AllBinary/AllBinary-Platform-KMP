@@ -698,8 +698,17 @@ open fun processInvalidation()
                                     }
                                 
 
-                    //Otherwise - statement - BlockStmt
 
+                            {
+                            this.weblisketSession!!.setTimeout(BooleanFactory.getInstance()!!.TRUE_STRING)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return Boolean.FALSE
+
+                            }
+                    
 } catch(e: Exception)
             {
     

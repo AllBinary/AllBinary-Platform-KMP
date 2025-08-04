@@ -38,11 +38,9 @@ open public class ImageArrayRotationAnimation : ImageArrayBaseRotationAnimation 
     private var expectedTotalFrames: Int= 0
 protected constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
 
-                            : super(anyType = anyTypeanyType as ImageArrayRotationAnimationInfo
-anyType.
-                                getImageArray(), anyType = anyTypeanyType as ImageArrayRotationAnimationInfo
-anyType.
-                                getAngleInfoP(), animationBehavior){
+                            : super(
+                                    (anyType as ImageArrayRotationAnimationInfo).getImageArray(), 
+                                    (anyType as ImageArrayRotationAnimationInfo).getAngleInfoP(), animationBehavior){
 
                     var anyType = anyType
 
