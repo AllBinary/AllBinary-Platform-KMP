@@ -43,7 +43,9 @@
         <module>../j2me/SWTToJ2MELibraryKtM</module>
         
         <module>../j2me/media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>
+-->
         <module>../graphics/opengl/Min3dForNullJavaLibraryKtM</module>
+<!--
         <module>../graphics/opengl/OpenGLESFileConfigurationJavaLibraryKtM</module>
         <module>../graphics/opengl/OpenGLESJavaLibraryKtM</module>
         <module>../j2me/media/graphics/animation/image/ImageSwtJ2SEJavaLibraryKtM</module>
