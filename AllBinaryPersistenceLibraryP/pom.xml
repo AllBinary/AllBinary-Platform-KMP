@@ -45,7 +45,7 @@
         <module>../allbinary_src/PreLoaderLicenseJavaLibraryKtM</module>-->
         <module>../j2me/PCResourceLibraryKtM</module>
         <module>../j2me/ProgressJ2MEJavaLibraryKtM</module>
-<!--        <module>../allbinary_src/licensing/ClientInfoBaseJavaLibraryKtM</module>-->
+        <module>../allbinary_src/licensing/ClientInfoBaseJavaLibraryKtM</module>
 <!--        <module>../allbinary_src/licensing/RemoteXmlRpcJavaLibraryKtM</module>
         <module>../allbinary_src/licensing/LicenseClientJavaLibraryKtM</module>-->
 

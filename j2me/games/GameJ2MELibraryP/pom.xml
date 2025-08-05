@@ -179,7 +179,9 @@
         <module>../GameNotificationJavaLibraryKtM</module>
 
         <module>../../../graphics/opengl/NoSWTJavaLibraryKtM</module>
+-->
         <module>../../../graphics/opengl/SWTWithoutJOGLJavaLibraryKtM</module>
+<!--
         <module>../SWTJavaLibraryKtM</module>-->
         <module>../GameJ2MELibraryKtM</module>
         
