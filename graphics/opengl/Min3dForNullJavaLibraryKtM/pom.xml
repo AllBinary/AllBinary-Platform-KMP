@@ -91,22 +91,9 @@
   
         <dependency>
             <groupId>org.microemu</groupId>
-            <artifactId>microemu-javaseKt</artifactId>
-            <version>2.0.4</version>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.microemu</groupId>
             <artifactId>microemu-midpKt</artifactId>
             <version>2.0.4</version>
             <optional>true</optional>
-        </dependency>
-        
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>androidKt</artifactId>
-            <version>4.1.1.4</version>
-            <scope>provided</scope>
         </dependency>
 
         <dependency>

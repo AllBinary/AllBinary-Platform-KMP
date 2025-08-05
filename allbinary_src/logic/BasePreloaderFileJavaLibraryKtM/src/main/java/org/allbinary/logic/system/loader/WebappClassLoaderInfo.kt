@@ -29,6 +29,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class WebappClassLoaderInfo
             : Object
@@ -38,7 +39,7 @@ open public class WebappClassLoaderInfo
         companion object {
 
 
-    private var classLoader: ClassLoader
+    private var classLoader: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
 open fun setLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
@@ -55,7 +56,7 @@ open fun getLoader()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return classLoader
+                        return classLoader as ClassLoader
 }
 
 

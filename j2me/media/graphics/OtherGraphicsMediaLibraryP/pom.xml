@@ -50,11 +50,11 @@
 
         <!--
         ../../
-        <module>../../../../../work/j2me/media/graphics/animation/sprite/AllBinaryQuarterSpriteAnimationJavaLibraryKtM</module>
+        <module>../../../../../workkt/j2me/media/graphics/animation/sprite/AllBinaryQuarterSpriteAnimationJavaLibraryKtM</module>
         -->
         <!--
         ../../
-        <module>../../../../../work/j2me/media/graphics/animation/sprite/AllBinaryQuarterSpriteAnimation2JavaLibraryKtM</module>
+        <module>../../../../../workkt/j2me/media/graphics/animation/sprite/AllBinaryQuarterSpriteAnimation2JavaLibraryKtM</module>
         -->
 
         <module>../../graphics/animation/image/ImageJ2MEJavaLibraryKtM</module>
@@ -71,7 +71,7 @@
         
         <!--
         ../../
-        <module>../../../../../work/j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>
+        <module>../../../../../workkt/j2me/media/graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>
         <module>../../graphics/layer/AllBinaryTiledLayerJavaLibraryKtM</module>
         -->
 

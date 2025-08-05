@@ -36,14 +36,14 @@
         ../../
         -->
 
-<!--        <module>../../../../../../../work/j2me/media/graphics/geography/GeographicPathFinderJGraphTJavaLibraryKtM</module>
-        <module>../../../../../../../work/j2me/media/graphics/geography/GeographicPathFinderJGraphTJavaLibrary_1_4_2KtM</module>-->
+<!--        <module>../../../../../../../workkt/j2me/media/graphics/geography/GeographicPathFinderJGraphTJavaLibraryKtM</module>
+        <module>../../../../../../../workkt/j2me/media/graphics/geography/GeographicPathFinderJGraphTJavaLibrary_1_4_2KtM</module>-->
         
         <module>../../PathFindingNodeCostJavaLibraryKtM</module>
         
-<!--        <module>../../../../../../../work/j2me/media/graphics/geography/GeographicPathFinderHack1JavaLibraryKtM</module>
-        <module>../../../../../../../work/j2me/media/graphics/geography/GeographicPathFinderHack2JavaLibraryKtM</module>
-        <module>../../../../../../../work/j2me/media/graphics/geography/GeographicPathFinderHack3JavaLibraryKtM</module>-->
+<!--        <module>../../../../../../../workkt/j2me/media/graphics/geography/GeographicPathFinderHack1JavaLibraryKtM</module>
+        <module>../../../../../../../workkt/j2me/media/graphics/geography/GeographicPathFinderHack2JavaLibraryKtM</module>
+        <module>../../../../../../../workkt/j2me/media/graphics/geography/GeographicPathFinderHack3JavaLibraryKtM</module>-->
         <module>../../GeographicPathFinderPriorityQueueJavaLibraryKtM</module>
 
 <!--        <module>../../GeographicPathFindingLibraryKtM</module>-->
@@ -53,7 +53,7 @@
         -->
 
         <module>../../PathFindingNodeCostPerformantJavaLibraryKtM</module><!--
-        <module>../../../../../../../work/j2me/media/graphics/geography/PathFindingNodeCostComplexJavaLibraryKtM</module>-->
+        <module>../../../../../../../workkt/j2me/media/graphics/geography/PathFindingNodeCostComplexJavaLibraryKtM</module>-->
         
         <module>../../../../../../physics/FrictionJavaLibraryKtM</module>
 <!--    
@@ -64,7 +64,7 @@
 <!--        <module>../RaceTrackGeographicMapLibraryKtM</module>-->
         
 
-<!--        <module>../../../../../../../work/j2me/media/graphics/geography/map/DynamicPathFindingRaceTrackJavaLibrary_1_4_2KtM</module>-->
+<!--        <module>../../../../../../../workkt/j2me/media/graphics/geography/map/DynamicPathFindingRaceTrackJavaLibrary_1_4_2KtM</module>-->
         <!--
         -->        
         

@@ -40,6 +40,7 @@ open public class AbFileOutputStream : OutputStream {
 public constructor        (name: String){
 
                     var name = name
+this.fileOutputStream= FileOutputStream(name)
 }
 
 
@@ -50,7 +51,7 @@ public constructor        (file: AbFile){
 this.fileOutputStream= FileOutputStream(AbFileNativeUtil.get(file))
 }
 
-protected constructor        (fileOutputStream: FileOutputStream){
+public constructor        (fileOutputStream: FileOutputStream){
 
                     var fileOutputStream = fileOutputStream
 this.fileOutputStream= fileOutputStream
@@ -58,8 +59,7 @@ this.fileOutputStream= fileOutputStream
 
 
                 @Throws(IOException::class)
-            
-open fun close()
+            override fun close()
         //nullable = true from not(false or (false and true)) = true
 {this.fileOutputStream!!.close()
 }
@@ -76,8 +76,7 @@ open fun getChannel()
 
 
                 @Throws(IOException::class)
-            
-open fun write(buffer: ByteArray)
+            override fun write(buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -87,8 +86,7 @@ this.fileOutputStream!!.write(buffer)
 
 
                 @Throws(IOException::class)
-            
-open fun write(buffer: ByteArray, offset: Int, count: Int)
+            override fun write(buffer: ByteArray, offset: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -104,8 +102,7 @@ this.fileOutputStream!!.write(buffer, offset, count)
 
 
                 @Throws(IOException::class)
-            
-open fun write(b: Int)
+            override fun write(b: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 

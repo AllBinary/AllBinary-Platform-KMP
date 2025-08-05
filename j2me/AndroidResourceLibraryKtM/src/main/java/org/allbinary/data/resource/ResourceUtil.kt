@@ -34,6 +34,7 @@ import android.content.Context
 import android.content.res.Resources
 import org.allbinary.debug.DebugFactory
 import org.allbinary.debug.NoDebug
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.ForcedLogUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
@@ -67,11 +68,9 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    private var activity: Activity
+    private var context: Context = NullAndroidContext.NULL_ANDROID_CONTEXT
 
-    private var context: Context
-
-    private var resources: Resources
+    private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private var hashMap: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
@@ -121,7 +120,7 @@ open fun getResourceId(resource: String)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value)!!.toString(), this, 
+                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value!!.toString())!!.toString(), this, 
                             "getResourceId")
 
                                     }
@@ -148,7 +147,7 @@ open fun addResource(resource: String, value: Integer)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value)!!.toString(), this, 
+                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value!!.toString())!!.toString(), this, 
                             "addResource")
 
     
@@ -188,7 +187,7 @@ open fun containsDuplicate(resource: String, value: Integer)
 
 
         {
-    var integer: Integer = this.hashMap!!.get(objectArray[index]!!) as Integer
+    var integer: Integer = this.hashMap!!.get(objectArray[index]!! as Object) as Integer
 
 
     
@@ -257,7 +256,8 @@ open fun getResourceAsStream(resource: String)
             
 
 
-    var inputStream: InputStream = this.resources!!.openRawResource(id)!!
+    var inputStream: InputStream = 
+                                    (resources as Resources).openRawResource(id)!!
             
 
 

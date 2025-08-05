@@ -57,10 +57,6 @@ open fun deleteOnExit()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun equals(obj: Any)
-        //nullable = true from not(false or (false and false)) = true
-: Boolean
-
 open fun exists()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
@@ -75,10 +71,6 @@ open fun getCanonicalPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
-open fun getName()
-        //nullable = true from not(false or (false and true)) = true
-: String
-
 open fun getParent()
         //nullable = true from not(false or (false and true)) = true
 : String
@@ -86,10 +78,6 @@ open fun getParent()
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String
-
-open fun hashCode()
-        //nullable = true from not(false or (false and true)) = true
-: Int
 
 open fun isAbsolute()
         //nullable = true from not(false or (false and true)) = true

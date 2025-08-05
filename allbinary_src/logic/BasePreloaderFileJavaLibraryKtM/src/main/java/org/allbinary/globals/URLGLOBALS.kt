@@ -36,7 +36,7 @@ open public class URLGLOBALS
         companion object {
 
 
-    private var urlGlobalsInterface: UrlGlobalsInterface
+    private var urlGlobalsInterface: UrlGlobalsInterface = AppUrlGlobals.NULL_APP_URL_GLOBALS
 
 open fun init(urlGlobalsInterface: UrlGlobalsInterface)
         //nullable = true from not(false or (false and false)) = true

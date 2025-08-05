@@ -32,14 +32,21 @@ import org.allbinary.logic.string.StringUtil
 open public class AppUrlGlobals : UrlGlobalsInterface {
         
 
+        companion object {
+
+
+    val NULL_APP_URL_GLOBALS: AppUrlGlobals = AppUrlGlobals()
+
+
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
             }            
         
-    private var path: String
-
-open fun isTestingMode()
+    private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
+override fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 
@@ -48,8 +55,7 @@ open fun isTestingMode()
                         return false
 }
 
-
-open fun getWebappPath()
+override fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -78,8 +84,7 @@ this.path= path
                                 
 }
 
-
-open fun getTestHtmlPath()
+override fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 
@@ -90,8 +95,7 @@ open fun getTestHtmlPath()
 
 
                 @Throws(Exception::class)
-            
-open fun getMainPath()
+            override fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
 

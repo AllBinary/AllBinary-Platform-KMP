@@ -84,13 +84,13 @@
 
         <dependency>
             <groupId>com.google.android</groupId>
-            <artifactId>androidKt</artifactId>
+            <artifactId>android</artifactId>
             <version>1.5_r3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.android</groupId>
-            <artifactId>androidKt</artifactId>
+            <artifactId>android</artifactId>
             <version>1.5_r3</version>
             <scope>provided</scope>
             <classifier>sources</classifier>

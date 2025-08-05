@@ -58,15 +58,6 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>TokenizerJavaLibraryKt</artifactId>
-            <!-- AllBinary Platform Version Start -->
-            <version>1.0.0-SNAPSHOT</version>
-            <!-- AllBinary Platform Version End -->
-
-        </dependency>
-
-        <dependency>
-            <groupId>org.allbinary</groupId>
             <artifactId>OpenGLESJavaLibraryKt</artifactId>
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
@@ -84,10 +75,10 @@
 
         <dependency>
             <groupId>org.allbinary</groupId>
-            <artifactId>FileJ2SEJavaLibraryKt</artifactId>
+            <artifactId>FileJ2SEJavaLibrary</artifactId>
             <!--
-            <artifactId>FileAndroidJavaLibraryKt</artifactId>
-            <artifactId>FileJ2SEJavaLibraryKt</artifactId>
+            <artifactId>FileAndroidJavaLibrary</artifactId>
+            <artifactId>FileJ2SEJavaLibrary</artifactId>
             -->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
@@ -138,13 +129,13 @@
 
         <dependency>
             <groupId>com.google.android</groupId>
-            <artifactId>androidKt</artifactId>
+            <artifactId>android</artifactId>
             <version>1.5_r3</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.google.android</groupId>
-            <artifactId>androidKt</artifactId>
+            <artifactId>android</artifactId>
             <version>1.5_r3</version>
             <scope>provided</scope>
             <classifier>sources</classifier>

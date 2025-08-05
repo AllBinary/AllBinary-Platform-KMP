@@ -107,7 +107,7 @@
 
         Since POMs are built before the other libs is it best to handle this differently
         ../../
-        <module>../../../../work/j2me/games/strategy/rts/RTSGameJavaLibraryP</module>
+        <module>../../../../workkt/j2me/games/strategy/rts/RTSGameJavaLibraryP</module>
         -->
 
         <module>../../media/graphics/OtherGraphicsMediaLibraryP</module>

@@ -82,7 +82,7 @@ open fun init(classLoader: ClassLoader, pathString: String)
     var appUrlGlobals: AppUrlGlobals = AppUrlGlobals()
 
 appUrlGlobals!!.setWebappPath(pathString)
-org!!.allbinary!!.globals!!.URLGLOBALS.init(appUrlGlobals)
+URLGLOBALS.init(appUrlGlobals)
 WebappClassLoaderInfo.setLoader(classLoader)
 
     var stringBuffer: StringMaker = StringMaker()
@@ -110,7 +110,7 @@ stringBuffer!!.append(pathString)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(CommonSeps.getInstance()!!.EQUALS)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(org!!.allbinary!!.globals!!.URLGLOBALS.getWebappPath())
+stringBuffer!!.append(URLGLOBALS.getWebappPath())
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                                     }
@@ -118,7 +118,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(
                             "Webapp Path Set To: ")
-stringBuffer!!.append(org!!.allbinary!!.globals!!.URLGLOBALS.getWebappPath())
+stringBuffer!!.append(URLGLOBALS.getWebappPath())
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }
 

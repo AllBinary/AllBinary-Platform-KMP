@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import android.content.Context
+import org.allbinary.data.resource.NullAndroidContext
 import org.allbinary.data.resource.ResourceUtil
 
 open public class FileStreamFactory
@@ -53,7 +54,7 @@ open fun getInstance()
 
         }
             
-    private var context: Context
+    private var context: Context = NullAndroidContext.NULL_ANDROID_CONTEXT
 private constructor        (context: Context)
             : super()
         {

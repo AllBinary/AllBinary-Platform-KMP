@@ -54,7 +54,7 @@
         -->
         
         <!--
-        <module>../../../../working/j2me/AndroidToJ2MELibraryKtM</module>
+        <module>../../../../workingkt/j2me/AndroidToJ2MELibraryKtM</module>
         -->
 
         <!--
@@ -70,7 +70,7 @@
         <module>../../media/graphics/ImageCacheAndroidJavaLibraryKtM</module>
         -->
                 
-        <!-- ../../../../working/allbinary_src/logic/data/file/FileAndroidJavaLibraryM -->
+        <!-- ../../../../workingkt/allbinary_src/logic/data/file/FileAndroidJavaLibraryM -->
         <module>../../../allbinary_src/logic/data/file/FileAndroidJavaLibraryKtM</module>
         
         <module>../../input/platform/android/MotionInputAndroidResourcesJavaLibraryKtM</module>

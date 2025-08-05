@@ -30,7 +30,7 @@
 
     <modules>
         
-        <module>../../ProgressLazyJ2MEJavaLibraryKtM</module>
+<!--        <module>../../ProgressLazyJ2MEJavaLibraryKtM</module>-->
         <!--
                 <module>../../games/GameScoresBaseHTMLLibraryKtM</module>
                 <module>../../games/GameScoresJ2MEJavaLibraryKtM</module>
@@ -38,16 +38,16 @@
                 <module>../../games/GameScoresLocalLibraryKtM</module>
                 <module>../../games/GameScoresRemoteAndLocalLibraryKtM</module>
         -->
-        <module>../../media/graphics/ImageCacheJ2MEJavaLibraryKtM</module>
-        <module>../../media/graphics/ImageCacheLazyJ2MEJavaLibraryKtM</module>
+<!--        <module>../../media/graphics/ImageCacheJ2MEJavaLibraryKtM</module>
+        <module>../../media/graphics/ImageCacheLazyJ2MEJavaLibraryKtM</module>-->
         <!--        <module>../../media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>-->
-        <module>../../media/graphics/LazyGameResourceNoneJavaLibraryKtM</module>
+<!--        <module>../../media/graphics/LazyGameResourceNoneJavaLibraryKtM</module>-->
 
         <!--
                 <module>../../../graphics/opengl/OpenGLESJavaLibraryKtM</module>
         -->
 
-        <module>../../input/JSEGyroSensorJavaLibraryKtM</module>
+<!--        <module>../../input/JSEGyroSensorJavaLibraryKtM</module>-->
         <!--        
                 <module>../../ProgressJ2MEJavaLibraryKtM</module>
         -->
@@ -57,19 +57,19 @@
         
         <!--
         ../../
-        <module>../../../../work/j2me/media/graphics/FormJMEJavaLibraryKtM</module>
+        <module>../../../../workkt/j2me/media/graphics/FormJMEJavaLibraryKtM</module>
         -->
         <!--
         ../../
-        <module>../../../../work/j2me/media/graphics/FormJSEJavaLibraryKtM</module>
+        <module>../../../../workkt/j2me/media/graphics/FormJSEJavaLibraryKtM</module>
         -->
 
-        <module>../../media/sound/J2SEMediaMIDPMinimalJavaLibraryKtM</module>
+<!--        <module>../../media/sound/J2SEMediaMIDPMinimalJavaLibraryKtM</module>
         <module>../../media/sound/NotDeviceSpecificMIDP2JavaLibraryKtM</module>
-        <module>../../media/sound/MediaMIDP2ForHTMLJavaLibraryKtM</module>
+        <module>../../media/sound/MediaMIDP2ForHTMLJavaLibraryKtM</module>-->
 
         <!--
-                <module>../../../../work/j2me/ScreenCaptureAndroidJavaLibraryKtM</module>
+                <module>../../../../workkt/j2me/ScreenCaptureAndroidJavaLibraryKtM</module>
         -->
     </modules>
 

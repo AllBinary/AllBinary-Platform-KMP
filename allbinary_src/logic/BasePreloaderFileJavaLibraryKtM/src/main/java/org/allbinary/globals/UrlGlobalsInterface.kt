@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.string.StringUtil
 
 open public class UrlGlobalsInterface
             : Object
@@ -46,7 +47,7 @@ open fun getMainPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 
@@ -56,7 +57,7 @@ open fun getTestHtmlPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 
@@ -66,7 +67,7 @@ open fun getWebappPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 

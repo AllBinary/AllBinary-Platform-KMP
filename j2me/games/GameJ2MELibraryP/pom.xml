@@ -37,8 +37,8 @@
 
 <!--        <module>../../../allbinary_src/security/SimpleCryptLibraryKtM</module>-->
         <!--
-        <module>../../../../working_thirdparty/security/BouncyCastleDESJavaLibraryKtM</module>
-        <module>../../../../working_thirdparty/communication/XmlRpc/XmlRpcJavaLibraryKtM</module>
+        <module>../../../../working_thirdpartykt/security/BouncyCastleDESJavaLibraryKtM</module>
+        <module>../../../../working_thirdpartykt/communication/XmlRpc/XmlRpcJavaLibraryKtM</module>
         -->
 <!--        <module>../../../allbinary_src/TokenizerJavaLibraryKtM</module>-->
 <!--        <module>../../../allbinary_src/security/BasicSecurityJavaLibraryKtM</module>
