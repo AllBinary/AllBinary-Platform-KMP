@@ -37,7 +37,7 @@ import org.allbinary.input.automation.actions.script.condition.CustomTreeNodeInt
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class GenericProfileActionScriptJPanel : swing.JPanel
+open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
                 , JTreeInterface {
         
 

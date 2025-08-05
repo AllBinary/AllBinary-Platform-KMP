@@ -37,7 +37,7 @@ import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonStrings
 
-open public class KeyboardActionScriptInputJPanel : swing.JPanel {
+open public class KeyboardActionScriptInputJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

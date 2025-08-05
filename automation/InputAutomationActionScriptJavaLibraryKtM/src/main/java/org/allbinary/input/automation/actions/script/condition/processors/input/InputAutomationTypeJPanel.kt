@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 
-open public class InputAutomationTypeJPanel : swing.JPanel {
+open public class InputAutomationTypeJPanel : javax.swing.JPanel {
         
 public constructor        (){initComponents()
 }

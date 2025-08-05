@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 
-open public class LicensingException : lang.Exception {
+open public class LicensingException : java.lang.Exception {
         
 
         companion object {

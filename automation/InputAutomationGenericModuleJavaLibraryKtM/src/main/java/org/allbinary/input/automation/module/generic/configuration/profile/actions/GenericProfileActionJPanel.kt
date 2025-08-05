@@ -35,7 +35,7 @@ import org.allbinary.input.automation.actions.script.condition.TimeIntervalActio
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.script.GenericProfileActionScriptJPanel
 import org.allbinary.logic.communication.log.LogUtil
 
-open public class GenericProfileActionJPanel : swing.JPanel {
+open public class GenericProfileActionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

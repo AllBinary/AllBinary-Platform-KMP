@@ -37,7 +37,7 @@ import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
 
-open public class GenericModuleConfigurationJPanel : swing.JPanel
+open public class GenericModuleConfigurationJPanel : javax.swing.JPanel
                 , GenericModuleConfigurationInterface {
         
 

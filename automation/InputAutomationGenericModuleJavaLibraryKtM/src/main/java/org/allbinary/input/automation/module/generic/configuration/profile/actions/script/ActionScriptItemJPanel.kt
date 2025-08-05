@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 
-open public class ActionScriptItemJPanel : swing.JPanel {
+open public class ActionScriptItemJPanel : javax.swing.JPanel {
         
 public constructor        (){initComponents()
 }

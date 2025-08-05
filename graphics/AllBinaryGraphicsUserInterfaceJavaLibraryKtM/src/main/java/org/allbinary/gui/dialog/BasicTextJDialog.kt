@@ -30,7 +30,7 @@
         import kotlin.reflect.KClass
         
 
-open public class BasicTextJDialog : swing.JDialog {
+open public class BasicTextJDialog : javax.swing.JDialog {
         
 
         companion object {

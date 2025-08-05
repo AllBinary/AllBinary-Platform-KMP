@@ -13,7 +13,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-interface GL10 : opengles.GL {
+interface GL10 : javax.microedition.khronos.opengles.GL {
         
 
         companion object {

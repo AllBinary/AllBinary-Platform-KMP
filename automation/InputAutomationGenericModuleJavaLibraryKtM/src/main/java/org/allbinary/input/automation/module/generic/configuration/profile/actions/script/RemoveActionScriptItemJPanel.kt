@@ -32,7 +32,7 @@ import org.allbinary.input.automation.module.generic.configuration.profile.actio
 import org.allbinary.input.automation.module.generic.configuration.profile.actions.GenericProfileActionJPanel
 import org.allbinary.logic.communication.log.LogUtil
 
-open public class RemoveActionScriptItemJPanel : awt.Panel {
+open public class RemoveActionScriptItemJPanel : java.awt.Panel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

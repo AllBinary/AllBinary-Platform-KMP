@@ -28,7 +28,7 @@
         import kotlin.reflect.KClass
         
 
-open public class InitException : lang.Exception {
+open public class InitException : java.lang.Exception {
         
 public constructor        (){}
 

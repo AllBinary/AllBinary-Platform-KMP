@@ -33,7 +33,7 @@ import org.allbinary.input.media.image.InputImageType
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class ImageActionScriptOutputJPanel : swing.JPanel {
+open public class ImageActionScriptOutputJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

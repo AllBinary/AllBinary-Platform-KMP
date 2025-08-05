@@ -13,7 +13,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-interface GL11Ext : opengles.GL {
+interface GL11Ext : javax.microedition.khronos.opengles.GL {
         
 
         companion object {

@@ -30,7 +30,7 @@
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class AlwaysActionScriptConditionJPanel : swing.JPanel {
+open public class AlwaysActionScriptConditionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

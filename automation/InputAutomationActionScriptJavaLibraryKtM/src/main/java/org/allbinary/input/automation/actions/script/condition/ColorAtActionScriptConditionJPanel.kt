@@ -32,7 +32,7 @@ import org.allbinary.logic.string.StringValidationUtil
 import org.allbinary.media.image.analysis.ColorRangeInterface
 import org.allbinary.string.CommonStrings
 
-open public class ColorAtActionScriptConditionJPanel : swing.JPanel {
+open public class ColorAtActionScriptConditionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

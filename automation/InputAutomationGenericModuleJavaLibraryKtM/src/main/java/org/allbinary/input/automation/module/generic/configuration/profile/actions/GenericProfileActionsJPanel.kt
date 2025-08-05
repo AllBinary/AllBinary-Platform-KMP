@@ -31,7 +31,7 @@ import org.allbinary.input.automation.module.DefaultListModelHelper
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 
-open public class GenericProfileActionsJPanel : swing.JPanel {
+open public class GenericProfileActionsJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

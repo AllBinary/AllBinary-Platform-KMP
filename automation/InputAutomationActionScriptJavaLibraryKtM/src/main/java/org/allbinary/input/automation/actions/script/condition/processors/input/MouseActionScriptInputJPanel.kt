@@ -40,7 +40,7 @@ import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonPhoneStrings
 import org.allbinary.string.CommonStrings
 
-open public class MouseActionScriptInputJPanel : swing.JPanel {
+open public class MouseActionScriptInputJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!

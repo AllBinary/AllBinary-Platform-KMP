@@ -32,7 +32,7 @@
 import java.io.File
 import org.allbinary.logic.communication.log.LogUtil
 
-open public class FileJDialog : swing.JDialog {
+open public class FileJDialog : javax.swing.JDialog {
         
 
         companion object {
