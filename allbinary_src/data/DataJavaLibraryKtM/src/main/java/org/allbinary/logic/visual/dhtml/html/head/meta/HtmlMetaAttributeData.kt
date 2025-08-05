@@ -49,7 +49,7 @@ this.id= id
 }
 
 
-open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData)
+open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 

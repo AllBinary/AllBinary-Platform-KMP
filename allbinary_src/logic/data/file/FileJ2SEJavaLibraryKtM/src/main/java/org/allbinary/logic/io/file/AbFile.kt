@@ -580,7 +580,7 @@ open fun compareTo(pathname: File)
 }
 
 
-open fun equals(obj: Any)
+open fun equals(obj: Any?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 

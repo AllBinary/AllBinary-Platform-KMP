@@ -100,8 +100,11 @@ logUtil!!.put(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(
             
 
 serverUrl= serverUrl!!.substring(0, index +1) +PAGE
-this.setClient(XmlRpcClient(serverUrl))
-this.getClient()!!.setBasicAuthentication(
+
+    var xmlRpcClient: XmlRpcClient = XmlRpcClient(serverUrl)
+
+this.setClient(xmlRpcClient)
+xmlRpcClient!!.setBasicAuthentication(
                             null, 
                             null)
 
@@ -110,7 +113,7 @@ this.getClient()!!.setBasicAuthentication(
 logUtil!!.put(CLIENT_INFO +hashtable!!.toString(), this, commonStrings!!.GET)
 param!!.add(hashtable)
 
-    var result: Any = getClient()!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
+    var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
             
 
 logUtil!!.put(RESULT +result!!.toString(), this, commonStrings!!.GET)

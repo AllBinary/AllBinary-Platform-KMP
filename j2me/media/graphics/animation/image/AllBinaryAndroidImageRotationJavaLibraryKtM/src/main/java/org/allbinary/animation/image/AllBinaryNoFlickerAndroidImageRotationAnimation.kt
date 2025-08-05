@@ -135,7 +135,7 @@ open fun setAlpha(alpha: Int)
 
 
     
-                        if(this.alpha != alpha)
+                        if(this.alphaP != alpha)
                         
                                     {
                                     changed= true
@@ -143,7 +143,7 @@ open fun setAlpha(alpha: Int)
                                     }
                                 
 super.setAlpha(alpha)
-imageModifierUtil!!.setAlpha(this.originalImage, this.imageToShow, 0, this.alpha)
+imageModifierUtil!!.setAlpha(this.originalImage, this.imageToShow, 0, this.alphaP)
 
     
                         if(changed)

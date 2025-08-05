@@ -197,7 +197,7 @@ open fun getSessionInactivityTimeout()
 }
 
 
-open fun equals(basicUserRole: BasicUserRole)
+open fun equals(basicUserRole: BasicUserRole?)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 

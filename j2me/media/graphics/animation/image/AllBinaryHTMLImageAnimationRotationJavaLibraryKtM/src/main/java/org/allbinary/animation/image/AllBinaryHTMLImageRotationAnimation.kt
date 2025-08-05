@@ -157,7 +157,7 @@ open fun setAlpha(alpha: Int)
 
 
     
-                        if(this.alpha != alpha)
+                        if(this.alphaP != alpha)
                         
                                     {
                                     changed= true
@@ -199,7 +199,7 @@ open fun updateImage()
 
 canvasSurface!!.save()
 this.imageRotationUtil!!.rotateImageClear(originalImage, this.twoImages[this.bufferedImageIndex]!!, canvasSurface, this.angleInfo!!.getAngle() +90)
-this.alphaProcessor!!.setAlpha(imageModifierUtil, this.originalImage, this.twoImages[this.bufferedImageIndex]!!, this.alpha)
+this.alphaProcessor!!.setAlpha(imageModifierUtil, this.originalImage, this.twoImages[this.bufferedImageIndex]!!, this.alphaP)
 this.imageRotationUtil!!.drawImage(originalImage, imageToShow, canvasSurface)
 canvasSurface!!.restore()
 this.swap()
