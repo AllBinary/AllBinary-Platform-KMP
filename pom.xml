@@ -36,11 +36,10 @@
         <module>./j2me/AllBinaryJ2MELibraryP</module>
         <module>./AllBinaryPersistenceLibraryP</module>        
 <!--        
-
         <module>./automation/InputAutomationToolsP</module>
         <module>./graphics/GraphicsToolsP</module>
         <module>./allbinary_src/FreeblisketJavaLibraryP</module>
-        -->
+-->
         <module>./j2me/games/platform/AllBinaryOnAllPlaformsJavaLibraryP</module>
         
         
@@ -50,9 +49,6 @@
         <module>./j2me/games/Resources/sounds/release/GameSoundsJ2SEOggResourcesJavaLibraryKtM</module>
         <module>./graphics/opengl/AllBinaryJOGLResourcesJavaLibraryKtM</module>-->
 
-        <!--
-        <module>AllBinaryPersistenceLibraryP</module>
-        -->
     </modules>
 
     <dependencies>

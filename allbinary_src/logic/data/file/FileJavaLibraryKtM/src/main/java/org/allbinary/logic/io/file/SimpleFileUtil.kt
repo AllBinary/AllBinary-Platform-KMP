@@ -176,7 +176,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
 
         while(index < size -1 && byteArray[index] != 
                             '\n'
-                        .code)
+                        .code as Byte)
         {index++
 }
 
@@ -189,7 +189,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
     
                         if(index > 0 && byteArray[index -1] == 
                             '\r'
-                        .code)
+                        .code as Byte)
                         
                                     {
                                     returnLine= 1

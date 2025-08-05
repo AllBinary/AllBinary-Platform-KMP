@@ -47,13 +47,13 @@
 <!--        <module>../../../allbinary_src/licensing/FileLicenseInitInfoJavaLibraryKtM</module>-->
         <module>../../../allbinary_src/licensing/ClientInfoLicensingJavaLibraryKtM</module>
 
-<!--        <module>../../games/licensing/PartnerJ2MEJavaLibraryKtM</module>
+        <module>../../games/licensing/PartnerJ2MEJavaLibraryKtM</module><!--
         <module>../../games/licensing/PartnerHTMLJavaLibraryKtM</module>
         <module>../../games/licensing/PartnerAndroidJavaLibraryKtM</module>-->
-<!--        <module>../../games/licensing/NoGameLicensingJavaLibraryKtM</module>-->
+        <module>../../games/licensing/NoGameLicensingJavaLibraryKtM</module>
         <module>../../games/licensing/GameLicensingOnlyDemoJavaLibraryKtM</module>
 <!--        <module>../../games/licensing/GameLicensingOnlyNormalJavaLibraryKtM</module>-->
-<!--        <module>../../games/licensing/GameLicensingBaseJavaLibraryKtM</module>-->
+        <module>../../games/licensing/GameLicensingBaseJavaLibraryKtM</module>
 
         <!--
         <module>../../games/GameScoresBaseLibraryKtM</module>
@@ -63,8 +63,8 @@
         <module>../../games/GameScoresLocalJavaLibraryKtM</module>
 <!--        <module>../../games/GameScoresRemoteAndLocalJavaLibraryKtM</module>-->
 
-<!--        <module>../../../store/ThirdPartyStoreJavaLibraryKtM</module>
-        <module>../../../store/NoThirdPartyStoreJavaLibraryKtM</module>-->
+        <module>../../../store/ThirdPartyStoreJavaLibraryKtM</module>
+        <module>../../../store/NoThirdPartyStoreJavaLibraryKtM</module>
 
         <module>../../media/graphics/layer/CollisionLayerJavaLibraryKtM</module>
         <module>../../games/CollisionLibraryKtM</module>

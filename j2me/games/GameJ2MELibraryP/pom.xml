@@ -116,8 +116,8 @@
         <module>../../media/sound/NoPlayerJavaLibraryKtM</module>
         <module>../../media/sound/SoundJ2MELibraryKtM</module>
 
-<!--        <module>../../media/motion/AllBinaryVibrationJavaLibraryKtM</module>-->
-<!--        <module>../../media/motion/NoVibrateJavaLibraryKtM</module>-->
+        <module>../../media/motion/AllBinaryVibrationJavaLibraryKtM</module>
+        <module>../../media/motion/NoVibrateJavaLibraryKtM</module>
 <!--        <module>../../media/motion/VibrateAndroidJavaLibraryKtM</module>-->
 
         <module>../../media/graphics/NullCustomUIJavaLibraryKtM</module>
@@ -132,9 +132,9 @@
         -->
         <module>../../../j2me/media/graphics/FormJMEJavaLibraryKtM</module>
 
-<!--        <module>../../media/graphics/animation/AnimationResourceJavaLibraryKtM</module>
+        <module>../../media/graphics/animation/AnimationResourceJavaLibraryKtM</module>        
         <module>../../media/graphics/animation/TransitionAnimationJavaLibraryKtM</module>
-        <module>../../media/graphics/animation/NoTransitionAnimationJavaLibraryKtM</module>-->
+        <module>../../media/graphics/animation/NoTransitionAnimationJavaLibraryKtM</module>
         <!--
         AndroidTransitionAnimationJavaLibraryM
         -->
@@ -147,39 +147,30 @@
         <module>../../media/MediaDataKtM</module>
         <module>../../media/sound/NotDeviceSpecificNoMediaMIDP1LibraryKtM</module>
 
-<!--        <module>../../../allbinary_src/content/ContentNoneJavaLibraryKtM</module>-->
+        <module>../../../allbinary_src/content/ContentNoneJavaLibraryKtM</module>
 <!--        <module>../../../allbinary_src/content/ContentAndroidJavaLibraryKtM</module>-->
 
         <module>../../games/GameConfigurationFormJavaLibraryKtM</module>
 
-<!--        <module>../../FullScreenNoneJavaLibraryKtM</module>-->
-        <!--
-        <module>../../FullScreenJavaLibraryKtM</module>
-        -->
-
+        <module>../../FullScreenNoneJavaLibraryKtM</module>
+<!--        <module>../../FullScreenJavaLibraryKtM</module>-->
         <module>../../lib/Basic2DVectorLibraryKtM</module>
 
         <module>../../../physics/VelocityLibraryKtM</module>
         
         <module>../../games/weapon/SoundsBasicWeaponsJavaLibraryKtM</module>        
-<!--
 
         <module>../../lib/TrigJ2MELibraryKtM</module>
-
         <module>../../media/graphics/geography/map/LayerPlacementLibraryKtM</module>
         <module>../../media/graphics/layer/AllBinaryLayerJavaLibraryKtM</module>
-
         <module>../../ScreenCaptureNoneJavaLibraryKtM</module>
-        
         <module>../licensing/GameLicensingNullJavaLibraryKtM</module>
-        
         <module>../../business/advertisement/AllBinaryAdvertisementClientJavaLibraryKtM</module>
         <module>../../business/advertisement/AdvertisementClientNoneJavaLibraryKtM</module>
-
+        
         <module>../GameNotificationJavaLibraryKtM</module>
-
+        
         <module>../../../graphics/opengl/NoSWTJavaLibraryKtM</module>
--->
         <module>../../../graphics/opengl/SWTWithoutJOGLJavaLibraryKtM</module>
 <!--
         <module>../SWTJavaLibraryKtM</module>-->
