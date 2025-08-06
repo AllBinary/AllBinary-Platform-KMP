@@ -59,6 +59,7 @@
         <module>../../media/graphics/PlatformNullImageJavaLibraryKtM</module>
         <module>../../media/graphics/ImageCacheBaseJavaLibraryKtM</module>
         <module>../../media/graphics/ImageCacheJ2MEJavaLibraryKtM</module>
+<!--        <module>../../../graphics/opengl/OpenGLJ2MENoneJavaLibraryKtM</module>-->
         <module>../../../graphics/opengl/OpenGLNoneJavaLibraryKtM</module>
         <module>../../../graphics/opengl/OpenGLNoneOtherJavaLibraryKtM</module>
         <module>../../../graphics/opengl/OpenGLESBaseJ2MEJavaLibraryKtM</module>
