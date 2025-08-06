@@ -94,7 +94,7 @@ open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
             
 
-stringBuilder!!.delete(0, stringBuilder!!.length)
+stringBuilder!!.delete(0, stringBuilder!!.length())
 
     var list: BasicArrayList = BasicArrayList()
 

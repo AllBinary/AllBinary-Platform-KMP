@@ -38,12 +38,13 @@
         <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEBasePlatformJavaLibraryKtM</module>
         <module>../j2me/games/platform/j2se/AllBinaryOnJ2SEPlatformJavaLibraryKtM</module>
         
-<!--        <module>../j2me/FullScreenJavaLibraryKtM</module>
-
+<!--        
+        <module>../j2me/FullScreenJavaLibraryKtM</module>
         <module>../j2me/SWTToJ2MELibraryKtM</module>
-        
-        <module>../j2me/media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>
 -->
+
+        <module>../j2me/media/graphics/ImageCacheOpenGLESJavaLibraryKtM</module>
+        
         <module>../graphics/opengl/Min3dForNullJavaLibraryKtM</module>
         <module>../graphics/opengl/OpenGLESFileConfigurationJavaLibraryKtM</module>
         <module>../graphics/opengl/OpenGLESJavaLibraryKtM</module>

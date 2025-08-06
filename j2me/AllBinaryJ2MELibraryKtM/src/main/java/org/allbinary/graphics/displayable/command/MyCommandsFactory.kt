@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Command
+import org.allbinary.logic.string.StringUtil
 
 open public class MyCommandsFactory
             : Object
@@ -52,6 +53,8 @@ open fun getInstance()
 
         }
             
+    val NO_COMMAND: Command = Command(StringUtil.getInstance()!!.EMPTY_STRING,  -1,  -1)
+
     val GAUGE_CHANGE: Command = Command(
                             "GAUGE_CHANGE", Command.ITEM, 1)
 

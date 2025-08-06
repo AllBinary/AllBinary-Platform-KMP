@@ -35,16 +35,16 @@
 
         -->
 
-<!--        <module>../../../allbinary_src/security/SimpleCryptLibraryKtM</module>-->
+        <module>../../../allbinary_src/security/SimpleCryptLibraryKtM</module>
         <!--
         <module>../../../../working_thirdpartykt/security/BouncyCastleDESJavaLibraryKtM</module>
         <module>../../../../working_thirdpartykt/communication/XmlRpc/XmlRpcJavaLibraryKtM</module>
         -->
-<!--        <module>../../../allbinary_src/TokenizerJavaLibraryKtM</module>-->
+        <module>../../../allbinary_src/TokenizerJavaLibraryKtM</module>
 <!--        <module>../../../allbinary_src/security/BasicSecurityJavaLibraryKtM</module>
         <module>../../../replace_these_stub_projects/security/YourCryptFileJavaLibraryKtM</module>-->
         <module>../../../replace_these_stub_projects/security/YourSecurityJavaLibraryKtM</module>
-<!--        <module>../../../replace_these_stub_projects/communication/YourXmlRpcJavaLibraryKtM</module>-->
+        <module>../../../replace_these_stub_projects/communication/YourXmlRpcJavaLibraryKtM</module>
         <module>../../../replace_these_stub_projects/allbinary_src/J2MEOnlyJavaLibraryKtM</module>
 <!--        <module>../../../replace_these_stub_projects/allbinary_src/J2MECompatibilityJavaLibraryKtM</module>-->
 

@@ -38,7 +38,7 @@ open public class Tokenizer
 
     private var sep: String
 
-    private var endSep: String
+    private var endSep: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (sep: String)
             : super()
         {
