@@ -50,8 +50,7 @@ open fun getOrientation()
                         return Orientation.NONE
 }
 
-
-open fun onSensorChange()
+override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
 {}
 
