@@ -131,7 +131,7 @@ open fun toXmlNode(document: Document)
                             "000000")!!
             
 
-node!!.appendChild(blackNode)
+node.appendChild(blackNode)
 
 
 
@@ -176,7 +176,7 @@ hexColorStringBuffer!!.append(index.toString())
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
             
 
-node!!.appendChild(colorNode)
+node.appendChild(colorNode)
 }
 
 
@@ -184,7 +184,7 @@ node!!.appendChild(colorNode)
                             "FFFFFF")!!
             
 
-node!!.appendChild(whiteNode)
+node.appendChild(whiteNode)
 
 
 
@@ -206,7 +206,7 @@ node!!.appendChild(whiteNode)
                         for (redIndex in 0 until MAX /2)
 
 
-        {node!!.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
@@ -234,7 +234,7 @@ node!!.appendChild(whiteNode)
                         for (blueIndex in 0 until MAX /2)
 
 
-        {node!!.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
@@ -262,7 +262,7 @@ node!!.appendChild(whiteNode)
                         for (blueIndex in 0 until MAX /2)
 
 
-        {node!!.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
@@ -290,7 +290,7 @@ node!!.appendChild(whiteNode)
                         for (blueIndex in 0 until MAX)
 
 
-        {node!!.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }

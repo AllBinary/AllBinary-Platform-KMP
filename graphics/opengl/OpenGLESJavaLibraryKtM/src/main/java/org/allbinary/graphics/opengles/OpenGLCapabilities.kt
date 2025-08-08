@@ -152,11 +152,11 @@ open fun initCapabilities(gl: GL10)
 
     var stringBuffer: StringMaker = StringMaker()
 
-glVersionString= gl!!.glGetString(GL10.GL_VERSION)
+glVersionString= gl.glGetString(GL10.GL_VERSION)
 
     var GL_SHADING_LANGUAGE_VERSION: Int = 0x8b8c
 
-glShaderVersionString= gl!!.glGetString(GL_SHADING_LANGUAGE_VERSION)
+glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
 
     
                         if(glShaderVersionString == 
@@ -204,9 +204,9 @@ shaderVersion= Integer.parseInt(glShaderVersionString!!.replace(CommonSeps.getIn
 logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
-glRenderer= gl!!.glGetString(GL10.GL_RENDERER)
-glVendor= gl!!.glGetString(GL10.GL_VENDOR)
-glExtensions= gl!!.glGetString(GL10.GL_EXTENSIONS)
+glRenderer= gl.glGetString(GL10.GL_RENDERER)
+glVendor= gl.glGetString(GL10.GL_VENDOR)
+glExtensions= gl.glGetString(GL10.GL_EXTENSIONS)
 
     
                         if(glExtensions!!.indexOf(this.GL_EXT_GPU_SHADER4) >= 0)
@@ -372,7 +372,7 @@ this.glVersion= this.VERSION_UNK
 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AUTO_SELECT))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AUTO_SELECT))
                         
                                     {
                                     
@@ -410,7 +410,7 @@ openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
 
     var maxTextureSizeArray: IntArray = IntArray(1)
 
-gl!!.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSizeArray, 0)
+gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSizeArray, 0)
 this.maxTextureSize= maxTextureSizeArray[0]!!
 } catch(e: Exception)
             {
@@ -498,18 +498,18 @@ stringBuffer!!.append(
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.SPACE)
 
 
-    var list: BasicArrayList = tokenizer!!.getTokens(glExtensions, BasicArrayList())!!
+    var list: BasicArrayList = tokenizer.getTokens(glExtensions, BasicArrayList())!!
             
 
 
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
         {stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(stringUtil!!.toString(list!!.objectArray[index]!!))
+stringBuffer!!.append(stringUtil!!.toString(list.objectArray[index]!!))
 }
 
 } catch(e: Exception)

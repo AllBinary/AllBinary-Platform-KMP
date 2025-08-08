@@ -54,7 +54,7 @@ open fun isValid()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: org.w3c.dom.Document{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,9 +62,9 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: org.w3c.dom.Node{
 
                     var document = document
 
@@ -77,7 +77,7 @@ open fun toValidationInfoNode(document: Document)
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: org.w3c.dom.Document{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -85,15 +85,15 @@ open fun toXmlDoc()
 }
 
 
-open fun toXmlNode(document: Document)
+open fun toXmlNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: org.w3c.dom.Node{
 
                     var document = document
 
         try {
             
-    var shippingMethodNode: Node = document!!.createElement(ShippingMethodData.NAME)!!
+    var shippingMethodNode: Node = document.createElement(ShippingMethodData.NAME)!!
             
 
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodData.NAME, this.getName()))
@@ -106,7 +106,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 

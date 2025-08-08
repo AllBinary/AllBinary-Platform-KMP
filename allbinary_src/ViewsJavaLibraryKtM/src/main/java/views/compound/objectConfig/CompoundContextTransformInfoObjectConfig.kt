@@ -52,7 +52,7 @@ open public class CompoundContextTransformInfoObjectConfig : GenericStoreTransfo
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface){
 
@@ -66,7 +66,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
                     
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, document){
 
@@ -84,7 +84,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, name, type){
 
@@ -138,7 +138,7 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Root View Called with: " +viewVector!!.size, this, 
@@ -193,7 +193,7 @@ stringBuffer!!.append(endXMLHeader)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -211,12 +211,12 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 
     var replace: Replace = Replace(templateKey, templateValue)
 
-rootView= replace!!.all(rootView)
+rootView= replace.all(rootView)
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("End: Result of a compound view: " +rootView, this, 
@@ -245,7 +245,7 @@ open fun createInputStream()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Template: " +String(completeTemplateViewBytes).

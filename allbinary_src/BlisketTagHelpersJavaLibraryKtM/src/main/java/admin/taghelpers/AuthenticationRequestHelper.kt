@@ -139,16 +139,16 @@ open fun newPassword()
 : Boolean{
         try {
             
-    var userName: String = request!!.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
+    var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
             
 
 
-    var email: String = request!!.getParameter(UserData.MAINEMAIL)!!
+    var email: String = request.getParameter(UserData.MAINEMAIL)!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put("Generating New Password For: " +userName, this, 
@@ -178,7 +178,7 @@ open fun newPassword()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put(
@@ -212,7 +212,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                             process()
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put("Generated New Password For: " +userName, this, 
@@ -228,7 +228,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -251,24 +251,24 @@ open fun changePassword()
 : Boolean{
         try {
             
-    var userName: String = request!!.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
+    var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
             
 
 
-    var passwordString: String = request!!.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
+    var passwordString: String = request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
             
 
 
-    var newPassword: String = request!!.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
+    var newPassword: String = request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
             
 
 
-    var newReenteredPassword: String = request!!.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
+    var newReenteredPassword: String = request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put("Changing Password For User: " +userName, this, 
@@ -281,12 +281,12 @@ open fun changePassword()
 
 
     
-                        if(!password!!.isValid()!!)
+                        if(!password.isValid()!!)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put(
@@ -310,7 +310,7 @@ open fun changePassword()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put(
@@ -345,12 +345,12 @@ open fun changePassword()
 
 
     
-                        if(login!!.compareTo(GLOBALS2.LOGINSUCCESS) == 0)
+                        if(login.compareTo(GLOBALS2.LOGINSUCCESS) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put(
@@ -360,7 +360,7 @@ open fun changePassword()
                                     }
                                 
 
-    var newPasswordHashMap: HashMap<Any, Any> = password!!.toHashMap(
+    var newPasswordHashMap: HashMap<Any, Any> = password.toHashMap(
                             null)!!
             
 
@@ -377,7 +377,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put(
@@ -394,7 +394,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -443,10 +443,10 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Role is null: " +userInterface!!.getRole() +" Valid Roles: " +roles!!.toString(), this, 
+                                    logUtil!!.put("Role is null: " +userInterface!!.getRole() +" Valid Roles: " +roles.toString(), this, 
                             "isRoleValid()")
 
                                     }
@@ -460,7 +460,7 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
                                     }
                                 
 
-    var basicUserRoleArray: Array<Any?> = roles!!.toArray()!!
+    var basicUserRoleArray: Array<Any?> = roles.toArray()!!
             
 
 
@@ -483,8 +483,8 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
                         
                                     {
                                     userInterface!!.validateSession(weblisketSession as WeblisketSessionInterface)
-this.request!!.removeAttribute(WeblisketSessionData.REMOVABLEUSERNAME)
-this.request!!.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
+this.request.removeAttribute(WeblisketSessionData.REMOVABLEUSERNAME)
+this.request.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
 
 
 
@@ -497,7 +497,7 @@ this.request!!.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     
@@ -508,7 +508,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(userInterface!!.getRole()!!.toString())
 stringBuffer!!.append(
                             " Valid Roles: ")
-stringBuffer!!.append(roles!!.toString())
+stringBuffer!!.append(roles.toString())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "isRoleValid()")
 
@@ -522,7 +522,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

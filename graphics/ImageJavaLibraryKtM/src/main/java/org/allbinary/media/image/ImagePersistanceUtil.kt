@@ -95,7 +95,7 @@ StreamUtil.getInstance()!!.close(fileOutputStream)
 
          }
         
-logUtil!!.put("Wrote Image: " +file!!.getAbsolutePath(), this, commonStrings!!.SAVE)
+logUtil!!.put("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAVE)
 }
 
 
@@ -138,7 +138,7 @@ open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
 
 
     
-                        if(!iter!!.hasNext())
+                        if(!iter.hasNext())
                         
                                     {
                                     logUtil!!.put(
@@ -151,20 +151,20 @@ open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
 
                                     }
                                 
-writer= iter!!.next() as ImageWriter
+writer= iter.next() as ImageWriter
 ios= ImageIO.createImageOutputStream(file)
-writer!!.setOutput(ios)
+writer.setOutput(ios)
 
-    var iwp: ImageWriteParam = writer!!.getDefaultWriteParam()!!
+    var iwp: ImageWriteParam = writer.getDefaultWriteParam()!!
             
 
-iwp!!.setCompressionMode(ImageWriteParam.MODE_EXPLICIT)
-iwp!!.setCompressionQuality(0.95f)
-writer!!.write(
+iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT)
+iwp.setCompressionQuality(0.95f)
+writer.write(
                             null, IIOImage(bufferedImage, 
                             null, 
                             null), iwp)
-logUtil!!.put("Wrote Image: " +file!!.getAbsolutePath(), this, commonStrings!!.SAVE)
+logUtil!!.put("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAVE)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 }
@@ -179,7 +179,7 @@ logUtil!!.put("Wrote Image: " +file!!.getAbsolutePath(), this, commonStrings!!.S
                                 )
                         
                                     {
-                                    ios!!.flush()
+                                    ios.flush()
 
         try {
             
@@ -189,8 +189,8 @@ logUtil!!.put("Wrote Image: " +file!!.getAbsolutePath(), this, commonStrings!!.S
                                 )
                         
                                     {
-                                    logUtil!!.put(ios!!.toString(), ios, commonStrings!!.CLOSE)
-ios!!.close()
+                                    logUtil!!.put(ios.toString(), ios, commonStrings!!.CLOSE)
+ios.close()
 
                                     }
                                 
@@ -208,7 +208,7 @@ ios!!.close()
                                 )
                         
                                     {
-                                    writer!!.dispose()
+                                    writer.dispose()
 
                                     }
                                 

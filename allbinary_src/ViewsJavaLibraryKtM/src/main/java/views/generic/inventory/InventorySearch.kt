@@ -138,7 +138,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -174,7 +174,7 @@ open fun searchSingleDynamicPage()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

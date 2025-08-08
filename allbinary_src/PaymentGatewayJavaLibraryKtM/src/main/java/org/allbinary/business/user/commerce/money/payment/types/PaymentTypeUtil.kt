@@ -179,7 +179,7 @@ open fun initDefault(storeName: String)
                     var storeName = storeName
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     logUtil!!.put("initDefault Payment: " +this.defaultName, this, 
@@ -213,7 +213,7 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
             
 
 
-    var nodeList: NodeList = document!!.getElementsByTagName(PaymentGatewaysData.NAME)!!
+    var nodeList: NodeList = document.getElementsByTagName(PaymentGatewaysData.NAME)!!
             
 
 
@@ -228,7 +228,7 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
             
 
 
-    var defaultPaymentGatewayNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.DEFAULT, node!!.getChildNodes())!!
+    var defaultPaymentGatewayNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.DEFAULT, node.getChildNodes())!!
             
 
 
@@ -237,7 +237,7 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     logUtil!!.put("DefaultPaymentGatewayNodeValue: " +defaultPaymentGatewayNodeValue, this, 
@@ -271,7 +271,7 @@ open fun getDefault(storeName: String)
                     var storeName = storeName
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -338,7 +338,7 @@ open fun difference(a_PaymentTypeVector: Vector)
 
     
                         if(!a_PaymentTypeVector!!.contains(paymentType))
-                        diff!!.add(paymentType)
+                        diff.add(paymentType)
 }
 
 

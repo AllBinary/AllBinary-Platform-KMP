@@ -68,7 +68,7 @@ open fun onEmailSendFailure(emailEvent: EmailEvent)
 
     var email: BasicEmail = BasicEmail(emailEvent!!.getEmailInfo(), to)
 
-EmailQueueFactory.getInstance()!!.offer(email!!.getEmail() as EmailInterface)
+EmailQueueFactory.getInstance()!!.offer(email.getEmail() as EmailInterface)
 }
 
 
@@ -81,7 +81,7 @@ open fun onEmailSendRequest(emailEvent: EmailEvent)
                     var emailEvent = emailEvent
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put("Add Email To Que For Sending: " +emailEvent!!.toString(), this, 
@@ -96,7 +96,7 @@ open fun onEmailSendRequest(emailEvent: EmailEvent)
 
     var email: BasicEmail = BasicEmail(emailEvent!!.getEmailInfo(), to)
 
-EmailQueueFactory.getInstance()!!.offer(email!!.getEmail() as EmailInterface)
+EmailQueueFactory.getInstance()!!.offer(email.getEmail() as EmailInterface)
 }
 
 

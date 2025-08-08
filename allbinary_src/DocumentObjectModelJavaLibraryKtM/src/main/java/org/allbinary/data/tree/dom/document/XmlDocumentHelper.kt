@@ -98,8 +98,8 @@ open fun init(indent: Int, ignoreDeclaration: Boolean)
 
 transformerFactory!!.setAttribute(INDENT_NUMBER, indent)
 transformer= transformerFactory!!.newTransformer()
-transformer!!.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance()!!.UTF_8)
-transformer!!.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclaration) {
+transformer.setOutputProperty(OutputKeys.ENCODING, CharacterSetData.getInstance()!!.UTF_8)
+transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclaration) {
                             
                             booleanFactory!!.YES
                         
@@ -107,7 +107,7 @@ transformer!!.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclar
                             booleanFactory!!.NO
                             }
     )
-transformer!!.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
+transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -136,12 +136,12 @@ open fun format(xmlString: String)
 
     var out: Writer = StringWriter()
 
-transformer!!.transform(DOMSource(document), StreamResult(out))
+transformer.transform(DOMSource(document), StreamResult(out))
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return out!!.toString()
+                        return out.toString()
 }
 
 

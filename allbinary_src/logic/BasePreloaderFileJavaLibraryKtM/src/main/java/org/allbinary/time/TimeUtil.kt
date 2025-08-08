@@ -97,7 +97,7 @@ open fun setCalendar(calendar: Calendar, yearString: String, monthString: String
                             toInt()!!
             
 
-calendar!!.set(year, month, day, hour, 0)
+calendar.set(year, month, day, hour, 0)
 }
 
 
@@ -154,7 +154,7 @@ open fun setCalendar(calendar: Calendar, yearString: String, monthString: String
                             toInt()!!
             
 
-calendar!!.set(year, month, day, hour, minute, second)
+calendar.set(year, month, day, hour, minute, second)
 }
 
 
@@ -182,30 +182,30 @@ open fun setExpirationCalendar(calendar: Calendar, yearsString: String, monthsSt
 
                     var secondsString = secondsString
 
-    var year: Int = calendar!!.get(Calendar.YEAR) +Integer(yearsString).
+    var year: Int = calendar.get(Calendar.YEAR) +Integer(yearsString).
                             toInt()
 
 
-    var month: Int = calendar!!.get(Calendar.MONTH) +Integer(monthsString).
+    var month: Int = calendar.get(Calendar.MONTH) +Integer(monthsString).
                             toInt()
 
 
-    var day: Int = calendar!!.get(Calendar.DAY_OF_MONTH) +Integer(daysString).
+    var day: Int = calendar.get(Calendar.DAY_OF_MONTH) +Integer(daysString).
                             toInt()
 
 
-    var hour: Int = calendar!!.get(Calendar.HOUR) +Integer(hoursString).
+    var hour: Int = calendar.get(Calendar.HOUR) +Integer(hoursString).
                             toInt()
 
 
-    var minute: Int = calendar!!.get(Calendar.MINUTE) +Integer(minutesString).
+    var minute: Int = calendar.get(Calendar.MINUTE) +Integer(minutesString).
                             toInt()
 
 
-    var second: Int = calendar!!.get(Calendar.SECOND) +Integer(secondsString).
+    var second: Int = calendar.get(Calendar.SECOND) +Integer(secondsString).
                             toInt()
 
-calendar!!.set(year, month, day, hour, minute, second)
+calendar.set(year, month, day, hour, minute, second)
 }
 
 
@@ -230,12 +230,12 @@ open fun getTotalTime(yearString: String, monthString: String, dayString: String
 
                     var secondString = secondString
 
-    var time: Long = calendar!!.getTimeInMillis()!!
+    var time: Long = calendar.getTimeInMillis()!!
             
 
 this.setExpirationCalendar(calendar, yearString, monthString, dayString, hourString, minuteString, secondString)
 
-    var timeDelta: Long = calendar!!.getTimeInMillis()!!
+    var timeDelta: Long = calendar.getTimeInMillis()!!
             
 
 

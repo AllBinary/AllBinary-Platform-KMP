@@ -62,7 +62,7 @@ open fun build(context: Context, command: Command, message: String, integer: Int
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Builder(context).
-                            setSmallIcon(integer!!.toInt())!!.setTicker(message)!!.setWhen(System.currentTimeMillis())!!.setContentTitle(command!!.getLabel())!!.setContentText(message)!!.setContentIntent(pendingIntent)!!.build()
+                            setSmallIcon(integer.toInt())!!.setTicker(message)!!.setWhen(System.currentTimeMillis())!!.setContentTitle(command.getLabel())!!.setContentText(message)!!.setContentIntent(pendingIntent)!!.build()
 }
 
 

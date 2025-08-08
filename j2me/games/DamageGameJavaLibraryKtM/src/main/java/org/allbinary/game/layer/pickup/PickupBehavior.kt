@@ -134,6 +134,14 @@ override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
 
                                     }
                                 
+                             else 
+    
+                        if(pickedUpLayerType == pickedUpLayerTypeFactory!!.NONE)
+                        
+                                    {
+                                    
+                                    }
+                                
                         else {
                             this.doPickup(pickedUpLayerInterfaceFactoryInterface as PickupProcessorInterface)
 

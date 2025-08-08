@@ -155,7 +155,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, (image!!.getHeight() shr 2), (image!!.getHeight() shr 2), animationBehaviorFactory){
+                            : super(image, (image.getHeight() shr 2), (image.getHeight() shr 2), animationBehaviorFactory){
 
                     var image = image
 
@@ -169,7 +169,7 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
 
 public constructor        (image: Image, unused: Any)                        
 
-                            : super(image, (image!!.getHeight() shr 2), (image!!.getHeight() shr 2), AnimationBehaviorFactory.getInstance()){
+                            : super(image, (image.getHeight() shr 2), (image.getHeight() shr 2), AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -183,7 +183,7 @@ public constructor        (image: Image, unused: Any)
 
 public constructor        (image: Image, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image!!.getHeight(), image!!.getHeight(), animationBehaviorFactory){
+                            : super(image, image.getHeight(), image.getHeight(), animationBehaviorFactory){
 
                     var image = image
 

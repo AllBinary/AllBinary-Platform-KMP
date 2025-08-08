@@ -66,10 +66,10 @@ open fun addListener(layerManagerEventListener: LayerManagerEventListener)
                     var layerManagerEventListener = layerManagerEventListener
 
     
-                        if(!list!!.contains(layerManagerEventListener))
+                        if(!list.contains(layerManagerEventListener))
                         
                                     {
-                                    list!!.add(layerManagerEventListener)
+                                    list.add(layerManagerEventListener)
 
                                     }
                                 
@@ -77,7 +77,7 @@ open fun addListener(layerManagerEventListener: LayerManagerEventListener)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -86,7 +86,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -101,13 +101,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var layerManagerEventListener: LayerManagerEventListener = this.list!!.objectArray[index]!! as LayerManagerEventListener
+    var layerManagerEventListener: LayerManagerEventListener = this.list.objectArray[index]!! as LayerManagerEventListener
 
 layerManagerEventListener!!.onCreateLayerManagerEvent(eventObject as LayerManagerEvent)
 } catch(e: Exception)
@@ -135,13 +135,13 @@ open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var layerManagerEventListener: LayerManagerEventListener = this.list!!.objectArray[index]!! as LayerManagerEventListener
+    var layerManagerEventListener: LayerManagerEventListener = this.list.objectArray[index]!! as LayerManagerEventListener
 
 layerManagerEventListener!!.onDeleteLayerManagerEvent(eventObject as LayerManagerEvent)
 } catch(e: Exception)

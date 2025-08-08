@@ -61,7 +61,7 @@ stringBuffer!!.append(lineBreak)
 
 
 
-                        for (index in 0 until constructor!!.size)
+                        for (index in 0 until constructor.size)
 
 
         {stringBuffer!!.append(ConstructorUtil.view(constructor[index]!!, lineBreak))
@@ -97,16 +97,16 @@ open fun view(constructor: Constructor, lineBreak: String)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(constructor!!.getName())
+stringBuffer!!.append(constructor.getName())
 
-    var classes: Array<KClass<*>?> = constructor!!.getParameterTypes()!!
+    var classes: Array<KClass<*>?> = constructor.getParameterTypes()!!
             
 
 
 
 
 
-                        for (index in 0 until classes!!.size)
+                        for (index in 0 until classes.size)
 
 
         {stringBuffer!!.append(commonSeps!!.SPACE)

@@ -44,8 +44,7 @@ public constructor        (data: String)
 this.data= data
 }
 
-
-open fun compareTo(componentInterface: HardwareComponentInterface)
+override fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 

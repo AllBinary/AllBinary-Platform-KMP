@@ -118,7 +118,7 @@ open fun toHashtable()
 : Hashtable<Any, Any>{
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-hashtable!!.put(INPUT_PROBABILITY, this)
+hashtable.put(INPUT_PROBABILITY, this)
 
 
 

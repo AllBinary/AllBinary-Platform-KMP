@@ -80,14 +80,14 @@ public constructor        (userName: String, request: HttpServletRequest)
 this.id= QuoteRequestIdGenerator().
                             getNext()
 this.setUserName(userName)
-this.setProjectInfo(request!!.getParameter(quoteRequestData!!.PROJECT_INFO) as String)
-this.setUserComments(request!!.getParameter(quoteRequestData!!.CUSTOMER_COMMENTS) as String)
-this.setBudget(request!!.getParameter(quoteRequestData!!.BUDGET) as String)
-this.setTimeFrame(request!!.getParameter(quoteRequestData!!.TIMEFRAME) as String)
-this.setComments(request!!.getParameter(quoteRequestData!!.COMMENTS) as String)
+this.setProjectInfo(request.getParameter(quoteRequestData!!.PROJECT_INFO) as String)
+this.setUserComments(request.getParameter(quoteRequestData!!.CUSTOMER_COMMENTS) as String)
+this.setBudget(request.getParameter(quoteRequestData!!.BUDGET) as String)
+this.setTimeFrame(request.getParameter(quoteRequestData!!.TIMEFRAME) as String)
+this.setComments(request.getParameter(quoteRequestData!!.COMMENTS) as String)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put("Created with: " +this.toHashMap(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -114,7 +114,7 @@ this.setTimeFrame(hashMap!!.get(quoteRequestData!!.TIMEFRAME) as String)
 this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
                                     logUtil!!.put("Created with: " +this.toHashMap(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -168,7 +168,7 @@ open fun isValid()
     
                         if(this.budget == 
                                     null
-                                 || this.budget!!.length < 0 || this.budget!!.length > AbSqlData.MAXBLOB)
+                                 || this.budget.length < 0 || this.budget.length > AbSqlData.MAXBLOB)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -190,7 +190,7 @@ open fun isValid()
     
                         if(this.comments == 
                                     null
-                                 || this.comments!!.length < 0 || this.comments!!.length > AbSqlData.MAXBLOB)
+                                 || this.comments.length < 0 || this.comments.length > AbSqlData.MAXBLOB)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -205,7 +205,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -268,7 +268,7 @@ open fun validationInfo()
     
                         if(this.budget == 
                                     null
-                                 || this.budget!!.length < 0 || this.budget!!.length > AbSqlData.MAXBLOB)
+                                 || this.budget.length < 0 || this.budget.length > AbSqlData.MAXBLOB)
                         
                                     {
                                     stringBuffer!!.append("Please enter Budget with less than " +AbSqlData.MAXBLOB +" characters.<br>")
@@ -290,7 +290,7 @@ open fun validationInfo()
     
                         if(this.comments == 
                                     null
-                                 || this.comments!!.length < 0 || this.comments!!.length > AbSqlData.MAXBLOB)
+                                 || this.comments.length < 0 || this.comments.length > AbSqlData.MAXBLOB)
                         
                                     {
                                     stringBuffer!!.append("Please enter comments with less than " +AbSqlData.MAXBLOB +" characters.<br>")
@@ -305,7 +305,7 @@ open fun validationInfo()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -329,24 +329,24 @@ open fun toVector()
 : Vector{
     var values: Vector = Vector()
 
-values!!.add(id)
-values!!.add(userName)
-values!!.add(this.projectInfo)
-values!!.add(this.userComments)
-values!!.add(this.budget)
-values!!.add(this.timeFrame)
-values!!.add(this.comments)
+values.add(id)
+values.add(userName)
+values.add(this.projectInfo)
+values.add(this.userComments)
+values.add(this.budget)
+values.add(this.timeFrame)
+values.add(this.comments)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.add(time)
-values!!.add(time)
+values.add(time)
+values.add(time)
 
 
 
@@ -364,22 +364,22 @@ open fun toHashMap()
 
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(UserData.USERNAME, userName)
-values!!.put(quoteRequestData!!.PROJECT_INFO, this.projectInfo)
-values!!.put(quoteRequestData!!.CUSTOMER_COMMENTS, this.userComments)
-values!!.put(quoteRequestData!!.BUDGET, this.budget)
-values!!.put(quoteRequestData!!.TIMEFRAME, this.timeFrame)
-values!!.put(quoteRequestData!!.COMMENTS, this.comments)
+values.put(UserData.USERNAME, userName)
+values.put(quoteRequestData!!.PROJECT_INFO, this.projectInfo)
+values.put(quoteRequestData!!.CUSTOMER_COMMENTS, this.userComments)
+values.put(quoteRequestData!!.BUDGET, this.budget)
+values.put(quoteRequestData!!.TIMEFRAME, this.timeFrame)
+values.put(quoteRequestData!!.COMMENTS, this.comments)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 

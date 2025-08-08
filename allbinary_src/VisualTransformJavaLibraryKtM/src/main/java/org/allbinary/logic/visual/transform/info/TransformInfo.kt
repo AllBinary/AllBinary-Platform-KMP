@@ -158,7 +158,7 @@ open fun override(hashMap: HashMap<Any, Any>)
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -219,7 +219,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TransformInfo override view Object for: " +this.getName(), this, 
@@ -253,7 +253,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TransformInfo override ObjectConfig for: " +this.getName(), this, 
@@ -275,7 +275,7 @@ this.setObjectConfig(hashMap!!.get(transformInfoData!!.OBJECTCONFIG) as String)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TransformInfo override ObjectConfig File for: " +this.getName(), this, 
@@ -332,7 +332,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TransformInfo override Template for: " +this.getName(), this, 
@@ -379,7 +379,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TransformInfo override Data for: " +this.getName(), this, 
@@ -406,7 +406,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer= StringMaker()
@@ -440,7 +440,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     logUtil!!.put(this.log(), this, 
@@ -526,7 +526,7 @@ this.anyType= anyType
 }
 
 
-open fun setObjectFile(value: String)
+open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -555,7 +555,7 @@ this.templateFileName= value
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigFileName(value: String)
+open fun setObjectConfigFileName(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -566,7 +566,7 @@ this.objectConfigFileName= value
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigFile(value: String)
+open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -578,7 +578,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
 
                 @Throws(Exception::class)
             
-open fun setObjectConfig(value: String)
+open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -734,7 +734,7 @@ open fun getData()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Data File overriding existing data: " +this.getDataFilePath(), this, 
@@ -749,7 +749,7 @@ this.data= fileData
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put("Could Not Load Data from: " +this.getDataFile(), this, 
@@ -771,7 +771,7 @@ this.data= fileData
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put("Data: " +DomDocumentHelper.toString(DomDocumentHelper.create(data)), this, 
@@ -785,7 +785,7 @@ this.data= fileData
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     
@@ -802,7 +802,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(stringBuffer!!.toString(), this, 
@@ -819,7 +819,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put("Could Not Preview Data: " +this.data, this, 
@@ -856,7 +856,7 @@ open fun getDataDocument()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -917,13 +917,13 @@ hashMap!!.put(transformInfoData!!.OBJECTCONFIG, Encoder.encode(this.getObjectCon
 hashMap!!.put(transformInfoData!!.TEMPLATEFILENAME, this.templateFileName)
 hashMap!!.put(transformInfoData!!.TEMPLATE, this.template)
 hashMap!!.put(transformInfoData!!.DATAFILENAME, this.dataFileName)
-hashMap!!.put(transformInfoData!!.DATA, Encoder.encode(this.data!!.encodeToByteArray()))
+hashMap!!.put(transformInfoData!!.DATA, Encoder.encode(this.data.encodeToByteArray()))
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
@@ -938,30 +938,30 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: java.util.Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.name)
-vector!!.add(this.storeName)
-vector!!.add(this.objectFileName)
-vector!!.add(this.anyType)
-vector!!.add(this.getObjectConfigFile())
-vector!!.add(Encoder.encode(this.getObjectConfigInterface()!!.toString()!!.encodeToByteArray()))
-vector!!.add(this.templateFileName)
-vector!!.add(this.template)
-vector!!.add(this.dataFileName)
-vector!!.add(Encoder.encode(this.data!!.encodeToByteArray()))
+vector.add(this.name)
+vector.add(this.storeName)
+vector.add(this.objectFileName)
+vector.add(this.anyType)
+vector.add(this.getObjectConfigFile())
+vector.add(Encoder.encode(this.getObjectConfigInterface()!!.toString()!!.encodeToByteArray()))
+vector.add(this.templateFileName)
+vector.add(this.template)
+vector.add(this.dataFileName)
+vector.add(Encoder.encode(this.data.encodeToByteArray()))
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-vector!!.add(time)
-vector!!.add(time)
+vector.add(time)
+vector.add(time)
 
 
 
@@ -1006,7 +1006,7 @@ open fun getObjectConfigInterface()
 }
 
 
-open fun setObjectConfigInterface(objectConfigInterface: TransformInfoObjectConfigInterface)
+open fun setObjectConfigInterface(objectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 

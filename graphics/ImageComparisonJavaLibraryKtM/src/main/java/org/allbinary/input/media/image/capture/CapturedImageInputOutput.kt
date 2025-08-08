@@ -94,7 +94,7 @@ open fun save(bufferedImage: BufferedImage, frame: Long)
     var filePathStringBuffer: StringMaker = StringMaker()
 
 filePathStringBuffer!!.append(ImageOutputData.SAVE_PATH)
-filePathStringBuffer!!.append(LongUtil.fillIn(frame!!.toString()))
+filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
 filePathStringBuffer!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath: String = filePathStringBuffer!!.toString()!!

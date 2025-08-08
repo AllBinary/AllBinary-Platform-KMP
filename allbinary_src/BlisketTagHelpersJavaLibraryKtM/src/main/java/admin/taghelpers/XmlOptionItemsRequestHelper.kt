@@ -68,11 +68,11 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request!!.getParameter(BasicItemData.ID)
-this.xmlFileStatus= request!!.getParameter(XmlOptionItemData.XML_FILE_STATUS)
-this.optionXmlFile= request!!.getParameter(XmlOptionItemData.OPTION_XML_FILE)
-this.timeEntered= request!!.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= request!!.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+{this.id= request.getParameter(BasicItemData.ID)
+this.xmlFileStatus= request.getParameter(XmlOptionItemData.XML_FILE_STATUS)
+this.optionXmlFile= request.getParameter(XmlOptionItemData.OPTION_XML_FILE)
+this.timeEntered= request.getParameter(EntryData.getInstance()!!.TIMECREATED)
+this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
 
 
@@ -81,19 +81,19 @@ open fun getHashMap()
 : HashMap<Any, Any>{
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(BasicItemData.ID, this.id)
-values!!.put(XmlOptionItemData.XML_FILE_STATUS, this.xmlFileStatus)
-values!!.put(XmlOptionItemData.OPTION_XML_FILE, this.optionXmlFile)
+values.put(BasicItemData.ID, this.id)
+values.put(XmlOptionItemData.XML_FILE_STATUS, this.xmlFileStatus)
+values.put(XmlOptionItemData.OPTION_XML_FILE, this.optionXmlFile)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 
@@ -111,25 +111,25 @@ open fun insert()
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
 
     var values: Vector = Vector()
 
-values!!.add(this.id)
-values!!.add(this.xmlFileStatus)
-values!!.add(this.optionXmlFile)
-values!!.add(time)
-values!!.add(time)
+values.add(this.id)
+values.add(this.xmlFileStatus)
+values.add(this.optionXmlFile)
+values.add(time)
+values.add(time)
 XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.insert(values)
 
     var success: String = "Successfully inserted " +id +" into items table"
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -148,7 +148,7 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -176,7 +176,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -195,7 +195,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -227,7 +227,7 @@ open fun update()
 XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.update(values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(id +" " +success, this, 
@@ -246,7 +246,7 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

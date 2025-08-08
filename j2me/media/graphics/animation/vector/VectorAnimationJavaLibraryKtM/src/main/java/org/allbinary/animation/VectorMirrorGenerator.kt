@@ -91,7 +91,7 @@ open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
     var size2: Int= 0
 
 
-    var size: Int = points!!.size
+    var size: Int = points.size
                 
 
 
@@ -124,7 +124,7 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
 
 
 
-                        for (index in 0 until points!!.size)
+                        for (index in 0 until points.size)
 
 
         {pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))

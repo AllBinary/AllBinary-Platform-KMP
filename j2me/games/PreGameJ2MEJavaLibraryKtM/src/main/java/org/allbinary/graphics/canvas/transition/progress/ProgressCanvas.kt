@@ -166,8 +166,8 @@ open fun start()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 this.setBackground(true)
-this.gauge!!.setHeight(30)
-this.gauge!!.setLabel(commonStrings!!.PLEASE_WAIT)
+this.gauge.setHeight(30)
+this.gauge.setLabel(commonStrings!!.PLEASE_WAIT)
 this.setText(TEXT)
 this.setValue(0)
 this.inGameProcessor= Processor.getInstance()
@@ -191,8 +191,8 @@ logUtil!!.put(commonStrings!!.START, this, START_BACKGROUND)
             
 
 this.setBackground(background)
-this.gauge!!.setHeight(myFont!!.DEFAULT_CHAR_HEIGHT +2)
-this.gauge!!.setLabel(backgroundLabel)
+this.gauge.setHeight(myFont!!.DEFAULT_CHAR_HEIGHT +2)
+this.gauge.setLabel(backgroundLabel)
 this.setText(TEXT)
 this.setValue(0)
 this.inGameProcessor= Processor.getInstance()
@@ -217,7 +217,7 @@ open fun inGame()
 open fun end()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
-this.gauge!!.setValue(this.getMaxValue())
+this.gauge.setValue(this.getMaxValue())
 this.endActual()
 this.paintable= NullPaintable.getInstance()
 }
@@ -225,7 +225,7 @@ this.paintable= NullPaintable.getInstance()
 
 open fun endFromInitialLazyLoadingComplete()
         //nullable = true from not(false or (false and true)) = true
-{this.gauge!!.setValue(this.getMaxValue())
+{this.gauge.setValue(this.getMaxValue())
 this.inGameProcessor= IN_GAME_PROCESSOR
 }
 
@@ -252,7 +252,7 @@ open fun addEarlyPortion(value: Int, text: String, index: Int)
                     var index = index
 this.setText(StringMaker().
                             append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index)!!.toString())!!.toString())
-this.gauge!!.setValue(this.gauge!!.getValue() +this.getMaxValue() /value)
+this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
@@ -270,7 +270,7 @@ open fun addPortion(value: Int, text: String, index: Int)
 this.setText(StringMaker().
                             append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index)!!.toString())!!.toString())
 PreLogUtil.put(this.text, this, ADD_PORTION)
-this.gauge!!.setValue(this.gauge!!.getValue() +this.getMaxValue() /value)
+this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
@@ -292,7 +292,7 @@ open fun addPortion(value: Int, text: String)
                                     }
                                 
 this.setText(text)
-this.gauge!!.setValue(this.gauge!!.getValue() +this.getMaxValue() /value)
+this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 }
 
 
@@ -302,7 +302,7 @@ open fun setValue(value: Int)
 
                     var value = value
 this.value= value.toFloat()
-this.gauge!!.setValue(value.toFloat())
+this.gauge.setValue(value.toFloat())
 }
 
 override fun paint(graphics: Graphics)
@@ -310,7 +310,7 @@ override fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-this.paintable!!.paint(graphics)
+this.paintable.paint(graphics)
 }
 
 
@@ -323,9 +323,9 @@ open fun paint2(graphics: Graphics)
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
             
 
-graphics!!.setColor(backgroundBasicColor!!.toInt())
-graphics!!.fillRect(0, 0, displayInfoSingleton!!.getLastWidth(), displayInfoSingleton!!.getLastHeight())
-gauge!!.paint(graphics, 0, 0)
+graphics.setColor(backgroundBasicColor!!.toInt())
+graphics.fillRect(0, 0, displayInfoSingleton!!.getLastWidth(), displayInfoSingleton!!.getLastHeight())
+gauge.paint(graphics, 0, 0)
 hasPainted= true
 }
 

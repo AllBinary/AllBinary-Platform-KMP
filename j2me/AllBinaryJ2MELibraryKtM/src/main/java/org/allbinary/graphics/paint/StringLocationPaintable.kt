@@ -50,7 +50,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-graphics!!.drawString(this.value, x, y, 0)
+graphics.drawString(this.value, x, y, 0)
 }
 
 

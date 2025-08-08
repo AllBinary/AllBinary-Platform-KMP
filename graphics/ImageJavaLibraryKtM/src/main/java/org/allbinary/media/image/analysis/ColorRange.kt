@@ -179,7 +179,7 @@ open fun isInRange(color: Color)
                     var color = color
 
     
-                        if(color!!.getRed() >= this.getMinRed() && color!!.getRed() <= this.getMaxRed() && color!!.getGreen() >= this.getMinGreen() && color!!.getGreen() <= this.getMaxGreen() && color!!.getBlue() >= this.getMinBlue() && color!!.getBlue() <= this.getMaxBlue())
+                        if(color.getRed() >= this.getMinRed() && color.getRed() <= this.getMaxRed() && color.getGreen() >= this.getMinGreen() && color.getGreen() <= this.getMaxGreen() && color.getBlue() >= this.getMinBlue() && color.getBlue() <= this.getMaxBlue())
                         
                                     {
                                     

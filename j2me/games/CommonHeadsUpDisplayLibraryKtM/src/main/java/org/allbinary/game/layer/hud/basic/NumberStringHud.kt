@@ -189,8 +189,8 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
     var len2: Int = this.valueTotalDigits
 
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
-graphics!!.drawChars(charArray, 0, len, x, y, 0)
-graphics!!.drawChars(charArray2, 0, len2, x -this.offset, y, 0)
+graphics.drawChars(charArray, 0, len, x, y, 0)
+graphics.drawChars(charArray2, 0, len2, x -this.offset, y, 0)
 }
 
 override fun paintThreed(graphics: Graphics)

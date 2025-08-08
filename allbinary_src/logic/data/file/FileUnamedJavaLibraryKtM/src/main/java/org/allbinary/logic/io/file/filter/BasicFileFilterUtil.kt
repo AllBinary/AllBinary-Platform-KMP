@@ -47,7 +47,7 @@ open fun getInstance(extension: String)
 
     var vector: BasicArrayList = BasicArrayList()
 
-vector!!.add(extension)
+vector.add(extension)
 
     var includeFileExtensionsBooleanFileVisitor: IncludeFileExtensionsBooleanFileVisitor = IncludeFileExtensionsBooleanFileVisitor(vector)
 

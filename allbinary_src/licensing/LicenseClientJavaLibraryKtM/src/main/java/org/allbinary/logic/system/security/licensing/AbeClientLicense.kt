@@ -100,7 +100,7 @@ this.hashtable= Hashtable<Any, Any>()
             
 
 
-    var keyValue: Any = hashtable!!.get(abeClientInformationData!!.KEY)!!
+    var keyValue: Any = hashtable.get(abeClientInformationData!!.KEY)!!
             
 
 
@@ -115,20 +115,20 @@ this.hashtable= Hashtable<Any, Any>()
                         if(keyValue is String)
                         
                                     {
-                                    this.hashtable!!.put(abeClientInformationData!!.KEY, keyValue)
+                                    this.hashtable.put(abeClientInformationData!!.KEY, keyValue)
 
                                     }
                                 
 
                                     }
                                 
-this.id= hashtable!!.get(abeClientInformationData!!.LICENSEID) as String
+this.id= hashtable.get(abeClientInformationData!!.LICENSEID) as String
 
-    var vector: Vector = hashtable!!.get(abeClientInformationData!!.LICENSESERVERS) as Vector
+    var vector: Vector = hashtable.get(abeClientInformationData!!.LICENSESERVERS) as Vector
 
 this.servers= BasicArrayList()
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -138,16 +138,16 @@ this.servers= BasicArrayList()
                         for (index in 0 until size)
 
 
-        {this.servers!!.add(vector!!.get(index))
+        {this.servers.add(vector.get(index))
 }
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
             
 
-this.setSpecial(stringUtil!!.getInstance(hashtable!!.get(abeClientInformationData!!.SPECIAL) as String))
+this.setSpecial(stringUtil!!.getInstance(hashtable.get(abeClientInformationData!!.SPECIAL) as String))
 
-    var licenseTypeString: String = stringUtil!!.getInstance(hashtable!!.get(abeClientInformationData!!.LICENSE_TYPE) as String)!!
+    var licenseTypeString: String = stringUtil!!.getInstance(hashtable.get(abeClientInformationData!!.LICENSE_TYPE) as String)!!
             
 
 this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeString)
@@ -173,7 +173,7 @@ open fun getKey(keyName: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable!!.get(keyName as Object?) as String
+                        return hashtable.get(keyName as Object?) as String
 }
 
 
@@ -241,7 +241,7 @@ stringBuffer!!.append(this.isValid())
 stringBuffer!!.append(BREAK)
 stringBuffer!!.append(
                             "Keys: ")
-stringBuffer!!.append(this.hashtable!!.toString())
+stringBuffer!!.append(this.hashtable.toString())
 stringBuffer!!.append(BREAK)
 
     var serverVector: BasicArrayList = this.getServers()!!

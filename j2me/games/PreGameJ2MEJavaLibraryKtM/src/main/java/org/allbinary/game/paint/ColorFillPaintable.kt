@@ -52,8 +52,8 @@ override fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.setColor(this.colorP)
-graphics!!.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
+graphics.setColor(this.colorP)
+graphics.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
 }
 
 

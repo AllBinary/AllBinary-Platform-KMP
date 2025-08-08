@@ -58,7 +58,7 @@ public constructor        (motionRectangles: MotionRectangles)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -69,9 +69,9 @@ public constructor        (motionRectangles: MotionRectangles)
 
 
         {
-    var motionRectangle: MotionRectangle = vector!!.get(index) as MotionRectangle
+    var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
 
-vector!!.add(motionRectangle!!.clone())
+vector.add(motionRectangle!!.clone())
 }
 
 consolidateMotionRectangles()
@@ -84,13 +84,13 @@ open fun consolidateMotionRectangles()
     var vector: Vector = this.getVector()!!
             
 
-logUtil!!.put("Start - Size Before: " +vector!!.size, this, 
+logUtil!!.put("Start - Size Before: " +vector.size, this, 
                             "consolidateMotionRectangleConstraints")
 
     var removeVector: Vector = Vector()
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -101,17 +101,17 @@ logUtil!!.put("Start - Size Before: " +vector!!.size, this,
 
 
         {
-    var motionRectangle: MotionRectangle = vector!!.get(index) as MotionRectangle
+    var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
 
 
 
 
 
-                        for (i in index +1 until vector!!.size!!)
+                        for (i in index +1 until vector.size!!)
 
 
         {
-    var motionRectangle2: MotionRectangle = vector!!.get(i) as MotionRectangle
+    var motionRectangle2: MotionRectangle = vector.get(i) as MotionRectangle
 
 
     var rectangle: Rectangle = motionRectangle!!.getRectangle()!!
@@ -122,20 +122,20 @@ logUtil!!.put("Start - Size Before: " +vector!!.size, this,
             
 
 
-    var x2: Int = rectangle!!.x +rectangle!!.width
+    var x2: Int = rectangle.x +rectangle.width
 
 
-    var y2: Int = rectangle!!.y +rectangle!!.height
+    var y2: Int = rectangle.y +rectangle.height
 
 
-    var rightX: Int = rectangle2!!.x +rectangle2!!.width
+    var rightX: Int = rectangle2.x +rectangle2.width
 
 
-    var bottomY: Int = rectangle2!!.y +rectangle2!!.height
+    var bottomY: Int = rectangle2.y +rectangle2.height
 
 
     
-                        if(rectangle!!.x <= rectangle2!!.x && rectangle!!.y <= rectangle2!!.y && x2 >= rightX && y2 >= bottomY)
+                        if(rectangle.x <= rectangle2.x && rectangle.y <= rectangle2.y && x2 >= rightX && y2 >= bottomY)
                         
                                     {
                                     removeVector!!.add(motionRectangle2)
@@ -170,7 +170,7 @@ open fun remove(removeVector: Vector)
                         for (index in 0 until size)
 
 
-        {vector!!.remove(removeVector!!.get(index))
+        {vector.remove(removeVector!!.get(index))
 }
 
 }

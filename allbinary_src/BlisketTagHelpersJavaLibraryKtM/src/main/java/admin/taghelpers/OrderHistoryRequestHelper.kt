@@ -71,9 +71,9 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request!!.getParameter(OrderData.ID)
-this.groupId= request!!.getParameter(ShippingMethodData.GROUP)
-this.status= request!!.getParameter(OrderHistoryData.STATUS)
+{this.id= request.getParameter(OrderData.ID)
+this.groupId= request.getParameter(ShippingMethodData.GROUP)
+this.status= request.getParameter(OrderHistoryData.STATUS)
 }
 
 
@@ -109,7 +109,7 @@ open fun setOrderStatus()
 OrderHistoryEntityFactory.getInstance()!!.setStatus(id, this.status)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(
@@ -129,7 +129,7 @@ OrderHistoryEntityFactory.getInstance()!!.setStatus(id, this.status)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -172,7 +172,7 @@ OrderStatusEmail(this.abeClientInformation, orderHistory).
                             process()
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(
@@ -192,7 +192,7 @@ OrderStatusEmail(this.abeClientInformation, orderHistory).
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

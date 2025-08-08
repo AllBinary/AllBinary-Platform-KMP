@@ -82,7 +82,7 @@ open fun saveFiles(fileItem: FileItem)
                                 
 
     
-                        if(!this.directory!!.create(this.imageFileAbPath))
+                        if(!this.directory.create(this.imageFileAbPath))
                         
                                     {
                                     

@@ -170,7 +170,7 @@ open fun send(emailInterface: EmailInterface)
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put("Sending: " +emailInterface!!.log(), this, 
@@ -181,7 +181,7 @@ open fun send(emailInterface: EmailInterface)
 Transport.send(emailInterface!!.getMimeMessage())
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put("Email Send Debug: " +emailInterface!!.getDebugInfo(), this, 
@@ -197,7 +197,7 @@ Transport.send(emailInterface!!.getMimeMessage())
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put("Failed Email Send Debug: " +emailInterface!!.getDebugInfo(), this, 

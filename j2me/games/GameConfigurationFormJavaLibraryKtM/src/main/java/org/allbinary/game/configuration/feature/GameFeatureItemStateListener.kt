@@ -50,6 +50,23 @@ open public class GameFeatureItemStateListener
 
     private var toggleList: BasicArrayList = BasicArrayList()
 
+open fun add(gameFeature: GameFeature)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var gameFeature = gameFeature
+
+    
+                        if(!GameFeatureItemStateListener.toggleList!!.contains(gameFeature))
+                        
+                                    {
+                                    GameFeatureItemStateListener.toggleList!!.add(gameFeature)
+
+                                    }
+                                
+}
+
+
 
         }
             
@@ -67,31 +84,14 @@ this.gameOptionsForm= gameOptionsForm
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
             
 
-this.add(gameFeatureFactory!!.ARTIFICIAL_INTELLEGENCE_PROCESSOR)
-this.add(gameFeatureFactory!!.COLLIDABLE_INTERFACE_LAYER_PROCESSOR)
-this.add(gameFeatureFactory!!.DAMAGE_FLOATERS)
-this.add(gameFeatureFactory!!.DROPPED_ITEMS)
-this.add(gameFeatureFactory!!.GAME_INPUT_LAYER_PROCESSOR)
-this.add(gameFeatureFactory!!.HEALTH_BARS)
-this.add(gameFeatureFactory!!.SOUND)
-this.add(gameFeatureFactory!!.TICKABLE_LAYER_PROCESSOR)
-}
-
-
-open fun add(gameFeature: GameFeature)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameFeature = gameFeature
-
-    
-                        if(!GameFeatureItemStateListener.toggleList!!.contains(gameFeature))
-                        
-                                    {
-                                    GameFeatureItemStateListener.toggleList!!.add(gameFeature)
-
-                                    }
-                                
+GameFeatureItemStateListener.add(gameFeatureFactory!!.ARTIFICIAL_INTELLEGENCE_PROCESSOR)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.COLLIDABLE_INTERFACE_LAYER_PROCESSOR)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.DAMAGE_FLOATERS)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.DROPPED_ITEMS)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.GAME_INPUT_LAYER_PROCESSOR)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.HEALTH_BARS)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.SOUND)
+GameFeatureItemStateListener.add(gameFeatureFactory!!.TICKABLE_LAYER_PROCESSOR)
 }
 
 override fun itemStateChanged(item: Item)
@@ -102,7 +102,7 @@ override fun itemStateChanged(item: Item)
 
         try {
             
-    var itemLabel: String = item!!.getLabel()!!
+    var itemLabel: String = item.getLabel()!!
             
 
 logUtil!!.put(StringMaker().

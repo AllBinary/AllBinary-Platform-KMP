@@ -60,7 +60,7 @@ open fun init(size: Int)
                         if(this.size < size)
                         
                                     {
-                                    this.list!!.ensureCapacity(size)
+                                    this.list.ensureCapacity(size)
 
 
 
@@ -87,7 +87,7 @@ open fun get(index: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.objectArray[index]!!
+                        return this.list.objectArray[index]!!
 }
 
 
@@ -105,7 +105,7 @@ open fun add(anyType: Any)
 {
 
                     var anyType = anyType
-this.list!!.add(anyType)
+this.list.add(anyType)
 }
 
 
@@ -115,7 +115,7 @@ this.list!!.add(anyType)
 {
 
                     var cacheableInterface = cacheableInterface
-this.list!!.add(cacheableInterface)
+this.list.add(cacheableInterface)
 }
 
 

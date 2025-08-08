@@ -57,7 +57,7 @@ open fun process(display: Display)
 {
 
                     var display = display
-this.runnable!!.run()
+this.runnable.run()
 }
 
 

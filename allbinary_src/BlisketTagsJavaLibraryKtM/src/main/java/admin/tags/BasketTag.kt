@@ -89,7 +89,7 @@ open fun isBasketEmpty()
             
 
 
-    var emptyBoolean: Boolean = method!!.invoke(anyType, 
+    var emptyBoolean: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
@@ -106,7 +106,7 @@ open fun isBasketEmpty()
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -142,7 +142,7 @@ open fun addItemToBasket()
             
 
 
-    var emptyBoolean: Boolean = method!!.invoke(anyType, 
+    var emptyBoolean: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
@@ -162,7 +162,7 @@ open fun addItemToBasket()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -198,7 +198,7 @@ open fun removeItemFromBasket()
             
 
 
-    var emptyBoolean: Boolean = method!!.invoke(anyType, 
+    var emptyBoolean: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
@@ -218,7 +218,7 @@ open fun removeItemFromBasket()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -254,7 +254,7 @@ open fun adjustBasket()
             
 
 
-    var emptyBoolean: Boolean = method!!.invoke(anyType, 
+    var emptyBoolean: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
@@ -274,7 +274,7 @@ open fun adjustBasket()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -309,7 +309,7 @@ open fun doStartTag()
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
-                        if(command!!.compareTo(BasketData.INSERT) == 0)
+                        if(command.compareTo(BasketData.INSERT) == 0)
                         
                                     {
                                     
@@ -327,7 +327,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command!!.compareTo(BasketData.DELETE) == 0)
+                        if(command.compareTo(BasketData.DELETE) == 0)
                         
                                     {
                                     this.removeItemFromBasket()
@@ -336,7 +336,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command!!.compareTo(BasketData.ADJUST) == 0)
+                        if(command.compareTo(BasketData.ADJUST) == 0)
                         
                                     {
                                     this.adjustBasket()
@@ -345,7 +345,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command!!.compareTo(BasketData.ISEMPTY) == 0)
+                        if(command.compareTo(BasketData.ISEMPTY) == 0)
                         
                                     {
                                     

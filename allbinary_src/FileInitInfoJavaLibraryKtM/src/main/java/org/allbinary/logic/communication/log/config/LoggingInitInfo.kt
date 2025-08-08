@@ -111,7 +111,7 @@ open fun read()
             
 
 
-    var logConfigsNodeList: NodeList = document!!.getElementsByTagName(LogConfigsData.getInstance()!!.NAME)!!
+    var logConfigsNodeList: NodeList = document.getElementsByTagName(LogConfigsData.getInstance()!!.NAME)!!
             
 
 

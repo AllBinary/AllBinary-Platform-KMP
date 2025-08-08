@@ -61,7 +61,7 @@ open fun toXmlDoc()
                             toXmlNode(document)!!
             
 
-document!!.appendChild(node)
+document.appendChild(node)
 
 
 

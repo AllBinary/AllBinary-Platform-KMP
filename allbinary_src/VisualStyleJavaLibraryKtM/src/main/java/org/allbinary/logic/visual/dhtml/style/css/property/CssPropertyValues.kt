@@ -65,12 +65,12 @@ public constructor        (node: Node)
 
 this.propertyValueVector= Vector()
 
-    var cssPropertyNodeVector: Vector = DomSearchHelper.getAllNodes(CssPropertyValueData.getInstance()!!.NAME, node!!.getChildNodes())!!
+    var cssPropertyNodeVector: Vector = DomSearchHelper.getAllNodes(CssPropertyValueData.getInstance()!!.NAME, node.getChildNodes())!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STYLE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
                                     logUtil!!.put("Number Of Properties: " +cssPropertyNodeVector!!.size, this, 
@@ -102,7 +102,7 @@ this.propertyValueVector= Vector()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STYLE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
                                     logUtil!!.put("Property Value: " +propertyValue, this, 
@@ -196,7 +196,7 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     

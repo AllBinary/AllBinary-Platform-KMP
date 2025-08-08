@@ -107,7 +107,7 @@ open fun stringWidth(string: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DEFAULT_CHAR_WIDTH *string!!.length
+                        return DEFAULT_CHAR_WIDTH *string.length
 }
 
 

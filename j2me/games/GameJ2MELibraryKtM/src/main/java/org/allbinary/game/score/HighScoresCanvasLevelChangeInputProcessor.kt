@@ -74,7 +74,7 @@ override fun update()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -85,7 +85,7 @@ override fun update()
 
 
         {
-    var anyType: Any = list!!.objectArray[index]!!
+    var anyType: Any = list.objectArray[index]!!
 
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
@@ -112,7 +112,7 @@ override fun update()
 this.getHighScoresCanvas()!!.executeUpdate()
 }
 
-list!!.clear()
+list.clear()
 }
 
 override fun paint(graphics: Graphics)
@@ -129,9 +129,9 @@ override fun paint(graphics: Graphics)
             
 
 
-    var topScoresWidth: Int = (graphics!!.getFont()!!.stringWidth(INSTRUCTIONS) shr 1)
+    var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(INSTRUCTIONS) shr 1)
 
-graphics!!.drawString(INSTRUCTIONS, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *2, anchor)
+graphics.drawString(INSTRUCTIONS, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *2, anchor)
 }
 
 

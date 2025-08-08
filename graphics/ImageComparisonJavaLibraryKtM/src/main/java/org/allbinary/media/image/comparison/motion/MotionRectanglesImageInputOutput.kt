@@ -125,7 +125,7 @@ open fun save(motionRectangles: MotionRectangles, frame: Long)
     var filePathStringBuffer: StringMaker = StringMaker()
 
 filePathStringBuffer!!.append(ImageOutputData.SAVE_PATH)
-filePathStringBuffer!!.append(LongUtil.fillIn(frame!!.toString()))
+filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
 filePathStringBuffer!!.append(
                             "_")
 filePathStringBuffer!!.append(motionRectangles!!.getName())
@@ -233,7 +233,7 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
 
         {bufferedImageGraphicsArray[index]!!.setColor(Color.ORANGE)
-bufferedImageGraphicsArray[index]!!.drawRect(rectangle!!.x, rectangle!!.y, rectangle!!.width, rectangle!!.height)
+bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height)
 }
 
 }

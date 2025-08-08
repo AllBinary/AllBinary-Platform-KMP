@@ -72,7 +72,7 @@ open fun visit(file: AbFile)
                     var file = file
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
@@ -87,7 +87,7 @@ open fun visit(file: AbFile)
     
                         if(this.includesString == 
                                     null
-                                 || file!!.getAbsolutePath()!!.indexOf(this.includesString) >= 0)
+                                 || file.getAbsolutePath()!!.indexOf(this.includesString) >= 0)
                         
                                     {
                                     

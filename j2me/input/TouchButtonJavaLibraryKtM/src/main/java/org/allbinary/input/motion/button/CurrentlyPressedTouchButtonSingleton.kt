@@ -64,7 +64,7 @@ open fun size()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.size()
+                        return this.list.size()
 }
 
 
@@ -77,7 +77,7 @@ open fun remove(index: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.remove(index) as TouchButtonInput
+                        return this.list.remove(index) as TouchButtonInput
 }
 
 
@@ -90,7 +90,7 @@ open fun remove(touchButtonInput: TouchButtonInput)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.remove(touchButtonInput)
+                        return this.list.remove(touchButtonInput)
 }
 
 
@@ -103,7 +103,7 @@ open fun get(index: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.objectArray[index]!! as TouchButtonInput
+                        return this.list.objectArray[index]!! as TouchButtonInput
 }
 
 
@@ -116,7 +116,7 @@ open fun contains(touchButtonInput: TouchButtonInput)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.contains(touchButtonInput)
+                        return this.list.contains(touchButtonInput)
 }
 
 
@@ -125,7 +125,7 @@ open fun add(touchButtonInput: TouchButtonInput)
 {
 
                     var touchButtonInput = touchButtonInput
-this.list!!.add(touchButtonInput)
+this.list.add(touchButtonInput)
 }
 
 

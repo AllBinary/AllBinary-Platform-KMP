@@ -60,7 +60,7 @@ public constructor        (node: Node)
                     var node = node
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, this.commonStrings!!.CONSTRUCTOR)
@@ -69,7 +69,7 @@ public constructor        (node: Node)
                                 
 this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfigurationInterface
 
-    var childNodeList: NodeList = node!!.getChildNodes()!!
+    var childNodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -130,7 +130,7 @@ open fun toXmlNode(document: Document)
 
     var userEmailEventsConfigurationView: UserEmailEventsConfigurationView = UserEmailEventsConfigurationView(userEmailEventsConfigurationInterface)
 
-node!!.appendChild(userEmailEventsConfigurationView!!.toXmlNode(document))
+node.appendChild(userEmailEventsConfigurationView!!.toXmlNode(document))
 
 
 

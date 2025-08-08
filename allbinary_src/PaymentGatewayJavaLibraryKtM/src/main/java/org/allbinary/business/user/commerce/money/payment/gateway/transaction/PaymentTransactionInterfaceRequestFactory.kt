@@ -106,14 +106,14 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
     var httpServletRequest: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
 
 
-    var command: String = httpServletRequest!!.getParameter(org!!.allbinary!!.globals!!.GLOBALS2.ADMINCOMMAND)!!
+    var command: String = httpServletRequest!!.getParameter(org.allbinary.globals.GLOBALS2.ADMINCOMMAND)!!
             
 
 
     
                         if(command != 
                                     null
-                                 && command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
+                                 && command.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
                         
                                     {
                                     
@@ -141,7 +141,7 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
             
 
 
-    var orderId: String = order!!.getId()!!
+    var orderId: String = order.getId()!!
             
 
 
@@ -161,7 +161,7 @@ orderPaymentInfo!!.setTenderType(TenderTypeFactory.getInstance()!!.CREDITCARD.to
 orderReview!!.setPaymentInfo(orderPaymentInfo)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     logUtil!!.put(orderReview!!.getId(), this, 
@@ -184,7 +184,7 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -254,8 +254,8 @@ open fun generateFromTestData(transformInfoInterface: TransformInfoInterface)
 
     var payment: Payment = Payment()
 
-payment!!.setTransactionType(transactionType)
-payment!!.setTenderType(tenderType)
+payment.setTransactionType(transactionType)
+payment.setTenderType(tenderType)
 
     var orderReview: OrderHistory = OrderHistory(Basket())
 
@@ -318,14 +318,14 @@ orderReview!!.setId(orderId)
                             "name")!!
             
 
-payment!!.setName(name)
-payment!!.setNumber(account)
-payment!!.setExpiration(expirationDate)
-payment!!.setCheckNumber(checkNumber)
-payment!!.setDriversLicense(driversLicense)
-payment!!.setMagneticInkCheckReader(magneticInkCheckReader)
-payment!!.setAba(aba)
-payment!!.setAccountType(accountType)
+payment.setName(name)
+payment.setNumber(account)
+payment.setExpiration(expirationDate)
+payment.setCheckNumber(checkNumber)
+payment.setDriversLicense(driversLicense)
+payment.setMagneticInkCheckReader(magneticInkCheckReader)
+payment.setAba(aba)
+payment.setAccountType(accountType)
 
     var street: String = httpServletRequest!!.getParameter(
                             "street")!!
@@ -387,7 +387,7 @@ orderReview!!.setPaymentInfo(payment)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

@@ -211,7 +211,7 @@ open fun update(hashtable: Hashtable<Any, Any>)
                     var hashtable = hashtable
 this.getList()!!.clear()
 
-    var vector: Vector = hashtable!!.get(RemoteHighScoresData.getInstance()!!.HIGH_SCORES as Object) as Vector
+    var vector: Vector = hashtable.get(RemoteHighScoresData.getInstance()!!.HIGH_SCORES as Object) as Vector
 
 
     
@@ -224,11 +224,11 @@ this.getList()!!.clear()
 
 
 
-                        for (index in 0 until vector!!.size!!)
+                        for (index in 0 until vector.size!!)
 
 
         {
-    var highScoreVector: Vector = vector!!.elementAt(index) as Vector
+    var highScoreVector: Vector = vector.elementAt(index) as Vector
 
 
     var displayName: String = highScoreVector!!.elementAt(0) as String
@@ -256,15 +256,15 @@ this.getList()!!.add(highScore)
             
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.elements()!!
+    var enumeration: Enumeration<Any?> = hashtable.elements()!!
             
 
 
     var nextElement: Any
 
 
-        while(enumeration!!.hasMoreElements())
-        {nextElement= enumeration!!.nextElement()!!
+        while(enumeration.hasMoreElements())
+        {nextElement= enumeration.nextElement()!!
 logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
 }
 

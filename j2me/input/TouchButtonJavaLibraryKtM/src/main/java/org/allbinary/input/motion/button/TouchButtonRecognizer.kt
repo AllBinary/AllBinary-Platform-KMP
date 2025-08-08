@@ -260,15 +260,15 @@ this.processRelease(touchButtonInput, deviceId)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
-        {touchButton= list!!.objectArray[index]!! as TouchButton
+        {touchButton= list.objectArray[index]!! as TouchButton
 rectangle= touchButton!!.getRectangle()
-point= rectangle!!.getPoint()
+point= rectangle.getPoint()
 
     
-                        if(rectangleCollisionUtil!!.isInside(point!!.getX(), point!!.getY(), rectangle!!.getMaxX(), rectangle!!.getMaxY(), x, y))
+                        if(rectangleCollisionUtil!!.isInside(point.getX(), point.getY(), rectangle.getMaxX(), rectangle.getMaxY(), x, y))
                         
                                     {
                                     touchButtonInput= touchButton!!.getTouchButtonInput()
@@ -327,15 +327,15 @@ open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
-        {touchButton= list!!.objectArray[index]!! as TouchButton
+        {touchButton= list.objectArray[index]!! as TouchButton
 rectangle= touchButton!!.getRectangle()
-point= rectangle!!.getPoint()
+point= rectangle.getPoint()
 
     
-                        if(rectangleCollisionUtil!!.isInside(point!!.getX(), point!!.getY(), rectangle!!.getMaxX(), rectangle!!.getMaxY(), x, y))
+                        if(rectangleCollisionUtil!!.isInside(point.getX(), point.getY(), rectangle.getMaxX(), rectangle.getMaxY(), x, y))
                         
                                     {
                                     touchButtonInput= touchButton!!.getTouchButtonInput()

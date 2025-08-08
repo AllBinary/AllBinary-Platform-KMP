@@ -43,8 +43,8 @@ override fun onTerrainEvent(terrainEvent: TerrainEvent)
 {
 
                     var terrainEvent = terrainEvent
-this.list!!.clear()
-this.list!!.add(terrainEvent)
+this.list.clear()
+this.list.add(terrainEvent)
 }
 
 

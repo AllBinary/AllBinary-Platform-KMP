@@ -44,7 +44,7 @@ open fun getDepth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     
-                        if(this.image!!.isMutable())
+                        if(this.image.isMutable())
                         
                                     {
                                     
@@ -98,7 +98,7 @@ open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, w
                     var height = height
 
     
-                        if(this.image!!.isMutable())
+                        if(this.image.isMutable())
                         
                                     {
                                     
@@ -142,7 +142,7 @@ open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, w
 
 
                     var height = height
-this.image!!.setRGB2(pixels, offset, height, x, y, width, height)
+this.image.setRGB2(pixels, offset, height, x, y, width, height)
 }
 
 
@@ -152,7 +152,7 @@ open fun getWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.image!!.getWidth()
+                        return this.image.getWidth()
 }
 
 
@@ -162,7 +162,7 @@ open fun getHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.image!!.getHeight()
+                        return this.image.getHeight()
 }
 
 

@@ -74,7 +74,7 @@ this.bitmapConfig= bitmapConfig
     val ARGB_8888: Config = Config(
                             null)
 
-open fun createBitmap(width: Int, height: Int, config: Config)
+open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 

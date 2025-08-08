@@ -115,7 +115,7 @@ open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: 
     var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
 
-    var index: Int = this.list!!.indexOf(colorCompositeInterface)!!
+    var index: Int = this.list.indexOf(colorCompositeInterface)!!
             
 
 
@@ -123,7 +123,7 @@ open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: 
                         if(index >= 0)
                         
                                     {
-                                    this.list!!.remove(index)
+                                    this.list.remove(index)
 this.basicColorList!!.remove(index)
 this.positionList!!.remove(index)
 
@@ -146,7 +146,7 @@ open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: Geogra
     var layerIndex: Int =  -1
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -157,7 +157,7 @@ open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: Geogra
 
 
         {
-    var nextColorCompositeInterface: ColorCompositeInterface = list!!.get(index) as ColorCompositeInterface
+    var nextColorCompositeInterface: ColorCompositeInterface = list.get(index) as ColorCompositeInterface
 
 
     
@@ -186,7 +186,7 @@ break;
                         if(layerIndex ==  -1)
                         
                                     {
-                                    this.list!!.add(colorCompositeInterface)
+                                    this.list.add(colorCompositeInterface)
 
     var basicColor: BasicColor = colorCompositeInterface!!.getBasicColorP()!!
             
@@ -235,9 +235,9 @@ open fun paintDots(graphics: Graphics)
 
         {point= localPositionList!!.get(index) as GPoint
 basicColor= localBasicColorList!!.get(index) as BasicColor
-graphics!!.setColor(basicColor!!.toInt())
+graphics.setColor(basicColor!!.toInt())
 this.animationInterface!!.setBasicColorP(basicColor)
-this.animationInterface!!.paint(graphics, point!!.getX() +this.x, point!!.getY() +this.y)
+this.animationInterface!!.paint(graphics, point.getX() +this.x, point.getY() +this.y)
 }
 
 }

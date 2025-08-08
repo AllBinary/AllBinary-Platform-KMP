@@ -78,7 +78,7 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
     var fileLockVector: Vector = Vector()
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -89,7 +89,7 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
 
 
         {
-    var file: AbFile = vector!!.get(index) as AbFile
+    var file: AbFile = vector.get(index) as AbFile
 
 
     var fileLock: FileLock = getLock(file)!!
@@ -102,7 +102,7 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
                                 )
                         
                                     {
-                                    logUtil!!.put("File Lock Obtained: " +file!!.getAbsolutePath(), this, 
+                                    logUtil!!.put("File Lock Obtained: " +file.getAbsolutePath(), this, 
                             "getAll")
 fileLockVector!!.add(fileLock)
 
@@ -163,7 +163,7 @@ open fun getAllOrNone(vector: Vector)
 
 
     
-                        if(vector!!.size != fileLockVector!!.size)
+                        if(vector.size != fileLockVector!!.size)
                         
                                     {
                                     

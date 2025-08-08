@@ -33,7 +33,7 @@ import org.w3c.dom.Document
 
 open public class OverrideStoreTransformInfoObjectConfig : GenericStoreTransformInfoObjectConfig {
         
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface){
 
@@ -47,7 +47,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
                     
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, document){
 
@@ -65,7 +65,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface, name, type){
 

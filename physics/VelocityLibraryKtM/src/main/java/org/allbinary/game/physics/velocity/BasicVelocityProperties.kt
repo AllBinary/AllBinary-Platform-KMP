@@ -235,7 +235,7 @@ override fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
 
 
                     var otherAngle = otherAngle
-this.setVelocity(magnitude, angle!!.getValue().toInt(), otherAngle!!.getValue().toInt())
+this.setVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
 }
 
 override fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
@@ -249,7 +249,7 @@ override fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
 
 
                     var otherAngle = otherAngle
-this.addVelocity(magnitude, angle!!.getValue().toInt(), otherAngle!!.getValue().toInt())
+this.addVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
 }
 
 

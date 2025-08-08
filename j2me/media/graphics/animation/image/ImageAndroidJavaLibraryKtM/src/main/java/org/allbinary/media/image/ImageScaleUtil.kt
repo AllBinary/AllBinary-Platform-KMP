@@ -300,14 +300,14 @@ open fun getScaledImage(imageCache: ImageCache, originalImage: Image, scaleX: Fl
                             
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
     var matrix: Matrix = Matrix()
 
 this.scale(image, matrix, scaleX, scaleY)
-image!!.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
 
 
 
@@ -342,12 +342,12 @@ open fun scale(image: Image, matrix: Matrix, scaleX: Float, scaleY: Float)
 
 
                     var scaleY = scaleY
-matrix!!.setScale(scaleX, scaleY)
+matrix.setScale(scaleX, scaleY)
 
-    var canvas: Canvas = image!!.getCanvas()!!
+    var canvas: Canvas = image.getCanvas()!!
             
 
-canvas!!.concat(matrix)
+canvas.concat(matrix)
 }
 
 

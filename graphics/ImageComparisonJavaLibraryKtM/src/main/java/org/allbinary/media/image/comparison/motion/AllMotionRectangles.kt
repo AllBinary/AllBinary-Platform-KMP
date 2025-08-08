@@ -67,7 +67,7 @@ open fun createMotionRectangles(imageComparisonInfo: ImageComparisonResult)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -78,7 +78,7 @@ open fun createMotionRectangles(imageComparisonInfo: ImageComparisonResult)
 
 
         {
-    var pixelDelta: PixelDelta = vector!!.get(index) as PixelDelta
+    var pixelDelta: PixelDelta = vector.get(index) as PixelDelta
 
 addPixelDeltaToAMotionRectangle(pixelDelta)
 }
@@ -98,7 +98,7 @@ open fun addPixelDeltaToExistingMotionRectangle(pixelDelta: PixelDelta)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -109,7 +109,7 @@ open fun addPixelDeltaToExistingMotionRectangle(pixelDelta: PixelDelta)
 
 
         {
-    var motionRectangle: MotionRectangle = vector!!.get(index) as MotionRectangle
+    var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
 
 
     

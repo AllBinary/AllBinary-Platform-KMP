@@ -74,7 +74,7 @@ open fun getInstance(os: GenericOperatingSystem)
         try {
             
     
-                        if(os!!.getName()!!.compareTo(OperatingSystems.getInstance()!!.ANDROID) == 0)
+                        if(os.getName()!!.compareTo(OperatingSystems.getInstance()!!.ANDROID) == 0)
                         
                                     {
                                     
@@ -88,7 +88,7 @@ open fun getInstance(os: GenericOperatingSystem)
 
 
 
-                            throw Exception("No Hardware Imp for: " +os!!.getName())
+                            throw Exception("No Hardware Imp for: " +os.getName())
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

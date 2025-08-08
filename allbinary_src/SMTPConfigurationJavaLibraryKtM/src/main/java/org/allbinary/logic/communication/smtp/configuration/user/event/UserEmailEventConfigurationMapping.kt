@@ -81,8 +81,8 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.userEmailEventConfigurationInterface!!.getName())
-vector!!.add(this.userEmailEventConfigurationInterface!!.getEventListenerClassPath())
+vector.add(this.userEmailEventConfigurationInterface!!.getName())
+vector.add(this.userEmailEventConfigurationInterface!!.getEventListenerClassPath())
 
 
 

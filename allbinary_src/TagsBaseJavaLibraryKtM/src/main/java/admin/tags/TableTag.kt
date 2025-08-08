@@ -59,7 +59,7 @@ open public class TableTag : PropertiesTag {
     private var total: Integer
 public constructor        (){
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -89,7 +89,7 @@ open fun isEnabled()
                                     {
                                     
     
-                        if(BooleanUtil.getInstance()!!.getFromString(this.enabled) || this.enabled!!.compareTo(
+                        if(BooleanUtil.getInstance()!!.getFromString(this.enabled) || this.enabled.compareTo(
                             "on") == 0)
                         
                                     {
@@ -209,7 +209,7 @@ open fun drop()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -223,7 +223,7 @@ open fun drop()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.DROP, e)
@@ -261,7 +261,7 @@ open fun create()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -275,7 +275,7 @@ open fun create()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -314,7 +314,7 @@ open fun restore()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -328,7 +328,7 @@ open fun restore()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -367,7 +367,7 @@ open fun backup()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -381,7 +381,7 @@ open fun backup()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -416,7 +416,7 @@ open fun insert()
             
 
 
-    var result: String = method!!.invoke(requestObject, 
+    var result: String = method.invoke(requestObject, 
                             null) as String
 
 
@@ -430,7 +430,7 @@ open fun insert()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -464,7 +464,7 @@ open fun delete()
             
 
 
-    var result: String = method!!.invoke(requestObject, 
+    var result: String = method.invoke(requestObject, 
                             null) as String
 
 
@@ -478,7 +478,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -513,7 +513,7 @@ open fun update()
             
 
 
-    var result: String = method!!.invoke(requestObject, 
+    var result: String = method.invoke(requestObject, 
                             null) as String
 
 
@@ -527,7 +527,7 @@ open fun update()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -553,7 +553,7 @@ open fun doStartTag()
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     
@@ -567,7 +567,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(this.getTagHelperFactoryInterface()!!.::class.qualifiedName!!)
 stringBuffer!!.append(
                             " Request URI: ")
-stringBuffer!!.append(request!!.getRequestURI())
+stringBuffer!!.append(request.getRequestURI())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "doStartTag()")
 
@@ -582,7 +582,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put("TableTag RequestHelper: " +this.getTagRequestHelperFactoryInterface()!!.::class.qualifiedName!!, this, 
@@ -596,7 +596,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -610,7 +610,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                             
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put("TableTag this.getCommand(): " +this.getCommand(), this, 
@@ -668,7 +668,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.BACKUP) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.BACKUP) == 0)
                         
                                     {
                                     
@@ -677,7 +677,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")
@@ -694,7 +694,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.RESTORE) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.RESTORE) == 0)
                         
                                     {
                                     this.getPropertiesHashMap()!!.put(
@@ -707,7 +707,7 @@ this.getPropertiesHashMap()!!.put(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")
@@ -733,7 +733,7 @@ this.getPropertiesHashMap()!!.put(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")
@@ -759,7 +759,7 @@ this.getPropertiesHashMap()!!.put(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")
@@ -785,7 +785,7 @@ this.getPropertiesHashMap()!!.put(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")
@@ -806,7 +806,7 @@ this.getPropertiesHashMap()!!.put(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")
@@ -827,7 +827,7 @@ this.getPropertiesHashMap()!!.put(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGEXTRAOUTPUT))
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(output +"<br />")

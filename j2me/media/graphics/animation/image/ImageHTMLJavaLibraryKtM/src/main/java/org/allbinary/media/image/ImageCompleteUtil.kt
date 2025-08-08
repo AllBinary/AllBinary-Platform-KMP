@@ -193,7 +193,7 @@ PreLogUtil.put("Total: " +size, this,
                         for (index in 0 until size)
 
 
-        {this.waitFor(hashtable!!.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
+        {this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }
 
 }

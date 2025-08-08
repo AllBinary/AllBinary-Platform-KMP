@@ -43,7 +43,7 @@ open public class ImageArrayRotationAnimationFactory : BaseImageAnimationFactory
     private var angleIncrement: Int
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -60,7 +60,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
 
                     var image = image
 
@@ -83,7 +83,7 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animatio
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Int)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -103,7 +103,7 @@ public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
 
                     var image = image
 
@@ -316,7 +316,7 @@ open fun getInstance(instanceId: Int)
                         for (index in 0 until size)
 
 
-        {scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, image!!.getWidth(), image!!.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)
+        {scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, image.getWidth(), image.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)
 }
 
 

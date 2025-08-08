@@ -33,7 +33,7 @@
         <!--
         -->
 <!--        <module>../allbinary_src/cache/AllBinaryCacheLibraryKtM</module>-->
-<!--        <module>../allbinary_src/logic/BasePreloaderFileJavaLibraryKtM</module>-->
+        <module>../allbinary_src/logic/BasePreloaderFileJavaLibraryKtM</module>
         <module>../allbinary_src/logic/data/file/FileJavaLibraryKtM</module>
 <!--        <module>../allbinary_src/logic/data/file/FileJ2SEJavaLibraryKtM</module>-->
 <!--        <module>../allbinary_src/data/DataJavaLibraryKtM</module>-->

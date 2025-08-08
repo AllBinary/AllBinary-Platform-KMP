@@ -60,7 +60,7 @@ stringBuffer!!.append(lineBreak)
 
 
 
-                        for (index in 0 until interfaces!!.size)
+                        for (index in 0 until interfaces.size)
 
 
         {stringBuffer!!.append(
@@ -91,14 +91,14 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
                                     null
                                  && interfaces != 
                                     null
-                                 && interfaces!!.size > 0)
+                                 && interfaces.size > 0)
                         
                                     {
                                     
 
 
 
-                        for (index in 0 until interfaces!!.size)
+                        for (index in 0 until interfaces.size)
 
 
         {
@@ -143,12 +143,12 @@ open fun isImplemented(clazz: KClass<*>, anyType: Any)
 
 
 
-                        for (index in 0 until classes!!.size)
+                        for (index in 0 until classes.size)
 
 
         {
     
-                        if(clazz!!.
+                        if(clazz.
                                             qualifiedName!!.compareTo(classes[index]!!.getName()) == 0)
                         
 
@@ -181,7 +181,7 @@ open fun isImplemented(className: String, anyType: Any)
 
 
 
-                        for (index in 0 until classes!!.size)
+                        for (index in 0 until classes.size)
 
 
         {
@@ -228,10 +228,10 @@ stringBuffer!!.append(
 
 
 
-                        for (index in 0 until classes!!.size)
+                        for (index in 0 until classes.size)
 
 
-        {stringBuffer!!.append(clazz!!.qualifiedName!!)
+        {stringBuffer!!.append(clazz.qualifiedName!!)
 stringBuffer!!.append(
                             " should be = ")
 stringBuffer!!.append(classes[index]!!.getName())

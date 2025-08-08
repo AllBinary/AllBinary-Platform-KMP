@@ -65,7 +65,7 @@ open fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable!!.size
+                        return this.hashtable.size
 }
 
 
@@ -77,7 +77,7 @@ open fun add(pathId: Integer, list: BasicArrayList)
 
 
                     var list = list
-this.hashtable!!.put(pathId, list)
+this.hashtable.put(pathId, list)
 }
 
 
@@ -86,7 +86,7 @@ open fun remove(pathId: Integer)
 {
 
                     var pathId = pathId
-this.hashtable!!.remove(pathId)
+this.hashtable.remove(pathId)
 }
 
 
@@ -94,10 +94,10 @@ this.hashtable!!.remove(pathId)
             
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-{this.hashtable!!.clear()
+{this.hashtable.clear()
 
     
-                        if(this.hashtable!!.size > 0)
+                        if(this.hashtable.size > 0)
                         
                                     {
                                     
@@ -122,7 +122,7 @@ open fun getInstance(pathIdInteger: Integer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable!!.get(pathIdInteger as Object?) as BasicArrayList
+                        return this.hashtable.get(pathIdInteger as Object?) as BasicArrayList
 }
 
 

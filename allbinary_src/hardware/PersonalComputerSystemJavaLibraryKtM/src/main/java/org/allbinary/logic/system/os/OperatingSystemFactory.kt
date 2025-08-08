@@ -180,7 +180,7 @@ this.genericOperatingSystem= Solaris() as GenericOperatingSystem
                             "OperatingSystem Info: ")!!.append(StringUtil.getInstance()!!.toString(this.genericOperatingSystem))!!.toString(), this, commonStrings!!.GET_INSTANCE)!!
             
 
-System.out!!.println(log!!.toString())
+System.out.println(log.toString())
 logUtil!!.put(log)
 
                                     }

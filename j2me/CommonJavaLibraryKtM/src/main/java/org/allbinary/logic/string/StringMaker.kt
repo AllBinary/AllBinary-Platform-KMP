@@ -34,11 +34,11 @@ open fun append(string: String)
 
                     var string = string
 
-    var stringLength: Int = string!!.length!!
+    var stringLength: Int = string.length!!
             
 
 ensureCapacity(currentLength +stringLength)
-string!!.toCharArray(charArray,
+string.toCharArray(charArray,
                                     currentLength,
                                     0,
                                     stringLength)

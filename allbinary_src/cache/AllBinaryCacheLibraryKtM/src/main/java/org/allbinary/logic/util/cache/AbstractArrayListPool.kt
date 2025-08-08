@@ -83,7 +83,7 @@ open fun add(cacheableInterface: CacheableInterface)
 {
 
                     var cacheableInterface = cacheableInterface
-buffers!!.add(cacheableInterface)
+buffers.add(cacheableInterface)
 }
 
 
@@ -101,7 +101,7 @@ open fun add(cacheableInterfaces: Array<CacheableInterface?>)
                         for (index in 0 until cacheableInterfaces!!.size)
 
 
-        {buffers!!.add(cacheableInterfaces[index]!!)
+        {buffers.add(cacheableInterfaces[index]!!)
 }
 
 }

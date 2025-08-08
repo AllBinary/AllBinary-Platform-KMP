@@ -150,7 +150,7 @@ open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographic
 
 
                     var geographicMapInterface = geographicMapInterface
-hashtable!!.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManager)
+hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManager)
 super.update(allBinaryGameLayerManager, geographicMapInterface)
 }
 
@@ -169,7 +169,7 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
 
                     var index = index
 
-    var geographicMapCellPosition: GeographicMapCellPosition = this.list!!.get(index) as GeographicMapCellPosition
+    var geographicMapCellPosition: GeographicMapCellPosition = this.list.get(index) as GeographicMapCellPosition
 
 
     var randomGeographicMapCellPosition: GeographicMapCellPosition = this.getFirstNonRoadAdjacentCellPosition(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow())!!
@@ -203,21 +203,21 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
     var direction: Direction = geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition)!!
             
 
-hashtable!!.put(DirectionFactory.getInstance()!!.NAME, direction)
+hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
 
     var point: GPoint = randomGeographicMapCellPosition!!.getPoint()!!
             
 
 
-    var x: Int = point!!.getX()!!
+    var x: Int = point.getX()!!
             
 
 
-    var y: Int = point!!.getY()!!
+    var y: Int = point.getY()!!
             
 
 
-    var z: Int = point!!.getZ()!!
+    var z: Int = point.getZ()!!
             
 
 
@@ -248,10 +248,10 @@ hashtable!!.put(DirectionFactory.getInstance()!!.NAME, direction)
 
 
 
-                        for (index2 in list!!.size()!! downTo 0)
+                        for (index2 in list.size()!! downTo 0)
 
 
-        {geographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(list!!.get(index2) as GeographicMapCellPosition)
+        {geographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(list.get(index2) as GeographicMapCellPosition)
 
     
                         if(raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellType))

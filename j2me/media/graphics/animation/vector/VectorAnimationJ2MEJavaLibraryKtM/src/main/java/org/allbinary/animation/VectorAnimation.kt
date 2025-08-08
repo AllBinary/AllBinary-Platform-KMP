@@ -192,7 +192,7 @@ nextPointY= nextPoint[1]!!
                         if(nextPointX != 1000)
                         
                                     {
-                                    graphics!!.drawLine(point[0] +x, point[1] +y, nextPointX +x, nextPointY +y)
+                                    graphics.drawLine(point[0] +x, point[1] +y, nextPointX +x, nextPointY +y)
 
                                     }
                                 

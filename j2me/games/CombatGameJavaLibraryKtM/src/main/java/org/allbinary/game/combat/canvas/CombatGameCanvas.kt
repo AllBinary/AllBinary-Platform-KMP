@@ -114,7 +114,7 @@ ProgressCanvasFactory.getInstance()!!.addPortion(portion,
 
 
     
-                        if(features!!.isFeature(gameFeatureFactory!!.DROPPED_ITEMS) && features!!.isFeature(gameFeatureFactory!!.DROPPED_ITEMS_FROM_DEATH))
+                        if(features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS) && features.isFeature(gameFeatureFactory!!.DROPPED_ITEMS_FROM_DEATH))
                         
                                     {
                                     basicLayerProcessor= arrayOfNulls(2)

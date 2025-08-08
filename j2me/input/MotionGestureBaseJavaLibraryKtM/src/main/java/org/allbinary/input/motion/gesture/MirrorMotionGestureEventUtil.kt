@@ -96,8 +96,8 @@ open fun mirrorVerticle(motionGestureEvent: MotionGestureEvent, halfWidth: Int)
     var mirroredCurrentPoint: GPoint = pointFactory!!.getInstance(currentNewX, motionGestureEvent!!.getCurrentPoint()!!.getY())!!
             
 
-event!!.setPreviousPoint(mirroredPreviousPoint)
-event!!.setCurrentPoint(mirroredCurrentPoint)
+event.setPreviousPoint(mirroredPreviousPoint)
+event.setCurrentPoint(mirroredCurrentPoint)
 
 
 

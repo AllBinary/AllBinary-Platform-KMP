@@ -75,7 +75,7 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -90,7 +90,7 @@ logUtil!!.put("Generating Instance for type: " +type, this, commonStrings!!.GET_
     
                         if(type == 
                                     null
-                                 || type!!.compareTo(InputOutputTypeData.getInstance()!!.RESPONSE) == 0 || transformInfoInterface!!.isChild())
+                                 || type.compareTo(InputOutputTypeData.getInstance()!!.RESPONSE) == 0 || transformInfoInterface!!.isChild())
                         
                                     {
                                     
@@ -103,7 +103,7 @@ logUtil!!.put("Generating Instance for type: " +type, this, commonStrings!!.GET_
                                 
                              else 
     
-                        if(type!!.compareTo(InputOutputTypeData.getInstance()!!.FILE) == 0)
+                        if(type.compareTo(InputOutputTypeData.getInstance()!!.FILE) == 0)
                         
                                     {
                                     

@@ -121,7 +121,7 @@ open fun rotate(angle: Angle)
 {
 
                     var angle = angle
-this.rotate(angle!!.getValue().toInt())
+this.rotate(angle.getValue().toInt())
 }
 
 

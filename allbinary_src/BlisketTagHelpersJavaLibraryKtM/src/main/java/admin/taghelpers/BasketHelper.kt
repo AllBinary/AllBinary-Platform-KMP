@@ -87,7 +87,7 @@ open fun isBasketEmpty()
 
 
     
-                        if(basket!!.getNumberOfItems()!!.toInt() <= 0)
+                        if(basket.getNumberOfItems()!!.toInt() <= 0)
                         
                                     {
                                     
@@ -110,7 +110,7 @@ open fun isBasketEmpty()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

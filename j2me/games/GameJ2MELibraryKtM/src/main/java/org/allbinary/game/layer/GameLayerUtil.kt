@@ -49,7 +49,7 @@ open fun isOnScreen(layer: AllBinaryLayer)
             
 
 
-    var viewPosition: ViewPosition = layer!!.getViewPosition()!!
+    var viewPosition: ViewPosition = layer.getViewPosition()!!
             
 
 

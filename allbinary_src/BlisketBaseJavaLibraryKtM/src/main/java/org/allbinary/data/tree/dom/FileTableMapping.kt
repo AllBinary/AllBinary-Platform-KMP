@@ -58,7 +58,7 @@ open fun getKey()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getPath() as Object
+                        return this.file.getPath() as Object
 }
 
 
@@ -69,11 +69,11 @@ open fun toVector()
 : Vector{
     var filePropertyVector: Vector = Vector()
 
-filePropertyVector!!.add(file!!.getAbsolutePath())
-filePropertyVector!!.add(file!!.getCanonicalPath())
-filePropertyVector!!.add(file!!.getName())
-filePropertyVector!!.add(file!!.getParent())
-filePropertyVector!!.add(file!!.getPath())
+filePropertyVector!!.add(file.getAbsolutePath())
+filePropertyVector!!.add(file.getCanonicalPath())
+filePropertyVector!!.add(file.getName())
+filePropertyVector!!.add(file.getParent())
+filePropertyVector!!.add(file.getPath())
 
 
 
@@ -94,7 +94,7 @@ open fun toHashMap()
             
 
 
-    var rootFileName: String = pathUtil!!.getNameFromPath(pathUtil!!.getWithoutExtension(file!!.getPath()))!!
+    var rootFileName: String = pathUtil!!.getNameFromPath(pathUtil!!.getWithoutExtension(file.getPath()))!!
             
 
 
@@ -102,15 +102,15 @@ open fun toHashMap()
             
 
 filePropertyHashMap!!.put(fileData!!.ROOT_NAME, rootFileName)
-filePropertyHashMap!!.put(fileData!!.ISFILE, Boolean.valueOf(file!!.isFile())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ISDIRECTORY, Boolean.valueOf(file!!.isDirectory())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ISHIDDEN, Boolean.valueOf(file!!.isHidden())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ISABSOLUTE, Boolean.valueOf(file!!.isAbsolute())!!.toString())
-filePropertyHashMap!!.put(fileData!!.ABSOLUTE_PATH, file!!.getAbsolutePath())
-filePropertyHashMap!!.put(fileData!!.CANONICAL_PATH, file!!.getCanonicalPath())
-filePropertyHashMap!!.put(fileData!!.NAME, file!!.getName())
-filePropertyHashMap!!.put(fileData!!.PARENT, file!!.getParent())
-filePropertyHashMap!!.put(fileData!!.PATH, file!!.getPath())
+filePropertyHashMap!!.put(fileData!!.ISFILE, Boolean.valueOf(file.isFile())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISDIRECTORY, Boolean.valueOf(file.isDirectory())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISHIDDEN, Boolean.valueOf(file.isHidden())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ISABSOLUTE, Boolean.valueOf(file.isAbsolute())!!.toString())
+filePropertyHashMap!!.put(fileData!!.ABSOLUTE_PATH, file.getAbsolutePath())
+filePropertyHashMap!!.put(fileData!!.CANONICAL_PATH, file.getCanonicalPath())
+filePropertyHashMap!!.put(fileData!!.NAME, file.getName())
+filePropertyHashMap!!.put(fileData!!.PARENT, file.getParent())
+filePropertyHashMap!!.put(fileData!!.PATH, file.getPath())
 
 
 

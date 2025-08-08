@@ -68,7 +68,7 @@ open fun translate(gl: GL10, translateX: Float, translateY: Float)
 
 
                     var translateY = translateY
-gl!!.glTranslatef(translateX, translateY, 0)
+gl.glTranslatef(translateX, translateY, 0)
 }
 
 
@@ -80,7 +80,7 @@ open fun rotate(gl: GL10, angle: Float)
 
 
                     var angle = angle
-gl!!.glRotatef( -angle, 0, 0, 1)
+gl.glRotatef( -angle, 0, 0, 1)
 }
 
 
@@ -95,7 +95,7 @@ open fun scale(gl: GL10, scaleX: Float, scaleY: Float)
 
 
                     var scaleY = scaleY
-gl!!.glScalef(scaleX, scaleY, 1)
+gl.glScalef(scaleX, scaleY, 1)
 }
 
 

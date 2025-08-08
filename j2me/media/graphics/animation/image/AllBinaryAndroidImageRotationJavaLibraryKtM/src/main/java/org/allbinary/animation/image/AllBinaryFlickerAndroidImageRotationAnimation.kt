@@ -75,8 +75,8 @@ protected constructor        (originalImage: Image, image: Image, angleInfo: Ang
                             //For kotlin this is before the body of the constructor.
                     
 this.originalImage= originalImage
-this.halfWidth= (image!!.getWidth() shr 1)
-this.halfHeight= (image!!.getHeight() shr 1)
+this.halfWidth= (image.getWidth() shr 1)
+this.halfHeight= (image.getHeight() shr 1)
 this.increment= ().toShort()
 }
 
@@ -106,7 +106,7 @@ super.setBasicColorP(basicColor)
                         if(changed)
                         
                                     {
-                                    matrix!!.setRotate(0, this.halfWidth, this.halfHeight)
+                                    matrix.setRotate(0, this.halfWidth, this.halfHeight)
 this.updateImage()
 
                                     }
@@ -138,7 +138,7 @@ imageModifierUtil!!.setAlpha(this.originalImage, this.getImage(), 0, this.alphaP
                         if(changed)
                         
                                     {
-                                    matrix!!.setRotate(0, this.halfWidth, this.halfHeight)
+                                    matrix.setRotate(0, this.halfWidth, this.halfHeight)
 this.updateImage()
 
                                     }
@@ -149,7 +149,7 @@ this.updateImage()
 open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
 {super.nextRotation()
-matrix!!.setRotate(this.increment, this.halfWidth, this.halfHeight)
+matrix.setRotate(this.increment, this.halfWidth, this.halfHeight)
 this.updateImage()
 }
 
@@ -157,7 +157,7 @@ this.updateImage()
 open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
 {super.previousRotation()
-matrix!!.setRotate( -this.increment, this.halfWidth, this.halfHeight)
+matrix.setRotate( -this.increment, this.halfWidth, this.halfHeight)
 this.updateImage()
 }
 
@@ -183,7 +183,7 @@ this.circularIndexUtil!!.setIndex(index)
             
 
 this.angleInfo!!.adjustAngle(newFrame)
-matrix!!.setRotate((newFrame -currentFrame) *increment, this.halfWidth, this.halfHeight)
+matrix.setRotate((newFrame -currentFrame) *increment, this.halfWidth, this.halfHeight)
 this.updateImage()
 }
 

@@ -57,24 +57,24 @@ public constructor        (request: HttpServletRequest)
 
                     var request = request
 this.columnsAndSearchValues= HashMap<Any, Any>()
-this.setLength(request!!.getParameter(SearchData.LENGTH))
-this.setOrder(request!!.getParameter(SearchData.ORDER))
+this.setLength(request.getParameter(SearchData.LENGTH))
+this.setOrder(request.getParameter(SearchData.ORDER))
 
-    var page: String = request!!.getParameter(SearchData.PAGE)!!
+    var page: String = request.getParameter(SearchData.PAGE)!!
             
 
 this.setStartPage(page)
 this.setEndPage(page)
-this.setSortBy(request!!.getParameter(SearchData.SORTBY))
+this.setSortBy(request.getParameter(SearchData.SORTBY))
 
     var index: Int = 0
 
 
-    var columnName: String = request!!.getParameter(SearchData.COLUMNNAME +"[0]")!!
+    var columnName: String = request.getParameter(SearchData.COLUMNNAME +"[0]")!!
             
 
 
-    var columnValue: String = request!!.getParameter(SearchData.COLUMNVALUE +"[0]")!!
+    var columnValue: String = request.getParameter(SearchData.COLUMNVALUE +"[0]")!!
             
 
 
@@ -83,8 +83,8 @@ this.setSortBy(request!!.getParameter(SearchData.SORTBY))
                                 )
         {this.add(columnName, columnValue)
 index++
-columnName= request!!.getParameter(SearchData.COLUMNNAME +"[" +index +"]")
-columnValue= request!!.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
+columnName= request.getParameter(SearchData.COLUMNNAME +"[" +index +"]")
+columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
 }
 
 }
@@ -319,7 +319,7 @@ open fun getFieldsNode(document: Document)
             
 
 
-    var searchValueArray: Array<Any?> = set!!.toArray()!!
+    var searchValueArray: Array<Any?> = set.toArray()!!
             
 
 

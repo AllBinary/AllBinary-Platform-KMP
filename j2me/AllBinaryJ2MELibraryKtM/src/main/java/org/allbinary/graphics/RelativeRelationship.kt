@@ -58,9 +58,9 @@ public constructor        (point: GPoint, typesAllowedList: BasicArrayList)
 
 
                     var typesAllowedList = typesAllowedList
-this.x= point!!.getX()
-this.y= point!!.getY()
-this.z= point!!.getZ()
+this.x= point.getX()
+this.y= point.getY()
+this.z= point.getZ()
 this.typesAllowedList= typesAllowedList
 }
 

@@ -44,7 +44,7 @@ public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)
                     var tagHelperFactoryInterface = tagHelperFactoryInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -68,7 +68,7 @@ open fun setHelper()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put("Creating TagHelper with: \n" +this.getPropertiesHashMap()!!.toString(), this, 
@@ -97,7 +97,7 @@ open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(

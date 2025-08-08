@@ -71,10 +71,10 @@ override fun getList()
 
     var RIGHT: TouchButton = TouchButton(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_THREE, TouchButtonTurnRightResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.BOTTOM_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())
 
-list!!.add(UP)
-list!!.add(LEFT)
-list!!.add(RIGHT)
-list!!.add(DOWN)
+list.add(UP)
+list.add(LEFT)
+list.add(RIGHT)
+list.add(DOWN)
 
 
 

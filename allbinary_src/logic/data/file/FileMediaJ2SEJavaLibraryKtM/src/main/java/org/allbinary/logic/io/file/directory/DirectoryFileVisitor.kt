@@ -42,7 +42,7 @@ public constructor        ()
         {}
 
 
-open fun accept(arg0: File)
+open fun accept(arg0: java.io.File)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 
@@ -69,7 +69,7 @@ open fun visit(anyType: Any)
     var index: Int = 1
 
 
-    var aFile: File = file!!.getParentFile()!!
+    var aFile: File = file.getParentFile()!!
             
 
 
@@ -81,7 +81,7 @@ open fun visit(anyType: Any)
 
 
     
-                        if(file!!.isDirectory() && index < 5)
+                        if(file.isDirectory() && index < 5)
                         
                                     {
                                     

@@ -129,7 +129,7 @@ gameCanvas!!.toggleMenu()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -145,7 +145,7 @@ gameCanvas!!.toggleMenu()
                         for (index in 0 until size)
 
 
-        {gameKeyEvent= list!!.objectArray[index]!! as GameKeyEvent
+        {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
     
                         if(gameKeyEvent != 
@@ -275,12 +275,12 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
             
 
 
-    var rectPoint: GPoint = rectangle!!.getPoint()!!
+    var rectPoint: GPoint = rectangle.getPoint()!!
             
 
 
     
-                        if(rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), rectangle!!.getMaxX() +20, rectangle!!.getMaxY(), point!!.getX(), point!!.getY()))
+                        if(rectangleCollisionUtil!!.isInside(rectPoint!!.getX(), rectPoint!!.getY(), rectangle.getMaxX() +20, rectangle.getMaxY(), point.getX(), point.getY()))
                         
                                     {
                                     

@@ -74,7 +74,7 @@ open fun isFile(path: String)
                     var path = path
 
         try {
-            context!!.openFileInput(path)
+            context.openFileInput(path)
 
 
 

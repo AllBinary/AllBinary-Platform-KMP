@@ -91,7 +91,7 @@ open fun addOption(key: String)
 {
 
                     var key = key
-this.options!!.add(key)
+this.options.add(key)
 }
 
 
@@ -160,7 +160,7 @@ open fun getOptions()
     var result: String = stringUtil!!.EMPTY_STRING
 
 
-    var optionsArray: Array<Any?> = options!!.toArray()!!
+    var optionsArray: Array<Any?> = options.toArray()!!
             
 
 
@@ -181,7 +181,7 @@ open fun getOptions()
     
                         if(value != 
                                     null
-                                 && value!!.compareTo(stringUtil!!.EMPTY_STRING) != 0)
+                                 && value.compareTo(stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
                                     result += STARTOPTION
@@ -242,7 +242,7 @@ result += "\" "
     
                         if(value != 
                                     null
-                                 && value!!.compareTo(stringUtil!!.EMPTY_STRING) != 0)
+                                 && value.compareTo(stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
                                     result += key

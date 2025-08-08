@@ -140,7 +140,7 @@ override fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
 {
 
                     var ev = ev
-touchGestureCollection!!.add(ev!!.getMotionGesture())
+touchGestureCollection!!.add(ev.getMotionGesture())
 }
 
 override fun released(ev: MotionGestureEvent)
@@ -150,15 +150,15 @@ override fun released(ev: MotionGestureEvent)
                     var ev = ev
 
         try {
-            touchGestureCollection!!.add(ev!!.getMotionGesture())
-signed!!.onMotionGestureCompleted(touchGestureCollection)
+            touchGestureCollection!!.add(ev.getMotionGesture())
+signed.onMotionGestureCompleted(touchGestureCollection)
 touchGestureCollection!!.clear()
 } catch(e: Exception)
             {
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(commonStrings!!.EXCEPTION_LABEL)
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev!!.getMotionGesture()))
+stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "release", e)
 }
@@ -173,7 +173,7 @@ override fun onMotionGestureEvent(ev: MotionGestureEvent)
 
         try {
             
-    var motionGestureInput: MotionGestureInput = ev!!.getMotionGesture()!!
+    var motionGestureInput: MotionGestureInput = ev.getMotionGesture()!!
             
 
 
@@ -196,7 +196,7 @@ override fun onMotionGestureEvent(ev: MotionGestureEvent)
                                 
                         else {
                             motionGestureCollection!!.add(motionGestureInput)
-signed!!.onMotionGestureCompleted(motionGestureCollection)
+signed.onMotionGestureCompleted(motionGestureCollection)
 motionGestureCollection!!.clear()
 touchGestureCollection!!.clear()
 
@@ -207,7 +207,7 @@ touchGestureCollection!!.clear()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(commonStrings!!.EXCEPTION_LABEL)
-stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev!!.getMotionGesture()))
+stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "onMotionGestureEvent", e)
 }

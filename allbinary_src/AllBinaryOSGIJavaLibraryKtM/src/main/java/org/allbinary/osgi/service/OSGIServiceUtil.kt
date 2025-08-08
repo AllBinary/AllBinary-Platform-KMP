@@ -65,7 +65,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun getServicesObjectVector(bundleContext: BundleContext, serviceReferences: Array<ServiceReference?>)
+open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array<ServiceReference?>)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 
@@ -124,7 +124,7 @@ logUtil!!.put("Service References: " +size, this,
 
                                     }
                                 
-vector!!.add(osgiServiceInterface)
+vector.add(osgiServiceInterface)
 
                                     }
                                 

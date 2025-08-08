@@ -110,11 +110,11 @@ open fun isValid()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.user!!.isValid()
+                        return this.user.isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -146,7 +146,7 @@ open fun validationInfo()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -189,12 +189,12 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                             
 
     
-                        if(this.user!!.isValid() == Boolean.FALSE)
+                        if(this.user.isValid() == Boolean.FALSE)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -205,7 +205,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                                 
 stringBuffer!!.append(
                             "User data is not valid - Please call administrator.<br />")
-stringBuffer!!.append(this.user!!.validationInfo())
+stringBuffer!!.append(this.user.validationInfo())
 
                                     }
                                 
@@ -217,7 +217,7 @@ stringBuffer!!.append(this.user!!.validationInfo())
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

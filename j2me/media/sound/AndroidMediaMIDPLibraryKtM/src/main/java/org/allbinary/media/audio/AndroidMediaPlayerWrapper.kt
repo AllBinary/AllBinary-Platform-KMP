@@ -231,7 +231,7 @@ logUtil!!.put("LineEvent: " +event, this, commonStrings!!.UPDATE)
         {
     var listener: PlayerListener = this.listenersList!!.objectArray[index]!! as PlayerListener
 
-listener!!.playerUpdate(this, event, 
+listener.playerUpdate(this, event, 
                             null)
 }
 

@@ -46,7 +46,7 @@ open fun repaint(displayable: Displayable)
 
     var canvas: Canvas = displayable as Canvas
 
-canvas!!.repaint()
+canvas.repaint()
 }
 
 

@@ -63,11 +63,11 @@ open fun updateSelectionInfo()
 
 
 
-                        for (index in list!!.size()!! downTo 0)
+                        for (index in list.size()!! downTo 0)
 
 
         {
-    var geographicMapCellPosition: GeologicalGeographicMapCellPosition = list!!.get(index) as GeologicalGeographicMapCellPosition
+    var geographicMapCellPosition: GeologicalGeographicMapCellPosition = list.get(index) as GeologicalGeographicMapCellPosition
 
 total += geographicMapCellPosition!!.getGeologicalResource()!!.getTotal()
 }

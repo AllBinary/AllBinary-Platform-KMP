@@ -68,7 +68,7 @@ this.setObjectFile(
                                     this.getPropertiesHashMap()!!.put(UserRoleData.NAME, this.role)
 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
                                     

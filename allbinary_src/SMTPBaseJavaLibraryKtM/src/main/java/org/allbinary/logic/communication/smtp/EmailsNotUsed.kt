@@ -65,7 +65,7 @@ open fun toXmlNode(document: Document)
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -74,7 +74,7 @@ open fun toXmlNode(document: Document)
                                     }
                                 
 
-    var node: Node = document!!.createElement(EmailData.NAME)!!
+    var node: Node = document.createElement(EmailData.NAME)!!
             
 
 
@@ -92,7 +92,7 @@ open fun toXmlNode(document: Document)
     var email: Email = emailInfoVector!!.get(index) as Email
 
 
-    var emailNode: Node = email!!.toXmlNode(document)!!
+    var emailNode: Node = email.toXmlNode(document)!!
             
 
 
@@ -102,7 +102,7 @@ open fun toXmlNode(document: Document)
                                 )
                         
                                     {
-                                    node!!.appendChild(emailNode)
+                                    node.appendChild(emailNode)
 
                                     }
                                 
@@ -110,7 +110,7 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PAYMENT))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.END, this, 
@@ -126,7 +126,7 @@ open fun toXmlNode(document: Document)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

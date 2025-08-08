@@ -106,7 +106,7 @@ override fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
 
                     var y = y
 this.setFrame(frame)
-this.sprite!!.setPosition(x +this.dx, y +this.dy)
+this.sprite.setPosition(x +this.dx, y +this.dy)
 super.paint(graphics)
 }
 
@@ -121,7 +121,7 @@ override fun paint(g: Graphics, x: Int, y: Int)
 
 
                     var y = y
-this.sprite!!.setPosition(x +this.dx, y +this.dy)
+this.sprite.setPosition(x +this.dx, y +this.dy)
 super.paint(g)
 }
 
@@ -130,7 +130,7 @@ override fun paint(g: Graphics)
 {
 
                     var g = g
-this.sprite!!.setPosition(this.dx, this.dy)
+this.sprite.setPosition(this.dx, this.dy)
 super.paint(g)
 }
 

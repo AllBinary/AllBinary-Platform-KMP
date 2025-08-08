@@ -114,8 +114,8 @@ override fun getPoint(x: Int, y: Int)
 
                     var y = y
 point= CustomGPoint(0, 0)
-this.point!!.setX(x)
-this.point!!.setY(y)
+this.point.setX(x)
+this.point.setY(y)
 
 
 
@@ -143,7 +143,7 @@ override fun add(string: String, seconds: Integer, basicColor: BasicColor, perma
                     var permanent = permanent
 
     
-                        if(permanent!!)
+                        if(permanent)
                         
                                     {
                                     
@@ -235,13 +235,13 @@ open fun setAndRemove()
             
 
 this.setX((displayInfo!!.getLastWidth() -width) shr 1)
-this.point!!.setX(this.getX())
-this.point!!.setY(this.getY())
+this.point.setX(this.getX())
+this.point.setY(this.getY())
 
     var time: Integer = this.gameNotification!!.timeList!!.remove(0) as Integer
 
 
-    var iTime: Int = time!!.toInt() *1000
+    var iTime: Int = time.toInt() *1000
 
 
     
@@ -271,12 +271,12 @@ this.string= this.permanentGameNotification!!.stringList!!.objectArray[index]!! 
             
 
 this.setX((displayInfo!!.getLastWidth() -width) shr 1)
-this.point!!.setX(this.getX())
-this.point!!.setY(this.getY())
+this.point.setX(this.getX())
+this.point.setY(this.getY())
 
     var time: Integer = this.permanentGameNotification!!.timeList!!.objectArray[index]!! as Integer
 
-this.timeDelayHelper!!.delay= time!!.toInt() *1000
+this.timeDelayHelper!!.delay= time.toInt() *1000
 this.setBasicColorP(this.permanentGameNotification!!.colorList!!.objectArray[index]!! as BasicColor)
 this.circularIndexUtil!!.next()
 }

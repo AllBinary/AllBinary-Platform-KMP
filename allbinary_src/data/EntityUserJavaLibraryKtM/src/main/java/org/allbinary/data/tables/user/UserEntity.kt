@@ -88,7 +88,7 @@ open fun insert(values: Vector)
             super.insert(values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
@@ -98,7 +98,7 @@ open fun insert(values: Vector)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
@@ -289,7 +289,7 @@ open fun getUser(userName: String)
 
     var row: HashMap<Any, Any> = HashMap<Any, Any>()
 
-row!!.put(UserData.USERNAME, userName)
+row.put(UserData.USERNAME, userName)
 
     var userHashMap: HashMap<Any, Any> = super.getRow(row)!!
             
@@ -334,7 +334,7 @@ open fun deleteWhere(key: String, value: String)
             super.deleteWhere(key, value)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
@@ -345,7 +345,7 @@ open fun deleteWhere(key: String, value: String)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -383,14 +383,14 @@ open fun login(userName: String, password: String)
     
                         if(encryption != 
                                     null
-                                 && encryption!!.compareTo(this.stringUtil!!.EMPTY_STRING) != 0)
-                        isUserNameAndPasswordCorrect= result!!.compareTo(SuperCrypt(Integer(encryption).
+                                 && encryption.compareTo(this.stringUtil!!.EMPTY_STRING) != 0)
+                        isUserNameAndPasswordCorrect= result.compareTo(SuperCrypt(Integer(encryption).
                             toInt()).
                             encrypt(password))
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put("Command Success but login failed for user: " +userName +" because user did not exist", this, 
@@ -413,7 +413,7 @@ open fun login(userName: String, password: String)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     
@@ -441,7 +441,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     
@@ -472,7 +472,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

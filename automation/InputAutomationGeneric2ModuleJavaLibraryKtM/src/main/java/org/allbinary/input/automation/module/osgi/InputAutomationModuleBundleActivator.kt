@@ -80,7 +80,7 @@ open fun getInputAutomationConfigurationModuleChangeListener(context: BundleCont
 
                     var context = context
 
-    var serviceReference: ServiceReference = context!!.getServiceReference(
+    var serviceReference: ServiceReference = context.getServiceReference(
                                 //Otherwise - scopeIdentifier - ClassExpr
 getName())!!
             
@@ -93,7 +93,7 @@ getName())!!
                         
                                     {
                                     
-    var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = context!!.getService(serviceReference) as InputAutomationConfigurationModuleChangeListener
+    var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = context.getService(serviceReference) as InputAutomationConfigurationModuleChangeListener
 
 
     

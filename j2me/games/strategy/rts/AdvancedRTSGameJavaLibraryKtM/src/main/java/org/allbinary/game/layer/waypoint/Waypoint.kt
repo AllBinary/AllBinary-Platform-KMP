@@ -124,14 +124,14 @@ open fun releaseCachedPaths()
 
 
 
-                        for (columnIndex in paths!!.size downTo 0)
+                        for (columnIndex in paths.size downTo 0)
 
 
         {
 
 
 
-                        for (rowIndex in paths!!.size downTo 0)
+                        for (rowIndex in paths.size downTo 0)
 
 
         {
@@ -344,7 +344,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 
 
     
-                        if(list!!.size() < 1)
+                        if(list.size() < 1)
                         
                                     {
                                     
@@ -383,14 +383,14 @@ open fun onBuildingEvent(event: RTSLayerEvent)
 
 
 
-                        for (columnIndex in paths!!.size downTo 0)
+                        for (columnIndex in paths.size downTo 0)
 
 
         {
 
 
 
-                        for (rowIndex in paths!!.size downTo 0)
+                        for (rowIndex in paths.size downTo 0)
 
 
         {this.paths[columnIndex]!![rowIndex]= 

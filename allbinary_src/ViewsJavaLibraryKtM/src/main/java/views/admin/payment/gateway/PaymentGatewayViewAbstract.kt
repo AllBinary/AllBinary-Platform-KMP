@@ -60,7 +60,7 @@ open fun getFormData(request: HttpServletRequest)
             
 
 
-    var gatewayName: String = request!!.getParameter(PaymentGatewayData.NAME.toString())!!
+    var gatewayName: String = request.getParameter(PaymentGatewayData.NAME.toString())!!
             
 
 this.setPaymentGatewayPrimaryKey(PaymentGatewayPrimaryKey(storeName, gatewayName))

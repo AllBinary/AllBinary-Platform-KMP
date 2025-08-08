@@ -70,10 +70,10 @@ open fun add(sound: Sound)
         try {
             
     
-                        if(!list!!.contains(sound))
+                        if(!list.contains(sound))
                         
                                     {
-                                    list!!.add(sound)
+                                    list.add(sound)
 
                                     }
                                 
@@ -97,10 +97,10 @@ open fun process()
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
-                                    sound= list!!.remove(0) as Sound
+                                    sound= list.remove(0) as Sound
 
     
                         if(sound != 
@@ -108,13 +108,13 @@ open fun process()
                                 )
                         
                                     {
-                                    sound!!.getPlayerP()!!.start()
+                                    sound.getPlayerP()!!.start()
 
                                     }
                                 
 
-        while(list!!.size() > max)
-        {list!!.remove(0)
+        while(list.size() > max)
+        {list.remove(0)
 }
 
 played= true
@@ -137,7 +137,7 @@ played= true
                                 )
                         
                                     {
-                                    resource= sound!!.getResource()
+                                    resource= sound.getResource()
 
                                     }
                                 
@@ -155,7 +155,7 @@ PreLogUtil.put(StringMaker().
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 }
 
 override fun toString()
@@ -165,7 +165,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(TOTAL)!!.append(this.list!!.size())!!.toString()
+                            append(TOTAL)!!.append(this.list.size())!!.toString()
 }
 
 

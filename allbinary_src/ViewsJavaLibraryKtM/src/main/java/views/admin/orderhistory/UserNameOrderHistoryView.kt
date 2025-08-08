@@ -78,12 +78,12 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                             //For kotlin this is before the body of the constructor.
                     
 this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
-this.userName= request!!.getParameter(UserData.USERNAME)
-this.preprocessing= request!!.getParameter(OrderHistoryData.PREPROCESSINGNAME)
-this.shipped= request!!.getParameter(OrderHistoryData.SHIPPEDNAME)
-this.partiallyShipped= request!!.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
-this.processing= request!!.getParameter(OrderHistoryData.PROCESSINGNAME)
-this.cancelled= request!!.getParameter(OrderHistoryData.CANCELLEDNAME)
+this.userName= request.getParameter(UserData.USERNAME)
+this.preprocessing= request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
+this.shipped= request.getParameter(OrderHistoryData.SHIPPEDNAME)
+this.partiallyShipped= request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
+this.processing= request.getParameter(OrderHistoryData.PROCESSINGNAME)
+this.cancelled= request.getParameter(OrderHistoryData.CANCELLEDNAME)
 }
 
 
@@ -108,7 +108,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -133,7 +133,7 @@ open fun toXmlNode(document: Document)
 
         try {
             
-    var node: Node = document!!.createElement(OrderData.ORDERS)!!
+    var node: Node = document.createElement(OrderData.ORDERS)!!
             
 
 
@@ -162,15 +162,15 @@ open fun toXmlNode(document: Document)
             
 
 
-    var orderNode: Node = document!!.createElement(orderHistory!!.getPaymentMethod())!!
+    var orderNode: Node = document.createElement(orderHistory!!.getPaymentMethod())!!
             
 
-node!!.appendChild(orderHistory!!.toXmlNode(document))
+node.appendChild(orderHistory!!.toXmlNode(document))
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -179,12 +179,12 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
 
                                     }
                                 
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PREPROCESSINGNAME, OrderHistoryData.PREPROCESSING))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PROCESSINGNAME, OrderHistoryData.PROCESSING))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.CANCELLEDNAME, OrderHistoryData.CANCELLED))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PARTIALLYSHIPPEDNAME, OrderHistoryData.PARTIALLYSHIPPED))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PREPROCESSINGNAME, OrderHistoryData.PREPROCESSING))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PROCESSINGNAME, OrderHistoryData.PROCESSING))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.CANCELLEDNAME, OrderHistoryData.CANCELLED))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PARTIALLYSHIPPEDNAME, OrderHistoryData.PARTIALLYSHIPPED))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
+node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
 
 
 
@@ -193,7 +193,7 @@ node!!.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -215,7 +215,7 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(

@@ -84,19 +84,19 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request!!.getParameter(BasicItemData.ID)
-this.itemOne= request!!.getParameter(BasicGroupItemData.ITEM_ONE)
-this.itemTwo= request!!.getParameter(BasicGroupItemData.ITEM_TWO)
-this.itemThree= request!!.getParameter(BasicGroupItemData.ITEM_THREE)
-this.itemFour= request!!.getParameter(BasicGroupItemData.ITEM_FOUR)
-this.itemFive= request!!.getParameter(BasicGroupItemData.ITEM_FIVE)
-this.itemSix= request!!.getParameter(BasicGroupItemData.ITEM_SIX)
-this.itemSeven= request!!.getParameter(BasicGroupItemData.ITEM_SEVEN)
-this.itemEight= request!!.getParameter(BasicGroupItemData.ITEM_EIGHT)
-this.itemNine= request!!.getParameter(BasicGroupItemData.ITEM_NINE)
-this.itemTen= request!!.getParameter(BasicGroupItemData.ITEM_TEN)
-this.timeEntered= request!!.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= request!!.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+{this.id= request.getParameter(BasicItemData.ID)
+this.itemOne= request.getParameter(BasicGroupItemData.ITEM_ONE)
+this.itemTwo= request.getParameter(BasicGroupItemData.ITEM_TWO)
+this.itemThree= request.getParameter(BasicGroupItemData.ITEM_THREE)
+this.itemFour= request.getParameter(BasicGroupItemData.ITEM_FOUR)
+this.itemFive= request.getParameter(BasicGroupItemData.ITEM_FIVE)
+this.itemSix= request.getParameter(BasicGroupItemData.ITEM_SIX)
+this.itemSeven= request.getParameter(BasicGroupItemData.ITEM_SEVEN)
+this.itemEight= request.getParameter(BasicGroupItemData.ITEM_EIGHT)
+this.itemNine= request.getParameter(BasicGroupItemData.ITEM_NINE)
+this.itemTen= request.getParameter(BasicGroupItemData.ITEM_TEN)
+this.timeEntered= request.getParameter(EntryData.getInstance()!!.TIMECREATED)
+this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
 
 
@@ -105,27 +105,27 @@ open fun getHashMap()
 : HashMap<Any, Any>{
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(BasicItemData.ID, id)
-values!!.put(BasicGroupItemData.ITEM_ONE, this.itemOne)
-values!!.put(BasicGroupItemData.ITEM_TWO, this.itemTwo)
-values!!.put(BasicGroupItemData.ITEM_THREE, this.itemThree)
-values!!.put(BasicGroupItemData.ITEM_FOUR, this.itemFour)
-values!!.put(BasicGroupItemData.ITEM_FIVE, this.itemFive)
-values!!.put(BasicGroupItemData.ITEM_SIX, this.itemSix)
-values!!.put(BasicGroupItemData.ITEM_SEVEN, this.itemSeven)
-values!!.put(BasicGroupItemData.ITEM_EIGHT, this.itemEight)
-values!!.put(BasicGroupItemData.ITEM_NINE, this.itemNine)
-values!!.put(BasicGroupItemData.ITEM_TEN, this.itemTen)
+values.put(BasicItemData.ID, id)
+values.put(BasicGroupItemData.ITEM_ONE, this.itemOne)
+values.put(BasicGroupItemData.ITEM_TWO, this.itemTwo)
+values.put(BasicGroupItemData.ITEM_THREE, this.itemThree)
+values.put(BasicGroupItemData.ITEM_FOUR, this.itemFour)
+values.put(BasicGroupItemData.ITEM_FIVE, this.itemFive)
+values.put(BasicGroupItemData.ITEM_SIX, this.itemSix)
+values.put(BasicGroupItemData.ITEM_SEVEN, this.itemSeven)
+values.put(BasicGroupItemData.ITEM_EIGHT, this.itemEight)
+values.put(BasicGroupItemData.ITEM_NINE, this.itemNine)
+values.put(BasicGroupItemData.ITEM_TEN, this.itemTen)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 
@@ -143,33 +143,33 @@ open fun insert()
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
 
     var values: Vector = Vector()
 
-values!!.add(this.id)
-values!!.add(this.itemOne)
-values!!.add(this.itemTwo)
-values!!.add(this.itemThree)
-values!!.add(this.itemFour)
-values!!.add(this.itemFive)
-values!!.add(this.itemSix)
-values!!.add(this.itemSeven)
-values!!.add(this.itemEight)
-values!!.add(this.itemNine)
-values!!.add(this.itemTen)
-values!!.add(time)
-values!!.add(time)
+values.add(this.id)
+values.add(this.itemOne)
+values.add(this.itemTwo)
+values.add(this.itemThree)
+values.add(this.itemFour)
+values.add(this.itemFive)
+values.add(this.itemSix)
+values.add(this.itemSeven)
+values.add(this.itemEight)
+values.add(this.itemNine)
+values.add(this.itemTen)
+values.add(time)
+values.add(time)
 BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!!.insert(values)
 
     var success: String = "Successfully inserted " +id +" into items table"
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -188,7 +188,7 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -216,7 +216,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -235,7 +235,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -267,7 +267,7 @@ open fun update()
 BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!!.update(values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(id +" " +success, this, 
@@ -286,7 +286,7 @@ BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

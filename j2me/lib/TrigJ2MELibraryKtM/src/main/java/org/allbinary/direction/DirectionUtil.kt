@@ -86,7 +86,7 @@ open fun getAngle(direction: Direction)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directionArray2[direction!!.getValue()]!!
+                        return directionArray2[direction.getValue()]!!
 }
 
 
@@ -99,7 +99,7 @@ open fun getFrameAngle(direction: Direction)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directionArray[direction!!.getValue()]!!
+                        return directionArray[direction.getValue()]!!
 }
 
 

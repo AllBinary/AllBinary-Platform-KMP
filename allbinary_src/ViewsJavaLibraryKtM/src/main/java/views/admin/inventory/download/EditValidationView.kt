@@ -146,7 +146,7 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
 
 
     
-                        if(vector!!.size != 1)
+                        if(vector.size != 1)
                         
                                     {
                                     
@@ -157,7 +157,7 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
 
                                     }
                                 
-this.downloadableItem= vector!!.get(0) as DownloadableItem
+this.downloadableItem= vector.get(0) as DownloadableItem
 
                                     }
                                 

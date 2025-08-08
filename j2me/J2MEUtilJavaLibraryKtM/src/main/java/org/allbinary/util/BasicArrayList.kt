@@ -275,7 +275,7 @@ open fun removeAll2(list: BasicArrayList)
     var result: Boolean = true
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -287,7 +287,7 @@ open fun removeAll2(list: BasicArrayList)
 
         {
     
-                        if(this.remove(list!!.get(index)))
+                        if(this.remove(list.get(index)))
                         
                                     {
                                     
@@ -313,9 +313,9 @@ open fun addAll2(list: BasicArrayList)
 : Boolean{
 
                     var list = list
-ensureCapacity(currentIndex +list!!.currentIndex)
+ensureCapacity(currentIndex +list.currentIndex)
 
-    var listSize: Int = list!!.currentIndex
+    var listSize: Int = list.currentIndex
 
 
 
@@ -324,7 +324,7 @@ ensureCapacity(currentIndex +list!!.currentIndex)
                         for (index in 0 until listSize)
 
 
-        {objectArray[currentIndex++]= list!!.objectArray[index]!!
+        {objectArray[currentIndex++]= list.objectArray[index]!!
 }
 
 
@@ -341,7 +341,7 @@ open fun addAll(list: BasicArrayList)
 
                     var list = list
 
-    var newObjectArray: Array<Any?> = list!!.toArray()!!
+    var newObjectArray: Array<Any?> = list.toArray()!!
             
 
 
@@ -718,7 +718,7 @@ override fun clone()
 
 
         {anyType= this.objectArray[index]!!
-list!!.add(anyType)
+list.add(anyType)
 }
 
 

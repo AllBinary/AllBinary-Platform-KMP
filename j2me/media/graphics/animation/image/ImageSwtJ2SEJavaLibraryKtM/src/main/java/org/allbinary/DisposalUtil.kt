@@ -86,7 +86,7 @@ open fun dispose(image: Image)
                                 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -110,11 +110,11 @@ open fun dispose(resource: Resource)
                     var resource = resource
 
     
-                        if(!resource!!.isDisposed())
+                        if(!resource.isDisposed())
                         
                                     {
-                                    System.out!!.println(commonStrings!!.CLOSE)
-resource!!.dispose()
+                                    System.out.println(commonStrings!!.CLOSE)
+resource.dispose()
 
                                     }
                                 

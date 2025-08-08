@@ -45,7 +45,7 @@ open fun toValidationInfoDoc()
 }
 
 
-open fun toValidationInfoNode(document: Document)
+open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
 : Node{
 

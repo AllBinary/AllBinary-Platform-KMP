@@ -73,7 +73,7 @@ open fun main(args: Array<String?>)
     var vector: BasicArrayList = WeblisketFinder.getInstance()!!.findAll(stringUtil!!.EMPTY_STRING)!!
             
 
-System.out!!.println(vector!!.size())
+System.out.println(vector.size())
 }
 
 
@@ -138,7 +138,7 @@ open fun getInstallationPath(file: AbFile)
 
         try {
             
-    var filePath: String = file!!.getPath()!!
+    var filePath: String = file.getPath()!!
             
 
 
@@ -166,7 +166,7 @@ open fun getInstallationPath(file: AbFile)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

@@ -71,8 +71,8 @@ open fun paint(graphics: Graphics, y: Int)
 
 
                     var y = y
-graphics!!.drawString(this.LABEL, this.labelX, y, 0)
-graphics!!.drawChars(this.value, 0, this.len, this.valueX, y, 0)
+graphics.drawString(this.LABEL, this.labelX, y, 0)
+graphics.drawChars(this.value, 0, this.len, this.valueX, y, 0)
 }
 
 

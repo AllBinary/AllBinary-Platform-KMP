@@ -91,7 +91,7 @@ open fun getInputAutomationRobotChangeListener(context: BundleContext)
 
                     var context = context
 
-    var serviceReference: ServiceReference = context!!.getServiceReference(
+    var serviceReference: ServiceReference = context.getServiceReference(
                                 //Otherwise - scopeIdentifier - ClassExpr
 getName())!!
             
@@ -104,7 +104,7 @@ getName())!!
                         
                                     {
                                     
-    var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = context!!.getService(serviceReference) as InputAutomationRobotChangeListener
+    var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = context.getService(serviceReference) as InputAutomationRobotChangeListener
 
 
     

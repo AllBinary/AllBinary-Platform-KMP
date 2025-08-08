@@ -64,17 +64,17 @@ open fun main(args: Array<String?>)
 
     var list: BasicArrayList = BasicArrayList()
 
-list!!.add(commonPhoneStrings!!.ONE)
-list!!.add(commonPhoneStrings!!.TWO)
-list!!.add(commonPhoneStrings!!.THREE)
-list!!.add(commonPhoneStrings!!.FOUR)
-list!!.add(commonPhoneStrings!!.FIVE)
-list!!.add(commonPhoneStrings!!.SIX)
-list!!.add(commonPhoneStrings!!.SEVEN)
-list!!.add(commonPhoneStrings!!.EIGHT)
-list!!.add(commonPhoneStrings!!.NINE)
+list.add(commonPhoneStrings!!.ONE)
+list.add(commonPhoneStrings!!.TWO)
+list.add(commonPhoneStrings!!.THREE)
+list.add(commonPhoneStrings!!.FOUR)
+list.add(commonPhoneStrings!!.FIVE)
+list.add(commonPhoneStrings!!.SIX)
+list.add(commonPhoneStrings!!.SEVEN)
+list.add(commonPhoneStrings!!.EIGHT)
+list.add(commonPhoneStrings!!.NINE)
 BasicArrayListUtil.getInstance()!!.reverse(list)
-System.out!!.println(list)
+System.out.println(list)
 }
 
 
@@ -104,7 +104,7 @@ open fun getRandom(list: BasicArrayList)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list!!.objectArray[i_random]!!
+                        return list.objectArray[i_random]!!
 }
 
 
@@ -117,7 +117,7 @@ open fun getRandomIndex(list: BasicArrayList)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return myRandomFactory!!.getAbsoluteNextInt(list!!.size())
+                        return myRandomFactory!!.getAbsoluteNextInt(list.size())
 }
 
 
@@ -127,7 +127,7 @@ open fun reverse(list: BasicArrayList)
 
                     var list = list
 
-    var lastMinusOneIndex: Int = list!!.size() -2
+    var lastMinusOneIndex: Int = list.size() -2
 
 
     var temp: Any
@@ -146,9 +146,9 @@ open fun reverse(list: BasicArrayList)
 
 
         {secondSwapIndex= lastMinusOneIndex -index
-temp= list!!.remove(index)
-list!!.add(index, list!!.remove(secondSwapIndex))
-list!!.add(secondSwapIndex +1, temp)
+temp= list.remove(index)
+list.add(index, list.remove(secondSwapIndex))
+list.add(secondSwapIndex +1, temp)
 }
 
 }
@@ -160,7 +160,7 @@ open fun log(list: BasicArrayList)
 
                     var list = list
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -176,7 +176,7 @@ stringBuffer!!.append(size)
 
 
         {
-    var usedList: BasicArrayList = list!!.objectArray[index]!! as BasicArrayList
+    var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
 
 stringBuffer!!.append(
                             " s: ")

@@ -82,7 +82,7 @@ open fun get(inputStream: InputStream, outputStream: OutputStream, buffer: ByteA
 
 
         while(true)
-        {len= inputStream!!.read(buffer, 0, buffer!!.size)
+        {len= inputStream!!.read(buffer, 0, buffer.size)
 
     
                         if(len !=  -1)
@@ -162,7 +162,7 @@ open fun close(closeable: Closeable)
                                 )
                         
                                     {
-                                    closeable!!.close()
+                                    closeable.close()
 
                                     }
                                 

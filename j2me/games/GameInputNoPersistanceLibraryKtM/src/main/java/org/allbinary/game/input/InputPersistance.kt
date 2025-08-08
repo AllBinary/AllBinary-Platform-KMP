@@ -141,15 +141,15 @@ PreLogUtil.put(StringMaker().
 
 
         {gameActionInput= inputObjectArray[index]!! as Input
-list= hashtable!!.get(inputObjectArray[index]!!) as BasicArrayList
+list= hashtable.get(inputObjectArray[index]!!) as BasicArrayList
 
 
 
 
-                        for (index2 in 0 until list!!.size()!!)
+                        for (index2 in 0 until list.size()!!)
 
 
-        {input= list!!.get(index2) as Input
+        {input= list.get(index2) as Input
 }
 
 }

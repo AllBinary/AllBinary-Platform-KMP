@@ -151,9 +151,9 @@ layerInterface= pickedUpLayerInterfaceFactoryInterface!!.getIconLayer()
 y= 40 +(count *height)
 layerInterface!!.setPosition(widthEdge, y, layerInterface!!.getZP())
 layerInterface!!.paint(graphics)
-graphics!!.setColor(countedTotalStringColor)
+graphics.setColor(countedTotalStringColor)
 charArray= countedLayerInterfaceFactory!!.getTotalString()
-graphics!!.drawChars(charArray, 0, charArray!!.size, widthEdge -countedLayerInterfaceFactory!!.getXOffset(), y, 0)
+graphics.drawChars(charArray, 0, charArray!!.size, widthEdge -countedLayerInterfaceFactory!!.getXOffset(), y, 0)
 count++
 
                                     }
@@ -165,8 +165,8 @@ count++
                         if(count > 0)
                         
                                     {
-                                    graphics!!.setColor(countedPartsBorder)
-graphics!!.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +this.dropSize, (count *height) +3)
+                                    graphics.setColor(countedPartsBorder)
+graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +this.dropSize, (count *height) +3)
 
                                     }
                                 

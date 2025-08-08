@@ -45,7 +45,7 @@ override fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-this.form!!.paint(graphics)
+this.form.paint(graphics)
 }
 
 

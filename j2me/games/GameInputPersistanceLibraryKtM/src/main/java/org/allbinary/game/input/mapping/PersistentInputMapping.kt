@@ -186,7 +186,7 @@ inputPersistance!!.loadAll(abeClientInformation)
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -200,19 +200,19 @@ inputPersistance!!.loadAll(abeClientInformation)
 
 
         {
-    var hashtable: Hashtable<Any, Any> = list!!.objectArray[index]!! as Hashtable<Any, Any>
+    var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.keys()!!
+    var enumeration: Enumeration<Any?> = hashtable.keys()!!
             
 
 
-        while(enumeration!!.hasMoreElements())
+        while(enumeration.hasMoreElements())
         {
-    var mappedToInput: Input = enumeration!!.nextElement()!! as Input
+    var mappedToInput: Input = enumeration.nextElement()!! as Input
 
 
-    var gameActionInput: Input = hashtable!!.get(mappedToInput as Object?) as Input
+    var gameActionInput: Input = hashtable.get(mappedToInput as Object?) as Input
 
 totalMappedTo++
 this.getInputMapping()!!.add(gameActionInput, mappedToInput)

@@ -84,7 +84,7 @@ list= BasicArrayList()
                         for (index in 0 until partInterfaceArray!!.size)
 
 
-        {list!!.add(partInterfaceArray[index]!!)
+        {list.add(partInterfaceArray[index]!!)
 }
 
 
@@ -106,7 +106,7 @@ list= BasicArrayList()
 
 
         {layerInterfaceFactoryInterface= countedBasicArrayList!!.objectArray[index]!! as CountedPickedUpLayerInterfaceFactory
-list!!.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
+list.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
 }
 
 
@@ -114,7 +114,7 @@ list!!.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
 
 stringBuffer!!.append(
                             "Total Parts: ")
-stringBuffer!!.append(list!!.size())
+stringBuffer!!.append(list.size())
 stringBuffer!!.append(
                             " Counted: ")
 stringBuffer!!.append(countedBasicArrayList!!.size())
@@ -124,7 +124,7 @@ stringBuffer!!.append(countedBasicArrayList!!.size())
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-    var newPartInterfaceArray: Array<PartInterface?> = list!!.toArray(arrayOfNulls(list!!.size())) as Array<PartInterface?>
+    var newPartInterfaceArray: Array<PartInterface?> = list.toArray(arrayOfNulls(list.size())) as Array<PartInterface?>
 
 
 

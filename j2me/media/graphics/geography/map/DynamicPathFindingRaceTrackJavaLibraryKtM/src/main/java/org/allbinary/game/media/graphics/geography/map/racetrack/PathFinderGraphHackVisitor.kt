@@ -138,7 +138,7 @@ open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>,
     var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, nextRow)!!
             
 
-graph!!.removeEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
+graph.removeEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
                                     }
                                 
@@ -178,7 +178,7 @@ open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, e
 
     var geographicMapCellPosition: GeographicMapCellPosition = endPathFindingNode!!.geographicMapCellPosition
 
-graph!!.addVertex(geographicMapCellPosition)
+graph.addVertex(geographicMapCellPosition)
 
     var column: Int = geographicMapCellPosition!!.getColumn()!!
             
@@ -199,7 +199,7 @@ graph!!.addVertex(geographicMapCellPosition)
     var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, nextRow)!!
             
 
-graph!!.addEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
+graph.addEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
                                     }
                                 
@@ -250,11 +250,11 @@ logUtil!!.put("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColum
     var leftUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn() -1, overPassGeographicMapCellPosition!!.getRow())!!
             
 
-graph!!.removeEdge(underPassGeographicMapCellPosition, rightUnderPassGeographicMapCellPosition)
-graph!!.removeEdge(underPassGeographicMapCellPosition, leftUnderPassGeographicMapCellPosition)
-graph!!.addVertex(overPassGeographicMapCellPosition)
-graph!!.addEdge(overPassGeographicMapCellPosition, rightUnderPassGeographicMapCellPosition)
-graph!!.addEdge(overPassGeographicMapCellPosition, leftUnderPassGeographicMapCellPosition)
+graph.removeEdge(underPassGeographicMapCellPosition, rightUnderPassGeographicMapCellPosition)
+graph.removeEdge(underPassGeographicMapCellPosition, leftUnderPassGeographicMapCellPosition)
+graph.addVertex(overPassGeographicMapCellPosition)
+graph.addEdge(overPassGeographicMapCellPosition, rightUnderPassGeographicMapCellPosition)
+graph.addEdge(overPassGeographicMapCellPosition, leftUnderPassGeographicMapCellPosition)
 }
 
 }

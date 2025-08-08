@@ -83,10 +83,10 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.ftpConfigurationInterface!!.getServer())
-vector!!.add(this.ftpConfigurationInterface!!.getUserName())
-vector!!.add(this.ftpConfigurationInterface!!.getPassword())
-vector!!.add(this.ftpConfigurationInterface!!.getPath())
+vector.add(this.ftpConfigurationInterface!!.getServer())
+vector.add(this.ftpConfigurationInterface!!.getUserName())
+vector.add(this.ftpConfigurationInterface!!.getPassword())
+vector.add(this.ftpConfigurationInterface!!.getPath())
 
 
 

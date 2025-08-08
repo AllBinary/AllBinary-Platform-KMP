@@ -83,7 +83,7 @@ open fun toXmlNode(document: Document)
 
         try {
             
-    var shippingMethodsNode: Node = document!!.createElement(ShippingMethodsData.SHIPPINGMETHODSORDERSUMMARIES)!!
+    var shippingMethodsNode: Node = document.createElement(ShippingMethodsData.SHIPPINGMETHODSORDERSUMMARIES)!!
             
 
 
@@ -118,7 +118,7 @@ open fun toXmlNode(document: Document)
 
 
         {
-    var shippingMethodNode: Node = document!!.createElement(ShippingMethodsData.SHIPPINGMETHODORDERSUMMARY)!!
+    var shippingMethodNode: Node = document.createElement(ShippingMethodsData.SHIPPINGMETHODORDERSUMMARY)!!
             
 
 
@@ -129,11 +129,11 @@ open fun toXmlNode(document: Document)
 
 shippingMethodNode!!.appendChild(shippingView!!.toXmlNode(document))
 
-    var shippingCost: Money = shipping!!.getCost(order)!!
+    var shippingCost: Money = shipping.getCost(order)!!
             
 
 
-    var subTotal: Money = basket!!.getSubTotal()!!
+    var subTotal: Money = basket.getSubTotal()!!
             
 
 
@@ -146,16 +146,16 @@ shippingMethodNode!!.appendChild(shippingView!!.toXmlNode(document))
 
     var total: Money = Money()
 
-total!!.add(shippingCost!!.toString())
-total!!.add(subTotal!!.toString())
-tax!!.add(total!!.toString())
-tax!!.multiply(taxRate)
-total!!.add(tax!!.toString())
+total.add(shippingCost!!.toString())
+total.add(subTotal!!.toString())
+tax.add(total.toString())
+tax.multiply(taxRate)
+total.add(tax.toString())
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.SHIPPINGCOST, shippingCost!!.toString()))
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.TAXRATE, taxRate!!.toString()))
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.SUBTOTAL, subTotal!!.toString()))
-shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.TAX, tax!!.toString()))
-shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.TOTAL, total!!.toString()))
+shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.TAX, tax.toString()))
+shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodsData.TOTAL, total.toString()))
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, EntryData.getInstance()!!.DEFAULT, this.shippingMethods!!.getDefault()!!.getName()))
 shippingMethodsNode!!.appendChild(shippingMethodNode)
 }
@@ -168,7 +168,7 @@ shippingMethodsNode!!.appendChild(shippingMethodNode)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -207,7 +207,7 @@ open fun view()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

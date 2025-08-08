@@ -120,7 +120,7 @@ open fun update(items: Array<CustomItem?>)
 
 
 
-                        for (index in items!!.size downTo 0)
+                        for (index in items.size downTo 0)
 
 
         {this.update(index, items[index]!!)
@@ -148,11 +148,11 @@ open fun update(index: Int, item: CustomItem)
     var selectedButtonColor: BasicColor = basicColorFactory!!.TRANSPARENT_RED
 
 
-    var width: Int = item!!.getMinimumWidth()!!
+    var width: Int = item.getMinimumWidth()!!
             
 
 
-    var height: Int = item!!.getMinimumHeight()!!
+    var height: Int = item.getMinimumHeight()!!
             
 
 

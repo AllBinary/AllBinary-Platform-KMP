@@ -60,7 +60,7 @@ open public class BasicRandomAIFactory
 
                     var gameInput = gameInput
 
-    var visitor: Visitor = hashtable!!.get(BasicAI.AI_VISITOR as Object) as Visitor
+    var visitor: Visitor = hashtable.get(BasicAI.AI_VISITOR as Object) as Visitor
 
 
     
@@ -78,7 +78,7 @@ open public class BasicRandomAIFactory
                                     }
                                 
 
-    var inputProbability: InputProbability = hashtable!!.get(InputProbability.INPUT_PROBABILITY as Object) as InputProbability
+    var inputProbability: InputProbability = hashtable.get(InputProbability.INPUT_PROBABILITY as Object) as InputProbability
 
 
 

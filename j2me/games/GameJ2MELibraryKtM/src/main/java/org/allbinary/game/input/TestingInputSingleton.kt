@@ -215,7 +215,7 @@ open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicA
     var gameKeyEvent: GameKeyEvent
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -225,7 +225,7 @@ open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicA
                         for (index in 0 until size)
 
 
-        {gameKeyEvent= (list!!.objectArray[index]!! as GameKeyEvent)
+        {gameKeyEvent= (list.objectArray[index]!! as GameKeyEvent)
 key= gameKeyEvent!!.getKey()
 inputProcessorArray[key]!!.process(allbinaryLayerManager, GameKeyEvent.NONE)
 }
@@ -248,7 +248,7 @@ override fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-this.paintable!!.paint(graphics)
+this.paintable.paint(graphics)
 }
 
 override fun implmentsGameInputInterface()

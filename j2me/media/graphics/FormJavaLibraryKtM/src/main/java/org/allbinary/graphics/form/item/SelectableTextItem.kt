@@ -87,11 +87,11 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
                                 )
                         
                                     {
-                                    graphics!!.setColor(stringComponent!!.getForegroundBasicColor()!!.toInt())
+                                    graphics.setColor(stringComponent!!.getForegroundBasicColor()!!.toInt())
 
                                     }
                                 
-graphics!!.drawString(this.getLabel(), x +2, y, 0)
+graphics.drawString(this.getLabel(), x +2, y, 0)
 }
 
 

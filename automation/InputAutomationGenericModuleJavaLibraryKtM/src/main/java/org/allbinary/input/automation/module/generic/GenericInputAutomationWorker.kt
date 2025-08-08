@@ -86,7 +86,7 @@ this.setGenericProfile(genericProfile)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -97,7 +97,7 @@ this.setGenericProfile(genericProfile)
 
 
         {
-    var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector!!.get(index) as GenericProfileDataWorkerType
+    var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
 logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.commonStrings!!.CONSTRUCTOR)
 
@@ -158,9 +158,9 @@ setFrame(keyArray[keyArray!!.size -1]!! as Long)
     var set: Set = hashMap!!.keySet()!!
             
 
-logUtil!!.put("Processing " +set!!.size() +"Actions", this, this.PROCESS_DATA_WORKER_RESULTS)
+logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORKER_RESULTS)
 
-    var actionNameArray: Array<Any?> = set!!.toArray()!!
+    var actionNameArray: Array<Any?> = set.toArray()!!
             
 
 

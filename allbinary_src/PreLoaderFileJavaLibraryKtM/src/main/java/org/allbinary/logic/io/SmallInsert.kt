@@ -79,7 +79,7 @@ idOutData!!.writeBytes(text +this.string)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -108,7 +108,7 @@ open fun after(text: String, after: String)
 
         try {
             
-    var index: Int = this.string!!.indexOf(after)!!
+    var index: Int = this.string.indexOf(after)!!
             
 
 
@@ -116,7 +116,7 @@ open fun after(text: String, after: String)
                         if(index < 0)
                         
                                     {
-                                    System.out!!.println("No such start: " +after +" in: " +this.string)
+                                    System.out.println("No such start: " +after +" in: " +this.string)
 
 
 
@@ -125,13 +125,13 @@ open fun after(text: String, after: String)
 
                                     }
                                 
-index= index +after!!.length
+index= index +after.length
 
-    var start: String = this.string!!.substring(0, index)!!
+    var start: String = this.string.substring(0, index)!!
             
 
 
-    var end: String = this.string!!.substring(index +1, this.string!!.length)!!
+    var end: String = this.string.substring(index +1, this.string.length)!!
             
 
 
@@ -151,7 +151,7 @@ idFile!!.close()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -191,7 +191,7 @@ idOutData!!.writeBytes(this.string +text)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

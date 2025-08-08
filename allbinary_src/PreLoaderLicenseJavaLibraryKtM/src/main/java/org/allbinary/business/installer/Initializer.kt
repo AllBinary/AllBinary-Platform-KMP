@@ -143,11 +143,11 @@ public constructor        (map: Map)
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var keys: Set = map!!.keySet()!!
+    var keys: Set = map.keySet()!!
             
 
 
-    var keyArray: Array<Any?> = keys!!.toArray()!!
+    var keyArray: Array<Any?> = keys.toArray()!!
             
 
 
@@ -165,7 +165,7 @@ public constructor        (map: Map)
     var key: String = keyArray[index]!! as String
 
 
-    var values: Array<String?> = map!!.get(key) as Array<String?>
+    var values: Array<String?> = map.get(key) as Array<String?>
 
 hashMap!!.put(key.concatToString(), .concatToString())
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -262,7 +262,7 @@ open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
                                     

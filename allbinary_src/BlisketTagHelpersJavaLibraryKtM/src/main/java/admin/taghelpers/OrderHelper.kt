@@ -99,7 +99,7 @@ open fun setPaymentGateway()
             
 
 
-    var requestPaymentGateway: String = request!!.getParameter(PaymentGatewayData.NAME.toString()) as String
+    var requestPaymentGateway: String = request.getParameter(PaymentGatewayData.NAME.toString()) as String
 
 
     
@@ -142,7 +142,7 @@ paymentGatewayBoolean= Boolean.TRUE
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     
@@ -167,7 +167,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     
@@ -223,14 +223,14 @@ open fun process()
     var order: OrderInterface = this.weblisketSession!!.getOrder()!!
             
 
-order!!.setStoreName(this.storeFrontInterface!!.getName())
+order.setStoreName(this.storeFrontInterface!!.getName())
 
     var result: String = OrderProcessorUtil.getInstance()!!.process(this.weblisketSession!!.getUserName(), order as Order)!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put("Successfully Processed Order: " +result, this, 
@@ -263,7 +263,7 @@ stringBuffer!!.append(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)

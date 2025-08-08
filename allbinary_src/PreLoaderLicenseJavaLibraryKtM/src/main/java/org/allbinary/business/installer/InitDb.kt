@@ -94,7 +94,7 @@ open fun getHostName()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -127,14 +127,14 @@ open fun addUsers()
             
 
 
-    var result: Boolean = method!!.invoke(anyType, 
+    var result: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!
+                        return result
 } catch(e: Exception)
             {
 
@@ -160,14 +160,14 @@ open fun addDatabases()
             
 
 
-    var result: Boolean = method!!.invoke(anyType, 
+    var result: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!
+                        return result
 } catch(e: Exception)
             {
 
@@ -193,14 +193,14 @@ open fun addTables()
             
 
 
-    var result: Boolean = method!!.invoke(anyType, 
+    var result: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!
+                        return result
 } catch(e: Exception)
             {
 
@@ -226,14 +226,14 @@ open fun useTemporaryMainPath()
             
 
 
-    var result: Boolean = method!!.invoke(anyType, 
+    var result: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!
+                        return result
 } catch(e: Exception)
             {
 
@@ -259,14 +259,14 @@ open fun useNormalMainPath()
             
 
 
-    var result: Boolean = method!!.invoke(anyType, 
+    var result: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!
+                        return result
 } catch(e: Exception)
             {
 

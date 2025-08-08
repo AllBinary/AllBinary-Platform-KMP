@@ -63,7 +63,7 @@ open fun getInstance(cssElementStyleNodeList: Vector)
 
     var cssValidationInterface: ValidationInterface = CssElementValidationFactory.getInstance(cssElementStyleNode) as ValidationInterface
 
-styles!!.add(cssValidationInterface)
+styles.add(cssValidationInterface)
 }
 
 

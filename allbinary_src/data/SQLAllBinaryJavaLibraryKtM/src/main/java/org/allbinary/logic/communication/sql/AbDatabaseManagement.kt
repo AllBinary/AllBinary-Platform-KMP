@@ -105,7 +105,7 @@ open fun getHostName()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return addr!!.getHostName()
+                        return addr.getHostName()
 } catch(e: Exception)
             {logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
 

@@ -71,7 +71,7 @@ open fun toTransformInfoPropertiesHashMap()
     var transformInfoPropertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var transformInfosNode: Node = this.document!!.getElementsByTagName(TransformInfosData.getInstance()!!.NAME)!!.item(0)!!
+    var transformInfosNode: Node = this.document.getElementsByTagName(TransformInfosData.getInstance()!!.NAME)!!.item(0)!!
             
 
 
@@ -84,7 +84,7 @@ open fun toTransformInfoPropertiesHashMap()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Size: " +transformInfoNodeVector!!.size, this, 
@@ -117,7 +117,7 @@ transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transf
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     

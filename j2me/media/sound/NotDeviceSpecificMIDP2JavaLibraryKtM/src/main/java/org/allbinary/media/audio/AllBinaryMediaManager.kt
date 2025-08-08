@@ -129,7 +129,7 @@ open fun createPlayer(resource: String)
                                     {
                                     
     
-                        if(resource!!.compareTo(Manager.TONE_DEVICE_LOCATOR) == 0)
+                        if(resource.compareTo(Manager.TONE_DEVICE_LOCATOR) == 0)
                         
                                     {
                                     

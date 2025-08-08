@@ -181,28 +181,28 @@ open fun toVector()
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString()!!
             
 
 
     var values: Vector = Vector()
 
-values!!.add(getId())
-values!!.add(this.basicItemId)
-values!!.add(this.enabled)
-values!!.add(this.getSpecialName())
-values!!.add(this.getVersion())
-values!!.add(this.getChanges())
-values!!.add(this.getSystem())
-values!!.add(this.getPlatform())
-values!!.add(this.getLicenseFile())
-values!!.add(this.getFile())
-values!!.add(this.getSize()!!.toString())
-values!!.add(this.getValidTime()!!.toString())
-values!!.add(this.getRetries())
-values!!.add(time)
-values!!.add(time)
+values.add(getId())
+values.add(this.basicItemId)
+values.add(this.enabled)
+values.add(this.getSpecialName())
+values.add(this.getVersion())
+values.add(this.getChanges())
+values.add(this.getSystem())
+values.add(this.getPlatform())
+values.add(this.getLicenseFile())
+values.add(this.getFile())
+values.add(this.getSize()!!.toString())
+values.add(this.getValidTime()!!.toString())
+values.add(this.getRetries())
+values.add(time)
+values.add(time)
 
 
 
@@ -216,29 +216,29 @@ open fun toHashMap()
 : HashMap<Any, Any>{
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(DownloadItemData.ID, this.getId())
-values!!.put(BasicItemData.ID, this.basicItemId)
-values!!.put(EntryData.getInstance()!!.ENABLE, this.enabled)
-values!!.put(DownloadItemData.SYSTEM, this.getSystem())
-values!!.put(DownloadItemData.PLATFORM, this.getPlatform())
-values!!.put(DownloadItemData.SPECIAL_NAME, this.getSpecialName())
-values!!.put(DownloadItemData.VERSION, this.getVersion())
-values!!.put(DownloadItemData.CHANGES, this.getChanges())
-values!!.put(DownloadItemData.LICENSE_FILE, this.getLicenseFile())
-values!!.put(DownloadItemData.FILE, this.getFile())
-values!!.put(DownloadItemData.SIZE, this.getSize()!!.toString())
-values!!.put(DownloadItemData.VALID_TIME, this.getValidTime()!!.toString())
-values!!.put(DownloadItemData.RETRIES, this.getRetries())
+values.put(DownloadItemData.ID, this.getId())
+values.put(BasicItemData.ID, this.basicItemId)
+values.put(EntryData.getInstance()!!.ENABLE, this.enabled)
+values.put(DownloadItemData.SYSTEM, this.getSystem())
+values.put(DownloadItemData.PLATFORM, this.getPlatform())
+values.put(DownloadItemData.SPECIAL_NAME, this.getSpecialName())
+values.put(DownloadItemData.VERSION, this.getVersion())
+values.put(DownloadItemData.CHANGES, this.getChanges())
+values.put(DownloadItemData.LICENSE_FILE, this.getLicenseFile())
+values.put(DownloadItemData.FILE, this.getFile())
+values.put(DownloadItemData.SIZE, this.getSize()!!.toString())
+values.put(DownloadItemData.VALID_TIME, this.getValidTime()!!.toString())
+values.put(DownloadItemData.RETRIES, this.getRetries())
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 

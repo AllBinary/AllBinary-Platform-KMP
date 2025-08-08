@@ -57,6 +57,14 @@ import org.allbinary.util.BasicArrayList
 open public class ImageCache : ImageCacheBase {
         
 
+        companion object {
+
+
+    val NULL_IMAGE_CACHE: ImageCache = ImageCache()
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
@@ -95,6 +103,14 @@ open public class ImageCache : ImageCacheBase {
 
 open public inner class NotHTMLProcessor : Processor {
         
+/*Static stuff is not allowed for Kotlin inner classes
+        companion object {
+
+
+
+        }
+            */
+
 
             //Auto Generated
             public constructor() : super()
@@ -112,6 +128,14 @@ open fun process()
             
 open public inner class NotHTMLEndProcessor : Processor {
         
+/*Static stuff is not allowed for Kotlin inner classes
+        companion object {
+
+
+
+        }
+            */
+
 
             //Auto Generated
             public constructor() : super()
@@ -133,6 +157,14 @@ progressCanvas!!.endIfPaintedSinceStart()
             
 open public inner class HTMLEndProcessor : Processor {
         
+/*Static stuff is not allowed for Kotlin inner classes
+        companion object {
+
+
+
+        }
+            */
+
 
             //Auto Generated
             public constructor() : super()
@@ -184,6 +216,14 @@ endProcessor= NotHTMLEndProcessor()
 
 open public inner class FirstProcessor : Processor {
         
+/*Static stuff is not allowed for Kotlin inner classes
+        companion object {
+
+
+
+        }
+            */
+
 
             //Auto Generated
             public constructor() : super()
@@ -196,7 +236,7 @@ open fun process()
     var features: Features = Features.getInstance()!!
             
 
-isHTML= features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)
+isHTML= features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)
 
     
                         if(isHTML)
@@ -397,7 +437,7 @@ lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
         //synchronized(lock) 
         //mutex.withLock
         
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -588,7 +628,7 @@ open fun loadImage(image: Image)
                     var image = image
 
     
-                        if(image!!.isReady())
+                        if(image.isReady())
                         
                                     {
                                     
@@ -602,14 +642,14 @@ open fun loadImage(image: Image)
                         else {
                             
     
-                        if(image!!.getImage() != 
+                        if(image.getImage() != 
                                     null
                                 )
                         
                                     {
                                     
     
-                        if(image!!.setReady())
+                        if(image.setReady())
                         
                                     {
                                     this.totalLoaded++
@@ -626,7 +666,7 @@ open fun loadImage(image: Image)
                                 
                         else {
                             
-    var key: String = image!!.getName()!!
+    var key: String = image.getName()!!
             
 
 
@@ -635,7 +675,7 @@ open fun loadImage(image: Image)
 
 
     
-                        if(image2!!.isReady())
+                        if(image2.isReady())
                         
                                     {
                                     this.init(image, image2)
@@ -648,7 +688,7 @@ open fun loadImage(image: Image)
                                     }
                                 
                         else {
-                            image!!.setImage(image2!!.getImage())
+                            image.setImage(image2.getImage())
 
                         }
                             
@@ -676,7 +716,7 @@ open fun init(image: Image, image2: Image)
 
 
                     var image2 = image2
-image!!.init(image2!!.getImage())
+image.init(image2.getImage())
 }
 
 
@@ -695,7 +735,7 @@ open fun creatImage(key: String)
     var image: Image = Image.createImage(inputStream)!!
             
 
-image!!.setName(key)
+image.setName(key)
 
 
 
@@ -746,7 +786,7 @@ volume= 0
 image= this.createImage(caller, width, height)
 
     
-                        if(nextIndex > widths!!.length -1)
+                        if(nextIndex > widths.length -1)
                         
                                     {
                                     
@@ -784,7 +824,7 @@ open fun get(key: Any)
 
                     var key = key
 
-    var image: Image = this.hashtable!!.get(key as Object?) as Image
+    var image: Image = this.hashtable.get(key as Object?) as Image
 
 
     
@@ -814,7 +854,7 @@ Thread.sleep(100)
 image= this.createImage(key, inputStream)
 }
 
-this.hashtable!!.put(key, image)
+this.hashtable.put(key, image)
 
                                     }
                                 
@@ -1002,14 +1042,14 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
                         if(lazyImageRotationAnimation2!!.instanceId == lazyImageRotationAnimation!!.instanceId)
                         
                                     {
-                                    list!!.add(lazyImageRotationAnimation2)
+                                    list.add(lazyImageRotationAnimation2)
 
                                     }
                                 
 }
 
 
-    var size2: Int = list!!.size()!!
+    var size2: Int = list.size()!!
             
 
 
@@ -1019,7 +1059,7 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
                         for (index in 0 until size2)
 
 
-        {this.loadAfterList!!.remove(list!!.get(index))
+        {this.loadAfterList!!.remove(list.get(index))
 }
 
 
@@ -1082,7 +1122,7 @@ this.runTask()
             
 open fun runTask()
         //nullable = true from not(false or (false and true)) = true
-{this.processor!!.process()
+{this.processor.process()
 }
 
 

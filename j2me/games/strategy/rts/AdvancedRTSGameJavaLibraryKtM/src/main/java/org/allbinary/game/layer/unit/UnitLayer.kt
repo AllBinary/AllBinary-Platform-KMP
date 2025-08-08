@@ -608,16 +608,16 @@ open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-hashtable!!.put(Group.ID, this.getGroupInterface())
-hashtable!!.put(Layer.ID, this)
-hashtable!!.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManagerP)
+hashtable.put(Group.ID, this.getGroupInterface())
+hashtable.put(Layer.ID, this)
+hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManagerP)
 this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFactoryInterface!!.getInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
 
     var features: Features = Features.getInstance()!!
             
 
 
-    var isHTML: Boolean = features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
+    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
             
 
 
@@ -1047,7 +1047,7 @@ open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
                             this.setAnimationInterface(this.destroyAnimationInterface)
 SecondaryPlayerQueueFactory.getInstance()!!.add(ExplosionBasicSound.getInstance())
 this.shakeListener!!.onSmallShakeEvent()
-vibration!!.vibrate(duration, 0, 0)
+vibration.vibrate(duration, 0, 0)
 this.setReadyForExplosion(true)
 
                         }
@@ -1074,7 +1074,7 @@ open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
     var point: GPoint = geographicMapCellPosition!!.getMidPoint()!!
             
 
-this.setPosition(point!!.getX() -this.getHalfWidth(), point!!.getY() -this.getHalfHeight(), this.z)
+this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHeight(), this.z)
 }
 
 
@@ -1222,7 +1222,7 @@ open fun processInput(layerManager: AllBinaryLayerManager)
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -1233,7 +1233,7 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
 
         {
-    var anyType: Any = list!!.get(index)!!
+    var anyType: Any = list.get(index)!!
             
 
 
@@ -1243,7 +1243,7 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 this.inputProcessorArray[key]!!.process(layerManager, null as GameKeyEvent)
 }
 
-list!!.clear()
+list.clear()
 this.groundFriction()
 this.move()
 }
@@ -1254,7 +1254,7 @@ open fun accelerate(accelerate: BasicDecimal)
 {
 
                     var accelerate = accelerate
-this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate!!.getUnscaled(), this.rotationAnimationInterface!!.getAngleInfoP()!!.getAngle(), 90.toShort())
+this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.getUnscaled(), this.rotationAnimationInterface!!.getAngleInfoP()!!.getAngle(), 90.toShort())
 }
 
 
@@ -1272,7 +1272,7 @@ open fun fireAll(layerManager: AllBinaryLayerManager)
 
     var angle: Short = (angleInfo!!.getAngle() +this.slightAngle).toShort()
 
-hashtable!!.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), SmallIntegerSingletonFactory.getInstance()!!.getInstance(AngleFactory.getInstance()!!.getInstance(angle)!!.getValue()))
+hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), SmallIntegerSingletonFactory.getInstance()!!.getInstance(AngleFactory.getInstance()!!.getInstance(angle)!!.getValue()))
  = this.getPartInterfaceArray()[0]!! as SalvoInterface
 .
                                 process(layerManager, angle, 90.toShort())
@@ -1325,10 +1325,10 @@ this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.get
             
 
 
-    var dx: Int = (this.getXP() +this.getHalfWidth()) -point!!.getX()
+    var dx: Int = (this.getXP() +this.getHalfWidth()) -point.getX()
 
 
-    var dy: Int = (this.getYP() +this.getHalfHeight()) -point!!.getY()
+    var dy: Int = (this.getYP() +this.getHalfHeight()) -point.getY()
 
 this.rtsLogHelper!!.trackTo(this, nextUnvisitedPathGeographicMapCellPosition, dx, dy, reason)
 this.trackTo(dx, dy)
@@ -1662,18 +1662,18 @@ open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
                                     
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var steeringVisitor: SteeringVisitor = list!!.get(index) as SteeringVisitor
+    var steeringVisitor: SteeringVisitor = list.get(index) as SteeringVisitor
 
 
     var anyType: Any = steeringVisitor!!.visit(
@@ -1687,7 +1687,7 @@ open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
                                 )
                         
                                     {
-                                    list!!.remove(index)
+                                    list.remove(index)
 
                                     }
                                 
@@ -1908,7 +1908,7 @@ open fun onBuildingEvent(event: RTSLayerEvent)
 
                     var event = event
 
-    var buildingLayer: BuildingLayer = event!!.getRtsLayer() as BuildingLayer
+    var buildingLayer: BuildingLayer = event.getRtsLayer() as BuildingLayer
 
 this.getUnitWaypointBehavior()!!.moveAwayFromBuilding(buildingLayer)
 }
@@ -2002,7 +2002,7 @@ BuildingEventHandler.getInstance()!!.removeListener(this)
                         
                                     {
                                     this.shakeListener!!.onSmallShakeEvent()
-vibration!!.vibrate(duration, 0, 0)
+vibration.vibrate(duration, 0, 0)
 
                                     }
                                 
@@ -2012,7 +2012,7 @@ vibration!!.vibrate(duration, 0, 0)
                         
                                     {
                                     this.shakeListener!!.onMediumShakeEvent()
-vibration!!.vibrate(duration *2, 0, 0)
+vibration.vibrate(duration *2, 0, 0)
 
                                     }
                                 
@@ -2022,7 +2022,7 @@ vibration!!.vibrate(duration *2, 0, 0)
                         
                                     {
                                     this.shakeListener!!.onLargeShakeEvent()
-vibration!!.vibrate(duration *4, 0, 0)
+vibration.vibrate(duration *4, 0, 0)
 
                                     }
                                 

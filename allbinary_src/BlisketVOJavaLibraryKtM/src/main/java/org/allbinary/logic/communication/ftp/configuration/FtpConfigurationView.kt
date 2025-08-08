@@ -49,7 +49,7 @@ public constructor        (node: Node)
                     var node = node
 this.setFtpConfigurationInterface(FtpConfiguration() as FtpConfigurationInterface)
 
-    var chileNodeList: NodeList = node!!.getChildNodes()!!
+    var chileNodeList: NodeList = node.getChildNodes()!!
             
 
 

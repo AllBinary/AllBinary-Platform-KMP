@@ -68,13 +68,13 @@ open fun toString(files: BasicArrayList)
 
 
 
-                        for (index in 0 until files!!.size()!!)
+                        for (index in 0 until files.size()!!)
 
 
         {
-    var file: AbFile = files!!.get(index) as AbFile
+    var file: AbFile = files.get(index) as AbFile
 
-stringBuffer!!.append(file!!.getPath())
+stringBuffer!!.append(file.getPath())
 stringBuffer!!.append(NEW_LINE)
 }
 
@@ -108,7 +108,7 @@ open fun search(fileFilter: FileFilter, file: AbFile)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory!!.search(fileFilter, file, true)
+                        return directory.search(fileFilter, file, true)
 }
 
 
@@ -121,7 +121,7 @@ open fun search(file: AbFile)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory!!.search(file, true)
+                        return directory.search(file, true)
 }
 
 
@@ -137,7 +137,7 @@ open fun search(searchValue: String, file: AbFile)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory!!.search(searchValue, file, true)
+                        return directory.search(searchValue, file, true)
 }
 
 
@@ -153,7 +153,7 @@ open fun search(level: Int, file: AbFile)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory!!.search(level, file, true)
+                        return directory.search(level, file, true)
 }
 
 

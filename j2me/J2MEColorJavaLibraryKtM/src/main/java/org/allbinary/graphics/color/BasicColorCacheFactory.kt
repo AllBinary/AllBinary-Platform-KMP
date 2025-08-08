@@ -63,7 +63,7 @@ open fun add(basicDefaultColor: BasicColor)
 {
 
                     var basicDefaultColor = basicDefaultColor
-hashtable!!.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
+hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 }
 
 
@@ -73,7 +73,7 @@ open fun getInstance(integer: Integer)
 
                     var integer = integer
 
-    var basicColor: BasicColor = hashtable!!.get(integer as Object?) as BasicColor
+    var basicColor: BasicColor = hashtable.get(integer as Object?) as BasicColor
 
 
     
@@ -82,8 +82,8 @@ open fun getInstance(integer: Integer)
                                 )
                         
                                     {
-                                    basicColor= BasicColor(integer!!.toInt())
-hashtable!!.put(integer, basicColor)
+                                    basicColor= BasicColor(integer.toInt())
+hashtable.put(integer, basicColor)
 
                                     }
                                 

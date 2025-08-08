@@ -107,12 +107,12 @@ open fun add(gameFeature: Feature)
                     var gameFeature = gameFeature
 
     
-                        if(!list!!.contains(gameFeature))
+                        if(!list.contains(gameFeature))
                         
                                     {
                                     logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, commonStrings!!.ADD)
-list!!.add(gameFeature)
+list.add(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
                                     }
@@ -144,11 +144,11 @@ open fun remove(gameFeature: Feature)
                     var gameFeature = gameFeature
 
     
-                        if(list!!.contains(gameFeature))
+                        if(list.contains(gameFeature))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, commonStrings!!.REMOVE)
-list!!.remove(gameFeature)
+list.remove(gameFeature)
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, gameFeature!!.toString()))
 
                                     }
@@ -236,7 +236,7 @@ open fun isFeature(gameFeature: Feature)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.contains(gameFeature)
+                        return this.list.contains(gameFeature)
 }
 
 

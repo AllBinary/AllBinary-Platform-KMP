@@ -267,15 +267,15 @@ open fun sendRedirect(pageContext: PageContext, page: String)
     var response: HttpServletResponse = pageContext!!.getResponse() as HttpServletResponse
 
 
-    var requestDispatcher: RequestDispatcher = request!!.getRequestDispatcher(page)!!
+    var requestDispatcher: RequestDispatcher = request.getRequestDispatcher(page)!!
             
 
 
     
-                        if(response!!.isCommitted())
+                        if(response.isCommitted())
                         
                                     {
-                                    response!!.sendRedirect(page)
+                                    response.sendRedirect(page)
 
                                     }
                                 

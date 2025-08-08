@@ -142,7 +142,7 @@ hashtable= Hashtable<String, String>()
         {name= inputStream!!.readUTF()
 inputStream!!.readUTF()
 value= inputStream!!.readUTF()
-hashtable!!.put(name, value)
+hashtable.put(name, value)
 }
 
 this.valueList!!.add(hashtable)
@@ -230,7 +230,7 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
         {outputStream!!.writeUTF(objectArray[index]!! as String)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
 anyType= objectArray[index]!! as Object
-value= hashtable!!.get(anyType as Object?) as String
+value= hashtable.get(anyType as Object?) as String
 outputStream!!.writeUTF(value)
 }
 

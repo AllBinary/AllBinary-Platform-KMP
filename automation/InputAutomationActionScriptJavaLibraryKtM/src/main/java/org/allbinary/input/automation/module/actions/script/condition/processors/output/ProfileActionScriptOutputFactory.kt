@@ -52,7 +52,7 @@ open fun getInstance(node: Node)
 
 
     
-                        if(DomSearchHelper.getNodeNoThrow(ImageActionScriptOutputData.NAME, node!!.getChildNodes()) != 
+                        if(DomSearchHelper.getNodeNoThrow(ImageActionScriptOutputData.NAME, node.getChildNodes()) != 
                                     null
                                 )
                         

@@ -108,10 +108,10 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.setColor(backgroundColor)
-graphics!!.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
-graphics!!.setColor(this.getColor())
-graphics!!.drawString(getName(), this.textX, y, 0)
+graphics.setColor(backgroundColor)
+graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
+graphics.setColor(this.getColor())
+graphics.drawString(getName(), this.textX, y, 0)
 }
 
 

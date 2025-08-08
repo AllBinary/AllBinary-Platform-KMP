@@ -69,7 +69,7 @@ open fun getWebappPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org!!.allbinary!!.globals!!.URLGLOBALS.getWebappPath()
+                        return org.allbinary.globals.URLGLOBALS.getWebappPath()
 } catch(e: Exception)
             {
 
@@ -98,7 +98,7 @@ URLGLOBALS.init(urlGlobals)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

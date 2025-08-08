@@ -65,7 +65,7 @@ this.groupInterface= groupInterface
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 }
 
 
@@ -86,7 +86,7 @@ stringBuffer!!.append(groupInterface!!.toString())
 stringBuffer!!.append(TO_LABEL)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.groupInterface))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.ADD)
-this.list!!.add(groupInterface)
+this.list.add(groupInterface)
 }
 
 
@@ -97,7 +97,7 @@ open fun isInGroup(groupInterface: Group)
                     var groupInterface = groupInterface
 
     
-                        if(list!!.contains(groupInterface))
+                        if(list.contains(groupInterface))
                         
                                     {
                                     

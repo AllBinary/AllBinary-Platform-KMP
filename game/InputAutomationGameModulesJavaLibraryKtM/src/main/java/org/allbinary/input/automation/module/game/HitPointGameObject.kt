@@ -44,7 +44,7 @@ open public class HitPointGameObject : MeteredGameObject
     private val IS_DAMAGED_LABEL: String = "isDamaged: "
 
     private val IS_CLOSE_DEATH_LABEL: String = "isCloseDeath: "
-public constructor        (bufferedImage: Array<BufferedImage?>, minX: Integer, maxX: Integer, y: Integer)                        
+public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
                             : super(bufferedImage, minX, maxX, y){
 

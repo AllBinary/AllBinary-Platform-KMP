@@ -67,10 +67,10 @@ override fun paint(graphics: Graphics)
     var width: Int = this.displayInfoSingleton!!.getLast()[this.displayInfoSingleton!!.WIDTH]!!
 
 
-    var topScoresWidth: Int = (graphics!!.getFont()!!.stringWidth(this.text) shr 1)
+    var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(this.text) shr 1)
 
-graphics!!.setColor(this.getBasicColorP()!!.toInt())
-graphics!!.drawString(this.text, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *3, anchor)
+graphics.setColor(this.getBasicColorP()!!.toInt())
+graphics.drawString(this.text, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_CHAR_HEIGHT *3, anchor)
 }
 
 override fun setBasicColorP(basicColor: BasicColor)

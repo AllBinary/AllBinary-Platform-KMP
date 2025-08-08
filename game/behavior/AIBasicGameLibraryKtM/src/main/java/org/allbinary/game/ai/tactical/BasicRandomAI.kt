@@ -156,7 +156,7 @@ break;
 
                                     }
                                 
-this.visitor!!.visit(this)
+this.visitor.visit(this)
 
                                     }
                                 

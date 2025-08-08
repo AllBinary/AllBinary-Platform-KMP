@@ -69,7 +69,7 @@ open fun paint(graphics: Graphics, string: String, line: Int)
     var myFont: MyFont = MyFont.getInstance()!!
             
 
-drawStringUtil!!.drawCenterString(graphics, string, 0, string!!.length, x, y +(line *myFont!!.DEFAULT_CHAR_HEIGHT))
+drawStringUtil!!.drawCenterString(graphics, string, 0, string.length, x, y +(line *myFont!!.DEFAULT_CHAR_HEIGHT))
 }
 
 

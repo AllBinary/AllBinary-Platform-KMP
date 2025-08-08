@@ -76,7 +76,7 @@ open fun isTooSmall(rectangle: Rectangle)
                     var rectangle = rectangle
 
     
-                        if(rectangle!!.width < this.getMinDimension()!!.width || rectangle!!.height < this.getMinDimension()!!.height)
+                        if(rectangle.width < this.getMinDimension()!!.width || rectangle.height < this.getMinDimension()!!.height)
                         
                                     {
                                     
@@ -106,7 +106,7 @@ open fun isAreaTooSmall(rectangle: Rectangle)
                     var rectangle = rectangle
 
     
-                        if(rectangle!!.width *rectangle!!.height < this.getMinArea())
+                        if(rectangle.width *rectangle.height < this.getMinArea())
                         
                                     {
                                     
@@ -136,7 +136,7 @@ open fun isTooBig(rectangle: Rectangle)
                     var rectangle = rectangle
 
     
-                        if(rectangle!!.width > this.getMaxDimension()!!.width || rectangle!!.height > this.getMaxDimension()!!.height)
+                        if(rectangle.width > this.getMaxDimension()!!.width || rectangle.height > this.getMaxDimension()!!.height)
                         
                                     {
                                     

@@ -128,7 +128,7 @@ this.setRunning(true)
     var filePathStringBuffer: StringMaker = StringMaker()
 
 filePathStringBuffer!!.append(this.savedCaptureGenericProfileDataWorkerType!!.getPath())
-filePathStringBuffer!!.append(LongUtil.fillIn(frame!!.toString()))
+filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
 filePathStringBuffer!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath: String = filePathStringBuffer!!.toString()!!
@@ -140,7 +140,7 @@ logUtil!!.put("Loading Image File Path: " +filePath, this, this.commonStrings!!.
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
                                     

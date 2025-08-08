@@ -55,7 +55,7 @@ open fun getInstance(os: GenericOperatingSystem)
 
 
     
-                        if(os!!.getName()!!.compareTo(operatingSystems!!.LINUX) == 0)
+                        if(os.getName()!!.compareTo(operatingSystems!!.LINUX) == 0)
                         
                                     {
                                     
@@ -68,7 +68,7 @@ open fun getInstance(os: GenericOperatingSystem)
                                 
                              else 
     
-                        if(os!!.getName()!!.indexOf(operatingSystems!!.WINDOWS) >= 0)
+                        if(os.getName()!!.indexOf(operatingSystems!!.WINDOWS) >= 0)
                         
                                     {
                                     
@@ -82,7 +82,7 @@ open fun getInstance(os: GenericOperatingSystem)
 
 
 
-                            throw Exception("No Hardware Imp for: " +os!!.getName())
+                            throw Exception("No Hardware Imp for: " +os.getName())
 } catch(e: Exception)
             {
 

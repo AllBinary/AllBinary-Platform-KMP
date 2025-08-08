@@ -484,19 +484,19 @@ stringBuffer!!.append(
 stringBuffer!!.append(cost)
 stringBuffer!!.append(
                             " with ")
-stringBuffer!!.append(capital!!.getTotalMoney())
+stringBuffer!!.append(capital.getTotalMoney())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "attemptBuild")
 
     
-                        if(cost <= capital!!.getTotalMoney())
+                        if(cost <= capital.getTotalMoney())
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
 newUnconstructedRTSLayerInterfaceArray[itemIndex]= 
                                         null
                                     
-capital!!.removeMoney(cost)
+capital.removeMoney(cost)
 this.add(rtsPlayerLayerInterface, layerManager, layerInterface)
 
 

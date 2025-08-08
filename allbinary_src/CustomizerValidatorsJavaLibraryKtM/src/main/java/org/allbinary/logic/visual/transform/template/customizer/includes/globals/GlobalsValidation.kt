@@ -77,7 +77,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -110,7 +110,7 @@ open fun validationInfo()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -160,10 +160,10 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(GlobalsData.NAME)!!
+    var node: Node = document.createElement(GlobalsData.NAME)!!
             
 
-node!!.appendChild(StoreFrontView(this.storeFrontInterface).
+node.appendChild(StoreFrontView(this.storeFrontInterface).
                             toXmlNode(document))
 
 

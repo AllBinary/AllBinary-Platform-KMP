@@ -104,7 +104,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(ThemesData.getInstance()!!.NAME)!!
+    var node: Node = document.createElement(ThemesData.getInstance()!!.NAME)!!
             
 
 
@@ -121,7 +121,7 @@ open fun toXmlNode(document: Document)
         {
     var themeDomNodeInterface: DomNodeInterface = themeVector!!.get(i) as DomNodeInterface
 
-node!!.appendChild(themeDomNodeInterface!!.toXmlNode(document))
+node.appendChild(themeDomNodeInterface!!.toXmlNode(document))
 }
 
 

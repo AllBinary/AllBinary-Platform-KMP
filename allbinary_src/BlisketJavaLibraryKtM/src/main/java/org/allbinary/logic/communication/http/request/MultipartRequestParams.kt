@@ -98,7 +98,7 @@ open fun processMultipartRequest(request: HttpServletRequest)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("FileItem List Size: " +multipartRequestList!!.size(), this, 
@@ -146,7 +146,7 @@ open fun processMultipartRequest(request: HttpServletRequest)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("Special Request Data: " +specialRequest!!.toString(), this, 
@@ -162,7 +162,7 @@ this.setMap(specialRequest)
 } catch(e: InvalidContentTypeException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -171,12 +171,12 @@ this.setMap(specialRequest)
 
                                     }
                                 
-super.setMap(request!!.getParameterMap())
+super.setMap(request.getParameterMap())
 }
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUESTERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUESTERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -185,7 +185,7 @@ super.setMap(request!!.getParameterMap())
 
                                     }
                                 
-super.setMap(request!!.getParameterMap())
+super.setMap(request.getParameterMap())
 }
 
 }

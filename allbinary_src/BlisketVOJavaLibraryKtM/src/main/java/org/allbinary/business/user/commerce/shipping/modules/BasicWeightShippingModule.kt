@@ -55,15 +55,15 @@ open fun getCost(order: OrderInterface)
 
                     var order = order
 
-    var basket: BasketInterface = order!!.getBasket()!!
+    var basket: BasketInterface = order.getBasket()!!
             
 
 
     var money: Money = Money()
 
-money!!.add(basket!!.getTotalWeight())
-money!!.multiply(1)
-money!!.add(
+money.add(basket.getTotalWeight())
+money.multiply(1)
+money.add(
                             "3.50")
 
 

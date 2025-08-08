@@ -66,10 +66,10 @@ open fun addListener(analogControllerConfigurationEventListenerInterface: Analog
                     var analogControllerConfigurationEventListenerInterface = analogControllerConfigurationEventListenerInterface
 
     
-                        if(!list!!.contains(analogControllerConfigurationEventListenerInterface))
+                        if(!list.contains(analogControllerConfigurationEventListenerInterface))
                         
                                     {
-                                    list!!.add(analogControllerConfigurationEventListenerInterface)
+                                    list.add(analogControllerConfigurationEventListenerInterface)
 
                                     }
                                 
@@ -77,7 +77,7 @@ open fun addListener(analogControllerConfigurationEventListenerInterface: Analog
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -86,7 +86,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -101,13 +101,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var playerGameInput: AnalogControllerConfigurationEventListenerInterface = this.list!!.objectArray[index]!! as AnalogControllerConfigurationEventListenerInterface
+    var playerGameInput: AnalogControllerConfigurationEventListenerInterface = this.list.objectArray[index]!! as AnalogControllerConfigurationEventListenerInterface
 
 playerGameInput!!.onAnalogControllerConfigurationEvent(eventObject as AnalogControllerConfigurationEvent)
 } catch(e: Exception)

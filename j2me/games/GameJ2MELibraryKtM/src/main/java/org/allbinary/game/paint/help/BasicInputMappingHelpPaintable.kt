@@ -139,7 +139,7 @@ open fun get(keyList: BasicArrayList)
 
 
         {key= keyList!!.objectArray[index]!! as Input
-stringBuffer!!.append(key!!.getName())
+stringBuffer!!.append(key.getName())
 
     
                         if(index +1 < keyList!!.size())

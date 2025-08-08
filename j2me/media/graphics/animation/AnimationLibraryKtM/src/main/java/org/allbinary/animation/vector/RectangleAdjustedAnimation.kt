@@ -81,7 +81,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
                     var y = y
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
-graphics!!.drawRect(x +this.offsetX, y +this.offsetY, width, height)
+graphics.drawRect(x +this.offsetX, y +this.offsetY, width, height)
 }
 
 

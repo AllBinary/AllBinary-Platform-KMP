@@ -70,7 +70,7 @@ override fun addListeners(vector: BasicArrayList)
     var eventListenerInterface: EventListenerInterface
 
 
-    var size: Int = vector!!.size()!!
+    var size: Int = vector.size()!!
             
 
 
@@ -80,7 +80,7 @@ override fun addListeners(vector: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {eventListenerInterface= vector!!.get(index) as EventListenerInterface
+        {eventListenerInterface= vector.get(index) as EventListenerInterface
 this.addListener(eventListenerInterface)
 }
 
@@ -96,7 +96,7 @@ open fun removeListeners(vector: BasicArrayList)
     var eventListenerInterface: EventListenerInterface
 
 
-    var size: Int = vector!!.size()!!
+    var size: Int = vector.size()!!
             
 
 
@@ -106,7 +106,7 @@ open fun removeListeners(vector: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {eventListenerInterface= vector!!.get(index) as EventListenerInterface
+        {eventListenerInterface= vector.get(index) as EventListenerInterface
 this.removeListener(eventListenerInterface)
 }
 

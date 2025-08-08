@@ -71,7 +71,7 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var titleTextNode: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.TEXT, node!!.getChildNodes())!!
+    var titleTextNode: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.TEXT, node.getChildNodes())!!
             
 
 
@@ -90,7 +90,7 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Title: " +this.getTitle(), this, 
@@ -107,7 +107,7 @@ public constructor        (hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("HashMap: " +hashMap!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -173,7 +173,7 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TitleView HashMap: " +hashMap!!.toString(), this, 

@@ -22,7 +22,7 @@ open fun updateJTree()
 
 open fun getActionScriptJTree()
         //nullable = true from not(false or (false and true)) = true
-: JTree
+: javax.swing.JTree
 
 }
                 

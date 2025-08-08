@@ -195,7 +195,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                 
 nameEnding= StringMaker().
                             append(index2)!!.append(commonSeps!!.UNDERSCORE)!!.append(index3)!!.toString()
-visitor!!.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
+visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
 }
@@ -242,7 +242,7 @@ nameEnding= StringMaker().
     var generatedBufferedImage: BufferedImage = ImageUnifierUtil.getInstance()!!.getImage(tempBufferedImageArray, imageUnifierProperties)!!
             
 
-visitor!!.visit(generatedBufferedImage, nameEnding, index)
+visitor.visit(generatedBufferedImage, nameEnding, index)
 }
 
 
@@ -318,7 +318,7 @@ generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +wi
                                 
 nameEnding= StringMaker().
                             append(this.commonStrings!!.DIRECTION_NAME[index2]!!)!!.append(commonSeps!!.UNDERSCORE)!!.append(index3)!!.toString()
-visitor!!.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
+visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index)
 }
 
 }
@@ -365,7 +365,7 @@ nameEnding= StringMaker().
     var generatedBufferedImage: BufferedImage = ImageUnifierUtil.getInstance()!!.getImage(tempBufferedImageArray, imageUnifierProperties)!!
             
 
-visitor!!.visit(generatedBufferedImage, nameEnding, index)
+visitor.visit(generatedBufferedImage, nameEnding, index)
 }
 
 

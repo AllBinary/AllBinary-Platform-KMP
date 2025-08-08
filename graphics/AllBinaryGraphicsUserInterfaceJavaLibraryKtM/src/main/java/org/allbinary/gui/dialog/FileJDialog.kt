@@ -43,12 +43,12 @@ open fun main(args: Array<String?>)
 {
 
                     var args = args
-java!!.awt!!.EventQueue.invokeLater(object: Runnable()
+java.awt.EventQueue.invokeLater(object: Runnable()
                                 {
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{FileJDialog(JFrame(), true).
+{FileJDialog(javax.swing.JFrame(), true).
                             setVisible(true)
 }
 
@@ -74,7 +74,7 @@ initComponents()
 this.getJFileChooser1()!!.setMultiSelectionEnabled(true)
 }
 
-public constructor        (parent: Frame, modal: Boolean)                        
+public constructor        (parent: java.awt.Frame, modal: Boolean)                        
 
                             : super(parent, modal){
 
@@ -102,12 +102,12 @@ this.finishedListenerInterface= finishedListenerInterface
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{jFileChooser1= JFileChooser()
-setDefaultCloseOperation(javax!!.swing!!.WindowConstants.DISPOSE_ON_CLOSE)
-jFileChooser1!!.addActionListener(object: ActionListener()
+{jFileChooser1= javax.swing.JFileChooser()
+setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
+jFileChooser1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -118,21 +118,21 @@ jFileChooser1ActionPerformed(evt)
                                 }
                             )
 
-    var layout: GroupLayout = GroupLayout(getContentPane())
+    var layout: org.jdesktop.layout.GroupLayout = org.jdesktop.layout.GroupLayout(getContentPane())
 
 getContentPane()!!.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(org!!.jdesktop!!.layout!!.GroupLayout.TRAILING, layout!!.createSequentialGroup()!!.addContainerGap(org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.add(jFileChooser1, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)!!.addContainerGap()))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(org!!.jdesktop!!.layout!!.GroupLayout.LEADING)!!.add(layout!!.createSequentialGroup()!!.addContainerGap()!!.add(jFileChooser1, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE, 357, org!!.jdesktop!!.layout!!.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(org!!.jdesktop!!.layout!!.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+layout.setHorizontalGroup(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()!!.addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)!!.add(jFileChooser1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.addContainerGap()))
+layout.setVerticalGroup(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)!!.add(layout.createSequentialGroup()!!.addContainerGap()!!.add(jFileChooser1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 357, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)!!.addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
 pack()
 }
 
 
-open fun jFileChooser1ActionPerformed(evt: ActionEvent)
+open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
                     var evt = evt
-logUtil!!.put("Starting Action Command: " +evt!!.getActionCommand(), this, 
+logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, 
                             "ActionPerformed")
 
     var files: Array<File?> = this.getJFileChooser1()!!.getSelectedFiles()!!
@@ -140,7 +140,7 @@ logUtil!!.put("Starting Action Command: " +evt!!.getActionCommand(), this,
 
 
     
-                        if(evt!!.getActionCommand() == this.getJFileChooser1()!!.CANCEL_SELECTION)
+                        if(evt.getActionCommand() == this.getJFileChooser1()!!.CANCEL_SELECTION)
                         
                                     {
                                     this.setVisible(false)
@@ -149,14 +149,14 @@ logUtil!!.put("Starting Action Command: " +evt!!.getActionCommand(), this,
                                 
 
     
-                        if(evt!!.getActionCommand() == this.getJFileChooser1()!!.APPROVE_SELECTION)
+                        if(evt.getActionCommand() == this.getJFileChooser1()!!.APPROVE_SELECTION)
                         
                                     {
                                     
     
                         if(files != 
                                     null
-                                 && files!!.size > 0)
+                                 && files.size > 0)
                         
                                     {
                                     this.finishedListenerInterface!!.onFiles(files)
@@ -171,7 +171,7 @@ logUtil!!.put("Starting Action Command: " +evt!!.getActionCommand(), this,
 
 open fun getJFileChooser1()
         //nullable = true from not(false or (false and true)) = true
-: JFileChooser{
+: javax.swing.JFileChooser{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -179,7 +179,7 @@ open fun getJFileChooser1()
 }
 
 
-open fun setJFileChooser1(jFileChooser1: JFileChooser)
+open fun setJFileChooser1(jFileChooser1: javax.swing.JFileChooser)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -188,7 +188,7 @@ this.jFileChooser1= jFileChooser1
 }
 
 
-    private var jFileChooser1: JFileChooser
+    private var jFileChooser1: javax.swing.JFileChooser
 
 }
                 

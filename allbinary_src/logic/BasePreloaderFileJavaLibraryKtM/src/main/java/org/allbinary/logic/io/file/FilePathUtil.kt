@@ -68,7 +68,7 @@ open fun adjust(path: String)
 
                                     }
                                 
-path= path!!.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)
+path= path.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)
 
 
 

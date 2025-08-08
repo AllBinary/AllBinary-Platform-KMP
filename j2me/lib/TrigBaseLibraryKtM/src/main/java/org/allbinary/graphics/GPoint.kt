@@ -89,9 +89,9 @@ public constructor        (point: GPoint)
         {
 
                     var point = point
-this.x= point!!.getX()
-this.y= point!!.getY()
-this.z= point!!.getZ()
+this.x= point.getX()
+this.y= point.getY()
+this.z= point.getZ()
 }
 
 public constructor        (x: Int, y: Int)

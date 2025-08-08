@@ -106,7 +106,7 @@ open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, othe
 
     var zVector: Int = (axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
 
-layer!!.move(xVector, yVector, zVector)
+layer.move(xVector, yVector, zVector)
 }
 
 
@@ -116,7 +116,7 @@ layer!!.move(xVector, yVector, zVector)
 {
 
                     var layer = layer
-layer!!.move(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled())
+layer.move(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled())
 }
 
 override fun toString()

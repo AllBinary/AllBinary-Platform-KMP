@@ -67,10 +67,10 @@ open fun addListener(collidableDestroyableDamageableLayer: CollidableDestroyable
                     var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
     
-                        if(!list!!.contains(collidableDestroyableDamageableLayer))
+                        if(!list.contains(collidableDestroyableDamageableLayer))
                         
                                     {
-                                    list!!.add(collidableDestroyableDamageableLayer)
+                                    list.add(collidableDestroyableDamageableLayer)
 
                                     }
                                 
@@ -78,7 +78,7 @@ open fun addListener(collidableDestroyableDamageableLayer: CollidableDestroyable
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -87,7 +87,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -102,13 +102,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.list!!.objectArray[index]!! as CollidableDestroyableDamageableLayer
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.list.objectArray[index]!! as CollidableDestroyableDamageableLayer
 
 collidableDestroyableDamageableLayer!!.onDestroyed(eventObject as DestroyedEvent)
 } catch(e: Exception)

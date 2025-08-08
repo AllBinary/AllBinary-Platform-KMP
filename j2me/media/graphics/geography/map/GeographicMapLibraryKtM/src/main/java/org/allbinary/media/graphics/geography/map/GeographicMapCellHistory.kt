@@ -98,7 +98,7 @@ open fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.size()
+                        return this.list.size()
 }
 
 
@@ -108,10 +108,10 @@ open fun track(list: BasicArrayList)
 
                     var list = list
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
-this.list!!.ensureCapacity(size)
+this.list.ensureCapacity(size)
 this.visitedList!!.ensureCapacity(size)
 
     var geographicMapCellPosition: GeographicMapCellPosition
@@ -123,7 +123,7 @@ this.visitedList!!.ensureCapacity(size)
                         for (index in 0 until size)
 
 
-        {geographicMapCellPosition= list!!.get(index) as GeographicMapCellPosition
+        {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 this.track(geographicMapCellPosition)
 }
 
@@ -137,10 +137,10 @@ open fun track(geographicMapCellPosition: GeographicMapCellPosition)
                     var geographicMapCellPosition = geographicMapCellPosition
 
     
-                        if(!this.list!!.contains(geographicMapCellPosition))
+                        if(!this.list.contains(geographicMapCellPosition))
                         
                                     {
-                                    this.list!!.add(geographicMapCellPosition)
+                                    this.list.add(geographicMapCellPosition)
 this.visitedList!!.add(booleanFactory!!.FALSE)
 
                                     }
@@ -341,7 +341,7 @@ open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
 
                     var geographicMapCellPosition = geographicMapCellPosition
 
-    var index: Int = this.list!!.indexOf(geographicMapCellPosition)!!
+    var index: Int = this.list.indexOf(geographicMapCellPosition)!!
             
 
 
@@ -386,7 +386,7 @@ open fun visit(geographicMapCellPosition: GeographicMapCellPosition)
 
                     var geographicMapCellPosition = geographicMapCellPosition
 
-    var index: Int = this.list!!.indexOf(geographicMapCellPosition)!!
+    var index: Int = this.list.indexOf(geographicMapCellPosition)!!
             
 
 
@@ -571,17 +571,17 @@ open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, po
 
                     var point = point
 
-    var x: Int = point!!.getX() -tiledLayer!!.getXP()
+    var x: Int = point.getX() -tiledLayer!!.getXP()
 
 
-    var y: Int = point!!.getY() -tiledLayer!!.getYP()
+    var y: Int = point.getY() -tiledLayer!!.getYP()
 
 
     
                         if(halfWidth == 0)
                         
                                     {
-                                    this.halfWidth= (graphics!!.getFont()!!.stringWidth(MISSED_INFO) shr 1)
+                                    this.halfWidth= (graphics.getFont()!!.stringWidth(MISSED_INFO) shr 1)
 
                                     }
                                 
@@ -592,7 +592,7 @@ open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, po
 
     var height: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
 
-this.animation!!.paint(graphics, x +halfWidth, y +(height))
+this.animation.paint(graphics, x +halfWidth, y +(height))
 }
 
 
@@ -609,7 +609,7 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
                     var geographicMapInterface = geographicMapInterface
 
         try {
-            graphics!!.setColor(RED)
+            graphics.setColor(RED)
 
     var localVisitedList: BasicArrayList = this.visitedList
 
@@ -630,7 +630,7 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
                         for (index in size downTo 0)
 
 
-        {geographicMapCellPosition= list!!.get(index) as GeographicMapCellPosition
+        {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
 
     
@@ -657,7 +657,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this,
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 this.visitedList!!.clear()
 this.totalVisited= 0
 }

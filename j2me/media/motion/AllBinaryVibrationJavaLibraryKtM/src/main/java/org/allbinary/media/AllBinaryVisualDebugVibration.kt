@@ -84,7 +84,7 @@ open fun paint(graphics: Graphics)
     var width: Int = myFont!!.stringWidth(VIBRATING)!!
             
 
-graphics!!.drawString(VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, anchor)
+graphics.drawString(VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, anchor)
 
                                     }
                                 

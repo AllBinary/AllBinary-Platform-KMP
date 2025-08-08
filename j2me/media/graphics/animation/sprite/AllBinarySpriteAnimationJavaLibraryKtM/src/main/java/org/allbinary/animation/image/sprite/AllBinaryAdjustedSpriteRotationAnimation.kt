@@ -74,7 +74,7 @@ override fun paint(g: Graphics, x: Int, y: Int)
 
 
                     var y = y
-this.sprite!!.setPosition(x +this.dx, y +this.dy)
+this.sprite.setPosition(x +this.dx, y +this.dy)
 this.paint(g)
 }
 

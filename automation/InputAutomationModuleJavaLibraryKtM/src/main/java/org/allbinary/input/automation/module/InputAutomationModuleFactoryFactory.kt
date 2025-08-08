@@ -71,15 +71,15 @@ this.hashMap= HashMap<Any, Any>()
             
 
 
-    var iterator: Iterator = collection!!.iterator()!!
+    var iterator: Iterator = collection.iterator()!!
             
 
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
 
 
-        while(iterator!!.hasNext())
-        {inputAutomationModuleConfiguration= iterator!!.next() as InputAutomationModuleConfiguration
+        while(iterator.hasNext())
+        {inputAutomationModuleConfiguration= iterator.next() as InputAutomationModuleConfiguration
 this.add(inputAutomationModuleConfiguration)
 }
 

@@ -85,7 +85,7 @@ open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
 
 
     
-                        if(features!!.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
@@ -127,7 +127,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
                                     }
                                 
 
-    var originalSwtImage: Image = (originalImage2!!.getImage() as Image)
+    var originalSwtImage: org.eclipse.swt.graphics.Image = (originalImage2!!.getImage() as Image)
 
 
     var gc: GC = 
@@ -135,13 +135,13 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
             
 
 
-    var copySwtImage: Image = 
+    var copySwtImage: org.eclipse.swt.graphics.Image = 
                 null
             
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -154,7 +154,7 @@ imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, totalAngl
                                     }
                                 
                         else {
-                            PreLogUtil.put("No rotation for: " +image!!.toString(), this, 
+                            PreLogUtil.put("No rotation for: " +image.toString(), this, 
                             "rotateImage")
 
                         }

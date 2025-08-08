@@ -84,7 +84,7 @@ open fun getInstance(runnable: GameCanvasRunnableInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(runnable, runnable!!.getType())
+                        return this.getInstance(runnable, runnable.getType())
 }
 
 
@@ -97,7 +97,7 @@ open fun getInstance(runnable: ABRunnable)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getInstance(runnable, runnable!!.getType())
+                        return this.getInstance(runnable, runnable.getType())
 }
 
 
@@ -119,7 +119,7 @@ open fun getInstance(runnable: Runnable, type: Int)
 
 
     
-                        if(features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
+                        if(features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
                         
                                     {
                                     
@@ -157,9 +157,9 @@ primaryThreadPool!!.runTask(runnable)
                                     }
                                 
 
-    var thread: Thread = Thread(runnable, runnable!!.toString())
+    var thread: Thread = Thread(runnable, runnable.toString())
 
-logUtil!!.put(thread!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+logUtil!!.put(thread.toString(), this, commonStrings!!.CONSTRUCTOR)
 
 
 
@@ -173,7 +173,7 @@ open fun start(thread: Thread)
 {
 
                     var thread = thread
-thread!!.start()
+thread.start()
 }
 
 

@@ -79,8 +79,8 @@ open fun getList()
 
     var DOWN: TouchButton = TouchButton(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_ONE, TouchButtonDowngradeResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.SECOND_FROM_TOP_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())
 
-list!!.add(UP)
-list!!.add(DOWN)
+list.add(UP)
+list.add(DOWN)
 
                                     }
                                 

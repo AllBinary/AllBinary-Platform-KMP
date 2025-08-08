@@ -279,9 +279,9 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
             
 
-g!!.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
-g!!.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
-g!!.drawRenderedImage(bufferedImage, at)
+g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
+g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
+g.drawRenderedImage(bufferedImage, at)
 }
 
 

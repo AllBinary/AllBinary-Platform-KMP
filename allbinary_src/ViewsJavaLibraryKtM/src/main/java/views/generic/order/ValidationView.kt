@@ -63,7 +63,7 @@ open fun isValid()
 
 
     
-                        if(this.order!!.isIdValid() == Boolean.FALSE)
+                        if(this.order.isIdValid() == Boolean.FALSE)
                         
                                     {
                                     
@@ -75,7 +75,7 @@ open fun isValid()
                                     }
                                 
                         else {
-                            this.orderHistory= OrderHistoryFactory.getInstance(this.order!!.getId())
+                            this.orderHistory= OrderHistoryFactory.getInstance(this.order.getId())
 
     
                         if(this.orderHistory == 
@@ -94,7 +94,7 @@ open fun isValid()
 
     var orderItems: OrderItemsEntity = OrderItemsEntity()
 
-this.basketReview= orderItems!!.getBasketReview(this.order!!.getId())
+this.basketReview= orderItems!!.getBasketReview(this.order.getId())
 
     
                         if(this.basketReview == 
@@ -121,7 +121,7 @@ this.basketReview= orderItems!!.getBasketReview(this.order!!.getId())
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -148,15 +148,15 @@ open fun validationInfo()
 
 
     
-                        if(this.order!!.isIdValid() == Boolean.FALSE)
+                        if(this.order.isIdValid() == Boolean.FALSE)
                         
                                     {
-                                    stringBuffer!!.append(this.order!!.getIdValidationInfo())
+                                    stringBuffer!!.append(this.order.getIdValidationInfo())
 
                                     }
                                 
                         else {
-                            this.orderHistory= OrderHistoryFactory.getInstance(this.order!!.getId())
+                            this.orderHistory= OrderHistoryFactory.getInstance(this.order.getId())
 
     
                         if(this.orderHistory == 
@@ -166,7 +166,7 @@ open fun validationInfo()
                                     {
                                     stringBuffer!!.append(
                             "Order History data error for: ")
-stringBuffer!!.append(this.order!!.getId())
+stringBuffer!!.append(this.order.getId())
 stringBuffer!!.append(
                             "<br />")
 
@@ -175,7 +175,7 @@ stringBuffer!!.append(
 
     var orderItems: OrderItemsEntity = OrderItemsEntity()
 
-this.basketReview= orderItems!!.getBasketReview(this.order!!.getId())
+this.basketReview= orderItems!!.getBasketReview(this.order.getId())
 
     
                         if(this.basketReview == 
@@ -185,7 +185,7 @@ this.basketReview= orderItems!!.getBasketReview(this.order!!.getId())
                                     {
                                     stringBuffer!!.append(
                             "Order Items data error - does not exist for: ")
-stringBuffer!!.append(this.order!!.getId())
+stringBuffer!!.append(this.order.getId())
 stringBuffer!!.append(
                             "<br />")
 
@@ -198,7 +198,7 @@ stringBuffer!!.append(
                                     {
                                     stringBuffer!!.append(
                             "Order Items data error - not valid for: ")
-stringBuffer!!.append(this.order!!.getId())
+stringBuffer!!.append(this.order.getId())
 stringBuffer!!.append(
                             "<br />")
 
@@ -215,7 +215,7 @@ stringBuffer!!.append(
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

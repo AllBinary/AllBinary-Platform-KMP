@@ -67,10 +67,10 @@ open fun addListener(layerInterface: AllBinaryLayer)
                     var layerInterface = layerInterface
 
     
-                        if(!list!!.contains(layerInterface))
+                        if(!list.contains(layerInterface))
                         
                                     {
-                                    list!!.add(layerInterface)
+                                    list.add(layerInterface)
 
                                     }
                                 
@@ -78,7 +78,7 @@ open fun addListener(layerInterface: AllBinaryLayer)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -87,7 +87,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -102,13 +102,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var layerInterface: AllBinaryLayer = this.list!!.objectArray[index]!! as AllBinaryLayer
+    var layerInterface: AllBinaryLayer = this.list.objectArray[index]!! as AllBinaryLayer
 
 layerInterface!!.onChangeEvent(eventObject as ViewPositionEvent)
 } catch(e: Exception)

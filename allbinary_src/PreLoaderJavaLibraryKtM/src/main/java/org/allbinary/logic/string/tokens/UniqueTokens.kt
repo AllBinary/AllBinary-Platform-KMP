@@ -118,7 +118,7 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.COMMA)
 
 
-    var keywordVector: BasicArrayList = tokenizer!!.getTokens(keywords, BasicArrayList())!!
+    var keywordVector: BasicArrayList = tokenizer.getTokens(keywords, BasicArrayList())!!
             
 
 

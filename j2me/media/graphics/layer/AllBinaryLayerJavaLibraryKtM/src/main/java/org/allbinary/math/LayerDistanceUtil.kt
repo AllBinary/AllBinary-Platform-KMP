@@ -118,10 +118,10 @@ open fun getDistance(layerInterface: AllBinaryLayer, point: GPoint)
 
                     var point = point
 
-    var dx: Int = layerInterface!!.getXP() -point!!.getX()
+    var dx: Int = layerInterface!!.getXP() -point.getX()
 
 
-    var dy: Int = layerInterface!!.getYP() -point!!.getY()
+    var dy: Int = layerInterface!!.getYP() -point.getY()
 
 
 

@@ -65,7 +65,7 @@ open fun getStoreName()
             
 
 
-    var result: String = method!!.invoke(this.getWorkFlowObject(), 
+    var result: String = method.invoke(this.getWorkFlowObject(), 
                             null) as String
 
 
@@ -79,7 +79,7 @@ open fun getStoreName()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     

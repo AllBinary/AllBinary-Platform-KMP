@@ -115,7 +115,7 @@ open fun init(abeClientInformation: AbeClientInformationInterface, node: Node)
 
                     var node = node
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -188,14 +188,14 @@ open fun toDomNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(InputAutomationModuleData.NAME)!!
+    var node: Node = document.createElement(InputAutomationModuleData.NAME)!!
             
 
 
     var classNameNode: Node = ModDomHelper.createTextNode(document, DynamicObjectData.NAME, this.getClassName())!!
             
 
-node!!.appendChild(classNameNode)
+node.appendChild(classNameNode)
 
 
 

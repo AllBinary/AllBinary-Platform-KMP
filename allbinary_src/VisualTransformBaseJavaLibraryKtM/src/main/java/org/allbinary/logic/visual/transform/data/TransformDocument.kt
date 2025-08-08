@@ -55,15 +55,15 @@ public constructor        ()
         try {
             this.document= DomDocumentHelper.create()
 
-    var allbinaryNode: Node = document!!.createElement(
+    var allbinaryNode: Node = document.createElement(
                             "allbinary")!!
             
 
 this.baseNode= allbinaryNode
-document!!.appendChild(this.baseNode)
+document.appendChild(this.baseNode)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(this.log(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -73,7 +73,7 @@ document!!.appendChild(this.baseNode)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)

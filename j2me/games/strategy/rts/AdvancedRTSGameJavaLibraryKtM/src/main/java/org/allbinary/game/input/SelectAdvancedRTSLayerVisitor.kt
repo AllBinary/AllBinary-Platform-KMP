@@ -69,11 +69,11 @@ open fun visit(anyType: Any)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var currentRTSLayer: RTSLayer = list!!.get(index) as RTSLayer
+    var currentRTSLayer: RTSLayer = list.get(index) as RTSLayer
 
 
     

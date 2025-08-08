@@ -230,10 +230,10 @@ open fun add()
             
     var values: Vector = Vector()
 
-values!!.add(NOTHING)
-values!!.add(InitInfo.getInstance()!!.getTesting())
-values!!.add(InitInfo.getInstance()!!.getTestHtmlPath())
-values!!.add(InitInfo.getInstance()!!.getMainPath())
+values.add(NOTHING)
+values.add(InitInfo.getInstance()!!.getTesting())
+values.add(InitInfo.getInstance()!!.getTestHtmlPath())
+values.add(InitInfo.getInstance()!!.getMainPath())
 insert(values)
 } catch(e: Exception)
             {

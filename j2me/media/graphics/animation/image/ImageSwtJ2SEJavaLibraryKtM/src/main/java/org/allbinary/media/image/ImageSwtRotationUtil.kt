@@ -84,9 +84,9 @@ private constructor        ()
         {}
 
 
-open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
+open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: org.eclipse.swt.graphics.Image{
 
                     var bufferedImage = bufferedImage
 
@@ -94,7 +94,7 @@ open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
                     var totalAngle = totalAngle
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
@@ -114,9 +114,9 @@ open fun getRotatedImage(bufferedImage: Image, totalAngle: Int)
 }
 
 
-open fun getRotatedImage2(bufferedImage: Image, newBufferedImage: Image, gc: GC, angle: Float)
+open fun getRotatedImage2(bufferedImage: org.eclipse.swt.graphics.Image, newBufferedImage: org.eclipse.swt.graphics.Image, gc: GC, angle: Float)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: org.eclipse.swt.graphics.Image{
 
                     var bufferedImage = bufferedImage
 
@@ -130,7 +130,7 @@ open fun getRotatedImage2(bufferedImage: Image, newBufferedImage: Image, gc: GC,
                     var angle = angle
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
@@ -150,9 +150,9 @@ open fun getRotatedImage2(bufferedImage: Image, newBufferedImage: Image, gc: GC,
 }
 
 
-open fun rotateImage(originalSwtImage: Image, newSwtImage: Image, gc: GC, totalAngle: Int)
+open fun rotateImage(originalSwtImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: org.eclipse.swt.graphics.Image{
 
                     var originalSwtImage = originalSwtImage
 
@@ -172,9 +172,9 @@ open fun rotateImage(originalSwtImage: Image, newSwtImage: Image, gc: GC, totalA
 }
 
 
-open fun getRotatedImage(bufferedImage: Image, newSwtImage: Image, gc: GC, totalAngle: Int)
+open fun getRotatedImage(bufferedImage: org.eclipse.swt.graphics.Image, newSwtImage: org.eclipse.swt.graphics.Image, gc: GC, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: org.eclipse.swt.graphics.Image{
 
                     var bufferedImage = bufferedImage
 
@@ -194,9 +194,9 @@ open fun getRotatedImage(bufferedImage: Image, newSwtImage: Image, gc: GC, total
 }
 
 
-open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle: Int)
+open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberOfFrames: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>{
+: Array<org.eclipse.swt.graphics.Image?>{
 
                     var bufferedImage = bufferedImage
 
@@ -206,7 +206,7 @@ open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle:
 
                     var totalAngle = totalAngle
 
-    var bufferedImageArray: Array<Image?> = arrayOfNulls(numberOfFrames)
+    var bufferedImageArray: Array<org.eclipse.swt.graphics.Image?> = arrayOfNulls(numberOfFrames)
 
 
     var angle: Int= 0
@@ -234,9 +234,9 @@ bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)
 }
 
 
-open fun createSpriteImage(bufferedImageArray: Array<Image?>)
+open fun createSpriteImage(bufferedImageArray: Array<org.eclipse.swt.graphics.Image?>)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: org.eclipse.swt.graphics.Image{
 
                     var bufferedImageArray = bufferedImageArray
 
@@ -269,21 +269,21 @@ rows= (size /columns)
                                     }
                                 
 
-    var firstBufferedImage: Image = bufferedImageArray[0]!!
+    var firstBufferedImage: org.eclipse.swt.graphics.Image = bufferedImageArray[0]!!
 
 
     var imageData: ImageData = firstBufferedImage!!.getImageData()!!
             
 
 
-    var bufferedImage: Image = this.imageUtil!!.create(imageData!!.width *columns, imageData!!.height *rows)!!
+    var bufferedImage: org.eclipse.swt.graphics.Image = this.imageUtil!!.create(imageData!!.width *columns, imageData!!.height *rows)!!
             
 
 
     var gc: GC = GC(bufferedImage)
 
-gc!!.setAntialias(SWT.ON)
-gc!!.setInterpolation(SWT.HIGH)
+gc.setAntialias(SWT.ON)
+gc.setInterpolation(SWT.HIGH)
 
     var columnIndex: Int = 0
 
@@ -291,7 +291,7 @@ gc!!.setInterpolation(SWT.HIGH)
     var rowIndex: Int = 0
 
 
-    var nextBufferedImage: Image
+    var nextBufferedImage: org.eclipse.swt.graphics.Image
 
 
 
@@ -312,11 +312,11 @@ columnIndex= 0
                                 
 nextBufferedImage= bufferedImageArray[index]!!
 imageData= nextBufferedImage!!.getImageData()
-gc!!.drawImage(bufferedImage, 0, 0, bufferedImage!!.getBounds()!!.width, bufferedImage!!.getBounds()!!.height, imageData!!.width *columnIndex, imageData!!.height *rowIndex, imageData!!.width, imageData!!.height)
+gc.drawImage(bufferedImage, 0, 0, bufferedImage!!.getBounds()!!.width, bufferedImage!!.getBounds()!!.height, imageData!!.width *columnIndex, imageData!!.height *rowIndex, imageData!!.width, imageData!!.height)
 columnIndex++
 }
 
-gc!!.dispose()
+gc.dispose()
 
 
 

@@ -31,6 +31,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
@@ -38,6 +39,9 @@ open public class ThreadPool
             : Object
          {
         
+
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
@@ -133,7 +137,7 @@ open fun runATask()
                                 )
                         
                                     {
-                                    runnable!!.run()
+                                    runnable.run()
 
                                     }
                                 
@@ -196,7 +200,7 @@ open fun runTaskWithPriority(task: PriorityRunnable)
         {runnable= this.taskQueue!!.get(index) as PriorityRunnable
 
     
-                        if(runnable!!.getPriority() > task!!.getPriority())
+                        if(runnable.getPriority() > task.getPriority())
                         
                                     {
                                     lowerPriorityRunnable= runnable

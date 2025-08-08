@@ -104,7 +104,7 @@ override fun paint(g: Graphics, x: Int, y: Int)
 
 
                     var y = y
-this.sprite!!.setPosition(x, y)
+this.sprite.setPosition(x, y)
 this.paint(g)
 }
 
@@ -114,17 +114,17 @@ open fun paint(g: Graphics)
 {
 
                     var g = g
-this.sprite!!.paint(g)
+this.sprite.paint(g)
 }
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite!!.nextFrame()
+{this.sprite.nextFrame()
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite!!.prevFrame()
+{this.sprite.prevFrame()
 }
 
 override fun getSize()
@@ -133,7 +133,7 @@ override fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.sprite!!.getRawFrameCount()
+                        return this.sprite.getRawFrameCount()
 }
 
 override fun setFrame(frame: Int)
@@ -141,7 +141,7 @@ override fun setFrame(frame: Int)
 {
 
                     var frame = frame
-this.sprite!!.setFrame(frame)
+this.sprite.setFrame(frame)
 }
 
 override fun getFrame()
@@ -150,7 +150,7 @@ override fun getFrame()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.sprite!!.getFrame()
+                        return this.sprite.getFrame()
 }
 
 override fun setSequence(sequence: IntArray)

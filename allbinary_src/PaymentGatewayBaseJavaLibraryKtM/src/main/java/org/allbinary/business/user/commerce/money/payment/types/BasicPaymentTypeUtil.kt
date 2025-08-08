@@ -150,7 +150,7 @@ open fun difference(a_PaymentTypeVector: Vector)
 
     
                         if(!a_PaymentTypeVector!!.contains(paymentType))
-                        diff!!.add(paymentType)
+                        diff.add(paymentType)
 }
 
 

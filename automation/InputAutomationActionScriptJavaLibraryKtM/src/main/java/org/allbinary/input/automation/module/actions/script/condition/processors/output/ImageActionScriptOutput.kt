@@ -70,7 +70,7 @@ public constructor        (node: Node)
                     
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
-    var actionNode: Node = DomSearchHelper.getNode(ImageActionScriptOutputData.NAME, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(ImageActionScriptOutputData.NAME, node.getChildNodes())!!
             
 
 
@@ -214,7 +214,7 @@ open fun toXmlNode(document: Document)
             
 
 newNode!!.appendChild(this.getImageTypes()!!.toXmlNode(document))
-node!!.appendChild(newNode)
+node.appendChild(newNode)
 
 
 

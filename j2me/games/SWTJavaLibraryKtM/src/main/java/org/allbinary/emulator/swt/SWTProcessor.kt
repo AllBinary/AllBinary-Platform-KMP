@@ -67,7 +67,7 @@ open fun process(display: Display)
 {
 
                     var display = display
-display!!.sleep()
+display.sleep()
 }
 
 

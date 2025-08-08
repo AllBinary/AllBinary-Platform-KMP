@@ -83,7 +83,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
                     var y = y
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
-graphics!!.drawArc(x, y, width, height, 0, TOTAL_ANGLE)
+graphics.drawArc(x, y, width, height, 0, TOTAL_ANGLE)
 }
 
 

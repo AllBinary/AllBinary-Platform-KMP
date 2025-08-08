@@ -89,7 +89,7 @@ open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource
     var transformer: Transformer = transformerFactory!!.newTransformer(xsltStreamSource)!!
             
 
-transformer!!.transform(xmlStreamSource, streamResult)
+transformer.transform(xmlStreamSource, streamResult)
 
 
 
@@ -132,7 +132,7 @@ tFactory!!.setURIResolver(resolver)
     var transformer: Transformer = tFactory!!.newTransformer(xsltStreamSource)!!
             
 
-transformer!!.transform(xmlStreamSource, streamResult)
+transformer.transform(xmlStreamSource, streamResult)
 
 
 

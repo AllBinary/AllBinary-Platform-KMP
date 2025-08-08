@@ -120,7 +120,7 @@ open fun setDisplay(newDisplay: Displayable)
     var display: Display = getDisplay()!!
             
 
-display!!.setCurrent(newDisplay)
+display.setCurrent(newDisplay)
 }
 
 

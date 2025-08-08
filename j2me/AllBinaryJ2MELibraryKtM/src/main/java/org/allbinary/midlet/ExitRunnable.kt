@@ -72,16 +72,16 @@ override fun run()
 {
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
-this.midlet!!.destroyApp(false, this.isProgress)
-this.midlet!!.setDisplay(null as Displayable)
-this.midlet!!.notifyDestroyed()
+this.midlet.destroyApp(false, this.isProgress)
+this.midlet.setDisplay(null as Displayable)
+this.midlet.notifyDestroyed()
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
-processor!!.process()
+processor.process()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
         try {
-            processor!!.process()
+            processor.process()
 } catch(e2: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

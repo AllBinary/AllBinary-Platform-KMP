@@ -73,12 +73,12 @@ open fun paint(bitmap: Bitmap, originalBitmap: Bitmap, paint: Paint)
 
 
                     var paint = paint
-bitmap!!.eraseColor(Color.TRANSPARENT)
+bitmap.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = Canvas()
+    var canvas: Canvas = android.graphics.Canvas()
 
-canvas!!.setBitmap(bitmap)
-canvas!!.drawBitmap(originalBitmap, 0, 0, paint)
+canvas.setBitmap(bitmap)
+canvas.drawBitmap(originalBitmap, 0, 0, paint)
 }
 
 
@@ -93,12 +93,12 @@ open fun paint(image: Image, originalImage: Image, paint: Paint)
 
 
                     var paint = paint
-image!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = image!!.getCanvas()!!
+    var canvas: Canvas = image.getCanvas()!!
             
 
-canvas!!.drawBitmap(originalImage!!.getBitmap(), 0, 0, paint)
+canvas.drawBitmap(originalImage!!.getBitmap(), 0, 0, paint)
 }
 
 
@@ -116,13 +116,13 @@ open fun rotate(image: Image, originalImage: Image, matrix: Matrix, paint: Paint
 
 
                     var paint = paint
-image!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = image!!.getCanvas()!!
+    var canvas: Canvas = image.getCanvas()!!
             
 
-canvas!!.concat(matrix)
-canvas!!.drawBitmap(originalImage!!.getBitmap(), 0, 0, paint)
+canvas.concat(matrix)
+canvas.drawBitmap(originalImage!!.getBitmap(), 0, 0, paint)
 }
 
 
@@ -137,13 +137,13 @@ open fun rotate(image: Image, originalImage: Image, matrix: Matrix)
 
 
                     var matrix = matrix
-image!!.getBitmap()!!.eraseColor(Color.TRANSPARENT)
+image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
-    var canvas: Canvas = image!!.getCanvas()!!
+    var canvas: Canvas = image.getCanvas()!!
             
 
-canvas!!.concat(matrix)
-image!!.getGraphics()!!.drawImage(originalImage, 0, 0, 0)
+canvas.concat(matrix)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, 0)
 }
 
 

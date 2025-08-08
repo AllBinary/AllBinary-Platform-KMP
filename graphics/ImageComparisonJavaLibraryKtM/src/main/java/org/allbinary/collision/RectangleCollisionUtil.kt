@@ -48,7 +48,7 @@ open fun isCollision(rectangle: Rectangle, point: GPoint)
                     var point = point
 
     
-                        if(point!!.getX() > (rectangle!!.x.toInt() +rectangle!!.getWidth()) || point!!.getY() > (rectangle!!.y.toInt() +rectangle!!.getHeight()) || point!!.getX() < rectangle!!.x || point!!.getY() < rectangle!!.y)
+                        if(point.getX() > (rectangle.x.toInt() +rectangle.getWidth()) || point.getY() > (rectangle.y.toInt() +rectangle.getHeight()) || point.getX() < rectangle.x || point.getY() < rectangle.y)
                         
                                     {
                                     
@@ -83,7 +83,7 @@ open fun isCollision(rectangle1: Rectangle, rectangle2: Rectangle)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return isCollision(rectangle1!!.x, rectangle1!!.y, rectangle1!!.x +rectangle1!!.width, rectangle1!!.y +rectangle1!!.height, rectangle2!!.x, rectangle2!!.y, rectangle2!!.x +rectangle2!!.width, rectangle2!!.y +rectangle2!!.height)
+                        return isCollision(rectangle1.x, rectangle1.y, rectangle1.x +rectangle1.width, rectangle1.y +rectangle1.height, rectangle2.x, rectangle2.y, rectangle2.x +rectangle2.width, rectangle2.y +rectangle2.height)
 }
 
 

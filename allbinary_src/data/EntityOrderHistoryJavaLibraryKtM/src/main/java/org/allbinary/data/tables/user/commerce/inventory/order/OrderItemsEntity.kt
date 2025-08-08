@@ -86,11 +86,11 @@ open fun insert(userName: String, order: OrderInterface)
 
         try {
             
-    var basket: BasketInterface = order!!.getBasket()!!
+    var basket: BasketInterface = order.getBasket()!!
             
 
 
-    var items: Set = basket!!.getIds()!!
+    var items: Set = basket.getIds()!!
             
 
 
@@ -104,7 +104,7 @@ open fun insert(userName: String, order: OrderInterface)
             
 
 
-    var itemsArray: Array<Any?> = items!!.toArray()!!
+    var itemsArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -126,69 +126,69 @@ open fun insert(userName: String, order: OrderInterface)
             
 
 vector= Vector()
-vector!!.add(OrderItemIdGenerator().
+vector.add(OrderItemIdGenerator().
                             getNext())
-vector!!.add(order!!.getId())
-vector!!.add(TableDataFactory.getInstance()!!.INTEGER_MAX_VALUE_STRING)
-vector!!.add(userName)
-vector!!.add(order!!.getStoreName())
-vector!!.add(itemInterface!!.getId())
-vector!!.add(basket!!.getNumberOf(item)!!.toString())
-vector!!.add(itemInterface!!.getNewOrUsed())
-vector!!.add(itemInterface!!.getSummary())
-vector!!.add(itemInterface!!.getDistributor())
-vector!!.add(itemInterface!!.getIdUsedByDistributor())
-vector!!.add(itemInterface!!.getProducedBy())
-vector!!.add(itemInterface!!.getProductionDate())
-vector!!.add(itemInterface!!.getStartProductionDate())
-vector!!.add(itemInterface!!.getDescription())
-vector!!.add(itemInterface!!.getKeywords())
-vector!!.add(itemInterface!!.getCategory())
-vector!!.add(itemInterface!!.getType())
-vector!!.add(itemInterface!!.getSmallImage())
-vector!!.add(itemInterface!!.getMediumImage())
-vector!!.add(itemInterface!!.getLargeImage())
-vector!!.add(itemInterface!!.getWeight())
-vector!!.add(itemInterface!!.getPrice()!!.toString())
-vector!!.add(itemInterface!!.getComment())
-vector!!.add(itemInterface!!.getCustoms())
-vector!!.add(itemInterface!!.getDownloads())
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(EMPTY_STRING)
-vector!!.add(ZERO_STRING)
-vector!!.add(ZERO_STRING)
-vector!!.add(ZERO_STRING)
-vector!!.add(ZERO_STRING)
+vector.add(order.getId())
+vector.add(TableDataFactory.getInstance()!!.INTEGER_MAX_VALUE_STRING)
+vector.add(userName)
+vector.add(order.getStoreName())
+vector.add(itemInterface!!.getId())
+vector.add(basket.getNumberOf(item)!!.toString())
+vector.add(itemInterface!!.getNewOrUsed())
+vector.add(itemInterface!!.getSummary())
+vector.add(itemInterface!!.getDistributor())
+vector.add(itemInterface!!.getIdUsedByDistributor())
+vector.add(itemInterface!!.getProducedBy())
+vector.add(itemInterface!!.getProductionDate())
+vector.add(itemInterface!!.getStartProductionDate())
+vector.add(itemInterface!!.getDescription())
+vector.add(itemInterface!!.getKeywords())
+vector.add(itemInterface!!.getCategory())
+vector.add(itemInterface!!.getType())
+vector.add(itemInterface!!.getSmallImage())
+vector.add(itemInterface!!.getMediumImage())
+vector.add(itemInterface!!.getLargeImage())
+vector.add(itemInterface!!.getWeight())
+vector.add(itemInterface!!.getPrice()!!.toString())
+vector.add(itemInterface!!.getComment())
+vector.add(itemInterface!!.getCustoms())
+vector.add(itemInterface!!.getDownloads())
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(EMPTY_STRING)
+vector.add(ZERO_STRING)
+vector.add(ZERO_STRING)
+vector.add(ZERO_STRING)
+vector.add(ZERO_STRING)
 this.insert(vector)
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Command Success Added: " +items!!.size, this, INSERT)
+                                    logUtil!!.put("Command Success Added: " +items.size, this, INSERT)
 
                                     }
                                 
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Command Failed: " +vector!!.toString(), this, INSERT, e)
+                                    logUtil!!.put("Command Failed: " +vector.toString(), this, INSERT, e)
 
                                     }
                                 
@@ -223,7 +223,7 @@ super.updateWhere(whereHashMap, updateHashMap)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -258,7 +258,7 @@ open fun isEverythingShipped(orderId: String)
 
 
     
-                        if(status!!.compareTo(OrderHistoryData.SHIPPED) != 0)
+                        if(status.compareTo(OrderHistoryData.SHIPPED) != 0)
                         
                                     {
                                     
@@ -279,7 +279,7 @@ open fun isEverythingShipped(orderId: String)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -323,14 +323,14 @@ keyValues!!.put(OrderData.ID, orderId)
     
                         if(items != 
                                     null
-                                 && items!!.size > 0)
+                                 && items.size > 0)
                         
                                     {
                                     
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
-    var itemsArray: Array<Any?> = items!!.toArray()!!
+    var itemsArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -381,7 +381,7 @@ basketReview!!.addItem(item)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

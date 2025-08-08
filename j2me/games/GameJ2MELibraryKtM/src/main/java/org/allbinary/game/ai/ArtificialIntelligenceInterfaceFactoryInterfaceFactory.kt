@@ -74,14 +74,14 @@ open fun getInstance(hashtable: Hashtable<Any, Any>)
 
                     var hashtable = hashtable
 
-    var typeInteger: Integer = hashtable!!.get(BasicAI.ID as Object) as Integer
+    var typeInteger: Integer = hashtable.get(BasicAI.ID as Object) as Integer
 
 
     var type: Int = typeInteger!!.toInt()!!
             
 
 
-    var artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface = list!!.objectArray[type -1]!! as ArtificialIntelligenceInterfaceFactoryInterface
+    var artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface = list.objectArray[type -1]!! as ArtificialIntelligenceInterfaceFactoryInterface
 
 
 
@@ -96,7 +96,7 @@ open fun add(artificialIntelligenceInterfaceFactoryInterface: ArtificialIntellig
 {
 
                     var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
-list!!.add(artificialIntelligenceInterfaceFactoryInterface)
+list.add(artificialIntelligenceInterfaceFactoryInterface)
 }
 
 

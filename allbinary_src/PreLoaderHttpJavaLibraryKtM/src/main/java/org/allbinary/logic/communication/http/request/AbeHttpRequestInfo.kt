@@ -90,9 +90,9 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
             
 
 
-        while(enumuration!!.hasMoreElements())
+        while(enumuration.hasMoreElements())
         {
-    var key: String = enumuration!!.nextElement()!! as String
+    var key: String = enumuration.nextElement()!! as String
 
 
     var value: String = httpServletRequest!!.getHeader(key)!!
@@ -100,7 +100,7 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
 
 
     
-                        if(key!!.indexOf(
+                        if(key.indexOf(
                             "user") >= 0)
                         this.httpUserAgent= "key: " +key +" value: " +value
 }
@@ -137,12 +137,12 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.httpUserAgent)
-vector!!.add(this.remoteAddress)
-vector!!.add(this.remoteHost)
-vector!!.add(this.remoteHostByAddr)
-vector!!.add(this.remotePort)
-vector!!.add(this.requestedFilePath)
+vector.add(this.httpUserAgent)
+vector.add(this.remoteAddress)
+vector.add(this.remoteHost)
+vector.add(this.remoteHostByAddr)
+vector.add(this.remotePort)
+vector.add(this.requestedFilePath)
 
 
 

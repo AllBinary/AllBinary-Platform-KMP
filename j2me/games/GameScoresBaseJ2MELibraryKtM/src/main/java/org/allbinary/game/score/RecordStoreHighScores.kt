@@ -410,7 +410,7 @@ inputStream= DataInputStream(byteArrayInputStream)
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -424,7 +424,7 @@ inputStream= DataInputStream(byteArrayInputStream)
 
 
         {
-    var highScore: HighScore = list!!.objectArray[index]!! as HighScore
+    var highScore: HighScore = list.objectArray[index]!! as HighScore
 
 
     
@@ -440,7 +440,7 @@ break;
                                 
 }
 
-list!!.add(lastIndex, newHighScore)
+list.add(lastIndex, newHighScore)
 } catch(e: EOFException)
             {logUtil!!.put(
                             "EOF", this, commonStrings!!.LOAD, e)
@@ -558,7 +558,7 @@ open fun isTooManyHighScores()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -569,7 +569,7 @@ open fun isTooManyHighScores()
 
 
         {
-    var highScore: HighScore = list!!.objectArray[index]!! as HighScore
+    var highScore: HighScore = list.objectArray[index]!! as HighScore
 
 
     
@@ -621,7 +621,7 @@ stringBuffer!!.append(super.toString())
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -632,7 +632,7 @@ stringBuffer!!.append(super.toString())
 
 
         {
-    var highScore: HighScore = list!!.objectArray[index]!! as HighScore
+    var highScore: HighScore = list.objectArray[index]!! as HighScore
 
 stringBuffer!!.append(highScore!!.getScoreString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.COMMA_SEP)

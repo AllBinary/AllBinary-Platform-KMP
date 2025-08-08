@@ -72,10 +72,10 @@ open fun addListener(miniMapLayer: MiniMapLayer)
                     var miniMapLayer = miniMapLayer
 
     
-                        if(!list!!.contains(miniMapLayer))
+                        if(!list.contains(miniMapLayer))
                         
                                     {
-                                    list!!.add(miniMapLayer)
+                                    list.add(miniMapLayer)
 
                                     }
                                 
@@ -84,7 +84,7 @@ open fun addListener(miniMapLayer: MiniMapLayer)
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -94,7 +94,7 @@ open fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -110,13 +110,13 @@ open fun fireEvent(eventObject: AllBinaryEventObject)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var miniMapLayer: MiniMapLayer = this.list!!.get(index) as MiniMapLayer
+    var miniMapLayer: MiniMapLayer = this.list.get(index) as MiniMapLayer
 
 miniMapLayer!!.onGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
 } catch(e: Exception)
@@ -143,13 +143,13 @@ open fun fireRemoveEvent(eventObject: AllBinaryEventObject)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var miniMapLayer: MiniMapLayer = this.list!!.get(index) as MiniMapLayer
+    var miniMapLayer: MiniMapLayer = this.list.get(index) as MiniMapLayer
 
 miniMapLayer!!.onRemoveGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
 } catch(e: Exception)
@@ -162,13 +162,13 @@ miniMapLayer!!.onRemoveGeographicMapCellPositionEvent(eventObject as GeographicM
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
         {
         try {
             
-    var eventListenerInterface: EventListenerInterface = list!!.get(index) as EventListenerInterface
+    var eventListenerInterface: EventListenerInterface = list.get(index) as EventListenerInterface
 
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as GeographicMapCellPositionEventListenerInterface
 eventListenerInterface.

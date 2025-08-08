@@ -36,7 +36,7 @@ public constructor        (){initComponents()
 
 open fun getNewActionScriptInputJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: javax.swing.JPanel{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,7 +44,7 @@ open fun getNewActionScriptInputJPanel()
 }
 
 
-open fun setNewActionScriptInputJPanel(newActionScriptInputJPanel: JPanel)
+open fun setNewActionScriptInputJPanel(newActionScriptInputJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -55,7 +55,7 @@ this.newActionScriptInputJPanel= newActionScriptInputJPanel
 
 open fun getRemoveJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: javax.swing.JPanel{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +63,7 @@ open fun getRemoveJPanel()
 }
 
 
-open fun setRemoveJPanel(removeJPanel: JPanel)
+open fun setRemoveJPanel(removeJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -74,7 +74,7 @@ this.removeJPanel= removeJPanel
 
 open fun getScriptItemJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: javax.swing.JPanel{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +82,7 @@ open fun getScriptItemJPanel()
 }
 
 
-open fun setScriptItemJPanel(scriptItemJPanel: JPanel)
+open fun setScriptItemJPanel(scriptItemJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -93,7 +93,7 @@ this.scriptItemJPanel= scriptItemJPanel
 
 open fun getNewActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: javax.swing.JPanel{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +101,7 @@ open fun getNewActionScriptConditionJPanel()
 }
 
 
-open fun setNewActionScriptConditionJPanel(newActionScriptConditionJPanel: JPanel)
+open fun setNewActionScriptConditionJPanel(newActionScriptConditionJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -112,7 +112,7 @@ this.newActionScriptConditionJPanel= newActionScriptConditionJPanel
 
 open fun getChildActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: javax.swing.JPanel{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,7 +120,7 @@ open fun getChildActionScriptConditionJPanel()
 }
 
 
-open fun setChildActionScriptConditionJPanel(childActionScriptConditionJPanel: JPanel)
+open fun setChildActionScriptConditionJPanel(childActionScriptConditionJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -131,40 +131,40 @@ this.childActionScriptConditionJPanel= childActionScriptConditionJPanel
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{newActionScriptInputJPanel= JPanel()
-childActionScriptConditionJPanel= JPanel()
-newActionScriptConditionJPanel= JPanel()
-scriptItemJPanel= JPanel()
-removeJPanel= JPanel()
-newActionScriptInputJPanel!!.setLayout(GridLayout(1, 0))
+{newActionScriptInputJPanel= javax.swing.JPanel()
+childActionScriptConditionJPanel= javax.swing.JPanel()
+newActionScriptConditionJPanel= javax.swing.JPanel()
+scriptItemJPanel= javax.swing.JPanel()
+removeJPanel= javax.swing.JPanel()
+newActionScriptInputJPanel!!.setLayout(java.awt.GridLayout(1, 0))
 
-    var childActionScriptConditionJPanelLayout: GroupLayout = GroupLayout(childActionScriptConditionJPanel)
+    var childActionScriptConditionJPanelLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(childActionScriptConditionJPanel)
 
 childActionScriptConditionJPanel!!.setLayout(childActionScriptConditionJPanelLayout)
-childActionScriptConditionJPanelLayout!!.setHorizontalGroup(childActionScriptConditionJPanelLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 229, Short.MAX_VALUE))
-childActionScriptConditionJPanelLayout!!.setVerticalGroup(childActionScriptConditionJPanelLayout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGap(0, 8, Short.MAX_VALUE))
-newActionScriptConditionJPanel!!.setLayout(GridLayout(1, 0))
-scriptItemJPanel!!.setLayout(GridLayout(1, 1))
-removeJPanel!!.setLayout(GridLayout(1, 1))
-removeJPanel!!.setMinimumSize(Dimension(30, 20))
+childActionScriptConditionJPanelLayout!!.setHorizontalGroup(childActionScriptConditionJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 229, Short.MAX_VALUE))
+childActionScriptConditionJPanelLayout!!.setVerticalGroup(childActionScriptConditionJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 8, Short.MAX_VALUE))
+newActionScriptConditionJPanel!!.setLayout(java.awt.GridLayout(1, 0))
+scriptItemJPanel!!.setLayout(java.awt.GridLayout(1, 1))
+removeJPanel!!.setLayout(java.awt.GridLayout(1, 1))
+removeJPanel!!.setMinimumSize(java.awt.Dimension(30, 20))
 
-    var layout: GroupLayout = GroupLayout(this)
+    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 
 this.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addComponent(scriptItemJPanel, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, 167, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax!!.swing!!.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(removeJPanel, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))!!.addComponent(newActionScriptInputJPanel, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)!!.addComponent(newActionScriptConditionJPanel, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)!!.addComponent(childActionScriptConditionJPanel, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addComponent(scriptItemJPanel, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)!!.addComponent(removeJPanel, javax!!.swing!!.GroupLayout.Alignment.TRAILING, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))!!.addPreferredGap(javax!!.swing!!.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(childActionScriptConditionJPanel, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax!!.swing!!.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(newActionScriptConditionJPanel, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, 28, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax!!.swing!!.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(newActionScriptInputJPanel, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, 30, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addComponent(scriptItemJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(removeJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))!!.addComponent(newActionScriptInputJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)!!.addComponent(newActionScriptConditionJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)!!.addComponent(childActionScriptConditionJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(scriptItemJPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE)!!.addComponent(removeJPanel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 31, Short.MAX_VALUE))!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(childActionScriptConditionJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(newActionScriptConditionJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(newActionScriptInputJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
 }
 
 
-    private var childActionScriptConditionJPanel: JPanel
+    private var childActionScriptConditionJPanel: javax.swing.JPanel
 
-    private var newActionScriptConditionJPanel: JPanel
+    private var newActionScriptConditionJPanel: javax.swing.JPanel
 
-    private var newActionScriptInputJPanel: JPanel
+    private var newActionScriptInputJPanel: javax.swing.JPanel
 
-    private var removeJPanel: JPanel
+    private var removeJPanel: javax.swing.JPanel
 
-    private var scriptItemJPanel: JPanel
+    private var scriptItemJPanel: javax.swing.JPanel
 
 }
                 

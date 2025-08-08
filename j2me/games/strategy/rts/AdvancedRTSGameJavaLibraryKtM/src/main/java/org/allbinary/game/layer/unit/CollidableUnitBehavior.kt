@@ -256,10 +256,10 @@ open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
 
 
     
-                        if(!list!!.contains(this.simpleSteeringVisitor))
+                        if(!list.contains(this.simpleSteeringVisitor))
                         
                                     {
-                                    list!!.add(this.simpleSteeringVisitor)
+                                    list.add(this.simpleSteeringVisitor)
 
                                     }
                                 

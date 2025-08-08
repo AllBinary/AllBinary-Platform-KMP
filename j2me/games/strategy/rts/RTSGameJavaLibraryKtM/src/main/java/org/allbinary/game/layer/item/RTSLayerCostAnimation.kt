@@ -129,13 +129,13 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 super.paint(graphics, x, y)
 
-    var adjustedCostY: Int = image!!.getHeight() -()
+    var adjustedCostY: Int = image.getHeight() -()
 
 
     var xa: Int = x +2
 
-graphics!!.drawString(DOLLAR, xa, y +adjustedCostY, 0)
-graphics!!.drawChars(costString, 0, this.len, x +adjustedCostX, y +adjustedCostY, 0)
+graphics.drawString(DOLLAR, xa, y +adjustedCostY, 0)
+graphics.drawChars(costString, 0, this.len, x +adjustedCostX, y +adjustedCostY, 0)
 }
 
 

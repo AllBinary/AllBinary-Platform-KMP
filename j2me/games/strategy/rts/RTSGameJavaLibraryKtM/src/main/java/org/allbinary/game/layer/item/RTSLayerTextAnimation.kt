@@ -65,9 +65,9 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 super.paint(graphics, x, y)
 
-    var adjustedCostY: Int = image!!.getHeight() -()
+    var adjustedCostY: Int = image.getHeight() -()
 
-graphics!!.drawString(text, x, y +adjustedCostY, 0)
+graphics.drawString(text, x, y +adjustedCostY, 0)
 }
 
 

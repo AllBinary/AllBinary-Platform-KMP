@@ -35,7 +35,7 @@ open public class ImageAnimationFactory : BaseImageAnimationFactory {
         
 public constructor        (image: Image)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), 0, 0, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), 0, 0, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -46,7 +46,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 

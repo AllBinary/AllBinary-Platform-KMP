@@ -77,7 +77,7 @@ open fun process(userName: String, order: Order)
 
     var orderHistory: OrderHistoryEntity = OrderHistoryEntity()
 
-order!!.setId(OrderIdGenerator().
+order.setId(OrderIdGenerator().
                             getNext())
 orderItems!!.insert(userName, order)
 orderHistory!!.insert(userName, order)

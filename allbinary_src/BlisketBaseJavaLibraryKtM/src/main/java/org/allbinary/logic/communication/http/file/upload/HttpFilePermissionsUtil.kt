@@ -70,10 +70,10 @@ open fun create(path: AbPath)
 
 
     
-                        if(!file!!.isFile())
+                        if(!file.isFile())
                         
                                     {
-                                    file!!.createNewFile()
+                                    file.createNewFile()
 
                                     }
                                 

@@ -120,7 +120,7 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -185,9 +185,9 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 
                         }
                             
-geographicMapCellPosition= list!!.get(index) as GeographicMapCellPosition
+geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 point= geographicMapCellPosition!!.getMidPoint()
-geographicMapCellPosition= list!!.get(index +1) as GeographicMapCellPosition
+geographicMapCellPosition= list.get(index +1) as GeographicMapCellPosition
 nextPoint= geographicMapCellPosition!!.getMidPoint()
 this.linePathAnimation!!.paint(graphics, point, nextPoint, tiledLayer)
 }

@@ -97,9 +97,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
             
 
 
-        while(rset!!.next())
+        while(rset.next())
         {
-    var intValue: Int = rset!!.getInt(columnName)!!
+    var intValue: Int = rset.getInt(columnName)!!
             
 
 
@@ -120,7 +120,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -140,7 +140,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COL
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_LARGETS_INTEGER_IN_COLUMN, e)
@@ -183,24 +183,24 @@ stringBuffer!!.append(this.getTableName())
             
 
 
-        while(rset!!.next())
+        while(rset.next())
         {
-    var field: String = rset!!.getObject(columnName)!!.toString()!!
+    var field: String = rset.getObject(columnName)!!.toString()!!
             
 
-column!!.add(field)
+column.add(field)
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
 stringBuffer!!.append(sqlStrings!!.COLUMN_VALUE)
-stringBuffer!!.append(column!!.toString())
+stringBuffer!!.append(column.toString())
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
 
                                     }
@@ -213,7 +213,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_COLUMN, e)
@@ -270,21 +270,21 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
         try {
             rset= executeSQLStatement(sqlStatement)
 
-        while(rset!!.next())
-        {field= rset!!.getObject(columnName)!!.toString()
-column!!.add(field)
+        while(rset.next())
+        {field= rset.getObject(columnName)!!.toString()
+column.add(field)
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(sqlStrings!!.SQL_STATEMENT_LABEL)
 stringBuffer!!.append(sqlStatement)
 stringBuffer!!.append(sqlStrings!!.COLUMN_VALUE)
-stringBuffer!!.append(column!!.toString())
+stringBuffer!!.append(column.toString())
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
 
                                     }
@@ -297,7 +297,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, this.METHOD_GET_COLUMN_WHERE, e)

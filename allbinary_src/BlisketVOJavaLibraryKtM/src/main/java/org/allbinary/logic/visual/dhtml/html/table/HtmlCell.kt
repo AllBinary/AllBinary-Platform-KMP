@@ -118,7 +118,7 @@ result += " "
     
                         if(value != 
                                     null
-                                 && value!!.compareTo(stringUtil!!.EMPTY_STRING) != 0)
+                                 && value.compareTo(stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
                                     result += key

@@ -105,14 +105,14 @@ open fun registerAsService()
     var properties: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 
-    var serviceRegistration: ServiceRegistration = context!!.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!
+    var serviceRegistration: ServiceRegistration = context.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!
             
 
 
     var serviceReference: ServiceReference = serviceRegistration!!.getReference()!!
             
 
-serviceReference= context!!.getServiceReference(CRYPT_REGISTRY_NAME)
+serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
 
     
                         if(serviceReference == 

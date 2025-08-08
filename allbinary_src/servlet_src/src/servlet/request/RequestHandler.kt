@@ -75,10 +75,10 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                     var response = response
 
         try {
-            response!!.setContentType(
+            response.setContentType(
                             "text/html")
 
-    var out: PrintWriter = response!!.getWriter()!!
+    var out: PrintWriter = response.getWriter()!!
             
 
 
@@ -92,16 +92,16 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                 )
                         
                                     {
-                                    out!!.print(workflowInterface!!.process())
+                                    out.print(workflowInterface!!.process())
 
                                     }
                                 
-out!!.flush()
-out!!.close()
+out.flush()
+out.close()
 } catch(e: LicensingException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -110,12 +110,12 @@ out!!.close()
 
                                     }
                                 
-response!!.sendRedirect(abcs!!.globals!!.URLGLOBALS.LICENSEERRORPAGE)
+response.sendRedirect(abcs.globals.URLGLOBALS.LICENSEERRORPAGE)
 }
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -124,7 +124,7 @@ response!!.sendRedirect(abcs!!.globals!!.URLGLOBALS.LICENSEERRORPAGE)
 
                                     }
                                 
-response!!.sendRedirect(abcs!!.globals!!.URLGLOBALS.ERRORPAGE)
+response.sendRedirect(abcs.globals.URLGLOBALS.ERRORPAGE)
 }
 
 }

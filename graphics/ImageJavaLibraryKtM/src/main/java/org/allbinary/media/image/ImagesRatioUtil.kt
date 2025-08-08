@@ -179,13 +179,13 @@ open fun fudge(bufferedImage: BufferedImage, ratio: Double)
                         
                                     {
                                     newWidth= (bufferedImage!!.getHeight().toDouble() *ratio).toInt()
-point!!.x= (newWidth -bufferedImage!!.getWidth()) /2
+point.x= (newWidth -bufferedImage!!.getWidth()) /2
 
                                     }
                                 
                         else {
                             newHeight= (bufferedImage!!.getWidth().toDouble() /ratio).toInt()
-point!!.y= (newHeight -bufferedImage!!.getHeight()) /2
+point.y= (newHeight -bufferedImage!!.getHeight()) /2
 
                         }
                             
@@ -205,7 +205,7 @@ logUtil!!.put(commonLabels!!.WIDTH_LABEL +bufferedImage!!.getWidth() +" newWidth
 
 
     
-                        if(point!!.x > 0)
+                        if(point.x > 0)
                         
                                     {
                                     
@@ -223,12 +223,12 @@ logUtil!!.put(
 
 
 
-                        for (index in 0 until point!!.x)
+                        for (index in 0 until point.x)
 
 
-        {g!!.drawImage(firstColumnBufferedImage, index, 0, 
+        {g.drawImage(firstColumnBufferedImage, index, 0, 
                             null)
-g!!.drawImage(lastColumnBufferedImage, newWidth -index, 0, 
+g.drawImage(lastColumnBufferedImage, newWidth -index, 0, 
                             null)
 }
 
@@ -237,7 +237,7 @@ g!!.drawImage(lastColumnBufferedImage, newWidth -index, 0,
                                 
 
     
-                        if(point!!.y > 0)
+                        if(point.y > 0)
                         
                                     {
                                     
@@ -255,19 +255,19 @@ logUtil!!.put(
 
 
 
-                        for (index in 0 until point!!.y)
+                        for (index in 0 until point.y)
 
 
-        {g!!.drawImage(firstRowBufferedImage, 0, index, 
+        {g.drawImage(firstRowBufferedImage, 0, index, 
                             null)
-g!!.drawImage(lastRowBufferedImage, 0, newHeight -index, 
+g.drawImage(lastRowBufferedImage, 0, newHeight -index, 
                             null)
 }
 
 
                                     }
                                 
-g!!.drawImage(bufferedImage, point!!.x, point!!.y, bufferedImage!!.getWidth(), bufferedImage!!.getHeight(), 
+g.drawImage(bufferedImage, point.x, point.y, bufferedImage!!.getWidth(), bufferedImage!!.getHeight(), 
                             null)
 
 

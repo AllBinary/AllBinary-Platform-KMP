@@ -164,7 +164,7 @@ this.setPaintable(this.getHighScoresPaintable())
             
 
 
-    var isHTML: Boolean = features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
+    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
             
 
 SecondaryThreadPool.getInstance()!!.runTask(object: NullRunnable()
@@ -250,7 +250,7 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
-this.paintable!!.paint(graphics)
+this.paintable.paint(graphics)
 
     
                         if(this.waitPaintable != this.paintable)

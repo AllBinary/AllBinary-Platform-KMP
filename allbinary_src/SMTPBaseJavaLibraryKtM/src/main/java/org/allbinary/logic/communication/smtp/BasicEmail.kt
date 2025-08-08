@@ -63,7 +63,7 @@ open fun getEmail()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.getEmail() as Email
+                        return this.email.getEmail() as Email
 }
 
 
@@ -73,7 +73,7 @@ open fun getMimeMessage()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.getMimeMessage()
+                        return this.email.getMimeMessage()
 }
 
 
@@ -83,7 +83,7 @@ open fun getDebugInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.getDebugInfo()
+                        return this.email.getDebugInfo()
 }
 
 
@@ -95,7 +95,7 @@ open fun log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.log()
+                        return this.email.log()
 }
 
 
@@ -107,7 +107,7 @@ open fun toHashMap()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.toHashMap()
+                        return this.email.toHashMap()
 }
 
 
@@ -122,7 +122,7 @@ open fun toXmlNode(document: Document)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.toXmlNode(document)
+                        return this.email.toXmlNode(document)
 }
 
 
@@ -134,7 +134,7 @@ open fun toXmlDoc()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.toXmlDoc()
+                        return this.email.toXmlDoc()
 }
 
 

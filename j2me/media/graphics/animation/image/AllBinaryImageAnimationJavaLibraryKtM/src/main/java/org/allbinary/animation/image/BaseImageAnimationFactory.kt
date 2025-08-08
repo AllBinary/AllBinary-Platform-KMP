@@ -210,7 +210,7 @@ override fun toString()
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
-stringBuffer!!.append(image!!.getHeight())
+stringBuffer!!.append(image.getHeight())
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(this.animationFactoryInitializationVisitor!!.toString())
 

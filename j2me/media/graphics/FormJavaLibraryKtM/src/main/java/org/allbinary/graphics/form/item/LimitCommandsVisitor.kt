@@ -59,7 +59,7 @@ override fun visit(anyType: Any)
 
 
     
-                        if(isNotSmallDisplay || command!!.getPriority() == 1 || command == GameCommandsFactory.getInstance()!!.EXIT_COMMAND || command == GameCommandsFactory.getInstance()!!.EXIT_WITHOUT_PROGRESS_COMMAND)
+                        if(isNotSmallDisplay || command.getPriority() == 1 || command == GameCommandsFactory.getInstance()!!.EXIT_COMMAND || command == GameCommandsFactory.getInstance()!!.EXIT_WITHOUT_PROGRESS_COMMAND)
                         
                                     {
                                     

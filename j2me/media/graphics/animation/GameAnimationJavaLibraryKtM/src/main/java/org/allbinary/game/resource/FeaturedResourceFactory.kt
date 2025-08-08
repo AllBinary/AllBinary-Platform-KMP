@@ -81,7 +81,7 @@ open fun init(level: Int)
 
                     var level = level
 
-    var size: Int = this.list!!.size()!!
+    var size: Int = this.list.size()!!
             
 
 
@@ -92,7 +92,7 @@ open fun init(level: Int)
 
 
         {
-    var featureInterface: GameFeatureControlledInterface = this.list!!.objectArray[index]!! as GameFeatureControlledInterface
+    var featureInterface: GameFeatureControlledInterface = this.list.objectArray[index]!! as GameFeatureControlledInterface
 
 
     var isLoadingLevel: Boolean = featureInterface!!.isLoadingLevel(level)!!
@@ -127,24 +127,24 @@ logUtil!!.put(StringMaker().
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(ANIMATION_FEATURES)
-stringBuffer!!.append(features!!.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
+stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
 stringBuffer!!.append(IMAGE_LABEL)
-stringBuffer!!.append(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
+stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
+                        if(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(IMAGE_GRAPHICS_ARRAY)
-stringBuffer!!.append(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
+stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
 stringBuffer!!.append(IMAGE_GRAPHICS_ROTATION)
-stringBuffer!!.append(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
+stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
 stringBuffer!!.append(SPRITE_QUARTER)
-stringBuffer!!.append(features!!.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
+stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
 stringBuffer!!.append(SPRITE_FULL)
-stringBuffer!!.append(features!!.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
+stringBuffer!!.append(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                                     }
@@ -154,7 +154,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 }
 
 
@@ -165,7 +165,7 @@ open fun add(featureInterface: GameFeatureControlledInterface)
                     var featureInterface = featureInterface
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(featureInterface))!!.toString(), this, commonStrings!!.ADD)
-this.list!!.add(featureInterface)
+this.list.add(featureInterface)
 }
 
 

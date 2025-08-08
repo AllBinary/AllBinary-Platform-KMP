@@ -72,7 +72,7 @@ override fun run()
             
 
 
-    var commandListener: CommandListener = canvas!!.getCustomCommandListener()!!
+    var commandListener: CommandListener = canvas.getCustomCommandListener()!!
             
 
 commandListener!!.commandAction(command, canvas)

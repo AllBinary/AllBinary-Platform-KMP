@@ -55,7 +55,7 @@ open public class CompositeRTSFormInput : RTSFormInput {
     private val isPrimaryWaypointCreator: Boolean
 public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreator: Boolean)                        
 
-                            : this(groupInterface, isPrimaryWaypointCreator, intArrayOf(0)){
+                            : this(groupInterface, isPrimaryWaypointCreator, arrayOf(0)){
 
                     var groupInterface = groupInterface
 

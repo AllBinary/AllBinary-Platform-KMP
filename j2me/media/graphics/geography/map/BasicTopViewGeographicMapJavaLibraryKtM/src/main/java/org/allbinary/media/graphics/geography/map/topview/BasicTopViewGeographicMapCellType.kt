@@ -96,7 +96,7 @@ public constructor        (name: String, types: IntArray, cost: Int)
 
                     var cost = cost
 
-    var size: Int = types!!.size
+    var size: Int = types.size
                 
 
 
@@ -146,7 +146,7 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
 
                     var cost = cost
 
-    var size: Int = types!!.size()!!
+    var size: Int = types.size()!!
             
 
 
@@ -162,7 +162,7 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
                         for (index in 0 until size)
 
 
-        {type= get = types!!.get(index)get as Integer
+        {type= get = types.get(index)get as Integer
 get.
                                 toInt()
 
@@ -200,7 +200,7 @@ open fun isType(type: GeographicMapCellType)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isType(type!!.getType())
+                        return this.isType(type.getType())
 }
 
 
@@ -210,7 +210,7 @@ open fun isType(type: Int)
 
                     var type = type
 
-    var size: Int = types!!.size
+    var size: Int = types.size
                 
 
 
@@ -258,7 +258,7 @@ override fun toString()
     var stringMaker: StringMaker = StringMaker()
 
 
-    var size: Int = types!!.size
+    var size: Int = types.size
                 
 
 

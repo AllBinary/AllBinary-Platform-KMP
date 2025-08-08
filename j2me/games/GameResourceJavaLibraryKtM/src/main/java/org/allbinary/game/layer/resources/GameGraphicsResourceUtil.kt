@@ -101,7 +101,7 @@ open fun getString()
 
 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
+                        if(features.isFeature(graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS))
                         
                                     {
                                     graphicsFeature= graphicsFeatureFactory!!.IMAGE_TO_ARRAY_GRAPHICS
@@ -110,7 +110,7 @@ open fun getString()
                                 
                              else 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
+                        if(features.isFeature(graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS))
                         
                                     {
                                     graphicsFeature= graphicsFeatureFactory!!.SPRITE_FULL_GRAPHICS
@@ -119,7 +119,7 @@ open fun getString()
                                 
                              else 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
+                        if(features.isFeature(graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS))
                         
                                     {
                                     graphicsFeature= graphicsFeatureFactory!!.SPRITE_QUARTER_ROTATION_GRAPHICS
@@ -128,7 +128,7 @@ open fun getString()
                                 
                              else 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_ROTATION_ON_THE_FLY))
+                        if(features.isFeature(graphicsFeatureFactory!!.IMAGE_ROTATION_ON_THE_FLY))
                         
                                     {
                                     graphicsFeature= graphicsFeatureFactory!!.IMAGE_ROTATION_ON_THE_FLY
@@ -164,7 +164,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 
 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
+                        if(features.isFeature(graphicsFeatureFactory!!.VECTOR_GRAPHICS))
                         
                                     {
                                     
@@ -172,7 +172,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
                                 
                              else 
     
-                        if(features!!.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
+                        if(features.isFeature(graphicsFeatureFactory!!.IMAGE_GRAPHICS))
                         
                                     {
                                     

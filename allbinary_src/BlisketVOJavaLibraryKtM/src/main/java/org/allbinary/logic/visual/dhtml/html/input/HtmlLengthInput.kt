@@ -67,7 +67,7 @@ open fun setMaxLength(length: Integer)
 {
 
                     var length = length
-this.length= length!!.toString().toCharArray().concatToString()
+this.length= length.toString().toCharArray().concatToString()
                                 
 addAttribute(MAXLENGTH, this.length)
 }
@@ -78,7 +78,7 @@ open fun setSize(size: Integer)
 {
 
                     var size = size
-this.size= size!!.toString().toCharArray().concatToString()
+this.size= size.toString().toCharArray().concatToString()
                                 
 addAttribute(MAXLENGTH, this.size)
 }

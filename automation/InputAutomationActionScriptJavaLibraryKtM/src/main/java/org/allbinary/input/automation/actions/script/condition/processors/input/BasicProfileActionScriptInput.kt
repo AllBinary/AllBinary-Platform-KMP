@@ -67,7 +67,7 @@ public constructor        (label: String, node: Node)
                     
 logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
 
-    var actionNode: Node = DomSearchHelper.getNode(GenericProfileActionScriptInputData.TYPE, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(GenericProfileActionScriptInputData.TYPE, node.getChildNodes())!!
             
 
 
@@ -75,7 +75,7 @@ logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
             
 
 
-    var timeNode: Node = DomSearchHelper.getNodeNoThrow(GenericProfileActionScriptInputData.DELAY, node!!.getChildNodes())!!
+    var timeNode: Node = DomSearchHelper.getNodeNoThrow(GenericProfileActionScriptInputData.DELAY, node.getChildNodes())!!
             
 
 
@@ -119,14 +119,14 @@ logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
     var hashtable: Hashtable<Any, Any> = inputRobotFactory!!.get() as Hashtable<Any, Any>
 
 
-    var set: Set = hashtable!!.keySet()!!
+    var set: Set = hashtable.keySet()!!
             
 
 
-    var iterator: Iterator = set!!.iterator()!!
+    var iterator: Iterator = set.iterator()!!
             
 
-this.setInputRobotInterface(inputRobotFactory!!.get(iterator!!.next() as String))
+this.setInputRobotInterface(inputRobotFactory!!.get(iterator.next() as String))
 this.setTime(0)
 }
 

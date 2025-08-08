@@ -68,10 +68,10 @@ open fun xor(array: ByteArray, mask: Byte)
 
                     var mask = mask
 
-    var bytes: ByteArray = ByteArray(array!!.size)
+    var bytes: ByteArray = ByteArray(array.size)
 
 
-    var size: Int = array!!.size
+    var size: Int = array.size
                 
 
 
@@ -101,10 +101,10 @@ open fun not(array: ByteArray)
 
                     var array = array
 
-    var bytes: ByteArray = ByteArray(array!!.size)
+    var bytes: ByteArray = ByteArray(array.size)
 
 
-    var size: Int = array!!.size
+    var size: Int = array.size
                 
 
 

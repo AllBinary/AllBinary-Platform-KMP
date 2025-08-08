@@ -117,12 +117,12 @@ open fun insert(userName: String, order: Order)
             
 
 
-    var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(order!!.getStoreName())!!
+    var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(order.getStoreName())!!
             
 
 
     var shippingInterface: ShippingInterface = ShippingMethods(abeClientInformation, storeFrontInterface).
-                            getShippingInterface(order!!.getShippingMethod())!!
+                            getShippingInterface(order.getShippingMethod())!!
             
 
 
@@ -130,7 +130,7 @@ open fun insert(userName: String, order: Order)
             
 
 
-    var basketInterface: BasketInterface = order!!.getBasket()!!
+    var basketInterface: BasketInterface = order.getBasket()!!
             
 
 
@@ -147,37 +147,37 @@ open fun insert(userName: String, order: Order)
 
     var total: Money = Money()
 
-total!!.add(shippingCost!!.toString())
-total!!.add(subTotal!!.toString())
-tax!!.add(total!!.toString())
-tax!!.multiply(taxRate)
-total!!.add(tax!!.toString())
+total.add(shippingCost!!.toString())
+total.add(subTotal!!.toString())
+tax.add(total.toString())
+tax.multiply(taxRate)
+total.add(tax.toString())
 
     var empty: String = StringUtil.getInstance()!!.EMPTY_STRING
 
-vector!!.add(OrderHistoryIdGenerator().
+vector.add(OrderHistoryIdGenerator().
                             getNext())
 
     var ZERO: String = TableDataFactory.getInstance()!!.ZERO_STRING
 
-vector!!.add(order!!.getId())
-vector!!.add(userName)
-vector!!.add(order!!.getStoreName())
+vector.add(order.getId())
+vector.add(userName)
+vector.add(order.getStoreName())
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-vector!!.add(ZERO)
-vector!!.add(time)
-vector!!.add(ZERO)
-vector!!.add(ZERO)
-vector!!.add(OrderHistoryData.PREPROCESSING)
-vector!!.add(order!!.getPaymentMethod())
+vector.add(ZERO)
+vector.add(time)
+vector.add(ZERO)
+vector.add(ZERO)
+vector.add(OrderHistoryData.PREPROCESSING)
+vector.add(order.getPaymentMethod())
 
     
                         if(paymentInterface != 
@@ -185,27 +185,27 @@ vector!!.add(order!!.getPaymentMethod())
                                 )
                         
                                     {
-                                    vector!!.add(paymentInterface!!.getName())
-vector!!.add(paymentInterface!!.getType())
-vector!!.add(paymentInterface!!.getExpiration())
+                                    vector.add(paymentInterface!!.getName())
+vector.add(paymentInterface!!.getType())
+vector.add(paymentInterface!!.getExpiration())
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
             
 
-vector!!.add(SuperCrypt(random).
+vector.add(SuperCrypt(random).
                             encrypt(paymentInterface!!.getNumber()))
-vector!!.add(Integer(random).
+vector.add(Integer(random).
                             toString())
 
                                     }
                                 
                         else {
-                            vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(ZERO)
+                            vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(ZERO)
 
                         }
                             
@@ -216,22 +216,22 @@ vector!!.add(ZERO)
                                 )
                         
                                     {
-                                    vector!!.add(billingAddress!!.getName())
-vector!!.add(billingAddress!!.getStreet())
-vector!!.add(billingAddress!!.getCity())
-vector!!.add(billingAddress!!.getState())
-vector!!.add(billingAddress!!.getCode())
-vector!!.add(billingAddress!!.getCountry())
+                                    vector.add(billingAddress!!.getName())
+vector.add(billingAddress!!.getStreet())
+vector.add(billingAddress!!.getCity())
+vector.add(billingAddress!!.getState())
+vector.add(billingAddress!!.getCode())
+vector.add(billingAddress!!.getCountry())
 
                                     }
                                 
                         else {
-                            vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
+                            vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
 
                         }
                             
@@ -242,39 +242,39 @@ vector!!.add(empty)
                                 )
                         
                                     {
-                                    vector!!.add(shippingAddress!!.getName())
-vector!!.add(shippingAddress!!.getStreet())
-vector!!.add(shippingAddress!!.getCity())
-vector!!.add(shippingAddress!!.getState())
-vector!!.add(shippingAddress!!.getCode())
-vector!!.add(shippingAddress!!.getCountry())
+                                    vector.add(shippingAddress!!.getName())
+vector.add(shippingAddress!!.getStreet())
+vector.add(shippingAddress!!.getCity())
+vector.add(shippingAddress!!.getState())
+vector.add(shippingAddress!!.getCode())
+vector.add(shippingAddress!!.getCountry())
 
                                     }
                                 
                         else {
-                            vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
-vector!!.add(empty)
+                            vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
+vector.add(empty)
 
                         }
                             
-vector!!.add(order!!.getShippingMethod())
-vector!!.add(subTotal!!.toString())
-vector!!.add(shippingCost!!.toString())
-vector!!.add(tax!!.toString())
-vector!!.add(total!!.toString())
-vector!!.add(order!!.getSpecial())
-vector!!.add(order!!.getUserComments())
-vector!!.add(order!!.getUserCancelComments())
-vector!!.add(order!!.getStoreComments())
-vector!!.add(order!!.getStoreCancelComments())
+vector.add(order.getShippingMethod())
+vector.add(subTotal!!.toString())
+vector.add(shippingCost!!.toString())
+vector.add(tax.toString())
+vector.add(total.toString())
+vector.add(order.getSpecial())
+vector.add(order.getUserComments())
+vector.add(order.getUserCancelComments())
+vector.add(order.getStoreComments())
+vector.add(order.getStoreCancelComments())
 this.insert(vector)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
@@ -284,7 +284,7 @@ this.insert(vector)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put("Command Failed: " +vector, this, INSERT, e)
@@ -306,7 +306,7 @@ open fun insert(values: Vector)
             super.insert(values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
@@ -316,7 +316,7 @@ open fun insert(values: Vector)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
@@ -343,7 +343,7 @@ open fun setStatus(orderId: String, status: String)
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
@@ -353,7 +353,7 @@ open fun setStatus(orderId: String, status: String)
 updateHashMap!!.put(OrderHistoryData.STATUS, status)
 
     
-                        if(status!!.compareTo(OrderHistoryData.CANCELLED) == 0)
+                        if(status.compareTo(OrderHistoryData.CANCELLED) == 0)
                         
                                     {
                                     updateHashMap!!.put(OrderHistoryData.CANCELDATE, time)
@@ -362,7 +362,7 @@ updateHashMap!!.put(OrderHistoryData.STATUS, status)
                                 
                              else 
     
-                        if(status!!.compareTo(OrderHistoryData.SHIPPED) == 0)
+                        if(status.compareTo(OrderHistoryData.SHIPPED) == 0)
                         
                                     {
                                     updateHashMap!!.put(OrderHistoryData.SHIPPEDDATE, time)
@@ -373,7 +373,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -401,7 +401,7 @@ open fun setPaymentMethod(orderId: String, paymentMethod: String)
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
@@ -414,7 +414,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

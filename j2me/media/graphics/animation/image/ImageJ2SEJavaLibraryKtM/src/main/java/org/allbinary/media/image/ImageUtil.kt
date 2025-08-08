@@ -90,14 +90,14 @@ open fun getDefaultConfiguration()
             
 
 
-    var gd: GraphicsDevice = ge!!.getDefaultScreenDevice()!!
+    var gd: GraphicsDevice = ge.getDefaultScreenDevice()!!
             
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gd!!.getDefaultConfiguration()
+                        return gd.getDefaultConfiguration()
 }
 
 
@@ -390,7 +390,7 @@ affineTransform!!.translate(dx, dy)
     var graphics: Graphics2D = newBufferedImage!!.createGraphics()!!
             
 
-graphics!!.drawRenderedImage(bufferedImage, affineTransform)
+graphics.drawRenderedImage(bufferedImage, affineTransform)
 
 
 

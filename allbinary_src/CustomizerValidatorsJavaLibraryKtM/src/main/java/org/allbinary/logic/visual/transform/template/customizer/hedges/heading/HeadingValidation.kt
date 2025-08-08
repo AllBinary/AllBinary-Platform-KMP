@@ -59,7 +59,7 @@ public constructor        (document: Document){
 
                     var document = document
 
-    var headingNodeList: NodeList = document!!.getElementsByTagName(HeadingData.NAME)!!
+    var headingNodeList: NodeList = document.getElementsByTagName(HeadingData.NAME)!!
             
 
 
@@ -108,7 +108,7 @@ open fun isValid()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.IS_VALID)
@@ -117,7 +117,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.title!!.isValid()!!)
+                        if(!this.title.isValid()!!)
                         
                                     {
                                     titleValid= Boolean.FALSE
@@ -126,7 +126,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.logo!!.isValid()!!)
+                        if(!this.logo.isValid()!!)
                         
                                     {
                                     logoValid= Boolean.FALSE
@@ -134,7 +134,7 @@ open fun isValid()
                                     }
                                 
                         else {
-                            this.logo!!.processLogoFile()
+                            this.logo.processLogoFile()
 
                         }
                             
@@ -149,7 +149,7 @@ open fun isValid()
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("HeadingValidation: " +valid, this, commonStrings!!.IS_VALID)
@@ -164,7 +164,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -200,7 +200,7 @@ open fun validationInfo()
 
 
     
-                        if(!this.title!!.isValid()!!)
+                        if(!this.title.isValid()!!)
                         
                                     {
                                     titleValid= Boolean.FALSE
@@ -209,7 +209,7 @@ open fun validationInfo()
                                 
 
     
-                        if(!this.logo!!.isValid()!!)
+                        if(!this.logo.isValid()!!)
                         
                                     {
                                     logoValid= Boolean.FALSE
@@ -227,7 +227,7 @@ open fun validationInfo()
                                 
 
     
-                        if(!valid!!)
+                        if(!valid)
                         
                                     {
                                     stringBuffer!!.append(
@@ -243,7 +243,7 @@ open fun validationInfo()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -293,11 +293,11 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(HeadingData.NAME)!!
+    var node: Node = document.createElement(HeadingData.NAME)!!
             
 
-node!!.appendChild(this.logo!!.toXmlNode(document))
-node!!.appendChild(this.title!!.toXmlNode(document))
+node.appendChild(this.logo.toXmlNode(document))
+node.appendChild(this.title.toXmlNode(document))
 
 
 

@@ -68,7 +68,7 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
@@ -97,7 +97,7 @@ public constructor        (request: HttpServletRequest, propertiesHashMap: HashM
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
@@ -128,7 +128,7 @@ public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
@@ -154,7 +154,7 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
 this.abContext= AbContext(propertiesHashMap, pageContext)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
@@ -187,7 +187,7 @@ open fun set(hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Properties HashMap: " +hashMap!!.toString(), this, 
@@ -240,7 +240,7 @@ this.setDataFile(hashMap!!.get(transformInfoData!!.DATAFILENAME) as String)
 this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     logUtil!!.put(this.log(), this, 

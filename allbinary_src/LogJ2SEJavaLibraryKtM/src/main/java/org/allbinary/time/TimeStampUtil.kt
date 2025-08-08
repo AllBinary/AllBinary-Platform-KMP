@@ -68,7 +68,7 @@ open fun getAsString()
             
 
 
-    var date: Date = calendar!!.getTime()!!
+    var date: Date = calendar.getTime()!!
             
 
 

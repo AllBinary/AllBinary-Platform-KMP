@@ -88,7 +88,7 @@ open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryI
     var name: String = flagResources!!.NAME
 
 
-    var index: Int = name!!.indexOf(commonSeps!!.SPACE)!!
+    var index: Int = name.indexOf(commonSeps!!.SPACE)!!
             
 
 
@@ -96,7 +96,7 @@ open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryI
                         if(index >= 0)
                         
                                     {
-                                    name= name!!.substring(index)
+                                    name= name.substring(index)
 
                                     }
                                 

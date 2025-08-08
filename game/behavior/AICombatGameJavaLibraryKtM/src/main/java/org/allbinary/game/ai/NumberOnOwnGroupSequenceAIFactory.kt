@@ -79,7 +79,7 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
 
         {
-    var integer: Integer = hashtable!!.get(integerArray[index]!! as Object) as Integer
+    var integer: Integer = hashtable.get(integerArray[index]!! as Object) as Integer
 
 
     
@@ -94,7 +94,7 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
                                     }
                                 
-list!!.add(integer)
+list.add(integer)
 }
 
 
@@ -102,7 +102,7 @@ list!!.add(integer)
 
 stringBuffer!!.append(
                             "Total AI Properties: ")
-stringBuffer!!.append(list!!.size())
+stringBuffer!!.append(list.size())
 stringBuffer!!.append(
                             " == Total AI: ")
 stringBuffer!!.append(artificialIntelligenceInterface!!.size)
@@ -115,7 +115,7 @@ stringBuffer!!.append(
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
     
-                        if(artificialIntelligenceInterface!!.size -1 > list!!.size())
+                        if(artificialIntelligenceInterface!!.size -1 > list.size())
                         
                                     {
                                     
@@ -128,7 +128,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
                                 
 
     
-                        if(artificialIntelligenceInterface!!.size -1 < list!!.size())
+                        if(artificialIntelligenceInterface!!.size -1 < list.size())
                         
                                     {
                                     
@@ -140,7 +140,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
                                     }
                                 
 
-    var numberOnSameTeam: Array<Integer?> = arrayOfNulls(list!!.size())
+    var numberOnSameTeam: Array<Integer?> = arrayOfNulls(list.size())
 
 
 
@@ -149,7 +149,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
                         for (index in 0 until numberOnSameTeam!!.size)
 
 
-        {numberOnSameTeam[index]= list!!.objectArray[index]!! as Integer
+        {numberOnSameTeam[index]= list.objectArray[index]!! as Integer
 }
 
 

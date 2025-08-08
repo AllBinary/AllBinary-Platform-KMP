@@ -158,8 +158,8 @@ open fun paint(graphics: Graphics)
                     var graphics = graphics
 super.paint(graphics)
 this.rtsLayerCompositePaintable!!.paint(graphics)
-graphics!!.drawChars(percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, costY, 0)
-graphics!!.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
+graphics.drawChars(percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, costY, 0)
+graphics.drawString(this.PERCENT, this.percentCompleteX2, costY, 0)
 this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 }
 

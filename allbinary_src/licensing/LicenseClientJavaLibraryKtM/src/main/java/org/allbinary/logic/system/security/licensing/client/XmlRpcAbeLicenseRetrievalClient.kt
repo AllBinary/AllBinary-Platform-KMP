@@ -98,13 +98,13 @@ xmlRpcClient!!.setBasicAuthentication(
     var hashtable: Hashtable<Any, Any> = this.getClientInfo()!!.toHashtable()!!
             
 
-logUtil!!.put(CLIENT_INFO +hashtable!!.toString(), this, commonStrings!!.GET)
-param!!.add(hashtable)
+logUtil!!.put(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
+param.add(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
             
 
-logUtil!!.put(RESULT +result!!.toString(), this, commonStrings!!.GET)
+logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
 
     var resultHashtable: Hashtable<Any, Any> = result as Hashtable<Any, Any>
 
@@ -137,7 +137,7 @@ isOnline= true
 logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
 
     
-                        if(!e!!.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
+                        if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
                         
                                     {
                                     

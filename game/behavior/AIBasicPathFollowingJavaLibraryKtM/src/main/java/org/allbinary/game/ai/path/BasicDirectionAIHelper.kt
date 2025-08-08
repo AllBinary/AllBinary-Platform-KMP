@@ -137,14 +137,14 @@ open fun getAIKeyPressed(frame: Integer)
                     var frame = frame
 
     
-                        if(this.angleInfo!!.getAngle() != this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame!!.toInt()))
+                        if(this.angleInfo!!.getAngle() != this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame.toInt()))
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.turnAI(frame!!.toInt())
+                        return this.turnAI(frame.toInt())
 
                                     }
                                 

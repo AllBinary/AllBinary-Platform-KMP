@@ -54,11 +54,11 @@ open fun getInstance(searchRequest: SearchRequest)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ProductListing(searchRequest) as ProductListingInterface
+                        return views.admin.inventory.listings.ProductListing(searchRequest) as ProductListingInterface
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     

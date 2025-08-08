@@ -79,7 +79,7 @@ override fun addPlayerListener(playerListener: PlayerListener)
 {
 
                     var playerListener = playerListener
-this.player!!.addPlayerListener(playerListener)
+this.player.addPlayerListener(playerListener)
 }
 
 override fun removePlayerListener(playerListener: PlayerListener)
@@ -87,17 +87,17 @@ override fun removePlayerListener(playerListener: PlayerListener)
 {
 
                     var playerListener = playerListener
-this.player!!.removePlayerListener(playerListener)
+this.player.removePlayerListener(playerListener)
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.player!!.close()
+{this.player.close()
 }
 
 override fun deallocate()
         //nullable = true from not(false or (false and true)) = true
-{this.player!!.deallocate()
+{this.player.deallocate()
 }
 
 override fun getContentType()
@@ -106,7 +106,7 @@ override fun getContentType()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getContentType()
+                        return this.player.getContentType()
 }
 
 override fun getDuration()
@@ -115,7 +115,7 @@ override fun getDuration()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getDuration()
+                        return this.player.getDuration()
 }
 
 override fun getMediaTime()
@@ -124,14 +124,14 @@ override fun getMediaTime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getMediaTime()
+                        return this.player.getMediaTime()
 }
 
 override fun prefetch()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.prefetch()
+            this.player.prefetch()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "prefetch", e)
@@ -143,7 +143,7 @@ override fun realize()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.realize()
+            this.player.realize()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "realize", e)
@@ -157,7 +157,7 @@ override fun getState()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getState()
+                        return this.player.getState()
 }
 
 override fun setLoopCount(count: Int)
@@ -165,7 +165,7 @@ override fun setLoopCount(count: Int)
 {
 
                     var count = count
-this.player!!.setLoopCount(count)
+this.player.setLoopCount(count)
 }
 
 override fun setMediaTime(now: Long)
@@ -179,7 +179,7 @@ override fun setMediaTime(now: Long)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.setMediaTime(now)
+                        return this.player.setMediaTime(now)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "setMediaTime", e)
@@ -204,7 +204,7 @@ override fun start()
                         if(timeElapsedHelper!!.isTime(gameTickTimeDelayHelper!!.startTime))
                         
                                     {
-                                    this.player!!.start()
+                                    this.player.start()
 
                                     }
                                 
@@ -218,7 +218,7 @@ override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.stop()
+            this.player.stop()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "stop", e)
@@ -235,7 +235,7 @@ override fun getControl(controlType: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getControl(controlType)
+                        return this.player.getControl(controlType)
 }
 
 override fun getControls()
@@ -259,7 +259,7 @@ open fun setVolume(leftVolume: Int, rightVolume: Int)
 
     var controllable2: Controllable2 = (this.player as Controllable2)
 
-controllable2!!.setVolume(leftVolume, rightVolume)
+controllable2.setVolume(leftVolume, rightVolume)
 }
 
 

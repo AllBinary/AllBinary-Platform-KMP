@@ -51,11 +51,11 @@ open fun printPath(list: BasicArrayList)
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
         {
-    var anyType: Any = list!!.get(index)!!
+    var anyType: Any = list.get(index)!!
             
 
 PreLogUtil.put(StringMaker().
@@ -77,13 +77,13 @@ open fun printPaths(list: BasicArrayList)
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
-        {System.out!!.println(StringMaker().
+        {System.out.println(StringMaker().
                             append(
                             " Path ")!!.append(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())
-this.printPath(list!!.get(index) as BasicArrayList)
+this.printPath(list.get(index) as BasicArrayList)
 }
 
 }

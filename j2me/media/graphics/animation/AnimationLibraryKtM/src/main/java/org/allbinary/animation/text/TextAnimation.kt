@@ -104,7 +104,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
                         for (index in 0 until size)
 
 
-        {graphics!!.drawString(textArray[index]!!, x, y +(index *height), anchor)
+        {graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
 }
 
 }
@@ -137,7 +137,7 @@ open fun setText(text: String)
 
         while(index >= 0)
         {startIndex= index
-index= text!!.indexOf(
+index= text.indexOf(
                             '\n', startIndex)
 endIndex= index
 
@@ -145,11 +145,11 @@ endIndex= index
                         if(index < 0)
                         
                                     {
-                                    endIndex= text!!.length
+                                    endIndex= text.length
 
                                     }
                                 
-list!!.add(text!!.substring(startIndex, endIndex))
+list.add(text.substring(startIndex, endIndex))
 
     
                         if(index < 0)
@@ -169,10 +169,10 @@ index++
                                 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
-                                    this.textArray= list!!.toArray(arrayOfNulls(list!!.size())) as Array<String?>
+                                    this.textArray= list.toArray(arrayOfNulls(list.size())) as Array<String?>
 
                                     }
                                 

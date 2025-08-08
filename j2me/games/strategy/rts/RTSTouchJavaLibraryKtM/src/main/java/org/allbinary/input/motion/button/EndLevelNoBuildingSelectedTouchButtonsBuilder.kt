@@ -52,9 +52,9 @@ open fun getList()
 
     var list: BasicArrayList = BasicArrayList()
 
-list!!.addAll(BasicTouchButtonsBuilder().
+list.addAll(BasicTouchButtonsBuilder().
                             getList())
-list!!.addAll(BuildingScrollTouchButtonsBuilder().
+list.addAll(BuildingScrollTouchButtonsBuilder().
                             getList())
 this.add(list)
 

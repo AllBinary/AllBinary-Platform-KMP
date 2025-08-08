@@ -73,7 +73,7 @@ override fun onGameFeatureChange(gameFeatureEvent: GameFeatureEvent)
                     var gameFeatureEvent = gameFeatureEvent
 logUtil!!.put(StringMaker().
                             append(gameFeatureUtil!!.GAME_FEATURE_CHANGED)!!.append(gameFeatureEvent!!.getWhatChanged())!!.toString(), this, gameFeatureUtil!!.ON_GAME_FEATURE_CHANGE)
-list!!.add(gameFeatureEvent!!.getGameOption())
+list.add(gameFeatureEvent!!.getGameOption())
 setChanged(true)
 }
 
@@ -83,7 +83,7 @@ open fun add(gameFeature: Feature)
 {
 
                     var gameFeature = gameFeature
-list!!.add(gameFeature)
+list.add(gameFeature)
 }
 
 
@@ -92,7 +92,7 @@ open fun remove(gameFeature: Feature)
 {
 
                     var gameFeature = gameFeature
-list!!.remove(gameFeature)
+list.remove(gameFeature)
 }
 
 
@@ -107,7 +107,7 @@ this.changed= initialized
                         if(!this.isChanged())
                         
                                     {
-                                    list!!.clear()
+                                    list.clear()
 
                                     }
                                 
@@ -120,7 +120,7 @@ open fun isChanged(gameFeature: Feature)
 
                     var gameFeature = gameFeature
 
-    var isChanged: Boolean = list!!.contains(gameFeature)!!
+    var isChanged: Boolean = list.contains(gameFeature)!!
             
 
 

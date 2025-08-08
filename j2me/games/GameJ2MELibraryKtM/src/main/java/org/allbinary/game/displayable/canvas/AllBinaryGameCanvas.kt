@@ -456,7 +456,7 @@ override fun setCurrentThread()
 
 
     
-                        if(features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     super.setCurrentThreadFake()
@@ -594,7 +594,7 @@ open fun initPopupMenu()
 
 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.TOUCH_ENABLED))
+                        if(features.isFeature(touchFeatureFactory!!.TOUCH_ENABLED))
                         
                                     {
                                     this.setOpenMenuPaintable(BasicPopupMenuPaintable(popupMenuRectangle, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor()))
@@ -658,7 +658,7 @@ this.setMenuForm(CommandCurrentSelectionFormFactory.getInstance(StringUtil.getIn
 
 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.TOUCH_ENABLED))
+                        if(features.isFeature(touchFeatureFactory!!.TOUCH_ENABLED))
                         
                                     {
                                     this.mainMenuInputProcessor= PopupCommandFormInputProcessor(BasicArrayList(),  -1, this, scrollSelectionForm, this.getPopupMenuInputProcessor() as PopupMenuInputProcessor)
@@ -722,7 +722,7 @@ scrollSelectionForm!!.deleteAll()
             
 
 
-    var size: Int = items!!.size
+    var size: Int = items.size
                 
 
 
@@ -927,7 +927,7 @@ this.setGameInputProcessor(Processor.getInstance())
 
 
     
-                        if(features!!.isFeature(GameFeatureFactory.getInstance()!!.CHEATING))
+                        if(features.isFeature(GameFeatureFactory.getInstance()!!.CHEATING))
                         
                                     {
                                     this.isCheating= true
@@ -1029,7 +1029,7 @@ GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, game
 
 logUtil!!.put(StringMaker().
                             append(
-                            "Sound Changing To: ")!!.append(features!!.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, 
+                            "Sound Changing To: ")!!.append(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, 
                             "initConfigurable")
 this.mediaInit()
 changedGameFeatureListener!!.remove(gameFeatureFactory!!.SOUND)
@@ -1132,7 +1132,7 @@ open fun updateTouch2()
 
 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
+                        if(features.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
                         
                                     {
                                     
@@ -1205,7 +1205,7 @@ this.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
 
 
     
-                        if(features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     
@@ -1249,7 +1249,7 @@ override fun itemStateChanged(item: Item)
 
         try {
             
-    var itemLabel: String = item!!.getLabel()!!
+    var itemLabel: String = item.getLabel()!!
             
 
 logUtil!!.put(StringMaker().
@@ -1309,7 +1309,7 @@ open fun updateScreenButtonPaintable2()
 
 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
+                        if(features.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS))
                         
                                     {
                                     this.setTouchPaintableP(this.getTouchButtonsPaintable())
@@ -1319,7 +1319,7 @@ this.setStartLevel(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel())
                                 
                              else 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS))
+                        if(features.isFeature(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS))
                         
                                     {
                                     this.setTouchPaintableP(this.getTouchButtonsPaintable())
@@ -1328,7 +1328,7 @@ this.setStartLevel(this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel())
                                 
                              else 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.HIDE_SCREEN_BUTTONS))
+                        if(features.isFeature(touchFeatureFactory!!.HIDE_SCREEN_BUTTONS))
                         
                                     {
                                     this.setTouchPaintableP(NullPaintable.getInstance())
@@ -1649,7 +1649,7 @@ this.setHighScoresPaintable(NullPaintable.getInstance())
 progressCanvas!!.addPortion(portion, 
                             "Finishing.")
 this.getEndGameInfoP()!!.update(this.getLayerManager()!!.getGameInfo(), this)
-this.isSingleKeyRepeatableProcessing= features!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)
+this.isSingleKeyRepeatableProcessing= features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)
 this.setGameOver(false)
 progressCanvas!!.addPortion(portion, 
                             "Finishing..")
@@ -1677,7 +1677,7 @@ progressCanvas!!.addPortion(portion,
                                     {
                                     
     
-                        if(features!!.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     
@@ -1782,11 +1782,11 @@ open fun loadState()
     
                         if(hashtable != 
                                     null
-                                 && hashtable!!.size > 0)
+                                 && hashtable.size > 0)
                         
                                     {
                                     
-    var levelAsString: String = hashtable!!.get(GameInfo.LEVEL_NAME as Object) as String
+    var levelAsString: String = hashtable.get(GameInfo.LEVEL_NAME as Object) as String
 
 
     var level: Int = Integer.valueOf(levelAsString)!!.toInt()!!
@@ -1836,7 +1836,7 @@ override fun getCurrentStateHashtable()
     var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()!!
             
 
-hashtable!!.put(GameInfo.LEVEL_NAME.toString(), Integer.toString(level))
+hashtable.put(GameInfo.LEVEL_NAME.toString(), Integer.toString(level))
 logUtil!!.put(StringMaker().
                             append(
                             "End: ")!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, 
@@ -2128,7 +2128,7 @@ open fun shouldWait()
                                 
                              else 
     
-                        if(features!!.isFeature(openGLFeatureFactory!!.OPENGL_2D))
+                        if(features.isFeature(openGLFeatureFactory!!.OPENGL_2D))
                         
                                     {
                                     
@@ -2137,7 +2137,7 @@ open fun shouldWait()
                         else {
                             
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -2220,12 +2220,12 @@ open fun run2()
 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     logUtil!!.put(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD.getName(), this, commonStrings!!.RUN)
@@ -2234,7 +2234,7 @@ open fun run2()
                                 
 
     
-                        if(features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     logUtil!!.put(htmlFeatureFactory!!.HTML.getName(), this, commonStrings!!.RUN)
@@ -2253,7 +2253,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                                 
                              else 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS))
                         
                                     {
                                     logUtil!!.put(openGLFeatureFactory!!.OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS.getName(), this, commonStrings!!.RUN)
@@ -2315,7 +2315,7 @@ super.setRunning(running)
                         else {
                             
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL) || SWTUtil.isSWT)
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL) || SWTUtil.isSWT)
                         
                                     {
                                     
@@ -3069,7 +3069,7 @@ open fun isRunningInAnotherThread()
 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     

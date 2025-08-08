@@ -366,7 +366,7 @@ open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
                             this.setAnimationInterface(this.destroyAnimationInterface)
 SecondaryPlayerQueueFactory.getInstance()!!.add(ExplosionBasicSound.getInstance())
 this.shakeListener!!.onSmallShakeEvent()
-vibration!!.vibrate(duration, 0, 0)
+vibration.vibrate(duration, 0, 0)
 this.timeDelayHelper!!.setStartTime()
 this.setReadyForExplosion(true)
 
@@ -567,7 +567,7 @@ occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPo
                         
                                     {
                                     list= BasicArrayList(1)
-list!!.add(surroundGeographicMapCellPosition)
+list.add(surroundGeographicMapCellPosition)
 pathsList!!.add(list)
 
                                     }
@@ -747,7 +747,7 @@ TrackingEventHandler.getInstance()!!.removeListener(this)
                         
                                     {
                                     this.shakeListener!!.onSmallShakeEvent()
-vibration!!.vibrate(duration, 0, 0)
+vibration.vibrate(duration, 0, 0)
 
                                     }
                                 
@@ -757,7 +757,7 @@ vibration!!.vibrate(duration, 0, 0)
                         
                                     {
                                     this.shakeListener!!.onMediumShakeEvent()
-vibration!!.vibrate(duration *2, 0, 0)
+vibration.vibrate(duration *2, 0, 0)
 
                                     }
                                 
@@ -767,7 +767,7 @@ vibration!!.vibrate(duration *2, 0, 0)
                         
                                     {
                                     this.shakeListener!!.onLargeShakeEvent()
-vibration!!.vibrate(duration *4, 0, 0)
+vibration.vibrate(duration *4, 0, 0)
 
                                     }
                                 

@@ -85,7 +85,7 @@ open fun addListeners(vector: BasicArrayList)
     var eventListenerInterface: RawKeyEventListener
 
 
-    var size: Int = vector!!.size()!!
+    var size: Int = vector.size()!!
             
 
 
@@ -95,7 +95,7 @@ open fun addListeners(vector: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {eventListenerInterface= vector!!.get(index) as RawKeyEventListener
+        {eventListenerInterface= vector.get(index) as RawKeyEventListener
 this.addListener(eventListenerInterface)
 }
 

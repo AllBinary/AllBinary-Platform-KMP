@@ -56,7 +56,7 @@ open fun getInstance(document: Document)
 
                     var document = document
 
-    var configurationNode: Node = DomSearchHelper.getNode(UserConfigurationData.NAME, document!!.getChildNodes())!!
+    var configurationNode: Node = DomSearchHelper.getNode(UserConfigurationData.NAME, document.getChildNodes())!!
             
 
 

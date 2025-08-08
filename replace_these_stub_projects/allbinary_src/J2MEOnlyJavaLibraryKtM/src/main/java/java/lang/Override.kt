@@ -14,5 +14,5 @@
         import kotlin.reflect.KClass
         
 
-                //Otherwise - type - AnnotationDeclaration
+                //Otherwise - classOrInterfaceDeclaration - type - AnnotationDeclaration
 

@@ -81,7 +81,7 @@ public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)
 
 public constructor        (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(rectangle!!.getWidth(), rectangle!!.getHeight()){
+                            : super(rectangle.getWidth(), rectangle.getHeight()){
 
                     var name = name
 
@@ -116,10 +116,10 @@ public constructor        (name: String, rectangle: Rectangle, viewPosition: Vie
                             
 this.name= localName
 
-    var point: GPoint = rectangle!!.getPoint()!!
+    var point: GPoint = rectangle.getPoint()!!
             
 
-this.setPosition(point!!.getX(), point!!.getY(), point!!.getZ())
+this.setPosition(point.getX(), point.getY(), point.getZ())
 this.setHalfWidth((this.getWidth() shr 1))
 this.setHalfHeight((this.getHeight() shr 1))
 this.viewPosition= viewPosition

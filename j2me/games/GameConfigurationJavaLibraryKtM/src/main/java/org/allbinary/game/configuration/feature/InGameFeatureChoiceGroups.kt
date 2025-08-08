@@ -89,7 +89,7 @@ open fun add(name: String, list: BasicArrayList)
 
 
                     var list = list
-hashtable!!.put(name, list)
+hashtable.put(name, list)
 }
 
 

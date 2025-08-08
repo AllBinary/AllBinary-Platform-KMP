@@ -46,7 +46,7 @@ public constructor        (key: BufferedImageInfo)
 
                     var key = key
 this.key= key
-this.setBufferedImage(BufferedImage(key!!.getWidth(), key!!.getHeight(), key!!.getType()))
+this.setBufferedImage(BufferedImage(key.getWidth(), key.getHeight(), key.getType()))
 }
 
 

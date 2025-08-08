@@ -65,19 +65,19 @@ open fun put(log: Log)
 
                     var log = log
 
-    var specialMessage: String = log!!.getSpecialMessage()!!
+    var specialMessage: String = log.getSpecialMessage()!!
             
 
 
-    var anyType: Any = log!!.getObject()!!
+    var anyType: Any = log.getObject()!!
             
 
 
-    var functionName: String = log!!.getFunctionName()!!
+    var functionName: String = log.getFunctionName()!!
             
 
 
-    var exception: Any = log!!.getThrowable()!!
+    var exception: Any = log.getThrowable()!!
             
 
 put(specialMessage, anyType, functionName, exception)

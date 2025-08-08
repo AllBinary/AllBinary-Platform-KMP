@@ -294,7 +294,7 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-graphics!!.drawImage(this.imageToShow, x, y, anchor)
+graphics.drawImage(this.imageToShow, x, y, anchor)
 }
 
 

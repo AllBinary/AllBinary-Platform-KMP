@@ -158,7 +158,7 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
     var image: Image = Image.createImage(ResourceUtil.getInstance()!!.getResourceAsStream(FONT_ATLAS_1024))!!
             
 
-image!!.setName(canvasStrings!!.FONT_ATLAS)
+image.setName(canvasStrings!!.FONT_ATLAS)
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
                                     }
@@ -175,7 +175,7 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
     var image: Image = Image.createImage(ResourceUtil.getInstance()!!.getResourceAsStream(FONT_ATLAS_512))!!
             
 
-image!!.setName(canvasStrings!!.FONT_ATLAS)
+image.setName(canvasStrings!!.FONT_ATLAS)
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
                                     }
@@ -188,7 +188,7 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
     var image: Image = Image.createImage(ResourceUtil.getInstance()!!.getResourceAsStream(FONT_ATLAS_512))!!
             
 
-image!!.setName(canvasStrings!!.FONT_ATLAS)
+image.setName(canvasStrings!!.FONT_ATLAS)
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
                         }
@@ -238,7 +238,7 @@ open fun saveFontAtlasAsFile()
 
     var imageData: ImageData = image = imageimage as SwtMutableImage
 image.
-                                image!!.getImageData()!!
+                                image.getImageData()!!
             
 
 imageData!!.transparentPixel= imageData!!.getPixel(0, 0)
@@ -281,10 +281,10 @@ open fun getFontBitmap2(filename: String, cellSize: Int, basicColor: BasicColor)
             
 
 
-    var graphics: Graphics = image!!.getGraphics()!!
+    var graphics: Graphics = image.getGraphics()!!
             
 
-graphics!!.setColor(basicColor!!.toInt())
+graphics.setColor(basicColor!!.toInt())
 
     var biggestHeight: Int = 0
 
@@ -304,12 +304,12 @@ graphics!!.setColor(basicColor!!.toInt())
                         for (index in 0 until size)
 
 
-        {characterArray[0]= pattern!![index]
-_characterWidth[index]= bounds!!.getMaxX()
+        {characterArray[0]= pattern[index]
+_characterWidth[index]= bounds.getMaxX()
 
     
-                        if(bounds!!.getMaxY() -bounds!!.getPoint()!!.getX() > biggestHeight)
-                        biggestHeight= bounds!!.getMaxY() -bounds!!.getPoint()!!.getX()
+                        if(bounds.getMaxY() -bounds.getPoint()!!.getX() > biggestHeight)
+                        biggestHeight= bounds.getMaxY() -bounds.getPoint()!!.getX()
 x= (index % CELLS_PER_ROW) *cellSize
 x += (cellSize shr 1)
 x -= (_characterWidth[index] shr 1)
@@ -344,7 +344,7 @@ y=  -(cellSize shr 1)
                         y += cellSize
 y += cellSize
 y -= (cellSize shr 2)
-graphics!!.drawChar(characterArray[0]!!, x, y, 0)
+graphics.drawChar(characterArray[0]!!, x, y, 0)
 }
 
 
@@ -374,7 +374,7 @@ open fun getFontWidths(filename: String, fontSize: Int)
                         for (index in 0 until size)
 
 
-        {characterArray[0]= pattern!![index]
+        {characterArray[0]= pattern[index]
 
     
                         if(characterArray[0] == ' ')

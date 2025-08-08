@@ -135,7 +135,7 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.addAll(this.getBasicPaymentType()!!.toVector())
+vector.addAll(this.getBasicPaymentType()!!.toVector())
 
     
                         if(this.paymentTransactionInterfaceFactoryInterface != 
@@ -143,7 +143,7 @@ vector!!.addAll(this.getBasicPaymentType()!!.toVector())
                                 )
                         
                                     {
-                                    vector!!.add(this.paymentTransactionInterfaceFactoryInterface!!.::class.qualifiedName!!)
+                                    vector.add(this.paymentTransactionInterfaceFactoryInterface!!.::class.qualifiedName!!)
 
                                     }
                                 
@@ -154,7 +154,7 @@ vector!!.addAll(this.getBasicPaymentType()!!.toVector())
                                 )
                         
                                     {
-                                    vector!!.add(this.paymentProcessorInterfaceFactoryInterface!!.::class.qualifiedName!!)
+                                    vector.add(this.paymentProcessorInterfaceFactoryInterface!!.::class.qualifiedName!!)
 
                                     }
                                 

@@ -64,82 +64,81 @@ public constructor        (){
 
 stringBuffer!!.append(DEVICE_ID)
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getDeviceId())
+stringBuffer!!.append(properties.getDeviceId())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(DEVICE_SOFTWARE_VERSION)
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getDeviceSoftwareVersion())
+stringBuffer!!.append(properties.getDeviceSoftwareVersion())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(LINE_1_NUMBER)
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getLine1Number())
+stringBuffer!!.append(properties.getLine1Number())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "NetworkCountryIso")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getNetworkCountryIso())
+stringBuffer!!.append(properties.getNetworkCountryIso())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "NetworkOperator")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getNetworkOperator())
+stringBuffer!!.append(properties.getNetworkOperator())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "NetworkOperatorName")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getNetworkOperatorName())
+stringBuffer!!.append(properties.getNetworkOperatorName())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "NetworkType")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getNetworkType())
+stringBuffer!!.append(properties.getNetworkType())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "PhoneType")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getPhoneType())
+stringBuffer!!.append(properties.getPhoneType())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "SimCountryIso")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getSimCountryIso())
+stringBuffer!!.append(properties.getSimCountryIso())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "SimOperator")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getSimOperator())
+stringBuffer!!.append(properties.getSimOperator())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "SimOperatorName")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getSimOperatorName())
+stringBuffer!!.append(properties.getSimOperatorName())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "SimSerialNumber")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getSimSerialNumber())
+stringBuffer!!.append(properties.getSimSerialNumber())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "SubscriberId")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getSubscriberId())
+stringBuffer!!.append(properties.getSubscriberId())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "VoiceMailAlphaTag")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getVoiceMailAlphaTag())
+stringBuffer!!.append(properties.getVoiceMailAlphaTag())
 stringBuffer!!.append(commonStrings!!.SPACE)
 stringBuffer!!.append(
                             "VoiceMailNumber")
 stringBuffer!!.append(commonStrings!!.EQUALS)
-stringBuffer!!.append(properties!!.getVoiceMailNumber())
+stringBuffer!!.append(properties.getVoiceMailNumber())
 stringBuffer!!.append(commonStrings!!.SPACE)
 }
 
 
     private val OUYA: String = "ouya"
-
-open fun isOverScan()
+override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var properties: AndroidSystemProperties = AndroidSystemProperties.getInstance()!!
@@ -147,7 +146,7 @@ open fun isOverScan()
 
 
     
-                        if(properties!!.getDevice()!!.lowercase()!!.indexOf(OUYA) >= 0)
+                        if(properties.getDevice()!!.lowercase()!!.indexOf(OUYA) >= 0)
                         
                                     {
                                     
@@ -165,8 +164,7 @@ open fun isOverScan()
                         return false
 }
 
-
-open fun getOverScanXPercent()
+override fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 
@@ -175,8 +173,7 @@ open fun getOverScanXPercent()
                         return 90
 }
 
-
-open fun getOverScanYPercent()
+override fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

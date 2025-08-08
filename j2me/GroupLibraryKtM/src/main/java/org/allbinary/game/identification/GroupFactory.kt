@@ -70,7 +70,7 @@ open fun getInstance()
 open fun getNextGroup()
         //nullable = true from not(false or (false and true)) = true
 : Group{
-    var group: Group = list!!.objectArray[index]!! as Group
+    var group: Group = list.objectArray[index]!! as Group
 
 index++
 
@@ -90,7 +90,7 @@ open fun getNextGroup(name: String)
     var group: Group = this.getNextGroup()!!
             
 
-group!!.setName(name)
+group.setName(name)
 
 
 
@@ -117,10 +117,10 @@ open fun init(groups: Short, nameArray: Array<String?>)
 
     var TEAM: String = "Team "
 
-list!!.clear()
+list.clear()
 index= 0
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -143,7 +143,7 @@ name= stringMaker!!.append(TEAM)!!.append(size)!!.toString()
 
                         }
                             
-list!!.add(Group(name, (size +3).toShort()))
+list.add(Group(name, (size +3).toShort()))
 size++
 }
 

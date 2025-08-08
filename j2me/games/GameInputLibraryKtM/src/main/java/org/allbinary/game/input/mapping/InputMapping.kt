@@ -120,10 +120,10 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 
 
     
-                        if(list!!.contains(mappedToInput))
+                        if(list.contains(mappedToInput))
                         
                                     {
-                                    list!!.remove(mappedToInput)
+                                    list.remove(mappedToInput)
 this.mappedList!!.remove(mappedToInput)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(
@@ -181,10 +181,10 @@ open fun add(input: Input, mappedToInput: Input)
 
 
     
-                        if(!list!!.contains(mappedToInput))
+                        if(!list.contains(mappedToInput))
                         
                                     {
-                                    list!!.add(mappedToInput)
+                                    list.add(mappedToInput)
 this.mappedList!!.add(mappedToInput)
 
                                     }

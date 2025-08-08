@@ -106,7 +106,7 @@ open fun processInput(key: Int)
                         
                                     {
                                     PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
-this.form!!.processInput(key)
+this.form.processInput(key)
 
 
 
@@ -148,7 +148,7 @@ open fun processCommand()
     var command: Command = commandCurrentSelectionForm!!.getSelectedCommand()!!
             
 
-logUtil!!.put(command!!.toString(), this, PROCESS_COMMAND)
+logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
 
     var features: Features = Features.getInstance()!!
             
@@ -159,7 +159,7 @@ logUtil!!.put(command!!.toString(), this, PROCESS_COMMAND)
 
 
     
-                        if(SWTUtil.isSWT && features!!.isFeature(openGLFeatureFactory!!.OPENGL) && command != GameCommandsFactory.getInstance()!!.EXIT_COMMAND)
+                        if(SWTUtil.isSWT && features.isFeature(openGLFeatureFactory!!.OPENGL) && command != GameCommandsFactory.getInstance()!!.EXIT_COMMAND)
                         
                                     {
                                     CommandRunnable(this, command).
@@ -211,7 +211,7 @@ logUtil!!.put(command!!.toString(), this, PROCESS_COMMAND)
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -227,7 +227,7 @@ logUtil!!.put(command!!.toString(), this, PROCESS_COMMAND)
                         for (index in 0 until size)
 
 
-        {gameKeyEvent= list!!.objectArray[index]!! as GameKeyEvent
+        {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 key= gameKeyEvent!!.getKey()
 
     
@@ -339,11 +339,11 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
 
 
     
-                        if(this.form!!.isInForm(point))
+                        if(this.form.isInForm(point))
                         
                                     {
                                     
-    var index: Int = this.form!!.getSelectedIndex(point)!!
+    var index: Int = this.form.getSelectedIndex(point)!!
             
 
 
@@ -354,7 +354,7 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                     PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
 
     
-                        if(index == this.form!!.getSelectedIndex())
+                        if(index == this.form.getSelectedIndex())
                         
                                     {
                                     
@@ -370,7 +370,7 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                     }
                                 
                         else {
-                            this.form!!.setSelectedIndex(index)
+                            this.form.setSelectedIndex(index)
 
                         }
                             
@@ -430,7 +430,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(NAME_LABEL)!!.append(this.form!!.toString())!!.toString()
+                            append(super.toString())!!.append(NAME_LABEL)!!.append(this.form.toString())!!.toString()
 }
 
 

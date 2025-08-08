@@ -142,15 +142,15 @@ public constructor        (location: Int, direction: Int, basicColor: BasicColor
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.timer!!.update()
+{this.timer.update()
 this.set()
 }
 
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{this.string= timer!!.getTimeChars()
-totalDigits= timer!!.getCurrentTotalDigits()
+{this.string= timer.getTimeChars()
+totalDigits= timer.getCurrentTotalDigits()
 }
 
 

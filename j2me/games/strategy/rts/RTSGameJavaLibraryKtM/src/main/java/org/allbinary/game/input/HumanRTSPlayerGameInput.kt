@@ -697,7 +697,7 @@ open fun updatePaintable()
 
 
     
-                        if(list!!.size() > 1)
+                        if(list.size() > 1)
                         
                                     {
                                     
@@ -714,11 +714,11 @@ this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(multiSelectPaintable)
                                 
                              else 
     
-                        if(list!!.size() == 1)
+                        if(list.size() == 1)
                         
                                     {
                                     
-    var rtsLayer: RTSLayer = list!!.get(0) as RTSLayer
+    var rtsLayer: RTSLayer = list.get(0) as RTSLayer
 
 this.getRTSLayerInfoPaintable()!!.updateRTSLayerInfo(rtsLayer!!.createHudPaintable())
 
@@ -743,7 +743,7 @@ super.paint(graphics)
                         if(this.startPoint != PointFactory.getInstance()!!.ZERO_ZERO && this.endPoint != PointFactory.getInstance()!!.ZERO_ZERO)
                         
                                     {
-                                    graphics!!.setColor(BasicColorFactory.getInstance()!!.RED.toInt())
+                                    graphics.setColor(BasicColorFactory.getInstance()!!.RED.toInt())
 
     var rectX1: Int = this.startPoint!!.getX()!!
             
@@ -780,7 +780,7 @@ rectY1= this.endPoint!!.getY()
 
                                     }
                                 
-graphics!!.drawRect(rectX1, rectY1, rectX2 -rectX1, rectY2 -rectY1)
+graphics.drawRect(rectX1, rectY1, rectX2 -rectX1, rectY2 -rectY1)
 
                                     }
                                 

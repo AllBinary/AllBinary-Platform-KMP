@@ -61,7 +61,7 @@ open fun addItem(item: Item)
 {
 
                     var item = item
-items!!.add(item)
+items.add(item)
 }
 
 
@@ -81,7 +81,7 @@ open fun removeItem(id: String)
 
                     var id = id
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -100,10 +100,10 @@ open fun removeItem(id: String)
 
 
     
-                        if(item!!.getId()!!.compareTo(id) == 0)
+                        if(item.getId()!!.compareTo(id) == 0)
                         
                                     {
-                                    items!!.remove(item)
+                                    items.remove(item)
 
                                     }
                                 
@@ -121,7 +121,7 @@ open fun adjustItem(id: String, num: String)
 
                     var num = num
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -140,10 +140,10 @@ open fun adjustItem(id: String, num: String)
 
 
     
-                        if(item!!.getId()!!.compareTo(id) == 0)
+                        if(item.getId()!!.compareTo(id) == 0)
                         
                                     {
-                                    item!!.setNumber(num)
+                                    item.setNumber(num)
 
                                     }
                                 
@@ -158,7 +158,7 @@ open fun getTotalWeight()
     var weightFloat: Float = 0
 
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -175,7 +175,7 @@ open fun getTotalWeight()
         {
     var item: Item = itemArray[index]!! as Item
 
-weightFloat += Float(item!!.getWeight()).
+weightFloat += Float(item.getWeight()).
                             floatValue()
 }
 
@@ -194,7 +194,7 @@ open fun getNumberOfItems()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer(items!!.size)
+                        return Integer(items.size)
 }
 
 
@@ -204,7 +204,7 @@ open fun getIds()
     var idSet: HashSet = HashSet()
 
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -221,7 +221,7 @@ open fun getIds()
         {
     var item: Item = itemArray[index]!! as Item
 
-idSet!!.add(item!!.getId())
+idSet!!.add(item.getId())
 }
 
 
@@ -238,7 +238,7 @@ open fun getNumberOf(id: String)
 
                     var id = id
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -257,14 +257,14 @@ open fun getNumberOf(id: String)
 
 
     
-                        if(item!!.getId()!!.compareTo(id) == 0)
+                        if(item.getId()!!.compareTo(id) == 0)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer(item!!.getNumber())
+                        return Integer(item.getNumber())
 
                                     }
                                 
@@ -286,11 +286,11 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(BasketData.BASKET)!!
+    var node: Node = document.createElement(BasketData.BASKET)!!
             
 
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -307,7 +307,7 @@ open fun toXmlNode(document: Document)
         {
     var item: Item = itemArray[index]!! as Item
 
-node!!.appendChild(ItemView(item, Vector()).
+node.appendChild(ItemView(item, Vector()).
                             toXmlNode(document))
 }
 

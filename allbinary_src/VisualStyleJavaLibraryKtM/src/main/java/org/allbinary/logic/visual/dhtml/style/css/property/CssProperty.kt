@@ -64,13 +64,13 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var propertyNode: Node = DomSearchHelper.getNode(DomData.VALUE, node!!.getChildNodes())!!
+    var propertyNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
             
 
 this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STYLE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
                                     logUtil!!.put("Name: " +this.getName(), this, 
@@ -79,7 +79,7 @@ this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)
                                     }
                                 
 
-    var propertyValuesNode: Node = DomSearchHelper.getNode(CssPropertyData.getInstance()!!.VALUES, node!!.getChildNodes())!!
+    var propertyValuesNode: Node = DomSearchHelper.getNode(CssPropertyData.getInstance()!!.VALUES, node.getChildNodes())!!
             
 
 this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
@@ -123,7 +123,7 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("CssView HashMap: " +hashMap!!.toString(), this, 
@@ -135,7 +135,7 @@ open fun toXmlNode(document: Document)
     var node: Node = ModDomHelper.createNameValueNodes(document, CssPropertyData.getInstance()!!.NAME, this.propertyName)!!
             
 
-node!!.appendChild(this.cssPropertyValues!!.toXmlNode(document))
+node.appendChild(this.cssPropertyValues!!.toXmlNode(document))
 
 
 

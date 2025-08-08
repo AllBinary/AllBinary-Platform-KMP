@@ -117,7 +117,7 @@ open fun count(string: String, aChar: Char)
     var count: Int = 0
 
 
-    var size: Int = string!!.length!!
+    var size: Int = string.length!!
             
 
 
@@ -129,7 +129,7 @@ open fun count(string: String, aChar: Char)
 
         {
     
-                        if(string!![index] == aChar)
+                        if(string[index] == aChar)
                         
                                     {
                                     count++

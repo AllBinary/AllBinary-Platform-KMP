@@ -311,7 +311,7 @@ open fun getCustomCommands()
 
 
     
-                        if(features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     
@@ -345,7 +345,7 @@ commandList!!.add(gameCommandsFactory!!.START_COMMAND)
 
 
     
-                        if(list!!.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(list!!.get(0) as LockableFeature))
+                        if(list.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(list.get(0) as LockableFeature))
                         
                                     {
                                     commandList!!.add(gameCommandsFactory!!.BUY_COMMAND)
@@ -529,7 +529,7 @@ this.removeGameKeyEvent(keyCode, false)
 }
 
 
-    private var isSingleKeyRepeatableProcessing: Boolean = features!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
+    private var isSingleKeyRepeatableProcessing: Boolean = features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
             
 
 open fun keyRepeated(keyCode: Int, deviceId: Int)
@@ -993,7 +993,7 @@ this.setCurrentThread()
 this.setRunning(true)
 
     
-                        if(features!!.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     progressCanvas!!.end()
@@ -1012,7 +1012,7 @@ this.initPostPaint()
 this.setState()
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     OpenGLThreadUtil.getInstance()!!.onResume()
@@ -1021,7 +1021,7 @@ this.setState()
                                 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     
@@ -1056,7 +1056,7 @@ super.setRunning(running)
         try {
             
     
-                        if((features!!.isDefault(openGLFeatureFactory!!.OPENGL) || features!!.isDefault(htmlFeatureFactory!!.HTML)) && !running)
+                        if((features.isDefault(openGLFeatureFactory!!.OPENGL) || features.isDefault(htmlFeatureFactory!!.HTML)) && !running)
                         
                                     {
                                     
@@ -1091,7 +1091,7 @@ baseGameStatistics!!.add(StringMaker().
 baseGameStatistics!!.init()
 
     
-                        if(features!!.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     progressCanvas!!.start()
@@ -1346,7 +1346,7 @@ open fun isRunningInAnotherThread()
 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     

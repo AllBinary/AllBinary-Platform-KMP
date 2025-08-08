@@ -250,7 +250,7 @@ this.setGroupInterface()
 this.totalDamage= 0
 this.initDamage= weaponProperties!!.getDamage()
 this.setDestroyed(false)
-this.movement!!.init(weaponProperties!!.getSpeed(), angle, otherAngle)
+this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
 }
 
 
@@ -343,7 +343,7 @@ this.setReadyForExplosion(true)
 
                                     }
                                 
-this.movement!!.process(this)
+this.movement.process(this)
 this.totalDamage += this.weaponProperties!!.getDissipation()
 }
 

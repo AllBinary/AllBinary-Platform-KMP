@@ -295,8 +295,8 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
 
         {item= this.get(index) as CustomItemInterface
-width= item!!.getMinimumWidth()
-height= item!!.getMinimumHeight()
+width= item.getMinimumWidth()
+height= item.getMinimumHeight()
 
     var diffX: Int = 0
 
@@ -328,12 +328,12 @@ height= item!!.getMinimumHeight()
                             
 
     
-                        if(rectangleCollisionUtil!!.isInside(diffX, dy -this.halfBorder, diffX +width +this.border, dy +height +this.halfBorder +1, point!!.getX(), point!!.getY()))
+                        if(rectangleCollisionUtil!!.isInside(diffX, dy -this.halfBorder, diffX +width +this.border, dy +height +this.halfBorder +1, point.getX(), point.getY()))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(commonLabels!!.ITEM_LABEL)
-stringBuffer!!.append(item!!.getLabel())
+stringBuffer!!.append(item.getLabel())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.append(index)
@@ -354,7 +354,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
                                     dx= dx +width +border
 
     
-                        if(dx > this.rectangle!!.getMaxX())
+                        if(dx > this.rectangle.getMaxX())
                         
                                     {
                                     break;
@@ -374,7 +374,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
                                     dy= dy +height +border
 
     
-                        if(dy > this.rectangle!!.getMaxY())
+                        if(dy > this.rectangle.getMaxY())
                         
                                     {
                                     break;
@@ -533,7 +533,7 @@ open fun isInForm(point: GPoint)
                     var point = point
 
     
-                        if(rectangleCollisionUtil!!.isInside(x, y -halfBorder, this.rectangle!!.getMaxX() +border, this.rectangle!!.getMaxY() +border, point!!.getX(), point!!.getY()))
+                        if(rectangleCollisionUtil!!.isInside(x, y -halfBorder, this.rectangle.getMaxX() +border, this.rectangle.getMaxY() +border, point.getX(), point.getY()))
                         
                                     {
                                     logUtil!!.put(StringMaker().
@@ -574,20 +574,20 @@ open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x:
 
                     var y = y
 
-    var width: Int = item!!.getMinimumWidth()!!
+    var width: Int = item.getMinimumWidth()!!
             
 
 
-    var height: Int = item!!.getMinimumHeight()!!
+    var height: Int = item.getMinimumHeight()!!
             
 
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
             
 
-item!!.paint(graphics, x, y)
-graphics!!.setColor(this.getButtonBasicColor()!!.toInt())
-graphics!!.drawRect(x -halfBorder, y -halfBorder, width +border, height +border)
+item.paint(graphics, x, y)
+graphics.setColor(this.getButtonBasicColor()!!.toInt())
+graphics.drawRect(x -halfBorder, y -halfBorder, width +border, height +border)
 
     
                         if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)
@@ -658,15 +658,15 @@ open fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInt
 
                     var y = y
 
-    var width: Int = item!!.getMinimumWidth()!!
+    var width: Int = item.getMinimumWidth()!!
             
 
 
-    var height: Int = item!!.getMinimumHeight()!!
+    var height: Int = item.getMinimumHeight()!!
             
 
-graphics!!.setColor(this.getButtonBasicColor()!!.toInt())
-item!!.paintUnselected(graphics, x, y)
+graphics.setColor(this.getButtonBasicColor()!!.toInt())
+item.paintUnselected(graphics, x, y)
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
             

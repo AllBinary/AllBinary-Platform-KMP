@@ -78,7 +78,7 @@ public constructor        (parent: ClassLoader, key: String)
                             //For kotlin this is before the body of the constructor.
                     
 this.key= key
-this.PATH= org!!.allbinary!!.globals!!.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
+this.PATH= org.allbinary.globals.URLGLOBALS.getWebappPath() +"WEB-INF/classes/"
 }
 
 
@@ -91,7 +91,7 @@ open fun findLoadedClass1(name: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return classes!!.get(name) as Class
+                        return classes.get(name) as Class
 }
 
 
@@ -207,7 +207,7 @@ myClass= defineClass(name, classBytes, 0, classBytes!!.size)
 
                                     }
                                 
-classes!!.put(name, myClass)
+classes.put(name, myClass)
 
                                     }
                                 
@@ -226,7 +226,7 @@ resolveClass(myClass)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logBuffer!!.logAll()
@@ -260,7 +260,7 @@ open fun loadClassBytesFromFile(name: String)
 
 
         try {
-            cname= PATH +name!!.replace(
+            cname= PATH +name.replace(
                             '.', AbPathData.getInstance()!!.SEPARATORCHAR) +ENCRYPTED_EXTENSION
 in= FileInputStream(cname)
 
@@ -275,7 +275,7 @@ in= FileInputStream(cname)
 } catch(e: IOException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("(Before LogBuffer Output) Failure loading Encrypted: " +name +" File: " +cname, 
@@ -292,7 +292,7 @@ StreamUtil.getInstance()!!.close(in)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("(Before LogBuffer Output) Failed to Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, 
@@ -307,7 +307,7 @@ StreamUtil.getInstance()!!.close(in)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("(Before LogBuffer Output) NoClassDefFoundError Failed Loaded Class: " +name +" File: " +cname +"\nwith: " +loadedWith, this, 
@@ -376,7 +376,7 @@ open fun oldLoadClass(name: String, resolve: Boolean)
 } catch(e: ClassNotFoundException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     logUtil!!.put("Failed Loaded Class: " +name +" with: " +loadedWith, this, 
@@ -388,7 +388,7 @@ open fun oldLoadClass(name: String, resolve: Boolean)
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     logUtil!!.put("Failed Loaded Class: " +name +" with: " +loadedWith, this, 
@@ -400,7 +400,7 @@ open fun oldLoadClass(name: String, resolve: Boolean)
  catch(e: NoClassDefFoundError)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     logUtil!!.put("Failed Loaded Class: " +name +" with: " +loadedWith, this, 
@@ -444,14 +444,14 @@ myClass= defineClass(name, classBytes, 0, classBytes!!.size)
 
                                     }
                                 
-classes!!.put(name, myClass)
+classes.put(name, myClass)
 
                                     }
                                 
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADER))
                         
                                     {
                                     logUtil!!.put("Already Loaded: " +name +" with: " +loadedWith, this, 
@@ -471,7 +471,7 @@ resolveClass(myClass)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("Failure loading: " +name, 

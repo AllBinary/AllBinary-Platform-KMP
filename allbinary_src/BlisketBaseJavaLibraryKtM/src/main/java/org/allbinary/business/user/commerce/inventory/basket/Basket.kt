@@ -59,7 +59,7 @@ open fun addItem(id: String, num: String)
                     var num = num
 
     
-                        if(items!!.containsKey(id))
+                        if(items.containsKey(id))
                         
                                     {
                                     
@@ -80,12 +80,12 @@ open fun addItem(id: String, num: String)
 
     var newNumInt: Integer = Integer(oldNumInt!!.toInt() +numInt!!.toInt())
 
-items!!.put(id, newNumInt!!.toString())
+items.put(id, newNumInt!!.toString())
 
                                     }
                                 
                         else {
-                            items!!.put(id, num)
+                            items.put(id, num)
 
                         }
                             
@@ -97,7 +97,7 @@ open fun removeItem(id: String)
 {
 
                     var id = id
-items!!.remove(id)
+items.remove(id)
 }
 
 
@@ -114,12 +114,12 @@ open fun adjustItem(id: String, num: String)
                         if(Integer.valueOf(num)!!.toInt() > 0)
                         
                                     {
-                                    items!!.put(id, num)
+                                    items.put(id, num)
 
                                     }
                                 
                         else {
-                            items!!.remove(id)
+                            items.remove(id)
 
                         }
                             
@@ -151,7 +151,7 @@ open fun getTotalWeight()
     var weightFloat: Float
 
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 
@@ -189,14 +189,14 @@ open fun getNumberOfItems()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer(items!!.size())
+                        return Integer(items.size())
 }
 
 
 open fun getIds()
         //nullable = true from not(false or (false and true)) = true
 : Set{
-    var set: Set = items!!.keySet()!!
+    var set: Set = items.keySet()!!
             
 
 
@@ -223,7 +223,7 @@ open fun getNumberOf(product: String)
 
                     var product = product
 
-    var numStr: String = items!!.get(product) as String
+    var numStr: String = items.get(product) as String
 
 
 
@@ -263,7 +263,7 @@ open fun getSubTotal()
     var inventoryEntity: InventoryEntity = inventoryEntityFactory!!.getInventoryEntityInstance() as InventoryEntity
 
 
-    var itemArray: Array<Any?> = items!!.toArray()!!
+    var itemArray: Array<Any?> = items.toArray()!!
             
 
 

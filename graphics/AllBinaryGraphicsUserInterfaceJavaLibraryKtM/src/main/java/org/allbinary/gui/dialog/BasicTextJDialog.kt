@@ -41,12 +41,12 @@ open fun main(args: Array<String?>)
 {
 
                     var args = args
-java!!.awt!!.EventQueue.invokeLater(object: Runnable()
+java.awt.EventQueue.invokeLater(object: Runnable()
                                 {
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{BasicTextJDialog(JFrame(), true, 
+{BasicTextJDialog(javax.swing.JFrame(), true, 
                             "Test").
                             setVisible(true)
 }
@@ -60,7 +60,7 @@ open fun run()
         }
             
     private var closeListenerInterface: CloseJDialogListenerInterface
-public constructor        (parent: Frame, modal: Boolean, text: String)                        
+public constructor        (parent: java.awt.Frame, modal: Boolean, text: String)                        
 
                             : super(parent, modal){
 
@@ -107,15 +107,15 @@ this.textJLabel!!.setText(text)
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{jButton1= JButton()
-textJLabel= JLabel()
-setDefaultCloseOperation(javax!!.swing!!.WindowConstants.DISPOSE_ON_CLOSE)
+{jButton1= javax.swing.JButton()
+textJLabel= javax.swing.JLabel()
+setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
 jButton1!!.setText(
                             "OK")
-jButton1!!.addActionListener(object: ActionListener()
+jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
-open override fun actionPerformed(evt: ActionEvent)
+open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -128,16 +128,16 @@ jButton1ActionPerformed(evt)
 textJLabel!!.setText(
                             "No Text Set")
 
-    var layout: GroupLayout = GroupLayout(getContentPane())
+    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(getContentPane())
 
 getContentPane()!!.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addGap(80, 80, 80)!!.addComponent(jButton1))!!.addGroup(layout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(textJLabel, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)))!!.addContainerGap()))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addGap(20, 20, 20)!!.addComponent(textJLabel, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, 20, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)!!.addGap(30, 30, 30)!!.addComponent(jButton1)))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGap(80, 80, 80)!!.addComponent(jButton1))!!.addGroup(layout.createSequentialGroup()!!.addContainerGap()!!.addComponent(textJLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)))!!.addContainerGap()))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addGap(20, 20, 20)!!.addComponent(textJLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)!!.addGap(30, 30, 30)!!.addComponent(jButton1)))
 pack()
 }
 
 
-open fun jButton1ActionPerformed(evt: ActionEvent)
+open fun jButton1ActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -157,9 +157,9 @@ this.setVisible(false)
 }
 
 
-    private var jButton1: JButton
+    private var jButton1: javax.swing.JButton
 
-    private var textJLabel: JLabel
+    private var textJLabel: javax.swing.JLabel
 
 }
                 

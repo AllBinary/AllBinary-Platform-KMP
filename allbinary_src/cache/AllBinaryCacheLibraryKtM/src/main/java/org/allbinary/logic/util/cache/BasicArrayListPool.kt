@@ -45,7 +45,7 @@ public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfac
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.buffers!!.clear()
+{this.buffers.clear()
 }
 
 
@@ -57,7 +57,7 @@ open fun remove(key: Any)
 
                     var key = key
 
-    var size: Int = this.buffers!!.size()!!
+    var size: Int = this.buffers.size()!!
             
 
 
@@ -69,7 +69,7 @@ open fun remove(key: Any)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return buffers!!.remove(size -1) as CacheableInterface
+                        return buffers.remove(size -1) as CacheableInterface
 
                                     }
                                 
@@ -128,7 +128,7 @@ open fun releaseUsedBackToPool(usedList: BasicArrayList)
 
 
     
-                        if(list!!.size() == 0)
+                        if(list.size() == 0)
                         
                                     {
                                     usedList!!.remove(index)

@@ -190,7 +190,7 @@ this.maxTileId= maxTileId
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.WALL))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.WALL))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.WALL, idsWithTypeList, 1000)
@@ -200,7 +200,7 @@ BLOCK_CELL_TYPE= basicPlatormGeographicMapCellType
                                 
                              else 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.OFF_MAP))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.OFF_MAP))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.OFF_MAP, idsWithTypeList, 1001)
@@ -210,7 +210,7 @@ OFF_MAP_CELL_TYPE= basicPlatormGeographicMapCellType
                                 
                              else 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.FLOOR))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.FLOOR))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.FLOOR, idsWithTypeList, 1)
@@ -220,7 +220,7 @@ FLOOR_CELL_TYPE= basicPlatormGeographicMapCellType
                                 
                              else 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.DOOR))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.DOOR))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.DOOR, idsWithTypeList, 1)
@@ -230,7 +230,7 @@ DOOR_CELL_TYPE= basicPlatormGeographicMapCellType
                                 
                              else 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.STAIRS_UP))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.STAIRS_UP))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.STAIRS_UP, idsWithTypeList, 1)
@@ -240,7 +240,7 @@ STAIRS_UP_CELL_TYPE= basicPlatormGeographicMapCellType
                                 
                              else 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.STAIRS_DOWN))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.STAIRS_DOWN))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.STAIRS_DOWN, idsWithTypeList, 1)
@@ -250,7 +250,7 @@ STAIRS_DOWN_CELL_TYPE= basicPlatormGeographicMapCellType
                                 
                              else 
     
-                        if(key!!.equals(basicTopViewGeographicMapStrings!!.OTHER))
+                        if(key.equals(basicTopViewGeographicMapStrings!!.OTHER))
                         
                                     {
                                     basicPlatormGeographicMapCellType= BasicTopViewGeographicMapCellType(basicTopViewGeographicMapStrings!!.OTHER, idsWithTypeList, 1)

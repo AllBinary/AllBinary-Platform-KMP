@@ -61,7 +61,7 @@ public constructor        (algorithm: String, key: String)
 
         try {
             this.algorithm= algorithm
-this.key= key!!.encodeToByteArray()
+this.key= key.encodeToByteArray()
 this.init()
 } catch(e: Exception)
             {
@@ -80,7 +80,7 @@ open fun init()
 {
         try {
             
-    var sunJce: Provider = SunJCE()
+    var sunJce: Provider = com.sun.crypto.provider.SunJCE()
 
 Security.addProvider(sunJce)
 
@@ -112,17 +112,17 @@ open fun encrypt(array: ByteArray)
                     var array = array
 
         try {
-            cipher!!.init(Cipher.ENCRYPT_MODE, secretKey)
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
     var ivArray: ByteArray = secretKey!!.getEncoded()!!
             
 
 
-    var encrypted: ByteArray = cipher!!.doFinal(array)!!
+    var encrypted: ByteArray = cipher.doFinal(array)!!
             
 
 
-    var result: ByteArray = ByteArray(ivArray!!.size +encrypted!!.size)
+    var result: ByteArray = ByteArray(ivArray!!.size +encrypted.size)
 
 PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, 
                             "encrypt")
@@ -140,7 +140,7 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this,
 
 
 
-                        for (index in 0 until encrypted!!.size)
+                        for (index in 0 until encrypted.size)
 
 
         {result[index +ivArray!!.size]= encrypted[index]!!
@@ -172,7 +172,7 @@ open fun decrypt(array: ByteArray)
                     var array = array
 
         try {
-            cipher!!.init(Cipher.DECRYPT_MODE, secretKey)
+            cipher.init(Cipher.DECRYPT_MODE, secretKey)
 
     var ivArray: ByteArray = ByteArray(8)
 
@@ -189,20 +189,20 @@ open fun decrypt(array: ByteArray)
 PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, 
                             "encrypt")
 
-    var result: ByteArray = ByteArray(array!!.size -ivArray!!.size)
+    var result: ByteArray = ByteArray(array.size -ivArray!!.size)
 
 
 
 
 
-                        for (index in ivArray!!.size until array!!.size)
+                        for (index in ivArray!!.size until array.size)
 
 
         {result[index -ivArray!!.size]= array[index]!!
 }
 
 
-    var decrypted: ByteArray = cipher!!.doFinal(result)!!
+    var decrypted: ByteArray = cipher.doFinal(result)!!
             
 
 

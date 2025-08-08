@@ -84,7 +84,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Generating View: " +transformInfoInterface!!.getName(), this, 
@@ -109,7 +109,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 
 
     
-                        if(result!!.indexOf(
+                        if(result.indexOf(
                             "<HTML>") >= 0)
                         
                                     {
@@ -127,7 +127,7 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(

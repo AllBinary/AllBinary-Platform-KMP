@@ -64,7 +64,7 @@ open fun init(maxConcurrentPaths: Int, maxPaths: Int)
                         for (index in maxConcurrentPaths downTo this.maxConcurrentPaths)
 
 
-        {this.list!!.add(BasicArrayList(maxPaths))
+        {this.list.add(BasicArrayList(maxPaths))
 }
 
 this.maxConcurrentPaths= maxConcurrentPaths
@@ -79,14 +79,14 @@ open fun getPaths()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
     
-                        if(this.list!!.size() > 0)
+                        if(this.list.size() > 0)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.remove(0) as BasicArrayList
+                        return this.list.remove(0) as BasicArrayList
 
                                     }
                                 
@@ -111,14 +111,14 @@ open fun release(list: BasicArrayList)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
-        {BasicGeographicMapExtractedPathCacheFactory.getInstance()!!.release(list!!.get(index) as BasicArrayList)
+        {BasicGeographicMapExtractedPathCacheFactory.getInstance()!!.release(list.get(index) as BasicArrayList)
 }
 
-list!!.clear()
-this.list!!.add(list)
+list.clear()
+this.list.add(list)
 }
 
 

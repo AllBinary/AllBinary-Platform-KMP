@@ -133,7 +133,7 @@ open fun getInstance(anyType: GameKeyEventSourceInterface, input: Input)
 
                     var input = input
 
-    var gameKeyEvent: GameKeyEvent = ARRAY[anyType!!.getSourceId()]!![input!!.getId()]!!
+    var gameKeyEvent: GameKeyEvent = ARRAY[anyType!!.getSourceId()]!![input.getId()]!!
 
 
 

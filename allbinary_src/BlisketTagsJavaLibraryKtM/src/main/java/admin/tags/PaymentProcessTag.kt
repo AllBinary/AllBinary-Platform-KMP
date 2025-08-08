@@ -64,7 +64,7 @@ open fun process()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -75,7 +75,7 @@ open fun process()
 } catch(e: LicensingException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -91,7 +91,7 @@ open fun process()
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
@@ -115,13 +115,13 @@ open fun doStartTag()
         try {
             
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0 || this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDERANDEVALBODY) == 0 || this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0 || this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDERANDEVALBODY) == 0 || this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
                         
                                     {
                                     this.pageContext!!.getOut()!!.print(this.process() +"<br />")
 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
                         
 
 

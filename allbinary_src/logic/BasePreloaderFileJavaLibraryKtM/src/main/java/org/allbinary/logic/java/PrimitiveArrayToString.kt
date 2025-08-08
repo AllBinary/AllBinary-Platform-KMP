@@ -49,7 +49,7 @@ open fun toString(floats: FloatArray)
 
 
 
-                        for (index in 0 until floats!!.size)
+                        for (index in 0 until floats.size)
 
 
         {stringBuffer!!.append(floats[index]!!)

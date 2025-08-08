@@ -87,7 +87,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
                                     
@@ -98,7 +98,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append(
                             "->")
-stringBuffer!!.append(instance!!::class.qualifiedName!!)
+stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
@@ -125,7 +125,7 @@ params[1]= pageContext as Object
 } catch(e: LicensingException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     
@@ -139,7 +139,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append(
                             "->")
-stringBuffer!!.append(instance!!::class.qualifiedName!!)
+stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
@@ -156,7 +156,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
                                     
@@ -170,7 +170,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append(
                             "->")
-stringBuffer!!.append(instance!!::class.qualifiedName!!)
+stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             

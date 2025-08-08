@@ -93,7 +93,7 @@ this.value= value
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringMaker().
                             append(this.name)!!.append(
                             " value: from: ")!!.append(oldValue!!.toInt())!!.append(
-                            " to ")!!.append(this.value!!.toInt())!!.toString()))
+                            " to ")!!.append(this.value.toInt())!!.toString()))
 
                                     }
                                 

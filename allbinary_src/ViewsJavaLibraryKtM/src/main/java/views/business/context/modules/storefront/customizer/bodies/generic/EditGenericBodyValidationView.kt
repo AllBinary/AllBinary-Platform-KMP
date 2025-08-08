@@ -64,7 +64,7 @@ open fun isValid()
 
 this.body= GenericBodyValidation(document)
 
-    var isValid: Boolean = this.body!!.isValid()!!
+    var isValid: Boolean = this.body.isValid()!!
             
 
 
@@ -75,7 +75,7 @@ this.body= GenericBodyValidation(document)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -100,7 +100,7 @@ open fun validationInfo()
             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(this.body!!.validationInfo())
+stringBuffer!!.append(this.body.validationInfo())
 
 
 
@@ -109,7 +109,7 @@ stringBuffer!!.append(this.body!!.validationInfo())
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

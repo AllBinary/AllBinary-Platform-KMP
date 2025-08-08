@@ -193,7 +193,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image!!.getHeight(), image!!.getHeight(), animationBehaviorFactory){
+                            : super(image, image.getHeight(), image.getHeight(), animationBehaviorFactory){
 
                     var image = image
 

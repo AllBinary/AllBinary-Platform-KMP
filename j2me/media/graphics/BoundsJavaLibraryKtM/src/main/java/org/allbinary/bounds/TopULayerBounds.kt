@@ -49,7 +49,7 @@ override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
                     var boundsVisitorInterface = boundsVisitorInterface
 
     
-                        if(boundsVisitorInterface!!.getX() > this.rectangle!!.getMaxX())
+                        if(boundsVisitorInterface!!.getX() > this.rectangle.getMaxX())
                         
                                     {
                                     boundsVisitorInterface!!.maxX()
@@ -58,7 +58,7 @@ override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
                                 
 
     
-                        if(boundsVisitorInterface!!.getX() < this.rectangle!!.getPoint()!!.getX())
+                        if(boundsVisitorInterface!!.getX() < this.rectangle.getPoint()!!.getX())
                         
                                     {
                                     boundsVisitorInterface!!.minX()
@@ -67,7 +67,7 @@ override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
                                 
 
     
-                        if(boundsVisitorInterface!!.getY() < this.rectangle!!.getPoint()!!.getY())
+                        if(boundsVisitorInterface!!.getY() < this.rectangle.getPoint()!!.getY())
                         
                                     {
                                     boundsVisitorInterface!!.minY()

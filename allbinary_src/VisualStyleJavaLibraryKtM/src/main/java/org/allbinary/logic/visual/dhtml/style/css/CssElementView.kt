@@ -88,12 +88,12 @@ public constructor        (node: Node)
 
         try {
             
-    var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, node!!.getChildNodes())!!
+    var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
             
 
 this.value= DomNodeHelper.getTextNodeValue(valueNode)
 
-    var titleValueNode: Node = DomSearchHelper.getNodeNoThrow(TITLE, node!!.getChildNodes())!!
+    var titleValueNode: Node = DomSearchHelper.getNodeNoThrow(TITLE, node.getChildNodes())!!
             
 
 
@@ -117,7 +117,7 @@ this.title= stringUtil!!.EMPTY_STRING
                         }
                             
 
-    var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(DESCRIPTION, node!!.getChildNodes())!!
+    var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(DESCRIPTION, node.getChildNodes())!!
             
 
 
@@ -138,7 +138,7 @@ this.title= stringUtil!!.EMPTY_STRING
                             
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(StringMaker().
@@ -150,12 +150,12 @@ this.title= stringUtil!!.EMPTY_STRING
                                     }
                                 
 
-    var cssElementStyleNodeVector: Vector = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, node!!.getChildNodes())!!
+    var cssElementStyleNodeVector: Vector = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, node.getChildNodes())!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Child Css Elements: " +cssElementStyleNodeVector!!.size, this, 
@@ -165,14 +165,14 @@ this.title= stringUtil!!.EMPTY_STRING
                                 
 this.cssElementVector= CssElementsValidationFactory.getInstance(cssElementStyleNodeVector)
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(StringMaker().
@@ -232,7 +232,7 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("CssView HashMap: " +hashMap!!.toString(), this, 
@@ -258,7 +258,7 @@ open fun toXmlNode(document: Document)
         {
     var cssPropertyDomNodeInterface: DomNodeInterface = cssPropertyVector!!.get(index) as DomNodeInterface
 
-node!!.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
+node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 }
 
 
@@ -275,7 +275,7 @@ node!!.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
         {
     var cssElementDomNodeInterface: DomNodeInterface = cssElementVector!!.get(index) as DomNodeInterface
 
-node!!.appendChild(cssElementDomNodeInterface!!.toXmlNode(document))
+node.appendChild(cssElementDomNodeInterface!!.toXmlNode(document))
 }
 
 

@@ -50,7 +50,7 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigFile(value: String)
+open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -62,7 +62,7 @@ this.setObjectConfigInterface(TransformInfoObjectConfigNoManipulationFactory.get
 
                 @Throws(Exception::class)
             
-open fun setObjectConfig(value: String)
+open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 

@@ -94,7 +94,7 @@ open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, othe
 
     var zVector: Int = (axisMathVectorUtil!!.calculateZ(radius, otherAngle) /scaleFactorValue).toInt()
 
-layer!!.move(xVector, yVector, zVector)
+layer.move(xVector, yVector, zVector)
 }
 
 
@@ -116,13 +116,13 @@ layer!!.move(xVector, yVector, zVector)
     var z: Int = this.basicVelocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled()!!
             
 
-layer!!.move(x, y, z)
+layer.move(x, y, z)
 
     
                         if(x != 0 || y != 0 || z != 0)
                         
                                     {
-                                    layer!!.onViewPositionChangeEvent()
+                                    layer.onViewPositionChangeEvent()
 
                                     }
                                 

@@ -68,7 +68,7 @@ public constructor        (file: AbFile, childPathName: String)
 
 
                     var childPathName = childPathName
-this.file= File(file!!.getFile(), childPathName)
+this.file= File(file.getFile(), childPathName)
 }
 
 public constructor        (filePath: String)
@@ -117,7 +117,7 @@ open fun getName()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getName()
+                        return this.file.getName()
 }
 
 override fun getParent()
@@ -126,7 +126,7 @@ override fun getParent()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getParent()
+                        return this.file.getParent()
 }
 
 
@@ -136,7 +136,7 @@ open fun getParentFile()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getParentFile()
+                        return this.file.getParentFile()
 }
 
 override fun getPath()
@@ -145,7 +145,7 @@ override fun getPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getPath()
+                        return this.file.getPath()
 }
 
 override fun isAbsolute()
@@ -154,7 +154,7 @@ override fun isAbsolute()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.isAbsolute()
+                        return this.file.isAbsolute()
 }
 
 override fun getAbsolutePath()
@@ -163,7 +163,7 @@ override fun getAbsolutePath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getAbsolutePath()
+                        return this.file.getAbsolutePath()
 }
 
 
@@ -173,7 +173,7 @@ open fun getAbsoluteFile()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getAbsoluteFile()
+                        return this.file.getAbsoluteFile()
 }
 
 
@@ -184,7 +184,7 @@ open fun getAbsoluteFile()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getCanonicalPath()
+                        return this.file.getCanonicalPath()
 }
 
 
@@ -196,7 +196,7 @@ open fun getCanonicalFile()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.getCanonicalFile()
+                        return this.file.getCanonicalFile()
 }
 
 override fun toURI()
@@ -205,7 +205,7 @@ override fun toURI()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.toURI()
+                        return this.file.toURI()
 }
 
 override fun canRead()
@@ -214,7 +214,7 @@ override fun canRead()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.canRead()
+                        return this.file.canRead()
 }
 
 override fun canWrite()
@@ -223,7 +223,7 @@ override fun canWrite()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.canWrite()
+                        return this.file.canWrite()
 }
 
 override fun exists()
@@ -232,7 +232,7 @@ override fun exists()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.exists()
+                        return this.file.exists()
 }
 
 override fun isDirectory()
@@ -241,7 +241,7 @@ override fun isDirectory()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.isDirectory()
+                        return this.file.isDirectory()
 }
 
 override fun isFile()
@@ -250,7 +250,7 @@ override fun isFile()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.isFile()
+                        return this.file.isFile()
 }
 
 override fun isHidden()
@@ -259,7 +259,7 @@ override fun isHidden()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.isHidden()
+                        return this.file.isHidden()
 }
 
 override fun lastModified()
@@ -268,7 +268,7 @@ override fun lastModified()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.lastModified()
+                        return this.file.lastModified()
 }
 
 override fun length()
@@ -277,7 +277,7 @@ override fun length()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.length
+                        return this.file.length
 }
 
 
@@ -288,7 +288,7 @@ override fun length()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.createNewFile()
+                        return this.file.createNewFile()
 }
 
 
@@ -299,12 +299,12 @@ override fun length()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.delete()
+                        return this.file.delete()
 }
 
 override fun deleteOnExit()
         //nullable = true from not(false or (false and true)) = true
-{this.file!!.deleteOnExit()
+{this.file.deleteOnExit()
 }
 
 override fun list()
@@ -313,7 +313,7 @@ override fun list()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.list()
+                        return this.file.list()
 }
 
 override fun list(filter: FilenameFilter)
@@ -325,7 +325,7 @@ override fun list(filter: FilenameFilter)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.list(filter)
+                        return this.file.list(filter)
 }
 
 
@@ -335,7 +335,7 @@ open fun listFiles()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.listFiles()
+                        return this.file.listFiles()
 }
 
 
@@ -348,7 +348,7 @@ open fun listFiles(filter: FilenameFilter)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.listFiles(filter)
+                        return this.file.listFiles(filter)
 }
 
 
@@ -361,7 +361,7 @@ open fun listFiles(filter: FileFilter)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.listFiles(filter)
+                        return this.file.listFiles(filter)
 }
 
 override fun mkdir()
@@ -370,7 +370,7 @@ override fun mkdir()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.mkdir()
+                        return this.file.mkdir()
 }
 
 override fun mkdirs()
@@ -379,7 +379,7 @@ override fun mkdirs()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.mkdirs()
+                        return this.file.mkdirs()
 }
 
 
@@ -392,7 +392,7 @@ open fun renameTo(dest: AbFile)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.renameTo(dest!!.getFile())
+                        return this.file.renameTo(dest.getFile())
 }
 
 override fun setLastModified(time: Long)
@@ -404,7 +404,7 @@ override fun setLastModified(time: Long)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.setLastModified(time)
+                        return this.file.setLastModified(time)
 }
 
 override fun setReadOnly()
@@ -413,7 +413,7 @@ override fun setReadOnly()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.setReadOnly()
+                        return this.file.setReadOnly()
 }
 
 
@@ -426,7 +426,7 @@ open fun compareTo(pathname: File)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.compareTo(pathname)
+                        return this.file.compareTo(pathname)
 }
 
 override fun equals(obj: Any?)
@@ -438,7 +438,7 @@ override fun equals(obj: Any?)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.equals(obj)
+                        return this.file.equals(obj)
 }
 
 override fun hashCode()
@@ -447,7 +447,7 @@ override fun hashCode()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.hashCode()
+                        return this.file.hashCode()
 }
 
 override fun toString()
@@ -456,7 +456,7 @@ override fun toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file!!.toString()
+                        return this.file.toString()
 }
 
 

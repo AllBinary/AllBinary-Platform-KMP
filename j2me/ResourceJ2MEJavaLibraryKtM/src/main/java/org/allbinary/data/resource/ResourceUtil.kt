@@ -70,7 +70,7 @@ open fun getResourceAsStream(resource: String)
 
                     var resource = resource
 
-    var inputStream: InputStream = resource!!::class.getResourceAsStream(resource)!!
+    var inputStream: InputStream = resource::class.getResourceAsStream(resource)!!
             
 
 
@@ -100,15 +100,15 @@ open fun getResourceAsStream(resource: String)
     var stringMaker: StringMaker = StringMaker()
 
 
-    var index: Int = resource!!.lastIndexOf(
+    var index: Int = resource.lastIndexOf(
                             '/')!!
             
 
 
-    var resourcePath: String = resource!!.substring(index +1)!!
+    var resourcePath: String = resource.substring(index +1)!!
             
 
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -116,8 +116,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
                                 )
                         
                                     {
-                                    resourcePath= resource!!.substring(index)
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+                                    resourcePath= resource.substring(index)
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -128,8 +128,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
                                     
     var RES: String = "res"
 
-resourcePath= stringMaker!!.append(RES)!!.append(resource!!.substring(index))!!.toString()
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+resourcePath= stringMaker!!.append(RES)!!.append(resource.substring(index))!!.toString()
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -139,8 +139,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
 resourcePath= stringMaker!!.append(
-                            "/")!!.append(RES)!!.append(resource!!.substring(index))!!.toString()
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+                            "/")!!.append(RES)!!.append(resource.substring(index))!!.toString()
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     var COLON: String = CommonSeps.getInstance()!!.COLON
 
@@ -152,8 +152,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-resourcePath= stringMaker!!.append(RES)!!.append(COLON)!!.append(resource!!.substring(index))!!.toString()
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+resourcePath= stringMaker!!.append(RES)!!.append(COLON)!!.append(resource.substring(index))!!.toString()
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -162,8 +162,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-resourcePath= stringMaker!!.append(RES)!!.append(COLON)!!.append(resource!!.substring(index +1))!!.toString()
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+resourcePath= stringMaker!!.append(RES)!!.append(COLON)!!.append(resource.substring(index +1))!!.toString()
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -175,8 +175,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
     var RESOURCE_STRING: String = "resource"
 
 stringMaker!!.delete(0, stringMaker!!.length())
-resourcePath= stringMaker!!.append(RESOURCE_STRING)!!.append(COLON)!!.append(resource!!.substring(index))!!.toString()
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+resourcePath= stringMaker!!.append(RESOURCE_STRING)!!.append(COLON)!!.append(resource.substring(index))!!.toString()
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -185,8 +185,8 @@ inputStream= resource!!::class.getResourceAsStream(resourcePath)
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-resourcePath= stringMaker!!.append(RESOURCE_STRING)!!.append(COLON)!!.append(resource!!.substring(index +1))!!.toString()
-inputStream= resource!!::class.getResourceAsStream(resourcePath)
+resourcePath= stringMaker!!.append(RESOURCE_STRING)!!.append(COLON)!!.append(resource.substring(index +1))!!.toString()
+inputStream= resource::class.getResourceAsStream(resourcePath)
 
     
                         if(inputStream == 
@@ -255,15 +255,15 @@ open fun getResourceAsStream(resource: String, startIndex: Int)
     var stringMaker: StringMaker = StringMaker()
 
 
-    var index: Int = resource!!.indexOf(CommonSeps.getInstance()!!.COLON)!!
+    var index: Int = resource.indexOf(CommonSeps.getInstance()!!.COLON)!!
             
 
 
-    var resourcePath: String = resource!!.substring(index +startIndex)!!
+    var resourcePath: String = resource.substring(index +startIndex)!!
             
 
 
-    var inputStream: InputStream = resource!!::class.getResourceAsStream(resourcePath)!!
+    var inputStream: InputStream = resource::class.getResourceAsStream(resourcePath)!!
             
 
 

@@ -132,7 +132,7 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
             override fun close()
         //nullable = true from not(false or (false and true)) = true
 {super.close()
-this.paintable!!.process()
+this.paintable.process()
 this.selectedGameKey= NONE
 this.selectedInput= NONE
 this.update()
@@ -303,7 +303,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
             
 
 
-    var isInputAlreadyMappedToSelectedAction: Boolean = list!!.contains(input)!!
+    var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)!!
             
 
 
@@ -408,7 +408,7 @@ open fun deleteCurrentMapping()
 
 
     
-                        if(list!!.size() > 1)
+                        if(list.size() > 1)
                         
                                     {
                                     
@@ -463,7 +463,7 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
 this.helpPaintable!!.paint(graphics)
-this.paintable!!.paint(graphics)
+this.paintable.paint(graphics)
 super.paint(graphics)
 }
 

@@ -70,9 +70,9 @@ open fun getStackTrace(e: Throwable)
 
     var bs: ByteArrayOutputStream = ByteArrayOutputStream()
 
-e!!.printStackTrace()
+e.printStackTrace()
 
-    var output: String = bs!!.toString()!!
+    var output: String = bs.toString()!!
             
 
 

@@ -52,7 +52,7 @@ open public class GenericStoreTransformInfoObjectConfig : TransformInfoObjectCon
             
 
     val abeClientInformation: AbeClientInformationInterface
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
 
@@ -67,7 +67,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 this.abeClientInformation= abeClientInformation
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
                             : super(transformInfoInterface, document){
 
@@ -86,7 +86,7 @@ this.abeClientInformation= abeClientInformation
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
+public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(transformInfoInterface, name, type){
 
@@ -118,7 +118,7 @@ open fun generate(objectConfigDocument: Document)
                     var objectConfigDocument = objectConfigDocument
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -230,7 +230,7 @@ open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objec
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("TemplateNameOverride: " +templateNameOverride, this, 
@@ -287,12 +287,12 @@ open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>
     var replace: Replace = Replace(hashMap)
 
 
-    var newObjectConfigDocument: Document = DomDocumentHelper.create(replace!!.all(objectConfigDocumentString))!!
+    var newObjectConfigDocument: Document = DomDocumentHelper.create(replace.all(objectConfigDocumentString))!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, 

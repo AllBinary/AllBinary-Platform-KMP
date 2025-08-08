@@ -92,7 +92,7 @@ open fun getTotal()
 {
 
                     var sourceLayerInterface = sourceLayerInterface
-pool!!.visit(sourceLayerInterface)
+pool.visit(sourceLayerInterface)
 }
 
 

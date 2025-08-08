@@ -47,7 +47,7 @@ open fun getInstance()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return IdGeneratorEntity() as IdGeneratorEntityInterface
+                        return org.allbinary.data.tables.generator.IdGeneratorEntity() as IdGeneratorEntityInterface
 } catch(e: Exception)
             {
     var logUtil: LogUtil = LogUtil.getInstance()!!

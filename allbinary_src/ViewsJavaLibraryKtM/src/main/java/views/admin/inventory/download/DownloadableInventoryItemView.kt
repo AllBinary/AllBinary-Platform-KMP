@@ -136,7 +136,7 @@ open fun addDomNodeInterfaces()
                                 )
                         
                                     {
-                                    vector!!.add(DownloadableItemView(this.downloadableItem))
+                                    vector.add(DownloadableItemView(this.downloadableItem))
 
                                     }
                                 
@@ -159,7 +159,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -205,9 +205,9 @@ logUtil!!.put("FileName: " +fileName, this,
 
     var file: AbFile = AbFile(stringBuffer!!.toString())
 
-logUtil!!.put(file!!.getPath(), this, 
+logUtil!!.put(file.getPath(), this, 
                             "processFiles()")
-file!!.createNewFile()
+file.createNewFile()
 
     var byteArray: ByteArray = fileItem!!.get()!!
             
@@ -241,7 +241,7 @@ logUtil!!.put("FileName: " +fileName, this,
 
     var file: AbFile = AbFile(stringBuffer!!.toString())
 
-logUtil!!.put(file!!.getPath(), this, 
+logUtil!!.put(file.getPath(), this, 
                             "unzip()")
 ZipFileUtil.getInstance()!!.unzip(fullPath, file, fileName)
 }

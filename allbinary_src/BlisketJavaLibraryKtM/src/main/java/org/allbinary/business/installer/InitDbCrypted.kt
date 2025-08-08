@@ -349,7 +349,7 @@ logDbInitInfo= LogDbInitInfo()
     var file: AbFile = FileFactory.getInstance()!!.getInstance(SQL_FILE)!!
             
 
-file!!.createNewFile()
+file.createNewFile()
 
     var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(file)!!
             

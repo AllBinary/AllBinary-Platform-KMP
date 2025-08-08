@@ -78,7 +78,7 @@ public constructor        (genericProfileActionJPanel: GenericProfileActionJPane
 this.genericProfileActionJPanel= genericProfileActionJPanel
 this.setProfileActionConditionInterfaceVector(Vector())
 
-    var actionScriptNode: Node = DomSearchHelper.getNode(GenericProfileActionData.SCRIPT, node!!.getChildNodes())!!
+    var actionScriptNode: Node = DomSearchHelper.getNode(GenericProfileActionData.SCRIPT, node.getChildNodes())!!
             
 
 
@@ -202,7 +202,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(GenericProfileActionData.SCRIPT)!!
+    var node: Node = document.createElement(GenericProfileActionData.SCRIPT)!!
             
 
 
@@ -210,7 +210,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -221,9 +221,9 @@ open fun toXmlNode(document: Document)
 
 
         {
-    var profileActionConditionInterface: ProfileActionScriptConditionInterface = vector!!.get(index) as ProfileActionScriptConditionInterface
+    var profileActionConditionInterface: ProfileActionScriptConditionInterface = vector.get(index) as ProfileActionScriptConditionInterface
 
-node!!.appendChild(profileActionConditionInterface!!.toXmlNode(document))
+node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 }
 
 

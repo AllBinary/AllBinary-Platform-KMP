@@ -73,7 +73,7 @@ open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
                     var totalAngle = totalAngle
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -128,7 +128,7 @@ open fun rotateImageClear(originalImage: Image, image: Image, canvasSurface: Can
                     var totalAngle = totalAngle
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     canvasSurface!!.translate( -originalImage!!.getWidth() /2,  -originalImage!!.getHeight() /2)
@@ -170,7 +170,7 @@ open fun rotateImage(originalImage: Image, image: Image, canvasSurface: CanvasSu
                     var totalAngle = totalAngle
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     canvasSurface!!.rotate(Math.toRadians(totalAngle).toFloat())
@@ -206,7 +206,7 @@ open fun drawImage(originalImage: Image, image: Image, canvasSurface: CanvasSurf
 
                     var canvasSurface = canvasSurface
 
-    var originalPlayNImage: Image = 
+    var originalPlayNImage: playn.core.Image = 
                 null
             
 

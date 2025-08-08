@@ -68,7 +68,7 @@ public constructor        ()
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
             
 
-this.anyThreed= openGLConfiguration!!.isOpenGL() && (features!!.isFeature(openGLFeatureFactory!!.OPENGL_2D_AND_3D) || features!!.isFeature(openGLFeatureFactory!!.OPENGL_3D))
+this.anyThreed= openGLConfiguration!!.isOpenGL() && (features.isFeature(openGLFeatureFactory!!.OPENGL_2D_AND_3D) || features.isFeature(openGLFeatureFactory!!.OPENGL_3D))
 }
 
 

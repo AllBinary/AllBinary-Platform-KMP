@@ -68,7 +68,7 @@ open fun getStoreFrontsEntityInstance()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return StoreFrontsEntity()
+                        return org.allbinary.data.tables.context.module.storefronts.StoreFrontsEntity()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -76,7 +76,7 @@ open fun getStoreFrontsEntityInstance()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)

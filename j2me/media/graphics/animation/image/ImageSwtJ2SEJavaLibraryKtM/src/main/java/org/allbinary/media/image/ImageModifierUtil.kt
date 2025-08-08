@@ -97,11 +97,11 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 
                     var basicColor = basicColor
 
-    var newBufferedImage: Image
+    var newBufferedImage: org.eclipse.swt.graphics.Image
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -129,11 +129,11 @@ newBufferedImage= swtImage!!.getImage() as Image
     var b: Short = basicColor!!.blue
 
 
-    var width: Int = image!!.getWidth()!!
+    var width: Int = image.getWidth()!!
             
 
 
-    var height: Int = image!!.getHeight()!!
+    var height: Int = image.getHeight()!!
             
 
 
@@ -212,12 +212,12 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
                     var basicColor = basicColor
 
     
-                        if(features!!.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
     
-                        if(image!!.getType() >= OpenGLESImage.TYPE)
+                        if(image.getType() >= OpenGLESImage.TYPE)
                         
                                     {
                                     
@@ -239,11 +239,11 @@ openGLESImage!!.openGLESImageProperties!!.bluef= basicColor!!.getBlueComponent()
                                     }
                                 
 
-    var newBufferedImage: Image
+    var newBufferedImage: org.eclipse.swt.graphics.Image
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -274,11 +274,11 @@ newBufferedImage= swtImage!!.getImage() as Image
     var b: Float = (basicColor!!.blue.toFloat()) /MAX
 
 
-    var width: Int = image!!.getWidth()!!
+    var width: Int = image.getWidth()!!
             
 
 
-    var height: Int = image!!.getHeight()!!
+    var height: Int = image.getHeight()!!
             
 
 
@@ -352,12 +352,12 @@ open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alp
                     var alphaInt = alphaInt
 
     
-                        if(features!!.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(features.isFeature(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
     
-                        if(image!!.getType() >= OpenGLESImage.TYPE)
+                        if(image.getType() >= OpenGLESImage.TYPE)
                         
                                     {
                                     
@@ -392,11 +392,11 @@ open fun setAlpha(image: Image, alphaInt: Int)
     var alpha: Byte = alphaInt as Byte
 
 
-    var newBufferedImage: Image
+    var newBufferedImage: org.eclipse.swt.graphics.Image
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     

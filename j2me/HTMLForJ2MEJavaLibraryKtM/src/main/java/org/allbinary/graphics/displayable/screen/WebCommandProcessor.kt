@@ -85,7 +85,7 @@ open fun process(midletCommandListener: CommandListener, command: Command, canva
                     var canvas = canvas
 
         try {
-            PlayN.openURL(list!!.remove(0) as String)
+            PlayN.openURL(list.remove(0) as String)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

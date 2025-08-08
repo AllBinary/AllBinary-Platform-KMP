@@ -145,8 +145,8 @@ open fun update(name: String, value: Long)
 
     var map: HashMap<Any, Any> = HashMap<Any, Any>()
 
-map!!.put(NAME, name)
-map!!.put(VALUE, value!!.toString())
+map.put(NAME, name)
+map.put(VALUE, value.toString())
 this.update(map)
 }
 

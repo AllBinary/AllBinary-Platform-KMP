@@ -96,7 +96,7 @@ mediaPlayer!!.setOnErrorListener(mOnErrorListener)
 }
 
 
-    private var mOnBufferingUpdateListener: OnBufferingUpdateListener = object: OnBufferingUpdateListener()
+    private var mOnBufferingUpdateListener: MediaPlayer.OnBufferingUpdateListener = object: MediaPlayer.OnBufferingUpdateListener()
                                 {
                                 
 open override fun onBufferingUpdate(mediaPlayer: MediaPlayer, i: Int)
@@ -115,7 +115,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                                 }
                             
 
-    private var mOnPreparedListener: OnPreparedListener = object: OnPreparedListener()
+    private var mOnPreparedListener: MediaPlayer.OnPreparedListener = object: MediaPlayer.OnPreparedListener()
                                 {
                                 
 open override fun onPrepared(mp: MediaPlayer)
@@ -131,7 +131,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                                 }
                             
 
-    private var mOnErrorListener: OnErrorListener = object: OnErrorListener()
+    private var mOnErrorListener: MediaPlayer.OnErrorListener = object: MediaPlayer.OnErrorListener()
                                 {
                                 
 open override fun onError(mp: MediaPlayer, what: Int, extra: Int)
@@ -161,7 +161,7 @@ this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(Player
                                 }
                             
 
-    private var mOnCompletionListener: OnCompletionListener = object: OnCompletionListener()
+    private var mOnCompletionListener: MediaPlayer.OnCompletionListener = object: MediaPlayer.OnCompletionListener()
                                 {
                                 
 open override fun onCompletion(mp: MediaPlayer)

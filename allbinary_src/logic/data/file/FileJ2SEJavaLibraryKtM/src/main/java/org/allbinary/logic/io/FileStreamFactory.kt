@@ -99,11 +99,11 @@ open fun getFileOutputStreamInstance(path: String, fileName: String)
 
 
     
-                        if(file!!.exists())
+                        if(file.exists())
                         
                                     {
-                                    file!!.delete()
-file!!.createNewFile()
+                                    file.delete()
+file.createNewFile()
 
                                     }
                                 
@@ -131,7 +131,7 @@ open fun delete(path: String, fileName: String)
 
     var file: AbFile = AbFile(FILEABPATH)
 
-file!!.delete()
+file.delete()
 }
 
 

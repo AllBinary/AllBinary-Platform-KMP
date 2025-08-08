@@ -98,11 +98,11 @@ open fun init(rectangle: Rectangle, formType: FormType)
                     var formType = formType
 this.rectangle= rectangle
 
-    var point: GPoint = this.rectangle!!.getPoint()!!
+    var point: GPoint = this.rectangle.getPoint()!!
             
 
-this.x= point!!.getX()
-this.y= point!!.getY()
+this.x= point.getX()
+this.y= point.getY()
 this.formType= formType
 }
 
@@ -113,7 +113,7 @@ open fun getWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.rectangle!!.getWidth()
+                        return this.rectangle.getWidth()
 }
 
 

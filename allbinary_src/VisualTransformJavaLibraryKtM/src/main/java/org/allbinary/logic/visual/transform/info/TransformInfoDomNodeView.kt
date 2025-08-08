@@ -100,11 +100,11 @@ open fun toXmlNode(document: Document)
             
 
 
-    var subViewNode: Node = document!!.createElement(transformInfoData!!.NAME)!!
+    var subViewNode: Node = document.createElement(transformInfoData!!.NAME)!!
             
 
 
-    var viewNameAttr: Attr = document!!.createAttribute(transformInfoData!!.NAME)!!
+    var viewNameAttr: Attr = document.createAttribute(transformInfoData!!.NAME)!!
             
 
 viewNameAttr!!.setValue(this.getTransformInfoInterface()!!.getName())
@@ -121,7 +121,7 @@ componentNodeAttributes!!.setNamedItem(viewNameAttr)
                         
                                     {
                                     
-    var mappedNameAttr: Attr = document!!.createAttribute(transformInfoData!!.MAPPED)!!
+    var mappedNameAttr: Attr = document.createAttribute(transformInfoData!!.MAPPED)!!
             
 
 mappedNameAttr!!.setValue(this.getMappedName())

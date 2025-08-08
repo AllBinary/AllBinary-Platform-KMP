@@ -69,7 +69,7 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
                     var pageContext = pageContext
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         
                                     {
                                     logUtil!!.put("Properties: " +propertiesHashMap!!.toString(), this, 
@@ -121,7 +121,7 @@ open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)

@@ -72,7 +72,7 @@ public constructor        (groupInterfaceArray: Array<Group?>)
 
                     var groupInterfaceArray = groupInterfaceArray
 this.groupInterfaceArray= groupInterfaceArray
-this.hashtable!!.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.DOWN)
+this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.DOWN)
 
     
                         if(groupInterfaceArray != 
@@ -80,7 +80,7 @@ this.hashtable!!.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.get
                                 )
                         
                                     {
-                                    this.hashtable!!.put(Group.ID, groupInterfaceArray)
+                                    this.hashtable.put(Group.ID, groupInterfaceArray)
 
                                     }
                                 
@@ -346,7 +346,7 @@ open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geo
     var item: LayerInterfaceFactoryImageItem = aItem as LayerInterfaceFactoryImageItem
 
 
-    var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = item!!.getLayerInterfaceFactoryInterface()!!
+    var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = item.getLayerInterfaceFactoryInterface()!!
             
 
 
@@ -360,7 +360,7 @@ open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geo
                                 )
                         
                                     {
-                                    hashtable!!.put(AllBinaryGameLayerManager.ID, layerManager)
+                                    hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
 
 
 

@@ -164,8 +164,8 @@ this.rectangleP= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, 
     var point: GPoint = rectangleP!!.getPoint()!!
             
 
-this.animationX= point!!.getX()
-this.animationY= point!!.getY()
+this.animationX= point.getX()
+this.animationY= point.getY()
 this.hintAnimationY= animationY -32
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 

@@ -65,7 +65,7 @@ public constructor        (algorithm: String, key: String)
 
         try {
             this.algorithm= algorithm
-this.key= key!!.encodeToByteArray()
+this.key= key.encodeToByteArray()
 this.init()
 } catch(e: Exception)
             {
@@ -119,13 +119,13 @@ open fun encrypt(array: ByteArray)
                     var array = array
 
         try {
-            cipher!!.init(Cipher.ENCRYPT_MODE, secretKey)
+            cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 array= this.mutilate(array)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cipher!!.doFinal(array)
+                        return cipher.doFinal(array)
 } catch(e: Exception)
             {PreLogUtil.put(
                             "Encrypt Failed", this, 
@@ -147,12 +147,12 @@ open fun decrypt(array: ByteArray)
                     var array = array
 
         try {
-            cipher!!.init(Cipher.DECRYPT_MODE, secretKey)
+            cipher.init(Cipher.DECRYPT_MODE, secretKey)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.mutilate(cipher!!.doFinal(array))
+                        return this.mutilate(cipher.doFinal(array))
 } catch(e: Exception)
             {PreLogUtil.put(
                             "decrypt Failed", this, 
@@ -176,7 +176,7 @@ open fun mutilate(array: ByteArray)
 
 
 
-                        for (index in 0 until key!!.size)
+                        for (index in 0 until key.size)
 
 
         {

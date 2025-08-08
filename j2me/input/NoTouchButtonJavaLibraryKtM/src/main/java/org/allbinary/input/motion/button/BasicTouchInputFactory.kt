@@ -113,16 +113,16 @@ open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
                         
                                     {
                                     initialized= true
-list!!.add(UP)
-list!!.add(LEFT)
-list!!.add(RIGHT)
-list!!.add(DOWN)
-list!!.add(SPECIAL_BUTTON_TWO)
-list!!.add(SPECIAL_BUTTON_FOUR)
-list!!.add(SPECIAL_BUTTON_THREE)
-list!!.add(SPECIAL_BUTTON_ONE)
-list!!.add(SPECIAL_BUTTON_FIVE)
-list!!.add(SPECIAL_BUTTON_SIX)
+list.add(UP)
+list.add(LEFT)
+list.add(RIGHT)
+list.add(DOWN)
+list.add(SPECIAL_BUTTON_TWO)
+list.add(SPECIAL_BUTTON_FOUR)
+list.add(SPECIAL_BUTTON_THREE)
+list.add(SPECIAL_BUTTON_ONE)
+list.add(SPECIAL_BUTTON_FIVE)
+list.add(SPECIAL_BUTTON_SIX)
 this.updateAll(list, inputToGameKeyMapping)
 CancelTouchButtonInputFactory.getInstance()
 
@@ -149,17 +149,17 @@ open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMa
 
                     var inputToGameKeyMapping = inputToGameKeyMapping
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START)!!.append(list!!.size())!!.toString(), this, 
+                            append(CommonLabels.getInstance()!!.START)!!.append(list.size())!!.toString(), this, 
                             "updateAll")
 
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var touchButtonInput: TouchButtonInput = list!!.get(index) as TouchButtonInput
+    var touchButtonInput: TouchButtonInput = list.get(index) as TouchButtonInput
 
 touchButtonInput!!.update(inputToGameKeyMapping)
 }

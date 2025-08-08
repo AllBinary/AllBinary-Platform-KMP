@@ -53,7 +53,7 @@ open fun visitBool(visitorInterface: Visitor)
     var result: Boolean = visitorInterface!!.visit(nullUtil!!.NULL_OBJECT) as Boolean
 
 
-    var result2: Boolean = result!!!!
+    var result2: Boolean = result!!
             
 
 

@@ -93,19 +93,19 @@ open fun put(log: Log)
                                     }
                                 
 
-    var specialMessage: String = log!!.getSpecialMessage()!!
+    var specialMessage: String = log.getSpecialMessage()!!
             
 
 
-    var anyType: Any = log!!.getObject()!!
+    var anyType: Any = log.getObject()!!
             
 
 
-    var functionName: String = log!!.getFunctionName()!!
+    var functionName: String = log.getFunctionName()!!
             
 
 
-    var exception: Any = log!!.getThrowable()!!
+    var exception: Any = log.getThrowable()!!
             
 
 this.put(specialMessage, anyType, functionName, exception)
@@ -149,7 +149,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                     {
                                     
     
-                        if(exception!!::class.
+                        if(exception::class.
                                             qualifiedName!!.compareTo(
                                 //Otherwise - scopeIdentifier - ClassExpr
 getName()) == 0)
@@ -165,7 +165,7 @@ getName()) == 0)
                                 
 
     
-                        if(exception!!::class.
+                        if(exception::class.
                                             qualifiedName!!.compareTo(
                                 //Otherwise - scopeIdentifier - ClassExpr
 getName()) == 0)
@@ -208,7 +208,7 @@ this.isFirstException= false
 
 
         try {
-            System.out!!.println(
+            System.out.println(
                             "Eeeek")
 
     
@@ -232,14 +232,14 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(message)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(SpecialMessageUtil.getInstance()!!.get())
-hashtable!!.put(
+hashtable.put(
                             "message", stringBuffer!!.toString())
 XmlRpcRemoteLogClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Throwable)
-            {System.out!!.println(
+            {System.out.println(
                             "Exception")
-e!!.printStackTrace()
+e.printStackTrace()
 }
 
 

@@ -82,18 +82,18 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request!!.getParameter(BasicItemData.ID)
-this.number= request!!.getParameter(BasicItemData.NUMBER)
-this.enabled= request!!.getParameter(EntryData.getInstance()!!.ENABLE)
-this.who= request!!.getParameter(PermissionItemData.WHO)
-this.what= request!!.getParameter(PermissionItemData.WHAT)
-this.type= request!!.getParameter(PermissionItemData.TYPE)
-this.remoteAddr= request!!.getParameter(PermissionItemData.REMOTE_ADDR)
-this.startTime= request!!.getParameter(PermissionItemData.START_TIME)
-this.endTime= request!!.getParameter(PermissionItemData.END_TIME)
-this.price= request!!.getParameter(BasicItemData.PRICE)
-this.timeEntered= request!!.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= request!!.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+{this.id= request.getParameter(BasicItemData.ID)
+this.number= request.getParameter(BasicItemData.NUMBER)
+this.enabled= request.getParameter(EntryData.getInstance()!!.ENABLE)
+this.who= request.getParameter(PermissionItemData.WHO)
+this.what= request.getParameter(PermissionItemData.WHAT)
+this.type= request.getParameter(PermissionItemData.TYPE)
+this.remoteAddr= request.getParameter(PermissionItemData.REMOTE_ADDR)
+this.startTime= request.getParameter(PermissionItemData.START_TIME)
+this.endTime= request.getParameter(PermissionItemData.END_TIME)
+this.price= request.getParameter(BasicItemData.PRICE)
+this.timeEntered= request.getParameter(EntryData.getInstance()!!.TIMECREATED)
+this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
 
 
@@ -102,26 +102,26 @@ open fun getHashMap()
 : HashMap<Any, Any>{
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(BasicItemData.ID, this.id)
-values!!.put(BasicItemData.NUMBER, this.number)
-values!!.put(EntryData.getInstance()!!.ENABLE, this.enabled)
-values!!.put(PermissionItemData.WHO, this.who)
-values!!.put(PermissionItemData.WHAT, this.what)
-values!!.put(PermissionItemData.TYPE, this.type)
-values!!.put(PermissionItemData.REMOTE_ADDR, this.remoteAddr)
-values!!.put(PermissionItemData.START_TIME, this.startTime)
-values!!.put(PermissionItemData.END_TIME, this.endTime)
-values!!.put(BasicItemData.PRICE, this.price)
+values.put(BasicItemData.ID, this.id)
+values.put(BasicItemData.NUMBER, this.number)
+values.put(EntryData.getInstance()!!.ENABLE, this.enabled)
+values.put(PermissionItemData.WHO, this.who)
+values.put(PermissionItemData.WHAT, this.what)
+values.put(PermissionItemData.TYPE, this.type)
+values.put(PermissionItemData.REMOTE_ADDR, this.remoteAddr)
+values.put(PermissionItemData.START_TIME, this.startTime)
+values.put(PermissionItemData.END_TIME, this.endTime)
+values.put(BasicItemData.PRICE, this.price)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 
@@ -139,32 +139,32 @@ open fun insert()
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
 
     var values: Vector = Vector()
 
-values!!.add(this.id)
-values!!.add(this.number)
-values!!.add(this.enabled)
-values!!.add(this.who)
-values!!.add(this.what)
-values!!.add(this.type)
-values!!.add(this.remoteAddr)
-values!!.add(this.startTime)
-values!!.add(this.endTime)
-values!!.add(this.price)
-values!!.add(time)
-values!!.add(time)
+values.add(this.id)
+values.add(this.number)
+values.add(this.enabled)
+values.add(this.who)
+values.add(this.what)
+values.add(this.type)
+values.add(this.remoteAddr)
+values.add(this.startTime)
+values.add(this.endTime)
+values.add(this.price)
+values.add(time)
+values.add(time)
 PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.insert(values)
 
     var success: String = "Successfully inserted " +id +" into items table"
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -183,7 +183,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -211,7 +211,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -230,7 +230,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -262,7 +262,7 @@ open fun update()
 PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.update(values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(id +" " +success, this, 
@@ -281,7 +281,7 @@ PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

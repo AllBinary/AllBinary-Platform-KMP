@@ -157,7 +157,7 @@ open fun addProperty(gameSkillPropertyInterface: GameSkillPropertyInterface)
 {
 
                     var gameSkillPropertyInterface = gameSkillPropertyInterface
-this.vector!!.add(gameSkillPropertyInterface)
+this.vector.add(gameSkillPropertyInterface)
 }
 
 

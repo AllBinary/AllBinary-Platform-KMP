@@ -116,7 +116,7 @@ open fun toHashtable()
     var registrationConfiguration: RegistrationConfiguration = RegistrationConfiguration.getInstance()!!
             
 
-hashtable!!.put(registrationConfiguration!!.NAME, registrationConfiguration!!.getRegistrationCode())
+hashtable.put(registrationConfiguration!!.NAME, registrationConfiguration!!.getRegistrationCode())
 
 
 

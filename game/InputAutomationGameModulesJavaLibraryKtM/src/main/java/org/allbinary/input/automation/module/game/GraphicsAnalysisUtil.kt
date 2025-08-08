@@ -63,7 +63,7 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
 
 
 
-                        for (index in max_x!!.toInt()!! downTo min_x!!.toInt()!!)
+                        for (index in max_x.toInt()!! downTo min_x.toInt()!!)
 
 
         {
@@ -85,7 +85,7 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
 
 
     
-                        if(color!!.getRed() < MAX && color!!.getGreen() < MAX && color!!.getBlue() < MAX)
+                        if(color.getRed() < MAX && color.getGreen() < MAX && color.getBlue() < MAX)
                         
                                     {
                                     
@@ -96,7 +96,7 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return index -min_x!!.toInt()
+                        return index -min_x.toInt()
 
                         }
                             

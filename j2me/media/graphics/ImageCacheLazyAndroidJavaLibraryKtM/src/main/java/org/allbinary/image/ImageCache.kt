@@ -41,7 +41,18 @@ import org.allbinary.system.Memory
 open public class ImageCache : ImageCacheBase {
         
 
+        companion object {
+
+
+    val NULL_IMAGE_CACHE: ImageCache = ImageCache()
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
+            
+
+    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 protected constructor        (){}
 
@@ -126,7 +137,7 @@ open fun get(key: Any)
             
 
 
-    var image: Image = this.hashtable!!.get(resourceId as Object?) as Image
+    var image: Image = this.hashtable.get(resourceId as Object?) as Image
 
 
     
@@ -157,7 +168,7 @@ Thread.sleep(100)
 image= this.createImage(key, inputStream)
 }
 
-this.hashtable!!.put(resourceId, image)
+this.hashtable.put(resourceId, image)
 
                                     }
                                 

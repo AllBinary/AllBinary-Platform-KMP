@@ -91,7 +91,7 @@ open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformat
 
     var vector: Vector = Vector()
 
-vector!!.add(userEmailEventListenerInterface)
+vector.add(userEmailEventListenerInterface)
 
 
 
@@ -125,7 +125,7 @@ open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, us
                     var userVector = userVector
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     

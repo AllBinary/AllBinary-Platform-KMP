@@ -54,7 +54,7 @@ open fun getInstance(request: ServletRequest)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Payment(request) as PaymentInterface
+                        return org.allbinary.business.user.commerce.money.payment.Payment(request) as PaymentInterface
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -62,7 +62,7 @@ open fun getInstance(request: ServletRequest)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, 

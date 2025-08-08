@@ -204,13 +204,13 @@ open fun upgrade()
 
 
     
-                        if(upgradeCost <= capital!!.getTotalMoney())
+                        if(upgradeCost <= capital.getTotalMoney())
                         
                                     {
                                     anyChanged= true
 rtsPlayerLayerInterface!!.add(UpgradeSound.getInstance())
 rtsLayer!!.upgrade()
-capital!!.removeMoney(upgradeCost)
+capital.removeMoney(upgradeCost)
 
     
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
@@ -289,7 +289,7 @@ rtsLayer!!.downgrade()
     var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
             
 
-capital!!.addMoney(downgradeCost)
+capital.addMoney(downgradeCost)
 
     
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
@@ -358,7 +358,7 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
         try {
             
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -372,7 +372,7 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
 
         {
-    var gameKeyEvent: GameKeyEvent = list!!.get(index) as GameKeyEvent
+    var gameKeyEvent: GameKeyEvent = list.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
 this.processInput(key)

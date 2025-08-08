@@ -76,7 +76,7 @@ open fun main(args: Array<String?>)
 
     var ORIGINAL_DATA_LABEL: String = "Original Data: "
 
-System.out!!.print(ORIGINAL_DATA_LABEL)
+System.out.print(ORIGINAL_DATA_LABEL)
 permutationVisitor!!.print(data)
 OrderedIntArrayPermutationUtil.getInstance()!!.generate(data, permutationVisitor)
 }
@@ -99,7 +99,7 @@ open fun getNext(data: IntArray)
 
                     var data = data
 
-    var length: Int = data!!.size
+    var length: Int = data.size
                 
 
 
@@ -193,11 +193,11 @@ open fun generate(data: IntArray, visitor: Visitor)
 
                     var visitor = visitor
 
-    var iterations: Long = this.factorial(data!!.size)!!
+    var iterations: Long = this.factorial(data.size)!!
             
 
-System.out!!.print(TOTAL_ITERATIONS_TABLE)
-System.out!!.println(iterations)
+System.out.print(TOTAL_ITERATIONS_TABLE)
+System.out.println(iterations)
 
 
 
@@ -206,10 +206,10 @@ System.out!!.println(iterations)
 
 
         {this.getNext(data)
-visitor!!.visit(this)
+visitor.visit(this)
 }
 
-System.out!!.println(FINISHED)
+System.out.println(FINISHED)
 }
 
 

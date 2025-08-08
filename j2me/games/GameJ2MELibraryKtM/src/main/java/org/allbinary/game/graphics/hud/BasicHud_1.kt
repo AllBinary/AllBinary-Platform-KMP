@@ -398,8 +398,8 @@ open fun paint(graphics: Graphics, string: String, string2: String, offset: Int)
 
                     var offset = offset
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
-graphics!!.drawString(string, x, getY(), hudGraphicsPosition!!.getAnchor())
-graphics!!.drawString(string2, x +offset, getY(), hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string, x, getY(), hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string2, x +offset, getY(), hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -420,9 +420,9 @@ open fun paint(graphics: Graphics, string: String, string2: String, offset: Int,
 
 
                     var offset2 = offset2
-graphics!!.setColor(this.getColor())
-graphics!!.drawString(string, x +offset, getY(), hudGraphicsPosition!!.getAnchor())
-graphics!!.drawString(string2, x +offset2, getY(), hudGraphicsPosition!!.getAnchor())
+graphics.setColor(this.getColor())
+graphics.drawString(string, x +offset, getY(), hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string2, x +offset2, getY(), hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -460,8 +460,8 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
     var y: Int = getY()!!
             
 
-graphics!!.drawChars(charArray, offset, len, x +xOffset, y, hudGraphicsPosition!!.getAnchor())
-graphics!!.drawChars(charArray2, offset2, len2, x +xOffset2, y, hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray, offset, len, x +xOffset, y, hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray2, offset2, len2, x +xOffset2, y, hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -496,8 +496,8 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
     var y: Int = getY()!!
             
 
-graphics!!.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor())
-graphics!!.drawChars(charArray2, offset2, len2, x +xOffset, y, hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray2, offset2, len2, x +xOffset, y, hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -520,7 +520,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
     var y: Int = getY()!!
             
 
-graphics!!.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor())
+graphics.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor())
 }
 
 
@@ -538,7 +538,7 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
 
     var y: Int = getY() +offsetY
 
-graphics!!.drawString(string, x, y, hudGraphicsPosition!!.getAnchor())
+graphics.drawString(string, x, y, hudGraphicsPosition!!.getAnchor())
 }
 
 

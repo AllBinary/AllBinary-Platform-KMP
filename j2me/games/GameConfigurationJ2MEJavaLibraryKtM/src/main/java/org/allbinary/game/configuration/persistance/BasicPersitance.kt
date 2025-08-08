@@ -99,7 +99,7 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
         {
     var integer: Integer = this.idList!!.objectArray[index]!! as Integer
 
-this.delete(abeClientInformation, integer!!.toInt())
+this.delete(abeClientInformation, integer.toInt())
 }
 
 this.clear()

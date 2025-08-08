@@ -72,7 +72,7 @@ UserRoleFactory.getInstance()
 
 
     
-                        if(role!!.compareTo(userRole!!.toString()) == 0)
+                        if(role.compareTo(userRole!!.toString()) == 0)
                         
                                     {
                                     

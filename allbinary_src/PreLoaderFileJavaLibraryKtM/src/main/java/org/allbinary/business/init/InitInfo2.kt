@@ -70,7 +70,7 @@ open fun isTestHtmlPathValid(value: AbPath)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory!!.create(value)
+                        return directory.create(value)
 }
 
 
@@ -83,7 +83,7 @@ open fun isMainPathValid(value: AbPath)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return directory!!.create(value)
+                        return directory.create(value)
 }
 
 

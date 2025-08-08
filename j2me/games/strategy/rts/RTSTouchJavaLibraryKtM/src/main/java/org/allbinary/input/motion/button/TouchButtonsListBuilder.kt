@@ -55,7 +55,7 @@ open fun add(list: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {list!!.addAll(
+        {list.addAll(
                                     (get as BaseTouchInput).getList())
 }
 

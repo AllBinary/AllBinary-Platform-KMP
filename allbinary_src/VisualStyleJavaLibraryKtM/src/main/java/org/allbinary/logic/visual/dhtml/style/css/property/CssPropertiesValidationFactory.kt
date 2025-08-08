@@ -64,7 +64,7 @@ open fun getInstance(nodeList: NodeList)
 
 
     
-                        if(node!!.getNodeName()!!.compareTo(CssPropertyData.getInstance()!!.NAME) == 0)
+                        if(node.getNodeName()!!.compareTo(CssPropertyData.getInstance()!!.NAME) == 0)
                         
                                     {
                                     

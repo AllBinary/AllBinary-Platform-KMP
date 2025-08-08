@@ -67,19 +67,17 @@ override fun removeAllListeners()
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
-                                    eventListenerInterface= list!!.objectArray[0]!! as EventListenerInterface
+                                    eventListenerInterface= list.objectArray[0]!! as EventListenerInterface
 
                                     }
                                 
 super.removeAllListeners()
 
     
-                        if(eventListenerInterface != 
-                                    null
-                                )
+                        if(eventListenerInterface != NullEventListener.NULL_EVENT_LISTENER)
                         
                                     {
                                     this.addListener(eventListenerInterface)

@@ -112,7 +112,7 @@ this.pageContext!!.forward(stringBuffer!!.toString())
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -198,7 +198,7 @@ open fun shouldForward()
 
 
     
-                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (!StringValidationUtil.getInstance()!!.isEmpty(requestCommand) && command!!.compareTo(requestCommand) == 0))
+                        if(StringValidationUtil.getInstance()!!.isEmpty(command) || (!StringValidationUtil.getInstance()!!.isEmpty(requestCommand) && command.compareTo(requestCommand) == 0))
                         
                                     {
                                     

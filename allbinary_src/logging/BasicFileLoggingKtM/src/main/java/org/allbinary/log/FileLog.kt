@@ -107,7 +107,7 @@ fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return canWrite
 } catch(e: Exception)
-            {System.out!!.println("Error Creating Log: " +e)
+            {System.out.println("Error Creating Log: " +e)
 
 
 
@@ -144,7 +144,7 @@ logFileBak= File(logPath, StringBuilder().
         while((line= tmpIn!!.readLine()) != 
                                     null
                                 )
-        {tmpOut!!.write(line, 0, line!!.length)
+        {tmpOut!!.write(line, 0, line.length)
 tmpOut!!.newLine()
 }
 
@@ -158,7 +158,7 @@ logFile!!.delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {System.out!!.println("Error Creating Backup: " +e)
+            {System.out.println("Error Creating Backup: " +e)
 
 
 
@@ -278,7 +278,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
             
 
-fileOut!!.write(message, 0, message!!.length)
+fileOut!!.write(message, 0, message.length)
 fileOut!!.newLine()
 fileOut!!.flush()
 
@@ -396,7 +396,7 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
             
 
-fileOut!!.write(message, 0, message!!.length)
+fileOut!!.write(message, 0, message.length)
 fileOut!!.newLine()
 fileOut!!.flush()
 

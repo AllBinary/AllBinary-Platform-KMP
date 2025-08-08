@@ -71,7 +71,7 @@ open fun addListener(vector: Vector)
 
                     var vector = vector
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -82,7 +82,7 @@ open fun addListener(vector: Vector)
 
 
         {
-    var userEmailEventListenerInterface: UserEmailEventListenerInterface = vector!!.get(index) as UserEmailEventListenerInterface
+    var userEmailEventListenerInterface: UserEmailEventListenerInterface = vector.get(index) as UserEmailEventListenerInterface
 
 this.addListener(userEmailEventListenerInterface)
 }

@@ -82,22 +82,22 @@ public constructor        (payment: HashMap<Any, Any>)
         {
 
                     var payment = payment
-this.name= payment!!.get(PaymentData.NAME) as String
-this.type= payment!!.get(PaymentData.TYPE) as String
-this.expiration= payment!!.get(PaymentData.EXPIRATION) as String
-this.encryption= payment!!.get(EntryData.getInstance()!!.ENCRYPTION) as String
+this.name= payment.get(PaymentData.NAME) as String
+this.type= payment.get(PaymentData.TYPE) as String
+this.expiration= payment.get(PaymentData.EXPIRATION) as String
+this.encryption= payment.get(EntryData.getInstance()!!.ENCRYPTION) as String
 this.number= SuperCrypt(Integer(encryption).
                             toInt()).
-                            decrypt(payment!!.get(PaymentData.NUMBER) as String) as String
-this.id= payment!!.get(PaymentData.ID) as String
+                            decrypt(payment.get(PaymentData.NUMBER) as String) as String
+this.id= payment.get(PaymentData.ID) as String
 
-    var def: String = payment!!.get(EntryData.getInstance()!!.DEFAULT) as String
+    var def: String = payment.get(EntryData.getInstance()!!.DEFAULT) as String
 
 
     
                         if(def != 
                                     null
-                                 && def!!.compareTo(EntryData.getInstance()!!.DEFAULT) == 0)
+                                 && def.compareTo(EntryData.getInstance()!!.DEFAULT) == 0)
                         
                                     {
                                     this.isDefault= true
@@ -109,16 +109,16 @@ this.id= payment!!.get(PaymentData.ID) as String
 
                         }
                             
-this.tenderType= payment!!.get(PaymentData.TENDERTYPE) as String
-this.transactionType= payment!!.get(PaymentData.TRANSACTIONTYPE) as String
-this.aba= payment!!.get(PaymentData.ABA) as String
-this.account= payment!!.get(PaymentData.ACCOUNT) as String
-this.accountType= payment!!.get(PaymentData.ACCOUNTTYPE) as String
-this.authorizationCode= payment!!.get(PaymentData.AUTHORIZATIONCODE) as String
-this.checkNumber= payment!!.get(PaymentData.CHECKNUMBER) as String
-this.checkType= payment!!.get(PaymentData.CHECKTYPE) as String
-this.driversLicense= payment!!.get(PaymentData.DRIVERSLICENSE) as String
-this.magneticInkCheckReader= payment!!.get(PaymentData.MAGNETICINKCHECKREADER) as String
+this.tenderType= payment.get(PaymentData.TENDERTYPE) as String
+this.transactionType= payment.get(PaymentData.TRANSACTIONTYPE) as String
+this.aba= payment.get(PaymentData.ABA) as String
+this.account= payment.get(PaymentData.ACCOUNT) as String
+this.accountType= payment.get(PaymentData.ACCOUNTTYPE) as String
+this.authorizationCode= payment.get(PaymentData.AUTHORIZATIONCODE) as String
+this.checkNumber= payment.get(PaymentData.CHECKNUMBER) as String
+this.checkType= payment.get(PaymentData.CHECKTYPE) as String
+this.driversLicense= payment.get(PaymentData.DRIVERSLICENSE) as String
+this.magneticInkCheckReader= payment.get(PaymentData.MAGNETICINKCHECKREADER) as String
 }
 
 public constructor        (request: ServletRequest)
@@ -126,20 +126,20 @@ public constructor        (request: ServletRequest)
         {
 
                     var request = request
-this.name= request!!.getParameter(PaymentData.NAME)
-this.type= request!!.getParameter(PaymentData.TYPE)
-this.expiration= request!!.getParameter(PaymentData.EXPIRATION)
-this.number= request!!.getParameter(PaymentData.NUMBER)
-this.tenderType= request!!.getParameter(PaymentData.TENDERTYPE)
-this.transactionType= request!!.getParameter(PaymentData.TRANSACTIONTYPE)
-this.aba= request!!.getParameter(PaymentData.ABA)
-this.account= request!!.getParameter(PaymentData.ACCOUNT)
-this.accountType= request!!.getParameter(PaymentData.ACCOUNTTYPE)
-this.authorizationCode= request!!.getParameter(PaymentData.AUTHORIZATIONCODE)
-this.checkNumber= request!!.getParameter(PaymentData.CHECKNUMBER)
-this.checkType= request!!.getParameter(PaymentData.CHECKTYPE)
-this.driversLicense= request!!.getParameter(PaymentData.DRIVERSLICENSE)
-this.magneticInkCheckReader= request!!.getParameter(PaymentData.MAGNETICINKCHECKREADER)
+this.name= request.getParameter(PaymentData.NAME)
+this.type= request.getParameter(PaymentData.TYPE)
+this.expiration= request.getParameter(PaymentData.EXPIRATION)
+this.number= request.getParameter(PaymentData.NUMBER)
+this.tenderType= request.getParameter(PaymentData.TENDERTYPE)
+this.transactionType= request.getParameter(PaymentData.TRANSACTIONTYPE)
+this.aba= request.getParameter(PaymentData.ABA)
+this.account= request.getParameter(PaymentData.ACCOUNT)
+this.accountType= request.getParameter(PaymentData.ACCOUNTTYPE)
+this.authorizationCode= request.getParameter(PaymentData.AUTHORIZATIONCODE)
+this.checkNumber= request.getParameter(PaymentData.CHECKNUMBER)
+this.checkType= request.getParameter(PaymentData.CHECKTYPE)
+this.driversLicense= request.getParameter(PaymentData.DRIVERSLICENSE)
+this.magneticInkCheckReader= request.getParameter(PaymentData.MAGNETICINKCHECKREADER)
 }
 
 public constructor        ()
@@ -160,7 +160,7 @@ open fun isValid()
     
                         if(this.name == 
                                     null
-                                 || this.name!!.compareTo(stringUtil!!.EMPTY_STRING) == 0)
+                                 || this.name.compareTo(stringUtil!!.EMPTY_STRING) == 0)
                         
                                     {
                                     
@@ -175,7 +175,7 @@ open fun isValid()
     
                         if(this.type == 
                                     null
-                                 || this.type!!.compareTo(stringUtil!!.EMPTY_STRING) == 0)
+                                 || this.type.compareTo(stringUtil!!.EMPTY_STRING) == 0)
                         
                                     {
                                     
@@ -190,7 +190,7 @@ open fun isValid()
     
                         if(this.expiration == 
                                     null
-                                 || this.expiration!!.compareTo(stringUtil!!.EMPTY_STRING) == 0)
+                                 || this.expiration.compareTo(stringUtil!!.EMPTY_STRING) == 0)
                         
                                     {
                                     
@@ -205,7 +205,7 @@ open fun isValid()
     
                         if(this.number == 
                                     null
-                                 || this.number!!.compareTo(stringUtil!!.EMPTY_STRING) == 0)
+                                 || this.number.compareTo(stringUtil!!.EMPTY_STRING) == 0)
                         
                                     {
                                     
@@ -218,7 +218,7 @@ open fun isValid()
                                 
 
     
-                        if(this.number!!.length > org!!.allbinary!!.business!!.user!!.commerce!!.money!!.payment!!.types!!.CreditCardType.MAXLEN)
+                        if(this.number.length > org.allbinary.business.user.commerce.money.payment.types.CreditCardType.MAXLEN)
                         
                                     {
                                     
@@ -518,14 +518,14 @@ open fun getLastFour()
         //nullable = true from not(false or (false and true)) = true
 : String{
     
-                        if(this.number!!.length > PaymentData.MIN && this.number!!.length <= PaymentData.MAX)
+                        if(this.number.length > PaymentData.MIN && this.number.length <= PaymentData.MAX)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.number!!.substring(this.number!!.length -4)
+                        return this.number.substring(this.number.length -4)
 
                                     }
                                 

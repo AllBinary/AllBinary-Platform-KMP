@@ -79,7 +79,7 @@ open fun visit(file: AbFile, fileNameString: String)
 
                     var fileNameString = fileNameString
 
-    var fileNameAndExtension: String = file!!.getPath()!!
+    var fileNameAndExtension: String = file.getPath()!!
             
 
 

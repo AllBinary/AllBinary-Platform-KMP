@@ -180,7 +180,7 @@ open fun isValid()
 
 
     
-                        if(size!!.length < 1 || size!!.length > AbSqlData.MAXNUM)
+                        if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -216,7 +216,7 @@ open fun isValid()
 
 
     
-                        if(size!!.length < 1 || size!!.length > AbSqlData.MAXNUM)
+                        if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -252,7 +252,7 @@ open fun isValid()
 
 
     
-                        if(size!!.length < 1 || size!!.length > AbSqlData.MAXNUM)
+                        if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -274,7 +274,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -420,7 +420,7 @@ stringBuffer!!.append(
 
 
     
-                        if(size!!.length < 1 || size!!.length > AbSqlData.MAXNUM)
+                        if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append(
@@ -453,7 +453,7 @@ stringBuffer!!.append(
 
 
     
-                        if(size!!.length < 1 || size!!.length > AbSqlData.MAXNUM)
+                        if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append(
@@ -486,7 +486,7 @@ stringBuffer!!.append(
 
 
     
-                        if(size!!.length < 1 || size!!.length > AbSqlData.MAXNUM)
+                        if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append(
@@ -508,7 +508,7 @@ stringBuffer!!.append(
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(

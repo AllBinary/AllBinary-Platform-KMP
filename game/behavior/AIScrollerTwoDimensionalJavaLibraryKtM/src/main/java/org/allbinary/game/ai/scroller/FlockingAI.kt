@@ -59,7 +59,7 @@ public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: 
                             //For kotlin this is before the body of the constructor.
                     
 
-    var allowedDistance: Integer = hashtable!!.get(BasePatrolAI.MAX_DISTANCE) as Integer
+    var allowedDistance: Integer = hashtable.get(BasePatrolAI.MAX_DISTANCE) as Integer
 
 this.allowedDistance= allowedDistance!!.toInt()
 }
@@ -86,7 +86,7 @@ this.allowedDistance= allowedDistance!!.toInt()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -97,7 +97,7 @@ this.allowedDistance= allowedDistance!!.toInt()
 
 
         {
-    var allBinaryLayer: AllBinaryLayer = list!!.get(index) as AllBinaryLayer
+    var allBinaryLayer: AllBinaryLayer = list.get(index) as AllBinaryLayer
 
 
     

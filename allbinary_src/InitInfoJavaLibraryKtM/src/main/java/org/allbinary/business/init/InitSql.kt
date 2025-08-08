@@ -228,7 +228,7 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
             
 
 
-    var keyArray: Array<Any?> = set!!.toArray()!!
+    var keyArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -269,7 +269,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     PreLogUtil.put(sqlStrings!!.SQL_STATEMENT_LABEL +sqlStatement, this.INIT_SQL, this.METHOD_GET_ROW)
@@ -281,11 +281,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
             
 
 
-    var resultSetMetaData: ResultSetMetaData = rset!!.getMetaData()!!
+    var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
             
 
 
-        while(rset!!.next())
+        while(rset.next())
         {result= HashMap<Any, Any>()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
@@ -303,18 +303,18 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
             
 
 
-    var field: String = rset!!.getString(columnName)!!
+    var field: String = rset.getString(columnName)!!
             
 
-result!!.put(columnName, field)
+result.put(columnName, field)
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    PreLogUtil.put(ROW_VALUE_LABEL +result!!.toString(), this.INIT_SQL, this.METHOD_GET_ROW)
+                                    PreLogUtil.put(ROW_VALUE_LABEL +result.toString(), this.INIT_SQL, this.METHOD_GET_ROW)
 
                                     }
                                 
@@ -327,7 +327,7 @@ result!!.put(columnName, field)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     PreLogUtil.put(NO_RESULTS_IN_RESULT_SET, this.INIT_SQL, this.METHOD_GET_ROW)
@@ -342,7 +342,7 @@ result!!.put(columnName, field)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     PreLogUtil.put(this.FAILED_SQL_STATEMENT +stringBuffer, this.INIT_SQL, this.METHOD_GET_ROW, e)
@@ -443,7 +443,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 this.executeSQLStatement(sqlStatement)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     PreLogUtil.put(this.SUCCESS_SQL_STATEMENT +sqlStatement, this.INIT_SQL, METHOD_UPDATE_WHERE)
@@ -453,7 +453,7 @@ this.executeSQLStatement(sqlStatement)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     PreLogUtil.put(this.FAILED_SQL_STATEMENT +stringBuffer, this.INIT_SQL, METHOD_UPDATE_WHERE, e)
@@ -479,7 +479,7 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
         try {
             
-    var size: Int = values!!.size!!
+    var size: Int = values.size!!
             
 
 
@@ -490,7 +490,7 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
 
         {
-    var value: String = this.getValue(values!!.get(i) as String)!!
+    var value: String = this.getValue(values.get(i) as String)!!
             
 
 stringBuffer!!.append(value)
@@ -498,7 +498,7 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 }
 
 
-    var value: String = this.getValue(values!!.lastElement() as String)!!
+    var value: String = this.getValue(values.lastElement() as String)!!
             
 
 stringBuffer!!.append(value)
@@ -510,7 +510,7 @@ stringBuffer!!.append(INSERT_END)
 this.executeSQLStatement(sqlStatement)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     PreLogUtil.put(this.SUCCESS_SQL_STATEMENT +sqlStatement, this.INIT_SQL, INSERT)
@@ -520,7 +520,7 @@ this.executeSQLStatement(sqlStatement)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     PreLogUtil.put(this.FAILED_SQL_STATEMENT +stringBuffer!!.toString(), this.INIT_SQL, INSERT, e)
@@ -583,15 +583,15 @@ open fun executeSQLStatement(statement: String)
                                     }
                                 
 
-    var stmt: Statement = conn!!.createStatement()!!
+    var stmt: Statement = conn.createStatement()!!
             
 
-stmt!!.execute(statement)
+stmt.execute(statement)
 
-    var rset: ResultSet = stmt!!.getResultSet()!!
+    var rset: ResultSet = stmt.getResultSet()!!
             
 
-stmt!!.close()
+stmt.close()
 
 
 

@@ -90,7 +90,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
 } catch(e: LicensingException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("Failure for: " +className, this, 
@@ -106,7 +106,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("Failure for: " +className, this, 
@@ -160,7 +160,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
     var loader: ClassLoader = AbeClassLoader(parent, AbKeys.getInstance()!!.getKey(abeClientInformation, className))
 
 
-    var myClass: KClass<*> = loader!!.loadClass(className)!!
+    var myClass: KClass<*> = loader.loadClass(className)!!
             
 
 constructor= myClass!!.getConstructor(classes)
@@ -168,13 +168,13 @@ constructor= myClass!!.getConstructor(classes)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return constructor!!.newInstance(params)
+                        return constructor.newInstance(params)
 
                                     }
                                 
                         else {
                             
-    var myClass: KClass<*> = parent!!.loadClass(className)!!
+    var myClass: KClass<*> = parent.loadClass(className)!!
             
 
 constructor= myClass!!.getConstructor(classes)
@@ -182,14 +182,14 @@ constructor= myClass!!.getConstructor(classes)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return constructor!!.newInstance(params)
+                        return constructor.newInstance(params)
 
                         }
                             
 } catch(e: LicensingException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     
@@ -214,7 +214,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     
@@ -266,7 +266,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
     var loader: ClassLoader = AbeClassLoader(parent, AbKeys.getInstance()!!.getKey(abeClientInformation, className))
 
 
-    var c: KClass<*> = loader!!.loadClass(className)!!
+    var c: KClass<*> = loader.loadClass(className)!!
             
 
 
@@ -279,7 +279,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
                                 
                         else {
                             
-    var c: KClass<*> = parent!!.loadClass(className)!!
+    var c: KClass<*> = parent.loadClass(className)!!
             
 
 
@@ -293,7 +293,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
 } catch(e: LicensingException)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("Failure for: " +className, this, 
@@ -309,7 +309,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
                                     logUtil!!.put("Failure for: " +className, this, 

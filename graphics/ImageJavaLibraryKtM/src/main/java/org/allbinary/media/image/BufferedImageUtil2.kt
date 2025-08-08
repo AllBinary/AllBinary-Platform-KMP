@@ -114,7 +114,7 @@ columnIndex= 0
 
                                     }
                                 
-g!!.drawImage(bufferedImageArray[index]!!, bufferedImageArray[index]!!.getWidth(
+g.drawImage(bufferedImageArray[index]!!, bufferedImageArray[index]!!.getWidth(
                             null) *columnIndex, bufferedImageArray[index]!!.getHeight(
                             null) *rowIndex, bufferedImageArray[index]!!.getWidth(
                             null), bufferedImageArray[index]!!.getHeight(
@@ -123,7 +123,7 @@ g!!.drawImage(bufferedImageArray[index]!!, bufferedImageArray[index]!!.getWidth(
 columnIndex++
 }
 
-g!!.dispose()
+g.dispose()
 
 
 

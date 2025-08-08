@@ -122,7 +122,7 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo
         {
     var integer: Integer = this.nameBasicArrayList!!.objectArray[index]!! as Integer
 
-this.delete(abeClientInformation, gameInfo, integer!!.toInt())
+this.delete(abeClientInformation, gameInfo, integer.toInt())
 }
 
 this.clear()

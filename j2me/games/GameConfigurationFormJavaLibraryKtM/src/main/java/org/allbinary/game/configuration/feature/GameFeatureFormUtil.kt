@@ -88,7 +88,7 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
     var choiceGroup: ChoiceGroup = ChoiceGroup(name, option)
 
 
-    var list: BasicArrayList = hashtable!!.get(name as Object) as BasicArrayList
+    var list: BasicArrayList = hashtable.get(name as Object) as BasicArrayList
 
 
     var features: Features = Features.getInstance()!!
@@ -101,7 +101,7 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
     var GET_CHOICE_GROUP: String = "getChoiceGroup"
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -112,14 +112,14 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
 
 
         {
-    var gameFeature: Feature = list!!.objectArray[index]!! as Feature
+    var gameFeature: Feature = list.objectArray[index]!! as Feature
 
 stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.put(stringMaker!!.append(name)!!.append(ADD_CHOICE)!!.append(gameFeature!!.toString())!!.toString(), this, GET_CHOICE_GROUP)
 choiceGroup!!.append(gameFeature!!.toString(), NullCanvas.NULL_IMAGE)
 
     
-                        if(features!!.isFeature(gameFeature))
+                        if(features.isFeature(gameFeature))
                         
                                     {
                                     choiceGroup!!.setSelectedIndex(index, true)
@@ -157,7 +157,7 @@ open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, optio
     var ADD_CHOICE_GROUP: String = "addChoiceGroup"
 
 
-    var size: Int = hashtable!!.size!!
+    var size: Int = hashtable.size!!
             
 
 
@@ -176,7 +176,7 @@ open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, optio
 
 stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.put(stringMaker!!.append(ADDING_CHOICE_GROUP)!!.append(name)!!.toString(), this, ADD_CHOICE_GROUP)
-form!!.append(this.getChoiceGroup(hashtable, name, option))
+form.append(this.getChoiceGroup(hashtable, name, option))
 }
 
 }
@@ -193,11 +193,11 @@ open fun setDefault(form: CommandForm)
 
 
 
-                        for (index in 0 until form!!.size()!!)
+                        for (index in 0 until form.size()!!)
 
 
         {
-    var item: Item = form!!.get(index)!!
+    var item: Item = form.get(index)!!
             
 
 

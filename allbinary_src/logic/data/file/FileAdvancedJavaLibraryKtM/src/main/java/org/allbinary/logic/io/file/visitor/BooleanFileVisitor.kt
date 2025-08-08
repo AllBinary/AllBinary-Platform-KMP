@@ -76,7 +76,7 @@ open fun visit(file: AbFile)
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -89,7 +89,7 @@ open fun visit(file: AbFile)
                         for (index in 0 until size)
 
 
-        {nextFileFilterString= list!!.get(index) as String
+        {nextFileFilterString= list.get(index) as String
 
     
                         if(this.visit(file, nextFileFilterString)!!)

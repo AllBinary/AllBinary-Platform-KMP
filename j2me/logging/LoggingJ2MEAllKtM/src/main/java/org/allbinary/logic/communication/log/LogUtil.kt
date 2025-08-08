@@ -66,19 +66,19 @@ open fun put(log: Log)
 
                     var log = log
 
-    var specialMessage: String = log!!.getSpecialMessage()!!
+    var specialMessage: String = log.getSpecialMessage()!!
             
 
 
-    var anyType: Any = log!!.getObject()!!
+    var anyType: Any = log.getObject()!!
             
 
 
-    var functionName: String = log!!.getFunctionName()!!
+    var functionName: String = log.getFunctionName()!!
             
 
 
-    var exception: Any = log!!.getThrowable()!!
+    var exception: Any = log.getThrowable()!!
             
 
 this.put(specialMessage, anyType, functionName, exception)
@@ -116,8 +116,8 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
             
 
-System.out!!.print(LOG_SUCCESS)
-System.out!!.println(message)
+System.out.print(LOG_SUCCESS)
+System.out.println(message)
 }
 
 
@@ -155,8 +155,8 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
             
 
-System.out!!.print(LOG_SUCCESS)
-System.out!!.println(message)
+System.out.print(LOG_SUCCESS)
+System.out.println(message)
 }
 
 

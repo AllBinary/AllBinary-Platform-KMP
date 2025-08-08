@@ -179,11 +179,11 @@ open fun show()
     var sound: Sound = this.songList!!.get(index) as Sound
 
 
-    var duration: Long = sound!!.getDuration()!!
+    var duration: Long = sound.getDuration()!!
             
 
 PreLogUtil.put(StringBuilder().
-                            append(PLAY)!!.append(sound!!.getResource())!!.append(FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
+                            append(PLAY)!!.append(sound.getResource())!!.append(FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
 }
 
 }

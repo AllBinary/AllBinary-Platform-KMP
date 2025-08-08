@@ -72,7 +72,7 @@ public constructor        (label: String, node: Node)
                     
 this.init()
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -134,7 +134,7 @@ open fun addProcessorNodes(node: Node)
 
                     var node = node
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -323,7 +323,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(GenericProfileActionScriptConditionData.NAME)!!
+    var node: Node = document.createElement(GenericProfileActionScriptConditionData.NAME)!!
             
 
 
@@ -344,7 +344,7 @@ open fun toXmlNode(document: Document)
         {
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = profileActionConditionInterfaceVector!!.get(index) as ProfileActionScriptConditionInterface
 
-node!!.appendChild(profileActionConditionInterface!!.toXmlNode(document))
+node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 }
 
 
@@ -365,7 +365,7 @@ node!!.appendChild(profileActionConditionInterface!!.toXmlNode(document))
         {
     var profileActionProcessorInterface: ProfileActionScriptProcessorInterface = profileActionProcessorInterfaceVector!!.get(index) as ProfileActionScriptProcessorInterface
 
-node!!.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
+node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 }
 
 

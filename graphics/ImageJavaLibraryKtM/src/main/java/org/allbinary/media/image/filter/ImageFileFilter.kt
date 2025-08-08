@@ -45,7 +45,7 @@ open fun accept(f: File)
                     var f = f
 
     
-                        if(f!!.isDirectory())
+                        if(f.isDirectory())
                         
                                     {
                                     
@@ -57,27 +57,27 @@ open fun accept(f: File)
                                     }
                                 
 
-    var s: String = f!!.getName()!!
+    var s: String = f.getName()!!
             
 
 
-    var i: Int = s!!.lastIndexOf(
+    var i: Int = s.lastIndexOf(
                             '.')!!
             
 
 
     
-                        if(i > 0 && i < s!!.length -1)
+                        if(i > 0 && i < s.length -1)
                         
                                     {
                                     
-    var ext: String = s!!.substring(i +1)!!.lowercase()!!
+    var ext: String = s.substring(i +1)!!.lowercase()!!
             
 
 
     
-                        if(ext!!.equals(
-                            "jpg") || ext!!.equals(
+                        if(ext.equals(
+                            "jpg") || ext.equals(
                             "jpeg"))
                         
 

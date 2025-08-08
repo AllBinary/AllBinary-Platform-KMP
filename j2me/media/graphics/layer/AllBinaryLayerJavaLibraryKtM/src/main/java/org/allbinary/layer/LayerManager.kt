@@ -58,7 +58,7 @@ open fun contains(layerInterface: AllBinaryLayer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.contains(layerInterface)
+                        return this.list.contains(layerInterface)
 }
 
 
@@ -73,7 +73,7 @@ open fun insert(layerInterface: AllBinaryLayer)
     var nextLayerInterface: AllBinaryLayer
 
 
-    var size: Int = this.list!!.size()!!
+    var size: Int = this.list.size()!!
             
 
 
@@ -83,7 +83,7 @@ open fun insert(layerInterface: AllBinaryLayer)
                         for (index in 0 until size)
 
 
-        {nextLayerInterface= this.list!!.get(index) as AllBinaryLayer
+        {nextLayerInterface= this.list.get(index) as AllBinaryLayer
 
     
                         if(layerInterface!!.getZP() > nextLayerInterface!!.getZP())
@@ -112,7 +112,7 @@ open fun append(layerInterface: AllBinaryLayer)
 
                     var layerInterface = layerInterface
 this.layerManagerLogging!!.append(layerInterface)
-this.list!!.add(layerInterface)
+this.list.add(layerInterface)
 }
 
 
@@ -127,7 +127,7 @@ open fun append(layerInterface: AllBinaryLayer, index: Int)
 
                     var index = index
 this.layerManagerLogging!!.append(layerInterface, index)
-this.list!!.add(index, layerInterface)
+this.list.add(index, layerInterface)
 }
 
 
@@ -144,7 +144,7 @@ open fun remove(layerInterface: AllBinaryLayer)
         //mutex.withLock
         this.layerManagerLogging!!.remove(layerInterface)
 
-    var result: Boolean = this.list!!.remove(layerInterface)!!
+    var result: Boolean = this.list.remove(layerInterface)!!
             
 
 this.layerManagerLogging!!.remove(this, layerInterface, result)
@@ -162,7 +162,7 @@ open fun getLayerAt(index: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.objectArray[index]!! as Layer
+                        return this.list.objectArray[index]!! as Layer
 }
 
 
@@ -172,7 +172,7 @@ open fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.list!!.size()
+                        return this.list.size()
 }
 
 
@@ -184,7 +184,7 @@ open fun cleanup()
         
         //synchronized(anyType) 
         //mutex.withLock
-        this.list!!.clear()
+        this.list.clear()
 this.layerManagerLogging!!.clear()
 System.gc()
 System.gc()
@@ -215,18 +215,18 @@ open fun paint(g: Graphics, x: Int, y: Int)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
-        {comp= list!!.objectArray[index]!! as Layer
+        {comp= list.objectArray[index]!! as Layer
 
     
                         if(comp != 
                                     null
-                                 && comp!!.isVisible())
+                                 && comp.isVisible())
                         
                                     {
-                                    comp!!.paint(g)
+                                    comp.paint(g)
 
                                     }
                                 

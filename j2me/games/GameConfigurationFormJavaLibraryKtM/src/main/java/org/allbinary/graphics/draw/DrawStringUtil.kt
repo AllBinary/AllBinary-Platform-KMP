@@ -99,7 +99,7 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
             
 
 
-    var isHTML: Boolean = features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
+    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
             
 
 
@@ -137,7 +137,7 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
                                     }
                                 
 
-    var size: Int = string!!.length!!
+    var size: Int = string.length!!
             
 
 
@@ -153,7 +153,7 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
                         for (index in size -1 downTo 0)
 
 
-        {aChar= string!![index]
+        {aChar= string[index]
 
     
                         if(openGLFeatureUtil!!.isAnyThreed())
@@ -163,7 +163,7 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
 
                                     }
                                 
-graphics!!.drawChar(aChar, x +offsetX, y +(charHeight *index) +offsetY, anchor)
+graphics.drawChar(aChar, x +offsetX, y +(charHeight *index) +offsetY, anchor)
 }
 
 }
@@ -192,15 +192,15 @@ open fun drawCenterString(graphics: Graphics, string: String, offset: Int, lengt
 
                     var y = y
 
-    var width: Int = (graphics!!.getFont()!!.substringWidth(string, offset, length) shr 1)
+    var width: Int = (graphics.getFont()!!.substringWidth(string, offset, length) shr 1)
 
 
         try {
-            graphics!!.drawSubstring(string, offset, length, x -width, y, anchor)
+            graphics.drawSubstring(string, offset, length, x -width, y, anchor)
 } catch(e: Exception)
             {PreLogUtil.put(StringMaker().
                             append(
-                            "Exception: stringLength: ")!!.append(string!!.length)!!.append(
+                            "Exception: stringLength: ")!!.append(string.length)!!.append(
                             " offset: ")!!.append(offset)!!.append(
                             " currentLength: ")!!.append(length)!!.toString(), this, 
                             "drawCenterString")
@@ -254,7 +254,7 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
                         
                                     {
                                     
-    var width: Int = graphics!!.getFont()!!.stringWidth(string)!!
+    var width: Int = graphics.getFont()!!.stringWidth(string)!!
             
 
 
@@ -270,7 +270,7 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
                                     }
                                 
 
-    var linePortion: Int = string!!.length /minTotalLines
+    var linePortion: Int = string.length /minTotalLines
 
 
     var offset: Int = 0
@@ -279,7 +279,7 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
     var currentLength: Int = linePortion
 
 
-    var size: Int = string!!.length!!
+    var size: Int = string.length!!
             
 
 

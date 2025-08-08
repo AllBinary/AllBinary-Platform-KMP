@@ -56,11 +56,11 @@ open fun glBindBuffer(target: Int, buffer: Int)
 
 
                     var buffer = buffer
-this.gl11!!.glBindBuffer(target, buffer)
+this.gl11.glBindBuffer(target, buffer)
 }
 
 
-open fun glBufferData(target: Int, size: Int, data: Buffer, usage: Int)
+open fun glBufferData(target: Int, size: Int, data: java.nio.Buffer, usage: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -74,11 +74,11 @@ open fun glBufferData(target: Int, size: Int, data: Buffer, usage: Int)
 
 
                     var usage = usage
-this.gl11!!.glBufferData(target, size, data, usage)
+this.gl11.glBufferData(target, size, data, usage)
 }
 
 
-open fun glBufferSubData(target: Int, offset: Int, size: Int, data: Buffer)
+open fun glBufferSubData(target: Int, offset: Int, size: Int, data: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -92,7 +92,7 @@ open fun glBufferSubData(target: Int, offset: Int, size: Int, data: Buffer)
 
 
                     var data = data
-this.gl11!!.glBufferSubData(target, offset, size, data)
+this.gl11.glBufferSubData(target, offset, size, data)
 }
 
 
@@ -107,11 +107,11 @@ open fun glClipPlanef(plane: Int, equation: FloatArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glClipPlanef(plane, equation, offset)
+this.gl11.glClipPlanef(plane, equation, offset)
 }
 
 
-open fun glClipPlanef(plane: Int, equation: FloatBuffer)
+open fun glClipPlanef(plane: Int, equation: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -119,7 +119,7 @@ open fun glClipPlanef(plane: Int, equation: FloatBuffer)
 
 
                     var equation = equation
-this.gl11!!.glClipPlanef(plane, equation)
+this.gl11.glClipPlanef(plane, equation)
 }
 
 
@@ -137,7 +137,7 @@ open fun glColor4ub(red: Byte, green: Byte, blue: Byte, alpha: Byte)
 
 
                     var alpha = alpha
-this.gl11!!.glColor4ub(red, green, blue, alpha)
+this.gl11.glColor4ub(red, green, blue, alpha)
 }
 
 
@@ -155,7 +155,7 @@ open fun glColorPointer(size: Int, type: Int, stride: Int, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glColorPointer(size, type, stride, offset)
+this.gl11.glColorPointer(size, type, stride, offset)
 }
 
 
@@ -170,11 +170,11 @@ open fun glDeleteBuffers(n: Int, buffers: IntArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glDeleteBuffers(n, buffers, offset)
+this.gl11.glDeleteBuffers(n, buffers, offset)
 }
 
 
-open fun glDeleteBuffers(n: Int, buffers: IntBuffer)
+open fun glDeleteBuffers(n: Int, buffers: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -182,7 +182,7 @@ open fun glDeleteBuffers(n: Int, buffers: IntBuffer)
 
 
                     var buffers = buffers
-this.gl11!!.glDeleteBuffers(n, buffers)
+this.gl11.glDeleteBuffers(n, buffers)
 }
 
 
@@ -200,7 +200,7 @@ open fun glDrawElements(mode: Int, count: Int, type: Int, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glDrawElements(mode, count, type, offset)
+this.gl11.glDrawElements(mode, count, type, offset)
 }
 
 
@@ -215,11 +215,11 @@ open fun glGenBuffers(n: Int, buffers: IntArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glGenBuffers(n, buffers, offset)
+this.gl11.glGenBuffers(n, buffers, offset)
 }
 
 
-open fun glGenBuffers(n: Int, buffers: IntBuffer)
+open fun glGenBuffers(n: Int, buffers: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -227,7 +227,7 @@ open fun glGenBuffers(n: Int, buffers: IntBuffer)
 
 
                     var buffers = buffers
-this.gl11!!.glGenBuffers(n, buffers)
+this.gl11.glGenBuffers(n, buffers)
 }
 
 
@@ -245,11 +245,11 @@ open fun glGetBufferParameteriv(target: Int, pname: Int, params: IntArray, offse
 
 
                     var offset = offset
-this.gl11!!.glGetBufferParameteriv(target, pname, params, offset)
+this.gl11.glGetBufferParameteriv(target, pname, params, offset)
 }
 
 
-open fun glGetBufferParameteriv(target: Int, pname: Int, params: IntBuffer)
+open fun glGetBufferParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -260,7 +260,7 @@ open fun glGetBufferParameteriv(target: Int, pname: Int, params: IntBuffer)
 
 
                     var params = params
-this.gl11!!.glGetBufferParameteriv(target, pname, params)
+this.gl11.glGetBufferParameteriv(target, pname, params)
 }
 
 
@@ -275,11 +275,11 @@ open fun glGetClipPlanef(pname: Int, eqn: FloatArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glGetClipPlanef(pname, eqn, offset)
+this.gl11.glGetClipPlanef(pname, eqn, offset)
 }
 
 
-open fun glGetClipPlanef(pname: Int, eqn: FloatBuffer)
+open fun glGetClipPlanef(pname: Int, eqn: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -287,7 +287,7 @@ open fun glGetClipPlanef(pname: Int, eqn: FloatBuffer)
 
 
                     var eqn = eqn
-this.gl11!!.glGetClipPlanef(pname, eqn)
+this.gl11.glGetClipPlanef(pname, eqn)
 }
 
 
@@ -302,11 +302,11 @@ open fun glGetFloatv(pname: Int, params: FloatArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glGetFloatv(pname, params, offset)
+this.gl11.glGetFloatv(pname, params, offset)
 }
 
 
-open fun glGetFloatv(pname: Int, params: FloatBuffer)
+open fun glGetFloatv(pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -314,7 +314,7 @@ open fun glGetFloatv(pname: Int, params: FloatBuffer)
 
 
                     var params = params
-this.gl11!!.glGetFloatv(pname, params)
+this.gl11.glGetFloatv(pname, params)
 }
 
 
@@ -332,11 +332,11 @@ open fun glGetLightfv(light: Int, pname: Int, params: FloatArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glGetLightfv(light, pname, params, offset)
+this.gl11.glGetLightfv(light, pname, params, offset)
 }
 
 
-open fun glGetLightfv(light: Int, pname: Int, params: FloatBuffer)
+open fun glGetLightfv(light: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -347,7 +347,7 @@ open fun glGetLightfv(light: Int, pname: Int, params: FloatBuffer)
 
 
                     var params = params
-this.gl11!!.glGetLightfv(light, pname, params)
+this.gl11.glGetLightfv(light, pname, params)
 }
 
 
@@ -365,11 +365,11 @@ open fun glGetMaterialfv(face: Int, pname: Int, params: FloatArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glGetMaterialfv(face, pname, params, offset)
+this.gl11.glGetMaterialfv(face, pname, params, offset)
 }
 
 
-open fun glGetMaterialfv(face: Int, pname: Int, params: FloatBuffer)
+open fun glGetMaterialfv(face: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -380,7 +380,7 @@ open fun glGetMaterialfv(face: Int, pname: Int, params: FloatBuffer)
 
 
                     var params = params
-this.gl11!!.glGetMaterialfv(face, pname, params)
+this.gl11.glGetMaterialfv(face, pname, params)
 }
 
 
@@ -398,11 +398,11 @@ open fun glGetTexEnviv(env: Int, pname: Int, params: IntArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glGetTexEnviv(env, pname, params, offset)
+this.gl11.glGetTexEnviv(env, pname, params, offset)
 }
 
 
-open fun glGetTexEnviv(env: Int, pname: Int, params: IntBuffer)
+open fun glGetTexEnviv(env: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -413,7 +413,7 @@ open fun glGetTexEnviv(env: Int, pname: Int, params: IntBuffer)
 
 
                     var params = params
-this.gl11!!.glGetTexEnviv(env, pname, params)
+this.gl11.glGetTexEnviv(env, pname, params)
 }
 
 
@@ -431,11 +431,11 @@ open fun glGetTexParameterfv(target: Int, pname: Int, params: FloatArray, offset
 
 
                     var offset = offset
-this.gl11!!.glGetTexParameterfv(target, pname, params, offset)
+this.gl11.glGetTexParameterfv(target, pname, params, offset)
 }
 
 
-open fun glGetTexParameterfv(target: Int, pname: Int, params: FloatBuffer)
+open fun glGetTexParameterfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -446,7 +446,7 @@ open fun glGetTexParameterfv(target: Int, pname: Int, params: FloatBuffer)
 
 
                     var params = params
-this.gl11!!.glGetTexParameterfv(target, pname, params)
+this.gl11.glGetTexParameterfv(target, pname, params)
 }
 
 
@@ -464,11 +464,11 @@ open fun glGetTexParameteriv(target: Int, pname: Int, params: IntArray, offset: 
 
 
                     var offset = offset
-this.gl11!!.glGetTexParameteriv(target, pname, params, offset)
+this.gl11.glGetTexParameteriv(target, pname, params, offset)
 }
 
 
-open fun glGetTexParameteriv(target: Int, pname: Int, params: IntBuffer)
+open fun glGetTexParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -479,7 +479,7 @@ open fun glGetTexParameteriv(target: Int, pname: Int, params: IntBuffer)
 
 
                     var params = params
-this.gl11!!.glGetTexParameteriv(target, pname, params)
+this.gl11.glGetTexParameteriv(target, pname, params)
 }
 
 
@@ -492,7 +492,7 @@ open fun glIsBuffer(buffer: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gl11!!.glIsBuffer(buffer)
+                        return this.gl11.glIsBuffer(buffer)
 }
 
 
@@ -505,7 +505,7 @@ open fun glIsEnabled(cap: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gl11!!.glIsEnabled(cap)
+                        return this.gl11.glIsEnabled(cap)
 }
 
 
@@ -518,7 +518,7 @@ open fun glIsTexture(texture: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.gl11!!.glIsTexture(texture)
+                        return this.gl11.glIsTexture(texture)
 }
 
 
@@ -533,7 +533,7 @@ open fun glNormalPointer(type: Int, stride: Int, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glNormalPointer(type, stride, offset)
+this.gl11.glNormalPointer(type, stride, offset)
 }
 
 
@@ -545,7 +545,7 @@ open fun glPointParameterf(pname: Int, param: Float)
 
 
                     var param = param
-this.gl11!!.glPointParameterf(pname, param)
+this.gl11.glPointParameterf(pname, param)
 }
 
 
@@ -560,11 +560,11 @@ open fun glPointParameterfv(pname: Int, params: FloatArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glPointParameterfv(pname, params, offset)
+this.gl11.glPointParameterfv(pname, params, offset)
 }
 
 
-open fun glPointParameterfv(pname: Int, params: FloatBuffer)
+open fun glPointParameterfv(pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -572,7 +572,7 @@ open fun glPointParameterfv(pname: Int, params: FloatBuffer)
 
 
                     var params = params
-this.gl11!!.glPointParameterfv(pname, params)
+this.gl11.glPointParameterfv(pname, params)
 }
 
 
@@ -590,7 +590,7 @@ open fun glTexCoordPointer(size: Int, type: Int, stride: Int, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glTexCoordPointer(size, type, stride, offset)
+this.gl11.glTexCoordPointer(size, type, stride, offset)
 }
 
 
@@ -605,7 +605,7 @@ open fun glTexEnvi(target: Int, pname: Int, param: Int)
 
 
                     var param = param
-this.gl11!!.glTexEnvi(target, pname, param)
+this.gl11.glTexEnvi(target, pname, param)
 }
 
 
@@ -623,11 +623,11 @@ open fun glTexEnviv(target: Int, pname: Int, params: IntArray, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glTexEnviv(target, pname, params, offset)
+this.gl11.glTexEnviv(target, pname, params, offset)
 }
 
 
-open fun glTexEnviv(target: Int, pname: Int, params: IntBuffer)
+open fun glTexEnviv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -638,7 +638,7 @@ open fun glTexEnviv(target: Int, pname: Int, params: IntBuffer)
 
 
                     var params = params
-this.gl11!!.glTexEnviv(target, pname, params)
+this.gl11.glTexEnviv(target, pname, params)
 }
 
 
@@ -656,11 +656,11 @@ open fun glTexParameterfv(target: Int, pname: Int, params: FloatArray, offset: I
 
 
                     var offset = offset
-this.gl11!!.glTexParameterfv(target, pname, params, offset)
+this.gl11.glTexParameterfv(target, pname, params, offset)
 }
 
 
-open fun glTexParameterfv(target: Int, pname: Int, params: FloatBuffer)
+open fun glTexParameterfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -671,7 +671,7 @@ open fun glTexParameterfv(target: Int, pname: Int, params: FloatBuffer)
 
 
                     var params = params
-this.gl11!!.glTexParameterfv(target, pname, params)
+this.gl11.glTexParameterfv(target, pname, params)
 }
 
 
@@ -686,7 +686,7 @@ open fun glTexParameteri(target: Int, pname: Int, param: Int)
 
 
                     var param = param
-this.gl11!!.glTexParameteri(target, pname, param)
+this.gl11.glTexParameteri(target, pname, param)
 }
 
 
@@ -704,11 +704,11 @@ open fun glTexParameteriv(target: Int, pname: Int, params: IntArray, offset: Int
 
 
                     var offset = offset
-this.gl11!!.glTexParameteriv(target, pname, params, offset)
+this.gl11.glTexParameteriv(target, pname, params, offset)
 }
 
 
-open fun glTexParameteriv(target: Int, pname: Int, params: IntBuffer)
+open fun glTexParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -719,7 +719,7 @@ open fun glTexParameteriv(target: Int, pname: Int, params: IntBuffer)
 
 
                     var params = params
-this.gl11!!.glTexParameteriv(target, pname, params)
+this.gl11.glTexParameteriv(target, pname, params)
 }
 
 
@@ -737,7 +737,7 @@ open fun glTexParameterxv(target: Int, pname: Int, params: IntArray, offset: Int
 
 
                     var offset = offset
-this.gl11!!.glTexParameteriv(target, pname, params, offset)
+this.gl11.glTexParameteriv(target, pname, params, offset)
 }
 
 
@@ -755,7 +755,7 @@ open fun glVertexPointer(size: Int, type: Int, stride: Int, offset: Int)
 
 
                     var offset = offset
-this.gl11!!.glVertexPointer(size, type, stride, offset)
+this.gl11.glVertexPointer(size, type, stride, offset)
 }
 
 

@@ -69,33 +69,33 @@ open fun toXmlNode(document: Document)
             
 
 
-    var basketNode: Node = document!!.createElement(BasketData.BASKET)!!
+    var basketNode: Node = document.createElement(BasketData.BASKET)!!
             
 
 
-    var totalNumberNode: Node = document!!.createElement(SearchData.TOTAL_NUMBER_ITEMS)!!
+    var totalNumberNode: Node = document.createElement(SearchData.TOTAL_NUMBER_ITEMS)!!
             
 
 
-    var totalNumberTextNode: Node = document!!.createTextNode(basketInterface!!.getNumberOfItems()!!.toString())!!
+    var totalNumberTextNode: Node = document.createTextNode(basketInterface!!.getNumberOfItems()!!.toString())!!
             
 
 totalNumberNode!!.appendChild(totalNumberTextNode)
 
-    var totalWeightNode: Node = document!!.createElement(BasketData.TOTALWEIGHT)!!
+    var totalWeightNode: Node = document.createElement(BasketData.TOTALWEIGHT)!!
             
 
 
-    var totalWeightTextNode: Node = document!!.createTextNode(basketInterface!!.getTotalWeight()!!.toString())!!
+    var totalWeightTextNode: Node = document.createTextNode(basketInterface!!.getTotalWeight()!!.toString())!!
             
 
 totalWeightNode!!.appendChild(totalWeightTextNode)
 
-    var subTotalNode: Node = document!!.createElement(BasketData.SUBTOTAL)!!
+    var subTotalNode: Node = document.createElement(BasketData.SUBTOTAL)!!
             
 
 
-    var subTotalTextNode: Node = document!!.createTextNode(basketInterface!!.getSubTotal()!!.toString())!!
+    var subTotalTextNode: Node = document.createTextNode(basketInterface!!.getSubTotal()!!.toString())!!
             
 
 subTotalNode!!.appendChild(subTotalTextNode)
@@ -110,7 +110,7 @@ basketNode!!.appendChild(subTotalNode)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -148,7 +148,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

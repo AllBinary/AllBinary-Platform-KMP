@@ -92,7 +92,7 @@ open fun process()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -112,7 +112,7 @@ open fun process()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
@@ -151,7 +151,7 @@ open fun setPaymentGateway()
             
 
 
-    var result: Boolean = method!!.invoke(anyType, 
+    var result: Boolean = method.invoke(anyType, 
                             null) as Boolean
 
 
@@ -171,7 +171,7 @@ open fun setPaymentGateway()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -206,7 +206,7 @@ open fun doStartTag()
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESS) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESS) == 0)
                         
                                     {
                                     this.process()
@@ -215,7 +215,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command!!.compareTo(PaymentGatewayData.NAME.toString()) == 0)
+                        if(command.compareTo(PaymentGatewayData.NAME.toString()) == 0)
                         
                                     {
                                     

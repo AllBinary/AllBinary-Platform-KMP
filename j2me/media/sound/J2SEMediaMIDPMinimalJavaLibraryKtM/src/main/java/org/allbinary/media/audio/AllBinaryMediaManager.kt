@@ -130,7 +130,7 @@ open fun createPlayer(resource: String)
                     var resource = resource
 
     
-                        if(resource!!.startsWith(Manager.TONE_DEVICE_LOCATOR))
+                        if(resource.startsWith(Manager.TONE_DEVICE_LOCATOR))
                         
                                     {
                                     

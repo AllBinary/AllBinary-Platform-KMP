@@ -76,7 +76,7 @@ public constructor        (node: Node)
                     
 this.point= Point(0, 0)
 
-    var actionNode: Node = DomSearchHelper.getNode(ColorAtActionScriptConditionData.NAME, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(ColorAtActionScriptConditionData.NAME, node.getChildNodes())!!
             
 
 
@@ -110,7 +110,7 @@ this.point= Point(0, 0)
     var locationX: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.point!!.x= locationX.concatToString()
+this.point.x= locationX.concatToString()
 
                                 
 
@@ -125,7 +125,7 @@ this.point!!.x= locationX.concatToString()
     var locationY: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.point!!.y= locationY.concatToString()
+this.point.y= locationY.concatToString()
 
                                 
 
@@ -302,7 +302,7 @@ open fun toXmlNode(document: Document)
     var node: Node = super.toXmlNode(document)!!
             
 
-node!!.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionScriptConditionData.NAME, this.toHashMap()))
+node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionScriptConditionData.NAME, this.toHashMap()))
 
 
 

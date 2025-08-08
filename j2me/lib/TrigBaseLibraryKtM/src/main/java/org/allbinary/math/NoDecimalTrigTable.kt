@@ -1491,21 +1491,21 @@ dy[3]= (screenY2 -targetY2)
 
 
 
-                        for (index in 0 until dx!!.size)
+                        for (index in 0 until dx.size)
 
 
         {
 
 
 
-                        for (index2 in 0 until dy!!.size)
+                        for (index2 in 0 until dy.size)
 
 
         {angleOfTarget= this.antiTan(dx[index]!!, dy[index2]!!)
 angle= angleFactory!!.getInstance(angleOfTarget.toInt())
 stringMaker!!.delete(0, stringMaker!!.length())
 PreLogUtil.put(stringMaker!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)!!.append(index)!!.append(
-                            " index2: ")!!.append(index2)!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.append(dx[index]!!)!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.append(dy[index2]!!)!!.append(TARGET_ANGLE)!!.append(angleOfTarget)!!.append(CommonSeps.getInstance()!!.EQUALS)!!.append(angle!!.getValue())!!.toString(), this, METHOD_NAME)
+                            " index2: ")!!.append(index2)!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.append(dx[index]!!)!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.append(dy[index2]!!)!!.append(TARGET_ANGLE)!!.append(angleOfTarget)!!.append(CommonSeps.getInstance()!!.EQUALS)!!.append(angle.getValue())!!.toString(), this, METHOD_NAME)
 }
 
 }

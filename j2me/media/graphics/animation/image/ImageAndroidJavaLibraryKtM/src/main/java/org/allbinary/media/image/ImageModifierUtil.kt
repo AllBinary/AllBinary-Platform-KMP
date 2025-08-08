@@ -75,7 +75,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 
 
                     var basicColor = basicColor
-paint!!.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
+paint.setColorFilter(PorterDuffColorFilter(basicColor!!.toInt(), PorterDuff.Mode.SRC_IN))
 }
 
 
@@ -112,10 +112,10 @@ open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt:
                     var alphaInt = alphaInt
 
     
-                        if(alphaInt != paint!!.getAlpha())
+                        if(alphaInt != paint.getAlpha())
                         
                                     {
-                                    paint!!.setAlpha(alphaInt)
+                                    paint.setAlpha(alphaInt)
 
                                     }
                                 

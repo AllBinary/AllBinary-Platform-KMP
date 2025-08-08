@@ -54,10 +54,10 @@ open fun addPlayer(playerInputId: Int)
 
 
     
-                        if(playerInputId < list!!.size())
+                        if(playerInputId < list.size())
                         
                                     {
-                                    analogLocationInput= list!!.get(playerInputId) as AnalogLocationInput
+                                    analogLocationInput= list.get(playerInputId) as AnalogLocationInput
 
                                     }
                                 
@@ -69,7 +69,7 @@ open fun addPlayer(playerInputId: Int)
                         
                                     {
                                     analogLocationInput= AnalogLocationInput(playerInputId)
-list!!.add(analogLocationInput)
+list.add(analogLocationInput)
 
                                     }
                                 
@@ -85,7 +85,7 @@ open fun getInstance(playerInputId: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list!!.get(playerInputId) as AnalogLocationInput
+                        return list.get(playerInputId) as AnalogLocationInput
 }
 
 

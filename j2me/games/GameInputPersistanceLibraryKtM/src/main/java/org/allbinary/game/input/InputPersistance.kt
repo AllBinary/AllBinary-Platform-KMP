@@ -204,7 +204,7 @@ PreLogUtil.put(stringBuffer!!.toString(), this, this.persistanceStrings!!.LOAD_A
                             
                         }
                             
-hashtable!!.put(input, gameActionInput)
+hashtable.put(input, gameActionInput)
 }
 
 this.valueList!!.add(hashtable)
@@ -306,12 +306,12 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 
         {gameActionInput= inputObjectArray[index]!! as Input
-list= hashtable!!.get(inputObjectArray[index]!! as Object) as BasicArrayList
+list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
 
 
 
-                        for (index2 in 0 until list!!.size()!!)
+                        for (index2 in 0 until list.size()!!)
 
 
         {
@@ -320,9 +320,9 @@ list= hashtable!!.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
 outputStream!!.writeUTF(gameActionInputIdAsString)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
-input= list!!.objectArray[index2]!! as Input
+input= list.objectArray[index2]!! as Input
 
-    var inputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(input!!.getId())!!.toString()!!
+    var inputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(input.getId())!!.toString()!!
             
 
 outputStream!!.writeUTF(inputIdAsString)

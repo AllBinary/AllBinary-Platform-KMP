@@ -86,7 +86,7 @@ open fun update()
     var keys: Array<Integer?> = this.keys
 
 
-    var size: Int = keys!!.size
+    var size: Int = keys.size
                 
 
 

@@ -55,11 +55,11 @@ open fun getImage(paintableInterface: PaintableInterface, width: Int, height: In
 
                     var height = height
 
-    var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance!!::class.qualifiedName!!, width, height)!!
+    var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.qualifiedName!!, width, height)!!
             
 
 
-    var graphics: Graphics = image!!.getGraphics()!!
+    var graphics: Graphics = image.getGraphics()!!
             
 
 paintableInterface!!.paint(graphics)

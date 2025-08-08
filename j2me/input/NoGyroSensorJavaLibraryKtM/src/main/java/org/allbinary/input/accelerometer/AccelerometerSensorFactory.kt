@@ -55,7 +55,7 @@ open fun init()
 
 
     
-                        if(features!!.isFeature(sensorFeatureFactory!!.ORIENTATION_SENSORS))
+                        if(features.isFeature(sensorFeatureFactory!!.ORIENTATION_SENSORS))
                         
                                     {
                                     
@@ -68,7 +68,7 @@ open fun init()
                                 
                              else 
     
-                        if(features!!.isFeature(sensorFeatureFactory!!.SIMULATED_ORIENTATION_SENSORS))
+                        if(features.isFeature(sensorFeatureFactory!!.SIMULATED_ORIENTATION_SENSORS))
                         
                                     {
                                     
@@ -81,7 +81,7 @@ open fun init()
                                 
                              else 
     
-                        if(features!!.isFeature(sensorFeatureFactory!!.NO_ORIENTATION))
+                        if(features.isFeature(sensorFeatureFactory!!.NO_ORIENTATION))
                         
                                     {
                                     allBinaryAccelerometerSensor= NoAccelerometerSensor()

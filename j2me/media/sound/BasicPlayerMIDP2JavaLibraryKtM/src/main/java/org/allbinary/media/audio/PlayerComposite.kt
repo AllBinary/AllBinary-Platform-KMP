@@ -82,7 +82,7 @@ open fun addPlayerListener(playerListener: PlayerListener)
 {
 
                     var playerListener = playerListener
-this.player!!.addPlayerListener(playerListener)
+this.player.addPlayerListener(playerListener)
 }
 
 
@@ -91,19 +91,19 @@ open fun removePlayerListener(playerListener: PlayerListener)
 {
 
                     var playerListener = playerListener
-this.player!!.removePlayerListener(playerListener)
+this.player.removePlayerListener(playerListener)
 }
 
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.player!!.close()
+{this.player.close()
 }
 
 
 open fun deallocate()
         //nullable = true from not(false or (false and true)) = true
-{this.player!!.deallocate()
+{this.player.deallocate()
 }
 
 
@@ -113,7 +113,7 @@ open fun getContentType()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getContentType()
+                        return this.player.getContentType()
 }
 
 
@@ -123,7 +123,7 @@ open fun getDuration()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getDuration()
+                        return this.player.getDuration()
 }
 
 
@@ -133,7 +133,7 @@ open fun getMediaTime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getMediaTime()
+                        return this.player.getMediaTime()
 }
 
 
@@ -165,7 +165,7 @@ open fun prefetch()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.prefetch()
+            this.player.prefetch()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "prefetch", e)
@@ -178,7 +178,7 @@ open fun realize()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.realize()
+            this.player.realize()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "realize", e)
@@ -193,7 +193,7 @@ open fun getState()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getState()
+                        return this.player.getState()
 }
 
 
@@ -202,7 +202,7 @@ open fun setLoopCount(count: Int)
 {
 
                     var count = count
-this.player!!.setLoopCount(count)
+this.player.setLoopCount(count)
 }
 
 
@@ -217,7 +217,7 @@ open fun setMediaTime(now: Long)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.setMediaTime(now)
+                        return this.player.setMediaTime(now)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "setMediaTime", e)
@@ -243,7 +243,7 @@ open fun start()
                         if(timeElapsedHelper!!.isTime(gameTickTimeDelayHelper!!.startTime))
                         
                                     {
-                                    this.player!!.start()
+                                    this.player.start()
 
                                     }
                                 
@@ -258,7 +258,7 @@ open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.stop()
+            this.player.stop()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "stop", e)
@@ -276,7 +276,7 @@ open fun getControl(controlType: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.player!!.getControl(controlType)
+                        return this.player.getControl(controlType)
 }
 
 

@@ -115,14 +115,14 @@ open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, 
 
 
                     var radians = radians
-g!!.rotate(radians, newBufferedImage!!.getWidth(
+g.rotate(radians, newBufferedImage!!.getWidth(
                             null) /2, newBufferedImage!!.getHeight(
                             null) /2)
-g!!.drawImage(bufferedImage, 0, 0, bufferedImage!!.getWidth(
+g.drawImage(bufferedImage, 0, 0, bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
                             null), 
                             null)
-g!!.dispose()
+g.dispose()
 
 
 
@@ -148,8 +148,8 @@ open fun rotateImage(bufferedImage: Image, newBufferedImage: BufferedImage, tota
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
             
 
-g!!.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
-g!!.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
+g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
+g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
 
 
 
@@ -297,7 +297,7 @@ columnIndex= 0
                                     }
                                 
 nextBufferedImage= bufferedImageArray[index]!!
-g!!.drawImage(nextBufferedImage, nextBufferedImage!!.getWidth(
+g.drawImage(nextBufferedImage, nextBufferedImage!!.getWidth(
                             null) *columnIndex, nextBufferedImage!!.getHeight(
                             null) *rowIndex, nextBufferedImage!!.getWidth(
                             null), nextBufferedImage!!.getHeight(
@@ -306,7 +306,7 @@ g!!.drawImage(nextBufferedImage, nextBufferedImage!!.getWidth(
 columnIndex++
 }
 
-g!!.dispose()
+g.dispose()
 
 
 

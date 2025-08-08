@@ -66,7 +66,7 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
                     var pointsPerFrame = pointsPerFrame
 
-    var size: Int = vector!!.size()!!
+    var size: Int = vector.size()!!
             
 
 
@@ -80,7 +80,7 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
 
         {
-    var nextBasicArrayList: BasicArrayList = vector!!.objectArray[index]!! as BasicArrayList
+    var nextBasicArrayList: BasicArrayList = vector.objectArray[index]!! as BasicArrayList
 
 
     var frame: Array<IntArray?> = toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
@@ -90,7 +90,7 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
 
 
-                        for (pointIndex in 0 until frame!!.size)
+                        for (pointIndex in 0 until frame.size)
 
 
         {points[index]!![pointIndex]!![0]= frame[pointIndex]!![0]!!
@@ -113,7 +113,7 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
                     var vector = vector
 
-    var size: Int = vector!!.size()!!
+    var size: Int = vector.size()!!
             
 
 
@@ -127,7 +127,7 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
 
         {
-    var nextBasicArrayList: BasicArrayList = vector!!.objectArray[index]!! as BasicArrayList
+    var nextBasicArrayList: BasicArrayList = vector.objectArray[index]!! as BasicArrayList
 
 
     var framePoints: Array<IntArray?> = toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
@@ -161,10 +161,10 @@ open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
 
                     var list = list
 
-    var points: Array<IntArray?> = Array(list!!.size()) { IntArray(2) }
+    var points: Array<IntArray?> = Array(list.size()) { IntArray(2) }
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -175,7 +175,7 @@ open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
 
 
         {
-    var nextPoint: GPoint = list!!.objectArray[index]!! as GPoint
+    var nextPoint: GPoint = list.objectArray[index]!! as GPoint
 
 points[index]!![0]= nextPoint!!.getX()
 points[index]!![1]= nextPoint!!.getY()

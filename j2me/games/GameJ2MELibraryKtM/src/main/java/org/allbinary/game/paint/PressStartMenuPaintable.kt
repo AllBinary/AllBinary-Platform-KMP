@@ -115,7 +115,7 @@ override fun paint(graphics: Graphics)
             
 
 
-    var beginWidth: Int = (graphics!!.getFont()!!.stringWidth(startString) shr 1)
+    var beginWidth: Int = (graphics.getFont()!!.stringWidth(startString) shr 1)
 
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -124,7 +124,7 @@ override fun paint(graphics: Graphics)
 
     var line: Int = (4 *myFont!!.DEFAULT_CHAR_HEIGHT) +(myFont!!.DEFAULT_CHAR_HEIGHT shr 1)
 
-graphics!!.drawString(startString, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHeight() -line, anchor)
+graphics.drawString(startString, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHeight() -line, anchor)
 
                                     }
                                 

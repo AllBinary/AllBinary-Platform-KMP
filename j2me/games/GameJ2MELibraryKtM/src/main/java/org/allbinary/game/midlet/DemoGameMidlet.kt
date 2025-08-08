@@ -62,7 +62,7 @@ open fun isContinue()
     
                         if(hashtable != 
                                     null
-                                 && hashtable!!.size > 0)
+                                 && hashtable.size > 0)
                         
                                     {
                                     

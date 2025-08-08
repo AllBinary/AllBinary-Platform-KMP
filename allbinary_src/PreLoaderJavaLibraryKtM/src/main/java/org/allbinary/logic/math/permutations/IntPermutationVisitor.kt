@@ -65,7 +65,7 @@ open fun print(data: IntArray, stringBuilder: StringBuilder)
 
                     var stringBuilder = stringBuilder
 
-    var size: Int = data!!.size
+    var size: Int = data.size
                 
 
 
@@ -79,7 +79,7 @@ open fun print(data: IntArray, stringBuilder: StringBuilder)
 stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
 }
 
-System.out!!.println(stringBuilder!!.toString())
+System.out.println(stringBuilder!!.toString())
 }
 
 

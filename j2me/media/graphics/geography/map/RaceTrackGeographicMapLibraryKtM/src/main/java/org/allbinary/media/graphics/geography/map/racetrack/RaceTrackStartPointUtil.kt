@@ -61,7 +61,7 @@ open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFi
             
 
 
-    var startPathFindingNode: PathFindingNode = list!!.get(index) as PathFindingNode
+    var startPathFindingNode: PathFindingNode = list.get(index) as PathFindingNode
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = startPathFindingNode!!.geographicMapCellPosition
@@ -74,7 +74,7 @@ open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFi
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return PointFactory.getInstance()!!.getInstance(point!!.getX(), point!!.getY() +geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHalfCellHeight())
+                        return PointFactory.getInstance()!!.getInstance(point.getX(), point.getY() +geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHalfCellHeight())
 }
 
 

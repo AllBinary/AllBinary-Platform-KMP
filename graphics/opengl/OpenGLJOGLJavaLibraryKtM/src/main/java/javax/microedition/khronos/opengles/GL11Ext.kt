@@ -70,7 +70,7 @@ open fun glDrawTexfvOES(coords: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexfvOES(coords: FloatBuffer)
+open fun glDrawTexfvOES(coords: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -82,7 +82,7 @@ open fun glDrawTexivOES(coords: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexivOES(coords: IntBuffer)
+open fun glDrawTexivOES(coords: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -94,7 +94,7 @@ open fun glDrawTexsvOES(coords: ShortArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexsvOES(coords: ShortBuffer)
+open fun glDrawTexsvOES(coords: java.nio.ShortBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -106,7 +106,7 @@ open fun glDrawTexxvOES(coords: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawTexxvOES(coords: IntBuffer)
+open fun glDrawTexxvOES(coords: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -122,7 +122,7 @@ open fun glLoadPaletteFromModelViewMatrixOES()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: Buffer)
+open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -130,7 +130,7 @@ open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: Buffer)
+open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 

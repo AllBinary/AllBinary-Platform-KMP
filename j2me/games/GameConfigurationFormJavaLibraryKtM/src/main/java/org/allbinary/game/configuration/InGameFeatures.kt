@@ -88,7 +88,7 @@ InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTA
 
 
     
-                        if(features!!.isFeature(TouchFeatureFactory.getInstance()!!.SHOW_SCREEN_BUTTONS) || features!!.isFeature(TouchFeatureFactory.getInstance()!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS) || features!!.isFeature(TouchFeatureFactory.getInstance()!!.HIDE_SCREEN_BUTTONS))
+                        if(features.isFeature(TouchFeatureFactory.getInstance()!!.SHOW_SCREEN_BUTTONS) || features.isFeature(TouchFeatureFactory.getInstance()!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS) || features.isFeature(TouchFeatureFactory.getInstance()!!.HIDE_SCREEN_BUTTONS))
                         
                                     {
                                     
@@ -120,7 +120,7 @@ open fun isAny()
 
 
     
-                        if(features!!.isFeature(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS) || features!!.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS) || features!!.isFeature(touchFeatureFactory!!.HIDE_SCREEN_BUTTONS))
+                        if(features.isFeature(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS) || features.isFeature(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS) || features.isFeature(touchFeatureFactory!!.HIDE_SCREEN_BUTTONS))
                         
                                     {
                                     

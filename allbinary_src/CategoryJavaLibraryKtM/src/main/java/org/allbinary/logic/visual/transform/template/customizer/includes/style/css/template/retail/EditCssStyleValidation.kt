@@ -116,14 +116,14 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(StylesData.getInstance()!!.NAME)!!
+    var node: Node = document.createElement(StylesData.getInstance()!!.NAME)!!
             
 
 
-    var styleNode: Node = document!!.createElement(StyleData.getInstance()!!.NAME)!!
+    var styleNode: Node = document.createElement(StyleData.getInstance()!!.NAME)!!
             
 
-node!!.appendChild(styleNode)
+node.appendChild(styleNode)
 styleNode!!.appendChild(ColorsView().
                             toXmlNode(document))
 

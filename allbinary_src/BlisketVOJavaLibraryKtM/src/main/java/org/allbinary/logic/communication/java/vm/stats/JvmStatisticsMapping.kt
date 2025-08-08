@@ -85,16 +85,16 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.getFreeMemoryBytesString())
-vector!!.add(this.getFreeMemoryKilobytesString())
-vector!!.add(this.getFreeMemoryMegabytesString())
-vector!!.add(this.getMaxMemoryBytesString())
-vector!!.add(this.getMaxMemoryKilobytesString())
-vector!!.add(this.getMaxMemoryMegabytesString())
-vector!!.add(this.getNumberOfThreadsString())
-vector!!.add(this.getTotalMemoryBytesString())
-vector!!.add(this.getTotalMemoryKilobytesString())
-vector!!.add(this.getTotalMemoryMegabytesString())
+vector.add(this.getFreeMemoryBytesString())
+vector.add(this.getFreeMemoryKilobytesString())
+vector.add(this.getFreeMemoryMegabytesString())
+vector.add(this.getMaxMemoryBytesString())
+vector.add(this.getMaxMemoryKilobytesString())
+vector.add(this.getMaxMemoryMegabytesString())
+vector.add(this.getNumberOfThreadsString())
+vector.add(this.getTotalMemoryBytesString())
+vector.add(this.getTotalMemoryKilobytesString())
+vector.add(this.getTotalMemoryMegabytesString())
 
 
 

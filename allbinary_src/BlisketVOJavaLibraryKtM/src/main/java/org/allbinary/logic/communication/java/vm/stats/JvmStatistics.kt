@@ -50,7 +50,7 @@ open fun getFreeMemoryBytes()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return runtime!!.freeMemory()
+                        return runtime.freeMemory()
 }
 
 
@@ -80,7 +80,7 @@ open fun getMaxMemoryBytes()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return runtime!!.maxMemory()
+                        return runtime.maxMemory()
 }
 
 
@@ -110,7 +110,7 @@ open fun getTotalMemoryBytes()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return runtime!!.totalMemory()
+                        return runtime.totalMemory()
 }
 
 
@@ -346,7 +346,7 @@ open fun getNumberOfThreadsString()
 
 open fun collectGarbage()
         //nullable = true from not(false or (false and true)) = true
-{runtime!!.gc()
+{runtime.gc()
 }
 
 

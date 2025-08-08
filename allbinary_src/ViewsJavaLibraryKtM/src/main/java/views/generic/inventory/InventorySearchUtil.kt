@@ -122,10 +122,10 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    logUtil!!.put("Number Of Items Found: " +column!!.size, this, 
+                                    logUtil!!.put("Number Of Items Found: " +column.size, this, 
                             "search")
 
                                     }
@@ -152,15 +152,15 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
     var substoreIdColumn: Vector = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, subStore, BasicItemData.ID)!!
             
 
-column!!.addAll(substoreIdColumn)
+column.addAll(substoreIdColumn)
 }
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    logUtil!!.put("Number Of Items Found Including SubStores: " +column!!.size, this, 
+                                    logUtil!!.put("Number Of Items Found Including SubStores: " +column.size, this, 
                             "search")
 
                                     }
@@ -191,7 +191,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put("No Results Xml: " +success, this, 
@@ -296,10 +296,10 @@ open fun search(abeClientInformation: AbeClientInformationInterface, searchReque
     var inventoryNodes: Array<Node?> = arrayOfNulls(MAXPAGES)
 
 
-    var iter: ListIterator = column!!.listIterator()!!
+    var iter: ListIterator = column.listIterator()!!
             
 
-keyword= keyword!!.toUpperCase()
+keyword= keyword.toUpperCase()
 
     var lastPage: Int =  -1
 
@@ -335,7 +335,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
     var currentPage: Int =  -1
 
 
-        while(iter!!.hasNext())
+        while(iter.hasNext())
         {
     var product: String = .concatToString()
 
@@ -347,10 +347,10 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
     var keywords: String = itemInterface!!.getKeywords()!!
             
 
-keywords= keywords!!.toUpperCase()
+keywords= keywords.toUpperCase()
 
     
-                        if(keywords!!.indexOf(keyword) !=  -1)
+                        if(keywords.indexOf(keyword) !=  -1)
                         
                                     {
                                     
@@ -555,7 +555,7 @@ productListingPages[0]= StoreTransformer(abeClientInformation, TransformInfoHttp
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

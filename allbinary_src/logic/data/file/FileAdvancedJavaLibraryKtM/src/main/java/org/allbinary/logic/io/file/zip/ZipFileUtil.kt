@@ -134,7 +134,7 @@ zipFile!!.createNewFile()
 
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
@@ -142,25 +142,25 @@ zipFile!!.createNewFile()
                                 
                              else 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(current)
 stringBuffer!!.append(
                             " Creating Zip File Entry: ")
-stringBuffer!!.append(file!!.getPath())
+stringBuffer!!.append(file.getPath())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "create()")
 
         try {
             fileInputStream= AbFileInputStream(file)
-outputStream!!.putNextEntry(ZipEntry(file!!.getPath()))
+outputStream!!.putNextEntry(ZipEntry(file.getPath()))
 streamUtil!!.get(fileInputStream, outputStream, byteArray)
 outputStream!!.closeEntry()
 streamUtil!!.close(fileInputStream)
 } catch(e: Exception)
-            {logUtil!!.put("Skipping File (Probably Local): " +file!!.getPath(), this, 
+            {logUtil!!.put("Skipping File (Probably Local): " +file.getPath(), this, 
                             "create()")
 }
 

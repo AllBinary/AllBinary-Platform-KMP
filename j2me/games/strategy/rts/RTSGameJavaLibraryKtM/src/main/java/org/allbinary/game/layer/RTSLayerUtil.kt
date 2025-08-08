@@ -336,14 +336,14 @@ open fun destroyAndClear(list: BasicArrayList)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
-        {rtsLayer= list!!.get(index) as RTSLayer
+        {rtsLayer= list.get(index) as RTSLayer
 rtsLayer!!.setDestroyed(true)
 }
 
-list!!.clear()
+list.clear()
 }
 
 
@@ -360,9 +360,9 @@ open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGe
                             null)
 
 layerManager!!.setGeographicMapInterface(arrayOf(baseRaceTrackGeographicMap))
-hashtable!!.put(AllBinaryGameLayerManager.ID, layerManager)
-hashtable!!.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.LEFT)
-hashtable!!.put(Group.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
+hashtable.put(AllBinaryGameLayerManager.ID, layerManager)
+hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.LEFT)
+hashtable.put(Group.ID, BasicGroupFactory.getInstance()!!.NONE_ARRAY)
 
 
 

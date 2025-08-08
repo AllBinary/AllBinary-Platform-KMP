@@ -60,8 +60,8 @@ open public inner class Config
             */
 
 
-    val bitmapConfig: Config
-private constructor        (bitmapConfig: Config)
+    val bitmapConfig: Bitmap.Config
+private constructor        (bitmapConfig: Bitmap.Config)
             : super()
         {
 
@@ -75,7 +75,7 @@ this.bitmapConfig= bitmapConfig
             
     val ARGB_8888: Config = Config(Bitmap.Config.ARGB_8888)
 
-open fun createBitmap(width: Int, height: Int, config: Config)
+open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 
@@ -90,7 +90,7 @@ open fun createBitmap(width: Int, height: Int, config: Config)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(Bitmap.createBitmap(width, height, config!!.bitmapConfig))
+                        return OpenGLBitmap(Bitmap.createBitmap(width, height, config.bitmapConfig))
 }
 
 
@@ -118,7 +118,7 @@ open fun createBitmap(image: Image)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(image!!.getBitmap())
+                        return OpenGLBitmap(image.getBitmap())
 }
 
 

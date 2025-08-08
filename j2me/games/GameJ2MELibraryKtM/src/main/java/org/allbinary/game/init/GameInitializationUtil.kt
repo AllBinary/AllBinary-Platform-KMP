@@ -98,7 +98,7 @@ open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: M
 
 
     
-                        if(features!!.isFeature(mainFeatureFactory!!.LOAD_ALL))
+                        if(features.isFeature(mainFeatureFactory!!.LOAD_ALL))
                         
                                     {
                                     this.initGame(abeClientInformation, canvas, gameInitializationInterfaceFactoryInterface)
@@ -107,14 +107,14 @@ open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: M
                                 
                              else 
     
-                        if(features!!.isFeature(mainFeatureFactory!!.LOAD_ONDEMAND))
+                        if(features.isFeature(mainFeatureFactory!!.LOAD_ONDEMAND))
                         
                                     {
                                     
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
             
 
-gameInitializationInterface!!.init(abeClientInformation, canvas!!.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel())
+gameInitializationInterface!!.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel())
 this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_EARLY)
 
                                     }
@@ -161,7 +161,7 @@ open fun initGame(abeClientInformation: AbeClientInformationInterface, canvas: M
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
             
 
-gameInitializationInterface!!.init(abeClientInformation, canvas!!.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_ALL.getLevel())
+gameInitializationInterface!!.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_ALL.getLevel())
 this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_ALL)
 GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
 ChangedGameFeatureListener.getInstance()!!.remove(MainFeatureFactory.getInstance()!!.STATIC)

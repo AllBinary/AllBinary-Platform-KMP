@@ -71,13 +71,13 @@ open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, An
             
 
 
-        while(enumeration!!.hasMoreElements())
+        while(enumeration.hasMoreElements())
         {
-    var key: Any = enumeration!!.nextElement()!!!!
+    var key: Any = enumeration.nextElement()!!!!
             
 
 
-    var value: Any = hashtable!!.get(key as Object?)!!
+    var value: Any = hashtable.get(key as Object?)!!
             
 
 
@@ -91,7 +91,7 @@ open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, An
                                     }
                                 
                         else {
-                            hashtable!!.put(key, value)
+                            hashtable.put(key, value)
 
                         }
                             
@@ -106,18 +106,18 @@ open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
 
                     var hashtable = hashtable
 
-    var objectArray: Array<Any?> = arrayOfNulls(hashtable!!.size)
+    var objectArray: Array<Any?> = arrayOfNulls(hashtable.size)
 
 
     var index: Int = 0
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.keys()!!
+    var enumeration: Enumeration<Any?> = hashtable.keys()!!
             
 
 
-        while(enumeration!!.hasMoreElements())
-        {objectArray[index++]= enumeration!!.nextElement()!!
+        while(enumeration.hasMoreElements())
+        {objectArray[index++]= enumeration.nextElement()!!
 }
 
 
@@ -134,15 +134,15 @@ open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
 
                     var hashtable = hashtable
 
-    var list: BasicArrayList = BasicArrayList(hashtable!!.size)
+    var list: BasicArrayList = BasicArrayList(hashtable.size)
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.keys()!!
+    var enumeration: Enumeration<Any?> = hashtable.keys()!!
             
 
 
-        while(enumeration!!.hasMoreElements())
-        {list!!.add(enumeration!!.nextElement()!!)
+        while(enumeration.hasMoreElements())
+        {list.add(enumeration.nextElement()!!)
 }
 
 

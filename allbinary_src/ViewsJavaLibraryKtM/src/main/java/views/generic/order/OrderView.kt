@@ -73,7 +73,7 @@ this.getFormData()
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
-    var id: String = request!!.getParameter(OrderData.ID)!!
+    var id: String = request.getParameter(OrderData.ID)!!
             
 
 
@@ -88,7 +88,7 @@ open fun getFormData()
                                     }
                                 
 this.order= Order(Basket())
-this.order!!.setId(id)
+this.order.setId(id)
 }
 
 
@@ -104,11 +104,11 @@ open fun toXmlNode(document: Document)
             
 
 
-    var node: Node = document!!.createElement(orderHistory!!.getPaymentMethod())!!
+    var node: Node = document.createElement(orderHistory!!.getPaymentMethod())!!
             
 
 orderHistoryNode!!.appendChild(basketReview!!.toXmlNode(document))
-node!!.appendChild(orderHistoryNode)
+node.appendChild(orderHistoryNode)
 
 
 
@@ -117,7 +117,7 @@ node!!.appendChild(orderHistoryNode)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -156,7 +156,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

@@ -178,10 +178,10 @@ super.process(layerManager)
             
 
 
-    var x: Int = point!!.getX() +allBinaryTiledLayer!!.getXP()
+    var x: Int = point.getX() +allBinaryTiledLayer!!.getXP()
 
 
-    var y: Int = point!!.getY() +allBinaryTiledLayer!!.getYP()
+    var y: Int = point.getY() +allBinaryTiledLayer!!.getYP()
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(x, y)!!
@@ -384,10 +384,10 @@ logUtil!!.put("Layer: " +layerInterface, this,
 
 
 
-                        for (index in list!!.size()!! downTo 0)
+                        for (index in list.size()!! downTo 0)
 
 
-        {geographicMapCellType= geographicMapInterface!!.getCellTypeAt(list!!.get(index) as GeographicMapCellPosition)
+        {geographicMapCellType= geographicMapInterface!!.getCellTypeAt(list.get(index) as GeographicMapCellPosition)
 
     
                         if(raceTrackGeographicMapCellTypeFactory!!.isPath(geographicMapCellType))
@@ -432,19 +432,19 @@ stringBuffer!!.append(
 stringBuffer!!.append(cost)
 stringBuffer!!.append(
                             " with ")
-stringBuffer!!.append(capital!!.getTotalMoney())
+stringBuffer!!.append(capital.getTotalMoney())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "attemptBuild")
 
     
-                        if(cost <= capital!!.getTotalMoney())
+                        if(cost <= capital.getTotalMoney())
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
 newUnconstructedRTSLayerInterfaceArray[itemIndex]= 
                                         null
                                     
-capital!!.removeMoney(cost)
+capital.removeMoney(cost)
 WaypointCellPositionHistory.getInstance()!!.add(list, layerInterface)
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(layerInterface!!.getXP(), layerInterface!!.getYP())!!
@@ -522,7 +522,7 @@ stickyAssociatedRtsLayer.
             
 
 RTSLayerUtil.getInstance()!!.destroyAndClear(list)
-list!!.add(layerInterface)
+list.add(layerInterface)
 
     
                         if(this.isPrimaryWaypointCreator)

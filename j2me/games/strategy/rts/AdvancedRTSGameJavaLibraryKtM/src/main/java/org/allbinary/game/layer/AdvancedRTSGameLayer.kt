@@ -741,7 +741,7 @@ open fun onDestroyed(destroyedEvent: DestroyedEvent)
 
     var waypoint: WaypointBase = this.getWaypointBehavior()!!.getWaypoint() as WaypointBase
 
-waypoint!!.reset()
+waypoint.reset()
 
                                     }
                                 

@@ -79,7 +79,7 @@ override fun getX()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.layer!!.getXP() +super.getX()
+                        return this.layer.getXP() +super.getX()
 }
 
 override fun getY()
@@ -88,7 +88,7 @@ override fun getY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.layer!!.getYP() +super.getY()
+                        return this.layer.getYP() +super.getY()
 }
 
 override fun getZ()
@@ -97,7 +97,7 @@ override fun getZ()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.layer!!.getZP() +super.getZ()
+                        return this.layer.getZP() +super.getZ()
 }
 
 

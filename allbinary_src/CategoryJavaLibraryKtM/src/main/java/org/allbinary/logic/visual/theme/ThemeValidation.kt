@@ -127,7 +127,7 @@ this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemeAbPath!!.toStrin
 this.themeName= pathUtil!!.getNameFromPath(categoryThemeAbPath!!.toString())
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -161,7 +161,7 @@ public constructor        (storeThemeCategoryInterface: StoreThemeCategoryInterf
 this.transformInfoInterface= storeThemeCategoryInterface!!.getTransformInfoInterface()
 this.categoryAbPath= storeThemeCategoryInterface!!.getPath()
 
-    var themeNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.NAME, node!!.getChildNodes())!!
+    var themeNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.NAME, node.getChildNodes())!!
             
 
 
@@ -170,7 +170,7 @@ this.categoryAbPath= storeThemeCategoryInterface!!.getPath()
 
 this.themeName= DomNodeHelper.getTextNodeValue(valueNode)
 
-    var previewImageNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.PREVIEW_IMAGE_NAME, node!!.getChildNodes())!!
+    var previewImageNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.PREVIEW_IMAGE_NAME, node.getChildNodes())!!
             
 
 
@@ -307,7 +307,7 @@ open fun isValid()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.IS_VALID)
@@ -343,7 +343,7 @@ open fun isValid()
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("End: " +isValid, this, commonStrings!!.IS_VALID)
@@ -358,7 +358,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -393,7 +393,7 @@ stringBuffer!!.append(
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -450,10 +450,10 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.getName())
-vector!!.add(this.getPath())
-vector!!.add(this.getPreviewImageName())
-vector!!.add(this.getPreviewImagePath())
+vector.add(this.getName())
+vector.add(this.getPath())
+vector.add(this.getPreviewImageName())
+vector.add(this.getPreviewImagePath())
 
 
 
@@ -497,7 +497,7 @@ open fun toXmlNode(document: Document)
 
     var domNodeInterface: DomNodeInterface = this.getCssStyleValidation() as DomNodeInterface
 
-node!!.appendChild(domNodeInterface!!.toXmlNode(document))
+node.appendChild(domNodeInterface!!.toXmlNode(document))
 
 
 

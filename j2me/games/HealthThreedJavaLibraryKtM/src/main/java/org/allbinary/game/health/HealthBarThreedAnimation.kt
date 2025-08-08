@@ -62,16 +62,16 @@ public constructor        (layerInterface: AllBinaryLayer, location: Int)
 this.basicColor= this.basicColorFactory!!.GREEN
 this.colorP= this.basicColor!!.toInt()
 rectangle= Rectangle(0, 0, 1, 1, this.basicColor)
-rectangle!!.setDoubleSidedEnabled(true)
-rectangle!!.setNormalsEnabled(false)
-rectangle!!.setTexturesEnabled(false)
+rectangle.setDoubleSidedEnabled(true)
+rectangle.setNormalsEnabled(false)
+rectangle.setTexturesEnabled(false)
 }
 
 
 open fun updateColor()
         //nullable = true from not(false or (false and true)) = true
 {
-    var colorBufferList: ColorBufferList = rectangle!!.getVertices()!!.getColor4BufferList()!!
+    var colorBufferList: ColorBufferList = rectangle.getVertices()!!.getColor4BufferList()!!
             
 
 
@@ -94,7 +94,7 @@ open fun updateColor()
 open fun updateSize()
         //nullable = true from not(false or (false and true)) = true
 {
-    var number3dBufferList: Number3dBufferList = rectangle!!.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
+    var number3dBufferList: Number3dBufferList = rectangle.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
             
 
 
@@ -192,7 +192,7 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
             
 
 
-    var positionNumber3d: Number3d = this.rectangle!!.getPosition()!!
+    var positionNumber3d: Number3d = this.rectangle.getPosition()!!
             
 
 positionNumber3d!!.x=  -(viewPosition!!.getX().toFloat())

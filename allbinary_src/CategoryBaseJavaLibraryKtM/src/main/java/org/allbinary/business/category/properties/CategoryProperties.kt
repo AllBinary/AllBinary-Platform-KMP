@@ -175,13 +175,13 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
                         if(nextParentCategoryInterface!!.getProperties()!!.isRoot())
                         
                                     {
-                                    list!!.add(0, nextParentCategoryInterface!!.getPath()!!.toString())
+                                    list.add(0, nextParentCategoryInterface!!.getPath()!!.toString())
 
                                     }
                                 
                         else {
                             pathStringBuffer!!.delete(0, pathStringBuffer!!.length())
-list!!.add(0, pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(nextParentCategoryInterface!!.getProperties()!!.getValue())!!.toString())
+list.add(0, pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(nextParentCategoryInterface!!.getProperties()!!.getValue())!!.toString())
 
                         }
                             
@@ -219,7 +219,7 @@ depthIndex++
 pathStringBuffer!!.delete(0, pathStringBuffer!!.length())
 pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(this.getValue())
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -229,13 +229,13 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(this.getValue())
                         for (index in 0 until size)
 
 
-        {pathStringBuffer!!.append(list!!.get(index) as String)
+        {pathStringBuffer!!.append(list.get(index) as String)
 }
 
 pathStringBuffer!!.append(abPathData!!.SEPARATOR)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     logUtil!!.put("path = " +pathStringBuffer!!.toString(), this, 

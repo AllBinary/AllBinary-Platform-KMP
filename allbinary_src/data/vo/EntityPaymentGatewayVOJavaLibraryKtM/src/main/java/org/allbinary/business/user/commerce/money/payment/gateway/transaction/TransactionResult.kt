@@ -64,14 +64,14 @@ public constructor        (result: String)
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.AMP)
 
 
-    var tokens: BasicArrayList = tokenizer!!.getTokens(result, BasicArrayList())!!
+    var tokens: BasicArrayList = tokenizer.getTokens(result, BasicArrayList())!!
             
 
 
     var tokenizer2: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.EQUALS)
 
 
-    var hashtable: Hashtable<Any, Any> = tokenizer2!!.getTokens(tokens)!!
+    var hashtable: Hashtable<Any, Any> = tokenizer2.getTokens(tokens)!!
             
 
 keyValuePairs!!.putAll(hashtable)

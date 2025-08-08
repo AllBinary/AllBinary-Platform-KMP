@@ -142,20 +142,20 @@ open fun toVector()
 : Vector{
     var values: Vector = Vector()
 
-values!!.add(this.workFlowName)
-values!!.add(this.storeName)
-values!!.add(DomDocumentHelper.toString(this.workFlowDoc))
+values.add(this.workFlowName)
+values.add(this.storeName)
+values.add(DomDocumentHelper.toString(this.workFlowDoc))
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.add(time)
-values!!.add(time)
+values.add(time)
+values.add(time)
 
 
 
@@ -179,7 +179,7 @@ hashMap!!.put(WorkFlowData.getInstance()!!.DATA, DomDocumentHelper.toString(this
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
@@ -208,7 +208,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var node: Node = document!!.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
+    var node: Node = document.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
             
 
 
@@ -232,7 +232,7 @@ open fun toXmlNode(document: Document)
 
     var value: String = hashMap!!.get(name as Object?) as String
 
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
+node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
@@ -243,7 +243,7 @@ node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -273,7 +273,7 @@ open fun toXmlDoc()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -317,7 +317,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -357,7 +357,7 @@ open fun validationInfo()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

@@ -75,7 +75,7 @@ open fun isType(type: String)
                     var type = type
 
     
-                        if(this.type!!.compareTo(type) == 0)
+                        if(this.type.compareTo(type) == 0)
                         
                                     {
                                     

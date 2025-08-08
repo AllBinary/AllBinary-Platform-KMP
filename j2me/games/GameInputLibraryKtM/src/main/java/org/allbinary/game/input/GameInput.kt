@@ -153,16 +153,16 @@ open fun removeNonAIInputGameKeyEvents()
 
 
 
-                        for (index in list!!.size()!! downTo 0)
+                        for (index in list.size()!! downTo 0)
 
 
-        {gameKeyEvent= list!!.objectArray[index]!! as GameKeyEvent
+        {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
     
                         if(gameKeyEvent!!.getSourceId() != 1)
                         
                                     {
-                                    list!!.remove(index)
+                                    list.remove(index)
 
                                     }
                                 
@@ -197,15 +197,15 @@ open fun update()
 
 
 
-                        for (index2 in list!!.size()!! downTo 0)
+                        for (index2 in list.size()!! downTo 0)
 
 
         {
     
-                        if(list!!.objectArray[index2] == anyType)
+                        if(list.objectArray[index2] == anyType)
                         
                                     {
-                                    list!!.remove(index2)
+                                    list.remove(index2)
 
                                     }
                                 

@@ -126,7 +126,7 @@ open fun createPlayer(resource: String)
                                     {
                                     
     
-                        if(resource!!.compareTo(Manager.TONE_DEVICE_LOCATOR) == 0)
+                        if(resource.compareTo(Manager.TONE_DEVICE_LOCATOR) == 0)
                         
                                     {
                                     
@@ -142,7 +142,7 @@ open fun createPlayer(resource: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Manager.createPlayer(resource!!.substring(0, resource!!.length -4))
+                        return Manager.createPlayer(resource.substring(0, resource.length -4))
 
                         }
                             

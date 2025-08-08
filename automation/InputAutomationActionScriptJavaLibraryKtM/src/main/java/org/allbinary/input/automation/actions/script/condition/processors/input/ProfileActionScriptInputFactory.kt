@@ -52,7 +52,7 @@ open fun getInstance(node: Node)
 
 
     
-                        if(DomSearchHelper.getNodeNoThrow(KeyboardActionScriptInputData.NAME, node!!.getChildNodes()) != 
+                        if(DomSearchHelper.getNodeNoThrow(KeyboardActionScriptInputData.NAME, node.getChildNodes()) != 
                                     null
                                 )
                         
@@ -63,7 +63,7 @@ open fun getInstance(node: Node)
                                 
                              else 
     
-                        if(DomSearchHelper.getNodeNoThrow(MouseActionScriptInputData.NAME, node!!.getChildNodes()) != 
+                        if(DomSearchHelper.getNodeNoThrow(MouseActionScriptInputData.NAME, node.getChildNodes()) != 
                                     null
                                 )
                         

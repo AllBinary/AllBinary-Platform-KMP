@@ -81,13 +81,13 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
                     var height = height
 
-    var scaledImages: Array<Image?> = arrayOfNulls(images!!.size)
+    var scaledImages: Array<Image?> = arrayOfNulls(images.size)
 
 
 
 
 
-                        for (index in images!!.size downTo 0)
+                        for (index in images.size downTo 0)
 
 
         {scaledImages[index]= this.scale(images[index]!!, width, height)
@@ -115,13 +115,13 @@ open fun scale(image: Image, width: Int, height: Int)
 
                     var height = height
 
-    var originalPlayNImage: Image = 
+    var originalPlayNImage: playn.core.Image = 
                 null
             
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -153,7 +153,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as Image
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
             
 
-canvasSurface!!.drawImage(originalPlayNImage, 0, 0, scaledImage!!.getWidth(), scaledImage!!.getHeight(), 0, 0, image!!.getWidth(), image!!.getHeight())
+canvasSurface!!.drawImage(originalPlayNImage, 0, 0, scaledImage!!.getWidth(), scaledImage!!.getHeight(), 0, 0, image.getWidth(), image.getHeight())
 
 
 

@@ -112,14 +112,14 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
     var pointsBasicArrayList: BasicArrayList = BasicArrayList(totalAngle /angleIncrement)
 
 
-    var pointBasicArrayList: BasicArrayList = BasicArrayList(points!!.size)
+    var pointBasicArrayList: BasicArrayList = BasicArrayList(points.size)
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
             
 
 
-    var size: Int = points!!.size
+    var size: Int = points.size
                 
 
 

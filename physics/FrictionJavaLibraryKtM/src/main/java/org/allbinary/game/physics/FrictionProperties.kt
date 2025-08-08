@@ -48,7 +48,7 @@ open fun friction(velocityProperties: VelocityProperties, nominator: Int)
 
 
                     var nominator = nominator
-DragVelocityBehavior.instance!!.reduce(velocityProperties, nominator, FrictionData.getFrictionDenominator())
+DragVelocityBehavior.instance.reduce(velocityProperties, nominator, FrictionData.getFrictionDenominator())
 }
 
 

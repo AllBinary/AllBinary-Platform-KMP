@@ -65,7 +65,7 @@ public constructor        (node: Node)
                             //For kotlin this is before the body of the constructor.
                     
 
-    var actionNode: Node = DomSearchHelper.getNode(TimeIntervalActionScriptConditionData.NAME, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(TimeIntervalActionScriptConditionData.NAME, node.getChildNodes())!!
             
 
 
@@ -181,7 +181,7 @@ open fun toXmlNode(document: Document)
     var node: Node = super.toXmlNode(document)!!
             
 
-node!!.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalActionScriptConditionData.NAME, this.toHashMap()))
+node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalActionScriptConditionData.NAME, this.toHashMap()))
 
 
 

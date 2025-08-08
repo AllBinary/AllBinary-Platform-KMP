@@ -81,7 +81,7 @@ override fun pause(allBinaryGameCanvas: AllBinaryGameCanvas)
 
 
     
-                        if(features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     

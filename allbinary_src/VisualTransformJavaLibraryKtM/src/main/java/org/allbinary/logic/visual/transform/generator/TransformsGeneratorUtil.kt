@@ -67,7 +67,7 @@ private constructor        ()
 
                 @Throws(Exception::class)
             
-open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, group: String)
+open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
 : String{
 
@@ -80,7 +80,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInfor
                     var group = group
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Started Group: " +group, this, 
@@ -98,7 +98,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInfor
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("End Group: " +group, this, 
@@ -116,7 +116,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInfor
 
                 @Throws(Exception::class)
             
-open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInformationInterface, transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface, transformInfoInterface: TransformInfoInterface, group: String)
+open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoObjectConfigInterface: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
 : String{
 
@@ -132,7 +132,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInfor
                     var group = group
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Started Group: " +group, this, 
@@ -146,7 +146,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: AbeClientInfor
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -195,7 +195,7 @@ TransformGeneratorUtil.getInstance()!!.generate(abeClientInformation, transformI
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Done Group: " +group, this, 

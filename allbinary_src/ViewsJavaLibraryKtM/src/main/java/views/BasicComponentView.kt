@@ -65,7 +65,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                     var transformInfoInterface = transformInfoInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, commonStrings!!.CONSTRUCTOR)
@@ -146,7 +146,7 @@ open fun getDoc()
             
 
 
-    var dataNode: Node = this.getTransformDocumentInterface()!!.getDoc()!!.importNode(document!!.getFirstChild(), true)!!
+    var dataNode: Node = this.getTransformDocumentInterface()!!.getDoc()!!.importNode(document.getFirstChild(), true)!!
             
 
 
@@ -191,7 +191,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

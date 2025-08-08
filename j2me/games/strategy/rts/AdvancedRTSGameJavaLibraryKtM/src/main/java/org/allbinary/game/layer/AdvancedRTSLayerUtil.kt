@@ -68,7 +68,7 @@ open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGe
     var hashtable: Hashtable<Any, Any> = RTSLayerUtil.getInstance()!!.createFakeRTSLayerHashtable(baseRaceTrackGeographicMap)!!
             
 
-hashtable!!.put(WorkWaypoint.ID, SmallIntegerSingletonFactory.getInstance()!!.getInstance(50))
+hashtable.put(WorkWaypoint.ID, SmallIntegerSingletonFactory.getInstance()!!.getInstance(50))
 
 
 

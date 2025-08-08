@@ -107,7 +107,7 @@ open fun createImageForRotation(originalImage: Image)
                     var originalImage = originalImage
 
     
-                        if(features!!.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -143,7 +143,7 @@ open fun createImage(originalImage: Image)
                     var originalImage = originalImage
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
@@ -160,7 +160,7 @@ open fun createImage(originalImage: Image)
 
 
     
-                        if(features!!.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -191,7 +191,7 @@ originalImage2= openGLESImage!!.openGLBitmap!!.getImage()
                                     
     var originalMutableImage: SwtMutableImage = originalImage2 as SwtMutableImage
 
-image= SwtMutableImage(SwtDeviceComponent.createImage(originalMutableImage!!.image!!.getImageData()))
+image= SwtMutableImage(SwtDeviceComponent.createImage(originalMutableImage!!.image.getImageData()))
 
                                     }
                                 
@@ -199,7 +199,7 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(originalMutableImage!!.ima
                             
     var originalImmutableImage: SwtImmutableImage = originalImage2 as SwtImmutableImage
 
-image= SwtMutableImage(SwtDeviceComponent.createImage(originalImmutableImage!!.image!!.getImageData()))
+image= SwtMutableImage(SwtDeviceComponent.createImage(originalImmutableImage!!.image.getImageData()))
 
                         }
                             
@@ -254,7 +254,7 @@ open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boo
 
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
@@ -268,7 +268,7 @@ open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boo
                                 
 
     
-                        if(features!!.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -320,7 +320,7 @@ originalImage2= openGLESImage!!.openGLBitmap!!.getImage()
                         
                                     {
                                     
-    var imageData: ImageData = originalMutableImage!!.image!!.getImageData()!!.scaledTo(width, height)!!
+    var imageData: ImageData = originalMutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
             
 
 image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
@@ -347,7 +347,7 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
                         
                                     {
                                     
-    var imageData: ImageData = originalImmutableImage!!.image!!.getImageData()!!.scaledTo(width, height)!!
+    var imageData: ImageData = originalImmutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
             
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
@@ -396,7 +396,7 @@ open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Bo
 
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
@@ -415,7 +415,7 @@ open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Bo
 
 
     
-                        if(features!!.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     
@@ -471,7 +471,7 @@ openGLESImageProperties!!.scaleX= openGLESImageProperties!!.scaleX2= ((width.toF
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY2= ((height.toFloat()) /openGLESImage!!.getHeight()).toFloat()
 
     
-                        if(image!!.getName()!!.startsWith(INFORMATION))
+                        if(image.getName()!!.startsWith(INFORMATION))
                         
                                     {
                                     openGLESImage!!.openGLESImageTranslate= OpenGLESDeviceImageTranslate()
@@ -490,7 +490,7 @@ openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.25f
 openGLESImageProperties!!.scaleY= openGLESImageProperties!!.scaleY *0.75f
 
     
-                        if(image!!.getName()!!.startsWith(LEADERBOARD))
+                        if(image.getName()!!.startsWith(LEADERBOARD))
                         
                                     {
                                     openGLESImage!!.openGLESImageTranslate= OpenGLESDeviceImageTranslate()
@@ -503,7 +503,7 @@ openGLESDeviceImageTranslate!!.translateX=  -displayInfoSingleton!!.getLastWidth
                                 
 
     
-                        if(image!!.getName()!!.startsWith(LEADERBOARD))
+                        if(image.getName()!!.startsWith(LEADERBOARD))
                         
                                     {
                                     
@@ -542,7 +542,7 @@ image= openGLESImage
                         
                                     {
                                     
-    var imageData: ImageData = originalMutableImage!!.image!!.getImageData()!!.scaledTo(width, height)!!
+    var imageData: ImageData = originalMutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
             
 
 image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
@@ -569,7 +569,7 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
                         
                                     {
                                     
-    var imageData: ImageData = originalImmutableImage!!.image!!.getImageData()!!.scaledTo(width, height)!!
+    var imageData: ImageData = originalImmutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
             
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
@@ -611,7 +611,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                     var resize = resize
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)
@@ -661,7 +661,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -682,7 +682,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
     var originalPixelArray: IntArray = IntArray(originalImage!!.getWidth() *originalImage!!.getHeight())
 
 
-    var newPixelArray: IntArray = IntArray(image!!.getWidth() *image!!.getHeight())
+    var newPixelArray: IntArray = IntArray(image.getWidth() *image.getHeight())
 
 
     var width: Int = originalImage!!.getWidth()!!
@@ -723,7 +723,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 getImage = mutableImage2!!.getImage()getImage as Image
 getImage.
-                                getImageData()!!.setPixels(0, 0, image!!.getWidth(), newPixelArray, 0)
+                                getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
 
 
 

@@ -155,8 +155,17 @@ this.backgroundBasicColor= backgroundBasicColor
 this.foregroundColor= foregroundBasicColor!!.toInt()
 this.backgroundColor= backgroundBasicColor!!.toInt()
 this.initCommands(cmdListener)
-this.initMenu()
+
+        try {
+            this.initMenu()
 repaintProcessor!!.process()
+} catch(e: Exception)
+            {
+
+
+                            throw RuntimeException()
+}
+
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
@@ -233,7 +242,7 @@ open fun createForm()
             
 
 
-    var rectangle: Rectangle = this.createRectangle(items!!.size)!!
+    var rectangle: Rectangle = this.createRectangle(items.size)!!
             
 
 

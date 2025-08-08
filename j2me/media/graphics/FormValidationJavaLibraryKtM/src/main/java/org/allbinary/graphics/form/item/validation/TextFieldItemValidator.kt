@@ -75,7 +75,7 @@ override fun isValid()
             
 
 
-    var textLength: Int = string!!.length!!
+    var textLength: Int = string.length!!
             
 
 
@@ -125,7 +125,7 @@ override fun toList()
             
 
 
-    var textLength: Int = string!!.length!!
+    var textLength: Int = string.length!!
             
 
 
@@ -146,7 +146,7 @@ override fun toList()
                         if(textLength < this.min)
                         
                                     {
-                                    list!!.add(StringMaker().
+                                    list.add(StringMaker().
                             append(name)!!.append(
                             " is to short")!!.toString())
 
@@ -157,7 +157,7 @@ override fun toList()
                         if(textLength > this.max)
                         
                                     {
-                                    list!!.add(StringMaker().
+                                    list.add(StringMaker().
                             append(name)!!.append(
                             " is to long")!!.toString())
 

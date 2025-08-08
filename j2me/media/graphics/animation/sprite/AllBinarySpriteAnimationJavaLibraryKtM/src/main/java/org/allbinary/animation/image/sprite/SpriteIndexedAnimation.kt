@@ -184,8 +184,8 @@ open fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
 
                     var y = y
 this.setFrame(frame)
-this.sprite!!.setPosition(x, y)
-sprite!!.paint(graphics)
+this.sprite.setPosition(x, y)
+sprite.paint(graphics)
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
@@ -199,8 +199,8 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-this.sprite!!.setPosition(x, y)
-sprite!!.paint(graphics)
+this.sprite.setPosition(x, y)
+sprite.paint(graphics)
 }
 
 
@@ -209,17 +209,17 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-sprite!!.paint(graphics)
+sprite.paint(graphics)
 }
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite!!.nextFrame()
+{this.sprite.nextFrame()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite!!.prevFrame()
+{this.sprite.prevFrame()
 }
 
 override fun getSize()
@@ -228,7 +228,7 @@ override fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.sprite!!.getRawFrameCount()
+                        return this.sprite.getRawFrameCount()
 }
 
 override fun setFrame(frame: Int)
@@ -236,7 +236,7 @@ override fun setFrame(frame: Int)
 {
 
                     var frame = frame
-this.sprite!!.setFrame(frame)
+this.sprite.setFrame(frame)
 }
 
 override fun getFrame()
@@ -245,14 +245,14 @@ override fun getFrame()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.sprite!!.getFrame()
+                        return this.sprite.getFrame()
 }
 
 override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     
-                        if(this.sprite!!.getFrame() == this.getSize() -1)
+                        if(this.sprite.getFrame() == this.getSize() -1)
                         
                                     {
                                     

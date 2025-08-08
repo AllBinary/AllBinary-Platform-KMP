@@ -131,16 +131,16 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 
     
-                        if(features!!.isDefault(gameFeature))
+                        if(features.isDefault(gameFeature))
                         
                                     {
-                                    features!!.add(gameFeature)
+                                    features.add(gameFeature)
 choiceGroup!!.setSelectedIndex(index, true)
 
                                     }
                                 
                         else {
-                            features!!.remove(gameFeature)
+                            features.remove(gameFeature)
 choiceGroup!!.setSelectedIndex(index, false)
 
                         }
@@ -210,19 +210,19 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 
     
-                        if(!isSelected && features!!.isFeature(gameFeature))
+                        if(!isSelected && features.isFeature(gameFeature))
                         
                                     {
-                                    features!!.remove(gameFeature)
+                                    features.remove(gameFeature)
 
                                     }
                                 
                              else 
     
-                        if(isSelected && !features!!.isFeature(gameFeature))
+                        if(isSelected && !features.isFeature(gameFeature))
                         
                                     {
-                                    features!!.add(gameFeature)
+                                    features.add(gameFeature)
 
                                     }
                                 
@@ -305,9 +305,9 @@ open fun isExclusive(itemLabel: String)
             
 
 
-        while(enumeration!!.hasMoreElements())
+        while(enumeration.hasMoreElements())
         {
-    var name: String = enumeration!!.nextElement()!! as String
+    var name: String = enumeration.nextElement()!! as String
 
 
     
@@ -372,7 +372,7 @@ logUtil!!.put(StringMaker().
 
 
         {anyType= objectArray[index]!! as Object
-basicArrayList= hashtable!!.get(anyType as Object?) as BasicArrayList
+basicArrayList= hashtable.get(anyType as Object?) as BasicArrayList
 updateExclusive(gameFeature, basicArrayList)
 }
 
@@ -391,7 +391,7 @@ open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
                     var list = list
 
     
-                        if(list!!.contains(gameFeature))
+                        if(list.contains(gameFeature))
                         
                                     {
                                     
@@ -399,11 +399,11 @@ open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
             
 
 
-    var addIndex: Int = list!!.indexOf(gameFeature)!!
+    var addIndex: Int = list.indexOf(gameFeature)!!
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -418,12 +418,12 @@ open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
                         if(addIndex != index)
                         
                                     {
-                                    features!!.remove(list!!.objectArray[index]!! as Feature)
+                                    features.remove(list.objectArray[index]!! as Feature)
 
                                     }
                                 
                         else {
-                            features!!.add(list!!.objectArray[index]!! as Feature)
+                            features.add(list.objectArray[index]!! as Feature)
 
                         }
                             

@@ -220,12 +220,12 @@ stringBuffer!!.append(
 stringBuffer!!.append(cost)
 stringBuffer!!.append(
                             " with ")
-stringBuffer!!.append(capital!!.getTotalMoney())
+stringBuffer!!.append(capital.getTotalMoney())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "attemptBuild")
 
     
-                        if(cost <= capital!!.getTotalMoney())
+                        if(cost <= capital.getTotalMoney())
                         
                                     {
                                     layerInterface!!.construct(rtsPlayerLayerInterface)
@@ -233,7 +233,7 @@ this.newUnconstructedRTSLayerInterfaceArray[itemIndex]=
                                         null
                                     
 rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
-capital!!.removeMoney(cost)
+capital.removeMoney(cost)
 AssignWaypointsUtil.getInstance()!!.set(layerInterface as UnitLayer, associatedRtsLayer as AdvancedRTSGameLayer)
 layerManager!!.append(layerInterface, PlayersSingletonFactory.total)
 

@@ -76,11 +76,11 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
-    var originalPlayNImage: Image = 
+    var originalPlayNImage: playn.core.Image = 
                 null
             
 

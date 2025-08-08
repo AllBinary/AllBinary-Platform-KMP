@@ -70,13 +70,13 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
                     var height = height
 
-    var scaledImages: Array<Image?> = arrayOfNulls(images!!.size)
+    var scaledImages: Array<Image?> = arrayOfNulls(images.size)
 
 
 
 
 
-                        for (index in images!!.size downTo 0)
+                        for (index in images.size downTo 0)
 
 
         {scaledImages[index]= this.scale(images[index]!!, width, height)
@@ -104,17 +104,17 @@ open fun scale(image: Image, width: Int, height: Int)
 
                     var height = height
 
-    var sourceWidth: Int = image!!.getWidth()!!
+    var sourceWidth: Int = image.getWidth()!!
             
 
 
-    var sourceHeight: Int = image!!.getHeight()!!
+    var sourceHeight: Int = image.getHeight()!!
             
 
 
-    var originalData: IntArray = IntArray(image!!.getWidth() *image!!.getHeight())
+    var originalData: IntArray = IntArray(image.getWidth() *image.getHeight())
 
-image!!.getRGB(originalData, 0, image!!.getWidth(), 0, 0, image!!.getWidth(), image!!.getHeight())
+image.getRGB(originalData, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight())
 
     var scaledData: IntArray = IntArray(width *height)
 

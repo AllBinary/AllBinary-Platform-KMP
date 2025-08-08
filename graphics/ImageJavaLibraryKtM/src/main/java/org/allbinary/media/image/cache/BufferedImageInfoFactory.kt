@@ -54,11 +54,11 @@ open fun getInstance(width: Int, height: Int, type: Int)
 
     var stringbuffer: StringMaker = StringMaker()
 
-stringbuffer!!.append(width)
-stringbuffer!!.append(height)
-stringbuffer!!.append(type)
+stringbuffer.append(width)
+stringbuffer.append(height)
+stringbuffer.append(type)
 
-    var key: String = stringbuffer!!.toString()!!
+    var key: String = stringbuffer.toString()!!
             
 
 

@@ -145,7 +145,7 @@ this.wanderPathsList= BasicArrayList()
             
 
 
-    var isHTML: Boolean = features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
+    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
             
 
 this.waypointPathRunnable= if(isHTML) {
@@ -469,7 +469,7 @@ currentTargetLayerInterface.
             
 
 
-    var list: BasicArrayList = waypoint!!.getPathsListFromCacheOnly(geographicMapCellPosition)!!
+    var list: BasicArrayList = waypoint.getPathsListFromCacheOnly(geographicMapCellPosition)!!
             
 
 this.setWaypointPathsList(list)
@@ -727,12 +727,12 @@ open fun visitIfAtMidPoint(geographicMapCellPosition: GeographicMapCellPosition)
                                 
                              else 
     
-                        if(point!!.getX() < afterNextPoint!!.getX())
+                        if(point.getX() < afterNextPoint!!.getX())
                         
                                     {
                                     
     
-                        if(unitLayer!!.getXP() +unitLayer!!.getHalfWidth() < point!!.getX())
+                        if(unitLayer!!.getXP() +unitLayer!!.getHalfWidth() < point.getX())
                         
                                     {
                                     beyondMidPoint= false
@@ -745,7 +745,7 @@ open fun visitIfAtMidPoint(geographicMapCellPosition: GeographicMapCellPosition)
                         else {
                             
     
-                        if(unitLayer!!.getXP() +unitLayer!!.getHalfWidth() > point!!.getX())
+                        if(unitLayer!!.getXP() +unitLayer!!.getHalfWidth() > point.getX())
                         
                                     {
                                     beyondMidPoint= false
@@ -765,12 +765,12 @@ open fun visitIfAtMidPoint(geographicMapCellPosition: GeographicMapCellPosition)
                                 
                              else 
     
-                        if(point!!.getY() < afterNextPoint!!.getY())
+                        if(point.getY() < afterNextPoint!!.getY())
                         
                                     {
                                     
     
-                        if(unitLayer!!.getYP() +unitLayer!!.getHalfHeight() < point!!.getY())
+                        if(unitLayer!!.getYP() +unitLayer!!.getHalfHeight() < point.getY())
                         
                                     {
                                     beyondMidPoint= false
@@ -783,7 +783,7 @@ open fun visitIfAtMidPoint(geographicMapCellPosition: GeographicMapCellPosition)
                         else {
                             
     
-                        if(unitLayer!!.getYP() +unitLayer!!.getHalfHeight() > point!!.getY())
+                        if(unitLayer!!.getYP() +unitLayer!!.getHalfHeight() > point.getY())
                         
                                     {
                                     beyondMidPoint= false
@@ -910,8 +910,8 @@ this.clearTarget()
     var point: GPoint = this.nextUnvisitedPathGeographicMapCellPosition!!.getMidPoint()!!
             
 
-dx= associatedAdvancedRTSGameLayer!!.getXP() +associatedAdvancedRTSGameLayer!!.getHalfWidth() -point!!.getX()
-dy= associatedAdvancedRTSGameLayer!!.getYP() +associatedAdvancedRTSGameLayer!!.getHalfHeight() -point!!.getY()
+dx= associatedAdvancedRTSGameLayer!!.getXP() +associatedAdvancedRTSGameLayer!!.getHalfWidth() -point.getX()
+dy= associatedAdvancedRTSGameLayer!!.getYP() +associatedAdvancedRTSGameLayer!!.getHalfHeight() -point.getY()
 this.associatedAdvancedRTSGameLayer!!.waypoint2LogHelper!!.processTargeting(this.associatedAdvancedRTSGameLayer, dx, dy)
 
                                     }
@@ -1077,7 +1077,7 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
 
     
-                        if(list!!.size() == 0)
+                        if(list.size() == 0)
                         
                                     {
                                     
@@ -1092,11 +1092,11 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var layerInterface: AdvancedRTSGameLayer = list!!.get(index) as AdvancedRTSGameLayer
+    var layerInterface: AdvancedRTSGameLayer = list.get(index) as AdvancedRTSGameLayer
 
 
     

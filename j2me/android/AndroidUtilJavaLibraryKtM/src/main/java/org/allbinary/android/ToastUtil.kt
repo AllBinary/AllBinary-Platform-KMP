@@ -102,7 +102,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
                 
             
-view!!.post(MakeToast(message))
+view.post(MakeToast(message))
 }
 
 

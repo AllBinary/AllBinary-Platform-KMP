@@ -72,11 +72,11 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
                         
                                     {
                                     
-    var rgb1: Int = imageComparisonInfo!!.getBufferedImages()[0]!!.getRGB(point!!.getX(), point!!.getY())!!
+    var rgb1: Int = imageComparisonInfo!!.getBufferedImages()[0]!!.getRGB(point.getX(), point.getY())!!
             
 
 
-    var rgb2: Int = imageComparisonInfo!!.getBufferedImages()[1]!!.getRGB(point!!.getX(), point!!.getY())!!
+    var rgb2: Int = imageComparisonInfo!!.getBufferedImages()[1]!!.getRGB(point.getX(), point.getY())!!
             
 
 
@@ -124,7 +124,7 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
                                     }
                                 
                         else {
-                            imageComparisonInfo!!.add(PixelDeltaFactory.getInstance(point!!.getX(), point!!.getY(), rgb1, rgb2))
+                            imageComparisonInfo!!.add(PixelDeltaFactory.getInstance(point.getX(), point.getY(), rgb1, rgb2))
 
                         }
                             

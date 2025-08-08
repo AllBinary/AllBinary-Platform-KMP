@@ -86,7 +86,7 @@ open public class TopUBoundBounceAIFactory
             
 
 
-    var rectangle: Rectangle = Rectangle(point, (displayInfo!!.getLastWidth() -halfWidth -point!!.getX()), (displayInfo!!.getLastHeight() -halfHeight -point!!.getY()))
+    var rectangle: Rectangle = Rectangle(point, (displayInfo!!.getLastWidth() -halfWidth -point.getX()), (displayInfo!!.getLastHeight() -halfHeight -point.getY()))
 
 
 

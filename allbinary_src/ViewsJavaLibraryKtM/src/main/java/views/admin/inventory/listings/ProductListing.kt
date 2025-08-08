@@ -132,7 +132,7 @@ open fun getHashSet(storeFront: StoreFrontInterface)
     var substoreKeywords: Vector = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, AbPathData.getInstance()!!.SEPARATOR +subStore, BasicItemData.CATEGORY)!!
             
 
-keywords!!.addAll(substoreKeywords)
+keywords.addAll(substoreKeywords)
 }
 
 
@@ -162,7 +162,7 @@ open fun savePage(file: String, data: String)
                     var data = data
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     logUtil!!.put("Creating File: " +file, this, 
@@ -197,7 +197,7 @@ idOutData!!.flush()
 StreamUtil.getInstance()!!.close(idOutData)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     logUtil!!.put("Wrote Total Bytes: " +newFile!!.length, this, 
@@ -290,7 +290,7 @@ this.searchRequest!!.setFileBaseName(pageName)
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     logUtil!!.put("Saving Listing: " +index, this, 
@@ -324,7 +324,7 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
 
     
-                        if(!this.directory!!.create(staticPath))
+                        if(!this.directory.create(staticPath))
                         
                                     {
                                     
@@ -407,7 +407,7 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
                                     logUtil!!.put("Store Static Pages Path: " +staticPath, this, 

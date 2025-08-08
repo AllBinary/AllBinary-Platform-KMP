@@ -78,7 +78,7 @@ open fun getStackTrace(e: Throwable)
 
     var printStream: PrintStream = PrintStream(byteArrayOutputStream)
 
-e!!.printStackTrace(printStream)
+e.printStackTrace(printStream)
 
     var output: String = byteArrayOutputStream!!.toString()!!
             

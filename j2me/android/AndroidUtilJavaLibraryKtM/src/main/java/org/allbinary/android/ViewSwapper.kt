@@ -70,7 +70,7 @@ open fun setMainView(id: Int)
 
                     var id = id
 
-    var viewGroup: ViewGroup = this.activity!!.findViewById(rootViewId) as ViewGroup
+    var viewGroup: ViewGroup = this.activity.findViewById(rootViewId) as ViewGroup
 
 
     

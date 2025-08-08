@@ -41,7 +41,7 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var actionNode: Node = DomSearchHelper.getNode(GenericProfileActionScriptInputData.NAME, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(GenericProfileActionScriptInputData.NAME, node.getChildNodes())!!
             
 
 }
@@ -59,7 +59,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(GenericProfileActionScriptInputData.NAME)!!
+    var node: Node = document.createElement(GenericProfileActionScriptInputData.NAME)!!
             
 
 

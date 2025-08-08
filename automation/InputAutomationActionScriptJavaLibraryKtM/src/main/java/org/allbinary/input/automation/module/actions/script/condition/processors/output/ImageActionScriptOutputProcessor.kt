@@ -71,7 +71,7 @@ logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toSt
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -82,7 +82,7 @@ logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toSt
 
 
         {
-    var imageType: InputImageType = vector!!.get(index) as InputImageType
+    var imageType: InputImageType = vector.get(index) as InputImageType
 
 
     var imageIOInterface: ImageIOInterface = InputImageIOInterfaceFactory.getInstance(imageType)!!

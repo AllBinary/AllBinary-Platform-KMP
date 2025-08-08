@@ -64,7 +64,7 @@ open public class TransformInfoObjectConfig
     private var document: Document
 
     private var outputTypeName: String
-public constructor        (transformInfoInterface: TransformInfoInterface)
+public constructor        (transformInfoInterface: Object)
             : super()
         {
 
@@ -73,7 +73,7 @@ this.ownerTransformInfoInterface= transformInfoInterface
 this.createDocument()
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -108,7 +108,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, document: Document)
+public constructor        (transformInfoInterface: Object, document: Object)
             : super()
         {
 
@@ -135,7 +135,7 @@ this.document= document
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -170,7 +170,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, name: String, type: String)
+public constructor        (transformInfoInterface: Object, name: Object, type: Object)
             : super()
         {
 
@@ -184,18 +184,18 @@ public constructor        (transformInfoInterface: TransformInfoInterface, name:
 this.ownerTransformInfoInterface= transformInfoInterface
 this.createDocument()
 
-    var configNameAttr: Attr = this.document!!.createAttribute(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
+    var configNameAttr: Attr = this.document.createAttribute(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
             
 
 configNameAttr!!.setValue(name)
 
-    var objectConfigNode: Node = this.document!!.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
+    var objectConfigNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
             
 
 objectConfigNode!!.appendChild(configNameAttr)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -235,10 +235,10 @@ open fun createDocument()
         //nullable = true from not(false or (false and true)) = true
 {this.document= DomDocumentHelper.create()
 
-    var objectConfigNode: Node = document!!.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
+    var objectConfigNode: Node = document.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
             
 
-this.document!!.appendChild(objectConfigNode)
+this.document.appendChild(objectConfigNode)
 }
 
 
@@ -279,7 +279,7 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
 
                     var transformInfoInterface = transformInfoInterface
 
-    var objectConfigNode: Node = this.document!!.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
+    var objectConfigNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
             
 
 
@@ -336,7 +336,7 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
 open fun getTemplateAttributes()
         //nullable = true from not(false or (false and true)) = true
 : NamedNodeMap{
-    var componentNode: Node = this.document!!.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
+    var componentNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
             
 
 
@@ -384,7 +384,7 @@ open fun getNodeVector(nodeName: String)
 
                     var nodeName = nodeName
 
-    var componentsNodeList: NodeList = this.document!!.getElementsByTagName(nodeName)!!
+    var componentsNodeList: NodeList = this.document.getElementsByTagName(nodeName)!!
             
 
 
@@ -404,7 +404,7 @@ open fun getNodeVector(nodeName: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -525,7 +525,7 @@ open fun getTransformsGroup(group: String)
                     var group = group
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Started: " +group, this, 
@@ -540,7 +540,7 @@ open fun getTransformsGroup(group: String)
     var GROUP: String = TransformInfosData.getInstance()!!.GROUP
 
 
-    var componentsNodeList: NodeList = this.document!!.getElementsByTagName(GROUP)!!
+    var componentsNodeList: NodeList = this.document.getElementsByTagName(GROUP)!!
             
 
 
@@ -570,11 +570,11 @@ open fun getTransformsGroup(group: String)
             
 
 
-    var attributes: NamedNodeMap = node!!.getAttributes()!!
+    var attributes: NamedNodeMap = node.getAttributes()!!
             
 
 
-    var attrNode: Attr = attributes!!.getNamedItem(GROUP) as Attr
+    var attrNode: Attr = attributes.getNamedItem(GROUP) as Attr
 
 
     var value: String = attrNode!!.getValue()!!
@@ -582,7 +582,7 @@ open fun getTransformsGroup(group: String)
 
 
     
-                        if(value!!.compareTo(group) == 0)
+                        if(value.compareTo(group) == 0)
                         
                                     {
                                     componentsNode= node
@@ -604,7 +604,7 @@ break;
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Number Of Nodes: " +numberOfViews, this, 
@@ -635,7 +635,7 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -726,7 +726,7 @@ open fun getRootNode()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.document!!.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)
+                        return this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)
 }
 
 
@@ -829,7 +829,7 @@ override fun toString()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

@@ -129,7 +129,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-this.animation!!.paint(graphics, x, y)
+this.animation.paint(graphics, x, y)
 }
 
 

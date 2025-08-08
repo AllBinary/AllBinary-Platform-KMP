@@ -100,8 +100,8 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request!!.getParameter(OrderData.ID)
-this.groupId= request!!.getParameter(ShippingMethodData.GROUP)
+{this.id= request.getParameter(OrderData.ID)
+this.groupId= request.getParameter(ShippingMethodData.GROUP)
 
     
                         if(this.newStatus == 
@@ -109,7 +109,7 @@ this.groupId= request!!.getParameter(ShippingMethodData.GROUP)
                                 )
                         
                                     {
-                                    this.newStatus= request!!.getParameter(OrderHistoryData.STATUS)
+                                    this.newStatus= request.getParameter(OrderHistoryData.STATUS)
 
                                     }
                                 
@@ -133,7 +133,7 @@ open fun setOrderStatus()
 
 
     
-                        if(status!!.compareTo(OrderHistoryData.CANCELLED) == 0)
+                        if(status.compareTo(OrderHistoryData.CANCELLED) == 0)
                         
                                     {
                                     
@@ -146,7 +146,7 @@ open fun setOrderStatus()
                                 
                              else 
     
-                        if(status!!.compareTo(OrderHistoryData.SHIPPED) == 0)
+                        if(status.compareTo(OrderHistoryData.SHIPPED) == 0)
                         
                                     {
                                     
@@ -159,7 +159,7 @@ open fun setOrderStatus()
                                 
                              else 
     
-                        if(status!!.compareTo(OrderHistoryData.PREPROCESSING) == 0)
+                        if(status.compareTo(OrderHistoryData.PREPROCESSING) == 0)
                         
                                     {
                                     
@@ -172,7 +172,7 @@ open fun setOrderStatus()
                                 
                              else 
     
-                        if(status!!.compareTo(OrderHistoryData.PARTIALLYSHIPPED) == 0)
+                        if(status.compareTo(OrderHistoryData.PARTIALLYSHIPPED) == 0)
                         
                                     {
                                     
@@ -185,7 +185,7 @@ open fun setOrderStatus()
                                 
                              else 
     
-                        if(status!!.compareTo(OrderHistoryData.PROCESSING) == 0)
+                        if(status.compareTo(OrderHistoryData.PROCESSING) == 0)
                         
                                     {
                                     
@@ -203,7 +203,7 @@ orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -222,7 +222,7 @@ orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

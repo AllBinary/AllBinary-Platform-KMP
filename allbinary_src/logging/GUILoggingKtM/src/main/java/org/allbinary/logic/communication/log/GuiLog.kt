@@ -70,7 +70,7 @@ open fun showDialog(msg: String)
     var error: JDialog = JDialog()
 
 
-    var size: Int = msg!!.length *9
+    var size: Int = msg.length *9
 
 
     var x: Int = size
@@ -79,7 +79,7 @@ open fun showDialog(msg: String)
     
                         if(x > 550)
                         x= 550
-error!!.getContentPane()!!.setLayout(GridLayout(1, 1))
+error.getContentPane()!!.setLayout(GridLayout(1, 1))
 
     
                         if(size > 255)
@@ -88,8 +88,8 @@ error!!.getContentPane()!!.setLayout(GridLayout(1, 1))
                                     
     var y: Int = 550
 
-error!!.setSize(x, y)
-error!!.getContentPane()!!.add(JScrollPane(JTextArea(msg)))
+error.setSize(x, y)
+error.getContentPane()!!.add(javax.swing.JScrollPane(javax.swing.JTextArea(msg)))
 
                                     }
                                 
@@ -101,12 +101,12 @@ error!!.getContentPane()!!.add(JScrollPane(JTextArea(msg)))
                                     
     var y: Int = 50
 
-error!!.setSize(x, y)
-error!!.getContentPane()!!.add(JScrollPane(JLabel(msg)))
+error.setSize(x, y)
+error.getContentPane()!!.add(javax.swing.JScrollPane(javax.swing.JLabel(msg)))
 
                                     }
                                 
-error!!.show()
+error.show()
 }
 
 
@@ -151,7 +151,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
             
 
 this.showDialog(data)
-System.out!!.println(data)
+System.out.println(data)
 
 
 
@@ -211,7 +211,7 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
             
 
 this.showDialog(data)
-System.out!!.println(data)
+System.out.println(data)
 
 
 

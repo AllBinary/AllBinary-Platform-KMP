@@ -69,7 +69,7 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -90,52 +90,52 @@ open fun toXmlNode(document: Document)
             
 
 
-    var year: Int = calendar!!.get(Calendar.YEAR)!!
+    var year: Int = calendar.get(Calendar.YEAR)!!
             
 
 
-    var month: Int = calendar!!.get(Calendar.MONTH)!!
+    var month: Int = calendar.get(Calendar.MONTH)!!
             
 
 
-    var day: Int = calendar!!.get(Calendar.DAY_OF_MONTH)!!
+    var day: Int = calendar.get(Calendar.DAY_OF_MONTH)!!
             
 
 
-    var hour: Int = calendar!!.get(Calendar.HOUR)!!
+    var hour: Int = calendar.get(Calendar.HOUR)!!
             
 
 
-    var minute: Int = calendar!!.get(Calendar.MINUTE)!!
+    var minute: Int = calendar.get(Calendar.MINUTE)!!
             
 
 
-    var second: Int = calendar!!.get(Calendar.SECOND)!!
+    var second: Int = calendar.get(Calendar.SECOND)!!
             
 
-calendar!!.setTimeInMillis(calendar!!.getTimeInMillis() +totalTime)
+calendar.setTimeInMillis(calendar.getTimeInMillis() +totalTime)
 
-    var yearDelta: Int = calendar!!.get(Calendar.YEAR)!!
-            
-
-
-    var monthDelta: Int = calendar!!.get(Calendar.MONTH)!!
+    var yearDelta: Int = calendar.get(Calendar.YEAR)!!
             
 
 
-    var dayDelta: Int = calendar!!.get(Calendar.DAY_OF_MONTH)!!
+    var monthDelta: Int = calendar.get(Calendar.MONTH)!!
             
 
 
-    var hourDelta: Int = calendar!!.get(Calendar.HOUR)!!
+    var dayDelta: Int = calendar.get(Calendar.DAY_OF_MONTH)!!
             
 
 
-    var minuteDelta: Int = calendar!!.get(Calendar.MINUTE)!!
+    var hourDelta: Int = calendar.get(Calendar.HOUR)!!
             
 
 
-    var secondDelta: Int = calendar!!.get(Calendar.SECOND)!!
+    var minuteDelta: Int = calendar.get(Calendar.MINUTE)!!
+            
+
+
+    var secondDelta: Int = calendar.get(Calendar.SECOND)!!
             
 
 hashMap!!.put(DownloadItemData.VALID_TIME_YEARS, .concatToString()
@@ -161,7 +161,7 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, .concatToString()
             
 
 
-    var node: Node = document!!.createElement(DownloadItemData.NAME)!!
+    var node: Node = document.createElement(DownloadItemData.NAME)!!
             
 
 
@@ -190,7 +190,7 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, .concatToString()
     var value: String = hashMap!!.get(name as Object?) as String
 
 value= stringUtil!!.getInstance(value)
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
+node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 

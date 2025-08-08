@@ -96,7 +96,7 @@ randomFactory!!.shuffle(intArray, intArray2)
                             ',')
 }
 
-System.out!!.println(stringBuilder!!.toString())
+System.out.println(stringBuilder!!.toString())
 stringBuilder!!.delete(0, stringBuilder!!.length())
 
 
@@ -109,7 +109,7 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
                             ',')
 }
 
-System.out!!.println(stringBuilder!!.toString())
+System.out.println(stringBuilder!!.toString())
 
     var found: Boolean= false
 
@@ -183,7 +183,7 @@ open fun getNextInt(range: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rand!!.nextInt() /div
+                        return rand.nextInt() /div
 }
 
 

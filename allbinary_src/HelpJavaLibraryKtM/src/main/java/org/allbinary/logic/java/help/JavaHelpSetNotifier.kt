@@ -64,11 +64,11 @@ open fun isNotified(helpSet: HelpSet)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
-    var urlArray: Array<Any?> = vector!!.toArray()!!
+    var urlArray: Array<Any?> = vector.toArray()!!
             
 
 
@@ -83,7 +83,7 @@ open fun isNotified(helpSet: HelpSet)
 
 
     
-                        if(url!!.toString()!!.compareTo(nextURL!!.toString()) == 0)
+                        if(url.toString()!!.compareTo(nextURL!!.toString()) == 0)
                         
                                     {
                                     isNotified= true
@@ -92,7 +92,7 @@ open fun isNotified(helpSet: HelpSet)
                                 
 }
 
-vector!!.add(url)
+vector.add(url)
 
 
 

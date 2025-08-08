@@ -68,11 +68,11 @@ open fun getLogTableEntityInstance()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return LogTableEntity()
+                        return org.allbinary.data.tables.log.LogTableEntity()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
                                     

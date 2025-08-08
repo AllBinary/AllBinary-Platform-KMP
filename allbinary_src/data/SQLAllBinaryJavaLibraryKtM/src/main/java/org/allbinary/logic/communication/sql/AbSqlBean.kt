@@ -92,11 +92,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
             
 
 
-        while(rset!!.next())
-        {field= rset!!.getString(requestedField)
+        while(rset.next())
+        {field= rset.getString(requestedField)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -123,7 +123,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_FIELD, e)
@@ -166,7 +166,7 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
             
 
 
-    var keyArray: Array<Any?> = set!!.toArray()!!
+    var keyArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -212,11 +212,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
             
 
 
-        while(rset!!.next())
-        {field= rset!!.getString(requestedField)
+        while(rset.next())
+        {field= rset.getString(requestedField)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -247,7 +247,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_GET_FIELD, e)
@@ -324,7 +324,7 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
     var field: String
 
 
-        while(rset!!.next())
+        while(rset.next())
         {
     var keyArray2: Array<Any?> = columnsAndValues!!.keySet()!!.toArray()!!
             
@@ -341,17 +341,17 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         {columnName= keyArray2[i]!!.toString()
-field= rset!!.getObject(columnName)!!.toString()
+field= rset.getObject(columnName)!!.toString()
 
     
-                        if(field!!.compareTo(columnsAndValues!!.get(columnName) as String) != 0)
+                        if(field.compareTo(columnsAndValues!!.get(columnName) as String) != 0)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org!!.allbinary!!.globals!!.GLOBALS2.NOTASUBSET
+                        return org.allbinary.globals.GLOBALS2.NOTASUBSET
 
                                     }
                                 
@@ -361,14 +361,14 @@ field= rset!!.getObject(columnName)!!.toString()
 
 
     
-                        if(rset!!.getRow() != 1)
+                        if(rset.getRow() != 1)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org!!.allbinary!!.globals!!.GLOBALS2.NOTASUBSET
+                        return org.allbinary.globals.GLOBALS2.NOTASUBSET
 
                                     }
                                 
@@ -377,7 +377,7 @@ field= rset!!.getObject(columnName)!!.toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org!!.allbinary!!.globals!!.GLOBALS2.ISASUBSET
+                        return org.allbinary.globals.GLOBALS2.ISASUBSET
 
                         }
                             
@@ -388,7 +388,7 @@ field= rset!!.getObject(columnName)!!.toString()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.FAILED_SQL_STATEMENT +sqlStatement, this, METHOD_IS_SUBSET_OF_ENTRY, e)

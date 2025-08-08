@@ -118,11 +118,11 @@ open fun updateRectangle()
 
 this.rectangle= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
-    var point: GPoint = rectangle!!.getPoint()!!
+    var point: GPoint = rectangle.getPoint()!!
             
 
-this.animationX= point!!.getX()
-this.animationY= point!!.getY()
+this.animationX= point.getX()
+this.animationY= point.getY()
 } catch(e: Exception)
             {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
                             "updateRectangle", e)

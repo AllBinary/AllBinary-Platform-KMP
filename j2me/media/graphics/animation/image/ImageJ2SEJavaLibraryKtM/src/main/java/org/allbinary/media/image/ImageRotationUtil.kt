@@ -76,7 +76,7 @@ open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
                     var totalAngle = totalAngle
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -86,7 +86,7 @@ open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
     var newBufferedImage: BufferedImage = j2seImage!!.getImage() as BufferedImage
 
 
-    var originalAwtImage: Image = 
+    var originalAwtImage: java.awt.Image = 
                 null
             
 
@@ -140,11 +140,11 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
-    var originalAwtImage: Image = 
+    var originalAwtImage: java.awt.Image = 
                 null
             
 

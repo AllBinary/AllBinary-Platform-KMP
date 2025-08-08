@@ -221,19 +221,19 @@ override fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.setColor(this.backgroundColor)
-graphics!!.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
-graphics!!.setColor(this.foregroundColor)
+graphics.setColor(this.backgroundColor)
+graphics.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
+graphics.setColor(this.foregroundColor)
 
     
                         if(!J2MEUtil.isJ2ME())
                         
                                     {
-                                    graphics!!.drawString(this.getTitle(), 8, 1, 0)
+                                    graphics.drawString(this.getTitle(), 8, 1, 0)
 
                                     }
                                 
-this.paint(graphics, 8, graphics!!.getFont()!!.getHeight() +2)
+this.paint(graphics, 8, graphics.getFont()!!.getHeight() +2)
 super.paint(graphics)
 }
 

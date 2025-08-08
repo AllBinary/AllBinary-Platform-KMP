@@ -76,10 +76,10 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
 
 
-                        for (index in 1 until options!!.size)
+                        for (index in 1 until options.size)
 
 
-        {vector!!.add(options[index]!!)
+        {vector.add(options[index]!!)
 }
 
 }
@@ -144,7 +144,7 @@ open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
     var licenseInitInfo: LicenseInitInfo = this.getLicenseInitInfo()!!
             
 
-System.out!!.println(
+System.out.println(
                             "License Serv Example: http://www.dartstatistics.com/LicServ/serverssl.php")
 licenseInitInfo!!.clearServers()
 
@@ -186,8 +186,8 @@ licenseInitInfo!!.clearServers()
 LicenseInitInfoUtil.getInstance()!!.write(licenseInitInfo)
 LicenseInitInfoUtil.getInstance()!!.read()
 } catch(e: Exception)
-            {System.out!!.print("Error: " +e)
-e!!.printStackTrace()
+            {System.out.print("Error: " +e)
+e.printStackTrace()
 }
 
 }

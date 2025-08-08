@@ -55,7 +55,7 @@ open fun remove(key: Any)
 
                     var key = key
 
-    var size: Int = this.buffers!!.size()!!
+    var size: Int = this.buffers.size()!!
             
 
 
@@ -67,7 +67,7 @@ open fun remove(key: Any)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return buffers!!.remove(size -1) as CacheableInterface
+                        return buffers.remove(size -1) as CacheableInterface
 
                                     }
                                 

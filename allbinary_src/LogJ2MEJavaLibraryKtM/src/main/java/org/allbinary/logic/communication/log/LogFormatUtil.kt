@@ -200,7 +200,7 @@ open fun get(exception: Any)
 
 stringBuffer!!.append(LOG_ERROR)
 
-    var exceptionAsString: String = exception!!.toString()!!
+    var exceptionAsString: String = exception.toString()!!
             
 
 

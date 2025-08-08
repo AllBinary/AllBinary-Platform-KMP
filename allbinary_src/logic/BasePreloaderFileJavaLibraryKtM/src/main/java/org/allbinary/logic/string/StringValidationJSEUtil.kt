@@ -42,7 +42,7 @@ open fun isBlank(string: String)
 
                     var string = string
 
-    var len: Int = string!!.length!!
+    var len: Int = string.length!!
             
 
 
@@ -53,7 +53,7 @@ open fun isBlank(string: String)
 
 
         {
-    var c: Char = string!![i]!!
+    var c: Char = string[i]!!
             
 
 

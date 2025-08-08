@@ -90,7 +90,7 @@ open fun getLicenseInitInfo()
                                     }
                                 
                         else {
-                            System.out!!.println("No Licence File at: " +licenseInitInfoUtil!!.getFilePath())
+                            System.out.println("No Licence File at: " +licenseInitInfoUtil!!.getFilePath())
 
 
 
@@ -110,7 +110,7 @@ open fun printInitInfo()
     var licenseInitInfo: LicenseInitInfo = this.getLicenseInitInfo()!!
             
 
-System.out!!.println("License ID: " +licenseInitInfo!!.getLicenseId())
+System.out.println("License ID: " +licenseInitInfo!!.getLicenseId())
 
     var list: BasicArrayList = licenseInitInfo!!.getServerList()!!
             
@@ -119,15 +119,15 @@ System.out!!.println("License ID: " +licenseInitInfo!!.getLicenseId())
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
-        {System.out!!.println("Lic Serv: " +list!!.get(index))
+        {System.out.println("Lic Serv: " +list.get(index))
 }
 
 } catch(e: Exception)
-            {System.out!!.print("Error: " +e)
-e!!.printStackTrace()
+            {System.out.print("Error: " +e)
+e.printStackTrace()
 }
 
 }

@@ -63,9 +63,9 @@ private constructor        ()
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
             
 
-roles!!.add(basicUserRoleFactory!!.CUSTOMER)
-roles!!.add(basicUserRoleFactory!!.SUBSCRIBERCUSTOMER)
-roles!!.add(basicUserRoleFactory!!.WHOLESALECUSTOMER)
+roles.add(basicUserRoleFactory!!.CUSTOMER)
+roles.add(basicUserRoleFactory!!.SUBSCRIBERCUSTOMER)
+roles.add(basicUserRoleFactory!!.WHOLESALECUSTOMER)
 subscriberRoles!!.add(basicUserRoleFactory!!.SUBSCRIBERCUSTOMER)
 wholesaleRoles!!.add(basicUserRoleFactory!!.WHOLESALECUSTOMER)
 }

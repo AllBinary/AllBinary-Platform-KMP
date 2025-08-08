@@ -168,7 +168,7 @@ open fun load()
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
                                     
@@ -179,7 +179,7 @@ this.fileInit(idFile)
                                     }
                                 
                         else {
-                            logUtil!!.put("No Profile: " +file!!.getAbsolutePath(), this, 
+                            logUtil!!.put("No Profile: " +file.getAbsolutePath(), this, 
                             "Contructor")
 
                         }
@@ -205,16 +205,16 @@ open fun fileInit(fileInputStream: FileInputStream)
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data!!.lastIndexOf(
+    var endIndex: Int = data.lastIndexOf(
                             '>')!!
             
 
 
-    var document: Document = DomDocumentHelper.create(data!!.substring(0, endIndex +1))!!
+    var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
             
 
 
-    var nameNodeList: NodeList = document!!.getElementsByTagName(GenericProfileActionsData.NAME)!!
+    var nameNodeList: NodeList = document.getElementsByTagName(GenericProfileActionsData.NAME)!!
             
 
 logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this, 
@@ -231,7 +231,7 @@ logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this
             
 
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -384,7 +384,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(GenericProfileActionsData.NAME)!!
+    var node: Node = document.createElement(GenericProfileActionsData.NAME)!!
             
 
 
@@ -392,7 +392,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var actionNameArray: Array<Any?> = set!!.toArray()!!
+    var actionNameArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -412,7 +412,7 @@ open fun toXmlNode(document: Document)
 
     var nextGenericProfileAction: GenericProfileAction = this.getAction(nextActionName) as GenericProfileAction
 
-node!!.appendChild(nextGenericProfileAction!!.toXmlNode(document))
+node.appendChild(nextGenericProfileAction!!.toXmlNode(document))
 }
 
 
@@ -435,7 +435,7 @@ open fun toXmlDoc()
     var node: Node = this.toXmlNode(document)!!
             
 
-document!!.appendChild(node)
+document.appendChild(node)
 
 
 

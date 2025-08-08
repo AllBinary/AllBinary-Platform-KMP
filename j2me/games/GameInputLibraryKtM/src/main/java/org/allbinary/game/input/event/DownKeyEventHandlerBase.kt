@@ -59,10 +59,10 @@ open fun addListener(playerGameInput: PlayerGameInput)
                     var playerGameInput = playerGameInput
 
     
-                        if(!list!!.contains(playerGameInput))
+                        if(!list.contains(playerGameInput))
                         
                                     {
-                                    list!!.add(playerGameInput)
+                                    list.add(playerGameInput)
 
                                     }
                                 
@@ -70,7 +70,7 @@ open fun addListener(playerGameInput: PlayerGameInput)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -79,7 +79,7 @@ override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerI
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListenerSingleThreaded(eventListenerInterface)
 }
 
@@ -88,7 +88,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -104,13 +104,13 @@ open fun fireEvent(eventObject: Integer)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var playerGameInput: PlayerGameInput = this.list!!.objectArray[index]!! as PlayerGameInput
+    var playerGameInput: PlayerGameInput = this.list.objectArray[index]!! as PlayerGameInput
 
 playerGameInput!!.onDownKeyEvent(eventObject)
 } catch(e: Exception)
@@ -152,13 +152,13 @@ open fun fireEvent(eventObject: GameKeyEvent)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var playerGameInput: PlayerGameInput = this.list!!.objectArray[index]!! as PlayerGameInput
+    var playerGameInput: PlayerGameInput = this.list.objectArray[index]!! as PlayerGameInput
 
 playerGameInput!!.onDownKeyEvent(eventObject)
 } catch(e: Exception)
@@ -229,7 +229,7 @@ override fun toString()
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(TOTAL_LISTENERS)
-stringBuffer!!.append(this.list!!.size())
+stringBuffer!!.append(this.list.size())
 
     var eventListenerInterface: EventListenerInterface
 
@@ -237,12 +237,12 @@ stringBuffer!!.append(this.list!!.size())
 
 
 
-                        for (index in 0 until this.list!!.size()!!)
+                        for (index in 0 until this.list.size()!!)
 
 
         {
         try {
-            eventListenerInterface= this.list!!.get(index) as EventListenerInterface
+            eventListenerInterface= this.list.get(index) as EventListenerInterface
 stringBuffer!!.append(LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)

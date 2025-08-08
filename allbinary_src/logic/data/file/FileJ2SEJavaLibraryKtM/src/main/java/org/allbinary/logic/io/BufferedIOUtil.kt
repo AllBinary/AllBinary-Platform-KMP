@@ -66,7 +66,7 @@ open fun copy(backupFile: AbFile, backupFileBak: AbFile)
         while((line= tmpIn!!.readLine()) != 
                                     null
                                 )
-        {tmpOut!!.write(line, 0, line!!.length)
+        {tmpOut!!.write(line, 0, line.length)
 tmpOut!!.newLine()
 }
 

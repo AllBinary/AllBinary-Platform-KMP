@@ -100,14 +100,14 @@ open fun save(file: AbFile, document: Document)
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
-                                    file!!.delete()
+                                    file.delete()
 
                                     }
                                 
-file!!.createNewFile()
+file.createNewFile()
 dataOutputStream= DataOutputStreamFactory.getInstance()!!.getInstance(file)
 
     var streamResult: StreamResult = StreamResult(dataOutputStream)

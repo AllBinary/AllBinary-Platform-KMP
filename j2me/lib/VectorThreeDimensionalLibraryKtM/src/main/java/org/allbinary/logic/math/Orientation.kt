@@ -52,9 +52,9 @@ open fun getInstance(yaw: Int, pitch: Int, roll: Int)
 
 
                     var roll = roll
-SINGLETON.yaw!!.set(yaw)
-SINGLETON.pitch!!.set(pitch)
-SINGLETON.roll!!.set(roll)
+SINGLETON.yaw.set(yaw)
+SINGLETON.pitch.set(pitch)
+SINGLETON.roll.set(roll)
 
 
 
@@ -82,9 +82,9 @@ private constructor        (yaw: Int, pitch: Int, roll: Int)
 
 
                     var roll = roll
-this.yaw!!.set(yaw)
-this.pitch!!.set(pitch)
-this.roll!!.set(roll)
+this.yaw.set(yaw)
+this.pitch.set(pitch)
+this.roll.set(roll)
 }
 
 override fun toString()
@@ -94,13 +94,13 @@ override fun toString()
 
 stringBuffer!!.append(
                             "Y: ")
-stringBuffer!!.append(yaw!!.toString())
+stringBuffer!!.append(yaw.toString())
 stringBuffer!!.append(
                             " P: ")
-stringBuffer!!.append(pitch!!.toString())
+stringBuffer!!.append(pitch.toString())
 stringBuffer!!.append(
                             " R: ")
-stringBuffer!!.append(roll!!.toString())
+stringBuffer!!.append(roll.toString())
 
 
 

@@ -130,7 +130,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-graphics!!.drawRegion(this.getImage(), this.getStartX(), this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x, y, anchor)
+graphics.drawRegion(this.getImage(), this.getStartX(), this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x, y, anchor)
 }
 
 

@@ -46,7 +46,7 @@ public constructor        (money: Money)
         {
 
                     var money = money
-this.units= money!!.getUnits() as Long
+this.units= money.getUnits() as Long
 }
 
 public constructor        ()
@@ -87,7 +87,7 @@ open fun isValid()
     
                         if(this.units != 
                                     null
-                                 && this.units!!.longValue() > 0 && this.units!!.longValue() < Long.MAX_VALUE)
+                                 && this.units.longValue() > 0 && this.units.longValue() < Long.MAX_VALUE)
                         
                                     {
                                     
@@ -124,7 +124,7 @@ open fun add(usDollarStr: String)
 {
 
                     var usDollarStr = usDollarStr
-this.units= this.units!!.longValue() +convertUsdToUnits(usDollarStr) as Long
+this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
 }
 
 
@@ -133,7 +133,7 @@ open fun subtract(usDollarStr: String)
 {
 
                     var usDollarStr = usDollarStr
-this.units= this.units!!.longValue() -convertUsdToUnits(usDollarStr) as Long
+this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
 }
 
 
@@ -142,7 +142,7 @@ open fun multiply(multiplier: Float)
 {
 
                     var multiplier = multiplier
-this.units= Float(this.units!!.longValue() *multiplier!!.floatValue()).
+this.units= Float(this.units.longValue() *multiplier.floatValue()).
                             longValue() as Long
 }
 
@@ -152,7 +152,7 @@ open fun multiply(multiplier: Int)
 {
 
                     var multiplier = multiplier
-this.units= this.units!!.longValue() *multiplier as Long
+this.units= this.units.longValue() *multiplier as Long
 }
 
 
@@ -166,14 +166,14 @@ open fun convertUnitsTo(currency: String)
 
 
     
-                        if(currency!!.compareTo(DEFAULT_CURRENCY) == 0)
+                        if(currency.compareTo(DEFAULT_CURRENCY) == 0)
                         
                                     {
                                     
-    var dollar: Long = units!!.longValue() /100
+    var dollar: Long = units.longValue() /100
 
 
-    var cents: Long = units!!.longValue() -(dollar *100)
+    var cents: Long = units.longValue() -(dollar *100)
 
 stringBuffer!!.append(Long(dollar).
                             toString())
@@ -257,7 +257,7 @@ open fun getUnits()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return units!!.longValue()
+                        return units.longValue()
 }
 
 

@@ -470,7 +470,7 @@ override fun commandAction(command: Command, displayable: Displayable)
                                 )
                         
                                     {
-                                    displayableAsString= displayable!!.toString()
+                                    displayableAsString= displayable.toString()
 
                                     }
                                 
@@ -484,7 +484,7 @@ override fun commandAction(command: Command, displayable: Displayable)
                                 )
                         
                                     {
-                                    label= command!!.getLabel()
+                                    label= command.getLabel()
 
                                     }
                                 
@@ -620,11 +620,11 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
             
 
 
-    var lockableFeature: LockableFeature = list!!.get(0) as LockableFeature
+    var lockableFeature: LockableFeature = list.get(0) as LockableFeature
 
 
     
-                        if(list!!.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(lockableFeature))
+                        if(list.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(lockableFeature))
                         
                                     {
                                     inApplicationPurchaseFactory!!.purchase(lockableFeature)
@@ -839,7 +839,7 @@ this.commandAction(GameInputMappingCanvas.DISPLAY, MyCanvas.NULL_MY_CANVAS)
                                     {
                                     
     
-                        if(features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     this.pauseAppBackground(false)
@@ -922,7 +922,7 @@ this.stopAll()
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
             
 
-isFullScreen= features!!.isFeature(mainFeatureFactory!!.FULL_SCREEN)
+isFullScreen= features.isFeature(mainFeatureFactory!!.FULL_SCREEN)
 ResizableListenerHandler.getInstance()!!.fireEvent(true)
 this.setResized(false)
 this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, this.getGameOptionsForm())
@@ -1128,7 +1128,7 @@ virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT
                                 
                              else 
     
-                        if(command!!.getLabel()!!.compareTo(gameCommandsFactory!!.TOGGLE_FULLSCREEN.getLabel()) == 0)
+                        if(command.getLabel()!!.compareTo(gameCommandsFactory!!.TOGGLE_FULLSCREEN.getLabel()) == 0)
                         
                                     {
                                     
@@ -1136,7 +1136,7 @@ virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT
             
 
 
-    var isFullScreen: Boolean = features!!.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
+    var isFullScreen: Boolean = features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
             
 
 
@@ -1144,12 +1144,12 @@ virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT
                         if(isFullScreen)
                         
                                     {
-                                    features!!.removeDefault(mainFeatureFactory!!.FULL_SCREEN)
+                                    features.removeDefault(mainFeatureFactory!!.FULL_SCREEN)
 
                                     }
                                 
                         else {
-                            features!!.addDefault(mainFeatureFactory!!.FULL_SCREEN)
+                            features.addDefault(mainFeatureFactory!!.FULL_SCREEN)
 
                         }
                             
@@ -1180,7 +1180,7 @@ open fun updateFullScreen()
             
 
 
-    var isFullScreen: Boolean = features!!.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
+    var isFullScreen: Boolean = features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
             
 
 
@@ -1195,7 +1195,7 @@ open fun updateFullScreen()
                                     
     var canvas: Canvas = displayable as Canvas
 
-canvas!!.setFullScreenMode(isFullScreen)
+canvas.setFullScreenMode(isFullScreen)
 
                                     }
                                 
@@ -1280,7 +1280,7 @@ open fun startGameCanvasRunnableInterface()
 thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
 logUtil!!.put(StringMaker().
                             append(
-                            "Thread Priority: ")!!.append(thread!!.getPriority())!!.toString(), this, 
+                            "Thread Priority: ")!!.append(thread.getPriority())!!.toString(), this, 
                             "startGameCanvasRunnableInterface")
 this.allbinaryGameCanvasRunnableInterface!!.setThread(thread)
 threadFactoryUtil!!.start(thread)
@@ -1322,7 +1322,7 @@ ThreadUtil.getInstance()!!.join(this.thread)
 
 
     
-                        if(features!!.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ALL))
+                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ALL))
                         
                                     {
                                     progressCanvas!!.addPortion(50, 
@@ -1425,9 +1425,9 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
     var key: Any
 
 
-        while(enumeration!!.hasMoreElements())
-        {key= enumeration!!.nextElement()!!
-hashtable!!.put(key, currentHashtable!!.get(key as Object?))
+        while(enumeration.hasMoreElements())
+        {key= enumeration.nextElement()!!
+hashtable.put(key, currentHashtable!!.get(key as Object?))
 }
 
 

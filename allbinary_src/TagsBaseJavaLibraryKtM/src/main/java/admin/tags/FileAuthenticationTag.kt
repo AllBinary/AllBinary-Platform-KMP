@@ -134,8 +134,8 @@ open fun makeSessionValid(storedRole: BasicUserRole, userName: String)
 this.weblisketSession!!.setAuthenticated()
 this.weblisketSession!!.setRole(storedRole)
 this.weblisketSession!!.setUserName(userName)
-this.request!!.removeAttribute(WeblisketSessionData.REMOVABLEUSERNAME)
-this.request!!.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
+this.request.removeAttribute(WeblisketSessionData.REMOVABLEUSERNAME)
+this.request.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
 }
 
 
@@ -177,19 +177,19 @@ open fun changePassword()
 : Boolean{
         try {
             
-    var userName: String = request!!.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
+    var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
             
 
 
-    var password: String = request!!.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
+    var password: String = request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
             
 
 
-    var newPassword: String = request!!.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
+    var newPassword: String = request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
             
 
 
-    var newReenteredPassword: String = request!!.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
+    var newReenteredPassword: String = request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
             
 
 
@@ -239,7 +239,7 @@ this.weblisketSession!!.setPassword(newPassword)
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -271,7 +271,7 @@ open fun invalidateSession()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -307,7 +307,7 @@ open fun isSessionOld()
             
 
 
-    var sessionTimout: Long = this.role!!.getSessionTimeout()!!
+    var sessionTimout: Long = this.role.getSessionTimeout()!!
             
 
 
@@ -315,7 +315,7 @@ open fun isSessionOld()
             
 
 
-    var timeFirst: Long = calendar!!.getTimeInMillis() -sessionTimout
+    var timeFirst: Long = calendar.getTimeInMillis() -sessionTimout
 
 
     
@@ -324,7 +324,7 @@ open fun isSessionOld()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     
@@ -358,7 +358,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     logUtil!!.put(
@@ -378,7 +378,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -414,7 +414,7 @@ open fun isRarelyUsedSession()
             
 
 
-    var timePassed: Long = role!!.getSessionInactivityTimeout()!!
+    var timePassed: Long = role.getSessionInactivityTimeout()!!
             
 
 
@@ -422,11 +422,11 @@ open fun isRarelyUsedSession()
             
 
 
-    var timeFirst: Long = calendar!!.getTimeInMillis() -lastAccess
+    var timeFirst: Long = calendar.getTimeInMillis() -lastAccess
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     
@@ -452,7 +452,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     logUtil!!.put(
@@ -487,7 +487,7 @@ open fun isRoleValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -527,7 +527,7 @@ stringBuffer!!.append(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -570,7 +570,7 @@ stringBuffer!!.append(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -600,7 +600,7 @@ open fun isAuthenticationSessionValid()
                         
                                     {
                                     
-    var size: Int = roles!!.size!!
+    var size: Int = roles.size!!
             
 
 
@@ -611,13 +611,13 @@ open fun isAuthenticationSessionValid()
 
 
         {
-    var mustBeOfRole: BasicUserRole = roles!!.get(index) as BasicUserRole
+    var mustBeOfRole: BasicUserRole = roles.get(index) as BasicUserRole
 
 
     
                         if(sessionUserName != 
                                     null
-                                 && role!!.equals(mustBeOfRole))
+                                 && role.equals(mustBeOfRole))
                         
                                     {
                                     
@@ -646,7 +646,7 @@ open fun isAuthenticationSessionValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -672,7 +672,7 @@ open fun processIfNewLogin()
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put("Starting for User: " +this.userName +" Attempt: " +this.weblisketSession!!.getAttempts(), this, 
@@ -686,7 +686,7 @@ open fun processIfNewLogin()
                                     null
                                  && userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && password != 
                                     null
-                                 && password!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
+                                 && password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
                         
                                     {
                                     
@@ -700,18 +700,18 @@ open fun processIfNewLogin()
                         if(installerInfo!!.isValid(userName, password))
                         
                                     {
-                                    login= org!!.allbinary!!.globals!!.GLOBALS2.LOGINSUCCESS
+                                    login= org.allbinary.globals.GLOBALS2.LOGINSUCCESS
 
                                     }
                                 
                         else {
-                            login= org!!.allbinary!!.globals!!.GLOBALS2.LOGINFAILED
+                            login= org.allbinary.globals.GLOBALS2.LOGINFAILED
 
                         }
                             
 
     
-                        if(login!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.LOGINSUCCESS) == 0)
+                        if(login.compareTo(org.allbinary.globals.GLOBALS2.LOGINSUCCESS) == 0)
                         
                                     {
                                     this.weblisketSession!!.setAttempts(Integer(0))
@@ -741,7 +741,7 @@ this.nextAttempt()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -794,7 +794,7 @@ open fun processInvalidation()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -827,7 +827,7 @@ this.weblisketSession= BasicWeblisketSession(pageContext)
 this.getFormData()
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -845,12 +845,12 @@ this.getFormData()
                                     {
                                     
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.CHANGEPASSWORD) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.CHANGEPASSWORD) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -890,12 +890,12 @@ this.getFormData()
                                 
                              else 
     
-                        if(command!!.compareTo(WeblisketSessionData.INVALIDATESESSION) == 0)
+                        if(command.compareTo(WeblisketSessionData.INVALIDATESESSION) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -925,7 +925,7 @@ this.getFormData()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -938,7 +938,7 @@ pageContext!!.getOut()!!.print(
                             "Please login again.<p>")
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -964,7 +964,7 @@ pageContext!!.getOut()!!.print(
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -975,7 +975,7 @@ pageContext!!.getOut()!!.print(
                                 
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1007,14 +1007,14 @@ pageContext!!.getOut()!!.print(
                                     null
                                  || userName!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && (password == 
                                     null
-                                 || password!!.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
+                                 || password.compareTo(stringUtil!!.EMPTY_STRING) == 0) && this.roles != 
                                     null
                                  && this.isAuthenticationSessionValid())
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -1025,7 +1025,7 @@ pageContext!!.getOut()!!.print(
                                 
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1059,7 +1059,7 @@ pageContext!!.getOut()!!.print(
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -1075,7 +1075,7 @@ pageContext!!.getOut()!!.print(
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -1087,7 +1087,7 @@ pageContext!!.getOut()!!.print(
 pageContext!!.getOut()!!.print(validRole())
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1113,7 +1113,7 @@ pageContext!!.getOut()!!.print(validRole())
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -1125,7 +1125,7 @@ pageContext!!.getOut()!!.print(validRole())
 pageContext!!.getOut()!!.print(invalidRole())
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     
@@ -1154,7 +1154,7 @@ pageContext!!.getOut()!!.print(invalidRole())
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put(
@@ -1169,7 +1169,7 @@ pageContext!!.getOut()!!.print(invalidRole())
                                     null
                                  && userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && password != 
                                     null
-                                 && password!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
+                                 && password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
                         
                                     {
                                     pageContext!!.getOut()!!.print(
@@ -1182,7 +1182,7 @@ pageContext!!.getOut()!!.print(invalidRole())
                             
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     
@@ -1204,7 +1204,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.PROCESSBODYIFAUTHENTICATED) == 0)
                         
                                     {
                                     

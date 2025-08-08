@@ -48,7 +48,7 @@ public constructor        (sep: String)
     
                         if(sep == 
                                     null
-                                 || sep!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) == 0)
+                                 || sep.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) == 0)
                         
                                     {
                                     
@@ -93,19 +93,19 @@ open fun getInsideSep(string: String)
     var index: Int = 0
 
 
-    var size: Int = string!!.length!!
+    var size: Int = string.length!!
             
 
 
         while(index < size)
-        {index= string!!.indexOf(sep, index)
+        {index= string.indexOf(sep, index)
 
     
                         if(index !=  -1)
                         
                                     {
                                     
-    var end: Int = string!!.indexOf(endSep, index +sep!!.length)!!
+    var end: Int = string.indexOf(endSep, index +sep.length)!!
             
 
 
@@ -113,7 +113,7 @@ open fun getInsideSep(string: String)
                         if(end !=  -1)
                         
                                     {
-                                    tokenList!!.add(string!!.substring(index +sep!!.length, end -(endSep!!.length -1)))
+                                    tokenList!!.add(string.substring(index +sep.length, end -(endSep!!.length -1)))
 index= end +endSep!!.length
 
                                     }
@@ -157,20 +157,20 @@ open fun getTokens(string: String, tokenVector: BasicArrayList)
     var end: Int = 0
 
 
-        while(index < string!!.length)
-        {end= string!!.indexOf(sep, index)
+        while(index < string.length)
+        {end= string.indexOf(sep, index)
 
     
                         if(end !=  -1)
                         
                                     {
-                                    tokenVector!!.add(string!!.substring(index, end))
-index= end +sep!!.length
+                                    tokenVector!!.add(string.substring(index, end))
+index= end +sep.length
 
                                     }
                                 
                         else {
-                            tokenVector!!.add(string!!.substring(index, string!!.length))
+                            tokenVector!!.add(string.substring(index, string.length))
 break;
 
                     
@@ -213,13 +213,13 @@ open fun getTokens(stringVector: BasicArrayList)
 
 
         {string= stringVector!!.objectArray[index]!! as String
-end= string!!.indexOf(sep)
+end= string.indexOf(sep)
 
     
                         if(end >= 0)
                         
                                     {
-                                    tokenHashtable!!.put(string!!.substring(0, end), string!!.substring(end +1, string!!.length))
+                                    tokenHashtable!!.put(string.substring(0, end), string.substring(end +1, string.length))
 
                                     }
                                 

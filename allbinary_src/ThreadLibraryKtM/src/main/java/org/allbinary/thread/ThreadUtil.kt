@@ -73,7 +73,7 @@ open fun isRunning(thread: Thread)
     
                         if(thread != 
                                     null
-                                 && thread!!.isAlive())
+                                 && thread.isAlive())
                         
                                     {
                                     
@@ -110,7 +110,7 @@ open fun join(thread: Thread)
                                     {
                                     logUtil!!.put(
                             "Waiting for Thread To Join/End", this, JOIN)
-thread!!.join()
+thread.join()
 
                                     }
                                 

@@ -511,10 +511,10 @@ open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<
                 
 
 
-    var xPortion: Int = layer!!.getXP() /(size -1)
+    var xPortion: Int = layer.getXP() /(size -1)
 
 
-    var yPortion: Int = layer!!.getYP() /(size -1)
+    var yPortion: Int = layer.getYP() /(size -1)
 
 
 

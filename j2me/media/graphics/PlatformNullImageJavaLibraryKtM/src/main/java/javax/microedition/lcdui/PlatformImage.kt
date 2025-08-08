@@ -118,7 +118,7 @@ open fun getHeight(image: Image, height: Int)
 
 open fun getGraphics(graphicsSurface: Any, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Graphics{
+: javax.microedition.lcdui.Graphics{
 
                     var graphicsSurface = graphicsSurface
 
@@ -137,7 +137,7 @@ open fun getGraphics(graphicsSurface: Any, width: Int, height: Int, image: Image
 }
 
 
-open fun drawImage(image: Image, x: Int, y: Int, anchor: Int, g2: Graphics, g: Any)
+open fun drawImage(image: Image, x: Int, y: Int, anchor: Int, g2: javax.microedition.lcdui.Graphics, g: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -160,7 +160,7 @@ open fun drawImage(image: Image, x: Int, y: Int, anchor: Int, g2: Graphics, g: A
 }
 
 
-open fun drawRegion(image: Image, x_src: Int, y_src: Int, width: Int, height: Int, transform: Int, x_dst: Int, y_dst: Int, anchor: Int, g: Graphics)
+open fun drawRegion(image: Image, x_src: Int, y_src: Int, width: Int, height: Int, transform: Int, x_dst: Int, y_dst: Int, anchor: Int, g: javax.microedition.lcdui.Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 

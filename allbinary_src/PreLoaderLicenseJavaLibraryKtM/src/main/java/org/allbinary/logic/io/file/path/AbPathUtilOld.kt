@@ -131,7 +131,7 @@ open fun getExtension(filePath: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("FileExtension: " +extension, this, 
@@ -206,7 +206,7 @@ open fun getWithoutExtension(filePath: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("FileWithoutExtension: " +pathWithoutExtension, this, 
@@ -263,7 +263,7 @@ open fun isValidStart(path: String)
                     var path = path
 
     
-                        if(path!![0] == abPathData!!.SEPARATORCHAR)
+                        if(path[0] == abPathData!!.SEPARATORCHAR)
                         
                                     {
                                     
@@ -306,7 +306,7 @@ open fun isValidEnd(path: String)
                                 
 
     
-                        if(path!![path!!.length -1] == abPathData!!.SEPARATORCHAR)
+                        if(path[path.length -1] == abPathData!!.SEPARATORCHAR)
                         
                                     {
                                     
@@ -393,11 +393,11 @@ open fun adjust(path: String)
                                 
 
     
-                        if(path!!.indexOf(
+                        if(path.indexOf(
                             "\\") >= 0)
                         
                                     {
-                                    path= path!!.replace(
+                                    path= path.replace(
                             '\\', abPathData!!.SEPARATORCHAR)
 
                                     }

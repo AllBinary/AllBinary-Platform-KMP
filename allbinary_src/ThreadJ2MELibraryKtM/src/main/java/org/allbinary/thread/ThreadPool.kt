@@ -191,7 +191,7 @@ open fun runTaskWithPriority(task: PriorityRunnable)
         {runnable= this.taskQueue!!.get(index) as PriorityRunnable
 
     
-                        if(runnable!!.getPriority() > task!!.getPriority())
+                        if(runnable.getPriority() > task.getPriority())
                         
                                     {
                                     lowerPriorityRunnable= runnable
@@ -507,7 +507,7 @@ break;
                                 
 
         try {
-            task2!!.run()
+            task2.run()
 completedTask(task2)
 runningTask= false
 } catch(e: Exception)

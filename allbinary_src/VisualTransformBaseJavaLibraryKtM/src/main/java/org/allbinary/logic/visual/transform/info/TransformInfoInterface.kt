@@ -99,7 +99,7 @@ open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun setObjectFile(value: String)
+open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -109,7 +109,7 @@ open fun setObject(anyType: Object)
 
                 @Throws(Exception::class)
             
-open fun setObjectConfigInterface(transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface)
+open fun setObjectConfigInterface(transformInfoObjectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 
 

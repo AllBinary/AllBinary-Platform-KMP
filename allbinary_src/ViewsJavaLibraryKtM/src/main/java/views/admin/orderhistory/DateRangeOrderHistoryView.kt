@@ -121,21 +121,21 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.dateType= request!!.getParameter(OrderHistoryData.DATETYPE)
-this.preprocessing= request!!.getParameter(OrderHistoryData.PREPROCESSINGNAME)
-this.shipped= request!!.getParameter(OrderHistoryData.SHIPPEDNAME)
-this.partiallyShipped= request!!.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
-this.processing= request!!.getParameter(OrderHistoryData.PROCESSINGNAME)
-this.cancelled= request!!.getParameter(OrderHistoryData.CANCELLEDNAME)
-this.fromYear= request!!.getParameter(OrderHistoryData.FROMYEAR)
-this.fromMonth= request!!.getParameter(OrderHistoryData.FROMMONTH)
-this.fromDay= request!!.getParameter(OrderHistoryData.FROMDAY)
-this.fromHour= request!!.getParameter(OrderHistoryData.FROMHOUR)
-this.toYear= request!!.getParameter(OrderHistoryData.TOYEAR)
-this.toMonth= request!!.getParameter(OrderHistoryData.TOMONTH)
-this.toDay= request!!.getParameter(OrderHistoryData.TODAY)
-this.toHour= request!!.getParameter(OrderHistoryData.TOHOUR)
-this.command= request!!.getParameter(GLOBALS2.ADMINCOMMAND)
+{this.dateType= request.getParameter(OrderHistoryData.DATETYPE)
+this.preprocessing= request.getParameter(OrderHistoryData.PREPROCESSINGNAME)
+this.shipped= request.getParameter(OrderHistoryData.SHIPPEDNAME)
+this.partiallyShipped= request.getParameter(OrderHistoryData.PARTIALLYSHIPPEDNAME)
+this.processing= request.getParameter(OrderHistoryData.PROCESSINGNAME)
+this.cancelled= request.getParameter(OrderHistoryData.CANCELLEDNAME)
+this.fromYear= request.getParameter(OrderHistoryData.FROMYEAR)
+this.fromMonth= request.getParameter(OrderHistoryData.FROMMONTH)
+this.fromDay= request.getParameter(OrderHistoryData.FROMDAY)
+this.fromHour= request.getParameter(OrderHistoryData.FROMHOUR)
+this.toYear= request.getParameter(OrderHistoryData.TOYEAR)
+this.toMonth= request.getParameter(OrderHistoryData.TOMONTH)
+this.toDay= request.getParameter(OrderHistoryData.TODAY)
+this.toHour= request.getParameter(OrderHistoryData.TOHOUR)
+this.command= request.getParameter(GLOBALS2.ADMINCOMMAND)
 }
 
 
@@ -160,7 +160,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -186,7 +186,7 @@ open fun toXmlNode(document: Document)
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -206,19 +206,19 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     }
                                 
 
-    var node: Node = document!!.createElement(OrderData.ORDERS)!!
+    var node: Node = document.createElement(OrderData.ORDERS)!!
             
 
 
     
                         if(preprocessing != 
                                     null
-                                 && preprocessing!!.compareTo(ON) == 0)
+                                 && preprocessing.compareTo(ON) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -245,7 +245,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
-node!!.appendChild(orderHistory!!.toXmlNode(document))
+node.appendChild(orderHistory!!.toXmlNode(document))
 }
 
 
@@ -255,12 +255,12 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
     
                         if(shipped != 
                                     null
-                                 && shipped!!.compareTo(ON) == 0)
+                                 && shipped.compareTo(ON) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -287,7 +287,7 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
-node!!.appendChild(orderHistory!!.toXmlNode(document))
+node.appendChild(orderHistory!!.toXmlNode(document))
 }
 
 
@@ -302,7 +302,7 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -329,7 +329,7 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
-node!!.appendChild(orderHistory!!.toXmlNode(document))
+node.appendChild(orderHistory!!.toXmlNode(document))
 }
 
 
@@ -339,12 +339,12 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
     
                         if(processing != 
                                     null
-                                 && processing!!.compareTo(ON) == 0)
+                                 && processing.compareTo(ON) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -371,7 +371,7 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
-node!!.appendChild(orderHistory!!.toXmlNode(document))
+node.appendChild(orderHistory!!.toXmlNode(document))
 }
 
 
@@ -381,12 +381,12 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
     
                         if(cancelled != 
                                     null
-                                 && cancelled!!.compareTo(ON) == 0)
+                                 && cancelled.compareTo(ON) == 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -413,18 +413,18 @@ node!!.appendChild(orderHistory!!.toXmlNode(document))
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
-node!!.appendChild(orderHistory!!.toXmlNode(document))
+node.appendChild(orderHistory!!.toXmlNode(document))
 }
 
 
                                     }
                                 
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PREPROCESSINGNAME, OrderHistoryData.PREPROCESSING))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PROCESSINGNAME, OrderHistoryData.PROCESSING))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.CANCELLEDNAME, OrderHistoryData.CANCELLED))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PARTIALLYSHIPPEDNAME, OrderHistoryData.PARTIALLYSHIPPED))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PREPROCESSINGNAME, OrderHistoryData.PREPROCESSING))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PROCESSINGNAME, OrderHistoryData.PROCESSING))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.CANCELLEDNAME, OrderHistoryData.CANCELLED))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.PARTIALLYSHIPPEDNAME, OrderHistoryData.PARTIALLYSHIPPED))
+node.appendChild(ModDomHelper.createNameValueNodes(document, OrderHistoryData.SHIPPEDNAME, OrderHistoryData.SHIPPED))
+node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, GLOBALS2.VIEW))
 
 
 
@@ -433,7 +433,7 @@ node!!.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -486,7 +486,7 @@ open fun isValid()
             
 
 
-    var currentTime: Long = calendar!!.getTimeInMillis()!!
+    var currentTime: Long = calendar.getTimeInMillis()!!
             
 
 
@@ -494,7 +494,7 @@ open fun isValid()
 
 
     
-                        if(command!!.compareTo(VIEWORDERSINLASTHOUR) == 0)
+                        if(command.compareTo(VIEWORDERSINLASTHOUR) == 0)
                         
                                     {
                                     
@@ -507,7 +507,7 @@ rangeDate= Long(oneHour).
                                 
                              else 
     
-                        if(command!!.compareTo(VIEWORDERSINLASTDAY) == 0)
+                        if(command.compareTo(VIEWORDERSINLASTDAY) == 0)
                         
                                     {
                                     
@@ -520,7 +520,7 @@ rangeDate= Long(oneDay).
                                 
                              else 
     
-                        if(command!!.compareTo(VIEWORDERSINLASTWEEK) == 0)
+                        if(command.compareTo(VIEWORDERSINLASTWEEK) == 0)
                         
                                     {
                                     
@@ -533,7 +533,7 @@ rangeDate= Long(oneWeek).
                                 
                              else 
     
-                        if(command!!.compareTo(VIEWORDERSINLAST30DAYS) == 0)
+                        if(command.compareTo(VIEWORDERSINLAST30DAYS) == 0)
                         
                                     {
                                     
@@ -546,7 +546,7 @@ rangeDate= Long(thirtyDays).
                                 
                              else 
     
-                        if(command!!.compareTo(VIEWALLORDERS) == 0)
+                        if(command.compareTo(VIEWALLORDERS) == 0)
                         
                                     {
                                     rangeDate= Long(currentTime).
@@ -580,10 +580,10 @@ this.toDate= time
             
 
 TimeUtil.getInstance()!!.setCalendar(calendar, fromYear, fromMonth, fromDay, fromHour)
-this.fromDate= Long(calendar!!.getTimeInMillis()).
+this.fromDate= Long(calendar.getTimeInMillis()).
                             toString()
 TimeUtil.getInstance()!!.setCalendar(calendar, toYear, toMonth, toDay, toHour)
-this.toDate= Long(calendar!!.getTimeInMillis()).
+this.toDate= Long(calendar.getTimeInMillis()).
                             toString()
 
                                     }
@@ -611,7 +611,7 @@ this.toDate= Long(calendar!!.getTimeInMillis()).
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -637,7 +637,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -694,7 +694,7 @@ open fun validationInfo()
                                  || (dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
                         
                                     {
-                                    result!!.append(
+                                    result.append(
                             "DATETYPE not recognized")
 
                                     }
@@ -704,7 +704,7 @@ open fun validationInfo()
                         if(StringValidationUtil.getInstance()!!.isEmpty(toDate) || toDate!!.length > MAXLEN)
                         
                                     {
-                                    result!!.append(
+                                    result.append(
                             "Invalid To Date")
 
                                     }
@@ -714,7 +714,7 @@ open fun validationInfo()
                         if(StringValidationUtil.getInstance()!!.isEmpty(fromDate) || fromDate!!.length > MAXLEN)
                         
                                     {
-                                    result!!.append(
+                                    result.append(
                             "Invalid From Date")
 
                                     }
@@ -723,11 +723,11 @@ open fun validationInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!.toString()
+                        return result.toString()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

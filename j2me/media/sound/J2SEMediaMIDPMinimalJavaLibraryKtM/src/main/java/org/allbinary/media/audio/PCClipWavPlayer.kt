@@ -117,9 +117,9 @@ override fun close()
             
 open fun close2()
         //nullable = true from not(false or (false and true)) = true
-{this.clip!!.drain()
-this.clip!!.flush()
-this.clip!!.close()
+{this.clip.drain()
+this.clip.flush()
+this.clip.close()
 }
 
 override fun getContentType()
@@ -157,9 +157,9 @@ override fun getContentType()
             
 open fun start2()
         //nullable = true from not(false or (false and true)) = true
-{this.clip!!.setFramePosition(0)
-this.clip!!.loop(this.getLoopCount())
-this.clip!!.start()
+{this.clip.setFramePosition(0)
+this.clip.loop(this.getLoopCount())
+this.clip.start()
 super.start()
 }
 
@@ -175,8 +175,8 @@ open fun create(audioInputStream: AudioInputStream)
     var clip: Clip = AudioSystem.getClip()!!
             
 
-clip!!.addLineListener(this)
-clip!!.open(audioInputStream)
+clip.addLineListener(this)
+clip.open(audioInputStream)
 
 
 
@@ -210,7 +210,7 @@ clip!!.open(audioInputStream)
             
 open fun stop2()
         //nullable = true from not(false or (false and true)) = true
-{clip!!.stop()
+{clip.stop()
 super.stop()
 }
 
@@ -250,7 +250,7 @@ this.setVolume((leftVolume.toFloat()) /100.0f)
 open fun getVolume()
         //nullable = true from not(false or (false and true)) = true
 : Float{
-    var masterGainFloatControl: FloatControl = clip!!.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
+    var masterGainFloatControl: FloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
 
 
 
@@ -278,7 +278,7 @@ open fun setVolume(volume: Float)
                                     }
                                 
 
-    var masterGainFloatControl: FloatControl = clip!!.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
+    var masterGainFloatControl: FloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
 
 masterGainFloatControl!!.setValue(
                                     //Otherwise - left - DoubleLiteralExpr
@@ -291,7 +291,7 @@ override fun getDuration()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.clip!!.getMicrosecondLength() /1000
+                        return this.clip.getMicrosecondLength() /1000
 }
 
 override fun update(event: LineEvent)
@@ -301,7 +301,7 @@ override fun update(event: LineEvent)
                     var event = event
 
     
-                        if(event!!.getType()!!.equals(LineEvent.Type.STOP))
+                        if(event.getType()!!.equals(LineEvent.Type.STOP))
                         
                                     {
                                     
@@ -318,7 +318,7 @@ override fun update(event: LineEvent)
         {
     var listener: PlayerListener = this.listenersList!!.get(size) as PlayerListener
 
-listener!!.playerUpdate(this, PlayerListener.END_OF_MEDIA, 
+listener.playerUpdate(this, PlayerListener.END_OF_MEDIA, 
                             null)
 }
 

@@ -104,7 +104,7 @@ this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.stor
 }
 
 
-open fun setObjectFile(value: String)
+open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -114,7 +114,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTFILENA
 }
 
 
-open fun setObject(value: String)
+open fun setObject(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -164,7 +164,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.DATA, this.d
 }
 
 
-open fun setObjectConfigFile(value: String)
+open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -174,7 +174,7 @@ this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.OBJECTCONFIG
 }
 
 
-open fun setObjectConfig(value: String)
+open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -193,7 +193,7 @@ this.type= value
 this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.JSPTAG))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
                                     logUtil!!.put("TransformInfoTag type set: " +this.type, this, 

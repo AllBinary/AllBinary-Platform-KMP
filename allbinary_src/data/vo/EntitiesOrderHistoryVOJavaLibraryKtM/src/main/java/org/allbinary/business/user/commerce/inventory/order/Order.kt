@@ -444,7 +444,7 @@ open fun toXmlNode(document: Document)
                 
 
 
-    var node: Node = document!!.createElement(OrderData.ORDER)!!
+    var node: Node = document.createElement(OrderData.ORDER)!!
             
 
 
@@ -461,7 +461,7 @@ open fun toXmlNode(document: Document)
     var value: String = hashMap!!.get(name as Object?) as String
 
 value= StringUtil.getInstance()!!.getInstance(value)
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
+node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 

@@ -49,7 +49,7 @@ public constructor        (key: String)
                     var key = key
 
         try {
-            this.key= key!!.encodeToByteArray()
+            this.key= key.encodeToByteArray()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -123,7 +123,7 @@ open fun mutilate(array: ByteArray)
 
 
 
-                        for (index in 0 until key!!.size)
+                        for (index in 0 until key.size)
 
 
         {

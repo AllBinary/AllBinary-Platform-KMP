@@ -91,7 +91,7 @@ open fun getInstance(node: Node)
 
                     var node = node
 
-    var nameValueNode: Node = DomSearchHelper.getNode(LogConfigTypeData.getInstance()!!.NAME, node!!.getChildNodes())!!
+    var nameValueNode: Node = DomSearchHelper.getNode(LogConfigTypeData.getInstance()!!.NAME, node.getChildNodes())!!
             
 
 
@@ -99,7 +99,7 @@ open fun getInstance(node: Node)
             
 
 
-    var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(LogConfigTypeData.getInstance()!!.DESCRIPTION, node!!.getChildNodes())!!
+    var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(LogConfigTypeData.getInstance()!!.DESCRIPTION, node.getChildNodes())!!
             
 
 

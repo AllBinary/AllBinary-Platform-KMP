@@ -106,20 +106,20 @@ open fun init()
                                     {
                                     
     
-                        if(!features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(!features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     logUtil!!.put(
                             "Turning on OpenGL", this, commonStrings!!.INIT)
-features!!.addDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
+features.addDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
 logUtil!!.put("Using OpenGL Type Feature: " +this.getType(), this, commonStrings!!.INIT)
-features!!.addDefault(this.getType())
+features.addDefault(this.getType())
 logUtil!!.put("Using OpenGL ImageColor Feature: " +this.getImageColor(), this, commonStrings!!.INIT)
-features!!.addDefault(this.getImageColor())
+features.addDefault(this.getImageColor())
 logUtil!!.put("Using OpenGL Color Feature: " +this.getColor(), this, commonStrings!!.INIT)
-features!!.addDefault(this.getColor())
+features.addDefault(this.getColor())
 logUtil!!.put("Using OpenGL Version Selector Feature: " +this.getVersionSelector(), this, commonStrings!!.INIT)
-features!!.addDefault(this.getVersionSelector())
+features.addDefault(this.getVersionSelector())
 
                                     }
                                 
@@ -138,7 +138,7 @@ features!!.addDefault(this.getVersionSelector())
                         else {
                             
     
-                        if(this.isOpenGL() && !features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(this.isOpenGL() && !features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     PreLogUtil.put(
@@ -181,7 +181,7 @@ open fun update(gameFeature: Feature, colorLocked: Boolean)
                                     {
                                     
     
-                        if(features!!.isFeature(gameFeature))
+                        if(features.isFeature(gameFeature))
                         
                                     {
                                     
@@ -221,7 +221,7 @@ modified= true
                                     {
                                     
     
-                        if(features!!.isFeature(gameFeature))
+                        if(features.isFeature(gameFeature))
                         
                                     {
                                     
@@ -247,7 +247,7 @@ modified= true
                                     {
                                     
     
-                        if(features!!.isFeature(gameFeature))
+                        if(features.isFeature(gameFeature))
                         
                                     {
                                     
@@ -308,7 +308,7 @@ modified= true
                                     {
                                     
     
-                        if(features!!.isFeature(gameFeature))
+                        if(features.isFeature(gameFeature))
                         
                                     {
                                     
@@ -334,7 +334,7 @@ modified= true
                                     {
                                     
     
-                        if(features!!.isFeature(gameFeature))
+                        if(features.isFeature(gameFeature))
                         
                                     {
                                     this.setVersionSelector(gameFeature as OpenGLFeature)

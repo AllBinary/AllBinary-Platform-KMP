@@ -115,7 +115,7 @@ stringBuffer!!.append(this.SHIPPINGMETHODSFILEPATHSTRING)
 this.document= DomDocumentHelper.create(data)
 this.shippingVector= Vector()
 
-    var nodeList: NodeList = document!!.getElementsByTagName(ShippingMethodsData.NAME)!!
+    var nodeList: NodeList = document.getElementsByTagName(ShippingMethodsData.NAME)!!
             
 
 
@@ -130,7 +130,7 @@ this.shippingVector= Vector()
             
 
 
-    var shippingMethodNodeChildren: NodeList = node!!.getChildNodes()!!
+    var shippingMethodNodeChildren: NodeList = node.getChildNodes()!!
             
 
 

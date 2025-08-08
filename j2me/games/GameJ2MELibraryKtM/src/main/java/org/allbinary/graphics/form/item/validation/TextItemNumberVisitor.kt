@@ -51,7 +51,7 @@ override fun visit(anyType: Any)
 
 
     
-                        if(value!!.length < 2)
+                        if(value.length < 2)
                         
                                     {
                                     

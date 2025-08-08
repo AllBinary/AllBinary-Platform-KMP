@@ -78,7 +78,7 @@ open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrac
     var list: BasicArrayList = PathGenerator.getInstance()!!.getInstance(geographicMapInterface, RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance(), pathFindingInfo, 10)!!
             
 
-System.out!!.println("Track " +index)
+System.out.println("Track " +index)
 this.printPaths(list)
 }
 

@@ -147,7 +147,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
                     var mutable = mutable
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR)

@@ -28,7 +28,7 @@ open public class CustomItemJ2MEComposite : CustomItem
     private val item: Item
 public constructor        (item: Item, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(item!!.getLabel(), backgroundBasicColor, foregroundBasicColor){
+                            : super(item.getLabel(), backgroundBasicColor, foregroundBasicColor){
 
                     var item = item
 
@@ -53,7 +53,7 @@ open fun addCommand(cmd: Command)
 {
 
                     var cmd = cmd
-this.item!!.addCommand(cmd)
+this.item.addCommand(cmd)
 }
 
 
@@ -63,7 +63,7 @@ open fun getLabel()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getLabel()
+                        return this.item.getLabel()
 }
 
 
@@ -73,7 +73,7 @@ open fun getLayout()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getLayout()
+                        return this.item.getLayout()
 }
 
 
@@ -83,7 +83,7 @@ open fun getMinimumHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getMinimumHeight()
+                        return this.item.getMinimumHeight()
 }
 
 
@@ -93,7 +93,7 @@ open fun getMinimumWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getMinimumWidth()
+                        return this.item.getMinimumWidth()
 }
 
 
@@ -103,7 +103,7 @@ open fun getPreferredHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getPreferredHeight()
+                        return this.item.getPreferredHeight()
 }
 
 
@@ -113,7 +113,7 @@ open fun getPreferredWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getPreferredWidth()
+                        return this.item.getPreferredWidth()
 }
 
 
@@ -122,7 +122,7 @@ open fun removeCommand(cmd: Command)
 {
 
                     var cmd = cmd
-this.item!!.removeCommand(cmd)
+this.item.removeCommand(cmd)
 }
 
 
@@ -131,7 +131,7 @@ open fun setDefaultCommand(cmd: Command)
 {
 
                     var cmd = cmd
-this.item!!.setDefaultCommand(cmd)
+this.item.setDefaultCommand(cmd)
 }
 
 
@@ -149,7 +149,7 @@ open fun setLabel(label: String)
 {
 
                     var label = label
-this.item!!.setLabel(label)
+this.item.setLabel(label)
 }
 
 
@@ -158,7 +158,7 @@ open fun setLayout(layout: Int)
 {
 
                     var layout = layout
-this.item!!.setLayout(layout)
+this.item.setLayout(layout)
 }
 
 
@@ -170,7 +170,7 @@ open fun setPreferredSize(width: Int, height: Int)
 
 
                     var height = height
-this.item!!.setPreferredSize(width, height)
+this.item.setPreferredSize(width, height)
 }
 
 
@@ -180,7 +180,7 @@ open fun getHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.getHeight()
+                        return this.item.getHeight()
 }
 
 
@@ -190,7 +190,7 @@ open fun isFocusable()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.isFocusable()
+                        return this.item.isFocusable()
 }
 
 
@@ -199,7 +199,7 @@ open fun keyPressed(keyCode: Int)
 {
 
                     var keyCode = keyCode
-this.item!!.keyPressed(keyCode)
+this.item.keyPressed(keyCode)
 }
 
 
@@ -212,7 +212,7 @@ open fun paint(graphics: Graphics)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.paint(graphics)
+                        return this.item.paint(graphics)
 }
 
 
@@ -222,7 +222,7 @@ open fun hasFocus()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.hasFocus()
+                        return this.item.hasFocus()
 }
 
 
@@ -231,7 +231,7 @@ open fun setFocus(state: Boolean)
 {
 
                     var state = state
-this.item!!.setFocus(state)
+this.item.setFocus(state)
 }
 
 
@@ -241,7 +241,7 @@ open fun select()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.select()
+                        return this.item.select()
 }
 
 
@@ -263,7 +263,7 @@ open fun traverse(gameKeyCode: Int, top: Int, bottom: Int, action: Boolean)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.item!!.traverse(gameKeyCode, top, bottom, action)
+                        return this.item.traverse(gameKeyCode, top, bottom, action)
 }
 
 
@@ -272,7 +272,7 @@ open fun setOwner(owner: Screen)
 {
 
                     var owner = owner
-this.item!!.setOwner(owner)
+this.item.setOwner(owner)
 }
 
 

@@ -113,12 +113,12 @@ open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
     var point: Point = PointHelper.getCenterPoint(rectangle)!!
             
 
-this.robot!!.mouseMove(point!!.x +x, point!!.y +y)
+this.robot.mouseMove(point.x +x, point.y +y)
 
     var message: String = StringMaker().
                             append(
-                            "Moved Mouse To: x: ")!!.append(point!!.x)!!.append(
-                            " y: ")!!.append(point!!.y)!!.append(
+                            "Moved Mouse To: x: ")!!.append(point.x)!!.append(
+                            " y: ")!!.append(point.y)!!.append(
                             " in the middle of: ")!!.append(StringUtil.getInstance()!!.toString(rectangle))!!.toString()!!
             
 
@@ -132,7 +132,7 @@ open fun mouseMove(point: Point)
 {
 
                     var point = point
-this.mouseMove(point!!.x, point!!.y)
+this.mouseMove(point.x, point.y)
 }
 
 
@@ -144,7 +144,7 @@ open fun mouseMove(x: Int, y: Int)
 
 
                     var y = y
-this.robot!!.mouseMove(x, y)
+this.robot.mouseMove(x, y)
 
     var message: String = StringMaker().
                             append(
@@ -177,7 +177,7 @@ open fun createScreenCapture(screenRect: Rectangle)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.robot!!.createScreenCapture(screenRect)
+                        return this.robot.createScreenCapture(screenRect)
 }
 
 
@@ -186,7 +186,7 @@ open fun delay(ms: Integer)
 {
 
                     var ms = ms
-this.robot!!.delay(ms)
+this.robot.delay(ms)
 }
 
 
@@ -196,7 +196,7 @@ open fun getAutoDelay()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.robot!!.getAutoDelay()
+                        return this.robot.getAutoDelay()
 }
 
 
@@ -212,7 +212,7 @@ open fun getPixelColor(x: Integer, y: Integer)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.robot!!.getPixelColor(x, y)
+                        return this.robot.getPixelColor(x, y)
 }
 
 
@@ -222,7 +222,7 @@ open fun isAutoWaitForIdle()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.robot!!.isAutoWaitForIdle()
+                        return this.robot.isAutoWaitForIdle()
 }
 
 
@@ -231,7 +231,7 @@ open fun keyPress(keycode: Integer)
 {
 
                     var keycode = keycode
-this.robot!!.keyPress(keycode)
+this.robot.keyPress(keycode)
 }
 
 
@@ -240,7 +240,7 @@ open fun keyRelease(keycode: Integer)
 {
 
                     var keycode = keycode
-this.robot!!.keyRelease(keycode)
+this.robot.keyRelease(keycode)
 }
 
 
@@ -252,7 +252,7 @@ open fun mouseMove(x: Integer, y: Integer)
 
 
                     var y = y
-this.robot!!.mouseMove(x, y)
+this.robot.mouseMove(x, y)
 }
 
 
@@ -261,7 +261,7 @@ open fun mousePress(buttons: Integer)
 {
 
                     var buttons = buttons
-this.robot!!.mousePress(buttons)
+this.robot.mousePress(buttons)
 }
 
 
@@ -270,7 +270,7 @@ open fun mouseRelease(buttons: Integer)
 {
 
                     var buttons = buttons
-this.robot!!.mouseRelease(buttons)
+this.robot.mouseRelease(buttons)
 }
 
 
@@ -279,7 +279,7 @@ open fun mouseWheel(wheelAmt: Integer)
 {
 
                     var wheelAmt = wheelAmt
-this.robot!!.mouseWheel(wheelAmt)
+this.robot.mouseWheel(wheelAmt)
 }
 
 
@@ -288,7 +288,7 @@ open fun setAutoDelay(ms: Integer)
 {
 
                     var ms = ms
-this.robot!!.setAutoDelay(ms)
+this.robot.setAutoDelay(ms)
 }
 
 
@@ -297,7 +297,7 @@ open fun setAutoWaitForIdle(isOn: Boolean)
 {
 
                     var isOn = isOn
-this.robot!!.setAutoWaitForIdle(isOn)
+this.robot.setAutoWaitForIdle(isOn)
 }
 
 override fun toString()
@@ -306,13 +306,13 @@ override fun toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.robot!!.toString()
+                        return this.robot.toString()
 }
 
 
 open fun waitForIdle()
         //nullable = true from not(false or (false and true)) = true
-{this.robot!!.waitForIdle()
+{this.robot.waitForIdle()
 }
 
 

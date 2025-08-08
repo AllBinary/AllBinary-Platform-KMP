@@ -71,13 +71,13 @@ open fun initialize(value: Int)
             
     var vector: Vector = Vector()
 
-vector!!.add(name)
-vector!!.add(Long.valueOf(value)!!.toString())
+vector.add(name)
+vector.add(Long.valueOf(value)!!.toString())
 idGeneratorEntity!!.insert(vector)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     
@@ -133,7 +133,7 @@ this.idGeneratorEntity!!.update(name, newValue)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     

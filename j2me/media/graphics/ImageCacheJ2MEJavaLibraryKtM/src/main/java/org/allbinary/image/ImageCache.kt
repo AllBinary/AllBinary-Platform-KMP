@@ -106,7 +106,7 @@ image= this.createImage(caller, width, height)
 
 
     
-                        if(nextIndex > widths!!.size -1)
+                        if(nextIndex > widths.size -1)
                         
                                     {
                                     
@@ -143,7 +143,7 @@ listOfList[foundIndex]!!.add(image)
 
                     var key = key
 
-    var image: Image = this.hashtable!!.get(key as Object?) as Image
+    var image: Image = this.hashtable.get(key as Object?) as Image
 
 
     
@@ -193,7 +193,7 @@ image= this.createImage(key, inputStream)
 }
 
 inputStream!!.close()
-this.hashtable!!.put(key, image)
+this.hashtable.put(key, image)
 
                                     }
                                 

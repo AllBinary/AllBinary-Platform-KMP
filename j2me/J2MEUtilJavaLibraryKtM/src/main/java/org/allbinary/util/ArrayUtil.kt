@@ -61,7 +61,7 @@ open fun copyOf(original: Array<Any?>, newLength: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return copyOf(original, newLength, original!!::class)
+                        return copyOf(original, newLength, original::class)
 }
 
 
@@ -79,7 +79,7 @@ open fun copyOf(original: Array<Any?>, newLength: Int, newType: KClass<*>)
 
     var copy: Array<Any?> = arrayOfNulls(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -99,7 +99,7 @@ open fun copyOf(original: ByteArray, newLength: Int)
 
     var copy: ByteArray = ByteArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -119,7 +119,7 @@ open fun copyOf(original: ShortArray, newLength: Int)
 
     var copy: ShortArray = ShortArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -139,7 +139,7 @@ open fun copyOf(original: IntArray, newLength: Int)
 
     var copy: IntArray = IntArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -159,7 +159,7 @@ open fun copyOf(original: LongArray, newLength: Int)
 
     var copy: LongArray = LongArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -182,7 +182,7 @@ open fun copyOf(original: CharArray, newLength: Int)
                                                         CharArray(newLength)
                                                     
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -202,7 +202,7 @@ open fun copyOf(original: FloatArray, newLength: Int)
 
     var copy: FloatArray = FloatArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -222,7 +222,7 @@ open fun copyOf(original: DoubleArray, newLength: Int)
 
     var copy: DoubleArray = DoubleArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 
@@ -242,7 +242,7 @@ open fun copyOf(original: BooleanArray, newLength: Int)
 
     var copy: BooleanArray = BooleanArray(newLength)
 
-System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original!!.size, newLength))
+System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 
 

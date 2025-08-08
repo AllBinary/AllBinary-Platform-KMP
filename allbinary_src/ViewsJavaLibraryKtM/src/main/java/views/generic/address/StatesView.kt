@@ -62,7 +62,7 @@ open fun toXmlNode(document: Document)
 
         try {
             
-    var node: Node = document!!.createElement(StreetAddressData.STATES)!!
+    var node: Node = document.createElement(StreetAddressData.STATES)!!
             
 
 
@@ -77,7 +77,7 @@ open fun toXmlNode(document: Document)
     var option: String = lineReader!!.next()!!
             
 
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.STATE, option))
+node.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.STATE, option))
 }
 
 
@@ -88,7 +88,7 @@ node!!.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

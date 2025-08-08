@@ -77,7 +77,7 @@ open fun getOperatingSystemInstance()
                             "OperatingSystem Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString()!!
             
 
-System.out!!.println(osString)
+System.out.println(osString)
 logUtil!!.put(osString, this, commonStrings!!.GET_INSTANCE)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)

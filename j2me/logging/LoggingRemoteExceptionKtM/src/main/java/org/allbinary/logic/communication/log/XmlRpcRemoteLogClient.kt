@@ -82,23 +82,23 @@ this.getClient()!!.setBasicAuthentication(
 
     var hashtable: Hashtable<Any, Any> = anyType as Hashtable<Any, Any>
 
-param!!.add(hashtable)
+param.add(hashtable)
 
     var result: Any = getClient()!!.execute(this.getRemoteMethod(), param, noCrypt)!!
             
 
-System.out!!.println("Result: \n" +result!!.toString())
+System.out.println("Result: \n" +result.toString())
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
-            {System.out!!.println(
+            {System.out.println(
                             "IOException Trying Other Servers")
 
     
-                        if(!e!!.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
+                        if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
                         
                                     {
                                     

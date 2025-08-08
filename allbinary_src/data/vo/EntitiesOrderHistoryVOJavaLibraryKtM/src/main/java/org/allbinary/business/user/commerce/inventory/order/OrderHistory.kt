@@ -421,9 +421,9 @@ hashMap!!.put(OrderHistoryData.CANCELDATEFORMATTED, Date(Long(this.cancelDate).
                             toString())
 hashMap!!.put(OrderHistoryData.STATUS, this.status)
 hashMap!!.put(OrderHistoryData.SUBTOTAL, this.subTotal!!.toString())
-hashMap!!.put(OrderHistoryData.TOTAL, this.total!!.toString())
+hashMap!!.put(OrderHistoryData.TOTAL, this.total.toString())
 hashMap!!.put(OrderHistoryData.SHIPPINGCOST, this.shippingCost!!.toString())
-hashMap!!.put(OrderHistoryData.TAX, this.taxes!!.toString())
+hashMap!!.put(OrderHistoryData.TAX, this.taxes.toString())
 
 
 
@@ -456,23 +456,23 @@ open fun toXmlNode(document: Document)
                 
 
 
-    var node: Node = document!!.createElement(OrderHistoryData.ORDERHISTORY)!!
+    var node: Node = document.createElement(OrderHistoryData.ORDERHISTORY)!!
             
 
-node!!.appendChild(super.toXmlNode(document))
+node.appendChild(super.toXmlNode(document))
 
-    var billingAddressNode: Node = document!!.createElement(BillingAddressData.BILLINGADDRESS)!!
+    var billingAddressNode: Node = document.createElement(BillingAddressData.BILLINGADDRESS)!!
             
 
 billingAddressNode!!.appendChild(this.billingAddress!!.toXmlNode(document))
 
-    var shippingAddressNode: Node = document!!.createElement(ShippingAddressData.SHIPPINGADDRESS)!!
+    var shippingAddressNode: Node = document.createElement(ShippingAddressData.SHIPPINGADDRESS)!!
             
 
 shippingAddressNode!!.appendChild(this.shippingAddress!!.toXmlNode(document))
-node!!.appendChild(billingAddressNode)
-node!!.appendChild(shippingAddressNode)
-node!!.appendChild(this.payment!!.toXmlNode(document))
+node.appendChild(billingAddressNode)
+node.appendChild(shippingAddressNode)
+node.appendChild(this.payment.toXmlNode(document))
 
 
 
@@ -487,7 +487,7 @@ node!!.appendChild(this.payment!!.toXmlNode(document))
     var value: String = hashMap!!.get(name as Object?) as String
 
 value= StringUtil.getInstance()!!.getInstance(value)
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
+node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 

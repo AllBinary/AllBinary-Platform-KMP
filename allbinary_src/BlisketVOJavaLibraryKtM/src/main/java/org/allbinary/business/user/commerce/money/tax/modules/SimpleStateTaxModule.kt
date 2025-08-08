@@ -98,7 +98,7 @@ this.storeFrontInterface= storeFrontInterface
 this.document= DomDocumentHelper.create(data)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     logUtil!!.put("Tax Doc: " +DomDocumentHelper.toString(document), this, 
@@ -114,9 +114,9 @@ this.document= DomDocumentHelper.create(data)
     var country: String = this.streetAddress!!.getCountry()!!
             
 
-state= state!!.toUpperCase()
+state= state.toUpperCase()
 
-    var nodeList: NodeList = document!!.getElementsByTagName(TaxData.NAME)!!
+    var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
             
 
 
@@ -131,7 +131,7 @@ state= state!!.toUpperCase()
             
 
 
-    var taxNodeChildren: NodeList = node!!.getChildNodes()!!
+    var taxNodeChildren: NodeList = node.getChildNodes()!!
             
 
 
@@ -147,7 +147,7 @@ state= state!!.toUpperCase()
 
 
     
-                        if(!stringValidationUtil!!.isEmpty(country) && !stringValidationUtil!!.isEmpty(taxableStreetAddress!!.getCountry()) && country!!.compareTo(taxableStreetAddress!!.getCountry()) == 0)
+                        if(!stringValidationUtil!!.isEmpty(country) && !stringValidationUtil!!.isEmpty(taxableStreetAddress!!.getCountry()) && country.compareTo(taxableStreetAddress!!.getCountry()) == 0)
                         
                                     {
                                     
@@ -156,7 +156,7 @@ state= state!!.toUpperCase()
                                     null
                                  && taxableStreetAddress!!.getState() != 
                                     null
-                                 && state!!.compareTo(taxableStreetAddress!!.getState()) == 0)
+                                 && state.compareTo(taxableStreetAddress!!.getState()) == 0)
                         
                                     {
                                     
@@ -215,7 +215,7 @@ this.storeFrontInterface= storeFrontInterface
 this.document= DomDocumentHelper.create(data)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     logUtil!!.put("Tax Doc: " +DomDocumentHelper.toString(document), this, commonStrings!!.IS_VALID)
@@ -227,11 +227,11 @@ this.document= DomDocumentHelper.create(data)
             
 
 
-    var rootNode: Node = this.document!!.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
+    var rootNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
             
 
 
-    var nodeList: NodeList = document!!.getElementsByTagName(TaxData.NAME)!!
+    var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
             
 
 
@@ -246,7 +246,7 @@ this.document= DomDocumentHelper.create(data)
             
 
 
-    var taxNodeChildren: NodeList = node!!.getChildNodes()!!
+    var taxNodeChildren: NodeList = node.getChildNodes()!!
             
 
 
@@ -255,7 +255,7 @@ this.document= DomDocumentHelper.create(data)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     
@@ -296,7 +296,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                 
 
     
-                        if(!stringValidationUtil!!.isEmpty(country) && !stringValidationUtil!!.isEmpty(taxableStreetAddress!!.getCountry()) && country!!.compareTo(taxableStreetAddress!!.getCountry()) == 0)
+                        if(!stringValidationUtil!!.isEmpty(country) && !stringValidationUtil!!.isEmpty(taxableStreetAddress!!.getCountry()) && country.compareTo(taxableStreetAddress!!.getCountry()) == 0)
                         
                                     {
                                     
@@ -331,7 +331,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(

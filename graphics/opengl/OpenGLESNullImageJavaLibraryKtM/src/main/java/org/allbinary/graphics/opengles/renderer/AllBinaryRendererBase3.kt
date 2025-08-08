@@ -52,9 +52,9 @@ open fun update(gl: GL10)
 
                     var gl = gl
 
-        while(list!!.size() > 0)
+        while(list.size() > 0)
         {
-    var openGLESImage: OpenGLESImage = list!!.remove(0) as OpenGLESImage
+    var openGLESImage: OpenGLESImage = list.remove(0) as OpenGLESImage
 
 
     
@@ -77,7 +77,7 @@ open fun add(image: Image)
 {
 
                     var image = image
-this.list!!.add(image)
+this.list.add(image)
 }
 
 

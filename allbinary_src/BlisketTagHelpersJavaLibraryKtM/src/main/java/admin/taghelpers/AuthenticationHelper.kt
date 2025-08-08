@@ -88,7 +88,7 @@ this.weblisketSession= WeblisketSession(hashMap, httpServletRequest)
 this.getFormData()
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     logUtil!!.put(this.outputSessionInfo(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -125,7 +125,7 @@ open fun invalidateSession()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -157,7 +157,7 @@ open fun isSessionOld()
             
 
 
-    var sessionTimout: Long = this.role!!.getSessionTimeout()!!
+    var sessionTimout: Long = this.role.getSessionTimeout()!!
             
 
 
@@ -165,7 +165,7 @@ open fun isSessionOld()
             
 
 
-    var timeFirst: Long = calendar!!.getTimeInMillis() -sessionTimout
+    var timeFirst: Long = calendar.getTimeInMillis() -sessionTimout
 
 
     
@@ -174,7 +174,7 @@ open fun isSessionOld()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     
@@ -208,7 +208,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     logUtil!!.put(
@@ -246,7 +246,7 @@ open fun isRarelyUsedSession()
             
 
 
-    var inactivityAllowed: Long = role!!.getSessionInactivityTimeout()!!
+    var inactivityAllowed: Long = role.getSessionInactivityTimeout()!!
             
 
 
@@ -254,11 +254,11 @@ open fun isRarelyUsedSession()
             
 
 
-    var timeFirst: Long = calendar!!.getTimeInMillis() -lastAccess
+    var timeFirst: Long = calendar.getTimeInMillis() -lastAccess
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     
@@ -284,7 +284,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     logUtil!!.put(
@@ -324,7 +324,7 @@ stringBuffer!!.append(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -365,7 +365,7 @@ stringBuffer!!.append(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -439,11 +439,11 @@ open fun isAuthenticationSessionValid(roles: Vector)
                         
                                     {
                                     
-    var basicUserRole: BasicUserRole = role!!.getBasicUserRole()!!
+    var basicUserRole: BasicUserRole = role.getBasicUserRole()!!
             
 
 
-    var basicUserRoleArray: Array<Any?> = roles!!.toArray()!!
+    var basicUserRoleArray: Array<Any?> = roles.toArray()!!
             
 
 
@@ -521,7 +521,7 @@ open fun isAuthenticationSessionValid(roles: Vector)
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
                                     logUtil!!.put(
@@ -541,7 +541,7 @@ open fun isAuthenticationSessionValid(roles: Vector)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -592,7 +592,7 @@ open fun processIfNewLogin(userName: String, password: String)
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put("Starting: " +userName, this, 
@@ -606,7 +606,7 @@ open fun processIfNewLogin(userName: String, password: String)
                                     null
                                  && userName!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0 && password != 
                                     null
-                                 && password!!.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
+                                 && password.compareTo(StringUtil.getInstance()!!.EMPTY_STRING) != 0)
                         
                                     {
                                     
@@ -619,7 +619,7 @@ open fun processIfNewLogin(userName: String, password: String)
 login= userEntityInterface!!.login(userName, password)
 
     
-                        if(login!!.compareTo(GLOBALS2.LOGINSUCCESS) == 0)
+                        if(login.compareTo(GLOBALS2.LOGINSUCCESS) == 0)
                         
                                     {
                                     
@@ -661,7 +661,7 @@ this.nextAttempt()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -712,7 +712,7 @@ open fun processInvalidation()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -749,7 +749,7 @@ open fun outputSessionInfo()
     var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
             
 
-stringBuffer!!.append("Time Since Last Access: " +(calendar!!.getTimeInMillis() -lastAccess) +"<br/>\n")
+stringBuffer!!.append("Time Since Last Access: " +(calendar.getTimeInMillis() -lastAccess) +"<br/>\n")
 
     
                         if(this.role != 
@@ -765,22 +765,22 @@ stringBuffer!!.append(
 stringBuffer!!.append(this.sessionUserName)
 stringBuffer!!.append(
                             " Role: ")
-stringBuffer!!.append(this.role!!.toString())
+stringBuffer!!.append(this.role.toString())
 stringBuffer!!.append(
                             "<br/>\n")
 stringBuffer!!.append(
                             "Time Left: ")
-stringBuffer!!.append((role!!.getSessionTimeout() -(calendar!!.getTimeInMillis() -timeCreated)))
+stringBuffer!!.append((role.getSessionTimeout() -(calendar.getTimeInMillis() -timeCreated)))
 stringBuffer!!.append(
                             "<br/>\n")
 stringBuffer!!.append(
                             "Inactivity Time Allowed: ")
-stringBuffer!!.append(role!!.getSessionTimeout())
+stringBuffer!!.append(role.getSessionTimeout())
 stringBuffer!!.append(
                             "<br/>\n")
 stringBuffer!!.append(
                             "Inactivity Time Allowed: ")
-stringBuffer!!.append(role!!.getSessionInactivityTimeout())
+stringBuffer!!.append(role.getSessionInactivityTimeout())
 stringBuffer!!.append(
                             "<br/>\n")
 

@@ -82,7 +82,7 @@ open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: 
                     var transformInfoInterface = transformInfoInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +customizerTransformInfoInterface!!.getName(), this, 
@@ -115,7 +115,7 @@ open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: 
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: TransformInfoInterface, transformInfoInterface: TransformInfoInterface)
+open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 
@@ -125,7 +125,7 @@ open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransfo
                     var transformInfoInterface = transformInfoInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +customizerTransformInfoInterface!!.getName(), this, 
@@ -158,14 +158,14 @@ open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransfo
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: TransformInfoInterface)
+open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 
                     var transformInfoInterface = transformInfoInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
@@ -187,14 +187,14 @@ open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Tran
 
                 @Throws(Exception::class)
             
-open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: TransformInfoInterface)
+open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
 
                     var transformInfoInterface = transformInfoInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
@@ -226,7 +226,7 @@ open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface
                     var domNodeInterface = domNodeInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
@@ -246,7 +246,7 @@ open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface
     var document: Document = DomDocumentHelper.create()!!
             
 
-document!!.appendChild(domNodeInterface!!.toXmlNode(document))
+document.appendChild(domNodeInterface!!.toXmlNode(document))
 
     var documentString: String = DomDocumentHelper.toString(document)!!
             
@@ -256,7 +256,7 @@ document!!.appendChild(domNodeInterface!!.toXmlNode(document))
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.append(
@@ -291,7 +291,7 @@ transformInfoInterface!!.setData(documentString)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -320,7 +320,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -341,7 +341,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(transformInfoInterface!!.getName() +" is adding data to view: " +viewNameOfViewToBeModified, this, 
@@ -351,7 +351,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -388,7 +388,7 @@ open fun write(specifiedTransformInfoInterface: TransformInfoInterface, document
                     var documentString = documentString
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +specifiedTransformInfoInterface!!.getName(), this, 
@@ -407,14 +407,14 @@ transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMa
 
                 @Throws(Exception::class)
             
-open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: TransformInfoInterface)
+open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 : Document{
 
                     var transformInfoInterface = transformInfoInterface
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 

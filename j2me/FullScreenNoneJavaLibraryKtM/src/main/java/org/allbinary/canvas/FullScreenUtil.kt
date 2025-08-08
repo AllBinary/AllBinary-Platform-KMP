@@ -107,7 +107,7 @@ open fun isScreenChange(isFullScreen: Boolean)
 
 
     
-                        if(features!!.isFeature(mainFeatureFactory!!.FULL_SCREEN) != isFullScreen)
+                        if(features.isFeature(mainFeatureFactory!!.FULL_SCREEN) != isFullScreen)
                         
                                     {
                                     

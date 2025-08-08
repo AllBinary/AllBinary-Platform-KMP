@@ -62,7 +62,7 @@ private constructor        ()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{list!!.clear()
+{list.clear()
 }
 
 
@@ -72,7 +72,7 @@ open fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list!!.size()
+                        return list.size()
 }
 
 
@@ -94,7 +94,7 @@ open fun add(layerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterf
 {
 
                     var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
-list!!.add(layerInterfaceFactoryInterface)
+list.add(layerInterfaceFactoryInterface)
 }
 
 

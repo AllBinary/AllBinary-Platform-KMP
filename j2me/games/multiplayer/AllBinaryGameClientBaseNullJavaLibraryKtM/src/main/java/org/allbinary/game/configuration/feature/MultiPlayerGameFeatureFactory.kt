@@ -55,7 +55,7 @@ open fun addCommands(anyType: Any)
 
     var canvas: Canvas = anyType as Canvas
 
-canvas!!.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
+canvas.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
 }
 
 

@@ -150,7 +150,7 @@ this.mediaData= MediaData.get(pathUtil!!.getExtension(this.imageFileName))
 this.imageFileName= pathUtil!!.getWithoutExtension(this.imageFileName)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     
@@ -197,7 +197,7 @@ open fun addDomNodeInterfaces()
 
 
         {downloadableItem= this.downloadableItemVector!!.get(index) as DownloadableItem
-vector!!.add(DownloadableItemView(downloadableItem))
+vector.add(DownloadableItemView(downloadableItem))
 }
 
 this.addDomNodeInterface(BasicItemView(itemInterface, vector))
@@ -229,7 +229,7 @@ open fun view()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -255,7 +255,7 @@ open fun processImageFiles()
             
 
 
-    var fieldNameArray: Array<Any?> = set!!.toArray()!!
+    var fieldNameArray: Array<Any?> = set.toArray()!!
             
 
 

@@ -122,7 +122,7 @@ open fun write(abFile: AbFile, data: String)
 
     var fileOut: BufferedWriter = BufferedWriter(FileWriter(AbFileNativeUtil.get(abFile)))
 
-fileOut!!.write(data, 0, data!!.length)
+fileOut!!.write(data, 0, data.length)
 fileOut!!.newLine()
 fileOut!!.flush()
 }

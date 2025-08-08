@@ -124,7 +124,7 @@ open fun save()
 
     var file: File = File(FILENAME)
 
-FileUtil.getInstance()!!.copy(AbPath(file!!.getAbsolutePath()), AbPath(file!!.getAbsolutePath() +".bak.xml"))
+FileUtil.getInstance()!!.copy(AbPath(file.getAbsolutePath()), AbPath(file.getAbsolutePath() +".bak.xml"))
 
     var jaxbContext: JAXBContext = JAXBContext.newInstance(InputAutomationConfiguration::class)!!
             
@@ -133,8 +133,8 @@ FileUtil.getInstance()!!.copy(AbPath(file!!.getAbsolutePath()), AbPath(file!!.ge
     var marshaller: Marshaller = jaxbContext!!.createMarshaller()!!
             
 
-marshaller!!.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true)
-marshaller!!.marshal(this, document)
+marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true)
+marshaller.marshal(this, document)
 DomDocumentFileHelper.save(FileWrapperUtil.wrapFile(file), document)
 }
 

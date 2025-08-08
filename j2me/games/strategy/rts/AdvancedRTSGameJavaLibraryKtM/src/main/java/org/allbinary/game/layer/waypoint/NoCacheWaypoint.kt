@@ -254,7 +254,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 
 
     
-                        if(list!!.size() < 1)
+                        if(list.size() < 1)
                         
                                     {
                                     

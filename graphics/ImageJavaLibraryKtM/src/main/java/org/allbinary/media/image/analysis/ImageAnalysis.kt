@@ -106,9 +106,9 @@ open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeIn
 
 processColorRangeResults(imageAnalysisResults, colorRangeInterface, color)
 processImageColorResults(imageAnalysisResults!!.getImageColorResults(), colorRangeInterface, color)
-redTotal += color!!.getRed()
-greenTotal += color!!.getGreen()
-blueTotal += color!!.getBlue()
+redTotal += color.getRed()
+greenTotal += color.getGreen()
+blueTotal += color.getBlue()
 }
 
 }
@@ -173,55 +173,55 @@ open fun processImageColorResults(imageColorResults: ImageColorResults, colorRan
                     var color = color
 
     
-                        if(color!!.getRed() < imageColorResults!!.getColorRange()!!.getMinRed())
+                        if(color.getRed() < imageColorResults!!.getColorRange()!!.getMinRed())
                         
                                     {
-                                    imageColorResults!!.getColorRange()!!.setMinRed(color!!.getRed())
+                                    imageColorResults!!.getColorRange()!!.setMinRed(color.getRed())
 
                                     }
                                 
 
     
-                        if(color!!.getGreen() < imageColorResults!!.getColorRange()!!.getMinGreen())
+                        if(color.getGreen() < imageColorResults!!.getColorRange()!!.getMinGreen())
                         
                                     {
-                                    imageColorResults!!.getColorRange()!!.setMinGreen(color!!.getGreen())
+                                    imageColorResults!!.getColorRange()!!.setMinGreen(color.getGreen())
 
                                     }
                                 
 
     
-                        if(color!!.getBlue() < imageColorResults!!.getColorRange()!!.getMinBlue())
+                        if(color.getBlue() < imageColorResults!!.getColorRange()!!.getMinBlue())
                         
                                     {
-                                    imageColorResults!!.getColorRange()!!.setMinBlue(color!!.getBlue())
+                                    imageColorResults!!.getColorRange()!!.setMinBlue(color.getBlue())
 
                                     }
                                 
 
     
-                        if(color!!.getRed() > imageColorResults!!.getColorRange()!!.getMaxRed())
+                        if(color.getRed() > imageColorResults!!.getColorRange()!!.getMaxRed())
                         
                                     {
-                                    imageColorResults!!.getColorRange()!!.setMaxRed(color!!.getRed())
+                                    imageColorResults!!.getColorRange()!!.setMaxRed(color.getRed())
 
                                     }
                                 
 
     
-                        if(color!!.getGreen() > imageColorResults!!.getColorRange()!!.getMaxGreen())
+                        if(color.getGreen() > imageColorResults!!.getColorRange()!!.getMaxGreen())
                         
                                     {
-                                    imageColorResults!!.getColorRange()!!.setMaxGreen(color!!.getGreen())
+                                    imageColorResults!!.getColorRange()!!.setMaxGreen(color.getGreen())
 
                                     }
                                 
 
     
-                        if(color!!.getBlue() > imageColorResults!!.getColorRange()!!.getMaxBlue())
+                        if(color.getBlue() > imageColorResults!!.getColorRange()!!.getMaxBlue())
                         
                                     {
-                                    imageColorResults!!.getColorRange()!!.setMaxBlue(color!!.getBlue())
+                                    imageColorResults!!.getColorRange()!!.setMaxBlue(color.getBlue())
 
                                     }
                                 

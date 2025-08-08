@@ -54,7 +54,7 @@ public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: 
 
                             //For kotlin this is before the body of the constructor.
                     
-this.keys= arrayOfNulls(hashtable!!.size)
+this.keys= arrayOfNulls(hashtable.size)
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
             
@@ -70,7 +70,7 @@ this.keys= arrayOfNulls(hashtable!!.size)
                         for (index in 0 until size)
 
 
-        {keys[index]= hashtable!!.get(objectArray[index]!! as Object) as Integer
+        {keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 }
 
 }
@@ -91,7 +91,7 @@ this.keys= arrayOfNulls(hashtable!!.size)
 
 
 
-                        for (index in 0 until keys!!.size)
+                        for (index in 0 until keys.size)
 
 
         {super.processAI(keys[index]!!.toInt())

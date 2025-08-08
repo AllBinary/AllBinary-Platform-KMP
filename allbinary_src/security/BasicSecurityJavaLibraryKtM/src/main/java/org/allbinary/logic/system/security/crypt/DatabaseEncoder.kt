@@ -59,14 +59,14 @@ open fun encode(value: ByteArray)
 
 
 
-                        for (index in 0 until array!!.size)
+                        for (index in 0 until array.size)
 
 
         {stringBuffer!!.append(Byte(array[index]!!).
                             toString())
 
     
-                        if(index < array!!.size -1)
+                        if(index < array.size -1)
                         
                                     {
                                     stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
@@ -109,14 +109,14 @@ open fun decode(value: String)
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SPACE)
 
 
-    var vector: BasicArrayList = tokenizer!!.getTokens(value, BasicArrayList())!!
+    var vector: BasicArrayList = tokenizer.getTokens(value, BasicArrayList())!!
             
 
 
     var byteVector: BasicArrayList = BasicArrayList()
 
 
-    var size: Int = vector!!.size()!!
+    var size: Int = vector.size()!!
             
 
 
@@ -127,7 +127,7 @@ open fun decode(value: String)
 
 
         {
-    var byteOfData: String = vector!!.objectArray[index]!! as String
+    var byteOfData: String = vector.objectArray[index]!! as String
 
 byteVector!!.add(Byte(byteOfData))
 }

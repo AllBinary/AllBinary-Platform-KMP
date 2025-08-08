@@ -49,7 +49,7 @@ open fun log()
 
 stringBuffer!!.append(
                             "S: ")
-stringBuffer!!.append(this.list!!.size())
+stringBuffer!!.append(this.list.size())
 
 
 

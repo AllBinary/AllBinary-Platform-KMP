@@ -71,10 +71,10 @@ open fun addListener(gameLayer: AllBinaryGameLayer)
                     var gameLayer = gameLayer
 
     
-                        if(!list!!.contains(gameLayer))
+                        if(!list.contains(gameLayer))
                         
                                     {
-                                    list!!.add(gameLayer)
+                                    list.add(gameLayer)
 
                                     }
                                 
@@ -83,7 +83,7 @@ open fun addListener(gameLayer: AllBinaryGameLayer)
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -93,7 +93,7 @@ open fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -104,13 +104,13 @@ open fun fireEvent()
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var gameLayer: AllBinaryGameLayer = this.list!!.get(index) as AllBinaryGameLayer
+    var gameLayer: AllBinaryGameLayer = this.list.get(index) as AllBinaryGameLayer
 
 gameLayer!!.move()
 } catch(e: Exception)

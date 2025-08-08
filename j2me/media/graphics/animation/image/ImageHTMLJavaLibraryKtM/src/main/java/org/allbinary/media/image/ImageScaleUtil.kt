@@ -184,11 +184,11 @@ open fun createImage(originalImage: Image, scaleX: Float, scaleY: Float)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
-    var originalPlayNImage: Image = 
+    var originalPlayNImage: playn.core.Image = 
                 null
             
 
@@ -222,7 +222,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as Image
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
             
 
-canvasSurface!!.drawImage(originalPlayNImage, 0, 0, image!!.getWidth(), image!!.getHeight(), 0, 0, originalPlayNImage!!.width(), originalPlayNImage!!.height())
+canvasSurface!!.drawImage(originalPlayNImage, 0, 0, image.getWidth(), image.getHeight(), 0, 0, originalPlayNImage!!.width(), originalPlayNImage!!.height())
 
 
 

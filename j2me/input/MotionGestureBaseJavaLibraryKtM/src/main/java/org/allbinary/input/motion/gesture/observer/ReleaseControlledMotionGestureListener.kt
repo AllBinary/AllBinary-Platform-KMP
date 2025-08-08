@@ -163,11 +163,11 @@ override fun released(ev: MotionGestureEvent)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 isMouseGestureOccurring= false
-signed!!.onMotionGestureCompleted(motionGestureCollection)
+signed.onMotionGestureCompleted(motionGestureCollection)
 motionGestureCollection!!.clear()
 } catch(e: Exception)
             {logUtil!!.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev!!.getMotionGesture()))!!.toString(), this, 
+                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, 
                             "release", e)
 }
 
@@ -187,7 +187,7 @@ override fun onMotionGestureEvent(ev: MotionGestureEvent)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 
 
-    var motionGestureInput: MotionGestureInput = ev!!.getMotionGesture()!!
+    var motionGestureInput: MotionGestureInput = ev.getMotionGesture()!!
             
 
 
@@ -215,7 +215,7 @@ override fun onMotionGestureEvent(ev: MotionGestureEvent)
                         
                                     {
                                     currentMotionGesture= motionGestureInput
-motionGestureCollection!!.add(ev!!.getMotionGesture())
+motionGestureCollection!!.add(ev.getMotionGesture())
 
                                     }
                                 

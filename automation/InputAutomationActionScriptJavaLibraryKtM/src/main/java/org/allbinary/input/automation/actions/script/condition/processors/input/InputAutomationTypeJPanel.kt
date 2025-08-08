@@ -36,7 +36,7 @@ public constructor        (){initComponents()
 
 open fun getInputAutomationTypeJComboBox()
         //nullable = true from not(false or (false and true)) = true
-: JComboBox{
+: javax.swing.JComboBox{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,7 +44,7 @@ open fun getInputAutomationTypeJComboBox()
 }
 
 
-open fun setInputAutomationTypeJComboBox(inputAutomationTypeJComboBox: JComboBox)
+open fun setInputAutomationTypeJComboBox(inputAutomationTypeJComboBox: javax.swing.JComboBox)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -55,23 +55,23 @@ this.inputAutomationTypeJComboBox= inputAutomationTypeJComboBox
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{inputAutomationTypeJComboBox= JComboBox()
-jLabel1= JLabel()
-inputAutomationTypeJComboBox!!.setModel(DefaultComboBoxModel(arrayOf("DirectX","DirectX 8","Low Level","Java Robot")))
+{inputAutomationTypeJComboBox= javax.swing.JComboBox()
+jLabel1= javax.swing.JLabel()
+inputAutomationTypeJComboBox!!.setModel(javax.swing.DefaultComboBoxModel(arrayOf("DirectX","DirectX 8","Low Level","Java Robot")))
 jLabel1!!.setText(
                             "Input Type:")
 
-    var layout: GroupLayout = GroupLayout(this)
+    var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 
 this.setLayout(layout)
-layout!!.setHorizontalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createSequentialGroup()!!.addComponent(jLabel1)!!.addPreferredGap(javax!!.swing!!.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(inputAutomationTypeJComboBox, 0, 98, Short.MAX_VALUE)))
-layout!!.setVerticalGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.LEADING)!!.addGroup(layout!!.createParallelGroup(javax!!.swing!!.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(inputAutomationTypeJComboBox, javax!!.swing!!.GroupLayout.PREFERRED_SIZE, javax!!.swing!!.GroupLayout.DEFAULT_SIZE, javax!!.swing!!.GroupLayout.PREFERRED_SIZE)))
+layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createSequentialGroup()!!.addComponent(jLabel1)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(inputAutomationTypeJComboBox, 0, 98, Short.MAX_VALUE)))
+layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel1)!!.addComponent(inputAutomationTypeJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
 }
 
 
-    private var inputAutomationTypeJComboBox: JComboBox
+    private var inputAutomationTypeJComboBox: javax.swing.JComboBox
 
-    private var jLabel1: JLabel
+    private var jLabel1: javax.swing.JLabel
 
 }
                 

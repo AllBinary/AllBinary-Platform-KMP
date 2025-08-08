@@ -161,7 +161,7 @@ keyValuePersistance!!.loadAll(abeClientInformation)
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
                                     
@@ -172,7 +172,7 @@ keyValuePersistance!!.loadAll(abeClientInformation)
     var anyType: Any = this.SCALE.getName() as Object
 
 
-    var value: String = hashtable!!.get(anyType as Object?) as String
+    var value: String = hashtable.get(anyType as Object?) as String
 
 this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(value)!!.toInt()))
 
@@ -188,6 +188,15 @@ this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(v
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
+}
+
+
+open fun setGameControlFidelity(gameControlFidelity: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var gameControlFidelity = gameControlFidelity
+this.gameControlFidelity= gameControlFidelity
 }
 
 

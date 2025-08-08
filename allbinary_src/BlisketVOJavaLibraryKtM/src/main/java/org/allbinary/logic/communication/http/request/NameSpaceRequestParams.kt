@@ -57,7 +57,7 @@ public constructor        ()
                     
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -78,7 +78,7 @@ public constructor        (httpServletRequest: HttpServletRequest)
                     
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -99,7 +99,7 @@ public constructor        (pageContext: PageContext)
                     
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -124,7 +124,7 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
 
                     var packagePropertiesHashMap = packagePropertiesHashMap
 
-    var node: Node = document!!.createElement(packageName)!!
+    var node: Node = document.createElement(packageName)!!
             
 
 
@@ -156,7 +156,7 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
     var propertyNode: Node = ModDomHelper.createTextNode(document, propertyName, propertyValue)!!
             
 
-node!!.appendChild(propertyNode)
+node.appendChild(propertyNode)
 }
 
 
@@ -214,7 +214,7 @@ open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameS
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("\nAppending Multinode Element: " +multiElementPackage +"[" +indexValue +"] " +selectedValue, this, 
@@ -253,7 +253,7 @@ open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashM
 
                     var document = document
 
-    var rootNode: Node = DomSearchHelper.getNodeNoThrow(rootElementPackage, document!!.getChildNodes())!!
+    var rootNode: Node = DomSearchHelper.getNodeNoThrow(rootElementPackage, document.getChildNodes())!!
             
 
 
@@ -265,7 +265,7 @@ open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashM
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("\nAppending Document Root: " +"\nElementName: " +rootElementPackage +"\nProperties: " +packagePropertiesHashMap!!.toString(), this, 
@@ -277,10 +277,10 @@ open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashM
     var node: Node = this.createPackageNode(document, rootElementPackage, packagePropertiesHashMap)!!
             
 
-document!!.appendChild(node)
+document.appendChild(node)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("\nAppended Document Created: " +DomDocumentHelper.toString(document), this, 
@@ -299,7 +299,7 @@ document!!.appendChild(node)
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -334,13 +334,13 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                     var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(StringMaker().
                             append(
                             "\nAdding Any New Properties: ")!!.append(nextPackagePropertiesHashMap!!.toString())!!.append(
-                            "\nto node: ")!!.append(node!!.getNodeName())!!.toString(), this, 
+                            "\nto node: ")!!.append(node.getNodeName())!!.toString(), this, 
                             "addNewProperties")
 
                                     }
@@ -372,7 +372,7 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
             
 
 
-    var valueNode: Node = DomSearchHelper.getNodeNoThrow(nextPropertyName, node!!.getChildNodes())!!
+    var valueNode: Node = DomSearchHelper.getNodeNoThrow(nextPropertyName, node.getChildNodes())!!
             
 
 
@@ -388,10 +388,10 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nIf property: \"" +nextPropertyName +" is the same as:\n" +"Node: " +node!!.getNodeName() +" then: " +propertyValue +"==" +existingElementNodeTextNodeValue, this, 
+                                    logUtil!!.put("\nIf property: \"" +nextPropertyName +" is the same as:\n" +"Node: " +node.getNodeName() +" then: " +propertyValue +"==" +existingElementNodeTextNodeValue, this, 
                             "addNewProperties")
 
                                     }
@@ -403,7 +403,7 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -426,7 +426,7 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("Adding a new Property: " +nextPropertyName +"=" +propertyValue, this, 
@@ -438,7 +438,7 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
     var newPropertyNode: Node = ModDomHelper.createTextNode(document, nextPropertyName, propertyValue)!!
             
 
-node!!.appendChild(newPropertyNode)
+node.appendChild(newPropertyNode)
 
                         }
                             
@@ -464,10 +464,10 @@ open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, 
                     var node = node
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nComparing the value property in: " +nextPackagePropertiesHashMap!!.toString() +"\nto node child leaves of node: " +node!!.getNodeName(), this, 
+                                    logUtil!!.put("\nComparing the value property in: " +nextPackagePropertiesHashMap!!.toString() +"\nto node child leaves of node: " +node.getNodeName(), this, 
                             "isElementValueTextNodeEqual")
 
                                     }
@@ -476,7 +476,7 @@ open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, 
     var propertyValue: String = nextPackagePropertiesHashMap!!.get(DomData.VALUE) as String
 
 
-    var valueNode: Node = DomSearchHelper.getNodeNoThrow(DomData.VALUE, node!!.getChildNodes())!!
+    var valueNode: Node = DomSearchHelper.getNodeNoThrow(DomData.VALUE, node.getChildNodes())!!
             
 
 
@@ -497,7 +497,7 @@ open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, 
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -546,7 +546,7 @@ open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any,
                     var elementNodeVector = elementNodeVector
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("\nComparing Properties of: " +elementNodeVector!!.size +" Nodes", this, 
@@ -627,12 +627,12 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(StringMaker().
                             append(
-                            "\nTrying to Add Child to Node: ")!!.append(node!!.getNodeName())!!.append(
+                            "\nTrying to Add Child to Node: ")!!.append(node.getNodeName())!!.append(
                             "\nwith new PackageName: ")!!.append(nextPackageName)!!.toString(), this, 
                             "addChildren")
 
@@ -643,12 +643,12 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
             
 
 
-    var elementNodeVector: Vector = DomSearchHelper.getAllNodesNoThrow(nextPackageName, node!!.getChildNodes())!!
+    var elementNodeVector: Vector = DomSearchHelper.getAllNodesNoThrow(nextPackageName, node.getChildNodes())!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("\nDocument Contains " +elementNodeVector!!.size +" Node(s) With Same Name", this, 
@@ -669,14 +669,14 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
     var nextNode: Node = this.createPackageNode(document, nextPackageName, nextPackagePropertiesHashMap)!!
             
 
-node!!.appendChild(nextNode)
+node.appendChild(nextNode)
 node= nextNode
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nAppended Package: " +node!!.getNodeName(), this, 
+                                    logUtil!!.put("\nAppended Package: " +node.getNodeName(), this, 
                             "addChildren")
 logUtil!!.put("\nAppended Document Created: " +DomDocumentHelper.toString(document), this, 
                             "addChildren")
@@ -693,7 +693,7 @@ logUtil!!.put("\nAppended Document Created: " +DomDocumentHelper.toString(docume
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -706,11 +706,11 @@ logUtil!!.put("\nAppended Document Created: " +DomDocumentHelper.toString(docume
     var nextNode: Node = this.createPackageMultiNode(document, nameSpaceRequestParam, nextPackageName, nextPackagePropertiesHashMap)!!
             
 
-node!!.appendChild(nextNode)
+node.appendChild(nextNode)
 node= nextNode
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("\nAppended Multinode Element: " +DomDocumentHelper.toString(document), this, 
@@ -724,7 +724,7 @@ node= nextNode
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -739,7 +739,7 @@ node= nextNode
 node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackagePropertiesHashMap)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(
@@ -776,7 +776,7 @@ open fun addNameSpace(key: String, value: String, document: Document)
                     var document = document
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put(StringMaker().
@@ -855,7 +855,7 @@ open fun toHashMap()
             
 
 
-    var keyArray: Array<Any?> = keys!!.toArray()!!
+    var keyArray: Array<Any?> = keys.toArray()!!
             
 
 
@@ -864,10 +864,10 @@ open fun toHashMap()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("NameSpace Request Size: " +keys!!.size(), this, 
+                                    logUtil!!.put("NameSpace Request Size: " +keys.size(), this, 
                             "toHashMap")
 
                                     }
@@ -891,7 +891,7 @@ open fun toHashMap()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("Request Param Class: " +className, this, 
@@ -909,12 +909,12 @@ open fun toHashMap()
 
 
     
-                        if(key!!.indexOf(NameSpaceRequestParamData.NAME) < 0)
+                        if(key.indexOf(NameSpaceRequestParamData.NAME) < 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("Not NameSpace key: " +key +" Value: " +value, this, 
@@ -944,12 +944,12 @@ hashMap!!.put(key.concatToString(), value.concatToString())
 
 
     
-                        if(key!!.indexOf(NameSpaceRequestParamData.NAME) < 0)
+                        if(key.indexOf(NameSpaceRequestParamData.NAME) < 0)
                         
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("Not NameSpace key: " +key +" Value: " +values[0], this, 
@@ -973,7 +973,7 @@ hashMap!!.put(key.concatToString(), .concatToString())
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     logUtil!!.put("NameSpaceRequestParams: " +this.getMap()!!.toString() +"\ntoHashMap(): " +hashMap!!.toString() +"\nDocument Created: " +DomDocumentHelper.toString(document), this, 

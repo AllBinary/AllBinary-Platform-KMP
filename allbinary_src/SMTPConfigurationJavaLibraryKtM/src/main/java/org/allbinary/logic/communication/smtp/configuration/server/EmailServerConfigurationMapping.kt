@@ -82,7 +82,7 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.emailServerConfigurationInterface!!.getSmtpServer())
+vector.add(this.emailServerConfigurationInterface!!.getSmtpServer())
 
 
 

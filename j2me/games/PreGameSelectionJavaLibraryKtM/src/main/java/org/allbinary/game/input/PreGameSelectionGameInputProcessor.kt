@@ -136,7 +136,7 @@ open fun onInput(list: BasicArrayList)
 
                     var list = list
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -147,7 +147,7 @@ open fun onInput(list: BasicArrayList)
 
 
         {
-    var anyType: Any = list!!.get(index)!!
+    var anyType: Any = list.get(index)!!
             
 
 
@@ -198,7 +198,7 @@ break;
 
     var thread: Thread = Thread(abRunnable)
 
-thread!!.start()
+thread.start()
 
                                     }
                                 
@@ -218,7 +218,7 @@ break;
                                 
 }
 
-list!!.clear()
+list.clear()
 }
 
 

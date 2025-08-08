@@ -98,7 +98,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(myClass!!.getName())
 stringBuffer!!.append(
                             " uses ")
-stringBuffer!!.append(classes!!.size)
+stringBuffer!!.append(classes.size)
 stringBuffer!!.append(
                             " other classes")
 stringBuffer!!.append(lineBreak)
@@ -110,7 +110,7 @@ stringBuffer!!.append(lineBreak)
 
 
 
-                        for (index in 0 until classes!!.size)
+                        for (index in 0 until classes.size)
 
 
         {stringBuffer!!.append(

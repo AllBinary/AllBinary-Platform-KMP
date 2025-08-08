@@ -58,7 +58,7 @@ public constructor        (node: Node)
                     var node = node
 this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as UserEmailEventsConfigurationInterface
 
-    var childNodeList: NodeList = node!!.getChildNodes()!!
+    var childNodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -117,7 +117,7 @@ open fun toXmlNode(document: Document)
     var userEmailConfigurationMapping: UserEmailEventsConfigurationMapping = UserEmailEventsConfigurationMapping(this.userEmailEventsConfigurationInterface)
 
 
-    var node: Node = document!!.createElement(UserEmailEventsConfigurationData.NAME)!!
+    var node: Node = document.createElement(UserEmailEventsConfigurationData.NAME)!!
             
 
 
@@ -130,15 +130,15 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Number Of Email Events Specified in file: " +set!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
+                                    logUtil!!.put("Number Of Email Events Specified in file: " +set.size(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
 
-    var eventNameArray: Array<Any?> = set!!.toArray()!!
+    var eventNameArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -161,7 +161,7 @@ open fun toXmlNode(document: Document)
 
     var userEmailEventConfigurationView: UserEmailEventConfigurationView = UserEmailEventConfigurationView(userEmailEventsConfigurationInterface)
 
-node!!.appendChild(userEmailEventConfigurationView!!.toXmlNode(document))
+node.appendChild(userEmailEventConfigurationView!!.toXmlNode(document))
 }
 
 

@@ -73,7 +73,7 @@ open fun getInstance(document: Document)
             
 
 
-    var contextConfigurationNode: Node = DomSearchHelper.getNode(contextConfigurationData!!.NAME, document!!.getChildNodes())!!
+    var contextConfigurationNode: Node = DomSearchHelper.getNode(contextConfigurationData!!.NAME, document.getChildNodes())!!
             
 
 

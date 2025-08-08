@@ -66,7 +66,7 @@ open fun getInstance()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -77,7 +77,7 @@ open fun getInstance()
 
 
         {
-    var layerInterface: AllBinaryLayer = list!!.objectArray[index]!! as AllBinaryLayer
+    var layerInterface: AllBinaryLayer = list.objectArray[index]!! as AllBinaryLayer
 
 
     var dropLayerInterface: DropLayerInterface = layerInterface as DropLayerInterface
@@ -85,7 +85,7 @@ open fun getInstance()
 allBinaryLayerManager!!.append(dropLayerInterface!!.getDroppedLayer() as AllBinaryLayer)
 }
 
-list!!.clear()
+list.clear()
 }
 
 

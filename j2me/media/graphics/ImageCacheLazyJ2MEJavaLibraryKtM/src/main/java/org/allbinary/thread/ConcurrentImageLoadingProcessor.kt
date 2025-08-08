@@ -90,7 +90,7 @@ open fun runTask()
         //nullable = true from not(false or (false and true)) = true
 {
     
-                        if(!this.runnable!!.isRunning())
+                        if(!this.runnable.isRunning())
                         
                                     {
                                     ImageThreadPool.getInstance()!!.runTask(this.runnable)

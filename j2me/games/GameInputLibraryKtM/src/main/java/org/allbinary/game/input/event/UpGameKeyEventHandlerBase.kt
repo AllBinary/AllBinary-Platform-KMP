@@ -60,10 +60,10 @@ open fun addListener(playerGameInput: PlayerGameInput)
                     var playerGameInput = playerGameInput
 
     
-                        if(!list!!.contains(playerGameInput))
+                        if(!list.contains(playerGameInput))
                         
                                     {
-                                    list!!.add(playerGameInput)
+                                    list.add(playerGameInput)
 
                                     }
                                 
@@ -71,7 +71,7 @@ open fun addListener(playerGameInput: PlayerGameInput)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -80,7 +80,7 @@ override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerI
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListenerSingleThreaded(eventListenerInterface)
 }
 
@@ -89,7 +89,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -104,13 +104,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var playerGameInput: PlayerGameInput = this.list!!.objectArray[index]!! as PlayerGameInput
+    var playerGameInput: PlayerGameInput = this.list.objectArray[index]!! as PlayerGameInput
 
 playerGameInput!!.onUpGameKeyEvent(eventObject as GameKeyEvent)
 } catch(e: Exception)
@@ -145,18 +145,18 @@ override fun toString()
 
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(TOTAL_LISTENERS)
-stringBuffer!!.append(this.list!!.size())
+stringBuffer!!.append(this.list.size())
 
 
 
 
-                        for (index in 0 until this.list!!.size()!!)
+                        for (index in 0 until this.list.size()!!)
 
 
         {
         try {
             
-    var eventListenerInterface: EventListenerInterface = this.list!!.get(index) as EventListenerInterface
+    var eventListenerInterface: EventListenerInterface = this.list.get(index) as EventListenerInterface
 
 stringBuffer!!.append(LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())

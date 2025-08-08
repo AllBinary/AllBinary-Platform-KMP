@@ -80,9 +80,9 @@ open fun process()
     var vector: Vector = osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
             
 
-logUtil!!.put("Processing " +vector!!.size +" Services", this, commonStrings!!.PROCESS)
+logUtil!!.put("Processing " +vector.size +" Services", this, commonStrings!!.PROCESS)
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -95,7 +95,7 @@ logUtil!!.put("Processing " +vector!!.size +" Services", this, commonStrings!!.P
                         for (index in 0 until size)
 
 
-        {osgiServiceInterface= vector!!.get(index) as OSGIServiceInterface
+        {osgiServiceInterface= vector.get(index) as OSGIServiceInterface
 
     
                         if(!getOsgiServiceVisitorInterface()!!.visit(osgiServiceInterface))

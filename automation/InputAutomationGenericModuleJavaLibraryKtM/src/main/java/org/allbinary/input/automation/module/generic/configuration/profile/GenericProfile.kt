@@ -57,7 +57,7 @@ public constructor        (node: Node)
 this.setName(DomNodeHelper.getTextNodeValue(node))
 this.vector= Vector()
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength(), this, 
@@ -84,7 +84,7 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
 
 logUtil!!.put("Adding GenericProfileDataWorkerType: " +genericProfileDataWorkerType!!.toString(), this, 
                             "Contructor")
-this.vector!!.add(genericProfileDataWorkerType)
+this.vector.add(genericProfileDataWorkerType)
 
                                     }
                                 
@@ -119,8 +119,8 @@ open fun add(genericProfileDataWorkerType: GenericProfileDataWorkerType)
                     var genericProfileDataWorkerType = genericProfileDataWorkerType
 
     
-                        if(!this.vector!!.contains(genericProfileDataWorkerType))
-                        this.vector!!.add(genericProfileDataWorkerType)
+                        if(!this.vector.contains(genericProfileDataWorkerType))
+                        this.vector.add(genericProfileDataWorkerType)
 }
 
 
@@ -129,7 +129,7 @@ open fun remove(genericProfileDataWorkerType: GenericProfileDataWorkerType)
 {
 
                     var genericProfileDataWorkerType = genericProfileDataWorkerType
-this.vector!!.remove(genericProfileDataWorkerType)
+this.vector.remove(genericProfileDataWorkerType)
 }
 
 
@@ -145,7 +145,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -156,9 +156,9 @@ open fun toXmlNode(document: Document)
 
 
         {
-    var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector!!.get(index) as GenericProfileDataWorkerType
+    var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
-node!!.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
+node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 }
 
 

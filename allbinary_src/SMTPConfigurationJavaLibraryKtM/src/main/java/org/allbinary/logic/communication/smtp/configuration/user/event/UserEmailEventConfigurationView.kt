@@ -48,7 +48,7 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var childNodeList: NodeList = node!!.getChildNodes()!!
+    var childNodeList: NodeList = node.getChildNodes()!!
             
 
 

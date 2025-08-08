@@ -157,7 +157,7 @@ cpuHashMap= HashMap<Any, Any>()
                                     
     var file: AbFile = fileVector!!.get(0) as AbFile
 
-lineNumberReader= LineNumberReader(FileReader(file!!.getPath()))
+lineNumberReader= LineNumberReader(FileReader(file.getPath()))
 
                                     }
                                 
@@ -204,35 +204,35 @@ lineNumberReader= LineNumberReader(FileReader(file!!.getPath()))
 
 
     
-                        if(key!!.indexOf(CpuInfo.PROCESSOR.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.PROCESSOR.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.PROCESSOR, value)
 
     
-                        if(key!!.indexOf(CpuInfo.VENDORID.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.VENDORID.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.VENDORID, value)
 
     
-                        if(key!!.indexOf(CpuInfo.CPUFAMILY.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.CPUFAMILY.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.CPUFAMILY, value)
 
     
-                        if(key!!.indexOf(CpuInfo.MODEL.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.MODEL.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.MODEL, value)
 
     
-                        if(key!!.indexOf(CpuInfo.MODELNAME.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.MODELNAME.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.MODELNAME, value)
 
     
-                        if(key!!.indexOf(CpuInfo.STEPPING.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.STEPPING.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.STEPPING, value)
 
     
-                        if(key!!.indexOf(CpuInfo.CPUMHZ.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.CPUMHZ.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.CPUMHZ, value)
 
     
-                        if(key!!.indexOf(CpuInfo.CACHESIZE.toString()) >= 0)
+                        if(key.indexOf(CpuInfo.CACHESIZE.toString()) >= 0)
                         cpuHashMap!!.put(CpuInfo.CACHESIZE, value)
 
                                     }

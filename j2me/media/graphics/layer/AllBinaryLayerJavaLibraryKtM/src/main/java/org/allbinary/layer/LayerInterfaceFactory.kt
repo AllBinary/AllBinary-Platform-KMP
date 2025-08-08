@@ -100,10 +100,10 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
 logUtil!!.put(StringMaker().
                             append(HASHTABLE_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-    var typeInteger: Integer = hashtable!!.get(Layer.ID as Object) as Integer
+    var typeInteger: Integer = hashtable.get(Layer.ID as Object) as Integer
 
 
-    var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = list!!.objectArray[typeInteger!!.toInt() -1]!! as LayerInterfaceFactoryInterface
+    var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = list.objectArray[typeInteger!!.toInt() -1]!! as LayerInterfaceFactoryInterface
 
 
 
@@ -118,7 +118,7 @@ open fun add(layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
 {
 
                     var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
-list!!.add(layerInterfaceFactoryInterface)
+list.add(layerInterfaceFactoryInterface)
 }
 
 

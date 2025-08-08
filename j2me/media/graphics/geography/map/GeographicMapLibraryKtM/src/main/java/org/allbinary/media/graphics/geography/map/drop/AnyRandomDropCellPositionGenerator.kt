@@ -98,7 +98,7 @@ geographicMapCellPosition= basicGeographicMapCellPositionFactory!!.getInstance(r
                         if(this.isDropAllowedAt(geographicMapCellPosition))
                         
                                     {
-                                    this.list!!.add(geographicMapCellPosition)
+                                    this.list.add(geographicMapCellPosition)
 
                                     }
                                 

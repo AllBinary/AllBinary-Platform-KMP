@@ -95,7 +95,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -123,11 +123,11 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
     var b: Short = basicColor!!.blue
 
 
-    var width: Int = image!!.getWidth()!!
+    var width: Int = image.getWidth()!!
             
 
 
-    var height: Int = image!!.getHeight()!!
+    var height: Int = image.getHeight()!!
             
 
 
@@ -204,7 +204,7 @@ open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, 
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -235,11 +235,11 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
     var b: Float = (basicColor!!.blue.toFloat()) /MAX
 
 
-    var width: Int = image!!.getWidth()!!
+    var width: Int = image.getWidth()!!
             
 
 
-    var height: Int = image!!.getHeight()!!
+    var height: Int = image.getHeight()!!
             
 
 
@@ -314,7 +314,7 @@ open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alp
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -333,11 +333,11 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
                         }
                             
 
-    var width: Int = image!!.getWidth()!!
+    var width: Int = image.getWidth()!!
             
 
 
-    var height: Int = image!!.getHeight()!!
+    var height: Int = image.getHeight()!!
             
 
 
@@ -358,9 +358,9 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
                         for (index2 in 0 until height)
 
 
-        {raster!!.getPixel(index, index2, colorArray)
+        {raster.getPixel(index, index2, colorArray)
 colorArray[0]= alpha and colorArray[0]
-raster!!.setPixel(index, index2, colorArray)
+raster.setPixel(index, index2, colorArray)
 }
 
 }
@@ -397,7 +397,7 @@ open fun getImageArray(originalImageArray: Array<Image?>)
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
             
 
-image!!.getGraphics()!!.drawImage(originalImage, 0, 0, Anchor.TOP_LEFT)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, Anchor.TOP_LEFT)
 newImageArray[index]= image
 }
 

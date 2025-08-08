@@ -141,14 +141,14 @@ logUtil!!.put("isUpgradeable: " +rtsInterface!!.isUpgradeable(), this, commonStr
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
             
 
-logUtil!!.put(cost +"<=" +capital!!.getTotalMoney(), this, commonStrings!!.PROCESS)
+logUtil!!.put(cost +"<=" +capital.getTotalMoney(), this, commonStrings!!.PROCESS)
 
     
-                        if(cost <= capital!!.getTotalMoney())
+                        if(cost <= capital.getTotalMoney())
                         
                                     {
                                     rtsPlayerLayerInterface!!.add(BuildingSound.getInstance())
-capital!!.removeMoney(cost)
+capital.removeMoney(cost)
 rtsInterface!!.upgrade()
 technologyRTSInterfaceImageItem!!.update()
 TechEventHandler.getInstance()!!.fireEvent(EVENT)

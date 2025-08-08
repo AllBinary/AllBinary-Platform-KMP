@@ -82,7 +82,7 @@ open fun toXmlNode(document: Document)
                             toXmlNode(document)!!
             
 
-node!!.appendChild(childCategoryNode)
+node.appendChild(childCategoryNode)
 }
 
 

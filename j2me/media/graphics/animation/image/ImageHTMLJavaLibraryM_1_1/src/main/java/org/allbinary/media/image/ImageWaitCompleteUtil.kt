@@ -105,7 +105,7 @@ open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
     var playnImage: PlaynImage = image as PlaynImage
 
 
-    var playnCoreImage: Image = playnImage!!.getImage() as Image
+    var playnCoreImage: playn.core.Image = playnImage!!.getImage() as Image
 
 
         while(!playnCoreImage!!.isReady() || playnCoreImage!!.width() +playnCoreImage!!.height() <= 0)
@@ -125,10 +125,10 @@ open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
 
 
     
-                        if(!image!!.isReady())
+                        if(!image.isReady())
                         
                                     {
-                                    image!!.init(image!!.getImage())
+                                    image.init(image.getImage())
 
                                     }
                                 
@@ -161,7 +161,7 @@ PreLogUtil.put("Image Total: " +size, this,
                         for (index in 0 until size)
 
 
-        {this.waitFor(hashtable!!.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
+        {this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }
 
 }

@@ -168,7 +168,7 @@ this.getFormData(RequestParams(request).
                             toHashMap())
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put(
@@ -415,7 +415,7 @@ open fun isNameValid()
 
 
     
-                        if(this.name!!.compareTo(storeNameEscaped) != 0)
+                        if(this.name.compareTo(storeNameEscaped) != 0)
                         
                                     {
                                     isEscapedCharactersContained= true
@@ -692,7 +692,7 @@ valid= this.isNameValid()
                                 
 
     
-                        if(valid!! == true)
+                        if(valid == true)
                         
                                     {
                                     
@@ -1006,7 +1006,7 @@ stringBuffer!!.append(
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -1031,7 +1031,7 @@ open fun getTestHtmlPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org!!.allbinary!!.globals!!.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
+                        return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
 }
 
 
@@ -1042,7 +1042,7 @@ open fun getCurrentHostName()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostName()
@@ -1069,7 +1069,7 @@ open fun getCurrentHostNamePath()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostNamePath()
@@ -1096,7 +1096,7 @@ open fun getCurrentHomeHostName()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostName()
@@ -1123,7 +1123,7 @@ open fun getCurrentHomeHostNamePath()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostNamePath()
@@ -1283,7 +1283,7 @@ open fun getSubStores()
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
 
 
-    var subStoreVector: BasicArrayList = tokenizer!!.getTokens(this.subStores, BasicArrayList())!!
+    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayList())!!
             
 
 
@@ -1700,7 +1700,7 @@ open fun createDirectories()
 
 
     
-                        if(!this.directory!!.create(storeAbPath))
+                        if(!this.directory.create(storeAbPath))
                         
                                     {
                                     
@@ -1713,7 +1713,7 @@ open fun createDirectories()
                                 
 
     
-                        if(!this.directory!!.create(AbPath(storeAbPath +this.getCategoryPath())))
+                        if(!this.directory.create(AbPath(storeAbPath +this.getCategoryPath())))
                         
                                     {
                                     
@@ -1726,7 +1726,7 @@ open fun createDirectories()
                                 
 
     
-                        if(!this.directory!!.create(AbPath(storeAbPath +this.getStaticPath())))
+                        if(!this.directory.create(AbPath(storeAbPath +this.getStaticPath())))
                         
                                     {
                                     
@@ -1808,7 +1808,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     
-                        if(!this.directory!!.create(toDirectoryAbPath))
+                        if(!this.directory.create(toDirectoryAbPath))
                         
                                     {
                                     
@@ -1837,7 +1837,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
@@ -1889,7 +1889,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -2034,7 +2034,7 @@ dataVector!!.add(this.testFtpPassword)
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
@@ -2092,7 +2092,7 @@ dataHashMap!!.put(storeFrontData!!.TESTFTPPASSWORD, this.testFtpPassword)
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 

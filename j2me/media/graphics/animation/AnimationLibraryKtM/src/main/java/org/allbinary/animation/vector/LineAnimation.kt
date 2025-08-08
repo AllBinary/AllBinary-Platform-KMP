@@ -103,7 +103,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
     var currentLine: Array<IntArray?> = this.line
 
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
-graphics!!.drawLine(currentLine[0]!![0]!!, currentLine[0]!![1]!!, currentLine[1]!![0]!!, currentLine[1]!![1]!!)
+graphics.drawLine(currentLine[0]!![0]!!, currentLine[0]!![1]!!, currentLine[1]!![0]!!, currentLine[1]!![1]!!)
 }
 
 override fun nextFrame()

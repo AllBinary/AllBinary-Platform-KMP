@@ -179,7 +179,7 @@ MediaPlayerUtil.getInstance()!!.wait(androidMediaPlayerWrapper!!.getMediaPlayer(
                             
 
 
-                            throw Exception("Unknown Property Player: " +player!!::class.qualifiedName!!)
+                            throw Exception("Unknown Property Player: " +player::class.qualifiedName!!)
 
                         }
                             

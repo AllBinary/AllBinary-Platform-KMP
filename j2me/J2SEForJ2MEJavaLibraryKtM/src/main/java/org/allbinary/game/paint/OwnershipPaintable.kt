@@ -74,7 +74,7 @@ override fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.setColor(color)
+graphics.setColor(color)
 
     var myFont: MyFont = MyFont.getInstance()!!
             
@@ -92,16 +92,16 @@ graphics!!.setColor(color)
             
 
 
-    var font: Font = graphics!!.getFont()!!
+    var font: Font = graphics.getFont()!!
             
 
 
-    var beginWidth: Int = (font!!.stringWidth(COPYRIGHT) shr 1)
+    var beginWidth: Int = (font.stringWidth(COPYRIGHT) shr 1)
 
 
     var COPYRIGHT_Y: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics!!.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, anchor)
+graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, anchor)
 }
 
 override fun setBasicColorP(basicColor: BasicColor)

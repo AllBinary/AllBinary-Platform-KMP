@@ -80,28 +80,28 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
-    var bitmap: Bitmap = image!!.getBitmap()!!
+    var bitmap: Bitmap = image.getBitmap()!!
             
 
 
-    var width: Int = bitmap!!.getWidth()!!
+    var width: Int = bitmap.getWidth()!!
             
 
 
-    var height: Int = bitmap!!.getHeight()!!
+    var height: Int = bitmap.getHeight()!!
             
 
-matrix!!.setRotate(rotationInDegrees, (width shr 1), (height shr 1))
+matrix.setRotate(rotationInDegrees, (width shr 1), (height shr 1))
 
-    var canvas: Canvas = image!!.getCanvas()!!
+    var canvas: Canvas = image.getCanvas()!!
             
 
-canvas!!.concat(matrix)
-image!!.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
+canvas.concat(matrix)
+image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
 
 
 

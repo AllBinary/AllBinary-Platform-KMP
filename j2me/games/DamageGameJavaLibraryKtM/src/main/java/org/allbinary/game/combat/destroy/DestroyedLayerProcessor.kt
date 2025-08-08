@@ -76,7 +76,7 @@ open fun getInstance()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -100,7 +100,7 @@ open fun getInstance()
                         for (index in 0 until size)
 
 
-        {layerInterface= list!!.objectArray[index]!! as AllBinaryLayer
+        {layerInterface= list.objectArray[index]!! as AllBinaryLayer
 
     
                         if(layerInterface != 
@@ -120,7 +120,7 @@ destroyedEventHandler!!.fireEvent(destroyedEvent)
                             
 }
 
-list!!.clear()
+list.clear()
 }
 
 

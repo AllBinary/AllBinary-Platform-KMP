@@ -273,7 +273,7 @@ open fun hasChild(displayable: MyCanvas)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.childNameList!!.contains(displayable!!.name)
+                        return this.childNameList!!.contains(displayable.name)
 }
 
 

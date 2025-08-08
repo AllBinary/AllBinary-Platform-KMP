@@ -100,7 +100,7 @@ open fun get(abeClientInformation: AbeClientInformationInterface)
                                 
 
     
-                        if(servers!!.size() >= MINSERVERS && abeClientInformation!!.isLargerOrDifferentServerList(servers))
+                        if(servers.size() >= MINSERVERS && abeClientInformation!!.isLargerOrDifferentServerList(servers))
                         
                                     {
                                     isBetterServerList= true

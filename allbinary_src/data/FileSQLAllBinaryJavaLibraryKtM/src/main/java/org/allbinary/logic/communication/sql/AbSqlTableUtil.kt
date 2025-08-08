@@ -148,7 +148,7 @@ open fun getOutputStream(backupPath: String, tableName: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(SAVING +tableName, this, this.METHOD_GET_OUTPUT_STREAM)
@@ -183,7 +183,7 @@ backupFile!!.createNewFile()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -219,7 +219,7 @@ open fun backupFile(path: AbPath, backupPath: String, tableName: String)
             
 
 
-    var timeLong: Long = calendar!!.getTimeInMillis() as Long
+    var timeLong: Long = calendar.getTimeInMillis() as Long
 
 
     var time: String = timeLong!!.toString()!!
@@ -239,7 +239,7 @@ stringBuffer!!.append(time)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -265,7 +265,7 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.METHOD_BACKUP_FILE, e)
@@ -297,15 +297,15 @@ open fun convertNewLines(value: String)
     var lastIndex: Int = 0
 
 
-        while(index < value!!.length)
-        {index= value!!.indexOf(specialCharArray[0]!!, lastIndex)
+        while(index < value.length)
+        {index= value.indexOf(specialCharArray[0]!!, lastIndex)
 
     
                         if(index !=  -1)
                         
                                     {
                                     
-    var nextLine: String = value!!.substring(lastIndex, index -1)!!
+    var nextLine: String = value.substring(lastIndex, index -1)!!
             
 
 stringBuffer!!.append(nextLine)
@@ -325,10 +325,10 @@ lastIndex= index +1
 
 
     
-                        if(lastIndex < value!!.length)
+                        if(lastIndex < value.length)
                         
                                     {
-                                    stringBuffer!!.append(value!!.substring(lastIndex, value!!.length))
+                                    stringBuffer!!.append(value.substring(lastIndex, value.length))
 
                                     }
                                 
@@ -358,7 +358,7 @@ open fun backupTable(abSqlTable: AbSqlTable)
     var sqlStatement: String = this.sqlStrings!!.SELECT_ALL_FROM +tableName
 
 
-    var path: String = org!!.allbinary!!.globals!!.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
+    var path: String = org.allbinary.globals.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
 
 
     
@@ -367,7 +367,7 @@ open fun backupTable(abSqlTable: AbSqlTable)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(ERROR_CREATING +path, this, this.METHOD_BACKUP_TABLE)
@@ -382,11 +382,11 @@ open fun backupTable(abSqlTable: AbSqlTable)
             
 
 
-    var rsmd: ResultSetMetaData = rset!!.getMetaData()!!
+    var rsmd: ResultSetMetaData = rset.getMetaData()!!
             
 
 
-    var colNum: Int = rsmd!!.getColumnCount()!!
+    var colNum: Int = rsmd.getColumnCount()!!
             
 
 
@@ -402,7 +402,7 @@ open fun backupTable(abSqlTable: AbSqlTable)
             
 
 
-        while(rset!!.next())
+        while(rset.next())
         {stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(QUERY_START)
 
@@ -413,14 +413,14 @@ stringBuffer!!.append(QUERY_START)
 
 
         {
-    var value: String = rset!!.getString(i)!!
+    var value: String = rset.getString(i)!!
             
 
 stringBuffer!!.append(this.convertNewLines(value))
 stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 }
 
-stringBuffer!!.append(rset!!.getString(colNum))
+stringBuffer!!.append(rset.getString(colNum))
 stringBuffer!!.append(END)
 
     var sqlStatementLine: String = stringBuffer!!.toString()!!
@@ -428,7 +428,7 @@ stringBuffer!!.append(END)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(APPENDING +sqlStatementLine, this, this.METHOD_BACKUP_TABLE)
@@ -447,7 +447,7 @@ StreamUtil.getInstance()!!.close(outputStream)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -480,10 +480,10 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
 
         try {
             
-    var path: String = org!!.allbinary!!.globals!!.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
+    var path: String = org.allbinary.globals.URLGLOBALS.getMainPath() +PATH_GLOBALS.getInstance()!!.BACKUP_PATH
 
 
-    var current: Int = portion!!.getCurrent()!!.toInt()!!
+    var current: Int = portion.getCurrent()!!.toInt()!!
             
 
 
@@ -498,7 +498,7 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.ERROR_CREATING +path, this, this.METHOD_RESTORE_TABLE)
@@ -522,7 +522,7 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
             
 
 
-    var section: Long = size /portion!!.getTotal()!!.toInt() +1
+    var section: Long = size /portion.getTotal()!!.toInt() +1
 
 
     var start: Long = section *current
@@ -550,7 +550,7 @@ stringBuffer!!.append(DASH)
 stringBuffer!!.append(end)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(stringBuffer!!.toString(), this, this.METHOD_RESTORE_TABLE)
@@ -567,7 +567,7 @@ bufferedLineReader!!.readUpToLines(start)
                                 )
         {
     
-                        if(line!!.length > 1)
+                        if(line.length > 1)
                         
                                     {
                                     abSqlTable!!.executeSQLStatement(line)
@@ -588,7 +588,7 @@ stringBuffer!!.append(PORTION_RESTORED)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(

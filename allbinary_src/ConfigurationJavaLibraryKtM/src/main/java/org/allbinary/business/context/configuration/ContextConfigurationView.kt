@@ -49,7 +49,7 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var childNodeList: NodeList = node!!.getChildNodes()!!
+    var childNodeList: NodeList = node.getChildNodes()!!
             
 
 this.contextConfigurationInterface= ContextConfiguration()
@@ -90,13 +90,13 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(ContextConfigurationData.getInstance()!!.NAME)!!
+    var node: Node = document.createElement(ContextConfigurationData.getInstance()!!.NAME)!!
             
 
 
     var emailServerConfigurationView: EmailServerConfigurationView = EmailServerConfigurationView(this.getContextConfigurationInterface()!!.getEmailServerConfigurationInterface())
 
-node!!.appendChild(emailServerConfigurationView!!.toXmlNode(document))
+node.appendChild(emailServerConfigurationView!!.toXmlNode(document))
 
 
 

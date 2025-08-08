@@ -65,7 +65,7 @@ open fun process(list: BasicArrayList)
 
                     var list = list
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -78,7 +78,7 @@ open fun process(list: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {layerPlacementInterface= list!!.objectArray[index]!! as LayerPlacementInterface
+        {layerPlacementInterface= list.objectArray[index]!! as LayerPlacementInterface
 this.process(layerPlacementInterface)
 }
 
@@ -105,7 +105,7 @@ open fun process(layerPlacementInterface: LayerPlacementInterface)
             
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.keys()!!
+    var enumeration: Enumeration<Any?> = hashtable.keys()!!
             
 
 
@@ -127,12 +127,12 @@ open fun process(layerPlacementInterface: LayerPlacementInterface)
     var layerInterface: AllBinaryLayer
 
 
-        while(enumeration!!.hasMoreElements())
-        {point= enumeration!!.nextElement()!! as GPoint
-layerHashtable= hashtable!!.get(point as Object?) as Hashtable<Any, Any>
-x= point!!.getX() +relativePoint!!.getX()
-y= point!!.getY() +relativePoint!!.getY()
-z= point!!.getZ() +relativePoint!!.getZ()
+        while(enumeration.hasMoreElements())
+        {point= enumeration.nextElement()!! as GPoint
+layerHashtable= hashtable.get(point as Object?) as Hashtable<Any, Any>
+x= point.getX() +relativePoint!!.getX()
+y= point.getY() +relativePoint!!.getY()
+z= point.getZ() +relativePoint!!.getZ()
 layerInterface= layerInterfaceFactory!!.getInstance(layerHashtable, x, y, z)
 layerInterfaceVisitor!!.visit(layerInterface)
 }
@@ -165,10 +165,10 @@ open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
             
 
 
-    var x: Int = ((dimension!!.getX() -width) /2)
+    var x: Int = ((dimension.getX() -width) /2)
 
 
-    var y: Int = ((dimension!!.getY() -height) /2)
+    var y: Int = ((dimension.getY() -height) /2)
 
 
 
@@ -192,7 +192,7 @@ open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
             
 
 
-    var x: Int = ((dimension!!.getX() -width) /2)
+    var x: Int = ((dimension.getX() -width) /2)
 
 
     var y: Int =  -height

@@ -108,7 +108,7 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
 
                     var index = index
 
-    var geographicMapCellPosition: GeographicMapCellPosition = this.list!!.get(index) as GeographicMapCellPosition
+    var geographicMapCellPosition: GeographicMapCellPosition = this.list.get(index) as GeographicMapCellPosition
 
 
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
@@ -125,10 +125,10 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
     var column: Int = this.columnArray[randomCell]!!
 
 
-    var x: Int = point!!.getX() +(row *this.cellWidth)
+    var x: Int = point.getX() +(row *this.cellWidth)
 
 
-    var y: Int = point!!.getY() +(column *this.cellHeight)
+    var y: Int = point.getY() +(column *this.cellHeight)
 
 
     var pickedUpLayerInterfaceFactory: PickedUpLayerInterfaceFactoryInterface = DropLayerFactory.getInstance()!!.getRandomInstance()!!

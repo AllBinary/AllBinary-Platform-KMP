@@ -78,7 +78,7 @@ open fun init()
 
 
     
-                        if(features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
@@ -125,7 +125,7 @@ open fun update(gl: GL)
 
 
     
-                        if(features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     
@@ -172,7 +172,7 @@ open fun update(graphics: Graphics)
 
 
     
-                        if(features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     

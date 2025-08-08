@@ -71,15 +71,15 @@ open fun deleteAtStart(start: String, end: String)
     var beginIndex: Int= 0
     var endIndex: Int= 0
 
-beginIndex= this.string!!.indexOf(start)
-endIndex= this.string!!.indexOf(end)
+beginIndex= this.string.indexOf(start)
+endIndex= this.string.indexOf(end)
 
     
                         if(endIndex > beginIndex && beginIndex >= 0 && endIndex >= 0 && beginIndex < 10 && endIndex < 525)
                         
                                     {
                                     
-    var text: String = this.string!!.substring(endIndex, this.string!!.length)!!
+    var text: String = this.string.substring(endIndex, this.string.length)!!
             
 
 
@@ -105,7 +105,7 @@ idOutData!!.writeBytes(text)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -140,19 +140,19 @@ open fun deleteBetween(start: String, end: String, newText: String)
     var beginIndex: Int= 0
     var endIndex: Int= 0
 
-beginIndex= this.string!!.indexOf(start)
-endIndex= this.string!!.indexOf(end)
+beginIndex= this.string.indexOf(start)
+endIndex= this.string.indexOf(end)
 
     
                         if(endIndex > beginIndex && beginIndex >= 0 && endIndex >= 0 && beginIndex < 50 && endIndex < 425)
                         
                                     {
                                     
-    var newStart: String = this.string!!.substring(0, beginIndex)!!
+    var newStart: String = this.string.substring(0, beginIndex)!!
             
 
 
-    var text: String = this.string!!.substring(endIndex +end!!.length, this.string!!.length)!!
+    var text: String = this.string.substring(endIndex +end.length, this.string.length)!!
             
 
 
@@ -178,7 +178,7 @@ idOutData!!.writeBytes(newStart +newText +text)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

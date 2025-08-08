@@ -112,7 +112,7 @@ this.rtsInterface= rtsInterface
                                 )
                         
                                     {
-                                    imageHeight= image!!.getHeight()
+                                    imageHeight= image.getHeight()
 
                                     }
                                 
@@ -157,11 +157,11 @@ super.paint(graphics, x, y)
 
     var xa: Int = x +2
 
-graphics!!.drawString(COST, xa, y +this.adjustedCostLabelY, 0)
-graphics!!.drawString(DOLLAR, xa, y +this.adjustedCostY, 0)
-graphics!!.drawChars(costString, 0, this.costLength, x +this.adjustedCostX, y +this.adjustedCostY, 0)
-graphics!!.drawString(LEVEL, xa, y +this.adjustedLevelY, 0)
-graphics!!.drawChars(levelString, 0, this.levelLength, x +this.adjustedLevelX, y +this.adjustedLevelY, 0)
+graphics.drawString(COST, xa, y +this.adjustedCostLabelY, 0)
+graphics.drawString(DOLLAR, xa, y +this.adjustedCostY, 0)
+graphics.drawChars(costString, 0, this.costLength, x +this.adjustedCostX, y +this.adjustedCostY, 0)
+graphics.drawString(LEVEL, xa, y +this.adjustedLevelY, 0)
+graphics.drawChars(levelString, 0, this.levelLength, x +this.adjustedLevelX, y +this.adjustedLevelY, 0)
 }
 
 

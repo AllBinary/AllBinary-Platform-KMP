@@ -86,11 +86,11 @@ open fun process()
             
 
 
-    var set: Set = hashtable!!.keySet()!!
+    var set: Set = hashtable.keySet()!!
             
 
 
-    var inputTypeNameArray: Array<Any?> = set!!.toArray()!!
+    var inputTypeNameArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -108,7 +108,7 @@ open fun process()
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String
 
 
-    var robot: InputRobotInterface = hashtable!!.get(inputTypeNameString as Object?) as InputRobotInterface
+    var robot: InputRobotInterface = hashtable.get(inputTypeNameString as Object?) as InputRobotInterface
 
 
     

@@ -142,7 +142,7 @@ open fun isFeature(activity: Activity, property: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return activity!!.getPackageManager()!!.hasSystemFeature(property)
+                        return activity.getPackageManager()!!.hasSystemFeature(property)
 }
 
 

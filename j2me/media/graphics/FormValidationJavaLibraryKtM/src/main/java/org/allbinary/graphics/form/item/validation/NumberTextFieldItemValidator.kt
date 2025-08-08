@@ -99,7 +99,7 @@ override fun isValid()
             
 
 
-    var textLength: Int = string!!.length!!
+    var textLength: Int = string.length!!
             
 
 
@@ -156,7 +156,7 @@ override fun toList()
             
 
 
-    var textLength: Int = string!!.length!!
+    var textLength: Int = string.length!!
             
 
 
@@ -183,29 +183,29 @@ override fun toList()
 
 
     
-                        if(number!!.toInt() > min)
+                        if(number.toInt() > min)
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list!!.add(stringMaker!!.append(name)!!.append(
+list.add(stringMaker!!.append(name)!!.append(
                             " is to small")!!.toString())
 
                                     }
                                 
                              else 
     
-                        if(number!!.toInt() > max)
+                        if(number.toInt() > max)
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list!!.add(stringMaker!!.append(name)!!.append(
+list.add(stringMaker!!.append(name)!!.append(
                             " is to large")!!.toString())
 
                                     }
                                 
 } catch(e: NumberFormatException)
             {stringMaker!!.delete(0, stringMaker!!.length())
-list!!.add(stringMaker!!.append(name)!!.append(
+list.add(stringMaker!!.append(name)!!.append(
                             " is not a number")!!.toString())
 }
 
@@ -219,7 +219,7 @@ list!!.add(stringMaker!!.append(name)!!.append(
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list!!.add(stringMaker!!.append(name)!!.append(
+list.add(stringMaker!!.append(name)!!.append(
                             " is to short")!!.toString())
 
                                     }
@@ -230,7 +230,7 @@ list!!.add(stringMaker!!.append(name)!!.append(
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list!!.add(stringMaker!!.append(name)!!.append(
+list.add(stringMaker!!.append(name)!!.append(
                             " is to long")!!.toString())
 
                                     }

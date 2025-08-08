@@ -66,10 +66,10 @@ open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, fore
 
                     var foregroundBasicColor = foregroundBasicColor
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
-list!!.clear()
+list.clear()
 
     var textItem: CommandTextItem
 
@@ -102,10 +102,10 @@ list!!.clear()
                         for (index in 0 until size)
 
 
-        {command= vector!!.elementAt(index) as Command
+        {command= vector.elementAt(index) as Command
 
     
-                        if(command!!.getPriority() < priorityLimit)
+                        if(command.getPriority() < priorityLimit)
                         
                                     {
                                     
@@ -117,7 +117,7 @@ list!!.clear()
                         
                                     {
                                     textItem= CommandTextItem(command, ImageItem.LAYOUT_DEFAULT, StringUtil.getInstance()!!.EMPTY_STRING, backgroundBasicColor, foregroundBasicColor)
-list!!.add(textItem)
+list.add(textItem)
 
                                     }
                                 
@@ -127,7 +127,7 @@ list!!.add(textItem)
 }
 
 
-    var textItemArray: Array<CustomItem?> = arrayOfNulls(list!!.size())
+    var textItemArray: Array<CustomItem?> = arrayOfNulls(list.size())
 
 
     var size2: Int = textItemArray!!.size
@@ -140,7 +140,7 @@ list!!.add(textItem)
                         for (index in 0 until size2)
 
 
-        {textItemArray[index]= list!!.objectArray[index]!! as CustomItem
+        {textItemArray[index]= list.objectArray[index]!! as CustomItem
 }
 
 

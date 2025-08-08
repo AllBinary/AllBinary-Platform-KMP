@@ -201,7 +201,7 @@ open fun setRealAnimation()
 
 this.animationInterfaceFactoryInterface!!.setInitialScale(scaleProperties)
 this.animation= this.animationInterfaceFactoryInterface!!.getInstance(this.instanceId) as IndexedAnimation
-this.animation!!.setState(animation)
+this.animation.setState(animation)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
 }
@@ -216,7 +216,7 @@ override fun setScale(scaleX: Float, scaleY: Float)
 
 
                     var scaleY = scaleY
-this.animation!!.setScale(scaleX, scaleY)
+this.animation.setScale(scaleX, scaleY)
 }
 
 override fun getAnimationBehavior()
@@ -225,7 +225,7 @@ override fun getAnimationBehavior()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getAnimationBehavior()
+                        return this.animation.getAnimationBehavior()
 }
 
 
@@ -235,7 +235,7 @@ override fun getAnimationBehavior()
 {
 
                     var gl = gl
-this.animation!!.set(gl)
+this.animation.set(gl)
 }
 
 override fun setAlpha(alpha: Int)
@@ -243,7 +243,7 @@ override fun setAlpha(alpha: Int)
 {
 
                     var alpha = alpha
-this.animation!!.setAlpha(alpha)
+this.animation.setAlpha(alpha)
 }
 
 override fun setDx(dx: Int)
@@ -251,7 +251,7 @@ override fun setDx(dx: Int)
 {
 
                     var dx = dx
-this.animation!!.setDx(dx)
+this.animation.setDx(dx)
 }
 
 override fun setDy(dy: Int)
@@ -259,7 +259,7 @@ override fun setDy(dy: Int)
 {
 
                     var dy = dy
-this.animation!!.setDy(dy)
+this.animation.setDy(dy)
 }
 
 override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
@@ -270,7 +270,7 @@ override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
 
 
                     var maxScaleY = maxScaleY
-this.animation!!.setMaxScale(maxScaleX, maxScaleY)
+this.animation.setMaxScale(maxScaleX, maxScaleY)
 }
 
 override fun changeBasicColor(basicColor: BasicColor)
@@ -278,7 +278,7 @@ override fun changeBasicColor(basicColor: BasicColor)
 {
 
                     var basicColor = basicColor
-this.animation!!.changeBasicColor(basicColor)
+this.animation.changeBasicColor(basicColor)
 }
 
 override fun getBasicColorP()
@@ -287,7 +287,7 @@ override fun getBasicColorP()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getBasicColorP()
+                        return this.animation.getBasicColorP()
 }
 
 override fun getChangeBasicColor()
@@ -296,7 +296,7 @@ override fun getChangeBasicColor()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getChangeBasicColor()
+                        return this.animation.getChangeBasicColor()
 }
 
 override fun getChangeColor()
@@ -305,7 +305,7 @@ override fun getChangeColor()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getChangeColor()
+                        return this.animation.getChangeColor()
 }
 
 override fun getColor()
@@ -314,7 +314,7 @@ override fun getColor()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getColor()
+                        return this.animation.getColor()
 }
 
 override fun getDx()
@@ -323,7 +323,7 @@ override fun getDx()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getDx()
+                        return this.animation.getDx()
 }
 
 override fun getDy()
@@ -332,7 +332,7 @@ override fun getDy()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getDy()
+                        return this.animation.getDy()
 }
 
 override fun isThreed()
@@ -341,19 +341,19 @@ override fun isThreed()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.isThreed()
+                        return this.animation.isThreed()
 }
 
 
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.animation!!.nextFrame()
+{this.animation.nextFrame()
 }
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.animation!!.reset()
+{this.animation.reset()
 }
 
 override fun setFrame(index: Int)
@@ -361,7 +361,7 @@ override fun setFrame(index: Int)
 {
 
                     var index = index
-this.animation!!.setFrame(index)
+this.animation.setFrame(index)
 }
 
 override fun getFrame()
@@ -370,7 +370,7 @@ override fun getFrame()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getFrame()
+                        return this.animation.getFrame()
 }
 
 
@@ -381,7 +381,7 @@ override fun getFrame()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getAnimationSize()
+                        return this.animation.getAnimationSize()
 }
 
 override fun getSize()
@@ -390,12 +390,12 @@ override fun getSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getSize()
+                        return this.animation.getSize()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.animation!!.previousFrame()
+{this.animation.previousFrame()
 }
 
 override fun isLastFrame()
@@ -404,7 +404,7 @@ override fun isLastFrame()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.isLastFrame()
+                        return this.animation.isLastFrame()
 }
 
 override fun setSequence(sequence: IntArray)
@@ -412,7 +412,7 @@ override fun setSequence(sequence: IntArray)
 {
 
                     var sequence = sequence
-this.animation!!.setSequence(sequence)
+this.animation.setSequence(sequence)
 }
 
 override fun getSequence()
@@ -421,7 +421,7 @@ override fun getSequence()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getSequence()
+                        return this.animation.getSequence()
 }
 
 override fun getWidth()
@@ -430,7 +430,7 @@ override fun getWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animation!!.getWidth()
+                        return this.animation.getWidth()
 }
 
 
@@ -447,7 +447,7 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 
         try {
-            this.animation!!.paint(graphics, x, y)
+            this.animation.paint(graphics, x, y)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
@@ -471,7 +471,7 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
                     var z = z
 
         try {
-            this.animation!!.paintThreed(graphics, x, y, z)
+            this.animation.paintThreed(graphics, x, y, z)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
@@ -493,7 +493,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image!!.getName())!!.append(commonSeps!!.SPACE)!!.append(image!!.getWidth())!!.append(commonSeps!!.SPACE)!!.append(image!!.getHeight())!!.toString()
+                            append(super.toString())!!.append(commonSeps!!.SPACE)!!.append(image.getName())!!.append(commonSeps!!.SPACE)!!.append(image.getWidth())!!.append(commonSeps!!.SPACE)!!.append(image.getHeight())!!.toString()
 }
 
 

@@ -126,11 +126,11 @@ open fun addAll(input: Input, list: BasicArrayList)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var mappedToInput: Input = list!!.objectArray[index]!! as Input
+    var mappedToInput: Input = list.objectArray[index]!! as Input
 
 this.add(input, mappedToInput)
 }
@@ -235,7 +235,7 @@ open fun getReverseInstance(id: Int)
                                 )
                         
                                     {
-                                    list!!.add(input)
+                                    list.add(input)
 
                                     }
                                 
@@ -263,7 +263,7 @@ open fun init(canvas: Canvas, gameKey: GameKey)
 
                     var gameKey = gameKey
 
-    var key: Int = canvas!!.getKeyCode(gameKey!!.getId())!!
+    var key: Int = canvas.getKeyCode(gameKey!!.getId())!!
             
 
 
@@ -321,7 +321,7 @@ open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
                         for (index in mappedGameKeys!!.size downTo 0)
 
 
-        {nextKey= canvas!!.getKeyCode(mappedGameKeys[index]!!.getId())
+        {nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
 
     
                         if(nextKey < smallestKey)

@@ -68,7 +68,7 @@ override fun commandAction(command: Command, item: Item)
 
         try {
             
-    var itemLabel: String = item!!.getLabel()!!
+    var itemLabel: String = item.getLabel()!!
             
 
 logUtil!!.put(StringMaker().

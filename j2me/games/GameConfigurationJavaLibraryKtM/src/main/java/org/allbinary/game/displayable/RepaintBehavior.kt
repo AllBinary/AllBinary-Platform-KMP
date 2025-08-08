@@ -93,7 +93,7 @@ open fun onChangeRepaint(canvas: Canvas)
 
 
     
-                        if(features!!.isFeature(openGLFeatureFactory!!.OPENGL))
+                        if(features.isFeature(openGLFeatureFactory!!.OPENGL))
                         
                                     {
                                     DisplayInfoSingleton.getInstance()!!.process()
@@ -108,7 +108,7 @@ open fun onChangeRepaint(canvas: Canvas)
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            canvas!!.repaint()
+            canvas.repaint()
 DisplayInfoSingleton.getInstance()!!.process()
 } catch(e: Exception)
             {
@@ -123,7 +123,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
                                 }
                             , NAME)
 
-thread!!.start()
+thread.start()
 
                         }
                             

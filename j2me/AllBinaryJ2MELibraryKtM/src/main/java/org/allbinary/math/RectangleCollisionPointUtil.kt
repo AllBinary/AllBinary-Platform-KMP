@@ -66,13 +66,13 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
 
 
-                        for (index in list!!.size()!! downTo 0)
+                        for (index in list.size()!! downTo 0)
 
 
-        {point= list!!.objectArray[index]!! as GPoint
+        {point= list.objectArray[index]!! as GPoint
 
     
-                        if(!rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, point!!.getX(), point!!.getY()))
+                        if(!rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, point.getX(), point.getY()))
                         
                                     {
                                     
@@ -127,13 +127,13 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
 
 
-                        for (index in list!!.size()!! downTo 0)
+                        for (index in list.size()!! downTo 0)
 
 
-        {point= list!!.objectArray[index]!! as GPoint
+        {point= list.objectArray[index]!! as GPoint
 
     
-                        if(!rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, point!!.getX() *xCellSize, point!!.getY() *yCellSize))
+                        if(!rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, point.getX() *xCellSize, point.getY() *yCellSize))
                         
                                     {
                                     

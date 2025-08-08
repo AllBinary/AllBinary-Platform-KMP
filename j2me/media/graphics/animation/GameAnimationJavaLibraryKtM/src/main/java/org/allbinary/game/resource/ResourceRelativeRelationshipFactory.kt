@@ -66,7 +66,7 @@ this.setInitialized(true)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable!!.get(resource as Object?) as BasicArrayList
+                        return this.hashtable.get(resource as Object?) as BasicArrayList
 }
 
 
@@ -94,8 +94,8 @@ this.setInitialized(true)
 
                                     }
                                 
-list!!.add(hardPoint)
-this.hashtable!!.put(resource, list)
+list.add(hardPoint)
+this.hashtable.put(resource, list)
 }
 
 override fun isLoadingLevel(level: Int)

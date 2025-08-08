@@ -141,7 +141,7 @@ open fun init()
                         if(this.formType == formTypeFactory!!.TEMP_HORIZONTAL_FORM)
                         
                                     {
-                                    dx= x -30 +(this.rectangle!!.getWidth() shr 1)
+                                    dx= x -30 +(this.rectangle.getWidth() shr 1)
 dy= y
 
                                     }
@@ -168,11 +168,11 @@ dy= y
         {
     var item: CustomItemInterface = this.get(index) as CustomItemInterface
 
-totalWidth += item!!.getMinimumWidth() +border
+totalWidth += item.getMinimumWidth() +border
 }
 
-dx= x +(this.rectangle!!.getWidth() shr 1) -(totalWidth shr 1)
-dy= y +(this.rectangle!!.getHeight() shr 1)
+dx= x +(this.rectangle.getWidth() shr 1) -(totalWidth shr 1)
+dy= y +(this.rectangle.getHeight() shr 1)
 
     
                         if(this.moveForSmallScreen)
@@ -221,23 +221,23 @@ dy= y +(this.rectangle!!.getHeight() shr 1)
 
 
     
-                        if(maxWidth < item2!!.getMinimumWidth())
+                        if(maxWidth < item2.getMinimumWidth())
                         
                                     {
-                                    maxWidth= item2!!.getMinimumWidth()
+                                    maxWidth= item2.getMinimumWidth()
 
                                     }
                                 
-totalHeight += item2!!.getMinimumHeight() +border
+totalHeight += item2.getMinimumHeight() +border
 }
 
-dx= ((this.rectangle!!.getWidth() -maxWidth) /2)
+dx= ((this.rectangle.getWidth() -maxWidth) /2)
 
     
                         if(this.size() > 0)
                         
                                     {
-                                    dy= y +((this.rectangle!!.getHeight() -totalHeight) /2)
+                                    dy= y +((this.rectangle.getHeight() -totalHeight) /2)
 
     
                         if(this.moveForSmallScreen)
@@ -355,13 +355,13 @@ override fun paint(graphics: Graphics)
                         
                                     {
                                     delta= this.paintItem(graphics, index, item, deltaX +diffX, deltaY)
-this.paintable!!.paint(graphics, index, deltaX +diffX, deltaY)
+this.paintable.paint(graphics, index, deltaX +diffX, deltaY)
 
                                     }
                                 
                         else {
                             delta= this.paintUnselectedItem(graphics, index, item, deltaX +diffX, deltaY)
-this.paintable!!.paint(graphics, index, deltaX +diffX, deltaY)
+this.paintable.paint(graphics, index, deltaX +diffX, deltaY)
 
                         }
                             
@@ -416,7 +416,7 @@ override fun getDiffX(item: CustomItemInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ((maxWidth -item!!.getMinimumWidth()) shr 1)
+                        return ((maxWidth -item.getMinimumWidth()) shr 1)
 }
 
 override fun getDx()

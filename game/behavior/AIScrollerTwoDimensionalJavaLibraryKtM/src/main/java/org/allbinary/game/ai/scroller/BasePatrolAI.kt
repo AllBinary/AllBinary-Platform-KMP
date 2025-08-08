@@ -82,7 +82,7 @@ public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: 
 
                             //For kotlin this is before the body of the constructor.
                     
-this.maxDistance= hashtable!!.get(BasePatrolAI.MAX_DISTANCE) as Integer
+this.maxDistance= hashtable.get(BasePatrolAI.MAX_DISTANCE) as Integer
 this.currentDistance= maxDistance!!.toInt()
 }
 

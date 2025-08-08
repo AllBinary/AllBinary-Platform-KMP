@@ -235,7 +235,7 @@ lineNumberReader= LineNumberReader(pciFile)
                                     
     var file: AbFile = fileVector!!.get(0) as AbFile
 
-lineNumberReader= LineNumberReader(FileReader(file!!.getPath()))
+lineNumberReader= LineNumberReader(FileReader(file.getPath()))
 
                                     }
                                 

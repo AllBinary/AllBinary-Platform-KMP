@@ -31,7 +31,7 @@ import java.util.EventObject
 
 open public class AllBinaryEventObject : EventObject {
         
-public constructor        (anyType: Any)                        
+public constructor        (anyType: Object)                        
 
                             : super(anyType){
 

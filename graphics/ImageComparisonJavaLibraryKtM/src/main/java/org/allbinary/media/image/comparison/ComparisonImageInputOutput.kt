@@ -129,7 +129,7 @@ open fun save(imageComparisonResult: ImageComparisonResult, frame: Long)
     var filePathStringBuffer: StringMaker = StringMaker()
 
 filePathStringBuffer!!.append(ImageOutputData.SAVE_PATH)
-filePathStringBuffer!!.append(LongUtil.fillIn(frame!!.toString()))
+filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
 filePathStringBuffer!!.append(ROOT_NAME)
 
     var filePathStringBuffer1: StringMaker = StringMaker()

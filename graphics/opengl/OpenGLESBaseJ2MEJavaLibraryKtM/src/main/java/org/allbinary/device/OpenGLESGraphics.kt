@@ -31,7 +31,7 @@ open public class OpenGLESGraphics
             
 
     var gl: GL10 = NullGL10.NULL_GL10
-protected constructor        ()
+ constructor        ()
             : super()
         {}
 

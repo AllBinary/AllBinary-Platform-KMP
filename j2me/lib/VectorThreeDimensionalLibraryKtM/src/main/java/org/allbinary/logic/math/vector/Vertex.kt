@@ -53,9 +53,9 @@ public constructor        (x: Int, y: Int, z: Int)
 
 
                     var z = z
-this.x!!.set(x)
-this.y!!.set(y)
-this.z!!.set(z)
+this.x.set(x)
+this.y.set(y)
+this.z.set(z)
 }
 
 public constructor        (x: Int, y: Int)
@@ -66,8 +66,8 @@ public constructor        (x: Int, y: Int)
 
 
                     var y = y
-this.x!!.set(x)
-this.y!!.set(y)
+this.x.set(x)
+this.y.set(y)
 }
 
 public constructor        ()
@@ -84,13 +84,13 @@ override fun toString()
             
 
 stringBuffer!!.append(positionStrings!!.X_LABEL)
-stringBuffer!!.append(x!!.toString())
+stringBuffer!!.append(x.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(positionStrings!!.Y_LABEL)
-stringBuffer!!.append(y!!.toString())
+stringBuffer!!.append(y.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(positionStrings!!.Z_LABEL)
-stringBuffer!!.append(z!!.toString())
+stringBuffer!!.append(z.toString())
 
 
 

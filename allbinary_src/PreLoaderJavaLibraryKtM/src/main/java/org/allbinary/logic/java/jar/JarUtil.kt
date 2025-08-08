@@ -79,12 +79,12 @@ open fun show()
             
 
 
-    var jis: JarInputStream = JarInputStream(conn!!.getInputStream())
+    var jis: JarInputStream = JarInputStream(conn.getInputStream())
 
 
         while(true)
         {
-    var entry: JarEntry = jis!!.getNextJarEntry()!!
+    var entry: JarEntry = jis.getNextJarEntry()!!
             
 
 
@@ -96,7 +96,7 @@ open fun show()
                                     {
                                     
     
-                        if(!entry!!.isDirectory())
+                        if(!entry.isDirectory())
                         
                                     {
                                     
@@ -106,17 +106,17 @@ open fun show()
     var i: Int = 0
 
 
-        while((i= jis!!.read(cache, offset, cache!!.size -offset)) !=  -1)
+        while((i= jis.read(cache, offset, cache.size -offset)) !=  -1)
         {offset += i
 
     
-                        if(offset >= cache!!.size)
+                        if(offset >= cache.size)
                         
                                     {
                                     
-    var newcache: ByteArray = ByteArray(cache!!.size +1024)
+    var newcache: ByteArray = ByteArray(cache.size +1024)
 
-System.arraycopy(cache, 0, newcache, 0, cache!!.size)
+System.arraycopy(cache, 0, newcache, 0, cache.size)
 cache= newcache
 
                                     }
@@ -127,7 +127,7 @@ cache= newcache
     var tmp: ByteArray = ByteArray(offset)
 
 System.arraycopy(cache, 0, tmp, 0, offset)
-System.out!!.println(entry!!.getName())
+System.out.println(entry.getName())
 
                                     }
                                 
@@ -144,8 +144,8 @@ System.out!!.println(entry!!.getName())
 }
 
 } catch(ex: IOException)
-            {System.err!!.println(ex)
-ex!!.printStackTrace()
+            {System.err.println(ex)
+ex.printStackTrace()
 }
 
 }

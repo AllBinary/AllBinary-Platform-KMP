@@ -60,7 +60,7 @@ public constructor        (genericProfileActionJPanel: GenericProfileActionJPane
 
                     var node = node
 
-    var actionNameNode: Node = DomSearchHelper.getNode(GenericProfileActionData.NAME, node!!.getChildNodes())!!
+    var actionNameNode: Node = DomSearchHelper.getNode(GenericProfileActionData.NAME, node.getChildNodes())!!
             
 
 
@@ -142,7 +142,7 @@ open fun toXmlNode(document: Document)
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, GenericProfileActionData.NAME, this.toHashMap())!!
             
 
-node!!.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
+node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
 
 
 

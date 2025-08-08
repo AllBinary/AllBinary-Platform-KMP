@@ -64,7 +64,7 @@ open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
 
 
     
-                        if(node!!.getNodeName()!!.compareTo(nodeName) == 0)
+                        if(node.getNodeName()!!.compareTo(nodeName) == 0)
                         
                                     {
                                     
@@ -143,7 +143,7 @@ open fun getChildNodeList(nodeName: String, nodeList: NodeList)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return node!!.getChildNodes()
+                        return node.getChildNodes()
 }
 
 
@@ -215,7 +215,7 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
 
 
     
-                        if(node!!.getNodeName()!!.compareTo(nodeName) == 0)
+                        if(node.getNodeName()!!.compareTo(nodeName) == 0)
                         
                                     {
                                     nodeVector!!.add(node)

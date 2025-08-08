@@ -74,27 +74,27 @@ open fun get(hashtable: Hashtable<Any, Any>)
     var list: BasicArrayList = BasicArrayList()
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.keys()!!
+    var enumeration: Enumeration<Any?> = hashtable.keys()!!
             
 
 
-        while(enumeration!!.hasMoreElements())
+        while(enumeration.hasMoreElements())
         {
-    var layerHashtable: Hashtable<Any, Any> = hashtable!!.get(enumeration!!.nextElement()!! as Object) as Hashtable<Any, Any>
+    var layerHashtable: Hashtable<Any, Any> = hashtable.get(enumeration.nextElement()!! as Object) as Hashtable<Any, Any>
 
 
     var integer: Integer = layerHashtable!!.get(Layer.ID as Object) as Integer
 
 
-    var cachedInteger: Integer = smallIntegerSingletonFactory!!.getInstance(integer!!.toInt())!!
+    var cachedInteger: Integer = smallIntegerSingletonFactory!!.getInstance(integer.toInt())!!
             
 
 
     
-                        if(!list!!.contains(cachedInteger))
+                        if(!list.contains(cachedInteger))
                         
                                     {
-                                    list!!.add(cachedInteger)
+                                    list.add(cachedInteger)
 
                                     }
                                 

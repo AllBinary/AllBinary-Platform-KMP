@@ -98,7 +98,7 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.drawImage(this.image[max]!!, x, y, Anchor.TOP_LEFT)
+graphics.drawImage(this.image[max]!!, x, y, Anchor.TOP_LEFT)
 }
 
 

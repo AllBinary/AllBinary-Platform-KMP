@@ -49,6 +49,8 @@ open public class PersistentInputMapping
         companion object {
 
 
+    val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping()
+
     val DEFAULT_RECORD_ID: String = "_DIM"
 
     val RECORD_ID: String = "_SIC"
@@ -190,23 +192,23 @@ inputPersistance!!.loadAll(abeClientInformation)
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
         {
-    var hashtable: Hashtable<Any, Any> = list!!.objectArray[index]!! as Hashtable<Any, Any>
+    var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
 
 
-    var enumeration: Enumeration<Any?> = hashtable!!.keys()!!
+    var enumeration: Enumeration<Any?> = hashtable.keys()!!
             
 
 
-        while(enumeration!!.hasMoreElements())
+        while(enumeration.hasMoreElements())
         {
-    var mappedToInput: Input = enumeration!!.nextElement()!! as Input
+    var mappedToInput: Input = enumeration.nextElement()!! as Input
 
 
-    var gameActionInput: Input = hashtable!!.get(mappedToInput as Object?) as Input
+    var gameActionInput: Input = hashtable.get(mappedToInput as Object?) as Input
 
 totalMappedTo++
 this.getInputMapping()!!.add(gameActionInput, mappedToInput)

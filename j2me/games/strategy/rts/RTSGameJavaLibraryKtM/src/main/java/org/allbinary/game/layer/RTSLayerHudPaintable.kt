@@ -116,7 +116,7 @@ super.paint(graphics)
                         for (index in 0 until size)
 
 
-        {graphics!!.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charHeight), 0)
+        {graphics.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charHeight), 0)
 }
 
 }

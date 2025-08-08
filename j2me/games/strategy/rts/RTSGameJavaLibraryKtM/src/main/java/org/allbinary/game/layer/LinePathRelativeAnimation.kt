@@ -71,7 +71,7 @@ open fun paint(graphics: Graphics, point: GPoint, nextPoint: GPoint, tiledLayer:
 
 
                     var tiledLayer = tiledLayer
-graphics!!.drawLine(nextPoint!!.getX() -tiledLayer!!.getXP(), nextPoint!!.getY() -tiledLayer!!.getYP(), point!!.getX() -tiledLayer!!.getXP(), point!!.getY() -tiledLayer!!.getYP())
+graphics.drawLine(nextPoint!!.getX() -tiledLayer!!.getXP(), nextPoint!!.getY() -tiledLayer!!.getYP(), point.getX() -tiledLayer!!.getXP(), point.getY() -tiledLayer!!.getYP())
 }
 
 

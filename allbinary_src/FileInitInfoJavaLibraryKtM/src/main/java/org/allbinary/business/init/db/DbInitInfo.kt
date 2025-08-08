@@ -125,7 +125,7 @@ open fun write()
 {
     var PATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE)
 
-this.directory!!.create(PATH)
+this.directory.create(PATH)
 
     var FILEABPATH: AbPath = AbPath(URLGLOBALS.getWebappPath() +PACKAGE, this.initFileName)
 
@@ -220,7 +220,7 @@ open fun load()
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
                                     

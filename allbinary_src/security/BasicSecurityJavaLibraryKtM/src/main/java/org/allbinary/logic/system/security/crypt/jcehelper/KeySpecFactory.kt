@@ -78,7 +78,7 @@ open fun getInstance(algorithm: String, keyData: ByteArray)
         try {
             
     
-                        if(algorithm!!.compareTo(this.DES) == 0)
+                        if(algorithm.compareTo(this.DES) == 0)
                         
                                     {
                                     
@@ -91,7 +91,7 @@ open fun getInstance(algorithm: String, keyData: ByteArray)
                                 
                              else 
     
-                        if(algorithm!!.compareTo(this.DESEDE) == 0)
+                        if(algorithm.compareTo(this.DESEDE) == 0)
                         
                                     {
                                     

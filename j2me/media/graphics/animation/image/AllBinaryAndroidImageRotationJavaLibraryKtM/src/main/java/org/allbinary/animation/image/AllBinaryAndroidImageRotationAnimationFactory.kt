@@ -55,7 +55,7 @@ public constructor        (image: Image, unused: Any)
 
 public constructor        (image: Image, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(),  -(image!!.getWidth() shr 2),  -(image!!.getHeight() shr 2), animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(),  -(image.getWidth() shr 2),  -(image.getHeight() shr 2), animationBehaviorFactory){
 
                     var image = image
 
@@ -72,7 +72,7 @@ public constructor        (image: Image, unused: Any, animationBehaviorFactory: 
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -92,7 +92,7 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any)
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
 
                     var image = image
 
@@ -115,7 +115,7 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animatio
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any, angleIncrement: Short)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -138,7 +138,7 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any, angleInc
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
 
                     var image = image
 

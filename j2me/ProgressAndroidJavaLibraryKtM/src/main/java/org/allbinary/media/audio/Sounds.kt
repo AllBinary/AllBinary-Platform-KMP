@@ -168,7 +168,7 @@ open fun stopAll()
                                 )
                         
                                     {
-                                    player!!.stop()
+                                    player.stop()
 progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
 
                                     }
@@ -219,7 +219,7 @@ open fun closeAll()
                                 )
                         
                                     {
-                                    player!!.close()
+                                    player.close()
 progressCanvas!!.addPortion(100, this.soundStrings!!.CLOSING_SOUND, index)
 
                                     }

@@ -91,7 +91,7 @@ open fun isServiceRunning(name: String)
             
 
 
-    var runningServiceInfo: RunningServiceInfo
+    var runningServiceInfo: ActivityManager.RunningServiceInfo
 
 
     var serviceComponent: ComponentName

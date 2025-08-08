@@ -81,7 +81,7 @@ open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionTy
 
                     var type = type
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -95,10 +95,10 @@ open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionTy
 
 
         {
-    var point: GPoint = list!!.objectArray[index]!! as GPoint
+    var point: GPoint = list.objectArray[index]!! as GPoint
 
-points[index]!![0]= point!!.getX()
-points[index]!![1]= point!!.getY()
+points[index]!![0]= point.getX()
+points[index]!![1]= point.getY()
 }
 
 
@@ -229,7 +229,7 @@ open fun getInstance(tempBasicArrayList: BasicArrayList, points: Array<IntArray?
     var pointBasicArrayList: BasicArrayList = BasicArrayList()
 
 
-        while(index < points!!.size)
+        while(index < points.size)
         {
     var sectionBasicArrayList: BasicArrayList = BasicArrayList()
 
@@ -239,7 +239,7 @@ open fun getInstance(tempBasicArrayList: BasicArrayList, points: Array<IntArray?
 index++
 
     
-                        if(index >= points!!.size)
+                        if(index >= points.size)
                         
                                     {
                                     break;
@@ -276,7 +276,7 @@ sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howM
 
 
     
-                        if(index >= points!!.size)
+                        if(index >= points.size)
                         
                                     {
                                     break;
@@ -314,7 +314,7 @@ open fun createPointsBasicArrayList(points: Array<IntArray?>)
                     var points = points
 
     
-                        if(points!!.size == 0)
+                        if(points.size == 0)
                         
                                     {
                                     
@@ -326,13 +326,13 @@ open fun createPointsBasicArrayList(points: Array<IntArray?>)
                                     }
                                 
 
-    var firstPointBasicArrayList: BasicArrayList = BasicArrayList(points!!.size)
+    var firstPointBasicArrayList: BasicArrayList = BasicArrayList(points.size)
 
 
 
 
 
-                        for (index in 0 until points!!.size)
+                        for (index in 0 until points.size)
 
 
         {firstPointBasicArrayList!!.add(PointFactory.getInstance()!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))

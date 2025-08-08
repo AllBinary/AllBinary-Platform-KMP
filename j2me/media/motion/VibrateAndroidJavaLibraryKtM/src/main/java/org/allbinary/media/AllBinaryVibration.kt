@@ -89,7 +89,7 @@ open fun vibrate(duration: Int, type: Int, volume: Int)
 
 
                     var volume = volume
-vibrator!!.vibrate(duration)
+vibrator.vibrate(duration)
 }
 
 

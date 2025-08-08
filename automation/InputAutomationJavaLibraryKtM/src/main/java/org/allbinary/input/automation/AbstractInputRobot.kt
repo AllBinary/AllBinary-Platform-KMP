@@ -64,8 +64,8 @@ open fun mouseMove(point: Point)
 {
 
                     var point = point
-this.mouseMove(point!!.x, point!!.y)
-logUtil!!.put("Moved Mouse To: x: " +point!!.x +" y: " +point!!.y, this, 
+this.mouseMove(point.x, point.y)
+logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, 
                             "moveMouse")
 }
 
@@ -87,8 +87,8 @@ open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
     var point: Point = PointHelper.getCenterPoint(rectangle)!!
             
 
-this.mouseMove(point!!.x +x, point!!.y +y)
-logUtil!!.put("Moved Mouse To: x: " +point!!.x +" y: " +point!!.y +" in the middle of: " +rectangle, this, 
+this.mouseMove(point.x +x, point.y +y)
+logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle of: " +rectangle, this, 
                             "moveMouseToTarget")
 }
 

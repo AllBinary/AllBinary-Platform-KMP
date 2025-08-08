@@ -101,7 +101,7 @@ open fun getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(
 
         {basicGeographicMapCellPosition= pathList!!.get(index) as CellPosition
 geographicMapCellPosition= geographicMapCellPositionFactory!!.getInstance(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
-list!!.add(geographicMapCellPosition)
+list.add(geographicMapCellPosition)
 }
 
 
@@ -184,7 +184,7 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCe
 
 
         {pathList= this.getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory, basicList!!.get(index) as BasicArrayList)
-list!!.add(pathList)
+list.add(pathList)
 }
 
 pathCacheFactory!!.add(mapIdInteger, list)

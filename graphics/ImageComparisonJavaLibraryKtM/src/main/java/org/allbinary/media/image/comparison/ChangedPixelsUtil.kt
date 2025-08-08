@@ -95,7 +95,7 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -106,7 +106,7 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
 
 
         {
-    var pixelDelta: PixelDelta = vector!!.get(index) as PixelDelta
+    var pixelDelta: PixelDelta = vector.get(index) as PixelDelta
 
 
     
@@ -115,7 +115,7 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
                                 )
                         
                                     {
-                                    System.out!!.print(
+                                    System.out.print(
                             "ColorDelta")
 System.exit(0)
 

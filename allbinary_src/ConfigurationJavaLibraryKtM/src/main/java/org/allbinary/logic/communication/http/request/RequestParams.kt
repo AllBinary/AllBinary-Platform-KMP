@@ -62,7 +62,7 @@ public constructor        (request: HttpServletRequest)
         {
 
                     var request = request
-map= request!!.getParameterMap()
+map= request.getParameterMap()
 logUtil!!.put("RequestParams Size: " +this.getMap()!!.keySet()!!.size(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -107,18 +107,18 @@ open fun toXmlNode(document: Document)
 
         try {
             
-    var node: Node = document!!.createElement(RequestData.REQUEST)!!
+    var node: Node = document.createElement(RequestData.REQUEST)!!
             
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var keys: Set = map!!.keySet()!!
+    var keys: Set = map.keySet()!!
             
 
 
-    var keyArray: Array<Any?> = keys!!.toArray()!!
+    var keyArray: Array<Any?> = keys.toArray()!!
             
 
 
@@ -136,7 +136,7 @@ open fun toXmlNode(document: Document)
     var key: String = keyArray[i]!! as String
 
 
-    var values: Array<String?> = map!!.get(key) as Array<String?>
+    var values: Array<String?> = map.get(key) as Array<String?>
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(KEY)
@@ -145,7 +145,7 @@ stringBuffer!!.append(VALUE)
 stringBuffer!!.append(values[0]!!)
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "toXmlNode(document)")
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.concatToString(), .concatToString()))
+node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.concatToString(), .concatToString()))
 }
 
 
@@ -174,11 +174,11 @@ open fun toHashMap()
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var keys: Set = map!!.keySet()!!
+    var keys: Set = map.keySet()!!
             
 
 
-    var keyArray: Array<Any?> = keys!!.toArray()!!
+    var keyArray: Array<Any?> = keys.toArray()!!
             
 
 
@@ -199,7 +199,7 @@ open fun toHashMap()
     var key: String = keyArray[i]!! as String
 
 
-    var values: Array<String?> = map!!.get(key) as Array<String?>
+    var values: Array<String?> = map.get(key) as Array<String?>
 
 hashMap!!.put(key.concatToString(), .concatToString())
 }
@@ -207,7 +207,7 @@ hashMap!!.put(key.concatToString(), .concatToString())
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(
                             "RequestParams: ")
-stringBuffer!!.append(this.map!!.toString())
+stringBuffer!!.append(this.map.toString())
 stringBuffer!!.append(
                             "\ntoHashMap: ")
 stringBuffer!!.append(hashMap!!.toString())

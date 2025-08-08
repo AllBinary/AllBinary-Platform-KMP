@@ -69,15 +69,15 @@ URLGLOBALS.init(appUrlGlobals)
                             "gun", 
                             "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz")
 
-System.out!!.println("Old String: " +testString)
-testString= replace!!.all(testString)
-System.out!!.println("New String: " +testString)
+System.out.println("Old String: " +testString)
+testString= replace.all(testString)
+System.out.println("New String: " +testString)
 
     var replaceCat: Replace = Replace(
                             "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz", stringUtil!!.EMPTY_STRING)
 
 testString= replaceCat!!.all(testString)
-System.out!!.println("New String: " +testString)
+System.out.println("New String: " +testString)
 } catch(e: Exception)
             {}
 
@@ -112,7 +112,7 @@ hashMap= HashMap<Any, Any>()
 this.hashMap!!.put(arrayOf(key), arrayOf(value))
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     logUtil!!.put(REPLACERS_ +this.hashMap!!.toString(), this, commonStrings!!.CONSTRUCTOR)
@@ -133,7 +133,7 @@ hashMap= HashMap<Any, Any>()
 this.hashMap!!.put(keys, values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     logUtil!!.put(REPLACERS_ +this.hashMap!!.toString(), this, commonStrings!!.CONSTRUCTOR)
@@ -150,7 +150,7 @@ public constructor        (hashMap: HashMap<Any, Any>)
 this.hashMap= hashMap
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE_INFO))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE_INFO))
                         
                                     {
                                     logUtil!!.put(REPLACERS_ +this.hashMap!!.toString(), this, commonStrings!!.CONSTRUCTOR)
@@ -183,7 +183,7 @@ open fun upTo(replace: String, total: Int)
                     var total = total
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     logUtil!!.put(REPLACERS_ +this.hashMap!!.toString(), this, ALL)
@@ -230,9 +230,9 @@ values= hashMap!!.get(keys as Object?) as Array<String?>
     var index: Int = 0
 
 
-        while(index < replace!!.length)
+        while(index < replace.length)
         {
-    var begin: Int = replace!!.indexOf(keys[0]!!, index)!!
+    var begin: Int = replace.indexOf(keys[0]!!, index)!!
             
 
 
@@ -246,7 +246,7 @@ values= hashMap!!.get(keys as Object?) as Array<String?>
                         if(foundTotal % 100 == 0)
                         
                                     {
-                                    System.out!!.println(FOUND_KEY +foundTotal)
+                                    System.out.println(FOUND_KEY +foundTotal)
 
                                     }
                                 
@@ -254,18 +254,18 @@ values= hashMap!!.get(keys as Object?) as Array<String?>
     var end: Int = begin +keys[0]!!.length
 
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
-newStringBuffer!!.append(replace!!.substring(0, begin))
+newStringBuffer!!.append(replace.substring(0, begin))
 newStringBuffer!!.append(values[0]!!)
 index= newStringBuffer!!.length()
-newStringBuffer!!.append(replace!!.substring(end, replace!!.length))
+newStringBuffer!!.append(replace.substring(end, replace.length))
 replace= newStringBuffer!!.toString()
 
     
-                        if(keys!!.size > 1)
+                        if(keys.size > 1)
                         
                                     {
                                     
-    var begin2: Int = replace!!.indexOf(keys[1]!!, index)!!
+    var begin2: Int = replace.indexOf(keys[1]!!, index)!!
             
 
 
@@ -277,10 +277,10 @@ replace= newStringBuffer!!.toString()
     var end2: Int = begin2 +keys[1]!!.length
 
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
-newStringBuffer!!.append(replace!!.substring(0, begin2))
+newStringBuffer!!.append(replace.substring(0, begin2))
 newStringBuffer!!.append(values[1]!!)
 index= newStringBuffer!!.length()
-newStringBuffer!!.append(replace!!.substring(end2, replace!!.length))
+newStringBuffer!!.append(replace.substring(end2, replace.length))
 replace= newStringBuffer!!.toString()
 
                                     }
@@ -316,7 +316,7 @@ totalNumberOfReplaces++
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     logUtil!!.put("Total Number Of Replaces: " +totalNumberOfReplaces, this, ALL)
@@ -338,7 +338,7 @@ open fun line(replace: String)
                     var replace = replace
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     logUtil!!.put(REPLACERS_ +this.hashMap!!.toString(), this, ALL)
@@ -382,10 +382,10 @@ value= hashMap!!.get(key as Object?) as String
     var index: Int = 0
 
 
-        while(index < replace!!.length)
+        while(index < replace.length)
         {newStringBuffer!!.delete(0, newStringBuffer!!.length())
 
-    var begin: Int = replace!!.indexOf(key, index)!!
+    var begin: Int = replace.indexOf(key, index)!!
             
 
 
@@ -393,19 +393,19 @@ value= hashMap!!.get(key as Object?) as String
                         if(begin !=  -1)
                         
                                     {
-                                    System.out!!.println(FOUND_KEY)
+                                    System.out.println(FOUND_KEY)
 
-    var end: Int = replace!!.indexOf(
-                            '\n', begin +key!!.length) +1
+    var end: Int = replace.indexOf(
+                            '\n', begin +key.length) +1
 
 
     
                         if(end >= 0)
                         
                                     {
-                                    newStringBuffer!!.append(replace!!.substring(0, begin))
+                                    newStringBuffer!!.append(replace.substring(0, begin))
 index= newStringBuffer!!.length()
-newStringBuffer!!.append(replace!!.substring(end, replace!!.length))
+newStringBuffer!!.append(replace.substring(end, replace.length))
 replace= newStringBuffer!!.toString()
 totalNumberOfReplaces++
 
@@ -427,7 +427,7 @@ totalNumberOfReplaces++
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.REPLACE))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.REPLACE))
                         
                                     {
                                     logUtil!!.put("Total Number Of Replaces: " +totalNumberOfReplaces, this, ALL)

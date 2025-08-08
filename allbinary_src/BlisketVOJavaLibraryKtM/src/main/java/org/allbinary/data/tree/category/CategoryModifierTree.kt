@@ -57,7 +57,7 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
                     
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.START, this, 
@@ -80,7 +80,7 @@ open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInte
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     logUtil!!.put(
@@ -98,10 +98,10 @@ open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInte
 
     var directoryToBeCreatedAbPath: AbPath = AbPath(newChildCategoryInterface!!.getRootFilePath()!!.toString() +newChildCategoryInterface!!.getPath()!!.toString())
 
-this.directory!!.create(directoryToBeCreatedAbPath)
+this.directory.create(directoryToBeCreatedAbPath)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     logUtil!!.put(
@@ -122,7 +122,7 @@ this.save(newChildCategoryInterface)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -157,7 +157,7 @@ open fun delete(parentCategoryInterface: CategoryInterface, existingChildCategor
 this.delete(existingChildCategoryInterface)
 parentCategoryInterface!!.removeChild(existingChildCategoryInterface)
 this.save(parentCategoryInterface)
-this.directory!!.remove(directoryToBeDeletedAbPath)
+this.directory.remove(directoryToBeDeletedAbPath)
 
                                     }
                                 
@@ -168,7 +168,7 @@ this.directory!!.remove(directoryToBeDeletedAbPath)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)

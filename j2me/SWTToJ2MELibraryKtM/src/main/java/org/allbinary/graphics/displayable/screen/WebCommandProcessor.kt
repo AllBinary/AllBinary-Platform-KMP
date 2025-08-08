@@ -91,7 +91,7 @@ open fun process(midletCommandListener: CommandListener, command: Command, canva
                         if(Desktop.isDesktopSupported() && Desktop.getDesktop()!!.isSupported(Desktop.Action.BROWSE))
                         
                                     {
-                                    Desktop.getDesktop()!!.browse(URI(list!!.remove(0) as String))
+                                    Desktop.getDesktop()!!.browse(URI(list.remove(0) as String))
 
                                     }
                                 

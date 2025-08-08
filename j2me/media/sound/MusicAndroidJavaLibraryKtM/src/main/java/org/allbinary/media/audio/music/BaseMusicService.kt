@@ -84,9 +84,9 @@ open fun onDestroy()
                                 )
                         
                                     {
-                                    player!!.stop()
-player!!.reset()
-player!!.release()
+                                    player.stop()
+player.reset()
+player.release()
 
                                     }
                                 
@@ -143,9 +143,9 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND
                                 )
                         
                                     {
-                                    songId= intent!!.getIntExtra(musicStrings!!.SONG_EXTRA,  -1)
-leftVolume= intent!!.getIntExtra(musicStrings!!.LEFT_VOLUME,  -1)
-rightVolume= intent!!.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
+                                    songId= intent.getIntExtra(musicStrings!!.SONG_EXTRA,  -1)
+leftVolume= intent.getIntExtra(musicStrings!!.LEFT_VOLUME,  -1)
+rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
 
                                     }
                                 
@@ -168,7 +168,7 @@ rightVolume= intent!!.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
     
                         if(player != 
                                     null
-                                 && player!!.isPlaying())
+                                 && player.isPlaying())
                         
                                     {
                                     
@@ -184,7 +184,7 @@ open fun run()
 {
         try {
             
-        while(player!!.isPlaying())
+        while(player.isPlaying())
         {logUtil!!.put(WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
 Thread.sleep(1200)
 }
@@ -202,7 +202,7 @@ onStartCommand(intent)
 
     var thread: Thread = Thread(runnable)
 
-thread!!.start()
+thread.start()
 
 
 
@@ -212,9 +212,9 @@ thread!!.start()
                                     }
                                 
 player= MediaPlayer.create(this, songId)
-player!!.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
-player!!.setLooping(false)
-player!!.start()
+player.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
+player.setLooping(false)
+player.start()
 
                                     }
                                 

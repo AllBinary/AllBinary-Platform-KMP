@@ -326,11 +326,11 @@ this.closedSet!!.clear()
     var node: PathFindingNodeCost
 
 
-    var targetColumn: Int = target!!.getColumn()!!
+    var targetColumn: Int = target.getColumn()!!
             
 
 
-    var targetRow: Int = target!!.getRow()!!
+    var targetRow: Int = target.getRow()!!
             
 
 
@@ -357,14 +357,14 @@ this.closedSet!!.clear()
 
         {discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
-node!!.pathFindingNodeCostInfo!!.totalCost= 0
-node!!.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
+node.pathFindingNodeCostInfo!!.totalCost= 0
+node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
 }
 
 }
 
 
-    var startNode: PathFindingNodeCost = costArray[start!!.getColumn()]!![start!!.getRow()]!!
+    var startNode: PathFindingNodeCost = costArray[start.getColumn()]!![start.getRow()]!!
 
 openPriorityQueue!!.add(startNode)
 
@@ -376,7 +376,7 @@ openPriorityQueue!!.add(startNode)
             
 
 
-    var targetNode: PathFindingNodeCost = costArray[target!!.getColumn()]!![target!!.getRow()]!!
+    var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
 
 
     var current: PathFindingNodeCost
@@ -387,7 +387,7 @@ openPriorityQueue!!.add(startNode)
 closedSet!!.add(current)
 
     
-                        if(current!!.equals(targetNode))
+                        if(current.equals(targetNode))
                         
                                     {
                                     
@@ -411,14 +411,14 @@ closedSet!!.add(current)
 
 
 
-                        for (column in current!!.geographicMapCellPosition!!.getColumn() -1 until current!!.geographicMapCellPosition!!.getColumn() +2)
+                        for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
 
 
         {
 
 
 
-                        for (row in current!!.geographicMapCellPosition!!.getRow() -1 until current!!.geographicMapCellPosition!!.getRow() +2)
+                        for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
 
 
         {
@@ -439,15 +439,15 @@ closedSet!!.add(current)
 
                                     }
                                 
-neighborInfo= neighbor!!.pathFindingNodeCostInfo
-calculatedCost= neighborInfo!!.costToEnd +neighborInfo!!.costFromStart +current!!.pathFindingNodeCostInfo!!.totalCost
+neighborInfo= neighbor.pathFindingNodeCostInfo
+calculatedCost= neighborInfo!!.costToEnd +neighborInfo!!.costFromStart +current.pathFindingNodeCostInfo!!.totalCost
 
     
                         if(calculatedCost < neighborInfo!!.totalCost || !openPriorityQueue!!.contains(neighbor))
                         
                                     {
                                     neighborInfo!!.totalCost= calculatedCost
-neighbor!!.parent= current
+neighbor.parent= current
 
     
                         if(!openPriorityQueue!!.contains(neighbor))
@@ -455,7 +455,7 @@ neighbor!!.parent= current
                                     {
                                     
     
-                        if(this.geographicMapInterface!!.isOfFourDirections(current!!.geographicMapCellPosition, neighbor!!.geographicMapCellPosition))
+                        if(this.geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
                         
                                     {
                                     openPriorityQueue!!.add(neighbor)
@@ -508,11 +508,11 @@ this.closedSet!!.clear()
     var node: PathFindingNodeCost
 
 
-    var targetColumn: Int = target!!.getColumn()!!
+    var targetColumn: Int = target.getColumn()!!
             
 
 
-    var targetRow: Int = target!!.getRow()!!
+    var targetRow: Int = target.getRow()!!
             
 
 
@@ -539,14 +539,14 @@ this.closedSet!!.clear()
 
         {discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
-node!!.pathFindingNodeCostInfo!!.totalCost= 0
-node!!.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
+node.pathFindingNodeCostInfo!!.totalCost= 0
+node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
 }
 
 }
 
 
-    var startNode: PathFindingNodeCost = costArray[start!!.getColumn()]!![start!!.getRow()]!!
+    var startNode: PathFindingNodeCost = costArray[start.getColumn()]!![start.getRow()]!!
 
 openPriorityQueue!!.add(startNode)
 multipassState!!.step++
@@ -575,7 +575,7 @@ open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCell
             
 
 
-    var targetNode: PathFindingNodeCost = costArray[target!!.getColumn()]!![target!!.getRow()]!!
+    var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
 
 
     var current: PathFindingNodeCost
@@ -589,7 +589,7 @@ open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCell
 closedSet!!.add(current)
 
     
-                        if(current!!.equals(targetNode))
+                        if(current.equals(targetNode))
                         
                                     {
                                     
@@ -613,14 +613,14 @@ closedSet!!.add(current)
 
 
 
-                        for (column in current!!.geographicMapCellPosition!!.getColumn() -1 until current!!.geographicMapCellPosition!!.getColumn() +2)
+                        for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
 
 
         {
 
 
 
-                        for (row in current!!.geographicMapCellPosition!!.getRow() -1 until current!!.geographicMapCellPosition!!.getRow() +2)
+                        for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
 
 
         {
@@ -641,15 +641,15 @@ closedSet!!.add(current)
 
                                     }
                                 
-neighborInfo= neighbor!!.pathFindingNodeCostInfo
-calculatedCost= neighborInfo!!.costToEnd +neighborInfo!!.costFromStart +current!!.pathFindingNodeCostInfo!!.totalCost
+neighborInfo= neighbor.pathFindingNodeCostInfo
+calculatedCost= neighborInfo!!.costToEnd +neighborInfo!!.costFromStart +current.pathFindingNodeCostInfo!!.totalCost
 
     
                         if(calculatedCost < neighborInfo!!.totalCost || !openPriorityQueue!!.contains(neighbor))
                         
                                     {
                                     neighborInfo!!.totalCost= calculatedCost
-neighbor!!.parent= current
+neighbor.parent= current
 
     
                         if(!openPriorityQueue!!.contains(neighbor))
@@ -657,7 +657,7 @@ neighbor!!.parent= current
                                     {
                                     
     
-                        if(this.geographicMapInterface!!.isOfFourDirections(current!!.geographicMapCellPosition, neighbor!!.geographicMapCellPosition))
+                        if(this.geographicMapInterface!!.isOfFourDirections(current.geographicMapCellPosition, neighbor.geographicMapCellPosition))
                         
                                     {
                                     openPriorityQueue!!.add(neighbor)
@@ -714,14 +714,14 @@ open fun extractPath(start: GeographicMapCellPosition, current: PathFindingNodeC
     var path: BasicArrayList = BasicArrayList()
 
 
-        while(current!!.parent != 
+        while(current.parent != 
                                     null
                                 )
-        {path!!.add(current!!.geographicMapCellPosition)
-current= current!!.parent as PathFindingNodeCost
+        {path.add(current.geographicMapCellPosition)
+current= current.parent as PathFindingNodeCost
 }
 
-path!!.add(start)
+path.add(start)
 basicArrayListUtil!!.reverse(path)
 
 

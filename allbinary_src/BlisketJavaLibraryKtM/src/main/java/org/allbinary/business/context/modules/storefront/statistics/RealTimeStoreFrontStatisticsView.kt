@@ -71,7 +71,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(StoreFrontStatisticsData.getInstance()!!.NAME)!!
+    var node: Node = document.createElement(StoreFrontStatisticsData.getInstance()!!.NAME)!!
             
 
 
@@ -81,7 +81,7 @@ open fun toXmlNode(document: Document)
 
     var storeFrontAdvertisementsStatisticsDomNodeInterface: DomNodeInterface = StoreFrontAdvertisementsStatisticsView(storeFrontAdvertisementsStatisticsInterface)
 
-node!!.appendChild(storeFrontAdvertisementsStatisticsDomNodeInterface!!.toXmlNode(document))
+node.appendChild(storeFrontAdvertisementsStatisticsDomNodeInterface!!.toXmlNode(document))
 
     var storeFrontInventoryStatisticsInterface: StoreFrontInventoryStatisticsInterface = this.storeFrontStatisticsInterface!!.getInventory()!!
             
@@ -89,7 +89,7 @@ node!!.appendChild(storeFrontAdvertisementsStatisticsDomNodeInterface!!.toXmlNod
 
     var storeFrontInventoryStatisticsDomNodeInterface: DomNodeInterface = StoreFrontInventoryStatisticsView(storeFrontInventoryStatisticsInterface)
 
-node!!.appendChild(storeFrontInventoryStatisticsDomNodeInterface!!.toXmlNode(document))
+node.appendChild(storeFrontInventoryStatisticsDomNodeInterface!!.toXmlNode(document))
 
     var storeFrontOrdersHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface = this.storeFrontStatisticsInterface!!.getOrders()!!
             
@@ -97,7 +97,7 @@ node!!.appendChild(storeFrontInventoryStatisticsDomNodeInterface!!.toXmlNode(doc
 
     var storeFrontOrdersHistoryStatisticsDomNodeInterface: DomNodeInterface = StoreFrontOrdersHistoryStatisticsView(storeFrontOrdersHistoryStatisticsInterface)
 
-node!!.appendChild(storeFrontOrdersHistoryStatisticsDomNodeInterface!!.toXmlNode(document))
+node.appendChild(storeFrontOrdersHistoryStatisticsDomNodeInterface!!.toXmlNode(document))
 
     
                         if(this.userRole == UserRoleFactory.getInstance()!!.ADMINISTRATOR)
@@ -110,7 +110,7 @@ node!!.appendChild(storeFrontOrdersHistoryStatisticsDomNodeInterface!!.toXmlNode
 
     var storeFrontUsersStatisticsDomNodeInterface: DomNodeInterface = StoreFrontUsersStatisticsView(storeFrontUsersStatisticsInterface)
 
-node!!.appendChild(storeFrontUsersStatisticsDomNodeInterface!!.toXmlNode(document))
+node.appendChild(storeFrontUsersStatisticsDomNodeInterface!!.toXmlNode(document))
 
                                     }
                                 

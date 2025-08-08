@@ -65,7 +65,7 @@ open fun containsSpaces(value: String)
                     var value = value
 
     
-                        if(value!!.indexOf(
+                        if(value.indexOf(
                             ' ') >= 0)
                         
                                     {
@@ -97,11 +97,11 @@ open fun isNumber(value: String)
 
 
 
-                        for (index in 0 until value!!.length!!)
+                        for (index in 0 until value.length!!)
 
 
         {
-    var digit: Char = value!![index]!!
+    var digit: Char = value[index]!!
             
 
 
@@ -190,7 +190,7 @@ open fun isValidRequired(value: String, min: Int, max: Int)
     
                         if(value == 
                                     null
-                                 || value!!.length < min || value!!.length > max)
+                                 || value.length < min || value.length > max)
                         
                                     {
                                     
@@ -222,7 +222,7 @@ open fun isValidRequiredNumber(value: String, min: Int, max: Int)
                     var max = max
 
     
-                        if(this.isEmpty(value) || value!!.length < min || value!!.length > max)
+                        if(this.isEmpty(value) || value.length < min || value.length > max)
                         
                                     {
                                     
@@ -274,7 +274,7 @@ open fun isValidNotRequired(value: String, min: Int, max: Int)
                                     {
                                     
     
-                        if(value!!.length < min || value!!.length > max)
+                        if(value.length < min || value.length > max)
                         
                                     {
                                     
@@ -316,7 +316,7 @@ open fun isValidNotRequiredNumber(value: String, min: Int, max: Int)
                                     {
                                     
     
-                        if(value!!.compareTo(stringUtil!!.NULL_STRING) == 0 || value!!.length < min || value!!.length > max)
+                        if(value.compareTo(stringUtil!!.NULL_STRING) == 0 || value.length < min || value.length > max)
                         
                                     {
                                     
@@ -360,7 +360,7 @@ open fun isEmpty(string: String)
     
                         if(string != 
                                     null
-                                 && string!!.compareTo(stringUtil!!.NULL_STRING) != 0 && string!!.compareTo(stringUtil!!.EMPTY_STRING) != 0)
+                                 && string.compareTo(stringUtil!!.NULL_STRING) != 0 && string.compareTo(stringUtil!!.EMPTY_STRING) != 0)
                         
                                     {
                                     

@@ -68,7 +68,7 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMo
             
 
 
-    var commandActionsList: BasicArrayList = configuration!!.getAssociateCommandActionsList()!!
+    var commandActionsList: BasicArrayList = configuration.getAssociateCommandActionsList()!!
             
 
 
@@ -87,11 +87,11 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMo
 
 
     
-                        if(association!!.isMotionGestureArrayEquals(list) == true)
+                        if(association.isMotionGestureArrayEquals(list) == true)
                         
                                     {
                                     
-    var completeMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = association!!.getCommandAction() as GameKeyCompleteMotionGestureInputEvent
+    var completeMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = association.getCommandAction() as GameKeyCompleteMotionGestureInputEvent
 
 CompleteMotionGestureInputEventHandler.getInstance()!!.fireEvent(completeMotionGestureInputEvent)
 break;

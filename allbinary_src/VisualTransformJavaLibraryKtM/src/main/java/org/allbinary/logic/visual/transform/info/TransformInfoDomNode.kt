@@ -54,10 +54,10 @@ public constructor        (node: Node)
                     var node = node
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Constructing TransformInfo From TransformInfoDomNode: " +node!!.getNodeName(), this, 
+                                    logUtil!!.put("Constructing TransformInfo From TransformInfoDomNode: " +node.getNodeName(), this, 
                             "TransformInfoDomNode(Node node)")
 
                                     }
@@ -67,18 +67,18 @@ public constructor        (node: Node)
             
 
 
-    var attributes: NamedNodeMap = node!!.getAttributes()!!
+    var attributes: NamedNodeMap = node.getAttributes()!!
             
 
 
-    var attrNode: Attr = attributes!!.getNamedItem(transformInfoData!!.NAME) as Attr
+    var attrNode: Attr = attributes.getNamedItem(transformInfoData!!.NAME) as Attr
 
 
     var name: String = attrNode!!.getValue()!!
             
 
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -88,7 +88,7 @@ public constructor        (node: Node)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -146,7 +146,7 @@ this.transformInfoInterface= TransformInfo(name, objectFileName, objectConfigFil
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     
@@ -170,7 +170,7 @@ this.transformInfoInterface= TransformInfo(name) as TransformInfoInterface
                         }
                             
 
-    var templateAttrNode: Attr = attributes!!.getNamedItem(transformInfoData!!.MAPPED) as Attr
+    var templateAttrNode: Attr = attributes.getNamedItem(transformInfoData!!.MAPPED) as Attr
 
 
     
@@ -261,7 +261,7 @@ stringBuffer!!.append(
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Component Key: " +key, this, 

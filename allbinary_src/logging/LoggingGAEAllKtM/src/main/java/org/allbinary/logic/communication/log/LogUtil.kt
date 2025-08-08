@@ -70,19 +70,19 @@ open fun put(log: Log)
 
                     var log = log
 
-    var specialMessage: String = log!!.getSpecialMessage()!!
+    var specialMessage: String = log.getSpecialMessage()!!
             
 
 
-    var anyType: Any = log!!.getObject()!!
+    var anyType: Any = log.getObject()!!
             
 
 
-    var functionName: String = log!!.getFunctionName()!!
+    var functionName: String = log.getFunctionName()!!
             
 
 
-    var exception: Any = log!!.getThrowable()!!
+    var exception: Any = log.getThrowable()!!
             
 
 this.put(specialMessage, anyType, functionName, exception)
@@ -129,12 +129,12 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
     
-                        if(clazz!!.qualifiedName!! != 
+                        if(clazz.qualifiedName!! != 
                                     null
                                 )
                         
                                     {
-                                    className= clazz!!.qualifiedName!!
+                                    className= clazz.qualifiedName!!
 
                                     }
                                 
@@ -149,12 +149,12 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 )
                         
                                     {
-                                    logger!!.log(Level.SEVERE, message, exception)
+                                    logger.log(Level.SEVERE, message, exception)
 
                                     }
                                 
                         else {
-                            logger!!.log(Level.INFO, message)
+                            logger.log(Level.INFO, message)
 
                         }
                             

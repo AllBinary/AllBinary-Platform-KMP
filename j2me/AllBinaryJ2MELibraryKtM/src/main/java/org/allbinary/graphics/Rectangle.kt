@@ -83,7 +83,7 @@ open fun getMaxX()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.point!!.getX() +this.width
+                        return this.point.getX() +this.width
 }
 
 
@@ -93,7 +93,7 @@ open fun getMaxY()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.point!!.getY() +this.height
+                        return this.point.getY() +this.height
 }
 
 

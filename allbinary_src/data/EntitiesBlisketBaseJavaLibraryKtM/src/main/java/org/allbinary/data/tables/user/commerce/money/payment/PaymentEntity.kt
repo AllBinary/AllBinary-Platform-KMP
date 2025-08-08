@@ -110,11 +110,11 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
                                     }
                                 
 updateKeyAndValue!!.put(EntryData.getInstance()!!.DEFAULT, EntryData.getInstance()!!.DEFAULT)
-whereKeyAndValue!!.put(PaymentData.ID, index!!.toString())
+whereKeyAndValue!!.put(PaymentData.ID, index.toString())
 super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
@@ -125,7 +125,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -194,7 +194,7 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.GET, e)
@@ -239,7 +239,7 @@ paymentHashMap= super.getRow(updateKeyAndValue)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
@@ -267,7 +267,7 @@ paymentHashMap= super.getRow(updateKeyAndValue)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -299,11 +299,11 @@ open fun remove(userName: String, index: Integer)
     var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 whereHashMap!!.put(UserData.USERNAME, userName)
-whereHashMap!!.put(PaymentData.ID, index!!.toString() as String)
+whereHashMap!!.put(PaymentData.ID, index.toString() as String)
 super.deleteWhere(whereHashMap)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
@@ -314,7 +314,7 @@ super.deleteWhere(whereHashMap)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -340,36 +340,36 @@ open fun add(userName: String, paymentInterface: PaymentInterface)
             
     var vector: Vector = Vector()
 
-vector!!.add(PaymentIdGenerator().
+vector.add(PaymentIdGenerator().
                             getNext())
-vector!!.add(userName)
-vector!!.add(StringUtil.getInstance()!!.EMPTY_STRING)
-vector!!.add(paymentInterface!!.getName())
-vector!!.add(paymentInterface!!.getType())
-vector!!.add(paymentInterface!!.getExpiration())
+vector.add(userName)
+vector.add(StringUtil.getInstance()!!.EMPTY_STRING)
+vector.add(paymentInterface!!.getName())
+vector.add(paymentInterface!!.getType())
+vector.add(paymentInterface!!.getExpiration())
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
             
 
-vector!!.add(SuperCrypt(random).
+vector.add(SuperCrypt(random).
                             encrypt(paymentInterface!!.getNumber()))
-vector!!.add(Integer(random).
+vector.add(Integer(random).
                             toString())
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-vector!!.add(time)
+vector.add(time)
 super.insert(vector)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
@@ -380,7 +380,7 @@ super.insert(vector)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 

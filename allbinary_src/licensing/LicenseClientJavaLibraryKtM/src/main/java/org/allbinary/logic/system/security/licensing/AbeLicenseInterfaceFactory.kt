@@ -168,7 +168,7 @@ open fun isTimeToGetKey()
             
 
 
-    var currentTime: Long = calendar!!.getTimeInMillis()!!
+    var currentTime: Long = calendar.getTimeInMillis()!!
             
 
 

@@ -66,10 +66,10 @@ open fun addListener(completeMotionGestureInputEventListener: CompleteMotionGest
                     var completeMotionGestureInputEventListener = completeMotionGestureInputEventListener
 
     
-                        if(!list!!.contains(completeMotionGestureInputEventListener))
+                        if(!list.contains(completeMotionGestureInputEventListener))
                         
                                     {
-                                    list!!.add(completeMotionGestureInputEventListener)
+                                    list.add(completeMotionGestureInputEventListener)
 
                                     }
                                 
@@ -77,7 +77,7 @@ open fun addListener(completeMotionGestureInputEventListener: CompleteMotionGest
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -86,7 +86,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -101,13 +101,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var completeMotionGestureInputEventListener: CompleteMotionGestureInputEventListener = this.list!!.objectArray[index]!! as CompleteMotionGestureInputEventListener
+    var completeMotionGestureInputEventListener: CompleteMotionGestureInputEventListener = this.list.objectArray[index]!! as CompleteMotionGestureInputEventListener
 
 completeMotionGestureInputEventListener!!.onCompleteMotionGestureInputEvent(eventObject as CompleteMotionGestureInputEvent)
 } catch(e: Exception)

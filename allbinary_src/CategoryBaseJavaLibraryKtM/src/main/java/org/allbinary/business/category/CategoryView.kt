@@ -73,7 +73,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(CategoryData.getInstance()!!.NAME)!!
+    var node: Node = document.createElement(CategoryData.getInstance()!!.NAME)!!
             
 
 
@@ -82,7 +82,7 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.CATEGORY))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
                                     logUtil!!.put("Number Of Children: " +childCategoryVector!!.size, this, 
@@ -151,7 +151,7 @@ categoryPropertiesInterface= categoryInterface!!.getProperties()
                             toXmlNode(document)!!
             
 
-node!!.appendChild(childCategoryNode)
+node.appendChild(childCategoryNode)
 }
 
 

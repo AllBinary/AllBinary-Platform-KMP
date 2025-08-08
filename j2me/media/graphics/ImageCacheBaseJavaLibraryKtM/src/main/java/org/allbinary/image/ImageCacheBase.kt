@@ -117,7 +117,7 @@ open fun getIndex(width: Int, height: Int)
     var foundIndex: Int =  -1
 
 
-    var size: Int = widths!!.size
+    var size: Int = widths.size
                 
 
 
@@ -179,7 +179,7 @@ open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list!!.remove(list!!.size() -1) as Image
+                        return list.remove(list.size() -1) as Image
 
                                     }
                                 

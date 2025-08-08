@@ -166,7 +166,7 @@ this.attack()
 
                         }
                             
-this.list!!.clear()
+this.list.clear()
 }
 
 
@@ -187,7 +187,7 @@ open fun target(allBinaryLayerManager: AllBinaryLayerManager)
                     var allBinaryLayerManager = allBinaryLayerManager
 
     
-                        if(this.list!!.size() == 0)
+                        if(this.list.size() == 0)
                         
                                     {
                                     
@@ -199,7 +199,7 @@ open fun target(allBinaryLayerManager: AllBinaryLayerManager)
                                     }
                                 
 
-    var lastTrackingEvent: TrackingEvent = list!!.remove(0) as TrackingEvent
+    var lastTrackingEvent: TrackingEvent = list.remove(0) as TrackingEvent
 
 this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
@@ -641,7 +641,7 @@ override fun onMovement(trackingEvent: TrackingEvent)
 {
 
                     var trackingEvent = trackingEvent
-this.list!!.add(trackingEvent)
+this.list.add(trackingEvent)
 }
 
 override fun onDestroyed(destroyedEvent: DestroyedEvent)

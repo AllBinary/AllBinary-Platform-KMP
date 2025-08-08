@@ -68,7 +68,7 @@ open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
 
                     var y = y
 
-    var size: Int = points!!.size
+    var size: Int = points.size
                 
 
 
@@ -149,13 +149,13 @@ open fun adjust(points: Array<IntArray?>, x: Int, y: Int)
 
                     var y = y
 
-    var newPoints: Array<IntArray?> = Array(points!!.size) { IntArray(2) }
+    var newPoints: Array<IntArray?> = Array(points.size) { IntArray(2) }
 
 
 
 
 
-                        for (index2 in 0 until points!!.size)
+                        for (index2 in 0 until points.size)
 
 
         {

@@ -80,7 +80,7 @@ public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpS
 
     var request: HttpServletRequest = httpServletRequest
 
-this.session= request!!.getSession(true)
+this.session= request.getSession(true)
 
     
                         if(this.getStoreName() == 
@@ -101,7 +101,7 @@ open fun getId()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.session!!.getId()
+                        return this.session.getId()
 }
 
 
@@ -110,7 +110,7 @@ open fun setPassword(password: String)
 {
 
                     var password = password
-session!!.setAttribute(UserData.PASSWORD, password)
+session.setAttribute(UserData.PASSWORD, password)
 }
 
 
@@ -119,7 +119,7 @@ open fun setUserName(userName: String)
 {
 
                     var userName = userName
-session!!.setAttribute(UserData.USERNAME, userName)
+session.setAttribute(UserData.USERNAME, userName)
 }
 
 
@@ -128,13 +128,13 @@ open fun setPaymentMethod(value: String)
 {
 
                     var value = value
-session!!.setAttribute(PaymentGatewayData.NAME.toString(), value)
+session.setAttribute(PaymentGatewayData.NAME.toString(), value)
 }
 
 
 open fun setAuthenticated()
         //nullable = true from not(false or (false and true)) = true
-{session!!.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
+{session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 
@@ -143,7 +143,7 @@ open fun setRole(aRole: UserRole)
 {
 
                     var aRole = aRole
-session!!.setAttribute(UserRoleData.NAME.toString(), aRole)
+session.setAttribute(UserRoleData.NAME.toString(), aRole)
 }
 
 
@@ -152,7 +152,7 @@ open fun setAttempts(value: Integer)
 {
 
                     var value = value
-session!!.setAttribute(WeblisketSessionData.ATTEMPTS, value)
+session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
 }
 
 
@@ -161,7 +161,7 @@ open fun setTimeout(value: String)
 {
 
                     var value = value
-this.session!!.setAttribute(WeblisketSessionData.TIMEOUT, value)
+this.session.setAttribute(WeblisketSessionData.TIMEOUT, value)
 }
 
 
@@ -170,7 +170,7 @@ open fun setStoreName(value: String)
 {
 
                     var value = value
-this.session!!.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
+this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 }
 
 
@@ -180,7 +180,7 @@ open fun getWebAppPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.session!!.getAttribute(org!!.allbinary!!.globals!!.GLOBALS2.WEBAPPPATH) as String
+                        return this.session.getAttribute(org.allbinary.globals.GLOBALS2.WEBAPPPATH) as String
 }
 
 
@@ -190,7 +190,7 @@ open fun getUserName()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(UserData.USERNAME) as String
+                        return session.getAttribute(UserData.USERNAME) as String
 }
 
 
@@ -200,7 +200,7 @@ open fun getPassword()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(UserData.PASSWORD) as String
+                        return session.getAttribute(UserData.PASSWORD) as String
 }
 
 
@@ -210,7 +210,7 @@ open fun getPaymentMethod()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(PaymentGatewayData.NAME.toString()) as String
+                        return session.getAttribute(PaymentGatewayData.NAME.toString()) as String
 }
 
 
@@ -220,7 +220,7 @@ open fun getAuthentication()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(WeblisketSessionData.AUTHENTICATED) as String
+                        return session.getAttribute(WeblisketSessionData.AUTHENTICATED) as String
 }
 
 
@@ -230,7 +230,7 @@ open fun getAttempts()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(WeblisketSessionData.ATTEMPTS) as Integer
+                        return session.getAttribute(WeblisketSessionData.ATTEMPTS) as Integer
 }
 
 
@@ -240,7 +240,7 @@ open fun getTimeout()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(WeblisketSessionData.TIMEOUT) as String
+                        return session.getAttribute(WeblisketSessionData.TIMEOUT) as String
 }
 
 
@@ -250,7 +250,7 @@ open fun getStoreName()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getAttribute(StoreFrontData.getInstance()!!.NAME) as String
+                        return session.getAttribute(StoreFrontData.getInstance()!!.NAME) as String
 }
 
 
@@ -259,7 +259,7 @@ open fun getStoreName()
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
 : UserRole{
-    var userRole: UserRole = session!!.getAttribute(UserRoleData.NAME.toString()) as UserRole
+    var userRole: UserRole = session.getAttribute(UserRoleData.NAME.toString()) as UserRole
 
 
     
@@ -306,7 +306,7 @@ open fun getOrder()
                         
                                     {
                                     
-    var orderInterface: OrderInterface = session!!.getAttribute(basketName) as OrderInterface
+    var orderInterface: OrderInterface = session.getAttribute(basketName) as OrderInterface
 
 
     
@@ -319,7 +319,7 @@ open fun getOrder()
 
                                     }
                                 
-session!!.setAttribute(basketName, orderInterface)
+session.setAttribute(basketName, orderInterface)
 
 
 
@@ -345,16 +345,16 @@ open fun setAuthenticated(value: Boolean)
 {
 
                     var value = value
-session!!.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.FALSE_STRING)
+session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.FALSE_STRING)
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.session!!.removeAttribute(WeblisketSessionData.AUTHENTICATED)
-this.session!!.removeAttribute(WeblisketSessionData.TIMEOUT)
-this.session!!.removeAttribute(UserRoleData.NAME.toString())
-this.session!!.removeAttribute(UserData.USERNAME)
+{this.session.removeAttribute(WeblisketSessionData.AUTHENTICATED)
+this.session.removeAttribute(WeblisketSessionData.TIMEOUT)
+this.session.removeAttribute(UserRoleData.NAME.toString())
+this.session.removeAttribute(UserData.USERNAME)
 }
 
 
@@ -364,7 +364,7 @@ open fun getCreationTime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getCreationTime()
+                        return session.getCreationTime()
 }
 
 
@@ -374,7 +374,7 @@ open fun getLastAccessedTime()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return session!!.getLastAccessedTime()
+                        return session.getLastAccessedTime()
 }
 
 
@@ -393,7 +393,7 @@ open fun removeBasket()
                         if(!StringValidationUtil.getInstance()!!.isEmpty(basketName))
                         
                                     {
-                                    session!!.removeAttribute(basketName)
+                                    session.removeAttribute(basketName)
 
                                     }
                                 

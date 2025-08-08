@@ -79,12 +79,12 @@ logUtil!!.put(
                             "InputRobotFactory", 
                             "loadLibraries")
 
-    var iterator: Iterator = collection!!.iterator()!!
+    var iterator: Iterator = collection.iterator()!!
             
 
 
-        while(iterator!!.hasNext())
-        {loadLibrary(iterator!!.next() as InputRobotInterface)
+        while(iterator.hasNext())
+        {loadLibrary(iterator.next() as InputRobotInterface)
 }
 
 }
@@ -140,7 +140,7 @@ private constructor        ()
             
 
 
-    var screens: Array<GraphicsDevice?> = graphenv!!.getScreenDevices()!!
+    var screens: Array<GraphicsDevice?> = graphenv.getScreenDevices()!!
             
 
 
@@ -150,7 +150,7 @@ private constructor        ()
 
 
 
-                        for (i in 0 until screens!!.size)
+                        for (i in 0 until screens.size)
 
 
         {inputRobotInterface= InputRobot(screens[i]!!) as InputRobotInterface
@@ -159,7 +159,7 @@ logUtil!!.put("Adding Robot: " +inputRobotInterface!!.getName(), this,
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
 }
 
-logUtil!!.put("Number Of Robots: " +this.hashtable!!.size, this, 
+logUtil!!.put("Number Of Robots: " +this.hashtable.size, this, 
                             "getRobots")
 } catch(e: Exception)
             {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR)
@@ -251,7 +251,7 @@ logUtil!!.put(
                             "Loading Libraries", this, 
                             "loadLibraries")
 
-    var nameArray: Array<Any?> = set!!.toArray()!!
+    var nameArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -290,7 +290,7 @@ open fun unloadLibraries()
     var inputRobotInterface: InputRobotInterface
 
 
-    var inputRobotArray: Array<Any?> = set!!.toArray()!!
+    var inputRobotArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -347,7 +347,7 @@ logUtil!!.put("Getting Robot: " +name, this,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.hashtable!!.get(name as Object?) as InputRobotInterface
+                        return this.hashtable.get(name as Object?) as InputRobotInterface
 }
 
 

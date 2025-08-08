@@ -81,7 +81,7 @@ Arrays.sort(themeValidationArray, ThemeComparator())
         {
     var themeValidation: ThemeValidation = themeValidationArray[index]!! as ThemeValidation
 
-node!!.appendChild(themeValidation!!.toXmlNode(document))
+node.appendChild(themeValidation!!.toXmlNode(document))
 }
 
 

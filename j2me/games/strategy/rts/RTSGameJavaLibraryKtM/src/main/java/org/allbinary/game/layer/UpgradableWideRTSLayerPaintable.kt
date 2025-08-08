@@ -64,7 +64,7 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.drawString(this.getCost(), this.upgradableRTSLayerHudPaintable!!.textX, this.upgradableRTSLayerHudPaintable!!.costY, 0)
+graphics.drawString(this.getCost(), this.upgradableRTSLayerHudPaintable!!.textX, this.upgradableRTSLayerHudPaintable!!.costY, 0)
 }
 
 

@@ -78,7 +78,7 @@ open fun isSingleKeyProcessing()
 
 
     
-                        if(features!!.isFeature(this.SINGLE_KEY_REPEAT_PRESS) || features!!.isFeature(this.SINGLE_KEY_PRESS))
+                        if(features.isFeature(this.SINGLE_KEY_REPEAT_PRESS) || features.isFeature(this.SINGLE_KEY_PRESS))
                         
                                     {
                                     

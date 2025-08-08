@@ -268,7 +268,7 @@ open fun isValidStart(path: String)
                     var path = path
 
     
-                        if(path!![0] == abPathData!!.SEPARATORCHAR || path!![0] == '.')
+                        if(path[0] == abPathData!!.SEPARATORCHAR || path[0] == '.')
                         
                                     {
                                     
@@ -315,7 +315,7 @@ open fun isValidEnd(path: String)
                                 
 
     
-                        if(path!![path!!.length -1] == abPathData!!.SEPARATORCHAR)
+                        if(path[path.length -1] == abPathData!!.SEPARATORCHAR)
                         
                                     {
                                     
@@ -406,11 +406,11 @@ open fun adjust(path: String)
                                 
 
     
-                        if(path!!.indexOf(
+                        if(path.indexOf(
                             "\\") >= 0)
                         
                                     {
-                                    path= path!!.replace(
+                                    path= path.replace(
                             '\\', abPathData!!.SEPARATORCHAR)
 
                                     }
@@ -490,7 +490,7 @@ open fun removeNameFromPath(path: String)
 
                     var path = path
 
-    var endIndex: Int = path!!.lastIndexOf(abPathData!!.SEPARATOR)!!
+    var endIndex: Int = path.lastIndexOf(abPathData!!.SEPARATOR)!!
             
 
 
@@ -498,7 +498,7 @@ open fun removeNameFromPath(path: String)
                         if(endIndex < 0)
                         
                                     {
-                                    endIndex= path!!.lastIndexOf(filePathData!!.SEPARATORCHAR)
+                                    endIndex= path.lastIndexOf(filePathData!!.SEPARATORCHAR)
 
                                     }
                                 
@@ -517,20 +517,20 @@ open fun removeNameFromPath(path: String)
                                 
 
     
-                        if(path!!.length == endIndex +1)
+                        if(path.length == endIndex +1)
                         
                                     {
                                     
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.removeNameFromPath(path!!.substring(0, endIndex -1))
+                        return this.removeNameFromPath(path.substring(0, endIndex -1))
 
                                     }
                                 
                         else {
                             
-    var categoryName: String = path!!.substring(0, endIndex)!!
+    var categoryName: String = path.substring(0, endIndex)!!
             
 
 

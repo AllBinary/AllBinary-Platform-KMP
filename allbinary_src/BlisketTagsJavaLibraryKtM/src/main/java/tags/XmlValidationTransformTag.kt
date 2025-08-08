@@ -57,18 +57,18 @@ open fun isValid()
             
 
 
-    var result: Boolean = method!!.invoke(this.getHelper(), 
+    var result: Boolean = method.invoke(this.getHelper(), 
                             null) as Boolean
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return result!!
+                        return result
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)

@@ -68,7 +68,7 @@ open fun getRole(role: String)
 
 
     
-                        if(role!!.compareTo(userRole!!.toString()) == 0)
+                        if(role.compareTo(userRole!!.toString()) == 0)
                         
                                     {
                                     

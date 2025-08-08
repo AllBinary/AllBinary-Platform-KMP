@@ -90,7 +90,7 @@ stringBuffer!!.append(prePath)
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(
                             "Searched: ")
-stringBuffer!!.append(path!!.toFileSystemString())
+stringBuffer!!.append(path.toFileSystemString())
 stringBuffer!!.append(
                             " BasicArrayList: ")
 stringBuffer!!.append(size)

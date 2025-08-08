@@ -46,7 +46,7 @@ open fun getInstance()
 
 
     
-                        if(!configuration!!.isExecutingActionsAllowed())
+                        if(!configuration.isExecutingActionsAllowed())
                         
                                     {
                                     

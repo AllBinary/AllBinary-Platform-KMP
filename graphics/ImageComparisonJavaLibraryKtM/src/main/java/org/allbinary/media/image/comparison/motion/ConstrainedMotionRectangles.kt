@@ -87,7 +87,7 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
             
 
 
-    var size: Int = vector2!!.size!!
+    var size: Int = vector2.size!!
             
 
 
@@ -98,7 +98,7 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
 
 
         {
-    var motionRectangle: MotionRectangle = vector2!!.get(index) as MotionRectangle
+    var motionRectangle: MotionRectangle = vector2.get(index) as MotionRectangle
 
 
     var rectangle: Rectangle = motionRectangle!!.getRectangle()!!
@@ -171,7 +171,7 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
 
     
                         if(!isTooSmall && !isAreaTooSmall && !isTooBig && isValid)
-                        vector!!.add(motionRectangle)
+                        vector.add(motionRectangle)
 }
 
 this.setVector(vector)

@@ -74,14 +74,14 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request!!.getParameter(BasicItemData.ID)
-this.number= request!!.getParameter(BasicItemData.NUMBER)
-this.enabled= request!!.getParameter(EntryData.getInstance()!!.ENABLE)
-this.startTime= request!!.getParameter(SpecialItemData.START_TIME)
-this.endTime= request!!.getParameter(SpecialItemData.END_TIME)
-this.price= request!!.getParameter(BasicItemData.PRICE)
-this.timeEntered= request!!.getParameter(EntryData.getInstance()!!.TIMECREATED)
-this.lastModified= request!!.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
+{this.id= request.getParameter(BasicItemData.ID)
+this.number= request.getParameter(BasicItemData.NUMBER)
+this.enabled= request.getParameter(EntryData.getInstance()!!.ENABLE)
+this.startTime= request.getParameter(SpecialItemData.START_TIME)
+this.endTime= request.getParameter(SpecialItemData.END_TIME)
+this.price= request.getParameter(BasicItemData.PRICE)
+this.timeEntered= request.getParameter(EntryData.getInstance()!!.TIMECREATED)
+this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 }
 
 
@@ -90,22 +90,22 @@ open fun getHashMap()
 : HashMap<Any, Any>{
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(BasicItemData.ID, this.id)
-values!!.put(BasicItemData.NUMBER, this.number)
-values!!.put(EntryData.getInstance()!!.ENABLE, this.enabled)
-values!!.put(SpecialItemData.START_TIME, this.startTime)
-values!!.put(SpecialItemData.END_TIME, this.endTime)
-values!!.put(BasicItemData.PRICE, this.price)
+values.put(BasicItemData.ID, this.id)
+values.put(BasicItemData.NUMBER, this.number)
+values.put(EntryData.getInstance()!!.ENABLE, this.enabled)
+values.put(SpecialItemData.START_TIME, this.startTime)
+values.put(SpecialItemData.END_TIME, this.endTime)
+values.put(BasicItemData.PRICE, this.price)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 
@@ -123,28 +123,28 @@ open fun insert()
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
 
     var values: Vector = Vector()
 
-values!!.add(this.id)
-values!!.add(this.number)
-values!!.add(this.enabled)
-values!!.add(this.startTime)
-values!!.add(this.endTime)
-values!!.add(this.price)
-values!!.add(time)
-values!!.add(time)
+values.add(this.id)
+values.add(this.number)
+values.add(this.enabled)
+values.add(this.startTime)
+values.add(this.endTime)
+values.add(this.price)
+values.add(time)
+values.add(time)
 SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.insert(values)
 
     var success: String = "Successfully inserted " +id +" into items table"
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -163,7 +163,7 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.inse
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -191,7 +191,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(success, this, 
@@ -210,7 +210,7 @@ open fun delete()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -242,7 +242,7 @@ open fun update()
 SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.update(values)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
                                     logUtil!!.put(id +" " +success, this, 
@@ -261,7 +261,7 @@ SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.upda
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

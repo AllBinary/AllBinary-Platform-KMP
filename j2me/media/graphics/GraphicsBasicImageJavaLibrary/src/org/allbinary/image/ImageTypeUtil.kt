@@ -61,9 +61,9 @@ open fun getInstance()
     private val list: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        {list!!.add(JPG)
-list!!.add(GIF)
-list!!.add(PNG)
+        {list.add(JPG)
+list.add(GIF)
+list.add(PNG)
 }
 
 
@@ -77,11 +77,11 @@ mediaFileType= mediaFileType!!.lowercase()
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var name: String = list!!.objectArray[index]!! as String
+    var name: String = list.objectArray[index]!! as String
 
 
     

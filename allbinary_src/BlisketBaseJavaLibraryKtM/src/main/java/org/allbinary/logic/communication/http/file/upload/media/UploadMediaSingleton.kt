@@ -92,7 +92,7 @@ this.writerFileTypesHashMap= HashMap<Any, Any>()
             
 
 
-    var mediaDataNameArray: Array<Any?> = set!!.toArray()!!
+    var mediaDataNameArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -152,7 +152,7 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     

@@ -211,7 +211,7 @@ open fun paintFirst(graphics: Graphics)
 {
 
                     var graphics = graphics
-this.paintable!!.paint(graphics)
+this.paintable.paint(graphics)
 }
 
 
@@ -233,7 +233,7 @@ open fun paintDebug(graphics: Graphics)
             
 
 this.basicSetColorUtil!!.setBasicColorP(graphics, RED)
-graphics!!.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
+graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())
 }
 
 

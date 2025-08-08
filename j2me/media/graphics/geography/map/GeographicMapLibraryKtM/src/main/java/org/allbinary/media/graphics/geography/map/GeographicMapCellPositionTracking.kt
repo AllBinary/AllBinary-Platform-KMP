@@ -97,7 +97,7 @@ open fun updateStart(gameCanvasInterface: AllBinaryGameCanvas, layer: AllBinaryL
 
     var geographicMapInterface: BasicGeographicMap = geographicMapCompositeInterface!!.getGeographicMapInterface()[0]!!
 
-this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(layer!!.getXP() +layer!!.getHalfWidth(), layer!!.getYP() +layer!!.getHalfHeight())
+this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(layer.getXP() +layer.getHalfWidth(), layer.getYP() +layer.getHalfHeight())
 
     
                         if(this.newGeographicMapCellPosition != this.currentGeographicMapCellPosition)

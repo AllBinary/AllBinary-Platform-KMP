@@ -82,7 +82,7 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 this.previousImage= this.offScreenImage[this.drawCircularIndexUtil!!.getIndex()]!!
-graphics!!.drawImage(this.previousImage, 0, 0, anchor)
+graphics.drawImage(this.previousImage, 0, 0, anchor)
 }
 
 

@@ -186,7 +186,7 @@ open fun getWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return font!!.stringWidth(this.text)
+                        return font.stringWidth(this.text)
 }
 
 
@@ -196,7 +196,7 @@ open fun getHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return font!!.getHeight()
+                        return font.getHeight()
 }
 
 

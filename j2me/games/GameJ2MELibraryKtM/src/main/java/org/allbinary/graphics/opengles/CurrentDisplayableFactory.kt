@@ -128,7 +128,7 @@ open fun setMyCanvas(displayable: MyCanvas)
                                     {
                                     
     
-                        if(displayable!!.hasChild(this.displayable as MyCanvas))
+                        if(displayable.hasChild(this.displayable as MyCanvas))
                         
                                     {
                                     PreLogUtil.put(StringMaker().
@@ -233,7 +233,7 @@ open fun update()
 stringMaker!!.append(this.stringUtil!!.toString(openGlReadydisplayable))
 
     
-                        if(SWTUtil.isSWT && !features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(SWTUtil.isSWT && !features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(SWTUtil.SWT)!!.append(commonSeps!!.SPACE)!!.append(RUNNABLE)!!.append(this.stringUtil!!.toString(NullRunnable.getInstance()))!!.toString(), this, commonStrings!!.UPDATE)
@@ -243,7 +243,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
                                 
                              else 
     
-                        if(features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
+                        if(features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML))
                         
                                     {
                                     PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(HTMLFeatureFactory.getInstance()!!.HTML.toString())!!.append(commonSeps!!.SPACE)!!.append(RUNNABLE)!!.append(this.stringUtil!!.toString(runnable))!!.toString(), this, commonStrings!!.UPDATE)
@@ -253,7 +253,7 @@ this.setUsedRunnable(runnable)
                                 
                              else 
     
-                        if(openGlReadydisplayable is DemoCanvas || openGlReadydisplayable is AllBinaryGameCanvas || features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
+                        if(openGlReadydisplayable is DemoCanvas || openGlReadydisplayable is AllBinaryGameCanvas || features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
                                     PreLogUtil.put(stringMaker!!.append(commonSeps!!.SPACE)!!.append(OpenGLFeatureFactory.getInstance()!!.OPENGL.toString())!!.append(commonSeps!!.SPACE)!!.append(RUNNABLE)!!.append(this.stringUtil!!.toString(runnable))!!.toString(), this, commonStrings!!.UPDATE)

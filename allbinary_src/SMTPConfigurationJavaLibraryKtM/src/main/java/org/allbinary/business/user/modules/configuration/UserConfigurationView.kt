@@ -53,7 +53,7 @@ public constructor        (node: Node)
                     var node = node
 this.userConfigurationInterface= UserConfiguration() as UserConfigurationInterface
 
-    var childNodeList: NodeList = node!!.getChildNodes()!!
+    var childNodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -112,21 +112,21 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(UserConfigurationData.NAME)!!
+    var node: Node = document.createElement(UserConfigurationData.NAME)!!
             
 
 
     var userEmailConfigurationView: UserEmailConfigurationView = UserEmailConfigurationView(this.userConfigurationInterface!!.getUserEmailConfigurationInterface())
 
-node!!.appendChild(userEmailConfigurationView!!.toXmlNode(document))
+node.appendChild(userEmailConfigurationView!!.toXmlNode(document))
 
     var timeCreatedView: TimeCreatedView = TimeCreatedView(userConfigurationInterface!!.getTimeCreated())
 
-node!!.appendChild(timeCreatedView!!.toXmlNode(document))
+node.appendChild(timeCreatedView!!.toXmlNode(document))
 
     var timeLastModifiedView: TimeLastModifiedView = TimeLastModifiedView(userConfigurationInterface!!.getTimeLastModified())
 
-node!!.appendChild(timeLastModifiedView!!.toXmlNode(document))
+node.appendChild(timeLastModifiedView!!.toXmlNode(document))
 
 
 

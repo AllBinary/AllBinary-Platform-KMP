@@ -87,11 +87,11 @@ this.gl= gl
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var openGLESImage: OpenGLESImage = (list!!.objectArray[index]!! as OpenGLESImage)
+    var openGLESImage: OpenGLESImage = (list.objectArray[index]!! as OpenGLESImage)
 
 
     
@@ -159,7 +159,7 @@ height= textureSize
                         if(image != 
                                     null
                                 )
-                        list!!.add(image)
+                        list.add(image)
 
 
 
@@ -196,7 +196,7 @@ height= textureSize
                         if(image != 
                                     null
                                 )
-                        list!!.add(image)
+                        list.add(image)
 
 
 
@@ -230,7 +230,7 @@ open fun init(image: Image)
         //mutex.withLock
         
     
-                        if(list!!.contains(image))
+                        if(list.contains(image))
                         
                                     {
                                     
@@ -240,10 +240,10 @@ open fun init(image: Image)
 
                                     }
                                 
-list!!.add(image)
+list.add(image)
 
 
-this.renderer!!.add(image)
+this.renderer.add(image)
 } catch(e: Exception)
             {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }

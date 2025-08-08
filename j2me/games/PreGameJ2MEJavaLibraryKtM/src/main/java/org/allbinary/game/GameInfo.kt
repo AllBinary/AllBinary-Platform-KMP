@@ -244,11 +244,11 @@ open fun toHashtable()
 : Hashtable<Any, Any>{
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-hashtable!!.put(this.gameInfoData!!.GAME_TYPE, this.getGameType()!!.toString())
-hashtable!!.put(this.gameInfoData!!.GAME_MODE, this.gameMode!!.toString())
-hashtable!!.put(this.gameInfoData!!.PLAYER_TYPE, this.playerType!!.toString())
-hashtable!!.put(this.gameInfoData!!.HIGHEST_LEVEL, Integer.toString(this.getHighestLevel()))
-hashtable!!.put(this.gameInfoData!!.CURRENT_LEVEL, Integer.toString(this.currentLevel))
+hashtable.put(this.gameInfoData!!.GAME_TYPE, this.getGameType()!!.toString())
+hashtable.put(this.gameInfoData!!.GAME_MODE, this.gameMode!!.toString())
+hashtable.put(this.gameInfoData!!.PLAYER_TYPE, this.playerType!!.toString())
+hashtable.put(this.gameInfoData!!.HIGHEST_LEVEL, Integer.toString(this.getHighestLevel()))
+hashtable.put(this.gameInfoData!!.CURRENT_LEVEL, Integer.toString(this.currentLevel))
 
 
 

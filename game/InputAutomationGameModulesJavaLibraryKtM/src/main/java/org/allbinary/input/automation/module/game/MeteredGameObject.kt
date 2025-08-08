@@ -56,7 +56,7 @@ open public class MeteredGameObject
     private val IS_GOOD_LABEL: String = "isGood: "
 
     private val IS_DROPPPING_LABEL: String = "isDropping: "
-public constructor        (bufferedImage: Array<BufferedImage?>, minX: Integer, maxX: Integer, y: Integer)
+public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)
             : super()
         {
 

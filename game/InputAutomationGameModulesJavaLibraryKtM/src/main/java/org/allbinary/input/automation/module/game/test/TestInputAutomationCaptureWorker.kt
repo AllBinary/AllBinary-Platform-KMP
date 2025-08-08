@@ -104,7 +104,7 @@ open fun processDataWorkerResults()
             
 
 
-    var actionNameArray: Array<Any?> = set!!.toArray()!!
+    var actionNameArray: Array<Any?> = set.toArray()!!
             
 
 

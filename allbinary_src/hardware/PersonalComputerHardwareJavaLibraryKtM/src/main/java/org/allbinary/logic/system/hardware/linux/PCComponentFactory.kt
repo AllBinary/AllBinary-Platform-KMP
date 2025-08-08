@@ -94,7 +94,7 @@ open fun getInstance(component: String, componentData: String)
                                     {
                                     
     
-                        if(component!!.compareTo(this.componentFactory!!.ETHERNET.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.ETHERNET.toString()) == 0)
                         
                                     {
                                     
@@ -107,7 +107,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.BRIDGE.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.BRIDGE.toString()) == 0)
                         
                                     {
                                     
@@ -120,7 +120,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.IDE.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.IDE.toString()) == 0)
                         
                                     {
                                     
@@ -133,7 +133,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.MULTIMEDIA.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.MULTIMEDIA.toString()) == 0)
                         
                                     {
                                     
@@ -146,7 +146,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.SCSI.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.SCSI.toString()) == 0)
                         
                                     {
                                     
@@ -159,7 +159,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.USB.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.USB.toString()) == 0)
                         
                                     {
                                     
@@ -172,7 +172,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.VGA.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.VGA.toString()) == 0)
                         
                                     {
                                     
@@ -185,7 +185,7 @@ open fun getInstance(component: String, componentData: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.PCI.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.PCI.toString()) == 0)
                         
                                     {
                                     
@@ -235,7 +235,7 @@ open fun getComponentType(component: String)
                     var component = component
 
     
-                        if(component!!.indexOf(this.componentFactory!!.ETHERNET.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.ETHERNET.toString()) >= 0)
                         
                                     {
                                     
@@ -248,7 +248,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.indexOf(this.componentFactory!!.BRIDGE.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.BRIDGE.toString()) >= 0)
                         
                                     {
                                     
@@ -261,7 +261,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.indexOf(this.componentFactory!!.IDE.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.IDE.toString()) >= 0)
                         
                                     {
                                     
@@ -274,7 +274,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.indexOf(this.componentFactory!!.MULTIMEDIA.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.MULTIMEDIA.toString()) >= 0)
                         
                                     {
                                     
@@ -287,7 +287,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.indexOf(this.componentFactory!!.SCSI.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.SCSI.toString()) >= 0)
                         
                                     {
                                     
@@ -300,7 +300,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.indexOf(this.componentFactory!!.USB.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.USB.toString()) >= 0)
                         
                                     {
                                     
@@ -313,7 +313,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.indexOf(this.componentFactory!!.VGA.toString()) >= 0)
+                        if(component.indexOf(this.componentFactory!!.VGA.toString()) >= 0)
                         
                                     {
                                     
@@ -326,7 +326,7 @@ open fun getComponentType(component: String)
                                 
                              else 
     
-                        if(component!!.compareTo(this.componentFactory!!.PCI.toString()) == 0)
+                        if(component.compareTo(this.componentFactory!!.PCI.toString()) == 0)
                         
                                     {
                                     

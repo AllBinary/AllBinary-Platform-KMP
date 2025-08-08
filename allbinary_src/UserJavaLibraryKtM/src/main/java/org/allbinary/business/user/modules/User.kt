@@ -193,7 +193,7 @@ this.role= UserRoleB.getRole(userHashMap!!.get(UserRoleData.NAME.toString()) as 
 this.permissions= stringUtil!!.getInstance(userHashMap!!.get(UserData.PERMISSIONS) as String)
 
     
-                        if(!stringValidationUtil!!.isEmpty(this.permissions) && this.permissions!!.compareTo(StoreFrontData.getInstance()!!.NAME) == 0)
+                        if(!stringValidationUtil!!.isEmpty(this.permissions) && this.permissions.compareTo(StoreFrontData.getInstance()!!.NAME) == 0)
                         this.permissions= stringUtil!!.getInstance(userHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)
                              else 
     
@@ -228,7 +228,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.password!!.isValid()!!)
+                        if(!this.password.isValid()!!)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -275,7 +275,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
                         
                                     {
                                     
@@ -309,7 +309,7 @@ open fun validationInfo()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(UserName.getValidationInfo(this.userName))
-stringBuffer!!.append(this.password!!.getValidationInfo())
+stringBuffer!!.append(this.password.getValidationInfo())
 
     
                         if(!stringValidationUtil!!.isValidRequired(firstName, 1, UserData.MAXLEN))
@@ -349,7 +349,7 @@ stringBuffer!!.append(this.password!!.getValidationInfo())
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -553,7 +553,7 @@ open fun setPassword(value: String)
 {
 
                     var value = value
-this.password!!.set(value)
+this.password.set(value)
 }
 
 
@@ -786,7 +786,7 @@ open fun getPassword()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.password!!.get()
+                        return this.password.get()
 }
 
 
@@ -797,41 +797,41 @@ open fun toVector()
 : Vector{
     var values: Vector = Vector()
 
-values!!.add(userName)
-values!!.add(prefixName)
-values!!.add(firstName)
-values!!.add(lastName)
-values!!.add(middleName)
-values!!.add(suffixName)
-values!!.add(company)
-values!!.add(positionAtCompany)
-values!!.add(mainEmail)
-values!!.add(secondaryEmail)
-values!!.add(homePhone)
-values!!.add(cellPhone)
-values!!.add(workPhone)
-values!!.add(otherContact)
-values!!.add(electronicDevice)
-values!!.add(fax)
-values!!.add(this.getRole()!!.toString())
+values.add(userName)
+values.add(prefixName)
+values.add(firstName)
+values.add(lastName)
+values.add(middleName)
+values.add(suffixName)
+values.add(company)
+values.add(positionAtCompany)
+values.add(mainEmail)
+values.add(secondaryEmail)
+values.add(homePhone)
+values.add(cellPhone)
+values.add(workPhone)
+values.add(otherContact)
+values.add(electronicDevice)
+values.add(fax)
+values.add(this.getRole()!!.toString())
 
     var userConfigurationDomDocumentMapping: UserConfigurationDomDocumentMapping = UserConfigurationDomDocumentMapping(this.getUserConfigurationInterface())
 
-values!!.add(userConfigurationDomDocumentMapping!!.toDomDocumentString())
-values!!.add(this.permissions)
-values!!.addAll(this.password!!.toVector(this.secret))
-values!!.add(this.enable)
+values.add(userConfigurationDomDocumentMapping!!.toDomDocumentString())
+values.add(this.permissions)
+values.addAll(this.password.toVector(this.secret))
+values.add(this.enable)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.add(time)
-values!!.add(time)
+values.add(time)
+values.add(time)
 
 
 
@@ -847,22 +847,22 @@ open fun toHashMap()
 : HashMap<Any, Any>{
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
-values!!.put(UserData.USERNAME, userName)
-values!!.put(UserData.PREFIXNAME, prefixName)
-values!!.put(UserData.FIRSTNAME, firstName)
-values!!.put(UserData.LASTNAME, lastName)
-values!!.put(UserData.MIDDLENAME, middleName)
-values!!.put(UserData.SUFFIXNAME, suffixName)
-values!!.put(UserData.COMPANY, company)
-values!!.put(UserData.POSITIONATCOMPANY, positionAtCompany)
-values!!.put(UserData.MAINEMAIL, mainEmail)
-values!!.put(UserData.SECONDARYEMAIL, secondaryEmail)
-values!!.put(UserData.HOMEPHONE, homePhone)
-values!!.put(UserData.CELLPHONE, cellPhone)
-values!!.put(UserData.WORKPHONE, workPhone)
-values!!.put(UserData.OTHERCONTACT, otherContact)
-values!!.put(UserData.ELECTRONICDEVICE, electronicDevice)
-values!!.put(UserData.FAX, fax)
+values.put(UserData.USERNAME, userName)
+values.put(UserData.PREFIXNAME, prefixName)
+values.put(UserData.FIRSTNAME, firstName)
+values.put(UserData.LASTNAME, lastName)
+values.put(UserData.MIDDLENAME, middleName)
+values.put(UserData.SUFFIXNAME, suffixName)
+values.put(UserData.COMPANY, company)
+values.put(UserData.POSITIONATCOMPANY, positionAtCompany)
+values.put(UserData.MAINEMAIL, mainEmail)
+values.put(UserData.SECONDARYEMAIL, secondaryEmail)
+values.put(UserData.HOMEPHONE, homePhone)
+values.put(UserData.CELLPHONE, cellPhone)
+values.put(UserData.WORKPHONE, workPhone)
+values.put(UserData.OTHERCONTACT, otherContact)
+values.put(UserData.ELECTRONICDEVICE, electronicDevice)
+values.put(UserData.FAX, fax)
 
     
                         if(this.getRole() != 
@@ -870,27 +870,27 @@ values!!.put(UserData.FAX, fax)
                                 )
                         
                                     {
-                                    values!!.put(UserRoleData.NAME.toString(), this.getRole()!!.toString())
+                                    values.put(UserRoleData.NAME.toString(), this.getRole()!!.toString())
 
                                     }
                                 
 
     var userConfigurationDomDocumentMapping: UserConfigurationDomDocumentMapping = UserConfigurationDomDocumentMapping(this.getUserConfigurationInterface())
 
-values!!.put(UserData.CONFIGURATION, userConfigurationDomDocumentMapping!!.toDomDocumentString())
-values!!.put(UserData.PERMISSIONS, this.permissions)
-values!!.putAll(this.password!!.toHashMap(this.secret))
-values!!.put(EntryData.getInstance()!!.ENABLE, this.enable)
+values.put(UserData.CONFIGURATION, userConfigurationDomDocumentMapping!!.toDomDocumentString())
+values.put(UserData.PERMISSIONS, this.permissions)
+values.putAll(this.password.toHashMap(this.secret))
+values.put(EntryData.getInstance()!!.ENABLE, this.enable)
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString().toCharArray().concatToString()
                                 
 
-values!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
+values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 
 
@@ -905,7 +905,7 @@ open fun toPasswordHashMap()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.password!!.toHashMap(this.secret)
+                        return this.password.toHashMap(this.secret)
 }
 
 

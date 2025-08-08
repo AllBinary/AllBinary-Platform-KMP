@@ -229,7 +229,7 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
                     var list = list
 
-    var size: Int = list!!.size() -1
+    var size: Int = list.size() -1
 
 
     var currentSize: Int = this.licenseServers!!.size() -1
@@ -255,7 +255,7 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
 
         {
-    var newServerName: String = list!!.objectArray[index]!! as String
+    var newServerName: String = list.objectArray[index]!! as String
 
 
 

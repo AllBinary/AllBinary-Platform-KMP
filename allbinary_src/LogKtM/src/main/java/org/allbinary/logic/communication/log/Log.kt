@@ -149,12 +149,12 @@ override fun toString()
 
 
     
-                        if(clazz!!.qualifiedName!! != 
+                        if(clazz.qualifiedName!! != 
                                     null
                                 )
                         
                                     {
-                                    className= clazz!!.qualifiedName!!
+                                    className= clazz.qualifiedName!!
 
                                     }
                                 

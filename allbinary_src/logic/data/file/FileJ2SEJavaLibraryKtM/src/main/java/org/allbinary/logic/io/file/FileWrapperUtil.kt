@@ -46,13 +46,13 @@ open fun wrapFiles(files: Array<Any?>)
 
         try {
             
-    var abFileArray: Array<AbFile?> = arrayOfNulls(files!!.size)
+    var abFileArray: Array<AbFile?> = arrayOfNulls(files.size)
 
 
 
 
 
-                        for (index in files!!.size -1 downTo 0)
+                        for (index in files.size -1 downTo 0)
 
 
         {abFileArray[index]= AbFile(files[index]!! as File)

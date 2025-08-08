@@ -45,10 +45,10 @@ open fun getCenterPoint(rectangle: Rectangle)
 
                     var rectangle = rectangle
 
-    var x: Double = rectangle!!.getX() +rectangle!!.getWidth() /two
+    var x: Double = rectangle.getX() +rectangle.getWidth() /two
 
 
-    var y: Double = rectangle!!.getY() +rectangle!!.getHeight() /two
+    var y: Double = rectangle.getY() +rectangle.getHeight() /two
 
 
 

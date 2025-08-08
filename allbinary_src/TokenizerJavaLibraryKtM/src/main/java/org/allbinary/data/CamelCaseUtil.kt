@@ -101,9 +101,9 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 
     var tokenizer: Tokenizer = Tokenizer(commonSeps!!.UNDERSCORE)
 
-tokenizer!!.getTokens(string, list)
+tokenizer.getTokens(string, list)
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -116,14 +116,14 @@ tokenizer!!.getTokens(string, list)
                         for (i in 0 until size)
 
 
-        {word= list!!.get(i) as String
+        {word= list.get(i) as String
 word= if(stringValidationUtil!!.isEmpty(word)) {
                             
                             word
                         
                             } else {
                             StringMaker().
-                            append(Character.toUpperCase(word!![0]))!!.append(word!!.substring(1)!!.lowercase())!!.toString()
+                            append(Character.toUpperCase(word[0]))!!.append(word.substring(1)!!.lowercase())!!.toString()
                             }
     
 stringBuilder!!.append(word)

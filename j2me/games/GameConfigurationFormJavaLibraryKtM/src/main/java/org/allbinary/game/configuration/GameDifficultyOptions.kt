@@ -142,7 +142,7 @@ open fun add(list: BasicArrayList, name: String, option: Int)
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
                                     choiceGroup!!.setSelectedIndex(0, true)
@@ -174,7 +174,7 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
     var choiceGroup: ChoiceGroup = ChoiceGroup(name, option)
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -185,7 +185,7 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
 
 
         {
-    var anyType: Any = list!!.objectArray[index]!!
+    var anyType: Any = list.objectArray[index]!!
 
 logUtil!!.put(StringMaker().
                             append(NAME)!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)

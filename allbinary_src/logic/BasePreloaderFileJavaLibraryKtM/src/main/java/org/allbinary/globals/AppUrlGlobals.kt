@@ -73,8 +73,8 @@ open fun setWebappPath(path: String)
 this.path= path
 
     
-                        if(!(this.path!!.endsWith(
-                            "\\") || this.path!!.endsWith(
+                        if(!(this.path.endsWith(
+                            "\\") || this.path.endsWith(
                             "/")))
                         
                                     {

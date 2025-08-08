@@ -102,7 +102,7 @@ open fun init(fullScreenInterface: Canvas)
 
 
     
-                        if(features!!.isFeature(mainFeatureFactory!!.FULL_SCREEN))
+                        if(features.isFeature(mainFeatureFactory!!.FULL_SCREEN))
                         
                                     {
                                     fullScreenInterface!!.setFullScreenMode(true)
@@ -132,7 +132,7 @@ open fun isScreenChange(isFullScreen: Boolean)
 
 
     
-                        if(features!!.isFeature(mainFeatureFactory!!.FULL_SCREEN) != isFullScreen)
+                        if(features.isFeature(mainFeatureFactory!!.FULL_SCREEN) != isFullScreen)
                         
                                     {
                                     

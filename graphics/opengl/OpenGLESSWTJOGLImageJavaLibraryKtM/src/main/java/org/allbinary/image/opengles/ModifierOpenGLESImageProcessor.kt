@@ -71,7 +71,7 @@ open fun getInstance()
 
 
                     var alpha = alpha
-gl!!.glColor4f(red, green, blue, alpha)
+gl.glColor4f(red, green, blue, alpha)
 }
 
 

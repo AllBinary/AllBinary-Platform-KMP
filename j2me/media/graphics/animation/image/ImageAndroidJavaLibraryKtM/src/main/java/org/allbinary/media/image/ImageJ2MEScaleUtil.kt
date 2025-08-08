@@ -74,13 +74,13 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
 
 
-                        for (index in 0 until images!!.size)
+                        for (index in 0 until images.size)
 
 
         {
     var image: Image = images[index]!!
 
-images[index]= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width /2, image!!.getWidth(), height, image!!.getHeight(), false)
+images[index]= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width /2, image.getWidth(), height, image.getHeight(), false)
 }
 
 
@@ -108,7 +108,7 @@ open fun scale(image: Image, width: Int, height: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width, image!!.getWidth(), height, image!!.getHeight(), false)
+                        return ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width, image.getWidth(), height, image.getHeight(), false)
 }
 
 

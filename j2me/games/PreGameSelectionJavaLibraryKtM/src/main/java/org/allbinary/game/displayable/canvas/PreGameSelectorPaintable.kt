@@ -72,7 +72,7 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.setColor(BasicColorFactory.getInstance()!!.WHITE.toInt())
+graphics.setColor(BasicColorFactory.getInstance()!!.WHITE.toInt())
 this.canvasDrawLineString!!.paint(graphics, title, 0)
 this.getPreGameSelectionForm()!!.paint(graphics)
 }

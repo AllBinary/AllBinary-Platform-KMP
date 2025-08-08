@@ -101,7 +101,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-graphics!!.drawImage(this.image, x, y, anchor)
+graphics.drawImage(this.image, x, y, anchor)
 }
 
 
@@ -120,7 +120,7 @@ override fun getWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.image!!.getWidth()
+                        return this.image.getWidth()
 }
 
 

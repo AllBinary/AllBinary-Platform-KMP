@@ -156,7 +156,7 @@ open fun addThemes(node: Node)
 
                     var node = node
 
-    var themesNode: Node = DomSearchHelper.getNode(ThemesData.getInstance()!!.NAME, node!!.getChildNodes())!!
+    var themesNode: Node = DomSearchHelper.getNode(ThemesData.getInstance()!!.NAME, node.getChildNodes())!!
             
 
 

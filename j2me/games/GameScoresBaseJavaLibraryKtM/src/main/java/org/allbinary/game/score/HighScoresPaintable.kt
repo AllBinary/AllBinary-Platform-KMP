@@ -81,25 +81,25 @@ override fun paint(graphics: Graphics)
     var height: Int = this.displayInfoSingleton!!.getLastHeight()!!
             
 
-graphics!!.setColor(getBasicColorP()!!.toInt())
+graphics.setColor(getBasicColorP()!!.toInt())
 
     var heading: String = this.highScores!!.getHeading()!!
             
 
 
-    var topScoresWidth: Int = (graphics!!.getFont()!!.stringWidth(heading) shr 1)
+    var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(heading) shr 1)
 
-graphics!!.drawString(heading, (width shr 1) -topScoresWidth, charHeight, anchor)
-graphics!!.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, anchor)
+graphics.drawString(heading, (width shr 1) -topScoresWidth, charHeight, anchor)
+graphics.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, anchor)
 
     var columnTwoHeading: String = this.highScores!!.getColumnTwoHeading()!!
             
 
 
-    var columnTwoHeadingWidth: Int = graphics!!.getFont()!!.stringWidth(columnTwoHeading)!!
+    var columnTwoHeadingWidth: Int = graphics.getFont()!!.stringWidth(columnTwoHeading)!!
             
 
-graphics!!.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeight *3, anchor)
+graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeight *3, anchor)
 
     var index: Int = 4
 
@@ -111,7 +111,7 @@ graphics!!.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHe
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -120,10 +120,10 @@ graphics!!.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHe
 
         while(vectorIndex < size && charHeight *index < height -(charHeight *2))
         {
-    var highScore: HighScore = list!!.objectArray[vectorIndex]!! as HighScore
+    var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
 
 
-    var nextScoreWidth: Int = graphics!!.getFont()!!.stringWidth(highScore!!.getScoreString())!!
+    var nextScoreWidth: Int = graphics.getFont()!!.stringWidth(highScore!!.getScoreString())!!
             
 
 
@@ -142,10 +142,10 @@ vectorIndex= 0
 
         while(vectorIndex < size && charHeight *index < height -(charHeight *2))
         {
-    var highScore: HighScore = list!!.objectArray[vectorIndex]!! as HighScore
+    var highScore: HighScore = list.objectArray[vectorIndex]!! as HighScore
 
-graphics!!.drawString(highScore!!.getName(), 10, charHeight *index, anchor)
-graphics!!.drawString(highScore!!.getScoreString(), width -10 -largestSecondColumnWidth, charHeight *index, anchor)
+graphics.drawString(highScore!!.getName(), 10, charHeight *index, anchor)
+graphics.drawString(highScore!!.getScoreString(), width -10 -largestSecondColumnWidth, charHeight *index, anchor)
 index++
 vectorIndex++
 }

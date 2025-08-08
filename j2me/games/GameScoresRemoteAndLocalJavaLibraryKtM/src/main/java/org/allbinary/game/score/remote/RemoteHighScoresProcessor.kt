@@ -82,14 +82,14 @@ logUtil!!.put(
             
 
 HashtableUtil.getInstance()!!.putAll(gameInfo!!.toHashtable(), hashtable)
-hashtable!!.put(gameInfoData!!.SOFTWARE_INFORMATION, remoteHighScores!!.getSoftwareInformation()!!.toString())
-hashtable!!.put(remoteHighScores!!.ASCENDING, remoteHighScores!!.getAscending()!!.toString())
+hashtable.put(gameInfoData!!.SOFTWARE_INFORMATION, remoteHighScores!!.getSoftwareInformation()!!.toString())
+hashtable.put(remoteHighScores!!.ASCENDING, remoteHighScores!!.getAscending()!!.toString())
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
             
 
-hashtable!!.put(displayInfoSingleton!!.ORIENTATION, BooleanFactory.getInstance()!!.toString(displayInfoSingleton!!.isPortrait()))
-hashtable!!.put(RemoteHighScoresData.getInstance()!!.GAME_CONFIGURATION, GameConfigurationCentral.getInstance()!!.toString())
+hashtable.put(displayInfoSingleton!!.ORIENTATION, BooleanFactory.getInstance()!!.toString(displayInfoSingleton!!.isPortrait()))
+hashtable.put(RemoteHighScoresData.getInstance()!!.GAME_CONFIGURATION, GameConfigurationCentral.getInstance()!!.toString())
 
     
                         if(XmlRpcAbeClient.isOnline)

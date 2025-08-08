@@ -106,7 +106,7 @@ this.lastWidth= IntArray(this.stringArray!!.size)
 this.setBasicColorP(basicColor)
 this.color= basicColor!!.toInt()
 this.lineArray= lineArray
-this.fontSize= font!!.getSize()
+this.fontSize= font.getSize()
 this.font= font
 }
 
@@ -118,7 +118,7 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 
-    var existingFont: Font = graphics!!.getFont()!!
+    var existingFont: Font = graphics.getFont()!!
             
 
 fontDebugFactory!!.setFont(this.font, graphics)
@@ -142,12 +142,12 @@ basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
                         if(hasChanged)
                         
                                     {
-                                    this.lastWidth[index]= (graphics!!.getFont()!!.stringWidth(this.stringArray[index]!!) shr 1)
+                                    this.lastWidth[index]= (graphics.getFont()!!.stringWidth(this.stringArray[index]!!) shr 1)
 
                                     }
                                 
 beginWidth= this.lastWidth[index]!!
-graphics!!.drawString(this.stringArray[index]!!, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHalfHeight() -lineArray[index], anchor)
+graphics.drawString(this.stringArray[index]!!, displayInfo!!.getLastHalfWidth() -beginWidth, displayInfo!!.getLastHalfHeight() -lineArray[index], anchor)
 }
 
 hasChanged= false

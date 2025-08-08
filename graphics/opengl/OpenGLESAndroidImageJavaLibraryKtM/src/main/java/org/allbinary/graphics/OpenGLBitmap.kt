@@ -50,7 +50,7 @@ open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, w
 
 
                     var height = height
-this.bitmap!!.getPixels(pixels, offset, stride, x, y, width, height)
+this.bitmap.getPixels(pixels, offset, stride, x, y, width, height)
 }
 
 
@@ -77,7 +77,7 @@ open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, w
 
 
                     var height = height
-this.bitmap!!.setPixels(pixels, offset, stride, x, y, width, height)
+this.bitmap.setPixels(pixels, offset, stride, x, y, width, height)
 }
 
 
@@ -87,7 +87,7 @@ open fun getWidth()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.bitmap!!.getWidth()
+                        return this.bitmap.getWidth()
 }
 
 
@@ -97,13 +97,13 @@ open fun getHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.bitmap!!.getHeight()
+                        return this.bitmap.getHeight()
 }
 
 
 open fun recycle()
         //nullable = true from not(false or (false and true)) = true
-{this.bitmap!!.recycle()
+{this.bitmap.recycle()
 }
 
 

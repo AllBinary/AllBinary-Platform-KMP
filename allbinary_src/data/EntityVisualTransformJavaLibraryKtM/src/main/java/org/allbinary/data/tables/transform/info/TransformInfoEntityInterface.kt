@@ -43,7 +43,7 @@ open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
 
                 @Throws(Exception::class)
             
-open fun getObjectConfigs(storeName: String)
+open fun getObjectConfigs(storeName: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 

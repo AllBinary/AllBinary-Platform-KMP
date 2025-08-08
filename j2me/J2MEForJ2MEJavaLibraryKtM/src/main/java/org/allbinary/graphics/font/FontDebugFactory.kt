@@ -66,7 +66,7 @@ open fun setFont(font: Font, graphics: Graphics)
 
 
                     var graphics = graphics
-graphics!!.setFont(font)
+graphics.setFont(font)
 }
 
 

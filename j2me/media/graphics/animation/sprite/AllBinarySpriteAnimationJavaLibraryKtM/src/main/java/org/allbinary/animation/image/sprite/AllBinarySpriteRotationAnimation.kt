@@ -40,7 +40,7 @@ open public class AllBinarySpriteRotationAnimation : HackRotationSpriteIndexedAn
         
 public constructor        (sprite: Sprite, image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : super(sprite, image, AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /sprite!!.getRawFrameCount()).toShort()), animationBehavior){
+                            : super(sprite, image, AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /sprite.getRawFrameCount()).toShort()), animationBehavior){
 
                     var sprite = sprite
 
@@ -53,19 +53,19 @@ public constructor        (sprite: Sprite, image: Image, animationBehavior: Anim
 
                             //For kotlin this is before the body of the constructor.
                     
-this.angleInfo!!.adjustAngle(this.sprite!!.getFrame())
+this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite!!.nextFrame()
-this.angleInfo!!.adjustAngle(this.sprite!!.getFrame())
+{this.sprite.nextFrame()
+this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite!!.prevFrame()
-this.angleInfo!!.adjustAngle(this.sprite!!.getFrame())
+{this.sprite.prevFrame()
+this.angleInfo!!.adjustAngle(this.sprite.getFrame())
 }
 
 override fun setFrame(direction: Direction)
@@ -93,7 +93,7 @@ override fun setFrame(index: Int)
 {
 
                     var index = index
-this.sprite!!.setFrame(index)
+this.sprite.setFrame(index)
 this.angleInfo!!.adjustAngle(this.getFrame())
 }
 
@@ -102,7 +102,7 @@ override fun adjustFrame(angle: Angle)
 {
 
                     var angle = angle
-this.adjustFrame(angle!!.getValue())
+this.adjustFrame(angle.getValue())
 }
 
 

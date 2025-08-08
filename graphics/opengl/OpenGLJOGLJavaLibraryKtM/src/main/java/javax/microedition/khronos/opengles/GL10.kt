@@ -540,15 +540,15 @@ open fun glColorMask(red: Boolean, green: Boolean, blue: Boolean, alpha: Boolean
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glColorPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
+open fun glColorPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: Buffer)
+open fun glCompressedTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, imageSize: Int, data: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: Buffer)
+open fun glCompressedTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, imageSize: Int, data: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -568,7 +568,7 @@ open fun glDeleteTextures(n: Int, textures: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDeleteTextures(n: Int, textures: IntBuffer)
+open fun glDeleteTextures(n: Int, textures: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -596,7 +596,7 @@ open fun glDrawArrays(mode: Int, first: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glDrawElements(mode: Int, count: Int, type: Int, indices: Buffer)
+open fun glDrawElements(mode: Int, count: Int, type: Int, indices: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -624,7 +624,7 @@ open fun glFogfv(pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glFogfv(pname: Int, params: FloatBuffer)
+open fun glFogfv(pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -640,7 +640,7 @@ open fun glGenTextures(n: Int, textures: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glGenTextures(n: Int, textures: IntBuffer)
+open fun glGenTextures(n: Int, textures: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -652,13 +652,13 @@ open fun glGetIntegerv(pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glGetIntegerv(pname: Int, params: IntBuffer)
+open fun glGetIntegerv(pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
 open fun glGetString(name: Int)
         //nullable = true from not(false or (false and false)) = true
-: String
+: java.lang.String
 
 open fun glHint(target: Int, mode: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -672,7 +672,7 @@ open fun glLightModelfv(pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glLightModelfv(pname: Int, params: FloatBuffer)
+open fun glLightModelfv(pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -684,7 +684,7 @@ open fun glLightfv(light: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glLightfv(light: Int, pname: Int, params: FloatBuffer)
+open fun glLightfv(light: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -700,7 +700,7 @@ open fun glLoadMatrixf(m: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glLoadMatrixf(m: FloatBuffer)
+open fun glLoadMatrixf(m: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -716,7 +716,7 @@ open fun glMaterialfv(face: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glMaterialfv(face: Int, pname: Int, params: FloatBuffer)
+open fun glMaterialfv(face: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -728,7 +728,7 @@ open fun glMultMatrixf(m: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glMultMatrixf(m: FloatBuffer)
+open fun glMultMatrixf(m: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -740,7 +740,7 @@ open fun glNormal3f(nx: Float, ny: Float, nz: Float)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glNormalPointer(type: Int, stride: Int, pointer: Buffer)
+open fun glNormalPointer(type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -768,7 +768,7 @@ open fun glPushMatrix()
         //nullable = true from not(false or (false and true)) = true
 
 
-open fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
+open fun glReadPixels(x: Int, y: Int, width: Int, height: Int, format: Int, type: Int, pixels: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -812,7 +812,7 @@ open fun glStencilOp(fail: Int, zfail: Int, zpass: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
+open fun glTexCoordPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -824,11 +824,11 @@ open fun glTexEnvfv(target: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glTexEnvfv(target: Int, pname: Int, params: FloatBuffer)
+open fun glTexEnvfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: Buffer)
+open fun glTexImage2D(target: Int, level: Int, internalformat: Int, width: Int, height: Int, border: Int, format: Int, type: Int, pixels: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -840,7 +840,7 @@ open fun glTexParameteri(target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: Buffer)
+open fun glTexSubImage2D(target: Int, level: Int, xoffset: Int, yoffset: Int, width: Int, height: Int, format: Int, type: Int, pixels: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
@@ -848,7 +848,7 @@ open fun glTranslatef(x: Float, y: Float, z: Float)
         //nullable = true from not(false or (false and false)) = true
 
 
-open fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: Buffer)
+open fun glVertexPointer(size: Int, type: Int, stride: Int, pointer: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 

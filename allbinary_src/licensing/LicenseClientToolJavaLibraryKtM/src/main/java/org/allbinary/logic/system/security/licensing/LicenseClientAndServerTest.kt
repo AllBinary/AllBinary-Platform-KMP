@@ -84,15 +84,15 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
 
 
-                        for (index in 1 until options!!.size)
+                        for (index in 1 until options.size)
 
 
-        {vector!!.add(options[index]!!)
+        {vector.add(options[index]!!)
 }
 
 
     
-                        if(options!!.size < 2)
+                        if(options.size < 2)
                         
                                     {
                                     
@@ -118,7 +118,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
                                 )
                         
                                     {
-                                    vector!!.add(line)
+                                    vector.add(line)
 
                                     }
                                 
@@ -163,12 +163,12 @@ open fun test()
 
 
 
-                        for (index in 0 until vector!!.size()!!)
+                        for (index in 0 until vector.size()!!)
 
 
         {stringBuffer!!.append(TESTING)
 
-    var serverName: String = vector!!.get(index) as String
+    var serverName: String = vector.get(index) as String
 
 
         try {
@@ -205,14 +205,14 @@ logUtil!!.put(RESULT +stringBuffer!!.toString(), this,
                             "test")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 } catch(e: Exception)
-            {list!!.add(serverName)
+            {list.add(serverName)
 logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, 
                             "test", e)
 }
 
 }
 
-logUtil!!.put("Total Servers Failed: " +list!!.size() +" Failed Servers: " +list!!.toString(), this, 
+logUtil!!.put("Total Servers Failed: " +list.size() +" Failed Servers: " +list.toString(), this, 
                             "test")
 } catch(e: Exception)
             {logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, 

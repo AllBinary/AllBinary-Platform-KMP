@@ -112,7 +112,7 @@ open fun getName()
 
 logUtil!!.put(StringMaker().
                             append(
-                            "Available List of Animations: ")!!.append(hashtable!!.toString())!!.toString(), this, commonStrings!!.INIT)
+                            "Available List of Animations: ")!!.append(hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
 this.setInitialized(true)
 }
 
@@ -142,7 +142,7 @@ open fun add(resource: String, animationInterfaceFactoryInterface: BasicAnimatio
                     var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
 
     
-                        if(hashtable!!.containsKey(resource as Object))
+                        if(hashtable.containsKey(resource as Object))
                         
                                     {
                                     
@@ -154,7 +154,7 @@ open fun add(resource: String, animationInterfaceFactoryInterface: BasicAnimatio
 
                                     }
                                 
-hashtable!!.put(resource, animationInterfaceFactoryInterface)
+hashtable.put(resource, animationInterfaceFactoryInterface)
 }
 
 
@@ -168,7 +168,7 @@ hashtable!!.put(resource, animationInterfaceFactoryInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable!!.get(resource as Object?) as BasicAnimationInterfaceFactoryInterface
+                        return hashtable.get(resource as Object?) as BasicAnimationInterfaceFactoryInterface
 }
 
 

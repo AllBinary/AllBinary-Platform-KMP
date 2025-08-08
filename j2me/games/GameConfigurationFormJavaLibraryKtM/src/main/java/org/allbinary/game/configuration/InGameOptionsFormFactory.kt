@@ -88,9 +88,7 @@ open fun init(commandListener: CommandListener, initInterface: Init, title: Stri
         try {
             
     
-                        if(SINGLETON == 
-                                    null
-                                )
+                        if(SINGLETON == CommandForm.NULL_COMMAND_FORM)
                         
                                     {
                                     initInterface!!.init()

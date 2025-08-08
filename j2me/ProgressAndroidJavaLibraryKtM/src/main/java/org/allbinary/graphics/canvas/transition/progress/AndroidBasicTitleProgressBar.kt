@@ -491,7 +491,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                 )
                         
                                     {
-                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth, this.image!!.getWidth(), lastHeight -20, this.image!!.getHeight(), false)
+                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth, this.image.getWidth(), lastHeight -20, this.image.getHeight(), false)
 
                                     }
                                 
@@ -509,7 +509,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                 )
                         
                                     {
-                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth, this.image!!.getWidth(), lastHeight -28, this.image!!.getHeight(), false)
+                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth, this.image.getWidth(), lastHeight -28, this.image.getHeight(), false)
 
                                     }
                                 
@@ -645,7 +645,7 @@ open fun paint2(graphics: Graphics)
                     var graphics = graphics
 
         try {
-            animation!!.paint(graphics, 0, 20)
+            animation.paint(graphics, 0, 20)
 super.paint2(graphics)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)

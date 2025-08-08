@@ -105,7 +105,7 @@ scrollSelectionForm!!.setButtonBasicColor(basicColor)
     var item: TextItem = scrollSelectionForm!!.get(index) as TextItem
 
 
-    var stringComponent: StringComponent = item!!.getLabelStringComponent()!!
+    var stringComponent: StringComponent = item.getLabelStringComponent()!!
             
 
 

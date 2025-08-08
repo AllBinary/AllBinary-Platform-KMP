@@ -44,7 +44,7 @@ open public class NoTemplateTransformInfoObjectConfig : TransformInfoObjectConfi
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor        (transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
 
@@ -55,7 +55,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                     
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, document: Document)                        
+public constructor        (transformInfoInterface: Object, document: Object)                        
 
                             : super(transformInfoInterface, document){
 
@@ -70,7 +70,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface, docum
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
+public constructor        (transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(transformInfoInterface, name, type){
 
@@ -102,7 +102,7 @@ open fun generate(objectConfigDocument: Document)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Initial ObjectConfig: " +docString, this, 
@@ -135,12 +135,12 @@ hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
     var replace: Replace = Replace(hashMap)
 
 
-    var newObjectConfigDocument: Document = DomDocumentHelper.create(replace!!.all(docString))!!
+    var newObjectConfigDocument: Document = DomDocumentHelper.create(replace.all(docString))!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, 

@@ -118,7 +118,7 @@ public constructor        (itemHashMap: HashMap<Any, Any>)
                     var itemHashMap = itemHashMap
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -161,7 +161,7 @@ public constructor        ()
             : super()
         {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -816,7 +816,7 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -851,12 +851,12 @@ hashMap!!.put(BasicItemData.LARGEIMAGE, this.largeImage)
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString()!!
             
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
-hashMap!!.put(BasicItemData.PRICE, this.price!!.toString())
+hashMap!!.put(BasicItemData.PRICE, this.price.toString())
 hashMap!!.put(BasicItemData.COMMENT, this.comment)
 hashMap!!.put(BasicItemData.CUSTOMS, this.customs)
 hashMap!!.put(BasicItemData.DOWNLOADS, this.getDownloads())
@@ -876,7 +876,7 @@ open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -887,44 +887,44 @@ open fun toVector()
 
     var values: Vector = Vector()
 
-values!!.add(itemId)
-values!!.add(number)
-values!!.add(inBaskets)
-values!!.add(weight)
-values!!.add(enabled)
-values!!.add(newOrUsed)
-values!!.add(summary)
-values!!.add(distributor)
-values!!.add(idUsedByDistributor)
-values!!.add(producedBy)
-values!!.add(productionDate)
-values!!.add(startProductionDate)
-values!!.add(description)
-values!!.add(keywords)
-values!!.add(category)
-values!!.add(type)
-values!!.add(this.getSmallImage())
-values!!.add(this.getMediumImage())
-values!!.add(this.getLargeImage())
+values.add(itemId)
+values.add(number)
+values.add(inBaskets)
+values.add(weight)
+values.add(enabled)
+values.add(newOrUsed)
+values.add(summary)
+values.add(distributor)
+values.add(idUsedByDistributor)
+values.add(producedBy)
+values.add(productionDate)
+values.add(startProductionDate)
+values.add(description)
+values.add(keywords)
+values.add(category)
+values.add(type)
+values.add(this.getSmallImage())
+values.add(this.getMediumImage())
+values.add(this.getLargeImage())
 
     var calendar: Calendar = Calendar.getInstance()!!
             
 
 
-    var time: String = Long(calendar!!.getTimeInMillis()).
+    var time: String = Long(calendar.getTimeInMillis()).
                             toString()!!
             
 
-values!!.add(time)
-values!!.add(time)
-values!!.add(this.price!!.toString())
-values!!.add(this.comment)
-values!!.add(this.customs)
-values!!.add(this.getDownloads())
-values!!.add(this.groups)
-values!!.add(this.options)
-values!!.add(this.permissions)
-values!!.add(this.specials)
+values.add(time)
+values.add(time)
+values.add(this.price.toString())
+values.add(this.comment)
+values.add(this.customs)
+values.add(this.getDownloads())
+values.add(this.groups)
+values.add(this.options)
+values.add(this.permissions)
+values.add(this.specials)
 
 
 

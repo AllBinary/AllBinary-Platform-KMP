@@ -74,7 +74,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
         try {
             BlisketServletUtil.getInstance()!!.init(request)
 
-    var requestURI: String = request!!.getRequestURI()!!
+    var requestURI: String = request.getRequestURI()!!
             
 
 
@@ -88,13 +88,13 @@ inputStream= CloudStreamUtil.getInstance()!!.getFile(file)
     var byteArray: ByteArray = StreamUtil.getInstance()!!.getByteArray(inputStream, outputStream, ByteArray(16384))!!
             
 
-response!!.setContentType(
+response.setContentType(
                             "image/jpeg;charset=utf-8")
-response!!.getOutputStream()!!.write(byteArray)
+response.getOutputStream()!!.write(byteArray)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
@@ -105,13 +105,13 @@ response!!.getOutputStream()!!.write(byteArray)
 }
 
          finally {
-            StreamUtil.getInstance()!!.close(response!!.getOutputStream())
+            StreamUtil.getInstance()!!.close(response.getOutputStream())
 
     
                         if(!StreamUtil.getInstance()!!.close(inputStream))
                         
                                     {
-                                    response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+                                    response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
                                     }
                                 

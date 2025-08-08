@@ -132,12 +132,12 @@ hashMap!!.put(arrayOf(GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
             
 
 
-    var rootViewName: String = replace!!.all(viewName)!!
+    var rootViewName: String = replace.all(viewName)!!
             
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("RootViewName for ObjectConfig: " +rootViewName, this, 

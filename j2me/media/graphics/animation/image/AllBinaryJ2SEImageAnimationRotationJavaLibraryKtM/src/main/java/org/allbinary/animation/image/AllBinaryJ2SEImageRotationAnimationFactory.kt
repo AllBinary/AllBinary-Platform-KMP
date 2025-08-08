@@ -42,7 +42,7 @@ open public class AllBinaryJ2SEImageRotationAnimationFactory : BaseImageAnimatio
     val angleIncrement: Short
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -59,7 +59,7 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
 
                     var image = image
 
@@ -82,7 +82,7 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animatio
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -105,7 +105,7 @@ public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
 
                     var image = image
 
@@ -239,7 +239,7 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), AnimationBehaviorFactory.getInstance()){
 
                     var image = image
 
@@ -250,7 +250,7 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image!!.getWidth(), image!!.getHeight(), animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
 
                     var image = image
 

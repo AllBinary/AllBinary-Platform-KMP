@@ -64,7 +64,7 @@ public constructor        (server: String, from: String, to: String, subject: St
                     var contentBase = contentBase
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     this.email= Email(from, to, subject, server, textBody, htmlAttachment, contentBase, true)
@@ -85,7 +85,7 @@ open fun getMimeMessage()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.getMimeMessage()
+                        return this.email.getMimeMessage()
 }
 
 
@@ -95,7 +95,7 @@ open fun getDebugInfo()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.getDebugInfo()
+                        return this.email.getDebugInfo()
 }
 
 
@@ -107,7 +107,7 @@ open fun log()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.log()
+                        return this.email.log()
 }
 
 
@@ -119,7 +119,7 @@ open fun toHashMap()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.toHashMap()
+                        return this.email.toHashMap()
 }
 
 
@@ -134,7 +134,7 @@ open fun toXmlNode(document: Document)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.toXmlNode(document)
+                        return this.email.toXmlNode(document)
 }
 
 
@@ -156,7 +156,7 @@ open fun toXmlDoc()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.email!!.toXmlDoc()
+                        return this.email.toXmlDoc()
 }
 
 

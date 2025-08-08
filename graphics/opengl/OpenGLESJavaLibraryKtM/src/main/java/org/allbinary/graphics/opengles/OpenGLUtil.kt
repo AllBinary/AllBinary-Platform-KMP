@@ -150,12 +150,12 @@ open fun onSurfaceChanged(gl: GL10, graphics: OpenGLESGraphics)
                         if(!surfaceCreatedAndInitialized)
                         
                                     {
-                                    graphics!!.init()
+                                    graphics.init()
 surfaceCreatedAndInitialized= true
 
                                     }
                                 
-graphics!!.update()
+graphics.update()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
@@ -187,7 +187,7 @@ open fun add(image: Image)
         
         //synchronized(anyType) 
         //mutex.withLock
-        list!!.add(encapsulateImage)
+        list.add(encapsulateImage)
 
 
 
@@ -212,7 +212,7 @@ open fun clear()
         
         //synchronized(anyType) 
         //mutex.withLock
-        list!!.clear()
+        list.clear()
 
 
 }
@@ -265,7 +265,7 @@ open fun processRunnables()
 
 
         {runnable= this.runnableList!!.get(index) as Runnable
-runnable!!.run()
+runnable.run()
 }
 
 this.runnableList!!.clear()
@@ -282,7 +282,7 @@ open fun set(gl: GL10)
 
                     var gl = gl
 
-    var size: Int = this.list!!.size()!!
+    var size: Int = this.list.size()!!
             
 
 
@@ -295,7 +295,7 @@ open fun set(gl: GL10)
                         for (index2 in 0 until size)
 
 
-        {image= this.list!!.get(index2)
+        {image= this.list.get(index2)
 image = imageimage as OpenGLESImage
 image.
                                 set(gl)

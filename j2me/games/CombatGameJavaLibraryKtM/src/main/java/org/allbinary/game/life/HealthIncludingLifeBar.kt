@@ -95,7 +95,7 @@ public constructor        (layerInterface: AllBinaryLayer, life: Life, healthInt
 
 override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
-{this.animationInterface!!.onHealthChange(((this.healthInterface!!.getHealth() +(this.healthInterface!!.getMaxHealth() *this.life!!.get())) *this.allbinaryLayer!!.getWidth()) /(this.healthInterface!!.getMaxHealth() +(this.healthInterface!!.getMaxHealth() *this.life!!.getStartLives())))
+{this.animationInterface!!.onHealthChange(((this.healthInterface!!.getHealth() +(this.healthInterface!!.getMaxHealth() *this.life.get())) *this.allbinaryLayer!!.getWidth()) /(this.healthInterface!!.getMaxHealth() +(this.healthInterface!!.getMaxHealth() *this.life.getStartLives())))
 }
 
 override fun paint(graphics: Graphics)

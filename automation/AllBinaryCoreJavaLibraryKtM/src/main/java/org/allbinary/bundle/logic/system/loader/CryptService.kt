@@ -117,7 +117,7 @@ open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, 
         try {
             logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
-    var basicTextJDialog: BasicTextJDialog = BasicTextJDialog(e!!.getMessage())
+    var basicTextJDialog: BasicTextJDialog = BasicTextJDialog(e.getMessage())
 
 
         try {

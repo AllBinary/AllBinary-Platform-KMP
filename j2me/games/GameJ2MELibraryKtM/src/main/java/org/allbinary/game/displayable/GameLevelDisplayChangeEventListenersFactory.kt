@@ -67,7 +67,7 @@ open fun add(displayChangeEventListener: DisplayChangeEventListener)
 {
 
                     var displayChangeEventListener = displayChangeEventListener
-this.list!!.add(displayChangeEventListener)
+this.list.add(displayChangeEventListener)
 DisplayChangeEventHandler.getInstance()!!.addListener(displayChangeEventListener)
 }
 
@@ -85,14 +85,14 @@ open fun clear()
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
-        {displayChangeEventListener= this.list!!.objectArray[index]!! as DisplayChangeEventListener
+        {displayChangeEventListener= this.list.objectArray[index]!! as DisplayChangeEventListener
 displayChangeEventHandler!!.removeListener(displayChangeEventListener)
 }
 
-this.list!!.clear()
+this.list.clear()
 }
 
 

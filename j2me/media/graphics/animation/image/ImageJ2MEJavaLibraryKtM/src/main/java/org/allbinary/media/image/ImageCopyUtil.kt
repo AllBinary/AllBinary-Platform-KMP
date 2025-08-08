@@ -105,7 +105,7 @@ open fun createImage(originalImage: Image)
                     var originalImage = originalImage
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
@@ -123,10 +123,10 @@ open fun createImage(originalImage: Image)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
-                                    image!!.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
+                                    image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
 
 
 
@@ -162,7 +162,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                     var resize = resize
 
     
-                        if(!features!!.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
+                        if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
                         
                                     {
                                     logUtil!!.put(NO_COPY, this, commonStrings!!.CONSTRUCTOR, Exception())
@@ -212,7 +212,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 
     
-                        if(image!!.isMutable())
+                        if(image.isMutable())
                         
                                     {
                                     
@@ -222,10 +222,10 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
     var halfHeightDelta: Int = (newHeight -originalImage!!.getHeight()) /2
 
 
-    var graphics: Graphics = image!!.getGraphics()!!
+    var graphics: Graphics = image.getGraphics()!!
             
 
-graphics!!.drawImage(originalImage, halfWidthDelta, halfHeightDelta, anchor)
+graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, anchor)
 
 
 

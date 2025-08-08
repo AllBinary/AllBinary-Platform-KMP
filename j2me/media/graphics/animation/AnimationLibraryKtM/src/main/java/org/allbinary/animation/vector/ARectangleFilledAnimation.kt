@@ -61,7 +61,7 @@ override fun paint(graphics: Graphics, unusedX: Int, unusedY: Int)
 
 
                     var unusedY = unusedY
-graphics!!.fillRect(x, y, width, height)
+graphics.fillRect(x, y, width, height)
 }
 
 

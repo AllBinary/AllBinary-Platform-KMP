@@ -80,24 +80,24 @@ public constructor        (pageContext: PageContext, weblisketSession: Weblisket
 
 this.document= DomDocumentHelper.create()
 
-    var contentTypeNode: Node = document!!.createElement(contentType)!!
+    var contentTypeNode: Node = document.createElement(contentType)!!
             
 
 
-    var languageTypeNode: Node = document!!.createElement(language)!!
+    var languageTypeNode: Node = document.createElement(language)!!
             
 
 
-    var localTypeNode: Node = document!!.createElement(local)!!
+    var localTypeNode: Node = document.createElement(local)!!
             
 
 this.baseNode= localTypeNode
 languageTypeNode!!.appendChild(localTypeNode)
 contentTypeNode!!.appendChild(languageTypeNode)
-document!!.appendChild(contentTypeNode)
+document.appendChild(contentTypeNode)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(this.log(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -107,7 +107,7 @@ document!!.appendChild(contentTypeNode)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
@@ -135,25 +135,25 @@ public constructor        (searchRequest: SearchRequest)
 
 this.document= DomDocumentHelper.create()
 
-    var contentTypeNode: Node = document!!.createElement(contentType)!!
+    var contentTypeNode: Node = document.createElement(contentType)!!
             
 
 
-    var languageTypeNode: Node = document!!.createElement(language)!!
+    var languageTypeNode: Node = document.createElement(language)!!
             
 
 
-    var localTypeNode: Node = document!!.createElement(local)!!
+    var localTypeNode: Node = document.createElement(local)!!
             
 
 this.baseNode= localTypeNode
 languageTypeNode!!.appendChild(localTypeNode)
 contentTypeNode!!.appendChild(languageTypeNode)
-document!!.appendChild(contentTypeNode)
+document.appendChild(contentTypeNode)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)

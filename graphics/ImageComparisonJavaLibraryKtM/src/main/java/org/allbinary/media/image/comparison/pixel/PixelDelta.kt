@@ -55,7 +55,7 @@ open fun getKey(point: GPoint, colorDelta: ColorDelta)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(point!!.hashCode())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
+                            append(point.hashCode())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
 }
 
 
@@ -136,7 +136,7 @@ override fun toString()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
                             append(
-                            "PixelDelta: Point: ")!!.append(point!!.toString())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(colorDelta!!.toString())!!.toString()
+                            "PixelDelta: Point: ")!!.append(point.toString())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(colorDelta!!.toString())!!.toString()
 }
 
 

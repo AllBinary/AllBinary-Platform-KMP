@@ -80,7 +80,7 @@ override fun update()
             
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -91,7 +91,7 @@ override fun update()
 
 
         {
-    var anyType: Any = list!!.objectArray[index]!!
+    var anyType: Any = list.objectArray[index]!!
 
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
@@ -205,7 +205,7 @@ break;
                                 
 }
 
-list!!.clear()
+list.clear()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }

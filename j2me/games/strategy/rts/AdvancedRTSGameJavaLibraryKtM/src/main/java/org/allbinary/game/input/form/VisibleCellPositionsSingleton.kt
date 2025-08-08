@@ -148,11 +148,11 @@ open fun addStationaryCellPositions(list: BasicArrayList)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var cellPosition: CellPosition = list!!.get(index) as CellPosition
+    var cellPosition: CellPosition = list.get(index) as CellPosition
 
 this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]++
 }
@@ -169,11 +169,11 @@ open fun removeStationaryCellPositions(list: BasicArrayList)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var cellPosition: CellPosition = list!!.get(index) as CellPosition
+    var cellPosition: CellPosition = list.get(index) as CellPosition
 
 this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]--
 }
@@ -264,11 +264,11 @@ open fun addCellPositions(list: BasicArrayList)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var cellPosition: CellPosition = list!!.get(index) as CellPosition
+    var cellPosition: CellPosition = list.get(index) as CellPosition
 
 this.visibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]++
 }

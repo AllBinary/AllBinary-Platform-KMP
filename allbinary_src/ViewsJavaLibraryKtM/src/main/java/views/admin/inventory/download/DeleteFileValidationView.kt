@@ -140,7 +140,7 @@ this.itemInterface= inventoryEntity!!.getItem(this.id)
 
 
     
-                        if(vector!!.size != 1)
+                        if(vector.size != 1)
                         
                                     {
                                     
@@ -231,7 +231,7 @@ open fun validationInfo()
 
 
     
-                        if(vector!!.size == 0)
+                        if(vector.size == 0)
                         
                                     {
                                     stringBuffer!!.append(
@@ -241,7 +241,7 @@ open fun validationInfo()
                                 
 
     
-                        if(vector!!.size > 1)
+                        if(vector.size > 1)
                         
                                     {
                                     stringBuffer!!.append(

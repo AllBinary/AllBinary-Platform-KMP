@@ -64,7 +64,7 @@ open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor)
 
 
                     var basicColor = basicColor
-graphics!!.setColor(basicColor!!.toInt())
+graphics.setColor(basicColor!!.toInt())
 }
 
 
@@ -79,7 +79,7 @@ open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor, value: Int)
 
 
                     var value = value
-graphics!!.setColor(value)
+graphics.setColor(value)
 }
 
 

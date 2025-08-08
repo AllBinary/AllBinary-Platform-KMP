@@ -84,7 +84,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
         try {
             BlisketServletUtil.getInstance()!!.init(request)
 
-    var requestPath: String = request!!.getRequestURI()!!
+    var requestPath: String = request.getRequestURI()!!
             
 
 
@@ -94,7 +94,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                 )
                         
                                     {
-                                    response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+                                    response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
 
 
@@ -120,7 +120,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                     }
                                 
                         else {
-                            response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+                            response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
                         }
                             
@@ -129,10 +129,10 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
 
 
     
-                        if(!file!!.exists())
+                        if(!file.exists())
                         
                                     {
-                                    response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+                                    response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
 
 
@@ -160,7 +160,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                     {
                                     inputStream= CloudStreamUtil.getInstance()!!.getFile(file)
 
-    var contentType: String = getServletContext()!!.getMimeType(file!!.getName())!!
+    var contentType: String = getServletContext()!!.getMimeType(file.getName())!!
             
 
 
@@ -174,10 +174,10 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
 
                                     }
                                 
-response!!.reset()
-response!!.setBufferSize(DEFAULT_BUFFER_SIZE)
-response!!.setContentType(contentType)
-response!!.setHeader(
+response.reset()
+response.setBufferSize(DEFAULT_BUFFER_SIZE)
+response.setContentType(contentType)
+response.setHeader(
                             "Content-Length", length.concatToString()
 
                                 )
@@ -186,17 +186,17 @@ response!!.setHeader(
 
 stringBuffer!!.append(
                             "attachment; filename=\"")
-stringBuffer!!.append(file!!.getName())
+stringBuffer!!.append(file.getName())
 stringBuffer!!.append(
                             "\"")
-response!!.setHeader(
+response.setHeader(
                             "Content-Disposition", stringBuffer!!.toString())
-StreamUtil.getInstance()!!.get(inputStream, response!!.getOutputStream(), ByteArray(16348))
+StreamUtil.getInstance()!!.get(inputStream, response.getOutputStream(), ByteArray(16348))
 
                                     }
                                 
                         else {
-                            response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
+                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
                             "You are not Authorized")
 
                         }
@@ -205,7 +205,7 @@ StreamUtil.getInstance()!!.get(inputStream, response!!.getOutputStream(), ByteAr
                                     }
                                 
                         else {
-                            response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
+                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
                             "Please Login")
 
                         }
@@ -213,7 +213,7 @@ StreamUtil.getInstance()!!.get(inputStream, response!!.getOutputStream(), ByteAr
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
@@ -221,11 +221,11 @@ StreamUtil.getInstance()!!.get(inputStream, response!!.getOutputStream(), ByteAr
 
                                     }
                                 
-response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+response.sendError(HttpServletResponse.SC_NOT_FOUND)
 }
 
          finally {
-            StreamUtil.getInstance()!!.close(response!!.getOutputStream())
+            StreamUtil.getInstance()!!.close(response.getOutputStream())
 
     
                         if(!StreamUtil.getInstance()!!.close(inputStream))

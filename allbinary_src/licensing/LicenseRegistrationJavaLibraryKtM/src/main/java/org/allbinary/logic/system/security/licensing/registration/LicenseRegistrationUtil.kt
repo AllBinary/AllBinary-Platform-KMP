@@ -64,8 +64,8 @@ RegistrationConfiguration.getInstance()!!.write()
     var hashtable: Hashtable<Any, Any> = abeClientInformation!!.toHashtable()!!
             
 
-hashtable!!.put(RegistrationConfiguration.getInstance()!!.NAME, registrationId)
-hashtable!!.put(
+hashtable.put(RegistrationConfiguration.getInstance()!!.NAME, registrationId)
+hashtable.put(
                             "message", SpecialMessageUtil.getInstance()!!.get())
 XmlRpcRemoteLicenseRegistrationClient(abeClientInformation).
                             get(hashtable)

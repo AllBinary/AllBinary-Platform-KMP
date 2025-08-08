@@ -74,7 +74,7 @@ override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
 accumulatedX= (accumulatedX +velocityProperties!!.getVelocityXBasicDecimalP()!!.getUnscaled()).toInt()
 accumulatedY= (accumulatedY +velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled()).toInt()
 accumulatedZ= (accumulatedZ +velocityProperties!!.getVelocityZBasicDecimalP()!!.getUnscaled()).toInt()
-layer!!.move(accumulatedX /factorValue, accumulatedY /factorValue, accumulatedZ /factorValue)
+layer.move(accumulatedX /factorValue, accumulatedY /factorValue, accumulatedZ /factorValue)
 
     
                         if(mathUtil!!.abs(accumulatedX) > factorValue)

@@ -296,10 +296,10 @@ open fun select(motionGestureEvent: MotionGestureEvent)
             
 
 
-    var x: Int = point!!.getX() +allBinaryTiledLayer!!.getXP()
+    var x: Int = point.getX() +allBinaryTiledLayer!!.getXP()
 
 
-    var y: Int = point!!.getY() +allBinaryTiledLayer!!.getYP()
+    var y: Int = point.getY() +allBinaryTiledLayer!!.getYP()
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(x, y)!!
@@ -383,7 +383,7 @@ open fun paint(graphics: Graphics)
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
             
 
-graphics!!.setColor(BasicColorFactory.getInstance()!!.GREEN.toInt())
+graphics.setColor(BasicColorFactory.getInstance()!!.GREEN.toInt())
 
     var list: BasicArrayList = this.getSelectedBuildingPlayerGameInput()!!.getPaintSelectedRTSLayersList()!!
             
@@ -396,22 +396,22 @@ graphics!!.setColor(BasicColorFactory.getInstance()!!.GREEN.toInt())
 
 
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
                                     
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var rtsLayer: RTSLayer = list!!.get(index) as RTSLayer
+    var rtsLayer: RTSLayer = list.get(index) as RTSLayer
 
 width= rtsLayer!!.getWidth()
 height= rtsLayer!!.getHeight()
-graphics!!.drawRect(rtsLayer!!.getXP() -allBinaryTiledLayer!!.getXP(), rtsLayer!!.getYP() -allBinaryTiledLayer!!.getYP(), width, height)
+graphics.drawRect(rtsLayer!!.getXP() -allBinaryTiledLayer!!.getXP(), rtsLayer!!.getYP() -allBinaryTiledLayer!!.getYP(), width, height)
 }
 
 
@@ -430,7 +430,7 @@ graphics!!.drawRect(rtsLayer!!.getXP() -allBinaryTiledLayer!!.getXP(), rtsLayer!
 
 width= allBinaryTiledLayer!!.getCellWidth()
 height= allBinaryTiledLayer!!.getCellHeight()
-graphics!!.drawRect(point!!.getX() -allBinaryTiledLayer!!.getXP(), point!!.getY() -allBinaryTiledLayer!!.getYP(), width, height)
+graphics.drawRect(point.getX() -allBinaryTiledLayer!!.getXP(), point.getY() -allBinaryTiledLayer!!.getYP(), width, height)
 
                                     }
                                 

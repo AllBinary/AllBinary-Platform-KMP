@@ -70,8 +70,8 @@ this.motionGestureRecognizer= MotionGestureRecognizer(id)
 
     var point: CustomGPoint = pointCircularPool!!.getNextInstance() as CustomGPoint
 
-point!!.setX(x)
-point!!.setY(y)
+point.setX(x)
+point.setY(y)
 this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifiers)
 }
 
@@ -94,8 +94,8 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
 
     var point: CustomGPoint = pointCircularPool!!.getNextInstance() as CustomGPoint
 
-point!!.setX(x)
-point!!.setY(y)
+point.setX(x)
+point.setY(y)
 this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modifiers)
 }
 
@@ -118,8 +118,8 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
 
     var point: CustomGPoint = pointCircularPool!!.getNextInstance() as CustomGPoint
 
-point!!.setX(x)
-point!!.setY(y)
+point.setX(x)
+point.setY(y)
 this.motionGestureRecognizer!!.processDraggedMotionEvent(point, deviceId, modifiers)
 }
 

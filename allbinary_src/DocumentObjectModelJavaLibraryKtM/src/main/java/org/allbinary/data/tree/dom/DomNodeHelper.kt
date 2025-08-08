@@ -53,7 +53,7 @@ open fun getFirstChildElement(parentNode: Node)
     
                         if(node != 
                                     null
-                                 && node!!.getNodeType() != Node.ELEMENT_NODE)
+                                 && node.getNodeType() != Node.ELEMENT_NODE)
                         
                                     {
                                     
@@ -70,7 +70,7 @@ open fun getFirstChildElement(parentNode: Node)
         {node= nodeList!!.item(index)
 
     
-                        if(node!!.getNodeType() == 1)
+                        if(node.getNodeType() == 1)
                         
                                     {
                                     break;
@@ -98,7 +98,7 @@ open fun getTextNodeValue(node: Node)
 
                     var node = node
 
-    var nodeTextNode: Node = node!!.getFirstChild()!!
+    var nodeTextNode: Node = node.getFirstChild()!!
             
 
 
@@ -159,7 +159,7 @@ open fun getTextNodesValue(node: Node)
     var stringBuffer: StringMaker = StringMaker()
 
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 

@@ -133,8 +133,8 @@ override fun paint(graphics: Graphics)
                                     }
                                 
                         else {
-                            graphics!!.setColor(backgroundColor)
-graphics!!.fillRect(x, y, this.rectangle!!.getWidth(), this.rectangle!!.getHeight())
+                            graphics.setColor(backgroundColor)
+graphics.fillRect(x, y, this.rectangle.getWidth(), this.rectangle.getHeight())
 
                         }
                             
@@ -142,7 +142,7 @@ graphics!!.fillRect(x, y, this.rectangle!!.getWidth(), this.rectangle!!.getHeigh
     var myFont: MyFont = MyFont.getInstance()!!
             
 
-graphics!!.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
+graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
 
     var item: CustomItemInterface
 
@@ -156,12 +156,12 @@ graphics!!.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
         {item= this.get(index) as CustomItemInterface
 
     
-                        if(dx >= this.rectangle!!.getMaxX())
+                        if(dx >= this.rectangle.getMaxX())
                         
                                     {
                                     PreLogUtil.put(StringMaker().
                             append(
-                            "painting beyond maxx: ")!!.append(this.rectangle!!.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
+                            "painting beyond maxx: ")!!.append(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
 
                                     }
                                 
@@ -173,7 +173,7 @@ graphics!!.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
                                     
     var dx2: Int = this.paintItem(graphics, index, item, dx, dy) +border
 
-this.paintable!!.paint(graphics, index, dx, dy)
+this.paintable.paint(graphics, index, dx, dy)
 dx= dx2
 
                                     }
@@ -184,7 +184,7 @@ dx= dx2
                         
                                     {
                                     this.paintItem(graphics, index, item, dx, dy)
-this.paintable!!.paint(graphics, index, dx, dy)
+this.paintable.paint(graphics, index, dx, dy)
 
                                     }
                                 

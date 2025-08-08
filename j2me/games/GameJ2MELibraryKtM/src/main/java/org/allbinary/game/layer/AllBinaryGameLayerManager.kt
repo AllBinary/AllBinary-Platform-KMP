@@ -160,7 +160,7 @@ open fun setLayerProcessorList(list: BasicArrayList)
 
                     var list = list
 
-    var layerProcessorInterfaceArray: Array<LayerProcessor?> = arrayOfNulls(list!!.size())
+    var layerProcessorInterfaceArray: Array<LayerProcessor?> = arrayOfNulls(list.size())
 
 
     var size: Int = layerProcessorInterfaceArray!!.size
@@ -173,7 +173,7 @@ open fun setLayerProcessorList(list: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {layerProcessorInterfaceArray[index]= list!!.objectArray[index]!! as LayerProcessor
+        {layerProcessorInterfaceArray[index]= list.objectArray[index]!! as LayerProcessor
 }
 
 this.setLayerProcessorArray(layerProcessorInterfaceArray)

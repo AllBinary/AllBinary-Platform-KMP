@@ -195,7 +195,7 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 super.paint(graphics)
-this.paintable!!.paint(graphics)
+this.paintable.paint(graphics)
 }
 
 

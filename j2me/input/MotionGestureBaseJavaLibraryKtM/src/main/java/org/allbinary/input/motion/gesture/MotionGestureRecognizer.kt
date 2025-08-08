@@ -113,8 +113,8 @@ previous= origin
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.PRESSED)!!
             
 
-event!!.setPreviousPoint(previous)
-event!!.setCurrentPoint(current)
+event.setPreviousPoint(previous)
+event.setCurrentPoint(current)
 motionGesturesHandler!!.fireEvent(event)
 
 
@@ -141,8 +141,8 @@ open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.RELEASED)!!
             
 
-event!!.setPreviousPoint(previous)
-event!!.setCurrentPoint(current)
+event.setPreviousPoint(previous)
+event.setCurrentPoint(current)
 motionGesturesHandler!!.fireEvent(event)
 
 
@@ -180,15 +180,15 @@ intermediate= current
 
                                     }
                                 
-line!!.setP1(previous)
-line!!.setP2(current)
+line.setP1(previous)
+line.setP2(current)
 
     var minimumMotionGesture: Int = MotionGestureConfigurationFactory.getInstance()!!.getMinimumMotionGesture()!!
             
 
 
     
-                        if(j2seMath!!.abs(line!!.getDeltaX().toFloat()) < minimumMotionGesture && j2seMath!!.abs(line!!.getDeltaY().toFloat()) < minimumMotionGesture)
+                        if(j2seMath!!.abs(line.getDeltaX().toFloat()) < minimumMotionGesture && j2seMath!!.abs(line.getDeltaY().toFloat()) < minimumMotionGesture)
                         
                                     {
                                     intermediate= current
@@ -201,7 +201,7 @@ line!!.setP2(current)
                                     }
                                 
 
-    var gradient: Double = line!!.getGradient()!!
+    var gradient: Double = line.getGradient()!!
             
 
 
@@ -226,11 +226,11 @@ line!!.setP2(current)
 
 
     
-                        if(conf!!.isDiagonalMotionGestureAllowed())
+                        if(conf.isDiagonalMotionGestureAllowed())
                         
                                     {
-                                    diagonalToleranceHigher= (90 -conf!!.getDiagonalTolerance()).toDouble()
-diagonalToleranceLower= conf!!.getDiagonalTolerance().toDouble()
+                                    diagonalToleranceHigher= (90 -conf.getDiagonalTolerance()).toDouble()
+diagonalToleranceLower= conf.getDiagonalTolerance().toDouble()
 
                                     }
                                 
@@ -241,7 +241,7 @@ diagonalToleranceLower= conf!!.getDiagonalTolerance().toDouble()
                                     {
                                     
     
-                        if(line!!.getDeltaY() > 0)
+                        if(line.getDeltaY() > 0)
                         
                                     {
                                     newMotionGesture= touchMotionGestureFactory!!.UP
@@ -264,7 +264,7 @@ diagonalToleranceLower= conf!!.getDiagonalTolerance().toDouble()
                                     {
                                     
     
-                        if(line!!.getDeltaX() > 0)
+                        if(line.getDeltaX() > 0)
                         
                                     {
                                     newMotionGesture= touchMotionGestureFactory!!.LEFT
@@ -287,7 +287,7 @@ diagonalToleranceLower= conf!!.getDiagonalTolerance().toDouble()
                                     {
                                     
     
-                        if(line!!.getDeltaX() > 0)
+                        if(line.getDeltaX() > 0)
                         
                                     {
                                     newMotionGesture= touchMotionGestureFactory!!.DIAGONAL_UP_LEFT
@@ -305,7 +305,7 @@ diagonalToleranceLower= conf!!.getDiagonalTolerance().toDouble()
                         else {
                             
     
-                        if(line!!.getDeltaX() > 0)
+                        if(line.getDeltaX() > 0)
                         
                                     {
                                     newMotionGesture= touchMotionGestureFactory!!.DIAGONAL_DOWN_LEFT
@@ -332,8 +332,8 @@ intermediate= current
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
             
 
-event!!.setPreviousPoint(previous)
-event!!.setCurrentPoint(current)
+event.setPreviousPoint(previous)
+event.setCurrentPoint(current)
 motionGesturesHandler!!.fireEvent(event)
 
 
@@ -360,8 +360,8 @@ open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.NO_MOTION)!!
             
 
-event!!.setPreviousPoint(previous)
-event!!.setCurrentPoint(current)
+event.setPreviousPoint(previous)
+event.setCurrentPoint(current)
 movedMotionGesturesHandler!!.fireEvent(event)
 
 

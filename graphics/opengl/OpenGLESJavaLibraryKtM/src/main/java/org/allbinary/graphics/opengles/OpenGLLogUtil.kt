@@ -56,7 +56,7 @@ open fun logError(gl: GL10)
 
                     var gl = gl
 
-    var error: Int = gl!!.glGetError()!!
+    var error: Int = gl.glGetError()!!
             
 
 
@@ -78,7 +78,7 @@ stringBuffer!!.append(error)
 
     var maxTextureSize: IntArray = IntArray(1)
 
-gl!!.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
+gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
 stringBuffer!!.append(maxTextureSize[0]!!)
 
                                     }
@@ -116,7 +116,7 @@ open fun logError(gl: GL10, image: Image)
 
                     var image = image
 
-    var error: Int = gl!!.glGetError()!!
+    var error: Int = gl.glGetError()!!
             
 
 
@@ -138,13 +138,13 @@ stringBuffer!!.append(error)
 
     var maxTextureSize: IntArray = IntArray(1)
 
-gl!!.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
+gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0)
 stringBuffer!!.append(maxTextureSize[0]!!)
 
                                     }
                                 
 stringBuffer!!.append(IMAGE)
-stringBuffer!!.append(image!!.toString())
+stringBuffer!!.append(image.toString())
 PreLogUtil.put(stringBuffer!!.toString(), this, LOG_ERROR)
 
                                     }

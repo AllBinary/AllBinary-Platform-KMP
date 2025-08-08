@@ -73,7 +73,7 @@ open fun getInstance(node: Node)
 
                     var node = node
 
-    var transformInfoChildNodeList: NodeList = node!!.getChildNodes()!!
+    var transformInfoChildNodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -81,11 +81,11 @@ open fun getInstance(node: Node)
             
 
 
-    var attributes: NamedNodeMap = node!!.getAttributes()!!
+    var attributes: NamedNodeMap = node.getAttributes()!!
             
 
 
-    var attrNode: Attr = attributes!!.getNamedItem(transformInfoData!!.NAME) as Attr
+    var attrNode: Attr = attributes.getNamedItem(transformInfoData!!.NAME) as Attr
 
 
     var name: String = attrNode!!.getValue()!!
@@ -93,7 +93,7 @@ open fun getInstance(node: Node)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Next View Name: " +name, this, 

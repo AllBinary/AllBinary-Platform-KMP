@@ -69,7 +69,7 @@ open fun getPrimaryScreenSize()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, dimension!!.width, dimension!!.height)
+                        return Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, dimension.width, dimension.height)
 }
 
 

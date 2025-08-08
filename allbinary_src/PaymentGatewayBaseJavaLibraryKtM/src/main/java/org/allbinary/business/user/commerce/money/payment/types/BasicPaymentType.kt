@@ -91,7 +91,7 @@ hashMap!!.put(
 
     var replace: Replace = Replace(hashMap)
 
-this.name= replace!!.all(paymentMethod)
+this.name= replace.all(paymentMethod)
 this.value= paymentMethod
 BasicPaymentTypeUtil.getInstance()!!.add(this)
 }
@@ -186,8 +186,8 @@ open fun toVector()
 : Vector{
     var vector: Vector = Vector()
 
-vector!!.add(this.name)
-vector!!.add(this.value)
+vector.add(this.name)
+vector.add(this.value)
 
 
 

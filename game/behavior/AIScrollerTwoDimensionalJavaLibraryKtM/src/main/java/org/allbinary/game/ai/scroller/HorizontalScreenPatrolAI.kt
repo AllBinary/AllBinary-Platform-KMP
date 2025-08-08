@@ -87,7 +87,7 @@ public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: 
 
                             //For kotlin this is before the body of the constructor.
                     
-this.sound= hashtable!!.get(SOUND as Object?) as Sound
+this.sound= hashtable.get(SOUND as Object?) as Sound
 
     
                         if(this.sound == 

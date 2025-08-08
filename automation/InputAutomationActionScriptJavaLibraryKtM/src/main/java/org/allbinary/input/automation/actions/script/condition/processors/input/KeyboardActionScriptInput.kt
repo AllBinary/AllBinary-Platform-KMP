@@ -118,7 +118,7 @@ public constructor        (node: Node)
                     
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
-    var actionNode: Node = DomSearchHelper.getNode(KeyboardActionScriptInputData.NAME, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(KeyboardActionScriptInputData.NAME, node.getChildNodes())!!
             
 
 
@@ -155,7 +155,7 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
     var keyString: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-vector!!.add(keyString.valueOf())
+vector.add(keyString.valueOf())
 
                                     }
                                 
@@ -213,7 +213,7 @@ this.setRelease(value.concatToString()
                             
 }
 
-this.setKeyArray(vector!!.toArray(arrayOfNulls(vector!!.size)) as Array<Integer?>)
+this.setKeyArray(vector.toArray(arrayOfNulls(vector.size)) as Array<Integer?>)
 
                                     }
                                 
@@ -405,9 +405,9 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this,
     var index: Int = 0
 
 
-        while(index < text!!.length)
+        while(index < text.length)
         {
-    var aChar: Char = text!![index]!!
+    var aChar: Char = text[index]!!
             
 
 
@@ -417,11 +417,11 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this,
                                     {
                                     
     
-                        if(text!![index +1] == '#')
+                        if(text[index +1] == '#')
                         
                                     {
                                     
-    var endIndex: Int = text!!.indexOf(
+    var endIndex: Int = text.indexOf(
                             ';', index +1)!!
             
 
@@ -431,12 +431,12 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this,
                         
                                     {
                                     
-    var nextCharString: String = text!!.substring(index +2, endIndex)!!
+    var nextCharString: String = text.substring(index +2, endIndex)!!
             
 
 logUtil!!.put("Next Char String: " +nextCharString, this, 
                             "integerArrayValue")
-vector!!.add(substring.valueOf())
+vector.add(substring.valueOf())
 index= index +nextCharString!!.length +3
 
 
@@ -451,14 +451,14 @@ index= index +nextCharString!!.length +3
 
                                     }
                                 
-vector!!.add(KeySingletonFactory.getHashtable()!!.get(aChar.concatToString()
+vector.add(KeySingletonFactory.getHashtable()!!.get(aChar.concatToString()
 
                                 ))
 index++
 }
 
 
-    var integerArray: Array<Integer?> = vector!!.toArray(arrayOfNulls(vector!!.size)) as Array<Integer?>
+    var integerArray: Array<Integer?> = vector.toArray(arrayOfNulls(vector.size)) as Array<Integer?>
 
 
 
@@ -507,7 +507,7 @@ open fun toXmlNode(document: Document)
     var node: Node = super.toXmlNode(document)!!
             
 
-node!!.appendChild(ModDomHelper.createNodeWithValueNodes(document, KeyboardActionScriptInputData.NAME, this.toHashMap()))
+node.appendChild(ModDomHelper.createNodeWithValueNodes(document, KeyboardActionScriptInputData.NAME, this.toHashMap()))
 
 
 

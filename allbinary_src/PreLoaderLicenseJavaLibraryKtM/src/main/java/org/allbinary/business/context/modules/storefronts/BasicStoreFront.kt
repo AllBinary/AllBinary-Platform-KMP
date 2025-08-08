@@ -146,7 +146,7 @@ open fun getTestHtmlPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return org!!.allbinary!!.globals!!.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
+                        return org.allbinary.globals.URLGLOBALS.getTestHtmlPath() +this.getCurrentHostNamePath()
 }
 
 
@@ -159,7 +159,7 @@ open fun getCurrentHostName()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostName()
@@ -188,7 +188,7 @@ open fun getCurrentHostNamePath()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHostNamePath()
@@ -217,7 +217,7 @@ open fun getCurrentHomeHostName()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostName()
@@ -246,7 +246,7 @@ open fun getCurrentHomeHostNamePath()
 
 
     
-                        if(org!!.allbinary!!.globals!!.URLGLOBALS.isTestingMode())
+                        if(org.allbinary.globals.URLGLOBALS.isTestingMode())
                         
                                     {
                                     location= this.getTestHomeHostNamePath()
@@ -416,7 +416,7 @@ open fun getSubStores()
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
 
 
-    var subStoreVector: BasicArrayList = tokenizer!!.getTokens(this.subStores, BasicArrayList())!!
+    var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayList())!!
             
 
 

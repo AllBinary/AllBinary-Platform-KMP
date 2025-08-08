@@ -72,16 +72,16 @@ this.setHashMap(HashMap<Any, Any>())
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data!!.lastIndexOf(
+    var endIndex: Int = data.lastIndexOf(
                             '>')!!
             
 
 
-    var document: Document = DomDocumentHelper.create(data!!.substring(0, endIndex +1))!!
+    var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
             
 
 
-    var nodeList: NodeList = document!!.getElementsByTagName(NewInputAutomationModulesData.NAME)!!
+    var nodeList: NodeList = document.getElementsByTagName(NewInputAutomationModulesData.NAME)!!
             
 
 
@@ -90,7 +90,7 @@ this.setHashMap(HashMap<Any, Any>())
                         
                                     {
                                     
-    var nameNodeList: NodeList = document!!.getElementsByTagName(InputAutomationModuleData.NAME)!!
+    var nameNodeList: NodeList = document.getElementsByTagName(InputAutomationModuleData.NAME)!!
             
 
 logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, 
@@ -124,7 +124,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
                     var document = document
 this.setHashMap(HashMap<Any, Any>())
 
-    var nameNodeList: NodeList = document!!.getElementsByTagName(InputAutomationModuleData.NAME)!!
+    var nameNodeList: NodeList = document.getElementsByTagName(InputAutomationModuleData.NAME)!!
             
 
 logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, 

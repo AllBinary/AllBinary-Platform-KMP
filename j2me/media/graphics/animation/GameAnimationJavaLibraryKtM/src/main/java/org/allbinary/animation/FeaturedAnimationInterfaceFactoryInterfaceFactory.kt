@@ -108,7 +108,7 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
 
         {
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list!!.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
+    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
 
     
@@ -130,7 +130,7 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Rectangle(PointFactory.getInstance()!!.getInstance(x, y), ((rectangle!!.getWidth() *scale) shr 1), ((rectangle!!.getHeight() *scale) shr 1))
+                        return Rectangle(PointFactory.getInstance()!!.getInstance(x, y), ((rectangle.getWidth() *scale) shr 1), ((rectangle.getHeight() *scale) shr 1))
 
                                     }
                                 
@@ -204,7 +204,7 @@ open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
 
 
         {
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list!!.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
+    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
 
     
@@ -286,7 +286,7 @@ stringBuffer!!.append(resource)
 
         {stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list!!.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
+    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
 
     
@@ -321,7 +321,7 @@ stringBuffer!!.append(RESOURCES_LABEL)
 
 
         {
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list!!.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
+    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
 stringBuffer!!.append(featureInterface!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)

@@ -55,11 +55,11 @@ open fun create()
             
 
 
-    var builder: DocumentBuilder = factory!!.newDocumentBuilder()!!
+    var builder: DocumentBuilder = factory.newDocumentBuilder()!!
             
 
 
-    var document: Document = builder!!.newDocument()!!
+    var document: Document = builder.newDocument()!!
             
 
 
@@ -92,11 +92,11 @@ open fun create(inputStream: InputStream)
             
 
 
-    var builder: DocumentBuilder = factory!!.newDocumentBuilder()!!
+    var builder: DocumentBuilder = factory.newDocumentBuilder()!!
             
 
 
-    var document: Document = builder!!.parse(inputStream)!!
+    var document: Document = builder.parse(inputStream)!!
             
 
 
@@ -128,11 +128,11 @@ open fun create(xmlString: String)
             
 
 
-    var builder: DocumentBuilder = factory!!.newDocumentBuilder()!!
+    var builder: DocumentBuilder = factory.newDocumentBuilder()!!
             
 
 
-    var document: Document = builder!!.parse(StringBufferInputStream(xmlString))!!
+    var document: Document = builder.parse(StringBufferInputStream(xmlString))!!
             
 
 

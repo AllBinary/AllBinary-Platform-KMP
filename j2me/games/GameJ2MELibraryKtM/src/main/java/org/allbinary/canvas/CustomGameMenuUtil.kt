@@ -67,7 +67,7 @@ open fun add(canvas: MyCanvas)
                                     }
                                 
                         else {
-                            canvas!!.addCommand(gameCommandsFactory!!.EXIT_COMMAND)
+                            canvas.addCommand(gameCommandsFactory!!.EXIT_COMMAND)
 
                         }
                             

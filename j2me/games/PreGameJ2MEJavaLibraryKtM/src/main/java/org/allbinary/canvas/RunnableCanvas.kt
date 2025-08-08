@@ -241,7 +241,7 @@ stringBuffer!!.append(THREAD)
                                 )
                         
                                     {
-                                    stringBuffer!!.append(this.thread!!.toString())
+                                    stringBuffer!!.append(this.thread.toString())
 
                                     }
                                 
@@ -357,7 +357,7 @@ open fun waitOnNotify(wait: Long)
                         if(wait > 0)
                         
                                     {
-                                    threadObjectUtil!!.waitObject(this, wait)
+                                    threadObjectUtil!!.waitObject(this, wait.toLong())
 
                                     }
                                 

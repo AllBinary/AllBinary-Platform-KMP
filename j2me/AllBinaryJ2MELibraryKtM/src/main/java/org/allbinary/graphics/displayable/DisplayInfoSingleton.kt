@@ -389,7 +389,7 @@ open fun add(reason: String)
 logUtil!!.put(stringMaker!!.append(REASON)!!.append(reason)!!.toString(), this, FIRE_METHOD_NAME)
 stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.put(this.toString(stringMaker), this, FIRE_METHOD_NAME)
-list!!.add(reason)
+list.add(reason)
 }
 
 
@@ -399,14 +399,14 @@ open fun process()
         try {
             
     
-                        if(list!!.size() > 0)
+                        if(list.size() > 0)
                         
                                     {
                                     this.processForced()
 
                                     }
                                 
-list!!.clear()
+list.clear()
 } catch(e: Exception)
             {PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
@@ -442,11 +442,11 @@ open fun update(displayable: Displayable, reason: String)
 
                     var reason = reason
 
-    var aLastWidth: Int = displayable!!.getWidth()!!
+    var aLastWidth: Int = displayable.getWidth()!!
             
 
 
-    var aLastHeight: Int = displayable!!.getHeight()!!
+    var aLastHeight: Int = displayable.getHeight()!!
             
 
 

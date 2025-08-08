@@ -77,7 +77,7 @@ open fun setOrderStatus()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -97,7 +97,7 @@ open fun setOrderStatus()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -144,7 +144,7 @@ pageContext!!.getOut()!!.print(this.setOrderStatus())
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
                                     

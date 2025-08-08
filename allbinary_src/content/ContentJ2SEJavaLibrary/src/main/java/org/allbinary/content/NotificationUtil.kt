@@ -84,14 +84,14 @@ open fun notify(command: Command, resource: String, message: String)
             
 
 
-    var notification: Notification = Notification(integer!!.toInt()message, System.currentTimeMillis())
+    var notification: Notification = Notification(integer.toInt(), message, System.currentTimeMillis())
 
 
     var pendingIntent: PendingIntent = PendingIntent.getActivity(context, 0, intent, 0)!!
             
 
-notification!!.setLatestEventInfo(context, command!!.getLabel(), message, pendingIntent)
-notificationManager!!.notify(command!!.hashCode(), notification)
+notification.setLatestEventInfo(context, command.getLabel(), message, pendingIntent)
+notificationManager!!.notify(command.hashCode(), notification)
 }
 
 

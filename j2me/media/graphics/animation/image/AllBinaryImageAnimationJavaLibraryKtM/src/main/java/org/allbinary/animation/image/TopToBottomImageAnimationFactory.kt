@@ -49,7 +49,7 @@ public constructor        (image: Image, sequenceArray: IntArray)
 
 public constructor        (image: Image, sequenceArray: IntArray, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, sequenceArray, image!!.getWidth(), image!!.getHeight(), animationBehaviorFactory){
+                            : super(image, sequenceArray, image.getWidth(), image.getHeight(), animationBehaviorFactory){
 
                     var image = image
 

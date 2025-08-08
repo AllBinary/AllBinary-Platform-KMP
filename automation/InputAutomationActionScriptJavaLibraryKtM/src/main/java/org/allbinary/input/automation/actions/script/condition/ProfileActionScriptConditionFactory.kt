@@ -52,7 +52,7 @@ open fun getInstance(node: Node)
 
 
     
-                        if(DomSearchHelper.getNodeNoThrow(ColorAtActionScriptConditionData.NAME, node!!.getChildNodes()) != 
+                        if(DomSearchHelper.getNodeNoThrow(ColorAtActionScriptConditionData.NAME, node.getChildNodes()) != 
                                     null
                                 )
                         
@@ -63,7 +63,7 @@ open fun getInstance(node: Node)
                                 
                              else 
     
-                        if(DomSearchHelper.getNodeNoThrow(TimeIntervalActionScriptConditionData.NAME, node!!.getChildNodes()) != 
+                        if(DomSearchHelper.getNodeNoThrow(TimeIntervalActionScriptConditionData.NAME, node.getChildNodes()) != 
                                     null
                                 )
                         
@@ -74,7 +74,7 @@ open fun getInstance(node: Node)
                                 
                              else 
     
-                        if(DomSearchHelper.getNodeNoThrow(AlwaysActionScriptConditionData.NAME, node!!.getChildNodes()) != 
+                        if(DomSearchHelper.getNodeNoThrow(AlwaysActionScriptConditionData.NAME, node.getChildNodes()) != 
                                     null
                                 )
                         

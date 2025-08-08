@@ -36,7 +36,7 @@ open public class CommandTextItem : TextItem {
     private val command: Command
 public constructor        (command: Command, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(command!!.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor){
+                            : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor){
 
                     var command = command
 

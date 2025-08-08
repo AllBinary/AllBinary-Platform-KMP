@@ -95,11 +95,11 @@ open fun getDecryptedInputStream(inputStream: InputStream, cryptInterface: Crypt
 
                                     }
                                 
-buffer!!.write(ch)
+buffer.write(ch)
 }
 
 
-    var decrypted: ByteArray = cryptInterface!!.decrypt(buffer!!.toByteArray())!!
+    var decrypted: ByteArray = cryptInterface!!.decrypt(buffer.toByteArray())!!
             
 
 

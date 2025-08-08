@@ -52,7 +52,7 @@ open fun doStartTag()
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
                                     this.setName(
@@ -64,7 +64,7 @@ this.setObjectFile(
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.NEW) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
                                     this.setName(

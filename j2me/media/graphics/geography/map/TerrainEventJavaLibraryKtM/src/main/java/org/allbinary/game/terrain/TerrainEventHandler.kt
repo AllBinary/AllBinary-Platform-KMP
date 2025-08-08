@@ -55,7 +55,7 @@ open fun getInstance(anyType: Any)
 
                     var anyType = anyType
 
-    var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable!!.get(anyType as Object?) as TerrainEventHandler
+    var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable.get(anyType as Object?) as TerrainEventHandler
 
 
     
@@ -65,7 +65,7 @@ open fun getInstance(anyType: Any)
                         
                                     {
                                     eventHandler= TerrainEventHandler()
-TerrainEventHandler.hashtable!!.put(anyType, eventHandler)
+TerrainEventHandler.hashtable.put(anyType, eventHandler)
 
                                     }
                                 
@@ -91,10 +91,10 @@ open fun addListener(terrainEventListener: TerrainEventListener)
                     var terrainEventListener = terrainEventListener
 
     
-                        if(!list!!.contains(terrainEventListener))
+                        if(!list.contains(terrainEventListener))
                         
                                     {
-                                    list!!.add(terrainEventListener)
+                                    list.add(terrainEventListener)
 
                                     }
                                 
@@ -102,7 +102,7 @@ open fun addListener(terrainEventListener: TerrainEventListener)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 super.removeAllListeners()
 }
 
@@ -111,7 +111,7 @@ override fun removeListener(eventListenerInterface: EventListenerInterface)
 {
 
                     var eventListenerInterface = eventListenerInterface
-this.list!!.remove(eventListenerInterface)
+this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
 
@@ -126,13 +126,13 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list!!.size()!! downTo 0)
+                        for (index in this.list.size()!! downTo 0)
 
 
         {
         try {
             
-    var terrainEventListener: TerrainEventListener = this.list!!.get(index) as TerrainEventListener
+    var terrainEventListener: TerrainEventListener = this.list.get(index) as TerrainEventListener
 
 terrainEventListener!!.onTerrainEvent(eventObject as TerrainEvent)
 } catch(e: Exception)

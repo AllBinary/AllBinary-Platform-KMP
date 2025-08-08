@@ -51,7 +51,7 @@ open fun getInstance(id: String)
 
         try {
             
-    var orderHistoryEntityInterface: OrderHistoryEntity = OrderHistoryEntity()
+    var orderHistoryEntityInterface: OrderHistoryEntity = org.allbinary.data.tables.user.commerce.inventory.order.OrderHistoryEntity()
 
 
 
@@ -65,7 +65,7 @@ open fun getInstance(id: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, 

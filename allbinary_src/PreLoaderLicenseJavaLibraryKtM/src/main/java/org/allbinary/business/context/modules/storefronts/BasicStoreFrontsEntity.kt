@@ -74,7 +74,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
                                     throw Exception("No Such Store: " +name)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
                                     logUtil!!.put("StoreFront: " +storeHashMap!!.toString(), this, 

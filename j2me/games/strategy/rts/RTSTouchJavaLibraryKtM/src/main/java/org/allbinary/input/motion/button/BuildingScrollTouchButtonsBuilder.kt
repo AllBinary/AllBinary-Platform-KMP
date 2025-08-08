@@ -67,8 +67,8 @@ open fun getList()
 
     var RIGHT: TouchButton = TouchButton(BasicTouchInputFactory.getInstance()!!.RIGHT, TouchButtonStrafeRightResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.TOP_RIGHT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())
 
-list!!.add(LEFT)
-list!!.add(RIGHT)
+list.add(LEFT)
+list.add(RIGHT)
 
 
 

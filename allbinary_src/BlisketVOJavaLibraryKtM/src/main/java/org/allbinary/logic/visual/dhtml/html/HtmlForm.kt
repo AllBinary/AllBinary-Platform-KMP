@@ -85,7 +85,7 @@ open fun addInput(htmlInput: HtmlInput)
 {
 
                     var htmlInput = htmlInput
-inputs!!.add(htmlInput)
+inputs.add(htmlInput)
 }
 
 
@@ -94,7 +94,7 @@ open fun addTable(htmlTable: HtmlTable)
 {
 
                     var htmlTable = htmlTable
-inputs!!.add(htmlTable)
+inputs.add(htmlTable)
 }
 
 override fun toString()
@@ -107,7 +107,7 @@ override fun toString()
     var result: String = stringUtil!!.EMPTY_STRING
 
 
-    var inputArray: Array<Any?> = inputs!!.toArray()!!
+    var inputArray: Array<Any?> = inputs.toArray()!!
             
 
 

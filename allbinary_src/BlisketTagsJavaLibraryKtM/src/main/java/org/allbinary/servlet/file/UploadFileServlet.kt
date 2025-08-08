@@ -103,7 +103,7 @@ this.requestHashMap= MultipartRequestParams(request).
                         
                                     {
                                     isError= true
-response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+response.sendError(HttpServletResponse.SC_NOT_FOUND)
 
 
 
@@ -130,9 +130,9 @@ response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
                         
                                     {
                                     this.saveFile(filePath)
-response!!.setContentType(
+response.setContentType(
                             "text/plain")
-response!!.getOutputStream()!!.write(
+response.getOutputStream()!!.write(
                                 //Otherwise - scopeIdentifier - StringLiteralExpr
 encodeToByteArray())
 
@@ -140,7 +140,7 @@ encodeToByteArray())
                                 
                         else {
                             isError= true
-response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
+response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
                             "You are not Authorized")
 
                         }
@@ -150,7 +150,7 @@ response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED,
                                 
                         else {
                             isError= true
-response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
+response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
                             "Please Login")
 
                         }
@@ -158,7 +158,7 @@ response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED,
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
@@ -167,7 +167,7 @@ response!!.sendError(HttpServletResponse.SC_UNAUTHORIZED,
                                     }
                                 
 isError= true
-response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
+response.sendError(HttpServletResponse.SC_NOT_FOUND)
 }
 
          finally {
@@ -176,7 +176,7 @@ response!!.sendError(HttpServletResponse.SC_NOT_FOUND)
                         if(!isError)
                         
                                     {
-                                    StreamUtil.getInstance()!!.close(response!!.getOutputStream())
+                                    StreamUtil.getInstance()!!.close(response.getOutputStream())
 
                                     }
                                 
@@ -235,7 +235,7 @@ open fun saveFile(filePath: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
                                     
@@ -246,7 +246,7 @@ stringBuffer!!.append(
 stringBuffer!!.append(this.fileName)
 stringBuffer!!.append(
                             " New File: ")
-stringBuffer!!.append(file!!.getPath())
+stringBuffer!!.append(file.getPath())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "saveFile()")
 
@@ -259,11 +259,11 @@ HttpFileUploadUtil.log(fileItem)
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
-                                    file!!.delete()
-file!!.createNewFile()
+                                    file.delete()
+file.createNewFile()
 
                                     }
                                 

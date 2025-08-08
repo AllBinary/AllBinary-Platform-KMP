@@ -184,17 +184,16 @@ open fun setAlpha2(originalImage: Image, image: Image, imageIndex: Int, alpha: F
     var canvasImage: CanvasImage = htmlImage!!.getImage() as CanvasImage
 
 
-    var originalPlaynImage: Image = originalImage = originalImageoriginalImage as PlaynImage
-originalImage.
-                                getImage() as Image
+    var originalPlaynImage: playn.core.Image = 
+                                    (originalImage as PlaynImage).getImage() as Image
 
 
     var canvas: Canvas = canvasImage!!.canvas()!!
             
 
-canvas!!.clear()
-canvas!!.setAlpha(alpha)
-canvas!!.drawImage(originalPlaynImage, 0, 0)
+canvas.clear()
+canvas.setAlpha(alpha)
+canvas.drawImage(originalPlaynImage, 0, 0)
 }
 
 
@@ -222,7 +221,7 @@ open fun setAlpha3(image: Image, alpha: Float)
     var canvas: Canvas = canvasImage!!.canvas()!!
             
 
-canvas!!.setAlpha(alphaFloat)
+canvas.setAlpha(alphaFloat)
 }
 
 
@@ -270,9 +269,8 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
 
                     var image = image
 
-    var image3: Image = image = imageimage as PlaynImage
-image.
-                                getImage() as Image
+    var image3: playn.core.Image = 
+                                    (image as PlaynImage).getImage() as Image
 
 
     
@@ -283,7 +281,7 @@ image.
                                     {
                                     
     
-                        if(image3!!.isReady() || image3!!.width() +image3!!.height() <= 0 || image!!.getName() == resourceCallbackStrings!!.FROM_DATA)
+                        if(image3.isReady() || image3.width() +image3.height() <= 0 || image.getName() == resourceCallbackStrings!!.FROM_DATA)
                         
                                     {
                                     copy(imageArray, index, image, image3)
@@ -299,7 +297,7 @@ image.
 {
 
                     var resource = resource
-logUtil!!.put(resourceCallbackStrings!!.DONE +image!!.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
+logUtil!!.put(resourceCallbackStrings!!.DONE +image.getName(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 copy(imageArray, index, image, image3)
 }
 override fun error(e: Throwable)
@@ -308,13 +306,13 @@ override fun error(e: Throwable)
 
                     var e = e
 logUtil!!.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(resourceCallbackStrings!!.ERROR)!!.append(image!!.getName())!!.toString(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
+                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(resourceCallbackStrings!!.ERROR)!!.append(image.getName())!!.toString(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 }
 
                                 }
                             
 
-image3!!.addCallback(callback)
+image3.addCallback(callback)
 
                         }
                             
@@ -322,14 +320,14 @@ image3!!.addCallback(callback)
                                     }
                                 
                         else {
-                            logUtil!!.put(resourceCallbackStrings!!.NULL +image!!.isMutable(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
+                            logUtil!!.put(resourceCallbackStrings!!.NULL +image.isMutable(), this, resourceCallbackStrings!!.HANDLE_IMAGE)
 
                         }
                             
 }
 
 
-open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: Image)
+open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn.core.Image)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -346,14 +344,14 @@ open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: Image
 
         try {
             
-    var image2: Image = Image.createImage(image3!!.width(), image3!!.height())!!
+    var image2: Image = Image.createImage(image3.width(), image3.height())!!
             
 
 
-    var graphics: Graphics = image2!!.getGraphics()!!
+    var graphics: Graphics = image2.getGraphics()!!
             
 
-graphics!!.drawImage(image, 0, 0, Anchor.TOP_LEFT)
+graphics.drawImage(image, 0, 0, Anchor.TOP_LEFT)
 imageArray[index]= image2
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resourceCallbackStrings!!.DONE, this, resourceCallbackStrings!!.HANDLE_IMAGE)

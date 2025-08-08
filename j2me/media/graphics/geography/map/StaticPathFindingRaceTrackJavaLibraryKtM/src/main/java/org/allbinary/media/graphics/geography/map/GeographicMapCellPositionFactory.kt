@@ -75,7 +75,7 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap)
             
 
 
-    var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = hashtable!!.get(allBinaryTiledLayer!!.getDataId()) as BasicGeographicMapCellPositionFactory
+    var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = hashtable.get(allBinaryTiledLayer!!.getDataId()) as BasicGeographicMapCellPositionFactory
 
 
     
@@ -108,7 +108,7 @@ logUtil!!.put(StringMaker().
                             append(
                             "Creating GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 geographicMapCellPositionFactory= BasicGeographicMapCellPositionFactory(geographicMapInterface)
-hashtable!!.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactory)
+hashtable.put(allBinaryTiledLayer!!.getDataId(), geographicMapCellPositionFactory)
 
 
 

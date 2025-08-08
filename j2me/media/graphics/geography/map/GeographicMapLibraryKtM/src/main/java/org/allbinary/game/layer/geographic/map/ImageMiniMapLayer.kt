@@ -76,7 +76,7 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.drawImage(image, x, y, anchor)
+graphics.drawImage(image, x, y, anchor)
 this.paintDots(graphics)
 }
 

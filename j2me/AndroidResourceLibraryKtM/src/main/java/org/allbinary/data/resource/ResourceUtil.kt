@@ -120,7 +120,7 @@ open fun getResourceId(resource: String)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value!!.toString())!!.toString(), this, 
+                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, 
                             "getResourceId")
 
                                     }
@@ -147,7 +147,7 @@ open fun addResource(resource: String, value: Integer)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value!!.toString())!!.toString(), this, 
+                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, 
                             "addResource")
 
     
@@ -201,7 +201,7 @@ open fun containsDuplicate(resource: String, value: Integer)
                                     {
                                     
     
-                        if(value!!.toInt() == integer!!.toInt())
+                        if(value.toInt() == integer.toInt())
                         
                                     {
                                     
@@ -235,7 +235,7 @@ open fun setResources(resources: Resources)
                     var resources = resources
 logUtil!!.put(StringMaker().
                             append(
-                            "Resource Loader: ")!!.append(resources!!::class.qualifiedName!!)!!.toString(), this, 
+                            "Resource Loader: ")!!.append(resources::class.qualifiedName!!)!!.toString(), this, 
                             "setResources")
 this.resources= resources
 }
@@ -252,7 +252,7 @@ open fun getResourceAsStream(resource: String)
     var integer: Integer = this.hashMap!!.get(resource as Object?) as Integer
 
 
-    var id: Int = integer!!.toInt()!!
+    var id: Int = integer.toInt()!!
             
 
 

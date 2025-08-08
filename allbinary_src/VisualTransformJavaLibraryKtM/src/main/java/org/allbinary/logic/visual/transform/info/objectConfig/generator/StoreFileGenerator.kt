@@ -108,7 +108,7 @@ outputMappingHashMap!!.put(CommonSeps.getInstance()!!.SPACE, StringUtil.getInsta
 
     var replace: Replace = Replace(outputMappingHashMap)
 
-fileName= replace!!.all(fileName)
+fileName= replace.all(fileName)
 
                                     }
                                 
@@ -160,7 +160,7 @@ this.fileAbPath= abPath
 this.file= AbFile(this.fileAbPath)
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("File: " +this.fileAbPath!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
@@ -179,7 +179,7 @@ open fun process(input: String)
                     var input = input
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -189,20 +189,20 @@ open fun process(input: String)
                                 
 
     
-                        if(!this.file!!.exists())
+                        if(!this.file.exists())
                         
                                     {
-                                    this.file!!.createNewFile()
+                                    this.file.createNewFile()
 
                                     }
                                 
 
     
-                        if(this.file!!.exists())
+                        if(this.file.exists())
                         
                                     {
                                     
-    var inputStream: InputStream = ByteArrayInputStream(input!!.encodeToByteArray())
+    var inputStream: InputStream = ByteArrayInputStream(input.encodeToByteArray())
 
 FileUtil.getInstance()!!.write(inputStream, this.file)
 
@@ -218,7 +218,7 @@ FileUtil.getInstance()!!.write(inputStream, this.file)
                             
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(

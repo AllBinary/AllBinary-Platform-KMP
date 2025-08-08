@@ -71,7 +71,7 @@ public constructor        (node: Node)
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 this.point= Point()
 
-    var actionNode: Node = DomSearchHelper.getNode(MouseActionScriptInputData.NAME, node!!.getChildNodes())!!
+    var actionNode: Node = DomSearchHelper.getNode(MouseActionScriptInputData.NAME, node.getChildNodes())!!
             
 
 
@@ -263,7 +263,7 @@ open fun toXmlNode(document: Document)
     var mouseNode: Node = ModDomHelper.createNodeWithValueNodes(document, MouseActionScriptInputData.NAME, this.toHashMap())!!
             
 
-node!!.appendChild(mouseNode)
+node.appendChild(mouseNode)
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 

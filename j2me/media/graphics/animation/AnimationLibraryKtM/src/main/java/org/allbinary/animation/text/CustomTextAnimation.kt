@@ -77,7 +77,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
                     var y = y
 
-    var existingFont: Font = graphics!!.getFont()!!
+    var existingFont: Font = graphics.getFont()!!
             
 
 fontDebugFactory!!.setFont(this.font, graphics)
@@ -136,7 +136,7 @@ override fun getWidth()
                         if(this.hasChanged)
                         
                                     {
-                                    this.textWidth= this.font!!.stringWidth(this.textArray[0]!!)
+                                    this.textWidth= this.font.stringWidth(this.textArray[0]!!)
 this.hasChanged= false
 
                                     }
@@ -154,7 +154,7 @@ override fun getHeight()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.font!!.getHeight()
+                        return this.font.getHeight()
 }
 
 

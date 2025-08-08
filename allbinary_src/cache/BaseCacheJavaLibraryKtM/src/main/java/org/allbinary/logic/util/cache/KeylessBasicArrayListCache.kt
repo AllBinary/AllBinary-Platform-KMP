@@ -60,7 +60,7 @@ open fun get()
         try {
             
     
-                        if(this.index >= this.list!!.size())
+                        if(this.index >= this.list.size())
                         
                                     {
                                     this.add()
@@ -96,10 +96,10 @@ override fun clear()
 
 
 
-                        for (index in this.list!!.size() -1 downTo 0)
+                        for (index in this.list.size() -1 downTo 0)
 
 
-        {basicArrayList= (this.list!!.objectArray[index]!! as BasicArrayList)
+        {basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
 basicArrayList!!.clear()
 }
 
@@ -112,7 +112,7 @@ override fun log()
 
 stringBuffer!!.append(
                             "S: ")
-stringBuffer!!.append(this.list!!.size())
+stringBuffer!!.append(this.list.size())
 
     var basicArrayList: BasicArrayList
 
@@ -120,12 +120,12 @@ stringBuffer!!.append(this.list!!.size())
 
 
 
-                        for (index in this.list!!.size() -1 downTo 0)
+                        for (index in this.list.size() -1 downTo 0)
 
 
         {stringBuffer!!.append(
                             " s: ")
-basicArrayList= (this.list!!.objectArray[index]!! as BasicArrayList)
+basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
 stringBuffer!!.append(basicArrayList!!.size())
 }
 

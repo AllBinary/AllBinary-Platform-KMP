@@ -71,7 +71,7 @@ open fun search()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 pageContext!!.getOut()!!.print(result)
@@ -87,7 +87,7 @@ pageContext!!.getOut()!!.print(result)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -102,7 +102,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 } catch(e2: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -140,7 +140,7 @@ open fun viewSummary()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 pageContext!!.getOut()!!.print(result)
@@ -156,7 +156,7 @@ pageContext!!.getOut()!!.print(result)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -171,7 +171,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 } catch(e2: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -202,7 +202,7 @@ open fun doStartTag()
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.SEARCH) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.SEARCH) == 0)
                         
                                     {
                                     this.setName(
@@ -220,7 +220,7 @@ this.search()
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.VIEWSUMMARY) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEWSUMMARY) == 0)
                         
                                     {
                                     this.setName(
@@ -238,7 +238,7 @@ this.viewSummary()
                                 
                              else 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.VIEW) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
                                     this.setName(

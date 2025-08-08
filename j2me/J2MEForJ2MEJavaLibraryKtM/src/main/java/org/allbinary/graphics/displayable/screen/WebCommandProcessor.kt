@@ -83,7 +83,7 @@ open fun process(midletCommandListener: CommandListener, command: Command, canva
                     var canvas = canvas
 
         try {
-            list!!.remove(0)
+            list.remove(0)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

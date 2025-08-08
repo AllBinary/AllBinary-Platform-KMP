@@ -84,7 +84,7 @@ open fun hasNext()
 : Boolean{
         try {
             
-    var nextIndex: Int = string!!.indexOf(
+    var nextIndex: Int = string.indexOf(
                             "\n", index)!!
             
 
@@ -132,7 +132,7 @@ open fun next()
 : String{
         try {
             
-    var nextIndex: Int = string!!.indexOf(
+    var nextIndex: Int = string.indexOf(
                             "\n", index)!!
             
 
@@ -150,7 +150,7 @@ open fun next()
                                     }
                                 
 
-    var temp: String = string!!.substring(index, nextIndex)!!
+    var temp: String = string.substring(index, nextIndex)!!
             
 
 index= nextIndex +1

@@ -75,7 +75,7 @@ open public class OpenGLESImage : Image
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image!!.getName(), 
+                            : super(image.getName(), 
                             null){
 
                     var image = image
@@ -144,23 +144,23 @@ open fun initTexture(gl: GL10)
 
     var textures: IntArray = IntArray(1)
 
-gl!!.glEnable(GL10.GL_TEXTURE_2D)
+gl.glEnable(GL10.GL_TEXTURE_2D)
 
     
                         if(this.openGLESImageProperties!!.textureID !=  -1)
                         
                                     {
                                     textures[0]= this.openGLESImageProperties!!.textureID
-gl!!.glDeleteTextures(1, textures, 0)
+gl.glDeleteTextures(1, textures, 0)
 
                                     }
                                 
-gl!!.glGenTextures(1, textures, 0)
+gl.glGenTextures(1, textures, 0)
 this.openGLESImageProperties!!.textureID= textures[0]!!
-gl!!.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
-gl!!.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MIN_FILTER, GL10.GL_NEAREST)
-gl!!.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_S, GL10.GL_CLAMP_TO_EDGE)
-gl!!.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_EDGE)
+gl.glBindTexture(GL10.GL_TEXTURE_2D, this.openGLESImageProperties!!.textureID)
+gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_MIN_FILTER, GL10.GL_NEAREST)
+gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_S, GL10.GL_CLAMP_TO_EDGE)
+gl.glTexParameterf(GL10.GL_TEXTURE_2D, GL10.GL_TEXTURE_WRAP_T, GL10.GL_CLAMP_TO_EDGE)
 
 
 

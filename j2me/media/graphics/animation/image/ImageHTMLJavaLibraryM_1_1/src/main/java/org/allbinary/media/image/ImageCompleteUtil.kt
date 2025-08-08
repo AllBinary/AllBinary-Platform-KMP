@@ -95,7 +95,7 @@ open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
     var playnImage: PlaynImage = image as PlaynImage
 
 
-    var playnCoreImage: Image = playnImage!!.getImage() as Image
+    var playnCoreImage: playn.core.Image = playnImage!!.getImage() as Image
 
 
     
@@ -113,16 +113,16 @@ open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
                                 
 
     
-                        if(!image!!.isReady())
+                        if(!image.isReady())
                         
                                     {
-                                    image!!.init(image!!.getImage())
+                                    image.init(image.getImage())
 
     
-                        if(!image!!.isReady())
+                        if(!image.isReady())
                         
                                     {
-                                    PreLogUtil.put("Waiting for Not Ready Image: " +image!!.getName(), this, ISREADY)
+                                    PreLogUtil.put("Waiting for Not Ready Image: " +image.getName(), this, ISREADY)
 
                                     }
                                 
@@ -133,7 +133,7 @@ open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(COMPLETE +image!!.getName(), this, commonStrings!!.SUCCESS)
+PreLogUtil.put(COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
 
 
 

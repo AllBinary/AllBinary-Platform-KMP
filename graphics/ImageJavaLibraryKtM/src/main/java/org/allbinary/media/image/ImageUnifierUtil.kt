@@ -72,14 +72,14 @@ open fun getDefaultConfiguration()
             
 
 
-    var gd: GraphicsDevice = ge!!.getDefaultScreenDevice()!!
+    var gd: GraphicsDevice = ge.getDefaultScreenDevice()!!
             
 
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return gd!!.getDefaultConfiguration()
+                        return gd.getDefaultConfiguration()
 }
 
 
@@ -126,7 +126,7 @@ logUtil!!.put("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!
 
 logUtil!!.put("Adding Image: " +index +" x: " +x +" y: " +y, this, 
                             "getImage")
-g!!.drawImage(bufferedImageArray[index]!!, x, y, imageUnifierProperties!!.getImageUnifierCell()!!.getWidth()!!.toInt(), imageUnifierProperties!!.getImageUnifierCell()!!.getHeight()!!.toInt(), 
+g.drawImage(bufferedImageArray[index]!!, x, y, imageUnifierProperties!!.getImageUnifierCell()!!.getWidth()!!.toInt(), imageUnifierProperties!!.getImageUnifierCell()!!.getHeight()!!.toInt(), 
                             null)
 
     var totalColumnsMinusOne: Int = (imageUnifierProperties!!.getColumns()!!.toInt() -1)
@@ -143,7 +143,7 @@ columnIndex= 0
                                 
 }
 
-g!!.dispose()
+g.dispose()
 
 
 

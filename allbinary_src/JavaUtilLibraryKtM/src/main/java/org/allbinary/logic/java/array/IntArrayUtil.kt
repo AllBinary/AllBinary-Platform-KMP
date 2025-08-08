@@ -49,13 +49,13 @@ open fun toString(array: IntArray)
 
 
 
-                        for (index in 0 until array!!.size)
+                        for (index in 0 until array.size)
 
 
         {stringBuffer!!.append(array[index]!!)
 
     
-                        if(index < array!!.size)
+                        if(index < array.size)
                         
                                     {
                                     stringBuffer!!.append(
@@ -85,7 +85,7 @@ open fun toString(array: Array<IntArray?>)
 
 
 
-                        for (index in 0 until array!!.size)
+                        for (index in 0 until array.size)
 
 
         {stringBuffer!!.append(
@@ -114,7 +114,7 @@ stringBuffer!!.append(
                             "}")
 
     
-                        if(index < array!!.size -1)
+                        if(index < array.size -1)
                         
                                     {
                                     stringBuffer!!.append(
@@ -144,7 +144,7 @@ open fun toString(array: Array<Array<IntArray?>?>)
 
 
 
-                        for (index in 0 until array!!.size)
+                        for (index in 0 until array.size)
 
 
         {stringBuffer!!.append(
@@ -196,7 +196,7 @@ stringBuffer!!.append(
                             "}")
 
     
-                        if(index < array!!.size -1)
+                        if(index < array.size -1)
                         
                                     {
                                     stringBuffer!!.append(

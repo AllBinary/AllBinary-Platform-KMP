@@ -108,15 +108,15 @@ override fun paint(graphics: Graphics)
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
 
-    var font: Font = graphics!!.getFont()!!
+    var font: Font = graphics.getFont()!!
             
 
 
-    var beginWidth: Int = (font!!.stringWidth(this.ABOUT) shr 1)
+    var beginWidth: Int = (font.stringWidth(this.ABOUT) shr 1)
 
-graphics!!.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
+graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
 
-    var infoSize: Int = this.info!!.size
+    var infoSize: Int = this.info.size
                 
 
 
@@ -126,12 +126,12 @@ graphics!!.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
                         for (index in 0 until infoSize)
 
 
-        {beginWidth= (font!!.stringWidth(this.info[index]!!) shr 1)
-graphics!!.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charHeight, anchor)
+        {beginWidth= (font.stringWidth(this.info[index]!!) shr 1)
+graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charHeight, anchor)
 }
 
 
-    var size: Int = this.developers!!.size
+    var size: Int = this.developers.size
                 
 
 
@@ -141,8 +141,8 @@ graphics!!.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *cha
                         for (index in 0 until size)
 
 
-        {beginWidth= (font!!.stringWidth(this.developers[index]!!) shr 1)
-graphics!!.drawString(this.developers[index]!!, halfWidth -beginWidth, (5 +infoSize +index) *charHeight, anchor)
+        {beginWidth= (font.stringWidth(this.developers[index]!!) shr 1)
+graphics.drawString(this.developers[index]!!, halfWidth -beginWidth, (5 +infoSize +index) *charHeight, anchor)
 }
 
 }

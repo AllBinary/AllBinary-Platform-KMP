@@ -88,7 +88,7 @@ open fun isValid()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VALIDATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
                                     logUtil!!.put("Password: " +this.password, this, commonStrings!!.IS_VALID)
@@ -102,7 +102,7 @@ open fun isValid()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VALIDATION))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
                                     logUtil!!.put(
@@ -122,7 +122,7 @@ valid= Boolean.FALSE
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -182,10 +182,10 @@ this.password= StringUtil.getInstance()!!.getInstance(this.password)
 
     var vector: Vector = Vector()
 
-vector!!.add(Integer(random).
+vector.add(Integer(random).
                             toString())
-vector!!.add(secret)
-vector!!.add(SuperCrypt(random).
+vector.add(secret)
+vector.add(SuperCrypt(random).
                             encrypt(password))
 
 
@@ -209,10 +209,10 @@ this.password= StringUtil.getInstance()!!.getInstance(this.password)
                             nextInt(SuperCrypt.KEYMAX)!!
             
 
-values!!.put(EntryData.getInstance()!!.ENCRYPTION, Integer(random).
+values.put(EntryData.getInstance()!!.ENCRYPTION, Integer(random).
                             toString())
-values!!.put(UserData.SECRET, secret)
-values!!.put(UserData.PASSWORD, SuperCrypt(random).
+values.put(UserData.SECRET, secret)
+values.put(UserData.PASSWORD, SuperCrypt(random).
                             encrypt(this.password))
 
 

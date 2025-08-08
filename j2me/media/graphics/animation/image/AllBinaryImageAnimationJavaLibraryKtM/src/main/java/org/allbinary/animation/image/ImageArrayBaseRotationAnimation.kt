@@ -181,7 +181,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-graphics!!.drawImage(this.currentImage, x, y, anchor)
+graphics.drawImage(this.currentImage, x, y, anchor)
 }
 
 

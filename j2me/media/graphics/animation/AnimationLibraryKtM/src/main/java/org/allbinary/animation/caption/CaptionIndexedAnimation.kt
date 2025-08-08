@@ -106,7 +106,7 @@ this.END_EVENT= AllBinaryEventObject(this)
 
 this.timeDelayHelper= TimeDelayHelper(timePerFrame)
 this.player= player
-this.player!!.start()
+this.player.start()
 }
 
 

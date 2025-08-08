@@ -69,7 +69,7 @@ open fun init(request: HttpServletRequest)
 
     var urlGlobals: AppUrlGlobals = AppUrlGlobals()
 
-urlGlobals!!.setWebappPath(request!!.getServletContext()!!.getRealPath(AbPathData.getInstance()!!.SEPARATOR))
+urlGlobals!!.setWebappPath(request.getServletContext()!!.getRealPath(AbPathData.getInstance()!!.SEPARATOR))
 URLGLOBALS.init(urlGlobals)
 WebappClassLoaderInfo.setLoader(::class.getClassLoader())
 }

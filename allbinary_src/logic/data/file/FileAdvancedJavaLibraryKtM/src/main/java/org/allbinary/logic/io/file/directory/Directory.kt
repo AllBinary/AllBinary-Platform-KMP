@@ -226,11 +226,11 @@ open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean
 
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
-    var fileArray: Array<Any?> = file!!.listFiles(fileFilter)!!
+    var fileArray: Array<Any?> = file.listFiles(fileFilter)!!
             
 
 
@@ -268,7 +268,7 @@ open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean
                                     }
                                 
 
-    var size: Int = files!!.size
+    var size: Int = files.size
                 
 
 
@@ -331,11 +331,11 @@ open fun search(file: AbFile, isRecursiveSearch: Boolean)
 
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
-    var fileArray: Array<Any?> = file!!.listFiles()!!
+    var fileArray: Array<Any?> = file.listFiles()!!
             
 
 
@@ -376,7 +376,7 @@ open fun search(file: AbFile, isRecursiveSearch: Boolean)
 
 
 
-                        for (index in 0 until files!!.size)
+                        for (index in 0 until files.size)
 
 
         {fileList!!.add(files[index]!!)
@@ -438,11 +438,11 @@ open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
 
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
-    var fileArray: Array<Any?> = file!!.listFiles()!!
+    var fileArray: Array<Any?> = file.listFiles()!!
             
 
 
@@ -483,7 +483,7 @@ open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
 
 
 
-                        for (index in 0 until files!!.size)
+                        for (index in 0 until files.size)
 
 
         {
@@ -553,11 +553,11 @@ open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
 
 
     
-                        if(file!!.isDirectory())
+                        if(file.isDirectory())
                         
                                     {
                                     
-    var fileArray: Array<Any?> = file!!.listFiles()!!
+    var fileArray: Array<Any?> = file.listFiles()!!
             
 
 
@@ -598,7 +598,7 @@ open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
 
 
 
-                        for (index in 0 until files!!.size)
+                        for (index in 0 until files.size)
 
 
         {fileList!!.add(files[index]!!)

@@ -145,15 +145,15 @@ open fun getResourceAsStream(resource: String, startIndex: Int)
             
 
 
-    var index: Int = resource!!.indexOf(commonSeps!!.COLON)!!
+    var index: Int = resource.indexOf(commonSeps!!.COLON)!!
             
 
 
-    var resourcePath: String = resource!!.substring(index +startIndex)!!
+    var resourcePath: String = resource.substring(index +startIndex)!!
             
 
 
-    var inputStream: InputStream = resource!!::class.getResourceAsStream(resourcePath)!!
+    var inputStream: InputStream = resource::class.getResourceAsStream(resourcePath)!!
             
 
 

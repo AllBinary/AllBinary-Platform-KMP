@@ -98,7 +98,7 @@ open fun getShippingInterface(name: String)
         {shipping= shippingVector!!.get(index) as ShippingInterface
 
     
-                        if(name!!.compareTo(shipping!!.getName()) == 0)
+                        if(name.compareTo(shipping.getName()) == 0)
                         
 
 
@@ -111,7 +111,7 @@ open fun getShippingInterface(name: String)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SHIPPINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SHIPPINGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

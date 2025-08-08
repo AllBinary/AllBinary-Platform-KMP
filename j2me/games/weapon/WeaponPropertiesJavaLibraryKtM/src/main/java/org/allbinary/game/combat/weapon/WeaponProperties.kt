@@ -105,10 +105,10 @@ this.setSpeed(BasicDecimal(speed))
                         
                                     {
                                     
-    var unscaledDamage: Long = this.speed!!.getUnscaled() *damage
+    var unscaledDamage: Long = this.speed.getUnscaled() *damage
 
 
-    var scaledDissipation: Int = dissipation *this.speed!!.getScaledFactorValue()
+    var scaledDissipation: Int = dissipation *this.speed.getScaledFactorValue()
 
 
     var value: Long = (unscaledDamage /scaledDissipation)
@@ -203,7 +203,7 @@ open fun getDamage(range: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getDamage() -((this.getDissipation() *range) /this.speed!!.getScaled())
+                        return this.getDamage() -((this.getDissipation() *range) /this.speed.getScaled())
 }
 
 

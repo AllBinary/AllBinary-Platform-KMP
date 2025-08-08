@@ -66,10 +66,10 @@ open fun toXmlNode(document: Document)
 
         try {
             
-    var paymentNode: Node = document!!.createElement(PaymentData.PAYMENT)!!
+    var paymentNode: Node = document.createElement(PaymentData.PAYMENT)!!
             
 
-document!!.appendChild(paymentNode)
+document.appendChild(paymentNode)
 
     var paymentVector: Vector = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!.get(this.getWeblisketSession()!!.getUserName())!!
             
@@ -88,7 +88,7 @@ document!!.appendChild(paymentNode)
         {
     var payment: Payment = paymentVector!!.get(index) as Payment
 
-paymentNode!!.appendChild(payment!!.toXmlNode(document))
+paymentNode!!.appendChild(payment.toXmlNode(document))
 }
 
 
@@ -99,7 +99,7 @@ paymentNode!!.appendChild(payment!!.toXmlNode(document))
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.FAILURE, this, 
@@ -138,7 +138,7 @@ open fun view()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

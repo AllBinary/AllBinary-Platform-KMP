@@ -99,7 +99,7 @@ open fun notifyStoreAdmin()
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put(
@@ -112,7 +112,7 @@ open fun notifyStoreAdmin()
     var adminEmailSubject: String = "Order " +this.orderHistory!!.getStatus() +" Attempt"
 
 
-    var adminEmailTextBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +user!!.getUserName()
+    var adminEmailTextBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +user.getUserName()
 
 
     var adminBasicEmailInfo: BasicEmailInfo = AdminEmailInfo(adminEmailSubject, adminEmailTextBody) as BasicEmailInfo
@@ -143,7 +143,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmail
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
@@ -164,7 +164,7 @@ open fun notifyUser()
         try {
             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
                                     logUtil!!.put(
@@ -177,7 +177,7 @@ open fun notifyUser()
     var subject: String = "Order " +this.orderHistory!!.getStatus() +" Attempt"
 
 
-    var textBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +user!!.getUserName()
+    var textBody: String = "Order attempt: " +this.orderHistory!!.getId() +" Preprocessing by: " +user.getUserName()
 
 
     var basicEmailInfo: BasicEmailInfo = StoreEmailInfo(this.storeFrontInterface, subject, textBody) as BasicEmailInfo
@@ -197,7 +197,7 @@ userEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, emailInfo)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 

@@ -99,12 +99,12 @@ logUtil!!.put(
     var tx: AffineTransform = AffineTransform.getScaleInstance(1,  -1)!!
             
 
-tx!!.translate(0,  -bufferedImage!!.getHeight(
+tx.translate(0,  -bufferedImage!!.getHeight(
                             null))
 
     var op: AffineTransformOp = AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
 
-bufferedImage= op!!.filter(bufferedImage, 
+bufferedImage= op.filter(bufferedImage, 
                             null)
 
                                     }
@@ -118,21 +118,21 @@ bufferedImage= op!!.filter(bufferedImage,
     var tx: AffineTransform = AffineTransform.getScaleInstance( -1, 1)!!
             
 
-tx!!.translate( -bufferedImage!!.getWidth(
+tx.translate( -bufferedImage!!.getWidth(
                             null), 0)
 
     var op: AffineTransformOp = AffineTransformOp(tx, AffineTransformOp.TYPE_NEAREST_NEIGHBOR)
 
-bufferedImage= op!!.filter(bufferedImage, 
+bufferedImage= op.filter(bufferedImage, 
                             null)
 
                                     }
                                 
-g!!.drawImage(bufferedImage, 0, 0, bufferedImage!!.getWidth(
+g.drawImage(bufferedImage, 0, 0, bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
                             null), 
                             null)
-g!!.dispose()
+g.dispose()
 
 
 

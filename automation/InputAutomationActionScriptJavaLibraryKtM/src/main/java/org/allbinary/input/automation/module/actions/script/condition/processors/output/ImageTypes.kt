@@ -88,7 +88,7 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -147,11 +147,11 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var newNode: Node = document!!.createElement(ImageActionScriptOutputData.TYPES)!!
+    var newNode: Node = document.createElement(ImageActionScriptOutputData.TYPES)!!
             
 
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -162,7 +162,7 @@ open fun toXmlNode(document: Document)
 
 
         {
-    var imageType: InputImageType = vector!!.get(index) as InputImageType
+    var imageType: InputImageType = vector.get(index) as InputImageType
 
 newNode!!.appendChild(ModDomHelper.createTextNode(document, ImageActionScriptOutputData.TYPE, imageType!!.getName()))
 }
@@ -182,7 +182,7 @@ override fun toString()
 stringBuffer!!.append(
                             "ImageTypes: ")
 
-    var size: Int = vector!!.size!!
+    var size: Int = vector.size!!
             
 
 
@@ -193,7 +193,7 @@ stringBuffer!!.append(
 
 
         {
-    var imageType: InputImageType = vector!!.get(index) as InputImageType
+    var imageType: InputImageType = vector.get(index) as InputImageType
 
 stringBuffer!!.append(imageType!!.getName())
 

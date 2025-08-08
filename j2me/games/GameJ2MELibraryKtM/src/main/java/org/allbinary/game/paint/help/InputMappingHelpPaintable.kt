@@ -175,7 +175,7 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
 gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
 
-    var size2: Int = list!!.size()!!
+    var size2: Int = list.size()!!
             
 
 inputBasicColorArray[index]= arrayOfNulls(size2)
@@ -199,7 +199,7 @@ logUtil!!.put(stringMaker!!.append(
                             "Found: selected GameKey: ")!!.append(this.stringUtil!!.toString(selectedGameKey))!!.toString(), this, commonStrings!!.UPDATE)
 actionBasicColor[index]= this.selectedBasicColor
 
-    var indexOfSelectedInput: Int = list!!.indexOf(selectedInput)!!
+    var indexOfSelectedInput: Int = list.indexOf(selectedInput)!!
             
 
 
@@ -252,7 +252,7 @@ open fun get(keyList: BasicArrayList)
 
 
         {key= keyList!!.objectArray[index]!! as Input
-stringBuffer!!.append(key!!.getName())
+stringBuffer!!.append(key.getName())
 
     
                         if(index +1 < keyList!!.size())
@@ -324,7 +324,7 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 
-    var font: Font = graphics!!.getFont()!!
+    var font: Font = graphics.getFont()!!
             
 
 
@@ -349,10 +349,10 @@ override fun paint(graphics: Graphics)
             
 
 
-    var beginWidth: Int = (font!!.stringWidth(this.TITLE) shr 1)
+    var beginWidth: Int = (font.stringWidth(this.TITLE) shr 1)
 
-graphics!!.setColor(this.basicColor!!.toInt())
-graphics!!.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
+graphics.setColor(this.basicColor!!.toInt())
+graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
 
     var inputInfo: Array<String?> = this.inputInfo
 
@@ -394,15 +394,15 @@ graphics!!.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
         {y= (index +3) *charHeight
 deltaX= 0
 list= this.keyMappingArray[index]!!
-size2= list!!.size()
+size2= list.size()
 keyMappings= this.get(list)
 stringMaker!!.delete(0, stringMaker!!.length())
 actionString= stringMaker!!.append(inputInfo[index]!!)!!.append(commonSeps!!.COLON)!!.append(commonSeps!!.SPACE)!!.append(commonSeps!!.SPACE)!!.toString()
 stringMaker!!.delete(0, stringMaker!!.length())
-beginWidth= (font!!.stringWidth(stringMaker!!.append(actionString)!!.append(keyMappings)!!.toString()) shr 1)
-graphics!!.setColor(this.actionBasicColor[index]!!.toInt())
-graphics!!.drawString(actionString, halfWidth -beginWidth +deltaX, y, anchor)
-deltaX += font!!.stringWidth(actionString)
+beginWidth= (font.stringWidth(stringMaker!!.append(actionString)!!.append(keyMappings)!!.toString()) shr 1)
+graphics.setColor(this.actionBasicColor[index]!!.toInt())
+graphics.drawString(actionString, halfWidth -beginWidth +deltaX, y, anchor)
+deltaX += font.stringWidth(actionString)
 
 
 
@@ -410,19 +410,19 @@ deltaX += font!!.stringWidth(actionString)
                         for (index2 in 0 until size2)
 
 
-        {input= list!!.objectArray[index2]!! as Input
-graphics!!.setColor(this.inputBasicColorArray[index]!![index2]!!.toInt())
-graphics!!.drawString(input!!.getName(), halfWidth -beginWidth +deltaX, y, anchor)
-deltaX += font!!.stringWidth(input!!.getName())
+        {input= list.objectArray[index2]!! as Input
+graphics.setColor(this.inputBasicColorArray[index]!![index2]!!.toInt())
+graphics.drawString(input.getName(), halfWidth -beginWidth +deltaX, y, anchor)
+deltaX += font.stringWidth(input.getName())
 sep= EMPTY_STRING
 
     
-                        if(index2 +1 < list!!.size())
+                        if(index2 +1 < list.size())
                         
                                     {
                                     
     
-                        if(list!!.size() == 2)
+                        if(list.size() == 2)
                         
                                     {
                                     sep= AND
@@ -432,7 +432,7 @@ sep= EMPTY_STRING
                         else {
                             
     
-                        if(index2 +2 == list!!.size())
+                        if(index2 +2 == list.size())
                         
                                     {
                                     sep= MORE_THAN_TWO_IN_LIST_AND
@@ -455,9 +455,9 @@ sep= EMPTY_STRING
                         if(sep != EMPTY_STRING)
                         
                                     {
-                                    graphics!!.setColor(this.basicColor!!.toInt())
-graphics!!.drawString(sep, halfWidth -beginWidth +deltaX, y, anchor)
-deltaX += font!!.stringWidth(sep)
+                                    graphics.setColor(this.basicColor!!.toInt())
+graphics.drawString(sep, halfWidth -beginWidth +deltaX, y, anchor)
+deltaX += font.stringWidth(sep)
 
                                     }
                                 

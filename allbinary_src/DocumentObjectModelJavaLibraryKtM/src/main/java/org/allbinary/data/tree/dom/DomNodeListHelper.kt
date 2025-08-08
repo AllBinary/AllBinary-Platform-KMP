@@ -57,7 +57,7 @@ open fun getVector(nodeList: NodeList)
                         for (index in 0 until size)
 
 
-        {vector!!.add(DomNodeHelper.getTextNodeValue(nodeList!!.item(index)))
+        {vector.add(DomNodeHelper.getTextNodeValue(nodeList!!.item(index)))
 }
 
 

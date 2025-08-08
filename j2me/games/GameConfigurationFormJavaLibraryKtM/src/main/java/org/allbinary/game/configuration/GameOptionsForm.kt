@@ -114,13 +114,13 @@ open fun addTextFieldsIfSimulated()
                         
                                     {
                                     
-    var list: BasicArrayList = hashtable!!.get(key as Object?) as BasicArrayList
+    var list: BasicArrayList = hashtable.get(key as Object?) as BasicArrayList
 
 
     
                         if(list != 
                                     null
-                                 && list!!.contains(SensorFeatureFactory.getInstance()!!.SIMULATED_ORIENTATION_SENSORS))
+                                 && list.contains(SensorFeatureFactory.getInstance()!!.SIMULATED_ORIENTATION_SENSORS))
                         
                                     {
                                     this.addTextFields()
@@ -140,7 +140,7 @@ open fun addTextFields()
             
 
 
-    var size: Int = hashtable!!.size!!
+    var size: Int = hashtable.size!!
             
 
 
@@ -155,7 +155,7 @@ open fun addTextFields()
 
 
         {
-    var gameConfigurationTextInput: GameConfigurationTextInput = hashtable!!.get(objectArray[index]!! as Object) as GameConfigurationTextInput
+    var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(objectArray[index]!! as Object) as GameConfigurationTextInput
 
 
     var textField: TextField = TextField(gameConfigurationTextInput!!.getLabel(), gameConfigurationTextInput!!.getText(), 30, TextField.ANY)
@@ -182,7 +182,7 @@ open fun addConfiguration()
     var GAUGE_CHANGE: Command = MyCommandsFactory.getInstance()!!.GAUGE_CHANGE
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -193,15 +193,15 @@ open fun addConfiguration()
 
 
         {
-    var gameConfiguration: GameConfiguration = list!!.objectArray[index]!! as GameConfiguration
+    var gameConfiguration: GameConfiguration = list.objectArray[index]!! as GameConfiguration
 
 logUtil!!.put(StringMaker().
                             append(NAME)!!.append(gameConfiguration!!.toString())!!.toString(), this, METHOD_NAME)
 
     var gauge: GameConfigurationGauge = GameConfigurationGauge(gameConfiguration)
 
-gauge!!.setDefaultCommand(GAUGE_CHANGE)
-gauge!!.setItemCommandListener(GameFeatureItemCommandListener(this))
+gauge.setDefaultCommand(GAUGE_CHANGE)
+gauge.setItemCommandListener(GameFeatureItemCommandListener(this))
 this.append(gauge)
 }
 
@@ -269,7 +269,7 @@ GameConfigurationUtil.getInstance()!!.updateCompetitionValue()
 
     var SCALE: GameConfiguration = GameConfigurationCentral.getInstance()!!.SCALE
 
-hashtable!!.put(SCALE.getName(), SCALE.getValue()!!.toString())
+hashtable.put(SCALE.getName(), SCALE.getValue()!!.toString())
 
     var keyValuePersistance: KeyValuePersistance = GameConfigurationPersistanceSingleton.getInstance()!!
             
@@ -285,13 +285,13 @@ keyValuePersistance!!.save(abeClientInformation, hashtable)
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
         {
-    var integer: Integer = list!!.objectArray[index]!! as Integer
+    var integer: Integer = list.objectArray[index]!! as Integer
 
-keyValuePersistance!!.delete(abeClientInformation, integer!!.toInt())
+keyValuePersistance!!.delete(abeClientInformation, integer.toInt())
 }
 
 }

@@ -128,7 +128,7 @@ open fun getObjectConfigInterface()
 }
 
 
-open fun setObjectConfigInterface(transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface)
+open fun setObjectConfigInterface(transformInfoObjectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -213,7 +213,7 @@ open fun setStoreName(value: String)
 }
 
 
-open fun setObjectFile(value: String)
+open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -229,7 +229,7 @@ open fun setObject(anyType: Object)
 }
 
 
-open fun setObjectConfigFile(value: String)
+open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
 {
 

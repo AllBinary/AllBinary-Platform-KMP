@@ -125,7 +125,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             
 
 
-    var taxNameNodeList: NodeList = document!!.getElementsByTagName(TaxData.NAME)!!
+    var taxNameNodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
             
 
 
@@ -140,7 +140,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             
 
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -176,7 +176,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     logUtil!!.put(
@@ -193,7 +193,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.TAX))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
                                     logUtil!!.put(

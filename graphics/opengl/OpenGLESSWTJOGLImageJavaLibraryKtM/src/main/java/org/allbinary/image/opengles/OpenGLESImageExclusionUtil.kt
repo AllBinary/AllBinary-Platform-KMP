@@ -68,7 +68,7 @@ open fun isCustomScaling(image: Image)
                     var image = image
 
     
-                        if(image!!.getName()!!.startsWith(EXCLUSION) || image!!.getName()!!.startsWith(GREEN_BUTTON))
+                        if(image.getName()!!.startsWith(EXCLUSION) || image.getName()!!.startsWith(GREEN_BUTTON))
                         
                                     {
                                     

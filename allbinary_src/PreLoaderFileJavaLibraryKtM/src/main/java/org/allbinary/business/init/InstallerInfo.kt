@@ -112,7 +112,7 @@ hasRead= false
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -144,7 +144,7 @@ open fun read()
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
                                     
@@ -169,7 +169,7 @@ this.setPassword(WeakCrypt(2).
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRELOADER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
                                     logUtil!!.put("Not a File - Failed Loading: " +FILEABPATH.toString(), this, 
@@ -183,7 +183,7 @@ this.setPassword(WeakCrypt(2).
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -237,7 +237,7 @@ this.read()
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRELOADER))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
                                     logUtil!!.put(
@@ -298,7 +298,7 @@ this.updateIfNeeded()
                                     null
                                  && this.userName!!.compareTo(userName) == 0 && this.password != 
                                     null
-                                 && this.password!!.compareTo(password) == 0)
+                                 && this.password.compareTo(password) == 0)
                         
                                     {
                                     

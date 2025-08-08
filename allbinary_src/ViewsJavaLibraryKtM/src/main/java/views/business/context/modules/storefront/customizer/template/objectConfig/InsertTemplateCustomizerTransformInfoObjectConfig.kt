@@ -41,7 +41,7 @@ open public class InsertTemplateCustomizerTransformInfoObjectConfig : NoTemplate
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
-public constructor        (transformInfoInterface: TransformInfoInterface)                        
+public constructor        (transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
 
@@ -52,7 +52,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                     
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, document: Document)                        
+public constructor        (transformInfoInterface: Object, document: Object)                        
 
                             : super(transformInfoInterface, document){
 
@@ -67,7 +67,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface, docum
 this.setDocument(this.generate(this.toXmlDoc()))
 }
 
-public constructor        (transformInfoInterface: TransformInfoInterface, name: String, type: String)                        
+public constructor        (transformInfoInterface: Object, name: Object, type: Object)                        
 
                             : super(transformInfoInterface, name, type){
 
@@ -95,7 +95,7 @@ open fun set(aParentViewName: String)
                     var aParentViewName = aParentViewName
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("Setting: " +aParentViewName, this, 
@@ -108,7 +108,7 @@ open fun set(aParentViewName: String)
             
 
 
-    var parentComponentsNodeList: NodeList = document!!.getElementsByTagName(TransformInfosData.getInstance()!!.NAME)!!
+    var parentComponentsNodeList: NodeList = document.getElementsByTagName(TransformInfosData.getInstance()!!.NAME)!!
             
 
 
@@ -120,7 +120,7 @@ open fun set(aParentViewName: String)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -140,7 +140,7 @@ open fun set(aParentViewName: String)
                                 )
                         
                                     {
-                                    document!!.removeChild(componentNode)
+                                    document.removeChild(componentNode)
 
                                     }
                                 
@@ -152,7 +152,7 @@ parentComponentsNodeList!!.item(0)!!.appendChild(TransformInfoDomNodeView(aParen
                         else {
                             
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -162,11 +162,11 @@ parentComponentsNodeList!!.item(0)!!.appendChild(TransformInfoDomNodeView(aParen
                                     }
                                 
 
-    var objectConfigNode: Node = document!!.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
+    var objectConfigNode: Node = document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
             
 
 
-    var parentComponentsNode: Node = document!!.createElement(TransformInfosData.getInstance()!!.NAME)!!
+    var parentComponentsNode: Node = document.createElement(TransformInfosData.getInstance()!!.NAME)!!
             
 
 objectConfigNode!!.appendChild(parentComponentsNode)

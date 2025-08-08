@@ -77,7 +77,7 @@ open fun clear()
     var groupList: BasicArrayList
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -87,7 +87,7 @@ open fun clear()
                         for (index in size -1 downTo 0)
 
 
-        {groupList= this.list!!.objectArray[index]!! as BasicArrayList
+        {groupList= this.list.objectArray[index]!! as BasicArrayList
 groupList!!.clear()
 }
 
@@ -149,7 +149,7 @@ open fun getList(groupId: Int)
 
                     var groupId = groupId
 
-    var groupList: BasicArrayList = this.list!!.objectArray[groupId]!! as BasicArrayList
+    var groupList: BasicArrayList = this.list.objectArray[groupId]!! as BasicArrayList
 
 
 
@@ -165,7 +165,7 @@ open fun getGroupSize(groupId: Int)
 
                     var groupId = groupId
 
-    var groupList: BasicArrayList = this.list!!.objectArray[groupId]!! as BasicArrayList
+    var groupList: BasicArrayList = this.list.objectArray[groupId]!! as BasicArrayList
 
 
     var size: Int = groupList!!.size()!!
@@ -188,7 +188,7 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
     var id: Int = groupInterface!!.getGroupId().toInt()
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -313,7 +313,7 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
 
                     var maxSize = maxSize
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -364,8 +364,8 @@ open fun init(total: Int)
 
                     var total = total
 
-        while(this.list!!.size() <= total +1)
-        {this.list!!.add(BasicArrayList())
+        while(this.list.size() <= total +1)
+        {this.list.add(BasicArrayList())
 }
 
 }
@@ -411,7 +411,7 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 
         {id= groupInterfaceArray[index]!!.getGroupId().toInt()
-groupList= this.list!!.objectArray[id]!! as BasicArrayList
+groupList= this.list.objectArray[id]!! as BasicArrayList
 
     
                         if(groupList == 
@@ -476,7 +476,7 @@ groupList= this.list!!.objectArray[id]!! as BasicArrayList
 
 
         {id= groupInterfaceArray[index]!!.getGroupId().toInt()
-groupList= this.list!!.objectArray[id]!! as BasicArrayList
+groupList= this.list.objectArray[id]!! as BasicArrayList
 groupList!!.remove(layerInterface)
 }
 
@@ -498,7 +498,7 @@ open fun log()
     var TOTAL_LABEL: String = CommonLabels.getInstance()!!.TOTAL_LABEL
 
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 
@@ -509,7 +509,7 @@ open fun log()
 
 
         {
-    var groupList: BasicArrayList = this.list!!.objectArray[index]!! as BasicArrayList
+    var groupList: BasicArrayList = this.list.objectArray[index]!! as BasicArrayList
 
 stringBuffer!!.append(GROUP)
 stringBuffer!!.append(index)

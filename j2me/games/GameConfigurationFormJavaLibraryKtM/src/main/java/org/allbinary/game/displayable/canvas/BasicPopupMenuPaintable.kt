@@ -89,11 +89,11 @@ this.rectangle= rectangle
             
 
 
-    var isHTML: Boolean = features!!.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
+    var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
             
 
 
-    var isOpenGL: Boolean = features!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
+    var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
             
 
 
@@ -133,7 +133,7 @@ this.BORDER= BORDER
                                     }
                                 
                         else {
-                            this.animationInterface= RectangleFilledAnimation(this.rectangle!!.getWidth(), this.rectangle!!.getHeight(), BasicColorFactory.getInstance()!!.TRANSPARENT_GREY)
+                            this.animationInterface= RectangleFilledAnimation(this.rectangle.getWidth(), this.rectangle.getHeight(), BasicColorFactory.getInstance()!!.TRANSPARENT_GREY)
 
                         }
                             
@@ -154,7 +154,7 @@ this.rectangle= rectangle
             
 
 
-    var heightOffset: Int = rectangle!!.getHeight() -(myFont!!.DEFAULT_CHAR_HEIGHT *NAME.length)
+    var heightOffset: Int = rectangle.getHeight() -(myFont!!.DEFAULT_CHAR_HEIGHT *NAME.length)
 
 
     
@@ -181,11 +181,11 @@ this.rectangle= rectangle
                                 
 this.offset= (heightOffset shr 1)
 
-    var width: Int = this.rectangle!!.getWidth()!!
+    var width: Int = this.rectangle.getWidth()!!
             
 
 
-    var height: Int = this.rectangle!!.getHeight()!!
+    var height: Int = this.rectangle.getHeight()!!
             
 
 
@@ -216,29 +216,29 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 
-    var point: GPoint = this.rectangle!!.getPoint()!!
+    var point: GPoint = this.rectangle.getPoint()!!
             
 
 
-    var x: Int = point!!.getX()!!
+    var x: Int = point.getX()!!
             
 
 
-    var y: Int = point!!.getY()!!
+    var y: Int = point.getY()!!
             
 
 
-    var width: Int = this.rectangle!!.getWidth()!!
+    var width: Int = this.rectangle.getWidth()!!
             
 
 
-    var height: Int = this.rectangle!!.getHeight()!!
+    var height: Int = this.rectangle.getHeight()!!
             
 
 this.animationInterface!!.paint(graphics, x, y)
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor)
 drawStringUtil!!.paintVerticle(graphics, label, x +BORDER, y +offset, 0)
-graphics!!.drawRect(x, y, width, height)
+graphics.drawRect(x, y, width, height)
 }
 
 

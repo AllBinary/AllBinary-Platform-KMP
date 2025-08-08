@@ -109,7 +109,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var dirNode: Node = document!!.createElement(
+    var dirNode: Node = document.createElement(
                             "dir")!!
             
 

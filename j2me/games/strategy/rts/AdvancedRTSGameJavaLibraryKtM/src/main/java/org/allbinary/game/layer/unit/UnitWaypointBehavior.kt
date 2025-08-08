@@ -138,7 +138,7 @@ open fun onWaypointEvent(event: RTSLayerEvent)
 
                     var event = event
 
-    var advancedRTSGameLayer: AdvancedRTSGameLayer = event!!.getRtsLayer() as AdvancedRTSGameLayer
+    var advancedRTSGameLayer: AdvancedRTSGameLayer = event.getRtsLayer() as AdvancedRTSGameLayer
 
 this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.onWaypointEvent(this.associatedAdvancedRTSGameLayer, advancedRTSGameLayer)
 
@@ -413,7 +413,7 @@ open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
 
 
     
-                        if(list!!.contains(geographicMapCellPosition))
+                        if(list.contains(geographicMapCellPosition))
                         
                                     {
                                     

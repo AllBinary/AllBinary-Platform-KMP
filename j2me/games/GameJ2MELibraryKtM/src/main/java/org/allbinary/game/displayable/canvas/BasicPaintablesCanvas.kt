@@ -68,7 +68,7 @@ override fun paint(graphics: Graphics)
 
                     var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
-graphics!!.setColor(this.foregroundColor)
+graphics.setColor(this.foregroundColor)
 
 
 

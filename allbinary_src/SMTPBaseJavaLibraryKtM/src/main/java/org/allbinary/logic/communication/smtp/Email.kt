@@ -211,7 +211,7 @@ init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(Inte
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     
@@ -261,7 +261,7 @@ open fun init(server: String, authenticator: Authenticator, addresses_from: Arra
 
                     var mimeBodyParts = mimeBodyParts
 this.properties= Properties()
-this.properties!!.put(SMTP_HOST, server)
+this.properties.put(SMTP_HOST, server)
 
         try {
             
@@ -274,7 +274,7 @@ this.properties!!.put(SMTP_HOST, server)
                                     {
                                     
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -283,7 +283,7 @@ this.properties!!.put(SMTP_HOST, server)
 
                                     }
                                 
-this.properties!!.put(SMTP_LOCAL_HOST, 
+this.properties.put(SMTP_LOCAL_HOST, 
                             "FakeHostName")
 
                                     }
@@ -291,7 +291,7 @@ this.properties!!.put(SMTP_LOCAL_HOST,
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -300,7 +300,7 @@ this.properties!!.put(SMTP_LOCAL_HOST,
 
                                     }
                                 
-this.properties!!.put(SMTP_LOCAL_HOST, 
+this.properties.put(SMTP_LOCAL_HOST, 
                             "FakeHostName")
 }
 
@@ -309,7 +309,7 @@ this.properties!!.put(SMTP_LOCAL_HOST,
                         if(isDebug)
                         
                                     {
-                                    this.properties!!.put(DEBUG, 
+                                    this.properties.put(DEBUG, 
                             "true")
 
                                     }
@@ -323,21 +323,21 @@ this.properties!!.put(SMTP_LOCAL_HOST,
                         if(isDebug)
                         
                                     {
-                                    session!!.setDebug(true)
+                                    session.setDebug(true)
 bs= ByteArrayOutputStream()
 
     var printStream: PrintStream = PrintStream(bs)
 
-session!!.setDebugOut(printStream)
+session.setDebugOut(printStream)
 
                                     }
                                 
 msg= MimeMessage(session)
-msg!!.addFrom(addresses_from)
-msg!!.setRecipients(Message.RecipientType.TO, addresses_to)
-msg!!.setRecipients(Message.RecipientType.CC, addresses_cc)
-msg!!.setRecipients(Message.RecipientType.BCC, addresses_bcc)
-msg!!.setSubject(subject)
+msg.addFrom(addresses_from)
+msg.setRecipients(Message.RecipientType.TO, addresses_to)
+msg.setRecipients(Message.RecipientType.CC, addresses_cc)
+msg.setRecipients(Message.RecipientType.BCC, addresses_bcc)
+msg.setSubject(subject)
 
     var mimeMultipart: MimeMultipart = MimeMultipart()
 
@@ -351,7 +351,7 @@ msg!!.setSubject(subject)
         {mimeMultipart!!.addBodyPart(mimeBodyParts[i]!!)
 }
 
-msg!!.setContent(mimeMultipart)
+msg.setContent(mimeMultipart)
 }
 
 
@@ -415,9 +415,9 @@ open fun toHashMap()
             
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-hashMap!!.put(EmailData.SERVER, properties!!.get(SMTP_HOST) as String)
+hashMap!!.put(EmailData.SERVER, properties.get(SMTP_HOST) as String)
 
-    var addresses: Array<Address?> = msg!!.getFrom()!!
+    var addresses: Array<Address?> = msg.getFrom()!!
             
 
 
@@ -431,7 +431,7 @@ hashMap!!.put(EmailData.SERVER, properties!!.get(SMTP_HOST) as String)
 
 
 
-                        for (index in 0 until addresses!!.size)
+                        for (index in 0 until addresses.size)
 
 
         {hashMap!!.put(EmailData.FROM, addresses[index]!!.toString())
@@ -440,7 +440,7 @@ hashMap!!.put(EmailData.SERVER, properties!!.get(SMTP_HOST) as String)
 
                                     }
                                 
-addresses= msg!!.getRecipients(Message.RecipientType.TO)
+addresses= msg.getRecipients(Message.RecipientType.TO)
 
     
                         if(addresses != 
@@ -452,7 +452,7 @@ addresses= msg!!.getRecipients(Message.RecipientType.TO)
 
 
 
-                        for (index in 0 until addresses!!.size)
+                        for (index in 0 until addresses.size)
 
 
         {hashMap!!.put(EmailData.TO, addresses[index]!!.toString())
@@ -461,7 +461,7 @@ addresses= msg!!.getRecipients(Message.RecipientType.TO)
 
                                     }
                                 
-addresses= msg!!.getRecipients(Message.RecipientType.CC)
+addresses= msg.getRecipients(Message.RecipientType.CC)
 
     
                         if(addresses != 
@@ -473,7 +473,7 @@ addresses= msg!!.getRecipients(Message.RecipientType.CC)
 
 
 
-                        for (index in 0 until addresses!!.size)
+                        for (index in 0 until addresses.size)
 
 
         {hashMap!!.put(EmailData.CC, addresses[index]!!.toString())
@@ -482,7 +482,7 @@ addresses= msg!!.getRecipients(Message.RecipientType.CC)
 
                                     }
                                 
-addresses= msg!!.getRecipients(Message.RecipientType.BCC)
+addresses= msg.getRecipients(Message.RecipientType.BCC)
 
     
                         if(addresses != 
@@ -494,7 +494,7 @@ addresses= msg!!.getRecipients(Message.RecipientType.BCC)
 
 
 
-                        for (index in 0 until addresses!!.size)
+                        for (index in 0 until addresses.size)
 
 
         {hashMap!!.put(EmailData.BCC, addresses[index]!!.toString())
@@ -503,9 +503,9 @@ addresses= msg!!.getRecipients(Message.RecipientType.BCC)
 
                                     }
                                 
-hashMap!!.put(EmailData.SUBJECT, msg!!.getSubject())
+hashMap!!.put(EmailData.SUBJECT, msg.getSubject())
 
-    var mimeMultipart: MimeMultipart = msg!!.getContent() as MimeMultipart
+    var mimeMultipart: MimeMultipart = msg.getContent() as MimeMultipart
 
 
     
@@ -538,7 +538,7 @@ hashMap!!.put(EmailData.CONTENT, content)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

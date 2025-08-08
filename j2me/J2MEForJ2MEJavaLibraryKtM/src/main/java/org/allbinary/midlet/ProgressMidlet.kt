@@ -77,7 +77,7 @@ primaryThreadPool!!.runTask(runnable)
                             "exit", e)
 
         try {
-            processor!!.process()
+            processor.process()
 } catch(e2: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "exit", e)

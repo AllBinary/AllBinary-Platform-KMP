@@ -78,14 +78,14 @@ open fun makeFloatBuffer3($a: Float, $b: Float, $c: Float)
     var b: ByteBuffer = ByteBuffer.allocateDirect(3 *BYTES_PER_FLOAT)!!
             
 
-b!!.order(ByteOrder.nativeOrder())
+b.order(ByteOrder.nativeOrder())
 
-    var buffer: FloatBuffer = b!!.asFloatBuffer()!!
+    var buffer: FloatBuffer = b.asFloatBuffer()!!
             
 
-buffer!!.put($a)
-buffer!!.put($b)
-buffer!!.put($c)
+buffer.put($a)
+buffer.put($b)
+buffer.put($c)
 this.position(buffer, 0)
 
 
@@ -113,15 +113,15 @@ open fun makeFloatBuffer4($a: Float, $b: Float, $c: Float, $d: Float)
     var b: ByteBuffer = ByteBuffer.allocateDirect(4 *BYTES_PER_FLOAT)!!
             
 
-b!!.order(ByteOrder.nativeOrder())
+b.order(ByteOrder.nativeOrder())
 
-    var buffer: FloatBuffer = b!!.asFloatBuffer()!!
+    var buffer: FloatBuffer = b.asFloatBuffer()!!
             
 
-buffer!!.put($a)
-buffer!!.put($b)
-buffer!!.put($c)
-buffer!!.put($d)
+buffer.put($a)
+buffer.put($b)
+buffer.put($c)
+buffer.put($d)
 this.position(buffer, 0)
 
 
@@ -140,9 +140,9 @@ open fun makeFloatBuffer(byteBuffer: ByteBuffer)
     var b: ByteBuffer = ByteBuffer.allocateDirect(byteBuffer!!.limit() *BYTES_PER_FLOAT)!!
             
 
-b!!.order(ByteOrder.nativeOrder())
+b.order(ByteOrder.nativeOrder())
 
-    var buffer: FloatBuffer = b!!.asFloatBuffer()!!
+    var buffer: FloatBuffer = b.asFloatBuffer()!!
             
 
 
@@ -155,7 +155,7 @@ b!!.order(ByteOrder.nativeOrder())
         while(byteBuffer!!.hasRemaining())
         {unsigned= byteBuffer!!.get() and 0xFF
 v= (unsigned.toFloat()) /255f
-buffer!!.put(v)
+buffer.put(v)
 }
 
 this.position(buffer, 0)
@@ -179,7 +179,7 @@ open fun position(buffer: Buffer, newPosition: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return buffer!!.position(newPosition)
+                        return buffer.position(newPosition)
 }
 
 
@@ -213,7 +213,7 @@ open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: 
 
 
 
-                        for (i in 0 until uvs!!.size)
+                        for (i in 0 until uvs.size)
 
 
         {

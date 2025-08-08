@@ -141,11 +141,11 @@ open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
 
 
 
-                        for (index in 0 until list!!.size()!!)
+                        for (index in 0 until list.size()!!)
 
 
         {
-    var relativeRelationship: RelativeRelationship = list!!.objectArray[index]!! as RelativeRelationship
+    var relativeRelationship: RelativeRelationship = list.objectArray[index]!! as RelativeRelationship
 
 newList!!.add(RelativeLayerRelationship(layer, PointFactory.getInstance()!!.getInstance(relativeRelationship!!.getX(), relativeRelationship!!.getY()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()))
 }

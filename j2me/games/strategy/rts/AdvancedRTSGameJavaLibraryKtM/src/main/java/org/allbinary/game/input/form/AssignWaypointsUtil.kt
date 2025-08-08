@@ -92,11 +92,11 @@ open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLay
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
         {
-    var waypointLayer: RTSLayer = list!!.get(index) as RTSLayer
+    var waypointLayer: RTSLayer = list.get(index) as RTSLayer
 
 WAYPOINT_EVENT.setRtsLayer(waypointLayer)
 unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)

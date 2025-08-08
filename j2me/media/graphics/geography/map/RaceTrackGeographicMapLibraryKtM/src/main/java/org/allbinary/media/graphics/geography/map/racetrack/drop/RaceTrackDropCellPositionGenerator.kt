@@ -61,7 +61,7 @@ protected constructor        (){timeDelayHelper= TimeDelayHelper(10000)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.list!!.clear()
+{this.list.clear()
 }
 
 
@@ -147,7 +147,7 @@ ahead= index
                         if(total > STRAIGHTAWAY)
                         
                                     {
-                                    this.list!!.add(geographicMapCellPosition)
+                                    this.list.add(geographicMapCellPosition)
 break;
 
                     
@@ -171,7 +171,7 @@ ahead++
 }
 
 
-    var size: Int = this.list!!.size()!!
+    var size: Int = this.list.size()!!
             
 
 

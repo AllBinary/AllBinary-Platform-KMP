@@ -75,7 +75,7 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
                                     logUtil!!.put(this.commonStrings!!.START, this, 
@@ -100,7 +100,7 @@ hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
             
 
 
-    var node: Node = document!!.createElement(BasicItemData.ITEM)!!
+    var node: Node = document.createElement(BasicItemData.ITEM)!!
             
 
 
@@ -125,16 +125,16 @@ hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
     var value: String = hashMap!!.get(name as Object?) as String
 
 value= stringUtil!!.getInstance(value)
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
+node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 
     var totalNode: Node = ModDomHelper.createNameValueNodes(document, BasicItemData.TOTAL, this.itemInterface!!.getTotal()!!.toString())!!
             
 
-node!!.appendChild(totalNode)
+node.appendChild(totalNode)
 
-    var size: Int = this.vector!!.size!!
+    var size: Int = this.vector.size!!
             
 
 
@@ -145,13 +145,13 @@ node!!.appendChild(totalNode)
 
 
         {
-    var domNodeInterface: DomNodeInterface = this.vector!!.get(index) as DomNodeInterface
+    var domNodeInterface: DomNodeInterface = this.vector.get(index) as DomNodeInterface
 
 
     var customNode: Node = domNodeInterface!!.toXmlNode(document)!!
             
 
-node!!.appendChild(customNode)
+node.appendChild(customNode)
 }
 
 

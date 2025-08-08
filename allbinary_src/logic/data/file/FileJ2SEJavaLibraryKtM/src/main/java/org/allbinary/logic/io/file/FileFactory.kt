@@ -101,7 +101,7 @@ open fun isFile(path: String)
 
 
     
-                        if(file!!.exists())
+                        if(file.exists())
                         
                                     {
                                     

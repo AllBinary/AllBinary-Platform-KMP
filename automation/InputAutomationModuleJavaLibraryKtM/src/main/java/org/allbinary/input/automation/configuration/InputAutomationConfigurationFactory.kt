@@ -75,7 +75,7 @@ open fun init(abeClientInformation: AbeClientInformationInterface)
 
 
     
-                        if(file!!.isFile())
+                        if(file.isFile())
                         
                                     {
                                     logUtil!!.put(
@@ -89,10 +89,10 @@ open fun init(abeClientInformation: AbeClientInformationInterface)
             
 
 
-    var root: JAXBElement<InputAutomationConfiguration> = unmarshaller!!.unmarshal(StreamSource(FileInputStream(file)), InputAutomationConfiguration::class)!!
+    var root: JAXBElement<InputAutomationConfiguration> = unmarshaller.unmarshal(StreamSource(FileInputStream(file)), InputAutomationConfiguration::class)!!
             
 
-inputAutomationConfiguration= root!!.getValue() as InputAutomationConfiguration
+inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
 
     var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
             

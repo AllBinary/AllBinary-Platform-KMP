@@ -98,7 +98,7 @@ open fun toXmlDoc()
     var document: Document = DomDocumentHelper.create()!!
             
 
-document!!.appendChild(CategoryView(this.getCategoryInterface()).
+document.appendChild(CategoryView(this.getCategoryInterface()).
                             toXmlNode(document))
 
 

@@ -98,7 +98,7 @@ override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            this.player!!.start()
+            this.player.start()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

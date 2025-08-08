@@ -102,13 +102,13 @@ override fun paint(graphics: Graphics)
             
 
 
-    var beginWidth: Int = (graphics!!.getFont()!!.stringWidth(this.TITLE) shr 1)
+    var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.TITLE) shr 1)
 
-graphics!!.setColor(this.basicColor!!.toInt())
+graphics.setColor(this.basicColor!!.toInt())
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics!!.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
+graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
 
     var size: Int = inputInfo!!.size
                 
@@ -120,8 +120,8 @@ graphics!!.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
                         for (index in 0 until size)
 
 
-        {beginWidth= (graphics!!.getFont()!!.stringWidth(inputInfo[index]!!) shr 1)
-graphics!!.drawString(inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, anchor)
+        {beginWidth= (graphics.getFont()!!.stringWidth(inputInfo[index]!!) shr 1)
+graphics.drawString(inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, anchor)
 }
 
 }

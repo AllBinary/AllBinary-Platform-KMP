@@ -53,7 +53,7 @@ open fun update(list: BasicArrayList)
                     var list = list
 this.clear()
 
-    var size: Int = list!!.size()!!
+    var size: Int = list.size()!!
             
 
 this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
@@ -66,10 +66,10 @@ this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
 
 
-                        for (index in list!!.size() -1 downTo 0)
+                        for (index in list.size() -1 downTo 0)
 
 
-        {rtsLayer= list!!.get(index) as RTSLayer
+        {rtsLayer= list.get(index) as RTSLayer
 
     
                         if(!this.rootNameList!!.contains(rtsLayer!!.getRootName()))
@@ -132,15 +132,15 @@ open fun paint(graphics: Graphics)
 {
 
                     var graphics = graphics
-graphics!!.setColor(backgroundColor)
-graphics!!.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
-graphics!!.setColor(this.getColor())
-graphics!!.drawString(TOTAL, this.textX, y, 0)
-graphics!!.drawChars(this.totalCharArray, 0, this.getPrimitiveLongUtil()!!.getCurrentTotalDigits(), this.textX +this.totalWidth, y, 0)
+graphics.setColor(backgroundColor)
+graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
+graphics.setColor(this.getColor())
+graphics.drawString(TOTAL, this.textX, y, 0)
+graphics.drawChars(this.totalCharArray, 0, this.getPrimitiveLongUtil()!!.getCurrentTotalDigits(), this.textX +this.totalWidth, y, 0)
 
     var textLine2Y: Int = (y +myFont!!.DEFAULT_CHAR_HEIGHT)
 
-graphics!!.drawString(this.rootNamesString, this.textX, textLine2Y, 0)
+graphics.drawString(this.rootNamesString, this.textX, textLine2Y, 0)
 }
 
 

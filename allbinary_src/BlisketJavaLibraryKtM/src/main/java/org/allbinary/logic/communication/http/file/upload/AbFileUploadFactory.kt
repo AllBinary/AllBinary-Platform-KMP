@@ -87,16 +87,16 @@ open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
     var items: List = ArrayList()
 
 
-        while(iterator!!.hasNext())
+        while(iterator.hasNext())
         {
-    var fileItemStream: FileItemStream = iterator!!.next()!!
+    var fileItemStream: FileItemStream = iterator.next()!!
             
 
 HttpFileUploadUtil.log(fileItemStream)
 
     var fileItem: AbFileItem = AbFileItem(fileItemStream!!.getName(), fileItemStream!!.getFieldName(), FileItemUtil.getInstance()!!.encodeToByteArray())
 
-items!!.add(fileItem)
+items.add(fileItem)
 }
 
 
@@ -107,7 +107,7 @@ items!!.add(fileItem)
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
                                     {
                                     
@@ -152,7 +152,7 @@ open fun getFileItemList(httpServletRequest: HttpServletRequest)
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 

@@ -152,7 +152,7 @@ this.totalString= this.primitiveLongUtil!!.getCharArray(total)
     var font: MyFont = MyFont.getInstance()!!
             
 
-this.setXOffset(font!!.charsWidth(totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font!!.getSize() shr 1))
+this.setXOffset(font.charsWidth(totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font.getSize() shr 1))
 }
 
 override fun paint(graphics: Graphics)

@@ -54,7 +54,7 @@ public constructor        (document: Document){
 
                     var document = document
 
-    var node: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.NAME, document!!.getElementsByTagName(PageData.getInstance()!!.NAME))!!
+    var node: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.NAME, document.getElementsByTagName(PageData.getInstance()!!.NAME))!!
             
 
 this.title= TitleValidation(node)
@@ -85,7 +85,7 @@ open fun isValid()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put(
@@ -95,7 +95,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.title!!.isValid()!!)
+                        if(!this.title.isValid()!!)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -104,7 +104,7 @@ open fun isValid()
                                 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.VIEW))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
                                     logUtil!!.put("PageValidation: " +valid, this, commonStrings!!.IS_VALID)
@@ -119,7 +119,7 @@ open fun isValid()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -146,10 +146,10 @@ open fun validationInfo()
 
 
     
-                        if(!this.title!!.isValid()!!)
+                        if(!this.title.isValid()!!)
                         
                                     {
-                                    stringBuffer!!.append(this.title!!.validationInfo())
+                                    stringBuffer!!.append(this.title.validationInfo())
 
                                     }
                                 
@@ -161,7 +161,7 @@ open fun validationInfo()
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(
@@ -211,10 +211,10 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(PageData.getInstance()!!.NAME)!!
+    var node: Node = document.createElement(PageData.getInstance()!!.NAME)!!
             
 
-node!!.appendChild(this.title!!.toXmlNode(document))
+node.appendChild(this.title.toXmlNode(document))
 
 
 

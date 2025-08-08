@@ -162,7 +162,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
     var currentY: Int = dy *frame
 
-graphics!!.drawImage(this.image, x +currentX, y +currentY, anchor)
+graphics.drawImage(this.image, x +currentX, y +currentY, anchor)
 }
 
 

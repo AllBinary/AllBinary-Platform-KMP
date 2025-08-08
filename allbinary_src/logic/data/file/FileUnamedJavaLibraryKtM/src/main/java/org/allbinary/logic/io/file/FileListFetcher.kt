@@ -80,8 +80,8 @@ open fun getFiles(path: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            {e!!.printStackTrace()
-System.out!!.println("Error: " +e +"\nMsg: " +e!!.getMessage())
+            {e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.getMessage())
 }
 
 
@@ -119,8 +119,8 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            {e!!.printStackTrace()
-System.out!!.println("Error: " +e +"\nMsg: " +e!!.getMessage())
+            {e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.getMessage())
 }
 
 
@@ -161,8 +161,8 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            {e!!.printStackTrace()
-System.out!!.println("Error: " +e +"\nMsg: " +e!!.getMessage())
+            {e.printStackTrace()
+System.out.println("Error: " +e +"\nMsg: " +e.getMessage())
 }
 
 

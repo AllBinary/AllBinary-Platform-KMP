@@ -65,7 +65,7 @@ open fun process()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -84,7 +84,7 @@ open fun process()
  catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
@@ -113,7 +113,7 @@ open fun doStartTag()
                                     {
                                     
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0 || this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDERANDEVALBODY) == 0 || this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0 || this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDERANDEVALBODY) == 0 || this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEFORMEVALBODYONERROR) == 0)
                         
                                     {
                                     
@@ -129,7 +129,7 @@ open fun doStartTag()
                     
 
     
-                        if(this.getCommand()!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
+                        if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.AUTHORIZEORDEREVALBODYONERROR) == 0)
                         
                                     {
                                     

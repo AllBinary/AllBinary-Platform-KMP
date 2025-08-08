@@ -87,7 +87,7 @@ open fun getCurrentLocation()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -107,7 +107,7 @@ open fun getCurrentLocation()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -143,7 +143,7 @@ open fun getCurrentHomeLocation()
             
 
 
-    var result: String = method!!.invoke(anyType, 
+    var result: String = method.invoke(anyType, 
                             null) as String
 
 
@@ -163,7 +163,7 @@ open fun getCurrentHomeLocation()
 
 
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
                                     logUtil!!.put(commonStrings!!.EXCEPTION, this, 
@@ -198,7 +198,7 @@ open fun doStartTag()
 this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.GETCURRENTLOCATION) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.GETCURRENTLOCATION) == 0)
                         
                                     {
                                     pageContext!!.getOut()!!.print(this.getCurrentLocation())
@@ -207,7 +207,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                 
                              else 
     
-                        if(command!!.compareTo(org!!.allbinary!!.globals!!.GLOBALS2.GETCURRENTHOMELOCATION) == 0)
+                        if(command.compareTo(org.allbinary.globals.GLOBALS2.GETCURRENTHOMELOCATION) == 0)
                         
                                     {
                                     pageContext!!.getOut()!!.print(this.getCurrentHomeLocation())

@@ -169,7 +169,7 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                     var y = y
-graphics!!.drawImage(this.imageArray[this.circularIndexUtil!!.getIndex()]!!, x, y, anchor)
+graphics.drawImage(this.imageArray[this.circularIndexUtil!!.getIndex()]!!, x, y, anchor)
 }
 
 

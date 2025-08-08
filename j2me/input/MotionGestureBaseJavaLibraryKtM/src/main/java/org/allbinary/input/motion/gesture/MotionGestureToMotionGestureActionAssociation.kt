@@ -100,7 +100,7 @@ open fun isMotionGestureArrayEquals(aList: BasicArrayList)
 
 
     
-                        if(this.list!!.size() != size)
+                        if(this.list.size() != size)
                         
                                     {
                                     
@@ -120,7 +120,7 @@ open fun isMotionGestureArrayEquals(aList: BasicArrayList)
 
         {
     
-                        if(aList!!.objectArray[i] != this.list!!.objectArray[i])
+                        if(aList!!.objectArray[i] != this.list.objectArray[i])
                         
                                     {
                                     

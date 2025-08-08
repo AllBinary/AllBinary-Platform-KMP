@@ -68,8 +68,8 @@ open fun paint(graphics: Graphics, y: Int)
 
 
                     var y = y
-graphics!!.drawString(this.LABEL, this.labelX, y, 0)
-graphics!!.drawString(this.value, this.valueX, y, 0)
+graphics.drawString(this.LABEL, this.labelX, y, 0)
+graphics.drawString(this.value, this.valueX, y, 0)
 }
 
 

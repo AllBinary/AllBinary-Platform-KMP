@@ -85,7 +85,7 @@ open fun toXmlNode(document: Document)
 
     var domNodeInterface: DomNodeInterface = ThemePropertiesView(themeValidation as ThemeInterface) as DomNodeInterface
 
-node!!.appendChild(domNodeInterface!!.toXmlNode(document))
+node.appendChild(domNodeInterface!!.toXmlNode(document))
 }
 
 

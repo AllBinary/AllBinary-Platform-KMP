@@ -81,11 +81,11 @@ open fun paintDebug(graphics: Graphics)
 
                     var graphics = graphics
 
-    var font: Font = graphics!!.getFont()!!
+    var font: Font = graphics.getFont()!!
             
 
-graphics!!.setFont(font2)
-graphics!!.setColor(debugColor)
+graphics.setFont(font2)
+graphics.setColor(debugColor)
 
     var x: Int = this.tiledLayer!!.getX()!!
             
@@ -168,12 +168,12 @@ graphics!!.setColor(debugColor)
                                 
 tile--
 stringMaker!!.delete(0, stringMaker!!.length())
-graphics!!.drawString(stringMaker!!.append(columnIndex)!!.append(commonSeps!!.COMMA)!!.append(rowIndex)!!.append(commonSeps!!.COLON)!!.append(tile)!!.toString(), x +5, y +10, 0)
+graphics.drawString(stringMaker!!.append(columnIndex)!!.append(commonSeps!!.COMMA)!!.append(rowIndex)!!.append(commonSeps!!.COLON)!!.append(tile)!!.toString(), x +5, y +10, 0)
 }
 
 }
 
-graphics!!.setFont(font)
+graphics.setFont(font)
 }
 
 

@@ -155,7 +155,7 @@ override fun adjustFrame(angle: Angle)
 {
 
                     var angle = angle
-this.adjustFrame(angle!!.getValue())
+this.adjustFrame(angle.getValue())
 }
 
 override fun adjustFrame(angle: Short)

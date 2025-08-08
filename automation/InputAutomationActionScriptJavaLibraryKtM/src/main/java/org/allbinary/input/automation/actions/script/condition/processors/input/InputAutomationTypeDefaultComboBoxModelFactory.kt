@@ -51,7 +51,7 @@ open fun getInstance()
             
 
 
-    var nameArray: Array<Any?> = set!!.toArray()!!
+    var nameArray: Array<Any?> = set.toArray()!!
             
 
 

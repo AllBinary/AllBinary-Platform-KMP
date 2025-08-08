@@ -67,7 +67,7 @@ public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactor
                     
 this.onDisplayChangeEvent(
                             null)
-rectangle= intArrayOf(0,this.getHeight(), ,this.getWidth(), , -this.getHeight())
+rectangle= arrayOf(0,this.getHeight(), ,this.getWidth(), , -this.getHeight())
 }
 
 
@@ -105,8 +105,8 @@ this.onDisplayChangeEvent(
                         
                                     {
                                     this.textureFactory!!.load(gl11, GL10.GL_TEXTURE_2D, 0, this, 0, true)
-gl11!!.glTexParameteriv(GL10.GL_TEXTURE_2D, GL11Ext.GL_TEXTURE_CROP_RECT_OES, rectangle, 0)
-gl11!!.glDisable(GL10.GL_TEXTURE_2D)
+gl11.glTexParameteriv(GL10.GL_TEXTURE_2D, GL11Ext.GL_TEXTURE_CROP_RECT_OES, rectangle, 0)
+gl11.glDisable(GL10.GL_TEXTURE_2D)
 OpenGLLogUtil.getInstance()!!.logError(gl11, this)
 
                                     }
@@ -128,12 +128,12 @@ open fun draw(gl: GL10, x: Int, y: Int, z: Int)
 
 
                     var z = z
-gl!!.glEnable(GL10.GL_TEXTURE_2D)
-gl!!.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
+gl.glEnable(GL10.GL_TEXTURE_2D)
+gl.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
 gl = glgl as GL11Ext
 gl.
                                 glDrawTexfOES(x, a -y, z, this.getWidth(), this.getHeight())
-gl!!.glDisable(GL10.GL_TEXTURE_2D)
+gl.glDisable(GL10.GL_TEXTURE_2D)
 }
 
 

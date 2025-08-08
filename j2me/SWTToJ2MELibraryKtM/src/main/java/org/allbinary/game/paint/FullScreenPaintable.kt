@@ -77,11 +77,11 @@ open fun paint(graphics: Graphics)
             
 
 
-    var font: Font = graphics!!.getFont()!!
+    var font: Font = graphics.getFont()!!
             
 
 
-    var beginWidth: Int = (font!!.stringWidth(this.FULLSCREEN_TEXT) shr 1)
+    var beginWidth: Int = (font.stringWidth(this.FULLSCREEN_TEXT) shr 1)
 
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -90,7 +90,7 @@ open fun paint(graphics: Graphics)
 
     var Y: Int = 4 *myFont!!.DEFAULT_CHAR_HEIGHT
 
-graphics!!.drawString(this.FULLSCREEN_TEXT, halfWidth -beginWidth, height -Y, anchor)
+graphics.drawString(this.FULLSCREEN_TEXT, halfWidth -beginWidth, height -Y, anchor)
 }
 
 

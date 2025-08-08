@@ -73,32 +73,32 @@ public constructor        (node: Node)
 
                     var node = node
 
-    var nameNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, node!!.getChildNodes())!!
+    var nameNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, node.getChildNodes())!!
             
 
 this.name= DomNodeHelper.getTextNodeValue(nameNode)
 
-    var streetNode: Node = DomSearchHelper.getNode(StreetAddressData.STREET, node!!.getChildNodes())!!
+    var streetNode: Node = DomSearchHelper.getNode(StreetAddressData.STREET, node.getChildNodes())!!
             
 
 this.street= DomNodeHelper.getTextNodeValue(streetNode)
 
-    var cityNode: Node = DomSearchHelper.getNode(StreetAddressData.CITY, node!!.getChildNodes())!!
+    var cityNode: Node = DomSearchHelper.getNode(StreetAddressData.CITY, node.getChildNodes())!!
             
 
 this.city= DomNodeHelper.getTextNodeValue(cityNode)
 
-    var stateNode: Node = DomSearchHelper.getNode(StreetAddressData.STATE, node!!.getChildNodes())!!
+    var stateNode: Node = DomSearchHelper.getNode(StreetAddressData.STATE, node.getChildNodes())!!
             
 
 this.state= DomNodeHelper.getTextNodeValue(stateNode)
 
-    var codeNode: Node = DomSearchHelper.getNode(StreetAddressData.CODE, node!!.getChildNodes())!!
+    var codeNode: Node = DomSearchHelper.getNode(StreetAddressData.CODE, node.getChildNodes())!!
             
 
 this.code= DomNodeHelper.getTextNodeValue(codeNode)
 
-    var countryNode: Node = DomSearchHelper.getNode(StreetAddressData.COUNTRY, node!!.getChildNodes())!!
+    var countryNode: Node = DomSearchHelper.getNode(StreetAddressData.COUNTRY, node.getChildNodes())!!
             
 
 this.country= DomNodeHelper.getTextNodeValue(countryNode)
@@ -126,13 +126,13 @@ public constructor        (request: HttpServletRequest)
         {
 
                     var request = request
-this.setId(request!!.getParameter(StreetAddressData.ID))
-this.setName(request!!.getParameter(StreetAddressData.NAME))
-this.setStreet(request!!.getParameter(StreetAddressData.STREET))
-this.setCity(request!!.getParameter(StreetAddressData.CITY))
-this.setState(request!!.getParameter(StreetAddressData.STATE))
-this.setCode(request!!.getParameter(StreetAddressData.CODE))
-this.setCountry(request!!.getParameter(StreetAddressData.COUNTRY))
+this.setId(request.getParameter(StreetAddressData.ID))
+this.setName(request.getParameter(StreetAddressData.NAME))
+this.setStreet(request.getParameter(StreetAddressData.STREET))
+this.setCity(request.getParameter(StreetAddressData.CITY))
+this.setState(request.getParameter(StreetAddressData.STATE))
+this.setCode(request.getParameter(StreetAddressData.CODE))
+this.setCountry(request.getParameter(StreetAddressData.COUNTRY))
 this.log()
 }
 
@@ -170,21 +170,21 @@ public constructor        (address: HashMap<Any, Any>)
         {
 
                     var address = address
-this.id= address!!.get(StreetAddressData.ID) as String
-this.name= address!!.get(StreetAddressData.NAME) as String
-this.street= address!!.get(StreetAddressData.STREET) as String
-this.city= address!!.get(StreetAddressData.CITY) as String
-this.state= address!!.get(StreetAddressData.STATE) as String
-this.code= address!!.get(StreetAddressData.CODE) as String
-this.country= address!!.get(StreetAddressData.COUNTRY) as String
+this.id= address.get(StreetAddressData.ID) as String
+this.name= address.get(StreetAddressData.NAME) as String
+this.street= address.get(StreetAddressData.STREET) as String
+this.city= address.get(StreetAddressData.CITY) as String
+this.state= address.get(StreetAddressData.STATE) as String
+this.code= address.get(StreetAddressData.CODE) as String
+this.country= address.get(StreetAddressData.COUNTRY) as String
 
-    var def: String = address!!.get(StreetAddressData.DEFAULT) as String
+    var def: String = address.get(StreetAddressData.DEFAULT) as String
 
 
     
                         if(def != 
                                     null
-                                 && def!!.compareTo(StreetAddressData.DEFAULT) == 0)
+                                 && def.compareTo(StreetAddressData.DEFAULT) == 0)
                         
                                     {
                                     this.isDefault= true
@@ -204,7 +204,7 @@ open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
                                     logUtil!!.put("Created Address: \n" +this.toHashMap(), this, 
@@ -543,10 +543,10 @@ open fun toValidationInfoNode(document: Document)
 
         try {
             
-    var node: Node = document!!.createElement(StreetAddressData.FORM)!!
+    var node: Node = document.createElement(StreetAddressData.FORM)!!
             
 
-node!!.appendChild(this.toXmlNode(document))
+node.appendChild(this.toXmlNode(document))
 
 
 
@@ -555,7 +555,7 @@ node!!.appendChild(this.toXmlNode(document))
 } catch(e: Exception)
             {
     
-                        if(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypes.LOGGING.contains(org!!.allbinary!!.logic!!.communication!!.log!!.config!!.type!!.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
+                        if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
                                     
@@ -625,7 +625,7 @@ open fun toXmlNode(document: Document)
                 
 
 
-    var node: Node = document!!.createElement(StreetAddressData.ADDRESS)!!
+    var node: Node = document.createElement(StreetAddressData.ADDRESS)!!
             
 
 
@@ -642,7 +642,7 @@ open fun toXmlNode(document: Document)
     var value: String = stringUtil!!.getInstance(hashMap!!.get(name as Object?) as String)!!
             
 
-node!!.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
+node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }
 
 

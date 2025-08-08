@@ -350,7 +350,7 @@ open fun getCustomCommands()
 
 
     
-                        if(features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     
@@ -384,7 +384,7 @@ commandList!!.add(gameCommandsFactory!!.START_COMMAND)
 
 
     
-                        if(list!!.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(list!!.get(0) as LockableFeature))
+                        if(list.size() > 0 && !inApplicationPurchaseFactory!!.isPurchased(list.get(0) as LockableFeature))
                         
                                     {
                                     commandList!!.add(gameCommandsFactory!!.BUY_COMMAND)
@@ -1208,7 +1208,7 @@ override fun showGamePaintable()
 
 PreLogUtil.put(commonStrings!!.START, this, METHOD_NAME)
 
-    var isDefault: Boolean = features!!.isDefault(htmlFeatureFactory!!.HTML)!!
+    var isDefault: Boolean = features.isDefault(htmlFeatureFactory!!.HTML)!!
             
 
 
@@ -1301,7 +1301,7 @@ this.setCurrentThread()
 this.setRunning(true)
 
     
-                        if(features!!.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     progressCanvas!!.end()
@@ -1320,7 +1320,7 @@ this.initPostPaint()
 this.setState()
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     
@@ -1345,7 +1345,7 @@ OpenGLThreadUtil.getInstance()!!.onResume()
                                 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features!!.isDefault(htmlFeatureFactory!!.HTML))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD) || features.isDefault(htmlFeatureFactory!!.HTML))
                         
                                     {
                                     
@@ -1418,7 +1418,7 @@ super.setRunning(running)
                         else {
                             
     
-                        if((features!!.isDefault(openGLFeatureFactory!!.OPENGL) || features!!.isDefault(htmlFeatureFactory!!.HTML)) || SWTUtil.isSWT)
+                        if((features.isDefault(openGLFeatureFactory!!.OPENGL) || features.isDefault(htmlFeatureFactory!!.HTML)) || SWTUtil.isSWT)
                         
                                     {
                                     
@@ -1460,7 +1460,7 @@ baseGameStatistics!!.add(StringMaker().
 baseGameStatistics!!.init()
 
     
-                        if(features!!.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
+                        if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND))
                         
                                     {
                                     progressCanvas!!.start()
@@ -1765,7 +1765,7 @@ open fun isRunningInAnotherThread()
 
 
     
-                        if(features!!.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
+                        if(features.isDefault(openGLFeatureFactory!!.OPENGL_AS_GAME_THREAD))
                         
                                     {
                                     

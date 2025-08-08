@@ -99,16 +99,16 @@ this.hashMap= HashMap<Any, Any>()
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data!!.lastIndexOf(
+    var endIndex: Int = data.lastIndexOf(
                             '>')!!
             
 
 
-    var document: Document = DomDocumentHelper.create(data!!.substring(0, endIndex +1))!!
+    var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
             
 
 
-    var nodeList: NodeList = document!!.getElementsByTagName(GenericProfilesData.NAME)!!
+    var nodeList: NodeList = document.getElementsByTagName(GenericProfilesData.NAME)!!
             
 
 logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this, 
@@ -155,7 +155,7 @@ open fun initProfiles(node: Node)
 
                     var node = node
 
-    var nodeList: NodeList = node!!.getChildNodes()!!
+    var nodeList: NodeList = node.getChildNodes()!!
             
 
 
@@ -266,7 +266,7 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = document!!.createElement(GenericProfilesData.NAME)!!
+    var node: Node = document.createElement(GenericProfilesData.NAME)!!
             
 
 
@@ -274,7 +274,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var nameArray: Array<Any?> = set!!.toArray()!!
+    var nameArray: Array<Any?> = set.toArray()!!
             
 
 
@@ -291,7 +291,7 @@ open fun toXmlNode(document: Document)
         {
     var genericProfile: GenericProfile = this.hashMap!!.get(nameArray[index]!! as String) as GenericProfile
 
-node!!.appendChild(genericProfile!!.toXmlNode(document))
+node.appendChild(genericProfile!!.toXmlNode(document))
 }
 
 
@@ -314,7 +314,7 @@ open fun toXmlDoc()
     var node: Node = this.toXmlNode(document)!!
             
 
-document!!.appendChild(node)
+document.appendChild(node)
 
 
 

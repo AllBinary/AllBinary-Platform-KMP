@@ -36,7 +36,7 @@ open public class MagicGameObject : MeteredGameObject
         
 
     private val MP_LABEL: String = "MP:"
-public constructor        (bufferedImage: Array<BufferedImage?>, minX: Integer, maxX: Integer, y: Integer)                        
+public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
                             : super(bufferedImage, minX, maxX, y){
 
