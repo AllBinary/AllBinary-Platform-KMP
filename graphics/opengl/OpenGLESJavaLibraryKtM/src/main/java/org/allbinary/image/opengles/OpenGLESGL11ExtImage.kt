@@ -67,7 +67,7 @@ public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactor
                     
 this.onDisplayChangeEvent(
                             null)
-rectangle= arrayOf(0,this.getHeight(), ,this.getWidth(), , -this.getHeight())
+rectangle= intArrayOf(0,this.getHeight(), ,this.getWidth(), , -this.getHeight())
 }
 
 
