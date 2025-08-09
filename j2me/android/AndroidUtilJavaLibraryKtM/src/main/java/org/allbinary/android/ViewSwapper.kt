@@ -22,17 +22,23 @@ open public class ViewSwapper
          {
         
 
+        companion object {
+
+
+    private val NULL_VIEW_ARRAY: Array<View?> = arrayOfNulls(0)
+
+
+        }
+            
     private val rootViewId: Int
 
     private val activity: Activity
 
     private var currentMainViewId: Int =  -1
 
-    private var mainViewArray: Array<View?> = 
-                null
-            
+    private var mainViewArray: Array<View?> = NULL_VIEW_ARRAY
 
-    private var topViewArray: Array<View?> = arrayOfNulls(0)
+    private var topViewArray: Array<View?> = NULL_VIEW_ARRAY
 public constructor        (activity: Activity, rootViewId: Int)
             : super()
         {

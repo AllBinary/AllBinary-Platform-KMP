@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2011 AllBinary 
+                *  Copyright (c) 2025 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -27,20 +27,18 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.lcdui.Command
-import android.app.PendingIntent
-import android.content.Context
 import android.os.Parcelable
 
-open public class NotificationBuilder
+open public class NullParcelable
             : Object
-         {
+        
+                , Parcelable {
         
 
         companion object {
 
 
-    val NULL_NOTIFICATION_BUILDER: NotificationBuilder = NotificationBuilder()
+    val NULL_PARCELABLE: NullParcelable = NullParcelable()
 
 
         }
@@ -49,29 +47,22 @@ open public class NotificationBuilder
             public constructor() : super()
             {
             }            
-        
-open fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
+        override fun describeContents()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+                            throw RuntimeException()
+}
+
+override fun writeToParcel(dest: android.os.Parcel, flags: Int)
         //nullable = true from not(false or (false and false)) = true
-: Parcelable{
+{
 
-                    var context = context
-
-
-                    var command = command
+                    var dest = dest
 
 
-                    var message = message
-
-
-                    var integer = integer
-
-
-                    var pendingIntent = pendingIntent
-
-
-
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return NullParcelable.NULL_PARCELABLE
+                    var flags = flags
 }
 
 

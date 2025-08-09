@@ -83,9 +83,7 @@ private constructor        ()
                                     }
                                 
                         else {
-                            notificationBuilder= 
-                                        null
-                                    
+                            notificationBuilder= NotificationBuilder.NULL_NOTIFICATION_BUILDER
 
                         }
                             
@@ -153,10 +151,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.NOT_IMPLEMENTED)
 
                                     }
                                 
-
-    var notification: Notification = notificationBuilder!!.build(context, command, message, integer, pendingIntent)!!
-            
-
+notificationBuilder!!.build(context, command, message, integer, pendingIntent)
 }
 
 

@@ -29,8 +29,10 @@
         
 import javax.microedition.lcdui.Command
 import android.app.Notification
+import android.app.Notification.Builder
 import android.app.PendingIntent
 import android.content.Context
+import android.os.Parcelable
 
 open public class NotificationBuilderAPI23 : NotificationBuilder {
         
@@ -39,10 +41,9 @@ open public class NotificationBuilderAPI23 : NotificationBuilder {
             public constructor() : super()
             {
             }            
-        
-open fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
+        override fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
         //nullable = true from not(false or (false and false)) = true
-: Notification{
+: Parcelable{
 
                     var context = context
 
@@ -58,11 +59,15 @@ open fun build(context: Context, command: Command, message: String, integer: Int
 
                     var pendingIntent = pendingIntent
 
+    var notification: Notification = Builder(context).
+                            setSmallIcon(integer.toInt())!!.setTicker(message)!!.setWhen(System.currentTimeMillis())!!.setContentTitle(command.getLabel())!!.setContentText(message)!!.setContentIntent(pendingIntent)!!.build()!!
+            
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Builder(context).
-                            setSmallIcon(integer.toInt())!!.setTicker(message)!!.setWhen(System.currentTimeMillis())!!.setContentTitle(command.getLabel())!!.setContentText(message)!!.setContentIntent(pendingIntent)!!.build()
+                        return notification
 }
 
 

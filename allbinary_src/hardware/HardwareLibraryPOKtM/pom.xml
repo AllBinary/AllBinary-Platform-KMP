@@ -42,7 +42,7 @@
         <module>../AndroidSystemJavaLibraryKtM</module>
         -->
         
-<!--        <module>../PersonalComputerSystemJavaLibraryKtM</module>-->
+        <module>../PersonalComputerSystemJavaLibraryKtM</module>
         <module>../PersonalComputerOperatingSystemsJavaLibraryKtM</module>
 <!--        <module>../PersonalComputerHardwareJavaLibraryKtM</module>-->
         

@@ -149,7 +149,7 @@
         <module>../../media/sound/NotDeviceSpecificNoMediaMIDP1LibraryKtM</module>
 
         <module>../../../allbinary_src/content/ContentNoneJavaLibraryKtM</module>
-<!--        <module>../../../allbinary_src/content/ContentAndroidJavaLibraryKtM</module>-->
+        <module>../../../allbinary_src/content/ContentAndroidJavaLibraryKtM</module>
 
         <module>../../games/GameConfigurationFormJavaLibraryKtM</module>
 

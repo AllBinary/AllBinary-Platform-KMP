@@ -82,8 +82,7 @@ public constructor        (string: String)
 this.string= string
 }
 
-
-open fun run()
+override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
         try {

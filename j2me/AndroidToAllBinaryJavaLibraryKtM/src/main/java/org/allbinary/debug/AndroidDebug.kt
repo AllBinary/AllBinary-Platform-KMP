@@ -45,8 +45,7 @@ open public class AndroidDebug
     private var running: Boolean = false
 
     private var bufferSize: Int = 32 *1024 *1024
-
-open fun start()
+override fun start()
         //nullable = true from not(false or (false and true)) = true
 {this.setStartTime(System.currentTimeMillis())
 Debug.startMethodTracing(
@@ -54,16 +53,14 @@ Debug.startMethodTracing(
 setRunning(true)
 }
 
-
-open fun stop()
+override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {startTime= Long.MAX_VALUE
 Debug.stopMethodTracing()
 setRunning(false)
 }
 
-
-open fun getMaxTime()
+override fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -81,8 +78,7 @@ open fun setStartTime(startTime: Long)
 this.startTime= startTime
 }
 
-
-open fun getStartTime()
+override fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
@@ -100,8 +96,7 @@ open fun setRunning(running: Boolean)
 this.running= running
 }
 
-
-open fun isRunning()
+override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

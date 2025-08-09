@@ -27,8 +27,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import java.util.List
+
+//import java.util.List
 import android.app.ActivityManager
+import android.app.ActivityManager.RunningServiceInfo
 import android.content.ComponentName
 import android.content.Context
 import org.allbinary.data.resource.ResourceUtil
@@ -100,7 +102,7 @@ open fun isServiceRunning(name: String)
     var serviceName: String
 
 
-    var size: Int = runningServicesList!!.size()!!
+    var size: Int = runningServicesList!!.size!!
             
 
 
