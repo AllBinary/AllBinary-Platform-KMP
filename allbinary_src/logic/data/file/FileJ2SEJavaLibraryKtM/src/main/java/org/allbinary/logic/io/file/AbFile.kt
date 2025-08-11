@@ -277,7 +277,7 @@ override fun length()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.length
+                        return this.file.length()
 }
 
 
@@ -335,7 +335,7 @@ open fun listFiles()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.listFiles()
+                        return this.file.listFiles() as Array<Any?>
 }
 
 
@@ -348,7 +348,7 @@ open fun listFiles(filter: FilenameFilter)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.listFiles(filter)
+                        return this.file.listFiles(filter) as Array<Any?>
 }
 
 
@@ -361,7 +361,7 @@ open fun listFiles(filter: FileFilter)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.listFiles(filter)
+                        return this.file.listFiles(filter) as Array<Any?>
 }
 
 override fun mkdir()

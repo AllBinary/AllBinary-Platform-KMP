@@ -277,7 +277,7 @@ override fun length()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.length
+                        return this.file.length()
 }
 
 
@@ -331,37 +331,37 @@ override fun list(filter: FilenameFilter)
 
 open fun listFiles()
         //nullable = true from not(false or (false and true)) = true
-: Array<File?>{
+: Array<Any?>{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.listFiles()
+                        return this.file.listFiles() as Array<Any?>
 }
 
 
 open fun listFiles(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<File?>{
+: Array<Any?>{
 
                     var filter = filter
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.listFiles(filter)
+                        return this.file.listFiles(filter) as Array<Any?>
 }
 
 
 open fun listFiles(filter: FileFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<File?>{
+: Array<Any?>{
 
                     var filter = filter
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.file.listFiles(filter)
+                        return this.file.listFiles(filter) as Array<Any?>
 }
 
 override fun mkdir()
