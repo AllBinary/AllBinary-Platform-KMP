@@ -33,7 +33,7 @@ import org.allbinary.media.graphics.geography.map.GeographicMapCellPosition
 import org.allbinary.string.CommonLabels
 
 open public class PathFindingNodeCost : PathFindingNode
-                , Comparable {
+                , Comparable<PathFindingNodeCost> {
         
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!

@@ -95,19 +95,13 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
-stringBuffer!!.append(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
+stringBuffer!!.append(PaymentGatewayPrimaryKey::classgetName())
+stringBuffer!!.append(StoreFront::classgetName())
 stringBuffer!!.append(
                             " =")
 stringBuffer!!.append(this.getStoreName())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
+stringBuffer!!.append(PaymentGateway::classgetName())
 stringBuffer!!.append(
                             "=")
 stringBuffer!!.append(this.getName())

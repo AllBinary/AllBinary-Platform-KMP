@@ -27,21 +27,20 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.File
+import java.io.FileOutputStream
+import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Typeface
-import java.io.File
-import java.io.FileOutputStream
-import javax.microedition.khronos.opengles.GL10
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.displayable.CanvasStrings
 import org.allbinary.image.PreResourceImageUtil
 import org.allbinary.image.opengles.OpenGLESImage
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonStrings
@@ -75,7 +74,7 @@ open fun getInstance()
 
     private val realFontSize: Int = 18
 
-    var fontImage: OpenGLESImage
+    var fontImage: OpenGLESImage = OpenGLESImage.NULL_OPENGL_IMAGE
 private constructor        ()                        
 
                             : super(1){
@@ -177,8 +176,8 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
     var paint: Paint = Paint()
 
 paint.setTypeface(typeface)
-paint.setTextSize(realFontSize)
-paint.setAlpha(basicColor!!.alpha)
+paint.setTextSize(realFontSize.toFloat())
+paint.setAlpha(basicColor!!.alpha.toInt())
 paint.setColor(basicColor!!.toInt())
 
     var biggestHeight: Int = 0
@@ -280,7 +279,7 @@ y= 0
                                 
 y += cellSize
 y -= (cellSize shr 2)
-canvas.drawText(characterArray, 0, 1, x -3, y -6, paint)
+canvas.drawText(characterArray, 0, 1, x.toFloat() -3, y.toFloat() -6, paint)
 }
 
 canvas.save()
@@ -323,7 +322,7 @@ open fun getFontWidths(filename: String, fontSize: Int)
     var paint: Paint = Paint()
 
 paint.setTypeface(typeface)
-paint.setTextSize(fontSize)
+paint.setTextSize(fontSize.toFloat())
 paint.setARGB(255, 255, 255, 255)
 
     var bounds: Rect = Rect()

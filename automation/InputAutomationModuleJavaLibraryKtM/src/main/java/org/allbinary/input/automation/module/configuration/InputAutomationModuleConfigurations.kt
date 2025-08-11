@@ -152,7 +152,7 @@ public constructor        (inputAutomationModuleConfigurationList: List<InputAut
                     var inputAutomationModuleConfigurationList = inputAutomationModuleConfigurationList
 this.setHashMap(HashMap<Any, Any>())
 
-    var size: Int = inputAutomationModuleConfigurationList!!.size()!!
+    var size: Int = inputAutomationModuleConfigurationList!!.size!!
             
 
 

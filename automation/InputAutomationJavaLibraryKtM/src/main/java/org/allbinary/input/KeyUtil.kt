@@ -45,69 +45,7 @@ open fun isNormallyDisplayed(keyCode: Int)
 
 
         when (keyCode) {
-            //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_SPACE, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_COMMA, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_MINUS, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_PERIOD, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_SLASH, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_0, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_1, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_2, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_3, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_4, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_5, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_6, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_7, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_8, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_9, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_SEMICOLON, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_EQUALS, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_A, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_B, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_C, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_D, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_E, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_F, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_G, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_H, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_I, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_J, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_K, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_L, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_M, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_N, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_O, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_P, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_Q, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_R, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_S, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_T, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_U, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_V, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_W, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_X, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_Y, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_Z, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_OPEN_BRACKET, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_BACK_SLASH, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_CLOSE_BRACKET, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD0, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD1, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD2, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD3, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD4, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD5, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD6, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD7, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD8, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_NUMPAD9, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_MULTIPLY, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_ADD, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_SEPARATER, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_SUBTRACT, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_DECIMAL, //Otherwise - label - FieldAccessExpr
-KeyEvent.VK_DIVIDE -> {
+            KeyEvent.VK_SPACE, KeyEvent.VK_COMMA, KeyEvent.VK_MINUS, KeyEvent.VK_PERIOD, KeyEvent.VK_SLASH, KeyEvent.VK_0, KeyEvent.VK_1, KeyEvent.VK_2, KeyEvent.VK_3, KeyEvent.VK_4, KeyEvent.VK_5, KeyEvent.VK_6, KeyEvent.VK_7, KeyEvent.VK_8, KeyEvent.VK_9, KeyEvent.VK_SEMICOLON, KeyEvent.VK_EQUALS, KeyEvent.VK_A, KeyEvent.VK_B, KeyEvent.VK_C, KeyEvent.VK_D, KeyEvent.VK_E, KeyEvent.VK_F, KeyEvent.VK_G, KeyEvent.VK_H, KeyEvent.VK_I, KeyEvent.VK_J, KeyEvent.VK_K, KeyEvent.VK_L, KeyEvent.VK_M, KeyEvent.VK_N, KeyEvent.VK_O, KeyEvent.VK_P, KeyEvent.VK_Q, KeyEvent.VK_R, KeyEvent.VK_S, KeyEvent.VK_T, KeyEvent.VK_U, KeyEvent.VK_V, KeyEvent.VK_W, KeyEvent.VK_X, KeyEvent.VK_Y, KeyEvent.VK_Z, KeyEvent.VK_OPEN_BRACKET, KeyEvent.VK_BACK_SLASH, KeyEvent.VK_CLOSE_BRACKET, KeyEvent.VK_NUMPAD0, KeyEvent.VK_NUMPAD1, KeyEvent.VK_NUMPAD2, KeyEvent.VK_NUMPAD3, KeyEvent.VK_NUMPAD4, KeyEvent.VK_NUMPAD5, KeyEvent.VK_NUMPAD6, KeyEvent.VK_NUMPAD7, KeyEvent.VK_NUMPAD8, KeyEvent.VK_NUMPAD9, KeyEvent.VK_MULTIPLY, KeyEvent.VK_ADD, KeyEvent.VK_SEPARATER, KeyEvent.VK_SUBTRACT, KeyEvent.VK_DECIMAL, KeyEvent.VK_DIVIDE -> {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

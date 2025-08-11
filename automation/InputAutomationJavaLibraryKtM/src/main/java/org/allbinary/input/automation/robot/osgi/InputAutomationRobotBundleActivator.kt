@@ -77,9 +77,7 @@ open fun registerAsService(bundleContext: BundleContext)
 {
 
                     var bundleContext = bundleContext
-OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), 
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
+OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAutomationRobotServiceInterface::classgetName())
 }
 
 
@@ -91,9 +89,7 @@ open fun getInputAutomationRobotChangeListener(context: BundleContext)
 
                     var context = context
 
-    var serviceReference: ServiceReference = context.getServiceReference(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())!!
+    var serviceReference: ServiceReference = context.getServiceReference(InputAutomationRobotChangeListener::classgetName())!!
             
 
 
@@ -123,9 +119,7 @@ getName())!!
                                     }
                                 
                         else {
-                            logUtil!!.put("No ServiceReference: " +
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName(), this, 
+                            logUtil!!.put("No ServiceReference: " +InputAutomationRobotChangeListener::classgetName(), this, 
                             "getInputAutomationRobotChangeListener")
 
 

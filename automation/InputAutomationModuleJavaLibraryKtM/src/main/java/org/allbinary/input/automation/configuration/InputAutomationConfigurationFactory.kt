@@ -99,7 +99,7 @@ inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
 
 logUtil!!.put("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
-    var size: Int = inputAutomationModuleConfigurationList!!.size()!!
+    var size: Int = inputAutomationModuleConfigurationList!!.size!!
             
 
 

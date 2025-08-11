@@ -2,7 +2,7 @@
         /*
                 *  
                 *  AllBinary Open License Version 1 
-                *  Copyright (c) 2025 AllBinary 
+                *  Copyright (c) 2022 AllBinary 
                 *   
                 *  By agreeing to this license you and any business entity you represent are 
                 *  legally bound to the AllBinary Open License Version 1 legal agreement. 
@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.content
+        package org.allbinary
 
 
 
@@ -27,18 +27,28 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import android.os.Parcelable
+import javax.microedition.lcdui.Image
+import org.eclipse.swt.graphics.Resource
 
-open public class NullParcelable
+open public class DisposalUtil
             : Object
-        
-                , Parcelable {
+         {
         
 
         companion object {
 
 
-    val NULL_PARCELABLE: NullParcelable = NullParcelable()
+    private val instance: DisposalUtil = DisposalUtil()
+
+open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: DisposalUtil{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return instance
+}
+
 
 
         }
@@ -47,22 +57,29 @@ open public class NullParcelable
             public constructor() : super()
             {
             }            
-        override fun describeContents()
-        //nullable = true from not(false or (false and true)) = true
-: Int{
-
-
-                            throw RuntimeException()
-}
-
-override fun writeToParcel(dest: android.os.Parcel, flags: Int)
+        
+open fun dispose(image: Image)
         //nullable = true from not(false or (false and false)) = true
 {
 
-                    var dest = dest
+                    var image = image
+}
 
 
-                    var flags = flags
+open fun dispose(resource: Resource)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var resource = resource
+
+    
+                        if(!resource.isDisposed())
+                        
+                                    {
+                                    resource.dispose()
+
+                                    }
+                                
 }
 
 

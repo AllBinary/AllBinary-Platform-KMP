@@ -169,7 +169,7 @@ state= state.toUpperCase()
 
 
     var taxRateFloat: Float = Float(Float(taxRate).
-                            floatValue() *.01)
+                            toFloat() *.01)
 
 
 

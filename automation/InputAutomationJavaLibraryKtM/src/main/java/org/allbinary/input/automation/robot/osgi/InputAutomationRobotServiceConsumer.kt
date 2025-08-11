@@ -35,9 +35,7 @@ open public class InputAutomationRobotServiceConsumer : InputAutomationServiceCo
         
 public constructor        (bundleContext: BundleContext)                        
 
-                            : super(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName(), bundleContext, InputAutomationRobotOSGIServiceVisitor()){
+                            : super(InputAutomationRobotServiceInterface::classgetName(), bundleContext, InputAutomationRobotOSGIServiceVisitor()){
 
                     var bundleContext = bundleContext
 

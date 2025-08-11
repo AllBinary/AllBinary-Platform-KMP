@@ -142,7 +142,7 @@ open fun multiply(multiplier: Float)
 {
 
                     var multiplier = multiplier
-this.units= Float(this.units.longValue() *multiplier.floatValue()).
+this.units= Float(this.units.longValue() *multiplier.toFloat()).
                             longValue() as Long
 }
 

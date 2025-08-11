@@ -57,8 +57,7 @@ open fun getInstance()
             }            
         
                 @Throws(Exception::class)
-            
-open fun process(activity: Activity)
+            override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 

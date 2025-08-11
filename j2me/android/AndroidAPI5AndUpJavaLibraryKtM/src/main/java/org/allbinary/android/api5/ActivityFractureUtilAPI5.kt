@@ -65,8 +65,7 @@ open fun getInstance()
     private val FEATURE_TOUCHSCREEN: String = "android.hardware.touchscreen"
 
     private val FEATURE_TOUCHSCREEN_MULTITOUCH_DISTINCT: String = "android.hardware.touchscreen.multitouch.distinct"
-
-open fun process(activity: Activity)
+override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
 {
 

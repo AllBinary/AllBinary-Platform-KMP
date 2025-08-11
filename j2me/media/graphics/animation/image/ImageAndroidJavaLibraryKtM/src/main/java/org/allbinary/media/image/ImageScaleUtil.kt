@@ -31,9 +31,9 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Matrix
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.graphics.Anchor
 import org.allbinary.image.ImageCache
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
@@ -198,15 +198,17 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float
                         
                                     {
                                     
-    var scaleX2: Int = get = this.scaleXBasicArrayList!!.get(index)get as Float
-get.
-                                toInt()!!
+    var scaleX2Float: Float = this.scaleXBasicArrayList!!.get(index) as Float
+
+
+    var scaleX2: Float = scaleX2Float!!.toFloat()!!
             
 
 
-    var scaleY2: Int = get = this.scaleYBasicArrayList!!.get(index)get as Float
-get.
-                                toInt()!!
+    var scaleY2Float: Float = this.scaleYBasicArrayList!!.get(index) as Float
+
+
+    var scaleY2: Float = scaleY2Float!!.toFloat()!!
             
 
 
@@ -280,9 +282,7 @@ open fun getScaledImage(imageCache: ImageCache, originalImage: Image, scaleX: Fl
 
                     var cached = cached
 
-    var image: Image = 
-                null
-            
+    var image: Image = NullCanvas.NULL_IMAGE
 
 
     

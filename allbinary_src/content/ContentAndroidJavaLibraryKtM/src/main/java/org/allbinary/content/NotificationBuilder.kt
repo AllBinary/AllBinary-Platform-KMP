@@ -27,6 +27,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.android.NullParcelable
 import javax.microedition.lcdui.Command
 import android.app.PendingIntent
 import android.content.Context

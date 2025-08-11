@@ -168,7 +168,7 @@ open fun getTotalWeight()
         {product= .concatToString()
 weightFloat= Float(InventoryEntity().
                             getWeight(product))
-weightFloat= Float(getNumberOf(product)!!.floatValue() *weightFloat!!.floatValue())
+weightFloat= Float(getNumberOf(product)!!.toFloat() *weightFloat!!.toFloat())
 totalWeight!!.add(weightFloat!!.toString())
 }
 

@@ -63,10 +63,22 @@ open fun copy(backupFile: AbFile, backupFileBak: AbFile)
     var tmpIn: BufferedReader = BufferedReader(FileReader(AbFileNativeUtil.get(backupFile)))
 
 
-        while((line= tmpIn!!.readLine()) != 
+        while(true)
+        {line= tmpIn!!.readLine()
+
+    
+                        if(line == 
                                     null
                                 )
-        {tmpOut!!.write(line, 0, line.length)
+                        
+                                    {
+                                    break;
+
+                    
+
+                                    }
+                                
+tmpOut!!.write(line, 0, line.length)
 tmpOut!!.newLine()
 }
 

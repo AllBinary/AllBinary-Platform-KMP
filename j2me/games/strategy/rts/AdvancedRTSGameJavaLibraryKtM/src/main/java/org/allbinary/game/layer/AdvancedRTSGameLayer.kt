@@ -732,9 +732,7 @@ open fun onDestroyed(destroyedEvent: DestroyedEvent)
 
 
     
-                        if(layerInterface == 
-                                    //Otherwise - right - ThisExpr
-)
+                        if(layerInterface == this)
                         
                                     {
                                     DestroyedEventHandler.getInstance()!!.removeListener(this)

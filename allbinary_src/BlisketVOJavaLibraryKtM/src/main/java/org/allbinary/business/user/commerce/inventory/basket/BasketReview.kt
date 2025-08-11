@@ -176,7 +176,7 @@ open fun getTotalWeight()
     var item: Item = itemArray[index]!! as Item
 
 weightFloat += Float(item.getWeight()).
-                            floatValue()
+                            toFloat()
 }
 
 

@@ -80,9 +80,7 @@ open fun getInputAutomationConfigurationModuleChangeListener(context: BundleCont
 
                     var context = context
 
-    var serviceReference: ServiceReference = context.getServiceReference(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())!!
+    var serviceReference: ServiceReference = context.getServiceReference(InputAutomationConfigurationModuleChangeListener::classgetName())!!
             
 
 
@@ -112,9 +110,7 @@ getName())!!
                                     }
                                 
                         else {
-                            logUtil!!.put("No ServiceReference: " +
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName(), this, 
+                            logUtil!!.put("No ServiceReference: " +InputAutomationConfigurationModuleChangeListener::classgetName(), this, 
                             "addModules")
 
 
@@ -179,9 +175,7 @@ open fun registerAsService(bundleContext: BundleContext)
 {
 
                     var bundleContext = bundleContext
-OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), 
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName())
+OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAutomationModuleServiceInterface::classgetName())
 }
 
 

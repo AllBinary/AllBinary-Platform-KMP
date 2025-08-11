@@ -101,7 +101,7 @@ open fun processMultipartRequest(request: HttpServletRequest)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("FileItem List Size: " +multipartRequestList!!.size(), this, 
+                                    logUtil!!.put("FileItem List Size: " +multipartRequestList!!.size, this, 
                             "processMultipartRequest()")
 
                                     }

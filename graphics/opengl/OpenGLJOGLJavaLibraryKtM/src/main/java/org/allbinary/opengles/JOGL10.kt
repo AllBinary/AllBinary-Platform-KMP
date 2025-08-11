@@ -650,7 +650,7 @@ this.gl10.glGetIntegerv(pname, params)
 
 open fun glGetString(name: Int)
         //nullable = true from not(false or (false and false)) = true
-: java.lang.String{
+: String{
 
                     var name = name
 

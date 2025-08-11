@@ -33,7 +33,7 @@ import org.allbinary.string.CommonLabels
 open public class PathFindingNodeCostInfo
             : Object
         
-                , Comparable {
+                , Comparable<PathFindingNodeCostInfo> {
         
 
     private val pathFindingNodeCostInfoData: PathFindingNodeCostInfoData = PathFindingNodeCostInfoData.getInstance()!!

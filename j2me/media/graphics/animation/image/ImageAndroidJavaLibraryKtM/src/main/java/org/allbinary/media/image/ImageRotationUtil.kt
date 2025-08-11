@@ -95,7 +95,7 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
     var height: Int = bitmap.getHeight()!!
             
 
-matrix.setRotate(rotationInDegrees, (width shr 1), (height shr 1))
+matrix.setRotate(rotationInDegrees.toFloat(), (width shr 1).toFloat(), (height shr 1).toFloat())
 
     var canvas: Canvas = image.getCanvas()!!
             

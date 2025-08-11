@@ -78,7 +78,7 @@ bitmap.eraseColor(Color.TRANSPARENT)
     var canvas: Canvas = android.graphics.Canvas()
 
 canvas.setBitmap(bitmap)
-canvas.drawBitmap(originalBitmap, 0, 0, paint)
+canvas.drawBitmap(originalBitmap, 0.0f, 0.0f, paint)
 }
 
 
@@ -98,7 +98,7 @@ image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
     var canvas: Canvas = image.getCanvas()!!
             
 
-canvas.drawBitmap(originalImage!!.getBitmap(), 0, 0, paint)
+canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
 }
 
 
@@ -122,7 +122,7 @@ image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
             
 
 canvas.concat(matrix)
-canvas.drawBitmap(originalImage!!.getBitmap(), 0, 0, paint)
+canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
 }
 
 

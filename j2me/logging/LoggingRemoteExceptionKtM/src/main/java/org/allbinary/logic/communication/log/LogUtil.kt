@@ -150,9 +150,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                     
     
                         if(exception::class.
-                                            qualifiedName!!.compareTo(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName()) == 0)
+                                            qualifiedName!!.compareTo(XmlRpcException::classgetName()) == 0)
                         
                                     {
                                     
@@ -166,9 +164,7 @@ getName()) == 0)
 
     
                         if(exception::class.
-                                            qualifiedName!!.compareTo(
-                                //Otherwise - scopeIdentifier - ClassExpr
-getName()) == 0)
+                                            qualifiedName!!.compareTo(IOException::classgetName()) == 0)
                         
                                     {
                                     

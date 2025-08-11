@@ -40,6 +40,8 @@ open public class AllBinarySensor
         companion object {
 
 
+    val NULL_ALLBINARY_SENSOR: AllBinarySensor = AllBinarySensor()
+
     private var max: Int = 100
 
 open fun setMax(max: Int)

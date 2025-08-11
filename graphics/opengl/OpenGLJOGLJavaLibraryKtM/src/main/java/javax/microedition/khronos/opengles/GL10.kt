@@ -658,7 +658,7 @@ open fun glGetIntegerv(pname: Int, params: java.nio.IntBuffer)
 
 open fun glGetString(name: Int)
         //nullable = true from not(false or (false and false)) = true
-: java.lang.String
+: String
 
 open fun glHint(target: Int, mode: Int)
         //nullable = true from not(false or (false and false)) = true
