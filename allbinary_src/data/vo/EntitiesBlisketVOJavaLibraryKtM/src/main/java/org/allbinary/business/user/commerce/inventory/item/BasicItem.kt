@@ -851,7 +851,7 @@ hashMap!!.put(BasicItemData.LARGEIMAGE, this.largeImage)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString()!!
             
 
@@ -911,7 +911,7 @@ values.add(this.getLargeImage())
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString()!!
             
 

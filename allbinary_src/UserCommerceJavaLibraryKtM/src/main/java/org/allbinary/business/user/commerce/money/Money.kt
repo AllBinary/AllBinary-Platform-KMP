@@ -175,7 +175,7 @@ open fun convertUnitsTo(currency: String)
 
     var cents: Long = units.longValue() -(dollar *100)
 
-stringBuffer!!.append(Long(dollar).
+stringBuffer!!.append(dollar as Long.
                             toString())
 stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 
@@ -187,7 +187,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 
                                     }
                                 
-stringBuffer!!.append(Long(cents).
+stringBuffer!!.append(cents as Long.
                             toString())
 
                                     }
@@ -238,10 +238,10 @@ centsStr= substring.toCharArray().concatToString()
 
                         }
                             
-localUnit= Long(Long(dollarStr).
-                            longValue() *100).
+localUnit= dollarStr as Long.
+                            longValue() *100 as Long.
                             longValue()
-localUnit += Long(centsStr).
+localUnit += centsStr as Long.
                             longValue()
 
 

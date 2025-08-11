@@ -2034,7 +2034,7 @@ dataVector!!.add(this.testFtpPassword)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -2092,7 +2092,7 @@ dataHashMap!!.put(storeFrontData!!.TESTFTPPASSWORD, this.testFtpPassword)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

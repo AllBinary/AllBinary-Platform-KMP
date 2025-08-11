@@ -168,7 +168,7 @@ vector.add(order.getStoreName())
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -343,7 +343,7 @@ open fun setStatus(orderId: String, status: String)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -401,7 +401,7 @@ open fun setPaymentMethod(orderId: String, paymentMethod: String)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

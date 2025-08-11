@@ -103,7 +103,7 @@ vector.addAll(PaymentGatewayEncryptedMapping(paymentGatewayInterface).
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -148,7 +148,7 @@ open fun update(paymentGatewayInterface: PaymentGatewayInterface)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

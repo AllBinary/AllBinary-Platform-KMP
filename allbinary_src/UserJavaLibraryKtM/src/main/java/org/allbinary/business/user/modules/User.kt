@@ -826,7 +826,7 @@ values.add(this.enable)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -886,7 +886,7 @@ values.put(EntryData.getInstance()!!.ENABLE, this.enable)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

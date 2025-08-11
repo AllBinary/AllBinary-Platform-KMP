@@ -98,7 +98,7 @@ public constructor        (node: Node)
     var booleanString: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setIsOn(Boolean(booleanString).
+this.setIsOn(.
                             )
 
                                     }

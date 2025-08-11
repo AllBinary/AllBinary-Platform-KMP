@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.init.crypt.jcehelper.CryptInterface
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.java.byteutil.ByteUtil
 import org.allbinary.string.CommonStrings
@@ -41,15 +42,18 @@ open public class BasicCrypt
     private val byteUtil: ByteUtil = ByteUtil.getInstance()!!
             
 
-    private var key: ByteArray
-public constructor        (key: String)
+    private val key: ByteArray
+public constructor        (keyAsString: String)
             : super()
         {
 
-                    var key = key
+                    var keyAsString = keyAsString
+
+    var key: ByteArray = NullUtil.getInstance()!!.NULL_BYTE_ARRAY
+
 
         try {
-            this.key= key.encodeToByteArray()
+            key= keyAsString!!.encodeToByteArray()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -59,10 +63,10 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this,
                             "AbCrypt(alg,key)", e)
 }
 
+this.key= key
 }
 
-
-open fun encrypt(array: ByteArray)
+override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 
@@ -82,13 +86,12 @@ open fun encrypt(array: ByteArray)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_BYTE_ARRAY
 }
 
 }
 
-
-open fun decrypt(array: ByteArray)
+override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : ByteArray{
 
@@ -108,7 +111,7 @@ open fun decrypt(array: ByteArray)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_BYTE_ARRAY
 }
 
 }
@@ -120,16 +123,17 @@ open fun mutilate(array: ByteArray)
 
                     var array = array
 
+    var value: Byte
+
+
 
 
 
                         for (index in 0 until key.size)
 
 
-        {
-    var val: Byte = key[index]!!
-
-array= byteUtil!!.xor(array, val)
+        {value= key[index]!!
+array= byteUtil!!.xor(array, value)
 }
 
 

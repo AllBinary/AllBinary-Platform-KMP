@@ -121,7 +121,7 @@ values.put(BasicGroupItemData.ITEM_TEN, this.itemTen)
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -143,7 +143,7 @@ open fun insert()
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

@@ -104,7 +104,7 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
     var booleanString: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setSaved(Boolean(booleanString).
+this.setSaved(.
                             )
 
                                     }
@@ -118,7 +118,7 @@ this.setSaved(Boolean(booleanString).
     var booleanString: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setSaved(Boolean(booleanString).
+this.setSaved(.
                             )
 
                                     }

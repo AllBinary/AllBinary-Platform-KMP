@@ -160,7 +160,11 @@ override fun toList()
             
 
 
-    var name: String = this.textFieldItem!!.getLabel()!!.substring(0, this.textFieldItem!!.getLabel()!!.length -2)!!
+    var label: String = this.textFieldItem!!.getLabel()!!
+            
+
+
+    var name: String = label.substring(0, label.length -2)!!
             
 
 

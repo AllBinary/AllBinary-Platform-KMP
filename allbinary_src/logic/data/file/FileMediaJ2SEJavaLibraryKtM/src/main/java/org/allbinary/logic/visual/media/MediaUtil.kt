@@ -229,10 +229,10 @@ stringBuffer!!.append(
 stringBuffer!!.append(newHeight)
 stringBuffer!!.append(
                             "\nFile Length: ")
-stringBuffer!!.append(originalImageFile!!.length)
+stringBuffer!!.append(originalImageFile!!.length())
 stringBuffer!!.append(
                             "\nNew File Length: ")
-stringBuffer!!.append(imageFile!!.length)
+stringBuffer!!.append(imageFile!!.length())
 logUtil!!.put(stringBuffer!!.toString(), this, 
                             "saveImageFile()")
 

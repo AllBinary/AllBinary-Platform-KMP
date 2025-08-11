@@ -200,7 +200,7 @@ StreamUtil.getInstance()!!.close(idOutData)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Wrote Total Bytes: " +newFile!!.length, this, 
+                                    logUtil!!.put("Wrote Total Bytes: " +newFile!!.length(), this, 
                             "generateAll()")
 
                                     }

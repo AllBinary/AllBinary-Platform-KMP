@@ -57,7 +57,7 @@ open fun isValid()
     
                         if(this.downloadableItem!!.getId() == 
                                     null
-                                 || this.downloadableItem!!.getId()!!.length < 1 || this.downloadableItem!!.getId()!!.length > AbSqlData.MAXNUM)
+                                 || this.downloadableItem!!.getId()!!.length() < 1 || this.downloadableItem!!.getId()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -87,7 +87,7 @@ open fun isValid()
     
                         if(this.downloadableItem!!.getSystem() == 
                                     null
-                                 || this.downloadableItem!!.getSystem()!!.length < 1 || this.downloadableItem!!.getSystem()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getSystem()!!.length() < 1 || this.downloadableItem!!.getSystem()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -102,7 +102,7 @@ open fun isValid()
     
                         if(this.downloadableItem!!.getPlatform() == 
                                     null
-                                 || this.downloadableItem!!.getPlatform()!!.length < 1 || this.downloadableItem!!.getPlatform()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getPlatform()!!.length() < 1 || this.downloadableItem!!.getPlatform()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -117,7 +117,7 @@ open fun isValid()
     
                         if(this.downloadableItem!!.getSpecialName() == 
                                     null
-                                 || this.downloadableItem!!.getSpecialName()!!.length < 0 || this.downloadableItem!!.getSpecialName()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getSpecialName()!!.length() < 0 || this.downloadableItem!!.getSpecialName()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -132,7 +132,7 @@ open fun isValid()
     
                         if(this.downloadableItem!!.getVersion() == 
                                     null
-                                 || this.downloadableItem!!.getVersion()!!.length < 1 || this.downloadableItem!!.getVersion()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getVersion()!!.length() < 1 || this.downloadableItem!!.getVersion()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -147,7 +147,7 @@ open fun isValid()
     
                         if(this.downloadableItem!!.getChanges() == 
                                     null
-                                 || this.downloadableItem!!.getChanges()!!.length < 1 || this.downloadableItem!!.getChanges()!!.length > AbSqlData.MAXBLOB)
+                                 || this.downloadableItem!!.getChanges()!!.length() < 1 || this.downloadableItem!!.getChanges()!!.length() > AbSqlData.MAXBLOB)
                         
                                     {
                                     
@@ -303,7 +303,7 @@ open fun validationInfo()
     
                         if(this.downloadableItem!!.getId() == 
                                     null
-                                 || this.downloadableItem!!.getId()!!.length < 1 || this.downloadableItem!!.getId()!!.length > AbSqlData.MAXNUM)
+                                 || this.downloadableItem!!.getId()!!.length() < 1 || this.downloadableItem!!.getId()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append(
@@ -330,7 +330,7 @@ stringBuffer!!.append(
     
                         if(this.downloadableItem!!.getSystem() == 
                                     null
-                                 || this.downloadableItem!!.getSystem()!!.length < 1 || this.downloadableItem!!.getSystem()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getSystem()!!.length() < 1 || this.downloadableItem!!.getSystem()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append(
@@ -345,7 +345,7 @@ stringBuffer!!.append(
     
                         if(this.downloadableItem!!.getPlatform() == 
                                     null
-                                 || this.downloadableItem!!.getPlatform()!!.length < 1 || this.downloadableItem!!.getPlatform()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getPlatform()!!.length() < 1 || this.downloadableItem!!.getPlatform()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append(
@@ -360,7 +360,7 @@ stringBuffer!!.append(
     
                         if(this.downloadableItem!!.getSpecialName() == 
                                     null
-                                 || this.downloadableItem!!.getSpecialName()!!.length < 0 || this.downloadableItem!!.getSpecialName()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getSpecialName()!!.length() < 0 || this.downloadableItem!!.getSpecialName()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append(
@@ -375,7 +375,7 @@ stringBuffer!!.append(
     
                         if(this.downloadableItem!!.getVersion() == 
                                     null
-                                 || this.downloadableItem!!.getVersion()!!.length < 1 || this.downloadableItem!!.getVersion()!!.length > AbSqlData.MAXSTRING)
+                                 || this.downloadableItem!!.getVersion()!!.length() < 1 || this.downloadableItem!!.getVersion()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append(
@@ -390,7 +390,7 @@ stringBuffer!!.append(
     
                         if(this.downloadableItem!!.getChanges() == 
                                     null
-                                 || this.downloadableItem!!.getChanges()!!.length < 0 || this.downloadableItem!!.getChanges()!!.length > AbSqlData.MAXBLOB)
+                                 || this.downloadableItem!!.getChanges()!!.length() < 0 || this.downloadableItem!!.getChanges()!!.length() > AbSqlData.MAXBLOB)
                         
                                     {
                                     stringBuffer!!.append(

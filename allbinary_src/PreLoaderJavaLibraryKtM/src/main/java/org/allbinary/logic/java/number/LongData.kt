@@ -36,8 +36,8 @@ open public class LongData
         companion object {
 
 
-    var MAX_LONG_LENGTH: Int = Long(Long.MAX_VALUE).
-                            toString()!!.length!!
+    var MAX_LONG_LENGTH: Int = Long.MAX_VALUE as Long.
+                            toString()!!.length()!!
             
 
 

@@ -181,7 +181,7 @@ open fun toVector()
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString()!!
             
 
@@ -234,7 +234,7 @@ values.put(DownloadItemData.RETRIES, this.getRetries())
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

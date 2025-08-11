@@ -132,7 +132,7 @@ values.put(BasicOptionItemData.OPTION_ONE_NINE_VALUE, this.optionValue!!.get(8))
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -154,7 +154,7 @@ open fun insert()
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

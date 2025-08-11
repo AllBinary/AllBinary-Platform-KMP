@@ -43,6 +43,13 @@
         <dependency>
             <groupId>org.allbinary</groupId>
             <artifactId>AndroidResourceLibraryKt</artifactId>
+<!--
+            <artifactId>ResourceJ2MEJavaLibraryKt</artifactId>
+            <artifactId>PCResourceLibraryKt</artifactId>
+            <artifactId>AndroidResourceLibraryKt</artifactId>
+            <artifactId>ResourceLibraryKt</artifactId>
+            for HTML it is in ABDKPlaynJavaLibrary
+-->
             <!-- AllBinary Platform Version Start -->
             <version>1.0.0-SNAPSHOT</version>
             <!-- AllBinary Platform Version End -->

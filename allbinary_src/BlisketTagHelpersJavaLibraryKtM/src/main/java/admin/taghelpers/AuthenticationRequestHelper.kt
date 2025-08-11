@@ -94,7 +94,7 @@ open fun generateNewPassword()
                         
                                     {
                                     
-    var startIndex: Int = this.weblisketSession!!.getId()!!.length!!
+    var startIndex: Int = this.weblisketSession!!.getId()!!.length()!!
             
 
 

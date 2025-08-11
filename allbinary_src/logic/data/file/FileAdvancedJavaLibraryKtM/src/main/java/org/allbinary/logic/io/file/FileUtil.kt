@@ -689,7 +689,7 @@ open fun copyFile(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, ove
 
 stringBuffer!!.append(
                             "Copying ")
-stringBuffer!!.append(fromFile!!.length)
+stringBuffer!!.append(fromFile!!.length())
 stringBuffer!!.append(
                             " bytes from File: ")
 stringBuffer!!.append(fromFile!!.getPath())
@@ -864,7 +864,7 @@ stringBuffer!!.append(end)
             
 
 
-    var beginIndex: Int = fromDirectoryAbPath!!.getPath()!!.length!!
+    var beginIndex: Int = fromDirectoryAbPath!!.getPath()!!.length()!!
             
 
 
@@ -873,7 +873,7 @@ stringBuffer!!.append(end)
                         
                                     {
                                     beginIndex -= AbPath(URLGLOBALS.getWebappPath()).
-                            getPath()!!.length
+                            getPath()!!.length()
 
                                     }
                                 
@@ -1182,7 +1182,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                                     {
                                     
     
-                        if(fromAbPath!!.toFileSystemString()!![fromAbPath!!.toFileSystemString()!!.length -1] == java.io.File.separatorChar)
+                        if(fromAbPath!!.toFileSystemString()!![fromAbPath!!.toFileSystemString()!!.length() -1] == java.io.File.separatorChar)
                         
                                     {
                                     

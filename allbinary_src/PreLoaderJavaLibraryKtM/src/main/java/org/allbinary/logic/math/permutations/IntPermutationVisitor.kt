@@ -34,7 +34,7 @@ open fun visit(anyType: Any)
 : Any{
 
                     var anyType = anyType
-stringBuilder!!.delete(0, stringBuilder!!.length)
+stringBuilder!!.delete(0, stringBuilder!!.length())
 this.print(data, stringBuilder)
 
 

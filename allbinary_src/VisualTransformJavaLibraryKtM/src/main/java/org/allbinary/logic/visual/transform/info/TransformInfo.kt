@@ -923,7 +923,7 @@ hashMap!!.put(transformInfoData!!.DATA, Encoder.encode(this.data.encodeToByteArr
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -956,7 +956,7 @@ vector.add(Encoder.encode(this.data.encodeToByteArray()))
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

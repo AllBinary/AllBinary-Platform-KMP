@@ -77,8 +77,7 @@ open fun init()
     private val vibrator: Vibrator = ResourceUtil.getInstance()!!.getContext()!!.getSystemService(Context.VIBRATOR_SERVICE) as Vibrator
 protected constructor        (){}
 
-
-open fun vibrate(duration: Int, type: Int, volume: Int)
+override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -89,7 +88,7 @@ open fun vibrate(duration: Int, type: Int, volume: Int)
 
 
                     var volume = volume
-vibrator.vibrate(duration)
+vibrator.vibrate(duration.toLong())
 }
 
 

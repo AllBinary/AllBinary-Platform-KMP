@@ -77,7 +77,7 @@ this.value= value
                                     }
                                 
 
-    var packages: String = nameSpace!!.substring(beginIndex +NameSpaceRequestParamData.NAME.length +NameSpaceRequestParamData.SEP.length)!!
+    var packages: String = nameSpace!!.substring(beginIndex +NameSpaceRequestParamData.NAME.length() +NameSpaceRequestParamData.SEP.length())!!
             
 
 

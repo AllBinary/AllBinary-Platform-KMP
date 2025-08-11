@@ -102,10 +102,14 @@ open fun getInstance(algorithm: String, keyData: ByteArray)
 
                                     }
                                 
-                             else 
-    
-                        if()
-                        
+                        else {
+                            
+
+
+                            throw RuntimeException()
+
+                        }
+                            
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -115,8 +119,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 
-                        //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                            throw RuntimeException()
 }
 
 }

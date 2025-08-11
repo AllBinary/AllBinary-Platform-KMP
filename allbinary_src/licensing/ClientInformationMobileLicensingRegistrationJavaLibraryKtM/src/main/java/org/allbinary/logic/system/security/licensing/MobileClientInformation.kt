@@ -69,7 +69,7 @@ public constructor        (name: String, version: String, specialName: String, s
                             //For kotlin this is before the body of the constructor.
                     
 
-    var number: String = this.getSpecialName()!!.substring(this.getSpecialName()!!.length -1)!!
+    var number: String = this.getSpecialName()!!.substring(this.getSpecialName()!!.length() -1)!!
             
 
 

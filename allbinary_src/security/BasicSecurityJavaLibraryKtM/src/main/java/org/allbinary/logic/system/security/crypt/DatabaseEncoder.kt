@@ -27,8 +27,10 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringMaker
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.string.tokens.Tokenizer
 import org.allbinary.string.CommonSeps
 import org.allbinary.string.CommonStrings
@@ -62,7 +64,7 @@ open fun encode(value: ByteArray)
                         for (index in 0 until array.size)
 
 
-        {stringBuffer!!.append(Byte(array[index]!!).
+        {stringBuffer!!.append(array[index]!!.
                             toString())
 
     
@@ -92,7 +94,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 }
@@ -120,16 +122,17 @@ open fun decode(value: String)
             
 
 
+    var byteOfData: String
+
+
 
 
 
                         for (index in 0 until size)
 
 
-        {
-    var byteOfData: String = vector.objectArray[index]!! as String
-
-byteVector!!.add(Byte(byteOfData))
+        {byteOfData= vector.objectArray[index]!! as String
+byteVector!!.add(byteOfData)
 }
 
 
@@ -139,16 +142,17 @@ byteVector!!.add(Byte(byteOfData))
     var decodeIndex: Int = 0
 
 
+    var aByte: Byte
+
+
 
 
 
                         for (index in 0 until size)
 
 
-        {
-    var aByte: Byte = byteVector!!.objectArray[index]!! as Byte
-
-decode[decodeIndex]= aByte!!.byteValue()
+        {aByte= byteVector!!.objectArray[index]!! as Byte
+decode[decodeIndex]= aByte!!.toByte()
 decodeIndex++
 }
 
@@ -169,7 +173,7 @@ PreLogUtil.put(commonStrings!!.EXCEPTION,
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return NullUtil.getInstance()!!.NULL_BYTE_ARRAY
 }
 
 }

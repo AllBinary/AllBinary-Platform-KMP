@@ -92,7 +92,7 @@ open fun createLogFile()
     var raFile: RandomAccessFile = RandomAccessFile(logFile, 
                             "rw")
 
-raFile!!.seek(raFile!!.length)
+raFile!!.seek(raFile!!.length())
 fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
 
                         }
@@ -228,7 +228,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                     }
                                 
 
-    var length: Long = logFile!!.length!!
+    var length: Long = logFile!!.length()!!
             
 
 
@@ -356,7 +356,7 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                                     }
                                 
 
-    var length: Long = logFile!!.length!!
+    var length: Long = logFile!!.length()!!
             
 
 

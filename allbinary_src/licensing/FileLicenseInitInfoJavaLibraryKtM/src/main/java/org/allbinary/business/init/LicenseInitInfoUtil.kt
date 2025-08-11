@@ -37,6 +37,7 @@ import org.allbinary.logic.io.AbDataOutputStream
 import org.allbinary.logic.io.AbFileInputStream
 import org.allbinary.logic.io.DataOutputStreamFactory
 import org.allbinary.logic.io.FileStreamFactory
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.crypt.DatabaseEncoder
 import org.allbinary.logic.system.security.crypt.WeakCrypt
 
@@ -77,7 +78,7 @@ open fun getInstance()
 
     val PRIVACY_POLICY: String = "privacy_policy"
 
-    private var filePath: String
+    private var filePath: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
@@ -209,7 +210,11 @@ open fun readAgain(initializeCounter: Int)
     var initInfo: LicenseInitInfo = LicenseInitInfo()
 
 
-    var licenseIdDecoded: String = decode.decodeToString()
+    var decodedByteArray: ByteArray = DatabaseEncoder.decode(iData!!.readUTF())!!
+            
+
+
+    var licenseIdDecoded: String = decodedByteArray.decodeToString()
 
 initInfo!!.setLicenseId(WeakCrypt(1).
                             decrypt(licenseIdDecoded))
@@ -230,7 +235,8 @@ initInfo!!.setLicenseId(WeakCrypt(1).
                         for (index in 0 until numberOfLicenseServers)
 
 
-        {licenseServerDecoded= decode.decodeToString()
+        {decodedByteArray= DatabaseEncoder.decode(iData!!.readUTF())
+licenseServerDecoded= decodedByteArray.decodeToString()
 initInfo!!.setServer(WeakCrypt(3).
                             decrypt(licenseServerDecoded), index)
 logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
@@ -256,7 +262,7 @@ logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
             {
         try {
             logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
-Thread.currentThread()!!.sleep(2000)
+Thread.sleep(2000)
 
     
                         if(initializeCounter < 3)

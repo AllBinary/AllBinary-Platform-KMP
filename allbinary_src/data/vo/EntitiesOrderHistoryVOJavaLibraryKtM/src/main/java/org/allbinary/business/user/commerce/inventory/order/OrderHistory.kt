@@ -407,16 +407,16 @@ hashMap!!.put(OrderHistoryData.ORDERDATE, this.orderDate)
 hashMap!!.put(OrderHistoryData.SHIPPEDDATE, this.shipDate)
 hashMap!!.put(OrderHistoryData.TRANSDATE, this.transDate)
 hashMap!!.put(OrderHistoryData.CANCELDATE, this.cancelDate)
-hashMap!!.put(OrderHistoryData.ORDERDATEFORMATTED, Date(Long(this.orderDate).
+hashMap!!.put(OrderHistoryData.ORDERDATEFORMATTED, Date(this.orderDate as Long.
                             longValue()).
                             toString())
-hashMap!!.put(OrderHistoryData.SHIPPEDDATEFORMATTED, Date(Long(this.shipDate).
+hashMap!!.put(OrderHistoryData.SHIPPEDDATEFORMATTED, Date(this.shipDate as Long.
                             longValue()).
                             toString())
-hashMap!!.put(OrderHistoryData.TRANSDATEFORMATTED, Date(Long(this.transDate).
+hashMap!!.put(OrderHistoryData.TRANSDATEFORMATTED, Date(this.transDate as Long.
                             longValue()).
                             toString())
-hashMap!!.put(OrderHistoryData.CANCELDATEFORMATTED, Date(Long(this.cancelDate).
+hashMap!!.put(OrderHistoryData.CANCELDATEFORMATTED, Date(this.cancelDate as Long.
                             longValue()).
                             toString())
 hashMap!!.put(OrderHistoryData.STATUS, this.status)

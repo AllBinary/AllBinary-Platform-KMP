@@ -500,7 +500,7 @@ open fun isValid()
                                     
     var oneHour: Long = 60.toLong() *60 *1000
 
-rangeDate= Long(oneHour).
+rangeDate= oneHour as Long.
                             toString()
 
                                     }
@@ -513,7 +513,7 @@ rangeDate= Long(oneHour).
                                     
     var oneDay: Long = 24.toLong() *60 *60 *1000
 
-rangeDate= Long(oneDay).
+rangeDate= oneDay as Long.
                             toString()
 
                                     }
@@ -526,7 +526,7 @@ rangeDate= Long(oneDay).
                                     
     var oneWeek: Long = 7.toLong() *24 *60 *60 *1000
 
-rangeDate= Long(oneWeek).
+rangeDate= oneWeek as Long.
                             toString()
 
                                     }
@@ -539,7 +539,7 @@ rangeDate= Long(oneWeek).
                                     
     var thirtyDays: Long = 30.toLong() *24 *60 *60 *1000
 
-rangeDate= Long(thirtyDays).
+rangeDate= thirtyDays as Long.
                             toString()
 
                                     }
@@ -549,20 +549,20 @@ rangeDate= Long(thirtyDays).
                         if(command.compareTo(VIEWALLORDERS) == 0)
                         
                                     {
-                                    rangeDate= Long(currentTime).
+                                    rangeDate= currentTime as Long.
                             toString()
 
                                     }
                                 
 
-    var rangeDateLong: Long = Long(rangeDate).
+    var rangeDateLong: Long = rangeDate as Long.
                             longValue()!!
             
 
-this.fromDate= Long(currentTime -rangeDateLong).
+this.fromDate= currentTime -rangeDateLong as Long.
                             toString()
 
-    var time: String = Long(currentTime).
+    var time: String = currentTime as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -580,10 +580,10 @@ this.toDate= time
             
 
 TimeUtil.getInstance()!!.setCalendar(calendar, fromYear, fromMonth, fromDay, fromHour)
-this.fromDate= Long(calendar.getTimeInMillis()).
+this.fromDate= calendar.getTimeInMillis() as Long.
                             toString()
 TimeUtil.getInstance()!!.setCalendar(calendar, toYear, toMonth, toDay, toHour)
-this.toDate= Long(calendar.getTimeInMillis()).
+this.toDate= calendar.getTimeInMillis() as Long.
                             toString()
 
                                     }

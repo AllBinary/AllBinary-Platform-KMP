@@ -150,7 +150,7 @@ values.add(DomDocumentHelper.toString(this.workFlowDoc))
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 
@@ -179,7 +179,7 @@ hashMap!!.put(WorkFlowData.getInstance()!!.DATA, DomDocumentHelper.toString(this
             
 
 
-    var time: String = Long(calendar.getTimeInMillis()).
+    var time: String = calendar.getTimeInMillis() as Long.
                             toString().toCharArray().concatToString()
                                 
 

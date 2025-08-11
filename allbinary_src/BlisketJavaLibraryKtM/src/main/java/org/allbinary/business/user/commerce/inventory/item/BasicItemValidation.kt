@@ -61,7 +61,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getId() == 
                                     null
-                                 || this.itemInterface!!.getId()!!.length < 1 || this.itemInterface!!.getId()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getId()!!.length() < 1 || this.itemInterface!!.getId()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -95,7 +95,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getNumber() == 
                                     null
-                                 || this.itemInterface!!.getNumber()!!.length < 1 || this.itemInterface!!.getNumber()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getNumber()!!.length() < 1 || this.itemInterface!!.getNumber()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -125,7 +125,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getInBaskets() == 
                                     null
-                                 || this.itemInterface!!.getInBaskets()!!.length < 1 || this.itemInterface!!.getInBaskets()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getInBaskets()!!.length() < 1 || this.itemInterface!!.getInBaskets()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -155,7 +155,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getWeight() == 
                                     null
-                                 || this.itemInterface!!.getWeight()!!.length < 1 || this.itemInterface!!.getWeight()!!.length > MAXWEIGHT)
+                                 || this.itemInterface!!.getWeight()!!.length() < 1 || this.itemInterface!!.getWeight()!!.length() > MAXWEIGHT)
                         
                                     {
                                     
@@ -185,7 +185,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getEnabled() == 
                                     null
-                                 || this.itemInterface!!.getEnabled()!!.length < 1 || this.itemInterface!!.getEnabled()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getEnabled()!!.length() < 1 || this.itemInterface!!.getEnabled()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -200,7 +200,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getNewOrUsed() == 
                                     null
-                                 || this.itemInterface!!.getNewOrUsed()!!.length < 1 || this.itemInterface!!.getNewOrUsed()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getNewOrUsed()!!.length() < 1 || this.itemInterface!!.getNewOrUsed()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -215,7 +215,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getSummary() == 
                                     null
-                                 || this.itemInterface!!.getSummary()!!.length < 1 || this.itemInterface!!.getSummary()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getSummary()!!.length() < 1 || this.itemInterface!!.getSummary()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -230,7 +230,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getDescription() == 
                                     null
-                                 || this.itemInterface!!.getDescription()!!.length < 1 || this.itemInterface!!.getDescription()!!.length > AbSqlData.MAXBLOB)
+                                 || this.itemInterface!!.getDescription()!!.length() < 1 || this.itemInterface!!.getDescription()!!.length() > AbSqlData.MAXBLOB)
                         
                                     {
                                     
@@ -245,7 +245,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getKeywords() == 
                                     null
-                                 || this.itemInterface!!.getKeywords()!!.length < 1 || this.itemInterface!!.getKeywords()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getKeywords()!!.length() < 1 || this.itemInterface!!.getKeywords()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -260,7 +260,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getCategory() == 
                                     null
-                                 || this.itemInterface!!.getCategory()!!.length < 1 || this.itemInterface!!.getCategory()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getCategory()!!.length() < 1 || this.itemInterface!!.getCategory()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -275,7 +275,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getType() == 
                                     null
-                                 || this.itemInterface!!.getType()!!.length < 1 || this.itemInterface!!.getType()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getType()!!.length() < 1 || this.itemInterface!!.getType()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     
@@ -305,7 +305,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getCustoms() == 
                                     null
-                                 || this.itemInterface!!.getCustoms()!!.length < 1 || this.itemInterface!!.getCustoms()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getCustoms()!!.length() < 1 || this.itemInterface!!.getCustoms()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -320,7 +320,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getDownloads() == 
                                     null
-                                 || this.itemInterface!!.getDownloads()!!.length < 1 || this.itemInterface!!.getDownloads()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getDownloads()!!.length() < 1 || this.itemInterface!!.getDownloads()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -335,7 +335,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getGroups() == 
                                     null
-                                 || this.itemInterface!!.getGroups()!!.length < 1 || this.itemInterface!!.getGroups()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getGroups()!!.length() < 1 || this.itemInterface!!.getGroups()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -350,7 +350,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getOptions() == 
                                     null
-                                 || this.itemInterface!!.getOptions()!!.length < 1 || this.itemInterface!!.getOptions()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getOptions()!!.length() < 1 || this.itemInterface!!.getOptions()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -365,7 +365,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getPermissions() == 
                                     null
-                                 || this.itemInterface!!.getPermissions()!!.length < 1 || this.itemInterface!!.getPermissions()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getPermissions()!!.length() < 1 || this.itemInterface!!.getPermissions()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -380,7 +380,7 @@ open fun isValid()
     
                         if(this.itemInterface!!.getSpecials() == 
                                     null
-                                 || this.itemInterface!!.getSpecials()!!.length < 1 || this.itemInterface!!.getSpecials()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getSpecials()!!.length() < 1 || this.itemInterface!!.getSpecials()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     
@@ -428,7 +428,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getId() == 
                                     null
-                                 || this.itemInterface!!.getId()!!.length < 1 || this.itemInterface!!.getId()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getId()!!.length() < 1 || this.itemInterface!!.getId()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Id is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -455,7 +455,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getNumber() == 
                                     null
-                                 || this.itemInterface!!.getNumber()!!.length < 1 || this.itemInterface!!.getNumber()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getNumber()!!.length() < 1 || this.itemInterface!!.getNumber()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Number of items is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -478,7 +478,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getInBaskets() == 
                                     null
-                                 || this.itemInterface!!.getInBaskets()!!.length < 1 || this.itemInterface!!.getInBaskets()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getInBaskets()!!.length() < 1 || this.itemInterface!!.getInBaskets()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Number in baskets is invalid. Must be < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -501,7 +501,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getWeight() == 
                                     null
-                                 || this.itemInterface!!.getWeight()!!.length < 1 || this.itemInterface!!.getWeight()!!.length > MAXWEIGHT)
+                                 || this.itemInterface!!.getWeight()!!.length() < 1 || this.itemInterface!!.getWeight()!!.length() > MAXWEIGHT)
                         
                                     {
                                     stringBuffer!!.append("Weight value is invalid. Must be < " +MAXWEIGHT +" and > 0 digits.<br />")
@@ -524,7 +524,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getEnabled() == 
                                     null
-                                 || this.itemInterface!!.getEnabled()!!.length < 1 || this.itemInterface!!.getEnabled()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getEnabled()!!.length() < 1 || this.itemInterface!!.getEnabled()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append("For Sale value is invalid. Must be < " +AbSqlData.MAXSTRING +" and > 0 characters long.<br />")
@@ -535,7 +535,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getNewOrUsed() == 
                                     null
-                                 || this.itemInterface!!.getNewOrUsed()!!.length < 1 || this.itemInterface!!.getNewOrUsed()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getNewOrUsed()!!.length() < 1 || this.itemInterface!!.getNewOrUsed()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append("New Or Used value is invalid. Must be < " +AbSqlData.MAXSTRING +" and > 0 characters long.<br />")
@@ -546,7 +546,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getSummary() == 
                                     null
-                                 || this.itemInterface!!.getSummary()!!.length < 1 || this.itemInterface!!.getSummary()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getSummary()!!.length() < 1 || this.itemInterface!!.getSummary()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append("Summary value is invalid. Must be < " +AbSqlData.MAXSTRING +" and > 0 characters long.<br />")
@@ -557,7 +557,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getDescription() == 
                                     null
-                                 || this.itemInterface!!.getDescription()!!.length < 1 || this.itemInterface!!.getDescription()!!.length > AbSqlData.MAXBLOB)
+                                 || this.itemInterface!!.getDescription()!!.length() < 1 || this.itemInterface!!.getDescription()!!.length() > AbSqlData.MAXBLOB)
                         
                                     {
                                     stringBuffer!!.append("Description value is invalid. Must be < " +AbSqlData.MAXBLOB +" and > 0 characters long.<br />")
@@ -568,7 +568,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getKeywords() == 
                                     null
-                                 || this.itemInterface!!.getKeywords()!!.length < 1 || this.itemInterface!!.getKeywords()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getKeywords()!!.length() < 1 || this.itemInterface!!.getKeywords()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append("Keywords value is invalid. Must be < " +AbSqlData.MAXSTRING +" and > 0 characters long.<br />")
@@ -579,7 +579,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getCategory() == 
                                     null
-                                 || this.itemInterface!!.getCategory()!!.length < 1 || this.itemInterface!!.getCategory()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getCategory()!!.length() < 1 || this.itemInterface!!.getCategory()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append("Category value is invalid. Must be < " +AbSqlData.MAXSTRING +" and > 0 characters long.<br />")
@@ -590,7 +590,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getType() == 
                                     null
-                                 || this.itemInterface!!.getType()!!.length < 1 || this.itemInterface!!.getType()!!.length > AbSqlData.MAXSTRING)
+                                 || this.itemInterface!!.getType()!!.length() < 1 || this.itemInterface!!.getType()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
                                     stringBuffer!!.append("Type value is invalid. Must be < " +AbSqlData.MAXSTRING +" and > 0 characters long.<br />")
@@ -612,7 +612,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getCustoms() == 
                                     null
-                                 || this.itemInterface!!.getCustoms()!!.length < 1 || this.itemInterface!!.getCustoms()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getCustoms()!!.length() < 1 || this.itemInterface!!.getCustoms()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Custom items value is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -623,7 +623,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getDownloads() == 
                                     null
-                                 || this.itemInterface!!.getDownloads()!!.length < 1 || this.itemInterface!!.getDownloads()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getDownloads()!!.length() < 1 || this.itemInterface!!.getDownloads()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Downloadable item value is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -634,7 +634,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getGroups() == 
                                     null
-                                 || this.itemInterface!!.getGroups()!!.length < 1 || this.itemInterface!!.getGroups()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getGroups()!!.length() < 1 || this.itemInterface!!.getGroups()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Group item value is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -645,7 +645,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getOptions() == 
                                     null
-                                 || this.itemInterface!!.getOptions()!!.length < 1 || this.itemInterface!!.getOptions()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getOptions()!!.length() < 1 || this.itemInterface!!.getOptions()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Option item value is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -656,7 +656,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getPermissions() == 
                                     null
-                                 || this.itemInterface!!.getPermissions()!!.length < 1 || this.itemInterface!!.getPermissions()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getPermissions()!!.length() < 1 || this.itemInterface!!.getPermissions()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Permission item value is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")
@@ -667,7 +667,7 @@ open fun validationInfo()
     
                         if(this.itemInterface!!.getSpecials() == 
                                     null
-                                 || this.itemInterface!!.getSpecials()!!.length < 1 || this.itemInterface!!.getSpecials()!!.length > AbSqlData.MAXNUM)
+                                 || this.itemInterface!!.getSpecials()!!.length() < 1 || this.itemInterface!!.getSpecials()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
                                     stringBuffer!!.append("Special item value is invalid. Must be number < " +AbSqlData.MAXNUM +" and > 0 digits.<br />")

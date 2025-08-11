@@ -171,7 +171,7 @@ open fun show(helpSet: HelpSet)
 
 helpBroker!!.setLocation(point)
 helpBroker!!.setSize(dimension)
-DisplayHelpFromSource(helpBroker).
+CSH.DisplayHelpFromSource(helpBroker).
                             actionPerformed(contextSensitiveHelpActionEvent)
 logUtil!!.put(
                             "CSH Action", getInstance(), 

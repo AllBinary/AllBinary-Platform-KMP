@@ -96,7 +96,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     
     var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = transformInfoInterface as TransformInfoHttpStoreInterface
 
-fileName= transformInfoInterface!!.getName()!!.substring(transformInfoHttpStoreInterface!!.getStoreName()!!.length +1)
+fileName= transformInfoInterface!!.getName()!!.substring(transformInfoHttpStoreInterface!!.getStoreName()!!.length() +1)
 
     var outputMappingHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 

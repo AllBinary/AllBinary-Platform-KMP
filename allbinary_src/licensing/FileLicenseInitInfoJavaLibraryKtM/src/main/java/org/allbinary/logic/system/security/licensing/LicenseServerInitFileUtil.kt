@@ -54,6 +54,9 @@ open public class LicenseServerInitFileUtil
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
+    private val NULL_OUTPUT_STREAM: OutputStream = OutputStream.nullOutputStream()!!
+            
+
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -87,9 +90,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
 open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
-    var fileOutputStream: OutputStream = 
-                null
-            
+    var fileOutputStream: OutputStream = NULL_OUTPUT_STREAM
 
 
         try {
@@ -118,8 +119,20 @@ fileOutputStream= fileStreamFactory!!.getFileOutputStreamInstance(StringUtil.get
     var index: Int = 0
 
 
-        while((b= inputStream!!.read()) !=  -1)
-        {fileOutputStream!!.write(b)
+        while(true)
+        {b= inputStream!!.read()
+
+    
+                        if(b ==  -1)
+                        
+                                    {
+                                    break;
+
+                    
+
+                                    }
+                                
+fileOutputStream!!.write(b)
 index++
 }
 

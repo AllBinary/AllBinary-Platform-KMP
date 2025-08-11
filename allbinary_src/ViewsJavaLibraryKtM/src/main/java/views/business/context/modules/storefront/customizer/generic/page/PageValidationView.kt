@@ -174,7 +174,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length)!!
+    var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length())!!
             
 
 
@@ -317,7 +317,7 @@ open fun validationInfo()
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
-    var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length)!!
+    var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length())!!
             
 
 

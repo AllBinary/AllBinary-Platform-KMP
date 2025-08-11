@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.logic.communication.log.PreLogUtil
+import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.system.security.crypt.jcehelper.AbCrypt
 import org.allbinary.logic.system.security.crypt.jcehelper.KeySpecFactory
 import org.allbinary.string.CommonStrings
@@ -48,7 +49,7 @@ open public class WeakCrypt
 
         }
             
-    private var abCrypt: AbCrypt
+    private var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.getInstance()!!.DES)
 public constructor        (key: Int)
             : super()
         {
@@ -56,7 +57,7 @@ public constructor        (key: Int)
                     var key = key
 
         try {
-            abCrypt= AbCrypt(KeySpecFactory.getInstance()!!.DES, keys[key]!!)
+            this.abCrypt!!.init(keys[key]!!)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -84,7 +85,7 @@ open fun encrypt(value: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return encode.decodeToString()
+                        return DatabaseEncoder.encode(crypted)
 } catch(e: Exception)
             {PreLogUtil.put(
                             "Encrypt Failed", this, 
@@ -93,7 +94,7 @@ open fun encrypt(value: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 }
@@ -123,7 +124,7 @@ open fun decrypt(value: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return StringUtil.getInstance()!!.EMPTY_STRING
 }
 
 }

@@ -251,7 +251,7 @@ values= hashMap!!.get(keys as Object?) as Array<String?>
                                     }
                                 
 
-    var end: Int = begin +keys[0]!!.length
+    var end: Int = begin +keys[0]!!.length()
 
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
 newStringBuffer!!.append(replace.substring(0, begin))
@@ -274,7 +274,7 @@ replace= newStringBuffer!!.toString()
                         
                                     {
                                     
-    var end2: Int = begin2 +keys[1]!!.length
+    var end2: Int = begin2 +keys[1]!!.length()
 
 newStringBuffer!!.delete(0, newStringBuffer!!.length())
 newStringBuffer!!.append(replace.substring(0, begin2))

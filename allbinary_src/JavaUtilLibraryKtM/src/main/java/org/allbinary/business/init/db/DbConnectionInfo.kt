@@ -143,7 +143,7 @@ stringBuffer!!.append(this.getServer())
     
                         if(this.getPort() != 
                                     null
-                                 && this.getPort()!!.length > 1)
+                                 && this.getPort()!!.length() > 1)
                         
                                     {
                                     stringBuffer!!.append(CommonSeps.getInstance()!!.COLON)
