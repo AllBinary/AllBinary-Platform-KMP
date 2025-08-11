@@ -18,7 +18,7 @@ https://github.com/AllBinary/AllBinary-Platform
 
 Who is responsible for this repo?
 
-Travis Berthelot travisberthelot@hotmail.com
+Travis Berthelot travisberthelot@allbinary.com
 
 Instructions
 
