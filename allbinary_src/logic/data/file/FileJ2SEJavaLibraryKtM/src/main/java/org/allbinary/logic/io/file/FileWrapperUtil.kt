@@ -99,7 +99,7 @@ open fun wrapFile(file: File)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return null
+                        return AbFile.NULL_FILE
 }
 
 }

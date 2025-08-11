@@ -50,12 +50,9 @@ open public class ImageCache : ImageCacheBase {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-            
-
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
-protected constructor        (){}
+ constructor        (){}
 
 
 open fun addListener(renderer: Any)
@@ -67,8 +64,7 @@ open fun addListener(renderer: Any)
 
 
                 @Throws(Exception::class)
-            
-open fun get(caller: String, width: Int, height: Int)
+            override fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 
@@ -131,8 +127,7 @@ listOfList[foundIndex]!!.add(image)
 
 
                 @Throws(Exception::class)
-            
-open fun get(key: Any)
+            override fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
 : Image{
 

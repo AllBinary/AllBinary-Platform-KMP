@@ -33,6 +33,7 @@ import java.io.FilenameFilter
 import java.io.IOException
 import java.net.URI
 import org.allbinary.logic.io.path.AbPath
+import org.allbinary.logic.string.StringUtil
 
 open public class AbFile
             : Object
@@ -40,6 +41,14 @@ open public class AbFile
                 , AbFileInterface {
         
 
+        companion object {
+
+
+    val NULL_FILE: AbFile = AbFile(StringUtil.getInstance()!!.EMPTY_STRING, false)
+
+
+        }
+            
     private val file: File
  constructor        (filePath: String, unknown: Boolean)
             : super()
