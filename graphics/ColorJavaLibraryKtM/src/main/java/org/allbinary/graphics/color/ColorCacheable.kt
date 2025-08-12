@@ -47,7 +47,7 @@ public constructor        (key: Any)
 this.key= key
 this.color= Color(key = keykey as Integer
 key.
-                                toInt())
+                    toInt())
 }
 
 

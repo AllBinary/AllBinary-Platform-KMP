@@ -85,7 +85,7 @@ open fun isValid(tagClass: Any, parentTag: Tag)
                                 
                              else 
     
-                        if(!(parentTag))
+                        if(!(parentTag is HelperTag))
                         
                                     {
                                     

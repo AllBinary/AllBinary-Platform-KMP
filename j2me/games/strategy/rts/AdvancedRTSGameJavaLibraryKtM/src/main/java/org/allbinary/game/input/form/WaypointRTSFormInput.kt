@@ -465,7 +465,7 @@ advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!.addWaypoin
 layerManager!!.append(layerInterface)
 rtsPlayerLayerInterface!!.add(waypointLayer = waypointLayerwaypointLayer as AdvancedRTSGameLayer
 waypointLayer.
-                                getWaypointBehavior()!!.getWaypoint()!!.getSound())
+                    getWaypointBehavior()!!.getWaypoint()!!.getSound())
 
     
                         if(!rtsPlayerLayerInterface!!.implmentsArtificialIntelligenceCompositeInterface())
@@ -518,7 +518,7 @@ open fun addWayPoint(layerInterface: WaypointLayer)
 
     var list: BasicArrayList = stickyAssociatedRtsLayer = stickyAssociatedRtsLayerstickyAssociatedRtsLayer as AdvancedRTSGameLayer
 stickyAssociatedRtsLayer.
-                                getWaypointBehavior()!!.getOwnedWaypointList()!!
+                    getWaypointBehavior()!!.getOwnedWaypointList()!!
             
 
 RTSLayerUtil.getInstance()!!.destroyAndClear(list)

@@ -164,7 +164,7 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
 
         {type= get = types.get(index)get as Integer
 get.
-                                toInt()
+                    toInt()
 
     
                         if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 

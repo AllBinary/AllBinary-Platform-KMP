@@ -80,7 +80,7 @@ open fun remove(key: Any)
 
 cacheableInterface = cacheableInterfacecacheableInterface as ImageArrayRotationAnimationCacheable
 cacheableInterface.
-                                setImageArray(allBinaryImageRotationAnimationInfo!!.getImageArray())
+                    setImageArray(allBinaryImageRotationAnimationInfo!!.getImageArray())
 
 
 

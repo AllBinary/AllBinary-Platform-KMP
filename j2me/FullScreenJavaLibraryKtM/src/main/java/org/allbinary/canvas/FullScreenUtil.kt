@@ -72,7 +72,7 @@ open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
                     var commandListener = commandListener
 fullScreenInterface = fullScreenInterfacefullScreenInterface as RunnableCanvas
 fullScreenInterface.
-                                waitOnNotify(0)
+                    waitOnNotify(0)
 
     
                         if(commandListener != 

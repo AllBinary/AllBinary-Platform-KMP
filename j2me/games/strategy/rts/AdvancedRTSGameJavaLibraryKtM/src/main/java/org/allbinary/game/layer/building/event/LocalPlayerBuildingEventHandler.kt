@@ -66,7 +66,7 @@ open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: Even
                     var eventListenerInterface = eventListenerInterface
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as BuildingEventListenerInterface
 eventListenerInterface.
-                                onBuildingEvent(eventObject as RTSLayerEvent)
+                    onBuildingEvent(eventObject as RTSLayerEvent)
 }
 
 

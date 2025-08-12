@@ -171,7 +171,7 @@ open fun isValid(anyType: Any)
     
                         if(anyType != 
                                     null
-                                 && !(anyType))
+                                 && !(anyType is String))
                         
                                     {
                                     

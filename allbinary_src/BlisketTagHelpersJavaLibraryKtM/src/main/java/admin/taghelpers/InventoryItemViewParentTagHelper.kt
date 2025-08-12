@@ -258,7 +258,7 @@ open fun checkForValidationViewHelper(helperObject: Any)
                     var helperObject = helperObject
 
     
-                        if(!(helperObject))
+                        if(!(helperObject is ValidationViewHelper))
                         
                                     {
                                     

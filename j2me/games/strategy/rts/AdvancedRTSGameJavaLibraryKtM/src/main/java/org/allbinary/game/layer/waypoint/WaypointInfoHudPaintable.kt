@@ -49,7 +49,7 @@ open fun updateSelectionInfo()
 this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
 this.keyvalueDrawString!!.update(getRtsLayer = this.getRtsLayer()getRtsLayer as WaypointLayer
 getRtsLayer.
-                                getParentLayer()!!.getName())
+                    getParentLayer()!!.getName())
 }
 
 

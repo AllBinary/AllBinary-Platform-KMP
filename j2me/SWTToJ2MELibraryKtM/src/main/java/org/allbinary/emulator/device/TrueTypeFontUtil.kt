@@ -238,7 +238,7 @@ open fun saveFontAtlasAsFile()
 
     var imageData: ImageData = image = imageimage as SwtMutableImage
 image.
-                                image.getImageData()!!
+                    image.getImageData()!!
             
 
 imageData!!.transparentPixel= imageData!!.getPixel(0, 0)

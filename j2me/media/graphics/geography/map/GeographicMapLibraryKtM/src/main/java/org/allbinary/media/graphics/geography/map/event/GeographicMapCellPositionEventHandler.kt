@@ -172,7 +172,7 @@ miniMapLayer!!.onRemoveGeographicMapCellPositionEvent(eventObject as GeographicM
 
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as GeographicMapCellPositionEventListenerInterface
 eventListenerInterface.
-                                onRemoveGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
+                    onRemoveGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
@@ -194,7 +194,7 @@ open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: Even
                     var eventListenerInterface = eventListenerInterface
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as GeographicMapCellPositionEventListenerInterface
 eventListenerInterface.
-                                onGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
+                    onGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
 }
 
 

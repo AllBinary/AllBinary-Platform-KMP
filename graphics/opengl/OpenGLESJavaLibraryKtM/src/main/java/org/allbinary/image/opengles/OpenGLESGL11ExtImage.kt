@@ -132,7 +132,7 @@ gl.glEnable(GL10.GL_TEXTURE_2D)
 gl.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
 gl = glgl as GL11Ext
 gl.
-                                glDrawTexfOES(x, a -y, z, this.getWidth(), this.getHeight())
+                    glDrawTexfOES(x, a -y, z, this.getWidth(), this.getHeight())
 gl.glDisable(GL10.GL_TEXTURE_2D)
 }
 

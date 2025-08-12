@@ -54,7 +54,7 @@ open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellP
                     var cellPosition = cellPosition
 cellPosition = cellPositioncellPosition as GeologicalGeographicMapCellPosition
 cellPosition.
-                                getGeologicalResource()!!.init()
+                    getGeologicalResource()!!.init()
 }
 
 

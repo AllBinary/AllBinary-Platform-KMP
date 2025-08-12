@@ -47,7 +47,7 @@ open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: Even
                     var eventListenerInterface = eventListenerInterface
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as CapitalEventListenerInterface
 eventListenerInterface.
-                                onCapitalChangeEvent(eventObject as CapitalEvent)
+                    onCapitalChangeEvent(eventObject as CapitalEvent)
 }
 
 

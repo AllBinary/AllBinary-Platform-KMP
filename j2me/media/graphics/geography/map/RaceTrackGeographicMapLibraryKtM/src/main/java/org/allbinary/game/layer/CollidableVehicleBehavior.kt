@@ -77,7 +77,7 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer
                                     {
                                     ownerLayer = this.ownerLayerownerLayer as CollidableDestroyableDamageableLayer
 ownerLayer.
-                                getPickupBehavior()!!.doPickup(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
+                    getPickupBehavior()!!.doPickup(collidableInterfaceCompositeInterface as PickedUpLayerInterface)
 
                                     }
                                 

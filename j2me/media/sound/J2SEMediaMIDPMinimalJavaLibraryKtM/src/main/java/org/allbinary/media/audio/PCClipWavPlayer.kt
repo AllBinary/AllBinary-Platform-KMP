@@ -280,9 +280,7 @@ open fun setVolume(volume: Float)
 
     var masterGainFloatControl: FloatControl = clip.getControl(FloatControl.Type.MASTER_GAIN) as FloatControl
 
-masterGainFloatControl!!.setValue(
-                                    //Otherwise - left - DoubleLiteralExpr
- *Math.log10(volume).toFloat())
+masterGainFloatControl!!.setValue(20f *Math.log10(volume).toFloat())
 }
 
 override fun getDuration()

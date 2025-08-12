@@ -465,7 +465,7 @@ this.targetList!!.clear()
 
     var waypoint: WaypointBase = currentTargetLayerInterface = this.currentTargetLayerInterfacecurrentTargetLayerInterface as PathFindingLayerInterface
 currentTargetLayerInterface.
-                                getWaypointBehavior()!!.getWaypoint()!!
+                    getWaypointBehavior()!!.getWaypoint()!!
             
 
 

@@ -1275,7 +1275,7 @@ open fun fireAll(layerManager: AllBinaryLayerManager)
 hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), SmallIntegerSingletonFactory.getInstance()!!.getInstance(AngleFactory.getInstance()!!.getInstance(angle)!!.getValue()))
  = this.getPartInterfaceArray()[0]!! as SalvoInterface
 .
-                                process(layerManager, angle, 90.toShort())
+                    process(layerManager, angle, 90.toShort())
 }
 
 

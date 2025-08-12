@@ -48,7 +48,7 @@ open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: Even
                     var eventListenerInterface = eventListenerInterface
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as WaypointEventListenerInterface
 eventListenerInterface.
-                                onWaypointEvent(eventObject as RTSLayerEvent)
+                    onWaypointEvent(eventObject as RTSLayerEvent)
 }
 
 

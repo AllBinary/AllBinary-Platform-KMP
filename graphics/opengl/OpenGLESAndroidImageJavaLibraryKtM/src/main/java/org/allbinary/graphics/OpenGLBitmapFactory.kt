@@ -61,7 +61,7 @@ open public inner class Config
 
 
     val bitmapConfig: Bitmap.Config
-private constructor        (bitmapConfig: Bitmap.Config)
+ constructor        (bitmapConfig: Bitmap.Config)
             : super()
         {
 
@@ -96,20 +96,19 @@ open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Confi
 
                 @Throws(IOException::class)
             
-open fun decodeStream(is: InputStream)
+open fun decodeStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 
-                    var is = is
+                    var inputStream = inputStream
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(BitmapFactory.decodeStream(is))
+                        return OpenGLBitmap(BitmapFactory.decodeStream(inputStream))
 }
 
-
-open fun createBitmap(image: Image)
+override fun createBitmap(image: Image)
         //nullable = true from not(false or (false and false)) = true
 : PlatformBitmapBase{
 

@@ -249,7 +249,7 @@ capital.removeMoney(upgradeCost)
                                     {
                                     getPlayerGameInput = this.rtsPlayerLayerInterface!!.getPlayerGameInput()getPlayerGameInput as RTSPlayerGameInput
 getPlayerGameInput.
-                                updatePaintable()
+                    updatePaintable()
 
                                     }
                                 
@@ -311,7 +311,7 @@ capital.addMoney(downgradeCost)
                                     {
                                     getPlayerGameInput = this.rtsPlayerLayerInterface!!.getPlayerGameInput()getPlayerGameInput as RTSPlayerGameInput
 getPlayerGameInput.
-                                updatePaintable()
+                    updatePaintable()
 
                                     }
                                 

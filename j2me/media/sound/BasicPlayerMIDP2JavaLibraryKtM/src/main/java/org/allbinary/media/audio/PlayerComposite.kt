@@ -157,7 +157,7 @@ open fun setTimeBase(timeBase: TimeBase)
                     var timeBase = timeBase
 player = this.playerplayer as TimeBaseInterface
 player.
-                                setTimeBase(timeBase)
+                    setTimeBase(timeBase)
 }
 
 
@@ -300,7 +300,7 @@ open fun setVolume(leftVolume: Int, rightVolume: Int)
                     var rightVolume = rightVolume
 player = this.playerplayer as Controllable2
 player.
-                                setVolume(leftVolume, rightVolume)
+                    setVolume(leftVolume, rightVolume)
 }
 
 

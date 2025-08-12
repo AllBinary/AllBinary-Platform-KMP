@@ -163,7 +163,7 @@ graphics.update()
 progressCanvas!!.update(graphics)
 getInstance = OpenGLImageCacheFactory.getInstance()getInstance as OpenGLImageCache
 getInstance.
-                                update(gl)
+                    update(gl)
 this.processRunnables()
 this.set(gl)
 }
@@ -298,7 +298,7 @@ open fun set(gl: GL10)
         {image= this.list.get(index2)
 image = imageimage as OpenGLESImage
 image.
-                                set(gl)
+                    set(gl)
 }
 
 }

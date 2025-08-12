@@ -53,7 +53,7 @@ open fun accept(arg0: java.io.File)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return visit = this.visit(arg0 as Object)visit as Boolean
 visit.
-                                
+                    
 }
 
 
