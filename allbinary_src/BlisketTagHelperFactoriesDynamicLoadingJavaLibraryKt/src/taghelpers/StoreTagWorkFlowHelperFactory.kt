@@ -40,12 +40,10 @@ open public class StoreTagWorkFlowHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "taghelpers.StoreTagWorkFlowHelper"
 
     private val FACTORYNAME: String = "taghelpers.StoreTagWorkFlowHelperFactory"
-
 
         }
             public constructor        ()

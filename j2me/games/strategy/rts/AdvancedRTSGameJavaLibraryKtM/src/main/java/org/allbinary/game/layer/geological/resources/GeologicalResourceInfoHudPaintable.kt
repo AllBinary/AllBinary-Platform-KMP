@@ -37,10 +37,8 @@ open public class GeologicalResourceInfoHudPaintable : WaypointInfoHudPaintable 
         
 
         companion object {
-
-
+            
     private val RESOURCES: String = "Resources: "
-
 
         }
             

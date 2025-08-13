@@ -42,10 +42,8 @@ open public class PickupBehavior
         
 
         companion object {
-
-
+            
     val NULL_PICKUP_BEHAVIOR: PickupBehavior = PickupBehavior(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER, 0)
-
 
         }
             

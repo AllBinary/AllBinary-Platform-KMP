@@ -34,10 +34,8 @@ open public class HeadingData
         
 
         companion object {
-
-
+            
     val NAME: String = "HEADER_NAME"
-
 
         }
             private constructor        ()

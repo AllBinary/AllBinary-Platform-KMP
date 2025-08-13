@@ -38,9 +38,8 @@ open public class VirtualKeyboardFactory
         
 
         companion object {
-
-
-    private var virtualKeyboard: VirtualKeyboard
+            
+    private var virtualKeyboard: VirtualKeyboard = VirtualKeyboard.NULL_VIRTUAL_KEYBOARD
 
 open fun init(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
@@ -76,7 +75,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return virtualKeyboard
 }
-
 
 
         }

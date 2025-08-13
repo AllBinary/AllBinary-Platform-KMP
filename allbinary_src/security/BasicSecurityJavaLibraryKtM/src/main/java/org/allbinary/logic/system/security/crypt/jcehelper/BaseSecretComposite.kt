@@ -35,10 +35,8 @@ open public class BaseSecretComposite
         
 
         companion object {
-
-
+            
     val NULL_SECRET_COMPOSITE: BaseSecretComposite = BaseSecretComposite()
-
 
         }
             

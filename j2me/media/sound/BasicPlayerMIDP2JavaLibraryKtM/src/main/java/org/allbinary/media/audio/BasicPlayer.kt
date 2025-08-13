@@ -44,10 +44,8 @@ open public class BasicPlayer
         
 
         companion object {
-
-
+            
     var CONTROL_TYPE: String = "ToneControl"
-
 
         }
             

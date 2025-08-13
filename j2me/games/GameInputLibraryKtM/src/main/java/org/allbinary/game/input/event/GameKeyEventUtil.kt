@@ -34,8 +34,7 @@ open public class GameKeyEventUtil
         
 
         companion object {
-
-
+            
 open fun getKey(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Int{
@@ -50,7 +49,6 @@ open fun getKey(anyType: Any)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return gameKeyEvent!!.getKey()
 }
-
 
 
         }

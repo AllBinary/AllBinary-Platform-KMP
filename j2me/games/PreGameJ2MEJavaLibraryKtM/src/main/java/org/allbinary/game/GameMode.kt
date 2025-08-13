@@ -35,8 +35,7 @@ open public class GameMode
         
 
         companion object {
-
-
+            
     var NONE: GameMode = GameMode(StringUtil.getInstance()!!.NULL_STRING)
 
     var SERVER: GameMode = GameMode(
@@ -44,7 +43,6 @@ open public class GameMode
 
     var CLIENT: GameMode = GameMode(
                             "Client")
-
 
         }
             

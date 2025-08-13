@@ -37,10 +37,8 @@ open public class NullPlayerGameInputComposite
         
 
         companion object {
-
-
+            
     val NULL_PLAYER_GAME_INPUT_COMPOSITE: NullPlayerGameInputComposite = NullPlayerGameInputComposite()
-
 
         }
             

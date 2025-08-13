@@ -38,8 +38,7 @@ open public class CssElementsValidationFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(cssElementStyleNodeList: Vector)
@@ -88,7 +87,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return styles
 }
-
 
 
         }

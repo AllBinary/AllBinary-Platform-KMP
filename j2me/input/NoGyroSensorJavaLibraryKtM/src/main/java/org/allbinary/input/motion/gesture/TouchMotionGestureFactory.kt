@@ -35,8 +35,7 @@ open public class TouchMotionGestureFactory
         
 
         companion object {
-
-
+            
     private val MOTION: TouchMotionGestureFactory = TouchMotionGestureFactory()
 
 open fun getInstance()
@@ -47,7 +46,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MOTION
 }
-
 
 
         }

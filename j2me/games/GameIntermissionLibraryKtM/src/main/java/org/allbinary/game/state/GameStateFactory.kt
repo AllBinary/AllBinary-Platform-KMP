@@ -34,8 +34,7 @@ open public class GameStateFactory
         
 
         companion object {
-
-
+            
     private var index: Int = 0
 
 open fun getInstance(name: String)
@@ -49,7 +48,6 @@ open fun getInstance(name: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GameState(name, index++)
 }
-
 
 
         }

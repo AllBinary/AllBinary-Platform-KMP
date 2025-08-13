@@ -34,8 +34,7 @@ open public class EchoPaymentGatewayData
         
 
         companion object {
-
-
+            
     var TRANSACTION_TYPE: String = "transaction_type"
 
     var MERCHANT_ECHO_ID: String = "merchant_echo_id"
@@ -175,7 +174,6 @@ open public class EchoPaymentGatewayData
     var PURCHASE_ORDER_NUMBER: String = "purchase_order_number"
 
     var SALES_TAX: String = "sales_tax"
-
 
         }
             private constructor        ()

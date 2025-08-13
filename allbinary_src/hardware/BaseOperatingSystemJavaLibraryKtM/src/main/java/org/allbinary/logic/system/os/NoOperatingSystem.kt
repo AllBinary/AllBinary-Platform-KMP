@@ -32,10 +32,8 @@ open public class NoOperatingSystem : GenericOperatingSystem {
         
 
         companion object {
-
-
+            
     val NO_OPERATING_SYSTEM: GenericOperatingSystem = GenericOperatingSystem()
-
 
         }
             public constructor        (){}

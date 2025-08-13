@@ -37,8 +37,7 @@ open public class JavaHelpSetNotifier
         
 
         companion object {
-
-
+            
     private var vector: Vector = Vector()
 
 open fun get()
@@ -99,7 +98,6 @@ vector.add(url)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isNotified
 }
-
 
 
         }

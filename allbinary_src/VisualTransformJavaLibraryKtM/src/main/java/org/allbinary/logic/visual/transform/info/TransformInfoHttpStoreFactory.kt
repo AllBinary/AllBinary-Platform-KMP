@@ -37,8 +37,7 @@ open public class TransformInfoHttpStoreFactory
         
 
         companion object {
-
-
+            
     private val instance: TransformInfoHttpStoreFactory = TransformInfoHttpStoreFactory()
 
 open fun getInstance()
@@ -49,7 +48,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

@@ -33,8 +33,7 @@ open public class AllBinaryVibration : AllBinaryVibrationME {
         
 
         companion object {
-
-
+            
     private var NO_VIBRATION: AllBinaryVibrationME = AllBinaryNoVibration()
 
     private var VIBRATION: AllBinaryVibrationME = NO_VIBRATION
@@ -66,7 +65,6 @@ open fun init()
                         }
                             
 }
-
 
 
         }

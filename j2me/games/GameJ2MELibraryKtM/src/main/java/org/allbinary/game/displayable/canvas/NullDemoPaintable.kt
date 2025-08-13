@@ -35,10 +35,8 @@ open public class NullDemoPaintable
         
 
         companion object {
-
-
+            
     val NULL_DEMO_PAINTABLE: NullDemoPaintable = NullDemoPaintable()
-
 
         }
             

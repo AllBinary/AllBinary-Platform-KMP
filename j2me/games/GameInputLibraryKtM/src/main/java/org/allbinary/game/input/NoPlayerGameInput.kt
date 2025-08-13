@@ -34,8 +34,7 @@ open public class NoPlayerGameInput : PlayerGameInput {
         
 
         companion object {
-
-
+            
     private val SINGLETON: NoPlayerGameInput = NoPlayerGameInput()
 
 open fun getInstance()
@@ -46,7 +45,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

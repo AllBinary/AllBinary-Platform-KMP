@@ -36,8 +36,7 @@ open public class RectangleCollisionPointUtil
         
 
         companion object {
-
-
+            
 open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -152,7 +151,6 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
-
 
 
         }

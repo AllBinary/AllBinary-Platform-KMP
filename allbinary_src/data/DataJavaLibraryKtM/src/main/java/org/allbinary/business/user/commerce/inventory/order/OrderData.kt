@@ -34,8 +34,7 @@ open public class OrderData
         
 
         companion object {
-
-
+            
     val ORDERS: String = "ORDERS"
 
     val ORDER: String = "ORDER"
@@ -49,7 +48,6 @@ open public class OrderData
     val STORECOMMENT: String = "ORDER_STORE_COMMENT"
 
     val STORECANCELCOMMENT: String = "ORDER_STORE_CANCEL_COMMENT"
-
 
         }
             

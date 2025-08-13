@@ -34,8 +34,7 @@ open public class GameState
         
 
         companion object {
-
-
+            
     var NO_GAME_STATE: GameState = GameStateFactory.getInstance(
                             "NO_GAME_STATE")!!
             
@@ -43,7 +42,6 @@ open public class GameState
     var PLAYING_GAME_STATE: GameState = GameStateFactory.getInstance(
                             "PLAYING_GAME_STATE")!!
             
-
 
         }
             

@@ -34,8 +34,7 @@ open public class ImageActionScriptOutputData
         
 
         companion object {
-
-
+            
     var NAME: String = "IMAGE_ACTION_OUTPUT_NAME"
 
     var SAVE: String = "SAVE_IMAGE_ACTION_OUTPUT_NAME"
@@ -45,7 +44,6 @@ open public class ImageActionScriptOutputData
     var TYPE: String = "TYPE_IMAGE_ACTION_OUTPUT_NAME"
 
     var TYPES: String = "TYPES_IMAGE_ACTION_OUTPUT_NAME"
-
 
         }
             private constructor        ()

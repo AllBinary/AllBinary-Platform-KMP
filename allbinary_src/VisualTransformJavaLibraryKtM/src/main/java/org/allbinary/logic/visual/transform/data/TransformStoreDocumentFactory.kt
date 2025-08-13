@@ -37,8 +37,7 @@ open public class TransformStoreDocumentFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSession)
@@ -70,7 +69,6 @@ open fun getInstance(searchRequest: SearchRequest)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformStoreDocument(searchRequest) as TransformDocumentInterface
 }
-
 
 
         }

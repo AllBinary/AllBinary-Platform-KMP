@@ -38,8 +38,7 @@ open public class NullAnimationFactory
         
 
         companion object {
-
-
+            
     private var NULL_ANIMATION_FACTORY: NullAnimationFactory = NullAnimationFactory()
 
 open fun getFactoryInstance()
@@ -50,7 +49,6 @@ open fun getFactoryInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NULL_ANIMATION_FACTORY
 }
-
 
 
         }

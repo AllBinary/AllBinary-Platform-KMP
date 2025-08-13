@@ -34,10 +34,8 @@ open public class GenericProfileDataWorkerData
         
 
         companion object {
-
-
+            
     var NAME: String = "GENERIC_PROFILE_DATA_WORKER_NAME"
-
 
         }
             private constructor        ()

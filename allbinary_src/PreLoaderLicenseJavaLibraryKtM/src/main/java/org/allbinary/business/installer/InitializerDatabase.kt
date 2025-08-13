@@ -45,8 +45,7 @@ open public class InitializerDatabase
         
 
         companion object {
-
-
+            
     private val MAXDB: Int = 30
 
     private val MAX: Int = 16
@@ -54,7 +53,6 @@ open public class InitializerDatabase
     private val MIN: Int = 4
 
     private val MINPASSWORD: Int = 0
-
 
         }
             

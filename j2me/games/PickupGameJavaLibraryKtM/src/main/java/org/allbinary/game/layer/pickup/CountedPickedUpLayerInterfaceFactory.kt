@@ -39,10 +39,8 @@ open public class CountedPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceF
         
 
         companion object {
-
-
+            
     val NULL_COUNTED_PICKUP_LAYER_FACTORY: CountedPickedUpLayerInterfaceFactory = CountedPickedUpLayerInterfaceFactory(PickedUpLayerTypeFactory.getInstance()!!.NONE, IconLayer.NULL_ICON_LAYER, NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
-
 
         }
             

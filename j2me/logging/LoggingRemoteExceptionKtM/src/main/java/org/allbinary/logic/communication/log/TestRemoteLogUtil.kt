@@ -36,8 +36,7 @@ open public class TestRemoteLogUtil
         
 
         companion object {
-
-
+            
     val PATH: String = "G:\\mnt\\bc\\mydev\\work\\allbinary_src\\licensing\\data\\"
 
                 @Throws(Exception::class)
@@ -53,11 +52,10 @@ open fun main(args: Array<String?>)
 }
 
 
-
         }
             public constructor        ()
             : super()
-        {Globals.getInstance()!!.init(this::class.getClassLoader(), PATH)
+        {Globals.getInstance()!!.init(this::class.java.classLoader, PATH)
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
             

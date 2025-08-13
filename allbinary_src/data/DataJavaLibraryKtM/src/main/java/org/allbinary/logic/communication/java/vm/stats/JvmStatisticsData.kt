@@ -34,8 +34,7 @@ open public class JvmStatisticsData
         
 
         companion object {
-
-
+            
     val JVM_STATISTICS: String = "JVM_STATISTICS_"
 
     val NAME: String = JVM_STATISTICS +"NAME"
@@ -59,7 +58,6 @@ open public class JvmStatisticsData
     val MAX_MEMORY_MEGABYTES: String = JVM_STATISTICS +"MAX_MEMORY_MEGABYTES"
 
     val NUMBER_OF_THREADS: String = JVM_STATISTICS +"NUMBER_OF_THREADS"
-
 
         }
             private constructor        ()                        

@@ -36,10 +36,8 @@ open public class AllBinaryOrientationSensor : AllBinarySensor {
         
 
         companion object {
-
-
+            
     val NULL_ALLBINARY_ORIENTATION_SENSOR: AllBinaryOrientationSensor = AllBinaryOrientationSensor()
-
 
         }
             

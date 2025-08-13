@@ -36,8 +36,7 @@ open public class CircularIndexUtil
         
 
         companion object {
-
-
+            
     val NULL_CIRCULAR_INDEX_UTIL: CircularIndexUtil = CircularIndexUtil(0)
 
 open fun getInstance(max: Int)
@@ -67,7 +66,6 @@ open fun getInstance(index: Int, max: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CircularIndexUtil(index, max)
 }
-
 
 
         }

@@ -39,8 +39,7 @@ open public class AbCryptUtil
         
 
         companion object {
-
-
+            
     private val instance: AbCryptUtil = AbCryptUtil()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -82,8 +80,9 @@ open fun decrypt(inputStream: InputStream, key: String)
         try {
             outputStream= streamUtil!!.get(inputStream, ByteArrayOutputStream(), ByteArray(16384)) as ByteArrayOutputStream
 
-    var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.getInstance()!!.DESEDE, key)
+    var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.getInstance()!!.DESEDE)
 
+abCrypt!!.init(key)
 
 
 

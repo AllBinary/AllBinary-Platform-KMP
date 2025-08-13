@@ -39,8 +39,7 @@ open public class ColorDelta
         
 
         companion object {
-
-
+            
 open fun getKey(rgb1: Int, rgb2: Int)
         //nullable = true from not(false or (false and false)) = true
 : Any{
@@ -56,7 +55,6 @@ open fun getKey(rgb1: Int, rgb2: Int)
                         return StringMaker().
                             append(Integer.toString(rgb1))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(Integer.toString(rgb2))!!.toString()
 }
-
 
 
         }

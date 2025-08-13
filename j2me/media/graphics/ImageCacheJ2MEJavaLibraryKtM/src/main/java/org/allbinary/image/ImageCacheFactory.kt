@@ -34,8 +34,7 @@ open public class ImageCacheFactory
         
 
         companion object {
-
-
+            
     private val IMAGE_CACHE: ImageCache = ImageCache()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {}
-
 
 
         }

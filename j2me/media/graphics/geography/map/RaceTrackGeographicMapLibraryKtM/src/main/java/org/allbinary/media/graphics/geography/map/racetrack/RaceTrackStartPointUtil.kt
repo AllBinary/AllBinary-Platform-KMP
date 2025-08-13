@@ -41,8 +41,7 @@ open public class RaceTrackStartPointUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, index: Int)
@@ -76,7 +75,6 @@ open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFi
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PointFactory.getInstance()!!.getInstance(point.getX(), point.getY() +geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHalfCellHeight())
 }
-
 
 
         }

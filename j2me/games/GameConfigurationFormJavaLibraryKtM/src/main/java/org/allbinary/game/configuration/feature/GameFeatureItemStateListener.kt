@@ -46,8 +46,7 @@ open public class GameFeatureItemStateListener
         
 
         companion object {
-
-
+            
     private var toggleList: BasicArrayList = BasicArrayList()
 
 open fun add(gameFeature: GameFeature)
@@ -65,7 +64,6 @@ open fun add(gameFeature: GameFeature)
                                     }
                                 
 }
-
 
 
         }

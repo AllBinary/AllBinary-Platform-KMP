@@ -42,10 +42,8 @@ open public class TimeIntervalActionScriptCondition : BasicProfileActionScriptCo
         
 
         companion object {
-
-
+            
     private val NAME: String = "Time Interval"
-
 
         }
             

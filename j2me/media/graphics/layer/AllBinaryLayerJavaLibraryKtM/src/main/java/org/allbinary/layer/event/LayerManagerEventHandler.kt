@@ -38,8 +38,7 @@ open public class LayerManagerEventHandler : BasicEventHandler {
         
 
         companion object {
-
-
+            
     private var instance: LayerManagerEventHandler = LayerManagerEventHandler()
 
 open fun getInstance()
@@ -50,7 +49,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LayerManagerEventHandler.instance
 }
-
 
 
         }

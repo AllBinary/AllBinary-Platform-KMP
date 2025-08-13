@@ -40,10 +40,8 @@ open public class AbPath
         
 
         companion object {
-
-
+            
     private val NETWORK_SEP: String = ":/"
-
 
         }
             

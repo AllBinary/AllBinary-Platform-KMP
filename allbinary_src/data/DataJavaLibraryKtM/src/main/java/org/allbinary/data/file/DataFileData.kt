@@ -34,12 +34,10 @@ open public class DataFileData
         
 
         companion object {
-
-
+            
     val UNCRYPTED_EXTENSION: String = "xml"
 
     val ENCRYPTED_EXTENSION: String = "abd"
-
 
         }
             private constructor        ()

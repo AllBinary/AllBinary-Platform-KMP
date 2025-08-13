@@ -41,8 +41,7 @@ open public class AbeClientLicense
         
 
         companion object {
-
-
+            
 open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -75,7 +74,6 @@ open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
                         }
                             
 }
-
 
 
         }

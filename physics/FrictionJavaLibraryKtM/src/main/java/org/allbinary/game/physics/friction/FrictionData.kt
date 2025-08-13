@@ -34,8 +34,7 @@ open public class FrictionData
         
 
         companion object {
-
-
+            
     private val FRICTION_DENOMINATOR: Int = 100
 
 open fun getFrictionDenominator()
@@ -46,7 +45,6 @@ open fun getFrictionDenominator()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FrictionData.FRICTION_DENOMINATOR
 }
-
 
 
         }

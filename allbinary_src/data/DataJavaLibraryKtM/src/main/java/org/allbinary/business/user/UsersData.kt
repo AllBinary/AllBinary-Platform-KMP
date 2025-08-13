@@ -34,10 +34,8 @@ open public class UsersData
         
 
         companion object {
-
-
+            
     val NAME: String = "USERS_NAME"
-
 
         }
             private constructor        ()

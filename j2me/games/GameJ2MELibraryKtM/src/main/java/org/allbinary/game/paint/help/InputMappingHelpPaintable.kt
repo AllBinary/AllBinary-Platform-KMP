@@ -52,14 +52,12 @@ open public class InputMappingHelpPaintable : HelpPaintable {
         
 
         companion object {
-
-
+            
     private val AND: String = " and "
 
     private val SEP: String = ", "
 
     private val MORE_THAN_TWO_IN_LIST_AND: String = ", and "
-
 
         }
             

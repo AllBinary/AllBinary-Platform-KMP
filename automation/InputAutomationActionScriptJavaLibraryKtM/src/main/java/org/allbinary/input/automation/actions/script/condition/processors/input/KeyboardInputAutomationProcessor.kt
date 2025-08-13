@@ -41,8 +41,7 @@ open public class KeyboardInputAutomationProcessor
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun process(keyActionScriptInputInterface: KeyboardActionScriptInputInterface)
@@ -158,7 +157,6 @@ Thread.sleep(50)
                         }
                             
 }
-
 
 
         }

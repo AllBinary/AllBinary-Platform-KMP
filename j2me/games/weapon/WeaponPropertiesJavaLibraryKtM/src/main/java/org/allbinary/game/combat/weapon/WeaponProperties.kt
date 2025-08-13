@@ -37,8 +37,7 @@ open public class WeaponProperties : SimpleWeaponProperties {
         
 
         companion object {
-
-
+            
     val NULL_WEAPON_PROPERTIES: WeaponProperties = WeaponProperties(0L, 0L, 0L, 0, 0.toShort())
 
     private var messageSent: Boolean = false
@@ -48,7 +47,6 @@ open public class WeaponProperties : SimpleWeaponProperties {
     private val RANGE: String = "Range: "
 
     private val RELOAD: String = "Reload: "
-
 
         }
             

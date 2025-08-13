@@ -35,8 +35,7 @@ open public class ExceptionUtil
         
 
         companion object {
-
-
+            
     private val instance: ExceptionUtil = ExceptionUtil()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
 
     val PRETEND_EXCEPTION: Exception = Exception(
                             "Not Really An Exception")
-
 
         }
             private constructor        ()

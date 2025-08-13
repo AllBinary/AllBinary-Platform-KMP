@@ -22,8 +22,7 @@ open public class ContextConfigurationPathUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getAbFile(contextName: String)
@@ -77,7 +76,6 @@ open fun getFileName(contextName: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
-
 
 
         }

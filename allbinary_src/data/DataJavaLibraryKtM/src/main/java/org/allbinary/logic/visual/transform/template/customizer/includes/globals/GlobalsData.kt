@@ -34,10 +34,8 @@ open public class GlobalsData
         
 
         companion object {
-
-
+            
     val NAME: String = "GLOBALS_NAME"
-
 
         }
             private constructor        ()

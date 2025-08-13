@@ -35,10 +35,8 @@ open public class LogConfigTypes
         
 
         companion object {
-
-
+            
     var LOGGING: BasicArrayList = BasicArrayList()
-
 
         }
             private constructor        ()

@@ -49,8 +49,7 @@ open public class AllBinaryMediaManager
         
 
         companion object {
-
-
+            
     private val THIS: String = "AllBinaryMediaManagerPC"
 
 open fun isMuted()
@@ -239,7 +238,6 @@ open fun isInitialized()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
-
 
 
         }

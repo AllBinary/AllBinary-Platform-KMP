@@ -137,14 +137,12 @@ open public class DemoCanvas : RunnableCanvas
         
 
         companion object {
-
-
+            
     private val id: Int = 0
 
     private val BOT_GAME_STATS: String = "Bot Game Statistics: "
 
     val TYPE: Int = 3
-
 
         }
             

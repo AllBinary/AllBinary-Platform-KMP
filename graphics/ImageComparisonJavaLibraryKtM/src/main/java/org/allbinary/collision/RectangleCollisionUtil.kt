@@ -36,8 +36,7 @@ open public class RectangleCollisionUtil
         
 
         companion object {
-
-
+            
 open fun isCollision(rectangle: Rectangle, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -136,7 +135,6 @@ open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1
                         }
                             
 }
-
 
 
         }

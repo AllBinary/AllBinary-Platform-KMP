@@ -54,8 +54,7 @@ public constructor        (midletActivity: Activity, progressCanvas: ProgressCan
 
 
     private val ZOOM_OUT_AND_IN: IntArray = intArrayOf(TransistionTypes.getInstance()!!.ZOOM_OUT,TransistionTypes.getInstance()!!.ZOOM_IN)
-
-open fun run()
+override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
         try {

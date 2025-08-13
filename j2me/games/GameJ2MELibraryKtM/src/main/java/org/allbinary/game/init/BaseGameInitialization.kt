@@ -52,10 +52,8 @@ open public class BaseGameInitialization
         
 
         companion object {
-
-
+            
     val NULL_BASE_GAME_INITIALIZATION: BaseGameInitialization = BaseGameInitialization(arrayOfNulls(0), 0)
-
 
         }
             

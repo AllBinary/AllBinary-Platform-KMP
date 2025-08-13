@@ -45,8 +45,7 @@ open public class InputAutomationConfigurationFactory
         
 
         companion object {
-
-
+            
     private var inputAutomationConfiguration: InputAutomationConfiguration = 
                 null
             
@@ -139,7 +138,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationConfiguration
 }
-
 
 
         }

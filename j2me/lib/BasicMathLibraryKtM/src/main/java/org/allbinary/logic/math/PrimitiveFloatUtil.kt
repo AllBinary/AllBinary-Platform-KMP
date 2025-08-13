@@ -34,8 +34,7 @@ open public class PrimitiveFloatUtil
         
 
         companion object {
-
-
+            
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : FloatArray{
@@ -44,7 +43,6 @@ open fun getArrayInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FloatArray(0)
 }
-
 
 
         }

@@ -34,8 +34,7 @@ open public class FinalPositionRaceTrackFactory
         
 
         companion object {
-
-
+            
     val FIRST_POSITION: Int = 1
 
     private var index: Int = FIRST_POSITION
@@ -54,7 +53,6 @@ open fun reset()
         //nullable = true from not(false or (false and true)) = true
 {index= FIRST_POSITION
 }
-
 
 
         }

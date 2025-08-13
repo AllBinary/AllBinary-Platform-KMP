@@ -56,8 +56,7 @@ open public class FileUtil
         
 
         companion object {
-
-
+            
     private val instance: FileUtil = FileUtil()
 
 open fun getInstance()
@@ -112,7 +111,6 @@ lastIndex= newDirectory!!.lastIndexOf(separatorChar)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newDirectory!!.substring(lastIndex, newDirectory!!.length)
 }
-
 
 
         }

@@ -37,8 +37,7 @@ open public class PlatformRecordIdUtil
         
 
         companion object {
-
-
+            
     private val instance: PlatformRecordIdUtil = PlatformRecordIdUtil()
 
 open fun getInstance()
@@ -49,7 +48,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

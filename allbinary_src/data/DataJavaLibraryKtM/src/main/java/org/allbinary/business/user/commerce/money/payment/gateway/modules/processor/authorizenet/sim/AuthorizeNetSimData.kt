@@ -34,8 +34,7 @@ open public class AuthorizeNetSimData
         
 
         companion object {
-
-
+            
     val X_FP_HASH: String = "x_fp_hash"
 
     val X_FP_SEQUENCE: String = "x_fp_sequence"
@@ -67,7 +66,6 @@ open public class AuthorizeNetSimData
     val X_COLOR_TEXT: String = "x_color_text"
 
     val X_RELAY_URL: String = "x_relay_url"
-
 
         }
             private constructor        ()

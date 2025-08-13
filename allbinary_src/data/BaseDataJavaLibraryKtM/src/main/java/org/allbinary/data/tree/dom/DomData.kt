@@ -34,8 +34,7 @@ open public class DomData
         
 
         companion object {
-
-
+            
     val ID: String = "id"
 
     val CHILD: String = "child"
@@ -45,7 +44,6 @@ open public class DomData
     val VALUE: String = "value"
 
     val INDEX: String = "index"
-
 
         }
             private constructor        ()

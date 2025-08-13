@@ -46,8 +46,7 @@ open public class LoggingInitInfo
         
 
         companion object {
-
-
+            
     private val INITFILENAME: String = "logConfig.xml"
 
     private val PACKAGE: String = PATH_GLOBALS.getInstance()!!.INIT_PATH
@@ -304,7 +303,6 @@ open fun getTypeList()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return allLogTypeVector
 }
-
 
 
         }

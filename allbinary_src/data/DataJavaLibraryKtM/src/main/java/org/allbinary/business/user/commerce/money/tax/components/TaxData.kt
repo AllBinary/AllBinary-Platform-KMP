@@ -34,12 +34,10 @@ open public class TaxData
         
 
         companion object {
-
-
+            
     val NAME: String = "TAX_NAME"
 
     val RATE: String = "TAX_RATE"
-
 
         }
             private constructor        ()

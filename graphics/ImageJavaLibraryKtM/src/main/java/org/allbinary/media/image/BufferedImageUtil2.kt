@@ -22,8 +22,7 @@ open public class BufferedImageUtil2
         
 
         companion object {
-
-
+            
     private val instance: BufferedImageUtil2 = BufferedImageUtil2()
 
 open fun getInstance()
@@ -34,7 +33,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

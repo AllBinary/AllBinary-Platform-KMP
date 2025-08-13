@@ -47,10 +47,8 @@ open public class CommandForm : Form
         
 
         companion object {
-
-
+            
     val NULL_COMMAND_FORM: CommandForm = CommandForm(NullCommandListener.NULL_COMMAND_LISTENER, StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
-
 
         }
             

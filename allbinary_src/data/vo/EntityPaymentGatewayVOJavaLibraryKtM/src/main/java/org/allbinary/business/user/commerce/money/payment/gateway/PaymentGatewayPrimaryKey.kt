@@ -34,7 +34,7 @@ import org.allbinary.string.CommonSeps
 open public class PaymentGatewayPrimaryKey
             : Object
         
-                , Serializable {
+                , java.io.Serializable {
         
 
     private var storeName: String

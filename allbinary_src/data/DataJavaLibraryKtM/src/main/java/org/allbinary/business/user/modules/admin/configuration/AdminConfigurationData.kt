@@ -34,10 +34,8 @@ open public class AdminConfigurationData
         
 
         companion object {
-
-
+            
     val CONTEXTNAME: String = "Admin"
-
 
         }
             

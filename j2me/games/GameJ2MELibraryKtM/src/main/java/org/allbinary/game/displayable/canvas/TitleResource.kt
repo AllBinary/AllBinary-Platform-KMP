@@ -34,10 +34,8 @@ open public class TitleResource
         
 
         companion object {
-
-
+            
     val RESOURCE_TITLE: String = "/title_sprite_100_by_100.png"
-
 
         }
             

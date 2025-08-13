@@ -39,8 +39,7 @@ open public class CreateUserFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
@@ -97,7 +96,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                         }
                             
 }
-
 
 
         }

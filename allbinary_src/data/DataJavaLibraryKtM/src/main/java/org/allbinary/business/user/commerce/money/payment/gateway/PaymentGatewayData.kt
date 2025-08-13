@@ -34,8 +34,7 @@ open public class PaymentGatewayData
         
 
         companion object {
-
-
+            
     val CRYPTNUM: Int = 5
 
     val ID: PaymentGatewayData = PaymentGatewayData(
@@ -130,7 +129,6 @@ open public class PaymentGatewayData
 
     val SPECIAL9: PaymentGatewayData = PaymentGatewayData(
                             "SPECIAL9")
-
 
         }
             

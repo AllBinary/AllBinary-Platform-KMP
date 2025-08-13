@@ -47,12 +47,10 @@ open public class AbeClassLoader : ClassLoader {
         
 
         companion object {
-
-
+            
     private var classes: Map = HashMap<Any, Any>()
 
     private var PATH: String
-
 
         }
             

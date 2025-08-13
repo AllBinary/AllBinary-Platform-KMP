@@ -36,8 +36,7 @@ open public class AffiliateSalesEntityFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "org.allbinary.data.tables.AffiliatesSalesEntity"
 
 open fun getInstance()
@@ -76,7 +75,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION,
 }
 
 }
-
 
 
         }

@@ -37,8 +37,7 @@ open public class Memory
         
 
         companion object {
-
-
+            
 open fun getInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
@@ -73,7 +72,6 @@ stringBuffer!!.append(Runtime.getRuntime()!!.maxMemory() -memoryUsed)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
-
 
 
         }

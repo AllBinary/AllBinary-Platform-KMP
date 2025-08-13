@@ -35,8 +35,7 @@ open public class CountedPickedUpLayerInterfaceFactoryPool
         
 
         companion object {
-
-
+            
     private var SINGLETON: CountedPickedUpLayerInterfaceFactoryPool = CountedPickedUpLayerInterfaceFactoryPool()
 
 open fun getInstance()
@@ -53,7 +52,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
 }
-
 
 
         }

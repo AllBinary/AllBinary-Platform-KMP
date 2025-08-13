@@ -34,8 +34,7 @@ open public class GLOBALS2
         
 
         companion object {
-
-
+            
     val GETCURRENTLOCATION: String = "Get Current Location"
 
     val GETCURRENTHOMELOCATION: String = "Get Current Home Location"
@@ -165,7 +164,6 @@ open public class GLOBALS2
     val NEW: String = "New"
 
     val SEARCH: String = "Search"
-
 
         }
             

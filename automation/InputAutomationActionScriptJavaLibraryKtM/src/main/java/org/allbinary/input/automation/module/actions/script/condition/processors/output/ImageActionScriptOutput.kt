@@ -42,10 +42,8 @@ open public class ImageActionScriptOutput : BasicProfileActionScriptOutput
         
 
         companion object {
-
-
+            
     private val NAME: String = "Captures"
-
 
         }
             

@@ -35,8 +35,7 @@ open public class ParamsUtil
         
 
         companion object {
-
-
+            
 open fun viewParams(params: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -77,7 +76,6 @@ stringBuffer!!.append(params[index]!!.getName())
                         if()
                         
 }
-
 
 
         }

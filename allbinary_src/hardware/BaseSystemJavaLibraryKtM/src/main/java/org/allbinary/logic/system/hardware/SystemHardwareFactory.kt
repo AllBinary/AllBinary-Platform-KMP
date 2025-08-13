@@ -39,8 +39,7 @@ open public class SystemHardwareFactory
         
 
         companion object {
-
-
+            
     private val instance: SystemHardwareFactory = SystemHardwareFactory()
 
 open fun getInstance()
@@ -85,7 +84,6 @@ osBuffer!!.append(
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return osBuffer!!.toString()
 }
-
 
 
         }

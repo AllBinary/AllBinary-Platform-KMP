@@ -37,8 +37,7 @@ open public class DomSearchHelper
         
 
         companion object {
-
-
+            
 open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Node{
@@ -230,7 +229,6 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return nodeVector
 }
-
 
 
         }

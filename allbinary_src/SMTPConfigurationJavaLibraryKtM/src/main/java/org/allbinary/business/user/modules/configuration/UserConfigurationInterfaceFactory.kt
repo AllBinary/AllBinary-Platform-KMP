@@ -44,8 +44,7 @@ open public class UserConfigurationInterfaceFactory
         
 
         companion object {
-
-
+            
     private val configurationName: String = "DefaultUserConfiguration"
 
                 @Throws(Exception::class)
@@ -105,7 +104,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserConfiguration()
 }
-
 
 
         }

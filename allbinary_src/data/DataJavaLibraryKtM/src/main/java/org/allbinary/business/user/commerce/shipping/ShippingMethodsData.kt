@@ -34,8 +34,7 @@ open public class ShippingMethodsData
         
 
         companion object {
-
-
+            
     val SHIPPINGMETHODSORDERSUMMARIES: String = "SHIPPINGMETHODS_ORDERSUMMARIES"
 
     val SHIPPINGMETHODORDERSUMMARY: String = "SHIPPINGMETHOD_ORDERSUMMARY"
@@ -53,7 +52,6 @@ open public class ShippingMethodsData
     val TAX: String = "SHIPPINGMETHOD_TAX"
 
     val TOTAL: String = "SHIPPINGMETHOD_TOTAL"
-
 
         }
             

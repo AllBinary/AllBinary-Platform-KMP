@@ -34,8 +34,7 @@ open public class AuthorizeNetData
         
 
         companion object {
-
-
+            
     val X_LOGIN: String = "x_login"
 
     val X_TRAN_KEY: String = "x_tran_key"
@@ -141,7 +140,6 @@ open public class AuthorizeNetData
     val X_FREIGHT: String = "x_freight"
 
     val X_DUTY: String = "x_duty"
-
 
         }
             private constructor        ()

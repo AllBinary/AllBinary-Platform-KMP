@@ -32,8 +32,7 @@ open public class GameYouLoseSound : CompositeSound {
         
 
         companion object {
-
-
+            
     private var soundInterface: Sound = GameYouLoseSound()
 
 open fun getInstance()
@@ -44,7 +43,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return soundInterface
 }
-
 
 
         }

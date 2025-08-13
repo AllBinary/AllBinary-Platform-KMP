@@ -41,8 +41,7 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
         
 
         companion object {
-
-
+            
     private val EDIT: String = "Edit"
 
     val DELETE: String = "Delete"
@@ -66,7 +65,6 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
     val NEW_JOYSTICK_INPUT: String = "Joystick"
 
     val NEW_IMAGE_OUTPUT: String = "Image"
-
 
         }
             

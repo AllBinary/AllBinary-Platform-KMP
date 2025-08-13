@@ -47,10 +47,8 @@ open public class CombatGameCanvas : AllBinaryGameCanvas {
         
 
         companion object {
-
-
+            
     var basicLayerProcessor: Array<BasicLayerProcessor?> = arrayOfNulls(0)
-
 
         }
             public constructor        (cmdListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        

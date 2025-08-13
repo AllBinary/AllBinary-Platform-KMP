@@ -36,8 +36,7 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
         
 
         companion object {
-
-
+            
     private val instance: LayerManagerLogging = LayerManagerLogging()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
 
 
     private var removeFailed: Boolean = false
-
 
         }
             

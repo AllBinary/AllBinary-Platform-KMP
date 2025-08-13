@@ -46,8 +46,7 @@ open public class StylesValidationFactory
         
 
         companion object {
-
-
+            
     private val instance: StylesValidationFactory = StylesValidationFactory()
 
 open fun getInstance()
@@ -76,7 +75,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StylesValidationFactory.getInstance()!!.getInstance(stylesDocument)
 }
-
 
 
         }

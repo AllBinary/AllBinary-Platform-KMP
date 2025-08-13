@@ -51,8 +51,7 @@ open public class InputAutomationConfiguration
         
 
         companion object {
-
-
+            
     private val FILENAME: String = "InputAutomationConfig.xml"
 
 open fun getFile()
@@ -63,7 +62,6 @@ open fun getFile()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return File(FILENAME)
 }
-
 
 
         }

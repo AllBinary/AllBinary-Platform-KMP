@@ -31,6 +31,12 @@
 open public class NoShakeAnimationListener : ShakeAnimationListener {
         
 
+        companion object {
+            
+    val NO_SHAKE_ANIMATION_LISTENER: ShakeAnimationListener = NoShakeAnimationListener()
+
+        }
+            
             //Auto Generated
             public constructor() : super()
             {

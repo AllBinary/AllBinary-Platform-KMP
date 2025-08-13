@@ -32,10 +32,8 @@ open public class StaticPagesDbInitInfo : DbInitInfo {
         
 
         companion object {
-
-
+            
     private val INITFILE: String = "staticpagesbinitdata.dat"
-
 
         }
             public constructor        ()                        

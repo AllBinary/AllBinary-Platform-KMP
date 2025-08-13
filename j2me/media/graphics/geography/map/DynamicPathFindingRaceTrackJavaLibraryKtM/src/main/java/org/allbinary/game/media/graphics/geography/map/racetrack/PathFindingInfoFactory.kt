@@ -50,8 +50,7 @@ open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
 
         companion object {
-
-
+            
     private var instance: PathFindingInfoFactory
 
 open fun getInstance()
@@ -71,7 +70,6 @@ open fun init(max: Int)
                     var max = max
 instance= PathFindingInfoFactory(SimplePathFinderGraphVisitorFactory(1, 1, Integer.MAX_VALUE), max)
 }
-
 
 
         }

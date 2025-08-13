@@ -36,8 +36,7 @@ open public class BufferedImageInfoFactory
         
 
         companion object {
-
-
+            
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 open fun getInstance(width: Int, height: Int, type: Int)
@@ -82,7 +81,6 @@ hashMap!!.put(key, bufferedImageInfo)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImageInfo
 }
-
 
 
         }

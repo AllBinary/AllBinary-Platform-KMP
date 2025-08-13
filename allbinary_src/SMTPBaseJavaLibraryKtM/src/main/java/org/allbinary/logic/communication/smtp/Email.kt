@@ -56,8 +56,7 @@ open public class Email
         
 
         companion object {
-
-
+            
     private val DEBUG: String = "mail.debug"
 
     private val SMTP_HOST: String = "mail.smtp.host"
@@ -69,7 +68,6 @@ open public class Email
     private val SMTP_RETURN_ADDRESS: String = "mail.from"
 
     private val SMTP_LOCAL_HOST: String = "mail.smtp.localhost"
-
 
         }
             

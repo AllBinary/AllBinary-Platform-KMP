@@ -52,8 +52,7 @@ open public class GenericProfileActions
         
 
         companion object {
-
-
+            
     val DEFAULT_PROFILE_ACTIONS_PATH: String = GenericProfiles.DEFAULT_PROFILES_PATH +"actions/"
 
 open fun getFile(name: String)
@@ -70,7 +69,6 @@ open fun getFile(name: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return File(fileName)
 }
-
 
 
         }

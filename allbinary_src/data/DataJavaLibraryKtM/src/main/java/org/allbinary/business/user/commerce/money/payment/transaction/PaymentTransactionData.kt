@@ -34,10 +34,8 @@ open public class PaymentTransactionData
         
 
         companion object {
-
-
+            
     var NAME: String = "PAYMENTTRANSACTION_NAME"
-
 
         }
             private constructor        ()

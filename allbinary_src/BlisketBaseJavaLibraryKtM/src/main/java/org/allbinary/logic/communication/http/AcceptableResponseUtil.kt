@@ -35,8 +35,7 @@ open public class AcceptableResponseUtil
         
 
         companion object {
-
-
+            
     private val instance: AcceptableResponseUtil = AcceptableResponseUtil()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
 
                 init{AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
 }
-
 
         }
             

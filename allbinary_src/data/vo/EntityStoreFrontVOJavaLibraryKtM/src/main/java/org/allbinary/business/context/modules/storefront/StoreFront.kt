@@ -67,10 +67,8 @@ open public class StoreFront
         
 
         companion object {
-
-
+            
     private val RESOURCES: String = " Resources" +AbPathData.getInstance()!!.SEPARATOR
-
 
         }
             

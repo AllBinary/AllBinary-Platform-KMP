@@ -37,8 +37,7 @@ open public class CategoryLoaderFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
 : CategoryLoaderInterface{
@@ -78,7 +77,6 @@ open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
 }
 
 }
-
 
 
         }

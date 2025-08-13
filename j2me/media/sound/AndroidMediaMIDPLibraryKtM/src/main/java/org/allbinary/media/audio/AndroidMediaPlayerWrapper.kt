@@ -40,12 +40,10 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
         
 
         companion object {
-
-
+            
     val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper()
 
     private val NULL_MEDIA_PLAYER: MediaPlayer = MediaPlayer()
-
 
         }
             

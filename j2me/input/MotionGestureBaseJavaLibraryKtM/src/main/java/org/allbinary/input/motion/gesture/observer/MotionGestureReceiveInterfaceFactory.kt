@@ -36,8 +36,7 @@ open public class MotionGestureReceiveInterfaceFactory
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CompleteMotionGestureListenerInterface{
@@ -67,7 +66,6 @@ open fun getInstance()
                         }
                             
 }
-
 
 
         }

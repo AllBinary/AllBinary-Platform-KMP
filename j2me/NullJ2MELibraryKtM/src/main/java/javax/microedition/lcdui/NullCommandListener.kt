@@ -21,10 +21,8 @@ open public class NullCommandListener
         
 
         companion object {
-
-
+            
     val NULL_COMMAND_LISTENER: NullCommandListener = NullCommandListener()
-
 
         }
             

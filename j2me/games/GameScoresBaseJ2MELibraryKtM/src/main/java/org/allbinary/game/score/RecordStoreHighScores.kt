@@ -54,8 +54,7 @@ open public class RecordStoreHighScores : HighScores {
         
 
         companion object {
-
-
+            
     private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, highScoreName: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)
@@ -99,7 +98,6 @@ hashTable!!.put(highScores!!.getName(), highScores)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return highScores
 }
-
 
 
         }

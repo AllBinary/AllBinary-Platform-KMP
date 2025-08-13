@@ -39,8 +39,7 @@ open public class AbeLicenseInterfaceFactory
         
 
         companion object {
-
-
+            
     private val SINGLETON: AbeLicenseInterfaceFactory = AbeLicenseInterfaceFactory()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

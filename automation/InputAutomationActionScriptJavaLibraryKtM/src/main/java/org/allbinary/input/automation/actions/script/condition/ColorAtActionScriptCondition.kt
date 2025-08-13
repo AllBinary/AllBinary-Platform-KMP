@@ -50,10 +50,8 @@ open public class ColorAtActionScriptCondition : BasicProfileActionScriptConditi
         
 
         companion object {
-
-
+            
     private val NAME: String = "If Color At"
-
 
         }
             

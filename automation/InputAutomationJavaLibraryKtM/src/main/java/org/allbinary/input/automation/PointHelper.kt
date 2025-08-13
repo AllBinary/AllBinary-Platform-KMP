@@ -35,8 +35,7 @@ open public class PointHelper
         
 
         companion object {
-
-
+            
     private val two: Double = 2
 
 open fun getCenterPoint(rectangle: Rectangle)
@@ -56,7 +55,6 @@ open fun getCenterPoint(rectangle: Rectangle)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return PointFactory.getInstance(x.toInt(), y.toInt())
 }
-
 
 
         }

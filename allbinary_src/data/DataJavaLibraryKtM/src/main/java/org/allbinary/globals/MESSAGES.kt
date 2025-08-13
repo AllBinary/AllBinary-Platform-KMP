@@ -34,10 +34,8 @@ open public class MESSAGES
         
 
         companion object {
-
-
+            
     var CONTACTADMIN: String = "Please contact the administrator."
-
 
         }
             private constructor        ()

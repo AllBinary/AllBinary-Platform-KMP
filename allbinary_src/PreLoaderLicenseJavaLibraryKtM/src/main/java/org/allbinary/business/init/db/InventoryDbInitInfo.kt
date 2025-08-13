@@ -32,10 +32,8 @@ open public class InventoryDbInitInfo : DbInitInfo {
         
 
         companion object {
-
-
+            
     private val INITFILE: String = "inventorydbinitdata.dat"
-
 
         }
             public constructor        ()                        

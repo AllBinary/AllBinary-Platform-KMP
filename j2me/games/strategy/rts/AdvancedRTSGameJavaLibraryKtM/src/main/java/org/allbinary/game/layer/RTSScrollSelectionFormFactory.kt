@@ -44,8 +44,7 @@ open public class RTSScrollSelectionFormFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(formLabel: String, items: Array<CustomItem?>)
@@ -82,7 +81,6 @@ open fun getInstance(formLabel: String, items: Array<CustomItem?>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MultipleScrollSelectionHorizontalForm(formLabel, items, menuRectangle, FormTypeFactory.getInstance()!!.HORIZONTAL_FORM, 0, basicColorFactory!!.BLACK, basicColorFactory!!.WHITE)
 }
-
 
 
         }

@@ -35,8 +35,7 @@ open public class PrimitiveIntUtil
         
 
         companion object {
-
-
+            
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
 : IntArray{
@@ -55,7 +54,6 @@ open fun getTwoDimensionalArrayInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
 }
-
 
 
         }

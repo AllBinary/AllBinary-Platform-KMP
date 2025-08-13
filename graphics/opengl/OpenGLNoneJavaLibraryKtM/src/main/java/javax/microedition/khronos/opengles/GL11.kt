@@ -20,8 +20,7 @@ interface GL11 : GL10 {
         
 
         companion object {
-
-
+            
     val GL_ACTIVE_TEXTURE: Int = 34016
 
     val GL_ADD_SIGNED: Int = 34164
@@ -265,7 +264,6 @@ interface GL11 : GL10 {
     val GL_VIEWPORT: Int = 2978
 
     val GL_WRITE_ONLY: Int = 35001
-
 
         }
             

@@ -35,10 +35,8 @@ open public class DemoGameStartupRunnable : ABRunnable {
         
 
         companion object {
-
-
+            
     val TYPE: Int = 4
-
 
         }
             

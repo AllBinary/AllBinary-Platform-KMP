@@ -38,12 +38,10 @@ open public class AdminConfigurationRequestHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "admin.taghelpers.AdminConfigurationRequestHelper"
 
     private val FACTORYNAME: String = "AdminConfigurationRequestHelperFactory"
-
 
         }
             public constructor        ()

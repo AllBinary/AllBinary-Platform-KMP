@@ -39,12 +39,10 @@ open public class CategoryRequestHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "admin.taghelpers.CategoryRequestHelper"
 
     private val FACTORYNAME: String = "CategoryRequestHelperFactory"
-
 
         }
             public constructor        ()

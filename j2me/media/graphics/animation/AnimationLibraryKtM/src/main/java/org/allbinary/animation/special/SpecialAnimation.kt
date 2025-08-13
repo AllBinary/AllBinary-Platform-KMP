@@ -36,8 +36,7 @@ open public class SpecialAnimation : IndexedAnimation
         
 
         companion object {
-
-
+            
     private val NULL_SPECIAL_ANIMATION: SpecialAnimation = SpecialAnimation(IndexedAnimationBehavior(1, 250))
 
 open fun getInstance()
@@ -48,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NULL_SPECIAL_ANIMATION
 }
-
 
 
         }

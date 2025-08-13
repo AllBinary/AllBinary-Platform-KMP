@@ -36,8 +36,7 @@ open public class NullShaderComposite : ShaderComposite {
         
 
         companion object {
-
-
+            
     private val instance: NullShaderComposite = object: NullShaderComposite(OpenGLCapabilities.getInstance()!!.VERSION_2_0, arrayOf(Shader(),Shader()), CompositeShaderUpdater.getInstance(), ShaderInitializer.getInstance(), ModelViewProjection.getInstance(), 
                             null, 
                             null, NullOpenGLProcessorFactory.getInstance())
@@ -61,7 +60,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

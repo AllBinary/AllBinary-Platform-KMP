@@ -35,8 +35,7 @@ open public class PrimitiveArrayToString
         
 
         companion object {
-
-
+            
 open fun toString(floats: FloatArray)
         //nullable = true from not(false or (true and false)) = true
 : String{
@@ -61,7 +60,6 @@ open fun toString(floats: FloatArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
-
 
 
         }

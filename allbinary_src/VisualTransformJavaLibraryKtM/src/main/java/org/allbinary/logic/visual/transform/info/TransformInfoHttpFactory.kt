@@ -42,8 +42,7 @@ open public class TransformInfoHttpFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
@@ -129,7 +128,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION,
 }
 
 }
-
 
 
         }

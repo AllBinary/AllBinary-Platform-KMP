@@ -52,10 +52,8 @@ open public class UnitItemArrayFactory
         
 
         companion object {
-
-
+            
     private val ITEMS: Array<CustomItem?> = CustomItemUtil.getInstance()!!.CUSTOM_ITEM_ARRAY
-
 
         }
             

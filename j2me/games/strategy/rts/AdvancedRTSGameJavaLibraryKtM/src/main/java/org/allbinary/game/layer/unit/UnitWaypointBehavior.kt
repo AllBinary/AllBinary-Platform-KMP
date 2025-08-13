@@ -55,10 +55,8 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase
         
 
         companion object {
-
-
+            
     private val PATHING: String = "Pathing"
-
 
         }
             

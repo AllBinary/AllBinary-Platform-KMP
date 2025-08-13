@@ -36,10 +36,8 @@ open public class LogConfigType
         
 
         companion object {
-
-
+            
     var availableLogConfigTypes: BasicArrayList = BasicArrayList()
-
 
         }
             

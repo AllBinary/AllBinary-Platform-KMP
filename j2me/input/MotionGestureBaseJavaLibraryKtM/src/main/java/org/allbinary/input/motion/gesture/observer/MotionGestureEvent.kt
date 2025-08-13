@@ -40,14 +40,12 @@ open public class MotionGestureEvent : AllBinaryEventObject {
         
 
         companion object {
-
-
+            
     private val CURRENT: String = CommonLabels.getInstance()!!.CURRENT
 
     private val PREVIOUS: String = " Previous: "
 
     private val HASHCODE: String = " hashcode: "
-
 
         }
             

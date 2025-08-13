@@ -32,10 +32,8 @@ open public class LicensingException : java.lang.Exception {
         
 
         companion object {
-
-
+            
     val serialVersionUID: Long = 1L
-
 
         }
             public constructor        (){}

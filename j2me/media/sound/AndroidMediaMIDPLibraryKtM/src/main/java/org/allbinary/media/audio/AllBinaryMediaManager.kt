@@ -44,8 +44,7 @@ open public class AllBinaryMediaManager
         
 
         companion object {
-
-
+            
     private val THIS: String = "AllBinaryMediaManagerAndroid"
 
     private var mostUsedTotal: Int = 0
@@ -300,7 +299,6 @@ open fun isInitialized()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
-
 
 
         }

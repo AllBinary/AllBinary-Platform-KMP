@@ -34,8 +34,7 @@ open public class BasketData
         
 
         companion object {
-
-
+            
     val BASKET: String = "BASKET"
 
     val NAME: String = "NAME"
@@ -57,7 +56,6 @@ open public class BasketData
     val DELETE: String = "BASKET_DELETE"
 
     val ADJUST: String = "BASKET_ADJUST"
-
 
         }
             private constructor        ()

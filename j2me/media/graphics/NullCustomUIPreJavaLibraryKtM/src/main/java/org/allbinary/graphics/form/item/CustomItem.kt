@@ -24,10 +24,8 @@ open public class CustomItem
         
 
         companion object {
-
-
+            
     val NULL_CUSTOM_ITEM: CustomItem = CustomItem(StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
-
 
         }
             protected constructor        (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)

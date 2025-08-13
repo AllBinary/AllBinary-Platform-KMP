@@ -44,8 +44,7 @@ open public class ImageScaleUtil
         
 
         companion object {
-
-
+            
     private val instance: ImageScaleUtil = ImageScaleUtil()
 
 open fun getInstance()
@@ -56,7 +55,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

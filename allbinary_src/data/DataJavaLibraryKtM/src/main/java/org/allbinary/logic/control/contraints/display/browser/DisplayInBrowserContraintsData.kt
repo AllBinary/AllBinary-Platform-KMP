@@ -34,8 +34,7 @@ open public class DisplayInBrowserContraintsData
         
 
         companion object {
-
-
+            
     val NAME: String = "DISPLAYBROWSERCONSTRAINTS_NAME"
 
     val FRAMEABLE: String = "DISPLAYBROWSERCONSTRAINTS_FRAMEABLE"
@@ -45,7 +44,6 @@ open public class DisplayInBrowserContraintsData
     val QUICKFRAMEABLE: String = "DISPLAYBROWSERCONSTRAINTS_QUICKFRAMEABLE"
 
     val MOUNTABLELINK: String = "DISPLAYBROWSERCONSTRAINTS_MOUNTABLELINK"
-
 
         }
             private constructor        ()

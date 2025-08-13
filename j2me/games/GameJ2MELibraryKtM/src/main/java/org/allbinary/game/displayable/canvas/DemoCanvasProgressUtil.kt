@@ -38,8 +38,7 @@ open public class DemoCanvasProgressUtil
         
 
         companion object {
-
-
+            
 open fun showProgress(demoCanvas: DemoCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -70,7 +69,6 @@ paintableArray[1]= demoCanvas!!.getDefaultPaintableInterface()
 demoCanvas!!.setDefaultPaintableInterface(PaintableComposite(paintableArray))
 demoCanvas!!.setPaintableInterface(demoCanvas!!.getDefaultPaintableInterface())
 }
-
 
 
         }

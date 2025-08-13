@@ -36,10 +36,8 @@ open public class NullRecordFilter
         
 
         companion object {
-
-
+            
     var NULL_RECORD_FILTER: NullRecordFilter = NullRecordFilter()
-
 
         }
             

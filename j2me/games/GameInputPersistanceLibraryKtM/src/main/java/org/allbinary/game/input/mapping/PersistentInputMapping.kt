@@ -47,14 +47,12 @@ open public class PersistentInputMapping
         
 
         companion object {
-
-
+            
     val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping()
 
     val DEFAULT_RECORD_ID: String = "_DIM"
 
     val RECORD_ID: String = "_SIC"
-
 
         }
             

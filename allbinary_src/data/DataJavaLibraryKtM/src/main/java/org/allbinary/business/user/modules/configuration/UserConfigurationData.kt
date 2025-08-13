@@ -35,14 +35,12 @@ open public class UserConfigurationData
         
 
         companion object {
-
-
+            
     val NAME: String = "USER_CONFIGURATION_NAME"
 
     val UNCRYPTED_EXTENSION: String = DataFileData.UNCRYPTED_EXTENSION
 
     val ENCRYPTED_EXTENSION: String = DataFileData.ENCRYPTED_EXTENSION
-
 
         }
             private constructor        ()

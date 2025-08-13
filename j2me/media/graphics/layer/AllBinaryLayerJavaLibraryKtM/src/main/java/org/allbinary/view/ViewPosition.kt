@@ -34,10 +34,8 @@ open public class ViewPosition : GPoint {
         
 
         companion object {
-
-
+            
     val NULL_VIEW_POSITION: ViewPosition = ViewPosition()
-
 
         }
             

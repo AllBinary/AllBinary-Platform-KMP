@@ -41,8 +41,7 @@ open public class NewUserFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance()
@@ -129,7 +128,6 @@ requestHashMap!!.put(UserRoleData.NAME.toString(), roleString)
                         }
                             
 }
-
 
 
         }

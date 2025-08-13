@@ -34,8 +34,7 @@ open public class EmailData
         
 
         companion object {
-
-
+            
     val SERVER: String = "EMAIL_SERVER"
 
     val NAME: String = "EMAIL_NAME"
@@ -51,7 +50,6 @@ open public class EmailData
     val SUBJECT: String = "EMAIL_SUBJECT"
 
     val CONTENT: String = "EMAIL_CONTENT"
-
 
         }
             private constructor        ()

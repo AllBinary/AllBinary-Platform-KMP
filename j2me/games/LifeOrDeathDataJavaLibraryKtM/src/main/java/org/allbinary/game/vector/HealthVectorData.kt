@@ -34,8 +34,7 @@ open public class HealthVectorData
         
 
         companion object {
-
-
+            
     var points: Array<Array<IntArray?>?> = arrayOf(arrayOf(intArrayOf(2,1)
 ,intArrayOf(3,2)
 ,intArrayOf(3,2)
@@ -58,7 +57,6 @@ open public class HealthVectorData
 ,intArrayOf(2,1)
 ,intArrayOf(1000,1000)
 ))
-
 
         }
             

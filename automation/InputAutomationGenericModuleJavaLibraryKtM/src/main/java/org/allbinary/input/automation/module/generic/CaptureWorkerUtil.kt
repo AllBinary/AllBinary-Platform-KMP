@@ -38,8 +38,7 @@ open public class CaptureWorkerUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun processProfileActionConditions(vector: Vector, frame: Long)
@@ -91,7 +90,6 @@ logUtil!!.put(commonStrings!!.START,
 }
 
 }
-
 
 
         }

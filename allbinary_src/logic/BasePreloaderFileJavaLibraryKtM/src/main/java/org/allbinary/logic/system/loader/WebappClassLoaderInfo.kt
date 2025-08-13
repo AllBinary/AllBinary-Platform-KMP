@@ -37,8 +37,7 @@ open public class WebappClassLoaderInfo
         
 
         companion object {
-
-
+            
     private var classLoader: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
 open fun setLoader(classLoader: ClassLoader)
@@ -58,7 +57,6 @@ open fun getLoader()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return classLoader as ClassLoader
 }
-
 
 
         }

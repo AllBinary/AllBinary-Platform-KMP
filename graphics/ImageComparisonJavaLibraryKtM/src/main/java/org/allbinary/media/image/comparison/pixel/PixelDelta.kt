@@ -40,8 +40,7 @@ open public class PixelDelta
         
 
         companion object {
-
-
+            
 open fun getKey(point: GPoint, colorDelta: ColorDelta)
         //nullable = true from not(false or (false and false)) = true
 : Any{
@@ -57,7 +56,6 @@ open fun getKey(point: GPoint, colorDelta: ColorDelta)
                         return StringMaker().
                             append(point.hashCode())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(colorDelta!!.getKey()!!.toString())!!.toString()
 }
-
 
 
         }

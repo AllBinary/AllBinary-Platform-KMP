@@ -41,8 +41,7 @@ open public class CommandUriAction
         
 
         companion object {
-
-
+            
     private val instance: CommandUriAction = CommandUriAction()
 
 open fun getInstance()
@@ -53,7 +52,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

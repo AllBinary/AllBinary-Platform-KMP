@@ -18,10 +18,8 @@ open public class NullMIDlet : MIDlet {
         
 
         companion object {
-
-
+            
     val NULL_MIDLET: NullMIDlet = NullMIDlet()
-
 
         }
             

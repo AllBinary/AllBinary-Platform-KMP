@@ -36,8 +36,7 @@ open public class PaymentGatewayPageData
         
 
         companion object {
-
-
+            
     private val EXTENSION: String = ".jsp"
 
     private val NAME: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -47,7 +46,6 @@ open public class PaymentGatewayPageData
     val PAYMENTOPTIONS: String = "PaymentOptions" +EXTENSION
 
     val STARTCHECKOUT: String = "StartCheckout" +EXTENSION
-
 
         }
             

@@ -36,10 +36,8 @@ open public class NullRecordComparator
         
 
         companion object {
-
-
+            
     val NULL_RECORD_COMPARATOR: NullRecordComparator = NullRecordComparator()
-
 
         }
             

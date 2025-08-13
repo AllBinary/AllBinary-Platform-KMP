@@ -37,10 +37,8 @@ open public class OnDemandResources
         
 
         companion object {
-
-
+            
     val NULL_ON_DEMAND_RESOURCES: OnDemandResources = OnDemandResources()
-
 
         }
             

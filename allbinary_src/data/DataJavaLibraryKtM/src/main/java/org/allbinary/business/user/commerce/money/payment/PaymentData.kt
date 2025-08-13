@@ -34,8 +34,7 @@ open public class PaymentData
         
 
         companion object {
-
-
+            
     val MIN: Int = 4
 
     val MAX: Int = 19
@@ -81,7 +80,6 @@ open public class PaymentData
     val DRIVERSLICENSE: String = "PAYMENT_DRIVERSLICENSE"
 
     val MAGNETICINKCHECKREADER: String = "PAYMENT_MAGNETICINKCHECKREADER"
-
 
         }
             

@@ -35,8 +35,7 @@ open public class ForcedLogUtil
         
 
         companion object {
-
-
+            
 open fun log(message: String, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -57,7 +56,6 @@ open fun log(message: String, anyType: Any)
 }
 
 }
-
 
 
         }

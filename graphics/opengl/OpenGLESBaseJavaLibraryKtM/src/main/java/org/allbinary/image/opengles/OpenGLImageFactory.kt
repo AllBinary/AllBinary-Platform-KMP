@@ -37,10 +37,8 @@ open public class OpenGLImageFactory
         
 
         companion object {
-
-
+            
     var NULL_OPENGL_IMAGE_FACTORY: OpenGLImageFactory = OpenGLImageFactory()
-
 
         }
             

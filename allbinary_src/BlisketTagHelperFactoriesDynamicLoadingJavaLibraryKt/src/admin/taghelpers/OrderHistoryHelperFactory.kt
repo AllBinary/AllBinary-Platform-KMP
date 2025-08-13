@@ -38,12 +38,10 @@ open public class OrderHistoryHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "admin.taghelpers.OrderHistoryHelper"
 
     private val FACTORYNAME: String = "OrderHistoryHelperFactory"
-
 
         }
             public constructor        ()

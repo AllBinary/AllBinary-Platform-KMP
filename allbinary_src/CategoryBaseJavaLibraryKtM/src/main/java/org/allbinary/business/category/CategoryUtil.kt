@@ -43,8 +43,7 @@ open public class CategoryUtil
         
 
         companion object {
-
-
+            
 open fun getPathLevel(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Int{
@@ -118,7 +117,6 @@ open fun getNameFromNode(node: Node)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
-
 
 
         }

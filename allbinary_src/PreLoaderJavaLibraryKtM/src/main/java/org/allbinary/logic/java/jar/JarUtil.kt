@@ -39,8 +39,7 @@ open public class JarUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun main(args: Array<String?>)
@@ -52,7 +51,6 @@ JarUtil(URL(
                             "file:///G:/mnt/bc/mydev/working/j2me/MiniSpaceWars/MiniSpaceWars/dist/MiniSpaceWars.jar")).
                             show()
 }
-
 
 
         }

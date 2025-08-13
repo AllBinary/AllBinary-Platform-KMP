@@ -40,8 +40,7 @@ open public class GenericProfileCaptureWorkerFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(genericProfile: GenericProfile)
@@ -101,7 +100,6 @@ open fun getInstance(genericProfile: GenericProfile)
                             throw Exception(
                             "No CaptureWorkerInterface specified in GenericProfile")
 }
-
 
 
         }

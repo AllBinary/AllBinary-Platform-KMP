@@ -41,8 +41,7 @@ open public class ModDomHelper
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun createTextNode(document: Document, name: String, text: String)
@@ -517,7 +516,6 @@ node.appendChild(ModDomHelper.createTextNode(document, name, value))
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 }
-
 
 
         }

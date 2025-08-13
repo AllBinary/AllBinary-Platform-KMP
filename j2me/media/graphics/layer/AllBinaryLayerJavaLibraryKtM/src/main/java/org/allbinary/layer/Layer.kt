@@ -40,11 +40,9 @@ open public class Layer
         
 
         companion object {
-
-
+            
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
             
-
 
         }
             

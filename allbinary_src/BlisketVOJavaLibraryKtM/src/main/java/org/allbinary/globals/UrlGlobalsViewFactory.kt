@@ -37,8 +37,7 @@ open public class UrlGlobalsViewFactory
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DomNodeInterface{
@@ -75,7 +74,6 @@ open fun getInstance()
 }
 
 }
-
 
 
         }

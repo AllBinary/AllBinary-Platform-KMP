@@ -55,10 +55,8 @@ open public class UpdateFileValidationView : InventoryItemView
         
 
         companion object {
-
-
+            
     private val UPDATEPRODUCT: String = CommonStrings.getInstance()!!.UPDATE
-
 
         }
             

@@ -45,8 +45,7 @@ open public class GameFeatureFormUtil
         
 
         companion object {
-
-
+            
     private val instance: GameFeatureFormUtil = GameFeatureFormUtil()
 
 open fun getInstance()
@@ -57,7 +56,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

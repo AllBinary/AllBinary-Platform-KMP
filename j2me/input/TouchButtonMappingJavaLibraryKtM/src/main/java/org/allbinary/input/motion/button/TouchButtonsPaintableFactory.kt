@@ -36,8 +36,7 @@ open public class TouchButtonsPaintableFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : Paintable{
@@ -49,7 +48,6 @@ open fun getInstance(basicColor: BasicColor)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TouchButtonsPaintable(basicColor)
 }
-
 
 
         }

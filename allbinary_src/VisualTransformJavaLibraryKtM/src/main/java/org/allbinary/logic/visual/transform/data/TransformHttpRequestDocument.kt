@@ -46,12 +46,10 @@ open public class TransformHttpRequestDocument
         
 
         companion object {
-
-
+            
     private val language: String = "en"
 
     private val local: String = "US"
-
 
         }
             

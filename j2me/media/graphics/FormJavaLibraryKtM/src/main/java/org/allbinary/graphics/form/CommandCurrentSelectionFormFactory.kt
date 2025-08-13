@@ -39,8 +39,7 @@ open public class CommandCurrentSelectionFormFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, moveForSmallScreen: Boolean, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
@@ -92,7 +91,6 @@ open fun getInstance(title: String, items: Array<CustomItem?>, rectangle: Rectan
                         }
                             
 }
-
 
 
         }

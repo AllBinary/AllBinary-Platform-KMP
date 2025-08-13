@@ -34,10 +34,8 @@ open public class BasicDecimal
         
 
         companion object {
-
-
+            
     val ZERO_BIGDECIMAL: BasicDecimal = BasicDecimal()
-
 
         }
             

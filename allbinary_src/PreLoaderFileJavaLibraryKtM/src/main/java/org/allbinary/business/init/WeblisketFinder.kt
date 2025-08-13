@@ -42,8 +42,7 @@ open public class WeblisketFinder
         
 
         companion object {
-
-
+            
     private val instance: WeblisketFinder = WeblisketFinder()
 
 open fun getInstance()
@@ -75,7 +74,6 @@ open fun main(args: Array<String?>)
 
 System.out.println(vector.size())
 }
-
 
 
         }

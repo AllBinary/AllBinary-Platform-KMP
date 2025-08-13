@@ -34,10 +34,8 @@ open public class AllMotionRecognizer
         
 
         companion object {
-
-
+            
     private var index: Int = 0
-
 
         }
             

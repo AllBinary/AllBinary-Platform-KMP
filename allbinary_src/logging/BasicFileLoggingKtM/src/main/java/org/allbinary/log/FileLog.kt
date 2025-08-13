@@ -43,8 +43,7 @@ open public class FileLog
         
 
         companion object {
-
-
+            
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
             
 
@@ -423,7 +422,6 @@ open fun getFilePath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return logPath +fileName
 }
-
 
 
         }

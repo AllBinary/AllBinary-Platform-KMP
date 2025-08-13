@@ -40,10 +40,8 @@ open public class SequenceAI : ArrayAI {
         
 
         companion object {
-
-
+            
     private val SEQUENCE_AI: String = "Sequence AI"
-
 
         }
             

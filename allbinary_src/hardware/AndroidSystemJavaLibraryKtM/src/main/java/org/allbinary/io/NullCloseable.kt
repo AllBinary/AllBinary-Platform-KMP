@@ -37,10 +37,8 @@ open public class NullCloseable
         
 
         companion object {
-
-
+            
     val NULL_CLOSEABLE: NullCloseable = NullCloseable()
-
 
         }
             

@@ -47,10 +47,8 @@ open public class GenericProfileActionScript : DefaultMutableTreeNode
         
 
         companion object {
-
-
+            
     private val NAME: String = "Root"
-
 
         }
             

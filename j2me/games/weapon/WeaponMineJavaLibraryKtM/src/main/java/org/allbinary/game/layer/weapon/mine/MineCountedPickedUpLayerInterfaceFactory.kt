@@ -43,8 +43,7 @@ open public class MineCountedPickedUpLayerInterfaceFactory : CountedPickedUpLaye
         
 
         companion object {
-
-
+            
     private var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY
 
                 @Throws(Exception::class)
@@ -63,7 +62,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return pickedUpLayerInterfaceFactoryInterface
 }
-
 
 
         }

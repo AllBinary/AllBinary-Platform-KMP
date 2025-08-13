@@ -37,8 +37,7 @@ open public class BasicErrorNodeUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun get(document: Document, errorText: String)
@@ -70,7 +69,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstan
 }
 
 }
-
 
 
         }

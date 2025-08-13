@@ -34,8 +34,7 @@ open public class ShippingMethodData
         
 
         companion object {
-
-
+            
     val DESCRIPTION: String = "SHIPPINGMETHOD_DESCRIPTION"
 
     val DEFAULT: String = "SHIPPINGMETHOD_DEFAULT"
@@ -45,7 +44,6 @@ open public class ShippingMethodData
     val GROUP: String = "SHIPPINGMETHOD_GROUP"
 
     val COST: String = "SHIPPINGMETHOD_COST"
-
 
         }
             public constructor        ()

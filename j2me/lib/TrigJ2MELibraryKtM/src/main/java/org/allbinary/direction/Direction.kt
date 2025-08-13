@@ -35,8 +35,7 @@ open public class Direction
         
 
         companion object {
-
-
+            
     private var directionArray: Array<Direction?> = arrayOfNulls(13)
 
 open fun getInstance(direction: Int)
@@ -50,7 +49,6 @@ open fun getInstance(direction: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return directionArray[direction]!!
 }
-
 
 
         }

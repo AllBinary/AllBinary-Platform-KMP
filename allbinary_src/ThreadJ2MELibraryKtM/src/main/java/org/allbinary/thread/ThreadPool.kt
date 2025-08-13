@@ -46,10 +46,8 @@ open public class ThreadPool
         
 
         companion object {
-
-
+            
     private val ROOT_NAME: String = "-PooledThread-"
-
 
         }
             
@@ -452,9 +450,7 @@ open public inner class PooledThread : Thread {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 

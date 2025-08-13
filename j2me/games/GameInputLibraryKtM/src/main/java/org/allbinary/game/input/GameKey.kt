@@ -34,10 +34,8 @@ open public class GameKey : Input {
         
 
         companion object {
-
-
+            
     val NULL_GAME_KEY: GameKey = GameKey( -1, StringUtil.getInstance()!!.NULL_STRING)
-
 
         }
              constructor        (key: Int, name: String)                        

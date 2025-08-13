@@ -36,8 +36,7 @@ open public class NullGameCanvas : AllBinaryGameCanvas {
         
 
         companion object {
-
-
+            
     private val SINGLETON: NullGameCanvas = NullGameCanvas()
 
 open fun getInstance()
@@ -71,7 +70,6 @@ nullGameCanvas!!.setTitle(NO_GAME)
     val NO_GAME: String = "No Background Game"
 
     val TYPE: Int = 1
-
 
         }
             protected constructor        (gameLayerManager: AllBinaryGameLayerManager)                        

@@ -46,11 +46,9 @@ open public class HorizontalScreenPatrolAI : BasicAI {
         
 
         companion object {
-
-
+            
     val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(433)!!
             
-
 
         }
             

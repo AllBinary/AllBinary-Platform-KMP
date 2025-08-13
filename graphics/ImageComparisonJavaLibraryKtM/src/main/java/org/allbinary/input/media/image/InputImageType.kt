@@ -36,8 +36,7 @@ open public class InputImageType
         
 
         companion object {
-
-
+            
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
     private val TYPE_VECTOR: Vector = Vector()
@@ -72,7 +71,6 @@ open fun getAllAsVector()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TYPE_VECTOR
 }
-
 
 
         }

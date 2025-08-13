@@ -40,12 +40,10 @@ open public class TransformInfoRequestHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "taghelpers.transform.info.TransformInfoRequestHelper"
 
     private val FACTORYNAME: String = "TransformInfoRequestHelperFactory"
-
 
         }
             public constructor        ()

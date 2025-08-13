@@ -40,10 +40,8 @@ open public class GenericModuleFactory : AbstractInputAutomationFactory {
         
 
         companion object {
-
-
+            
     private var NAME: String = "Generic" +InputAutomationModuleData.MODULE_NAME_END
-
 
         }
             public constructor        ()                        

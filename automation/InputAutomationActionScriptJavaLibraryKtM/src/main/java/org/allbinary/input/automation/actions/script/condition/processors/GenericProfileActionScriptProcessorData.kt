@@ -34,10 +34,8 @@ open public class GenericProfileActionScriptProcessorData
         
 
         companion object {
-
-
+            
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_PROCESSOR_NAME"
-
 
         }
             private constructor        ()

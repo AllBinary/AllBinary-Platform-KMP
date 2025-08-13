@@ -47,10 +47,8 @@ open public class TitleBodyCustomizerView : HttpStoreComponentView
         
 
         companion object {
-
-
+            
     private val NAME: String = "None"
-
 
         }
             

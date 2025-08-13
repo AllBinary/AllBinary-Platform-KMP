@@ -44,8 +44,7 @@ open public class DomDocumentFileHelper
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun create(xmlFile: AbFile)
@@ -127,7 +126,6 @@ dataOutputStream!!.flush()
          }
         
 }
-
 
 
         }

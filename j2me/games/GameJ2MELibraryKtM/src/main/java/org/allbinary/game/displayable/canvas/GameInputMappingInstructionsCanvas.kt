@@ -44,8 +44,7 @@ open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
         
 
         companion object {
-
-
+            
     val DISPLAY: Command = Command(
                             "Help", Command.SCREEN, 1)
 
@@ -53,7 +52,6 @@ open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
                             "Close", Command.SCREEN, 1)
 
     val NAME: String = "GameInputMappingInstructionsCanvas"
-
 
         }
             

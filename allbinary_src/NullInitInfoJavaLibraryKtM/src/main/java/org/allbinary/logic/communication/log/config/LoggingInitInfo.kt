@@ -35,8 +35,7 @@ open public class LoggingInitInfo
         
 
         companion object {
-
-
+            
     private var logConfigInfoList: BasicArrayList = 
                 null
             
@@ -182,7 +181,6 @@ open fun getTypeList()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return allLogTypeVector
 }
-
 
 
         }

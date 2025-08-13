@@ -34,8 +34,7 @@ open public class ColorLevel
         
 
         companion object {
-
-
+            
     val COLOR_MASK: Int = 0x00FFFFFF
 
     val MIN: Int = 0x44
@@ -45,7 +44,6 @@ open public class ColorLevel
     val LIGHT: Int = 0xAA
 
     val HIGH: Int = 0xEE
-
 
         }
             private constructor        ()

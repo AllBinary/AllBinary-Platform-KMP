@@ -45,8 +45,7 @@ open public class RequestWorkFlowFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class, LicensingException::class)
             
 open fun getInstance(request: ServletRequest, response: ServletResponse, servletConfig: ServletConfig, servletContext: ServletContext)
@@ -116,7 +115,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WorkFlowEntityFactory.getInstance()!!.create2()!!.get(workFlowName, storeName)
 }
-
 
 
         }

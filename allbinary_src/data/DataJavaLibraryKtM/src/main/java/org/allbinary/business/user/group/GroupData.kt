@@ -34,10 +34,8 @@ open public class GroupData
         
 
         companion object {
-
-
+            
     val NAME: String = "GROUP_NAME"
-
 
         }
             public constructor        ()

@@ -36,8 +36,7 @@ open public class ImageArrayRotationAnimationPool : BasicArrayListResetablePool 
         
 
         companion object {
-
-
+            
     private var IMAGE_ROTATION_ANIMATION_POOL: PoolInterface = ImageArrayRotationAnimationPool(ImageArrayRotationAnimationCacheableInterfaceFactory())
 
 open fun getInstance()
@@ -48,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ImageArrayRotationAnimationPool.IMAGE_ROTATION_ANIMATION_POOL
 }
-
 
 
         }

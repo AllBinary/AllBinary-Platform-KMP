@@ -44,8 +44,7 @@ open public class ImageModifierUtil
         
 
         companion object {
-
-
+            
     private val instance: ImageModifierUtil = ImageModifierUtil()
 
 open fun getInstanceOrCreate()
@@ -56,7 +55,6 @@ open fun getInstanceOrCreate()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

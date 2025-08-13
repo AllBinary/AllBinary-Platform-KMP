@@ -34,8 +34,7 @@ open public class ProcessingFrameIndexFactory
         
 
         companion object {
-
-
+            
     private var currentFrame: Long = 0L
 
 open fun next()
@@ -46,7 +45,6 @@ open fun next()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return currentFrame++
 }
-
 
 
         }

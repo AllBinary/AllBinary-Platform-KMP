@@ -37,11 +37,9 @@ open public class InputProbability
         
 
         companion object {
-
-
+            
     var INPUT_PROBABILITY: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
             
-
 
         }
             

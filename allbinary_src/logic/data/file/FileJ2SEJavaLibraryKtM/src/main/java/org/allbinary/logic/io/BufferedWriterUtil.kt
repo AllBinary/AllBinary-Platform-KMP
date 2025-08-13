@@ -38,8 +38,7 @@ open public class BufferedWriterUtil
         
 
         companion object {
-
-
+            
     private val instance: BufferedWriterUtil = BufferedWriterUtil()
 
 open fun getInstance()
@@ -50,7 +49,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

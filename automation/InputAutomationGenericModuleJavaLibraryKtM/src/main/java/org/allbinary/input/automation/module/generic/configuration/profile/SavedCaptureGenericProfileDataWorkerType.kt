@@ -33,11 +33,9 @@ open public class SavedCaptureGenericProfileDataWorkerType : GenericProfileDataW
         
 
         companion object {
-
-
+            
     var SAVED_CAPTURE: SavedCaptureGenericProfileDataWorkerType = SavedCaptureGenericProfileDataWorkerType("Saved " +InputImageType.CAPTURE.getName(), 
                             "c:\\share\\captures\\2\\", 100)
-
 
         }
             

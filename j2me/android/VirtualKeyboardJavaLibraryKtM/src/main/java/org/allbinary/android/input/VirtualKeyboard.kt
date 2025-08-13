@@ -37,6 +37,12 @@ open public class VirtualKeyboard
          {
         
 
+        companion object {
+            
+    val NULL_VIRTUAL_KEYBOARD: VirtualKeyboard = VirtualKeyboard()
+
+        }
+            
             //Auto Generated
             public constructor() : super()
             {

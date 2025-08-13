@@ -34,8 +34,7 @@ open public class DownGameKeyEventHandler : DownGameKeyEventHandlerBase {
         
 
         companion object {
-
-
+            
     private val instance: DownGameKeyEventHandler = DownGameKeyEventHandler()
 
     private val instanceArray: Array<DownGameKeyEventHandlerBase?> = arrayOf(DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase(),DownGameKeyEventHandlerBase())
@@ -48,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

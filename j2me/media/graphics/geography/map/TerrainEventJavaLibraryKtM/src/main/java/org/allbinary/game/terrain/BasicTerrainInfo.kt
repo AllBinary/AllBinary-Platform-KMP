@@ -36,10 +36,8 @@ open public class BasicTerrainInfo
         
 
         companion object {
-
-
+            
     val NULL_BASIC_TERRAIN_INFO: BasicTerrainInfo = BasicTerrainInfo(AngleFactory.getInstance()!!.NOT_ANGLE)
-
 
         }
             

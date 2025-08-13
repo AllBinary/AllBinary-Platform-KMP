@@ -37,8 +37,7 @@ open public class DisplaysUtil
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : DisplaysUtil{
@@ -50,7 +49,6 @@ open fun getInstance()
 
 
     private val instance: DisplaysUtil = DisplaysUtil()
-
 
         }
             

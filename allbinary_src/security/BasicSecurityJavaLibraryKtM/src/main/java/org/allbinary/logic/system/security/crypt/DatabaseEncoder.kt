@@ -42,8 +42,7 @@ open public class DatabaseEncoder
         
 
         companion object {
-
-
+            
 open fun encode(value: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -177,7 +176,6 @@ PreLogUtil.put(commonStrings!!.EXCEPTION,
 }
 
 }
-
 
 
         }

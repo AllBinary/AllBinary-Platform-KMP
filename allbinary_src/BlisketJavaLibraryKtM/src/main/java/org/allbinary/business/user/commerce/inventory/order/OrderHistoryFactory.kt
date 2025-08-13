@@ -37,8 +37,7 @@ open public class OrderHistoryFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(id: String)
         //nullable =  from not(true or (false and false)) = 
 : OrderHistory{
@@ -81,7 +80,6 @@ open fun getInstance(id: String)
 }
 
 }
-
 
 
         }

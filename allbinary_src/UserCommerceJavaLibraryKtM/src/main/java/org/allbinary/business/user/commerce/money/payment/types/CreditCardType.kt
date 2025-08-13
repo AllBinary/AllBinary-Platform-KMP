@@ -34,10 +34,8 @@ open public class CreditCardType
         
 
         companion object {
-
-
+            
     val MAXLEN: Int = 19
-
 
         }
             

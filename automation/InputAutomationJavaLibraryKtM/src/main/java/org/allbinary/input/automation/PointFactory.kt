@@ -35,8 +35,7 @@ open public class PointFactory
         
 
         companion object {
-
-
+            
     private var pointArray: Array<Array<Point?>?> = arrayOfNulls(3000)
 
 open fun getInstance(x: Int, y: Int)
@@ -67,7 +66,6 @@ open fun getInstance(x: Int, y: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return point
 }
-
 
 
         }

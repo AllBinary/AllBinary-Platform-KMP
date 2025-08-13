@@ -37,8 +37,7 @@ open public class GPoint
         
 
         companion object {
-
-
+            
     private val POINT_LABEL: String = "Point: "
 
 open fun toStringStatic(x: Int, y: Int, z: Int)
@@ -74,7 +73,6 @@ stringBuffer!!.append(z)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
-
 
 
         }

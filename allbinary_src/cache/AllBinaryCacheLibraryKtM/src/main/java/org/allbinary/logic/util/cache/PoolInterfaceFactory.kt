@@ -34,8 +34,7 @@ open public class PoolInterfaceFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, poolType: PoolType, cachePolicy: CachePolicy)
@@ -54,7 +53,6 @@ open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFacto
 
                             throw Exception("No Such PoolType: " +poolType!!.toString())
 }
-
 
 
         }

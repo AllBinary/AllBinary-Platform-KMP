@@ -34,8 +34,7 @@ open public class SearchData
         
 
         companion object {
-
-
+            
     val TOTAL_NUMBER_PAGES: String = "SEARCHDATA_TOTALNUMBEROFPAGES"
 
     val TOTAL_NUMBER_ITEMS_ON_THIS_PAGE: String = "SEARCHDATA_TOTALNUMBEROFITEMSONTHISPAGE"
@@ -81,7 +80,6 @@ open public class SearchData
     val SEARCH: String = "search"
 
     val MAKEPUBLIC: String = "Make Public"
-
 
         }
             public constructor        ()

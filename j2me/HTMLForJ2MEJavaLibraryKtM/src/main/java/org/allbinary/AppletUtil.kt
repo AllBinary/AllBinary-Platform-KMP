@@ -34,8 +34,7 @@ open public class AppletUtil
         
 
         companion object {
-
-
+            
 open fun isAppletLoader(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -47,7 +46,6 @@ open fun isAppletLoader(anyType: Any)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
-
 
 
         }

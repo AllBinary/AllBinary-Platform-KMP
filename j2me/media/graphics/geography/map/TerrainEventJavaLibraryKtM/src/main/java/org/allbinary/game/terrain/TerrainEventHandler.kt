@@ -39,8 +39,7 @@ open public class TerrainEventHandler : BasicEventHandler {
         
 
         companion object {
-
-
+            
     private var hashtable: Hashtable<Any, Any> = NullUtil.getInstance()!!.NULL_TABLE
 
 open fun init()
@@ -75,7 +74,6 @@ TerrainEventHandler.hashtable.put(anyType, eventHandler)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return eventHandler
 }
-
 
 
         }

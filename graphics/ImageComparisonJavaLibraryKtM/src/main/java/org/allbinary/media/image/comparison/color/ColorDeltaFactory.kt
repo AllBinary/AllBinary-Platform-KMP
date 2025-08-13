@@ -40,8 +40,7 @@ open public class ColorDeltaFactory
         
 
         companion object {
-
-
+            
     private var cacheInterface: AutomaticCacheInterface = 
                 null
             
@@ -101,7 +100,6 @@ open fun getInstance(rgb1: Int, rgb2: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return colorDelta
 }
-
 
 
         }

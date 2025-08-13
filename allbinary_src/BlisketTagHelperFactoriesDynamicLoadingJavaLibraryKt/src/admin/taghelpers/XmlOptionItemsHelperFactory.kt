@@ -38,12 +38,10 @@ open public class XmlOptionItemsHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "admin.taghelpers.XmlOptionItemsHelper"
 
     private val FACTORYNAME: String = "XmlOptionHelperFactory"
-
 
         }
             public constructor        ()

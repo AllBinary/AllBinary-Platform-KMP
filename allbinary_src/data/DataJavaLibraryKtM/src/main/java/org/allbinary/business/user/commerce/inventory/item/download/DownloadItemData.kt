@@ -34,8 +34,7 @@ open public class DownloadItemData
         
 
         companion object {
-
-
+            
     val NAME: String = "DOWNLOADITEM_NAME"
 
     val ID: String = "DOWNLOADITEM_ID"
@@ -73,7 +72,6 @@ open public class DownloadItemData
     val VALID_TIME_SECONDS: String = "DOWNLOADITEM_VALID_TIME_SECONDS"
 
     val RETRIES: String = "DOWNLOADITEM_RETRIES"
-
 
         }
             

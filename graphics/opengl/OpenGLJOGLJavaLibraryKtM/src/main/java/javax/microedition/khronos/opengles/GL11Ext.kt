@@ -17,8 +17,7 @@ interface GL11Ext : javax.microedition.khronos.opengles.GL {
         
 
         companion object {
-
-
+            
     val GL_MATRIX_INDEX_ARRAY_BUFFER_BINDING_OES: Int = 35742
 
     val GL_MATRIX_INDEX_ARRAY_OES: Int = 34884
@@ -50,7 +49,6 @@ interface GL11Ext : javax.microedition.khronos.opengles.GL {
     val GL_WEIGHT_ARRAY_STRIDE_OES: Int = 34474
 
     val GL_WEIGHT_ARRAY_TYPE_OES: Int = 34473
-
 
         }
             

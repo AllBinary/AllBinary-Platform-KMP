@@ -58,12 +58,10 @@ open public class AddFileValidationView : DownloadableInventoryItemView
         
 
         companion object {
-
-
+            
     private val ADDPRODUCT: String = "Finish"
 
     private val ADDANOTHERDOWNLOADABLE: String = "Add Another"
-
 
         }
             

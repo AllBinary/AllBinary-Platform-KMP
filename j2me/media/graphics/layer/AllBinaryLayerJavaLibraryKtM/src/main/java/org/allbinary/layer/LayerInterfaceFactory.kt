@@ -41,8 +41,7 @@ open public class LayerInterfaceFactory
         
 
         companion object {
-
-
+            
     private val SINGLETON: LayerInterfaceFactory = LayerInterfaceFactory()
 
 open fun getInstance()
@@ -53,7 +52,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

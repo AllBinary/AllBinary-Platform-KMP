@@ -40,8 +40,7 @@ open public class AllBinaryMediaManager
         
 
         companion object {
-
-
+            
     private val THIS: String = "AllBinaryMediaManagerNoMediaMIDP1"
 
 open fun isMuted()
@@ -197,7 +196,6 @@ open fun getSupportedProtocols(content_type: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.getArrayInstance()
 }
-
 
 
         }

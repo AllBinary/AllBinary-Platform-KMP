@@ -35,8 +35,7 @@ open public class OpenGLImageCacheFactory
         
 
         companion object {
-
-
+            
     private var IMAGE_CACHE: ImageCache = ImageCache.NULL_IMAGE_CACHE
 
 open fun getInstance()
@@ -62,7 +61,6 @@ open fun init()
                                     }
                                 
 }
-
 
 
         }

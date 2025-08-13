@@ -48,10 +48,8 @@ open public class MyCanvas : Canvas
         
 
         companion object {
-
-
+            
     val NULL_MY_CANVAS: MyCanvas = MyCanvas()
-
 
         }
             

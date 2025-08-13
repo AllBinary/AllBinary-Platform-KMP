@@ -34,8 +34,7 @@ open public class BasicGroupItemData
         
 
         companion object {
-
-
+            
     val ITEM_ONE: String = "BASICGROUPITEM_ONE"
 
     val ITEM_TWO: String = "BASICGROUPITEM_TWO"
@@ -55,7 +54,6 @@ open public class BasicGroupItemData
     val ITEM_NINE: String = "BASICGROUPITEM_NINE"
 
     val ITEM_TEN: String = "BASICGROUPITEM_TEN"
-
 
         }
             

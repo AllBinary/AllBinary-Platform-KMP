@@ -34,12 +34,10 @@ open public class SpecialItemData
         
 
         companion object {
-
-
+            
     val START_TIME: String = "SPECIALITEM_START_TIME"
 
     val END_TIME: String = "SPECIALITEM_END_TIME"
-
 
         }
             

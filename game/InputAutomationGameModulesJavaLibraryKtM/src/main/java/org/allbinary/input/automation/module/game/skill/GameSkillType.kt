@@ -34,8 +34,7 @@ open public class GameSkillType
         
 
         companion object {
-
-
+            
     var MANA: GameSkillType = GameSkillType(
                             "Mana")
 
@@ -50,7 +49,6 @@ open public class GameSkillType
 
     var TRANSPORT: GameSkillType = GameSkillType(
                             "Transport")
-
 
         }
             

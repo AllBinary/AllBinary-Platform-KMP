@@ -37,8 +37,7 @@ open public class GameConfigurationTextInput
         
 
         companion object {
-
-
+            
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     var SIMULATOR_IP: GameConfigurationTextInput = GameConfigurationTextInput(
@@ -72,7 +71,6 @@ open fun getHashtable()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashtable
 }
-
 
 
         }

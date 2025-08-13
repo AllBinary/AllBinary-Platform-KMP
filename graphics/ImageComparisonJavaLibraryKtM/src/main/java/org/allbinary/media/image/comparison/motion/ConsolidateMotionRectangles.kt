@@ -35,10 +35,8 @@ open public class ConsolidateMotionRectangles : MotionRectangles {
         
 
         companion object {
-
-
+            
     private val NAME: String = "consolidatedMotionRectangles_"
-
 
         }
             

@@ -33,12 +33,11 @@ import java.lang.reflect.Proxy
 open public class InterfaceCastProxy
             : Object
         
-                , InvocationHandler {
+                , java.lang.reflect.InvocationHandler {
         
 
         companion object {
-
-
+            
 open fun newInstance(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{
@@ -48,9 +47,8 @@ open fun newInstance(anyType: Any)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Proxy.newProxyInstance(anyType!!::class.getClassLoader(), anyType!!::class.getInterfaces(), InterfaceCastProxy(anyType))
+                        return Proxy.newProxyInstance(anyType!!::class.java.classLoader, anyType!!::class.getInterfaces(), InterfaceCastProxy(anyType))
 }
-
 
 
         }

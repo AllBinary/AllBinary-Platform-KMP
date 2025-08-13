@@ -52,14 +52,12 @@ open public class GenericProfiles
         
 
         companion object {
-
-
+            
     val DEFAULT_PROFILES_PATH: String = "./modules/configs/profiles/"
 
     val DEFAULT_PROFILE_ACTIONS_PATH: String = DEFAULT_PROFILES_PATH +"actions/"
 
     val DEFAULT_FILE: String = DEFAULT_PROFILES_PATH +"profiles.xml"
-
 
         }
             

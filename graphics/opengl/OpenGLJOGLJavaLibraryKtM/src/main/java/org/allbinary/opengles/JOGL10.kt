@@ -32,7 +32,7 @@ import com.jogamp.opengl.glu.GLU
 open public class JOGL10
             : Object
         
-                , GL10 {
+                , javax.microedition.khronos.opengles.GL10 {
         
 
     val RED: String = "red: "

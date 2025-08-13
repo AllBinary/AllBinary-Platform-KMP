@@ -38,8 +38,7 @@ open public class SpecialCharacterUtil
         
 
         companion object {
-
-
+            
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
@@ -102,7 +101,6 @@ hashMap!!.put(
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
-
 
 
         }

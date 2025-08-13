@@ -39,8 +39,7 @@ open public class CustomGameMenuUtil
         
 
         companion object {
-
-
+            
 open fun add(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -72,7 +71,6 @@ open fun add(canvas: MyCanvas)
                         }
                             
 }
-
 
 
         }

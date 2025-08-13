@@ -35,8 +35,7 @@ open public class LeftTrackballInputToGameKeyEventAction : GameKeyCompleteMotion
         
 
         companion object {
-
-
+            
     private val SINGLETON: GameKeyCompleteMotionGestureInputEvent = LeftTrackballInputToGameKeyEventAction()
 
 open fun getInstance()
@@ -47,7 +46,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

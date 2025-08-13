@@ -40,12 +40,10 @@ open public class DownGameKeyEventHandlerBase : BasicEventHandler {
         
 
         companion object {
-
-
+            
     private val TOTAL_LISTENERS: String = " Total PlayerGameInput Listeners: "
 
     private val LISTENER_LABEL: String = " PlayerGameInput Listener: "
-
 
         }
             

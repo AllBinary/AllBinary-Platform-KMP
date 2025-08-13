@@ -41,8 +41,7 @@ open public class InGameOptionsForm : CommandForm {
         
 
         companion object {
-
-
+            
     val DISPLAY: Command = Command(
                             "Options In Game", Command.SCREEN, 1)
 
@@ -51,7 +50,6 @@ open public class InGameOptionsForm : CommandForm {
 
     val DEFAULT: Command = Command(
                             "Default", Command.SCREEN, 1)
-
 
         }
              constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        

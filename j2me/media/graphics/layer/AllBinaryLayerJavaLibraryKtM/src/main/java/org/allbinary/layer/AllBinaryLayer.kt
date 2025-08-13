@@ -47,12 +47,10 @@ open public class AllBinaryLayer : Layer
         
 
         companion object {
-
-
+            
     val NULL_ALLBINARY_LAYER: AllBinaryLayer = AllBinaryLayer(RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
 
     private val TYPE: String = "Type: "
-
 
         }
             

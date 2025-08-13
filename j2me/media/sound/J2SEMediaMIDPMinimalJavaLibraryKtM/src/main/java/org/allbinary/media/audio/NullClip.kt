@@ -45,10 +45,8 @@ open public class NullClip
         
 
         companion object {
-
-
+            
     val NULL_CONTROL: NullJ2SEControl = NullJ2SEControl(BooleanControl.Type.MUTE)
-
 
         }
             

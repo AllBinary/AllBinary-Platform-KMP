@@ -37,8 +37,7 @@ open public class TouchButtonsPaintableCompositeFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(inputMappingInterface: InputMappingInterface, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
 : ProcessPaintable{
@@ -53,7 +52,6 @@ open fun getInstance(inputMappingInterface: InputMappingInterface, basicColor: B
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ProcessPaintable()
 }
-
 
 
         }

@@ -36,8 +36,7 @@ open public class ProfileActionScriptConditionFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(node: Node)
@@ -89,7 +88,6 @@ open fun getInstance(node: Node)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return profileActionScriptConditionInterface
 }
-
 
 
         }

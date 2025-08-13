@@ -64,7 +64,7 @@ params[0]= getLibraryName()
     var classes: Array<KClass<*>?> = arrayOfNulls(1)
 
 classes[0]= getLibraryName()!!.::class
-this.loader= NativeLibraryClassLoader(this::class.getClassLoader())
+this.loader= NativeLibraryClassLoader(this::class.java.classLoader)
 
     var myClass: KClass<*> = loader.loadClass(
                             "dynamic.NativeLibraryHelper")!!

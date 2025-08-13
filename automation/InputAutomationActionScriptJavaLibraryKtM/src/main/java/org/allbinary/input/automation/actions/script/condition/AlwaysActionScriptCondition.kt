@@ -41,10 +41,8 @@ open public class AlwaysActionScriptCondition : BasicProfileActionScriptConditio
         
 
         companion object {
-
-
+            
     private val NAME: String = "Always On/Off"
-
 
         }
             

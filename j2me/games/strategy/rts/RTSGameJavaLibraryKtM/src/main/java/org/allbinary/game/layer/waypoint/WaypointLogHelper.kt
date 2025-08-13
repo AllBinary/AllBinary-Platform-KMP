@@ -39,8 +39,7 @@ open public class WaypointLogHelper
         
 
         companion object {
-
-
+            
     private val instance: WaypointLogHelper = WaypointLogHelper()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

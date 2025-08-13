@@ -34,8 +34,7 @@ open public class AbSqlData
         
 
         companion object {
-
-
+            
     val ANYSINGLECHARACTERMATCH: String = "_"
 
     val ANYMULTICHARACTERMATCH: String = "%"
@@ -47,7 +46,6 @@ open public class AbSqlData
     val MAXSTRING: Int = 255
 
     val MAXBLOB: Int = 32000
-
 
         }
             public constructor        ()

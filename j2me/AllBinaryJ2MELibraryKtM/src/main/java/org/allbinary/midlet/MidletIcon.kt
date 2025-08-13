@@ -34,10 +34,8 @@ open public class MidletIcon
         
 
         companion object {
-
-
+            
     var RESOURCE: String = "icon"
-
 
         }
             

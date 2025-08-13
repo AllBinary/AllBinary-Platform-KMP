@@ -143,8 +143,7 @@ open public class UnitLayer : AdvancedRTSGameLayer
         
 
         companion object {
-
-
+            
     private val partialPositionList: BasicArrayList = BasicArrayList(4)
 
     private val SENSOR_RANGE_MULTIPLIER: Int = 6
@@ -169,7 +168,6 @@ open fun getPartialpositionlist()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return partialPositionList
 }
-
 
 
         }

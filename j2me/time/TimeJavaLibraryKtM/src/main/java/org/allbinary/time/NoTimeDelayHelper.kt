@@ -32,10 +32,8 @@ open public class NoTimeDelayHelper : TimeDelayHelper {
         
 
         companion object {
-
-
+            
     val SINGLETON: NoTimeDelayHelper = NoTimeDelayHelper()
-
 
         }
             public constructor        ()                        

@@ -34,12 +34,10 @@ open public class AlwaysActionScriptConditionData
         
 
         companion object {
-
-
+            
     var NAME: String = "ALWAYS_ACTION_CONDITION_NAME"
 
     var IS_ON: String = "ALWAYS_ACTION_CONDITION_IS_ON"
-
 
         }
             private constructor        ()

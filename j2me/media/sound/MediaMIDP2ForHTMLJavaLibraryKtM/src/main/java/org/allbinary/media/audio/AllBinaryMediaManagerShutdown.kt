@@ -36,8 +36,7 @@ open public class AllBinaryMediaManagerShutdown
         
 
         companion object {
-
-
+            
     private val instance: AllBinaryMediaManagerShutdown = AllBinaryMediaManagerShutdown()
 
                 @Throws(Exception::class)
@@ -59,7 +58,6 @@ logUtil!!.put(commonStrings!!.START, instance,
                             "shutdown")
 AllBinaryMediaManager.shutdown(soundsFactoryInterface)
 }
-
 
 
         }

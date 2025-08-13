@@ -20,8 +20,7 @@ open public class Encoder
         
 
         companion object {
-
-
+            
 open fun encode(value: ByteArray)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -46,7 +45,6 @@ open fun decode(value: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
-
 
 
         }

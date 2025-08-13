@@ -42,8 +42,7 @@ open public class WindowsOperatingSystemFactory
         
 
         companion object {
-
-
+            
     private val instance: WindowsOperatingSystemFactory = WindowsOperatingSystemFactory()
 
 open fun getInstance()
@@ -54,7 +53,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

@@ -50,10 +50,8 @@ open public class CategoryProperties
         
 
         companion object {
-
-
+            
     private val MAXDEPTH: Int = 100
-
 
         }
             

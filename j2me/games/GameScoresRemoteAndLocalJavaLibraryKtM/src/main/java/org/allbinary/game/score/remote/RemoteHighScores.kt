@@ -43,8 +43,7 @@ open public class RemoteHighScores : HighScores {
         
 
         companion object {
-
-
+            
     private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
@@ -138,7 +137,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.g
 }
 
 }
-
 
 
         }

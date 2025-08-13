@@ -58,7 +58,7 @@ open public class CryptService
             
 public constructor        ()
             : super()
-        {Globals.getInstance()!!.init(this::class.getClassLoader(), 
+        {Globals.getInstance()!!.init(this::class.java.classLoader, 
                             "./")
 logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStrings!!.CONSTRUCTOR)
 }

@@ -41,10 +41,8 @@ open public class GameNotification
         
 
         companion object {
-
-
+            
     val NULL_GAME_NOTIFICATION_EVENT: GameNotificationEvent = GameNotificationEvent(NullUtil.getInstance()!!.NULL_OBJECT, StringUtil.getInstance()!!.EMPTY_STRING, Integer(0), BasicColorFactory.getInstance()!!.RED, BooleanFactory.getInstance()!!.FALSE)
-
 
         }
             

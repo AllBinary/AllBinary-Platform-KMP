@@ -34,10 +34,8 @@ open public class EchoResponseTypeTwoData
         
 
         companion object {
-
-
+            
     var NAME: String = "ECHOTYPE2"
-
 
         }
             private constructor        ()

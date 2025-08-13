@@ -36,10 +36,8 @@ open public class AngleIncrementInfo
         
 
         companion object {
-
-
+            
     private val INCREMENT: String = "Inc: "
-
 
         }
             

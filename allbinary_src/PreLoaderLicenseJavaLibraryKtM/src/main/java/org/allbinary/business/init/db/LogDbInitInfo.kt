@@ -32,10 +32,8 @@ open public class LogDbInitInfo : DbInitInfo {
         
 
         companion object {
-
-
+            
     private val INITFILE: String = "logdbinitdata.dat"
-
 
         }
             public constructor        ()                        

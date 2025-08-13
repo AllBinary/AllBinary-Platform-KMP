@@ -46,8 +46,7 @@ open public class ScrollSelectionForm : PaintableForm {
         
 
         companion object {
-
-
+            
     val NULL_SCROLL_SELECTION_FORM: ScrollSelectionForm = ScrollSelectionForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, 0, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
     private val GET_SELECTED_INDEX: String = "getSelectedIndex"
@@ -55,7 +54,6 @@ open public class ScrollSelectionForm : PaintableForm {
     private val INSIDE_FORM: String = " inside form"
 
     private val IS_IN_FORM: String = "isInForm"
-
 
         }
             

@@ -36,8 +36,7 @@ open public class FREEBLISKET_PATH_GLOBALS
         
 
         companion object {
-
-
+            
     private val instance: FREEBLISKET_PATH_GLOBALS = FREEBLISKET_PATH_GLOBALS()
 
 open fun getInstance()
@@ -48,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

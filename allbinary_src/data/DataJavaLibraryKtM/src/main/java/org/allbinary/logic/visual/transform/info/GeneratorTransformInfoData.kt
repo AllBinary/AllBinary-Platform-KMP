@@ -34,10 +34,8 @@ open public class GeneratorTransformInfoData
         
 
         companion object {
-
-
+            
     val NAME: String = "GENERATOR_TRANSFORM_INFO_NAME"
-
 
         }
             private constructor        ()

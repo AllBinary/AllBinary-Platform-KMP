@@ -36,8 +36,7 @@ open public class DomNodeListHelper
         
 
         companion object {
-
-
+            
 open fun getVector(nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
 : Vector{
@@ -66,7 +65,6 @@ open fun getVector(nodeList: NodeList)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
-
 
 
         }

@@ -36,10 +36,8 @@ open public class RaceTrackPickupLayer : PickupLayer {
         
 
         companion object {
-
-
+            
     private val NAME: String = "RaceTrackPickupLayer"
-
 
         }
             public constructor        ()                        

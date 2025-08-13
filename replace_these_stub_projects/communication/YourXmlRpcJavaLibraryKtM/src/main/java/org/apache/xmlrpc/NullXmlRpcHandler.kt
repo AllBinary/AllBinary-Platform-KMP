@@ -37,10 +37,8 @@ open public class NullXmlRpcHandler
         
 
         companion object {
-
-
+            
     val NULL_XML_RPC_HANDLER: NullXmlRpcHandler = NullXmlRpcHandler()
-
 
         }
             

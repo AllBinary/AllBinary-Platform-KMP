@@ -42,10 +42,8 @@ open public class AbFile
         
 
         companion object {
-
-
+            
     val NULL_FILE: AbFile = AbFile(StringUtil.getInstance()!!.EMPTY_STRING, false)
-
 
         }
             

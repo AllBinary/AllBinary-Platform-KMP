@@ -37,8 +37,7 @@ open public class ProductListingFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(searchRequest: SearchRequest)
         //nullable =  from not(true or (false and false)) = 
 : ProductListingInterface{
@@ -78,7 +77,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION,
 }
 
 }
-
 
 
         }

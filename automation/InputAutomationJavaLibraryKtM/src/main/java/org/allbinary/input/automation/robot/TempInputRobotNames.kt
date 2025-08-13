@@ -34,14 +34,12 @@ open public class TempInputRobotNames
         
 
         companion object {
-
-
+            
     val LOW_NAME: String = "Low Level"
 
     val SYS_NAME: String = "System Drivers"
 
     val DX_NAME: String = "DirectX"
-
 
         }
             public constructor        ()

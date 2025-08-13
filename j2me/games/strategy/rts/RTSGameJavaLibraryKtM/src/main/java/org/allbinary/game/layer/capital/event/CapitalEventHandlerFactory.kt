@@ -35,8 +35,7 @@ open public class CapitalEventHandlerFactory
         
 
         companion object {
-
-
+            
     private val capitalEventHandlerArray: Array<CapitalEventHandler?>
 
                 init{capitalEventHandlerArray= arrayOfNulls(10)
@@ -78,7 +77,6 @@ open fun removeAll()
 }
 
 }
-
 
 
         }

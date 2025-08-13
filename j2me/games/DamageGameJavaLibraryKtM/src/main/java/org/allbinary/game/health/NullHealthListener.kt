@@ -35,10 +35,8 @@ open public class NullHealthListener
         
 
         companion object {
-
-
+            
     val NULL_HEALTH_LISTENER: NullHealthListener = NullHealthListener()
-
 
         }
             

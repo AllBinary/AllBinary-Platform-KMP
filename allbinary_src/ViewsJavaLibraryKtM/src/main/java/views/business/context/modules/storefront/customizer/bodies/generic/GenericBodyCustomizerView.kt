@@ -47,10 +47,8 @@ open public class GenericBodyCustomizerView : HttpStoreComponentView
         
 
         companion object {
-
-
+            
     private val NAME: String = "None"
-
 
         }
             

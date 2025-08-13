@@ -23,10 +23,8 @@ open public class BasicArrayList
         
 
         companion object {
-
-
+            
     private val SIZE: String = ", Size: "
-
 
         }
             

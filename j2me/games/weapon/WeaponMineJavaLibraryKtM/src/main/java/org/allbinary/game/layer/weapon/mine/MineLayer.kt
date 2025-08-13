@@ -42,10 +42,8 @@ open public class MineLayer : SimpleWeaponLayer {
         
 
         companion object {
-
-
+            
     private val NAME: String = "MineLayer"
-
 
         }
             public constructor        (viewPosition: ViewPosition)                        

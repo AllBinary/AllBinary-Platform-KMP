@@ -20,10 +20,8 @@ open public class E
         
 
         companion object {
-
-
+            
     private val e: E = E()
-
 
         }
             

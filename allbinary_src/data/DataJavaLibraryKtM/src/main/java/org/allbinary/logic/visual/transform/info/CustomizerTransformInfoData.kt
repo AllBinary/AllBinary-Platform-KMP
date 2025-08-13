@@ -34,10 +34,8 @@ open public class CustomizerTransformInfoData
         
 
         companion object {
-
-
+            
     val NAME: String = "CUSTOMIZER_TRANSFORM_INFO_NAME"
-
 
         }
             private constructor        ()

@@ -35,8 +35,7 @@ open public class KeyUtil
         
 
         companion object {
-
-
+            
 open fun isNormallyDisplayed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -62,7 +61,6 @@ else -> {
         
     
 }
-
 
 
         }

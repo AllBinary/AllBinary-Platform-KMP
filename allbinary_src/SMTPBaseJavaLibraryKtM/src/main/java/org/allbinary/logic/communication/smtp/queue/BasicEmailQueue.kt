@@ -37,8 +37,7 @@ open public class BasicEmailQueue : BasicQueue
         
 
         companion object {
-
-
+            
     private val instance: BasicEmailQueue = BasicEmailQueue()
 
     private var basicEmailQueue: BasicEmailQueue
@@ -62,7 +61,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicEmailQueue.basicEmailQueue
 }
-
 
 
         }

@@ -32,10 +32,8 @@ open public class NoDragVelocityBehavior : VelocityBehaviorBase {
         
 
         companion object {
-
-
+            
     val instance: NoDragVelocityBehavior = NoDragVelocityBehavior()
-
 
         }
             

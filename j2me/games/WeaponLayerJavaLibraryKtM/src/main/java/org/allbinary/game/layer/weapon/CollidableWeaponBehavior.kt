@@ -43,10 +43,8 @@ open public class CollidableWeaponBehavior : CollidableDestroyableDamageableBeha
         
 
         companion object {
-
-
+            
     val NULL_COLLIDABLE_WEAPON_BEHAVIOR: CollidableWeaponBehavior = CollidableWeaponBehavior(CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER, false)
-
 
         }
             

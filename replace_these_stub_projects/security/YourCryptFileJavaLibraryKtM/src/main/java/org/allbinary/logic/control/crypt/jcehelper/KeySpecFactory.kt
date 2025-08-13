@@ -35,8 +35,7 @@ open public class KeySpecFactory
         
 
         companion object {
-
-
+            
     val DES: String = "DES"
 
     val DESEDE: String = "DESede"
@@ -55,7 +54,6 @@ open fun getInstance(algorithm: String, keyData: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 }
-
 
 
         }

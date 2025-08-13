@@ -36,8 +36,7 @@ open public class FileJDialog : javax.swing.JDialog {
         
 
         companion object {
-
-
+            
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -55,7 +54,6 @@ open fun run()
                                 }
                             )
 }
-
 
 
         }

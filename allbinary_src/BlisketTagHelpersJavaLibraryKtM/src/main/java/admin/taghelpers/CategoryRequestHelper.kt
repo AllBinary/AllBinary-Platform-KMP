@@ -56,14 +56,12 @@ open public class CategoryRequestHelper : ModifyTable {
         
 
         companion object {
-
-
+            
     private val categoryRequest: String = StringMaker().
                             append(
                             "<")!!.append(CategoryData.getInstance()!!.REQUEST)!!.append(
                             ">")!!.toString()!!
             
-
 
         }
             

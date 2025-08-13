@@ -42,8 +42,7 @@ open public class AllBinaryMediaManager
         
 
         companion object {
-
-
+            
     private val THIS: String = "AllBinaryMediaManagerHTML5"
 
 open fun isMuted()
@@ -184,7 +183,6 @@ open fun playTone(frequency: Int, time: Int, volume: Int)
                                     }
                                 
 }
-
 
 
         }

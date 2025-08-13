@@ -32,8 +32,7 @@ open public class GamePersistanceSingleton : KeyValuePersistance {
         
 
         companion object {
-
-
+            
     private var GAME_PERSISTANCE: GamePersistanceSingleton = GamePersistanceSingleton()
 
 open fun getInstance()
@@ -47,7 +46,6 @@ open fun getInstance()
 
 
     private val RECORD_ID: String = "_SG"
-
 
         }
             private constructor        ()                        

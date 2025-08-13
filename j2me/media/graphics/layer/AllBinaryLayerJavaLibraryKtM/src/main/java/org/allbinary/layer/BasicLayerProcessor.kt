@@ -37,10 +37,8 @@ open public class BasicLayerProcessor
         
 
         companion object {
-
-
+            
     val NULL_LAYER_PROCESSOR: BasicLayerProcessor = BasicLayerProcessor()
-
 
         }
             

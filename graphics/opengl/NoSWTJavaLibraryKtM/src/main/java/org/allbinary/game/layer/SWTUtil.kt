@@ -34,12 +34,10 @@ open public class SWTUtil
         
 
         companion object {
-
-
+            
     var isSWT: Boolean = false
 
     var SWT: String = "SWT"
-
 
         }
             

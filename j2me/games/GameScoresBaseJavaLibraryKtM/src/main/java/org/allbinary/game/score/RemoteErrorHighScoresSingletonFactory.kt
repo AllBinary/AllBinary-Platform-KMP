@@ -35,8 +35,7 @@ open public class RemoteErrorHighScoresSingletonFactory
         
 
         companion object {
-
-
+            
     private val SINGLETON: HighScores = HighScores(
                             "Loading", 
                             "Remote High Scores Did Not Load", CommonStrings.getInstance()!!.PERIODS)
@@ -49,7 +48,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

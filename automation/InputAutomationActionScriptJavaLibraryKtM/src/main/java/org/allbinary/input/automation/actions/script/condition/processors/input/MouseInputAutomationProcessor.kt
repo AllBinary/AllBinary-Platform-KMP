@@ -40,8 +40,7 @@ open public class MouseInputAutomationProcessor
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun process(mouseActionScriptInputInterface: MouseActionScriptInputInterface)
@@ -89,7 +88,6 @@ inputRobotInterface!!.mouseRelease(mouseActionScriptInputInterface!!.getButtonCl
                                 
 Thread.sleep(mouseActionScriptInputInterface!!.getTime())
 }
-
 
 
         }

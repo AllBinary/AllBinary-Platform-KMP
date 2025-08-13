@@ -39,8 +39,7 @@ open public class AngleFactory
         
 
         companion object {
-
-
+            
     private val instance: AngleFactory = AngleFactory()
 
 open fun getInstance()
@@ -79,7 +78,6 @@ LogUtil.getInstance()!!.put(stringMaker!!.toString(),
                             "main", 
                             "main")
 }
-
 
 
         }

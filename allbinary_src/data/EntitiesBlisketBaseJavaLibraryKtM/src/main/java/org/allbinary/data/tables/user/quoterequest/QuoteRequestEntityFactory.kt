@@ -36,8 +36,7 @@ open public class QuoteRequestEntityFactory
         
 
         companion object {
-
-
+            
     private val instance: QuoteRequestEntityFactory = QuoteRequestEntityFactory()
 
 open fun getInstance()
@@ -48,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

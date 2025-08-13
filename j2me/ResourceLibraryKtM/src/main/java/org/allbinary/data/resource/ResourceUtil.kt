@@ -42,8 +42,7 @@ open public class ResourceUtil
         
 
         companion object {
-
-
+            
     private var classLoader: ClassLoader
 
     private val instance: ResourceUtil = ResourceUtil()
@@ -56,7 +55,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

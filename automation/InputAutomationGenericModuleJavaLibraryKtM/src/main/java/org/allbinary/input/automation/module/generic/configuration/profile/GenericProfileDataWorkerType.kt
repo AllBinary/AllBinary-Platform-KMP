@@ -41,8 +41,7 @@ open public class GenericProfileDataWorkerType
         
 
         companion object {
-
-
+            
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
     var SAVED_CAPTURE: GenericProfileDataWorkerType = SavedCaptureGenericProfileDataWorkerType.SAVED_CAPTURE
@@ -68,7 +67,6 @@ open fun getInstance(node: Node)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap!!.get(name as Object?) as GenericProfileDataWorkerType
 }
-
 
 
         }

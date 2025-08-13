@@ -39,10 +39,8 @@ open public class BufferedGameCanvasPaintHelper : ProcessPaintable {
         
 
         companion object {
-
-
+            
     private val MAX_IMAGES: Int = 4
-
 
         }
             

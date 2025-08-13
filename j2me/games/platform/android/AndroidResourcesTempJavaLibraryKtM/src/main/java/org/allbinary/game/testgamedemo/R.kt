@@ -27,17 +27,14 @@ open public class R
         
 
         companion object {
-
-
-open public inner class attr
+            
+open public class attr
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -50,15 +47,13 @@ open public inner class attr
 }
                 
             
-open public inner class drawable
+open public class drawable
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -71,14 +66,13 @@ open public inner class drawable
 }
                 
             
-open public inner class id
+open public class id
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val custom_web_view: Int = 0x7f050000
 
     val ad_area_bottom: Int = 0x7f060002
@@ -88,8 +82,7 @@ open public inner class id
     val ad_area_right: Int = 0x7f060004
 
     val ad_area_top: Int = 0x7f060001
-
-
+/*
         }
             */
 
@@ -102,17 +95,15 @@ open public inner class id
 }
                 
             
-open public inner class layout
+open public class layout
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val webview_layout: Int = 0x7f020000
-
-
+/*
         }
             */
 
@@ -125,14 +116,13 @@ open public inner class layout
 }
                 
             
-open public inner class raw
+open public class raw
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val about: Int = 0x7f030000
 
     val privacy_policy: Int = 0x7f030001
@@ -196,8 +186,7 @@ open public inner class raw
     val ouya_key: Int = 0x7f040013
 
     val google_key: Int = 0x7f040013
-
-
+/*
         }
             */
 
@@ -210,17 +199,15 @@ open public inner class raw
 }
                 
             
-open public inner class string
+open public class string
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val progressbar_in_title_string: Int = 0x7f050001
-
-
+/*
         }
             */
 
@@ -233,7 +220,6 @@ open public inner class string
 }
                 
             
-
         }
             
             //Auto Generated

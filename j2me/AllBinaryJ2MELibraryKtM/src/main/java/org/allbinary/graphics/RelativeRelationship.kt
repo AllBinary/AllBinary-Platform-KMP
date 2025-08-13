@@ -36,10 +36,8 @@ open public class RelativeRelationship
         
 
         companion object {
-
-
+            
     val NULL_RELATIVE_RELATIONSHIP: RelativeRelationship = RelativeRelationship(PointFactory.getInstance()!!.ZERO_ZERO, BasicArrayListUtil.getInstance()!!.getImmutableInstance())
-
 
         }
             

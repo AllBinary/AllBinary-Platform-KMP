@@ -41,13 +41,11 @@ open public class CountedLayersHudPaintable
         
 
         companion object {
-
-
+            
     private val XXString: String = "XX"
 
     private val XXStringWidth: Int = MyFont.getInstance()!!.stringWidth(XXString)!!
             
-
 
         }
             

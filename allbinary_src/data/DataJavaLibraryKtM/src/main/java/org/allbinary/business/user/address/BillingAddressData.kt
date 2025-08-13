@@ -34,8 +34,7 @@ open public class BillingAddressData
         
 
         companion object {
-
-
+            
     val MAX: Int = 255
 
     val MIN: Int = 0
@@ -69,7 +68,6 @@ open public class BillingAddressData
     val CODE: String = "BILLINGADDRESS_CODE"
 
     val COUNTRY: String = "BILLINGADDRESS_COUNTRY"
-
 
         }
             private constructor        ()

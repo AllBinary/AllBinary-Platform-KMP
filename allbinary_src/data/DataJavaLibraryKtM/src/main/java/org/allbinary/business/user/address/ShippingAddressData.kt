@@ -34,8 +34,7 @@ open public class ShippingAddressData
         
 
         companion object {
-
-
+            
     val SETTOBILLINGADDRESS: String = "Set To Billing Address"
 
     val SELECT: String = "Select Shipping Address"
@@ -65,7 +64,6 @@ open public class ShippingAddressData
     val COUNTRY: String = "SHIPPINGADDRESS_COUNTRY"
 
     val TAX: String = "SHIPPINGADDRESS_TAX"
-
 
         }
             private constructor        ()

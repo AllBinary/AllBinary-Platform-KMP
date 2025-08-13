@@ -36,8 +36,7 @@ open public class DocumentToNode
         
 
         companion object {
-
-
+            
     private val XMLROOT: String = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
 
     private val XMLROOTSTART: String = "<?xml"
@@ -140,7 +139,6 @@ open fun remove(documentString: String, start: String, end: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return documentString
 }
-
 
 
         }

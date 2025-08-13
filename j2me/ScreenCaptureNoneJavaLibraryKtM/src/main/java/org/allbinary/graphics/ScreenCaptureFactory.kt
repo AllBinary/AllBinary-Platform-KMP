@@ -34,8 +34,7 @@ open public class ScreenCaptureFactory
         
 
         companion object {
-
-
+            
     private val instance: ScreenCapture = ScreenCaptureNoneFactory.getInstance()!!
             
 
@@ -47,7 +46,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

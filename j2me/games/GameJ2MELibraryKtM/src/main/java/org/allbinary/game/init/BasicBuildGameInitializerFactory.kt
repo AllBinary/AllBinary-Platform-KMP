@@ -35,10 +35,8 @@ open public class BasicBuildGameInitializerFactory
         
 
         companion object {
-
-
+            
     var NULL_BASE_BUILD_GMAE_INITIALIZER_FACTORY: BasicBuildGameInitializerFactory = BasicBuildGameInitializerFactory()
-
 
         }
             

@@ -34,8 +34,7 @@ open public class PreLogUtil
         
 
         companion object {
-
-
+            
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -130,7 +129,6 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
 
 android.util.Log.i(className, message)
 }
-
 
 
         }

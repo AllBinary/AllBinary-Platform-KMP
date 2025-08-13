@@ -38,8 +38,7 @@ open public class GameSkill
         
 
         companion object {
-
-
+            
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 open fun getInstance(gameSkillType: GameSkillType, extra: String)
@@ -57,7 +56,6 @@ open fun getInstance(gameSkillType: GameSkillType, extra: String)
                         return hashMap!!.get(StringBuilder().
                             append(gameSkillType!!.getName())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(extra)!!.toString()) as GameSkill
 }
-
 
 
         }

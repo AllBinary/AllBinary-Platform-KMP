@@ -37,8 +37,7 @@ open public class AngleInfo
         
 
         companion object {
-
-
+            
 open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
 : AngleInfo{
@@ -53,7 +52,6 @@ open fun getInstance(angleIncrement: Short)
 
 
     private val ANGLE: String = "Angle: "
-
 
         }
             

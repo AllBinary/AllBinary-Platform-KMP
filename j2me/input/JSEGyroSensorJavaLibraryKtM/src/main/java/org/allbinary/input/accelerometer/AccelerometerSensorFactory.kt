@@ -37,8 +37,7 @@ open public class AccelerometerSensorFactory
         
 
         companion object {
-
-
+            
     private var allBinaryAccelerometerSensor: AllBinaryOrientationSensor
 
                 @Throws(Exception::class)
@@ -108,7 +107,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return allBinaryAccelerometerSensor
 }
-
 
 
         }

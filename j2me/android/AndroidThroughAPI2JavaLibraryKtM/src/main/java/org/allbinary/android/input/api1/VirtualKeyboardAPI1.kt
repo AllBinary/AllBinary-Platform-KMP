@@ -36,12 +36,10 @@ open public class VirtualKeyboardAPI1 : VirtualKeyboard
         
 
         companion object {
-
-
+            
     var MIN_API: Int = 1
 
     var MAX_API: Int = 2
-
 
         }
             public constructor        (activity: Activity){

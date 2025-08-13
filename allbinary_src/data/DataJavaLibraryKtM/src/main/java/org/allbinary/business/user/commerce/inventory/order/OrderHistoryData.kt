@@ -34,8 +34,7 @@ open public class OrderHistoryData
         
 
         companion object {
-
-
+            
     var MAXIDLEN: Int = 19
 
     val DATEDELTA: String = "DATE_DELTA"
@@ -117,7 +116,6 @@ open public class OrderHistoryData
     val SHIPPED: String = "Order Shipped"
 
     val SETSTATUS: String = "Set Status"
-
 
         }
             

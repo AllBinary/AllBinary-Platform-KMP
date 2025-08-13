@@ -38,14 +38,16 @@
         <module>../AndroidToJ2MELibraryKtM</module>
         -->
         <module>../../android/AndroidUtilJavaLibraryKtM</module>
+        <!--    
         <module>../../AndroidBaseJavaLibraryKtM</module>
-        <!--
         <module>../../android/AndroidAPI5AndUpJavaLibraryKtM</module>
         <module>../../android/AndroidThroughAPI2JavaLibraryKtM</module>
-        -->
         <module>../../android/AndroidThroughAPI4JavaLibraryKtM</module>
+        -->
 
-        <module>../../AndroidToAllBinaryJavaLibraryKtM</module>        
+        <!--        
+        <module>../../AndroidToAllBinaryJavaLibraryKtM</module>
+        -->
 
         <!--
         <module>../../input/android/MotionInputAndroidResourcesJavaLibraryKtM</module>

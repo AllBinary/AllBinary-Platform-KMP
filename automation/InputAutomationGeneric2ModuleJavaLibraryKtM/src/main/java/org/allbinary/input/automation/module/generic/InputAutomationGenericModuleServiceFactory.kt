@@ -35,8 +35,7 @@ open public class InputAutomationGenericModuleServiceFactory : InputAutomationMo
         
 
         companion object {
-
-
+            
     private var inputAutomationGenericModuleServiceFactory: InputAutomationGenericModuleServiceFactory = InputAutomationGenericModuleServiceFactory()
 
 open fun getInstance()
@@ -47,7 +46,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationGenericModuleServiceFactory
 }
-
 
 
         }

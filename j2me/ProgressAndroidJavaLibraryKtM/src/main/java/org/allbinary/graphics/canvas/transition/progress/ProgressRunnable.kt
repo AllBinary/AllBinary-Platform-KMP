@@ -23,27 +23,21 @@
         import java.lang.Object
         import java.lang.System
         
-        import java.lang.Runnable
-        
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
 import android.app.Activity
 import org.allbinary.android.activity.SimpleProgressActivityInterface
+import org.allbinary.thread.NullRunnable
 
-open public class ProgressRunnable
-            : Object
-        
-                , Runnable {
+open public class ProgressRunnable : NullRunnable {
         
 
     val midletActivity: SimpleProgressActivityInterface
 
     val progressCanvas: ProgressCanvas
-public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)
-            : super()
-        {
+public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas){
 
                     var midletActivity = midletActivity
 
@@ -53,8 +47,7 @@ this.midletActivity= midletActivity as SimpleProgressActivityInterface
 this.progressCanvas= progressCanvas
 }
 
-
-open fun run()
+override fun run()
         //nullable = true from not(false or (false and true)) = true
 {}
 

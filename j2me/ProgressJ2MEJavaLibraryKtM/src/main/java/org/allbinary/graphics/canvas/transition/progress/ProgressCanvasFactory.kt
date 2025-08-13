@@ -38,8 +38,7 @@ open public class ProgressCanvasFactory
         
 
         companion object {
-
-
+            
     private var PROGRESS_FORM_SCREEN: ProgressCanvas = ProgressCanvas(StringUtil.getInstance()!!.EMPTY_STRING, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
 
 open fun getInstance()
@@ -60,7 +59,6 @@ open fun getLazyInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NullPaintable.getInstance()
 }
-
 
 
         }

@@ -34,8 +34,7 @@ open public class GameInfoCopyFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(gameInfo: GameInfo, maxLevel: Int)
         //nullable =  from not(true or (false and false)) = 
 : GameInfo{
@@ -63,7 +62,6 @@ open fun getInstance(gameInfo: GameInfo)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), gameInfo!!.getPlayerType(), gameInfo!!.getHighestLevel(), gameInfo!!.getCurrentLevel())
 }
-
 
 
         }

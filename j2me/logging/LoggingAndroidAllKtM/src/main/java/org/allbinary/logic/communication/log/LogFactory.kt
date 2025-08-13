@@ -35,8 +35,7 @@ open public class LogFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(specialMessage: String, anyType: Any, exception: Any)
         //nullable =  from not(true or (false and false)) = 
 : Log{
@@ -95,7 +94,6 @@ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Log(specialMessage, anyType, functionName)
 }
-
 
 
         }

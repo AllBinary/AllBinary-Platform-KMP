@@ -119,12 +119,10 @@ open public class StartCanvas : RunnableCanvas
         
 
         companion object {
-
-
+            
     private val id: Int = 0
 
     private val BOT_GAME_STATS: String = "Bot Game Statistics: "
-
 
         }
             

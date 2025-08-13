@@ -30,8 +30,7 @@ open public class MediaUtil
         
 
         companion object {
-
-
+            
     private val instance: MediaUtil = MediaUtil()
 
 open fun getInstance()
@@ -86,7 +85,6 @@ hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 }
-
 
 
         }

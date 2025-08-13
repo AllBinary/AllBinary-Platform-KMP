@@ -41,10 +41,8 @@ open public class MotionEventFactory
         
 
         companion object {
-
-
+            
     private var index: Int = 0
-
 
         }
             

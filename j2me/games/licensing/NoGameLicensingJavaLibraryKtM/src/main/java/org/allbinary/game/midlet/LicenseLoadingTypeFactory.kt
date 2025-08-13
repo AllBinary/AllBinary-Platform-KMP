@@ -34,8 +34,7 @@ open public class LicenseLoadingTypeFactory
         
 
         companion object {
-
-
+            
     private val instance: LicenseLoadingTypeFactory = LicenseLoadingTypeFactory()
 
 open fun getIntance()
@@ -46,7 +45,6 @@ open fun getIntance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

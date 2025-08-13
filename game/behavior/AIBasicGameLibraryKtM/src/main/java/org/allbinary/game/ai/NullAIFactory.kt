@@ -39,8 +39,7 @@ open public class NullAIFactory
         
 
         companion object {
-
-
+            
     private var NULL_AI: NullAI = NullAI()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return NULL_AI
 }
-
 
 
         }

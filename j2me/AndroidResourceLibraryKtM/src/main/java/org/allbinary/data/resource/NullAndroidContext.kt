@@ -61,10 +61,8 @@ open public class NullAndroidContext : Context {
         
 
         companion object {
-
-
+            
     val NULL_ANDROID_CONTEXT: NullAndroidContext = NullAndroidContext()
-
 
         }
             

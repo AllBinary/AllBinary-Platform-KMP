@@ -34,10 +34,8 @@ open public class TransformTemplateCustomizersData
         
 
         companion object {
-
-
+            
     var NAME: String = "TEMPLATE_CUSTOMIZERS_NAME"
-
 
         }
             public constructor        ()

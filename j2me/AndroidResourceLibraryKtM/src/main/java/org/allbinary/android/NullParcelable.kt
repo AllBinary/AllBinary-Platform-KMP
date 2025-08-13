@@ -36,10 +36,8 @@ open public class NullParcelable
         
 
         companion object {
-
-
+            
     val NULL_PARCELABLE: NullParcelable = NullParcelable()
-
 
         }
             

@@ -34,8 +34,7 @@ open public class AppletUtil
         
 
         companion object {
-
-
+            
     private var applet: Boolean = false
 
 open fun setApplet()
@@ -55,7 +54,6 @@ open fun isAppletLoader(anyType: Any)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return applet
 }
-
 
 
         }

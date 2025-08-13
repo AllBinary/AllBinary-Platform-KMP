@@ -42,10 +42,8 @@ open public class InputRobot
         
 
         companion object {
-
-
+            
     val NAME: String = "Java Robot"
-
 
         }
             

@@ -63,10 +63,8 @@ open public class Hardware
         
 
         companion object {
-
-
+            
     private val PCIFILE: String = "/proc/pci"
-
 
         }
             

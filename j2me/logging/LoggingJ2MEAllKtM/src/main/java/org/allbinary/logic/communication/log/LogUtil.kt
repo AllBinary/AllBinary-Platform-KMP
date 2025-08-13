@@ -37,8 +37,7 @@ open public class LogUtil
         
 
         companion object {
-
-
+            
     private val instance: LogUtil = LogUtil()
 
 open fun getInstance()
@@ -52,7 +51,6 @@ open fun getInstance()
 
 
     private val LOG_SUCCESS: String = "org.allbinary: "
-
 
         }
             private constructor        ()

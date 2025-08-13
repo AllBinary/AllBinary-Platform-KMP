@@ -35,8 +35,7 @@ open public class InputAutomationRobotUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getChangeEvent(inputRobotInterface: InputRobotInterface)
@@ -56,7 +55,6 @@ open fun getChangeEvent(inputRobotInterface: InputRobotInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationRobotChangeEvent
 }
-
 
 
         }

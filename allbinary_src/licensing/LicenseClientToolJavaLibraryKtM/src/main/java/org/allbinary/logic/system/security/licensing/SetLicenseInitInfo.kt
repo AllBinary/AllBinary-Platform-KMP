@@ -44,8 +44,7 @@ open public class SetLicenseInitInfo
         
 
         companion object {
-
-
+            
     private var stdinput: BufferedReader = BufferedReader(InputStreamReader(System.in))
 
                 @Throws(Exception::class)
@@ -60,7 +59,6 @@ open fun main(args: Array<String?>)
 
 initInfo!!.createNewLicenseInitInfo(BasicArrayList())
 }
-
 
 
         }

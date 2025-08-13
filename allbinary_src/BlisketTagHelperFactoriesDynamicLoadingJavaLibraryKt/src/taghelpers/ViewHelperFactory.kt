@@ -40,12 +40,10 @@ open public class ViewHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "taghelpers.ViewHelper"
 
     private val FACTORYNAME: String = "taghelpers.ViewHelperFactory"
-
 
         }
             public constructor        ()

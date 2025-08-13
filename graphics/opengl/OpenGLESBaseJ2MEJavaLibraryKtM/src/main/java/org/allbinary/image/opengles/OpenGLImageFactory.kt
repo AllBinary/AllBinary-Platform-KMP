@@ -37,10 +37,8 @@ open public class OpenGLImageFactory
         
 
         companion object {
-
-
+            
     val NULL_OPENGL_IMAGE_FACTORY: OpenGLImageFactory = OpenGLImageFactory()
-
 
         }
             

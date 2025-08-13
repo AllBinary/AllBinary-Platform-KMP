@@ -38,8 +38,7 @@ open public class MotionEventCircularPool
         
 
         companion object {
-
-
+            
 open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
 : MotionEventCircularPool{
@@ -55,7 +54,6 @@ open fun getInstance(id: Int)
 
     private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()!!
             
-
 
         }
             

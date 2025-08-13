@@ -44,12 +44,10 @@ open public class StoreFrontsHelper : BasicTable {
         
 
         companion object {
-
-
+            
     private val CLASS: String = "class"
 
     private val TEXT: String = "text"
-
 
         }
             

@@ -35,10 +35,8 @@ open public class GameKeyEvent : AllBinaryEventObject {
         
 
         companion object {
-
-
+            
     val NONE: GameKeyEvent = GameKeyEvent(NullUtil.getInstance()!!.NULL_OBJECT,  -1,  -1,  -1,  -1, false)
-
 
         }
             

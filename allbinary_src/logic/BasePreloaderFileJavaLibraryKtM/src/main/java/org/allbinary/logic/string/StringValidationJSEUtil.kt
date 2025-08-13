@@ -34,8 +34,7 @@ open public class StringValidationJSEUtil
         
 
         companion object {
-
-
+            
 open fun isBlank(string: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -77,7 +76,6 @@ open fun isBlank(string: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 }
-
 
 
         }

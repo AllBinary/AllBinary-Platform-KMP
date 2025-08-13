@@ -35,8 +35,7 @@ open public class LongUtil
         
 
         companion object {
-
-
+            
 open fun fillIn(end: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -74,7 +73,6 @@ frameStringBuffer!!.append(end)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return frameStringBuffer!!.toString()
 }
-
 
 
         }

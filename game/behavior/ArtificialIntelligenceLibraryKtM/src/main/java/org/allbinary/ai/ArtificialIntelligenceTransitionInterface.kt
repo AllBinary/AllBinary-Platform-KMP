@@ -31,10 +31,8 @@ interface ArtificialIntelligenceTransitionInterface {
         
 
         companion object {
-
-
+            
     val ID: Int = 2
-
 
         }
             

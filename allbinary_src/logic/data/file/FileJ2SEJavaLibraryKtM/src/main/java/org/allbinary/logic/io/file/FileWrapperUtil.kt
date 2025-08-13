@@ -36,8 +36,7 @@ open public class FileWrapperUtil
         
 
         companion object {
-
-
+            
 open fun wrapFiles(files: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : Array<AbFile?>{
@@ -103,7 +102,6 @@ open fun wrapFile(file: File)
 }
 
 }
-
 
 
         }

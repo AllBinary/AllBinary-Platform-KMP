@@ -36,8 +36,7 @@ open public class FilePathUtil
         
 
         companion object {
-
-
+            
 open fun adjust(path: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -75,7 +74,6 @@ path= path.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return path
 }
-
 
 
         }

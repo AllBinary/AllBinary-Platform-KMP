@@ -39,8 +39,7 @@ open public class OSGIActivatorUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceName: String)
@@ -97,7 +96,6 @@ serviceReference= bundleContext!!.getServiceReference(serviceName)
                                     }
                                 
 }
-
 
 
         }

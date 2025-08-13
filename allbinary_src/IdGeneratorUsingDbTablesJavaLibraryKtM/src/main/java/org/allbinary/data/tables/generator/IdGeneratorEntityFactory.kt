@@ -37,8 +37,7 @@ open public class IdGeneratorEntityFactory
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : IdGeneratorEntityInterface{
@@ -67,7 +66,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION,
 }
 
 }
-
 
 
         }

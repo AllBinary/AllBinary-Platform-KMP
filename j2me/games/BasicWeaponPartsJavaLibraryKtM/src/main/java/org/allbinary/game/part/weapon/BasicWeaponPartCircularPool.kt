@@ -38,10 +38,8 @@ open public class BasicWeaponPartCircularPool
         
 
         companion object {
-
-
+            
     val NULL_BASIC_WEAPON_PART_CIRCULAR_POOL: BasicWeaponPartCircularPool = BasicWeaponPartCircularPool()
-
 
         }
             

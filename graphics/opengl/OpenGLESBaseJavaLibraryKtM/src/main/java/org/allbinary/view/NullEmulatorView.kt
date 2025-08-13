@@ -37,10 +37,8 @@ open public class NullEmulatorView
         
 
         companion object {
-
-
+            
     val NULL_EMULATOR_VIEW: NullEmulatorView = NullEmulatorView()
-
 
         }
             

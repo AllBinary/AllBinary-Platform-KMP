@@ -39,10 +39,8 @@ open public class BasicGameResources
         
 
         companion object {
-
-
+            
     val stringBuffer: StringMaker = StringMaker()
-
 
         }
             

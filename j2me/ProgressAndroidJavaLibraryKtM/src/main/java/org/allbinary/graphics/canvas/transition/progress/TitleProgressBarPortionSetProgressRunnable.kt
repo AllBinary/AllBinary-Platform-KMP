@@ -51,8 +51,7 @@ public constructor        (midletActivity: Activity, progressCanvas: ProgressCan
                     
 }
 
-
-open fun run()
+override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
         try {

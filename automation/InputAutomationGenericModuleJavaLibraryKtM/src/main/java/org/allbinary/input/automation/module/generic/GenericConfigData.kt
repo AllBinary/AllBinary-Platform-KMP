@@ -34,8 +34,7 @@ open public class GenericConfigData
         
 
         companion object {
-
-
+            
     var RELATIVE_PATH: String = "./"
 
     var CONFIG_PATH: String = "modules/configs/"
@@ -47,7 +46,6 @@ open public class GenericConfigData
     var MMO_GAME_MODULE_RELATIVE_PATH: String = GAME_MODULE_RELATIVE_PATH +"mmog/"
 
     var FREE_MMO_GAME_MODULE_RELATIVE_PATH: String = "free/"
-
 
         }
             private constructor        ()

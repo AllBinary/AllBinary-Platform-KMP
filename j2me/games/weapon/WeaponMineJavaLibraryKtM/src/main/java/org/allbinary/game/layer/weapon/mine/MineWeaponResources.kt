@@ -33,8 +33,7 @@ open public class MineWeaponResources : BasicGameResources {
         
 
         companion object {
-
-
+            
     private val SINGLETON: MineWeaponResources = MineWeaponResources()
 
 open fun getInstance()
@@ -45,7 +44,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

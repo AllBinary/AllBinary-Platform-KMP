@@ -34,8 +34,7 @@ open public class MouseActionScriptInputData
         
 
         companion object {
-
-
+            
     var NAME: String = "MOUSE_ACTION_INPUT_NAME"
 
     var BUTTONS: String = "MOUSE_ACTION_INPUT_BUTTONS"
@@ -45,7 +44,6 @@ open public class MouseActionScriptInputData
     var MOVE_X: String = "MOUSE_ACTION_INPUT_MOVE_X"
 
     var MOVE_Y: String = "MOUSE_ACTION_INPUT_MOVE_Y"
-
 
         }
             private constructor        ()

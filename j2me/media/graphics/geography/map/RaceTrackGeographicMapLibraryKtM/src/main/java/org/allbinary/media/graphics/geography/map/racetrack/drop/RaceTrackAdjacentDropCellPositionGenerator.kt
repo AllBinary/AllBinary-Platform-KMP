@@ -51,8 +51,7 @@ open public class RaceTrackAdjacentDropCellPositionGenerator : RaceTrackDropCell
         
 
         companion object {
-
-
+            
     private var SINGLETON: RaceTrackAdjacentDropCellPositionGenerator = RaceTrackAdjacentDropCellPositionGenerator()
 
 open fun getInstance()
@@ -63,7 +62,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

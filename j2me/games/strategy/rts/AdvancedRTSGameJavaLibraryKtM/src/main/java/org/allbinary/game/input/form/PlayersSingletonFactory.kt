@@ -34,10 +34,8 @@ open public class PlayersSingletonFactory
         
 
         companion object {
-
-
+            
     var total: Int= 0
-
 
         }
             

@@ -40,8 +40,7 @@ open public class BufferedImagePoolSingleton
         
 
         companion object {
-
-
+            
     private var poolInterface: PoolInterface = 
                 null
             
@@ -79,7 +78,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return poolInterface
 }
-
 
 
         }

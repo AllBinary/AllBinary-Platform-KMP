@@ -34,10 +34,8 @@ open public class UserEmailConfigurationData
         
 
         companion object {
-
-
+            
     val NAME: String = "USER_EMAIL_CONFIGURATION_NAME"
-
 
         }
             private constructor        ()

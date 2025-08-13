@@ -23,8 +23,7 @@ open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
         
 
         companion object {
-
-
+            
     private val instance: OpenGLBitmapFactory = OpenGLBitmapFactory()
 
 open fun getInstance()
@@ -35,7 +34,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -51,9 +49,7 @@ open public inner class Config
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -95,16 +91,16 @@ open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Confi
 
                 @Throws(IOException::class)
             
-open fun decodeStream(is: InputStream)
+open fun decodeStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 : OpenGLBitmap{
 
-                    var is = is
+                    var inputStream = inputStream
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return OpenGLBitmap(Image.createImage(is))
+                        return OpenGLBitmap(Image.createImage(inputStream))
 }
 
 

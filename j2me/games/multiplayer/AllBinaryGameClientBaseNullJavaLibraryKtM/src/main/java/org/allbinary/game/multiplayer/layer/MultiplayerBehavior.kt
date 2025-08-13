@@ -35,10 +35,8 @@ open public class MultiplayerBehavior
         
 
         companion object {
-
-
+            
     val NULL_MULTIPLAYER_BEHAVIOR: MultiplayerBehavior = MultiplayerBehavior(StringUtil.getInstance()!!.EMPTY_STRING)
-
 
         }
             protected constructor        (username: String)

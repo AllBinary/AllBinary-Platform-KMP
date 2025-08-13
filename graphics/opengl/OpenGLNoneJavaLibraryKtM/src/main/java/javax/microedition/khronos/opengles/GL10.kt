@@ -20,8 +20,7 @@ interface GL10 : GL {
         
 
         companion object {
-
-
+            
     val GL_ADD: Int = 260
 
     val GL_ALIASED_LINE_WIDTH_RANGE: Int = 33902
@@ -495,7 +494,6 @@ interface GL10 : GL {
     val GL_XOR: Int = 5382
 
     val GL_ZERO: Int = 0
-
 
         }
             

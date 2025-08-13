@@ -38,8 +38,7 @@ open public class GeographicMapCellPositionFactory : GeographicMapCellPositionBa
         
 
         companion object {
-
-
+            
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 open fun getHashtable()
@@ -50,7 +49,6 @@ open fun getHashtable()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashtable
 }
-
 
 
         }

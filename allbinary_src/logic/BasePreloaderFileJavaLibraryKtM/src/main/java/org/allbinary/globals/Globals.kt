@@ -42,8 +42,7 @@ open public class Globals
         
 
         companion object {
-
-
+            
     private val instance: Globals = Globals()
 
 open fun getInstance()
@@ -54,7 +53,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

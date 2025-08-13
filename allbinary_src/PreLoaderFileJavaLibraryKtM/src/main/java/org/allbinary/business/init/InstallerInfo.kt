@@ -46,8 +46,7 @@ open public class InstallerInfo
         
 
         companion object {
-
-
+            
     private val instance: InstallerInfo = InstallerInfo()
 
     private val INITFILENAME: String = "installerdata.dat"
@@ -67,7 +66,6 @@ open fun setHasRead(value: Boolean)
                     var value = value
 InstallerInfo.hasRead= value
 }
-
 
 
         }

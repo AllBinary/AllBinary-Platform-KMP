@@ -34,10 +34,8 @@ open public class NoPlayer : BasicPlayer {
         
 
         companion object {
-
-
+            
     val NO_PLAYER: NoPlayer = NoPlayer()
-
 
         }
             public constructor        (){}

@@ -42,10 +42,8 @@ open public class CheatGameInputProcessor : PlayerGameInput {
         
 
         companion object {
-
-
+            
     var inputProcessor: SpecialGameInputInterface = SpecialGameInputFactory.NO_SPECIAL_GAME_INPUT
-
 
         }
             

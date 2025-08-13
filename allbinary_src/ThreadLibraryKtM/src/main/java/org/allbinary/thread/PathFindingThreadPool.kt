@@ -35,8 +35,7 @@ open public class PathFindingThreadPool : ThreadPool {
         
 
         companion object {
-
-
+            
     private val instance: ThreadPool = PathFindingThreadPool(
                             "PathFinding", 1, 1)
 
@@ -48,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

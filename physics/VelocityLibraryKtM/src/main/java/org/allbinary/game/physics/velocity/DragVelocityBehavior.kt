@@ -33,10 +33,8 @@ open public class DragVelocityBehavior : VelocityBehaviorBase {
         
 
         companion object {
-
-
+            
     val instance: DragVelocityBehavior = DragVelocityBehavior()
-
 
         }
             

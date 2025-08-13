@@ -41,8 +41,7 @@ open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedRe
         
 
         companion object {
-
-
+            
     private var INSTANCE: FeaturedAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory()
 
 open fun getInstance()
@@ -53,7 +52,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return INSTANCE
 }
-
 
 
         }

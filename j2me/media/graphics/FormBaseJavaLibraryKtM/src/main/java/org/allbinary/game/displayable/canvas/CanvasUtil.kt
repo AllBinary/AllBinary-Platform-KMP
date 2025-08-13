@@ -36,8 +36,7 @@ open public class CanvasUtil
         
 
         companion object {
-
-
+            
 open fun getKeyName(key: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -118,7 +117,6 @@ open fun getKeyName(key: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "UNKNOWN KEY"
 }
-
 
 
         }

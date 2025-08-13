@@ -34,10 +34,8 @@ open public class InputAutomationModulesData
         
 
         companion object {
-
-
+            
     var NAME: String = "INPUT_AUTOMATION_MODULES"
-
 
         }
             private constructor        ()

@@ -36,8 +36,7 @@ open public class IndexedAnimationToImageArrayUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: IndexedAnimation)
@@ -75,7 +74,6 @@ imageArray[index]= AnimationFrameToImageUtil.getInstance()!!.getInstance(width, 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return imageArray
 }
-
 
 
         }

@@ -34,8 +34,7 @@ open public class RequestData
         
 
         companion object {
-
-
+            
     val REQUEST: String = "REQUESTDATA_REQUEST"
 
     val PARAMETER: String = "REQUESTDATA_PARAMETER"
@@ -43,7 +42,6 @@ open public class RequestData
     val VIEWS: String = "REQUESTDATA_VIEWS"
 
     val VISITORS: String = "REQUESTDATA_VISITORS"
-
 
         }
             public constructor        ()

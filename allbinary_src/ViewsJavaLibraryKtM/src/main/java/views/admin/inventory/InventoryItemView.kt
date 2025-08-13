@@ -56,10 +56,8 @@ open public class InventoryItemView : HttpStoreComponentView
         
 
         companion object {
-
-
+            
     var TYPE_ID: Int = 10
-
 
         }
             

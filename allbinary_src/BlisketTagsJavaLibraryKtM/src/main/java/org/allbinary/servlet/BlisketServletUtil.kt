@@ -39,8 +39,7 @@ open public class BlisketServletUtil
         
 
         companion object {
-
-
+            
     private val instance: BlisketServletUtil = BlisketServletUtil()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -71,7 +69,7 @@ open fun init(request: HttpServletRequest)
 
 urlGlobals!!.setWebappPath(request.getServletContext()!!.getRealPath(AbPathData.getInstance()!!.SEPARATOR))
 URLGLOBALS.init(urlGlobals)
-WebappClassLoaderInfo.setLoader(::class.getClassLoader())
+WebappClassLoaderInfo.setLoader(::class.java.classLoader)
 }
 
 

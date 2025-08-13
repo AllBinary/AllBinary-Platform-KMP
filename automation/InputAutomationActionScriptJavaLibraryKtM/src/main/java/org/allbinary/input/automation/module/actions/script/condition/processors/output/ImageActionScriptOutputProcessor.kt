@@ -40,8 +40,7 @@ open public class ImageActionScriptOutputProcessor
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun process(imageActionScriptOutputInterface: ImageActionScriptOutputInterface, frame: Long)
@@ -92,7 +91,6 @@ imageIOInterface!!.save(frame)
 }
 
 }
-
 
 
         }

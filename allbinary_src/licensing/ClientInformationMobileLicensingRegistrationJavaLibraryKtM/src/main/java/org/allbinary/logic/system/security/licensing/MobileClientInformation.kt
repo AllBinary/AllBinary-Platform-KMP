@@ -38,12 +38,10 @@ open public class MobileClientInformation : AbeClientInformation {
         
 
         companion object {
-
-
+            
     val DESC: String = "Mobile"
 
     val ANDROID_DESC: String = "Android" +DESC
-
 
         }
             

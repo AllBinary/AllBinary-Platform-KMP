@@ -42,8 +42,7 @@ open public class ChangedPixelsUtil
         
 
         companion object {
-
-
+            
     private val START_X: Int = 0
 
     private val START_Y: Int = 0
@@ -131,7 +130,6 @@ bufferedImageCacheables[1]!!.getBufferedImage()!!.setRGB(pixelDelta!!.getPoint()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return bufferedImageCacheables
 }
-
 
 
         }

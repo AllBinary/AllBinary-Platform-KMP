@@ -35,8 +35,7 @@ open public class Orientation
         
 
         companion object {
-
-
+            
     var NONE: Orientation = Orientation(0, 0, 0)
 
     private var SINGLETON: Orientation = Orientation(0, 0, 0)
@@ -61,7 +60,6 @@ SINGLETON.roll.set(roll)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

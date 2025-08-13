@@ -40,8 +40,7 @@ open public class LicenseRegistrationUtil
         
 
         companion object {
-
-
+            
 open fun process(abeClientInformation: AbeClientInformationInterface, registrationId: String)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -77,7 +76,6 @@ XmlRpcRemoteLicenseRegistrationClient(abeClientInformation).
 }
 
 }
-
 
 
         }

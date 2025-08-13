@@ -35,8 +35,7 @@ open public class OrderedIntArrayPermutationUtil
         
 
         companion object {
-
-
+            
     private val instance: OrderedIntArrayPermutationUtil = OrderedIntArrayPermutationUtil()
 
 open fun getInstance()
@@ -80,7 +79,6 @@ System.out.print(ORIGINAL_DATA_LABEL)
 permutationVisitor!!.print(data)
 OrderedIntArrayPermutationUtil.getInstance()!!.generate(data, permutationVisitor)
 }
-
 
 
         }

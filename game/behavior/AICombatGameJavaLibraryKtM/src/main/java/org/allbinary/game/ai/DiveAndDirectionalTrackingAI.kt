@@ -62,10 +62,8 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
         
 
         companion object {
-
-
+            
     private val directionToKeyMap: IntArray = intArrayOf(Canvas.LEFT,Canvas.DOWN,Canvas.UP,Canvas.RIGHT)
-
 
         }
             

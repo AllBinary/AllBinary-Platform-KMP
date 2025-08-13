@@ -33,8 +33,7 @@ open public class NoSound : Sound {
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : NoSound{
@@ -46,7 +45,6 @@ open fun getInstance()
 
 
     private val instance: NoSound = NoSound()
-
 
         }
             private constructor        ()                        

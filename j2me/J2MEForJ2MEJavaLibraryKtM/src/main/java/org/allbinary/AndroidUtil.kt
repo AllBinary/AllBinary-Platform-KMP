@@ -34,8 +34,7 @@ open public class AndroidUtil
         
 
         companion object {
-
-
+            
 open fun isMemoryRestrictive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
@@ -54,7 +53,6 @@ open fun isAndroid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
-
 
 
         }

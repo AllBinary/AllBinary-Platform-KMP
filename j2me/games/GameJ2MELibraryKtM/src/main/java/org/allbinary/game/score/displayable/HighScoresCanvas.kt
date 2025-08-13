@@ -62,10 +62,8 @@ open public class HighScoresCanvas : GameCommandCanvas
         
 
         companion object {
-
-
+            
     val NAME: String = "HighScoresCanvas"
-
 
         }
             

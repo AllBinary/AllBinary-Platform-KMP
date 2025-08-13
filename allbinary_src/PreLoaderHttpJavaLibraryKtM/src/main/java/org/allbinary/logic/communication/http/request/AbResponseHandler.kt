@@ -44,8 +44,7 @@ open public class AbResponseHandler
         
 
         companion object {
-
-
+            
                 @Throws(JspTagException::class)
             
 open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
@@ -291,7 +290,6 @@ open fun sendRedirect(pageContext: PageContext, page: String)
                         }
                             
 }
-
 
 
         }

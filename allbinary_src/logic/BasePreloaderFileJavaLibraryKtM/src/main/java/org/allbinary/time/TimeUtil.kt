@@ -35,8 +35,7 @@ open public class TimeUtil
         
 
         companion object {
-
-
+            
     private val instance: TimeUtil = TimeUtil()
 
 open fun getInstance()
@@ -51,7 +50,6 @@ open fun getInstance()
 
     private val calendar: Calendar = Calendar.getInstance()!!
             
-
 
         }
             

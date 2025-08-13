@@ -63,10 +63,8 @@ open public class LinuxHardware
         
 
         companion object {
-
-
+            
     private val PCIFILE: String = "/proc/pci"
-
 
         }
             

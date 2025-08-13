@@ -35,10 +35,8 @@ open public class Life
         
 
         companion object {
-
-
+            
     val NO_LIFE: Life = Life()
-
 
         }
             

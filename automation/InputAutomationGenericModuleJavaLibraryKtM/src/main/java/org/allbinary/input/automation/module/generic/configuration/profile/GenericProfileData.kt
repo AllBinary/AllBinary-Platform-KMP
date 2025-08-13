@@ -34,10 +34,8 @@ open public class GenericProfileData
         
 
         companion object {
-
-
+            
     var NAME: String = "GENERIC_PROFILE_NAME"
-
 
         }
             private constructor        ()

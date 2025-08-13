@@ -40,11 +40,9 @@ open public class TimedFireAI : BasicAI {
         
 
         companion object {
-
-
+            
     val TIME: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(1)!!
             
-
 
         }
             

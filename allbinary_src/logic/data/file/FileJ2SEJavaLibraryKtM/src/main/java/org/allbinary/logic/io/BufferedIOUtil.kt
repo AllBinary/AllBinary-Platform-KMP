@@ -41,8 +41,7 @@ open public class BufferedIOUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun copy(backupFile: AbFile, backupFileBak: AbFile)
@@ -84,7 +83,6 @@ tmpOut!!.newLine()
 
 tmpOut!!.flush()
 }
-
 
 
         }

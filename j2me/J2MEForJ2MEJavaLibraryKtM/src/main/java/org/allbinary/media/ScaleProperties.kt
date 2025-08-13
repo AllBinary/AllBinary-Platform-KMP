@@ -36,10 +36,8 @@ open public class ScaleProperties
         
 
         companion object {
-
-
+            
     val instance: ScaleProperties = ScaleProperties()
-
 
         }
             

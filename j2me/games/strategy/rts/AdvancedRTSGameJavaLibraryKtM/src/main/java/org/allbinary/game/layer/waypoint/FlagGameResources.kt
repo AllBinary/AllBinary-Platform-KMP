@@ -34,8 +34,7 @@ open public class FlagGameResources : BasicGameResources {
         
 
         companion object {
-
-
+            
     private val ICON: String = "_icon"
 
     private val BUILD: String = "_build"
@@ -43,7 +42,6 @@ open public class FlagGameResources : BasicGameResources {
     private val DESTROY: String = "_destroy"
 
     private val ICON_BUILD: String = "_icon" +BUILD
-
 
         }
             

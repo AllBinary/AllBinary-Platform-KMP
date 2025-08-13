@@ -42,8 +42,7 @@ open public class UploadMediaSingleton
         
 
         companion object {
-
-
+            
     private var uploadMedia: UploadMediaSingleton
 
 open fun getInstance()
@@ -65,7 +64,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UploadMediaSingleton.uploadMedia
 }
-
 
 
         }

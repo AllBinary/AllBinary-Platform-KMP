@@ -60,11 +60,9 @@ open public class UnitRTSFormInput : RTSFormInput {
         
 
         companion object {
-
-
+            
     val DECAL_ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(23)!!
             
-
 
         }
             

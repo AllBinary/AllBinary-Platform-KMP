@@ -34,8 +34,7 @@ open public class AuthorizeNetAimData
         
 
         companion object {
-
-
+            
     val X_DELIM_DATA: String = "x_delim_data"
 
     val X_DELIM_CHAR: String = "x_delim_char"
@@ -51,7 +50,6 @@ open public class AuthorizeNetAimData
     val X_DRIVERS_LICENSE_STATE: String = "x_drivers_license_state"
 
     val X_DRIVERS_LICENSE_DOB: String = "x_drivers_license_dob"
-
 
         }
             private constructor        ()

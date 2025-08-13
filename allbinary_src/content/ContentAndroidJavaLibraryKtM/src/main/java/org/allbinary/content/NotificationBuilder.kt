@@ -39,10 +39,8 @@ open public class NotificationBuilder
         
 
         companion object {
-
-
+            
     val NULL_NOTIFICATION_BUILDER: NotificationBuilder = NotificationBuilder()
-
 
         }
             

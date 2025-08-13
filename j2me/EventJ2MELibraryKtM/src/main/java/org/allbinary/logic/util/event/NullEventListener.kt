@@ -35,10 +35,8 @@ open public class NullEventListener
         
 
         companion object {
-
-
+            
     val NULL_EVENT_LISTENER: NullEventListener = NullEventListener()
-
 
         }
             

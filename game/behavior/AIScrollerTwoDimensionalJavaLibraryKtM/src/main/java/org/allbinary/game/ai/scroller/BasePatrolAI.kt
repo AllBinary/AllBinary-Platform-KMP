@@ -41,8 +41,7 @@ open public class BasePatrolAI : BasicAI {
         
 
         companion object {
-
-
+            
     val MAX_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
             
 
@@ -54,7 +53,6 @@ open public class BasePatrolAI : BasicAI {
 
     var SPEED: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(5)!!
             
-
 
         }
             

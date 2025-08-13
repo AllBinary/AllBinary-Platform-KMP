@@ -34,10 +34,8 @@ open public class ItemData
         
 
         companion object {
-
-
+            
     val ITEM: String = "ITEM"
-
 
         }
             

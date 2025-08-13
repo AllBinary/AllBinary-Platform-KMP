@@ -38,8 +38,7 @@ open public class InventoryHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "taghelpers.InventoryHelper"
 
     private val FACTORYNAME: String = "taghelpers.InventoryHelperFactory"
@@ -60,7 +59,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return HelperFactory.getInstance(FACTORYNAME, CLASSNAME, hashMap, pageContext)
 }
-
 
 
         }

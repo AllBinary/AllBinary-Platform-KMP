@@ -36,8 +36,7 @@ open public class PaymentGatewayEntityFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance()
@@ -75,7 +74,6 @@ open fun getInstance()
 }
 
 }
-
 
 
         }

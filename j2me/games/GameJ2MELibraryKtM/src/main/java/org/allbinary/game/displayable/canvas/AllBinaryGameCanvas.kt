@@ -162,8 +162,7 @@ open public class AllBinaryGameCanvas : RunnableCanvas
         
 
         companion object {
-
-
+            
     private val id: Int = 0
 
     val SHOW_END_RESULT_GAME_STATE: GameState = GameStateFactory.getInstance(
@@ -175,7 +174,6 @@ open public class AllBinaryGameCanvas : RunnableCanvas
             
 
     val TYPE: Int = 2
-
 
         }
             

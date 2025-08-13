@@ -82,8 +82,7 @@ open public class RTSLayer : MultiPlayerGameLayer
         
 
         companion object {
-
-
+            
     private val id: Int = 0
 
     val MAIN_INDEX: Int = 0
@@ -134,7 +133,6 @@ open fun isRTSLayer(layerInterface: AllBinaryLayer)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 }
-
 
 
         }

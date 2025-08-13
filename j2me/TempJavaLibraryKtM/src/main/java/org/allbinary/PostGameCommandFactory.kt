@@ -35,8 +35,7 @@ open public class PostGameCommandFactory
         
 
         companion object {
-
-
+            
     private val instance: PostGameCommandFactory = PostGameCommandFactory()
 
 open fun getInstance()
@@ -46,7 +45,6 @@ open fun getInstance()
 
                             throw RuntimeException()
 }
-
 
 
         }

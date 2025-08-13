@@ -39,10 +39,8 @@ open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
         
 
         companion object {
-
-
+            
     val NULL_COMPLETE_MOTION_GESTURE_INPUT_EVENT: CompleteMotionGestureInputEvent = CompleteMotionGestureInputEvent(StringUtil.getInstance()!!.EMPTY_STRING, TouchMotionGestureFactory.getInstance()!!.NO_MOTION)
-
 
         }
             

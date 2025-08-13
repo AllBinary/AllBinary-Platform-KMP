@@ -60,12 +60,10 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
         
 
         companion object {
-
-
+            
     val NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER: CollidableDestroyableDamageableLayer = CollidableDestroyableDamageableLayer(BasicGroupFactory.getInstance()!!.NONE_ARRAY, RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION)
 
     private val READYFOREXPLOSION: String = "ReadyForExplosion: "
-
 
         }
             

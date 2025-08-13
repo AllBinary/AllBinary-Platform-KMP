@@ -48,10 +48,8 @@ open public class LazyImageRotationAnimation : RotationAnimation {
         
 
         companion object {
-
-
+            
     private val SET_REAL_ANIMATION: String = "setRealAnimation"
-
 
         }
             

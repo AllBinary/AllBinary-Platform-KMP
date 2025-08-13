@@ -36,8 +36,7 @@ open public class MineLayerCircularStaticPool
         
 
         companion object {
-
-
+            
     private var WEAPON_LAYER_CIRCULAR_STATIC_POOL: WeaponLayerCircularPool = WeaponLayerCircularPool()
 
                 @Throws(Exception::class)
@@ -60,7 +59,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return WEAPON_LAYER_CIRCULAR_STATIC_POOL
 }
-
 
 
         }

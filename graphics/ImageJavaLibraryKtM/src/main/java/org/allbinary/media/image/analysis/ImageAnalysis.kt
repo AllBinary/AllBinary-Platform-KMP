@@ -41,8 +41,7 @@ open public class ImageAnalysis
         
 
         companion object {
-
-
+            
     private val instance: ImageAnalysis = ImageAnalysis()
 
 open fun getInstance()
@@ -226,7 +225,6 @@ open fun processImageColorResults(imageColorResults: ImageColorResults, colorRan
                                     }
                                 
 }
-
 
 
         }

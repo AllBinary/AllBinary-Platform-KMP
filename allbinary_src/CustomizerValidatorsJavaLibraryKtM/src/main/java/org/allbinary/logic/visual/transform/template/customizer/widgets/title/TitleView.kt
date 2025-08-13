@@ -46,10 +46,8 @@ open public class TitleView
         
 
         companion object {
-
-
+            
     private val NAME: String = "None"
-
 
         }
             

@@ -41,8 +41,7 @@ open public class UserName
         
 
         companion object {
-
-
+            
     private val instance: UserName = UserName()
 
 open fun getInstance()
@@ -79,7 +78,6 @@ open fun getValidationInfo(aUserName: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
-
 
 
         }

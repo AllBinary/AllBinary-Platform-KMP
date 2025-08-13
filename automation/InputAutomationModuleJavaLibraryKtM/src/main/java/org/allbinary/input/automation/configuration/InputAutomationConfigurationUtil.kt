@@ -36,8 +36,7 @@ open public class InputAutomationConfigurationUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getChangeEvent(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
@@ -57,7 +56,6 @@ open fun getChangeEvent(inputAutomationModuleInterface: InputAutomationModuleFac
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return inputAutomationConfigurationModuleChangeEvent
 }
-
 
 
         }

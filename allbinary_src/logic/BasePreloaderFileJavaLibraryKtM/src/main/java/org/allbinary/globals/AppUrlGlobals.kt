@@ -33,10 +33,8 @@ open public class AppUrlGlobals : UrlGlobalsInterface {
         
 
         companion object {
-
-
+            
     val NULL_APP_URL_GLOBALS: AppUrlGlobals = AppUrlGlobals()
-
 
         }
             

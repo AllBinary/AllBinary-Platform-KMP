@@ -40,8 +40,7 @@ open public class AbPathUtilOld
         
 
         companion object {
-
-
+            
     private val instance: AbPathUtilOld = AbPathUtilOld()
 
 open fun getInstance()
@@ -55,7 +54,6 @@ open fun getInstance()
 
 
     private val MIN: Int = 4
-
 
         }
             

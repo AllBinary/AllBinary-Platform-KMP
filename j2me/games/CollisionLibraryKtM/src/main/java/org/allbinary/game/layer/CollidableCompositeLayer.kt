@@ -44,10 +44,8 @@ open public class CollidableCompositeLayer : AllBinaryGameLayer
         
 
         companion object {
-
-
+            
     val NULL_COLLIDABLE_COMPOSITE_LAYER: CollidableCompositeLayer = CollidableCompositeLayer(RectangleFactory.SINGLETON, ViewPosition.NULL_VIEW_POSITION, CollidableNeverCollideBehaviorFactory.getInstance())
-
 
         }
             

@@ -39,8 +39,7 @@ open public class StoreFrontViewFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
 : DomNodeInterface{
@@ -84,7 +83,6 @@ open fun getInstance(storeName: String)
 }
 
 }
-
 
 
         }

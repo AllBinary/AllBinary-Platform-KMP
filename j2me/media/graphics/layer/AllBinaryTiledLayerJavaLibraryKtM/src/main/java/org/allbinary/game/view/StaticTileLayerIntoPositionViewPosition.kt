@@ -35,8 +35,7 @@ open public class StaticTileLayerIntoPositionViewPosition : ViewPosition {
         
 
         companion object {
-
-
+            
     private var tiledLayer: AllBinaryTiledLayer
 
     var layer: AllBinaryLayer
@@ -48,7 +47,6 @@ open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
                     var tiledLayer = tiledLayer
 StaticTileLayerIntoPositionViewPosition.tiledLayer= tiledLayer
 }
-
 
 
         }

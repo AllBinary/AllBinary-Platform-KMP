@@ -43,10 +43,8 @@ open public class ImageCache : ImageCacheBase {
         
 
         companion object {
-
-
+            
     val NULL_IMAGE_CACHE: ImageCache = ImageCache()
-
 
         }
             

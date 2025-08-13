@@ -42,8 +42,7 @@ open public class HelperFactory
         
 
         companion object {
-
-
+            
                 @Throws(LicensingException::class)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
@@ -395,7 +394,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory",
 }
 
 }
-
 
 
         }

@@ -39,8 +39,7 @@ open public class HttpFileUploadUtil
         
 
         companion object {
-
-
+            
     private val instance: HttpFileUploadUtil = HttpFileUploadUtil()
 
 open fun getInstance()
@@ -148,7 +147,6 @@ stringBuffer!!.append(fileItem!!.getSize())
                                     }
                                 
 }
-
 
 
         }

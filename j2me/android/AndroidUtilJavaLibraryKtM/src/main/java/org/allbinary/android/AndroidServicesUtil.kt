@@ -43,8 +43,7 @@ open public class AndroidServicesUtil
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidServicesUtil{
@@ -56,7 +55,6 @@ open fun getInstance()
 
 
     private val instance: AndroidServicesUtil = AndroidServicesUtil()
-
 
         }
             

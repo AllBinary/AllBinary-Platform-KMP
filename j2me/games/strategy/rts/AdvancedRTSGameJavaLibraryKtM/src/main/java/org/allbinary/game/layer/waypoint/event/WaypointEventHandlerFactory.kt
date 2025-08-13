@@ -35,8 +35,7 @@ open public class WaypointEventHandlerFactory
         
 
         companion object {
-
-
+            
     private val eventHandlerArray: Array<WaypointEventHandler?> = arrayOf(WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler(),WaypointEventHandler())
 
 open fun getInstance(groupInterface: Group)
@@ -65,7 +64,6 @@ open fun removeAll()
 }
 
 }
-
 
 
         }

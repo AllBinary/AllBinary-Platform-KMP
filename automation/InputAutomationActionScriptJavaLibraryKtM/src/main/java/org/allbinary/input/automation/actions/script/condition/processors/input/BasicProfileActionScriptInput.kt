@@ -119,7 +119,7 @@ logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
     var hashtable: Hashtable<Any, Any> = inputRobotFactory!!.get() as Hashtable<Any, Any>
 
 
-    var set: Set = hashtable.keySet()!!
+    var set: Set = hashtable.keys!!
             
 
 

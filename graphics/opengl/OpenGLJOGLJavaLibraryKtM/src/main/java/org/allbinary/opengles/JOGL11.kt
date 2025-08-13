@@ -31,7 +31,7 @@ import com.jogamp.opengl.GL2
 import com.jogamp.opengl.GL
 
 open public class JOGL11 : JOGL10
-                , GL11 {
+                , javax.microedition.khronos.opengles.GL11 {
         
 
     private val gl11: GL2

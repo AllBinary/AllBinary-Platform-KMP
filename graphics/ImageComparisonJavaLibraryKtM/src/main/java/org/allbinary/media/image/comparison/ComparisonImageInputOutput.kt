@@ -46,10 +46,8 @@ open public class ComparisonImageInputOutput
         
 
         companion object {
-
-
+            
     private val ROOT_NAME: String = "_Changed_"
-
 
         }
             

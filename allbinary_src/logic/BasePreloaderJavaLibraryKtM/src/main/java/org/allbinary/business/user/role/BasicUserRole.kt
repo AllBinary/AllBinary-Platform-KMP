@@ -37,8 +37,7 @@ open public class BasicUserRole
         
 
         companion object {
-
-
+            
     private val roleVector: Vector<Any> = Vector<Any>()
 
                 @Throws(Exception::class)
@@ -97,7 +96,6 @@ open fun getAll()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return BasicUserRole.roleVector
 }
-
 
 
         }

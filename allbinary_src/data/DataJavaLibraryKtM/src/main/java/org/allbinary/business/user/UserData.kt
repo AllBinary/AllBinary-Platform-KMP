@@ -34,8 +34,7 @@ open public class UserData
         
 
         companion object {
-
-
+            
     var MAXLEN: Int = 250
 
     val NAME: String = "USER_NAME"
@@ -79,7 +78,6 @@ open public class UserData
     val PERMISSIONS: String = "CUSTOMER_PERMISSIONS"
 
     val CONFIGURATION: String = "CUSTOMER_CONFIGURATION"
-
 
         }
             private constructor        ()

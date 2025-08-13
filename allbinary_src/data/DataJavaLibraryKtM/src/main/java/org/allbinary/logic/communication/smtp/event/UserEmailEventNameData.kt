@@ -36,8 +36,7 @@ open public class UserEmailEventNameData
         
 
         companion object {
-
-
+            
     private var userNameEvenNameHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
     private var nextId: Int = 0
@@ -143,7 +142,6 @@ open fun getInstance(userEmailEventNameString: String)
                         }
                             
 }
-
 
 
         }

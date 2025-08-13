@@ -26,12 +26,10 @@ open public class RemoteInfo
         
 
         companion object {
-
-
+            
     val REMOTE_INFO: RemoteInfo = RemoteInfo()
 
     val NEW_PLAYER_ID: Int = 0
-
 
         }
             private constructor        ()

@@ -22,10 +22,8 @@ open public class StringComponent
         
 
         companion object {
-
-
+            
     val NULL_STRING_COMPONENT: StringComponent = StringComponent()
-
 
         }
             

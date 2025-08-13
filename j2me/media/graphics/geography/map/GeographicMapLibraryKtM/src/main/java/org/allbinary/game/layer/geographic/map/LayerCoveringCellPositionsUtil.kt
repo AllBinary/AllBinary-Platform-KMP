@@ -40,8 +40,7 @@ open public class LayerCoveringCellPositionsUtil
         
 
         companion object {
-
-
+            
     private val instance: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil()
 
 open fun getInstance()
@@ -52,7 +51,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

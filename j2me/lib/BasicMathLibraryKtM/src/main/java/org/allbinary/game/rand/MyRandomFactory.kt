@@ -37,8 +37,7 @@ open public class MyRandomFactory
         
 
         companion object {
-
-
+            
     private val instance: MyRandomFactory = MyRandomFactory()
 
 open fun getInstance()
@@ -147,7 +146,6 @@ System.out.println(stringBuilder!!.toString())
 }
 
 }
-
 
 
         }

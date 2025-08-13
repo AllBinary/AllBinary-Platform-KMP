@@ -21,8 +21,7 @@ open public class AndroidResources
         
 
         companion object {
-
-
+            
     private val instance: AndroidResources = AndroidResources()
 
 open fun getInstance()
@@ -35,7 +34,6 @@ open fun getInstance()
 }
 
 
-
         }
             
             //Auto Generated
@@ -43,15 +41,15 @@ open fun getInstance()
             {
             }            
         
-    var drawable: drawable = drawable()
+    var drawable: R.Companion.drawable = R.Companion.drawable()
 
-    var id: id = id()
+    var id: R.Companion.id = R.Companion.id()
 
-    var layout: layout = layout()
+    var layout: R.Companion.layout = R.Companion.layout()
 
-    var raw: raw = raw()
+    var raw: R.Companion.raw = R.Companion.raw()
 
-    var string: string = string()
+    var string: R.Companion.string = R.Companion.string()
 
 }
                 

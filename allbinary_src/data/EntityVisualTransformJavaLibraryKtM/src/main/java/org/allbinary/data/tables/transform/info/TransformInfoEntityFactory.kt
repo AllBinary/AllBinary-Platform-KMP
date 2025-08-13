@@ -39,8 +39,7 @@ open public class TransformInfoEntityFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoEntity{
@@ -86,7 +85,6 @@ open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: Transfo
 }
 
 }
-
 
 
         }

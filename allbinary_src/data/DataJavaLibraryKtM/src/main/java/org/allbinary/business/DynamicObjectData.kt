@@ -34,10 +34,8 @@ open public class DynamicObjectData
         
 
         companion object {
-
-
+            
     val NAME: String = "DYNAMICCOMPONENT_NAME"
-
 
         }
             private constructor        ()

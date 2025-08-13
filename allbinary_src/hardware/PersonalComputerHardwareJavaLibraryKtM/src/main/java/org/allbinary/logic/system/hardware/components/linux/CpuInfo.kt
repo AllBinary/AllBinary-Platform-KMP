@@ -34,8 +34,7 @@ open public class CpuInfo
         
 
         companion object {
-
-
+            
     val PROCESSOR: CpuInfo = CpuInfo(
                             "processor")
 
@@ -89,7 +88,6 @@ open public class CpuInfo
 
     val BOGOMIPS: CpuInfo = CpuInfo(
                             "bogomips")
-
 
         }
             

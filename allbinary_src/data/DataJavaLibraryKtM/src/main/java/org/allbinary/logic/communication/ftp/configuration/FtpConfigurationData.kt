@@ -34,8 +34,7 @@ open public class FtpConfigurationData
         
 
         companion object {
-
-
+            
     val NAME: String = "FTP_NAME"
 
     val SERVER: String = "FTP_SERVER"
@@ -45,7 +44,6 @@ open public class FtpConfigurationData
     val USERNAME: String = "FTP_USERNAME"
 
     val PASSWORD: String = "FTP_PASSWORD"
-
 
         }
             private constructor        ()

@@ -40,8 +40,7 @@ open public class ConsolidatedMotionRectanglesResultsCacheSingleton
         
 
         companion object {
-
-
+            
     private var cacheInterface: CacheInterface = 
                 null
             
@@ -79,7 +78,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return cacheInterface
 }
-
 
 
         }

@@ -44,8 +44,7 @@ open public class DomDocumentHelper
         
 
         companion object {
-
-
+            
 open fun create()
         //nullable = true from not(false or (false and true)) = true
 : Document{
@@ -190,7 +189,6 @@ copyTransformer!!.transform(domSource, streamResult)
 }
 
 }
-
 
 
         }

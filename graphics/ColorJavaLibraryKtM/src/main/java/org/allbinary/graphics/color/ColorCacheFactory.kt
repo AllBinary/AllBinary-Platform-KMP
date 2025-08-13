@@ -40,8 +40,7 @@ open public class ColorCacheFactory
         
 
         companion object {
-
-
+            
     private var cacheInterface: AutomaticCacheInterface = 
                 null
             
@@ -76,7 +75,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return cacheInterface
 }
-
 
 
         }

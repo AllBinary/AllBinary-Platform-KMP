@@ -47,12 +47,10 @@ open public class OpenGLESImage : Image
         
 
         companion object {
-
-
+            
     val texture2dList: BasicArrayList = BasicArrayList()
 
     val TYPE: Int = 4
-
 
         }
             

@@ -38,12 +38,10 @@ open public class SpecialItemsHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "admin.taghelpers.SpecialItemsHelper"
 
     private val FACTORYNAME: String = "SpecialItemsHelperFactory"
-
 
         }
             public constructor        ()

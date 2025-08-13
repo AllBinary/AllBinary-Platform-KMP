@@ -36,10 +36,8 @@ open public class ConstrainedMotionRectangles : MotionRectangles {
         
 
         companion object {
-
-
+            
     private val NAME: String = "constrainedMotionRectangles_"
-
 
         }
             

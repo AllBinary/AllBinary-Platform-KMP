@@ -37,8 +37,7 @@ open public class InitDbHelperFactory
         
 
         companion object {
-
-
+            
     private val CLASSNAME: String = "org.allbinary.business.installer.InitDbCrypted"
 
                 @Throws(LicensingException::class)
@@ -92,7 +91,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 }
-
 
 
         }

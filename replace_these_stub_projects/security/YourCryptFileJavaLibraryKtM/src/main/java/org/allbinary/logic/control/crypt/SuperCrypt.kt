@@ -20,10 +20,8 @@ open public class SuperCrypt
         
 
         companion object {
-
-
+            
     var KEYMAX: Int = 0
-
 
         }
             public constructor        (key: Int)

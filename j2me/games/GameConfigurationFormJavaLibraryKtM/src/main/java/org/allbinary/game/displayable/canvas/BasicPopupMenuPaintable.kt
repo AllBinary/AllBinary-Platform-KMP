@@ -51,10 +51,8 @@ open public class BasicPopupMenuPaintable : Paintable {
         
 
         companion object {
-
-
+            
     private val NAME: String = "MENU"
-
 
         }
             

@@ -39,12 +39,10 @@ open public class GameInfo
         
 
         companion object {
-
-
+            
     val NONE: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.NONE, GameMode.NONE,  -1,  -1)
 
     val LEVEL_NAME: String = "LEVEL"
-
 
         }
             

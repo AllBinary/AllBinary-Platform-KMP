@@ -38,8 +38,7 @@ open public class HardwareFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(os: GenericOperatingSystem)
@@ -91,7 +90,6 @@ open fun getInstance(os: GenericOperatingSystem)
 }
 
 }
-
 
 
         }

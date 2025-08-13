@@ -44,10 +44,8 @@ open public class InputToGameKeyMapping : InputMapping {
         
 
         companion object {
-
-
+            
     val NULL_INPUT_TO_GAME_KEY_MAPPING: InputToGameKeyMapping = InputToGameKeyMapping()
-
 
         }
             

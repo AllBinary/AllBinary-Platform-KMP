@@ -43,10 +43,8 @@ open public class GameNotificationHud : BasicHud
         
 
         companion object {
-
-
+            
     val NULL_GAME_NOTIFICATION: GameNotificationHud = GameNotificationHud(BasicHudFactory.getInstance()!!.TOPCENTER, BasicHudFactory.getInstance()!!.HORIZONTAL, 0, 0, 0, BasicColorFactory.getInstance()!!.RED)
-
 
         }
             public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        

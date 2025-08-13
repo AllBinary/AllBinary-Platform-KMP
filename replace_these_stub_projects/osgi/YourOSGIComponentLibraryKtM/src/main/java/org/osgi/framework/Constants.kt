@@ -18,10 +18,8 @@ interface Constants {
         
 
         companion object {
-
-
+            
     val BUNDLE_SYMBOLICNAME: String = StringUtil.getInstance()!!.EMPTY_STRING
-
 
         }
             

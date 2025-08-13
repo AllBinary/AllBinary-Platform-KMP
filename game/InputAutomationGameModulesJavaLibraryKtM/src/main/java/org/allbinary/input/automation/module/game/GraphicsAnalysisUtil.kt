@@ -39,8 +39,7 @@ open public class GraphicsAnalysisUtil
         
 
         companion object {
-
-
+            
     private val MAX: Int = 122
 
                 @Throws(Exception::class)
@@ -108,7 +107,6 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
-
 
 
         }

@@ -38,8 +38,7 @@ open public class StoreFrontFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
 : StoreFront{
@@ -83,7 +82,6 @@ open fun getInstance(storeName: String)
 }
 
 }
-
 
 
         }

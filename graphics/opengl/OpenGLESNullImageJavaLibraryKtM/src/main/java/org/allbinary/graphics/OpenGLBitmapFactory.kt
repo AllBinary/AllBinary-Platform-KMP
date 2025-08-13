@@ -24,8 +24,7 @@ open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
         
 
         companion object {
-
-
+            
     private val instance: OpenGLBitmapFactory = OpenGLBitmapFactory()
 
 open fun getInstance()
@@ -36,7 +35,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -52,9 +50,7 @@ open public inner class Config
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 

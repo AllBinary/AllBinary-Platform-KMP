@@ -40,8 +40,7 @@ open public class DestroyedLayerProcessor : BasicLayerProcessor {
         
 
         companion object {
-
-
+            
     private var DESTROYED_LAYER_PROCESSOR: BasicLayerProcessor = BasicLayerProcessor.NULL_LAYER_PROCESSOR
 
 open fun init()
@@ -58,7 +57,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DESTROYED_LAYER_PROCESSOR
 }
-
 
 
         }

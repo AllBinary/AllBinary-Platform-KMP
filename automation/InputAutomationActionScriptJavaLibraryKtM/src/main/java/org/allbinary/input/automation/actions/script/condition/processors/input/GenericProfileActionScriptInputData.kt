@@ -34,14 +34,12 @@ open public class GenericProfileActionScriptInputData
         
 
         companion object {
-
-
+            
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_INPUT_NAME"
 
     var TYPE: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_INPUT_TYPE"
 
     var DELAY: String = "GENERIC_CONFIGURATION_PROFILE_ACTION_INPUT_DELAY"
-
 
         }
             private constructor        ()

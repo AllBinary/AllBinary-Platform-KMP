@@ -38,8 +38,7 @@ open public class BasicArrayListUtil
         
 
         companion object {
-
-
+            
     private val instance: BasicArrayListUtil = BasicArrayListUtil()
 
 open fun getInstance()
@@ -76,7 +75,6 @@ list.add(commonPhoneStrings!!.NINE)
 BasicArrayListUtil.getInstance()!!.reverse(list)
 System.out.println(list)
 }
-
 
 
         }

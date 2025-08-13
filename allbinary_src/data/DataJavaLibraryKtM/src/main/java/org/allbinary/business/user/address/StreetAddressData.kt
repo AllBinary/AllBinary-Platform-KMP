@@ -34,8 +34,7 @@ open public class StreetAddressData
         
 
         companion object {
-
-
+            
     val MAX: Int = 255
 
     val MIN: Int = 0
@@ -63,7 +62,6 @@ open public class StreetAddressData
     val CODE: String = "STREETADDRESS_CODE"
 
     val COUNTRY: String = "STREETADDRESS_COUNTRY"
-
 
         }
             private constructor        ()

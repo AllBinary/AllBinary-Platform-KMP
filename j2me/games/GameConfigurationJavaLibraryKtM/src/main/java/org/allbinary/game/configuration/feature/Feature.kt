@@ -36,8 +36,7 @@ open public class Feature
         
 
         companion object {
-
-
+            
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 open fun getInstance(name: String)
@@ -63,7 +62,6 @@ open fun add(name: String, gameFeature: Feature)
                     var gameFeature = gameFeature
 hashtable.put(name, gameFeature)
 }
-
 
 
         }

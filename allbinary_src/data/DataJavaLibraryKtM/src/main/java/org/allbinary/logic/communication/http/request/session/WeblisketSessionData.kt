@@ -34,8 +34,7 @@ open public class WeblisketSessionData
         
 
         companion object {
-
-
+            
     val INVALIDATESESSION: String = "SESSION_INVALIDATE_SESSION"
 
     val ATTEMPTS: String = "SESSION_ATTEMPTS"
@@ -51,7 +50,6 @@ open public class WeblisketSessionData
     val REMOVABLEREENTERNEWPASSWORD: String = "SESSION_REMOVABLE_REENTER_NEW_PASSWORD"
 
     val AUTHENTICATED: String = "SESSION_AUTHENTICATED"
-
 
         }
             public constructor        ()

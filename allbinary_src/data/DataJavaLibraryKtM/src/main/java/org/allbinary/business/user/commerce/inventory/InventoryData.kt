@@ -34,10 +34,8 @@ open public class InventoryData
         
 
         companion object {
-
-
+            
     val INVENTORY: String = "INVENTORY"
-
 
         }
             

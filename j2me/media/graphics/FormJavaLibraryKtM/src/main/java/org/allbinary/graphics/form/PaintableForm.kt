@@ -28,10 +28,8 @@ open public class PaintableForm : CustomForm {
         
 
         companion object {
-
-
+            
     val NULL_PAINTABLE_FORM: PaintableForm = PaintableForm(StringUtil.getInstance()!!.EMPTY_STRING, arrayOfNulls(0), RectangleFactory.SINGLETON, FormTypeFactory.getInstance()!!.NULL_FORM_TYPE, BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE)
-
 
         }
             

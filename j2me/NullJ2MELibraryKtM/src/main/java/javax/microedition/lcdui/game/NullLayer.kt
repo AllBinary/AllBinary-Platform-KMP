@@ -33,10 +33,8 @@ open public class NullLayer : Layer {
         
 
         companion object {
-
-
+            
     val NULL_LAYER: Layer = NullLayer(0, 0, 0, 0, false)
-
 
         }
              constructor        (x: Int, y: Int, width: Int, height: Int, visible: Boolean)                        

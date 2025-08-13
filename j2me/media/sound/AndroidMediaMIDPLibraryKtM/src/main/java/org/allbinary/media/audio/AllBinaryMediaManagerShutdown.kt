@@ -35,8 +35,7 @@ open public class AllBinaryMediaManagerShutdown
         
 
         companion object {
-
-
+            
     private val instance: AllBinaryMediaManagerShutdown = AllBinaryMediaManagerShutdown()
 
                 @Throws(Exception::class)
@@ -54,7 +53,6 @@ logUtil!!.put(
                             "No Media Shutdown for Android Process", instance, 
                             "shutdown")
 }
-
 
 
         }

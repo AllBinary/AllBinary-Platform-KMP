@@ -35,8 +35,7 @@ open public class AbFileNativeUtil
         
 
         companion object {
-
-
+            
 open fun get(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
 : File{
@@ -48,7 +47,6 @@ open fun get(file: AbFile)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return file.getFile()
 }
-
 
 
         }

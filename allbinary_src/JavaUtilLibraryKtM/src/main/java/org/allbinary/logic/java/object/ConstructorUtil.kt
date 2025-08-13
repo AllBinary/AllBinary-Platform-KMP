@@ -37,8 +37,7 @@ open public class ConstructorUtil
         
 
         companion object {
-
-
+            
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -129,7 +128,6 @@ stringBuffer!!.append(lineBreak)
                         if()
                         
 }
-
 
 
         }

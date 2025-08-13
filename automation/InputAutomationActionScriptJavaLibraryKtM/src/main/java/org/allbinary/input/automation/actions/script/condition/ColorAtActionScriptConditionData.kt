@@ -34,8 +34,7 @@ open public class ColorAtActionScriptConditionData
         
 
         companion object {
-
-
+            
     var NAME: String = "COLOR_AT_ACTION_CONDITION_NAME"
 
     var LOCATION_X: String = "COLOR_AT_ACTION_CONDITION_LOCATION_X"
@@ -53,7 +52,6 @@ open public class ColorAtActionScriptConditionData
     var MIN_BLUE: String = "COLOR_AT_ACTION_CONDITION_MIN_BLUE"
 
     var MAX_BLUE: String = "COLOR_AT_ACTION_CONDITION_MAX_BLUE"
-
 
         }
             private constructor        ()

@@ -36,10 +36,8 @@ open public class NullInputMappingEventListener
         
 
         companion object {
-
-
+            
     val NULL_INPUT_MAPPING_EVENT_LISTENER: NullInputMappingEventListener = NullInputMappingEventListener()
-
 
         }
             

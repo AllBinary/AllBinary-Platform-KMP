@@ -44,10 +44,8 @@ open public class CountedLayerInterfaceFactoryPart
         
 
         companion object {
-
-
+            
     val NULL_COUNTED_LAYER_INTERFACE_FACTORY: CountedLayerInterfaceFactoryPart = CountedLayerInterfaceFactoryPart(0, CountedPickedUpLayerInterfaceFactory.NULL_COUNTED_PICKUP_LAYER_FACTORY)
-
 
         }
             

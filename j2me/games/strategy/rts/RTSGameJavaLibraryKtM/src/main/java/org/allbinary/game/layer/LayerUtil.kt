@@ -39,8 +39,7 @@ open public class LayerUtil
         
 
         companion object {
-
-
+            
     private val HASHTABLE: String = "Hashtable: "
 
 open fun toString(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
@@ -85,7 +84,6 @@ stringBuffer!!.append(z)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 }
-
 
 
         }

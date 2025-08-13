@@ -34,8 +34,7 @@ open public class LicenseInterfaceSingleton
         
 
         companion object {
-
-
+            
     private var licenseInterface: AbeLicenseInterface = AbeNoLicense.getInstance()!!
             
 
@@ -66,7 +65,6 @@ open fun init(licenseInterface: AbeLicenseInterface)
                                     }
                                 
 }
-
 
 
         }

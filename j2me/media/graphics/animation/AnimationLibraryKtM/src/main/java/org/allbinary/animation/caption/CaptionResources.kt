@@ -34,10 +34,8 @@ open public class CaptionResources
         
 
         companion object {
-
-
+            
     val RESOURCE: String = "/character_message_bubbled_box.png"
-
 
         }
             

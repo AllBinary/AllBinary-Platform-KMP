@@ -39,8 +39,7 @@ open public class AboutPaintable : Paintable {
         
 
         companion object {
-
-
+            
 open fun getInstance(info: Array<String?>, developers: Array<String?>)
         //nullable =  from not(true or (false and false)) = 
 : AboutPaintable{
@@ -55,7 +54,6 @@ open fun getInstance(info: Array<String?>, developers: Array<String?>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AboutPaintable(info, developers)
 }
-
 
 
         }

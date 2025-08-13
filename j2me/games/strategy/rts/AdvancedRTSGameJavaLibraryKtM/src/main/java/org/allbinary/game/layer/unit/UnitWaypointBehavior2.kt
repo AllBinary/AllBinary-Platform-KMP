@@ -58,8 +58,7 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
         
 
         companion object {
-
-
+            
     private val WANDERING: String = "Order?"
 
     private val THINKING: String = "Thinking"
@@ -91,7 +90,6 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
     private val TARGET_DISTANCE: String = "Target Distance"
 
     private val TARGET_LAYER: String = "Target Layer"
-
 
         }
             
@@ -1214,9 +1212,7 @@ open public inner class BuildingSteeringVisitor : SteeringVisitor {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 

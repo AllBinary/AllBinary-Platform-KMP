@@ -34,12 +34,10 @@ open public class UserEmailEventConfigurationData
         
 
         companion object {
-
-
+            
     val NAME: String = "EMAIL_EVENT_CONFIGURATION_NAME"
 
     val LISTENER_CLASSPATH: String = "EMAIL_EVENT_CONFIGURATION_LISTENER_CLASSPATH"
-
 
         }
             private constructor        ()

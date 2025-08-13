@@ -26,8 +26,7 @@ open public class AndroidMediaPlayerWrapperListener
         
 
         companion object {
-
-
+            
     private val ON_BUFFERING_UPDATE: String = "onBufferingUpdate()"
 
     private val ON_PREPARE: String = "onPrepare()"
@@ -35,7 +34,6 @@ open public class AndroidMediaPlayerWrapperListener
     private val ON_ERROR: String = "onError()"
 
     private val ON_COMPLETE: String = "onComplete()"
-
 
         }
             
@@ -117,9 +115,7 @@ open public inner class MediaPlayerOnBufferingUpdateListener
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -149,9 +145,7 @@ open public inner class MediaPlayerOnPreparedListener
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -178,9 +172,7 @@ open public inner class MediaPlayerOnErrorListener
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -218,9 +210,7 @@ open public inner class MediaPlayerOnCompletionListener
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 

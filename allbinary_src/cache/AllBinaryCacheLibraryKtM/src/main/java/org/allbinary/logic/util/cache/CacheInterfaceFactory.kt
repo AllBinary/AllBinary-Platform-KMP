@@ -34,8 +34,7 @@ open public class CacheInterfaceFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(cacheType: CacheType, cachePolicy: CachePolicy)
@@ -51,7 +50,6 @@ open fun getInstance(cacheType: CacheType, cachePolicy: CachePolicy)
 
                             throw Exception("No such " +cacheType!!.toString())
 }
-
 
 
         }

@@ -39,10 +39,8 @@ open public class PlayerQueue
         
 
         companion object {
-
-
+            
     private val TOTAL: String = "Sounds In Queue: "
-
 
         }
             

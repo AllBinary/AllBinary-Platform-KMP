@@ -42,8 +42,7 @@ open public class ImageTypes
         
 
         companion object {
-
-
+            
 open fun valueOf(anyType: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
 : ImageTypes{
@@ -72,7 +71,6 @@ imageTypes!!.getVector()!!.add(imageType)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return imageTypes
 }
-
 
 
         }

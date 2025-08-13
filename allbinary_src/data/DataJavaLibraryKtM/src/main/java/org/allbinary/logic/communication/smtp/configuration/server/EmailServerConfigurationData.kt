@@ -34,8 +34,7 @@ open public class EmailServerConfigurationData
         
 
         companion object {
-
-
+            
     val NAME: String = "EMAIL_SERVER_CONFIGURATION_NAME"
 
     val SERVER: String = "EMAIL_SERVER_CONFIGURATION_SERVER"
@@ -43,7 +42,6 @@ open public class EmailServerConfigurationData
     val ACCOUNT: String = "EMAIL_SERVER_CONFIGURATION_ACCOUNT"
 
     val PASSWORD: String = "EMAIL_SERVER_CONFIGURATION_PASSWORD"
-
 
         }
             private constructor        ()

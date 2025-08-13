@@ -34,8 +34,7 @@ open public class BasicOptionItemData
         
 
         companion object {
-
-
+            
     val OPTION_ONE_TITLE: String = "BASICOPTIONITEM_OPTION_ONE_TITLE"
 
     val DEFAULT_OPTION_ITEM: String = "BASICOPTIONITEM_DEFAULT_OPTION_ITEM"
@@ -77,7 +76,6 @@ open public class BasicOptionItemData
     val OPTION_ONE_NINE_ITEM: String = "BASICOPTIONITEM_OPTION_ONE_NINE_ITEM"
 
     val OPTION_ONE_NINE_VALUE: String = "BASICOPTIONITEM_OPTION_ONE_NINE_VALUE"
-
 
         }
             

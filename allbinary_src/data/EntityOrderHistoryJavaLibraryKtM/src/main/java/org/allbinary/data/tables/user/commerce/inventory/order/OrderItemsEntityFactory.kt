@@ -36,8 +36,7 @@ open public class OrderItemsEntityFactory
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : OrderItemsEntity{
@@ -74,7 +73,6 @@ open fun getInstance()
 }
 
 }
-
 
 
         }

@@ -45,8 +45,7 @@ open public class EmailEventHandlerUtil
         
 
         companion object {
-
-
+            
     private val instance: EmailEventHandlerUtil = EmailEventHandlerUtil()
 
 open fun getInstance()
@@ -98,7 +97,6 @@ vector.add(userEmailEventListenerInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return vector
 }
-
 
 
         }

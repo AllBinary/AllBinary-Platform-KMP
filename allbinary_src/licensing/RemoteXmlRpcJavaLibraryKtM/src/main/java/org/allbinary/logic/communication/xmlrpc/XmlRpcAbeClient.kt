@@ -45,10 +45,8 @@ open public class XmlRpcAbeClient
         
 
         companion object {
-
-
+            
     var isOnline: Boolean = true
-
 
         }
             

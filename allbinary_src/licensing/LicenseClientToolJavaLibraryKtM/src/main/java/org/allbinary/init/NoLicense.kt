@@ -37,8 +37,7 @@ open public class NoLicense
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun init(classLoader: ClassLoader, pathString: String)
@@ -51,7 +50,6 @@ open fun init(classLoader: ClassLoader, pathString: String)
                     var pathString = pathString
 Globals.init(classLoader, pathString)
 }
-
 
 
         }

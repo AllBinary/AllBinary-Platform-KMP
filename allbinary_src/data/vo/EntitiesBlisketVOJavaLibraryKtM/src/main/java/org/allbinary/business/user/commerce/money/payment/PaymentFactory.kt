@@ -37,8 +37,7 @@ open public class PaymentFactory
         
 
         companion object {
-
-
+            
 open fun getInstance(request: ServletRequest)
         //nullable =  from not(true or (false and false)) = 
 : PaymentInterface{
@@ -78,7 +77,6 @@ open fun getInstance(request: ServletRequest)
 }
 
 }
-
 
 
         }

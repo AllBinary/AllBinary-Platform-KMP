@@ -34,8 +34,7 @@ open public class GyroSensorFactory
         
 
         companion object {
-
-
+            
     private var allBinaryGyroSensor: AllBinaryOrientationSensor
 
                 @Throws(Exception::class)
@@ -54,7 +53,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return GyroSensorFactory.allBinaryGyroSensor
 }
-
 
 
         }

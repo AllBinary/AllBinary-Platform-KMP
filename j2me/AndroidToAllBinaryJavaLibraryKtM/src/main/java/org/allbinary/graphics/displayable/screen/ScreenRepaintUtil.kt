@@ -36,8 +36,7 @@ open public class ScreenRepaintUtil
         
 
         companion object {
-
-
+            
 open fun repaint(displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -48,7 +47,6 @@ open fun repaint(displayable: Displayable)
 
 canvas.repaint()
 }
-
 
 
         }

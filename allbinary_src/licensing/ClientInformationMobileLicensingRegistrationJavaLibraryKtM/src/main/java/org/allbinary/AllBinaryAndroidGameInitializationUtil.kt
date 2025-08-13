@@ -37,8 +37,7 @@ open public class AllBinaryAndroidGameInitializationUtil
         
 
         companion object {
-
-
+            
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -60,7 +59,6 @@ resourceUtil!!.addResource(PartnerIdentifierFileUtil.getInstance()!!.FILE_NAME, 
 
                                 )
 }
-
 
 
         }

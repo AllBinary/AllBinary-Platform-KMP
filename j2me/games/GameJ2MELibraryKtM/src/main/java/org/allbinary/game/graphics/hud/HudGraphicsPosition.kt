@@ -36,10 +36,8 @@ open public class HudGraphicsPosition
         
 
         companion object {
-
-
+            
     val NULL_HUD_GRAPHICS_POSITION: HudGraphicsPosition = HudGraphicsPosition(PointFactory.getInstance()!!.ZERO_ZERO, 9)
-
 
         }
             

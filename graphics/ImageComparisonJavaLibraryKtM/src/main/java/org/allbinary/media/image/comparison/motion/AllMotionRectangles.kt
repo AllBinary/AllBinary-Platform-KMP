@@ -36,10 +36,8 @@ open public class AllMotionRectangles : MotionRectangles {
         
 
         companion object {
-
-
+            
     private val NAME: String = "allMotionRectangles_"
-
 
         }
             public constructor        (imageComparisonResult: ImageComparisonResult)                        

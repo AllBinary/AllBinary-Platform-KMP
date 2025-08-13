@@ -40,8 +40,7 @@ open public class DecalAnimationInterfaceFactory
         
 
         companion object {
-
-
+            
     private val instance: DecalAnimationInterfaceFactory = DecalAnimationInterfaceFactory()
 
 open fun getInstance()
@@ -52,7 +51,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

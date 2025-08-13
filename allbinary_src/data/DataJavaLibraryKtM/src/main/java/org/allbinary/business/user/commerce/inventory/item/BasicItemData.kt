@@ -34,8 +34,7 @@ open public class BasicItemData
         
 
         companion object {
-
-
+            
     val ITEM: String = "BASICITEM"
 
     val TOTAL: String = "BASICITEM_TOTAL"
@@ -93,7 +92,6 @@ open public class BasicItemData
     val PERMISSIONS: String = "BASICITEM_PERMISSIONS"
 
     val SPECIALS: String = "BASICITEM_SPECIALS"
-
 
         }
             

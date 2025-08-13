@@ -38,8 +38,7 @@ open public class ClassUtil
         
 
         companion object {
-
-
+            
 open fun viewAll(anyType: Any, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -137,7 +136,6 @@ stringBuffer!!.append(MethodUtil.viewAll(myClass, lineBreak))
                         if()
                         
 }
-
 
 
         }

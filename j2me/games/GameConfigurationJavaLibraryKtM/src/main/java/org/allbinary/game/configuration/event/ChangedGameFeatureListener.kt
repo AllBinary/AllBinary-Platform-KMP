@@ -33,8 +33,7 @@ open public class ChangedGameFeatureListener : BaseChangedGameFeatureListener {
         
 
         companion object {
-
-
+            
     private val gameFeatureListener: ChangedGameFeatureListener = ChangedGameFeatureListener()
 
 open fun getInstance()
@@ -45,7 +44,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return gameFeatureListener
 }
-
 
 
         }

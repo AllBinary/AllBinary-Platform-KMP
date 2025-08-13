@@ -41,8 +41,7 @@ open public class CapturedBufferedImagesCacheSingleton
         
 
         companion object {
-
-
+            
     private var cacheInterface: AutomaticCacheInterface = 
                 null
             
@@ -81,7 +80,6 @@ logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
 }
 
 }
-
 
         }
             

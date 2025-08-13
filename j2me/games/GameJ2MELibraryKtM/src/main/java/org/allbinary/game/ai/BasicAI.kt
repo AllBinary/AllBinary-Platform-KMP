@@ -45,14 +45,12 @@ open public class BasicAI : ArtificialIntelligence
         
 
         companion object {
-
-
+            
     val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
             
 
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(1)!!
             
-
 
         }
             

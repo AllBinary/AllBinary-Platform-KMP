@@ -35,8 +35,7 @@ open public class MediaData
         
 
         companion object {
-
-
+            
     private var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
                 @Throws(Exception::class)
@@ -94,7 +93,6 @@ open fun toHashMap()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return MediaData.hashMap
 }
-
 
 
         }

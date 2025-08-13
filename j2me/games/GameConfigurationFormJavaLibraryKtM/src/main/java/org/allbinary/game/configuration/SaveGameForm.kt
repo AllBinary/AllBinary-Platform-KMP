@@ -38,8 +38,7 @@ open public class SaveGameForm : CommandForm {
         
 
         companion object {
-
-
+            
     private var FORM: CommandForm = CommandForm.NULL_COMMAND_FORM
 
                 @Throws(Exception::class)
@@ -75,7 +74,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FORM
 }
-
 
 
         }

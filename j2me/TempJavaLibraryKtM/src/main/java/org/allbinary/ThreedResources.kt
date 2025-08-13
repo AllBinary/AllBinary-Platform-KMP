@@ -34,8 +34,7 @@ open public class ThreedResources
         
 
         companion object {
-
-
+            
     private val threedResources: ThreedResources = ThreedResources()
 
 open fun getThreedResources()
@@ -46,7 +45,6 @@ open fun getThreedResources()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return threedResources
 }
-
 
 
         }

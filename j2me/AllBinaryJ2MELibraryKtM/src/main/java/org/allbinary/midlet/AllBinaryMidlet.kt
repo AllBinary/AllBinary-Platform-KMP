@@ -50,10 +50,8 @@ open public class AllBinaryMidlet : MIDlet
         
 
         companion object {
-
-
+            
     val NULL_ALLBINARY_MIDLET: AllBinaryMidlet = AllBinaryMidlet()
-
 
         }
             

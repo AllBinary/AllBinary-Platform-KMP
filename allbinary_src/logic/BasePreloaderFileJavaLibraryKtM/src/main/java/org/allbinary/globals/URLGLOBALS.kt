@@ -34,8 +34,7 @@ open public class URLGLOBALS
         
 
         companion object {
-
-
+            
     private var urlGlobalsInterface: UrlGlobalsInterface = AppUrlGlobals.NULL_APP_URL_GLOBALS
 
 open fun init(urlGlobalsInterface: UrlGlobalsInterface)
@@ -87,7 +86,6 @@ open fun getMainPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return urlGlobalsInterface!!.getMainPath()
 }
-
 
 
         }

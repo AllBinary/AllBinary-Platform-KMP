@@ -83,10 +83,8 @@ open public class GameCommandCanvas : MyCanvas
         
 
         companion object {
-
-
+            
     private val id: Int = 0
-
 
         }
             

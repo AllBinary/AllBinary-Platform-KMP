@@ -34,10 +34,8 @@ open public class RootTransformInfoData
         
 
         companion object {
-
-
+            
     val NAME: String = "ROOT_TRANSFORM_INFO_NAME"
-
 
         }
             private constructor        ()

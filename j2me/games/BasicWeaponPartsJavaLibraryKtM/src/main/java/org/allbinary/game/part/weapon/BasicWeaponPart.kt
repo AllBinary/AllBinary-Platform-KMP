@@ -48,10 +48,8 @@ open public class BasicWeaponPart
         
 
         companion object {
-
-
+            
     val NULL_BASIC_WEAPON_PART: BasicWeaponPart = BasicWeaponPart(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
-
 
         }
             

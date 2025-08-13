@@ -32,10 +32,8 @@ open public class CustomGPoint : GPoint {
         
 
         companion object {
-
-
+            
     val NULL_CUSTOM_POINT: CustomGPoint = CustomGPoint(0, 0, 0)
-
 
         }
             

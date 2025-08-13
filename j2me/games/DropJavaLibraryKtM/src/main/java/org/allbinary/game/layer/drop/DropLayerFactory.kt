@@ -37,8 +37,7 @@ open public class DropLayerFactory
         
 
         companion object {
-
-
+            
     private val DROP_LAYER_FACTORY: DropLayerFactory = DropLayerFactory()
 
 open fun getInstance()
@@ -49,7 +48,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DROP_LAYER_FACTORY
 }
-
 
 
         }

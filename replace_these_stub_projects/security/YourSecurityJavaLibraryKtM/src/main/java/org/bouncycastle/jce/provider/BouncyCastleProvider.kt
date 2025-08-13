@@ -19,12 +19,10 @@ open public class BouncyCastleProvider : Provider {
         
 
         companion object {
-
-
+            
     private var info: String = "BouncyCastle Security Provider v1.41"
 
     var PROVIDER_NAME: String = "BC"
-
 
         }
             public constructor        ()                        

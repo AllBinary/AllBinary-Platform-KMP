@@ -35,10 +35,8 @@ open public class CaptionAnimationHelperBase : Animation {
         
 
         companion object {
-
-
+            
     val INSTANCE: CaptionAnimationHelperBase = CaptionAnimationHelperBase()
-
 
         }
             

@@ -34,12 +34,10 @@ open public class BasicTouchButtonCellPositionFactory
         
 
         companion object {
-
-
+            
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {}
-
 
 
         }

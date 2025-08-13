@@ -40,8 +40,7 @@ open public class LogConfigTypes
         
 
         companion object {
-
-
+            
     val JSP_ERROR_NO_FUNCTION: String = "in JSP Not In Function"
 
     var LOGGING: BasicArrayList = BasicArrayList()
@@ -154,7 +153,6 @@ open fun getInstance(node: Node)
 
                             throw Exception("No Such LogConfigType: " +name)
 }
-
 
 
         }

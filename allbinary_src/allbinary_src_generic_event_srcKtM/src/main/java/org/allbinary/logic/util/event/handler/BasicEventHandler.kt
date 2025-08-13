@@ -43,10 +43,8 @@ open public class BasicEventHandler
         
 
         companion object {
-
-
+            
     val PERFORMANCE_MESSAGE: String = "Use Custom onEvent Methods for needed optimization"
-
 
         }
             

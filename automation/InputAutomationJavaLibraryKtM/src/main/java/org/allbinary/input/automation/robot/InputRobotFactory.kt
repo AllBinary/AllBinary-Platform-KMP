@@ -47,8 +47,7 @@ open public class InputRobotFactory
         
 
         companion object {
-
-
+            
     private val inputRobotFactory: InputRobotFactory = InputRobotFactory()
 
                 @Throws(Exception::class)
@@ -117,7 +116,6 @@ securedNativeLibraryInterface!!.load()
                                     }
                                 
 }
-
 
 
         }

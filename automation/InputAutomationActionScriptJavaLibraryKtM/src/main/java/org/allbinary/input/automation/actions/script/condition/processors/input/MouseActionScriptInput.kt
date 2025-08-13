@@ -44,10 +44,8 @@ open public class MouseActionScriptInput : BasicProfileActionScriptInput
         
 
         companion object {
-
-
+            
     private val NAME: String = "Mouse"
-
 
         }
             

@@ -39,8 +39,7 @@ open public class ItemFactoryUnused
         
 
         companion object {
-
-
+            
                 @Throws(MoneyException::class)
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
@@ -70,7 +69,6 @@ open fun getInstance(request: HttpServletRequest)
                         return Item(RequestParams(request).
                             toHashMap()) as TableMappingInterface
 }
-
 
 
         }

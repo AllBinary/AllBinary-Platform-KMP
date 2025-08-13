@@ -53,10 +53,8 @@ open public class SavedCaptureImagesWorker : BasicEventHandler
         
 
         companion object {
-
-
+            
     private var index: Long
-
 
         }
             

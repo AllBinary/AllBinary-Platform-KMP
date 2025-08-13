@@ -20,8 +20,7 @@ open public class NullCanvas : Canvas {
         
 
         companion object {
-
-
+            
     val NULL_IMAGE_ARRAY: Array<Image?> = arrayOfNulls(0)
 
     val NULL_IMAGE: Image = Image()
@@ -29,7 +28,6 @@ open public class NullCanvas : Canvas {
     val NULL_CANVAS: NullCanvas = NullCanvas()
 
     val NULL_SCREEN: Form = Form(StringUtil.getInstance()!!.EMPTY_STRING)
-
 
         }
             public constructor        (){}

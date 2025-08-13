@@ -34,8 +34,7 @@ open public class PermissionItemData
         
 
         companion object {
-
-
+            
     val WHO: String = "PERMISSIONSITEM_WHO"
 
     val WHAT: String = "PERMISSIONSITEM_WHAT"
@@ -47,7 +46,6 @@ open public class PermissionItemData
     val END_TIME: String = "PERMISSIONSITEM_END_TIME"
 
     val REMOTE_ADDR: String = "PERMISSIONSITEM_REMOTE_ADDR"
-
 
         }
             

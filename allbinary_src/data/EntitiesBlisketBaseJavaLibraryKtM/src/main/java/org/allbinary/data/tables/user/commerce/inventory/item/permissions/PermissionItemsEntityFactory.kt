@@ -36,8 +36,7 @@ open public class PermissionItemsEntityFactory
         
 
         companion object {
-
-
+            
     private val instance: PermissionItemsEntityFactory = PermissionItemsEntityFactory()
 
 open fun getInstance()
@@ -86,7 +85,6 @@ open fun getPermissionItemsEntityInstance()
 }
 
 }
-
 
 
         }

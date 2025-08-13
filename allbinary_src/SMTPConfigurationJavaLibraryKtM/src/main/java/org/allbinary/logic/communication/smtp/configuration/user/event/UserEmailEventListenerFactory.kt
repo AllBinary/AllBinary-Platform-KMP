@@ -38,8 +38,7 @@ open public class UserEmailEventListenerFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface, userInterface: UserInterface)
@@ -69,7 +68,6 @@ params[0]= userInterface as Object
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeFactory.getInstance()!!.getInstance(abeClientInformation, userEmailEventConfigurationInterface!!.getEventListenerClassPath(), classes, params) as UserEmailEventListenerInterface
 }
-
 
 
         }

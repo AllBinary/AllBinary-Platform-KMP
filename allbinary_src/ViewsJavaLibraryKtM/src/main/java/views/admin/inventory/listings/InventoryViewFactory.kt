@@ -39,8 +39,7 @@ open public class InventoryViewFactory
         
 
         companion object {
-
-
+            
                 @Throws(LicensingException::class)
             
 open fun getInstance(searchRequest: SearchRequest)
@@ -83,7 +82,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION,
 }
 
 }
-
 
 
         }

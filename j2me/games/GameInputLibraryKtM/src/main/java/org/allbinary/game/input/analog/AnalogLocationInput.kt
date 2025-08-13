@@ -21,10 +21,8 @@ open public class AnalogLocationInput
         
 
         companion object {
-
-
+            
     val NULL_ANALOG_LOCATION_INPUT: AnalogLocationInput = AnalogLocationInput( -1)
-
 
         }
             

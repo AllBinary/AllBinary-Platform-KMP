@@ -39,12 +39,10 @@ open public class NullInputRobot : AbstractInputRobot
         
 
         companion object {
-
-
+            
     val LIBRARY_NAME: String = "null"
 
     val NAME: String = "NULL"
-
 
         }
             

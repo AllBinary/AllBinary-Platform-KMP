@@ -48,10 +48,8 @@ open public class Category
         
 
         companion object {
-
-
+            
     private val NOT_ROOT: String = "This is not the root so it has no file path."
-
 
         }
             

@@ -34,8 +34,7 @@ open public class TestRemoteHighScoresNotFinished
         
 
         companion object {
-
-
+            
     val PATH: String = "G:\\mnt\\bc\\mydev\\work\\allbinary_src\\licensing\\data\\"
 
                 @Throws(Exception::class)
@@ -49,7 +48,6 @@ open fun main(args: Array<String?>)
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
 
 }
-
 
 
         }

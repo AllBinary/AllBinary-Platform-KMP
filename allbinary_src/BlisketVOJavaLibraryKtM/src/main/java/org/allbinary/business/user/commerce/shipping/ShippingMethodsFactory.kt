@@ -55,8 +55,7 @@ open public class ShippingMethodsFactory
         
 
         companion object {
-
-
+            
     private val SHIPPINGMETHODSFILEPATHSTRING: String
 
                 init{
@@ -76,7 +75,6 @@ SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()
 }
 
     private val SHIPPINGMETHODSFILENAME: String = "shippingMethods.xml"
-
 
         }
             

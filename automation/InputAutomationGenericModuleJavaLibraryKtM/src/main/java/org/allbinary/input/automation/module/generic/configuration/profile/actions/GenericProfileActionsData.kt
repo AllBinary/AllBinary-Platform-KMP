@@ -34,10 +34,8 @@ open public class GenericProfileActionsData
         
 
         companion object {
-
-
+            
     var NAME: String = "GENERIC_CONFIGURATION_PROFILE_ACTIONS_NAME"
-
 
         }
             private constructor        ()

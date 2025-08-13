@@ -37,10 +37,8 @@ open public class FallingPickupLayer : PickupLayer
         
 
         companion object {
-
-
+            
     private val NAME: String = "FallingPickupLayer"
-
 
         }
             public constructor        (remoteInfo: RemoteInfo)                        

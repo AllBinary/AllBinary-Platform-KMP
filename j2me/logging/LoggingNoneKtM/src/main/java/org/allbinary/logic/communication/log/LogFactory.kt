@@ -36,8 +36,7 @@ open public class LogFactory
         
 
         companion object {
-
-
+            
     val LOG: Log = Log(StringUtil.getInstance()!!.EMPTY_STRING, NullUtil.getInstance()!!.NULL_OBJECT, StringUtil.getInstance()!!.EMPTY_STRING)
 
 open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
@@ -79,7 +78,6 @@ open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return LOG
 }
-
 
 
         }

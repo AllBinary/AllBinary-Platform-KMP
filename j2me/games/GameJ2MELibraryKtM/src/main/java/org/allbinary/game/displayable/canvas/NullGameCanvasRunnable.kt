@@ -44,10 +44,8 @@ open public class NullGameCanvasRunnable
         
 
         companion object {
-
-
+            
     val NULL_GAME_CANVAS_RUNNABLE: NullGameCanvasRunnable = NullGameCanvasRunnable()
-
 
         }
             

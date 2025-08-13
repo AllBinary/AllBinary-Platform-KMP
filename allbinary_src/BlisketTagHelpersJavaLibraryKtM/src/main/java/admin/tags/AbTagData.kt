@@ -34,10 +34,8 @@ open public class AbTagData
         
 
         companion object {
-
-
+            
     val PARENT: String = "TAG_PARENT"
-
 
         }
             private constructor        ()

@@ -45,8 +45,7 @@ open public class JavaHelpUtil
         
 
         companion object {
-
-
+            
     private val instance: JavaHelpUtil = JavaHelpUtil()
 
 open fun getInstance()
@@ -76,7 +75,6 @@ javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet(
             {}
 
 }
-
 
 
         }

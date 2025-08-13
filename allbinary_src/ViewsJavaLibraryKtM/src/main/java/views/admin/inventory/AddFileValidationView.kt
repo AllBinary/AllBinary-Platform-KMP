@@ -55,12 +55,10 @@ open public class AddFileValidationView : InventoryItemView
         
 
         companion object {
-
-
+            
     private val ADDPRODUCT: String = "Add Product"
 
     private val NEXTSTEP: String = "Next Step"
-
 
         }
             

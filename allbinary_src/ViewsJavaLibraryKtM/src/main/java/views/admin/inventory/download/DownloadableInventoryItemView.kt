@@ -56,10 +56,8 @@ open public class DownloadableInventoryItemView : HttpStoreComponentView
         
 
         companion object {
-
-
+            
     var TYPE_ID: Int = 11
-
 
         }
             

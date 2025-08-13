@@ -56,8 +56,7 @@ open public class WeaponLayer : MultiPlayerGameLayer
         
 
         companion object {
-
-
+            
 open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
 : Int{
@@ -66,7 +65,6 @@ open fun getStaticType()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return 0
 }
-
 
 
         }

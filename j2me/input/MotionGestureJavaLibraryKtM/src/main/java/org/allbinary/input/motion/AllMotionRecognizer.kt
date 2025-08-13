@@ -37,12 +37,10 @@ open public class AllMotionRecognizer : MotionRecognizer {
         
 
         companion object {
-
-
+            
     private var index: Int = 0
 
     private val pointCircularPool: GPointCircularPool = GPointCircularPool(40)
-
 
         }
             

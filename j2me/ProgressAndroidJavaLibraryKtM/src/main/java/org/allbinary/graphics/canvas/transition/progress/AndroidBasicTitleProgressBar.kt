@@ -29,12 +29,11 @@
         
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
+import android.app.Activity
 import org.allbinary.image.GameFeatureImageCacheFactory
 import org.allbinary.image.PreResourceImageUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogFactory
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.exception.ExceptionUtil
 import org.allbinary.animation.Animation
 import org.allbinary.animation.NullAnimationFactory
@@ -48,20 +47,21 @@ import org.allbinary.graphics.displayable.event.DisplayChangeEventListener
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.media.image.ImageScaleUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
-import android.app.Activity
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.image.ImageAnimation
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.util.event.EventStrings
+import org.allbinary.thread.NullRunnable
 
 open public class AndroidBasicTitleProgressBar : ProgressCanvas
                 , DisplayChangeEventListener {
         
 
         companion object {
-
-
+            
     val RESOURCE: String = "ProgressImage"
+
+    private val NULL_ACTIVITY: Activity = Activity()
 
     private var background: Int= 0
 
@@ -74,31 +74,31 @@ AndroidBasicTitleProgressBar.background= background
 }
 
 
-
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
+    private var showTitleProgressBarRunnable: NullRunnable = NullRunnable.getInstance()!!
             
 
-    private var showTitleProgressBarRunnable: ShowTitleProgressBarRunnable
+    private var dismissTitleProgressBarRunnable: NullRunnable = NullRunnable.getInstance()!!
+            
 
-    private var dismissTitleProgressBarRunnable: DismissTitleProgressBarRunnable
+    private var titleProgressDialogPortionSetProgressRunnable: NullRunnable = NullRunnable.getInstance()!!
+            
 
-    private var progressDialogPortionSetProgressRunnable: TitleProgressBarPortionSetProgressRunnable
+    private var titleProgressDialogSetProgressRunnable: NullRunnable = NullRunnable.getInstance()!!
+            
 
-    private var progressDialogSetProgressRunnable: TitleProgressBarSetProgressRunnable
-
-    private var midletActivity: Activity
+    private var midletActivity: Activity = NULL_ACTIVITY
 
     private var portion: Int = 0
 
     private var IMAGE: Array<Image?> = arrayOfNulls(4)
 
-    private var image: Image
+    private var image: Image = NullCanvas.NULL_IMAGE
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
             
-protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
+ constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){
 
@@ -155,8 +155,8 @@ open fun init(activity: Activity)
                                     this.midletActivity= activity
 this.showTitleProgressBarRunnable= ShowTitleProgressBarRunnable(this.midletActivity, this)
 this.dismissTitleProgressBarRunnable= DismissTitleProgressBarRunnable(this.midletActivity, this)
-this.progressDialogSetProgressRunnable= TitleProgressBarSetProgressRunnable(this.midletActivity, this)
-this.progressDialogPortionSetProgressRunnable= TitleProgressBarPortionSetProgressRunnable(this.midletActivity, this)
+this.titleProgressDialogSetProgressRunnable= TitleProgressBarSetProgressRunnable(this.midletActivity, this)
+this.titleProgressDialogPortionSetProgressRunnable= TitleProgressBarPortionSetProgressRunnable(this.midletActivity, this)
 this.loadProgressImages()
 
                                     }
@@ -233,8 +233,7 @@ open fun updateCurrent()
 
 }
 
-
-open fun onEvent(eventObject: AllBinaryEventObject)
+override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -242,8 +241,7 @@ open fun onEvent(eventObject: AllBinaryEventObject)
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
-
-open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
+override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -308,9 +306,7 @@ open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     
-                        if(this.midletActivity != 
-                                    null
-                                )
+                        if(this.midletActivity != AndroidBasicTitleProgressBar.NULL_ACTIVITY)
                         
                                     {
                                     
@@ -332,8 +328,7 @@ open fun isInitialized()
                             
 }
 
-
-open fun start()
+override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
@@ -346,8 +341,7 @@ this.midletActivity!!.runOnUiThread(showTitleProgressBarRunnable)
 
 }
 
-
-open fun end()
+override fun end()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
@@ -360,8 +354,7 @@ super.end()
 
 }
 
-
-open fun addEarlyPortion(value: Int, text: String, index: Int)
+override fun addEarlyPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -378,12 +371,10 @@ open fun addEarlyPortion(value: Int, text: String, index: Int)
 super.addEarlyPortion(value, text, index)
 
     
-                        if(this.midletActivity != 
-                                    null
-                                )
+                        if(this.midletActivity != AndroidBasicTitleProgressBar.NULL_ACTIVITY)
                         
                                     {
-                                    this.midletActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
+                                    this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 
                                     }
                                 
@@ -393,8 +384,7 @@ super.addEarlyPortion(value, text, index)
 
 }
 
-
-open fun addPortion(value: Int, text: String, index: Int)
+override fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -409,15 +399,14 @@ open fun addPortion(value: Int, text: String, index: Int)
         try {
             this.portion= value
 super.addPortion(value, text, index)
-this.midletActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
+this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
-
-open fun addPortion(value: Int, text: String)
+override fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -429,15 +418,14 @@ open fun addPortion(value: Int, text: String)
         try {
             this.portion= value
 super.addPortion(value, text)
-this.midletActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
+this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
-
-open fun setValue(value: Int)
+override fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -445,7 +433,7 @@ open fun setValue(value: Int)
 
         try {
             super.setValue(value)
-this.midletActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
+this.midletActivity!!.runOnUiThread(titleProgressDialogSetProgressRunnable)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
                             "setValue", e)
@@ -491,7 +479,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                 )
                         
                                     {
-                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth, this.image.getWidth(), lastHeight -20, this.image.getHeight(), false)
+                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth.toFloat(), this.image.getWidth().toFloat(), lastHeight.toFloat() -20, this.image.getHeight().toFloat(), false)
 
                                     }
                                 
@@ -509,7 +497,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                 )
                         
                                     {
-                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth, this.image.getWidth(), lastHeight -28, this.image.getHeight(), false)
+                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth.toFloat(), this.image.getWidth().toFloat(), lastHeight.toFloat() -28, this.image.getHeight().toFloat(), false)
 
                                     }
                                 
@@ -564,8 +552,7 @@ this.updateCurrent()
 
 
                 @Throws(Exception::class)
-            
-open fun update(graphics: Graphics)
+            override fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -612,9 +599,7 @@ open fun getImage(index: Int)
 
                     var index = index
 
-    var image: Image = 
-                null
-            
+    var image: Image = NullCanvas.NULL_IMAGE
 
 
     
@@ -637,8 +622,7 @@ open fun getImage(index: Int)
                         return image
 }
 
-
-open fun paint2(graphics: Graphics)
+override fun paint2(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -653,8 +637,7 @@ super.paint2(graphics)
 
 }
 
-
-open fun setBackground(background: Boolean)
+override fun setBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {
 

@@ -34,8 +34,7 @@ open public class ToDomHelper
         
 
         companion object {
-
-
+            
 open fun convertNull(value: String)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -53,7 +52,6 @@ open fun convertNull(value: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return value
 }
-
 
 
         }

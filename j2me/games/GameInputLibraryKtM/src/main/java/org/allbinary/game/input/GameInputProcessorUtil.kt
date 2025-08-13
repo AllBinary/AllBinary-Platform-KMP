@@ -34,8 +34,7 @@ open public class GameInputProcessorUtil
         
 
         companion object {
-
-
+            
 open fun init(inputProcessorArray: Array<GameInputProcessor?>)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -73,7 +72,6 @@ open fun init(inputProcessorArray: Array<GameInputProcessor?>)
 }
 
 }
-
 
 
         }

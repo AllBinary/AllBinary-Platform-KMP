@@ -43,8 +43,7 @@ open public class AllBinaryPreloaderActivator
         
 
         companion object {
-
-
+            
     private var context: BundleContext
 
     private val CRYPT_REGISTRY_NAME: String = "bundle.abcs.logic.system.loader.CryptService"
@@ -57,7 +56,6 @@ open fun getBundleContext()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return context
 }
-
 
 
         }

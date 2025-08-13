@@ -36,8 +36,7 @@ open public class InGameFeatureChoiceGroups
         
 
         companion object {
-
-
+            
     private var gameFeatureChoiceGroupsExclusive: InGameFeatureChoiceGroups = InGameFeatureChoiceGroups()
 
     private var gameFeatureChoiceGroupsMultiple: InGameFeatureChoiceGroups = InGameFeatureChoiceGroups()
@@ -60,7 +59,6 @@ open fun getMultipleInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return gameFeatureChoiceGroupsMultiple
 }
-
 
 
         }

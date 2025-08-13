@@ -39,8 +39,7 @@ open public class TileLayerPositionIntoViewPositionUtil
         
 
         companion object {
-
-
+            
 open fun init(gameCanvasInterface: AllBinaryGameCanvas, viewPosition: TileLayerPositionIntoViewPosition)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -64,7 +63,6 @@ open fun init(gameCanvasInterface: AllBinaryGameCanvas, viewPosition: TileLayerP
 
 viewPosition!!.setTiledLayer(tiledLayer)
 }
-
 
 
         }

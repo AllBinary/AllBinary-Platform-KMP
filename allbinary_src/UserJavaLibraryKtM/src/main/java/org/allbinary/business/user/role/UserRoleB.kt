@@ -35,8 +35,7 @@ open public class UserRoleB : UserRole {
         
 
         companion object {
-
-
+            
     var roleVector: Vector = Vector()
 
                 @Throws(Exception::class)
@@ -104,7 +103,6 @@ open fun getAll()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UserRoleB.roleVector
 }
-
 
 
         }

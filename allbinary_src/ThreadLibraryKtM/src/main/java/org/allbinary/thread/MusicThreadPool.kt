@@ -37,8 +37,7 @@ open public class MusicThreadPool : ThreadPool {
         
 
         companion object {
-
-
+            
     private val THREAD_POOL: ThreadPool = ThreadPool(
                             "Music", 2)
 
@@ -50,7 +49,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return THREAD_POOL
 }
-
 
 
         }

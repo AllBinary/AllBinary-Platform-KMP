@@ -38,8 +38,7 @@ open public class InputImageIOInterfaceFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(imageType: InputImageType)
@@ -95,7 +94,6 @@ open fun getInstance(imageType: InputImageType)
                         }
                             
 }
-
 
 
         }

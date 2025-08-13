@@ -34,8 +34,7 @@ open public class KeyboardActionScriptInputData
         
 
         companion object {
-
-
+            
     var NAME: String = "KEY_ACTION_INPUT_NAME"
 
     var KEY: String = "KEY_ACTION_INPUT_KEY"
@@ -45,7 +44,6 @@ open public class KeyboardActionScriptInputData
     var PRESS: String = "KEY_ACTION_INPUT_PRESS"
 
     var RELEASE: String = "KEY_ACTION_INPUT_RELEASE"
-
 
         }
             private constructor        ()

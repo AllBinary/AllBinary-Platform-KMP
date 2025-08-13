@@ -42,10 +42,8 @@ open public class UniqueIdGenerator
         
 
         companion object {
-
-
+            
     val EXT: String = ".unq"
-
 
         }
             

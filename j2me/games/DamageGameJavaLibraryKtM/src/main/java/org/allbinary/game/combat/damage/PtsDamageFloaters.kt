@@ -43,10 +43,8 @@ open public class PtsDamageFloaters : DamageFloaters {
         
 
         companion object {
-
-
+            
     private val basicColorArrayIndexer: BasicColorArrayIndexer = BasicColorArrayIndexer(arrayOf(BasicColorFactory.getInstance()!!.WHITE,BasicColorFactory.getInstance()!!.RED,BasicColorFactory.getInstance()!!.YELLOW,BasicColorFactory.getInstance()!!.BLUE))
-
 
         }
             

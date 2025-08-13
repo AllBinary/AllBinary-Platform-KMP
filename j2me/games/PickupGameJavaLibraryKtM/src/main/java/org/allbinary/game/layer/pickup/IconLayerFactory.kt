@@ -35,8 +35,7 @@ open public class IconLayerFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(animationInterface: Animation, width: Int, height: Int)
@@ -56,7 +55,6 @@ open fun getInstance(animationInterface: Animation, width: Int, height: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return IconLayer(animationInterface, width, height)
 }
-
 
 
         }

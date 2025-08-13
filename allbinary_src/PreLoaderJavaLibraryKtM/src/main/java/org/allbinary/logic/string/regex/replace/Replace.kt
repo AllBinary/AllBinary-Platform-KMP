@@ -42,8 +42,7 @@ open public class Replace
         
 
         companion object {
-
-
+            
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -82,7 +81,6 @@ System.out.println("New String: " +testString)
             {}
 
 }
-
 
 
         }

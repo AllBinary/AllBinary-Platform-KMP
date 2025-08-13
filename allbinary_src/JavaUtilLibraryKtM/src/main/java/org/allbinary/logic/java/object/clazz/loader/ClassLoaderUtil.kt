@@ -36,8 +36,7 @@ open public class ClassLoaderUtil
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getName(anyType: Any)
@@ -46,7 +45,7 @@ open fun getName(anyType: Any)
 
                     var anyType = anyType
 
-    var classLoader: ClassLoader = anyType!!::class.getClassLoader()!!
+    var classLoader: ClassLoader = anyType!!::class.java.classLoader!!
             
 
 
@@ -70,7 +69,6 @@ open fun getName(anyType: Any)
                             throw Exception(
                             "Unable to get ClassLoader")
 }
-
 
 
         }

@@ -34,8 +34,7 @@ open public class NameSpaceRequestParamData
         
 
         companion object {
-
-
+            
     val NAME: String = "NAMESPACE_REQUESTDATA_NAME"
 
     val VALUE: String = "INPUT_VALUE"
@@ -47,7 +46,6 @@ open public class NameSpaceRequestParamData
     val PROPERTIESSEPARATOR: String = "_PROPDOT_"
 
     val DOCUMENT: String = "NAMESPACE_REQUESTDATA_DOCUMENT"
-
 
         }
             public constructor        ()

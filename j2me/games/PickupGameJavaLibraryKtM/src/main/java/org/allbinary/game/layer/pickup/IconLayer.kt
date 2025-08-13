@@ -39,10 +39,8 @@ open public class IconLayer : AllBinaryLayer {
         
 
         companion object {
-
-
+            
     val NULL_ICON_LAYER: IconLayer = IconLayer(NullAnimationFactory.getFactoryInstance()!!.getInstance(0), 0, 0)
-
 
         }
             

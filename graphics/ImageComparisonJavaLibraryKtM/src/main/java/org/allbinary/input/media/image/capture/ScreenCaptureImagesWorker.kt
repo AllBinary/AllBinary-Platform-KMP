@@ -42,10 +42,8 @@ open public class ScreenCaptureImagesWorker : BasicEventHandler
         
 
         companion object {
-
-
+            
     private var index: Long
-
 
         }
             

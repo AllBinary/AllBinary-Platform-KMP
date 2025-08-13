@@ -44,12 +44,10 @@ open public class InitializeCloud
         
 
         companion object {
-
-
+            
     val CLOUD: String = "cloud/"
 
     val CLOUD_UPDATE: String = "cloudupdate/"
-
 
         }
             

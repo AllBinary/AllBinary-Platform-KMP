@@ -54,8 +54,7 @@ public constructor        (midletActivity: Activity, progressCanvas: ProgressCan
 
 
     private val FADE_IN_HALF: IntArray = intArrayOf(TransistionTypes.getInstance()!!.FADE_IN_TO_HALF_ALPHA,TransistionTypes.getInstance()!!.FADE_IN_FROM_HALF_ALPHA)
-
-open fun run()
+override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
         try {

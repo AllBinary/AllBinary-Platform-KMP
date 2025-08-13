@@ -41,8 +41,7 @@ open public class PathFindingInfoFactory : BasePathFindingInfoFactory {
         
 
         companion object {
-
-
+            
     private val instance: PathFindingInfoFactory = PathFindingInfoFactory()
 
 open fun getInstance()
@@ -64,7 +63,6 @@ open fun init(max: Int)
                     var max = max
 PathFindingInfoFactory.MAX= max
 }
-
 
 
         }

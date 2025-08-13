@@ -50,11 +50,9 @@ open public class HighScoreUtil
         
 
         companion object {
-
-
+            
     val SUBMIT_TEXTBOX_COMMAND: Command = Command(
                             "Submit", Command.SCREEN, 1)
-
 
         }
             

@@ -37,8 +37,7 @@ open public class GameLayerUtil
         
 
         companion object {
-
-
+            
 open fun isOnScreen(layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -109,7 +108,6 @@ open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: I
                         }
                             
 }
-
 
 
         }

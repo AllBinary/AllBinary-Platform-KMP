@@ -58,10 +58,8 @@ open public class ImageCache : ImageCacheBase {
         
 
         companion object {
-
-
+            
     val NULL_IMAGE_CACHE: ImageCache = ImageCache()
-
 
         }
             
@@ -105,9 +103,7 @@ open public inner class NotHTMLProcessor : Processor {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -130,9 +126,7 @@ open public inner class NotHTMLEndProcessor : Processor {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -159,9 +153,7 @@ open public inner class HTMLEndProcessor : Processor {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -218,9 +210,7 @@ open public inner class FirstProcessor : Processor {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 

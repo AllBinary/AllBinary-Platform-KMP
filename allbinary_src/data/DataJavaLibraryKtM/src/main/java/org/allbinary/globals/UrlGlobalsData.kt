@@ -34,8 +34,7 @@ open public class UrlGlobalsData
         
 
         companion object {
-
-
+            
     val NAME: String = "URLGLOBALS_NAME"
 
     val WEBAPPPATH: String = "URLGLOBALS_WEBAPPPATH"
@@ -45,7 +44,6 @@ open public class UrlGlobalsData
     val TESTINGHTMLPATH: String = "URLGLOBALS_TESTINGHTMLPATH"
 
     val MAINPATH: String = "URLGLOBALS_MAINPATH"
-
 
         }
             private constructor        ()

@@ -32,8 +32,7 @@ open public class ItemPaintableFactory : ItemPaintable {
         
 
         companion object {
-
-
+            
     private val instance: ItemPaintableFactory = ItemPaintableFactory()
 
 open fun getInstance()
@@ -44,7 +43,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

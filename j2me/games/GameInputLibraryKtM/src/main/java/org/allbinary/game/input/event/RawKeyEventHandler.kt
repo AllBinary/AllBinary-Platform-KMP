@@ -39,8 +39,7 @@ open public class RawKeyEventHandler
         
 
         companion object {
-
-
+            
     private val instance: RawKeyEventHandler = RawKeyEventHandler()
 
 open fun getInstance()
@@ -56,7 +55,6 @@ open fun getInstance()
     private val TOTAL_LISTENERS: String = "Total Listeners: "
 
     private val LISTENER_LABEL: String = " Listener: "
-
 
         }
             

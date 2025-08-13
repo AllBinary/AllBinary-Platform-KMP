@@ -39,12 +39,10 @@ open public class CompositeGroup
         
 
         companion object {
-
-
+            
     private val ADDING_LABEL: String = "Adding: "
 
     private val TO_LABEL: String = " to: "
-
 
         }
             

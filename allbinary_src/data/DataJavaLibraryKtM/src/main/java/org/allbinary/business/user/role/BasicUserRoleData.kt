@@ -34,10 +34,8 @@ open public class BasicUserRoleData
         
 
         companion object {
-
-
+            
     val NAME: String = "BASIC_USER_ROLE_NAME"
-
 
         }
             private constructor        ()

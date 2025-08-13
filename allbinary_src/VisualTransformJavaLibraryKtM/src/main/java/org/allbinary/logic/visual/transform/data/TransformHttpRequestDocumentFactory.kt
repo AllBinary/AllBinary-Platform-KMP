@@ -36,8 +36,7 @@ open public class TransformHttpRequestDocumentFactory
         
 
         companion object {
-
-
+            
                 @Throws(Exception::class)
             
 open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSession)
@@ -54,7 +53,6 @@ open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSessio
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformHttpRequestDocument(pageContext, weblisketSession) as TransformDocumentInterface
 }
-
 
 
         }
