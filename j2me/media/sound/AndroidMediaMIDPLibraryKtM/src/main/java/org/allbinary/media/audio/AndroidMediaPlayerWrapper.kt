@@ -32,15 +32,29 @@ import javax.microedition.media.Player
 import javax.microedition.media.PlayerListener
 import android.media.MediaPlayer
 import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
+import org.allbinary.logic.string.StringMaker
 
 open public class AndroidMediaPlayerWrapper : BasicPlayer {
         
 
+        companion object {
+
+
+    val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper()
+
+    private val NULL_MEDIA_PLAYER: MediaPlayer = MediaPlayer()
+
+
+        }
+            
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    private var mediaPlayer: MediaPlayer
+    private var mediaPlayer: MediaPlayer = AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER
+private constructor        (){}
+
 public constructor        (resource: String){
 
                     var resource = resource
@@ -53,15 +67,16 @@ public constructor        (resource: String){
 this.setMediaPlayer(MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil!!.getResourceId(resource)!!.toInt()))
 
     
-                        if(this.getMediaPlayer() == 
-                                    null
-                                )
+                        if(this.getMediaPlayer() == AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER)
                         
                                     {
                                     
 
 
-                            throw Exception("Failed to create media player for: " +resource +" with id: " +resourceUtil!!.getResourceId(resource))
+                            throw Exception(StringMaker().
+                            append(
+                            "Failed to create media player for: ")!!.append(resource)!!.append(
+                            " with id: ")!!.append(resourceUtil!!.getResourceId(resource)!!.toString())!!.toString())
 
                                     }
                                 
@@ -76,8 +91,7 @@ this.mediaPlayer!!.setLooping(false)
 
 }
 
-
-open fun setLoopCount(count: Int)
+override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -85,9 +99,7 @@ open fun setLoopCount(count: Int)
 super.setLoopCount(count)
 
     
-                        if(this.mediaPlayer != 
-                                    null
-                                )
+                        if(this.mediaPlayer != AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER)
                         
                                     {
                                     
@@ -108,8 +120,7 @@ super.setLoopCount(count)
                                 
 }
 
-
-open fun addPlayerListener(playerListener: PlayerListener)
+override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -117,8 +128,7 @@ open fun addPlayerListener(playerListener: PlayerListener)
 super.addPlayerListener(playerListener)
 }
 
-
-open fun removePlayerListener(playerListener: PlayerListener)
+override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -126,8 +136,7 @@ open fun removePlayerListener(playerListener: PlayerListener)
 super.removePlayerListener(playerListener)
 }
 
-
-open fun getState()
+override fun getState()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     
@@ -153,15 +162,12 @@ open fun getState()
                             
 }
 
-
-open fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
             this.mediaPlayer!!.release()
-this.mediaPlayer= 
-                                        null
-                                    
+this.mediaPlayer= AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 }
@@ -170,8 +176,7 @@ this.mediaPlayer=
 
 
                 @Throws(MediaException::class)
-            
-open fun start()
+            override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
@@ -195,8 +200,7 @@ super.start()
 
 
                 @Throws(MediaException::class)
-            
-open fun stop()
+            override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
@@ -231,14 +235,12 @@ logUtil!!.put("LineEvent: " +event, this, commonStrings!!.UPDATE)
         {
     var listener: PlayerListener = this.listenersList!!.objectArray[index]!! as PlayerListener
 
-listener.playerUpdate(this, event, 
-                            null)
+listener.playerUpdate(this, event, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 }
 
-
-open fun setVolume(leftVolume: Int, rightVolume: Int)
+override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -249,14 +251,13 @@ open fun setVolume(leftVolume: Int, rightVolume: Int)
 this.mediaPlayer!!.setVolume((leftVolume.toFloat()) /100.0f, (rightVolume.toFloat()) /100.0f)
 }
 
-
-open fun getDuration()
+override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
 : Long{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return mediaPlayer!!.getDuration()
+                        return mediaPlayer!!.getDuration().toLong()
 }
 
 
