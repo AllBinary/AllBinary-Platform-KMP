@@ -169,7 +169,7 @@ this.nameSpaceVector!!.add(packageName)
     var packagePropertiesHashMap: HashMap<Any, Any> = this.generatePackagePropertiesHashMap(properties)!!
             
 
-this.nameSpacePropertiesHashMap!!.put(packageIndex.toString())
+this.nameSpacePropertiesHashMap!!.put(Integer.toString(packageIndex), packagePropertiesHashMap)
 
                                     }
                                 

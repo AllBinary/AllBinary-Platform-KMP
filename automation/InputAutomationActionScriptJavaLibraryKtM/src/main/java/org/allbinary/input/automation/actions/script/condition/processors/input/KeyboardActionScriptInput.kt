@@ -478,7 +478,7 @@ open fun toHashMap()
                         for (index in 0 until this.getKeyArray()!!.length)
 
 
-        {hashMap!!.put(.toString())
+        {hashMap!!.put(KeyboardActionScriptInputData.KEY +index, Integer.toString(this.getKeyArray()[index]!!))
 }
 
 hashMap!!.put(KeyboardActionScriptInputData.DELAY_BETWEEN_KEYS, Integer.toString(this.getDelayBetweenKeys()))
