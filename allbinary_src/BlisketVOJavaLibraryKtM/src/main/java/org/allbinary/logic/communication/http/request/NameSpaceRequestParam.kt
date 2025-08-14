@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -169,7 +169,7 @@ this.nameSpaceVector!!.add(packageName)
     var packagePropertiesHashMap: HashMap<Any, Any> = this.generatePackagePropertiesHashMap(properties)!!
             
 
-this.nameSpacePropertiesHashMap!!.put(Integer.toString(packageIndex), packagePropertiesHashMap)
+this.nameSpacePropertiesHashMap!!.put(packageIndex.toString(), packagePropertiesHashMap)
 
                                     }
                                 
@@ -218,7 +218,7 @@ open fun getPackageProperties(packageIndex: Int)
 
                     var packageIndex = packageIndex
 
-    var packagePropertiesHashMap: HashMap<Any, Any> = this.nameSpacePropertiesHashMap!!.get(Integer.toString(packageIndex)) as HashMap<Any, Any>
+    var packagePropertiesHashMap: HashMap<Any, Any> = this.nameSpacePropertiesHashMap!!.get(packageIndex.toString()) as HashMap<Any, Any>
 
 
     

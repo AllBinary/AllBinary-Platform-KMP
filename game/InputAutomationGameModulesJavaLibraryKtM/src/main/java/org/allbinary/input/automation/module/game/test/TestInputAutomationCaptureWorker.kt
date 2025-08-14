@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -100,7 +98,7 @@ open fun processDataWorkerResults()
             
 
 
-    var set: Set = hashMap!!.keySet()!!
+    var set: Set = hashMap!!.keys!!
             
 
 

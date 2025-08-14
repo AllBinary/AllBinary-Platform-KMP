@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -134,16 +134,14 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
 cleanString= cleanString!!.trim()
 
     
-                        if(cleanString!!.indexOf(
-                            '-') !=  -1)
+                        if(cleanString!!.indexOf('-') !=  -1)
                         cleanString= Replace(
                             "-", commonSeps!!.SPACE).
                             all(cleanString)
 hashSet!!.add(cleanString)
 
     
-                        if(cleanString!!.indexOf(
-                            ' ') !=  -1)
+                        if(cleanString!!.indexOf(' ') !=  -1)
                         
                                     {
                                     

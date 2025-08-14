@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -108,9 +108,7 @@ this.point= Point(0, 0)
     var locationX: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.point.x= locationX.concatToString()
-
-                                
+this.point.x= Integer(Integer.valueOf(locationX))
 
                                     }
                                 
@@ -123,9 +121,7 @@ this.point.x= locationX.concatToString()
     var locationY: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.point.y= locationY.concatToString()
-
-                                
+this.point.y= Integer(Integer.valueOf(locationY))
 
                                     }
                                 
@@ -320,7 +316,7 @@ open fun shouldProcess(frame: Long)
     var capturedBufferedImageCacheable: BufferedImageFrameCacheable = 
                                     (getInstance as AutomaticCacheInterface).get(frame.concatToString()
 
-                                ) as BufferedImageFrameCacheable
+                                    ) as BufferedImageFrameCacheable
 
 
     var bufferedImage: BufferedImage = capturedBufferedImageCacheable!!.getBufferedImage()!!
@@ -331,9 +327,7 @@ open fun shouldProcess(frame: Long)
             
 
 
-    var colorInteger: Integer = getRGB.concatToString()
-
-                                !!
+    var colorInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(this.getPoint()!!.x, this.getPoint()!!.y)))!!
             
 
 

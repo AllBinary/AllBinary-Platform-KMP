@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -88,10 +86,10 @@ this.licenseFile= EMPTY_STRING
 this.file= EMPTY_STRING
 this.size= .concatToString()
 
-                                
+                                    
 this.validTime= .concatToString()
 
-                                
+                                    
 this.retries= EMPTY_STRING
 }
 
@@ -120,7 +118,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                                     {
                                     this.size= value.concatToString()
 
-                                
+                                    
 
                                     }
                                 
@@ -139,7 +137,7 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
                                     {
                                     this.validTime= validTime.concatToString()
 
-                                
+                                    
 
                                     }
                                 

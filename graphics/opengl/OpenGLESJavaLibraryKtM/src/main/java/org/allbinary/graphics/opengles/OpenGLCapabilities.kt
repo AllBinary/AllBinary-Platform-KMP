@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -172,13 +172,11 @@ glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
     
                         if(glShaderVersionString != 
                                     null
-                                 && glShaderVersionString!!.indexOf(
-                            '.') >= 0)
+                                 && glShaderVersionString!!.indexOf('.') >= 0)
                         
                                     {
                                     
-    var startIndex: Int = glShaderVersionString!!.lastIndexOf(
-                            ' ')!!
+    var startIndex: Int = glShaderVersionString!!.lastIndexOf(' ')!!
             
 
 

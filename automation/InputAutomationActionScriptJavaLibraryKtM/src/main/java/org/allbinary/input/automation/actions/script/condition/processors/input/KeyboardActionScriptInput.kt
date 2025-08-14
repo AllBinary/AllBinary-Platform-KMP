@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -181,7 +181,7 @@ this.setDelayBetweenKeys(Integer.valueOf(time)!!.toInt())
 
 this.setPress(value.concatToString()
 
-                                )
+                                    )
 
                                     }
                                 
@@ -196,7 +196,7 @@ this.setPress(value.concatToString()
 
 this.setRelease(value.concatToString()
 
-                                )
+                                    )
 
                                     }
                                 
@@ -419,8 +419,7 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this,
                         
                                     {
                                     
-    var endIndex: Int = text.indexOf(
-                            ';', index +1)!!
+    var endIndex: Int = text.indexOf(';', index +1)!!
             
 
 
@@ -451,7 +450,7 @@ index= index +nextCharString!!.length +3
                                 
 vector.add(KeySingletonFactory.getHashtable()!!.get(aChar.concatToString()
 
-                                ))
+                                    ))
 index++
 }
 

@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -91,9 +91,7 @@ open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeIn
 
 
         {
-    var keyInteger: Integer = getRGB.concatToString()
-
-                                !!
+    var keyInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(indexX, indexY)))!!
             
 
 

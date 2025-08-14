@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -423,9 +423,7 @@ this.downloads= value
                         
                                     {
                                     
-    var downloadInteger: Integer = downloads.concatToString()
-
-                                !!
+    var downloadInteger: Integer = Integer(Integer.valueOf(this.downloads))!!
             
 
 

@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -59,9 +59,7 @@ this.timeIntervalActionScriptConditionInterface!!.log()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= getText.concatToString()
-
-                                
+{this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= Integer(Integer.valueOf(this.getTimeIntervalJTextField()!!.getText()))
 this.timeIntervalActionScriptConditionInterface!!.log()
 }
 

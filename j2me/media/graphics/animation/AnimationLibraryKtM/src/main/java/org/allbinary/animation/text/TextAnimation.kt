@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -137,8 +135,7 @@ open fun setText(text: String)
 
         while(index >= 0)
         {startIndex= index
-index= text.indexOf(
-                            '\n', startIndex)
+index= text.indexOf('\n', startIndex)
 endIndex= index
 
     

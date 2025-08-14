@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -180,9 +178,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
         while(index < size)
         {startIndex= index
 
-        while(index < size -1 && byteArray[index] != 
-                            '\n'
-                        .code as Byte)
+        while(index < size -1 && byteArray[index] != '\n'.code as Byte)
         {index++
 }
 
@@ -193,9 +189,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD, e)
                                     {
                                     
     
-                        if(index > 0 && byteArray[index -1] == 
-                            '\r'
-                        .code as Byte)
+                        if(index > 0 && byteArray[index -1] == '\r'.code as Byte)
                         
                                     {
                                     returnLine= 1

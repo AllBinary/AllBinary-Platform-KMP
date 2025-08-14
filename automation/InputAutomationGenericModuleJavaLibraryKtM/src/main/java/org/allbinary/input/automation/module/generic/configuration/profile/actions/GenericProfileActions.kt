@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -203,8 +201,7 @@ open fun fileInit(fileInputStream: FileInputStream)
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data.lastIndexOf(
-                            '>')!!
+    var endIndex: Int = data.lastIndexOf('>')!!
             
 
 
@@ -386,7 +383,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var set: Set = this.getHashMap()!!.keySet()!!
+    var set: Set = this.getHashMap()!!.keys!!
             
 
 

@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -98,8 +98,7 @@ open fun getResourceAsStream(resource: String)
     var stringMaker: StringMaker = StringMaker()
 
 
-    var index: Int = resource.lastIndexOf(
-                            '/')!!
+    var index: Int = resource.lastIndexOf('/')!!
             
 
 

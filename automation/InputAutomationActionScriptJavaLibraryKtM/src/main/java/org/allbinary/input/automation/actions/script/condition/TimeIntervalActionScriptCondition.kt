@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -97,9 +97,7 @@ public constructor        (node: Node)
     var interval: String = DomNodeHelper.getTextNodeValue(childNode)!!
             
 
-this.setTimeDelayHelper(TimeDelayHelper(interval.concatToString()
-
-                                ))
+this.setTimeDelayHelper(TimeDelayHelper(Integer(Integer.valueOf(interval))))
 
                                     }
                                 

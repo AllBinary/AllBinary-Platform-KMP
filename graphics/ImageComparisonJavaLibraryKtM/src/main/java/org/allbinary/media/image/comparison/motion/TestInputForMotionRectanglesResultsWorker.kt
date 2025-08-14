@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         import java.lang.Thread
         
@@ -144,7 +142,7 @@ timeHelper!!.setStartTime()
             
 
 
-    var inputTypeNameArray: Array<Any?> = robotHashtable!!.keySet()!!.toArray()!!
+    var inputTypeNameArray: Array<Any?> = robotHashtable!!.keys.toTypedArray()!!
             
 
 

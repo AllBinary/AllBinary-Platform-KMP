@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -356,9 +354,7 @@ open fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, ge
             
 
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(
-                            ' ')!!.append(geographicMapCellHistory!!.getTotalVisited())!!.append(
-                            ' ')!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(' ')!!.append(geographicMapCellHistory!!.getTotalVisited())!!.append(' ')!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(
                             " - trying to move but not on path: ")!!.append(stringUtil!!.toString(pathList))!!.toString(), this, 
                             "turnTo")
 }

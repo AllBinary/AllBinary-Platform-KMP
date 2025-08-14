@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -102,7 +102,7 @@ open fun get(userName: String, id: Int)
     var row: HashMap<Any, Any> = HashMap<Any, Any>()
 
 row.put(UserData.USERNAME, userName)
-row.put(QuoteRequestData.getInstance()!!.ID, Integer.toString(id))
+row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
 
     var quoteRequestHashMap: HashMap<Any, Any> = super.getRow(row)!!
             

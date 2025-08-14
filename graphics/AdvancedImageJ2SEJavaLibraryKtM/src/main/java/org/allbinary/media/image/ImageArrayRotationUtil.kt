@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -87,9 +87,7 @@ open fun process(imageProcessorInput: ImageProcessorInput, input: String, visito
                         if(input == this.commonStrings!!.UP)
                         
                                     {
-                                    totalAngle= .concatToString()
-
-                                
+                                    totalAngle= Integer(Integer.valueOf( -90))
 
                                     }
                                 
@@ -98,16 +96,12 @@ open fun process(imageProcessorInput: ImageProcessorInput, input: String, visito
                         if(input == this.commonStrings!!.DOWN)
                         
                                     {
-                                    totalAngle= .concatToString()
-
-                                
+                                    totalAngle= Integer(Integer.valueOf(90))
 
                                     }
                                 
                         else {
-                            totalAngle= input.concatToString()
-
-                                
+                            totalAngle= Integer(Integer.valueOf(input))
 
                         }
                             

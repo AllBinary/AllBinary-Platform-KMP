@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -86,8 +84,7 @@ open fun get(anyType: Any, cryptInterface: CryptInterface)
             
 
 
-    var index: Int = serverUrl!!.lastIndexOf(
-                            '/')!!
+    var index: Int = serverUrl!!.lastIndexOf('/')!!
             
 
 serverUrl= serverUrl!!.substring(0, index +1) +page

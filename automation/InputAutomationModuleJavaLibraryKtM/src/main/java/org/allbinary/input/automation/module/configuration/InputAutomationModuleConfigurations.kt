@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -72,8 +70,7 @@ this.setHashMap(HashMap<Any, Any>())
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data.lastIndexOf(
-                            '>')!!
+    var endIndex: Int = data.lastIndexOf('>')!!
             
 
 

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -395,8 +393,7 @@ open fun adjust(path: String)
                             "\\") >= 0)
                         
                                     {
-                                    path= path.replace(
-                            '\\', abPathData!!.SEPARATORCHAR)
+                                    path= path.replace('\\', abPathData!!.SEPARATORCHAR)
 
                                     }
                                 

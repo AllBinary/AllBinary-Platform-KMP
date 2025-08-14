@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -66,15 +66,11 @@ open fun addItem(id: String, num: String)
     var oldNumStr: String = .concatToString()
 
 
-    var oldNumInt: Integer = oldNumStr.concatToString()
-
-                                !!
+    var oldNumInt: Integer = Integer(Integer.valueOf(oldNumStr))!!
             
 
 
-    var numInt: Integer = num.concatToString()
-
-                                !!
+    var numInt: Integer = Integer(Integer.valueOf(num))!!
             
 
 
@@ -229,9 +225,7 @@ open fun getNumberOf(product: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return numStr.concatToString()
-
-                                
+                        return Integer(Integer.valueOf(numStr))
 }
 
 

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         import java.lang.ClassNotFoundException
         
@@ -258,8 +256,7 @@ open fun loadClassBytesFromFile(name: String)
 
 
         try {
-            cname= PATH +name.replace(
-                            '.', AbPathData.getInstance()!!.SEPARATORCHAR) +ENCRYPTED_EXTENSION
+            cname= PATH +name.replace('.', AbPathData.getInstance()!!.SEPARATORCHAR) +ENCRYPTED_EXTENSION
 in= FileInputStream(cname)
 
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(in, this.key)!!

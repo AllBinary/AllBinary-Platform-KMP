@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -52,12 +52,8 @@ open fun init()
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
             
 
-resourceUtil!!.addResource(licenseInitInfoUtil!!.INITFILENAME, licenseinitdata.concatToString()
-
-                                )
-resourceUtil!!.addResource(PartnerIdentifierFileUtil.getInstance()!!.FILE_NAME, partner.concatToString()
-
-                                )
+resourceUtil!!.addResource(licenseInitInfoUtil!!.INITFILENAME, Integer(Integer.valueOf(androidResources!!.raw.licenseinitdata)))
+resourceUtil!!.addResource(PartnerIdentifierFileUtil.getInstance()!!.FILE_NAME, Integer(Integer.valueOf(androidResources!!.raw.partner)))
 }
 
 

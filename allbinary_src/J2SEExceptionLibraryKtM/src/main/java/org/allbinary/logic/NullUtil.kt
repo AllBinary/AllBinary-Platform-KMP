@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -29,6 +27,7 @@
         
 import java.util.HashMap
 import java.util.Hashtable
+import java.util.Vector
 
 open public class NullUtil
             : Object
@@ -74,6 +73,8 @@ open fun getInstance()
     val NULL_INT_ARRAY_ARRAY_ARRAY: Array<Array<IntArray?>?> = Array(0) { Array(0) { IntArray(0) } }
 
     val NULL_FLOAT_ARRAY: FloatArray = FloatArray(0)
+
+    val EMPTY_VECTOR: Vector<Any> = Vector<Any>()
 
     val NULL_TABLE: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

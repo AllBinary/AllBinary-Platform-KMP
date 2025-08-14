@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -148,7 +146,7 @@ open fun toHashMap()
 
 hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.getNumberOfUsers()!!.toString())
 
-    var setOfUserRoles: Set = this.totalUsersByRoleHashMap!!.keySet()!!
+    var setOfUserRoles: Set = this.totalUsersByRoleHashMap!!.keys!!
             
 
 

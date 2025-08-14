@@ -18,10 +18,12 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
+        
         import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -84,9 +86,7 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
             
 
 
-    var colorInteger: Integer = rgb1.concatToString()
-
-                                !!
+    var colorInteger: Integer = Integer(Integer.valueOf(rgb1))!!
             
 
 
@@ -97,9 +97,7 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
             
 
 
-    var colorInteger2: Integer = rgb2.concatToString()
-
-                                !!
+    var colorInteger2: Integer = Integer(Integer.valueOf(rgb2))!!
             
 
 

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -97,8 +95,7 @@ this.hashMap= HashMap<Any, Any>()
     var data: String = bytes.decodeToString()
 
 
-    var endIndex: Int = data.lastIndexOf(
-                            '>')!!
+    var endIndex: Int = data.lastIndexOf('>')!!
             
 
 
@@ -268,7 +265,7 @@ open fun toXmlNode(document: Document)
             
 
 
-    var set: Set = this.hashMap!!.keySet()!!
+    var set: Set = this.hashMap!!.keys!!
             
 
 

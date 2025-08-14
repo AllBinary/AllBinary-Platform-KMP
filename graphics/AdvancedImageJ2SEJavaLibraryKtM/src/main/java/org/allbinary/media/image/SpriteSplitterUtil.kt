@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -206,11 +206,7 @@ logUtil!!.put(
 imageUnifierProperties!!.setRows(.valueOf())
 imageUnifierProperties!!.setColumns(columns.valueOf())
 
-    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(.concatToString()
-
-                                .concatToString()
-
-                                )
+    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer(Integer.valueOf(cellWidth -(2 *widthReduction)))Integer(Integer.valueOf(cellHeight -(2 *heightReduction))))
 
 imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 
@@ -327,11 +323,7 @@ visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index
 imageUnifierProperties!!.setRows(.valueOf())
 imageUnifierProperties!!.setColumns(columns.valueOf())
 
-    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(.concatToString()
-
-                                 +increaseWidth, .concatToString()
-
-                                )
+    var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer(Integer.valueOf(cellWidth -(2 *widthReduction))) +increaseWidth, Integer(Integer.valueOf(cellHeight -(2 *heightReduction) +increaseHeight)))
 
 imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 logUtil!!.put(

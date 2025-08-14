@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -121,9 +121,7 @@ this.setButtonClicks(Integer.valueOf(buttons)!!.toInt())
             
 
 
-    var mouseXInteger: Integer = mouseXString.concatToString()
-
-                                !!
+    var mouseXInteger: Integer = Integer(Integer.valueOf(mouseXString))!!
             
 
 
@@ -135,9 +133,7 @@ this.setButtonClicks(Integer.valueOf(buttons)!!.toInt())
             
 
 
-    var mouseYInteger: Integer = mouseYString.concatToString()
-
-                                !!
+    var mouseYInteger: Integer = Integer(Integer.valueOf(mouseYString))!!
             
 
 

@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -254,7 +254,7 @@ open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<A
             
 
 
-    var keySet: Set = hashMap!!.keySet()!!
+    var keySet: Set = hashMap!!.keys!!
             
 
 
@@ -479,7 +479,7 @@ open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashM
             
 
 
-    var keySet: Set = hashMap!!.keySet()!!
+    var keySet: Set = hashMap!!.keys!!
             
 
 

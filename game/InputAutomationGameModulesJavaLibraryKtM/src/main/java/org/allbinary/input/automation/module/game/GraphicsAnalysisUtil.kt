@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -66,9 +66,7 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
 
 
         {
-    var colorInteger: Integer = getRGB.concatToString()
-
-                                !!
+    var colorInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(index, y.toInt())))!!
             
 
 

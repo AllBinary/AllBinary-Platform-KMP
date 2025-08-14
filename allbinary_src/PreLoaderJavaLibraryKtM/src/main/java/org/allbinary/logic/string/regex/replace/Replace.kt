@@ -18,9 +18,11 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
+        
         import java.lang.System
         
         
@@ -195,7 +197,7 @@ open fun upTo(replace: String, total: Int)
     var totalNumberOfReplaces: Int = 0
 
 
-    var keySet: Set = hashMap!!.keySet()!!
+    var keySet: Set = hashMap!!.keys!!
             
 
 
@@ -350,7 +352,7 @@ open fun line(replace: String)
     var totalNumberOfReplaces: Int = 0
 
 
-    var keySet: Set = hashMap!!.keySet()!!
+    var keySet: Set = hashMap!!.keys!!
             
 
 
@@ -393,8 +395,7 @@ value= hashMap!!.get(key as Object?) as String
                                     {
                                     System.out.println(FOUND_KEY)
 
-    var end: Int = replace.indexOf(
-                            '\n', begin +key.length) +1
+    var end: Int = replace.indexOf('\n', begin +key.length) +1
 
 
     

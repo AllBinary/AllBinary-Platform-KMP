@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -497,12 +497,12 @@ stringBuffer!!.append(searchRequest!!.getFileBaseName())
 
                                     }
                                 
-inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocument, SearchData.PAGE_INFO, Integer.toString(pageIndex), stringBuffer!!.toString()))
+inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocument, SearchData.PAGE_INFO, pageIndex.toString(), stringBuffer!!.toString()))
 
                                     }
                                 
                         else {
-                            inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocument, SearchData.PAGE_INFO, Integer.toString(pageIndex), SearchData.SEARCH))
+                            inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocument, SearchData.PAGE_INFO, pageIndex.toString(), SearchData.SEARCH))
 
                         }
                             

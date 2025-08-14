@@ -18,9 +18,11 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
+        
         import java.lang.System
         
         
@@ -91,8 +93,7 @@ randomFactory!!.shuffle(intArray, intArray2)
                         for (index in 0 until size)
 
 
-        {stringBuilder!!.append(intArray[index]!!)!!.append(
-                            ',')
+        {stringBuilder!!.append(intArray[index]!!)!!.append(',')
 }
 
 System.out.println(stringBuilder!!.toString())
@@ -104,8 +105,7 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
                         for (index in 0 until size)
 
 
-        {stringBuilder!!.append(intArray2[index]!!)!!.append(
-                            ',')
+        {stringBuilder!!.append(intArray2[index]!!)!!.append(',')
 }
 
 System.out.println(stringBuilder!!.toString())

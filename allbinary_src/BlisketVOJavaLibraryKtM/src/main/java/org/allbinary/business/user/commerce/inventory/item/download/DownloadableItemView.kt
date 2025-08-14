@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -138,26 +138,14 @@ calendar.setTimeInMillis(calendar.getTimeInMillis() +totalTime)
     var secondDelta: Int = calendar.get(Calendar.SECOND)!!
             
 
-hashMap!!.put(DownloadItemData.VALID_TIME_YEARS, .concatToString()
+hashMap!!.put(DownloadItemData.VALID_TIME_YEARS, Integer(Integer.valueOf(yearDelta -year)))
+hashMap!!.put(DownloadItemData.VALID_TIME_MONTHS, Integer(Integer.valueOf(monthDelta -month)))
+hashMap!!.put(DownloadItemData.VALID_TIME_DAYS, Integer(Integer.valueOf(dayDelta -day)))
+hashMap!!.put(DownloadItemData.VALID_TIME_HOURS, Integer(Integer.valueOf(hourDelta -hour)))
+hashMap!!.put(DownloadItemData.VALID_TIME_MINUTES, Integer(Integer.valueOf(minuteDelta -minute)))
+hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secondDelta -second)))
 
-                                )
-hashMap!!.put(DownloadItemData.VALID_TIME_MONTHS, .concatToString()
-
-                                )
-hashMap!!.put(DownloadItemData.VALID_TIME_DAYS, .concatToString()
-
-                                )
-hashMap!!.put(DownloadItemData.VALID_TIME_HOURS, .concatToString()
-
-                                )
-hashMap!!.put(DownloadItemData.VALID_TIME_MINUTES, .concatToString()
-
-                                )
-hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, .concatToString()
-
-                                )
-
-    var keySet: Set = hashMap!!.keySet()!!
+    var keySet: Set = hashMap!!.keys!!
             
 
 

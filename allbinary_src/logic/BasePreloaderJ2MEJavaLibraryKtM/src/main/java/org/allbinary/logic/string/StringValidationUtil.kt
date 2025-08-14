@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -63,8 +61,7 @@ open fun containsSpaces(value: String)
                     var value = value
 
     
-                        if(value.indexOf(
-                            ' ') >= 0)
+                        if(value.indexOf(' ') >= 0)
                         
                                     {
                                     

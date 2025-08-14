@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -56,8 +54,7 @@ open public class TrueTypeFontUtilBase
     val size: Int = pattern.length!!
             
 
-    val lastCapIndex: Int = pattern.indexOf(
-                            'Z')!!
+    val lastCapIndex: Int = pattern.indexOf('Z')!!
             
 
     var currentFont: Font = Font.getDefaultFont()!!

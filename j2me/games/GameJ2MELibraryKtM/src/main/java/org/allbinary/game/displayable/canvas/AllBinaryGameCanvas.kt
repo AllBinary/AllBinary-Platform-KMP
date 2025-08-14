@@ -18,9 +18,11 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
+        
         import java.lang.System
         
         import java.lang.Runnable
@@ -1834,7 +1836,7 @@ override fun getCurrentStateHashtable()
     var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()!!
             
 
-hashtable.put(GameInfo.LEVEL_NAME.toString(), Integer.toString(level))
+hashtable.put(GameInfo.LEVEL_NAME.toString(), level.toString())
 logUtil!!.put(StringMaker().
                             append(
                             "End: ")!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, 

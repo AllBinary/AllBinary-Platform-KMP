@@ -4,9 +4,9 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
+
+        import java.lang.Object        
+        
         import java.lang.System
         
         import java.lang.Runtime
@@ -147,8 +147,7 @@ open fun get()
                                     null
                                 )
         {
-    var index: Int = keyValuePair!!.indexOf(
-                            '=')!!
+    var index: Int = keyValuePair!!.indexOf('=')!!
             
 
 

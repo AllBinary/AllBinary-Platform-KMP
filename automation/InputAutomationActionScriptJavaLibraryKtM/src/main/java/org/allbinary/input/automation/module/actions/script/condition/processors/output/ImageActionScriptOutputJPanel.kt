@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -116,7 +114,7 @@ open fun update()
 
     var imageTypes: ImageTypes = anyType.concatToString()
 
-                                !!
+                                    !!
             
 
 this.capturedImageActionScriptOutputInterface!!.setImageTypes(imageTypes)

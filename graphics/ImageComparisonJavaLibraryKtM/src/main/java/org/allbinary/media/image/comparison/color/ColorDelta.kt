@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -53,7 +53,7 @@ open fun getKey(rgb1: Int, rgb2: Int)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(Integer.toString(rgb1))!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(Integer.toString(rgb2))!!.toString()
+                            append(rgb1.toString())!!.append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(rgb2.toString())!!.toString()
 }
 
 

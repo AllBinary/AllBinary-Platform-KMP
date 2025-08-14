@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -105,7 +105,7 @@ open fun getLevelString(level: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return Integer.toString(level)
+                        return level.toString()
 }
 
 

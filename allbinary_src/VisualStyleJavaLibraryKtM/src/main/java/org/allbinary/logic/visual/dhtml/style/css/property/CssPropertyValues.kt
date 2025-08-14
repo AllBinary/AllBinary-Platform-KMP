@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -125,7 +125,7 @@ indexPropertyValueHashMap!!.put(indexValue, propertyValue)
 
 
 
-                        for (index in 0 until indexPropertyValueHashMap!!.keySet()!!.size()!!)
+                        for (index in 0 until indexPropertyValueHashMap!!.keys.size()!!)
 
 
         {

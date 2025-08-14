@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -128,7 +126,7 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
             
 
 
-    var propertyKeySet: Set = packagePropertiesHashMap!!.keySet()!!
+    var propertyKeySet: Set = packagePropertiesHashMap!!.keys!!
             
 
 
@@ -184,8 +182,7 @@ open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameS
 
                     var packagePropertiesHashMap = packagePropertiesHashMap
 
-    var beginIndex: Int = packageName!!.indexOf(
-                            '[')!!
+    var beginIndex: Int = packageName!!.indexOf('[')!!
             
 
 
@@ -346,7 +343,7 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                                     }
                                 
 
-    var propertyNameSet: Set = nextPackagePropertiesHashMap!!.keySet()!!
+    var propertyNameSet: Set = nextPackagePropertiesHashMap!!.keys!!
             
 
 
