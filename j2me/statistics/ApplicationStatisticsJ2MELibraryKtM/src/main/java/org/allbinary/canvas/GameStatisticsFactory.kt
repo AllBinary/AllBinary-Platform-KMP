@@ -19,8 +19,7 @@ open public class GameStatisticsFactory : BaseGameStatistics {
         
 
         companion object {
-
-
+            
     private val instance: GameStatisticsFactory = GameStatisticsFactory()
 
 open fun getInstance()
@@ -31,7 +30,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

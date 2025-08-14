@@ -114,7 +114,7 @@ this.document= DomDocumentHelper.create(data)
     var country: String = this.streetAddress!!.getCountry()!!
             
 
-state= state.toUpperCase()
+state= state.uppercase()
 
     var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
             

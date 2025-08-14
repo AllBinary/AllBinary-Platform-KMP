@@ -29,6 +29,8 @@
         
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
+import java.io.Reader
+import java.io.Writer
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.StreamUtil
@@ -63,6 +65,12 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
+            
+
+    val NULL_WRITER: Writer = Writer.nullWriter()!!
+            
+
+    val NULL_READER: Reader = Reader.nullReader()!!
             
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!

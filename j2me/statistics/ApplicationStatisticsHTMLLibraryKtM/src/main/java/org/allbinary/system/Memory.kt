@@ -35,8 +35,7 @@ open public class Memory
         
 
         companion object {
-
-
+            
 open fun getInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
@@ -45,7 +44,6 @@ open fun getInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 }
-
 
 
         }

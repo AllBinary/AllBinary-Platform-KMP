@@ -27,8 +27,7 @@ open public class InApplicationPurchaseFactory
         
 
         companion object {
-
-
+            
     private val instance: InApplicationPurchaseFactory = InApplicationPurchaseFactory()
 
 open fun getInstance()
@@ -39,7 +38,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }

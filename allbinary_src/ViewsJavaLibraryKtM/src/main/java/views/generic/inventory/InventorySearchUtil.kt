@@ -297,7 +297,7 @@ open fun search(abeClientInformation: AbeClientInformationInterface, searchReque
     var iter: ListIterator = column.listIterator()!!
             
 
-keyword= keyword.toUpperCase()
+keyword= keyword.uppercase()
 
     var lastPage: Int =  -1
 
@@ -345,7 +345,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
     var keywords: String = itemInterface!!.getKeywords()!!
             
 
-keywords= keywords.toUpperCase()
+keywords= keywords.uppercase()
 
     
                         if(keywords.indexOf(keyword) !=  -1)
