@@ -129,7 +129,7 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
                                     {
                                     this.saveFile(filePath)
 response.setContentType("text/plain")
-response.getOutputStream()!!.write("OK!"encodeToByteArray())
+response.getOutputStream()!!.write("OK!".encodeToByteArray())
 
                                     }
                                 

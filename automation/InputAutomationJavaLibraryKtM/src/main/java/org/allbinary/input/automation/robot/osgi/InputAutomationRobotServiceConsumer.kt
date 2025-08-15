@@ -33,7 +33,7 @@ open public class InputAutomationRobotServiceConsumer : InputAutomationServiceCo
         
 public constructor        (bundleContext: BundleContext)                        
 
-                            : super(InputAutomationRobotServiceInterface::classgetName(), bundleContext, InputAutomationRobotOSGIServiceVisitor()){
+                            : super(InputAutomationRobotServiceInterface::class.getName(), bundleContext, InputAutomationRobotOSGIServiceVisitor()){
 
                     var bundleContext = bundleContext
 
