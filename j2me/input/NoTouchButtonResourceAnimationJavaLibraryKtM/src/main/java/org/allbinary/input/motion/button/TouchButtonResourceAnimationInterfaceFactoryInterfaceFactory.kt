@@ -36,8 +36,7 @@ open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
         
 public constructor        ()                        
 
-                            : super(
-                            "TouchButton Animations"){
+                            : super("TouchButton Animations"){
 
                             //For kotlin this is before the body of the constructor.
                     

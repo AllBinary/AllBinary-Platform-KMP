@@ -143,11 +143,9 @@ zipFile!!.createNewFile()
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(current)
-stringBuffer!!.append(
-                            " Creating Zip File Entry: ")
+stringBuffer!!.append(" Creating Zip File Entry: ")
 stringBuffer!!.append(file.getPath())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "create()")
+logUtil!!.put(stringBuffer!!.toString(), this, "create()")
 
         try {
             fileInputStream= AbFileInputStream(file)
@@ -156,8 +154,7 @@ streamUtil!!.get(fileInputStream, outputStream, byteArray)
 outputStream!!.closeEntry()
 streamUtil!!.close(fileInputStream)
 } catch(e: Exception)
-            {logUtil!!.put("Skipping File (Probably Local): " +file.getPath(), this, 
-                            "create()")
+            {logUtil!!.put("Skipping File (Probably Local): " +file.getPath(), this, "create()")
 }
 
 
@@ -168,8 +165,7 @@ current++
 
 streamUtil!!.close(outputStream)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "create", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "create", e)
 }
 
 }
@@ -230,20 +226,15 @@ open fun unzip(path: String, zipFile: AbFile, fileName: String)
     var entryFile: AbFile = AbFile(path +entryName)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "ZipEntry Name: ")
+stringBuffer!!.append("ZipEntry Name: ")
 stringBuffer!!.append(entryName)
-stringBuffer!!.append(
-                            " isFile: ")
+stringBuffer!!.append(" isFile: ")
 stringBuffer!!.append(entryFile!!.isFile())
-stringBuffer!!.append(
-                            " isDirectory: ")
+stringBuffer!!.append(" isDirectory: ")
 stringBuffer!!.append(entryFile!!.isDirectory())
-stringBuffer!!.append(
-                            " getParent: ")
+stringBuffer!!.append(" getParent: ")
 stringBuffer!!.append(entryFile!!.getParent())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "unzip")
+logUtil!!.put(stringBuffer!!.toString(), this, "unzip")
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(entryFile)!!
             

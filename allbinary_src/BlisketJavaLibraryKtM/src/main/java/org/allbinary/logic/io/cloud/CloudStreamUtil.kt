@@ -82,8 +82,7 @@ open fun getFile(file: AbFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Cloud File Bytes: " +available, this, 
-                            "processRequest()")
+                                    logUtil!!.put("Cloud File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 
@@ -122,8 +121,7 @@ open fun getFileAnyWhere(file: AbFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Local File Bytes: " +available, this, 
-                            "processRequest()")
+                                    logUtil!!.put("Local File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 
@@ -143,8 +141,7 @@ available= inputStream!!.available()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Cloud File Bytes: " +available, this, 
-                            "processRequest()")
+                                    logUtil!!.put("Cloud File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 
@@ -186,8 +183,7 @@ open fun getFileLocal(file: AbFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Local File Bytes: " +available, this, 
-                            "processRequest()")
+                                    logUtil!!.put("Local File Bytes: " +available, this, "processRequest()")
 
                                     }
                                 

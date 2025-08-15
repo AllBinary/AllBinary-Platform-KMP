@@ -47,8 +47,7 @@ open fun main(args: Array<String?>)
 {
 
                     var args = args
-JarUtil(URL(
-                            "file:///G:/mnt/bc/mydev/working/j2me/MiniSpaceWars/MiniSpaceWars/dist/MiniSpaceWars.jar")).
+JarUtil(URL("file:///G:/mnt/bc/mydev/working/j2me/MiniSpaceWars/MiniSpaceWars/dist/MiniSpaceWars.jar")).
                             show()
 }
 

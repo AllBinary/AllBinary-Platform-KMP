@@ -187,8 +187,7 @@ override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
 this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
 this.update()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onResize", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }
@@ -276,8 +275,7 @@ open fun createRectangle(size: Int)
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, 
-                            "open")
+{logUtil!!.put(commonStrings!!.START, this, "open")
 BasicMotionGesturesHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
@@ -419,8 +417,7 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -464,8 +461,7 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }

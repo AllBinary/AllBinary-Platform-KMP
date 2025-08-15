@@ -62,8 +62,7 @@ open fun getInstance()
     val TWELVE_SIZE: String = "(12)"
 
     val ONE_KB_CHAR_COLUMN: String = StringBuilder().
-                            append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(
-                            "(1024)")!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
+                            append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append("(1024)")!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
             
 
     val MAX_CHAR_COLUMN: String = StringBuilder().

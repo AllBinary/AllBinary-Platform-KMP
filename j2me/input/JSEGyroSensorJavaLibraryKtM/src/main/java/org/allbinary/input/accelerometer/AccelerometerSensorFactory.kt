@@ -58,8 +58,7 @@ open fun init()
                                     
 
 
-                            throw Exception(
-                            "No Orientation Sensors")
+                            throw Exception("No Orientation Sensors")
 
                                     }
                                 
@@ -71,8 +70,7 @@ open fun init()
                                     
 
 
-                            throw Exception(
-                            "No Simulation Sensors")
+                            throw Exception("No Simulation Sensors")
 
                                     }
                                 
@@ -89,8 +87,7 @@ open fun init()
                             
 
 
-                            throw Exception(
-                            "Not Such SensorFeature")
+                            throw Exception("Not Such SensorFeature")
 
                         }
                             

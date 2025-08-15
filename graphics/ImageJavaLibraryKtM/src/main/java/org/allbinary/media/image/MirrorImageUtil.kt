@@ -73,9 +73,7 @@ open fun getImage(bufferedImage: BufferedImage, verticle: Boolean, horizontal: B
 
 
                     var horizontal = horizontal
-logUtil!!.put(
-                            "Starting", this, 
-                            "getImage")
+logUtil!!.put("Starting", this, "getImage")
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
@@ -176,8 +174,7 @@ open fun getImages(bufferedImage: BufferedImage, verticle: Boolean, horizontal: 
     
                         if(horizontal)
                         numberOfFrames *= 2
-logUtil!!.put("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" numberOfFrames: " +numberOfFrames, this, 
-                            "getImages")
+logUtil!!.put("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" numberOfFrames: " +numberOfFrames, this, "getImages")
 
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(numberOfFrames)
 

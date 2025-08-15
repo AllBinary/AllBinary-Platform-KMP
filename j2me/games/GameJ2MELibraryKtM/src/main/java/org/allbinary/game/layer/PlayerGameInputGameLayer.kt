@@ -54,8 +54,7 @@ this.playerGameInput= PlayerGameInput(this.getGameKeyEventList(), playerInputId)
     var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Danger Danger Danger: Should Not Be Called Except For Testing Input", this, canvasStrings!!.PAINT)
+logUtil!!.put("Danger Danger Danger: Should Not Be Called Except For Testing Input", this, canvasStrings!!.PAINT)
 }
 
 override fun getPlayerGameInput()

@@ -116,12 +116,9 @@ open fun emailUser(quoteRequest: QuoteRequest)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "This is just a verification email. ")
-stringBuffer!!.append(
-                            "We usually respond to quote request within 24 hours.")
-stringBuffer!!.append(
-                            "\n\nThank You For Your Business.")
+stringBuffer!!.append("This is just a verification email. ")
+stringBuffer!!.append("We usually respond to quote request within 24 hours.")
+stringBuffer!!.append("\n\nThank You For Your Business.")
 
     var userEmailTextBody: String = stringBuffer!!.toString()!!
             
@@ -153,23 +150,17 @@ open fun emailAdmins(quoteRequest: QuoteRequest)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "\nUserName: ")
+stringBuffer!!.append("\nUserName: ")
 stringBuffer!!.append(quoteRequest!!.getUserName())
-stringBuffer!!.append(
-                            "\nProject Info: \n")
+stringBuffer!!.append("\nProject Info: \n")
 stringBuffer!!.append(quoteRequest!!.getProjectInfo())
-stringBuffer!!.append(
-                            "\nUser Comments: \n")
+stringBuffer!!.append("\nUser Comments: \n")
 stringBuffer!!.append(quoteRequest!!.getUserComments())
-stringBuffer!!.append(
-                            "\nBudget: \n")
+stringBuffer!!.append("\nBudget: \n")
 stringBuffer!!.append(quoteRequest!!.getBudget())
-stringBuffer!!.append(
-                            "\nTime Frame: \n")
+stringBuffer!!.append("\nTime Frame: \n")
 stringBuffer!!.append(quoteRequest!!.getTimeFrame())
-stringBuffer!!.append(
-                            "\nComments: \n")
+stringBuffer!!.append("\nComments: \n")
 stringBuffer!!.append(quoteRequest!!.getComments())
 
     var adminEmailTextBody: String = stringBuffer!!.toString()!!
@@ -264,8 +255,7 @@ this.emailAdmins(quoteRequest)
                             
 
 
-                            throw Exception(
-                            "No Quote Request")
+                            throw Exception("No Quote Request")
 
                         }
                             
@@ -275,8 +265,7 @@ this.emailAdmins(quoteRequest)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "email", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "email", e)
 
                                     }
                                 
@@ -348,8 +337,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "create()")
+                                    logUtil!!.put(success, this, "create()")
 
                                     }
                                 
@@ -367,8 +355,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "create()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
 
                                     }
                                 
@@ -398,8 +385,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "restore()")
+                                    logUtil!!.put(success, this, "restore()")
 
                                     }
                                 
@@ -417,8 +403,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "restore()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
 
                                     }
                                 
@@ -448,8 +433,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "backup()")
+                                    logUtil!!.put(success, this, "backup()")
 
                                     }
                                 
@@ -467,8 +451,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "backup()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
 
                                     }
                                 

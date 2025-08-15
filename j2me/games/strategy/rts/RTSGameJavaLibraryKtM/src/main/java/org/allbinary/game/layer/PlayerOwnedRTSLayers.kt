@@ -44,8 +44,7 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "All: ")
+stringBuffer!!.append("All: ")
 stringBuffer!!.append(this.rtsLayerList!!.size())
 
 

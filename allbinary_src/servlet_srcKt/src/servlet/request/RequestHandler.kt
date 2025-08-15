@@ -73,8 +73,7 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                     var response = response
 
         try {
-            response.setContentType(
-                            "text/html")
+            response.setContentType("text/html")
 
     var out: PrintWriter = response.getWriter()!!
             
@@ -102,9 +101,7 @@ out.close()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Servlet LicensingException", this, 
-                            "processRequest()", e)
+                                    logUtil!!.put("Servlet LicensingException", this, "processRequest()", e)
 
                                     }
                                 
@@ -116,9 +113,7 @@ response.sendRedirect(abcs.globals.URLGLOBALS.LICENSEERRORPAGE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Servlet Exception", this, 
-                            "processRequest()", e)
+                                    logUtil!!.put("Servlet Exception", this, "processRequest()", e)
 
                                     }
                                 

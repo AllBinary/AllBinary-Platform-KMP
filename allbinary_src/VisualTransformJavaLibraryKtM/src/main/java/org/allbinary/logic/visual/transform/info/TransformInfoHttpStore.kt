@@ -88,14 +88,11 @@ public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Database HashMap: ")
+stringBuffer!!.append("Database HashMap: ")
 stringBuffer!!.append(databaseHashMap!!.toString())
-stringBuffer!!.append(
-                            "\nProperties HashMap: ")
+stringBuffer!!.append("\nProperties HashMap: ")
 stringBuffer!!.append(propertiesHashMap!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "Constructor(HashMap, HashMap , PageContext)")
+logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(HashMap, HashMap , PageContext)")
 
                                     }
                                 

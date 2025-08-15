@@ -41,10 +41,8 @@ open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
         try {
-            this.setName(
-                            "Mini Basket View")
-this.setObjectFile(
-                            "views.generic.basket.mini.ValidationView")
+            this.setName("Mini Basket View")
+this.setObjectFile("views.generic.basket.mini.ValidationView")
 
     
                         if(this.getCommand() != 
@@ -79,8 +77,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

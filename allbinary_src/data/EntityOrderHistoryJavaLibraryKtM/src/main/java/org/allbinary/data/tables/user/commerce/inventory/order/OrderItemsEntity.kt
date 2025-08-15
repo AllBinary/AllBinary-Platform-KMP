@@ -224,8 +224,7 @@ super.updateWhere(whereHashMap, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "setStatus", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "setStatus", e)
 
                                     }
                                 
@@ -280,8 +279,7 @@ open fun isEverythingShipped(orderId: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "isEverythingShipped", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "isEverythingShipped", e)
 
                                     }
                                 
@@ -382,8 +380,7 @@ basketReview!!.addItem(item)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "getBasketReview", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "getBasketReview", e)
 
                                     }
                                 
@@ -406,11 +403,9 @@ open fun createTableStatement()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "CREATE TABLE ")
+stringBuffer!!.append("CREATE TABLE ")
 stringBuffer!!.append(tableName)
-stringBuffer!!.append(
-                            " (")
+stringBuffer!!.append(" (")
 stringBuffer!!.append(entryData!!.ID)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(OrderData.ID)
@@ -456,8 +451,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(BasicItemData.WEIGHT)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(BasicItemData.PRICE)
-stringBuffer!!.append(
-                            " VARCHAR(20) NOT NULL,")
+stringBuffer!!.append(" VARCHAR(20) NOT NULL,")
 stringBuffer!!.append(BasicItemData.COMMENT)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
 stringBuffer!!.append(BasicItemData.CUSTOMS)
@@ -483,8 +477,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(ShippingMethodData.NAME)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(entryData!!.SPECIAL)
-stringBuffer!!.append(
-                            " VARCHAR(255) ,")
+stringBuffer!!.append(" VARCHAR(255) ,")
 stringBuffer!!.append(OrderHistoryData.STATUS)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.CANCELINFO)
@@ -492,21 +485,16 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.CANCELTYPE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.SHIPPEDDATE)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
 stringBuffer!!.append(OrderHistoryData.ORDERDATE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.TRANSDATE)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
 stringBuffer!!.append(OrderHistoryData.CANCELDATE)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
-stringBuffer!!.append(
-                            "PRIMARY KEY(")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append("PRIMARY KEY(")
 stringBuffer!!.append(entryData!!.ID)
-stringBuffer!!.append(
-                            ") )")
+stringBuffer!!.append(") )")
 
 
 

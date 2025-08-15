@@ -73,8 +73,7 @@ open fun saveFiles(fileItem: FileItem)
                                     
 
 
-                            throw Exception(
-                            "Image File Name Was Null")
+                            throw Exception("Image File Name Was Null")
 
                                     }
                                 
@@ -86,8 +85,7 @@ open fun saveFiles(fileItem: FileItem)
                                     
 
 
-                            throw Exception(
-                            "Unable to save file to non creatable directory")
+                            throw Exception("Unable to save file to non creatable directory")
 
                                     }
                                 

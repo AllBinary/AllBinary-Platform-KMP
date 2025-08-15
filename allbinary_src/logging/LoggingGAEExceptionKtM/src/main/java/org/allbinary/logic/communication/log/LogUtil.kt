@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.util.logging.Level
 import org.allbinary.logic.string.StringMaker
 import java.util.logging.Logger
 import org.allbinary.string.CommonStrings
@@ -59,10 +60,7 @@ private constructor        ()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{PreLogUtil.put(
-                            "Loggin Initialized", 
-                            "LogUtil", 
-                            "init()")
+{PreLogUtil.put("Loggin Initialized", "LogUtil", "init()")
 }
 
 
@@ -118,10 +116,70 @@ open fun put(log: Log)
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
             
 
-logger.severe(message)
+logger.log(Level.INFO, message)
 
                                     }
                                 
+} catch(e: Exception)
+            {}
+
+}
+
+
+open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var specialMessage = specialMessage
+
+
+                    var anyType = anyType
+
+
+                    var functionName = functionName
+
+
+                    var exception = exception
+
+        try {
+            
+    var className: String = CommonStrings.getInstance()!!.EMPTY
+
+
+    var clazz: KClass<*> = anyType!!::class!!
+            
+
+
+    
+                        if(clazz.qualifiedName!! != 
+                                    null
+                                )
+                        
+                                    {
+                                    className= clazz.qualifiedName!!
+
+                                    }
+                                
+
+    var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
+            
+
+
+    
+                        if(exception != 
+                                    null
+                                )
+                        
+                                    {
+                                    logger.log(Level.SEVERE, message, exception)
+
+                                    }
+                                
+                        else {
+                            logger.log(Level.INFO, message)
+
+                        }
+                            
 } catch(e: Exception)
             {}
 

@@ -81,8 +81,7 @@ open fun isBasketEmpty()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "isBasketEmpty", 
+    var method: Method = anyType!!::class.getMethod("isBasketEmpty", 
                             null)!!
             
 
@@ -107,8 +106,7 @@ open fun isBasketEmpty()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "isBasketEmpty()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "isBasketEmpty()", e)
 
                                     }
                                 
@@ -134,8 +132,7 @@ open fun addItemToBasket()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "addItemToBasket", 
+    var method: Method = anyType!!::class.getMethod("addItemToBasket", 
                             null)!!
             
 
@@ -163,8 +160,7 @@ open fun addItemToBasket()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "addItemToBasket()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "addItemToBasket()", e)
 
                                     }
                                 
@@ -190,8 +186,7 @@ open fun removeItemFromBasket()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "removeItemFromBasket", 
+    var method: Method = anyType!!::class.getMethod("removeItemFromBasket", 
                             null)!!
             
 
@@ -219,8 +214,7 @@ open fun removeItemFromBasket()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "removeItemFromBasket()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeItemFromBasket()", e)
 
                                     }
                                 
@@ -246,8 +240,7 @@ open fun adjustBasket()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "adjustBasket", 
+    var method: Method = anyType!!::class.getMethod("adjustBasket", 
                             null)!!
             
 
@@ -275,8 +268,7 @@ open fun adjustBasket()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "adjustBasket()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "adjustBasket()", e)
 
                                     }
                                 
@@ -315,8 +307,7 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                         if(!this.addItemToBasket())
                         
                                     {
-                                    this.pageContext!!.getOut()!!.println(
-                            "Item is not currently being sold.<p/>")
+                                    this.pageContext!!.getOut()!!.println("Item is not currently being sold.<p/>")
 
                                     }
                                 

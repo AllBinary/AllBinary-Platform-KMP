@@ -135,8 +135,7 @@ open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
 
                     var repeated = repeated
 logUtil!!.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(keyCode)!!.toString(), this, 
-                            "onEvent")
+                            append(commonStrings!!.START)!!.append(keyCode)!!.toString(), this, "onEvent")
 this.keyPressed(keyCode, deviceId)
 }
 

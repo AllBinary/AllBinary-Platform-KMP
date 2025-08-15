@@ -236,11 +236,9 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failed To Get Instance: ")
+stringBuffer!!.append("Failed To Get Instance: ")
 stringBuffer!!.append(propertiesHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as String)
-stringBuffer!!.append(
-                            "->TransformFactory")
+stringBuffer!!.append("->TransformFactory")
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
                                     }
@@ -271,8 +269,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Creating Transform: " +transformInfoInterface!!.getName(), this, 
-                            "getInstance(TransformInfoInterface)")
+                                    logUtil!!.put("Creating Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
 
                                     }
                                 
@@ -285,8 +282,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Created Transform: " +transformInfoInterface!!.getName(), this, 
-                            "getInstance(TransformInfoInterface)")
+                                    logUtil!!.put("Created Transform: " +transformInfoInterface!!.getName(), this, "getInstance(TransformInfoInterface)")
 
                                     }
                                 
@@ -301,8 +297,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(TransformInfoInterface)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(TransformInfoInterface)", e)
 
                                     }
                                 

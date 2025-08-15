@@ -143,16 +143,14 @@ viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "getProduct", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "getProduct", e)
 
                                     }
                                 
 
 
 
-                            throw Exception(
-                            "Failed to getProduct")
+                            throw Exception("Failed to getProduct")
 }
 
 }

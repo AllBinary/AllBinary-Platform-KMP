@@ -106,8 +106,7 @@ open fun getInputAutomationRobotChangeListener(context: BundleContext)
                                     null
                                 )
                         
-                                    throw Exception(
-                            "No Service For ServiceReference")
+                                    throw Exception("No Service For ServiceReference")
 
 
 
@@ -117,8 +116,7 @@ open fun getInputAutomationRobotChangeListener(context: BundleContext)
                                     }
                                 
                         else {
-                            logUtil!!.put("No ServiceReference: " +InputAutomationRobotChangeListener::classgetName(), this, 
-                            "getInputAutomationRobotChangeListener")
+                            logUtil!!.put("No ServiceReference: " +InputAutomationRobotChangeListener::classgetName(), this, "getInputAutomationRobotChangeListener")
 
 
 
@@ -137,8 +135,7 @@ open fun addRobots(context: BundleContext)
                     var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "addRobots")
+            logUtil!!.put(this.commonStrings!!.START, this, "addRobots")
 
     var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = this.getInputAutomationRobotChangeListener(context)!!
             
@@ -168,8 +165,7 @@ inputAutomationRobotChangeListener!!.onAdd(inputAutomationRobotChangeEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "addModules")
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
 }
@@ -182,8 +178,7 @@ open fun removeRobots(context: BundleContext)
                     var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "removeRobots")
+            logUtil!!.put(this.commonStrings!!.START, this, "removeRobots")
 
     var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = this.getInputAutomationRobotChangeListener(context)!!
             
@@ -213,8 +208,7 @@ inputAutomationRobotChangeListener!!.onRemove(inputAutomationRobotChangeEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "removeRobots")
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeRobots")
 }
 
 }
@@ -240,8 +234,7 @@ open fun stop(context: BundleContext)
 {
 
                     var context = context
-logUtil!!.put(
-                            "Stop", this, this.commonStrings!!.START)
+logUtil!!.put("Stop", this, this.commonStrings!!.START)
 this.removeRobots(context)
 }
 

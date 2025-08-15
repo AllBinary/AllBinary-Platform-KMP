@@ -73,9 +73,7 @@ open fun accept(f: File)
 
 
     
-                        if(ext.equals(
-                            "jpg") || ext.equals(
-                            "jpeg"))
+                        if(ext.equals("jpg") || ext.equals("jpeg"))
                         
 
 

@@ -93,8 +93,7 @@ open fun setDefault(choiceGroup: ChoiceGroup)
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
             
 
-stringBuffer!!.append(
-                            "Multiple Total Choices: ")
+stringBuffer!!.append("Multiple Total Choices: ")
 stringBuffer!!.append(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
@@ -172,8 +171,7 @@ open fun updateMultiple(choiceGroup: ChoiceGroup)
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
             
 
-stringBuffer!!.append(
-                            "Multiple Total Choices: ")
+stringBuffer!!.append("Multiple Total Choices: ")
 stringBuffer!!.append(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
@@ -253,8 +251,7 @@ open fun updateExclusive(choiceGroup: ChoiceGroup)
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
             
 
-stringBuffer!!.append(
-                            "Exclusive Total Choices: 1==")
+stringBuffer!!.append("Exclusive Total Choices: 1==")
 stringBuffer!!.append(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
@@ -336,8 +333,7 @@ open fun updateExclusive(selectedChoiceLabel: String)
 
                     var selectedChoiceLabel = selectedChoiceLabel
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(selectedChoiceLabel)!!.toString(), this, 
-                            "updateExclusive")
+                            append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(selectedChoiceLabel)!!.toString(), this, "updateExclusive")
 
     var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
             

@@ -90,9 +90,7 @@ open fun notifyStoreAdmin()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "notifyStoreAdmin", this, 
-                            "notifyStoreAdmin")
+                                    logUtil!!.put("notifyStoreAdmin", this, "notifyStoreAdmin")
 
                                     }
                                 
@@ -119,8 +117,7 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "emailAdmin", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "emailAdmin", e)
 
                                     }
                                 
@@ -140,9 +137,7 @@ open fun notifyUser()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "Email User", this, 
-                            "notifyUser()")
+                                    logUtil!!.put("Email User", this, "notifyUser()")
 
                                     }
                                 
@@ -169,8 +164,7 @@ userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, ema
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "notifyUser", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "notifyUser", e)
 
                                     }
                                 

@@ -79,8 +79,7 @@ open fun getCurrentLocation()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "getCurrentLocation", 
+    var method: Method = anyType!!::class.getMethod("getCurrentLocation", 
                             null)!!
             
 
@@ -108,8 +107,7 @@ open fun getCurrentLocation()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getCurrentLocation()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getCurrentLocation()", e)
 
                                     }
                                 
@@ -135,8 +133,7 @@ open fun getCurrentHomeLocation()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "getCurrentHomeLocation", 
+    var method: Method = anyType!!::class.getMethod("getCurrentHomeLocation", 
                             null)!!
             
 
@@ -164,8 +161,7 @@ open fun getCurrentHomeLocation()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getCurrentHomeLocation()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getCurrentHomeLocation()", e)
 
                                     }
                                 

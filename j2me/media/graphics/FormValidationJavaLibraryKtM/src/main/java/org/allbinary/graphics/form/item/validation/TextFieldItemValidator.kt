@@ -149,8 +149,7 @@ override fun toList()
                         
                                     {
                                     list.add(StringMaker().
-                            append(name)!!.append(
-                            " is to short")!!.toString())
+                            append(name)!!.append(" is to short")!!.toString())
 
                                     }
                                 
@@ -160,8 +159,7 @@ override fun toList()
                         
                                     {
                                     list.add(StringMaker().
-                            append(name)!!.append(
-                            " is to long")!!.toString())
+                            append(name)!!.append(" is to long")!!.toString())
 
                                     }
                                 

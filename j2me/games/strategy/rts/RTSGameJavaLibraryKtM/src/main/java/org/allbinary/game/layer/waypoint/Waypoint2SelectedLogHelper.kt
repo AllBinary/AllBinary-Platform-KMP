@@ -108,8 +108,7 @@ stringBuffer!!.append(CLOSE_RANGE)
 stringBuffer!!.append(closeRange)
 stringBuffer!!.append(SENSOR_RANGE)
 stringBuffer!!.append(sensorRange)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: initRange")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: initRange")
 }
 
 
@@ -181,11 +180,9 @@ stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
 stringBuffer!!.append(ENEMY_POSSIBLE_TARGET)
 stringBuffer!!.append(layerInterface!!.getName())
-stringBuffer!!.append(
-                            " anotherTargetDistance: ")
+stringBuffer!!.append(" anotherTargetDistance: ")
 stringBuffer!!.append(anotherTargetDistance)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processPossibleTarget2")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget2")
 }
 
 
@@ -211,11 +208,9 @@ stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
 stringBuffer!!.append(ENEMY_POSSIBLE_TARGET)
 stringBuffer!!.append(layerInterface!!.getName())
-stringBuffer!!.append(
-                            " anotherTargetDistance: ")
+stringBuffer!!.append(" anotherTargetDistance: ")
 stringBuffer!!.append(anotherTargetDistance)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processPossibleTarget3")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget3")
 }
 
 
@@ -239,17 +234,13 @@ open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, wa
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(waypointBehaviorBase!!.getName())
-stringBuffer!!.append(
-                            " targeting: ")
+stringBuffer!!.append(" targeting: ")
 stringBuffer!!.append(layerInterface!!.getName())
-stringBuffer!!.append(
-                            " at: ")
+stringBuffer!!.append(" at: ")
 stringBuffer!!.append(anotherTargetDistance)
-stringBuffer!!.append(
-                            " instead of: ")
+stringBuffer!!.append(" instead of: ")
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetingStateString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: setTarget")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTarget")
 }
 
 
@@ -258,9 +249,7 @@ open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface
 {
 
                     var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(
-                            "Target Destroyed", this, 
-                            "selected: setTargetPath")
+logUtil!!.put("Target Destroyed", this, "selected: setTargetPath")
 }
 
 
@@ -276,13 +265,11 @@ open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(
-                            " Set Path To Target: ")
+stringBuffer!!.append(" Set Path To Target: ")
 stringBuffer!!.append(waypointBehaviorBase!!.getCurrentTargetLayerInterface()!!.getName())
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentTargetLayerInterface()))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: setTargetPath")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTargetPath")
 }
 
 
@@ -304,23 +291,17 @@ open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfa
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(
-                            " Size: ")
+stringBuffer!!.append(" Size: ")
 stringBuffer!!.append(size)
-stringBuffer!!.append(
-                            " Waypoint: ")
+stringBuffer!!.append(" Waypoint: ")
 stringBuffer!!.append(targetLayer!!.getName())
-stringBuffer!!.append(
-                            " Target: ")
+stringBuffer!!.append(" Target: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentTargetLayerInterface()))
-stringBuffer!!.append(
-                            " isTrackingWaypoint: ")
+stringBuffer!!.append(" isTrackingWaypoint: ")
 stringBuffer!!.append(waypointBehaviorBase!!.isTrackingWaypoint())
-stringBuffer!!.append(
-                            " WaypointOverridesAttacking: ")
+stringBuffer!!.append(" WaypointOverridesAttacking: ")
 stringBuffer!!.append(waypointBehaviorBase!!.isWaypointOverridesAttacking())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processWaypoint")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
 
@@ -336,17 +317,13 @@ open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayer
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(
-                            " currentPathGeographicMapCellPosition: ")
+stringBuffer!!.append(" currentPathGeographicMapCellPosition: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentPathGeographicMapCellPosition()))
-stringBuffer!!.append(
-                            " nextUnvisitedPathGeographicMapCellPosition: ")
+stringBuffer!!.append(" nextUnvisitedPathGeographicMapCellPosition: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()))
-stringBuffer!!.append(
-                            " Tracked: ")
+stringBuffer!!.append(" Tracked: ")
 stringBuffer!!.append(stringUtil!!.toString(waypointBehaviorBase!!.getCurrentGeographicMapCellHistory()!!.getTracked()))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processWaypoint")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
 
@@ -362,11 +339,9 @@ open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayer
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(
-                            " Visited: ")
+stringBuffer!!.append(" Visited: ")
 stringBuffer!!.append(stringUtil!!.toString(geographicMapCellPosition))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processWaypoint")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 }
 
 
@@ -379,8 +354,7 @@ open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: P
 
                     var reason = reason
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(reason)!!.toString(), this, 
-                            "turnTo")
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(reason)!!.toString(), this, "turnTo")
 }
 
 
@@ -389,8 +363,7 @@ open fun wander(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
 {
 
                     var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
-logUtil!!.put(associatedAdvancedRTSGameLayer!!.getName(), this, 
-                            "wander")
+logUtil!!.put(associatedAdvancedRTSGameLayer!!.getName(), this, "wander")
 }
 
 
@@ -400,9 +373,7 @@ open fun targetDestroyed(associatedAdvancedRTSGameLayer: PathFindingLayerInterfa
 
                     var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(
-                            " Target Destroyed")!!.toString(), this, 
-                            "selected: processTargeting")
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Target Destroyed")!!.toString(), this, "selected: processTargeting")
 }
 
 
@@ -427,8 +398,7 @@ stringBuffer!!.append(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
 stringBuffer!!.append(dy)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processTargeting")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 }
 
 
@@ -447,15 +417,13 @@ open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFinding
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(
-                            " Targeting Non Waypoint ")
+stringBuffer!!.append(" Targeting Non Waypoint ")
 stringBuffer!!.append(positionStrings!!.DX_LABEL)
 stringBuffer!!.append(dx)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(positionStrings!!.DY_LABEL)
 stringBuffer!!.append(dy)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: processTargeting")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 }
 
 
@@ -479,14 +447,11 @@ open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfac
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(unitWaypointBehavior2!!.getName())
-stringBuffer!!.append(
-                            " remove: ")
+stringBuffer!!.append(" remove: ")
 stringBuffer!!.append(waypointLayer!!.getName())
-stringBuffer!!.append(
-                            " because: ")
+stringBuffer!!.append(" because: ")
 stringBuffer!!.append(reason)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: removeWaypoint")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
 }
 
 
@@ -507,11 +472,9 @@ open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterfac
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(unitWaypointBehavior2!!.getName())
-stringBuffer!!.append(
-                            " Waypoints: ")
+stringBuffer!!.append(" Waypoints: ")
 stringBuffer!!.append(stringUtil!!.toString(list))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: removeWaypoint")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
 }
 
 
@@ -521,9 +484,7 @@ open fun removeWaypointClear(associatedAdvancedRTSGameLayer: PathFindingLayerInt
 
                     var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(
-                            " Clearing removed waypoint")!!.toString(), this, 
-                            "selected: removeWaypoint")
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Clearing removed waypoint")!!.toString(), this, "selected: removeWaypoint")
 }
 
 
@@ -533,9 +494,7 @@ open fun clearTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
 
                     var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(
-                            " Cleared Target")!!.toString(), this, 
-                            "selected: clearTarget")
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Cleared Target")!!.toString(), this, "selected: clearTarget")
 }
 
 
@@ -551,8 +510,7 @@ open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInt
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(associatedAdvancedRTSGameLayer!!.getName())
-stringBuffer!!.append(
-                            " Adding Waypoint to Selected: ")
+stringBuffer!!.append(" Adding Waypoint to Selected: ")
 stringBuffer!!.append(advancedRTSGameLayer!!.getName())
 
     
@@ -561,14 +519,12 @@ stringBuffer!!.append(advancedRTSGameLayer!!.getName())
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            " With Parent: ")
+                                    stringBuffer!!.append(" With Parent: ")
 stringBuffer!!.append(advancedRTSGameLayer!!.getParentLayer()!!.getName())
 
                                     }
                                 
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selected: onWaypointEvent")
+logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 }
 
 
@@ -578,9 +534,7 @@ open fun targetMovedSoRetarget(associatedAdvancedRTSGameLayer: PathFindingLayerI
 
                     var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
-                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(
-                            " - target moved so retargeting")!!.toString(), this, 
-                            "turnTo")
+                            append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" - target moved so retargeting")!!.toString(), this, "turnTo")
 }
 
 

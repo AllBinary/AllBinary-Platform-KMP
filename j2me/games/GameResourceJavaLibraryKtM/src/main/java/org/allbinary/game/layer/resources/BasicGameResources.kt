@@ -81,8 +81,7 @@ open fun init(ROOT: String, SIZE: Array<String?>)
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "Invalid Value: ")!!.append(scale)!!.toString())
+                            append("Invalid Value: ")!!.append(scale)!!.toString())
 
                         }
                             

@@ -55,14 +55,11 @@ open fun getInstance()
         
     var NONE: GameType = GameType(StringUtil.getInstance()!!.NULL_STRING)
 
-    var SINGLE_PLAYER: GameType = GameType(
-                            "Single Player")
+    var SINGLE_PLAYER: GameType = GameType("Single Player")
 
-    var MULTI_PLAYER: GameType = GameType(
-                            "Multi Player")
+    var MULTI_PLAYER: GameType = GameType("Multi Player")
 
-    var BOT: GameType = GameType(
-                            "Artificial Player")
+    var BOT: GameType = GameType("Artificial Player")
 
 }
                 

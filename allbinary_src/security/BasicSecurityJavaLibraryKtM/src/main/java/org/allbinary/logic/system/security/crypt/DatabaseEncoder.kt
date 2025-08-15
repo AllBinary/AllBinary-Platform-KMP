@@ -84,9 +84,7 @@ open fun encode(value: ByteArray)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, 
-                            "DatabaseEncoder", 
-                            "decode", e)
+PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
 
 
@@ -163,9 +161,7 @@ decodeIndex++
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, 
-                            "DatabaseEncoder", 
-                            "decode", e)
+PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
 
 

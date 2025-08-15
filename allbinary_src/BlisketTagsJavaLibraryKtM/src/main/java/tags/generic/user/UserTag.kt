@@ -65,10 +65,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT +org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Edit Session Validation User View - i.e. User Profile Edit")
-this.setObjectFile(
-                            "views.generic.user.EditValidationView")
+                                    this.setName("Edit Session Validation User View - i.e. User Profile Edit")
+this.setObjectFile("views.generic.user.EditValidationView")
 
                                     }
                                 
@@ -77,10 +75,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "New User View")
-this.setObjectFile(
-                            "views.generic.user.NewUserView")
+                                    this.setName("New User View")
+this.setObjectFile("views.generic.user.NewUserView")
 
                                     }
                                 
@@ -89,10 +85,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Add Validation User View")
-this.setObjectFile(
-                            "views.generic.user.AddValidationUserView")
+                                    this.setName("Add Validation User View")
+this.setObjectFile("views.generic.user.AddValidationUserView")
 
                                     }
                                 
@@ -101,10 +95,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation User View")
-this.setObjectFile(
-                            "views.generic.user.ViewValidationUserView")
+                                    this.setName("Validation User View")
+this.setObjectFile("views.generic.user.ViewValidationUserView")
 
                                     }
                                 
@@ -113,10 +105,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation User View")
-this.setObjectFile(
-                            "views.generic.user.EditValidationUserView")
+                                    this.setName("Validation User View")
+this.setObjectFile("views.generic.user.EditValidationUserView")
 
                                     }
                                 
@@ -125,10 +115,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.UPDATE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Update Validation User View")
-this.setObjectFile(
-                            "views.generic.user.UpdateValidationUserView")
+                                    this.setName("Update Validation User View")
+this.setObjectFile("views.generic.user.UpdateValidationUserView")
 
                                     }
                                 
@@ -137,10 +125,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Delete Validation User View")
-this.setObjectFile(
-                            "views.generic.user.DeleteValidationUserView")
+                                    this.setName("Delete Validation User View")
+this.setObjectFile("views.generic.user.DeleteValidationUserView")
 
                                     }
                                 
@@ -152,8 +138,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -165,8 +150,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -178,8 +162,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -191,8 +174,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -215,8 +197,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: Exception)
             {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 

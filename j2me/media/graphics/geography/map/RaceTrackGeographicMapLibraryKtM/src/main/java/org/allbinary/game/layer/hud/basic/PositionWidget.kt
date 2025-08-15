@@ -52,8 +52,7 @@ stringBuffer!!.append(position.toString())
                         if(position == 1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "st")
+                                    stringBuffer!!.append("st")
 
                                     }
                                 
@@ -62,8 +61,7 @@ stringBuffer!!.append(position.toString())
                         if(position == 2)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "nd")
+                                    stringBuffer!!.append("nd")
 
                                     }
                                 
@@ -72,14 +70,12 @@ stringBuffer!!.append(position.toString())
                         if(position == 3)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "rd")
+                                    stringBuffer!!.append("rd")
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "th")
+                            stringBuffer!!.append("th")
 
                         }
                             

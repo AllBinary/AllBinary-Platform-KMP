@@ -100,8 +100,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "create()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
 
                                     }
                                 
@@ -135,8 +134,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "restore()")
+                                    logUtil!!.put(success, this, "restore()")
 
                                     }
                                 
@@ -154,8 +152,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "restore()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
 
                                     }
                                 
@@ -185,8 +182,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "backup()")
+                                    logUtil!!.put(success, this, "backup()")
 
                                     }
                                 
@@ -204,8 +200,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "backup()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
 
                                     }
                                 

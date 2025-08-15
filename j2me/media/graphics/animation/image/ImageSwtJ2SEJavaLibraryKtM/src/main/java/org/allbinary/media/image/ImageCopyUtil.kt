@@ -732,8 +732,7 @@ getImage.
                             
 
 
-                            throw Exception(
-                            "Not Mutable")
+                            throw Exception("Not Mutable")
 
                         }
                             

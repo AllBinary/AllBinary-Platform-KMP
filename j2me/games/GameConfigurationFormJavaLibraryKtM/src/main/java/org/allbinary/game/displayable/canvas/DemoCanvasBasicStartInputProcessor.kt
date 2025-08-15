@@ -74,8 +74,7 @@ public constructor        (gameKeyEventList: BasicArrayList, gameCanvas: Runnabl
 
         {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 logUtil!!.put(StringMaker().
-                            append(
-                            "Start GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKeyEvent))!!.toString(), this, GameInputStrings.getInstance()!!.PROCESS_INPUT)
+                            append("Start GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKeyEvent))!!.toString(), this, GameInputStrings.getInstance()!!.PROCESS_INPUT)
 }
 
 this.getCanvas()!!.getCustomCommandListener()!!.commandAction(GameCommandsFactory.getInstance()!!.START_COMMAND, NullCanvas.NULL_CANVAS)

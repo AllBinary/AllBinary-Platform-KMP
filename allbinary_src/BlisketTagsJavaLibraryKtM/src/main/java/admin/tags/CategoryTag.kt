@@ -72,8 +72,7 @@ open fun viewCategory()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "viewCategory", 
+    var method: Method = helperClass!!.getMethod("viewCategory", 
                             null)!!
             
 
@@ -101,8 +100,7 @@ open fun viewCategory()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "viewCategory()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewCategory()", e)
 
                                     }
                                 
@@ -132,8 +130,7 @@ open fun viewCategories()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "viewCategories", 
+    var method: Method = helperClass!!.getMethod("viewCategories", 
                             null)!!
             
 
@@ -161,8 +158,7 @@ open fun viewCategories()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "viewCategories()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewCategories()", e)
 
                                     }
                                 

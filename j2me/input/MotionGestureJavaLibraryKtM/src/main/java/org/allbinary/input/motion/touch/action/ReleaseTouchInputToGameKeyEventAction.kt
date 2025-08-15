@@ -56,8 +56,7 @@ open fun getInstance()
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 private constructor        ()                        
 
-                            : super(
-                            "Release Action", TouchMotionGestureFactory.getInstance()!!.RELEASED, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+                            : super("Release Action", TouchMotionGestureFactory.getInstance()!!.RELEASED, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
                             //For kotlin this is before the body of the constructor.
                     

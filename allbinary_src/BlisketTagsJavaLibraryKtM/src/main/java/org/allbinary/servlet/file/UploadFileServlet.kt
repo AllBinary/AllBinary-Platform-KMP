@@ -128,18 +128,14 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
                         
                                     {
                                     this.saveFile(filePath)
-response.setContentType(
-                            "text/plain")
-response.getOutputStream()!!.write(
-                                //Otherwise - scopeIdentifier - StringLiteralExpr
-encodeToByteArray())
+response.setContentType("text/plain")
+response.getOutputStream()!!.write("OK!"encodeToByteArray())
 
                                     }
                                 
                         else {
                             isError= true
-response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
-                            "You are not Authorized")
+response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "You are not Authorized")
 
                         }
                             
@@ -148,8 +144,7 @@ response.sendError(HttpServletResponse.SC_UNAUTHORIZED,
                                 
                         else {
                             isError= true
-response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
-                            "Please Login")
+response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Please Login")
 
                         }
                             
@@ -159,8 +154,7 @@ response.sendError(HttpServletResponse.SC_UNAUTHORIZED,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "processRequest()", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)
 
                                     }
                                 
@@ -219,9 +213,7 @@ open fun saveFile(filePath: String)
                                     this.fileName= HttpRequestUtil.getInstance()!!.generateFileName(fileItem!!.getName())
 
     
-                        if(filePath!!.endsWith(
-                            "/") || filePath!!.endsWith(
-                            "\\"))
+                        if(filePath!!.endsWith("/") || filePath!!.endsWith("\\"))
                         
                                     {
                                     filePath= filePath +this.fileName
@@ -239,14 +231,11 @@ open fun saveFile(filePath: String)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Uploaded File: ")
+stringBuffer!!.append("Uploaded File: ")
 stringBuffer!!.append(this.fileName)
-stringBuffer!!.append(
-                            " New File: ")
+stringBuffer!!.append(" New File: ")
 stringBuffer!!.append(file.getPath())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "saveFile()")
+logUtil!!.put(stringBuffer!!.toString(), this, "saveFile()")
 
                                     }
                                 

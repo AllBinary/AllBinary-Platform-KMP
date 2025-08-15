@@ -49,8 +49,7 @@ override fun add(string: String)
                         
                                     {
                                     this.stringBuffer!!.delete(0, this.stringBuffer!!.length())
-this.stringBuffer!!.append(
-                            "Old Stats Cleared")
+this.stringBuffer!!.append("Old Stats Cleared")
 
                                     }
                                 

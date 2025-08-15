@@ -143,8 +143,7 @@ open fun postDemoSetup()
                 @Throws(Exception::class)
             override fun setDemo()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, 
-                            "setDemo")
+{logUtil!!.put(commonStrings!!.START, this, "setDemo")
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             

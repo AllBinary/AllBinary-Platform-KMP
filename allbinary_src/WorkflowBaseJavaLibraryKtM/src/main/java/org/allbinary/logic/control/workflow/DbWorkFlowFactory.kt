@@ -103,8 +103,7 @@ params[0]= hashMap as Object
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(HashMap)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
                                     }
                                 
@@ -123,8 +122,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this,
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(HashMap)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
                                     }
                                 

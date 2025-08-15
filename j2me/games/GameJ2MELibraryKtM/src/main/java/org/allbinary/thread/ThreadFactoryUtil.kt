@@ -127,8 +127,7 @@ open fun getInstance(runnable: Runnable, type: Int)
     var demoGameSingleThreadStartRunnable: RunnableCanvasSingleThreadStartRunnable = RunnableCanvasSingleThreadStartRunnable(runnable as RunnableCanvas)
 
 PreLogUtil.put(StringMaker().
-                            append(
-                            "Using Pseudo Thread for DemoCanvas/AllBinaryGameCanvas under PlayN/HTML5: ")!!.append(StringUtil.getInstance()!!.toString(runnable))!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Using Pseudo Thread for DemoCanvas/AllBinaryGameCanvas under PlayN/HTML5: ")!!.append(StringUtil.getInstance()!!.toString(runnable))!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 
     var primaryThreadPool: ThreadPool = PrimaryThreadPool.getInstance()!!
             
@@ -139,8 +138,7 @@ primaryThreadPool!!.runTask(demoGameSingleThreadStartRunnable)
                                 
                         else {
                             PreLogUtil.put(StringMaker().
-                            append(
-                            "Using Pseudo Thread for Runnable under PlayN/HTML5: ")!!.append(StringUtil.getInstance()!!.toString(runnable))!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Using Pseudo Thread for Runnable under PlayN/HTML5: ")!!.append(StringUtil.getInstance()!!.toString(runnable))!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 
     var primaryThreadPool: ThreadPool = PrimaryThreadPool.getInstance()!!
             

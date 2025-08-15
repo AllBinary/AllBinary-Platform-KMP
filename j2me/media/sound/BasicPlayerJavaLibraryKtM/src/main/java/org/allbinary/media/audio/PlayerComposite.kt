@@ -131,8 +131,7 @@ override fun prefetch()
         try {
             this.player.prefetch()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "prefetch", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
 }
 
 }
@@ -143,8 +142,7 @@ override fun realize()
         try {
             this.player.realize()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "realize", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
 }
 
 }
@@ -179,8 +177,7 @@ override fun setMediaTime(now: Long)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.setMediaTime(now)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setMediaTime", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
 
 
@@ -218,8 +215,7 @@ override fun stop()
         try {
             this.player.stop()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "stop", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }

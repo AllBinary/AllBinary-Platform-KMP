@@ -137,11 +137,9 @@ open fun createTable(tableData: String)
             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Creating Table: ")
+stringBuffer!!.append("Creating Table: ")
 stringBuffer!!.append(tableData)
-PreLogUtil.put(stringBuffer!!.toString(), INIT_SQL, 
-                            "createTable()")
+PreLogUtil.put(stringBuffer!!.toString(), INIT_SQL, "createTable()")
 this.executeSQLStatement(tableData)
 
 
@@ -154,8 +152,7 @@ this.executeSQLStatement(tableData)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, 
-                            "createTable()", e)
+                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createTable()", e)
 
                                     }
                                 
@@ -188,8 +185,7 @@ open fun dropTable()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, 
-                            "dropTables()", e)
+                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "dropTables()", e)
 
                                     }
                                 
@@ -601,8 +597,7 @@ stmt.close()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, 
-                            "executeSQLStatement()", e)
+                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e)
 
                                     }
                                 
@@ -617,8 +612,7 @@ stmt.close()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, 
-                            "executeSQLStatement()", e)
+                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "executeSQLStatement()", e)
 
                                     }
                                 
@@ -652,8 +646,7 @@ open fun createConnection()
                         }
                             
 } catch(se: SQLException)
-            {PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, 
-                            "createConnection()", se)
+            {PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", se)
 
 
 
@@ -676,10 +669,7 @@ open fun initialize()
             
 
 PreLogUtil.put(StringBuilder().
-                            append(
-                            "Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.qualifiedName!!)!!.append(
-                            " Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, 
-                            "initialize()")
+                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.qualifiedName!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
 Class.forName(jdbcDriver)!!.newInstance()
 } catch(e: Exception)
             {
@@ -687,8 +677,7 @@ Class.forName(jdbcDriver)!!.newInstance()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put("LoadDriver Failed: " +this.databaseConnectionInfoInterface!!.getJdbcDriver(), INIT_SQL, 
-                            "initialize()", e)
+                                    PreLogUtil.put("LoadDriver Failed: " +this.databaseConnectionInfoInterface!!.getJdbcDriver(), INIT_SQL, "initialize()", e)
 
                                     }
                                 
@@ -718,8 +707,7 @@ this.createConnection()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, 
-                            "initialize()", se)
+                                    PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "initialize()", se)
 
                                     }
                                 

@@ -99,14 +99,11 @@ open fun debugDamage(collidableInterfaceCompositeInterface1: CollidableComposite
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Collision ")
+stringBuffer!!.append("Collision ")
 stringBuffer!!.append(collidableInterfaceCompositeInterface1!!.toString())
-stringBuffer!!.append(
-                            " with: ")
+stringBuffer!!.append(" with: ")
 stringBuffer!!.append(collidableInterfaceCompositeInterface!!.toString())
-stringBuffer!!.append(
-                            " damage: ")
+stringBuffer!!.append(" damage: ")
 stringBuffer!!.append(damage)
 logUtil!!.put(stringBuffer!!.toString(), collidableInterfaceCompositeInterface1, COLLIDE)
 

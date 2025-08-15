@@ -185,8 +185,7 @@ override fun setValue(value: Int)
             super.setValue(value)
 this.progressActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setValue", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }

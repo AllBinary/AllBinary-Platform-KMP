@@ -52,17 +52,11 @@ open fun getInstance()
             {
             }            
         
-    val HTML: AcceptableResponse = AcceptableResponse(
-                            "text/html", 
-                            "html", 0)
+    val HTML: AcceptableResponse = AcceptableResponse("text/html", "html", 0)
 
-    val WML: AcceptableResponse = AcceptableResponse(
-                            "text/wml", 
-                            "wml", 1)
+    val WML: AcceptableResponse = AcceptableResponse("text/wml", "wml", 1)
 
-    val VXML: AcceptableResponse = AcceptableResponse(
-                            "text/vxml", 
-                            "vxml", 2)
+    val VXML: AcceptableResponse = AcceptableResponse("text/vxml", "vxml", 2)
 
 }
                 

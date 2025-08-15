@@ -97,8 +97,7 @@ open fun onTechEvent(event: AllBinaryEventObject)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onTechEvent", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onTechEvent", e)
 }
 
 }

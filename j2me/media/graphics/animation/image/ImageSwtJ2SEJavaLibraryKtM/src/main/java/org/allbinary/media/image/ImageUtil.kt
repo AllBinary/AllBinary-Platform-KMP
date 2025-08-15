@@ -370,9 +370,7 @@ logUtil!!.put(StringMaker().
                                     dx= (newWidth -width) /2
 dy= (newHeight -height) /2
 logUtil!!.put(StringMaker().
-                            append(
-                            "Translate dx: ")!!.append(dx)!!.append(
-                            " dy: ")!!.append(dy)!!.toString(), this, CREATE_BUFFERED_IMAGE)
+                            append("Translate dx: ")!!.append(dx)!!.append(" dy: ")!!.append(dy)!!.toString(), this, CREATE_BUFFERED_IMAGE)
 
                                     }
                                 
@@ -469,14 +467,12 @@ open fun toString(bufferedImage: org.eclipse.swt.graphics.Image)
     var imageData: ImageData = bufferedImage!!.getImageData()!!
             
 
-stringBuffer!!.append(
-                            " org.eclipse.swt.graphics.Image: ")
+stringBuffer!!.append(" org.eclipse.swt.graphics.Image: ")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
 stringBuffer!!.append(imageData!!.width)
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.append(imageData!!.height)
-stringBuffer!!.append(
-                            " Type: ")
+stringBuffer!!.append(" Type: ")
 stringBuffer!!.append(imageData!!.type)
 
 

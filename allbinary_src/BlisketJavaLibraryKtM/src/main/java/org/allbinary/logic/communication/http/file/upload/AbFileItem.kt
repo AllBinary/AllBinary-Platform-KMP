@@ -165,8 +165,7 @@ open fun getString()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getString", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getString", e)
 
                                     }
                                 
@@ -210,8 +209,7 @@ open fun write(file: AbFile)
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-{ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, 
-                            "delete()")
+{ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, "delete()")
 }
 
 

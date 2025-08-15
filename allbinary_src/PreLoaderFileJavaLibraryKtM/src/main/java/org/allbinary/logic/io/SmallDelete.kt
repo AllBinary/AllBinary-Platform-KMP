@@ -106,8 +106,7 @@ idOutData!!.writeBytes(text)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "deleteAtStart", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "deleteAtStart", e)
 
                                     }
                                 
@@ -179,8 +178,7 @@ idOutData!!.writeBytes(newStart +newText +text)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "deleteAtStart", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "deleteAtStart", e)
 
                                     }
                                 

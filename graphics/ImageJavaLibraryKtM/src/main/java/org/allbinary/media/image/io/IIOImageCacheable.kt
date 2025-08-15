@@ -93,8 +93,7 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.qualifiedName!!)
-stringBuffer!!.append(
-                            " Reusable IIOImage")
+stringBuffer!!.append(" Reusable IIOImage")
 
 
 

@@ -67,8 +67,7 @@ open fun insert()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "insert()")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "insert()")
 
                                     }
                                 
@@ -84,8 +83,7 @@ adminConfigurationInterface!!.write()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "insert()")
+                                    logUtil!!.put(success, this, "insert()")
 
                                     }
                                 
@@ -103,8 +101,7 @@ adminConfigurationInterface!!.write()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "insert()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insert()", e)
 
                                     }
                                 
@@ -130,8 +127,7 @@ open fun delete()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "delete()")
+                                    logUtil!!.put(success, this, "delete()")
 
                                     }
                                 
@@ -149,8 +145,7 @@ open fun delete()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 
@@ -179,8 +174,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "update()")
+                                    logUtil!!.put(success, this, "update()")
 
                                     }
                                 
@@ -198,8 +192,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 

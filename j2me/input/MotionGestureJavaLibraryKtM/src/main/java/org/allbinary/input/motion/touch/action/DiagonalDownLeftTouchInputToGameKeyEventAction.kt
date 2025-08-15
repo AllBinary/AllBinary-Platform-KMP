@@ -49,8 +49,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(
-                            "Diagonal Down Left Action", TouchMotionGestureFactory.getInstance()!!.DIAGONAL_DOWN_LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+                            : super("Diagonal Down Left Action", TouchMotionGestureFactory.getInstance()!!.DIAGONAL_DOWN_LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
                             //For kotlin this is before the body of the constructor.
                     

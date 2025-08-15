@@ -116,11 +116,9 @@ params[0]= transformInfoInterface as Object
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "\nNo Such View Name: ")
+stringBuffer!!.append("\nNo Such View Name: ")
 stringBuffer!!.append(transformInfoInterface!!.getName())
-stringBuffer!!.append(
-                            "\nNo Such View Object: ")
+stringBuffer!!.append("\nNo Such View Object: ")
 stringBuffer!!.append(transformInfoInterface!!.getObjectFile())
 
 
@@ -133,8 +131,7 @@ stringBuffer!!.append(transformInfoInterface!!.getObjectFile())
                             
 
 
-                            throw Exception(
-                            "No Such View Object since transformInfo is null")
+                            throw Exception("No Such View Object since transformInfo is null")
 
                         }
                             

@@ -78,8 +78,7 @@ open fun setValue(value: String)
 
 
 
-                            throw Exception(
-                            "No Value Allowed")
+                            throw Exception("No Value Allowed")
 }
 
 
@@ -107,8 +106,7 @@ open fun setRootFilePath(value: String)
 
 
 
-                            throw Exception(
-                            "No Value Allowed")
+                            throw Exception("No Value Allowed")
 }
 
 
@@ -119,8 +117,7 @@ open fun getRootFilePath()
 : AbPath{
 
 
-                            throw Exception(
-                            "No Value Allowed")
+                            throw Exception("No Value Allowed")
 }
 
 
@@ -131,8 +128,7 @@ open fun isRealRoot()
 : Boolean{
 
 
-                            throw Exception(
-                            "No A Real Root")
+                            throw Exception("No A Real Root")
 }
 
 
@@ -143,8 +139,7 @@ open fun isRoot()
 : Boolean{
 
 
-                            throw Exception(
-                            "Root but not implemented")
+                            throw Exception("Root but not implemented")
 }
 
 
@@ -158,8 +153,7 @@ open fun getWebAppPath(categoryHierarchyInterface: CategoryHierarchyInterface)
 
 
 
-                            throw Exception(
-                            "Not Root")
+                            throw Exception("Not Root")
 }
 
 

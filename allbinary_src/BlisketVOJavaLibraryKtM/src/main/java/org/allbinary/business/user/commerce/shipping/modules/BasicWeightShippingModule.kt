@@ -61,8 +61,7 @@ open fun getCost(order: OrderInterface)
 
 money.add(basket.getTotalWeight())
 money.multiply(1)
-money.add(
-                            "3.50")
+money.add("3.50")
 
 
 

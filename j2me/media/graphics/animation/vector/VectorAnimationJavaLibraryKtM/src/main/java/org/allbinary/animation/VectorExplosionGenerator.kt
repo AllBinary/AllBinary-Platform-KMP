@@ -316,8 +316,7 @@ open fun createPointsBasicArrayList(points: Array<IntArray?>)
                                     
 
 
-                            throw Exception(
-                            "Not Points Provided")
+                            throw Exception("Not Points Provided")
 
                                     }
                                 

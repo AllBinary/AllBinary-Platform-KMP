@@ -95,8 +95,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "WorkFlow does not exist.", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("WorkFlow does not exist.", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -119,8 +118,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -148,8 +146,7 @@ open fun validationInfo()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "WorkFlow name is invalid<br />")
+                                    stringBuffer!!.append("WorkFlow name is invalid<br />")
 
                                     }
                                 
@@ -165,14 +162,11 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "WorkFlow does not exist.", this, 
-                            "validationInfo()")
+                                    logUtil!!.put("WorkFlow does not exist.", this, "validationInfo()")
 
                                     }
                                 
-stringBuffer!!.append(
-                            "WorkFlow does not exist<br />")
+stringBuffer!!.append("WorkFlow does not exist<br />")
 
                                     }
                                 
@@ -187,9 +181,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

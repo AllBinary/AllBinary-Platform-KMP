@@ -56,8 +56,7 @@ open public class CryptService
             
 public constructor        ()
             : super()
-        {Globals.getInstance()!!.init(this::class.java.classLoader, 
-                            "./")
+        {Globals.getInstance()!!.init(this::class.java.classLoader, "./")
 logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
@@ -115,7 +114,7 @@ open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, 
         try {
             logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
 
-    var basicTextJDialog: BasicTextJDialog = BasicTextJDialog(e.getMessage())
+    var basicTextJDialog: BasicTextJDialog = BasicTextJDialog(e.message)
 
 
         try {
@@ -133,8 +132,7 @@ open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, 
                         if(abeLicenseInterface!!.isValid())
                         
                                     {
-                                    basicTextJDialog!!.setText(
-                            "Subscription Invalid")
+                                    basicTextJDialog!!.setText("Subscription Invalid")
 
                                     }
                                 

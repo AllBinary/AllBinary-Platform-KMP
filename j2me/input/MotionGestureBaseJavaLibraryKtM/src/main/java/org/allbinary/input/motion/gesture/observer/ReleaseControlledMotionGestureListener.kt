@@ -165,8 +165,7 @@ signed.onMotionGestureCompleted(motionGestureCollection)
 motionGestureCollection!!.clear()
 } catch(e: Exception)
             {logUtil!!.put(StringMaker().
-                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, 
-                            "release", e)
+                            append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, "release", e)
 }
 
 }

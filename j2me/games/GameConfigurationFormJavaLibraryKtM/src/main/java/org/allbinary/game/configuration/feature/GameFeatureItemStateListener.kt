@@ -102,8 +102,7 @@ override fun itemStateChanged(item: Item)
             
 
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, 
-                            "itemStateChanged")
+                            append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
 
     
                         if(item is GameConfigurationGauge)
@@ -144,8 +143,7 @@ logUtil!!.put(StringMaker().
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "itemStateChanged", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
 }
 
 }

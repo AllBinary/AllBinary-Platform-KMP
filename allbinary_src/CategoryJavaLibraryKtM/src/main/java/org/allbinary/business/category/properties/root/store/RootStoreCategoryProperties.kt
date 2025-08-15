@@ -383,11 +383,7 @@ open fun log()
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "filePath = ")!!.append(this.fileAbPath!!.toString())!!.append(
-                            "\npath = ")!!.append(this.abPath!!.toString())!!.append(
-                            "\ncategory = ")!!.append(this.category)!!.toString(), this, 
-                            "log()")
+                            append("filePath = ")!!.append(this.fileAbPath!!.toString())!!.append("\npath = ")!!.append(this.abPath!!.toString())!!.append("\ncategory = ")!!.append(this.category)!!.toString(), this, "log()")
 
                                     }
                                 

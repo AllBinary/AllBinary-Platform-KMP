@@ -52,10 +52,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation Gateway View")
-this.setObjectFile(
-                            "views.admin.payment.gateway.GatewayValidationView")
+                                    this.setName("Validation Gateway View")
+this.setObjectFile("views.admin.payment.gateway.GatewayValidationView")
 
                                     }
                                 
@@ -78,8 +76,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: Exception)
             {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 

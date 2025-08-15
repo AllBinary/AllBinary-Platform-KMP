@@ -117,8 +117,7 @@ this.setProfileActionConditionInterfaceVector(Vector())
                             
 
 
-                            throw Exception(
-                            "Profile Action Script Node Null")
+                            throw Exception("Profile Action Script Node Null")
 
                         }
                             
@@ -137,8 +136,7 @@ open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeI
 {
 
                     var profileActionScriptNodeInterface = profileActionScriptNodeInterface
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "addCondition")
+logUtil!!.put(this.commonStrings!!.START, this, "addCondition")
 this.getProfileActionConditionInterfaceVector()!!.add(profileActionScriptNodeInterface)
 this.add(profileActionScriptNodeInterface)
 }
@@ -149,8 +147,7 @@ open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNo
 {
 
                     var profileActionScriptNodeInterface = profileActionScriptNodeInterface
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "removeCondition")
+logUtil!!.put(this.commonStrings!!.START, this, "removeCondition")
 this.getProfileActionConditionInterfaceVector()!!.remove(profileActionScriptNodeInterface)
 this.remove(profileActionScriptNodeInterface)
 }
@@ -161,8 +158,7 @@ open fun toHashMap()
 : HashMap<Any, Any>{
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 

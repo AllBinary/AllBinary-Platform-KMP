@@ -96,8 +96,7 @@ open fun init(soundsFactoryInterface: SoundsFactoryInterface)
             
 
 logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, 
-                            "Media Manager")
+ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
 }
@@ -204,8 +203,7 @@ open fun createPlayer(stream: InputStream, type: String)
 
 
 
-                            throw MediaException(
-                            "No Impl")
+                            throw MediaException("No Impl")
 }
 
 
@@ -225,8 +223,7 @@ open fun playTone(frequency: Int, time: Int, volume: Int)
 
 
 
-                            throw MediaException(
-                            "No Impl")
+                            throw MediaException("No Impl")
 }
 
 

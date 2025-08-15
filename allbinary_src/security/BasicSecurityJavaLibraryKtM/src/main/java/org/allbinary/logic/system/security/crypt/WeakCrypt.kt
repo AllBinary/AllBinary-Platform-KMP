@@ -59,8 +59,7 @@ public constructor        (key: Int)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "SuperCrypt(key)", e)
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, "SuperCrypt(key)", e)
 }
 
 }
@@ -83,9 +82,7 @@ open fun encrypt(value: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DatabaseEncoder.encode(crypted)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "Encrypt Failed", this, 
-                            "encrypt", e)
+            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -113,9 +110,7 @@ open fun decrypt(value: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return decrypted.decodeToString()
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "decrypt Failed", this, 
-                            "decrypt", e)
+            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 

@@ -73,8 +73,7 @@ open fun getInstance(node: Node)
                             
 
 
-                            throw Exception(
-                            "No Such ActionScript Input")
+                            throw Exception("No Such ActionScript Input")
 
                         }
                             

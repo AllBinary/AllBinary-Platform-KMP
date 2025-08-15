@@ -481,14 +481,11 @@ open fun getMovementLogicAsString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "isTrackingWaypoint: ")
+stringBuffer!!.append("isTrackingWaypoint: ")
 stringBuffer!!.append(this.isTrackingWaypoint())
-stringBuffer!!.append(
-                            " sensorAction: ")
+stringBuffer!!.append(" sensorAction: ")
 stringBuffer!!.append(this.sensorAction!!.name)
-stringBuffer!!.append(
-                            " getCurrentTargetLayerInterface: ")
+stringBuffer!!.append(" getCurrentTargetLayerInterface: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.currentTargetLayerInterface))
 
     
@@ -497,11 +494,9 @@ stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.currentTargetLaye
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            " Target Range: ")
+                                    stringBuffer!!.append(" Target Range: ")
 stringBuffer!!.append(this.getCurrentTargetDistance())
-stringBuffer!!.append(
-                            " >= ")
+stringBuffer!!.append(" >= ")
 stringBuffer!!.append(this.longWeaponRange +this.currentTargetLayerInterface!!.getHalfHeight())
 
                                     }

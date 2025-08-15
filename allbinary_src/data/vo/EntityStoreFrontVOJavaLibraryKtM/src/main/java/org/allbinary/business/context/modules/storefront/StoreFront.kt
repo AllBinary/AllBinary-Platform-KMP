@@ -167,14 +167,11 @@ this.getFormData(RequestParams(request).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "TWB- needs update for adding and updating context configuration - currently defaults to admin context config", this, 
-                            "StoreFront")
+                                    logUtil!!.put("TWB- needs update for adding and updating context configuration - currently defaults to admin context config", this, "StoreFront")
 
                                     }
                                 
-this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(
-                            "Admin"))
+this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getInstance()!!.getInstance("Admin"))
 }
 
 public constructor        (hashMap: HashMap<Any, Any>)
@@ -725,11 +722,9 @@ open fun nameValidationInfo()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Name is invalid. Must be < ")
+stringBuffer!!.append("Name is invalid. Must be < ")
 stringBuffer!!.append(MAXCHAR)
-stringBuffer!!.append(
-                            " and > 0 characters.<br>")
+stringBuffer!!.append(" and > 0 characters.<br>")
 
 
 
@@ -763,11 +758,9 @@ stringBuffer!!.append(this.nameValidationInfo())
                         if(!stringValidationUtil!!.isValidRequired(this.basketName, MINCHAR, MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Basket name is invalid. Must be < ")
+                                    stringBuffer!!.append("Basket name is invalid. Must be < ")
 stringBuffer!!.append(MAXCHAR)
-stringBuffer!!.append(
-                            " and > 0 characters.<br>")
+stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
@@ -776,11 +769,9 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.homeHostName, MINCHAR, MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Home host name is invalid. Must be < ")
+                                    stringBuffer!!.append("Home host name is invalid. Must be < ")
 stringBuffer!!.append(MAXCHAR)
-stringBuffer!!.append(
-                            " and > 0 characters.<br>")
+stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
@@ -789,11 +780,9 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidNotRequired(this.homeHostNamePath!!.toString(), MINCHAR, MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Home host name path is invalid. Must be < ")
+                                    stringBuffer!!.append("Home host name path is invalid. Must be < ")
 stringBuffer!!.append(MAXCHAR)
-stringBuffer!!.append(
-                            " and > 0 characters.<br>")
+stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
@@ -802,11 +791,9 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.hostName, MINCHAR, MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Host name is invalid. Must be < ")
+                                    stringBuffer!!.append("Host name is invalid. Must be < ")
 stringBuffer!!.append(MAXCHAR)
-stringBuffer!!.append(
-                            " and > 0 characters.<br>")
+stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
@@ -815,11 +802,9 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.hostNamePath!!.toString(), MINCHAR, MAXCHAR))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Host name path is invalid. Must be < ")
+                                    stringBuffer!!.append("Host name path is invalid. Must be < ")
 stringBuffer!!.append(MAXCHAR)
-stringBuffer!!.append(
-                            " and > 0 characters.<br>")
+stringBuffer!!.append(" and > 0 characters.<br>")
 
                                     }
                                 
@@ -1005,9 +990,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -1761,8 +1744,7 @@ open fun install(current: Int, total: Int)
                                     
 
 
-                            throw Exception(
-                            "Unable to create store directories")
+                            throw Exception("Unable to create store directories")
 
                                     }
                                 
@@ -1784,8 +1766,7 @@ stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.INSTALLPATH)
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(viewPath)
-stringBuffer!!.append(
-                            "special")
+stringBuffer!!.append("special")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
     var fromSpecialDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
@@ -1888,8 +1869,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "install()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "install()", e)
 
                                     }
                                 
@@ -1940,8 +1920,7 @@ open fun installResources(fromDirectoryAbPath: AbPath, current: Int, total: Int)
 
 stringBuffer!!.append(fromDirectoryAbPath!!.toString())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-stringBuffer!!.append(
-                            "Resources")
+stringBuffer!!.append("Resources")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
     var installCategoryAbPath: AbPath = AbPath(stringBuffer!!.toString())
@@ -1977,8 +1956,7 @@ open fun installMedia(fromDirectoryAbPath: AbPath, current: Int, total: Int)
 stringBuffer!!.append(fromDirectoryAbPath!!.toString())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.TEMPLATEPATH)
-stringBuffer!!.append(
-                            "images")
+stringBuffer!!.append("images")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
     var viewStoreImagesDirectoryAbPath: AbPath = AbPath(stringBuffer!!.toString())

@@ -60,8 +60,7 @@ public constructor        (sleep: Int, inputAutomationActionInterface: InputAuto
 
                             //For kotlin this is before the body of the constructor.
                     
-logUtil!!.put(
-                            "BasicTestAttackWorder", this, this.commonStrings!!.CONSTRUCTOR)
+logUtil!!.put("BasicTestAttackWorder", this, this.commonStrings!!.CONSTRUCTOR)
 this.sleep= sleep
 }
 

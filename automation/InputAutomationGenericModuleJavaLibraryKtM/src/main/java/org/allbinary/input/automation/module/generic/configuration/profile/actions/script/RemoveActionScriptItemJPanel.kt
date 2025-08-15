@@ -55,8 +55,7 @@ open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
 {removeJButton= javax.swing.JButton()
 setLayout(java.awt.GridLayout())
-removeJButton!!.setText(
-                            "Remove")
+removeJButton!!.setText("Remove")
 removeJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -90,9 +89,7 @@ open fun removeJButtonActionPerformed(evt: java.awt.event.ActionEvent)
                                 )
                         
                                     {
-                                    logUtil!!.put(
-                            "GenericProfileAction was null", this, 
-                            "removeJButtonActionPerformed")
+                                    logUtil!!.put("GenericProfileAction was null", this, "removeJButtonActionPerformed")
 
 
 

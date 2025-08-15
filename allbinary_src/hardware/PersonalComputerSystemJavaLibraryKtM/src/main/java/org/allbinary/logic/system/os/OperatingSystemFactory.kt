@@ -115,8 +115,7 @@ this.hasDetected= true
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Found a Linux OS", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Found a Linux OS", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -134,8 +133,7 @@ this.genericOperatingSystem= LinuxOperatingSystemFactory.getInstance()!!.getOper
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Found a Windows OS", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Found a Windows OS", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -153,8 +151,7 @@ this.genericOperatingSystem= WindowsOperatingSystemFactory.getInstance()!!.getOp
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Found a Solaris OS", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Found a Solaris OS", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -167,15 +164,13 @@ this.genericOperatingSystem= Solaris() as GenericOperatingSystem
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "OS Not Supported: ")!!.append(osName)!!.toString())
+                            append("OS Not Supported: ")!!.append(osName)!!.toString())
 
                         }
                             
 
     var log: Log = LogFactory.getInstance(StringMaker().
-                            append(
-                            "OperatingSystem Info: ")!!.append(StringUtil.getInstance()!!.toString(this.genericOperatingSystem))!!.toString(), this, commonStrings!!.GET_INSTANCE)!!
+                            append("OperatingSystem Info: ")!!.append(StringUtil.getInstance()!!.toString(this.genericOperatingSystem))!!.toString(), this, commonStrings!!.GET_INSTANCE)!!
             
 
 System.out.println(log.toString())

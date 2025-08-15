@@ -75,8 +75,7 @@ open fun init(abeClientInformation: AbeClientInformationInterface)
                         if(file.isFile())
                         
                                     {
-                                    logUtil!!.put(
-                            "LoadingConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+                                    logUtil!!.put("LoadingConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
     var jaxbContext: JAXBContext = JAXBContext.newInstance(InputAutomationConfiguration::class)!!
             
@@ -113,14 +112,12 @@ logUtil!!.put("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INP
 inputAutomationModuleConfiguration!!.init(abeClientInformation)
 }
 
-logUtil!!.put(
-                            "LoadedConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+logUtil!!.put("LoadedConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "New Configuration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
+                            logUtil!!.put("New Configuration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 inputAutomationConfiguration= InputAutomationConfiguration()
 
                         }

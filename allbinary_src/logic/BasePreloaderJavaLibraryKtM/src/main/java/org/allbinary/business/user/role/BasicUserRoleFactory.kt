@@ -60,68 +60,39 @@ open fun getInstance()
 
     private val MAXSESSIONTIME: Long = 360000000
 
-    val INSTALLER: BasicUserRole = BasicUserRole(
-                            "Installer", 16, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val INSTALLER: BasicUserRole = BasicUserRole("Installer", 16, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val ADMINISTRATOR: BasicUserRole = BasicUserRole(
-                            "Administrator", 0, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val ADMINISTRATOR: BasicUserRole = BasicUserRole("Administrator", 0, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val CUSTOMER: BasicUserRole = BasicUserRole(
-                            "CustomerUser", 
-                            "Customer User", 1, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
+    val CUSTOMER: BasicUserRole = BasicUserRole("CustomerUser", "Customer User", 1, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
 
-    val SUBSCRIBERCUSTOMER: BasicUserRole = BasicUserRole(
-                            "SubscriberUser", 
-                            "Subscriber User", 2, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
+    val SUBSCRIBERCUSTOMER: BasicUserRole = BasicUserRole("SubscriberUser", "Subscriber User", 2, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
 
-    val WHOLESALECUSTOMER: BasicUserRole = BasicUserRole(
-                            "WholesaleUser", 
-                            "Wholesale User", 3, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
+    val WHOLESALECUSTOMER: BasicUserRole = BasicUserRole("WholesaleUser", "Wholesale User", 3, CUSTOMERTIMEOUT, CUSTOMERMAXSESSIONTIME)
 
-    val STOREMANAGER: BasicUserRole = BasicUserRole(
-                            "StoreManager", 
-                            "Store Manager", 4, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val STOREMANAGER: BasicUserRole = BasicUserRole("StoreManager", "Store Manager", 4, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val PRODUCTMANAGER: BasicUserRole = BasicUserRole(
-                            "ProductManager", 
-                            "Product Manager", 5, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val PRODUCTMANAGER: BasicUserRole = BasicUserRole("ProductManager", "Product Manager", 5, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val CUSTOMERMANAGER: BasicUserRole = BasicUserRole(
-                            "UserManager", 
-                            "User Manager", 6, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val CUSTOMERMANAGER: BasicUserRole = BasicUserRole("UserManager", "User Manager", 6, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val PAYMENTMANAGER: BasicUserRole = BasicUserRole(
-                            "PaymentManager", 
-                            "Payment Manager", 7, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val PAYMENTMANAGER: BasicUserRole = BasicUserRole("PaymentManager", "Payment Manager", 7, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val ORDERMANAGER: BasicUserRole = BasicUserRole(
-                            "OrderManager", 
-                            "Order Manager", 8, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val ORDERMANAGER: BasicUserRole = BasicUserRole("OrderManager", "Order Manager", 8, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val WEBMANAGER: BasicUserRole = BasicUserRole(
-                            "WebManager", 
-                            "Web Manager", 9, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val WEBMANAGER: BasicUserRole = BasicUserRole("WebManager", "Web Manager", 9, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val REVIEWER: BasicUserRole = BasicUserRole(
-                            "Reviewer", 10, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val REVIEWER: BasicUserRole = BasicUserRole("Reviewer", 10, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val SHIPPING: BasicUserRole = BasicUserRole(
-                            "Shipping", 11, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val SHIPPING: BasicUserRole = BasicUserRole("Shipping", 11, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val ADJUSTER: BasicUserRole = BasicUserRole(
-                            "Adjuster", 12, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val ADJUSTER: BasicUserRole = BasicUserRole("Adjuster", 12, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val WORKFLOWEDITOR: BasicUserRole = BasicUserRole(
-                            "WorkFlowEditor", 
-                            "WorkFlow Editor", 13, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val WORKFLOWEDITOR: BasicUserRole = BasicUserRole("WorkFlowEditor", "WorkFlow Editor", 13, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val WIZARD: BasicUserRole = BasicUserRole(
-                            "WizardUser", 
-                            "Wizard User", 14, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val WIZARD: BasicUserRole = BasicUserRole("WizardUser", "Wizard User", 14, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
-    val VIEWEDITOR: BasicUserRole = BasicUserRole(
-                            "ViewEditor", 
-                            "View Editor", 15, MAXSESSIONTIME, INACTIVITYTIMEOUT)
+    val VIEWEDITOR: BasicUserRole = BasicUserRole("ViewEditor", "View Editor", 15, MAXSESSIONTIME, INACTIVITYTIMEOUT)
 
 }
                 

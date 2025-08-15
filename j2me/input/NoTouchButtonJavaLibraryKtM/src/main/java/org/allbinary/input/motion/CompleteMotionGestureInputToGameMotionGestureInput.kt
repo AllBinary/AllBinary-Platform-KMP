@@ -59,8 +59,7 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{PreLogUtil.put(
-                            "No Touch Button = No Compound Motion Gestures", this, this.commonStrings!!.INIT)
+{PreLogUtil.put("No Touch Button = No Compound Motion Gestures", this, this.commonStrings!!.INIT)
 }
 
 

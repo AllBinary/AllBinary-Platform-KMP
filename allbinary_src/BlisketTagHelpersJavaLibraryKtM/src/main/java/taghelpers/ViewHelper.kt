@@ -107,8 +107,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -150,8 +149,7 @@ open fun toXmlDoc()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

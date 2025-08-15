@@ -161,8 +161,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -190,16 +189,12 @@ open fun toXmlNode(document: Document)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Attempt to View orders in (fromDate=")
+stringBuffer!!.append("Attempt to View orders in (fromDate=")
 stringBuffer!!.append(this.fromDate)
-stringBuffer!!.append(
-                            ",toDate=")
+stringBuffer!!.append(",toDate=")
 stringBuffer!!.append(this.toDate)
-stringBuffer!!.append(
-                            ") and status")
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "view")
+stringBuffer!!.append(") and status")
+logUtil!!.put(stringBuffer!!.toString(), this, "view")
 
                                     }
                                 
@@ -219,9 +214,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Adding Preprocessing Orders", this, 
-                            "toXmlNode")
+                                    logUtil!!.put("Adding Preprocessing Orders", this, "toXmlNode")
 
                                     }
                                 
@@ -261,9 +254,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Adding Shipped Orders", this, 
-                            "toXmlNode")
+                                    logUtil!!.put("Adding Shipped Orders", this, "toXmlNode")
 
                                     }
                                 
@@ -303,9 +294,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Adding Partially Shipped Orders", this, 
-                            "toDomNode")
+                                    logUtil!!.put("Adding Partially Shipped Orders", this, "toDomNode")
 
                                     }
                                 
@@ -345,9 +334,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Adding Processing Orders", this, 
-                            "toXmlNode")
+                                    logUtil!!.put("Adding Processing Orders", this, "toXmlNode")
 
                                     }
                                 
@@ -387,9 +374,7 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Adding Cancelled Orders", this, 
-                            "view")
+                                    logUtil!!.put("Adding Cancelled Orders", this, "view")
 
                                     }
                                 
@@ -434,8 +419,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, GLOBALS2.VIEWNAME, 
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "toXmlNode", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "toXmlNode", e)
 
                                     }
                                 
@@ -615,14 +599,11 @@ this.toDate= calendar.getTimeInMillis() as Long.
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Attempt to View orders in (fromDate=")
+stringBuffer!!.append("Attempt to View orders in (fromDate=")
 stringBuffer!!.append(this.fromDate)
-stringBuffer!!.append(
-                            ",toDate=")
+stringBuffer!!.append(",toDate=")
 stringBuffer!!.append(this.toDate)
-stringBuffer!!.append(
-                            ")")
+stringBuffer!!.append(")")
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
                                     }
@@ -638,8 +619,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in validation", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Exception in validation", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -692,8 +672,7 @@ open fun validationInfo()
                                  || (dateType!!.compareTo(OrderHistoryData.TYPELONG) != 0 && dateType!!.compareTo(OrderHistoryData.TYPECAESAR) != 0))
                         
                                     {
-                                    result.append(
-                            "DATETYPE not recognized")
+                                    result.append("DATETYPE not recognized")
 
                                     }
                                 
@@ -702,8 +681,7 @@ open fun validationInfo()
                         if(StringValidationUtil.getInstance()!!.isEmpty(toDate) || toDate!!.length > MAXLEN)
                         
                                     {
-                                    result.append(
-                            "Invalid To Date")
+                                    result.append("Invalid To Date")
 
                                     }
                                 
@@ -712,8 +690,7 @@ open fun validationInfo()
                         if(StringValidationUtil.getInstance()!!.isEmpty(fromDate) || fromDate!!.length > MAXLEN)
                         
                                     {
-                                    result.append(
-                            "Invalid From Date")
+                                    result.append("Invalid From Date")
 
                                     }
                                 
@@ -728,9 +705,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

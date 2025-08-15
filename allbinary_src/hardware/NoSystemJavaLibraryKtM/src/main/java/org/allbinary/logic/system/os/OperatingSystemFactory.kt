@@ -71,8 +71,7 @@ open fun getOperatingSystemInstance()
         try {
             
     var osString: String = StringMaker().
-                            append(
-                            "OperatingSystem Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString()!!
+                            append("OperatingSystem Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString()!!
             
 
 System.out.println(osString)

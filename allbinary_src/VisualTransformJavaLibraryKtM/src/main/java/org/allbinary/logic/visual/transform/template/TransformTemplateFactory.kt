@@ -102,8 +102,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, templa
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(error +templateName +"->TemplateFactory", this, 
-                            "getInstance(viewName, HashMap, PageContext)", e)
+                                    logUtil!!.put(error +templateName +"->TemplateFactory", this, "getInstance(viewName, HashMap, PageContext)", e)
 
                                     }
                                 

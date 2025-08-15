@@ -225,22 +225,16 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "BasicColor: ")
-stringBuffer!!.append(
-                            "Alpha: ")
+stringBuffer!!.append("BasicColor: ")
+stringBuffer!!.append("Alpha: ")
 stringBuffer!!.append(this.alpha)
-stringBuffer!!.append(
-                            " Red: ")
+stringBuffer!!.append(" Red: ")
 stringBuffer!!.append(this.red)
-stringBuffer!!.append(
-                            " Green: ")
+stringBuffer!!.append(" Green: ")
 stringBuffer!!.append(this.green)
-stringBuffer!!.append(
-                            " Blue: ")
+stringBuffer!!.append(" Blue: ")
 stringBuffer!!.append(this.blue)
-stringBuffer!!.append(
-                            " Value: ")
+stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(this.value)
 
 

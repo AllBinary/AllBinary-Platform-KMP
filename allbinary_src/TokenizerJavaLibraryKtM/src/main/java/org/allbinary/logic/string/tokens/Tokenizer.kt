@@ -52,8 +52,7 @@ public constructor        (sep: String)
                                     
 
 
-                            throw Exception(
-                            "Sep provided is not valid")
+                            throw Exception("Sep provided is not valid")
 
                                     }
                                 

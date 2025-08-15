@@ -60,8 +60,7 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.START, this, 
-                            "CategoryLoader(CategoryFactoryInterface categoryFactoryInterface)")
+                                    logUtil!!.put(commonStrings!!.START, this, "CategoryLoader(CategoryFactoryInterface categoryFactoryInterface)")
 
                                     }
                                 
@@ -104,8 +103,7 @@ open fun getDoc(categoryInterface: CategoryInterface)
                                     
 
 
-                            throw Exception(
-                            "Could Not Create Directory")
+                            throw Exception("Could Not Create Directory")
 
                                     }
                                 
@@ -139,8 +137,7 @@ this.save(categoryInterface)
                             
 
 
-                            throw Exception(
-                            "Null Category")
+                            throw Exception("Null Category")
 
                         }
                             
@@ -154,13 +151,10 @@ this.save(categoryInterface)
         try {
             categoryInterface!!.log()
 } catch(e2: Exception)
-            {logUtil!!.put(
-                            "Could Not Log Category", this, 
-                            "getDoc", e)
+            {logUtil!!.put("Could Not Log Category", this, "getDoc", e)
 }
 
-logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "getDoc", e)
+logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
 
                                     }
                                 

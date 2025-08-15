@@ -47,9 +47,7 @@ open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
     var logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-logUtil!!.put(
-                            "No Media Shutdown for Android Process", instance, 
-                            "shutdown")
+logUtil!!.put("No Media Shutdown for Android Process", instance, "shutdown")
 }
 
 

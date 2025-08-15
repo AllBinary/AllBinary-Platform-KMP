@@ -72,8 +72,7 @@ reset2()
                                     
 
 
-                            throw Exception(
-                            "Should never be running here")
+                            throw Exception("Should never be running here")
 
                                     }
                                 

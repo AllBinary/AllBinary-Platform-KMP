@@ -114,8 +114,7 @@ logUtil!!.put("Generating Instance for type: " +type, this, commonStrings!!.GET_
                             
 
 
-                            throw Exception(
-                            "No Such TransformInfoObjectConfigGenerator Type")
+                            throw Exception("No Such TransformInfoObjectConfigGenerator Type")
 
                         }
                             

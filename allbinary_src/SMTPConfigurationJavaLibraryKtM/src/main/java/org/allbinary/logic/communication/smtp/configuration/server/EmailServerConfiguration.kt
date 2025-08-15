@@ -76,8 +76,7 @@ public constructor        (hashMap: HashMap<Any, Any>)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, this, 
-                            "EmailServerConfiguration(HashMap)")
+logUtil!!.put(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
 
                                     }
                                 
@@ -107,8 +106,7 @@ public constructor        (account: String, password: String, server: String)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, this, 
-                            "EmailServerConfiguration(HashMap)")
+logUtil!!.put(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
 
                                     }
                                 
@@ -183,8 +181,7 @@ open fun log()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.toString(), this, 
-                            "EmailServerConfiguration")
+                                    logUtil!!.put(this.toString(), this, "EmailServerConfiguration")
 
                                     }
                                 

@@ -83,8 +83,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("Number Of Children: " +childCategoryVector!!.size, this, 
-                            "toXmlNode")
+                                    logUtil!!.put("Number Of Children: " +childCategoryVector!!.size, this, "toXmlNode")
 
                                     }
                                 
@@ -110,8 +109,7 @@ open fun toXmlNode(document: Document)
 
 
     
-                        if(InterfaceUtil.isImplemented(
-                            "CategoryPropertiesInterface", anyType))
+                        if(InterfaceUtil.isImplemented("CategoryPropertiesInterface", anyType))
                         
                                     {
                                     categoryPropertiesInterface= anyType as CategoryPropertiesInterface
@@ -120,8 +118,7 @@ open fun toXmlNode(document: Document)
                                 
                              else 
     
-                        if(InterfaceUtil.isImplemented(
-                            "CategoryInterface", anyType))
+                        if(InterfaceUtil.isImplemented("CategoryInterface", anyType))
                         
                                     {
                                     
@@ -133,8 +130,7 @@ categoryPropertiesInterface= categoryInterface!!.getProperties()
                                 
                         else {
                             
-    var isImpl: String = InterfaceUtil.viewAll(anyType!!::class, 
-                            "\n")!!
+    var isImpl: String = InterfaceUtil.viewAll(anyType!!::class, "\n")!!
             
 
 

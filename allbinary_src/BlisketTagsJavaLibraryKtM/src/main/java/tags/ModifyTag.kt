@@ -72,8 +72,7 @@ open fun insert()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "insert", 
+    var method: Method = helperClass!!.getMethod("insert", 
                             null)!!
             
 
@@ -95,8 +94,7 @@ open fun insert()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "insert()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insert()", e)
 
                                     }
                                 
@@ -143,8 +141,7 @@ open fun delete()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 
@@ -169,8 +166,7 @@ open fun update()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "update", 
+    var method: Method = helperClass!!.getMethod("update", 
                             null)!!
             
 
@@ -192,8 +188,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 
@@ -224,14 +219,11 @@ open fun doStartTag()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Command: ")
+stringBuffer!!.append("Command: ")
 stringBuffer!!.append(this.getCommand())
-stringBuffer!!.append(
-                            " Request URI: ")
+stringBuffer!!.append(" Request URI: ")
 stringBuffer!!.append(request.getRequestURI())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "doStartTag()")
+logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
 
                                     }
                                 

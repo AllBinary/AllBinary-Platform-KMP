@@ -126,23 +126,17 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "totalColumns: ")
+stringBuffer!!.append("totalColumns: ")
 stringBuffer!!.append(totalColumns)
-stringBuffer!!.append(
-                            " totalRows: ")
+stringBuffer!!.append(" totalRows: ")
 stringBuffer!!.append(totalRows)
-stringBuffer!!.append(
-                            " columnsRemainder: ")
+stringBuffer!!.append(" columnsRemainder: ")
 stringBuffer!!.append(columnsRemainder)
-stringBuffer!!.append(
-                            " rowsRemainder: ")
+stringBuffer!!.append(" rowsRemainder: ")
 stringBuffer!!.append(rowsRemainder)
-stringBuffer!!.append(
-                            " columnsRemainderHalf: ")
+stringBuffer!!.append(" columnsRemainderHalf: ")
 stringBuffer!!.append(columnsRemainderHalf)
-stringBuffer!!.append(
-                            " rowsRemainderHalf: ")
+stringBuffer!!.append(" rowsRemainderHalf: ")
 stringBuffer!!.append(rowsRemainderHalf)
 
 

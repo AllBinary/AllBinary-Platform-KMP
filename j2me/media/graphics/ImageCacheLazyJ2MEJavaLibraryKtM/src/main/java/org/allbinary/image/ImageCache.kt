@@ -34,7 +34,6 @@ import javax.microedition.lcdui.Image
 import org.allbinary.animation.image.LazyImageRotationAnimation
 import org.allbinary.canvas.GameGlobalsFactory
 import org.allbinary.canvas.Processor
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
@@ -52,6 +51,7 @@ import org.allbinary.logic.string.StringUtil
 import org.allbinary.system.Memory
 import org.allbinary.thread.BaseImageLoadingProcessor
 import org.allbinary.thread.ConcurrentImageLoadingProcessor
+import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 
 open public class ImageCache : ImageCacheBase {
@@ -91,7 +91,7 @@ open public class ImageCache : ImageCacheBase {
 
     val loadAfterList: BasicArrayList = BasicArrayList()
 
-    private val lock: Any = Any()
+    private val lock: SynchObject = SynchObject()
 
     private var firstTime: Boolean = true
 
@@ -832,11 +832,9 @@ open fun get(key: Any)
         try {
             image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+            {logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
-                            append(
-                            "InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
+                            append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
 System.gc()
 System.gc()
 logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
@@ -895,8 +893,7 @@ open fun getIndex(key: Any)
 }
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, commonStrings!!.RUN)
+                            append("unable to find key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString(), this, commonStrings!!.RUN)
 
 
 

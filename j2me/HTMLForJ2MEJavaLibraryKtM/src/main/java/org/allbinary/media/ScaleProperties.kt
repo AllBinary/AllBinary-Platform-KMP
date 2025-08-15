@@ -60,11 +60,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this.shouldScale)!!.append(
-                            "scaleX: ")!!.append(this.scaleX)!!.append(
-                            "scaleY: ")!!.append(this.scaleY)!!.append(
-                            "scaleWidth: ")!!.append(this.scaleWidth)!!.append(
-                            "scaleHeight: ")!!.append(this.scaleHeight)!!.toString()
+                            append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this.shouldScale)!!.append("scaleX: ")!!.append(this.scaleX)!!.append("scaleY: ")!!.append(this.scaleY)!!.append("scaleWidth: ")!!.append(this.scaleWidth)!!.append("scaleHeight: ")!!.append(this.scaleHeight)!!.toString()
 }
 
 

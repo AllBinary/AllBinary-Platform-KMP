@@ -739,8 +739,7 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(
-                            " LastDirection: ")
+stringBuffer!!.append(" LastDirection: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getLastDirection()))
 
 

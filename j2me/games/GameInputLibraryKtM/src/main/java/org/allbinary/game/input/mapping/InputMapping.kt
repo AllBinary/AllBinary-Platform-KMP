@@ -107,11 +107,9 @@ open fun remove(input: Input, mappedToInput: Input)
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.START_LABEL)
 stringBuffer!!.append(stringUtil!!.toString(input))
-stringBuffer!!.append(
-                            " == ")
+stringBuffer!!.append(" == ")
 stringBuffer!!.append(stringUtil!!.toString(mappedToInput))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "InputMapping::remove")
+logUtil!!.put(stringBuffer!!.toString(), this, "InputMapping::remove")
 
     var list: BasicArrayList = this.getMappedInput(input)!!
             
@@ -124,27 +122,21 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     list.remove(mappedToInput)
 this.mappedList!!.remove(mappedToInput)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Removed: ")
+stringBuffer!!.append("Removed: ")
 stringBuffer!!.append(stringUtil!!.toString(input))
-stringBuffer!!.append(
-                            " == ")
+stringBuffer!!.append(" == ")
 stringBuffer!!.append(stringUtil!!.toString(mappedToInput))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "InputMapping::remove")
+logUtil!!.put(stringBuffer!!.toString(), this, "InputMapping::remove")
 
                                     }
                                 
                         else {
                             stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Not Deleted: ")
+stringBuffer!!.append("Not Deleted: ")
 stringBuffer!!.append(stringUtil!!.toString(input))
-stringBuffer!!.append(
-                            " == ")
+stringBuffer!!.append(" == ")
 stringBuffer!!.append(stringUtil!!.toString(mappedToInput))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "InputMapping::remove")
+logUtil!!.put(stringBuffer!!.toString(), this, "InputMapping::remove")
 
                         }
                             

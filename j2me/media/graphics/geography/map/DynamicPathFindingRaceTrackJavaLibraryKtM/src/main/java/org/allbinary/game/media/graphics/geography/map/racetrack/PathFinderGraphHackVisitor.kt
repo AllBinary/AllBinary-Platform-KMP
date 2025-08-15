@@ -234,8 +234,7 @@ open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeight
         {
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!
 
-logUtil!!.put("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColumn() +", " +overPassGeographicMapCellPosition!!.getRow(), this, 
-                            "fixOverPassEdges")
+logUtil!!.put("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColumn() +", " +overPassGeographicMapCellPosition!!.getRow(), this, "fixOverPassEdges")
 
     var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
             

@@ -58,10 +58,8 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TerrainEvent: \n")
-stringBuffer!!.append(
-                            "LayerInterface: ")
+stringBuffer!!.append("TerrainEvent: \n")
+stringBuffer!!.append("LayerInterface: ")
 stringBuffer!!.append(this.basicTerrainInfo!!.toString())
 
 

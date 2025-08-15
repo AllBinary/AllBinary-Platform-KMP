@@ -205,8 +205,7 @@ open fun log()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Created Address: \n" +this.toHashMap(), this, 
-                            "log")
+                                    logUtil!!.put("Created Address: \n" +this.toHashMap(), this, "log")
 
                                     }
                                 
@@ -437,8 +436,7 @@ open fun validationInfo()
 : String{
     var stringBuffer: StringBuilder = StringBuilder()
 
-stringBuffer!!.append(
-                            "Address Failed To Validate - All fields must contain data.<br></br>")
+stringBuffer!!.append("Address Failed To Validate - All fields must contain data.<br></br>")
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
             
@@ -448,10 +446,8 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.getName(), StreetAddressData.MIN, StreetAddressData.MAX))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid name")
-stringBuffer!!.append(
-                            "<br></br>")
+                                    stringBuffer!!.append("Please enter a valid name")
+stringBuffer!!.append("<br></br>")
 
                                     }
                                 
@@ -460,10 +456,8 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.getStreet(), StreetAddressData.MIN, StreetAddressData.MAX))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid street")
-stringBuffer!!.append(
-                            "<br></br>")
+                                    stringBuffer!!.append("Please enter a valid street")
+stringBuffer!!.append("<br></br>")
 
                                     }
                                 
@@ -472,10 +466,8 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.getCity(), StreetAddressData.MIN, StreetAddressData.MAX))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid city")
-stringBuffer!!.append(
-                            "<br></br>")
+                                    stringBuffer!!.append("Please enter a valid city")
+stringBuffer!!.append("<br></br>")
 
                                     }
                                 
@@ -484,10 +476,8 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.getState(), StreetAddressData.MIN, StreetAddressData.MAX))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid state")
-stringBuffer!!.append(
-                            "<br></br>")
+                                    stringBuffer!!.append("Please enter a valid state")
+stringBuffer!!.append("<br></br>")
 
                                     }
                                 
@@ -496,10 +486,8 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.getCode(), StreetAddressData.MIN, StreetAddressData.MAX))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid zipcode")
-stringBuffer!!.append(
-                            "<br></br>")
+                                    stringBuffer!!.append("Please enter a valid zipcode")
+stringBuffer!!.append("<br></br>")
 
                                     }
                                 
@@ -508,10 +496,8 @@ stringBuffer!!.append(
                         if(!stringValidationUtil!!.isValidRequired(this.getCountry(), StreetAddressData.MIN, StreetAddressData.MAX))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid country")
-stringBuffer!!.append(
-                            "<br></br>")
+                                    stringBuffer!!.append("Please enter a valid country")
+stringBuffer!!.append("<br></br>")
 
                                     }
                                 
@@ -560,8 +546,7 @@ node.appendChild(this.toXmlNode(document))
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toValidationInfoNode", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoNode", e)
 
                                     }
                                 

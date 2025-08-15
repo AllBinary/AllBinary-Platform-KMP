@@ -400,8 +400,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -444,8 +443,7 @@ open fun validationInfo()
                                  && !stringValidationUtil!!.isNumber(this.itemInterface!!.getId()))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is invalid. Must be > 0.<br />")
+                                    stringBuffer!!.append("Id is invalid. Must be > 0.<br />")
 
                                     }
                                 
@@ -467,8 +465,7 @@ open fun validationInfo()
                                  && !stringValidationUtil!!.isNumber(this.itemInterface!!.getNumber()))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Number of items value is not a valid number.<br />")
+                                    stringBuffer!!.append("Number of items value is not a valid number.<br />")
 
                                     }
                                 
@@ -490,8 +487,7 @@ open fun validationInfo()
                                  && !stringValidationUtil!!.isNumber(this.itemInterface!!.getInBaskets()))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "In Baskets value is not a valid number.<br />")
+                                    stringBuffer!!.append("In Baskets value is not a valid number.<br />")
 
                                     }
                                 
@@ -513,8 +509,7 @@ open fun validationInfo()
                                  && !stringValidationUtil!!.isNumber(this.itemInterface!!.getWeight()))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Weight value is not a valid number.<br />")
+                                    stringBuffer!!.append("Weight value is not a valid number.<br />")
 
                                     }
                                 
@@ -683,9 +678,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

@@ -76,30 +76,18 @@ public constructor        ()
         {
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
-LEFT= MotionGestureInput(MAX -3, 
-                            "Left Touch")
-RIGHT= MotionGestureInput(MAX -4, 
-                            "Right Touch")
-UP= MotionGestureInput(MAX -5, 
-                            "Up Touch")
-DOWN= MotionGestureInput(MAX -6, 
-                            "Down Touch")
-PRESSED= MotionGestureInput(MAX -7, 
-                            "Screen Press")
-RELEASED= MotionGestureInput(MAX -8, 
-                            "Released")
-DIAGONAL_DOWN_RIGHT= MotionGestureInput(MAX -9, 
-                            "Diagonal Dn R")
-DIAGONAL_DOWN_LEFT= MotionGestureInput(MAX -10, 
-                            "Diagonal Dn L")
-DIAGONAL_UP_RIGHT= MotionGestureInput(MAX -11, 
-                            "Diagonal Up R")
-DIAGONAL_UP_LEFT= MotionGestureInput(MAX -12, 
-                            "Diagonal Up L")
-NO_MOTION= MotionGestureInput(MAX -2, 
-                            "No Motion")
-LAST_MOTION= MotionGestureInput(MAX -19, 
-                            "Last Motion")
+LEFT= MotionGestureInput(MAX -3, "Left Touch")
+RIGHT= MotionGestureInput(MAX -4, "Right Touch")
+UP= MotionGestureInput(MAX -5, "Up Touch")
+DOWN= MotionGestureInput(MAX -6, "Down Touch")
+PRESSED= MotionGestureInput(MAX -7, "Screen Press")
+RELEASED= MotionGestureInput(MAX -8, "Released")
+DIAGONAL_DOWN_RIGHT= MotionGestureInput(MAX -9, "Diagonal Dn R")
+DIAGONAL_DOWN_LEFT= MotionGestureInput(MAX -10, "Diagonal Dn L")
+DIAGONAL_UP_RIGHT= MotionGestureInput(MAX -11, "Diagonal Up R")
+DIAGONAL_UP_LEFT= MotionGestureInput(MAX -12, "Diagonal Up L")
+NO_MOTION= MotionGestureInput(MAX -2, "No Motion")
+LAST_MOTION= MotionGestureInput(MAX -19, "Last Motion")
 }
 
 

@@ -74,8 +74,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Started", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("Started", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -119,8 +118,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "validationInfo()", e)
 
                                     }
                                 
@@ -149,8 +147,7 @@ open fun toValidationInfoDoc()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toValidationInfoDoc()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoDoc()", e)
 
                                     }
                                 
@@ -182,8 +179,7 @@ open fun toValidationInfoNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toValidationInfoNode()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoNode()", e)
 
                                     }
                                 

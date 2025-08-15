@@ -66,8 +66,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "toXmlNode")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "toXmlNode")
 
                                     }
                                 
@@ -111,8 +110,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.END, this, 
-                            "toXmlNode()")
+                                    logUtil!!.put(commonStrings!!.END, this, "toXmlNode()")
 
                                     }
                                 
@@ -127,8 +125,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toXmlNode()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode()", e)
 
                                     }
                                 

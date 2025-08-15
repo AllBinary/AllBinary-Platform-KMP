@@ -99,20 +99,15 @@ open fun setCells(mapTwoDArray: Array<IntArray?>)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Start: r: ")
+stringBuffer!!.append("Start: r: ")
 stringBuffer!!.append(mapTwoDArray!!.size)
-stringBuffer!!.append(
-                            " c: ")
+stringBuffer!!.append(" c: ")
 stringBuffer!!.append(mapTwoDArray[0]!!.length)
-stringBuffer!!.append(
-                            " rows: ")
+stringBuffer!!.append(" rows: ")
 stringBuffer!!.append(this.getRows())
-stringBuffer!!.append(
-                            " columns: ")
+stringBuffer!!.append(" columns: ")
 stringBuffer!!.append(this.getColumns())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setCells")
+logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
 
     var rows: Int = this.getRows()!!
             

@@ -98,11 +98,9 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 stringBuffer!!.append(storeFrontInterface!!.getName())
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-stringBuffer!!.append(
-                            "generic")
+stringBuffer!!.append("generic")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
-stringBuffer!!.append(
-                            "taxes")
+stringBuffer!!.append("taxes")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
     var abPath: AbPath = AbPath(stringBuffer!!.toString(), TAXATIONFILENAME)
@@ -175,8 +173,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    logUtil!!.put(
-                            "Class Node Null", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Class Node Null", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -192,8 +189,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    logUtil!!.put(
-                            "Tax Name Node Node Children", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Tax Name Node Node Children", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 

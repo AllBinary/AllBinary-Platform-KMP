@@ -95,8 +95,7 @@ open fun getInstance(genericProfile: GenericProfile)
 
 
 
-                            throw Exception(
-                            "No CaptureWorkerInterface specified in GenericProfile")
+                            throw Exception("No CaptureWorkerInterface specified in GenericProfile")
 }
 
 

@@ -59,8 +59,7 @@ open fun getName()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "os.name")
+                        return System.getProperty("os.name")
 }
 
 
@@ -70,8 +69,7 @@ open fun getArch()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "os.arch")
+                        return System.getProperty("os.arch")
 }
 
 
@@ -81,8 +79,7 @@ open fun getVersion()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "os.version")
+                        return System.getProperty("os.version")
 }
 
 

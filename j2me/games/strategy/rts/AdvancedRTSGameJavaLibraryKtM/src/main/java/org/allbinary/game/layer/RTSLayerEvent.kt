@@ -47,10 +47,8 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "RTSLayerEvent: \n")
-stringBuffer!!.append(
-                            "RTSLayer: ")
+stringBuffer!!.append("RTSLayerEvent: \n")
+stringBuffer!!.append("RTSLayer: ")
 stringBuffer!!.append(this.getRtsLayer()!!.toString())
 
 

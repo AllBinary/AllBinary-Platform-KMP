@@ -194,8 +194,7 @@ hasRead= false
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put("Failed Write: " +FILEABPATH.toString(), this, 
-                            "write", e)
+                                    PreLogUtil.put("Failed Write: " +FILEABPATH.toString(), this, "write", e)
 
                                     }
                                 
@@ -335,8 +334,7 @@ this.load()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "updateIfNeeded", e)
+                                    PreLogUtil.put(commonStrings!!.EXCEPTION, this, "updateIfNeeded", e)
 
                                     }
                                 
@@ -353,8 +351,7 @@ open fun getName()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    PreLogUtil.put("Name: " +super.getName(), this, 
-                            "getName")
+                                    PreLogUtil.put("Name: " +super.getName(), this, "getName")
 
                                     }
                                 
@@ -374,8 +371,7 @@ open fun getUserName()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    PreLogUtil.put("Name: " +super.getUserName(), this, 
-                            "getUserName")
+                                    PreLogUtil.put("Name: " +super.getUserName(), this, "getUserName")
 
                                     }
                                 

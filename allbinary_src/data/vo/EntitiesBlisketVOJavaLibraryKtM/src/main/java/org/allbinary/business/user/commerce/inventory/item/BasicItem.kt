@@ -121,8 +121,7 @@ public constructor        (itemHashMap: HashMap<Any, Any>)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "Constructor(HashMap)")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "Constructor(HashMap)")
 
                                     }
                                 
@@ -817,8 +816,7 @@ open fun toHashMap()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "toHashMap")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "toHashMap")
 
                                     }
                                 
@@ -877,8 +875,7 @@ open fun toVector()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "toVector")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "toVector")
 
                                     }
                                 

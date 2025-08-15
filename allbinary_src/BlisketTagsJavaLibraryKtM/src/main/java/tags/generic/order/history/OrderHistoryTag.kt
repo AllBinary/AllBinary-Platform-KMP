@@ -69,8 +69,7 @@ open fun setOrderStatus()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "setOrderStatus", 
+    var method: Method = helperClass!!.getMethod("setOrderStatus", 
                             null)!!
             
 
@@ -98,8 +97,7 @@ open fun setOrderStatus()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setOrderStatus()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)
 
                                     }
                                 
@@ -119,10 +117,8 @@ open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
         try {
-            this.setName(
-                            "Basic Order History View")
-this.setObjectFile(
-                            "views.generic.order.history.ValidationView")
+            this.setName("Basic Order History View")
+this.setObjectFile("views.generic.order.history.ValidationView")
 
     
                         if(this.getCommand() != 
@@ -167,8 +163,7 @@ pageContext!!.getOut()!!.print(this.setOrderStatus())
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

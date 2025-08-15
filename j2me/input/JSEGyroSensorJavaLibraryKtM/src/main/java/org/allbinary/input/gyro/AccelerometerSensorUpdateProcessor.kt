@@ -79,8 +79,7 @@ open fun process()
                             
 
 
-                            throw Exception(
-                            "Sensor Feature Not Set")
+                            throw Exception("Sensor Feature Not Set")
 
                         }
                             

@@ -69,8 +69,7 @@ open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeCl
                     var highScore = highScore
 
         try {
-            logUtil!!.put(
-                            "Begin Remote HighScores Submission", this, commonStrings!!.PROCESS)
+            logUtil!!.put("Begin Remote HighScores Submission", this, commonStrings!!.PROCESS)
 
     var gameInfoData: GameInfoData = GameInfoData.getInstance()!!
             
@@ -80,8 +79,7 @@ open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeCl
             
 
 HashtableUtil.getInstance()!!.putAll(highScore!!.getGameInfo()!!.toHashtable(), hashtable)
-hashtable.put(RemoteHighScoresData.getInstance()!!.CUSTOMER_USER_NAME, 
-                            "None")
+hashtable.put(RemoteHighScoresData.getInstance()!!.CUSTOMER_USER_NAME, "None")
 hashtable.put(RemoteHighScoresData.getInstance()!!.DISPLAY_NAME, highScore!!.getName())
 hashtable.put(gameInfoData!!.SOFTWARE_INFORMATION, remoteHighScores!!.getSoftwareInformation()!!.toString())
 hashtable.put(remoteHighScores!!.ASCENDING, remoteHighScores!!.getAscending()!!.toString())
@@ -98,9 +96,7 @@ hashtable.put(RemoteHighScoresData.getInstance()!!.SCORE, (highScore!!.getScore(
                         
                                     {
                                     
-    var resultHashtable: Hashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, 
-                            "highscoresubmissionservicessl.php", 
-                            "HighScoreSubmissionService.process").
+    var resultHashtable: Hashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresubmissionservicessl.php", "HighScoreSubmissionService.process").
                             get(hashtable, noCrypt) as Hashtable<Any, Any>
 
 remoteHighScores!!.update(resultHashtable)

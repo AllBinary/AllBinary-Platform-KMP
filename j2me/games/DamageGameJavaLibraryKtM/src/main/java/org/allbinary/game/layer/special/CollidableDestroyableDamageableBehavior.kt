@@ -96,8 +96,7 @@ override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterf
 : Boolean{
 
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-ForcedLogUtil.log(
-                            "No Longer Used", this)
+ForcedLogUtil.log("No Longer Used", this)
 
 
 
@@ -112,8 +111,7 @@ ForcedLogUtil.log(
 {
 
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-ForcedLogUtil.log(
-                            "No Longer Used", this)
+ForcedLogUtil.log("No Longer Used", this)
 }
 
 

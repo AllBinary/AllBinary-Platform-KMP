@@ -71,8 +71,7 @@ keyStringHashtable!!.put(keyAsString, keyArray[index]!!)
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "KeySingleFactory", STATIC_BLOCK, e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, "KeySingleFactory", STATIC_BLOCK, e)
 }
 
 }

@@ -128,8 +128,7 @@ open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
 {
 
                     var evt = evt
-logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, 
-                            "ActionPerformed")
+logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, "ActionPerformed")
 
     var files: Array<File?> = this.getJFileChooser1()!!.getSelectedFiles()!!
             

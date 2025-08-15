@@ -79,8 +79,7 @@ open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: Stri
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(CommonLabels.getInstance()!!.START +filePath, this, 
-                            "isAuthorized()")
+                                    logUtil!!.put(CommonLabels.getInstance()!!.START +filePath, this, "isAuthorized()")
 
                                     }
                                 
@@ -116,9 +115,7 @@ open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: Stri
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Authorized", this, 
-                            "isAuthorized()")
+                                    logUtil!!.put("Authorized", this, "isAuthorized()")
 
                                     }
                                 
@@ -136,8 +133,7 @@ open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: Stri
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Not Authorized: " +basicUserRole!!.toString(), this, 
-                            "isAuthorized()")
+                                    logUtil!!.put("Not Authorized: " +basicUserRole!!.toString(), this, "isAuthorized()")
 
                                     }
                                 

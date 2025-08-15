@@ -79,7 +79,7 @@ open fun getFiles(path: String)
                         return files
 } catch(e: Exception)
             {e.printStackTrace()
-System.out.println("Error: " +e +"\nMsg: " +e.getMessage())
+System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
 
@@ -118,7 +118,7 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         return files
 } catch(e: Exception)
             {e.printStackTrace()
-System.out.println("Error: " +e +"\nMsg: " +e.getMessage())
+System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
 
@@ -160,7 +160,7 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         return files
 } catch(e: Exception)
             {e.printStackTrace()
-System.out.println("Error: " +e +"\nMsg: " +e.getMessage())
+System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
 

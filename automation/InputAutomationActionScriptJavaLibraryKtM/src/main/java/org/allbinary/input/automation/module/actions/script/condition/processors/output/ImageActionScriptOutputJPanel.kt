@@ -211,10 +211,8 @@ itemTypesJList= javax.swing.JList()
 capturedImageActionJButton= javax.swing.JButton()
 jLabel1= javax.swing.JLabel()
 capturedImageActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 250))
-titleJLabel!!.setText(
-                            "Image Output Options")
-okJButton!!.setText(
-                            "OK")
+titleJLabel!!.setText("Image Output Options")
+okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -228,12 +226,10 @@ okJButtonActionPerformed(evt)
 
                                 }
                             )
-saveJCheckBox!!.setText(
-                            "Save To File")
+saveJCheckBox!!.setText("Save To File")
 saveJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 saveJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
-displayJCheckBox!!.setText(
-                            "Display")
+displayJCheckBox!!.setText("Display")
 displayJCheckBox!!.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 0, 0, 0))
 displayJCheckBox!!.setMargin(java.awt.Insets(0, 0, 0, 0))
 displayJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
@@ -285,8 +281,7 @@ capturedImageActionJDialog!!.getContentPane()!!.setLayout(capturedImageActionJDi
 capturedImageActionJDialogLayout!!.setHorizontalGroup(capturedImageActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addGroup(capturedImageActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addGap(61, 61, 61)!!.addComponent(titleJLabel))!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addGroup(capturedImageActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(capturedImageActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addComponent(displayJCheckBox)!!.addComponent(saveJCheckBox, javax.swing.GroupLayout.Alignment.TRAILING))!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addGap(84, 84, 84)!!.addComponent(okJButton))))!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 216, Short.MAX_VALUE)))!!.addContainerGap()))
 capturedImageActionJDialogLayout!!.setVerticalGroup(capturedImageActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(capturedImageActionJDialogLayout!!.createSequentialGroup()!!.addComponent(titleJLabel)!!.addGap(5, 5, 5)!!.addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(saveJCheckBox)!!.addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)!!.addComponent(displayJCheckBox)!!.addGap(9, 9, 9)!!.addComponent(okJButton)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
-capturedImageActionJButton!!.setText(
-                            "Edit")
+capturedImageActionJButton!!.setText("Edit")
 capturedImageActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -300,8 +295,7 @@ capturedImageActionJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel1!!.setText(
-                            "Capture Image:")
+jLabel1!!.setText("Capture Image:")
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 

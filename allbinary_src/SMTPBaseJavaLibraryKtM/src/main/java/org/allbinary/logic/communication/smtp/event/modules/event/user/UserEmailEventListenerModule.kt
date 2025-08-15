@@ -82,8 +82,7 @@ open fun onEmailSendRequest(emailEvent: EmailEvent)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Add Email To Que For Sending: " +emailEvent!!.toString(), this, 
-                            "onEmailSendRequest")
+                                    logUtil!!.put("Add Email To Que For Sending: " +emailEvent!!.toString(), this, "onEmailSendRequest")
 
                                     }
                                 

@@ -81,8 +81,7 @@ open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: 
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +customizerTransformInfoInterface!!.getName(), this, 
-                            "getTransformInfoInterfaceToCustomize()")
+                                    logUtil!!.put("View Name: " +customizerTransformInfoInterface!!.getName(), this, "getTransformInfoInterfaceToCustomize()")
 
                                     }
                                 
@@ -124,8 +123,7 @@ open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransfo
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +customizerTransformInfoInterface!!.getName(), this, 
-                            "getTransformInfoObjectConfigComponentNodesToCustomize()")
+                                    logUtil!!.put("View Name: " +customizerTransformInfoInterface!!.getName(), this, "getTransformInfoObjectConfigComponentNodesToCustomize()")
 
                                     }
                                 
@@ -164,8 +162,7 @@ open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Obje
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "getTransformInfoObjectConfigComponentNodes()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "getTransformInfoObjectConfigComponentNodes()")
 
                                     }
                                 
@@ -193,8 +190,7 @@ open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface:
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "getTransformInfoObjectConfigComponentNodes()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "getTransformInfoObjectConfigComponentNodes()")
 
                                     }
                                 
@@ -225,8 +221,7 @@ open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "insert()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "insert()")
 
                                     }
                                 
@@ -255,14 +250,11 @@ document.appendChild(domNodeInterface!!.toXmlNode(document))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Total Views For Modification: ")
+                                    stringBuffer!!.append("Total Views For Modification: ")
 stringBuffer!!.append(allViewsToBeModified!!.size)
-stringBuffer!!.append(
-                            " New Xml/Data: ")
+stringBuffer!!.append(" New Xml/Data: ")
 stringBuffer!!.append(documentString)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "insert()")
+logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
                                     }
                                 
@@ -292,11 +284,9 @@ transformInfoInterface!!.setData(documentString)
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(transformInfoInterface!!.getName())
-stringBuffer!!.append(
-                            " is modifying view: ")
+stringBuffer!!.append(" is modifying view: ")
 stringBuffer!!.append(viewNameOfViewToBeModified)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "insert()")
+logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
                                     }
                                 
@@ -321,13 +311,10 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(transformInfoInterface!!.getName())
-stringBuffer!!.append(
-                            " is unable to add data to view: ")
+stringBuffer!!.append(" is unable to add data to view: ")
 stringBuffer!!.append(viewNameOfViewToBeModified)
-stringBuffer!!.append(
-                            " since it does not exist")
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "insert()")
+stringBuffer!!.append(" since it does not exist")
+logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
                                     }
                                 
@@ -340,8 +327,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(transformInfoInterface!!.getName() +" is adding data to view: " +viewNameOfViewToBeModified, this, 
-                            "insert()")
+                                    logUtil!!.put(transformInfoInterface!!.getName() +" is adding data to view: " +viewNameOfViewToBeModified, this, "insert()")
 
                                     }
                                 
@@ -352,14 +338,11 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(viewNameOfViewToBeModified)
-stringBuffer!!.append(
-                            " is changing data in ")
+stringBuffer!!.append(" is changing data in ")
 stringBuffer!!.append(specifiedTransformInfoInterface!!.getDataFilePath()!!.toString())
-stringBuffer!!.append(
-                            " to the following data:\n")
+stringBuffer!!.append(" to the following data:\n")
 stringBuffer!!.append(documentString)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "insert()")
+logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
                                     }
                                 
@@ -387,8 +370,7 @@ open fun write(specifiedTransformInfoInterface: TransformInfoInterface, document
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +specifiedTransformInfoInterface!!.getName(), this, 
-                            "write()")
+                                    logUtil!!.put("View Name: " +specifiedTransformInfoInterface!!.getName(), this, "write()")
 
                                     }
                                 
@@ -413,8 +395,7 @@ open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "getViewDataForComponentsInObjectConfig()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "getViewDataForComponentsInObjectConfig()")
 
                                     }
                                 
@@ -465,8 +446,7 @@ open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
 
 
 
-                            throw Exception(
-                            "No Components Specified in ObjectConfig")
+                            throw Exception("No Components Specified in ObjectConfig")
 }
 
 

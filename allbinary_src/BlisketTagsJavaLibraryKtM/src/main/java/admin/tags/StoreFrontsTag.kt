@@ -56,8 +56,7 @@ open fun generateSelect()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "generateSelect", 
+    var method: Method = anyType!!::class.getMethod("generateSelect", 
                             null)!!
             
 
@@ -85,8 +84,7 @@ open fun generateSelect()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateSelect()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateSelect()", e)
 
                                     }
                                 
@@ -111,8 +109,7 @@ open fun install()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "install", 
+    var method: Method = anyType!!::class.getMethod("install", 
                             null)!!
             
 
@@ -140,8 +137,7 @@ open fun install()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateSelect()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateSelect()", e)
 
                                     }
                                 
@@ -166,8 +162,7 @@ open fun sendStoreCreatedEmails()
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "sendStoreCreatedEmails", 
+    var method: Method = anyType!!::class.getMethod("sendStoreCreatedEmails", 
                             null)!!
             
 
@@ -195,8 +190,7 @@ open fun sendStoreCreatedEmails()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "sendStoreCreatedEmails()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "sendStoreCreatedEmails()", e)
 
                                     }
                                 
@@ -246,10 +240,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(storeFrontData!!.INSTALL) == 0)
                         
                                     {
-                                    this.getPropertiesHashMap()!!.put(
-                            "current", this.getCurrent())
-this.getPropertiesHashMap()!!.put(
-                            "total", this.getTotal())
+                                    this.getPropertiesHashMap()!!.put("current", this.getCurrent())
+this.getPropertiesHashMap()!!.put("total", this.getTotal())
 
     
                         if(this.getCurrent()!!.toInt() == this.getTotal()!!.toInt())

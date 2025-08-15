@@ -115,8 +115,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -147,9 +146,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "User Name is valid", this, 
-                            "validationInfo()")
+                                    logUtil!!.put("User Name is valid", this, "validationInfo()")
 
                                     }
                                 
@@ -161,8 +158,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "User does not exist.<br />")
+                                    stringBuffer!!.append("User does not exist.<br />")
 
 
 
@@ -175,8 +171,7 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "User Name is not valid.<br />")
+                            stringBuffer!!.append("User Name is not valid.<br />")
 
 
 
@@ -195,14 +190,11 @@ this.user= UserEntityFactory.getInstance()!!.getUser(this.userName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "User exists but is invalid - Probably manually modified", this, 
-                            "validationInfo()")
+                                    logUtil!!.put("User exists but is invalid - Probably manually modified", this, "validationInfo()")
 
                                     }
                                 
-stringBuffer!!.append(
-                            "User data is not valid - Please call administrator.<br />")
+stringBuffer!!.append("User data is not valid - Please call administrator.<br />")
 stringBuffer!!.append(this.user.validationInfo())
 
                                     }
@@ -218,9 +210,7 @@ stringBuffer!!.append(this.user.validationInfo())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

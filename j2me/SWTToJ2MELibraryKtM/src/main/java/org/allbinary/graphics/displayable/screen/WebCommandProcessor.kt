@@ -96,8 +96,7 @@ open fun process(midletCommandListener: CommandListener, command: Command, canva
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "process", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "process", e)
 }
 
 }

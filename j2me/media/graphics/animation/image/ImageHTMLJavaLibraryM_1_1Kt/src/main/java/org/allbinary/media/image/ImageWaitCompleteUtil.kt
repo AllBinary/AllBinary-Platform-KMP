@@ -150,8 +150,7 @@ open fun waitForAll()
     var size: Int = objectArray!!.size
                 
 
-PreLogUtil.put("Image Total: " +size, this, 
-                            "waitForAll")
+PreLogUtil.put("Image Total: " +size, this, "waitForAll")
 
 
 

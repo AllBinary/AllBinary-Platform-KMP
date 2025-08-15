@@ -71,8 +71,7 @@ this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
-                                    logUtil!!.put("Name: " +this.getName(), this, 
-                            "CssProperty()")
+                                    logUtil!!.put("Name: " +this.getName(), this, "CssProperty()")
 
                                     }
                                 
@@ -124,8 +123,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("CssView HashMap: " +hashMap!!.toString(), this, 
-                            "toXmlNode()")
+                                    logUtil!!.put("CssView HashMap: " +hashMap!!.toString(), this, "toXmlNode()")
 
                                     }
                                 

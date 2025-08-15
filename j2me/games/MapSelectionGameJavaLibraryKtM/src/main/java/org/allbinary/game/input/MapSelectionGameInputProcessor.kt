@@ -115,8 +115,7 @@ public constructor        (gameCanvas: AllBinaryGameCanvas, raceTrackGeographicM
 this.gameCanvas= gameCanvas
 this.raceTrackGeographicMapInterfaceFactoryInterface= raceTrackGeographicMapInterfaceFactoryInterface
 this.preGameSelectorPaintable= mapSelectorPaintable
-this.playerGameInput= GameInputProcessorComposite(
-                            "Map Selection", this)
+this.playerGameInput= GameInputProcessorComposite("Map Selection", this)
 this.lockedIndex= lockedIndex
 }
 

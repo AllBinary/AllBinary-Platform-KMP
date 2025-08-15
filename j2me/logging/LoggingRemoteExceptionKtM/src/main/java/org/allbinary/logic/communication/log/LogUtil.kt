@@ -202,8 +202,7 @@ this.isFirstException= false
 
 
         try {
-            System.out.println(
-                            "Eeeek")
+            System.out.println("Eeeek")
 
     
                         if(abeClientInformation == 
@@ -226,13 +225,11 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(message)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(SpecialMessageUtil.getInstance()!!.get())
-hashtable.put(
-                            "message", stringBuffer!!.toString())
+hashtable.put("message", stringBuffer!!.toString())
 XmlRpcRemoteLogClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Throwable)
-            {System.out.println(
-                            "Exception")
+            {System.out.println("Exception")
 e.printStackTrace()
 }
 

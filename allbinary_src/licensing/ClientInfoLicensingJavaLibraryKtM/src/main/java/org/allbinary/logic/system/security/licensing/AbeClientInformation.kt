@@ -90,8 +90,7 @@ this.setLicenseServers(licenseInitInfo!!.getServerList())
             
 
 PreLogUtil.put(StringMaker().
-                            append(
-                            "Special Name: ")!!.append(this.getSpecialName())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Special Name: ")!!.append(this.getSpecialName())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

@@ -120,14 +120,12 @@ override fun toString()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "BufferedImageInfo -")
+stringBuffer!!.append("BufferedImageInfo -")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
 stringBuffer!!.append(this.getWidth())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.append(this.getHeight())
-stringBuffer!!.append(
-                            " Type: ")
+stringBuffer!!.append(" Type: ")
 stringBuffer!!.append(this.getType())
 
 

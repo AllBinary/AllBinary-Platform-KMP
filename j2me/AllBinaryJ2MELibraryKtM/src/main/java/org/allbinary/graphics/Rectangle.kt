@@ -144,11 +144,9 @@ stringBuffer!!.append(this.getWidth())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(CommonLabels.getInstance()!!.HEIGHT_LABEL)
 stringBuffer!!.append(this.getHeight())
-stringBuffer!!.append(
-                            " MaxX: ")
+stringBuffer!!.append(" MaxX: ")
 stringBuffer!!.append(this.getMaxX())
-stringBuffer!!.append(
-                            " MaxY: ")
+stringBuffer!!.append(" MaxY: ")
 stringBuffer!!.append(this.getMaxY())
 
 

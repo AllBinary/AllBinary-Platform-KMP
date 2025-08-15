@@ -57,24 +57,19 @@ open fun getInstance()
 
     val SKIN_PINK: BasicColor = BasicColor(0xFDCECE)
 
-    val RED: BasicColor = BasicColor(0xFF0000, 
-                            "red")
+    val RED: BasicColor = BasicColor(0xFF0000, "red")
 
-    val LIGHT_RED: BasicColor = BasicColor(0xFFA0A0, 
-                            "light red")
+    val LIGHT_RED: BasicColor = BasicColor(0xFFA0A0, "light red")
 
     val DARK_GREEN: BasicColor = BasicColor(0x00FF00)
 
-    val GREEN: BasicColor = BasicColor(0x00DD00, 
-                            "green")
+    val GREEN: BasicColor = BasicColor(0x00DD00, "green")
 
     val LIGHT_GREEN: BasicColor = BasicColor(0x007700)
 
-    val PURPLE: BasicColor = BasicColor(0x400040, 
-                            "purple")
+    val PURPLE: BasicColor = BasicColor(0x400040, "purple")
 
-    val BLUE: BasicColor = BasicColor(0x0000FF, 
-                            "blue")
+    val BLUE: BasicColor = BasicColor(0x0000FF, "blue")
 
     val LIGHT_BLUE: BasicColor = BasicColor(0x00aaff)
 
@@ -84,16 +79,13 @@ open fun getInstance()
 
     val AQUA: BasicColor = BasicColor(0x00FFFF)
 
-    val YELLOW: BasicColor = BasicColor(0xFFFF00, 
-                            "yellow")
+    val YELLOW: BasicColor = BasicColor(0xFFFF00, "yellow")
 
     val PINK: BasicColor = BasicColor(0xFF00FF)
 
-    val BLACK: BasicColor = BasicColor(0x000000, 
-                            "black")
+    val BLACK: BasicColor = BasicColor(0x000000, "black")
 
-    val GREY: BasicColor = BasicColor(0xAAAAAA, 
-                            "grey")
+    val GREY: BasicColor = BasicColor(0xAAAAAA, "grey")
 
     val LIGHT_GREY: BasicColor = BasicColor(0xC0C0C0)
 

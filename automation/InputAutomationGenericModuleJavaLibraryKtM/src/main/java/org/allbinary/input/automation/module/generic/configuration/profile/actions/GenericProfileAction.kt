@@ -76,8 +76,7 @@ public constructor        (genericProfileActionJPanel: GenericProfileActionJPane
                             
 
 
-                            throw Exception(
-                            "Profile Action Name Node Null")
+                            throw Exception("Profile Action Name Node Null")
 
                         }
                             
@@ -119,8 +118,7 @@ open fun toHashMap()
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(GenericProfileActionData.NAME, this.name)
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 

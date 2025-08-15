@@ -81,8 +81,7 @@ open fun getNewDirectory(fromFile: AbFile)
 
 
     
-                        if(AbFileSystem.getInstance()!!.isType(
-                            "com.vobject.appengine.java.io"))
+                        if(AbFileSystem.getInstance()!!.isType("com.vobject.appengine.java.io"))
                         
                                     {
                                     separatorChar= AbPathData.getInstance()!!.SEPARATOR
@@ -262,8 +261,7 @@ this.directory.create(fixedPath)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
                         
                                     {
-                                    logUtil!!.put(string, getInstance(), 
-                            "fixPath")
+                                    logUtil!!.put(string, getInstance(), "fixPath")
 
                                     }
                                 
@@ -351,16 +349,12 @@ open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Out File: ")
+stringBuffer!!.append("Out File: ")
 stringBuffer!!.append(outFile!!.getPath())
-stringBuffer!!.append(
-                            " In File: ")
+stringBuffer!!.append(" In File: ")
 stringBuffer!!.append(file.getPath())
-stringBuffer!!.append(
-                            " to cloud.")
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyToCloud")
+stringBuffer!!.append(" to cloud.")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud")
 
                                     }
                                 
@@ -384,13 +378,10 @@ this.copy(fileInputStream, dataOutputStream)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Error Copying File File: ")
+stringBuffer!!.append("Error Copying File File: ")
 stringBuffer!!.append(file.toString())
-stringBuffer!!.append(
-                            " to cloud.")
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyToCloud", e)
+stringBuffer!!.append(" to cloud.")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud", e)
 
                                     }
                                 
@@ -458,16 +449,12 @@ open fun copyToCloud(file: AbFile, outFile: AbFile, overwriteNewer: Boolean, ove
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Out File: ")
+stringBuffer!!.append("Out File: ")
 stringBuffer!!.append(outFile!!.getPath())
-stringBuffer!!.append(
-                            " In File: ")
+stringBuffer!!.append(" In File: ")
 stringBuffer!!.append(file.getPath())
-stringBuffer!!.append(
-                            " to cloud.")
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyToCloud")
+stringBuffer!!.append(" to cloud.")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud")
 
                                     }
                                 
@@ -491,13 +478,10 @@ this.copy(fileInputStream, dataOutputStream)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Error Copying File File: ")
+stringBuffer!!.append("Error Copying File File: ")
 stringBuffer!!.append(file.toString())
-stringBuffer!!.append(
-                            " to cloud.")
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyToCloud", e)
+stringBuffer!!.append(" to cloud.")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud", e)
 
                                     }
                                 
@@ -545,11 +529,9 @@ open fun copyPrepare(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, 
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Overwriting File: ")
+stringBuffer!!.append("Overwriting File: ")
 stringBuffer!!.append(toFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyFile")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
 
                                     }
                                 
@@ -569,16 +551,12 @@ toFile!!.createNewFile()
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Newer by: ")
+stringBuffer!!.append("Newer by: ")
 stringBuffer!!.append(fromFile!!.lastModified() -toFile!!.lastModified())
-stringBuffer!!.append(
-                            "ms ")
-stringBuffer!!.append(
-                            "Copying File: ")
+stringBuffer!!.append("ms ")
+stringBuffer!!.append("Copying File: ")
 stringBuffer!!.append(toFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyFile")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
 
                                     }
                                 
@@ -594,28 +572,24 @@ toFile!!.createNewFile()
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "File Already Exists")
+stringBuffer!!.append("File Already Exists")
 
     
                         if(overwriteNewer)
                         
                                     {
-                                    stringBuffer!!.append(
-                            " And Is Not Older")
+                                    stringBuffer!!.append(" And Is Not Older")
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            " And Not A In Overwrite Mode")
+                            stringBuffer!!.append(" And Not A In Overwrite Mode")
 
                         }
                             
 stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
 stringBuffer!!.append(toFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyFile")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
 
                                     }
                                 
@@ -683,17 +657,13 @@ open fun copyFile(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, ove
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Copying ")
+stringBuffer!!.append("Copying ")
 stringBuffer!!.append(fromFile!!.length())
-stringBuffer!!.append(
-                            " bytes from File: ")
+stringBuffer!!.append(" bytes from File: ")
 stringBuffer!!.append(fromFile!!.getPath())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(toFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyFile")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
 
                                     }
                                 
@@ -727,14 +697,11 @@ this.copy(fileInputStream, dataOutputStream)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Error Copying File fromFile: ")
+stringBuffer!!.append("Error Copying File fromFile: ")
 stringBuffer!!.append(fromFile!!.toString())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(toFile!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyFile", e)
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile", e)
 
                                     }
                                 
@@ -795,11 +762,9 @@ open fun copyDirectoryPortion(fromDirectoryAbPath: AbPath, toDirectoryAbPath: Ab
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Searched: ")
+stringBuffer!!.append("Searched: ")
 stringBuffer!!.append(file.getPath())
-stringBuffer!!.append(
-                            " Total: ")
+stringBuffer!!.append(" Total: ")
 stringBuffer!!.append(size)
 
     var portion: Int = size /total +1
@@ -819,19 +784,16 @@ stringBuffer!!.append(size)
 
                                     }
                                 
-stringBuffer!!.append(
-                            " Section: ")
+stringBuffer!!.append(" Section: ")
 stringBuffer!!.append(start)
-stringBuffer!!.append(
-                            " - ")
+stringBuffer!!.append(" - ")
 stringBuffer!!.append(end)
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copySomeFilesToDirectory()")
+                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copySomeFilesToDirectory()")
 
                                     }
                                 
@@ -908,14 +870,11 @@ open fun copyDirectory(fromFile: AbFile, to: AbFile)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Copying Directory from: ")
+stringBuffer!!.append("Copying Directory from: ")
 stringBuffer!!.append(fromFile!!.getPath())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(to.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyDirectory")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
 
                                     }
                                 
@@ -954,17 +913,13 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Copying ")
+stringBuffer!!.append("Copying ")
 stringBuffer!!.append(size)
-stringBuffer!!.append(
-                            " files from: ")
+stringBuffer!!.append(" files from: ")
 stringBuffer!!.append(fromFile!!.getPath())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(to.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyDirectory")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
 
                                     }
                                 
@@ -1000,8 +955,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                             
 
 
-                            throw Exception(
-                            "File Copy Error")
+                            throw Exception("File Copy Error")
 
                         }
                             
@@ -1016,14 +970,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Error Copying Directory fromFile: ")
+stringBuffer!!.append("Error Copying Directory fromFile: ")
 stringBuffer!!.append(fromFile!!.toString())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(to.toString())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copyDirectory", e)
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory", e)
 
                                     }
                                 
@@ -1056,14 +1007,11 @@ open fun copy(fromAbPath: AbPath, to: AbPath)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Copying AbPaths from: ")
+stringBuffer!!.append("Copying AbPaths from: ")
 stringBuffer!!.append(fromAbPath!!.toString())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(to.toString())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copy")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
 
                                     }
                                 
@@ -1077,8 +1025,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                                     
 
 
-                            throw Exception(
-                            "Cannot Copy From A Null Location")
+                            throw Exception("Cannot Copy From A Null Location")
 
                                     }
                                 
@@ -1092,8 +1039,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                                     
 
 
-                            throw Exception(
-                            "Cannot Copy To A Null Location")
+                            throw Exception("Cannot Copy To A Null Location")
 
                                     }
                                 
@@ -1125,17 +1071,13 @@ this.copyFile(fromLocationFile, file)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Copied file=")
+stringBuffer!!.append("Copied file=")
 stringBuffer!!.append(fromLocationFile!!.getName())
-stringBuffer!!.append(
-                            " from: ")
+stringBuffer!!.append(" from: ")
 stringBuffer!!.append(fromLocationFile!!.getPath())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(toLocationFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copy")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
 
                                     }
                                 
@@ -1152,16 +1094,12 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Copied file with new name ")
-stringBuffer!!.append(
-                            " from: ")
+stringBuffer!!.append("Copied file with new name ")
+stringBuffer!!.append(" from: ")
 stringBuffer!!.append(fromLocationFile!!.getPath())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(toLocationFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copy")
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
 
                                     }
                                 
@@ -1186,9 +1124,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(),
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
                         
                                     {
-                                    logUtil!!.put(
-                            "Copying subdirectories", getInstance(), 
-                            "copy")
+                                    logUtil!!.put("Copying subdirectories", getInstance(), "copy")
 
                                     }
                                 
@@ -1231,8 +1167,7 @@ this.copyFile(file, aFile)
                             
 
 
-                            throw Exception(
-                            "File Copy Error")
+                            throw Exception("File Copy Error")
 
                         }
                             
@@ -1243,9 +1178,7 @@ this.copyFile(file, aFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
                         
                                     {
-                                    logUtil!!.put(
-                            "Copied subdirectories", getInstance(), 
-                            "copy")
+                                    logUtil!!.put("Copied subdirectories", getInstance(), "copy")
 
                                     }
                                 
@@ -1258,9 +1191,7 @@ this.copyFile(file, aFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
                         
                                     {
-                                    logUtil!!.put(
-                            "Copyinhg directory", getInstance(), 
-                            "copy")
+                                    logUtil!!.put("Copyinhg directory", getInstance(), "copy")
 
                                     }
                                 
@@ -1270,9 +1201,7 @@ copyDirectory(fromLocationFile, toLocationFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILE))
                         
                                     {
-                                    logUtil!!.put(
-                            "Copied directory", getInstance(), 
-                            "copy")
+                                    logUtil!!.put("Copied directory", getInstance(), "copy")
 
                                     }
                                 
@@ -1296,14 +1225,11 @@ copyDirectory(fromLocationFile, toLocationFile)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Error Copying fromAbPath: ")
+stringBuffer!!.append("Error Copying fromAbPath: ")
 stringBuffer!!.append(fromAbPath!!.toString())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(to.toString())
-logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "copy", e)
+logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy", e)
 
                                     }
                                 
@@ -1371,8 +1297,7 @@ open fun readAsString(fileName: String, bytes: ByteArray)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.IDLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "SmallInsert", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "SmallInsert", e)
 
                                     }
                                 

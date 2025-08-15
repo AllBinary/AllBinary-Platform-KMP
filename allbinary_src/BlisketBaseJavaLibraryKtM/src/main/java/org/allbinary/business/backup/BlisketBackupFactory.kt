@@ -101,8 +101,7 @@ open fun backup()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "backup()")
+            logUtil!!.put(this.commonStrings!!.START, this, "backup()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -121,8 +120,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backup.zip")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "backup()", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 
 }
@@ -132,8 +130,7 @@ open fun backupViews()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "backupViews()")
+            logUtil!!.put(this.commonStrings!!.START, this, "backupViews()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -180,21 +177,17 @@ stringBuffer!!.append(nextStore)
             
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Backup Store Views: ")
+stringBuffer!!.append("Backup Store Views: ")
 stringBuffer!!.append(nextStore)
-stringBuffer!!.append(
-                            " from: ")
+stringBuffer!!.append(" from: ")
 stringBuffer!!.append(viewsPath)
-PreLogUtil.put(stringBuffer!!.toString(), this, 
-                            "backupViews()")
+PreLogUtil.put(stringBuffer!!.toString(), this, "backupViews()")
 fileBasicArrayList!!.addAll(this.getFileBasicArrayList(viewsPath))
 }
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupViews.zip")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "backupViews()", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupViews()", e)
 }
 
 }
@@ -204,8 +197,7 @@ open fun backupResources()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "backupResources()")
+            logUtil!!.put(this.commonStrings!!.START, this, "backupResources()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -256,21 +248,17 @@ stringBuffer!!.append(storeFrontInterface!!.getCategoryPath())
             
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Backup Store Resrouces: ")
+stringBuffer!!.append("Backup Store Resrouces: ")
 stringBuffer!!.append(nextStore)
-stringBuffer!!.append(
-                            " from: ")
+stringBuffer!!.append(" from: ")
 stringBuffer!!.append(resourcesPath)
-PreLogUtil.put(stringBuffer!!.toString(), this, 
-                            "backupResources()")
+PreLogUtil.put(stringBuffer!!.toString(), this, "backupResources()")
 fileBasicArrayList!!.addAll(this.getFileBasicArrayList(resourcesPath))
 }
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupResources.zip")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "backupResources()", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupResources()", e)
 }
 
 }
@@ -280,8 +268,7 @@ open fun backupJsps()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "backupJsps()")
+            logUtil!!.put(this.commonStrings!!.START, this, "backupJsps()")
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -319,8 +306,7 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
         {
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
 
-PreLogUtil.put("Backup Store Jsps: " +nextStore, this, 
-                            "backupJsps()")
+PreLogUtil.put("Backup Store Jsps: " +nextStore, this, "backupJsps()")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(nextStore)
@@ -329,8 +315,7 @@ fileBasicArrayList!!.addAll(this.getFileBasicArrayList(stringBuffer!!.toString()
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backupJsps.zip")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "backupJsps()", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backupJsps()", e)
 }
 
 }
@@ -350,21 +335,15 @@ open fun backup(fileBasicArrayList: BasicArrayList, zipFile: String)
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "ZipFile: ")
+stringBuffer!!.append("ZipFile: ")
 stringBuffer!!.append(zipFile)
-stringBuffer!!.append(
-                            " BasicArrayList: ")
+stringBuffer!!.append(" BasicArrayList: ")
 stringBuffer!!.append(fileBasicArrayList!!.size())
-PreLogUtil.put("Creating Backup Zip File: " +stringBuffer!!.toString(), this, 
-                            "backup()")
+PreLogUtil.put("Creating Backup Zip File: " +stringBuffer!!.toString(), this, "backup()")
 ZipFileUtil.getInstance()!!.create(zipFile, fileBasicArrayList)
-logUtil!!.put(
-                            "Created Backup Zip File", this, 
-                            "backup()")
+logUtil!!.put("Created Backup Zip File", this, "backup()")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "backup()", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "backup()", e)
 }
 
 }

@@ -198,9 +198,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(super.toString())!!.append(
-                            "circularIndexUtil: ")!!.append(this.circularIndexUtil!!.toString())!!.append(
-                            "angleInfo: ")!!.append(this.angleInfo!!.toString())!!.toString()
+                            append(super.toString())!!.append("circularIndexUtil: ")!!.append(this.circularIndexUtil!!.toString())!!.append("angleInfo: ")!!.append(this.angleInfo!!.toString())!!.toString()
 }
 
 

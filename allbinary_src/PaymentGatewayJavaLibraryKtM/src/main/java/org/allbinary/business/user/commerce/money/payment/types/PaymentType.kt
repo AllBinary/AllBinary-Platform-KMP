@@ -88,8 +88,7 @@ open fun getPaymentTransactionInterfaceFactoryInterface()
                                     
 
 
-                            throw Exception(
-                            "PaymentTransactionInterfaceFactoryInterface is Null")
+                            throw Exception("PaymentTransactionInterfaceFactoryInterface is Null")
 
                                     }
                                 
@@ -115,8 +114,7 @@ open fun getPaymentProcessorInterfaceFactoryInterface()
                                     
 
 
-                            throw Exception(
-                            "PaymentProcessorInterfaceFactoryInterface is Null")
+                            throw Exception("PaymentProcessorInterfaceFactoryInterface is Null")
 
                                     }
                                 

@@ -77,13 +77,11 @@ open fun start(context: BundleContext)
                     var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "start")
+            logUtil!!.put(this.commonStrings!!.START, this, "start")
 AllBinaryPreloaderActivator.context= context
 this.registerAsService()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "start", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
 
 
 
@@ -115,8 +113,7 @@ serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
                                     null
                                 )
                         
-                                    throw Exception(
-                            "No Such Service Reference")
+                                    throw Exception("No Such Service Reference")
 }
 
 
@@ -127,8 +124,7 @@ open fun stop(context: BundleContext)
 {
 
                     var context = context
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "stop")
+logUtil!!.put(this.commonStrings!!.START, this, "stop")
 }
 
 

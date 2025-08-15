@@ -94,14 +94,11 @@ open fun isValid()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Invalid AdminCommand: ")
+stringBuffer!!.append("Invalid AdminCommand: ")
 stringBuffer!!.append(command)
-stringBuffer!!.append(
-                            " must be: ")
+stringBuffer!!.append(" must be: ")
 stringBuffer!!.append(ADDPRODUCT)
-stringBuffer!!.append(
-                            " or ")
+stringBuffer!!.append(" or ")
 stringBuffer!!.append(NEXTSTEP)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -187,8 +184,7 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Item Already Exists", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("Item Already Exists", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -248,8 +244,7 @@ HttpFileUploadUtil.log(fileItem)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in validation", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Exception in validation", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -318,8 +313,7 @@ open fun validationInfo()
                         
                                     {
                                     stringBuffer!!.append(basicItemValidation!!.validationInfo())
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                                     }
                                 
@@ -337,8 +331,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Category: " +fullCategory, this, 
-                            "validationInfo()")
+                                    logUtil!!.put("Category: " +fullCategory, this, "validationInfo()")
 
                                     }
                                 
@@ -350,11 +343,9 @@ stringBuffer!!.append(
                         if(!categoryFile!!.isDirectory())
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Category ")
+                                    stringBuffer!!.append("Category ")
 stringBuffer!!.append(this.itemInterface!!.getCategory())
-stringBuffer!!.append(
-                            " does not exist.<br />")
+stringBuffer!!.append(" does not exist.<br />")
 
                                     }
                                 
@@ -367,8 +358,7 @@ stringBuffer!!.append(
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is already in use. Refresh the page for a valid id.<br/>")
+                                    stringBuffer!!.append("Id is already in use. Refresh the page for a valid id.<br/>")
 
                                     }
                                 
@@ -378,9 +368,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Existing Item With MoneyException", this, 
-                            "validationInfo()")
+                                    logUtil!!.put("Existing Item With MoneyException", this, "validationInfo()")
 
                                     }
                                 
@@ -425,9 +413,7 @@ this.validationInfo(stringBuffer, fileName, fileItemFieldName, size)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -519,11 +505,9 @@ open fun isValid(fileName: String, size: Long)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "File Size To Large: ")
+stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.append(size)
-stringBuffer!!.append(
-                            ">")
+stringBuffer!!.append(">")
 stringBuffer!!.append(fileData!!.MAXIMAGEFILESIZE)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -550,11 +534,9 @@ this.processImageFiles()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "File Size To Small: ")
+stringBuffer!!.append("File Size To Small: ")
 stringBuffer!!.append(size)
-stringBuffer!!.append(
-                            ">")
+stringBuffer!!.append(">")
 stringBuffer!!.append(fileData!!.MINIMAGEFILESIZE)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -614,14 +596,11 @@ open fun validationInfo(stringBuffer: StringMaker, fileName: String, fileItemFie
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(fileName, fileData!!.MINLEN, fileData!!.MAXLEN))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "FileName must be >")
+                                    stringBuffer!!.append("FileName must be >")
 stringBuffer!!.append(fileData!!.MINLEN)
-stringBuffer!!.append(
-                            " and <")
+stringBuffer!!.append(" and <")
 stringBuffer!!.append(fileData!!.MAXLEN)
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                                     }
                                 
@@ -643,11 +622,9 @@ stringBuffer!!.append(
                         if(!uploadMedia!!.isWriterSupported(extension) && !uploadMedia!!.isReaderSupported(extension))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Image type: ")
+                                    stringBuffer!!.append("Image type: ")
 stringBuffer!!.append(extension)
-stringBuffer!!.append(
-                            " not supported.<br />")
+stringBuffer!!.append(" not supported.<br />")
 
                                     }
                                 
@@ -658,14 +635,11 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Image File Is To Large. ")
+                            stringBuffer!!.append("Image File Is To Large. ")
 stringBuffer!!.append(fileData!!.MINIMAGEFILESIZE)
-stringBuffer!!.append(
-                            " < > ")
+stringBuffer!!.append(" < > ")
 stringBuffer!!.append(fileData!!.MAXIMAGEFILESIZE)
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                         }
                             
@@ -676,14 +650,11 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Image File Is To Small. ")
+                            stringBuffer!!.append("Image File Is To Small. ")
 stringBuffer!!.append(fileData!!.MINIMAGEFILESIZE)
-stringBuffer!!.append(
-                            " < > ")
+stringBuffer!!.append(" < > ")
 stringBuffer!!.append(fileData!!.MAXIMAGEFILESIZE)
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                         }
                             

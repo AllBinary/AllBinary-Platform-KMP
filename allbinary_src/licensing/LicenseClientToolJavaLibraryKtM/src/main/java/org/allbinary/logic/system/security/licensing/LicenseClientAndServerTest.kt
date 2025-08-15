@@ -56,9 +56,7 @@ open fun main(args: Array<String?>)
 
 licensingTest!!.test()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, 
-                            "main()", 
-                            "main()", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
 }
 
 }
@@ -100,9 +98,8 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
     var lineNumberReader: LineNumberReader = LineNumberReader(reader)
 
-)
 
-
+        while(true)
         {
     var line: String = lineNumberReader!!.readLine()!!
             
@@ -197,22 +194,18 @@ stringBuffer!!.append(abeLicenseInterface!!.toString())
                                     }
                                 
 stringBuffer!!.append(END)
-logUtil!!.put(RESULT +stringBuffer!!.toString(), this, 
-                            "test")
+logUtil!!.put(RESULT +stringBuffer!!.toString(), this, "test")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 } catch(e: Exception)
             {list.add(serverName)
-logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, 
-                            "test", e)
+logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 }
 
 }
 
-logUtil!!.put("Total Servers Failed: " +list.size() +" Failed Servers: " +list.toString(), this, 
-                            "test")
+logUtil!!.put("Total Servers Failed: " +list.size() +" Failed Servers: " +list.toString(), this, "test")
 } catch(e: Exception)
-            {logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, 
-                            "test", e)
+            {logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 }
 
 }

@@ -205,8 +205,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
                                 )
                         
                                     {
-                                    logUtil!!.put("pathFindingInfo: " +pathFindingInfo, this, 
-                            "getPathsList")
+                                    logUtil!!.put("pathFindingInfo: " +pathFindingInfo, this, "getPathsList")
 
 
 
@@ -240,8 +239,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
                                     
 
 
-                            throw Exception(
-                            "Path may have been cleared by clearing caching")
+                            throw Exception("Path may have been cleared by clearing caching")
 
                                     }
                                 
@@ -263,8 +261,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getPathsList", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
 
 
 

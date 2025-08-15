@@ -98,8 +98,7 @@ open fun create(directory: String)
                         if(!directoryFile!!.isDirectory())
                         
                                     {
-                                    PreLogUtil.put("Creating Directories: " +directory, this, 
-                            "create")
+                                    PreLogUtil.put("Creating Directories: " +directory, this, "create")
 
     
                         if(!directoryFile!!.mkdirs())
@@ -122,8 +121,7 @@ open fun create(directory: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {PreLogUtil.put("Error Creating Directories: " +directory, this, 
-                            "create", e)
+            {PreLogUtil.put("Error Creating Directories: " +directory, this, "create", e)
 
 
 
@@ -167,9 +165,7 @@ open fun remove(existingDirectory: String)
                         if(existingDirectoryFile!!.delete())
                         
                                     {
-                                    PreLogUtil.put("Successfully Removed: " +existingDirectory, 
-                            "Directory", 
-                            "remove")
+                                    PreLogUtil.put("Successfully Removed: " +existingDirectory, "Directory", "remove")
 
                                     }
                                 

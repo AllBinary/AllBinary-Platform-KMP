@@ -52,14 +52,11 @@ open fun getInstance()
             {
             }            
         
-    val CREDITCARD: TenderType = TenderType(
-                            "Credit Card")
+    val CREDITCARD: TenderType = TenderType("Credit Card")
 
-    val CHECK: TenderType = TenderType(
-                            "Check")
+    val CHECK: TenderType = TenderType("Check")
 
-    val ACH: TenderType = TenderType(
-                            "Ach")
+    val ACH: TenderType = TenderType("Ach")
 
 }
                 

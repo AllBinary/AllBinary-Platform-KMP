@@ -38,8 +38,7 @@ open public class SecondaryThreadPool : ThreadPool {
 
         companion object {
             
-    private val instance: ThreadPool = SecondaryThreadPool(
-                            "Secondary", 1)
+    private val instance: ThreadPool = SecondaryThreadPool("Secondary", 1)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

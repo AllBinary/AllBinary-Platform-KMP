@@ -81,7 +81,7 @@ open fun getColorNode(document: Document, redIndex: Int, greenIndex: Int, blueIn
 
                                     }
                                 
-hexColorStringBuffer!!.append(redIndex.toString())
+hexColorStringBuffer!!.append(redIndex, HEXRADIX.toString())
 
     
                         if(greenIndex < HEXRADIX)
@@ -91,7 +91,7 @@ hexColorStringBuffer!!.append(redIndex.toString())
 
                                     }
                                 
-hexColorStringBuffer!!.append(greenIndex.toString())
+hexColorStringBuffer!!.append(greenIndex, HEXRADIX.toString())
 
     
                         if(blueIndex < HEXRADIX)
@@ -101,7 +101,7 @@ hexColorStringBuffer!!.append(greenIndex.toString())
 
                                     }
                                 
-hexColorStringBuffer!!.append(blueIndex.toString())
+hexColorStringBuffer!!.append(blueIndex, HEXRADIX.toString())
 
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
             
@@ -122,13 +122,11 @@ open fun toXmlNode(document: Document)
 
                     var document = document
 
-    var node: Node = ModDomHelper.createNameValueNodes(document, ColorsData.getInstance()!!.NAME, 
-                            "RGB Colors In Hex")!!
+    var node: Node = ModDomHelper.createNameValueNodes(document, ColorsData.getInstance()!!.NAME, "RGB Colors In Hex")!!
             
 
 
-    var blackNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, 
-                            "000000")!!
+    var blackNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, "000000")!!
             
 
 node.appendChild(blackNode)
@@ -151,7 +149,7 @@ node.appendChild(blackNode)
 
                                     }
                                 
-hexColorStringBuffer!!.append(index.toString())
+hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 
     
                         if(index < HEXRADIX)
@@ -161,7 +159,7 @@ hexColorStringBuffer!!.append(index.toString())
 
                                     }
                                 
-hexColorStringBuffer!!.append(index.toString())
+hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 
     
                         if(index < HEXRADIX)
@@ -171,7 +169,7 @@ hexColorStringBuffer!!.append(index.toString())
 
                                     }
                                 
-hexColorStringBuffer!!.append(index.toString())
+hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
             
@@ -180,8 +178,7 @@ node.appendChild(colorNode)
 }
 
 
-    var whiteNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, 
-                            "FFFFFF")!!
+    var whiteNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, "FFFFFF")!!
             
 
 node.appendChild(whiteNode)

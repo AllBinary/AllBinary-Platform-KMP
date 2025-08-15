@@ -94,8 +94,7 @@ open fun init(filePath: String)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Cpu Data: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR, e)
+                            append("Cpu Data: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
@@ -142,8 +141,7 @@ cpuHashMap= HashMap<Any, Any>()
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Cpu File Vector Size: ")!!.append(fileVector!!.size())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("Cpu File Vector Size: ")!!.append(fileVector!!.size())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 

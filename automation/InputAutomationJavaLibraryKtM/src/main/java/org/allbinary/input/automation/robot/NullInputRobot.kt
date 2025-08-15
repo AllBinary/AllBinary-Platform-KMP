@@ -93,8 +93,7 @@ open fun keyPress(keycode: Integer)
 {
 
                     var keycode = keycode
-logUtil!!.put("KeyCode: " +keycode, this, 
-                            "keyPress")
+logUtil!!.put("KeyCode: " +keycode, this, "keyPress")
 }
 
 
@@ -103,8 +102,7 @@ open fun keyRelease(keycode: Integer)
 {
 
                     var keycode = keycode
-logUtil!!.put("KeyCode: " +keycode, this, 
-                            "keyRelease")
+logUtil!!.put("KeyCode: " +keycode, this, "keyRelease")
 }
 
 
@@ -116,8 +114,7 @@ open fun mouseMove(x: Integer, y: Integer)
 
 
                     var y = y
-logUtil!!.put("X: " +x +" Y: " +y, this, 
-                            "mouseMove")
+logUtil!!.put("X: " +x +" Y: " +y, this, "mouseMove")
 }
 
 
@@ -126,8 +123,7 @@ open fun mousePress(buttons: Integer)
 {
 
                     var buttons = buttons
-logUtil!!.put("Buttons: " +buttons, this, 
-                            "mousePress")
+logUtil!!.put("Buttons: " +buttons, this, "mousePress")
 }
 
 
@@ -136,8 +132,7 @@ open fun mouseRelease(buttons: Integer)
 {
 
                     var buttons = buttons
-logUtil!!.put("Buttons: " +buttons, this, 
-                            "mouseRelease")
+logUtil!!.put("Buttons: " +buttons, this, "mouseRelease")
 }
 
 

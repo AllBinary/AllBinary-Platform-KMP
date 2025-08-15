@@ -126,8 +126,7 @@ open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, cate
                                     
 
 
-                            throw Exception(
-                            "Original Image File Does Not Exist.")
+                            throw Exception("Original Image File Does Not Exist.")
 
                                     }
                                 
@@ -145,8 +144,7 @@ open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, cate
                                     
 
 
-                            throw Exception(
-                            "Unable to find ImageReader for this file.")
+                            throw Exception("Unable to find ImageReader for this file.")
 
                                     }
                                 
@@ -159,8 +157,7 @@ open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, cate
     var hashMap: HashMap<Any, Any> = this.getImageBufferPropertyHashMap(bufferedImage)!!
             
 
-logUtil!!.put("Image Properties: " +hashMap!!.toString(), this, 
-                            "saveImageFile()")
+logUtil!!.put("Image Properties: " +hashMap!!.toString(), this, "saveImageFile()")
 
                                     }
                                 
@@ -188,8 +185,7 @@ imageFile!!.createNewFile()
                                     
 
 
-                            throw Exception(
-                            "Unable to write.")
+                            throw Exception("Unable to write.")
 
                                     }
                                 
@@ -205,32 +201,23 @@ imageFile!!.createNewFile()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Get Path: ")
+stringBuffer!!.append("Get Path: ")
 stringBuffer!!.append(originalImageFile!!.getPath())
-stringBuffer!!.append(
-                            "\nNewImageFileName: ")
+stringBuffer!!.append("\nNewImageFileName: ")
 stringBuffer!!.append(newImageFileName)
-stringBuffer!!.append(
-                            "\nCategory: ")
+stringBuffer!!.append("\nCategory: ")
 stringBuffer!!.append(category)
-stringBuffer!!.append(
-                            "\nSave File Type: ")
+stringBuffer!!.append("\nSave File Type: ")
 stringBuffer!!.append(mediaData!!.getName())
-stringBuffer!!.append(
-                            "\nNew")!!.append(commonLabels!!.WIDTH_LABEL)
+stringBuffer!!.append("\nNew")!!.append(commonLabels!!.WIDTH_LABEL)
 stringBuffer!!.append(newWidth)
-stringBuffer!!.append(
-                            "\nNew")!!.append(commonLabels!!.HEIGHT_LABEL)
+stringBuffer!!.append("\nNew")!!.append(commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.append(newHeight)
-stringBuffer!!.append(
-                            "\nFile Length: ")
+stringBuffer!!.append("\nFile Length: ")
 stringBuffer!!.append(originalImageFile!!.length())
-stringBuffer!!.append(
-                            "\nNew File Length: ")
+stringBuffer!!.append("\nNew File Length: ")
 stringBuffer!!.append(imageFile!!.length())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "saveImageFile()")
+logUtil!!.put(stringBuffer!!.toString(), this, "saveImageFile()")
 
                                     }
                                 

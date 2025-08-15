@@ -52,17 +52,13 @@ open fun getInstance()
             
     val NAME: String = "DIRECTION"
 
-    val LEFT: Direction = Direction(CommonPhoneStrings.getInstance()!!.LEFT, 
-                            "WEST", 0, 1)
+    val LEFT: Direction = Direction(CommonPhoneStrings.getInstance()!!.LEFT, "WEST", 0, 1)
 
-    val RIGHT: Direction = Direction(CommonPhoneStrings.getInstance()!!.RIGHT, 
-                            "EAST", 1, 0)
+    val RIGHT: Direction = Direction(CommonPhoneStrings.getInstance()!!.RIGHT, "EAST", 1, 0)
 
-    val DOWN: Direction = Direction(CommonPhoneStrings.getInstance()!!.DOWN, 
-                            "SOUTH", 2)
+    val DOWN: Direction = Direction(CommonPhoneStrings.getInstance()!!.DOWN, "SOUTH", 2)
 
-    val UP: Direction = Direction(CommonPhoneStrings.getInstance()!!.UP, 
-                            "NORTH", 3)
+    val UP: Direction = Direction(CommonPhoneStrings.getInstance()!!.UP, "NORTH", 3)
 
     val UP_LEFT: Direction
 
@@ -72,25 +68,15 @@ open fun getInstance()
 
     val DOWN_RIGHT: Direction
 
-    val NOT_BORDERED_WITH: Direction = Direction(
-                            "NOT_BORDERED_WITH", 
-                            "NOT_BORDERED_WITH", 8)
+    val NOT_BORDERED_WITH: Direction = Direction("NOT_BORDERED_WITH", "NOT_BORDERED_WITH", 8)
 
-    val NO_DIRECTION: Direction = Direction(
-                            "NO_DIRECTION", 
-                            "NO_DIRECTION", 9)
+    val NO_DIRECTION: Direction = Direction("NO_DIRECTION", "NO_DIRECTION", 9)
 
-    val TOP: Direction = Direction(
-                            "TOP", 
-                            "TOP", 10)
+    val TOP: Direction = Direction("TOP", "TOP", 10)
 
-    val BOTTOM: Direction = Direction(
-                            "BOTTOM", 
-                            "BOTTOM", 11)
+    val BOTTOM: Direction = Direction("BOTTOM", "BOTTOM", 11)
 
-    val ALL_DIRECTION: Direction = Direction(
-                            "ALL_DIRECTION", 
-                            "ALL_DIRECTION", 12)
+    val ALL_DIRECTION: Direction = Direction("ALL_DIRECTION", "ALL_DIRECTION", 12)
 private constructor        ()
             : super()
         {
@@ -100,17 +86,13 @@ private constructor        ()
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
             
 
-UP_LEFT= Direction(
-                            "UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4)
+UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-UP_RIGHT= Direction(
-                            "UP RIGHT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 5)
+UP_RIGHT= Direction("UP RIGHT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 5)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-DOWN_LEFT= Direction(
-                            "DOWN LEFT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 6)
+DOWN_LEFT= Direction("DOWN LEFT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 6)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-DOWN_RIGHT= Direction(
-                            "DOWN RIGHT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 7)
+DOWN_RIGHT= Direction("DOWN RIGHT", stringBuffer!!.append(DOWN.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(RIGHT.getOtherName())!!.toString(), 7)
 }
 
 

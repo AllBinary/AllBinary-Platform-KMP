@@ -99,36 +99,21 @@ private constructor        ()
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
             
 
-SCALE= GameConfiguration(
-                            "Scale", smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(3))
-ORIENTATION= GameConfiguration(
-                            "Orientation", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(8))
-SENSOR_UPDATE_RATE= GameConfiguration(
-                            "Sensor Update Rate", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(3))
-VIBRATION= GameConfiguration(
-                            "Vibration", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(3))
-CHALLENGE_LEVEL= GameConfiguration(
-                            "Global Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-COLLIDE_DAMAGE= GameConfiguration(
-                            "Collide Damage Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-DURABILITY_CHALLENGE_LEVEL= GameConfiguration(
-                            "Enemy Durability Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-SPEED_CHALLENGE_LEVEL= GameConfiguration(
-                            "Enemy Speed Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-ATTACK_CHALLENGE_LEVEL= GameConfiguration(
-                            "Enemy Attack Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-CONTROL_LEVEL= GameConfiguration(
-                            "Control Fidelity", smallIntegerSingletonFactory!!.getInstance(5), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-PLAYER_INPUT_WAIT= GameConfiguration(
-                            "Input Wait", smallIntegerSingletonFactory!!.getInstance(5), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-SPEED= GameConfiguration(
-                            "Game Speed (Device Specific)", smallIntegerSingletonFactory!!.getInstance(5), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
-SOUND_VOLUME= GameConfiguration(
-                            "Sound Volume", smallIntegerSingletonFactory!!.getInstance(6), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(10))
-MAX_GAME_OBJECTS= GameConfiguration(
-                            "Max Game Objects", smallIntegerSingletonFactory!!.getInstance(20), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(50))
-MAX_LAYERS= GameConfiguration(
-                            "Max Layers", smallIntegerSingletonFactory!!.getInstance(20), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(50))
+SCALE= GameConfiguration("Scale", smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(3))
+ORIENTATION= GameConfiguration("Orientation", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(8))
+SENSOR_UPDATE_RATE= GameConfiguration("Sensor Update Rate", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(3))
+VIBRATION= GameConfiguration("Vibration", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(3))
+CHALLENGE_LEVEL= GameConfiguration("Global Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+COLLIDE_DAMAGE= GameConfiguration("Collide Damage Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+DURABILITY_CHALLENGE_LEVEL= GameConfiguration("Enemy Durability Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+SPEED_CHALLENGE_LEVEL= GameConfiguration("Enemy Speed Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+ATTACK_CHALLENGE_LEVEL= GameConfiguration("Enemy Attack Challenge Level", smallIntegerSingletonFactory!!.getInstance(3), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+CONTROL_LEVEL= GameConfiguration("Control Fidelity", smallIntegerSingletonFactory!!.getInstance(5), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+PLAYER_INPUT_WAIT= GameConfiguration("Input Wait", smallIntegerSingletonFactory!!.getInstance(5), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+SPEED= GameConfiguration("Game Speed (Device Specific)", smallIntegerSingletonFactory!!.getInstance(5), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(10))
+SOUND_VOLUME= GameConfiguration("Sound Volume", smallIntegerSingletonFactory!!.getInstance(6), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(10))
+MAX_GAME_OBJECTS= GameConfiguration("Max Game Objects", smallIntegerSingletonFactory!!.getInstance(20), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(50))
+MAX_LAYERS= GameConfiguration("Max Layers", smallIntegerSingletonFactory!!.getInstance(20), smallIntegerSingletonFactory!!.getInstance(1), smallIntegerSingletonFactory!!.getInstance(50))
 }
 
 
@@ -177,8 +162,7 @@ this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(v
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "No Game Configuration To Load", this, commonStrings!!.LOAD)
+                            logUtil!!.put("No Game Configuration To Load", this, commonStrings!!.LOAD)
 
                         }
                             

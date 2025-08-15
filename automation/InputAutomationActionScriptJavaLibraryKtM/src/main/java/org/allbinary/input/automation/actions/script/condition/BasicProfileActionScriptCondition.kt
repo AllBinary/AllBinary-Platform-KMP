@@ -270,8 +270,7 @@ open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProces
 {
 
                     var profileActionProcessorInterface = profileActionProcessorInterface
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "addInput")
+logUtil!!.put(this.commonStrings!!.START, this, "addInput")
 this.getProfileActionProcessorInterfaceVector()!!.add(profileActionProcessorInterface)
 this.add(profileActionProcessorInterface)
 }
@@ -282,8 +281,7 @@ open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptPro
 {
 
                     var profileActionProcessorInterface = profileActionProcessorInterface
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "removeInput")
+logUtil!!.put(this.commonStrings!!.START, this, "removeInput")
 this.getProfileActionProcessorInterfaceVector()!!.remove(profileActionProcessorInterface)
 this.remove(profileActionProcessorInterface)
 }
@@ -294,8 +292,7 @@ open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNo
 {
 
                     var profileActionScriptNodeInterface = profileActionScriptNodeInterface
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "removeCondition")
+logUtil!!.put(this.commonStrings!!.START, this, "removeCondition")
 this.getProfileActionConditionInterfaceVector()!!.remove(profileActionScriptNodeInterface)
 this.remove(profileActionScriptNodeInterface)
 }
@@ -306,8 +303,7 @@ open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeI
 {
 
                     var profileActionScriptNodeInterface = profileActionScriptNodeInterface
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "addCondition")
+logUtil!!.put(this.commonStrings!!.START, this, "addCondition")
 this.getProfileActionConditionInterfaceVector()!!.add(profileActionScriptNodeInterface)
 this.add(profileActionScriptNodeInterface)
 }
@@ -483,9 +479,7 @@ this.updateTree()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Error", this, 
-                            "actionPerformed", e)
+            {logUtil!!.put("Error", this, "actionPerformed", e)
 }
 
 }
@@ -576,9 +570,7 @@ open fun process(frame: Long)
 
                     var frame = frame
 logUtil!!.put(StringMaker().
-                            append(
-                            "Start - Processing ")!!.append(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(
-                            " inputs")!!.toString(), this, commonStrings!!.PROCESS)
+                            append("Start - Processing ")!!.append(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, commonStrings!!.PROCESS)
 
     var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!
             

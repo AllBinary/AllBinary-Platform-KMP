@@ -114,8 +114,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
                                     }
                                 
                         else {
-                            PreLogUtil.put("OpenGL but image is: " +originalImage +" type: " +originalImage!!.getType(), this, 
-                            "rotateImage")
+                            PreLogUtil.put("OpenGL but image is: " +originalImage +" type: " +originalImage!!.getType(), this, "rotateImage")
 
                         }
                             
@@ -150,8 +149,7 @@ imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, totalAngl
                                     }
                                 
                         else {
-                            PreLogUtil.put("No rotation for: " +image.toString(), this, 
-                            "rotateImage")
+                            PreLogUtil.put("No rotation for: " +image.toString(), this, "rotateImage")
 
                         }
                             

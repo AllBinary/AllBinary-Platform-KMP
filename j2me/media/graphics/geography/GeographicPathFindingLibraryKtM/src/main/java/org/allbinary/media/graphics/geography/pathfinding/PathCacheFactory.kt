@@ -101,8 +101,7 @@ open fun removeAll()
                                     
 
 
-                            throw Exception(
-                            "Did not clear")
+                            throw Exception("Did not clear")
 
                                     }
                                 

@@ -286,9 +286,7 @@ open fun getItemAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoi
 
                     var point = point
 logUtil!!.put(StringMaker().
-                            append(
-                            "Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, 
-                            "getItemAt")
+                            append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
             
@@ -312,9 +310,7 @@ open fun getIndexAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPo
 
                     var point = point
 logUtil!!.put(StringMaker().
-                            append(
-                            "Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, 
-                            "getItemAt")
+                            append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
             
@@ -391,9 +387,7 @@ open fun setSelectedGeographicCellPosition(selectedGeographicCellPosition: Geogr
 
                     var selectedGeographicCellPosition = selectedGeographicCellPosition
 logUtil!!.put(StringMaker().
-                            append(
-                            "Selected GeographicMapCellPosition: ")!!.append(selectedGeographicCellPosition!!.toString())!!.toString(), this, 
-                            "setSelectedGeographicCellPosition")
+                            append("Selected GeographicMapCellPosition: ")!!.append(selectedGeographicCellPosition!!.toString())!!.toString(), this, "setSelectedGeographicCellPosition")
 this.selectedGeographicCellPosition= selectedGeographicCellPosition
 }
 

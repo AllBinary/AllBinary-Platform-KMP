@@ -72,9 +72,7 @@ open fun main(args: Array<String?>)
         {stringMaker!!.append(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
-LogUtil.getInstance()!!.put(stringMaker!!.toString(), 
-                            "main", 
-                            "main")
+LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
 }
 
 

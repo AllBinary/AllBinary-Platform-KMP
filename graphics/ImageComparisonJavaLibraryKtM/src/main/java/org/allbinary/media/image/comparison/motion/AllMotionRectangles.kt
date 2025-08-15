@@ -202,8 +202,7 @@ open fun shouldPixelDeltaPartOfMotionRectangle(motionRectangle: MotionRectangle,
                                     
 
 
-                            throw Exception(
-                            "PixelAboveTheRectangle")
+                            throw Exception("PixelAboveTheRectangle")
 
                                     }
                                 

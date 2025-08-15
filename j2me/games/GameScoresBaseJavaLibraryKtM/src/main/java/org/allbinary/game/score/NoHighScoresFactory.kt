@@ -61,9 +61,7 @@ override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: High
 
 
                     var highScoresResultsListener = highScoresResultsListener
-logUtil!!.put(
-                            "Getting No HighScores", this, 
-                            "fetchHighScores")
+logUtil!!.put("Getting No HighScores", this, "fetchHighScores")
 highScoresResultsListener!!.setHighScoresArray(NO_HIGH_SCORES)
 }
 

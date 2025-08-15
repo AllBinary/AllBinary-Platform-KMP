@@ -74,8 +74,7 @@ open fun select()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "select", 
+    var method: Method = addressHelperClass!!.getMethod("select", 
                             null)!!
             
 
@@ -103,8 +102,7 @@ open fun select()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "selectPayment()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "selectPayment()", e)
 
                                     }
                                 

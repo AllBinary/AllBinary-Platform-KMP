@@ -85,18 +85,15 @@ private constructor        (){
 
     var DEFAULT_CHAR_HEIGHT: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
-this.productivityHud= NumberStringHud(
-                            "Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+this.productivityHud= NumberStringHud("Productivity:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 index++
-this.efficiencyHud= NumberStringHud(
-                            "Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+this.efficiencyHud= NumberStringHud("Efficiency:", 999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 index++
 
     var totalLength: Int = HEALTH.length +1
 
 this.healthHud= NumberStringHud(HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
-this.maxHealthHud= NumberStringHud(
-                            "/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
+this.maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

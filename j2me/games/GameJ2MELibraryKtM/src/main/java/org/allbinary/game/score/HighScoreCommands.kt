@@ -53,14 +53,11 @@ open fun getInstance()
             {
             }            
         
-    val DISPLAY: Command = Command(
-                            "Scores", Command.SCREEN, 1)
+    val DISPLAY: Command = Command("Scores", Command.SCREEN, 1)
 
-    val PERSONAL: Command = Command(
-                            "Personal", Command.SCREEN, 1)
+    val PERSONAL: Command = Command("Personal", Command.SCREEN, 1)
 
-    val WORLD: Command = Command(
-                            "World", Command.SCREEN, 1)
+    val WORLD: Command = Command("World", Command.SCREEN, 1)
 
 }
                 

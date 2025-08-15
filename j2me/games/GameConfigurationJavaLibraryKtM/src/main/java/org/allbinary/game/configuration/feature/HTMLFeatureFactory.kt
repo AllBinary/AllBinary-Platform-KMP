@@ -37,8 +37,7 @@ open fun getInstance()
         {}
 
 
-    val HTML: Feature = Feature(
-                            "HTML")
+    val HTML: Feature = Feature("HTML")
 
 }
                 

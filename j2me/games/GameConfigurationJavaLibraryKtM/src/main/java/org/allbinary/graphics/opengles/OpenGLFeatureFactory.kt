@@ -51,71 +51,49 @@ open fun getInstance()
         {}
 
 
-    val OPENGL_OPTIONS: OpenGLFeature = OpenGLFeature(
-                            "OpenGL Options")
+    val OPENGL_OPTIONS: OpenGLFeature = OpenGLFeature("OpenGL Options")
 
-    val OPENGL: OpenGLFeature = OpenGLFeature(
-                            "OpenGL")
+    val OPENGL: OpenGLFeature = OpenGLFeature("OpenGL")
 
-    val OPENGL_SURFACE_VIEW: OpenGLFeature = OpenGLFeature(
-                            "GLSurfaceView")
+    val OPENGL_SURFACE_VIEW: OpenGLFeature = OpenGLFeature("GLSurfaceView")
 
-    val OPENGL_2D: OpenGLFeature = OpenGLFeature(
-                            "OpenGL 2D")
+    val OPENGL_2D: OpenGLFeature = OpenGLFeature("OpenGL 2D")
 
-    val OPENGL_3D: OpenGLFeature = OpenGLFeature(
-                            "OpenGL 3D")
+    val OPENGL_3D: OpenGLFeature = OpenGLFeature("OpenGL 3D")
 
-    val OPENGL_2D_AND_3D: OpenGLFeature = OpenGLFeature(
-                            "OpenGL 2D/3D")
+    val OPENGL_2D_AND_3D: OpenGLFeature = OpenGLFeature("OpenGL 2D/3D")
 
-    val OPENGL_AUTO_SELECT: OpenGLFeature = OpenGLFeature(
-                            "Auto Select")
+    val OPENGL_AUTO_SELECT: OpenGLFeature = OpenGLFeature("Auto Select")
 
-    val OPENGL_MINIMUM: OpenGLFeature = OpenGLFeature(
-                            "Minimum")
+    val OPENGL_MINIMUM: OpenGLFeature = OpenGLFeature("Minimum")
 
-    val OPENGL_AS_GAME_THREAD: OpenGLFeature = OpenGLFeature(
-                            "As game thread")
+    val OPENGL_AS_GAME_THREAD: OpenGLFeature = OpenGLFeature("As game thread")
 
-    val OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS: OpenGLFeature = OpenGLFeature(
-                            "As different threads")
+    val OPENGL_AND_GAME_HAVE_DIFFERENT_THREADS: OpenGLFeature = OpenGLFeature("As different threads")
 
-    val IMAGE_COLOR_DEPTH_4444: OpenGLFeature = OpenGLFeature(
-                            "4444")
+    val IMAGE_COLOR_DEPTH_4444: OpenGLFeature = OpenGLFeature("4444")
 
-    val IMAGE_COLOR_DEPTH_8888: OpenGLFeature = OpenGLFeature(
-                            "8888")
+    val IMAGE_COLOR_DEPTH_8888: OpenGLFeature = OpenGLFeature("8888")
 
-    val IMAGE_COLOR_DEPTH_565: OpenGLFeature = OpenGLFeature(
-                            "565")
+    val IMAGE_COLOR_DEPTH_565: OpenGLFeature = OpenGLFeature("565")
 
-    val OPENGL_COLOR_DEPTH_4444: OpenGLFeature = OpenGLFeature(
-                            "4444")
+    val OPENGL_COLOR_DEPTH_4444: OpenGLFeature = OpenGLFeature("4444")
 
-    val OPENGL_COLOR_DEPTH_8888: OpenGLFeature = OpenGLFeature(
-                            "8888")
+    val OPENGL_COLOR_DEPTH_8888: OpenGLFeature = OpenGLFeature("8888")
 
-    val OPENGL_COLOR_DEPTH_565: OpenGLFeature = OpenGLFeature(
-                            "565")
+    val OPENGL_COLOR_DEPTH_565: OpenGLFeature = OpenGLFeature("565")
 
-    val OPENGL_DRAW_TEXTURE: OpenGLFeature = OpenGLFeature(
-                            "GL_OES_draw_texture")
+    val OPENGL_DRAW_TEXTURE: OpenGLFeature = OpenGLFeature("GL_OES_draw_texture")
 
-    val OPENGL_VERTEX_BUFFER_OBJECT: OpenGLFeature = OpenGLFeature(
-                            "vertex_buffer_object")
+    val OPENGL_VERTEX_BUFFER_OBJECT: OpenGLFeature = OpenGLFeature("vertex_buffer_object")
 
-    val OPENGL_SIMPLE_OBJECT3D_PROCESSOR: OpenGLFeature = OpenGLFeature(
-                            "Simple Object3d Processor")
+    val OPENGL_SIMPLE_OBJECT3D_PROCESSOR: OpenGLFeature = OpenGLFeature("Simple Object3d Processor")
 
-    val OPENGL_COMPLEX_OBJECT3D_PROCESSOR: OpenGLFeature = OpenGLFeature(
-                            "Complex Object3d Processor")
+    val OPENGL_COMPLEX_OBJECT3D_PROCESSOR: OpenGLFeature = OpenGLFeature("Complex Object3d Processor")
 
-    val OPENGL_SIMPLE_TEXTURE_PROCESSOR: OpenGLFeature = OpenGLFeature(
-                            "Simple Texture Processor")
+    val OPENGL_SIMPLE_TEXTURE_PROCESSOR: OpenGLFeature = OpenGLFeature("Simple Texture Processor")
 
-    val OPENGL_COMPLEX_TEXTURE_PROCESSOR: OpenGLFeature = OpenGLFeature(
-                            "Complex Texture Processor")
+    val OPENGL_COMPLEX_TEXTURE_PROCESSOR: OpenGLFeature = OpenGLFeature("Complex Texture Processor")
 
 }
                 

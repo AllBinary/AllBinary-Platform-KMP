@@ -132,8 +132,7 @@ this.setSaved(.
                             
 
 
-                            throw Exception(
-                            "Action Script Output Unknown Node")
+                            throw Exception("Action Script Output Unknown Node")
 
                         }
                             
@@ -146,8 +145,7 @@ this.setSaved(.
                             
 
 
-                            throw Exception(
-                            "Action Script Output Node Null")
+                            throw Exception("Action Script Output Node Null")
 
                         }
                             
@@ -184,8 +182,7 @@ open fun toHashMap()
 
 hashMap!!.put(ImageActionScriptOutputData.DISPLAY, Boolean.toString(this.isDisplay()))
 hashMap!!.put(ImageActionScriptOutputData.SAVE, Boolean.toString(this.isSaved()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -279,14 +276,11 @@ open fun future_toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            " Is Save: ")
+stringBuffer!!.append(" Is Save: ")
 stringBuffer!!.append(this.isSaved())
-stringBuffer!!.append(
-                            " Is Display: ")
+stringBuffer!!.append(" Is Display: ")
 stringBuffer!!.append(this.isDisplay())
-stringBuffer!!.append(
-                            " ")
+stringBuffer!!.append(" ")
 stringBuffer!!.append(this.getImageTypes()!!.toString())
 
 
@@ -298,8 +292,7 @@ stringBuffer!!.append(this.getImageTypes()!!.toString())
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.future_toString(), this, 
-                            "log")
+{logUtil!!.put(this.future_toString(), this, "log")
 }
 
 

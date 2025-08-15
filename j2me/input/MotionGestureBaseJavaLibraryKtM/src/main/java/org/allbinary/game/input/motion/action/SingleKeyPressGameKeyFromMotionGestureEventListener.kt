@@ -73,8 +73,7 @@ PressGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onCompleteMotionGestureInputEvent", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onCompleteMotionGestureInputEvent", e)
 }
 
 }

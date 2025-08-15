@@ -52,17 +52,13 @@ open fun getInstance()
             {
             }            
         
-    val VISA: CreditCardType = CreditCardType(
-                            "Visa")
+    val VISA: CreditCardType = CreditCardType("Visa")
 
-    val MASTERCARD: CreditCardType = CreditCardType(
-                            "MasterCard")
+    val MASTERCARD: CreditCardType = CreditCardType("MasterCard")
 
-    val DISCOVER: CreditCardType = CreditCardType(
-                            "Discover")
+    val DISCOVER: CreditCardType = CreditCardType("Discover")
 
-    val AMERICANEXPRESS: CreditCardType = CreditCardType(
-                            "AMX")
+    val AMERICANEXPRESS: CreditCardType = CreditCardType("AMX")
 
 }
                 

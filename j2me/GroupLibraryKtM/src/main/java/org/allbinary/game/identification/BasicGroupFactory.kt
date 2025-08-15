@@ -56,17 +56,13 @@ open fun getInstance()
 
     val NO_SUCH_GROUP: String = "No Such Group: "
 
-    val GOOD: Group = Group(
-                            "Good Guys", 0.toShort())
+    val GOOD: Group = Group("Good Guys", 0.toShort())
 
-    val ENEMY: Group = Group(
-                            "Bad Guys", 1.toShort())
+    val ENEMY: Group = Group("Bad Guys", 1.toShort())
 
-    val ENEMY_ON_LEVEL: Group = Group(
-                            "Bad Guys on Level", 2.toShort())
+    val ENEMY_ON_LEVEL: Group = Group("Bad Guys on Level", 2.toShort())
 
-    val NONE: Group = Group(
-                            "Not On A Team", 3.toShort())
+    val NONE: Group = Group("Not On A Team", 3.toShort())
 
     val GOOD_ARRAY: Array<Group?> = arrayOf(this.GOOD)
 

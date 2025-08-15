@@ -372,9 +372,7 @@ logUtil!!.put(StringMaker().
     var dy: Double = (newHeight -height) /2
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "Translate dx: ")!!.append(dx.toFloat())!!.append(
-                            " dy: ")!!.append(dy.toFloat())!!.toString(), this, CREATE_BUFFERED_IMAGE)
+                            append("Translate dx: ")!!.append(dx.toFloat())!!.append(" dy: ")!!.append(dy.toFloat())!!.toString(), this, CREATE_BUFFERED_IMAGE)
 affineTransform!!.translate(dx, dy)
 
                                     }
@@ -407,14 +405,12 @@ open fun toString(bufferedImage: BufferedImage)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            " BufferedImage -")
+stringBuffer!!.append(" BufferedImage -")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
 stringBuffer!!.append(bufferedImage!!.getWidth())
 stringBuffer!!.append(commonLabels!!.HEIGHT_LABEL)
 stringBuffer!!.append(bufferedImage!!.getHeight())
-stringBuffer!!.append(
-                            " Type: ")
+stringBuffer!!.append(" Type: ")
 stringBuffer!!.append(bufferedImage!!.getType())
 
 

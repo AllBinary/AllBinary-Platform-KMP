@@ -164,13 +164,7 @@ open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellP
                             
 } catch(e: Exception)
             {logUtil!!.put(StringMaker().
-                            append(
-                            "[")!!.append(row)!!.append(
-                            "][")!!.append(column)!!.append(
-                            "] in [")!!.append(mapArray!!.size)!!.append(
-                            "][")!!.append(mapArray[0]!!.length)!!.append(
-                            "]")!!.toString(), this, 
-                            "visit", e)
+                            append("[")!!.append(row)!!.append("][")!!.append(column)!!.append("] in [")!!.append(mapArray!!.size)!!.append("][")!!.append(mapArray[0]!!.length)!!.append("]")!!.toString(), this, "visit", e)
 
 
 

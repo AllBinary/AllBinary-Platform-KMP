@@ -122,8 +122,7 @@ open fun getResourceAsStream(resource: String)
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "Unable to obtain: ")!!.append(resource)!!.toString())
+                            append("Unable to obtain: ")!!.append(resource)!!.toString())
 
                                     }
                                 

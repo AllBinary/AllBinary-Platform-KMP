@@ -257,8 +257,7 @@ open fun isValid()
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.mainEmail, 1, UserData.MAXLEN) || this.mainEmail!!.indexOf(
-                            "@") ==  -1)
+                        if(!stringValidationUtil!!.isValidRequired(this.mainEmail, 1, UserData.MAXLEN) || this.mainEmail!!.indexOf("@") ==  -1)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -280,8 +279,7 @@ open fun isValid()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -313,8 +311,7 @@ stringBuffer!!.append(this.password.getValidationInfo())
                         if(!stringValidationUtil!!.isValidRequired(firstName, 1, UserData.MAXLEN))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid First Name.<br />")
+                                    stringBuffer!!.append("Please enter a valid First Name.<br />")
 
                                     }
                                 
@@ -323,19 +320,16 @@ stringBuffer!!.append(this.password.getValidationInfo())
                         if(!stringValidationUtil!!.isValidRequired(lastName, 1, UserData.MAXLEN))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid Last Name.<br />")
+                                    stringBuffer!!.append("Please enter a valid Last Name.<br />")
 
                                     }
                                 
 
     
-                        if(!stringValidationUtil!!.isValidRequired(this.mainEmail, 1, UserData.MAXLEN) || this.mainEmail!!.indexOf(
-                            "@") ==  -1)
+                        if(!stringValidationUtil!!.isValidRequired(this.mainEmail, 1, UserData.MAXLEN) || this.mainEmail!!.indexOf("@") ==  -1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Please enter a valid email address.<br />")
+                                    stringBuffer!!.append("Please enter a valid email address.<br />")
 
                                     }
                                 
@@ -350,9 +344,7 @@ stringBuffer!!.append(this.password.getValidationInfo())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -557,15 +549,13 @@ this.password.set(value)
 
 open fun enable()
         //nullable = true from not(false or (false and true)) = true
-{this.setEnable(
-                            "Yes")
+{this.setEnable("Yes")
 }
 
 
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-{this.setEnable(
-                            "No")
+{this.setEnable("No")
 }
 
 

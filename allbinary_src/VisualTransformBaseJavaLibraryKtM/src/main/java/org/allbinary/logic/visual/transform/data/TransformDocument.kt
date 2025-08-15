@@ -53,8 +53,7 @@ public constructor        ()
         try {
             this.document= DomDocumentHelper.create()
 
-    var allbinaryNode: Node = document.createElement(
-                            "allbinary")!!
+    var allbinaryNode: Node = document.createElement("allbinary")!!
             
 
 this.baseNode= allbinaryNode
@@ -121,20 +120,17 @@ open fun log()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "BaseNode: ")
+                                    stringBuffer!!.append("BaseNode: ")
 stringBuffer!!.append(this.baseNode!!.getNodeName())
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Log-Error: BaseNode is Null")
+                            stringBuffer!!.append("Log-Error: BaseNode is Null")
 
                         }
                             
-stringBuffer!!.append(
-                            "\nDocument: ")
+stringBuffer!!.append("\nDocument: ")
 stringBuffer!!.append(DomDocumentHelper.toString(document))
 
 

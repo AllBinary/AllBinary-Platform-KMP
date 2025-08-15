@@ -97,8 +97,7 @@ open fun getInputAutomationConfigurationModuleChangeListener(context: BundleCont
                                     null
                                 )
                         
-                                    throw Exception(
-                            "No Service For ServiceReference")
+                                    throw Exception("No Service For ServiceReference")
 
 
 
@@ -108,8 +107,7 @@ open fun getInputAutomationConfigurationModuleChangeListener(context: BundleCont
                                     }
                                 
                         else {
-                            logUtil!!.put("No ServiceReference: " +InputAutomationConfigurationModuleChangeListener::classgetName(), this, 
-                            "addModules")
+                            logUtil!!.put("No ServiceReference: " +InputAutomationConfigurationModuleChangeListener::classgetName(), this, "addModules")
 
 
 
@@ -128,8 +126,7 @@ open fun addModules(context: BundleContext)
                     var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "addModules")
+            logUtil!!.put(this.commonStrings!!.START, this, "addModules")
 
     var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = this.getInputAutomationConfigurationModuleChangeListener(context)!!
             
@@ -159,8 +156,7 @@ inputAutomationConfigurationModuleChangeListener!!.onAdd(inputAutomationConfigur
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "addModules")
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
 }
@@ -184,8 +180,7 @@ open fun removeModules(context: BundleContext)
                     var context = context
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "removeModules")
+            logUtil!!.put(this.commonStrings!!.START, this, "removeModules")
 
     var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = this.getInputAutomationConfigurationModuleChangeListener(context)!!
             
@@ -215,8 +210,7 @@ inputAutomationConfigurationModuleChangeListener!!.onRemove(inputAutomationConfi
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "removeModules")
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeModules")
 }
 
 }
@@ -242,8 +236,7 @@ open fun stop(context: BundleContext)
 {
 
                     var context = context
-logUtil!!.put(this.commonStrings!!.START, this, 
-                            "stop")
+logUtil!!.put(this.commonStrings!!.START, this, "stop")
 this.removeModules(context)
 }
 

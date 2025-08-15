@@ -83,11 +83,9 @@ this.rows= rows
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Init: columns: ")
+stringBuffer!!.append("Init: columns: ")
 stringBuffer!!.append(columns)
-stringBuffer!!.append(
-                            " rows: ")
+stringBuffer!!.append(" rows: ")
 stringBuffer!!.append(rows)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
@@ -133,11 +131,7 @@ open fun getInstance(i_column: Int, i_row: Int)
             
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "columns: ")!!.append(this.getColumns())!!.append(
-                            " rows: ")!!.append(this.getRows())!!.append(
-                            " col: ")!!.append(i_column)!!.append(
-                            " row: ")!!.append(i_row)!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
+                            append("columns: ")!!.append(this.getColumns())!!.append(" rows: ")!!.append(this.getRows())!!.append(" col: ")!!.append(i_column)!!.append(" row: ")!!.append(i_row)!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
 
 

@@ -63,8 +63,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "PageViewValidation()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "PageViewValidation()")
 
                                     }
                                 
@@ -104,8 +103,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Views To Be Modified: " +allViewsToBeModifiedVector!!.size, this, 
-                            "get(transformInfoInterface)")
+                                    logUtil!!.put("Views To Be Modified: " +allViewsToBeModifiedVector!!.size, this, "get(transformInfoInterface)")
 
                                     }
                                 
@@ -136,11 +134,9 @@ open fun isValid()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.getTransformInfoInterface()!!.getName())
-stringBuffer!!.append(
-                            " is modifying view: ")
+stringBuffer!!.append(" is modifying view: ")
 stringBuffer!!.append(viewNameOfViewToBeModified)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "insert()")
+logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
                                     }
                                 
@@ -160,11 +156,9 @@ logUtil!!.put(stringBuffer!!.toString(), this,
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.getTransformInfoInterface()!!.getName())
-stringBuffer!!.append(
-                            " is adding data to view: ")
+stringBuffer!!.append(" is adding data to view: ")
 stringBuffer!!.append(viewNameOfViewToBeModified)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "insert()")
+logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
                                     }
                                 
@@ -177,8 +171,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
 
 
     
-                        if(title.compareTo(
-                            "index") == 0)
+                        if(title.compareTo("index") == 0)
                         
                                     {
                                     hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTransformInfoInterface()!!.getStoreName() +" - Home Page")
@@ -225,11 +218,9 @@ document.appendChild(pageValidation!!.toXmlNode(document))
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(viewNameOfViewToBeModified)
-stringBuffer!!.append(
-                            " is changing data in ")
+stringBuffer!!.append(" is changing data in ")
 stringBuffer!!.append(specifiedTransformInfoInterface!!.getDataFilePath()!!.toString())
-stringBuffer!!.append(
-                            " to the following data:\n")
+stringBuffer!!.append(" to the following data:\n")
 stringBuffer!!.append(documentString)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -252,8 +243,7 @@ CustomizerUtil.getInstance()!!.write(specifiedTransformInfoInterface, documentSt
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -320,8 +310,7 @@ open fun validationInfo()
 
 
     
-                        if(title.compareTo(
-                            "index") == 0)
+                        if(title.compareTo("index") == 0)
                         
                                     {
                                     hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTransformInfoInterface()!!.getStoreName() +" - Home Page")
@@ -360,9 +349,7 @@ stringBuffer!!.append("PageValidation Info:" +pageValidation!!.validationInfo())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

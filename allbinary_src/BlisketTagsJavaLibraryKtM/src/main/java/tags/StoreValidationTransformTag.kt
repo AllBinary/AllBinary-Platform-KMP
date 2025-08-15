@@ -67,9 +67,7 @@ open fun doStartTag()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(
-                            "Tag Start", this, 
-                            "doStartTag")
+                                    logUtil!!.put("Tag Start", this, "doStartTag")
 
                                     }
                                 

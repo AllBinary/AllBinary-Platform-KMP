@@ -68,8 +68,7 @@ open fun init()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, 
-                            " Constructor")
+                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, " Constructor")
 
                                     }
                                 
@@ -96,8 +95,7 @@ open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: Us
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Adding: " +userEmailEventConfigurationInterface!!.log(), this, 
-                            "addUserEmailEventConfiguration")
+                                    logUtil!!.put("Adding: " +userEmailEventConfigurationInterface!!.log(), this, "addUserEmailEventConfiguration")
 
                                     }
                                 

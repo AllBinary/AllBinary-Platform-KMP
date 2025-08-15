@@ -71,8 +71,7 @@ this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
                             
 
 
-                            throw Exception(
-                            "Unknow Listening Leve")
+                            throw Exception("Unknow Listening Leve")
 
                         }
                             
@@ -239,9 +238,7 @@ open public inner class MediaPlayerOnCompletionListener
 
                     var i = i
 logUtil!!.put(StringMaker().
-                            append(
-                            "Update buffer: ")!!.append(i)!!.append(
-                            "%")!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_BUFFERING_UPDATE)
+                            append("Update buffer: ")!!.append(i)!!.append("%")!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_BUFFERING_UPDATE)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.DEVICE_UNAVAILABLE)
 }
 
@@ -277,9 +274,7 @@ open override fun onError(mp: MediaPlayer, what: Int, extra: Int)
 
                     var extra = extra
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(
-                            "What: ")!!.append(what)!!.append(
-                            " Extra: ")!!.append(extra)!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_ERROR)
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append("What: ")!!.append(what)!!.append(" Extra: ")!!.append(extra)!!.toString(), this, AndroidMediaPlayerWrapperListener.ON_ERROR)
 this@AndroidMediaPlayerWrapperListener.androidMediaPlayerWrapper!!.update(PlayerListener.ERROR)
 
 

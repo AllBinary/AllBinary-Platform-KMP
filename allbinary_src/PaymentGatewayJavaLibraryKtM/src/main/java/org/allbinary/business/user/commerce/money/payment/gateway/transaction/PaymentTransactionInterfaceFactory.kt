@@ -113,8 +113,7 @@ open fun getInstance(orderReview: OrderHistory)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Failed to generate test data", this, commonStrings!!.GET_INSTANCE, e)
+logUtil!!.put("Failed to generate test data", this, commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 

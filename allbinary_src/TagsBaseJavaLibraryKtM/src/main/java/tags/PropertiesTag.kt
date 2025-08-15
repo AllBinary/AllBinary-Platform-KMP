@@ -65,9 +65,7 @@ open fun doEndTag()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(
-                            "Tag Ended", this, 
-                            "doEndTag")
+                                    logUtil!!.put("Tag Ended", this, "doEndTag")
 
                                     }
                                 

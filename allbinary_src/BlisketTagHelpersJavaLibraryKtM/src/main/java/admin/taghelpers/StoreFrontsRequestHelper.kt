@@ -107,8 +107,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "update()")
+                                    logUtil!!.put(success, this, "update()")
 
                                     }
                                 
@@ -126,8 +125,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 
@@ -154,26 +152,18 @@ open fun sendStoreCreatedEmails()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Store Created: ")
+stringBuffer!!.append("Store Created: ")
 stringBuffer!!.append(this.modifyingStoreFrontInterface!!.getName())
-stringBuffer!!.append(
-                            "\n\n")
-stringBuffer!!.append(
-                            "Click here for the Admin Interface:\n")
+stringBuffer!!.append("\n\n")
+stringBuffer!!.append("Click here for the Admin Interface:\n")
 stringBuffer!!.append(this.modifyingStoreFrontInterface!!.getCurrentHomeHostName())
-stringBuffer!!.append(
-                            "/admin/login.jsp\n\n")
-stringBuffer!!.append(
-                            "Goto Your Store:\n")
+stringBuffer!!.append("/admin/login.jsp\n\n")
+stringBuffer!!.append("Goto Your Store:\n")
 stringBuffer!!.append(this.modifyingStoreFrontInterface!!.getCurrentHomeHostName())
 stringBuffer!!.append(this.modifyingStoreFrontInterface!!.getName())
-stringBuffer!!.append(
-                            "/index.jsp")
-stringBuffer!!.append(
-                            "\n\n")
-stringBuffer!!.append(
-                            "UserName: ")
+stringBuffer!!.append("/index.jsp")
+stringBuffer!!.append("\n\n")
+stringBuffer!!.append("UserName: ")
 stringBuffer!!.append(this.weblisketSession!!.getUserName())
 
     var adminEmailTextBody: String = stringBuffer!!.toString()!!
@@ -211,11 +201,9 @@ open fun install()
             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Intall StoreFront Successfully: ")
+stringBuffer!!.append("Intall StoreFront Successfully: ")
 stringBuffer!!.append(this.portion.getCurrent()!!.toInt())
-stringBuffer!!.append(
-                            " of ")
+stringBuffer!!.append(" of ")
 stringBuffer!!.append(this.portion.getTotal()!!.toInt())
 
     var success: String = stringBuffer!!.toString()!!
@@ -227,8 +215,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "install()")
+                                    logUtil!!.put(success, this, "install()")
 
                                     }
                                 
@@ -246,8 +233,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "install()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "install()", e)
 
                                     }
                                 
@@ -278,8 +264,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "insert()")
+                                    logUtil!!.put(success, this, "insert()")
 
                                     }
                                 
@@ -297,8 +282,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "insert()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insert()", e)
 
                                     }
                                 
@@ -325,8 +309,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.delete
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "delete()")
+                                    logUtil!!.put(success, this, "delete()")
 
                                     }
                                 
@@ -344,8 +327,7 @@ StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.delete
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 

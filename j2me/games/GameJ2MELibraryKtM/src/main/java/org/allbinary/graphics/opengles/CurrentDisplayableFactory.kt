@@ -128,8 +128,7 @@ open fun setMyCanvas(displayable: MyCanvas)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(
-                            "Child Displayable is already set for: ")!!.append(this.stringUtil!!.toString(displayable))!!.toString(), this, SET_DISPLAYABLE)
+                            append("Child Displayable is already set for: ")!!.append(this.stringUtil!!.toString(displayable))!!.toString(), this, SET_DISPLAYABLE)
 
 
 

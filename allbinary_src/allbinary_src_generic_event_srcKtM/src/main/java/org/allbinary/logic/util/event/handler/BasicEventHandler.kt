@@ -60,8 +60,7 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Total Listeners: ")
+stringBuffer!!.append("Total Listeners: ")
 stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
 
     var eventListenerInterface: EventListenerInterface
@@ -76,8 +75,7 @@ stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
-stringBuffer!!.append(
-                            " Listener: ")
+stringBuffer!!.append(" Listener: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(eventListenerInterface))
 } catch(e: Exception)
             {

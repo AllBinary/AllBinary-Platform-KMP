@@ -52,65 +52,45 @@ open fun getInstance()
             {
             }            
         
-    val AVI: MediaData = MediaData(
-                            "avi")
+    val AVI: MediaData = MediaData("avi")
 
-    val BMP: MediaData = MediaData(
-                            "bmp")
+    val BMP: MediaData = MediaData("bmp")
 
-    val CEL: MediaData = MediaData(
-                            "cel")
+    val CEL: MediaData = MediaData("cel")
 
-    val FITS: MediaData = MediaData(
-                            "fits")
+    val FITS: MediaData = MediaData("fits")
 
-    val FLI: MediaData = MediaData(
-                            "fli")
+    val FLI: MediaData = MediaData("fli")
 
-    val GBR: MediaData = MediaData(
-                            "gbr")
+    val GBR: MediaData = MediaData("gbr")
 
-    val GIF: MediaData = MediaData(
-                            "gif")
+    val GIF: MediaData = MediaData("gif")
 
-    val GIH: MediaData = MediaData(
-                            "gih")
+    val GIH: MediaData = MediaData("gih")
 
-    val JPG: MediaData = MediaData(
-                            "jpg")
+    val JPG: MediaData = MediaData("jpg")
 
-    val PIX: MediaData = MediaData(
-                            "pix")
+    val PIX: MediaData = MediaData("pix")
 
-    val PNG: MediaData = MediaData(
-                            "png")
+    val PNG: MediaData = MediaData("png")
 
-    val PNM: MediaData = MediaData(
-                            "pnm")
+    val PNM: MediaData = MediaData("pnm")
 
-    val PSD: MediaData = MediaData(
-                            "psd")
+    val PSD: MediaData = MediaData("psd")
 
-    val PSP: MediaData = MediaData(
-                            "psp")
+    val PSP: MediaData = MediaData("psp")
 
-    val PS: MediaData = MediaData(
-                            "ps")
+    val PS: MediaData = MediaData("ps")
 
-    val SGI: MediaData = MediaData(
-                            "SGI")
+    val SGI: MediaData = MediaData("SGI")
 
-    val SWF: MediaData = MediaData(
-                            "swf")
+    val SWF: MediaData = MediaData("swf")
 
-    val TGA: MediaData = MediaData(
-                            "tga")
+    val TGA: MediaData = MediaData("tga")
 
-    val TIFF: MediaData = MediaData(
-                            "tiff")
+    val TIFF: MediaData = MediaData("tiff")
 
-    val WMF: MediaData = MediaData(
-                            "wmf")
+    val WMF: MediaData = MediaData("wmf")
 
 }
                 

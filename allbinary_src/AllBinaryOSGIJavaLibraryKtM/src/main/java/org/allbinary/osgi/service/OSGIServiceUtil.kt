@@ -83,8 +83,7 @@ open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array
     var size: Int = serviceReferences!!.size
                 
 
-logUtil!!.put("Service References: " +size, this, 
-                            "getServicesObjectVector")
+logUtil!!.put("Service References: " +size, this, "getServicesObjectVector")
 
 
 
@@ -115,8 +114,7 @@ logUtil!!.put("Service References: " +size, this,
                                     
 
 
-                            throw Exception(
-                            "No Service For Reference")
+                            throw Exception("No Service For Reference")
 
                                     }
                                 

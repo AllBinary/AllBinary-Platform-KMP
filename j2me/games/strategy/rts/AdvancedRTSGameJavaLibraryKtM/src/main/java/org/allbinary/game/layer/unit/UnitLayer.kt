@@ -945,8 +945,7 @@ layerInterface!!.onMovementFound(this.getTrackingEvent())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onMovement", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 }
 
 }
@@ -1845,8 +1844,7 @@ this.getUnitWaypointBehavior()!!.addBuildingChase(allbinaryLayer, cellPosition)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "move", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
 }
 
 }
@@ -1970,8 +1968,7 @@ open fun setDestroyed(destroyed: Boolean)
 {
 
                     var destroyed = destroyed
-logUtil!!.put(commonStrings!!.START, this, 
-                            "setDestroyed")
+logUtil!!.put(commonStrings!!.START, this, "setDestroyed")
 super.setDestroyed(destroyed)
 
     

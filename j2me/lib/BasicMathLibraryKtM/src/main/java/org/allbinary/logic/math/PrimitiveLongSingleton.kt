@@ -103,8 +103,7 @@ open fun getNumberFromChar(numberAsChar: Char)
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "numberAsChar was not in array: ")!!.append(numberAsChar)!!.toString())
+                            append("numberAsChar was not in array: ")!!.append(numberAsChar)!!.toString())
 }
 
 

@@ -275,9 +275,7 @@ open fun hasChild(displayable: MyCanvas)
 
 open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(
-                            "Destroyed MyCanvas", this, 
-                            "destroy")
+{logUtil!!.put("Destroyed MyCanvas", this, "destroy")
 }
 
 

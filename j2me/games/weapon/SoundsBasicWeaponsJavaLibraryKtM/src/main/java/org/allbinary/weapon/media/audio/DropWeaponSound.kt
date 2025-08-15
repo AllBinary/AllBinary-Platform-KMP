@@ -48,8 +48,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(
-                            "resource:/wav/mine.wav"){
+                            : super("resource:/wav/mine.wav"){
 
                             //For kotlin this is before the body of the constructor.
                     

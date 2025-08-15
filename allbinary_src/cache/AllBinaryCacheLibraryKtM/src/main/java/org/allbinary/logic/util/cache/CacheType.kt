@@ -90,11 +90,9 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "CacheType: Vendor: ")
+stringBuffer!!.append("CacheType: Vendor: ")
 stringBuffer!!.append(this.getVendor())
-stringBuffer!!.append(
-                            " Type: ")
+stringBuffer!!.append(" Type: ")
 stringBuffer!!.append(this.getType())
 
 

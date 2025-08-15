@@ -52,8 +52,7 @@ public constructor        ()
                             
 
 
-                            throw Exception(
-                            "Not Such Feature")
+                            throw Exception("Not Such Feature")
 
                         }
                             

@@ -80,8 +80,7 @@ open fun consolidateMotionRectangles()
     var vector: Vector = this.getVector()!!
             
 
-logUtil!!.put("Start - Size Before: " +vector.size, this, 
-                            "consolidateMotionRectangleConstraints")
+logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRectangleConstraints")
 
     var removeVector: Vector = Vector()
 

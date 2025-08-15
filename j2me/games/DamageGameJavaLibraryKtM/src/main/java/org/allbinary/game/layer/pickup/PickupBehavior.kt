@@ -87,8 +87,7 @@ override fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "doPickup", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
 
 }
@@ -149,8 +148,7 @@ pickupLayerInterface!!.setPickedUp()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "doPickup", e)
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
 
 }

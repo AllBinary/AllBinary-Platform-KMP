@@ -289,13 +289,11 @@ open fun loadProgressImages()
                         }
                             
 } catch(e: IllegalArgumentException)
-            {logUtil!!.put("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, 
-                            "loadProgressImages")
+            {logUtil!!.put("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
  catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, 
-                            "loadProgressImages")
+            {logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
@@ -435,8 +433,7 @@ override fun setValue(value: Int)
             super.setValue(value)
 this.midletActivity!!.runOnUiThread(titleProgressDialogSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setValue", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }

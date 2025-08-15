@@ -143,8 +143,7 @@ open fun setPaymentGateway()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "setPaymentGateway", 
+    var method: Method = addressHelperClass!!.getMethod("setPaymentGateway", 
                             null)!!
             
 
@@ -172,8 +171,7 @@ open fun setPaymentGateway()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setPaymentGateway()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setPaymentGateway()", e)
 
                                     }
                                 

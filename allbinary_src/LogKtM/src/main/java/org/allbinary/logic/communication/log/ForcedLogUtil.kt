@@ -49,8 +49,7 @@ open fun log(message: String, anyType: Any)
 
                             throw Exception(message)
 } catch(e: Exception)
-            {PreLogUtil.put(CommonStrings.getInstance()!!.EXCEPTION, anyType, 
-                            "log", e)
+            {PreLogUtil.put(CommonStrings.getInstance()!!.EXCEPTION, anyType, "log", e)
 }
 
 }

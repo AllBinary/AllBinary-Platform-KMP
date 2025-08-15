@@ -94,11 +94,9 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Name: ")
+stringBuffer!!.append("Name: ")
 stringBuffer!!.append(this.getName())
-stringBuffer!!.append(
-                            " Id: ")
+stringBuffer!!.append(" Id: ")
 stringBuffer!!.append(this.getId())
 
 

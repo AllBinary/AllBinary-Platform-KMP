@@ -150,8 +150,7 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Show HighScores that are already loaded", this, commonStrings!!.CONSTRUCTOR)
+                            logUtil!!.put("Show HighScores that are already loaded", this, commonStrings!!.CONSTRUCTOR)
 this.updateCommand(this.currentCommand)
 this.setPaintable(this.getHighScoresPaintable())
 
@@ -187,8 +186,7 @@ hasPainted= false
 
     var stringMaker: StringMaker = StringMaker()
 
-logUtil!!.put(stringMaker!!.append(
-                            "HighScoresCanvas - Request repaint to be sure: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Request repaint to be sure: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
 
     
@@ -203,8 +201,7 @@ repaintBehavior!!.onChangeRepaint(this@HighScoresCanvas)
                                     }
                                 
 stringMaker!!.delete(0, stringMaker!!.length())
-logUtil!!.put(stringMaker!!.append(
-                            "HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
+logUtil!!.put(stringMaker!!.append("HighScoresCanvas - Now that the canvas has completed repaint go ahead and fetch the scores: ")!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 executeUpdate()
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
@@ -299,14 +296,12 @@ override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(highScoresArray!!.size)!!.toString(), this, 
-                            "setHighScoresArray")
+                            append(commonStrings!!.START)!!.append(highScoresArray!!.size)!!.toString(), this, "setHighScoresArray")
 
                                     }
                                 
                         else {
-                            logUtil!!.put(commonStrings!!.START, this, 
-                            "setHighScoresArray")
+                            logUtil!!.put(commonStrings!!.START, this, "setHighScoresArray")
 
                         }
                             

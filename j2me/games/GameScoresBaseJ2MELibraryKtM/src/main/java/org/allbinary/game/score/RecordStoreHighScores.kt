@@ -173,15 +173,13 @@ override fun addHighScore(newHighScore: HighScore)
 
         try {
             logUtil!!.put(StringMaker().
-                            append(
-                            "Adding HighScore: ")!!.append(newHighScore!!.getScore())!!.toString(), this, commonStrings!!.ADD)
+                            append("Adding HighScore: ")!!.append(newHighScore!!.getScore())!!.toString(), this, commonStrings!!.ADD)
 
     
                         if(this.isTooManyHighScores())
                         
                                     {
-                                    logUtil!!.put(
-                            "Removing Lowest Score", this, commonStrings!!.ADD)
+                                    logUtil!!.put("Removing Lowest Score", this, commonStrings!!.ADD)
 this.removeLowestHighScore()
 
                                     }
@@ -216,8 +214,7 @@ this.load()
                                 )
                         
                                     {
-                                    PreLogUtil.put(
-                            "Closing RecordStore", this, commonStrings!!.ADD)
+                                    PreLogUtil.put("Closing RecordStore", this, commonStrings!!.ADD)
 recordStore!!.closeRecordStore()
 
                                     }
@@ -248,8 +245,7 @@ open fun removeLowestHighScore()
     var scoreComparator: ScoreComparator = (this.recordComparatorInterface as ScoreComparator)
 
 
-    var bestHighScore: HighScore = HighScore( -1, 
-                            "none", GameInfo.NONE, scoreComparator!!.getBestScore())
+    var bestHighScore: HighScore = HighScore( -1, "none", GameInfo.NONE, scoreComparator!!.getBestScore())
 
 
     var recordAsBytes: ByteArray
@@ -307,19 +303,16 @@ inputStream= DataInputStream(byteArrayInputStream)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Removing Lowest HighScore: ")!!.append(bestHighScore!!.getScore())!!.toString(), this, commonStrings!!.LOAD)
+                            append("Removing Lowest HighScore: ")!!.append(bestHighScore!!.getScore())!!.toString(), this, commonStrings!!.LOAD)
 recordStore!!.deleteRecord(bestHighScore!!.getId())
 
                                     }
                                 
 } catch(e: RecordStoreException)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "removeLowestHighScore", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
  catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "removeLowestHighScore", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
          finally {
@@ -332,16 +325,13 @@ recordStore!!.deleteRecord(bestHighScore!!.getId())
                                 )
                         
                                     {
-                                    PreLogUtil.put(
-                            "Closing RecordStore", this, 
-                            "removeLowestHighScore")
+                                    PreLogUtil.put("Closing RecordStore", this, "removeLowestHighScore")
 recordStore!!.closeRecordStore()
 
                                     }
                                 
 } catch(e: RecordStoreException)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "removeLowestHighScore", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "removeLowestHighScore", e)
 }
 
 
@@ -438,8 +428,7 @@ break;
 
 list.add(lastIndex, newHighScore)
 } catch(e: EOFException)
-            {logUtil!!.put(
-                            "EOF", this, commonStrings!!.LOAD, e)
+            {logUtil!!.put("EOF", this, commonStrings!!.LOAD, e)
 
 
 
@@ -452,8 +441,7 @@ list.add(lastIndex, newHighScore)
 }
 
 } catch(e: RecordStoreNotFoundException)
-            {logUtil!!.put(
-                            "No High Scores", this, commonStrings!!.LOAD, e)
+            {logUtil!!.put("No High Scores", this, commonStrings!!.LOAD, e)
 }
  catch(e: RecordStoreException)
             {logUtil!!.put(commonStrings!!.UNKNOWN, this, commonStrings!!.LOAD, e)
@@ -475,8 +463,7 @@ list.add(lastIndex, newHighScore)
                                 )
                         
                                     {
-                                    PreLogUtil.put(
-                            "Closing RecordStore", this, commonStrings!!.LOAD)
+                                    PreLogUtil.put("Closing RecordStore", this, commonStrings!!.LOAD)
 recordStore!!.closeRecordStore()
 
                                     }
@@ -510,9 +497,7 @@ open fun isTooManyHighScores()
                                 
                         else {
                             logUtil!!.put(StringMaker().
-                            append(
-                            "HighScores RecordStore Max Reached: ")!!.append(this.MAXHIGHSCORES)!!.toString(), this, 
-                            "isTooManyHighScores")
+                            append("HighScores RecordStore Max Reached: ")!!.append(this.MAXHIGHSCORES)!!.toString(), this, "isTooManyHighScores")
 
 
 
@@ -537,9 +522,7 @@ open fun isTooManyHighScores()
                         if(!this.isTooManyHighScores())
                         
                                     {
-                                    logUtil!!.put(
-                            "Slot Available for a High Score", this, 
-                            "isBestScore")
+                                    logUtil!!.put("Slot Available for a High Score", this, "isBestScore")
 
 
 
@@ -572,9 +555,7 @@ open fun isTooManyHighScores()
                         if(recordComparatorInterface!!.compare(newHighScore!!.getAsBytes(), highScore!!.getAsBytes()) == RecordComparator.FOLLOWS)
                         
                                     {
-                                    logUtil!!.put(
-                            "Obtained a High Score", this, 
-                            "isBestScore")
+                                    logUtil!!.put("Obtained a High Score", this, "isBestScore")
 
 
 
@@ -588,9 +569,7 @@ open fun isTooManyHighScores()
 
                         }
                             
-logUtil!!.put(
-                            "Not a High Score", this, 
-                            "isBestScore")
+logUtil!!.put("Not a High Score", this, "isBestScore")
 
 
 

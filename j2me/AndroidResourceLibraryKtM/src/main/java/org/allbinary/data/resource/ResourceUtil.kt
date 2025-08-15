@@ -118,8 +118,7 @@ open fun getResourceId(resource: String)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, 
-                            "getResourceId")
+                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, "getResourceId")
 
                                     }
                                 
@@ -145,16 +144,14 @@ open fun addResource(resource: String, value: Integer)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, 
-                            "addResource")
+                            append(resource)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(value.toString())!!.toString(), this, "addResource")
 
     
                         if(this.containsDuplicate(resource, value))
                         
                                     {
                                     ForcedLogUtil.log(StringMaker().
-                            append(
-                            "Found Duplicate Resource: ")!!.append(resource)!!.toString(), this)
+                            append("Found Duplicate Resource: ")!!.append(resource)!!.toString(), this)
 
                                     }
                                 
@@ -232,9 +229,7 @@ open fun setResources(resources: Resources)
 
                     var resources = resources
 logUtil!!.put(StringMaker().
-                            append(
-                            "Resource Loader: ")!!.append(resources::class.qualifiedName!!)!!.toString(), this, 
-                            "setResources")
+                            append("Resource Loader: ")!!.append(resources::class.qualifiedName!!)!!.toString(), this, "setResources")
 this.resources= resources
 }
 

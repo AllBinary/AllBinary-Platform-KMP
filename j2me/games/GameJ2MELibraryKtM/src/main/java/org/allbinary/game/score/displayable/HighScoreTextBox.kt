@@ -62,8 +62,7 @@ open public class HighScoreTextBox : CustomTextBox {
     var submitted: Boolean = false
 public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, 
-                            "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
+                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
 
                     var highScoresFactoryInterface = highScoresFactoryInterface
 
@@ -120,8 +119,7 @@ highScoreUtil= HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeCl
                                     }
                                 
                         else {
-                            this.getTextFieldItem()!!.setString(
-                            "NoGamerInfo")
+                            this.getTextFieldItem()!!.setString("NoGamerInfo")
 
                         }
                             

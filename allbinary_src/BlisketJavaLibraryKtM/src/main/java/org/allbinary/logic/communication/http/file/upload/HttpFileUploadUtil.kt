@@ -64,36 +64,25 @@ open fun log(fileItem: FileItemStream)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "FileItem Log:")
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Content Type:")
+stringBuffer!!.append("FileItem Log:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Content Type:")
 stringBuffer!!.append(fileItem!!.getContentType())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Field Name:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Field Name:")
 stringBuffer!!.append(fileItem!!.getFieldName())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Name:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Name:")
 stringBuffer!!.append(fileItem!!.getName())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Size:")
-stringBuffer!!.append(
-                            " Not Calculated Yet")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Size:")
+stringBuffer!!.append(" Not Calculated Yet")
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTP))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "log()")
+                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), "log()")
 
                                     }
                                 
@@ -112,35 +101,25 @@ open fun log(fileItem: FileItem)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "FileItem Log:")
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Content Type:")
+stringBuffer!!.append("FileItem Log:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Content Type:")
 stringBuffer!!.append(fileItem!!.getContentType())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Field Name:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Field Name:")
 stringBuffer!!.append(fileItem!!.getFieldName())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Name:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Name:")
 stringBuffer!!.append(fileItem!!.getName())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Size:")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Size:")
 stringBuffer!!.append(fileItem!!.getSize())
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), 
-                            "log()")
+                                    logUtil!!.put(stringBuffer!!.toString(), getInstance(), "log()")
 
                                     }
                                 
@@ -187,8 +166,7 @@ open fun isValid(anyType: Any)
                             
 
 
-                            throw Exception("Object Not Instance Of FileItem but is: " +ClassUtil.viewAll(anyType, 
-                            "\n"))
+                            throw Exception("Object Not Instance Of FileItem but is: " +ClassUtil.viewAll(anyType, "\n"))
 
                         }
                             

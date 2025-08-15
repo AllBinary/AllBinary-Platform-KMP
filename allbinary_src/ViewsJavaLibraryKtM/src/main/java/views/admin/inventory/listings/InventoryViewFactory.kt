@@ -66,9 +66,7 @@ open fun getInstance(searchRequest: SearchRequest)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "InventoryViewFactory", 
-                            "getInstance(SearchRequest)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, "InventoryViewFactory", "getInstance(SearchRequest)", e)
 
                                     }
                                 

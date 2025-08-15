@@ -107,8 +107,7 @@ open fun createImage(originalImage: Image)
                             
 
 
-                            throw Exception(
-                            "Not Mutable")
+                            throw Exception("Not Mutable")
 
                         }
                             
@@ -192,8 +191,7 @@ graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, anchor)
                             
 
 
-                            throw Exception(
-                            "Not Mutable")
+                            throw Exception("Not Mutable")
 
                         }
                             

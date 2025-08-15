@@ -646,8 +646,7 @@ isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "paintNotVisited", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintNotVisited", e)
 }
 
 }

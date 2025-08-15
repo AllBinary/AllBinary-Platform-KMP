@@ -112,8 +112,7 @@ open fun getShippingInterface(name: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SHIPPINGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getShippingInterface(String name)")
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getShippingInterface(String name)")
 
                                     }
                                 

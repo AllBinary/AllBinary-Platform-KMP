@@ -73,8 +73,7 @@ this.propertyValueVector= Vector()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
-                                    logUtil!!.put("Number Of Properties: " +cssPropertyNodeVector!!.size, this, 
-                            "CssProperties()")
+                                    logUtil!!.put("Number Of Properties: " +cssPropertyNodeVector!!.size, this, "CssProperties()")
 
                                     }
                                 
@@ -105,8 +104,7 @@ this.propertyValueVector= Vector()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STYLE))
                         
                                     {
-                                    logUtil!!.put("Property Value: " +propertyValue, this, 
-                            "CssProperties()")
+                                    logUtil!!.put("Property Value: " +propertyValue, this, "CssProperties()")
 
                                     }
                                 
@@ -203,8 +201,7 @@ open fun toXmlNode(document: Document)
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
             
 
-logUtil!!.put("CssPropertyValues HashMap: " +hashMap!!.toString(), this, 
-                            "toXmlNode()")
+logUtil!!.put("CssPropertyValues HashMap: " +hashMap!!.toString(), this, "toXmlNode()")
 
                                     }
                                 

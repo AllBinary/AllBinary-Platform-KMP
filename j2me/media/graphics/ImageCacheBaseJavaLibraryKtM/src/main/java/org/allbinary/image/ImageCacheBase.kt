@@ -97,9 +97,7 @@ availableListOfList[index]!!.addAll(listOfList[index]!!)
 }
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "ImageCache: ")!!.append(this.toString())!!.toString(), this, 
-                            "releaseAll")
+                            append("ImageCache: ")!!.append(this.toString())!!.toString(), this, "releaseAll")
 }
 
 
@@ -315,17 +313,14 @@ override fun toString()
     var totalAvailable: Int = availableListOfList[index]!!.size()!!
             
 
-stringBuffer!!.append(
-                            " w: ")
+stringBuffer!!.append(" w: ")
 stringBuffer!!.append(width)
-stringBuffer!!.append(
-                            " h: ")
+stringBuffer!!.append(" h: ")
 stringBuffer!!.append(height)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)
 stringBuffer!!.append(total)
-stringBuffer!!.append(
-                            " available: ")
+stringBuffer!!.append(" available: ")
 stringBuffer!!.append(totalAvailable)
 }
 

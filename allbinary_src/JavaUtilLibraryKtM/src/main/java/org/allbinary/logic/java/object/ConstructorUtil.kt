@@ -51,8 +51,7 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
     var constructor: Array<Constructor?> = myClass!!.getConstructors()!!
             
 
-stringBuffer!!.append(
-                            "Constructors: ")
+stringBuffer!!.append("Constructors: ")
 stringBuffer!!.append(lineBreak)
 
 

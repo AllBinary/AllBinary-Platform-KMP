@@ -65,8 +65,7 @@ public constructor        (powerOfTen: Int)
                         if(powerOfTen % 10 != 0)
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, Exception(
-                            "Max must be power of 10"))
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, Exception("Max must be power of 10"))
 
                                     }
                                 

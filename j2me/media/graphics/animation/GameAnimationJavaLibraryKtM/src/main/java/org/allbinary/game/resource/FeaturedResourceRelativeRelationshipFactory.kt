@@ -115,8 +115,7 @@ open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "Not available for current feature selection or Resource: ")!!.append(resource)!!.toString())
+                            append("Not available for current feature selection or Resource: ")!!.append(resource)!!.toString())
 }
 
 

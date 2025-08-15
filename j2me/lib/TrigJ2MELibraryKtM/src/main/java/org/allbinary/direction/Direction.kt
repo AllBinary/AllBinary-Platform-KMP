@@ -142,14 +142,11 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Direction: ")
+stringBuffer!!.append("Direction: ")
 stringBuffer!!.append(this.getName())
-stringBuffer!!.append(
-                            " Or: ")
+stringBuffer!!.append(" Or: ")
 stringBuffer!!.append(this.getOtherName())
-stringBuffer!!.append(
-                            " Value: ")
+stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(this.value)
 
 

@@ -75,8 +75,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "delete()")
+                                    logUtil!!.put(success, this, "delete()")
 
                                     }
                                 
@@ -96,8 +95,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 
@@ -114,8 +112,7 @@ WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", ex)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", ex)
 
                                     }
                                 
@@ -143,8 +140,7 @@ open fun insert()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "add()")
+                                    logUtil!!.put(success, this, "add()")
 
                                     }
                                 
@@ -162,8 +158,7 @@ open fun insert()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "add()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "add()", e)
 
                                     }
                                 
@@ -189,8 +184,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "update()")
+                                    logUtil!!.put(success, this, "update()")
 
                                     }
                                 
@@ -208,8 +202,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 

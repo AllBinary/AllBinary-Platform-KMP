@@ -57,8 +57,7 @@ open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
                                     
     var message: String = "Logging EmailEvent - Temporary Listener for debugging.\n\n" +userEmailInfoEvent!!.toString()
 
-logUtil!!.put(message, this, 
-                            "onEmailSendRequest")
+logUtil!!.put(message, this, "onEmailSendRequest")
 
                                     }
                                 

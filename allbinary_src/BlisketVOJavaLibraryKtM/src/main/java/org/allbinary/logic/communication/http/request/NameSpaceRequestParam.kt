@@ -71,8 +71,7 @@ this.value= value
                                     
 
 
-                            throw Exception(
-                            "Not a NameSpaceRequest")
+                            throw Exception("Not a NameSpaceRequest")
 
                                     }
                                 
@@ -92,8 +91,7 @@ this.value= value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nSep Tokens: " +nameSpaceWithPropertiesVector!!.toString(), this, 
-                            "NameSpaceRequestParam()")
+                                    logUtil!!.put("\nSep Tokens: " +nameSpaceWithPropertiesVector!!.toString(), this, "NameSpaceRequestParam()")
 
                                     }
                                 
@@ -128,8 +126,7 @@ list.clear()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nPackageName and PackageName Properties Tokens: " +nameSpaceAndPropertiesVector!!.toString(), this, 
-                            "NameSpaceRequestParam()")
+                                    logUtil!!.put("\nPackageName and PackageName Properties Tokens: " +nameSpaceAndPropertiesVector!!.toString(), this, "NameSpaceRequestParam()")
 
                                     }
                                 
@@ -151,8 +148,7 @@ list.clear()
                                     
 
 
-                            throw Exception(
-                            "Package Name Is Null")
+                            throw Exception("Package Name Is Null")
 
                                     }
                                 
@@ -184,8 +180,7 @@ packageIndex++
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("NameSpace: " +this.nameSpaceVector!!.toString(), this, 
-                            "NameSpaceRequestParam()")
+                                    logUtil!!.put("NameSpace: " +this.nameSpaceVector!!.toString(), this, "NameSpaceRequestParam()")
 
                                     }
                                 
@@ -199,8 +194,7 @@ open fun getPackages()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("NameSpace: " +this.nameSpaceVector!!.toString(), this, 
-                            "getPackages()")
+                                    logUtil!!.put("NameSpace: " +this.nameSpaceVector!!.toString(), this, "getPackages()")
 
                                     }
                                 
@@ -236,8 +230,7 @@ open fun getPackageProperties(packageIndex: Int)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("Package Properties: " +packagePropertiesHashMap!!.toString(), this, 
-                            "getPackagesProperties()")
+                                    logUtil!!.put("Package Properties: " +packagePropertiesHashMap!!.toString(), this, "getPackagesProperties()")
 
                                     }
                                 
@@ -256,8 +249,7 @@ open fun getValue()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nValue: " +this.value, this, 
-                            "getValue()")
+                                    logUtil!!.put("\nValue: " +this.value, this, "getValue()")
 
                                     }
                                 
@@ -330,8 +322,7 @@ list.clear()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
                                     {
-                                    logUtil!!.put("\nProperty Name: " +propertyName +"\nProperty Value: " +propertyValue, this, 
-                            "generatePackagePropertiesHashMap()")
+                                    logUtil!!.put("\nProperty Name: " +propertyName +"\nProperty Value: " +propertyValue, this, "generatePackagePropertiesHashMap()")
 
                                     }
                                 

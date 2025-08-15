@@ -39,56 +39,39 @@ open public class UserEmailEventNameData
 
     private var nextId: Int = 0
 
-    val INSTALLER: UserEmailEventNameData = UserEmailEventNameData(
-                            "Installer")
+    val INSTALLER: UserEmailEventNameData = UserEmailEventNameData("Installer")
 
-    val EXCEPTION: UserEmailEventNameData = UserEmailEventNameData(
-                            "Exception")
+    val EXCEPTION: UserEmailEventNameData = UserEmailEventNameData("Exception")
 
-    val LOGGEDEXCEPTION: UserEmailEventNameData = UserEmailEventNameData(
-                            "Logged Exception")
+    val LOGGEDEXCEPTION: UserEmailEventNameData = UserEmailEventNameData("Logged Exception")
 
-    val ERROR: UserEmailEventNameData = UserEmailEventNameData(
-                            "Error")
+    val ERROR: UserEmailEventNameData = UserEmailEventNameData("Error")
 
-    val OUTOFMEMORY: UserEmailEventNameData = UserEmailEventNameData(
-                            "Out Of Memory Error")
+    val OUTOFMEMORY: UserEmailEventNameData = UserEmailEventNameData("Out Of Memory Error")
 
-    val ADMINGENERATINGSTATICPAGES: UserEmailEventNameData = UserEmailEventNameData(
-                            "Admin Generating Static Pages")
+    val ADMINGENERATINGSTATICPAGES: UserEmailEventNameData = UserEmailEventNameData("Admin Generating Static Pages")
 
-    val STOREERROROCCURRED: UserEmailEventNameData = UserEmailEventNameData(
-                            "Store Error Occurred")
+    val STOREERROROCCURRED: UserEmailEventNameData = UserEmailEventNameData("Store Error Occurred")
 
-    val STOREOUTOFMEMORY: UserEmailEventNameData = UserEmailEventNameData(
-                            "Store Out Of Memory Error")
+    val STOREOUTOFMEMORY: UserEmailEventNameData = UserEmailEventNameData("Store Out Of Memory Error")
 
-    val STORECREATED: UserEmailEventNameData = UserEmailEventNameData(
-                            "Store Created")
+    val STORECREATED: UserEmailEventNameData = UserEmailEventNameData("Store Created")
 
-    val STOREOPENED: UserEmailEventNameData = UserEmailEventNameData(
-                            "Store Opened")
+    val STOREOPENED: UserEmailEventNameData = UserEmailEventNameData("Store Opened")
 
-    val STORECLOSED: UserEmailEventNameData = UserEmailEventNameData(
-                            "Store Closed")
+    val STORECLOSED: UserEmailEventNameData = UserEmailEventNameData("Store Closed")
 
-    val STOREGENERATINGSTATICPAGES: UserEmailEventNameData = UserEmailEventNameData(
-                            "Store Generating Static Pages")
+    val STOREGENERATINGSTATICPAGES: UserEmailEventNameData = UserEmailEventNameData("Store Generating Static Pages")
 
-    val PRODUCTISOUT: UserEmailEventNameData = UserEmailEventNameData(
-                            "Product Is Out")
+    val PRODUCTISOUT: UserEmailEventNameData = UserEmailEventNameData("Product Is Out")
 
-    val PRODUCTISAVAILABLE: UserEmailEventNameData = UserEmailEventNameData(
-                            "Product Is Available")
+    val PRODUCTISAVAILABLE: UserEmailEventNameData = UserEmailEventNameData("Product Is Available")
 
-    val PRODUCTISOLD: UserEmailEventNameData = UserEmailEventNameData(
-                            "Product Is Old")
+    val PRODUCTISOLD: UserEmailEventNameData = UserEmailEventNameData("Product Is Old")
 
-    val PRODUCTISONSALE: UserEmailEventNameData = UserEmailEventNameData(
-                            "Product Is On Sale")
+    val PRODUCTISONSALE: UserEmailEventNameData = UserEmailEventNameData("Product Is On Sale")
 
-    val PRODUCTSALEISOVER: UserEmailEventNameData = UserEmailEventNameData(
-                            "Product Sale Is Over")
+    val PRODUCTSALEISOVER: UserEmailEventNameData = UserEmailEventNameData("Product Sale Is Over")
 
     val ORDERPREPROCESSING: UserEmailEventNameData = UserEmailEventNameData(OrderHistoryData.PREPROCESSING)
 
@@ -100,11 +83,9 @@ open public class UserEmailEventNameData
 
     val ORDERSHIPPED: UserEmailEventNameData = UserEmailEventNameData(OrderHistoryData.SHIPPED)
 
-    val QUOTEREQUEST: UserEmailEventNameData = UserEmailEventNameData(
-                            "Quote Request")
+    val QUOTEREQUEST: UserEmailEventNameData = UserEmailEventNameData("Quote Request")
 
-    val NEWPASSWORD: UserEmailEventNameData = UserEmailEventNameData(
-                            "New Password")
+    val NEWPASSWORD: UserEmailEventNameData = UserEmailEventNameData("New Password")
 
                 @Throws(Exception::class)
             

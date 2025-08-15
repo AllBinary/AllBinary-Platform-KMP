@@ -52,248 +52,167 @@ open fun getInstance()
             {
             }            
         
-    val TRXTYPE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "TRXTYPE")
+    val TRXTYPE: PaymentTransactionKeys = PaymentTransactionKeys("TRXTYPE")
 
-    val TENDER: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "TENDER")
+    val TENDER: PaymentTransactionKeys = PaymentTransactionKeys("TENDER")
 
-    val ACCT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ACCT")
+    val ACCT: PaymentTransactionKeys = PaymentTransactionKeys("ACCT")
 
-    val EXPDATE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXPDATE")
+    val EXPDATE: PaymentTransactionKeys = PaymentTransactionKeys("EXPDATE")
 
-    val AMT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "AMT")
+    val AMT: PaymentTransactionKeys = PaymentTransactionKeys("AMT")
 
-    val AUTHCODE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "AUTHCODE")
+    val AUTHCODE: PaymentTransactionKeys = PaymentTransactionKeys("AUTHCODE")
 
-    val MICR: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "MICR")
+    val MICR: PaymentTransactionKeys = PaymentTransactionKeys("MICR")
 
-    val CHECKNUM: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "CHECKNUM")
+    val CHECKNUM: PaymentTransactionKeys = PaymentTransactionKeys("CHECKNUM")
 
-    val NAME: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "NAME")
+    val NAME: PaymentTransactionKeys = PaymentTransactionKeys("NAME")
 
-    val STREET: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "STREET")
+    val STREET: PaymentTransactionKeys = PaymentTransactionKeys("STREET")
 
-    val CITY: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "CITY")
+    val CITY: PaymentTransactionKeys = PaymentTransactionKeys("CITY")
 
-    val STATE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "STATE")
+    val STATE: PaymentTransactionKeys = PaymentTransactionKeys("STATE")
 
-    val ZIP: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ZIP")
+    val ZIP: PaymentTransactionKeys = PaymentTransactionKeys("ZIP")
 
-    val DL: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "DL")
+    val DL: PaymentTransactionKeys = PaymentTransactionKeys("DL")
 
-    val EMAIL: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EMAIL")
+    val EMAIL: PaymentTransactionKeys = PaymentTransactionKeys("EMAIL")
 
-    val COMMENT1: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "COMMENT1")
+    val COMMENT1: PaymentTransactionKeys = PaymentTransactionKeys("COMMENT1")
 
-    val COMMENT2: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "COMMENT2")
+    val COMMENT2: PaymentTransactionKeys = PaymentTransactionKeys("COMMENT2")
 
-    val ORIGID: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ORIGID")
+    val ORIGID: PaymentTransactionKeys = PaymentTransactionKeys("ORIGID")
 
-    val PONUM: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PONUM")
+    val PONUM: PaymentTransactionKeys = PaymentTransactionKeys("PONUM")
 
-    val DESC: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PaymentTransactionDESC")
+    val DESC: PaymentTransactionKeys = PaymentTransactionKeys("PaymentTransactionDESC")
 
-    val DESC1TO4: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "DESC1TO4")
+    val DESC1TO4: PaymentTransactionKeys = PaymentTransactionKeys("DESC1TO4")
 
-    val INVNUM: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "INVNUM")
+    val INVNUM: PaymentTransactionKeys = PaymentTransactionKeys("INVNUM")
 
-    val SHIPTOZIP: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPTOZIP")
+    val SHIPTOZIP: PaymentTransactionKeys = PaymentTransactionKeys("SHIPTOZIP")
 
-    val SWIPE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SWIPE")
+    val SWIPE: PaymentTransactionKeys = PaymentTransactionKeys("SWIPE")
 
-    val TAXAMT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "TAXAMT")
+    val TAXAMT: PaymentTransactionKeys = PaymentTransactionKeys("TAXAMT")
 
-    val COMMCARD: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "COMMCARD")
+    val COMMCARD: PaymentTransactionKeys = PaymentTransactionKeys("COMMCARD")
 
-    val DUTYAMT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "DUTYAMT")
+    val DUTYAMT: PaymentTransactionKeys = PaymentTransactionKeys("DUTYAMT")
 
-    val FRIEGHTAMT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "FRIEGHTAMT")
+    val FRIEGHTAMT: PaymentTransactionKeys = PaymentTransactionKeys("FRIEGHTAMT")
 
-    val ORDERDATE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ORDERDATE")
+    val ORDERDATE: PaymentTransactionKeys = PaymentTransactionKeys("ORDERDATE")
 
-    val TAXEXEMPT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "TAXEXEMPT")
+    val TAXEXEMPT: PaymentTransactionKeys = PaymentTransactionKeys("TAXEXEMPT")
 
-    val COUNTRYCODE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "COUNTRYCODE")
+    val COUNTRYCODE: PaymentTransactionKeys = PaymentTransactionKeys("COUNTRYCODE")
 
-    val CUSTCODE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "CUSTCODE")
+    val CUSTCODE: PaymentTransactionKeys = PaymentTransactionKeys("CUSTCODE")
 
-    val CVV2: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "CVV2")
+    val CVV2: PaymentTransactionKeys = PaymentTransactionKeys("CVV2")
 
-    val ABA: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ABA")
+    val ABA: PaymentTransactionKeys = PaymentTransactionKeys("ABA")
 
-    val ACCTTYPE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ACCTTYPE")
+    val ACCTTYPE: PaymentTransactionKeys = PaymentTransactionKeys("ACCTTYPE")
 
-    val DISCOUNT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "DISCOUNT")
+    val DISCOUNT: PaymentTransactionKeys = PaymentTransactionKeys("DISCOUNT")
 
-    val FIRSTNAME: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "FIRSTNAME")
+    val FIRSTNAME: PaymentTransactionKeys = PaymentTransactionKeys("FIRSTNAME")
 
-    val LASTNAME: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "LASNAME")
+    val LASTNAME: PaymentTransactionKeys = PaymentTransactionKeys("LASNAME")
 
-    val SHIPFROMZIP: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPFROMZIP")
+    val SHIPFROMZIP: PaymentTransactionKeys = PaymentTransactionKeys("SHIPFROMZIP")
 
-    val PRENOTE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PRENOTE")
+    val PRENOTE: PaymentTransactionKeys = PaymentTransactionKeys("PRENOTE")
 
-    val CHKTYPE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "CHKTYPE")
+    val CHKTYPE: PaymentTransactionKeys = PaymentTransactionKeys("CHKTYPE")
 
-    val DOB: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "DOB")
+    val DOB: PaymentTransactionKeys = PaymentTransactionKeys("DOB")
 
-    val PHONENUM: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PHONENUM")
+    val PHONENUM: PaymentTransactionKeys = PaymentTransactionKeys("PHONENUM")
 
-    val SS: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SS")
+    val SS: PaymentTransactionKeys = PaymentTransactionKeys("SS")
 
-    val COMPANYNAME: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "COMPANYNAME")
+    val COMPANYNAME: PaymentTransactionKeys = PaymentTransactionKeys("COMPANYNAME")
 
-    val COUNTRY: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "COUNTRY")
+    val COUNTRY: PaymentTransactionKeys = PaymentTransactionKeys("COUNTRY")
 
-    val FREIGHTAMT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "FREIGHTAMT")
+    val FREIGHTAMT: PaymentTransactionKeys = PaymentTransactionKeys("FREIGHTAMT")
 
-    val SHIPTOCITY: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPTOCITY")
+    val SHIPTOCITY: PaymentTransactionKeys = PaymentTransactionKeys("SHIPTOCITY")
 
-    val SHIPTOFIRSTNAME: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPTOFIRSTNAME")
+    val SHIPTOFIRSTNAME: PaymentTransactionKeys = PaymentTransactionKeys("SHIPTOFIRSTNAME")
 
-    val SHIPTOLASTNAME: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPTOLASTNAME")
+    val SHIPTOLASTNAME: PaymentTransactionKeys = PaymentTransactionKeys("SHIPTOLASTNAME")
 
-    val SHIPTOSTATE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPTOSTATE")
+    val SHIPTOSTATE: PaymentTransactionKeys = PaymentTransactionKeys("SHIPTOSTATE")
 
-    val SHIPTOSTREET: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SHIPTOSTREET")
+    val SHIPTOSTREET: PaymentTransactionKeys = PaymentTransactionKeys("SHIPTOSTREET")
 
-    val SPECIAL1: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SPECIAL1")
+    val SPECIAL1: PaymentTransactionKeys = PaymentTransactionKeys("SPECIAL1")
 
-    val SPECIAL2: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SPECIAL2")
+    val SPECIAL2: PaymentTransactionKeys = PaymentTransactionKeys("SPECIAL2")
 
-    val SPECIAL3: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SPECIAL3")
+    val SPECIAL3: PaymentTransactionKeys = PaymentTransactionKeys("SPECIAL3")
 
-    val PARTNER: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PARTNER")
+    val PARTNER: PaymentTransactionKeys = PaymentTransactionKeys("PARTNER")
 
-    val VENDOR: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "VENDOR")
+    val VENDOR: PaymentTransactionKeys = PaymentTransactionKeys("VENDOR")
 
-    val USER: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "USER")
+    val USER: PaymentTransactionKeys = PaymentTransactionKeys("USER")
 
-    val PWD: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PWD")
+    val PWD: PaymentTransactionKeys = PaymentTransactionKeys("PWD")
 
-    val CHKNUM: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "CHKNUM")
+    val CHKNUM: PaymentTransactionKeys = PaymentTransactionKeys("CHKNUM")
 
-    val AVSADDR: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "AVSADDR")
+    val AVSADDR: PaymentTransactionKeys = PaymentTransactionKeys("AVSADDR")
 
-    val AVSZIP: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "AVSZIP")
+    val AVSZIP: PaymentTransactionKeys = PaymentTransactionKeys("AVSZIP")
 
-    val PNREF: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "PNREF")
+    val PNREF: PaymentTransactionKeys = PaymentTransactionKeys("PNREF")
 
-    val RESPMSG: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "RESPMSG")
+    val RESPMSG: PaymentTransactionKeys = PaymentTransactionKeys("RESPMSG")
 
-    val RESULT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "RESULT")
+    val RESULT: PaymentTransactionKeys = PaymentTransactionKeys("RESULT")
 
-    val ORIGRESULT: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ORIGRESULT")
+    val ORIGRESULT: PaymentTransactionKeys = PaymentTransactionKeys("ORIGRESULT")
 
-    val STATUS: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "STATUS")
+    val STATUS: PaymentTransactionKeys = PaymentTransactionKeys("STATUS")
 
-    val FRAUDCODE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "FRAUDCODE")
+    val FRAUDCODE: PaymentTransactionKeys = PaymentTransactionKeys("FRAUDCODE")
 
-    val FRAUDMSG: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "FRAUDMSG")
+    val FRAUDMSG: PaymentTransactionKeys = PaymentTransactionKeys("FRAUDMSG")
 
-    val ERRCODE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "ERRCODE")
+    val ERRCODE: PaymentTransactionKeys = PaymentTransactionKeys("ERRCODE")
 
-    val SCORE: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "SCORE")
+    val SCORE: PaymentTransactionKeys = PaymentTransactionKeys("SCORE")
 
-    val REASON1: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "REASON1")
+    val REASON1: PaymentTransactionKeys = PaymentTransactionKeys("REASON1")
 
-    val REASON2: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "REASON2")
+    val REASON2: PaymentTransactionKeys = PaymentTransactionKeys("REASON2")
 
-    val REASON3: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "REASON3")
+    val REASON3: PaymentTransactionKeys = PaymentTransactionKeys("REASON3")
 
-    val EXCEPTION1: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION1")
+    val EXCEPTION1: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION1")
 
-    val EXCEPTION2: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION2")
+    val EXCEPTION2: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION2")
 
-    val EXCEPTION3: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION3")
+    val EXCEPTION3: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION3")
 
-    val EXCEPTION4: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION4")
+    val EXCEPTION4: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION4")
 
-    val EXCEPTION5: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION5")
+    val EXCEPTION5: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION5")
 
-    val EXCEPTION6: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION6")
+    val EXCEPTION6: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION6")
 
-    val EXCEPTION7: PaymentTransactionKeys = PaymentTransactionKeys(
-                            "EXCEPTION7")
+    val EXCEPTION7: PaymentTransactionKeys = PaymentTransactionKeys("EXCEPTION7")
 
 }
                 

@@ -61,38 +61,27 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    val SPECIAL_BUTTON_SIX: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -30, 
-                            "Button 6")
+    val SPECIAL_BUTTON_SIX: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -30, "Button 6")
 
-    val SPECIAL_BUTTON_FIVE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -31, 
-                            "Button 5")
+    val SPECIAL_BUTTON_FIVE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -31, "Button 5")
 
-    val SPECIAL_BUTTON_FOUR: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -32, 
-                            "Button 4")
+    val SPECIAL_BUTTON_FOUR: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -32, "Button 4")
 
-    val SPECIAL_BUTTON_THREE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -33, 
-                            "Button 3")
+    val SPECIAL_BUTTON_THREE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -33, "Button 3")
 
-    val SPECIAL_BUTTON_TWO: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -34, 
-                            "Button 2")
+    val SPECIAL_BUTTON_TWO: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -34, "Button 2")
 
-    val SPECIAL_BUTTON_ONE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -35, 
-                            "Button 1")
+    val SPECIAL_BUTTON_ONE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -35, "Button 1")
 
-    val UP: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -36, 
-                            "Up Button")
+    val UP: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -36, "Up Button")
 
-    val LEFT: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -37, 
-                            "Left Button")
+    val LEFT: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -37, "Left Button")
 
-    val RIGHT: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -38, 
-                            "Right Button")
+    val RIGHT: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -38, "Right Button")
 
-    val DOWN: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -39, 
-                            "Down Button")
+    val DOWN: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -39, "Down Button")
 
-    val NONE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -40, 
-                            "No Button")
+    val NONE: TouchButtonInput = TouchButtonInput(InputFactory.getInstance()!!.MAX -40, "No Button")
 
     private var initialized: Boolean = false
 
@@ -145,8 +134,7 @@ open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMa
 
                     var inputToGameKeyMapping = inputToGameKeyMapping
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START)!!.append(list.size())!!.toString(), this, 
-                            "updateAll")
+                            append(CommonLabels.getInstance()!!.START)!!.append(list.size())!!.toString(), this, "updateAll")
 
 
 

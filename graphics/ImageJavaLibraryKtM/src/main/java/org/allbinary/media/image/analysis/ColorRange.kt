@@ -204,33 +204,22 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "getMinRed(): ")
+stringBuffer!!.append("getMinRed(): ")
 stringBuffer!!.append(this.getMinRed())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getMaxRed(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getMaxRed(): ")
 stringBuffer!!.append(this.getMaxRed())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getMinGreen(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getMinGreen(): ")
 stringBuffer!!.append(this.getMinGreen())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getMaxGreen(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getMaxGreen(): ")
 stringBuffer!!.append(this.getMaxGreen())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getMinBlue(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getMinBlue(): ")
 stringBuffer!!.append(this.getMinGreen())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getMaxBlue(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getMaxBlue(): ")
 stringBuffer!!.append(this.getMaxBlue())
 
 

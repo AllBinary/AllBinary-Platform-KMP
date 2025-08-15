@@ -158,8 +158,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -196,13 +195,11 @@ itemResourceFile!!.mkdir()
 
 stringBuffer!!.append(fullPath)
 stringBuffer!!.append(fileName)
-logUtil!!.put("FileName: " +fileName, this, 
-                            "processFile()")
+logUtil!!.put("FileName: " +fileName, this, "processFile()")
 
     var file: AbFile = AbFile(stringBuffer!!.toString())
 
-logUtil!!.put(file.getPath(), this, 
-                            "processFiles()")
+logUtil!!.put(file.getPath(), this, "processFiles()")
 file.createNewFile()
 
     var byteArray: ByteArray = fileItem!!.get()!!
@@ -232,13 +229,11 @@ open fun unzip(fileItem: FileItem)
 
 stringBuffer!!.append(fullPath)
 stringBuffer!!.append(fileName)
-logUtil!!.put("FileName: " +fileName, this, 
-                            "unzip()")
+logUtil!!.put("FileName: " +fileName, this, "unzip()")
 
     var file: AbFile = AbFile(stringBuffer!!.toString())
 
-logUtil!!.put(file.getPath(), this, 
-                            "unzip()")
+logUtil!!.put(file.getPath(), this, "unzip()")
 ZipFileUtil.getInstance()!!.unzip(fullPath, file, fileName)
 }
 

@@ -51,20 +51,15 @@ open fun getInstance()
             
     private val NO_DESCRIPTION: String = "No Description"
 
-    val INIT_SERVER: LogConfigType = LogConfigType(
-                            "Init Server", NO_DESCRIPTION)
+    val INIT_SERVER: LogConfigType = LogConfigType("Init Server", NO_DESCRIPTION)
 
-    val LOBBY_SERVER: LogConfigType = LogConfigType(
-                            "Lobby Server", NO_DESCRIPTION)
+    val LOBBY_SERVER: LogConfigType = LogConfigType("Lobby Server", NO_DESCRIPTION)
 
-    val GAME_SERVER: LogConfigType = LogConfigType(
-                            "Game Server", NO_DESCRIPTION)
+    val GAME_SERVER: LogConfigType = LogConfigType("Game Server", NO_DESCRIPTION)
 
-    val GAME_SIMULATOR: LogConfigType = LogConfigType(
-                            "Game Simulator", NO_DESCRIPTION)
+    val GAME_SIMULATOR: LogConfigType = LogConfigType("Game Simulator", NO_DESCRIPTION)
 
-    val CUSTOM_TYPES: LogConfigType = LogConfigType(
-                            "Custom Types", NO_DESCRIPTION)
+    val CUSTOM_TYPES: LogConfigType = LogConfigType("Custom Types", NO_DESCRIPTION)
 private constructor        ()
             : super()
         {LogConfigTypes.LOGGING.add(this.INIT_SERVER)

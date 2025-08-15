@@ -58,8 +58,7 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.START, this, 
-                            "CategoryModifierTree(CategoryFactoryInterface categoryFactoryInterface)")
+                                    logUtil!!.put(commonStrings!!.START, this, "CategoryModifierTree(CategoryFactoryInterface categoryFactoryInterface)")
 
                                     }
                                 
@@ -81,9 +80,7 @@ open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInte
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(
-                            "Inserting", this, 
-                            "insert()")
+                                    logUtil!!.put("Inserting", this, "insert()")
 
                                     }
                                 
@@ -102,9 +99,7 @@ this.directory.create(directoryToBeCreatedAbPath)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(
-                            "Saving", this, 
-                            "insert()")
+                                    logUtil!!.put("Saving", this, "insert()")
 
                                     }
                                 
@@ -123,8 +118,7 @@ this.save(newChildCategoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "insert", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "insert", e)
 
                                     }
                                 

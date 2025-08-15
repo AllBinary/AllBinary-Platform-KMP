@@ -150,8 +150,7 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onMotionGestureEvent", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMotionGestureEvent", e)
 }
 
 }

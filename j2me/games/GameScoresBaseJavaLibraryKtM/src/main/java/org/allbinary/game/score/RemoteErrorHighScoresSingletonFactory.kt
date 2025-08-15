@@ -34,9 +34,7 @@ open public class RemoteErrorHighScoresSingletonFactory
 
         companion object {
             
-    private val SINGLETON: HighScores = HighScores(
-                            "Loading", 
-                            "Remote High Scores Did Not Load", CommonStrings.getInstance()!!.PERIODS)
+    private val SINGLETON: HighScores = HighScores("Loading", "Remote High Scores Did Not Load", CommonStrings.getInstance()!!.PERIODS)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

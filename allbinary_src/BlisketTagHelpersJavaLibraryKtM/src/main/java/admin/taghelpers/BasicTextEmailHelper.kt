@@ -61,12 +61,10 @@ this.hashMap= hashMap
 open fun send()
         //nullable = true from not(false or (false and true)) = true
 {
-    var adminEmailSubject: String = hashMap!!.get(
-                            "Subject") as String
+    var adminEmailSubject: String = hashMap!!.get("Subject") as String
 
 
-    var adminEmailTextBody: String = hashMap!!.get(
-                            "Body") as String
+    var adminEmailTextBody: String = hashMap!!.get("Body") as String
 
 
     var adminBasicEmailInfo: BasicEmailInfo = AdminEmailInfo(adminEmailSubject, adminEmailTextBody) as BasicEmailInfo

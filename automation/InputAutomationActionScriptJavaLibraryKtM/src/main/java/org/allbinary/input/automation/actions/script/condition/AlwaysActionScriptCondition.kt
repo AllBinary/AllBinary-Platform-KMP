@@ -103,8 +103,7 @@ this.setIsOn(.
                             
 
 
-                            throw Exception(
-                            "Action Script Condition Unknown Node")
+                            throw Exception("Action Script Condition Unknown Node")
 
                         }
                             
@@ -117,8 +116,7 @@ this.setIsOn(.
                             
 
 
-                            throw Exception(
-                            "Action Script Condition Node Null")
+                            throw Exception("Action Script Condition Node Null")
 
                         }
                             
@@ -172,8 +170,7 @@ open fun toHashMap()
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(AlwaysActionScriptConditionData.IS_ON, Boolean.toString(this.isIsOn()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -232,8 +229,7 @@ open fun shouldProcess(frame: Long)
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put("Is On: " +this.isIsOn(), this, 
-                            "log")
+{logUtil!!.put("Is On: " +this.isIsOn(), this, "log")
 }
 
 

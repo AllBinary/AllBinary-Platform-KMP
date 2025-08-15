@@ -117,8 +117,7 @@ open fun getInstance(id: Int)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Warning id: ")!!.append(id)!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Warning id: ")!!.append(id)!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
 

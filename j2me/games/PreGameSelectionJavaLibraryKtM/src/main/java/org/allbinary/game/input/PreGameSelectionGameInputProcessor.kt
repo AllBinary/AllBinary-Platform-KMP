@@ -112,8 +112,7 @@ public constructor        (gameCanvas: AllBinaryGameCanvas, preGameSelectorPaint
 this.gameCanvas= gameCanvas
 this.preGameSelectorPaintable= preGameSelectorPaintable
 this.nextGameState= nextGameState
-this.playerGameInput= GameInputProcessorComposite(
-                            "Pre Game Selection", this)
+this.playerGameInput= GameInputProcessorComposite("Pre Game Selection", this)
 this.lockedIndex= lockedIndex
 }
 

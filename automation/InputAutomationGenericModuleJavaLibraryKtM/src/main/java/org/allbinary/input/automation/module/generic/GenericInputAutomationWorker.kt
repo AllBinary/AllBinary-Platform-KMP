@@ -139,8 +139,7 @@ this.waitForDataWorkers()
                         if(keyArray!!.size > 0)
                         
                                     {
-                                    logUtil!!.put(
-                            "Image Available", this, this.PROCESS_DATA_WORKER_RESULTS)
+                                    logUtil!!.put("Image Available", this, this.PROCESS_DATA_WORKER_RESULTS)
 setFrame(keyArray[keyArray!!.size -1]!! as Long)
 
     
@@ -198,8 +197,7 @@ lastFrame= getFrame()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Image Not Available", this, this.PROCESS_DATA_WORKER_RESULTS)
+                            logUtil!!.put("Image Not Available", this, this.PROCESS_DATA_WORKER_RESULTS)
 
                         }
                             

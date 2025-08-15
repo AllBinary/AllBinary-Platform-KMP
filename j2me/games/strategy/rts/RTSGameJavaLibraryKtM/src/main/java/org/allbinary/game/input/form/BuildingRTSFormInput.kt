@@ -237,8 +237,7 @@ open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, this, 
-                            "buildFromMotionInput")
+logUtil!!.put(commonStrings!!.START, this, "buildFromMotionInput")
 
     
                         if(layerManager == 
@@ -395,9 +394,7 @@ open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerMan
 
                     var itemIndex = itemIndex
 logUtil!!.put(StringMaker().
-                            append(
-                            "Layer: ")!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, 
-                            "attemptBuild")
+                            append("Layer: ")!!.append(StringUtil.getInstance()!!.toString(layerInterface))!!.toString(), this, "attemptBuild")
 
     var geographicMapCellPositionArea: GeographicMapCellPositionArea = layerInterface!!.geographicMapCellPositionArea
 
@@ -474,17 +471,13 @@ geographicMapCellType= geographicMapInterface!!.getCellTypeAt(occupyList!!.get(i
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Trying to Build: ")
+stringBuffer!!.append("Trying to Build: ")
 stringBuffer!!.append(layerInterface!!.getName())
-stringBuffer!!.append(
-                            " for: $")
+stringBuffer!!.append(" for: $")
 stringBuffer!!.append(cost)
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(capital.getTotalMoney())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "attemptBuild")
+logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
 
     
                         if(cost <= capital.getTotalMoney())
@@ -690,17 +683,13 @@ open fun isSurroundingCellsOffMap(layerInterface: RTSLayer)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "occupySize: ")
+stringBuffer!!.append("occupySize: ")
 stringBuffer!!.append(occupySize)
-stringBuffer!!.append(
-                            " surroundSize: ")
+stringBuffer!!.append(" surroundSize: ")
 stringBuffer!!.append(surroundSize)
-stringBuffer!!.append(
-                            " surroundList: ")
+stringBuffer!!.append(" surroundList: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(surroundList))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "isSurroundingCellsOffMap")
+logUtil!!.put(stringBuffer!!.toString(), this, "isSurroundingCellsOffMap")
 
     var isSurroundOffMap: Boolean = false
 

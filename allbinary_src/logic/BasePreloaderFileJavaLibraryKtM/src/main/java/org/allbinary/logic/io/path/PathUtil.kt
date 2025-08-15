@@ -402,8 +402,7 @@ open fun adjust(path: String)
                                 
 
     
-                        if(path.indexOf(
-                            "\\") >= 0)
+                        if(path.indexOf("\\") >= 0)
                         
                                     {
                                     path= path.replace('\\', abPathData!!.SEPARATORCHAR)

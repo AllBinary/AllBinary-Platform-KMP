@@ -49,8 +49,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(
-                            "Roll Right Action", OrientationMotionGestureFactory.getInstance()!!.ROLL_RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+                            : super("Roll Right Action", OrientationMotionGestureFactory.getInstance()!!.ROLL_RIGHT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
                             //For kotlin this is before the body of the constructor.
                     

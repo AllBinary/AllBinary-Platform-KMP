@@ -57,8 +57,7 @@ public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Properties: " +hashMap!!.toString(), this, 
-                            "StoreTagWorkFlowHelper()")
+                                    logUtil!!.put("Properties: " +hashMap!!.toString(), this, "StoreTagWorkFlowHelper()")
 
                                     }
                                 
@@ -77,8 +76,7 @@ open fun process()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Process", this, commonStrings!!.PROCESS)
+                                    logUtil!!.put("Process", this, commonStrings!!.PROCESS)
 
                                     }
                                 
@@ -96,8 +94,7 @@ open fun process()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

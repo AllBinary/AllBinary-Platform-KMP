@@ -152,8 +152,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
                                     }
                                 
                         else {
-                            image= imageCache!!.get(
-                            "createImage", (width *scaleX).toInt(), (height *scaleY).toInt())
+                            image= imageCache!!.get("createImage", (width *scaleX).toInt(), (height *scaleY).toInt())
 
                         }
                             

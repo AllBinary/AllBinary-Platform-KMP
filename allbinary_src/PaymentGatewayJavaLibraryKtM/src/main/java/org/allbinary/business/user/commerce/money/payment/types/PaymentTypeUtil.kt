@@ -92,23 +92,17 @@ private constructor        ()
     var sep: String = AbPathData.getInstance()!!.SEPARATOR
 
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "generic")
+stringBuffer!!.append("generic")
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "user")
+stringBuffer!!.append("user")
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "commerce")
+stringBuffer!!.append("commerce")
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "money")
+stringBuffer!!.append("money")
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "payment")
+stringBuffer!!.append("payment")
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "gateway")
+stringBuffer!!.append("gateway")
 stringBuffer!!.append(sep)
 PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()
 }
@@ -178,8 +172,7 @@ open fun initDefault(storeName: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put("initDefault Payment: " +this.defaultName, this, 
-                            "initDefault")
+                                    logUtil!!.put("initDefault Payment: " +this.defaultName, this, "initDefault")
 
                                     }
                                 
@@ -236,8 +229,7 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put("DefaultPaymentGatewayNodeValue: " +defaultPaymentGatewayNodeValue, this, 
-                            "initDefault")
+                                    logUtil!!.put("DefaultPaymentGatewayNodeValue: " +defaultPaymentGatewayNodeValue, this, "initDefault")
 
                                     }
                                 
@@ -270,8 +262,7 @@ open fun getDefault(storeName: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "getDefault")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "getDefault")
 
                                     }
                                 

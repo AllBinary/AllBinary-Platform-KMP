@@ -87,8 +87,7 @@ open fun setTotalCost()
                                     
 
 
-                            throw Exception(
-                            "Max Cost Exceeded")
+                            throw Exception("Max Cost Exceeded")
 
                                     }
                                 
@@ -131,14 +130,11 @@ override fun toString()
 
 stringBuffer!!.append(this::class.qualifiedName!!)
 stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
-stringBuffer!!.append(
-                            "CostFromStart: ")
+stringBuffer!!.append("CostFromStart: ")
 stringBuffer!!.append(this.costFromStart)
-stringBuffer!!.append(
-                            " CostToEnd: ")
+stringBuffer!!.append(" CostToEnd: ")
 stringBuffer!!.append(this.costToEnd)
-stringBuffer!!.append(
-                            " TotalCost: ")
+stringBuffer!!.append(" TotalCost: ")
 stringBuffer!!.append(this.totalCost)
 
 

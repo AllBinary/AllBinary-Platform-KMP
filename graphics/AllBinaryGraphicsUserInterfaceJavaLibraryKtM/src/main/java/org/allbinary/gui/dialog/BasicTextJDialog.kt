@@ -43,8 +43,7 @@ java.awt.EventQueue.invokeLater(object: Runnable()
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{BasicTextJDialog(javax.swing.JFrame(), true, 
-                            "Test").
+{BasicTextJDialog(javax.swing.JFrame(), true, "Test").
                             setVisible(true)
 }
 
@@ -106,8 +105,7 @@ open fun initComponents()
 {jButton1= javax.swing.JButton()
 textJLabel= javax.swing.JLabel()
 setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE)
-jButton1!!.setText(
-                            "OK")
+jButton1!!.setText("OK")
 jButton1!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -121,8 +119,7 @@ jButton1ActionPerformed(evt)
 
                                 }
                             )
-textJLabel!!.setText(
-                            "No Text Set")
+textJLabel!!.setText("No Text Set")
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(getContentPane())
 

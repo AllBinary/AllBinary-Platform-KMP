@@ -62,10 +62,7 @@ open fun main(args: Array<String?>)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "Test", 
-                            "TestClass", Exception(
-                            "Pretend Exception"))
+logUtil!!.put(commonStrings!!.EXCEPTION, "Test", "TestClass", Exception("Pretend Exception"))
 }
 
 

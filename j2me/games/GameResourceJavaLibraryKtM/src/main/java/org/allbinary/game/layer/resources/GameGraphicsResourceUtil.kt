@@ -202,8 +202,7 @@ stringBuffer!!.append(SPRITE)
                             
 
 
-                            throw Exception(
-                            "None/Unknown Sub Image Resource Type Specified")
+                            throw Exception("None/Unknown Sub Image Resource Type Specified")
 
                         }
                             
@@ -223,8 +222,7 @@ stringBuffer!!.append(SPRITE)
                             
 
 
-                            throw Exception(
-                            "None/Unknown Main Image Resource Type Specified")
+                            throw Exception("None/Unknown Main Image Resource Type Specified")
 
                         }
                             

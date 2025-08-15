@@ -64,8 +64,7 @@ idFile= AbFileInputStream(fileName)
 idFile!!.read(bytes)
 string= bytes.decodeToString()
 } catch(e: Exception)
-            {logUtil!!.put("File: " +fileName, this, 
-                            "LineReader", e)
+            {logUtil!!.put("File: " +fileName, this, "LineReader", e)
 
 
                             {
@@ -82,8 +81,7 @@ open fun hasNext()
 : Boolean{
         try {
             
-    var nextIndex: Int = string.indexOf(
-                            "\n", index)!!
+    var nextIndex: Int = string.indexOf("\n", index)!!
             
 
 
@@ -105,8 +103,7 @@ open fun hasNext()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "hasNext", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "hasNext", e)
 
 
                             {
@@ -130,8 +127,7 @@ open fun next()
 : String{
         try {
             
-    var nextIndex: Int = string.indexOf(
-                            "\n", index)!!
+    var nextIndex: Int = string.indexOf("\n", index)!!
             
 
 
@@ -142,8 +138,7 @@ open fun next()
                                     
 
 
-                            throw Exception(
-                            "next() should have been called first")
+                            throw Exception("next() should have been called first")
 
                                     }
                                 
@@ -158,8 +153,7 @@ index= nextIndex +1
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return temp
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "next", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "next", e)
 
 
                             {

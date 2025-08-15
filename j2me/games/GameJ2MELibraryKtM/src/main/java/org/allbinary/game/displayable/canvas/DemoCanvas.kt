@@ -508,8 +508,7 @@ open fun initMenu()
             
 
 PreLogUtil.put(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(displayInfoSingleton!!.toString())!!.toString(), this, 
-                            "initMenu")
+                            append(commonLabels!!.START_LABEL)!!.append(displayInfoSingleton!!.toString())!!.toString(), this, "initMenu")
 
     var scrollSelectionForm: ScrollSelectionForm = CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 15, true, basicColorFactory!!.BLACK, basicColorFactory!!.WHITE)!!
             
@@ -679,8 +678,7 @@ logUtil!!.put(StringMaker().
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -720,8 +718,7 @@ UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }
@@ -771,9 +768,7 @@ override fun isPausable()
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{logUtil!!.put(StringMaker().
-                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(
-                            " since not a game")!!.toString(), this, 
-                            "isGameOver")
+                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
 
 
 
@@ -788,18 +783,14 @@ override fun isGameOver()
 {
 
                     var hashtable = hashtable
-logUtil!!.put(
-                            "Trying to continue a demo lol - only continue a game canvas not the demo", this, 
-                            "setLoadStateHashtable")
+logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "setLoadStateHashtable")
 }
 
 
                 @Throws(Exception::class)
             override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(
-                            "Trying to continue a demo lol - only continue a game canvas not the demo", this, 
-                            "getLoadStateHashtable")
+: Hashtable<Any, Any>{logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "getLoadStateHashtable")
 
 
 
@@ -811,9 +802,7 @@ logUtil!!.put(
                 @Throws(Exception::class)
             override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(
-                            "Trying to save the AI lol", this, 
-                            "getCurrentStateHashtable")
+: Hashtable<Any, Any>{logUtil!!.put("Trying to save the AI lol", this, "getCurrentStateHashtable")
 
 
 
@@ -853,9 +842,7 @@ this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
 
 override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(
-                            "Not Implemented since not a game", this, 
-                            "setGameOver")
+{logUtil!!.put("Not Implemented since not a game", this, "setGameOver")
 }
 
 
@@ -1011,8 +998,7 @@ open fun createRunnable(randomLevel: Int)
             
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-{PreLogUtil.put(commonStrings!!.START, this, 
-                            "create")
+{PreLogUtil.put(commonStrings!!.START, this, "create")
 this.highScoresPaintable= NullPaintable.getInstance()
 
     var randomLevel: Int = this.getNextRandom()!!
@@ -1038,8 +1024,7 @@ open fun start()
     var gameCanvas: AllBinaryGameCanvas = this.gameCanvas
 
 PreLogUtil.put(StringMaker().
-                            append(
-                            "Game Thread in DemoCanvas: ")!!.append(this.stringUtil!!.toString(gameCanvas))!!.toString(), this, commonStrings!!.START)
+                            append("Game Thread in DemoCanvas: ")!!.append(this.stringUtil!!.toString(gameCanvas))!!.toString(), this, commonStrings!!.START)
 this.canvasThread= threadFactoryUtil!!.getInstance(gameCanvas)
 this.gameCanvas!!.setThread(canvasThread)
 this.threadFactoryUtil!!.start(this.canvasThread)
@@ -1179,9 +1164,7 @@ open fun stopGameDemo()
                         if(this.gameCanvas != NullGameCanvas.getInstance())
                         
                                     {
-                                    logUtil!!.put(
-                            "Set Running False", this, 
-                            "stopGameDemo")
+                                    logUtil!!.put("Set Running False", this, "stopGameDemo")
 this.gameCanvas!!.setRunning(false)
 
                                     }
@@ -1213,16 +1196,14 @@ PreLogUtil.put(commonStrings!!.START, this, METHOD_NAME)
                         
                                     {
                                     this.gameRunnable= this.gameCanvas!!.gameRunnable
-PreLogUtil.put(
-                            "Showing Game", this, METHOD_NAME)
+PreLogUtil.put("Showing Game", this, METHOD_NAME)
 this.setPaintableInterface(this.gameCanvas)
 
                                     }
                                 
                         else {
                             this.gameRunnable= NullWaitGameRunnable.getInstance()
-PreLogUtil.put(
-                            "Not Showing Game", this, METHOD_NAME)
+PreLogUtil.put("Not Showing Game", this, METHOD_NAME)
 this.setPaintableInterface(this.getDefaultPaintableInterface())
 
                         }
@@ -1291,8 +1272,7 @@ override fun run()
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(50, 
-                            "Demo Thread")
+progressCanvas!!.addPortion(50, "Demo Thread")
 this.setCurrentThread()
 this.setRunning(true)
 
@@ -1305,8 +1285,7 @@ this.setRunning(true)
                                     }
                                 
                         else {
-                            progressCanvas!!.addPortion(50, 
-                            "Demo Thread Running")
+                            progressCanvas!!.addPortion(50, "Demo Thread Running")
 
                         }
                             
@@ -1463,8 +1442,7 @@ baseGameStatistics!!.init()
 
                                     }
                                 
-logUtil!!.put(
-                            "Demo End", this, commonStrings!!.RUN)
+logUtil!!.put("Demo End", this, commonStrings!!.RUN)
 this.close()
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 this.stopGameDemo()
@@ -1556,9 +1534,7 @@ this.state= state
 
 override fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{logUtil!!.put(
-                            "Wow the AI got a high score!", this, 
-                            "isHighScoreSubmitted")
+: Boolean{logUtil!!.put("Wow the AI got a high score!", this, "isHighScoreSubmitted")
 
 
 

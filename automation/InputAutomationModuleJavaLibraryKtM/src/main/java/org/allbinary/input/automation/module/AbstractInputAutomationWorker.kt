@@ -133,8 +133,7 @@ open fun startDataWorkers()
                         
                                     {
                                     captureThread= Thread(this.getCaptureWorker())
-logUtil!!.put("Starting CaptureWorkers - Need more images - Thread State: " +captureThread!!.getState()!!.toString(), this, 
-                            "startCaptureWorkers")
+logUtil!!.put("Starting CaptureWorkers - Need more images - Thread State: " +captureThread!!.getState()!!.toString(), this, "startCaptureWorkers")
 captureThread!!.start()
 
                                     }
@@ -148,8 +147,7 @@ open fun waitForDataWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
         while(isAnyDataWorkerRunning())
-        {logUtil!!.put(
-                            "Waiting", this, this.commonStrings!!.RUN)
+        {logUtil!!.put("Waiting", this, this.commonStrings!!.RUN)
 Thread.sleep(250)
 }
 

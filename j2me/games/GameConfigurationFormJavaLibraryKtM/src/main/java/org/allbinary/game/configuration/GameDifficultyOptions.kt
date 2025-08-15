@@ -119,8 +119,7 @@ this.setCommandListener(cmdListener)
             override fun update()
         //nullable = true from not(false or (false and true)) = true
 {this.deleteAll()
-this.add(list, 
-                            "Difficulty", Choice.EXCLUSIVE)
+this.add(list, "Difficulty", Choice.EXCLUSIVE)
 super.update()
 }
 

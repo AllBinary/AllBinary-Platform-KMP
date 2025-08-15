@@ -212,8 +212,7 @@ this.getColorRangeInterface()!!.setMaxBlue(string.valueOf())
                             
 
 
-                            throw Exception(
-                            "Color At Action Script Condition Node Null")
+                            throw Exception("Color At Action Script Condition Node Null")
 
                         }
                             
@@ -275,8 +274,7 @@ hashMap!!.put(ColorAtActionScriptConditionData.MIN_GREEN, Integer.toString(this.
 hashMap!!.put(ColorAtActionScriptConditionData.MAX_GREEN, Integer.toString(this.getColorRangeInterface()!!.getMaxGreen()))
 hashMap!!.put(ColorAtActionScriptConditionData.MIN_BLUE, Integer.toString(this.getColorRangeInterface()!!.getMinBlue()))
 hashMap!!.put(ColorAtActionScriptConditionData.MAX_BLUE, Integer.toString(this.getColorRangeInterface()!!.getMaxBlue()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -363,8 +361,7 @@ open fun log()
 {
     var message: String = "getPoint(): " +this.getPoint() +"\n" +this.getColorRangeInterface()!!.toString()
 
-logUtil!!.put(message, this, 
-                            "log")
+logUtil!!.put(message, this, "log")
 }
 
 

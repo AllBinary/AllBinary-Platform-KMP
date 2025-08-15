@@ -104,8 +104,7 @@ open fun saveFiles(byteArray: ByteArray, fileName: String, mediaData: MediaData)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("Start FileName: " +fileName, this, 
-                            "saveFiles()")
+                                    logUtil!!.put("Start FileName: " +fileName, this, "saveFiles()")
 
                                     }
                                 
@@ -117,8 +116,7 @@ open fun saveFiles(byteArray: ByteArray, fileName: String, mediaData: MediaData)
                                     
 
 
-                            throw Exception(
-                            "Image File Name Was Null")
+                            throw Exception("Image File Name Was Null")
 
                                     }
                                 
@@ -147,8 +145,7 @@ stringBuffer!!.append(itemInterface!!.getCategory())
                                     
 
 
-                            throw Exception(
-                            "Unable to save file to non existant directory")
+                            throw Exception("Unable to save file to non existant directory")
 
                                     }
                                 
@@ -165,8 +162,7 @@ stringBuffer!!.append(mediaData!!.getName())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("Saving Original Image: " +originalImageFile, this, 
-                            "saveFiles()")
+                                    logUtil!!.put("Saving Original Image: " +originalImageFile, this, "saveFiles()")
 
                                     }
                                 
@@ -185,14 +181,11 @@ fileUtil!!.write(ByteArrayInputStream(byteArray), originalImageFile)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Is Image Type: ")
+stringBuffer!!.append("Is Image Type: ")
 stringBuffer!!.append(mediaData!!.getName())
-stringBuffer!!.append(
-                            " supported: ")
+stringBuffer!!.append(" supported: ")
 stringBuffer!!.append(isMediaSupported)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "saveFiles()")
+logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
                                 
@@ -216,17 +209,13 @@ this.setFileNames(fileName)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Is ")
+stringBuffer!!.append("Is ")
 stringBuffer!!.append(mediaData!!.toString())
-stringBuffer!!.append(
-                            " Image Resize Supported:")
+stringBuffer!!.append(" Image Resize Supported:")
 stringBuffer!!.append(uploadMedia!!.isSupported(mediaData!!.getName()))
-stringBuffer!!.append(
-                            " WriterMedia: ")
+stringBuffer!!.append(" WriterMedia: ")
 stringBuffer!!.append(isMediaResizable)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "saveFiles()")
+logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
                                 
@@ -240,8 +229,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("Saving Small Image: " +this.itemInterface!!.getSmallImage(), this, 
-                            "saveFiles()")
+                                    logUtil!!.put("Saving Small Image: " +this.itemInterface!!.getSmallImage(), this, "saveFiles()")
 
                                     }
                                 
@@ -262,17 +250,13 @@ mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getLargeImage(), fu
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Converting: ")
+stringBuffer!!.append("Converting: ")
 stringBuffer!!.append(defaultMediaData!!.getName())
-stringBuffer!!.append(
-                            " into ")
+stringBuffer!!.append(" into ")
 stringBuffer!!.append(mediaData!!.getName())
-stringBuffer!!.append(
-                            " if Convertable is it: ")
+stringBuffer!!.append(" if Convertable is it: ")
 stringBuffer!!.append(isConvertable)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "saveFiles()")
+logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
 
                                     }
                                 
@@ -286,8 +270,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("Saving Small Image: " +this.itemInterface!!.getSmallImage(), this, 
-                            "saveFiles()")
+                                    logUtil!!.put("Saving Small Image: " +this.itemInterface!!.getSmallImage(), this, "saveFiles()")
 
                                     }
                                 
@@ -331,8 +314,7 @@ fileUtil!!.write(ByteArrayInputStream(byteArray), largeImageFile)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.END, this, 
-                            "saveFiles()")
+logUtil!!.put(commonStrings!!.END, this, "saveFiles()")
 
                                     }
                                 

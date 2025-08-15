@@ -246,7 +246,7 @@ hashtable.put(this.gameInfoData!!.GAME_TYPE, this.getGameType()!!.toString())
 hashtable.put(this.gameInfoData!!.GAME_MODE, this.gameMode!!.toString())
 hashtable.put(this.gameInfoData!!.PLAYER_TYPE, this.playerType!!.toString())
 hashtable.put(this.gameInfoData!!.HIGHEST_LEVEL, Integer.toString(this.getHighestLevel()))
-hashtable.put(this.gameInfoData!!.CURRENT_LEVEL, currentLevel.toString())
+hashtable.put(this.gameInfoData!!.CURRENT_LEVEL, this.currentLevel.toString())
 
 
 

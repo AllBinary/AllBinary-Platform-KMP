@@ -60,8 +60,7 @@ open fun getInstance()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "AdvertisementCampaignEntityFactory", commonStrings!!.GET_INSTANCE, e)
+logUtil!!.put(commonStrings!!.EXCEPTION, "AdvertisementCampaignEntityFactory", commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 

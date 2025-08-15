@@ -98,8 +98,7 @@ params[1]= httpServletRequest as Object
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(error, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+                                    logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -117,8 +116,7 @@ params[1]= httpServletRequest as Object
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(error, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+                                    logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -189,8 +187,7 @@ params[1]= pageContext as Object
                                     
     var error: String = "Failed To Get Instance Args: HashMap=" +hashMap!!.toString() +" PageContext=" +pageContext
 
-logUtil!!.put(error, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -209,8 +206,7 @@ logUtil!!.put(error, factoryName +"->HelperFactory",
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -286,8 +282,7 @@ params[2]= pageContext as Object
                                     
     var error: String = "Failed To Get Instance Args: HashMap=" +hashMap!!.toString() +" PageContext=" +pageContext
 
-logUtil!!.put(error, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -306,8 +301,7 @@ logUtil!!.put(error, factoryName +"->HelperFactory",
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -359,8 +353,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 
@@ -379,8 +372,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory",
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", 
-                            "getInstance(String, String, HashMap, PageContext)", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
                                     }
                                 

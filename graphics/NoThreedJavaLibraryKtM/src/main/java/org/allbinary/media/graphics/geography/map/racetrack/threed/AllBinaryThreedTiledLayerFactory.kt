@@ -68,8 +68,7 @@ open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
 
 
 
-                            throw Exception(
-                            "No Threed")
+                            throw Exception("No Threed")
 }
 
 

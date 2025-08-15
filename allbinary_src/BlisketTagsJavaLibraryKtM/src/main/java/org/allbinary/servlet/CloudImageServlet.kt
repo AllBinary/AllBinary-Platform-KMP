@@ -86,8 +86,7 @@ inputStream= CloudStreamUtil.getInstance()!!.getFile(file)
     var byteArray: ByteArray = StreamUtil.getInstance()!!.getByteArray(inputStream, outputStream, ByteArray(16384))!!
             
 
-response.setContentType(
-                            "image/jpeg;charset=utf-8")
+response.setContentType("image/jpeg;charset=utf-8")
 response.getOutputStream()!!.write(byteArray)
 } catch(e: Exception)
             {
@@ -95,8 +94,7 @@ response.getOutputStream()!!.write(byteArray)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "processRequest()", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)
 
                                     }
                                 

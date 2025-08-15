@@ -70,8 +70,7 @@ open fun set()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "set", 
+    var method: Method = addressHelperClass!!.getMethod("set", 
                             null)!!
             
 
@@ -99,8 +98,7 @@ open fun set()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "set()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "set()", e)
 
                                     }
                                 
@@ -130,8 +128,7 @@ open fun setToShippingAddress()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "setToShippingAddress", 
+    var method: Method = addressHelperClass!!.getMethod("setToShippingAddress", 
                             null)!!
             
 
@@ -159,8 +156,7 @@ open fun setToShippingAddress()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setToShippingAddress()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setToShippingAddress()", e)
 
                                     }
                                 

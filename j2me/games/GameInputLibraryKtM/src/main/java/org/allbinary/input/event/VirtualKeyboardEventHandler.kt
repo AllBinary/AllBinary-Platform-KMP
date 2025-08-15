@@ -82,8 +82,7 @@ open fun open()
             Thread.sleep(120)
 this.fireEvent(this.SHOW_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "open", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 }

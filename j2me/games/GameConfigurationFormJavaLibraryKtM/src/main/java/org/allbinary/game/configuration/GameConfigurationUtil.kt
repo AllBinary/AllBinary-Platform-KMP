@@ -149,13 +149,11 @@ open fun setDefault(gauge: GameConfigurationGauge)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Gauge Default: ")
+stringBuffer!!.append("Gauge Default: ")
 stringBuffer!!.append(gameConfiguration!!.getName())
 stringBuffer!!.append(TO)
 stringBuffer!!.append(gameConfiguration!!.getDefaultValue()!!.toInt())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setDefault")
+logUtil!!.put(stringBuffer!!.toString(), this, "setDefault")
 gauge.setValue(gameConfiguration!!.getDefaultValue()!!.toInt() -gameConfiguration!!.getMinValue()!!.toInt())
 gameConfiguration!!.setValue(gameConfiguration!!.getDefaultValue())
 }
@@ -184,8 +182,7 @@ open fun updateChallange(gameOptionsForm: GameOptionsForm, gameConfiguration: Ga
                         if(gameConfiguration == gameConfigurationCentral!!.CHALLENGE_LEVEL)
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.START, this, 
-                            "updateChallange")
+                                    logUtil!!.put(commonStrings!!.START, this, "updateChallange")
 gameConfigurationCentral!!.COLLIDE_DAMAGE.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
@@ -268,8 +265,7 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
 open fun updateCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, 
-                            "updateCompetitionValue")
+{logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
             

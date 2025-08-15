@@ -82,8 +82,7 @@ this.add(inputAutomationModuleConfiguration)
 }
 
 this.defaultListModelHelper!!.initDefaultModelList()
-logUtil!!.put("Loaded " +this.hashMap!!.size +"/" +this.defaultListModelHelper!!.getListModel()!!.getSize() +" Input Automation Modules", this, 
-                            "Contructor")
+logUtil!!.put("Loaded " +this.hashMap!!.size +"/" +this.defaultListModelHelper!!.getListModel()!!.getSize() +" Input Automation Modules", this, "Contructor")
 }
 
 

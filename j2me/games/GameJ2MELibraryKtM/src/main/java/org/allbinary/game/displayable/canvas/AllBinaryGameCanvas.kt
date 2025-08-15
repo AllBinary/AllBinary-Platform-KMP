@@ -167,12 +167,10 @@ open public class AllBinaryGameCanvas : RunnableCanvas
             
     private val id: Int = 0
 
-    val SHOW_END_RESULT_GAME_STATE: GameState = GameStateFactory.getInstance(
-                            "SHOW_END_RESULT_GAME_STATE")!!
+    val SHOW_END_RESULT_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_END_RESULT_GAME_STATE")!!
             
 
-    val SHOW_HIGH_SCORE_GAME_STATE: GameState = GameStateFactory.getInstance(
-                            "SHOW_HIGH_SCORE_GAME_STATE")!!
+    val SHOW_HIGH_SCORE_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_HIGH_SCORE_GAME_STATE")!!
             
 
     val TYPE: Int = 2
@@ -611,8 +609,7 @@ open fun initMenu()
         try {
             this.menuBehavior!!.initMenu(this)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "initMenu", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
 }
 
 }
@@ -693,8 +690,7 @@ open fun updateMenu()
         try {
             this.menuBehavior!!.updateMenu(this)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "initMenu", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "initMenu", e)
 }
 
 }
@@ -915,8 +911,7 @@ logUtil!!.put(BUFF_MESSAGE, this, commonStrings!!.CONSTRUCTOR)
                             
 
 
-                            throw Exception(
-                            "Buffering is disabled")
+                            throw Exception("Buffering is disabled")
 
                         }
                             
@@ -1007,8 +1002,7 @@ open fun initConfigurable(abeClientInformation: AbeClientInformationInterface)
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(50, 
-                            "Setting Configurables")
+progressCanvas!!.addPortion(50, "Setting Configurables")
 GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, gameInitializationInterfaceFactoryInterface)
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
@@ -1028,9 +1022,7 @@ GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, game
             
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "Sound Changing To: ")!!.append(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, 
-                            "initConfigurable")
+                            append("Sound Changing To: ")!!.append(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, "initConfigurable")
 this.mediaInit()
 changedGameFeatureListener!!.remove(gameFeatureFactory!!.SOUND)
 
@@ -1253,8 +1245,7 @@ override fun itemStateChanged(item: Item)
             
 
 logUtil!!.put(StringMaker().
-                            append(commonLabels!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, 
-                            "itemStateChanged")
+                            append(commonLabels!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
 
     
                         if(item is ChoiceGroup)
@@ -1286,8 +1277,7 @@ this.updateTouch()
 this.updateScreenButtonPaintable()
 this.sensorGameUpdateProcessor!!.sendNotifications(this.gameLayerManager)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "itemStateChanged", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
 }
 
 }
@@ -1416,9 +1406,7 @@ this.highScoreSubmitted= highScoreSubmitted
                                     }
                                 
 logUtil!!.put(StringMaker().
-                            append(
-                            "isHighScoreSubmitted: ")!!.append(highScoreSubmitted)!!.toString(), this, 
-                            "setHighScoreSubmitted")
+                            append("isHighScoreSubmitted: ")!!.append(highScoreSubmitted)!!.toString(), this, "setHighScoreSubmitted")
 }
 
 override fun getGameState()
@@ -1499,9 +1487,7 @@ open fun removeAllGameKeyInputListeners()
 
 open fun removeAllGameKeyInputListeners2()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(
-                            "Remove PlayerInput Listeners", this, 
-                            "removeAllGameKeyInputListeners")
+{logUtil!!.put("Remove PlayerInput Listeners", this, "removeAllGameKeyInputListeners")
 
 
 
@@ -1576,8 +1562,7 @@ open fun cleanupGame()
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(10, 
-                            "Cleaning Up")
+progressCanvas!!.addPortion(10, "Cleaning Up")
 primaryPlayerQueue!!.clear()
 secondaryPlayerQueue!!.clear()
 GameLevelDisplayChangeEventListenersFactory.getInstance()!!.clear()
@@ -1638,21 +1623,17 @@ screenCapture!!.startRecording()
     var features: Features = Features.getInstance()!!
             
 
-progressCanvas!!.addPortion(portion, 
-                            "Generic Build")
+progressCanvas!!.addPortion(portion, "Generic Build")
 this.removeAllGameKeyInputListenersOnBuild()
 this.updateTouch()
-progressCanvas!!.addPortion(portion, 
-                            "High Scores")
+progressCanvas!!.addPortion(portion, "High Scores")
 this.highScoresFactoryInterface!!.fetchHighScores(this.gameLayerManager!!.getGameInfo(), this.highScoresHelper)
 this.setHighScoresPaintable(NullPaintable.getInstance())
-progressCanvas!!.addPortion(portion, 
-                            "Finishing.")
+progressCanvas!!.addPortion(portion, "Finishing.")
 this.getEndGameInfoP()!!.update(this.getLayerManager()!!.getGameInfo(), this)
 this.isSingleKeyRepeatableProcessing= features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)
 this.setGameOver(false)
-progressCanvas!!.addPortion(portion, 
-                            "Finishing..")
+progressCanvas!!.addPortion(portion, "Finishing..")
 this.updateColor()
 this.getStartIntermissionPaintable()!!.update()
 
@@ -1668,8 +1649,7 @@ this.getStartIntermissionPaintable()!!.update()
 
                                     }
                                 
-progressCanvas!!.addPortion(portion, 
-                            "Finishing...")
+progressCanvas!!.addPortion(portion, "Finishing...")
 
     
                         if(this.isMainCanvas() || !this.isInitialized())
@@ -1708,15 +1688,13 @@ this.setInitialized(true)
                         if(this.getCustomCommandListener() == NullCommandListener.NULL_COMMAND_LISTENER)
                         
                                     {
-                                    logUtil!!.put(
-                            "Show Game Paintable in DemoCanvas Thread", this, BUILD_GAME)
+                                    logUtil!!.put("Show Game Paintable in DemoCanvas Thread", this, BUILD_GAME)
 this.gameCanvasStartListener!!.showGamePaintable()
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "No GameCanvasStartListener", this, BUILD_GAME)
+                            logUtil!!.put("No GameCanvasStartListener", this, BUILD_GAME)
 
                         }
                             
@@ -1807,8 +1785,7 @@ gameInfo!!.setCurrentLevel(level)
             override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{logUtil!!.put(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(this.hashtable))!!.toString(), this, 
-                            "getLoadStateHashtable")
+                            append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(this.hashtable))!!.toString(), this, "getLoadStateHashtable")
 
 
 
@@ -1822,8 +1799,7 @@ override fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
 
                     var hashtable = hashtable
 logUtil!!.put(StringMaker().
-                            append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, 
-                            "setLoadStateHashtable")
+                            append(commonLabels!!.START_LABEL)!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, "setLoadStateHashtable")
 this.hashtable= hashtable
 }
 
@@ -1838,9 +1814,7 @@ override fun getCurrentStateHashtable()
 
 hashtable.put(GameInfo.LEVEL_NAME.toString(), level.toString())
 logUtil!!.put(StringMaker().
-                            append(
-                            "End: ")!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, 
-                            "getCurrentStateHashtable")
+                            append("End: ")!!.append(this.stringUtil!!.toString(hashtable))!!.toString(), this, "getCurrentStateHashtable")
 
 
 
@@ -2166,8 +2140,7 @@ override fun run()
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(50, 
-                            "Game Thread")
+progressCanvas!!.addPortion(50, "Game Thread")
 this.setCurrentThread()
 this.setRunning(true)
 
@@ -2268,8 +2241,7 @@ this.end()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "this thread", this, commonStrings!!.RUN)
+                            logUtil!!.put("this thread", this, commonStrings!!.RUN)
 
         while(this.isRunning())
         {this.run3()
@@ -2387,8 +2359,7 @@ open fun createHighScore(score: Long)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return HighScore(0, 
-                            "NONE", GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), 0, 0), score)
+                        return HighScore(0, "NONE", GameInfo(gameInfo!!.getGameType(), gameInfo!!.getGameMode(), 0, 0), score)
 }
 
 
@@ -2488,8 +2459,7 @@ override fun run()
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "run", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "run", e)
 progressCanvas!!.end()
 }
 

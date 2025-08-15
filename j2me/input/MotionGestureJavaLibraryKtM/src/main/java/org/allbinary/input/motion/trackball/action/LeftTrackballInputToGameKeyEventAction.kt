@@ -49,8 +49,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(
-                            "Left Action", TrackballMotionGestureFactory.getInstance()!!.LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+                            : super("Left Action", TrackballMotionGestureFactory.getInstance()!!.LEFT, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
 
                             //For kotlin this is before the body of the constructor.
                     

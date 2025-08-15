@@ -52,8 +52,7 @@ public constructor        (size: Int)
 
 
                             throw IllegalArgumentException(StringMaker().
-                            append(
-                            "Init Size Exception: ")!!.append(size)!!.toString())
+                            append("Init Size Exception: ")!!.append(size)!!.toString())
 
                                     }
                                 

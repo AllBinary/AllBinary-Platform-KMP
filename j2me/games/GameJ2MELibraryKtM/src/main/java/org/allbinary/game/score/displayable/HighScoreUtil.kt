@@ -49,8 +49,7 @@ open public class HighScoreUtil
 
         companion object {
             
-    val SUBMIT_TEXTBOX_COMMAND: Command = Command(
-                            "Submit", Command.SCREEN, 1)
+    val SUBMIT_TEXTBOX_COMMAND: Command = Command("Submit", Command.SCREEN, 1)
 
         }
             
@@ -128,8 +127,7 @@ this.highScore!!.setName(name)
 open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, 
-                            "saveHighScore")
+                            append(commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, "saveHighScore")
 
     var size: Int = this.highScoresArray!!.size
                 
@@ -139,9 +137,7 @@ open fun saveHighScore()
                         if(firstTime && size == 0)
                         
                                     {
-                                    logUtil!!.put(
-                            "Games canvas did not give us any HighScores", this, 
-                            "saveHighScore")
+                                    logUtil!!.put("Games canvas did not give us any HighScores", this, "saveHighScore")
 highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
 
 
@@ -168,9 +164,7 @@ highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
 highScores!!.addHighScore(this.highScore)
 highScoresAsString= highScores!!.toString()
 logUtil!!.put(StringMaker().
-                            append(
-                            "Added/Adding Score: ")!!.append(highScoresAsString)!!.toString(), this, 
-                            "saveHighScore")
+                            append("Added/Adding Score: ")!!.append(highScoresAsString)!!.toString(), this, "saveHighScore")
 }
 
 this.highScoresHelper!!.setHighScoresArray(highScoresArray)

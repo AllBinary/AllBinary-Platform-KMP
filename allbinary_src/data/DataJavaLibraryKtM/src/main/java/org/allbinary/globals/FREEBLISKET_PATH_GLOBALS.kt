@@ -77,32 +77,27 @@ private constructor        ()
         {
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "install")
+stringBuffer!!.append("install")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 this.INSTALLPATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.INIT_PATH)
-stringBuffer!!.append(
-                            "views")
+stringBuffer!!.append("views")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 this.XSLPATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(XSLPATH)
-stringBuffer!!.append(
-                            "configuration")
+stringBuffer!!.append("configuration")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 this.CONFIGURATIONPATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(CONFIGURATIONPATH)
-stringBuffer!!.append(
-                            "user")
+stringBuffer!!.append("user")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 this.USERCONFIGURATIONPATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(CONFIGURATIONPATH)
-stringBuffer!!.append(
-                            "context")
+stringBuffer!!.append("context")
 stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 this.CONTEXTCONFIGURATIONPATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())

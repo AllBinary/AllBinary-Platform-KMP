@@ -47,11 +47,9 @@ open public class LicenseRegistrationTextBox : CustomTextBox {
 
         companion object {
             
-    val DISPLAY_COMMAND: Command = Command(
-                            "Register", Command.SCREEN, 3)
+    val DISPLAY_COMMAND: Command = Command("Register", Command.SCREEN, 3)
 
-    val SUBMIT_COMMAND: Command = Command(
-                            "Submit", Command.SCREEN, 3)
+    val SUBMIT_COMMAND: Command = Command("Submit", Command.SCREEN, 3)
 
         }
             
@@ -64,8 +62,7 @@ open public class LicenseRegistrationTextBox : CustomTextBox {
             
 public constructor        (cmdListener: CommandListener, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, 
-                            "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
+                            : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
 
                     var cmdListener = cmdListener
 
@@ -104,8 +101,7 @@ open fun open()
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "open", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 super.open()
@@ -126,8 +122,7 @@ open fun close()
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.HIDE_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "open", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 this.paintable= this.pleaseWaitPaintable

@@ -152,14 +152,11 @@ this.imageFileName= pathUtil!!.getWithoutExtension(this.imageFileName)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Uploaded File Data: ")
+stringBuffer!!.append("Uploaded File Data: ")
 stringBuffer!!.append(this.imageFileName)
-stringBuffer!!.append(
-                            " Extension: ")
+stringBuffer!!.append(" Extension: ")
 stringBuffer!!.append(this.mediaData!!.getName())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getFormData()")
+logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 
                                     }
                                 
@@ -228,8 +225,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

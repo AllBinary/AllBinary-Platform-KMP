@@ -145,8 +145,7 @@ open public class GameMidlet : ProgressMidlet
     private val NO_DISPLAYABLE: String = "No Displayable"
 
     private val COMMAND_ACTION: String = StringMaker().
-                            append(
-                            "GameMidlet::")!!.append(midletStrings!!.COMMAND_ACTION)!!.toString()!!
+                            append("GameMidlet::")!!.append(midletStrings!!.COMMAND_ACTION)!!.toString()!!
             
 
     private val PAUSE_APP_BACKGROUND: String = "pauseAppBackground"
@@ -269,8 +268,7 @@ logUtil!!.put(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "<<<<<< Null", this, PAUSE_APP_BACKGROUND)
+                            logUtil!!.put("<<<<<< Null", this, PAUSE_APP_BACKGROUND)
 
                         }
                             
@@ -309,8 +307,7 @@ AllBinarySensorManager.getInstance()!!.init()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "<<<<<< Null", this, UN_PAUSE_APP_BACKGROUND)
+                            logUtil!!.put("<<<<<< Null", this, UN_PAUSE_APP_BACKGROUND)
 
                         }
                             
@@ -378,8 +375,7 @@ this.mediaShutdown()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Midlet Managment Error: Midlet Should Only Be Destroyed Once", this, METHOD_NAME)
+                            logUtil!!.put("Midlet Managment Error: Midlet Should Only Be Destroyed Once", this, METHOD_NAME)
 
                         }
                             
@@ -419,8 +415,7 @@ this.setDemo()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "GameCanvasRunnableInterface is available", this, START_APP)
+                            logUtil!!.put("GameCanvasRunnableInterface is available", this, START_APP)
 
     
                         if(gameCanvasRunnableInterface == this.getCurrentDisplayable())
@@ -431,8 +426,7 @@ this.setDemo()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "GameCanvasRunnableInterface is not current displayable", this, START_APP)
+                            logUtil!!.put("GameCanvasRunnableInterface is not current displayable", this, START_APP)
 
                         }
                             
@@ -440,8 +434,7 @@ this.setDemo()
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "startApp", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "startApp", e)
 destroyApp(false)
 notifyDestroyed()
 }
@@ -571,8 +564,7 @@ GameMidletEventHandler.getInstance()!!.fireEvent(DemoGameMidletEvent(this, DemoG
                         if(command == gameCommandsFactory!!.START_COMMAND && this.isDemoLoading())
                         
                                     {
-                                    logUtil!!.put(
-                            "Trying to Start Game Before Loading Complete", this, midletStrings!!.COMMAND_ACTION)
+                                    logUtil!!.put("Trying to Start Game Before Loading Complete", this, midletStrings!!.COMMAND_ACTION)
 
                                     }
                                 
@@ -587,8 +579,7 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Starting Game Too Often", this, midletStrings!!.COMMAND_ACTION)
+                            logUtil!!.put("Starting Game Too Often", this, midletStrings!!.COMMAND_ACTION)
 
                         }
                             
@@ -596,8 +587,7 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Already in playing state", this, COMMAND_ACTION)
+                            logUtil!!.put("Already in playing state", this, COMMAND_ACTION)
 
                         }
                             
@@ -630,8 +620,7 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     }
                                 
                         else {
-                            TextNotificationUtil.getInstance()!!.fireSuccess(
-                            "Already Purchased")
+                            TextNotificationUtil.getInstance()!!.fireSuccess("Already Purchased")
 
                         }
                             
@@ -881,14 +870,12 @@ gameInputMappingCanvas!!.setDefault()
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(50, 
-                            "In Game Options")
+progressCanvas!!.addPortion(50, "In Game Options")
 
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
             
 
-InGameOptionsFormFactory.getInstance()!!.init(this, InGameFeatures(), 
-                            "Options In Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
+InGameOptionsFormFactory.getInstance()!!.init(this, InGameFeatures(), "Options In Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
 
     var inGameOptionsForm: InGameOptionsForm = InGameOptionsFormFactory.getInstance()!!.get() as InGameOptionsForm
 
@@ -937,12 +924,10 @@ this.commandAction(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS, displayable
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Close isFullScreen/change: ")
+stringBuffer!!.append("Close isFullScreen/change: ")
 stringBuffer!!.append(isFullScreen)
 stringBuffer!!.append(fullScreenUtil!!.isScreenChange(isFullScreen))
-stringBuffer!!.append(
-                            " isResized: ")
+stringBuffer!!.append(" isResized: ")
 stringBuffer!!.append(this.isResized())
 PreLogUtil.put(stringBuffer!!.toString(), this, COMMAND_ACTION)
 
@@ -979,8 +964,7 @@ keyValuePersistance!!.loadAll(abeClientInformation)
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
             
 
-this.setLoadGameForm(LoadGameForm(this, 
-                            "Load Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor()))
+this.setLoadGameForm(LoadGameForm(this, "Load Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor()))
 
                                     }
                                 
@@ -1074,8 +1058,7 @@ this.unPauseAppBackground(false)
                         if(command == HighScoreUtil.SUBMIT_TEXTBOX_COMMAND)
                         
                                     {
-                                    logUtil!!.put(
-                            "Submitted Score", this, COMMAND_ACTION)
+                                    logUtil!!.put("Submitted Score", this, COMMAND_ACTION)
 
     
                         if(displayable is HighScoreTextBox)
@@ -1277,9 +1260,7 @@ open fun startGameCanvasRunnableInterface()
 
 thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
 logUtil!!.put(StringMaker().
-                            append(
-                            "Thread Priority: ")!!.append(thread.getPriority())!!.toString(), this, 
-                            "startGameCanvasRunnableInterface")
+                            append("Thread Priority: ")!!.append(thread.getPriority())!!.toString(), this, "startGameCanvasRunnableInterface")
 this.allbinaryGameCanvasRunnableInterface!!.setThread(thread)
 threadFactoryUtil!!.start(thread)
 }
@@ -1301,15 +1282,13 @@ GameEventHandlerUtil.removeAllListeners()
                         if(gameCanvasRunnableInterface != NullGameCanvasRunnable.NULL_GAME_CANVAS_RUNNABLE)
                         
                                     {
-                                    logUtil!!.put(
-                            "Set Running False", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+                                    logUtil!!.put("Set Running False", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 gameCanvasRunnableInterface!!.setRunning(false)
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "StopGame - Could Not Stop", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+                            logUtil!!.put("StopGame - Could Not Stop", this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 
                         }
                             
@@ -1323,14 +1302,12 @@ ThreadUtil.getInstance()!!.join(this.thread)
                         if(features.isFeature(MainFeatureFactory.getInstance()!!.LOAD_ALL))
                         
                                     {
-                                    progressCanvas!!.addPortion(50, 
-                            "Stopped Game Runnable")
+                                    progressCanvas!!.addPortion(50, "Stopped Game Runnable")
 
                                     }
                                 
                         else {
-                            progressCanvas!!.addPortion(50, 
-                            "Stopped Main Runnable")
+                            progressCanvas!!.addPortion(50, "Stopped Main Runnable")
 
                         }
                             
@@ -1380,8 +1357,7 @@ open fun getGameOptionsForm()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return GameOptionsFormFactory.getInstance()!!.init(this, 
-                            "Game Options", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
+                        return GameOptionsFormFactory.getInstance()!!.init(this, "Game Options", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
 }
 
 
@@ -1401,8 +1377,7 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
                 @Throws(Exception::class)
             override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(commonStrings!!.START, this, 
-                            "getCurrentStateHashtable")
+: Hashtable<Any, Any>{logUtil!!.put(commonStrings!!.START, this, "getCurrentStateHashtable")
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

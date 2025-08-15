@@ -60,8 +60,7 @@ public constructor        (transformInfoInterface: Object)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "OverrideObjectRootContextView()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "OverrideObjectRootContextView()")
 
                                     }
                                 
@@ -79,8 +78,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +this.getTransformInfoInterface()!!.getName(), this, 
-                            "view()")
+                                    logUtil!!.put("View Name: " +this.getTransformInfoInterface()!!.getName(), this, "view()")
 
                                     }
                                 
@@ -118,8 +116,7 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
                             
 
 
-                            throw Exception(
-                            "Override Currently Not Supported")
+                            throw Exception("Override Currently Not Supported")
 
                         }
                             
@@ -132,8 +129,7 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Retrieved OverrideObjectConfig: " +DomDocumentHelper.toString(overrideObjectConfigDocument), this, 
-                            "view()")
+                                    logUtil!!.put("Retrieved OverrideObjectConfig: " +DomDocumentHelper.toString(overrideObjectConfigDocument), this, "view()")
 
                                     }
                                 
@@ -162,8 +158,7 @@ componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(tran
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Set OverrideObjectConfig: " +componentInterface!!.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toString(), this, 
-                            "view()")
+                                    logUtil!!.put("Set OverrideObjectConfig: " +componentInterface!!.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toString(), this, "view()")
 
                                     }
                                 
@@ -178,8 +173,7 @@ componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(tran
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

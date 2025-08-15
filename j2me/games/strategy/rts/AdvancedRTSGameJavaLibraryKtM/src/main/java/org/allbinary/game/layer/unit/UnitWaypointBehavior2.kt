@@ -248,8 +248,7 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
                             
 
 
-                            throw Exception(
-                            "Should not happen")
+                            throw Exception("Should not happen")
 
                         }
                             
@@ -1017,8 +1016,7 @@ setWaypointPathsList(runningWaypointPathList)
                                     
 
 
-                            throw Exception(
-                            "Should never be running here")
+                            throw Exception("Should never be running here")
 
                                     }
                                 
@@ -1166,8 +1164,7 @@ open fun getCurrentTargetingStateString()
                                     stringBuffer!!.append(TARGET_LAYER)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(this.currentTargetLayerInterface!!.getName())
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(TARGET_DISTANCE)
 stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(getCurrentTargetDistance())
@@ -1279,8 +1276,7 @@ this.positionList!!.clear()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "visit", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 
 

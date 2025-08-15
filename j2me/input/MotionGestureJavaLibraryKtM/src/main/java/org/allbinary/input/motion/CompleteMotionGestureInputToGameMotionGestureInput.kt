@@ -79,8 +79,7 @@ open fun init()
 
 
         try {
-            PreLogUtil.put(
-                            "Compound Motion Gestures", this, commonStrings!!.INIT)
+            PreLogUtil.put("Compound Motion Gestures", this, commonStrings!!.INIT)
 
     var motionGestureConfiguration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
             

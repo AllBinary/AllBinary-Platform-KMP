@@ -318,8 +318,7 @@ override fun toString()
     var stringUtil: StringUtil = StringUtil.getInstance()!!
             
 
-stringBuffer!!.append(
-                            "Velocity ")
+stringBuffer!!.append("Velocity ")
 stringBuffer!!.append(positionStrings!!.X_LABEL)
 stringBuffer!!.append(stringUtil!!.toString(this.velocityXBasicDecimal))
 stringBuffer!!.append(commonSeps!!.SPACE)

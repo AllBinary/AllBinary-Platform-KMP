@@ -130,8 +130,7 @@ this.angleInfo!!.adjustAngle(0)
                                     
 
 
-                            throw Exception(
-                            "Wrong Number of Frames")
+                            throw Exception("Wrong Number of Frames")
 
                                     }
                                 

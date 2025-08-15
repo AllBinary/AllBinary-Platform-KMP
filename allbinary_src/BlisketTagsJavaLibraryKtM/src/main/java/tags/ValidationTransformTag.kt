@@ -126,8 +126,7 @@ open fun validationInfo()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "validationInfo", 
+    var method: Method = addressHelperClass!!.getMethod("validationInfo", 
                             null)!!
             
 
@@ -146,8 +145,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "validationInfo()", e)
 
                                     }
                                 
@@ -177,17 +175,13 @@ open fun doStartTag()
 
     var request: HttpServletRequest = this.pageContext!!.getRequest() as HttpServletRequest
 
-stringBuffer!!.append(
-                            "ValidationViewTag Start For: ")
+stringBuffer!!.append("ValidationViewTag Start For: ")
 stringBuffer!!.append(this.getName())
-stringBuffer!!.append(
-                            "\nView FIle: ")
+stringBuffer!!.append("\nView FIle: ")
 stringBuffer!!.append(this.getObjectFile())
-stringBuffer!!.append(
-                            "\nRequest URI: ")
+stringBuffer!!.append("\nRequest URI: ")
 stringBuffer!!.append(request.getRequestURI())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "doStartTag")
+logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
 
                                     }
                                 
@@ -206,14 +200,11 @@ this.setHelper()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "View File: ")
+stringBuffer!!.append("View File: ")
 stringBuffer!!.append(this.getObjectFile())
-stringBuffer!!.append(
-                            "\nLogic includes body if true=")
+stringBuffer!!.append("\nLogic includes body if true=")
 stringBuffer!!.append(this.logic)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "doStartTag")
+logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
 
                                     }
                                 
@@ -252,16 +243,12 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "View File: ")
+stringBuffer!!.append("View File: ")
 stringBuffer!!.append(this.getObjectFile())
-stringBuffer!!.append(
-                            "\nisValid()=false")
-stringBuffer!!.append(
-                            "\nLogic skips body if true=")
+stringBuffer!!.append("\nisValid()=false")
+stringBuffer!!.append("\nLogic skips body if true=")
 stringBuffer!!.append(this.logic)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "doStartTag")
+logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
 
                                     }
                                 
@@ -317,9 +304,7 @@ open fun doEndTag()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(
-                            "Tag Ended", this, 
-                            "doEndTag")
+                                    logUtil!!.put("Tag Ended", this, "doEndTag")
 
                                     }
                                 

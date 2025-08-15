@@ -50,8 +50,7 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
             
 
 stringBuffer!!.append(lineBreak)
-stringBuffer!!.append(
-                            "Interfaces: ")
+stringBuffer!!.append("Interfaces: ")
 stringBuffer!!.append(lineBreak)
 
 
@@ -60,8 +59,7 @@ stringBuffer!!.append(lineBreak)
                         for (index in 0 until interfaces.size)
 
 
-        {stringBuffer!!.append(
-                            "Interface: ")
+        {stringBuffer!!.append("Interface: ")
 stringBuffer!!.append(interfaces[index]!!.getName())
 stringBuffer!!.append(lineBreak)
 }
@@ -219,8 +217,7 @@ open fun isImplementedView(clazz: KClass<*>, anyType: Any)
     var classes: Array<KClass<*>?> = anyType!!::class.getInterfaces()!!
             
 
-stringBuffer!!.append(
-                            "isImplementedView: \n")
+stringBuffer!!.append("isImplementedView: \n")
 
 
 
@@ -229,12 +226,10 @@ stringBuffer!!.append(
 
 
         {stringBuffer!!.append(clazz.qualifiedName!!)
-stringBuffer!!.append(
-                            " should be = ")
+stringBuffer!!.append(" should be = ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(classes[index]!!.getName())
-stringBuffer!!.append(
-                            "\n")
+stringBuffer!!.append("\n")
 }
 
 

@@ -124,17 +124,13 @@ open fun isChanged(gameFeature: Feature)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "GameFeature: ")
+stringBuffer!!.append("GameFeature: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(gameFeature))
-stringBuffer!!.append(
-                            " isFeature: ")
+stringBuffer!!.append(" isFeature: ")
 stringBuffer!!.append(Features.getInstance()!!.isFeature(gameFeature))
-stringBuffer!!.append(
-                            " isChanged: ")
+stringBuffer!!.append(" isChanged: ")
 stringBuffer!!.append(isChanged)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "isChanged")
+logUtil!!.put(stringBuffer!!.toString(), this, "isChanged")
 
 
 

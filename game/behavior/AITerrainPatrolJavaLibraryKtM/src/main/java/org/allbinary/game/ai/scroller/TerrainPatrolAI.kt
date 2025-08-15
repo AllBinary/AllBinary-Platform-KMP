@@ -111,9 +111,7 @@ open fun changeDirectionIfCliffReached()
                         if(!this.isFollowLimitedByTerrain)
                         
                                     {
-                                    logUtil!!.put(
-                            "Following Limited", this, 
-                            "onTerrainEvent")
+                                    logUtil!!.put("Following Limited", this, "onTerrainEvent")
 this.isFollowLimitedByTerrain= true
 
                                     }

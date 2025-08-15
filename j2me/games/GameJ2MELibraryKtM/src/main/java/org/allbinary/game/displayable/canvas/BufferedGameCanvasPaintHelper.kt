@@ -59,8 +59,7 @@ public constructor        (gameCanvas: AllBinaryGameCanvas){
 
 
 
-                            throw Exception(
-                            "No Longer Used")
+                            throw Exception("No Longer Used")
 }
 
 override fun process()

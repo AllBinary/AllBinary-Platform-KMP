@@ -66,8 +66,7 @@ open fun getLastSeparatorIndex(requestPath: String)
                         if(beginIndex < 0)
                         
                                     {
-                                    beginIndex= requestPath!!.lastIndexOf(
-                            "\\")
+                                    beginIndex= requestPath!!.lastIndexOf("\\")
 
                                     }
                                 

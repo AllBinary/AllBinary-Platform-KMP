@@ -87,25 +87,18 @@ stringBuffer!!.append(href)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "attempt to use xsl:import: href=")
+stringBuffer!!.append("attempt to use xsl:import: href=")
 stringBuffer!!.append(href)
-stringBuffer!!.append(
-                            "\nBase= ")
+stringBuffer!!.append("\nBase= ")
 stringBuffer!!.append(base)
-stringBuffer!!.append(
-                            "\nNew path= ")
+stringBuffer!!.append("\nNew path= ")
 stringBuffer!!.append(fileAbPath!!.toString())
-stringBuffer!!.append(
-                            "\nNote: ")
+stringBuffer!!.append("\nNote: ")
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
-stringBuffer!!.append(
-                            " is a urlglobal")
-stringBuffer!!.append(
-                            "\nRequired Extension: ")
+stringBuffer!!.append(" is a urlglobal")
+stringBuffer!!.append("\nRequired Extension: ")
 stringBuffer!!.append(this.basicURIResolver!!.getExtension())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "resolve")
+logUtil!!.put(stringBuffer!!.toString(), this, "resolve")
 
                                     }
                                 

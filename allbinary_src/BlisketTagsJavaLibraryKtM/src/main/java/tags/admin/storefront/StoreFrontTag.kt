@@ -53,10 +53,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Add Validation StoreFront View")
-this.setObjectFile(
-                            "views.admin.storefront.AddValidationStoreFrontView")
+                                    this.setName("Add Validation StoreFront View")
+this.setObjectFile("views.admin.storefront.AddValidationStoreFrontView")
 
                                     }
                                 
@@ -68,8 +66,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -78,10 +75,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Edit Validation StoreFront View")
-this.setObjectFile(
-                            "views.admin.storefront.EditValidationStoreFrontView")
+                                    this.setName("Edit Validation StoreFront View")
+this.setObjectFile("views.admin.storefront.EditValidationStoreFrontView")
 
                                     }
                                 
@@ -90,10 +85,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.UPDATE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Update Validation StoreFront View")
-this.setObjectFile(
-                            "views.admin.storefront.UpdateValidationStoreFrontView")
+                                    this.setName("Update Validation StoreFront View")
+this.setObjectFile("views.admin.storefront.UpdateValidationStoreFrontView")
 
                                     }
                                 
@@ -102,10 +95,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Delete Validation StoreFront View")
-this.setObjectFile(
-                            "views.admin.storefront.DeleteValidationStoreFrontView")
+                                    this.setName("Delete Validation StoreFront View")
+this.setObjectFile("views.admin.storefront.DeleteValidationStoreFrontView")
 
                                     }
                                 
@@ -117,8 +108,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -130,8 +120,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -143,8 +132,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -156,8 +144,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -180,8 +167,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

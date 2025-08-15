@@ -230,8 +230,7 @@ glExtensions= gl.glGetString(GL10.GL_EXTENSIONS)
                                 
 
     
-                        if(glRenderer!!.lowercase()!!.indexOf(
-                            "pixelflinger") >= 0)
+                        if(glRenderer!!.lowercase()!!.indexOf("pixelflinger") >= 0)
                         
                                     {
                                     acceleratedString= "Probably Not for " +glRenderer
@@ -263,8 +262,7 @@ this.glVersion= this.VERSION_UNK
                                 
                              else 
     
-                        if(this.glVersionString!!.indexOf(
-                            " 1.0") >= 0)
+                        if(this.glVersionString!!.indexOf(" 1.0") >= 0)
                         
                                     {
                                     this.glVersion= this.VERSION_1_0
@@ -273,8 +271,7 @@ this.glVersion= this.VERSION_UNK
                                 
                              else 
     
-                        if(this.glVersionString!!.indexOf(
-                            " 1.1") >= 0)
+                        if(this.glVersionString!!.indexOf(" 1.1") >= 0)
                         
                                     {
                                     this.glVersion= this.VERSION_1_1
@@ -332,9 +329,7 @@ this.glVersion= this.VERSION_UNK
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(
-                            "VBO:?")!!.append((this.glInstanceVersion == this.VERSION_1_1))!!.append(
-                            "||")!!.append(this.isExtension(openGLFeatureFactory!!.OPENGL_VERTEX_BUFFER_OBJECT))!!.toString(), this, METHOD_NAME)
+                            append("VBO:?")!!.append((this.glInstanceVersion == this.VERSION_1_1))!!.append("||")!!.append(this.isExtension(openGLFeatureFactory!!.OPENGL_VERTEX_BUFFER_OBJECT))!!.toString(), this, METHOD_NAME)
 
     
                         if((this.glInstanceVersion == this.VERSION_1_1 || this.isExtension(openGLFeatureFactory!!.OPENGL_VERTEX_BUFFER_OBJECT)))
@@ -345,14 +340,12 @@ this.glVersion= this.VERSION_UNK
                         if(AndroidUtil.isAndroid())
                         
                                     {
-                                    PreLogUtil.put(
-                            "VBO implementation was detected, but disabled by default for Android", this, METHOD_NAME)
+                                    PreLogUtil.put("VBO implementation was detected, but disabled by default for Android", this, METHOD_NAME)
 
                                     }
                                 
                         else {
-                            PreLogUtil.put(
-                            "VBO implementation was detected, but disabled for now", this, METHOD_NAME)
+                            PreLogUtil.put("VBO implementation was detected, but disabled for now", this, METHOD_NAME)
 
                         }
                             
@@ -381,11 +374,9 @@ this.glVersion= this.VERSION_UNK
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "OpenGL is on but ")
+                            stringBuffer!!.append("OpenGL is on but ")
 stringBuffer!!.append(stringUtil!!.toString(openGLFeatureFactory!!.OPENGL_DRAW_TEXTURE))
-stringBuffer!!.append(
-                            " was not available")
+stringBuffer!!.append(" was not available")
 PreLogUtil.put(stringBuffer!!.toString(), this, METHOD_NAME)
 openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
 
@@ -396,8 +387,7 @@ openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
                                 
                         else {
                             stringBuffer!!.append(stringUtil!!.toString(openGLFeatureFactory!!.OPENGL_AUTO_SELECT))
-stringBuffer!!.append(
-                            " is not on")
+stringBuffer!!.append(" is not on")
 PreLogUtil.put(stringBuffer!!.toString(), this, METHOD_NAME)
 openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
 
@@ -461,33 +451,25 @@ override fun toString()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "GL_VERSION: ")
+stringBuffer!!.append("GL_VERSION: ")
 stringBuffer!!.append(glVersionString)
-stringBuffer!!.append(
-                            " GL_SHADING_LANGUAGE_VERSION: ")
+stringBuffer!!.append(" GL_SHADING_LANGUAGE_VERSION: ")
 stringBuffer!!.append(this.glShaderVersionString)
-stringBuffer!!.append(
-                            " GL_RENDERER: ")
+stringBuffer!!.append(" GL_RENDERER: ")
 stringBuffer!!.append(glRenderer)
-stringBuffer!!.append(
-                            " GL_VENDOR: ")
+stringBuffer!!.append(" GL_VENDOR: ")
 stringBuffer!!.append(glVendor)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(
-                            " Is Accelerated: ")
+stringBuffer!!.append(" Is Accelerated: ")
 stringBuffer!!.append(acceleratedString)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(
-                            " VBO Support: ")
+stringBuffer!!.append(" VBO Support: ")
 stringBuffer!!.append(this.isVertexBufferObjectSupport())
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(
-                            " Max Texture Size: ")
+stringBuffer!!.append(" Max Texture Size: ")
 stringBuffer!!.append(this.maxTextureSize)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
-stringBuffer!!.append(
-                            " GL_EXTENSIONS: ")
+stringBuffer!!.append(" GL_EXTENSIONS: ")
 
         try {
             

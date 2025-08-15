@@ -72,8 +72,7 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         
                                     {
-                                    logUtil!!.put("Properties: " +propertiesHashMap!!.toString(), this, 
-                            "BasicWorkFlow()")
+                                    logUtil!!.put("Properties: " +propertiesHashMap!!.toString(), this, "BasicWorkFlow()")
 
                                     }
                                 

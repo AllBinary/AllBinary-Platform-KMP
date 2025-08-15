@@ -52,17 +52,13 @@ open fun getInstance()
             {
             }            
         
-    val FINGER: TouchScreenType = TouchScreenType(
-                            "Finger")
+    val FINGER: TouchScreenType = TouchScreenType("Finger")
 
-    val NOTOUCH: TouchScreenType = TouchScreenType(
-                            "No Touch")
+    val NOTOUCH: TouchScreenType = TouchScreenType("No Touch")
 
-    val STYLUS: TouchScreenType = TouchScreenType(
-                            "Stylus")
+    val STYLUS: TouchScreenType = TouchScreenType("Stylus")
 
-    val UNDEFINED: TouchScreenType = TouchScreenType(
-                            "Undefined")
+    val UNDEFINED: TouchScreenType = TouchScreenType("Undefined")
 
 }
                 

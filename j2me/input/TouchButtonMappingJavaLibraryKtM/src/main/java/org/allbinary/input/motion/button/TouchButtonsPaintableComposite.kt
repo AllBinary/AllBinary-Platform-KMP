@@ -95,8 +95,7 @@ override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: 
                     var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, 
-                            "onCompleteMotionGestureInputEvent")
+            logUtil!!.put(commonStrings!!.START, this, "onCompleteMotionGestureInputEvent")
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
             
@@ -159,9 +158,7 @@ released= true
                                 
 released= false
 logUtil!!.put(StringMaker().
-                            append(
-                            "GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKey))!!.append(
-                            " MotionGestureInput: ")!!.append(StringUtil.getInstance()!!.toString(motionGestureInput))!!.toString(), this, METHOD_NAME)
+                            append("GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKey))!!.append(" MotionGestureInput: ")!!.append(StringUtil.getInstance()!!.toString(motionGestureInput))!!.toString(), this, METHOD_NAME)
 this.inputMappingInterface!!.process(gameKey, motionGestureInput)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)

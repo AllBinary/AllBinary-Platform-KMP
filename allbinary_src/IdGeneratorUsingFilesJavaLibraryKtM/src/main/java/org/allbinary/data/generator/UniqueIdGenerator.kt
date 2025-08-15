@@ -82,8 +82,7 @@ idData!!.writeLong(value)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "initialize", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 
                                     }
                                 
@@ -150,8 +149,7 @@ idOutData!!.writeLong(id +1)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getNext", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "getNext", e)
 
                                     }
                                 

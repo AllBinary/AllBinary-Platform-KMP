@@ -105,8 +105,7 @@ this.setTimeDelayHelper(TimeDelayHelper(Integer(Integer.valueOf(interval))))
                             
 
 
-                            throw Exception(
-                            "Time Interval Action Script Condition Unknown Node")
+                            throw Exception("Time Interval Action Script Condition Unknown Node")
 
                         }
                             
@@ -119,8 +118,7 @@ this.setTimeDelayHelper(TimeDelayHelper(Integer(Integer.valueOf(interval))))
                             
 
 
-                            throw Exception(
-                            "Time Interval Action Script Condition Node Null")
+                            throw Exception("Time Interval Action Script Condition Node Null")
 
                         }
                             
@@ -156,8 +154,7 @@ open fun toHashMap()
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(TimeIntervalActionScriptConditionData.TIME, Integer.toString(this.timeHelper!!.delay))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -188,8 +185,7 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalAct
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, 
-                            "log")
+{logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, "log")
 }
 
 

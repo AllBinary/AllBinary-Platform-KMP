@@ -76,12 +76,10 @@ open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
                     var displayChangeEvent = displayChangeEvent
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, 
-                            "onResize")
+            logUtil!!.put(commonStrings!!.START, this, "onResize")
 this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onResize", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }

@@ -70,8 +70,7 @@ open fun getPermissionItemsEntityInstance()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "PermissionItemsEntityFactory", commonStrings!!.GET_INSTANCE, e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, "PermissionItemsEntityFactory", commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 

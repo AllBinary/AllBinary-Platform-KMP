@@ -122,8 +122,7 @@ this.basketReview= orderItems!!.getBasketReview(this.order.getId())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -162,11 +161,9 @@ open fun validationInfo()
                                  || this.orderHistory!!.isValid() == Boolean.FALSE)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Order History data error for: ")
+                                    stringBuffer!!.append("Order History data error for: ")
 stringBuffer!!.append(this.order.getId())
-stringBuffer!!.append(
-                            "<br />")
+stringBuffer!!.append("<br />")
 
                                     }
                                 
@@ -181,11 +178,9 @@ this.basketReview= orderItems!!.getBasketReview(this.order.getId())
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Order Items data error - does not exist for: ")
+                                    stringBuffer!!.append("Order Items data error - does not exist for: ")
 stringBuffer!!.append(this.order.getId())
-stringBuffer!!.append(
-                            "<br />")
+stringBuffer!!.append("<br />")
 
                                     }
                                 
@@ -194,11 +189,9 @@ stringBuffer!!.append(
                         if(this.basketReview!!.isValid() == Boolean.FALSE)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Order Items data error - not valid for: ")
+                                    stringBuffer!!.append("Order Items data error - not valid for: ")
 stringBuffer!!.append(this.order.getId())
-stringBuffer!!.append(
-                            "<br />")
+stringBuffer!!.append("<br />")
 
                                     }
                                 
@@ -216,9 +209,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

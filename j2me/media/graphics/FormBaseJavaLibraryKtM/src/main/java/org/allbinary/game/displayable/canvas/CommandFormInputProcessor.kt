@@ -392,8 +392,7 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                         if(!this.doubleClickTimeHelper!!.isTime())
                         
                                     {
-                                    logUtil!!.put(
-                            "Double Press", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
+                                    logUtil!!.put("Double Press", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
 this.processCommand()
 
                                     }

@@ -165,14 +165,11 @@ public constructor        (map: Map)
 
 hashMap!!.put(key.concatToString(), .concatToString())
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "key: ")
+stringBuffer!!.append("key: ")
 stringBuffer!!.append(key)
-stringBuffer!!.append(
-                            " Value: ")
+stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(values[0]!!)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getFormData()")
+logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 }
 
 this.getFormData(hashMap)
@@ -234,9 +231,7 @@ staticPagesSchema= hashMap!!.get(initializerData!!.STATICPAGESSCHEMA) as String
 staticPagesServer= hashMap!!.get(initializerData!!.STATICPAGESSERVER) as String
 staticPagesPort= hashMap!!.get(initializerData!!.STATICPAGESPORT) as String
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Unable to get form data", this, 
-                            "getFormData()", e)
+            {logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
 }
@@ -484,11 +479,9 @@ open fun getJdbcDriverValidationInfo(jdbcDriver: String)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "The JDBC driver (")
+stringBuffer!!.append("The JDBC driver (")
 stringBuffer!!.append(jdbcDriver)
-stringBuffer!!.append(
-                            ") you have provided is not valid.<br/>")
+stringBuffer!!.append(") you have provided is not valid.<br/>")
 
 
 
@@ -502,24 +495,15 @@ open fun getJdbcDriverSolutionInfo()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "The following describes the possible problems and solutions regarding the Jdbc Driver error(s):<p/>")
-stringBuffer!!.append(
-                            "1. A JDBC driver you specified is not in your classpath.<br/>")
-stringBuffer!!.append(
-                            "Solution 1: Move the JDBC driver into any directory specified in the existing classpath. <br/>")
-stringBuffer!!.append(
-                            "Solution 2: Add the directory that contains the JDBC driver to the classpath.<br/>")
-stringBuffer!!.append(
-                            "Solution 3: Add the JDBC driver to the WEB-INF/lib directory where you installed this webapp.<br/>")
-stringBuffer!!.append(
-                            "2. The JDBC driver you specified does not exit.<br/>")
-stringBuffer!!.append(
-                            "Solution: Get a JDBC driver. <br/>")
-stringBuffer!!.append(
-                            "3. The JDBC driver you specified is not valid.<br/>")
-stringBuffer!!.append(
-                            "Solution: Use a valid JDBC driver.<p/>")
+stringBuffer!!.append("The following describes the possible problems and solutions regarding the Jdbc Driver error(s):<p/>")
+stringBuffer!!.append("1. A JDBC driver you specified is not in your classpath.<br/>")
+stringBuffer!!.append("Solution 1: Move the JDBC driver into any directory specified in the existing classpath. <br/>")
+stringBuffer!!.append("Solution 2: Add the directory that contains the JDBC driver to the classpath.<br/>")
+stringBuffer!!.append("Solution 3: Add the JDBC driver to the WEB-INF/lib directory where you installed this webapp.<br/>")
+stringBuffer!!.append("2. The JDBC driver you specified does not exit.<br/>")
+stringBuffer!!.append("Solution: Get a JDBC driver. <br/>")
+stringBuffer!!.append("3. The JDBC driver you specified is not valid.<br/>")
+stringBuffer!!.append("Solution: Use a valid JDBC driver.<p/>")
 
 
 
@@ -746,9 +730,7 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.staticPagesJdbcDrive
             
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(
-                            "Creating DB connection files", this, 
-                            "set()")
+{logUtil!!.put("Creating DB connection files", this, "set()")
 
     var userDbInitInfo: UserDbInitInfo = UserDbInitInfo(false)
 
@@ -809,9 +791,7 @@ inventoryDbInitInfo!!.setServer(inventoryServer)
 inventoryDbInitInfo!!.setPort(inventoryPort)
 inventoryDbInitInfo!!.setHasRead(true)
 inventoryDbInitInfo!!.write()
-logUtil!!.put(
-                            "Created DB connection files", this, 
-                            "set()")
+logUtil!!.put("Created DB connection files", this, "set()")
 }
 
 

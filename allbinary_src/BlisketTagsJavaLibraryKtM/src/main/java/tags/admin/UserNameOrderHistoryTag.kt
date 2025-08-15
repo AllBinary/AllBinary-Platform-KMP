@@ -57,10 +57,8 @@ open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
         try {
-            this.setName(
-                            "Range Order History View")
-this.setObjectFile(
-                            "views.admin.orderhistory.UserNameOrderHistoryView")
+            this.setName("Range Order History View")
+this.setObjectFile("views.admin.orderhistory.UserNameOrderHistoryView")
 
     
                         if(this.getCommand() != 
@@ -95,8 +93,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: Exception)
             {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 

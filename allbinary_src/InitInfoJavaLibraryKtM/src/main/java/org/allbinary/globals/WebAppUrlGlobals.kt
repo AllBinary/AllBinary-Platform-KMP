@@ -118,8 +118,7 @@ open fun getMainPath()
                             
 
 
-                            throw Exception(
-                            "Webapp Path is not set")
+                            throw Exception("Webapp Path is not set")
 
                         }
                             

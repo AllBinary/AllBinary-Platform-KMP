@@ -52,20 +52,15 @@ open fun getInstance()
             {
             }            
         
-    val FULL_SCREEN: Feature = Feature(
-                            "Full Screen")
+    val FULL_SCREEN: Feature = Feature("Full Screen")
 
-    val TITLE_BAR: Feature = Feature(
-                            "Title Bar")
+    val TITLE_BAR: Feature = Feature("Title Bar")
 
-    val STATIC: Feature = Feature(
-                            "Static Dependent Feature")
+    val STATIC: Feature = Feature("Static Dependent Feature")
 
-    val LOAD_ONDEMAND: Feature = Feature(
-                            "Load OnDemand")
+    val LOAD_ONDEMAND: Feature = Feature("Load OnDemand")
 
-    val LOAD_ALL: Feature = Feature(
-                            "Load All")
+    val LOAD_ALL: Feature = Feature("Load All")
 
 }
                 

@@ -62,8 +62,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstan
             {
 
 
-                            throw Exception(
-                            "Error Node Creation Failure")
+                            throw Exception("Error Node Creation Failure")
 }
 
 }

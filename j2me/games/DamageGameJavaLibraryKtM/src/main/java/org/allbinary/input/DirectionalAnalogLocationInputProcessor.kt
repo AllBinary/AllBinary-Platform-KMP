@@ -171,8 +171,7 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Unable to process analog input", this, commonStrings!!.PROCESS, e)
+logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e)
 }
 
 }

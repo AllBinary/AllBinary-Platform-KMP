@@ -128,8 +128,7 @@ open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
 
         try {
             
-    var iter: Iterator = ImageIO.getImageWritersByFormatName(
-                            "jpeg")!!
+    var iter: Iterator = ImageIO.getImageWritersByFormatName("jpeg")!!
             
 
 
@@ -137,8 +136,7 @@ open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
                         if(!iter.hasNext())
                         
                                     {
-                                    logUtil!!.put(
-                            "Unable to save image to jpeg file type.", this, commonStrings!!.SAVE)
+                                    logUtil!!.put("Unable to save image to jpeg file type.", this, commonStrings!!.SAVE)
 
 
 

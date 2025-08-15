@@ -84,8 +84,7 @@ open fun init(paymentMethod: String)
 
 hashMap!!.put(CommonSeps.getInstance()!!.SPACE, UNDERSCORE)
 hashMap!!.put(AbPathData.getInstance()!!.EXTENSION_SEP, UNDERSCORE)
-hashMap!!.put(
-                            "-", UNDERSCORE)
+hashMap!!.put("-", UNDERSCORE)
 
     var replace: Replace = Replace(hashMap)
 
@@ -129,8 +128,7 @@ open fun getPaymentGatewayInterfaceFactoryInterface()
                                     
 
 
-                            throw Exception(
-                            "PaymentGatewayInterfaceFactoryInterface is Null")
+                            throw Exception("PaymentGatewayInterfaceFactoryInterface is Null")
 
                                     }
                                 
@@ -156,8 +154,7 @@ open fun getPaymentGatewayDomNodeFactoryInterface()
                                     
 
 
-                            throw Exception(
-                            "PaymentGatewayDomNodeFactoryInterface is Null")
+                            throw Exception("PaymentGatewayDomNodeFactoryInterface is Null")
 
                                     }
                                 

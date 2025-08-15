@@ -124,8 +124,7 @@ open fun removeDefault(gameFeature: Feature)
 
                     var gameFeature = gameFeature
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, 
-                            "removeDefault")
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, "removeDefault")
 this.remove(gameFeature)
 defaultList!!.remove(gameFeature)
 }

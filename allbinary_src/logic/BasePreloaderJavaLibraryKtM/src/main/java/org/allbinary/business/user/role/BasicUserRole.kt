@@ -81,8 +81,7 @@ open fun getRole(role: String)
 
 
 
-                            throw Exception(
-                            "Unable to get role - Unknown Role")
+                            throw Exception("Unable to get role - Unknown Role")
 }
 
 

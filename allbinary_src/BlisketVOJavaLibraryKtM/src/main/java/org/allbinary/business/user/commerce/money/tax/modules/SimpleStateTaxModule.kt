@@ -99,8 +99,7 @@ this.document= DomDocumentHelper.create(data)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAX))
                         
                                     {
-                                    logUtil!!.put("Tax Doc: " +DomDocumentHelper.toString(document), this, 
-                            "getTaxRate")
+                                    logUtil!!.put("Tax Doc: " +DomDocumentHelper.toString(document), this, "getTaxRate")
 
                                     }
                                 
@@ -259,14 +258,11 @@ this.document= DomDocumentHelper.create(data)
                                     
     var stringBuffer: StringBuilder = StringBuilder()
 
-stringBuffer!!.append(
-                            "StreetAddress Node: ")
+stringBuffer!!.append("StreetAddress Node: ")
 stringBuffer!!.append(streetAddressNode!!.getNodeName())
-stringBuffer!!.append(
-                            " Value: ")
+stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(streetAddressNode!!.getNodeValue())
-stringBuffer!!.append(
-                            " Number Of Children: ")
+stringBuffer!!.append(" Number Of Children: ")
 stringBuffer!!.append(streetAddressNode!!.getChildNodes()!!.getLength())
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -332,8 +328,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 

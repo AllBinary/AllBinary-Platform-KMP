@@ -154,11 +154,9 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Supported Media Readers: ")
+stringBuffer!!.append("Supported Media Readers: ")
 stringBuffer!!.append(this.readerFileTypesHashMap!!.toString())
-stringBuffer!!.append(
-                            " Writers: ")
+stringBuffer!!.append(" Writers: ")
 stringBuffer!!.append(this.writerFileTypesHashMap!!.toString())
 logUtil!!.put(stringBuffer!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 

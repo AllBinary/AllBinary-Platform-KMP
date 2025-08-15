@@ -182,8 +182,7 @@ backupFile!!.createNewFile()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Create File", this, this.METHOD_GET_OUTPUT_STREAM, e)
+                                    logUtil!!.put("Create File", this, this.METHOD_GET_OUTPUT_STREAM, e)
 
                                     }
                                 
@@ -446,8 +445,7 @@ StreamUtil.getInstance()!!.close(outputStream)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Backup Table Failed\nSQL Statement", this, this.METHOD_BACKUP_TABLE, e)
+                                    logUtil!!.put("Backup Table Failed\nSQL Statement", this, this.METHOD_BACKUP_TABLE, e)
 
                                     }
                                 
@@ -587,8 +585,7 @@ stringBuffer!!.append(PORTION_RESTORED)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Restore Table Failed\nSQL Statement", this, this.METHOD_RESTORE_TABLE, e)
+                                    logUtil!!.put("Restore Table Failed\nSQL Statement", this, this.METHOD_RESTORE_TABLE, e)
 
                                     }
                                 
@@ -597,8 +594,7 @@ stringBuffer!!.append(PORTION_RESTORED)
 
 stringBuffer!!.append(TABLE_LABEL)
 stringBuffer!!.append(tableName)
-stringBuffer!!.append(
-                            " Restoration Failed")
+stringBuffer!!.append(" Restoration Failed")
 
 
 

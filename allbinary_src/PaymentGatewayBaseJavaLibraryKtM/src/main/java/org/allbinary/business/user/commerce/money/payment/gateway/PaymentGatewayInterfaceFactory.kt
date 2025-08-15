@@ -64,8 +64,7 @@ open fun getInstance(httpServletRequest: HttpServletRequest)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(
-                            "Getting", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Getting", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -81,8 +80,7 @@ open fun getInstance(httpServletRequest: HttpServletRequest)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(HttpServletRequest)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HttpServletRequest)", e)
 
                                     }
                                 

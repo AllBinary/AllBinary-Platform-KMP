@@ -59,23 +59,19 @@ open fun main(args: Array<String?>)
 
     var appUrlGlobals: AppUrlGlobals = AppUrlGlobals()
 
-appUrlGlobals!!.setWebappPath(
-                            "G:/mnt/bc/mydev/work/allbinary_src/ToolsJavaLibrary/tools")
+appUrlGlobals!!.setWebappPath("G:/mnt/bc/mydev/work/allbinary_src/ToolsJavaLibrary/tools")
 URLGLOBALS.init(appUrlGlobals)
 
     var testString: String = "\"super gun\" big tank \"goodgunriflegun"
 
 
-    var replace: Replace = Replace(
-                            "gun", 
-                            "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz")
+    var replace: Replace = Replace("gun", "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz")
 
 System.out.println("Old String: " +testString)
 testString= replace.all(testString)
 System.out.println("New String: " +testString)
 
-    var replaceCat: Replace = Replace(
-                            "abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz", stringUtil!!.EMPTY_STRING)
+    var replaceCat: Replace = Replace("abcdefghijklmnopqrstuxwxyzabcdefghijklmnopqrstuxwxyz", stringUtil!!.EMPTY_STRING)
 
 testString= replaceCat!!.all(testString)
 System.out.println("New String: " +testString)

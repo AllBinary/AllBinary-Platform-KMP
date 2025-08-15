@@ -51,17 +51,13 @@ open fun getInstance()
         {}
 
 
-    val TOUCH_ENABLED: TouchFeature = TouchFeature(
-                            "Touch Enabled")
+    val TOUCH_ENABLED: TouchFeature = TouchFeature("Touch Enabled")
 
-    val SHOW_SCREEN_BUTTONS: TouchFeature = TouchFeature(
-                            "Show")
+    val SHOW_SCREEN_BUTTONS: TouchFeature = TouchFeature("Show")
 
-    val AUTO_HIDE_SHOW_SCREEN_BUTTONS: TouchFeature = TouchFeature(
-                            "Auto Hide (One Level)")
+    val AUTO_HIDE_SHOW_SCREEN_BUTTONS: TouchFeature = TouchFeature("Auto Hide (One Level)")
 
-    val HIDE_SCREEN_BUTTONS: TouchFeature = TouchFeature(
-                            "Hide")
+    val HIDE_SCREEN_BUTTONS: TouchFeature = TouchFeature("Hide")
 
 }
                 

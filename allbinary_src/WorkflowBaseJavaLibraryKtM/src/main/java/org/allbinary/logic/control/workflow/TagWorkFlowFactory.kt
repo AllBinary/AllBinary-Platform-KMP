@@ -108,11 +108,9 @@ params[1]= pageContext as Object
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failed To Get Instance: ")
+stringBuffer!!.append("Failed To Get Instance: ")
 stringBuffer!!.append(workFlowClassName)
-stringBuffer!!.append(
-                            "->")
+stringBuffer!!.append("->")
 stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -139,11 +137,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failed To Get Instance: ")
+stringBuffer!!.append("Failed To Get Instance: ")
 stringBuffer!!.append(workFlowClassName)
-stringBuffer!!.append(
-                            "->")
+stringBuffer!!.append("->")
 stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

@@ -49,11 +49,9 @@ open fun getInstance()
             
     private val NO_DESCRIPTION: String = "No Description"
 
-    val OS: LogConfigType = LogConfigType(
-                            "Operating System", NO_DESCRIPTION)
+    val OS: LogConfigType = LogConfigType("Operating System", NO_DESCRIPTION)
 
-    val FACTORYERROR: LogConfigType = LogConfigType(
-                            "Factory Error", NO_DESCRIPTION)
+    val FACTORYERROR: LogConfigType = LogConfigType("Factory Error", NO_DESCRIPTION)
 private constructor        ()
             : super()
         {LogConfigTypes.LOGGING.add(OS)

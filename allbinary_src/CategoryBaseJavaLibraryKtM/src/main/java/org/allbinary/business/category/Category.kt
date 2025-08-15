@@ -80,8 +80,7 @@ public constructor        (categoryPropertiesFactoryInterface: CategoryPropertie
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, 
-                            "Category(CategoryPropertiesFactoryInterface)")
+                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, "Category(CategoryPropertiesFactoryInterface)")
 
                                     }
                                 
@@ -228,9 +227,7 @@ this.removeDuplicateChild(categoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(
-                            "adding", this, 
-                            "addChild")
+                                    logUtil!!.put("adding", this, "addChild")
 
                                     }
                                 
@@ -452,8 +449,7 @@ open fun isLeaf()
                                     
 
 
-                            throw Exception(
-                            "Category Error")
+                            throw Exception("Category Error")
 
                                     }
                                 
@@ -694,17 +690,13 @@ open fun log()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Category Name: ")
+stringBuffer!!.append("Category Name: ")
 stringBuffer!!.append(this.categoryPropertiesInterface!!.getValue())
-stringBuffer!!.append(
-                            "\nPath = ")
+stringBuffer!!.append("\nPath = ")
 stringBuffer!!.append(this.getPath()!!.toString())
-stringBuffer!!.append(
-                            "\nFile Path: ")
+stringBuffer!!.append("\nFile Path: ")
 stringBuffer!!.append(this.getFilePath()!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "log()")
+logUtil!!.put(stringBuffer!!.toString(), this, "log()")
 
                                     }
                                 

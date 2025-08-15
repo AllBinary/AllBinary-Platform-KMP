@@ -30,11 +30,7 @@ open public class TestClientInformation : AbeClientInformation {
         
 public constructor        ()                        
 
-                            : super(
-                            "Test App Name", 
-                            "0.0.1", 
-                            "Test App Name 0.0.1", 
-                            "TA"){
+                            : super("Test App Name", "0.0.1", "Test App Name 0.0.1", "TA"){
 
                             //For kotlin this is before the body of the constructor.
                     

@@ -209,9 +209,7 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Group Size: ")!!.append(groupSize)!!.toString(), this, 
-                            "areAllOtherGroupsEmpty")
+                            append("Group Size: ")!!.append(groupSize)!!.toString(), this, "areAllOtherGroupsEmpty")
 
 
 
@@ -416,9 +414,7 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "id: ")!!.append(id)!!.toString(), this, 
-                            "onCreateLayerManagerEvent")
+                            append("id: ")!!.append(id)!!.toString(), this, "onCreateLayerManagerEvent")
 
                                     }
                                 
@@ -515,8 +511,7 @@ stringBuffer!!.append(groupList!!.size())
 stringBuffer!!.append(SPACE)
 }
 
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "log")
+logUtil!!.put(stringBuffer!!.toString(), this, "log")
 }
 
 

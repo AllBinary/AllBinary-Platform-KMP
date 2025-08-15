@@ -127,8 +127,7 @@ open fun getIndex(command: Command)
 
 
 
-                            throw Exception(
-                            "No Such Command")
+                            throw Exception("No Such Command")
 }
 
 

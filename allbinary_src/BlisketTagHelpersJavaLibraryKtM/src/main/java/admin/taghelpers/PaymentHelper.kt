@@ -68,8 +68,7 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.value= request.getParameter(
-                            "VALUE")
+{this.value= request.getParameter("VALUE")
 }
 
 
@@ -95,8 +94,7 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymen
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "addPayment()")
+                                    logUtil!!.put(success, this, "addPayment()")
 
                                     }
                                 
@@ -114,8 +112,7 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymen
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "addPayment()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "addPayment()", e)
 
                                     }
                                 
@@ -146,8 +143,7 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(this.v
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "selectPayment()")
+                                    logUtil!!.put(success, this, "selectPayment()")
 
                                     }
                                 
@@ -165,8 +161,7 @@ paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(this.v
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "selectPayment()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "selectPayment()", e)
 
                                     }
                                 
@@ -212,8 +207,7 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "removePayment()")
+                                    logUtil!!.put(success, this, "removePayment()")
 
                                     }
                                 
@@ -231,8 +225,7 @@ paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "removePayment()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "removePayment()", e)
 
                                     }
                                 
@@ -312,8 +305,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "create()")
+                                    logUtil!!.put(success, this, "create()")
 
                                     }
                                 
@@ -331,8 +323,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "create()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
 
                                     }
                                 
@@ -362,8 +353,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "restore()")
+                                    logUtil!!.put(success, this, "restore()")
 
                                     }
                                 
@@ -381,8 +371,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "restore()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
 
                                     }
                                 
@@ -412,8 +401,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "backup()")
+                                    logUtil!!.put(success, this, "backup()")
 
                                     }
                                 
@@ -431,8 +419,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "backup()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
 
                                     }
                                 

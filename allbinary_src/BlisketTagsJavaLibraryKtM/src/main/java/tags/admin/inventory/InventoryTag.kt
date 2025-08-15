@@ -65,10 +65,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Add Inventory Item Validation View")
-this.setObjectFile(
-                            "views.admin.inventory.AddFileValidationView")
+                                    this.setName("Add Inventory Item Validation View")
+this.setObjectFile("views.admin.inventory.AddFileValidationView")
 
                                     }
                                 
@@ -77,10 +75,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Delete Inventory Item Validation View")
-this.setObjectFile(
-                            "views.admin.inventory.DeleteFileValidationView")
+                                    this.setName("Delete Inventory Item Validation View")
+this.setObjectFile("views.admin.inventory.DeleteFileValidationView")
 
                                     }
                                 
@@ -89,10 +85,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Edit Inventory Item Validation View")
-this.setObjectFile(
-                            "views.admin.inventory.EditValidationView")
+                                    this.setName("Edit Inventory Item Validation View")
+this.setObjectFile("views.admin.inventory.EditValidationView")
 
                                     }
                                 
@@ -101,10 +95,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "New Inventory Item Validation View")
-this.setObjectFile(
-                            "views.admin.inventory.NewValidationView")
+                                    this.setName("New Inventory Item Validation View")
+this.setObjectFile("views.admin.inventory.NewValidationView")
 
                                     }
                                 
@@ -113,10 +105,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.UPDATE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Update Inventory Item Validation View")
-this.setObjectFile(
-                            "views.admin.inventory.UpdateFileValidationView")
+                                    this.setName("Update Inventory Item Validation View")
+this.setObjectFile("views.admin.inventory.UpdateFileValidationView")
 
                                     }
                                 
@@ -139,8 +129,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

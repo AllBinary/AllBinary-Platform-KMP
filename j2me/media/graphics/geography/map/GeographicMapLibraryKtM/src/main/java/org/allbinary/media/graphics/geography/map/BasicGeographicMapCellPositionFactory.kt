@@ -154,11 +154,7 @@ geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosi
 
 } catch(e: Exception)
             {logUtil!!.put(StringMaker().
-                            append(
-                            "[")!!.append(rows)!!.append(
-                            "][")!!.append(columns)!!.append(
-                            "]")!!.toString(), this, 
-                            "visit", e)
+                            append("[")!!.append(rows)!!.append("][")!!.append(columns)!!.append("]")!!.toString(), this, "visit", e)
 
 
 

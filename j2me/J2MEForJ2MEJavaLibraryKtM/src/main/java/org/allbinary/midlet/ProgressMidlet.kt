@@ -71,14 +71,12 @@ open fun exit(isProgress: Boolean)
 
 primaryThreadPool!!.runTask(runnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "exit", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
 
         try {
             processor.process()
 } catch(e2: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "exit", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "exit", e)
 }
 
 }

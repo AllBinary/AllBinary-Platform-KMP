@@ -72,8 +72,7 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {logUtil!!.put(
-                            "LicensingException", this, commonStrings!!.PROCESS, e)
+            {logUtil!!.put("LicensingException", this, commonStrings!!.PROCESS, e)
 
 
 

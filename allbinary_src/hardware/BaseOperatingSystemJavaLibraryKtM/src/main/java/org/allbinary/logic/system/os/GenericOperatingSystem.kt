@@ -183,8 +183,7 @@ override fun toString()
 
     var osBuffer: StringMaker = StringMaker()
 
-osBuffer!!.append(
-                            "Operating System Info: \n")
+osBuffer!!.append("Operating System Info: \n")
 osBuffer!!.append(this.getName())
 osBuffer!!.append(NEW_LINE)
 osBuffer!!.append(this.getArch())

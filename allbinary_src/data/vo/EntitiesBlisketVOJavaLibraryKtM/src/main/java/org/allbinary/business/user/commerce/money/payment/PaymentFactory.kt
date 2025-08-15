@@ -62,8 +62,7 @@ open fun getInstance(request: ServletRequest)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.FACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "PaymentFactory", commonStrings!!.GET_INSTANCE, e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, "PaymentFactory", commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 

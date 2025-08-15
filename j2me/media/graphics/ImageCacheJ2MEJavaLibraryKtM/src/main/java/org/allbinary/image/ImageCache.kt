@@ -169,8 +169,7 @@ listOfList[foundIndex]!!.add(image)
 
 
                             throw RuntimeException(StringMaker().
-                            append(
-                            "Image resource is not available for key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString())
+                            append("Image resource is not available for key: ")!!.append(StringUtil.getInstance()!!.toString(key))!!.toString())
 
                                     }
                                 
@@ -178,11 +177,9 @@ listOfList[foundIndex]!!.add(image)
         try {
             image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+            {logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
-                            append(
-                            "InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
+                            append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
 System.gc()
 System.gc()
 logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)

@@ -157,8 +157,7 @@ touchGestureCollection!!.clear()
 
 stringBuffer!!.append(commonStrings!!.EXCEPTION_LABEL)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "release", e)
+logUtil!!.put(stringBuffer!!.toString(), this, "release", e)
 }
 
 }
@@ -206,8 +205,7 @@ touchGestureCollection!!.clear()
 
 stringBuffer!!.append(commonStrings!!.EXCEPTION_LABEL)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "onMotionGestureEvent", e)
+logUtil!!.put(stringBuffer!!.toString(), this, "onMotionGestureEvent", e)
 }
 
 }

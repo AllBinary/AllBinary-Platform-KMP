@@ -84,8 +84,7 @@ open fun view()
 : String{
         try {
             
-    var result: String = this.getHelper()!!.::class.getMethod(
-                            "view", 
+    var result: String = this.getHelper()!!.::class.getMethod("view", 
                             null)!!.invoke(this.getHelper(), 
                             null) as String
 
@@ -100,8 +99,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -125,8 +123,7 @@ open fun doStartTag()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put("Creating with: \n" +this.getPropertiesHashMap()!!.toString(), this, 
-                            "doStartTag")
+                                    logUtil!!.put("Creating with: \n" +this.getPropertiesHashMap()!!.toString(), this, "doStartTag")
 
                                     }
                                 
@@ -138,14 +135,11 @@ open fun doStartTag()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "ViewTag Start For: ")
+stringBuffer!!.append("ViewTag Start For: ")
 stringBuffer!!.append(this.getName())
-stringBuffer!!.append(
-                            "\nViewFile: ")
+stringBuffer!!.append("\nViewFile: ")
 stringBuffer!!.append(this.getObjectFile())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "doStartTag")
+logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
 
                                     }
                                 
@@ -156,9 +150,7 @@ pageContext!!.getOut()!!.print(this.view())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(
-                            "Tag End", this, 
-                            "doStartTag")
+                                    logUtil!!.put("Tag End", this, "doStartTag")
 
                                     }
                                 

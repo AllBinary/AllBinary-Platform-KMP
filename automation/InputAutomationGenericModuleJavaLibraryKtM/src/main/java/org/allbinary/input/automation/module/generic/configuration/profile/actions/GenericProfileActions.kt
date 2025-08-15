@@ -175,8 +175,7 @@ this.fileInit(idFile)
                                     }
                                 
                         else {
-                            logUtil!!.put("No Profile: " +file.getAbsolutePath(), this, 
-                            "Contructor")
+                            logUtil!!.put("No Profile: " +file.getAbsolutePath(), this, "Contructor")
 
                         }
                             
@@ -212,8 +211,7 @@ open fun fileInit(fileInputStream: FileInputStream)
     var nameNodeList: NodeList = document.getElementsByTagName(GenericProfileActionsData.NAME)!!
             
 
-logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this, 
-                            "Contructor")
+logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this, "Contructor")
 
 
 
@@ -250,8 +248,7 @@ logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this
                             
 }
 
-logUtil!!.put("Loaded: " +this.getHashMap()!!.size +" Configuration Profile Action(s)", this, 
-                            "Contructor")
+logUtil!!.put("Loaded: " +this.getHashMap()!!.size +" Configuration Profile Action(s)", this, "Contructor")
 this.getDefaultListModelHelper()!!.initDefaultModelList()
 }
 
@@ -361,8 +358,7 @@ open fun toHashMap()
 : HashMap<Any, Any>{
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 

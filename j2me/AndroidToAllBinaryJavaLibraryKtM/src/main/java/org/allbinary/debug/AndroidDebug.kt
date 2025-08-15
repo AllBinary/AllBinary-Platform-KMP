@@ -48,8 +48,7 @@ open public class AndroidDebug
 override fun start()
         //nullable = true from not(false or (false and true)) = true
 {this.setStartTime(System.currentTimeMillis())
-Debug.startMethodTracing(
-                            "trace", bufferSize)
+Debug.startMethodTracing("trace", bufferSize)
 setRunning(true)
 }
 

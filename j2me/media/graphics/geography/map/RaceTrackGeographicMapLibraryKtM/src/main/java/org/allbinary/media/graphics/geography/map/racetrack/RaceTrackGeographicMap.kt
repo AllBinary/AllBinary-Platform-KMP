@@ -123,11 +123,9 @@ open fun isValid(geographicMapCellPosition: GeographicMapCellPosition)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Column: ")
+stringBuffer!!.append("Column: ")
 stringBuffer!!.append(geographicMapCellPosition!!.getColumn())
-stringBuffer!!.append(
-                            " not in: ")
+stringBuffer!!.append(" not in: ")
 stringBuffer!!.append(this.customMapGenerator!!.getCustomMapArray()[0]!!.length)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -163,11 +161,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Row: ")
+stringBuffer!!.append("Row: ")
 stringBuffer!!.append(geographicMapCellPosition!!.getRow())
-stringBuffer!!.append(
-                            " not in: ")
+stringBuffer!!.append(" not in: ")
 stringBuffer!!.append(this.customMapGenerator!!.getCustomMapArray()!!.length)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 

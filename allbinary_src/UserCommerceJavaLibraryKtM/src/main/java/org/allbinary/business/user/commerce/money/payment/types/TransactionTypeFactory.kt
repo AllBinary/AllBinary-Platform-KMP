@@ -52,23 +52,17 @@ open fun getInstance()
             {
             }            
         
-    val SALE: TransactionType = TransactionType(
-                            "Sale")
+    val SALE: TransactionType = TransactionType("Sale")
 
-    val CREDIT: TransactionType = TransactionType(
-                            "Credit")
+    val CREDIT: TransactionType = TransactionType("Credit")
 
-    val AUTHORIZATION: TransactionType = TransactionType(
-                            "Authorization")
+    val AUTHORIZATION: TransactionType = TransactionType("Authorization")
 
-    val DELAYEDCAPTURE: TransactionType = TransactionType(
-                            "Delayed Capture")
+    val DELAYEDCAPTURE: TransactionType = TransactionType("Delayed Capture")
 
-    val VOID: TransactionType = TransactionType(
-                            "Void")
+    val VOID: TransactionType = TransactionType("Void")
 
-    val INQUIRY: TransactionType = TransactionType(
-                            "Inquiry")
+    val INQUIRY: TransactionType = TransactionType("Inquiry")
 
 }
                 

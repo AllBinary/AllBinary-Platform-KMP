@@ -194,8 +194,7 @@ this.getPropertiesHashMap()!!.put(OutputTypeData.getInstance()!!.NAME, this.type
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put("TransformInfoTag type set: " +this.type, this, 
-                            "setType")
+                                    logUtil!!.put("TransformInfoTag type set: " +this.type, this, "setType")
 
                                     }
                                 

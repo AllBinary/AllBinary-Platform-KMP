@@ -407,8 +407,7 @@ newImageArray[index]= image
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "getImageArray", e)
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 
 
 

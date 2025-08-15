@@ -98,23 +98,20 @@ open fun findAll(path: String)
                     var path = path
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "findAll")
+            logUtil!!.put(this.commonStrings!!.START, this, "findAll")
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subDirectory!!.search(KEY, AbFile(path))
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "findAll", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "findAll", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
                                     }
                                 
@@ -167,8 +164,7 @@ open fun getInstallationPath(file: AbFile)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstallationPath", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstallationPath", e)
 
                                     }
                                 

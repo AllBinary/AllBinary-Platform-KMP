@@ -156,8 +156,7 @@ System.out.println(data)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "put", e)
+            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 
 
@@ -216,8 +215,7 @@ System.out.println(data)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "put", e)
+            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 
 

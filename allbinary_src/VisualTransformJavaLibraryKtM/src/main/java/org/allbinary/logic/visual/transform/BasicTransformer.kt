@@ -107,8 +107,7 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
                                     {
                                     logUtil!!.put("Decrypted Template: \n" +
                                     //Otherwise - right - ObjectCreationExpr
-, this, 
-                            "setEncryptedTemplateFileAsInputStream(file)")
+, this, "setEncryptedTemplateFileAsInputStream(file)")
 
                                     }
                                 
@@ -123,14 +122,11 @@ this.setURIResolver(BasicUriResolver(TransformInfoTemplateData.getInstance()!!.E
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failed to get Encrypted File: ")
+stringBuffer!!.append("Failed to get Encrypted File: ")
 stringBuffer!!.append(file.getPath())
-stringBuffer!!.append(
-                            " \nName:")
+stringBuffer!!.append(" \nName:")
 stringBuffer!!.append(file.getName())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setEncryptedTemplateFileAsInputStream()", e)
+logUtil!!.put(stringBuffer!!.toString(), this, "setEncryptedTemplateFileAsInputStream()", e)
 
                                     }
                                 
@@ -180,8 +176,7 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Decrypted Template: \n" +decrypted.toString(), this, 
-                            "setEncryptedTemplateAsInputStream()")
+                                    logUtil!!.put("Decrypted Template: \n" +decrypted.toString(), this, "setEncryptedTemplateAsInputStream()")
 
                                     }
                                 
@@ -193,8 +188,7 @@ this.setURIResolver(BasicUriResolver(TransformInfoTemplateData.getInstance()!!.E
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put("Failed to set with template: " +this.getTransformInfoInterface()!!.getTemplateFilePath(), this, 
-                            "setEncryptedTemplateFileAsInputStream()", e)
+                                    logUtil!!.put("Failed to set with template: " +this.getTransformInfoInterface()!!.getTemplateFilePath(), this, "setEncryptedTemplateFileAsInputStream()", e)
 
                                     }
                                 
@@ -234,8 +228,7 @@ open fun setTemplateAsInputStream()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, 
-                            "setTemplateAsInputStream()")
+                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, "setTemplateAsInputStream()")
 
                                     }
                                 
@@ -267,8 +260,7 @@ open fun setTemplateAsInputStream()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, 
-                            "setTemplateAsInputStream()")
+                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, "setTemplateAsInputStream()")
 
                                     }
                                 
@@ -291,8 +283,7 @@ stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, 
-                            "setTemplateAsInputStream()")
+                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, "setTemplateAsInputStream()")
 
                                     }
                                 
@@ -302,14 +293,11 @@ stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
                         
                                     {
                                     stringBuffer= StringMaker()
-stringBuffer!!.append(
-                            "Encrypted Template File isFile=")
+stringBuffer!!.append("Encrypted Template File isFile=")
 stringBuffer!!.append(encFile!!.isFile())
-stringBuffer!!.append(
-                            "\nEncTemplateFilePath: ")
+stringBuffer!!.append("\nEncTemplateFilePath: ")
 stringBuffer!!.append(encFile!!.getPath())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setTemplateAsInputStream()")
+logUtil!!.put(stringBuffer!!.toString(), this, "setTemplateAsInputStream()")
 
                                     }
                                 
@@ -336,8 +324,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, 
-                            "setTemplateAsInputStream()")
+                                    logUtil!!.put(this.getTransformInfoInterface()!!.log(), this, "setTemplateAsInputStream()")
 
                                     }
                                 
@@ -346,8 +333,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Template File isFile=" +file.isFile(), this, 
-                            "setTemplateAsInputStream()")
+                                    logUtil!!.put("Template File isFile=" +file.isFile(), this, "setTemplateAsInputStream()")
 
                                     }
                                 
@@ -364,8 +350,7 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put("Template: " +outputStream!!.toString(), this, 
-                            "getTemplateAsInputStream()")
+                                    logUtil!!.put("Template: " +outputStream!!.toString(), this, "getTemplateAsInputStream()")
 
                                     }
                                 
@@ -433,9 +418,7 @@ stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to get Template Data", this, 
-                            "setTemplateAsInputStream()", e)
+                                    logUtil!!.put("Failed to get Template Data", this, "setTemplateAsInputStream()", e)
 
                                     }
                                 
@@ -454,8 +437,7 @@ this.streamUtil!!.close(inputStream)
 
 
 
-                            throw Exception(
-                            "Error setTemplateAsInputStream()")
+                            throw Exception("Error setTemplateAsInputStream()")
 }
 
 

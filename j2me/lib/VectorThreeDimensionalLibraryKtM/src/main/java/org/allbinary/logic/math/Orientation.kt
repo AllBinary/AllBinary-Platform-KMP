@@ -88,14 +88,11 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Y: ")
+stringBuffer!!.append("Y: ")
 stringBuffer!!.append(yaw.toString())
-stringBuffer!!.append(
-                            " P: ")
+stringBuffer!!.append(" P: ")
 stringBuffer!!.append(pitch.toString())
-stringBuffer!!.append(
-                            " R: ")
+stringBuffer!!.append(" R: ")
 stringBuffer!!.append(roll.toString())
 
 

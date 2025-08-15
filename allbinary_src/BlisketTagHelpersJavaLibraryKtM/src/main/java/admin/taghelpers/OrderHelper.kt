@@ -146,14 +146,11 @@ paymentGatewayBoolean= Boolean.TRUE
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Successfully set PaymentGateway Order: ")
+stringBuffer!!.append("Successfully set PaymentGateway Order: ")
 stringBuffer!!.append(orderInterface!!.getId())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(orderInterface!!.getPaymentMethod())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setPaymentGateway()")
+logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()")
 
                                     }
                                 
@@ -171,8 +168,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failed to set PaymentGateway for Order: ")
+stringBuffer!!.append("Failed to set PaymentGateway for Order: ")
 
         try {
             
@@ -187,19 +183,16 @@ stringBuffer!!.append(
                         
                                     {
                                     stringBuffer!!.append(orderInterface!!.getId())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(orderInterface!!.getPaymentMethod())
 
                                     }
                                 
 } catch(ex: Exception)
-            {stringBuffer!!.append(
-                            " Exception Getting")
+            {stringBuffer!!.append(" Exception Getting")
 }
 
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setPaymentGateway()", e)
+logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
 
                                     }
                                 
@@ -231,8 +224,7 @@ order.setStoreName(this.storeFrontInterface!!.getName())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put("Successfully Processed Order: " +result, this, 
-                            "processOrder()")
+                                    logUtil!!.put("Successfully Processed Order: " +result, this, "processOrder()")
 
                                     }
                                 
@@ -245,14 +237,12 @@ order.setStoreName(this.storeFrontInterface!!.getName())
             {
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failed to Process Order: ")
+stringBuffer!!.append("Failed to Process Order: ")
 
         try {
             stringBuffer!!.append(this.weblisketSession!!.getOrder()!!.getId())
 } catch(ex: Exception)
-            {stringBuffer!!.append(
-                            " Exception Getting Id")
+            {stringBuffer!!.append(" Exception Getting Id")
 }
 
 

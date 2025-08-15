@@ -83,8 +83,7 @@ open fun setShippingType()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "setShippingType", 
+    var method: Method = addressHelperClass!!.getMethod("setShippingType", 
                             null)!!
             
 
@@ -112,8 +111,7 @@ open fun setShippingType()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setShippingType()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setShippingType()", e)
 
                                     }
                                 

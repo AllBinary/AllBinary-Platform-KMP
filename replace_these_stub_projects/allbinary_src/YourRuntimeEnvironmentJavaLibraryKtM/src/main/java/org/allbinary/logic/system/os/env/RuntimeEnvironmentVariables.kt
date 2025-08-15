@@ -45,8 +45,7 @@ open fun getTest1()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "java.java.home")
+                        return System.getProperty("java.java.home")
 }
 
 
@@ -172,8 +171,7 @@ environmentVariables!!.put(key, value)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "get()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "get()", e)
 
                                     }
                                 
@@ -195,16 +193,14 @@ open fun getTempDir()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "java.io.tmpdir")
+                        return System.getProperty("java.io.tmpdir")
 } catch(e: Exception)
             {
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getTempDir()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getTempDir()", e)
 
                                     }
                                 
@@ -226,16 +222,14 @@ open fun getLibraryPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "java.library.path")
+                        return System.getProperty("java.library.path")
 } catch(e: Exception)
             {
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getLibraryPath()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getLibraryPath()", e)
 
                                     }
                                 
@@ -257,16 +251,14 @@ open fun getClassPath()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "java.class.path")
+                        return System.getProperty("java.class.path")
 } catch(e: Exception)
             {
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getClassPath()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getClassPath()", e)
 
                                     }
                                 
@@ -291,16 +283,14 @@ open fun updateLibraryPath(libPath: String)
     var existingPath: String = this.getLibraryPath()!!
             
 
-System.setProperty(
-                            "java.library.path", libPath +":" +existingPath)
+System.setProperty("java.library.path", libPath +":" +existingPath)
 } catch(e: Exception)
             {
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "updateLibraryPath()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateLibraryPath()", e)
 
                                     }
                                 
@@ -317,16 +307,14 @@ open fun getUserHome()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "user.home")
+                        return System.getProperty("user.home")
 } catch(e: Exception)
             {
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getUserHome()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getUserHome()", e)
 
                                     }
                                 
@@ -348,16 +336,14 @@ open fun getUserDir()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return System.getProperty(
-                            "user.dir")
+                        return System.getProperty("user.dir")
 } catch(e: Exception)
             {
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getUserDir()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getUserDir()", e)
 
                                     }
                                 
@@ -381,8 +367,7 @@ open fun set()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "get()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "get()", e)
 
                                     }
                                 
@@ -466,8 +451,7 @@ open fun setVariable(var: String, val: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.OSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setVariable()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setVariable()", e)
 
                                     }
                                 

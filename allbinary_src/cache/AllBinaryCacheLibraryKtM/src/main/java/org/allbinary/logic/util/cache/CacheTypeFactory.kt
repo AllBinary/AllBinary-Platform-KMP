@@ -43,8 +43,7 @@ open fun getInstance()
                             null, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var SET: CacheType = CacheType(
-                            null, 
-                            "Set")
+                            null, "Set")
 
     var CACHE_VECTOR: CacheType = CacheType(
                             null, StringUtil.getInstance()!!.EMPTY_STRING)

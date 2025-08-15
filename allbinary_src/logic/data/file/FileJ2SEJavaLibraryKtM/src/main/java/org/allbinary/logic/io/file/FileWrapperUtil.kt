@@ -61,10 +61,7 @@ open fun wrapFiles(files: Array<Any?>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abFileArray
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "Exception Wrapping Files", 
-                            "FileWrapperUtil", 
-                            "wrapFiles", e)
+            {PreLogUtil.put("Exception Wrapping Files", "FileWrapperUtil", "wrapFiles", e)
 
 
 
@@ -88,10 +85,7 @@ open fun wrapFile(file: File)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFile(file)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "Exception Wrapping File", 
-                            "FileWrapperUtil", 
-                            "wrapFile", e)
+            {PreLogUtil.put("Exception Wrapping File", "FileWrapperUtil", "wrapFile", e)
 
 
 

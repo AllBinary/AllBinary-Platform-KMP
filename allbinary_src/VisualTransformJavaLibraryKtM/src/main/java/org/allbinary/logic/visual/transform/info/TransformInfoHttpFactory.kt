@@ -114,8 +114,7 @@ open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageCont
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, 
-                            "TransformInfoFactory", commonStrings!!.GET_INSTANCE, e)
+logUtil!!.put(commonStrings!!.EXCEPTION, "TransformInfoFactory", commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 

@@ -89,14 +89,11 @@ UserEntityFactory.getInstance()!!.deleteWhere(UserData.USERNAME, userName!!.get(
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Successfully Removed the user with ")
+stringBuffer!!.append("Successfully Removed the user with ")
 stringBuffer!!.append(UserData.USERNAME)
-stringBuffer!!.append(
-                            "=")
+stringBuffer!!.append("=")
 stringBuffer!!.append(userName!!.get())
-stringBuffer!!.append(
-                            " from to the user table")
+stringBuffer!!.append(" from to the user table")
 
     var success: String = stringBuffer!!.toString()!!
             
@@ -106,8 +103,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "delete()")
+                                    logUtil!!.put(success, this, "delete()")
 
                                     }
                                 
@@ -125,8 +121,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 
@@ -175,8 +170,7 @@ UserEntityFactory.getInstance()!!.insert(values)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "add()")
+                                    logUtil!!.put(success, this, "add()")
 
                                     }
                                 
@@ -194,8 +188,7 @@ UserEntityFactory.getInstance()!!.insert(values)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "add()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "add()", e)
 
                                     }
                                 
@@ -230,8 +223,7 @@ UserEntityFactory.getInstance()!!.update(user.getUserName(), values)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "update()")
+                                    logUtil!!.put(success, this, "update()")
 
                                     }
                                 
@@ -249,8 +241,7 @@ UserEntityFactory.getInstance()!!.update(user.getUserName(), values)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 
@@ -322,8 +313,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "create()")
+                                    logUtil!!.put(success, this, "create()")
 
                                     }
                                 
@@ -341,8 +331,7 @@ open fun create()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "create()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "create()", e)
 
                                     }
                                 
@@ -372,8 +361,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "restore()")
+                                    logUtil!!.put(success, this, "restore()")
 
                                     }
                                 
@@ -391,8 +379,7 @@ open fun restore()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "restore()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "restore()", e)
 
                                     }
                                 
@@ -422,8 +409,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "backup()")
+                                    logUtil!!.put(success, this, "backup()")
 
                                     }
                                 
@@ -441,8 +427,7 @@ open fun backup()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "backup()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "backup()", e)
 
                                     }
                                 

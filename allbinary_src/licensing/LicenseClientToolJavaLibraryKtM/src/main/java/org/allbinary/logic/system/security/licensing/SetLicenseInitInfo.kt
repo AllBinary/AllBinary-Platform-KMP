@@ -133,8 +133,7 @@ open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
                                     
 
 
-                            throw Exception(
-                            "null Vector Passed - Just Make Empty if you want")
+                            throw Exception("null Vector Passed - Just Make Empty if you want")
 
                                     }
                                 
@@ -142,8 +141,7 @@ open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
     var licenseInitInfo: LicenseInitInfo = this.getLicenseInitInfo()!!
             
 
-System.out.println(
-                            "License Serv Example: http://www.dartstatistics.com/LicServ/serverssl.php")
+System.out.println("License Serv Example: http://www.dartstatistics.com/LicServ/serverssl.php")
 licenseInitInfo!!.clearServers()
 
     var file: File = File(PrintLicenseInitInfo.PATH +"licenseservers.txt")
@@ -154,9 +152,8 @@ licenseInitInfo!!.clearServers()
 
     var lineNumberReader: LineNumberReader = LineNumberReader(reader)
 
-)
 
-
+        while(true)
         {
     var line: String = lineNumberReader!!.readLine()!!
             

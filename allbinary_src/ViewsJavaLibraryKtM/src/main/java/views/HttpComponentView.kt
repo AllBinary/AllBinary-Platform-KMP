@@ -68,8 +68,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "ComponentView()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "ComponentView()")
 
                                     }
                                 
@@ -152,8 +151,7 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toXmlDoc()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlDoc()", e)
 
                                     }
                                 
@@ -238,8 +236,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 

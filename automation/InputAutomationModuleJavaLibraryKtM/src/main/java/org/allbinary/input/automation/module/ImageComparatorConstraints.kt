@@ -214,8 +214,7 @@ open fun isFrameAllowed(frame: Int)
 
     var remainder: Int = ((frame +1) % this.doImageComparisonEveryNthFrame)
 
-logUtil!!.put(" Frame: " +frame +" remainder: " +remainder +" this.doImageComparisonEveryNthFrame: " +this.doImageComparisonEveryNthFrame, this, 
-                            "isCollisionWithAvoidRectangles")
+logUtil!!.put(" Frame: " +frame +" remainder: " +remainder +" this.doImageComparisonEveryNthFrame: " +this.doImageComparisonEveryNthFrame, this, "isCollisionWithAvoidRectangles")
 
     
                         if(remainder == 0)
@@ -275,8 +274,7 @@ open fun log()
         {
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
 
-logUtil!!.put("Avoid Rectangle: " +avoidRectangle, this, 
-                            "log")
+logUtil!!.put("Avoid Rectangle: " +avoidRectangle, this, "log")
 }
 
 }

@@ -113,13 +113,10 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.getEmailServerConfigurationInterface()!!.toString())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "Subject: \n")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("Subject: \n")
 stringBuffer!!.append(this.getSubject())
-stringBuffer!!.append(
-                            "\nText Body: \n")
+stringBuffer!!.append("\nText Body: \n")
 stringBuffer!!.append(this.getTextBody())
 
 

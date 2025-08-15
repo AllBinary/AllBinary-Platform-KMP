@@ -57,8 +57,7 @@ open fun getStoreName()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "getStoreName", 
+    var method: Method = helperClass!!.getMethod("getStoreName", 
                             null)!!
             
 
@@ -84,8 +83,7 @@ open fun getStoreName()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getStoreName()", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "getStoreName()", e)
 
                                     }
                                 

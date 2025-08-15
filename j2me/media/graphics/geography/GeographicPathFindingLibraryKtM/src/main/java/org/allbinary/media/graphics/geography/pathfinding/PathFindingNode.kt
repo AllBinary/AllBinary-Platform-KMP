@@ -58,8 +58,7 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
                                     
 
 
-                            throw Exception(
-                            "No GeographicMapCellPosition")
+                            throw Exception("No GeographicMapCellPosition")
 
                                     }
                                 
@@ -90,8 +89,7 @@ override fun toString()
 
 stringBuffer!!.append(this::class.qualifiedName!!)
 stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
-stringBuffer!!.append(
-                            " Path: ")
+stringBuffer!!.append(" Path: ")
 stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
 
     var pathFindingNode: PathFindingNode = this.parent

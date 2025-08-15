@@ -125,9 +125,7 @@ open fun viewSummary()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(
-                            "Successfull Inventory View Summary", this, 
-                            "viewSummary()")
+                                    logUtil!!.put("Successfull Inventory View Summary", this, "viewSummary()")
 
                                     }
                                 
@@ -145,8 +143,7 @@ open fun viewSummary()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "viewSummary()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewSummary()", e)
 
                                     }
                                 
@@ -199,9 +196,7 @@ open fun search()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(
-                            "Successful Inventory Dynamic Search", this, 
-                            "searchSingleDynamicPage()")
+                                    logUtil!!.put("Successful Inventory Dynamic Search", this, "searchSingleDynamicPage()")
 
                                     }
                                 
@@ -219,8 +214,7 @@ open fun search()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "searchSingleDynamicPage()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "searchSingleDynamicPage()", e)
 
                                     }
                                 

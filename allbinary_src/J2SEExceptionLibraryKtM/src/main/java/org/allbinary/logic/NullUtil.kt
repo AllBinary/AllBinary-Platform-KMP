@@ -57,6 +57,9 @@ open fun getInstance()
         
     val NULL_OBJECT: Any = Any()
 
+    val NULL_CLASS: KClass<*> = NULL_OBJECT::class!!
+            
+
     val NULL_OBJECT_ARRAY: Array<Any?> = arrayOfNulls(0)
 
     val NULL_BYTE_ARRAY: ByteArray = ByteArray(0)

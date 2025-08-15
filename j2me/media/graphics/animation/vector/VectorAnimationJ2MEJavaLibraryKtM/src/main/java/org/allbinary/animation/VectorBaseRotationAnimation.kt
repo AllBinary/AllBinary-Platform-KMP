@@ -223,8 +223,7 @@ nextPointY= nextPoint[1]!!
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "paintVectors", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintVectors", e)
 }
 
 }

@@ -56,8 +56,7 @@ open fun viewParams(params: Array<KClass<*>?>)
                         for (index in 0 until params.size)
 
 
-        {stringBuffer!!.append(
-                            " ")
+        {stringBuffer!!.append(" ")
 stringBuffer!!.append(params[index]!!.getName())
 }
 

@@ -96,8 +96,7 @@ this.sound= hashtable.get(SOUND as Object?) as Sound
                                     
 
 
-                            throw Exception(
-                            "No Sound Provided!!")
+                            throw Exception("No Sound Provided!!")
 
                                     }
                                 

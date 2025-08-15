@@ -124,22 +124,19 @@ open fun save(motionRectangles: MotionRectangles, frame: Long)
 
 filePathStringBuffer!!.append(ImageOutputData.SAVE_PATH)
 filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
-filePathStringBuffer!!.append(
-                            "_")
+filePathStringBuffer!!.append("_")
 filePathStringBuffer!!.append(motionRectangles!!.getName())
 
     var filePathStringBuffer1: StringMaker = StringMaker()
 
 filePathStringBuffer1!!.append(filePathStringBuffer!!.toString())
-filePathStringBuffer1!!.append(
-                            "_1")
+filePathStringBuffer1!!.append("_1")
 filePathStringBuffer1!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePathStringBuffer2: StringMaker = StringMaker()
 
 filePathStringBuffer2!!.append(filePathStringBuffer!!.toString())
-filePathStringBuffer2!!.append(
-                            "_2")
+filePathStringBuffer2!!.append("_2")
 filePathStringBuffer2!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePathStringBuffer3: StringMaker = StringMaker()

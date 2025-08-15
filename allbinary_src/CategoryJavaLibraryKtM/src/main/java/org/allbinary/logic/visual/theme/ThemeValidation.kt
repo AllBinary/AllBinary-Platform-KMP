@@ -131,17 +131,13 @@ this.themeName= pathUtil!!.getNameFromPath(categoryThemeAbPath!!.toString())
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "CategoryThemePath: ")
+stringBuffer!!.append("CategoryThemePath: ")
 stringBuffer!!.append(categoryThemeAbPath!!.toString())
-stringBuffer!!.append(
-                            " & CategoryPath: ")
+stringBuffer!!.append(" & CategoryPath: ")
 stringBuffer!!.append(this.categoryAbPath!!.toString())
-stringBuffer!!.append(
-                            " & ThemeName: ")
+stringBuffer!!.append(" & ThemeName: ")
 stringBuffer!!.append(this.themeName)
-logUtil!!.put(
-                            "Http Request Constructor", this, stringBuffer!!.toString())
+logUtil!!.put("Http Request Constructor", this, stringBuffer!!.toString())
 
                                     }
                                 
@@ -359,8 +355,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -381,8 +376,7 @@ open fun validationInfo()
             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Theme Validation Error")
+stringBuffer!!.append("Theme Validation Error")
 
 
 
@@ -394,9 +388,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

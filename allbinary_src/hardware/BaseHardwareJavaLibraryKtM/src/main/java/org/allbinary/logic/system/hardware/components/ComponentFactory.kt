@@ -53,41 +53,29 @@ open fun getInstance()
             {
             }            
         
-    val VGA: Component = Component(
-                            "VGA")
+    val VGA: Component = Component("VGA")
 
-    val IDE: Component = Component(
-                            "IDE")
+    val IDE: Component = Component("IDE")
 
-    val SCSI: Component = Component(
-                            "SCSI")
+    val SCSI: Component = Component("SCSI")
 
-    val BRIDGE: Component = Component(
-                            "bridge")
+    val BRIDGE: Component = Component("bridge")
 
-    val ETHERNET: Component = Component(
-                            "Ethernet")
+    val ETHERNET: Component = Component("Ethernet")
 
-    val USB: Component = Component(
-                            "USB")
+    val USB: Component = Component("USB")
 
-    val MULTIMEDIA: Component = Component(
-                            "Multimedia")
+    val MULTIMEDIA: Component = Component("Multimedia")
 
-    val PCI: Component = Component(
-                            "PCI")
+    val PCI: Component = Component("PCI")
 
-    val RAID: Component = Component(
-                            "RAID")
+    val RAID: Component = Component("RAID")
 
-    val SMBUS: Component = Component(
-                            "SMBus")
+    val SMBUS: Component = Component("SMBus")
 
-    val PIC: Component = Component(
-                            "PIC")
+    val PIC: Component = Component("PIC")
 
-    val Class: Component = Component(
-                            "Class")
+    val Class: Component = Component("Class")
 
     val UNKNOWN: Component = Component(CommonStrings.getInstance()!!.UNKNOWN)
 

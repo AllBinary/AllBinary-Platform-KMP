@@ -215,11 +215,9 @@ this.getInputMapping()!!.add(gameActionInput, mappedToInput)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "End - Total Loaded Keys Mapped: ")
+stringBuffer!!.append("End - Total Loaded Keys Mapped: ")
 stringBuffer!!.append(this.getTotalMapped())
-stringBuffer!!.append(
-                            " to: ")
+stringBuffer!!.append(" to: ")
 stringBuffer!!.append(totalMappedTo)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }

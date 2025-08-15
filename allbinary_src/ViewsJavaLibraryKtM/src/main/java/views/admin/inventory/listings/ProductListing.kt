@@ -165,8 +165,7 @@ open fun savePage(file: String, data: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Creating File: " +file, this, 
-                            "generateAll()")
+                                    logUtil!!.put("Creating File: " +file, this, "generateAll()")
 
                                     }
                                 
@@ -200,8 +199,7 @@ StreamUtil.getInstance()!!.close(idOutData)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Wrote Total Bytes: " +newFile!!.length(), this, 
-                            "generateAll()")
+                                    logUtil!!.put("Wrote Total Bytes: " +newFile!!.length(), this, "generateAll()")
 
                                     }
                                 
@@ -293,8 +291,7 @@ this.searchRequest!!.setFileBaseName(pageName)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Saving Listing: " +index, this, 
-                            "generateAll()")
+                                    logUtil!!.put("Saving Listing: " +index, this, "generateAll()")
 
                                     }
                                 
@@ -410,8 +407,7 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
                         
                                     {
-                                    logUtil!!.put("Store Static Pages Path: " +staticPath, this, 
-                            "generateAll()")
+                                    logUtil!!.put("Store Static Pages Path: " +staticPath, this, "generateAll()")
 
                                     }
                                 
@@ -436,11 +432,9 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Products For ")
+stringBuffer!!.append("Products For ")
 stringBuffer!!.append(storeFront!!.getName())
-stringBuffer!!.append(
-                            " Store Not Found")
+stringBuffer!!.append(" Store Not Found")
 
 
 
@@ -480,11 +474,9 @@ stringBuffer!!.append(
 
 this.addStaticPageInfoToDatabase(storeFront, keywordFilenameHashMap)
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Static Files Generated Successfully For ")
+stringBuffer!!.append("Static Files Generated Successfully For ")
 stringBuffer!!.append(storeFront!!.getName())
-stringBuffer!!.append(
-                            " it used packages ")
+stringBuffer!!.append(" it used packages ")
 stringBuffer!!.append(storeFront!!.getPackageLocation())
 stringBuffer!!.append(INVENTORY)
 
@@ -528,8 +520,7 @@ open fun generateAll(storeName: String)
                                     {
                                     this.searchRequest!!.setStoreFront(this.storeFronts!!.getStoreFrontInterface(storeName))
 stringBuffer!!.append(this.generateAll())
-stringBuffer!!.append(
-                            "<br />")
+stringBuffer!!.append("<br />")
 
                                     }
                                 
@@ -552,8 +543,7 @@ stringBuffer!!.append(
         {storeName= storeFrontVector!!.get(index) as String
 this.searchRequest!!.setStoreFront(this.storeFronts!!.getStoreFrontInterface(storeName))
 stringBuffer!!.append(this.generateAll())
-stringBuffer!!.append(
-                            "<br />")
+stringBuffer!!.append("<br />")
 }
 
 
@@ -571,8 +561,7 @@ stringBuffer!!.append(
 
                         }
                             
-stringBuffer!!.append(
-                            "All Static Pages Generated<br/>")
+stringBuffer!!.append("All Static Pages Generated<br/>")
 
 
 

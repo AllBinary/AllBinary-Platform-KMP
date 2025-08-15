@@ -69,8 +69,7 @@ open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeCl
 
 
                     var gameInfo = gameInfo
-logUtil!!.put(
-                            "Begin Remote HighScores Retrieval", this, commonStrings!!.PROCESS)
+logUtil!!.put("Begin Remote HighScores Retrieval", this, commonStrings!!.PROCESS)
 
     var gameInfoData: GameInfoData = GameInfoData.getInstance()!!
             
@@ -94,9 +93,7 @@ hashtable.put(RemoteHighScoresData.getInstance()!!.GAME_CONFIGURATION, GameConfi
                         
                                     {
                                     
-    var resultHashtable: Hashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, 
-                            "highscoresservicessl.php", 
-                            "HighScoresService.process").
+    var resultHashtable: Hashtable<Any, Any> = XmlRpcRemoteHighScoresClient(abeClientInformation, "highscoresservicessl.php", "HighScoresService.process").
                             get(hashtable, noCrypt) as Hashtable<Any, Any>
 
 remoteHighScores!!.update(resultHashtable)

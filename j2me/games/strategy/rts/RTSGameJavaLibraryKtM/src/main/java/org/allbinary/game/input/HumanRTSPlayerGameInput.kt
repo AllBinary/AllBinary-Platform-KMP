@@ -500,8 +500,7 @@ open fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
             
 
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START)!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, 
-                            "setSelectedRtsFormInput")
+                            append(CommonLabels.getInstance()!!.START)!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, "setSelectedRtsFormInput")
 super.setSelectedRtsFormInput(selectedRtsFormInput)
 this.setSelectedRtsLayer(
                             null)
@@ -641,9 +640,7 @@ gameCanvas!!.updateCurrentTouchInputFactory(endLevelTouchButtonsBuilder)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Set Player Default Form", this, 
-                            "setSelectedRTSLayer")
+                            logUtil!!.put("Set Player Default Form", this, "setSelectedRTSLayer")
 this.getRtsPlayerLayerInterface()!!.setCurrentScrollSelectionForm(this.getRtsPlayerLayerInterface()!!.getBuildingScrollSelectionForm())
 this.setSelectedRtsFormInput(this.getRtsPlayerLayerInterface()!!.getRTSFormInput())
 this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(

@@ -75,8 +75,7 @@ open fun getFormData()
                                     null
                                 )
                         
-                                    throw Exception(
-                            "No Request Params Found")
+                                    throw Exception("No Request Params Found")
 this.id= hashMap!!.get(BasicItemData.ID) as String
 }
 
@@ -178,8 +177,7 @@ open fun validationInfo()
                                  || !StringValidationUtil.getInstance()!!.isNumber(this.id))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is not valid.<br />")
+                                    stringBuffer!!.append("Id is not valid.<br />")
 
                                     }
                                 
@@ -190,8 +188,7 @@ open fun validationInfo()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Item does not exist.<br />")
+                                    stringBuffer!!.append("Item does not exist.<br />")
 
                                     }
                                 

@@ -106,8 +106,7 @@ this.hashMap= HashMap<Any, Any>()
     var nodeList: NodeList = document.getElementsByTagName(GenericProfilesData.NAME)!!
             
 
-logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this, 
-                            "Contructor")
+logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this, "Contructor")
 
     
                         if(nodeList != 
@@ -127,14 +126,12 @@ logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this,
 
                         }
                             
-logUtil!!.put("Loaded: " +this.hashMap!!.size +" Configuration Profile Actions", this, 
-                            "Contructor")
+logUtil!!.put("Loaded: " +this.hashMap!!.size +" Configuration Profile Actions", this, "Contructor")
 
                                     }
                                 
                         else {
-                            logUtil!!.put("No Generic Profile: " +fileName, this, 
-                            "Contructor")
+                            logUtil!!.put("No Generic Profile: " +fileName, this, "Contructor")
 
                         }
                             

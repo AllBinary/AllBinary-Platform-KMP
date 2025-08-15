@@ -42,10 +42,8 @@ public constructor        (hashMap: HashMap<Any, Any>)
         {
 
                     var hashMap = hashMap
-this.current= hashMap!!.get(
-                            "current") as Integer
-this.total= hashMap!!.get(
-                            "total") as Integer
+this.current= hashMap!!.get("current") as Integer
+this.total= hashMap!!.get("total") as Integer
 }
 
 

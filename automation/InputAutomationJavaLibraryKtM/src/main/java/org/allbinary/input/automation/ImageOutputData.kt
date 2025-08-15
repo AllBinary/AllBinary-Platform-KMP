@@ -36,8 +36,7 @@ open public class ImageOutputData
 
         companion object {
             
-    val SAVE_PATH: String = System.getProperty(
-                            "user.dir") +File.separator +"saves" +File.separator
+    val SAVE_PATH: String = System.getProperty("user.dir") +File.separator +"saves" +File.separator
 
         }
             private constructor        ()

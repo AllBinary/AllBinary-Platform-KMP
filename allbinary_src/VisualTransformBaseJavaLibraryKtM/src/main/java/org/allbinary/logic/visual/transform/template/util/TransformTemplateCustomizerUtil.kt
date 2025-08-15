@@ -136,8 +136,7 @@ hashMap!!.put(arrayOf(GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("RootViewName for ObjectConfig: " +rootViewName, this, 
-                            "getPageNameHack")
+                                    logUtil!!.put("RootViewName for ObjectConfig: " +rootViewName, this, "getPageNameHack")
 
                                     }
                                 

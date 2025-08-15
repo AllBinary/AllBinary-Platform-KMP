@@ -47,23 +47,17 @@ open fun getInstance()
 
         }
             
-    val MIME_AUDIO_TONE: AudioContentTypeData = AudioContentTypeData(
-                            "audio/x-tone-seq")
+    val MIME_AUDIO_TONE: AudioContentTypeData = AudioContentTypeData("audio/x-tone-seq")
 
-    val MIME_AUDIO_AMR: AudioContentTypeData = AudioContentTypeData(
-                            "audio/amr")
+    val MIME_AUDIO_AMR: AudioContentTypeData = AudioContentTypeData("audio/amr")
 
-    val MIME_AUDIO_AMR_WB: AudioContentTypeData = AudioContentTypeData(
-                            "audio/amr-wb")
+    val MIME_AUDIO_AMR_WB: AudioContentTypeData = AudioContentTypeData("audio/amr-wb")
 
-    val MIME_AUDIO_WAV: AudioContentTypeData = AudioContentTypeData(
-                            "audio/x-wav")
+    val MIME_AUDIO_WAV: AudioContentTypeData = AudioContentTypeData("audio/x-wav")
 
-    val MIME_AUDIO_MIDI: AudioContentTypeData = AudioContentTypeData(
-                            "audio/midi")
+    val MIME_AUDIO_MIDI: AudioContentTypeData = AudioContentTypeData("audio/midi")
 
-    val MIME_AUDIO_SP_MIDI: AudioContentTypeData = AudioContentTypeData(
-                            "audio/sp-midi")
+    val MIME_AUDIO_SP_MIDI: AudioContentTypeData = AudioContentTypeData("audio/sp-midi")
 private constructor        ()
             : super()
         {}

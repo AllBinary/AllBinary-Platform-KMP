@@ -204,8 +204,7 @@ orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "setOrderStatus()")
+                                    logUtil!!.put(success, this, "setOrderStatus()")
 
                                     }
                                 
@@ -223,8 +222,7 @@ orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setOrderStatus()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)
 
                                     }
                                 

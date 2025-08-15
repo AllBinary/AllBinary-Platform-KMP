@@ -176,8 +176,7 @@ stringBuffer!!.append(size)
         {
     var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
 
-stringBuffer!!.append(
-                            " s: ")
+stringBuffer!!.append(" s: ")
 stringBuffer!!.append(usedList!!.size())
 }
 

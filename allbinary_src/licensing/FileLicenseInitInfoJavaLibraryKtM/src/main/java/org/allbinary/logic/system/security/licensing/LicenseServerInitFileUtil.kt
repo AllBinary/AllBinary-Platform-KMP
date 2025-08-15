@@ -68,8 +68,7 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
                         if(FileFactory.getInstance()!!.isFile(filePath))
                         
                                     {
-                                    logUtil!!.put(
-                            "Using Existing License File", this, commonStrings!!.INIT)
+                                    logUtil!!.put("Using Existing License File", this, commonStrings!!.INIT)
 
                                     }
                                 
@@ -103,8 +102,7 @@ open fun write()
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(filePath)!!
             
 
-logUtil!!.put(
-                            "Writing Default License File", this, commonStrings!!.INIT)
+logUtil!!.put("Writing Default License File", this, commonStrings!!.INIT)
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
             

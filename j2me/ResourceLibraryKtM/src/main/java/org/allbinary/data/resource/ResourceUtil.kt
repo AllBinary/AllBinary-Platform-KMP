@@ -72,9 +72,7 @@ open fun setClassLoader(classLoader: ClassLoader)
 
                     var classLoader = classLoader
 logUtil!!.put(StringMaker().
-                            append(
-                            "Resource Loader: ")!!.append(classLoader!!::class.qualifiedName!!)!!.toString(), this, 
-                            "setClassLoader")
+                            append("Resource Loader: ")!!.append(classLoader!!::class.qualifiedName!!)!!.toString(), this, "setClassLoader")
 ResourceUtil.classLoader= classLoader
 }
 
@@ -109,8 +107,7 @@ open fun getResourceAsStream(resource: String)
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "Unable to obtain: ")!!.append(resource)!!.toString())
+                            append("Unable to obtain: ")!!.append(resource)!!.toString())
 
                                     }
                                 

@@ -49,8 +49,7 @@ open public class XmlRpcRemoteLicenseRegistrationClient : XmlRpcAbeClient {
     private val PAGE: String = "licenseregistrationserverssl.php"
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, 
-                            "LicenseRegistrationServer.process"){
+                            : super(clientInfo, "LicenseRegistrationServer.process"){
 
                     var clientInfo = clientInfo
 
@@ -93,8 +92,7 @@ logUtil!!.put(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(
             
 
 
-    var index: Int = serverUrl!!.lastIndexOf(
-                            "/")!!
+    var index: Int = serverUrl!!.lastIndexOf("/")!!
             
 
 serverUrl= serverUrl!!.substring(0, index +1) +PAGE

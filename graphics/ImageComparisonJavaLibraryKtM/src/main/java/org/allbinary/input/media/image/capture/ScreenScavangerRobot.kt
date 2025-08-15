@@ -52,8 +52,7 @@ public constructor        ()
             
 open fun getScreenAsBufferedImages()
         //nullable = true from not(false or (false and true)) = true
-: Array<BufferedImage?>{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "getScreenAsBufferedImages")
+: Array<BufferedImage?>{logUtil!!.put(this.commonStrings!!.START, this, "getScreenAsBufferedImages")
 
     var dimScreenSize: Dimension = Toolkit.getDefaultToolkit()!!.getScreenSize()!!
             
@@ -72,13 +71,10 @@ open fun getScreenAsBufferedImages()
     var index: Int = 0
 
 
-    var inputRobotInterface: InputRobotInterface = robotHashtable!!.get(
-                            "Java Robot") as InputRobotInterface
+    var inputRobotInterface: InputRobotInterface = robotHashtable!!.get("Java Robot") as InputRobotInterface
 
 bufferedImageArray[index]= inputRobotInterface!!.createScreenCapture(rectScreenSize)
-logUtil!!.put(
-                            "Finish", this, 
-                            "getScreenAsBufferedImages")
+logUtil!!.put("Finish", this, "getScreenAsBufferedImages")
 
 
 

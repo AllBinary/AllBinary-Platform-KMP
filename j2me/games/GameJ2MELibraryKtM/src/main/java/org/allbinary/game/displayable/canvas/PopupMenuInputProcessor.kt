@@ -245,8 +245,7 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                 )
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception: Bug", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
+                                    logUtil!!.put("Exception: Bug", this, gameInputStrings!!.PROCESS_MOTION_INPUT)
 
 
 

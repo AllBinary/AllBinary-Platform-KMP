@@ -162,12 +162,10 @@ open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
                     var displayChangeEvent = displayChangeEvent
 
         try {
-            logUtil!!.put(commonStrings!!.START, this, 
-                            "onDisplayChangeEvent")
+            logUtil!!.put(commonStrings!!.START, this, "onDisplayChangeEvent")
 this.getRTSLayerInfoPaintable()!!.update()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onDisplayChangeEvent", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDisplayChangeEvent", e)
 }
 
 }
@@ -339,9 +337,7 @@ this.setSelectedRTSLayer(foundRTSLayer, geographicMapCellPosition)
             
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "Off Of Map -")!!.append(commonLabels!!.WIDTH_LABEL)!!.append(allBinaryTiledLayer!!.getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(allBinaryTiledLayer!!.getHeight())!!.toString(), this, 
-                            "select")
+                            append("Off Of Map -")!!.append(commonLabels!!.WIDTH_LABEL)!!.append(allBinaryTiledLayer!!.getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(allBinaryTiledLayer!!.getHeight())!!.toString(), this, "select")
 
                         }
                             
@@ -466,9 +462,7 @@ open fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
 
                     var selectedRtsFormInput = selectedRtsFormInput
 logUtil!!.put(StringMaker().
-                            append(
-                            "RTSFormInput: ")!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, 
-                            "setSelectedRtsFormInput")
+                            append("RTSFormInput: ")!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, "setSelectedRtsFormInput")
 this.selectedRtsFormInput= selectedRtsFormInput
 }
 

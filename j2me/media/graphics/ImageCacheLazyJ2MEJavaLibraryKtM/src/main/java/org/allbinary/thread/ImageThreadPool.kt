@@ -38,8 +38,7 @@ open public class ImageThreadPool : ThreadPool {
 
         companion object {
             
-    private val instance: ThreadPool = ImageThreadPool(
-                            "ImageLoader", 1)
+    private val instance: ThreadPool = ImageThreadPool("ImageLoader", 1)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

@@ -227,16 +227,13 @@ override fun toString()
 
     var BREAK: String = "<br/>"
 
-stringBuffer!!.append(
-                            "License Id: ")
+stringBuffer!!.append("License Id: ")
 stringBuffer!!.append(this.getLicenseId())
 stringBuffer!!.append(BREAK)
-stringBuffer!!.append(
-                            "Is Valid: ")
+stringBuffer!!.append("Is Valid: ")
 stringBuffer!!.append(this.isValid())
 stringBuffer!!.append(BREAK)
-stringBuffer!!.append(
-                            "Keys: ")
+stringBuffer!!.append("Keys: ")
 stringBuffer!!.append(this.hashtable.toString())
 stringBuffer!!.append(BREAK)
 
@@ -257,8 +254,7 @@ stringBuffer!!.append(BREAK)
         {
     var nextServerString: String = serverVector!!.get(index) as String
 
-stringBuffer!!.append(
-                            "Server: ")
+stringBuffer!!.append("Server: ")
 stringBuffer!!.append(nextServerString)
 stringBuffer!!.append(BREAK)
 }

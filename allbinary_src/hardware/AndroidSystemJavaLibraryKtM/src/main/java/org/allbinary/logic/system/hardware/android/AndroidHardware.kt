@@ -69,8 +69,7 @@ public constructor        ()
                                     
 
 
-                            throw Exception(
-                            "Not Enough Data For A Valid License On Linux")
+                            throw Exception("Not Enough Data For A Valid License On Linux")
 
                                     }
                                 
@@ -130,8 +129,7 @@ componentInterfaceVector= BasicArrayList()
 
     var lineNumberReader: LineNumberReader = LineNumberReader(pciFile)
 
-logUtil!!.put(
-                            "File Found", this, commonStrings!!.CONSTRUCTOR)
+logUtil!!.put("File Found", this, commonStrings!!.CONSTRUCTOR)
 
     var nextLine: String = lineNumberReader!!.readLine()!!
             

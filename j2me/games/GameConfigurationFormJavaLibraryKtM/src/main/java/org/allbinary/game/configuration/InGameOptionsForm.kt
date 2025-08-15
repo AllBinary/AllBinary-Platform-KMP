@@ -40,14 +40,11 @@ open public class InGameOptionsForm : CommandForm {
 
         companion object {
             
-    val DISPLAY: Command = Command(
-                            "Options In Game", Command.SCREEN, 1)
+    val DISPLAY: Command = Command("Options In Game", Command.SCREEN, 1)
 
-    val SAVE: Command = Command(
-                            "Save", Command.SCREEN, 1)
+    val SAVE: Command = Command("Save", Command.SCREEN, 1)
 
-    val DEFAULT: Command = Command(
-                            "Default", Command.SCREEN, 1)
+    val DEFAULT: Command = Command("Default", Command.SCREEN, 1)
 
         }
              constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        

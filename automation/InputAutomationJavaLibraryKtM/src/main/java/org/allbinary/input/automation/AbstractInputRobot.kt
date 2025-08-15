@@ -65,8 +65,7 @@ open fun mouseMove(point: Point)
 
                     var point = point
 this.mouseMove(point.x, point.y)
-logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, 
-                            "moveMouse")
+logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse")
 }
 
 
@@ -88,8 +87,7 @@ open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
             
 
 this.mouseMove(point.x +x, point.y +y)
-logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle of: " +rectangle, this, 
-                            "moveMouseToTarget")
+logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle of: " +rectangle, this, "moveMouseToTarget")
 }
 
 

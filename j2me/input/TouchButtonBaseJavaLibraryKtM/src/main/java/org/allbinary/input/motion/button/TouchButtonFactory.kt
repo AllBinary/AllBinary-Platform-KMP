@@ -150,8 +150,7 @@ open fun setList(list: BasicArrayList)
                                     
 
 
-                            throw Exception(
-                            "Null List")
+                            throw Exception("Null List")
 
                                     }
                                 

@@ -449,16 +449,14 @@ open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPositio
     var stringMaker: StringMaker = StringMaker()
 
 
-    var string: String = stringMaker!!.append(CellPosition.toString(fromGeographicMapCellPosition))!!.append(
-                            " == ")!!.append(CellPosition.toString(toGeographicMapCellPosition))!!.toString()!!
+    var string: String = stringMaker!!.append(CellPosition.toString(fromGeographicMapCellPosition))!!.append(" == ")!!.append(CellPosition.toString(toGeographicMapCellPosition))!!.toString()!!
             
 
 stringMaker!!.delete(0, stringMaker!!.length())
 
 
 
-                            throw Exception(stringMaker!!.append(
-                            "Error: ")!!.append(string)!!.toString())
+                            throw Exception(stringMaker!!.append("Error: ")!!.append(string)!!.toString())
 }
 
 

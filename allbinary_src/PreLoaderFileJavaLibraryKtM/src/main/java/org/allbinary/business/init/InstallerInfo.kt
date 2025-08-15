@@ -111,9 +111,7 @@ hasRead= false
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed", this, 
-                            "write")
+                                    logUtil!!.put("Failed", this, "write")
 
                                     }
                                 
@@ -168,8 +166,7 @@ this.setPassword(WeakCrypt(2).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    logUtil!!.put("Not a File - Failed Loading: " +FILEABPATH.toString(), this, 
-                            "read")
+                                    logUtil!!.put("Not a File - Failed Loading: " +FILEABPATH.toString(), this, "read")
 
                                     }
                                 
@@ -182,9 +179,7 @@ this.setPassword(WeakCrypt(2).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed", this, 
-                            "read")
+                                    logUtil!!.put("Failed", this, "read")
 
                                     }
                                 
@@ -236,9 +231,7 @@ this.read()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed", this, 
-                            "updateIfNeeded")
+                                    logUtil!!.put("Failed", this, "updateIfNeeded")
 
                                     }
                                 

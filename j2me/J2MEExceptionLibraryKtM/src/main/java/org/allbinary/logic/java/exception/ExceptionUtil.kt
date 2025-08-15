@@ -53,8 +53,7 @@ open fun getInstance()
         {}
 
 
-    val PRETEND_EXCEPTION: Exception = Exception(
-                            "Not Really An Exception")
+    val PRETEND_EXCEPTION: Exception = Exception("Not Really An Exception")
 
     private val NONE: String = "No Stack Trace"
 

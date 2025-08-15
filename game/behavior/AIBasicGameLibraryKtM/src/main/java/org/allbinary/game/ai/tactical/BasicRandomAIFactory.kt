@@ -70,8 +70,7 @@ open public class BasicRandomAIFactory
                                     
 
 
-                            throw Exception(
-                            "No Visitor Provided")
+                            throw Exception("No Visitor Provided")
 
                                     }
                                 

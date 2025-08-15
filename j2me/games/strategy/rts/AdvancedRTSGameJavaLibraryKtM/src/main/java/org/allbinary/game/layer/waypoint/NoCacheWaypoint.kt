@@ -258,8 +258,7 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
                                     
 
 
-                            throw Exception(
-                            "Path may have been cleared by clearing caching")
+                            throw Exception("Path may have been cleared by clearing caching")
 
                                     }
                                 

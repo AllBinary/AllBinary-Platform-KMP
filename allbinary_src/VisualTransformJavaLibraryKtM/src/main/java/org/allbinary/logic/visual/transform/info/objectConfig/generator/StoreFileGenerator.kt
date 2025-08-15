@@ -98,10 +98,8 @@ fileName= transformInfoInterface!!.getName()!!.substring(transformInfoHttpStoreI
 
     var outputMappingHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-outputMappingHashMap!!.put(TransformInfosData.getInstance()!!.PREVIEW, 
-                            "Preview")
-outputMappingHashMap!!.put(TransformInfosData.getInstance()!!.SMALL_PREVIEW, 
-                            "SmallPreview")
+outputMappingHashMap!!.put(TransformInfosData.getInstance()!!.PREVIEW, "Preview")
+outputMappingHashMap!!.put(TransformInfosData.getInstance()!!.SMALL_PREVIEW, "SmallPreview")
 outputMappingHashMap!!.put(CommonSeps.getInstance()!!.SPACE, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var replace: Replace = Replace(outputMappingHashMap)
@@ -118,8 +116,7 @@ fileName= replace.all(fileName)
                                     
 
 
-                            throw Exception(
-                            "TransformInfoObjectConfigGenerator FileName Not Specified")
+                            throw Exception("TransformInfoObjectConfigGenerator FileName Not Specified")
 
                                     }
                                 
@@ -144,8 +141,7 @@ this.output= tempOutput
                                     
 
 
-                            throw Exception(
-                            "TransformInfoObjectConfigGenerator Output=extension Not Specified")
+                            throw Exception("TransformInfoObjectConfigGenerator Output=extension Not Specified")
 
                                     }
                                 
@@ -180,8 +176,7 @@ open fun process(input: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Processing", this, commonStrings!!.PROCESS)
+                                    logUtil!!.put("Processing", this, commonStrings!!.PROCESS)
 
                                     }
                                 
@@ -219,8 +214,7 @@ FileUtil.getInstance()!!.write(inputStream, this.file)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Processed", this, commonStrings!!.PROCESS)
+                                    logUtil!!.put("Processed", this, commonStrings!!.PROCESS)
 
                                     }
                                 

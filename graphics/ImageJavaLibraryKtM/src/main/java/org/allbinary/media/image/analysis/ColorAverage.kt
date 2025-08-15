@@ -49,21 +49,15 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "getAvgRed(): ")
+stringBuffer!!.append("getAvgRed(): ")
 stringBuffer!!.append(this.getAvgRed())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getAvgRed(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getAvgRed(): ")
 stringBuffer!!.append(this.getAvgRed())
-stringBuffer!!.append(
-                            "\n")
-stringBuffer!!.append(
-                            "getAvgGreen(): ")
+stringBuffer!!.append("\n")
+stringBuffer!!.append("getAvgGreen(): ")
 stringBuffer!!.append(this.getAvgGreen())
-stringBuffer!!.append(
-                            "\n")
+stringBuffer!!.append("\n")
 
 
 

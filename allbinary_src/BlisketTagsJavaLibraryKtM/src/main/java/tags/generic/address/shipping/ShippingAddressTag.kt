@@ -56,10 +56,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.ViewShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.ViewShippingAddressesView")
 
                                     }
                                 
@@ -68,10 +66,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.EditShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.EditShippingAddressesView")
 
                                     }
                                 
@@ -80,10 +76,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.NewShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.NewShippingAddressesView")
 
                                     }
                                 
@@ -92,10 +86,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.AddShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.AddShippingAddressesView")
 
                                     }
                                 
@@ -104,10 +96,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.DeleteShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.DeleteShippingAddressesView")
 
                                     }
                                 
@@ -116,10 +106,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(ShippingAddressData.SELECT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.SelectShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.SelectShippingAddressesView")
 
                                     }
                                 
@@ -128,10 +116,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(ShippingAddressData.SETTOBILLINGADDRESS) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Shipping Address View")
-this.setObjectFile(
-                            "views.generic.address.shipping.SetShippingAddressesView")
+                                    this.setName("Basic Shipping Address View")
+this.setObjectFile("views.generic.address.shipping.SetShippingAddressesView")
 
                                     }
                                 
@@ -154,8 +140,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

@@ -109,8 +109,7 @@ open fun getName()
             
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "Available List of Animations: ")!!.append(hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
+                            append("Available List of Animations: ")!!.append(hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
 this.setInitialized(true)
 }
 
@@ -147,8 +146,7 @@ open fun add(resource: String, animationInterfaceFactoryInterface: BasicAnimatio
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "Resource Already Created: ")!!.append(resource)!!.toString())
+                            append("Resource Already Created: ")!!.append(resource)!!.toString())
 
                                     }
                                 

@@ -89,10 +89,8 @@ open fun getInventoryItemView(inventoryTag: HelperTag)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Must have ")
-stringBuffer!!.append(
-                            "InventoryItemView and not: ")
+stringBuffer!!.append("Must have ")
+stringBuffer!!.append("InventoryItemView and not: ")
 stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
 
 
@@ -113,8 +111,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
                             
 
 
-                            throw Exception(
-                            "Must have parent tag.")
+                            throw Exception("Must have parent tag.")
 
                         }
                             
@@ -151,10 +148,8 @@ open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Must have ")
-stringBuffer!!.append(
-                            "DownloadableInventoryItemView and not: ")
+stringBuffer!!.append("Must have ")
+stringBuffer!!.append("DownloadableInventoryItemView and not: ")
 stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
 
 
@@ -175,8 +170,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
                             
 
 
-                            throw Exception(
-                            "Must have parent tag.")
+                            throw Exception("Must have parent tag.")
 
                         }
                             
@@ -213,10 +207,8 @@ open fun getRequestMapInterface(inventoryTag: HelperTag)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Must have ")
-stringBuffer!!.append(
-                            "specific TYPE_ID and not: ")
+stringBuffer!!.append("Must have ")
+stringBuffer!!.append("specific TYPE_ID and not: ")
 stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
 
 
@@ -237,8 +229,7 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
                             
 
 
-                            throw Exception(
-                            "Must have parent tag.")
+                            throw Exception("Must have parent tag.")
 
                         }
                             
@@ -260,12 +251,9 @@ open fun checkForValidationViewHelper(helperObject: Any)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Must have ")
-stringBuffer!!.append(
-                            "ValidationViewHelper")
-stringBuffer!!.append(
-                            "and not: ")
+stringBuffer!!.append("Must have ")
+stringBuffer!!.append("ValidationViewHelper")
+stringBuffer!!.append("and not: ")
 stringBuffer!!.append(helperObject!!::class.qualifiedName!!)
 
 

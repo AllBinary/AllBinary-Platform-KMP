@@ -119,8 +119,7 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
                             
 
 
-                            throw Exception(
-                            "No more left. Could use a listener to automatically remove")
+                            throw Exception("No more left. Could use a listener to automatically remove")
 
                         }
                             

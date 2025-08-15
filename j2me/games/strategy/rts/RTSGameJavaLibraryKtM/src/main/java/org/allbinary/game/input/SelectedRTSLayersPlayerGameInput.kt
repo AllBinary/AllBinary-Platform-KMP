@@ -450,8 +450,7 @@ open fun setSelectedRTSLayer(selectedLayer: RTSLayer)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Selected Layer: ")
+stringBuffer!!.append("Selected Layer: ")
 
     
                         if(selectedLayer != 
@@ -463,8 +462,7 @@ stringBuffer!!.append(
 
                                     }
                                 
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "setSelectedRTSLayer")
+logUtil!!.put(stringBuffer!!.toString(), this, "setSelectedRTSLayer")
 this.paintSelectedRTSLayersList= BasicArrayListUtil.getInstance()!!.getImmutableInstance()
 this.selectRTSLayerVisitorInterface!!.visit(selectedLayer)
 this.deselectAll()
@@ -481,9 +479,7 @@ this.deselectAll()
 this.preSelectedRTSLayersList= this.selectedRTSLayersList
 this.selectedRTSLayersList= tempList
 logUtil!!.put(StringMaker().
-                            append(
-                            "Preselected: ")!!.append(this.preSelectedRTSLayersList!!.toString())!!.toString(), this, 
-                            "setSelectedRTSLayer")
+                            append("Preselected: ")!!.append(this.preSelectedRTSLayersList!!.toString())!!.toString(), this, "setSelectedRTSLayer")
 
                                     }
                                 
@@ -534,11 +530,9 @@ open fun selectAllPreselected()
 {
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Select all Preselected: ")
+stringBuffer!!.append("Select all Preselected: ")
 stringBuffer!!.append(this.preSelectedRTSLayersList!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "selectAllPreselected")
+logUtil!!.put(stringBuffer!!.toString(), this, "selectAllPreselected")
 
 
 
@@ -560,11 +554,9 @@ open fun deselectAllPreselected()
 {
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Deselect all Preselected: ")
+stringBuffer!!.append("Deselect all Preselected: ")
 stringBuffer!!.append(this.preSelectedRTSLayersList!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "deselectAllPreselected")
+logUtil!!.put(stringBuffer!!.toString(), this, "deselectAllPreselected")
 
 
 

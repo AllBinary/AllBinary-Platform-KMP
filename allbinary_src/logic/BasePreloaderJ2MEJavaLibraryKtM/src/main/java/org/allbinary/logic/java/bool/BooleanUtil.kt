@@ -114,8 +114,7 @@ open fun getFromString(booleanString: String)
                             
 
 
-                            throw Exception(
-                            "Invalid booleanString - Must be true or false")
+                            throw Exception("Invalid booleanString - Must be true or false")
 
                         }
                             

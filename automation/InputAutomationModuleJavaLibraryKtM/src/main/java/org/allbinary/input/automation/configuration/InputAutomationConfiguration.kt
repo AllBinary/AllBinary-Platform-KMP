@@ -91,8 +91,7 @@ open fun setInstalled(installed: Boolean)
 
                     var installed = installed
 this.installed= installed
-logUtil!!.put("Installed: " +installed, this, 
-                            "setIntalled")
+logUtil!!.put("Installed: " +installed, this, "setIntalled")
 }
 
 

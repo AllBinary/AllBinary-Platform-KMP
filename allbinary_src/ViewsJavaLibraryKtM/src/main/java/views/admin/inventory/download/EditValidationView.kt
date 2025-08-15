@@ -82,8 +82,7 @@ open fun getFormData()
                                     
 
 
-                            throw Exception(
-                            "No Request Params Found")
+                            throw Exception("No Request Params Found")
 
                                     }
                                 
@@ -215,8 +214,7 @@ open fun validationInfo()
                                  || !StringValidationUtil.getInstance()!!.isNumber(this.id))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is not valid.<br />")
+                                    stringBuffer!!.append("Id is not valid.<br />")
 
                                     }
                                 
@@ -227,8 +225,7 @@ open fun validationInfo()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Item does not exist.<br />")
+                                    stringBuffer!!.append("Item does not exist.<br />")
 
                                     }
                                 
@@ -248,8 +245,7 @@ open fun validationInfo()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "DownloadableItem does not exist for item.<br />")
+                                    stringBuffer!!.append("DownloadableItem does not exist for item.<br />")
 
                                     }
                                 
@@ -257,8 +253,7 @@ open fun validationInfo()
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Item should not have DownloadableItem.<br />")
+                            stringBuffer!!.append("Item should not have DownloadableItem.<br />")
 
                         }
                             

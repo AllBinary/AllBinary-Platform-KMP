@@ -69,8 +69,7 @@ open fun setHelper()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put("Creating TagHelper with: \n" +this.getPropertiesHashMap()!!.toString(), this, 
-                            "doStartTag")
+                                    logUtil!!.put("Creating TagHelper with: \n" +this.getPropertiesHashMap()!!.toString(), this, "doStartTag")
 
                                     }
                                 
@@ -98,9 +97,7 @@ open fun doEndTag()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(
-                            "Tag Ended", this, 
-                            "doEndTag")
+                                    logUtil!!.put("Tag Ended", this, "doEndTag")
 
                                     }
                                 

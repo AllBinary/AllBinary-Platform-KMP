@@ -162,14 +162,11 @@ open fun override(hashMap: HashMap<Any, Any>)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TransformInfo properties overridden for: ")
+stringBuffer!!.append("TransformInfo properties overridden for: ")
 stringBuffer!!.append(this.getName())
-stringBuffer!!.append(
-                            "\n properties: ")
+stringBuffer!!.append("\n properties: ")
 stringBuffer!!.append(hashMap!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "override(HashMap hashMap)")
+logUtil!!.put(stringBuffer!!.toString(), this, "override(HashMap hashMap)")
 
                                     }
                                 
@@ -220,8 +217,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TransformInfo override view Object for: " +this.getName(), this, 
-                            "override(HashMap hashMap)")
+                                    logUtil!!.put("TransformInfo override view Object for: " +this.getName(), this, "override(HashMap hashMap)")
 
                                     }
                                 
@@ -254,8 +250,7 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TransformInfo override ObjectConfig for: " +this.getName(), this, 
-                            "override(HashMap hashMap)")
+                                    logUtil!!.put("TransformInfo override ObjectConfig for: " +this.getName(), this, "override(HashMap hashMap)")
 
                                     }
                                 
@@ -276,8 +271,7 @@ this.setObjectConfig(hashMap!!.get(transformInfoData!!.OBJECTCONFIG) as String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TransformInfo override ObjectConfig File for: " +this.getName(), this, 
-                            "override(HashMap hashMap)")
+                                    logUtil!!.put("TransformInfo override ObjectConfig File for: " +this.getName(), this, "override(HashMap hashMap)")
 
                                     }
                                 
@@ -333,8 +327,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TransformInfo override Template for: " +this.getName(), this, 
-                            "override(HashMap hashMap)")
+                                    logUtil!!.put("TransformInfo override Template for: " +this.getName(), this, "override(HashMap hashMap)")
 
                                     }
                                 
@@ -380,8 +373,7 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TransformInfo override Data for: " +this.getName(), this, 
-                            "override(HashMap hashMap)")
+                                    logUtil!!.put("TransformInfo override Data for: " +this.getName(), this, "override(HashMap hashMap)")
 
                                     }
                                 
@@ -408,31 +400,22 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
                         
                                     {
                                     stringBuffer= StringMaker()
-stringBuffer!!.append(
-                            "Name: ")
+stringBuffer!!.append("Name: ")
 stringBuffer!!.append(aName)
-stringBuffer!!.append(
-                            "\nTemp Object File: ")
+stringBuffer!!.append("\nTemp Object File: ")
 stringBuffer!!.append(aObject)
-stringBuffer!!.append(
-                            "\nTemp Object Config File: ")
+stringBuffer!!.append("\nTemp Object Config File: ")
 stringBuffer!!.append(this.getObjectConfigFilePath()!!.toString())
-stringBuffer!!.append(
-                            "\nTemp Template File: ")
+stringBuffer!!.append("\nTemp Template File: ")
 stringBuffer!!.append(aTemplate)
-stringBuffer!!.append(
-                            "\nTemp Data File: ")
+stringBuffer!!.append("\nTemp Data File: ")
 stringBuffer!!.append(aData)
-stringBuffer!!.append(
-                            "\nStore Name: ")
+stringBuffer!!.append("\nStore Name: ")
 stringBuffer!!.append(aStoreName)
-stringBuffer!!.append(
-                            "\nObjectFile: ")
+stringBuffer!!.append("\nObjectFile: ")
 stringBuffer!!.append(this.getObjectFile())
-stringBuffer!!.append(
-                            "->TransformInfo")
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "TransformInfoInterface(HashMap)")
+stringBuffer!!.append("->TransformInfo")
+logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoInterface(HashMap)")
 
                                     }
                                 
@@ -441,8 +424,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put(this.log(), this, 
-                            "override")
+                                    logUtil!!.put(this.log(), this, "override")
 
                                     }
                                 
@@ -454,31 +436,22 @@ open fun log()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Name: ")
+stringBuffer!!.append("Name: ")
 stringBuffer!!.append(this.name)
-stringBuffer!!.append(
-                            "\nObject File: ")
+stringBuffer!!.append("\nObject File: ")
 stringBuffer!!.append(this.objectFileName)
-stringBuffer!!.append(
-                            "\nObject Config File Path: ")
+stringBuffer!!.append("\nObject Config File Path: ")
 stringBuffer!!.append(this.getObjectConfigFile())
-stringBuffer!!.append(
-                            "\nTemplate File: ")
+stringBuffer!!.append("\nTemplate File: ")
 stringBuffer!!.append(this.templateFileName)
-stringBuffer!!.append(
-                            "\nData File: ")
+stringBuffer!!.append("\nData File: ")
 stringBuffer!!.append(this.dataFileName)
-stringBuffer!!.append(
-                            "\nStore Name: ")
+stringBuffer!!.append("\nStore Name: ")
 stringBuffer!!.append(this.storeName)
-stringBuffer!!.append(
-                            "\n")
+stringBuffer!!.append("\n")
 stringBuffer!!.append(this.getObjectFile())
-stringBuffer!!.append(
-                            "->TransformInfo")
-stringBuffer!!.append(
-                            "TransformInfoInterface(HashMap)")
+stringBuffer!!.append("->TransformInfo")
+stringBuffer!!.append("TransformInfoInterface(HashMap)")
 
 
 
@@ -735,8 +708,7 @@ open fun getData()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Data File overriding existing data: " +this.getDataFilePath(), this, 
-                            "getData()")
+                                    logUtil!!.put("Data File overriding existing data: " +this.getDataFilePath(), this, "getData()")
 
                                     }
                                 
@@ -750,8 +722,7 @@ this.data= fileData
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Could Not Load Data from: " +this.getDataFile(), this, 
-                            "getData()", e)
+                                    logUtil!!.put("Could Not Load Data from: " +this.getDataFile(), this, "getData()", e)
 
                                     }
                                 
@@ -772,8 +743,7 @@ this.data= fileData
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Data: " +DomDocumentHelper.toString(DomDocumentHelper.create(data)), this, 
-                            "getData()")
+                                    logUtil!!.put("Data: " +DomDocumentHelper.toString(DomDocumentHelper.create(data)), this, "getData()")
 
                                     }
                                 
@@ -789,22 +759,18 @@ this.data= fileData
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Name: ")
+stringBuffer!!.append("Name: ")
 stringBuffer!!.append(this.name)
-stringBuffer!!.append(
-                            "\nEmpty Data For: ")
+stringBuffer!!.append("\nEmpty Data For: ")
 stringBuffer!!.append(dataFileString)
-stringBuffer!!.append(
-                            "\nPath: ")
+stringBuffer!!.append("\nPath: ")
 stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getData()")
+                                    logUtil!!.put(stringBuffer!!.toString(), this, "getData()")
 
                                     }
                                 
@@ -820,8 +786,7 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put("Could Not Preview Data: " +this.data, this, 
-                            "getData()", e)
+                                    logUtil!!.put("Could Not Preview Data: " +this.data, this, "getData()", e)
 
                                     }
                                 
@@ -857,9 +822,7 @@ open fun getDataDocument()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "No Data So Creating New Document", this, 
-                            "getDataDocument()")
+                                    logUtil!!.put("No Data So Creating New Document", this, "getDataDocument()")
 
                                     }
                                 

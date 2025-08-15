@@ -94,8 +94,7 @@ open fun init(soundsFactoryInterface: SoundsFactoryInterface)
 
 logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
 AllBinaryMediaManager.shutdown(soundsFactoryInterface)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, 
-                            "Media Manager")
+ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
 System.gc()
 Sounds(soundsFactoryInterface).
                             init()
@@ -118,8 +117,7 @@ open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
     var commonString: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonString!!.START, THIS, 
-                            "shutdown")
+logUtil!!.put(commonString!!.START, THIS, "shutdown")
 
     
                         if(soundsFactoryInterface!!.isInitialized())
@@ -198,8 +196,7 @@ mostUsedTotal= 0
 
                                     }
                                 
-logUtil!!.put(commonString!!.START, THIS, 
-                            "shutdown")
+logUtil!!.put(commonString!!.START, THIS, "shutdown")
 }
 
 
@@ -228,8 +225,7 @@ mostUsedTotal++
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AndroidMediaPlayerWrapper(resource)
 } catch(e: Exception)
-            {logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +mostUsedTotal, THIS, 
-                            "createPlayer", e)
+            {logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +mostUsedTotal, THIS, "createPlayer", e)
 
 
 
@@ -265,8 +261,7 @@ open fun createPlayer(stream: InputStream, type: String)
 
 
 
-                            throw MediaException(
-                            "No Input Stream Player")
+                            throw MediaException("No Input Stream Player")
 }
 
 
@@ -286,8 +281,7 @@ open fun playTone(frequency: Int, time: Int, volume: Int)
 
 
 
-                            throw MediaException(
-                            "No Tone Player")
+                            throw MediaException("No Tone Player")
 }
 
 

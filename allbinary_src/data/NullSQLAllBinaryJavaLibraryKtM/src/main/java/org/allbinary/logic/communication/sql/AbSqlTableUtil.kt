@@ -105,8 +105,7 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
 
 stringBuffer!!.append(TABLE_LABEL)
 stringBuffer!!.append(tableName)
-stringBuffer!!.append(
-                            " Restoration Failed")
+stringBuffer!!.append(" Restoration Failed")
 
 
 

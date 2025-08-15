@@ -163,8 +163,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -202,8 +201,7 @@ open fun validationInfo()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Unable to Load Tax Component<br/>")
+                                    stringBuffer!!.append("Unable to Load Tax Component<br/>")
 
                                     }
                                 
@@ -213,8 +211,7 @@ open fun validationInfo()
                         if(taxInterface!!.isValid(this.streetAddress, storeFrontInterface) == Boolean.FALSE)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Unable to validate address with Tax Component<br/>")
+                                    stringBuffer!!.append("Unable to validate address with Tax Component<br/>")
 
                                     }
                                 
@@ -247,8 +244,7 @@ open fun validationInfo()
                         if(aStreetAddress!!.getName()!!.compareTo(ShippingAddressData.TAX) == 0)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Not a valid tax location<br/>")
+                                    stringBuffer!!.append("Not a valid tax location<br/>")
 
                                     }
                                 
@@ -265,9 +261,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to create validateInfo", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to create validateInfo", this, "validationInfo()", e)
 
                                     }
                                 

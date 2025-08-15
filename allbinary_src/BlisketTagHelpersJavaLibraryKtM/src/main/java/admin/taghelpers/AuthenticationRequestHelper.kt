@@ -112,8 +112,7 @@ open fun generateNewPassword()
                             
 
 
-                            throw Exception(
-                            "Error Generating New Password")
+                            throw Exception("Error Generating New Password")
 
                         }
                             
@@ -124,8 +123,7 @@ open fun generateNewPassword()
                             
 
 
-                            throw Exception(
-                            "No Session Available For Generating New Password")
+                            throw Exception("No Session Available For Generating New Password")
 
                         }
                             
@@ -149,8 +147,7 @@ open fun newPassword()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Generating New Password For: " +userName, this, 
-                            "newPassword()")
+                                    logUtil!!.put("Generating New Password For: " +userName, this, "newPassword()")
 
                                     }
                                 
@@ -179,9 +176,7 @@ open fun newPassword()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Requested Email Is Not In User Profile", this, 
-                            "newPassword()")
+                                    logUtil!!.put("Requested Email Is Not In User Profile", this, "newPassword()")
 
                                     }
                                 
@@ -213,8 +208,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Generated New Password For: " +userName, this, 
-                            "newPassword()")
+                                    logUtil!!.put("Generated New Password For: " +userName, this, "newPassword()")
 
                                     }
                                 
@@ -229,8 +223,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "newPassword()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "newPassword()", e)
 
                                     }
                                 
@@ -269,8 +262,7 @@ open fun changePassword()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Changing Password For User: " +userName, this, 
-                            "changePassword()")
+                                    logUtil!!.put("Changing Password For User: " +userName, this, "changePassword()")
 
                                     }
                                 
@@ -287,9 +279,7 @@ open fun changePassword()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "New Password Is Not Valid", this, 
-                            "changePassword()")
+                                    logUtil!!.put("New Password Is Not Valid", this, "changePassword()")
 
                                     }
                                 
@@ -311,9 +301,7 @@ open fun changePassword()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "New Password Fields Do Not Match", this, 
-                            "changePassword()")
+                                    logUtil!!.put("New Password Fields Do Not Match", this, "changePassword()")
 
                                     }
                                 
@@ -351,9 +339,7 @@ open fun changePassword()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Authentication Successful", this, 
-                            "changePassword()")
+                                    logUtil!!.put("Authentication Successful", this, "changePassword()")
 
                                     }
                                 
@@ -378,9 +364,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Authentication Failed", this, 
-                            "changePassword()")
+                                    logUtil!!.put("Authentication Failed", this, "changePassword()")
 
                                     }
                                 
@@ -395,9 +379,7 @@ NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Authentication Failed", this, 
-                            "changePassword()", e)
+                                    logUtil!!.put("Authentication Failed", this, "changePassword()", e)
 
                                     }
                                 
@@ -444,8 +426,7 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put("Role is null: " +userInterface!!.getRole() +" Valid Roles: " +roles.toString(), this, 
-                            "isRoleValid()")
+                                    logUtil!!.put("Role is null: " +userInterface!!.getRole() +" Valid Roles: " +roles.toString(), this, "isRoleValid()")
 
                                     }
                                 
@@ -501,14 +482,11 @@ this.request.removeAttribute(WeblisketSessionData.REMOVABLEPASSWORD)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Role is not valid: ")
+stringBuffer!!.append("Role is not valid: ")
 stringBuffer!!.append(userInterface!!.getRole()!!.toString())
-stringBuffer!!.append(
-                            " Valid Roles: ")
+stringBuffer!!.append(" Valid Roles: ")
 stringBuffer!!.append(roles.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "isRoleValid()")
+logUtil!!.put(stringBuffer!!.toString(), this, "isRoleValid()")
 
                                     }
                                 
@@ -523,8 +501,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "isRoleValid()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "isRoleValid()", e)
 
                                     }
                                 

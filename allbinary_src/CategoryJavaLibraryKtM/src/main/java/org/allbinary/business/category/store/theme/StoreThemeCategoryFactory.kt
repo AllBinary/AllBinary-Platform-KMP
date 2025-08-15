@@ -61,8 +61,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.START, this, 
-                            "StoreCategoryFactory(TransformInfoInterface transformInfoInterface)")
+                                    logUtil!!.put(commonStrings!!.START, this, "StoreCategoryFactory(TransformInfoInterface transformInfoInterface)")
 
                                     }
                                 
@@ -88,8 +87,7 @@ open fun getRootInstance()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getRootInstance()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getRootInstance()", e)
 
                                     }
                                 
@@ -128,8 +126,7 @@ open fun getRootInstance(categoryAbPath: AbPath)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getRootInstance(String)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getRootInstance(String)", e)
 
                                     }
                                 
@@ -171,8 +168,7 @@ open fun getRootInstanceFromNode(node: Node)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getRootInstance(node)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getRootInstance(node)", e)
 
                                     }
                                 
@@ -210,8 +206,7 @@ open fun getInstance(categoryPath: String, level: Int)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(String, int)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(String, int)", e)
 
                                     }
                                 
@@ -252,8 +247,7 @@ open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInt
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(CategoryInterface, CategoryInterface , String, int)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(CategoryInterface, CategoryInterface , String, int)", e)
 
                                     }
                                 
@@ -291,8 +285,7 @@ open fun getInstance(node: Node, level: Int)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(Node, int)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(Node, int)", e)
 
                                     }
                                 
@@ -333,8 +326,7 @@ open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInt
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(CategoryInterface, CategoryInterface, Node, int)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(CategoryInterface, CategoryInterface, Node, int)", e)
 
                                     }
                                 
@@ -372,8 +364,7 @@ open fun getInstance(categoryPropertiesHashMap: HashMap<Any, Any>, level: Int)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(HashMap)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
                                     }
                                 
@@ -414,8 +405,7 @@ open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInt
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getInstance(CategoryInterface, CategoryInterface, HashMap)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(CategoryInterface, CategoryInterface, HashMap)", e)
 
                                     }
                                 

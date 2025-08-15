@@ -56,8 +56,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, 
-                            "RootContextView()")
+                                    logUtil!!.put("View Name: " +transformInfoInterface!!.getName(), this, "RootContextView()")
 
                                     }
                                 
@@ -75,8 +74,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View Name: " +this.getTransformInfoInterface()!!.getName(), this, 
-                            "view()")
+                                    logUtil!!.put("View Name: " +this.getTransformInfoInterface()!!.getName(), this, "view()")
 
                                     }
                                 
@@ -99,8 +97,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "view()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "view()", e)
 
                                     }
                                 
@@ -134,8 +131,7 @@ open fun getName()
                                     
 
 
-                            throw Exception(
-                            "Template View Not Set - No Components")
+                            throw Exception("Template View Not Set - No Components")
 
                                     }
                                 
@@ -163,8 +159,7 @@ open fun getName()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Root Template With View Name: " +viewName, this, 
-                            "getName()")
+                                    logUtil!!.put("Root Template With View Name: " +viewName, this, "getName()")
 
                                     }
                                 
@@ -176,8 +171,7 @@ open fun getName()
                                     
 
 
-                            throw Exception(
-                            "Template View Not Set - No View Name")
+                            throw Exception("Template View Not Set - No View Name")
 
                                     }
                                 
@@ -192,8 +186,7 @@ open fun getName()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getName()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getName()", e)
 
                                     }
                                 

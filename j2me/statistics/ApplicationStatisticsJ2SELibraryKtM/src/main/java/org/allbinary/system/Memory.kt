@@ -41,14 +41,11 @@ open fun getInfo()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Memory: Free: ")
+stringBuffer!!.append("Memory: Free: ")
 stringBuffer!!.append(Runtime.getRuntime()!!.freeMemory())
-stringBuffer!!.append(
-                            " Max: ")
+stringBuffer!!.append(" Max: ")
 stringBuffer!!.append(Runtime.getRuntime()!!.maxMemory())
-stringBuffer!!.append(
-                            " Total: ")
+stringBuffer!!.append(" Total: ")
 stringBuffer!!.append(Runtime.getRuntime()!!.totalMemory())
 
 

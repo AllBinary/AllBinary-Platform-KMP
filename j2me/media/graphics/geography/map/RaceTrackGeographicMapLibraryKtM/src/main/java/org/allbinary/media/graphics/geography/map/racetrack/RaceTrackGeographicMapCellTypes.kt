@@ -65,22 +65,14 @@ open fun getInstance()
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 public constructor        ()
             : super()
-        {BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Bottom Left Turn", 1, 1)
-BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Bottom Right Turn", 2, 1)
-TOP_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Top Left Turn", 3, 1)
-TOP_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Top Right Turne", 4, 1)
-HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Horizontal Straight", 5, 1)
-VERTICAL_STRAIGHT_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Vertical Straight", 6, 1)
-START_LINE_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Start Line", 7, 1)
-DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType(
-                            "Finish Line", 8, 1)
+        {BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Left Turn", 1, 1)
+BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Right Turn", 2, 1)
+TOP_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Top Left Turn", 3, 1)
+TOP_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Top Right Turne", 4, 1)
+HORIZONTAL_STRAIGHT_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Horizontal Straight", 5, 1)
+VERTICAL_STRAIGHT_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Vertical Straight", 6, 1)
+START_LINE_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Start Line", 7, 1)
+DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Finish Line", 8, 1)
 }
 
 

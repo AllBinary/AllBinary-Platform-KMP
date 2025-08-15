@@ -189,8 +189,7 @@ point.y= (newHeight -bufferedImage!!.getHeight()) /2
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
             
 
-logUtil!!.put(commonLabels!!.WIDTH_LABEL +bufferedImage!!.getWidth() +" newWidth: " +newWidth +commonLabels!!.HEIGHT_LABEL +bufferedImage!!.getHeight() +" newHeight: " +newHeight +" needed ratio: " +(newWidth.toDouble() /newHeight), this, 
-                            "fudge")
+logUtil!!.put(commonLabels!!.WIDTH_LABEL +bufferedImage!!.getWidth() +" newWidth: " +newWidth +commonLabels!!.HEIGHT_LABEL +bufferedImage!!.getHeight() +" newHeight: " +newHeight +" needed ratio: " +(newWidth.toDouble() /newHeight), this, "fudge")
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(newWidth, newHeight)!!
             
@@ -212,9 +211,7 @@ logUtil!!.put(commonLabels!!.WIDTH_LABEL +bufferedImage!!.getWidth() +" newWidth
     var lastColumnBufferedImage: BufferedImage = bufferedImage!!.getSubimage(bufferedImage!!.getWidth() -1, 0, 1, bufferedImage!!.getHeight())!!
             
 
-logUtil!!.put(
-                            "Draw some columns to fill in gap", this, 
-                            "fudge")
+logUtil!!.put("Draw some columns to fill in gap", this, "fudge")
 
 
 
@@ -244,9 +241,7 @@ g.drawImage(lastColumnBufferedImage, newWidth -index, 0,
     var lastRowBufferedImage: BufferedImage = bufferedImage!!.getSubimage(0, bufferedImage!!.getHeight() -1, bufferedImage!!.getWidth(), 1)!!
             
 
-logUtil!!.put(
-                            "Draw some rows to fill in gap", this, 
-                            "fudge")
+logUtil!!.put("Draw some rows to fill in gap", this, "fudge")
 
 
 

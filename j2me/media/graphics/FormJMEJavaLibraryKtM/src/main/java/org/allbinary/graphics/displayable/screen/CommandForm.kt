@@ -90,8 +90,7 @@ this.commandStack= Stack<Any>()
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, 
-                            "open")
+{logUtil!!.put(this.commonStrings!!.START, this, "open")
 }
 
 

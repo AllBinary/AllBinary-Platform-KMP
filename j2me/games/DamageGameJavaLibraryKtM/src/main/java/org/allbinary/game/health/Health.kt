@@ -130,8 +130,7 @@ override fun damage(ahealth: Int)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "******* Trying to heal when damaging. Damage: ")
+stringBuffer!!.append("******* Trying to heal when damaging. Damage: ")
 stringBuffer!!.append(ahealth)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(this.toString())

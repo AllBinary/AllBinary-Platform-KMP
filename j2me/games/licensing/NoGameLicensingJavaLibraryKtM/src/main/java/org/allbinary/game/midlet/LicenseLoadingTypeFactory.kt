@@ -52,17 +52,13 @@ open fun getIntance()
             {
             }            
         
-    val INITIAL_LOADING: LicenseLoadingType = LicenseLoadingType(
-                            "Initial Loading")
+    val INITIAL_LOADING: LicenseLoadingType = LicenseLoadingType("Initial Loading")
 
-    val GAME_START: LicenseLoadingType = LicenseLoadingType(
-                            "Game Start")
+    val GAME_START: LicenseLoadingType = LicenseLoadingType("Game Start")
 
-    val LOGIN: LicenseLoadingType = LicenseLoadingType(
-                            "Login")
+    val LOGIN: LicenseLoadingType = LicenseLoadingType("Login")
 
-    val OTHER: LicenseLoadingType = LicenseLoadingType(
-                            "Other/Usually The First Non Demo Level")
+    val OTHER: LicenseLoadingType = LicenseLoadingType("Other/Usually The First Non Demo Level")
 
 }
                 

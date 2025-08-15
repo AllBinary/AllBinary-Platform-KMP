@@ -290,8 +290,7 @@ open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RT
 
 
                     var index = index
-logUtil!!.put("Set Sticking Item: " +item, this, 
-                            "processSticky")
+logUtil!!.put("Set Sticking Item: " +item, this, "processSticky")
 this.setSelectedStickyItem(item)
 this.setSelectedStickyItemIndex(index)
 this.setStickyItemSelected(true)
@@ -316,8 +315,7 @@ open fun attemptBuild(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerMan
 
 
                     var itemIndex = itemIndex
-logUtil!!.put("Layer: " +layerInterface, this, 
-                            "attemptBuild")
+logUtil!!.put("Layer: " +layerInterface, this, "attemptBuild")
 
     
                         if(layerInterface == 
@@ -325,9 +323,7 @@ logUtil!!.put("Layer: " +layerInterface, this,
                                 )
                         
                                     {
-                                    logUtil!!.put(
-                            "Layer was null", this, 
-                            "attemptBuild", Exception())
+                                    logUtil!!.put("Layer was null", this, "attemptBuild", Exception())
 
 
 
@@ -422,17 +418,13 @@ logUtil!!.put("Layer: " +layerInterface, this,
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Trying to Build: ")
+stringBuffer!!.append("Trying to Build: ")
 stringBuffer!!.append(layerInterface!!.getName())
-stringBuffer!!.append(
-                            " for: $")
+stringBuffer!!.append(" for: $")
 stringBuffer!!.append(cost)
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(capital.getTotalMoney())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "attemptBuild")
+logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
 
     
                         if(cost <= capital.getTotalMoney())

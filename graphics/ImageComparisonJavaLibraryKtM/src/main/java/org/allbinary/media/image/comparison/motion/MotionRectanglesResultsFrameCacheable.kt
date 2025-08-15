@@ -84,8 +84,7 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.qualifiedName!!)
-stringBuffer!!.append(
-                            " Frame: ")
+stringBuffer!!.append(" Frame: ")
 stringBuffer!!.append(this.getKey()!!.toString())
 
 

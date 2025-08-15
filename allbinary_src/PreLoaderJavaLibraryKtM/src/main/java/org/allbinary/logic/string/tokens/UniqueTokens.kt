@@ -43,50 +43,30 @@ open public class UniqueTokens
     private val specialCharacters: Vector = Vector()
 public constructor        ()
             : super()
-        {specialCharacters!!.add(
-                            "!")
-specialCharacters!!.add(
-                            "@")
+        {specialCharacters!!.add("!")
+specialCharacters!!.add("@")
 specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.POUND)
-specialCharacters!!.add(
-                            "$")
-specialCharacters!!.add(
-                            "%")
-specialCharacters!!.add(
-                            "^")
+specialCharacters!!.add("$")
+specialCharacters!!.add("%")
+specialCharacters!!.add("^")
 specialCharacters!!.add(CommonSeps.getInstance()!!.AMP)
 specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.STAR)
-specialCharacters!!.add(
-                            "(")
-specialCharacters!!.add(
-                            ")")
-specialCharacters!!.add(
-                            "-")
-specialCharacters!!.add(
-                            "_")
-specialCharacters!!.add(
-                            "+")
-specialCharacters!!.add(
-                            "=")
-specialCharacters!!.add(
-                            "\\")
-specialCharacters!!.add(
-                            "|")
+specialCharacters!!.add("(")
+specialCharacters!!.add(")")
+specialCharacters!!.add("-")
+specialCharacters!!.add("_")
+specialCharacters!!.add("+")
+specialCharacters!!.add("=")
+specialCharacters!!.add("\\")
+specialCharacters!!.add("|")
 specialCharacters!!.add(AbPathData.getInstance()!!.EXTENSION_SEP)
-specialCharacters!!.add(
-                            ",")
-specialCharacters!!.add(
-                            "<")
-specialCharacters!!.add(
-                            ">")
-specialCharacters!!.add(
-                            "?")
-specialCharacters!!.add(
-                            "/")
-specialCharacters!!.add(
-                            "~")
-specialCharacters!!.add(
-                            "`")
+specialCharacters!!.add(",")
+specialCharacters!!.add("<")
+specialCharacters!!.add(">")
+specialCharacters!!.add("?")
+specialCharacters!!.add("/")
+specialCharacters!!.add("~")
+specialCharacters!!.add("`")
 }
 
 
@@ -135,8 +115,7 @@ cleanString= cleanString!!.trim()
 
     
                         if(cleanString!!.indexOf('-') !=  -1)
-                        cleanString= Replace(
-                            "-", commonSeps!!.SPACE).
+                        cleanString= Replace("-", commonSeps!!.SPACE).
                             all(cleanString)
 hashSet!!.add(cleanString)
 

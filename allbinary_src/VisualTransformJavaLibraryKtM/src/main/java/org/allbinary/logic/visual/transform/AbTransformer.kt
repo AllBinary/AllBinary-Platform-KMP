@@ -130,8 +130,7 @@ open fun translate(xmlDocumentStr: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
                         
                                     {
-                                    logUtil!!.put("xml: \n" +xmlDocumentStr, this, 
-                            "translate(String xmlDocumentStr)")
+                                    logUtil!!.put("xml: \n" +xmlDocumentStr, this, "translate(String xmlDocumentStr)")
 
                                     }
                                 
@@ -145,8 +144,7 @@ open fun translate(xmlDocumentStr: String)
                                     
 
 
-                            throw Exception(
-                            "No URIResolver")
+                            throw Exception("No URIResolver")
 
                                     }
                                 
@@ -159,8 +157,7 @@ open fun translate(xmlDocumentStr: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGING))
                         
                                     {
-                                    logUtil!!.put("translated xml: " +result, this, 
-                            "translate(String xmlDocumentStr)")
+                                    logUtil!!.put("translated xml: " +result, this, "translate(String xmlDocumentStr)")
 
                                     }
                                 
@@ -179,8 +176,7 @@ open fun translate(xmlDocumentStr: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(this.transformInfoInterface!!.log(), this, 
-                            "translate(document)", e)
+                                    logUtil!!.put(this.transformInfoInterface!!.log(), this, "translate(document)", e)
 
                                     }
                                 

@@ -43,11 +43,9 @@ open public class GameInputMappingInstructionsCanvas : GameCommandCanvas {
 
         companion object {
             
-    val DISPLAY: Command = Command(
-                            "Help", Command.SCREEN, 1)
+    val DISPLAY: Command = Command("Help", Command.SCREEN, 1)
 
-    val CLOSE: Command = Command(
-                            "Close", Command.SCREEN, 1)
+    val CLOSE: Command = Command("Close", Command.SCREEN, 1)
 
     val NAME: String = "GameInputMappingInstructionsCanvas"
 

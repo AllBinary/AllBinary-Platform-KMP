@@ -51,8 +51,7 @@ open public class RequestParams
     private var map: Map
 public constructor        ()
             : super()
-        {logUtil!!.put(
-                            "New RequestParams Size: 0", this, this.commonStrings!!.CONSTRUCTOR)
+        {logUtil!!.put("New RequestParams Size: 0", this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 public constructor        (request: HttpServletRequest)
@@ -141,8 +140,7 @@ stringBuffer!!.append(KEY)
 stringBuffer!!.append(key)
 stringBuffer!!.append(VALUE)
 stringBuffer!!.append(values[0]!!)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "toXmlNode(document)")
+logUtil!!.put(stringBuffer!!.toString(), this, "toXmlNode(document)")
 node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.concatToString(), .concatToString()))
 }
 
@@ -152,8 +150,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMET
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toXmlNode(document)", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode(document)", e)
 
 
 
@@ -203,14 +200,11 @@ hashMap!!.put(key.concatToString(), .concatToString())
 }
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "RequestParams: ")
+stringBuffer!!.append("RequestParams: ")
 stringBuffer!!.append(this.map.toString())
-stringBuffer!!.append(
-                            "\ntoHashMap: ")
+stringBuffer!!.append("\ntoHashMap: ")
 stringBuffer!!.append(hashMap!!.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put(stringBuffer!!.toString(), this, "toHashMap()")
 
 
 

@@ -26,12 +26,11 @@ import org.allbinary.image.PreResourceImageUtil
 import org.allbinary.image.opengles.OpenGLESImage
 import org.allbinary.image.opengles.OpenGLImageCache
 import org.allbinary.image.opengles.OpenGLImageCacheFactory
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.string.CommonLabels
 import org.allbinary.string.CommonStrings
-import org.allbinary.logic.string.StringMaker
+import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 
 open public class OpenGLUtil
@@ -78,7 +77,9 @@ open fun getInstance()
     private val preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
             
 
-    private val anyType: Any = Any()
+    private val lockObject: SynchObject = SynchObject()
+
+    private val anyType: SynchObject = SynchObject()
 
     private val list: BasicArrayList = BasicArrayList()
 
@@ -213,8 +214,6 @@ open fun clear()
 
 }
 
-
-    private var lockObject: Any = Any()
 
 open fun add(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true

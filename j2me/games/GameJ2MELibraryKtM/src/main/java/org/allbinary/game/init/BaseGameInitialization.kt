@@ -107,8 +107,7 @@ open fun initKeyMapping(abeClientInformation: AbeClientInformationInterface, por
                         
                                     {
                                     PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.init(abeClientInformation)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, 
-                            "Game Keys")
+ProgressCanvasFactory.getInstance()!!.addPortion(50, "Game Keys")
 ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstance()!!.INPUT_MAPPING)
 
                                     }
@@ -157,17 +156,13 @@ GameKeyEventFactory.getInstance()!!.init()
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(localPortion, 
-                            "Game Key Events")
+progressCanvas!!.addPortion(localPortion, "Game Key Events")
 BasicTouchInputFactory.getInstance()!!.init(PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
-progressCanvas!!.addPortion(localPortion, 
-                            "Touch Input")
+progressCanvas!!.addPortion(localPortion, "Touch Input")
 CompleteMotionGestureInputToGameMotionGestureInput.getInstance()!!.init()
-progressCanvas!!.addPortion(localPortion, 
-                            "Motion Input")
+progressCanvas!!.addPortion(localPortion, "Motion Input")
 GameFeatureImageCacheFactory.init()
-progressCanvas!!.addPortion(localPortion, 
-                            "Image Cache")
+progressCanvas!!.addPortion(localPortion, "Image Cache")
 this.resourceInitializationArray[EARLY_RESOURCES]!!.init()
 
                                     }

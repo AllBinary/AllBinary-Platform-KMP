@@ -101,8 +101,7 @@ monitorInterfaceVector= Vector()
     
                         if(componentInterfaceVector!!.size < MINHARDWARE)
                         
-                                    throw Exception(
-                            "Not Enough Data For A Valid License On Windows")
+                                    throw Exception("Not Enough Data For A Valid License On Windows")
 } catch(e: Exception)
             {
 

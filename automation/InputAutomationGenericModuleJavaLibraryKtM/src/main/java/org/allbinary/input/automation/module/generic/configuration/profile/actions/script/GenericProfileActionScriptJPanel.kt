@@ -45,8 +45,7 @@ open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-    private var defaultMutableTreeNode: DefaultMutableTreeNode = DefaultMutableTreeNode(
-                            "Root")
+    private var defaultMutableTreeNode: DefaultMutableTreeNode = DefaultMutableTreeNode("Root")
 
     private var genericProfileActionScript: GenericProfileActionScript
 public constructor        (){logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
@@ -61,9 +60,7 @@ open fun updateJTree()
 
 this.getActionScriptJTree()!!.setModel(defaultTreeModel)
 this.repaint()
-logUtil!!.put(
-                            "Updated UI", this, 
-                            "updateJTree")
+logUtil!!.put("Updated UI", this, "updateJTree")
 }
 
 

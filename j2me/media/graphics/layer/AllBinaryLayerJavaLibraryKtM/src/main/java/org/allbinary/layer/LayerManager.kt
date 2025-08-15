@@ -16,6 +16,7 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
+import org.allbinary.thread.SynchObject
 import org.allbinary.util.BasicArrayList
 
 open public class LayerManager
@@ -33,7 +34,7 @@ open public class LayerManager
 
     private val list: BasicArrayList = BasicArrayList()
 
-    private val anyType: Any = Any()
+    private val anyType: SynchObject = SynchObject()
 public constructor        (layerManagerLogging: LayerManagerLogging)
             : super()
         {

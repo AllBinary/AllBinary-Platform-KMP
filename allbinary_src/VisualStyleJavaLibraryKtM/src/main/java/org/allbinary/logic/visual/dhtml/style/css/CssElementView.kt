@@ -140,10 +140,7 @@ this.title= stringUtil!!.EMPTY_STRING
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Value: ")!!.append(this.value)!!.append(
-                            "\nTitle: ")!!.append(this.title)!!.append(
-                            "\nDescription: ")!!.append(this.description)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Value: ")!!.append(this.value)!!.append("\nTitle: ")!!.append(this.title)!!.append("\nDescription: ")!!.append(this.description)!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -156,8 +153,7 @@ this.title= stringUtil!!.EMPTY_STRING
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Child Css Elements: " +cssElementStyleNodeVector!!.size, this, 
-                            "CssElementView()")
+                                    logUtil!!.put("Child Css Elements: " +cssElementStyleNodeVector!!.size, this, "CssElementView()")
 
                                     }
                                 
@@ -174,18 +170,14 @@ this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Value: ")!!.append(this.value)!!.append(
-                            "\nTitle: ")!!.append(this.title)!!.append(
-                            "\nDescription: ")!!.append(this.description)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR, e)
+                            append("Value: ")!!.append(this.value)!!.append("\nTitle: ")!!.append(this.title)!!.append("\nDescription: ")!!.append(this.description)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR, e)
 
                                     }
                                 
 
 
 
-                            throw Exception(
-                            "CssElementView")
+                            throw Exception("CssElementView")
 }
 
 }
@@ -233,8 +225,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("CssView HashMap: " +hashMap!!.toString(), this, 
-                            "toXmlNode")
+                                    logUtil!!.put("CssView HashMap: " +hashMap!!.toString(), this, "toXmlNode")
 
                                     }
                                 

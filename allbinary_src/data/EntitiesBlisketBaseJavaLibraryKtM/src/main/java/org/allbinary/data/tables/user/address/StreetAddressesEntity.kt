@@ -88,8 +88,7 @@ super.deleteWhere(whereHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "remove")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "remove")
 
                                     }
                                 
@@ -99,8 +98,7 @@ super.deleteWhere(whereHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "remove", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "remove", e)
 
                                     }
                                 
@@ -157,8 +155,7 @@ this.setDefault(getLastId())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "add")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "add")
 
                                     }
                                 
@@ -168,8 +165,7 @@ this.setDefault(getLastId())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "add", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
 
                                     }
                                 
@@ -201,8 +197,7 @@ this.setDefault(address.getId())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "update")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "update")
 
                                     }
                                 
@@ -212,8 +207,7 @@ this.setDefault(address.getId())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "add", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "add", e)
 
                                     }
                                 
@@ -390,8 +384,7 @@ addressHashMap= super.getRow(updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "getDefault")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "getDefault")
 
                                     }
                                 
@@ -409,9 +402,7 @@ addressHashMap= super.getRow(updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "No Default Address Found", this, 
-                            "getDefault")
+                                    logUtil!!.put("No Default Address Found", this, "getDefault")
 
                                     }
                                 
@@ -429,8 +420,7 @@ addressHashMap= super.getRow(updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "getDefault", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDefault", e)
 
                                     }
                                 
@@ -483,8 +473,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "setDefault")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "setDefault")
 
                                     }
                                 
@@ -494,8 +483,7 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "setShippingAddress", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "setShippingAddress", e)
 
                                     }
                                 

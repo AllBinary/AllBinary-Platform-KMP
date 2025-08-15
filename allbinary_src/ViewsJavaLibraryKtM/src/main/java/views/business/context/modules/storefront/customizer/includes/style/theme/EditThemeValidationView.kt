@@ -114,8 +114,7 @@ this.getTransformInfoInterface()!!.setData(documentString)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -148,9 +147,7 @@ stringBuffer!!.append(this.validationInterface!!.validationInfo())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

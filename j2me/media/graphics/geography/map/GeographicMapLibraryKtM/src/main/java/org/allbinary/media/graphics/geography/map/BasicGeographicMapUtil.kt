@@ -103,8 +103,7 @@ open fun getBorderingRow(direction: Int, oldGeographicMapCellPosition: Geographi
 else -> {
 
 
-                            throw Exception(
-                            "Only Four Directions")
+                            throw Exception("Only Four Directions")
 }
 
         }       
@@ -156,8 +155,7 @@ open fun getBorderingColumn(direction: Int, oldGeographicMapCellPosition: Geogra
 else -> {
 
 
-                            throw Exception(
-                            "Only Four Directions")
+                            throw Exception("Only Four Directions")
 }
 
         }       

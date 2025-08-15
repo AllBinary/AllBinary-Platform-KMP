@@ -114,9 +114,7 @@ open fun read()
 
 this.setRegistrationCode(dataInputStream!!.readUTF())
 PreLogUtil.put(StringMaker().
-                            append(
-                            "Read Configuration: ")!!.append(this.toString())!!.toString(), this, 
-                            "read")
+                            append("Read Configuration: ")!!.append(this.toString())!!.toString(), this, "read")
 }
 
 
@@ -132,9 +130,7 @@ open fun write()
 
         try {
             logUtil!!.put(StringMaker().
-                            append(
-                            "Write Configuration: ")!!.append(this.toString())!!.toString(), this, 
-                            "write")
+                            append("Write Configuration: ")!!.append(this.toString())!!.toString(), this, "write")
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
             
@@ -161,8 +157,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(
-                            "Registration Code: ")!!.append(this.getRegistrationCode())!!.toString()
+                            append("Registration Code: ")!!.append(this.getRegistrationCode())!!.toString()
 }
 
 

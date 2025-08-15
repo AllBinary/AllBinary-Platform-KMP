@@ -76,8 +76,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(
-                            "Registration Code: ")!!.append(this.getRegistrationCode())!!.toString()
+                            append("Registration Code: ")!!.append(this.getRegistrationCode())!!.toString()
 }
 
 

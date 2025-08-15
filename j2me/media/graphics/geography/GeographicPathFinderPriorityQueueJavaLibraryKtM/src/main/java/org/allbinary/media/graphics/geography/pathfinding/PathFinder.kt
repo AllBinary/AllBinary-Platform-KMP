@@ -149,8 +149,7 @@ open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "search", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
 
 

@@ -195,11 +195,7 @@ open fun drawCenterString(graphics: Graphics, string: String, offset: Int, lengt
             graphics.drawSubstring(string, offset, length, x -width, y, anchor)
 } catch(e: Exception)
             {PreLogUtil.put(StringMaker().
-                            append(
-                            "Exception: stringLength: ")!!.append(string.length)!!.append(
-                            " offset: ")!!.append(offset)!!.append(
-                            " currentLength: ")!!.append(length)!!.toString(), this, 
-                            "drawCenterString")
+                            append("Exception: stringLength: ")!!.append(string.length)!!.append(" offset: ")!!.append(offset)!!.append(" currentLength: ")!!.append(length)!!.toString(), this, "drawCenterString")
 }
 
 }

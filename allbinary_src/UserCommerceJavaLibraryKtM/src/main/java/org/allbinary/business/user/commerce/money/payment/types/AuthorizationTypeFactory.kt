@@ -52,26 +52,19 @@ open fun getInstance()
             {
             }            
         
-    val NONE: AuthorizationType = AuthorizationType(
-                            "None")
+    val NONE: AuthorizationType = AuthorizationType("None")
 
-    val VOICE: AuthorizationType = AuthorizationType(
-                            "Voice")
+    val VOICE: AuthorizationType = AuthorizationType("Voice")
 
-    val RETINAL: AuthorizationType = AuthorizationType(
-                            "Retinal")
+    val RETINAL: AuthorizationType = AuthorizationType("Retinal")
 
-    val IMAGE: AuthorizationType = AuthorizationType(
-                            "Image")
+    val IMAGE: AuthorizationType = AuthorizationType("Image")
 
-    val DNA: AuthorizationType = AuthorizationType(
-                            "DNA")
+    val DNA: AuthorizationType = AuthorizationType("DNA")
 
-    val PRINT: AuthorizationType = AuthorizationType(
-                            "Print")
+    val PRINT: AuthorizationType = AuthorizationType("Print")
 
-    val CHIP: AuthorizationType = AuthorizationType(
-                            "Chip")
+    val CHIP: AuthorizationType = AuthorizationType("Chip")
 
 }
                 

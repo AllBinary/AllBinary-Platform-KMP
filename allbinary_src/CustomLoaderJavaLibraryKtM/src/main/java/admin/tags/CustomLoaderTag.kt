@@ -88,8 +88,7 @@ open fun setCustomLoaderWebappPath()
     var methodArgs: Array<Any?> = arrayOf(this.webappPath)
 
 
-    var setMethod: Method = helperClass!!.getMethod(
-                            "setWebappPath", methodParams)!!
+    var setMethod: Method = helperClass!!.getMethod("setWebappPath", methodParams)!!
             
 
 setMethod!!.invoke(anyType, methodArgs)
@@ -105,8 +104,7 @@ setMethod!!.invoke(anyType, methodArgs)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setCustomLoaderWebappPath()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setCustomLoaderWebappPath()", e)
 
                                     }
                                 
@@ -126,8 +124,7 @@ open fun doStartTag()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "doStartTag()")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "doStartTag()")
 
                                     }
                                 

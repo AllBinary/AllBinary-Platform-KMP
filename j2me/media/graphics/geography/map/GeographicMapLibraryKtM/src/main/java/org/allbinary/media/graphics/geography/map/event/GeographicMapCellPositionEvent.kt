@@ -96,10 +96,8 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "CellPositionEvent: ")
-stringBuffer!!.append(
-                            "\nGeographicMapCellPosition: ")
+stringBuffer!!.append("CellPositionEvent: ")
+stringBuffer!!.append("\nGeographicMapCellPosition: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getGeographicMapCellPosition()))
 
 

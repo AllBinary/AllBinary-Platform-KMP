@@ -98,8 +98,7 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
                                 )
                         
                                     {
-                                    logUtil!!.put("File Lock Obtained: " +file.getAbsolutePath(), this, 
-                            "getAll")
+                                    logUtil!!.put("File Lock Obtained: " +file.getAbsolutePath(), this, "getAll")
 fileLockVector!!.add(fileLock)
 
                                     }
@@ -109,8 +108,7 @@ fileLockVector!!.add(fileLock)
                         if(isReturnOnFailure)
                         
                                     {
-                                    logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, 
-                            "getAll")
+                                    logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
 
 
 
@@ -121,8 +119,7 @@ fileLockVector!!.add(fileLock)
                                 
 }
 
-logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, 
-                            "getAll")
+logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
 
 
 
@@ -197,9 +194,7 @@ open fun getLock(file: AbFile)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return getLock(AbFileOutputStream(file, true))
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Exception returns null", this, 
-                            "getLock", e)
+            {logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -233,9 +228,7 @@ open fun getLock(fileOutputStream: AbFileOutputStream)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLock
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Exception returns null", this, 
-                            "getLock", e)
+            {logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -244,9 +237,7 @@ open fun getLock(fileOutputStream: AbFileOutputStream)
 }
 
          finally {
-            logUtil!!.put(
-                            "Finally - Closing FileOutputStream", this, 
-                            "getLock")
+            logUtil!!.put("Finally - Closing FileOutputStream", this, "getLock")
 StreamUtil.getInstance()!!.close(fileOutputStream)
 
          }
@@ -273,9 +264,7 @@ open fun getLock(fileChannel: FileChannel)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLock
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Exception returns null", this, 
-                            "getLock", e)
+            {logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -284,9 +273,7 @@ open fun getLock(fileChannel: FileChannel)
 }
 
          finally {
-            logUtil!!.put(
-                            "Finally - Closing FileChannel", this, 
-                            "getLock")
+            logUtil!!.put("Finally - Closing FileChannel", this, "getLock")
 fileChannel!!.close()
 
          }

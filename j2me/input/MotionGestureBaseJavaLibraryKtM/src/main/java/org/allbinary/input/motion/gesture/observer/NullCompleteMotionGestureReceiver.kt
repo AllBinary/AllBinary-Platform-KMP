@@ -43,8 +43,7 @@ public constructor        ()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Null Gesture Reciever", this, commonStrings!!.CONSTRUCTOR)
+logUtil!!.put("Null Gesture Reciever", this, commonStrings!!.CONSTRUCTOR)
 }
 
 

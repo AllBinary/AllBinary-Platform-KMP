@@ -75,8 +75,7 @@ open fun get(httpServletRequest: HttpServletRequest)
             
 
 
-    var acceptable: String = httpServletRequest!!.getHeader(
-                            "accept")!!
+    var acceptable: String = httpServletRequest!!.getHeader("accept")!!
             
 
 

@@ -50,8 +50,7 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
     var method: Array<Method?> = myClass!!.getMethods()!!
             
 
-stringBuffer!!.append(
-                            "Methods: ")
+stringBuffer!!.append("Methods: ")
 stringBuffer!!.append(lineBreak)
 
 
@@ -61,14 +60,11 @@ stringBuffer!!.append(lineBreak)
 
 
         {stringBuffer!!.append(method[index]!!.getReturnType()!!.getName())
-stringBuffer!!.append(
-                            " ")
+stringBuffer!!.append(" ")
 stringBuffer!!.append(method[index]!!.getName())
-stringBuffer!!.append(
-                            "(")
+stringBuffer!!.append("(")
 ParamsUtil.viewParams(method[index]!!.getParameterTypes())
-stringBuffer!!.append(
-                            ")")
+stringBuffer!!.append(")")
 stringBuffer!!.append(lineBreak)
 }
 

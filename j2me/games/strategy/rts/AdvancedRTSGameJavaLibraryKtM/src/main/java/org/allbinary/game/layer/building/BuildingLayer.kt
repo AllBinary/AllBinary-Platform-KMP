@@ -291,8 +291,7 @@ open fun onMovement(trackingEvent: TrackingEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "onMovement", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 }
 
 }
@@ -410,8 +409,7 @@ open fun getDowngradeCost()
     var downgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() -1) *getBuildingLevelCost())!!
             
 
-logUtil!!.put("Cost: " +downgradeCost, this, 
-                            "getDowngradeCost")
+logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
 
 
 

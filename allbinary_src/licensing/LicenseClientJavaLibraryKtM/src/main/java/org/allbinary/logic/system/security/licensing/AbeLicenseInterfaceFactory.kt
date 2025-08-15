@@ -113,8 +113,7 @@ open fun get(abeClientInformation: AbeClientInformationInterface)
                     var abeClientInformation = abeClientInformation
 
         try {
-            logUtil!!.put(
-                            "Getting Keys", this, commonStrings!!.GET)
+            logUtil!!.put("Getting Keys", this, commonStrings!!.GET)
 abeLicenseInterface= AbeNoLicense.getInstance()
 
     var licenseClient: AbeLicenseClient = AbeLicenseClient()
@@ -137,17 +136,14 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abeLicenseInterface
 } catch(e: IOException)
-            {logUtil!!.put(
-                            "Licensing IO Error", this, commonStrings!!.GET, e)
+            {logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
 
 
 
-                            throw LicensingException(
-                            "License Server Connection Error")
+                            throw LicensingException("License Server Connection Error")
 }
  catch(e: Exception)
-            {logUtil!!.put(
-                            "Licensing Failure", this, commonStrings!!.GET, e)
+            {logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
 
 
 

@@ -57,8 +57,7 @@ open fun process(keyActionScriptInputInterface: KeyboardActionScriptInputInterfa
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(CommonLabels.getInstance()!!.START +keyActionScriptInputInterface!!.toString(), 
-                            "KeyInputAutomationProcessor", commonStrings!!.PROCESS)
+logUtil!!.put(CommonLabels.getInstance()!!.START +keyActionScriptInputInterface!!.toString(), "KeyInputAutomationProcessor", commonStrings!!.PROCESS)
 
     var inputRobotInterface: InputRobotInterface = keyActionScriptInputInterface!!.getInputRobotInterface()!!
             

@@ -65,18 +65,12 @@ private constructor        ()
         {
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
-LEFT= MotionGestureInput(MAX -20, 
-                            "Left Orient")
-RIGHT= MotionGestureInput(MAX -21, 
-                            "Right Orient")
-UP= MotionGestureInput(MAX -22, 
-                            "Up Orient")
-DOWN= MotionGestureInput(MAX -23, 
-                            "Down Orient")
-ROLL_LEFT= MotionGestureInput(MAX -24, 
-                            "Roll Left")
-ROLL_RIGHT= MotionGestureInput(MAX -25, 
-                            "Roll Right")
+LEFT= MotionGestureInput(MAX -20, "Left Orient")
+RIGHT= MotionGestureInput(MAX -21, "Right Orient")
+UP= MotionGestureInput(MAX -22, "Up Orient")
+DOWN= MotionGestureInput(MAX -23, "Down Orient")
+ROLL_LEFT= MotionGestureInput(MAX -24, "Roll Left")
+ROLL_RIGHT= MotionGestureInput(MAX -25, "Roll Right")
 }
 
 

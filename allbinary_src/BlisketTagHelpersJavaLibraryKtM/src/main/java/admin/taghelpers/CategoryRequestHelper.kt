@@ -56,9 +56,7 @@ open public class CategoryRequestHelper : ModifyTable {
         companion object {
             
     private val categoryRequest: String = StringMaker().
-                            append(
-                            "<")!!.append(CategoryData.getInstance()!!.REQUEST)!!.append(
-                            ">")!!.toString()!!
+                            append("<")!!.append(CategoryData.getInstance()!!.REQUEST)!!.append(">")!!.toString()!!
             
 
         }
@@ -97,8 +95,7 @@ this.getXmlData()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "CategoryRequestHelper()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "CategoryRequestHelper()", e)
 
                                     }
                                 
@@ -158,8 +155,7 @@ open fun getXmlData()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(xmlRequest, this, 
-                            "getXmlData()")
+                                    logUtil!!.put(xmlRequest, this, "getXmlData()")
 
                                     }
                                 
@@ -176,8 +172,7 @@ open fun getXmlData()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(DomDocumentHelper.toString(document), this, 
-                            "getXmlData()")
+                                    logUtil!!.put(DomDocumentHelper.toString(document), this, "getXmlData()")
 
                                     }
                                 
@@ -199,9 +194,7 @@ this.categoryInterface= this.categoryLoaderInterface!!.get(this.categoryInterfac
                         
                                     {
                                     this.categoryInterface!!.log()
-logUtil!!.put(
-                            "Loaded Parent Category", this, 
-                            "getXmlData()")
+logUtil!!.put("Loaded Parent Category", this, "getXmlData()")
 
                                     }
                                 
@@ -221,9 +214,7 @@ logUtil!!.put(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPER))
                         
                                     {
-                                    logUtil!!.put(
-                            "Loading Child Category", this, 
-                            "getXmlData()")
+                                    logUtil!!.put("Loading Child Category", this, "getXmlData()")
 
                                     }
                                 
@@ -235,9 +226,7 @@ this.childCategoryInterface= StoreCategoryFactory(this.transformInfoInterface).
                         
                                     {
                                     this.childCategoryInterface!!.log()
-logUtil!!.put(
-                            "Loaded Child Category", this, 
-                            "getXmlData()")
+logUtil!!.put("Loaded Child Category", this, "getXmlData()")
 
                                     }
                                 
@@ -258,8 +247,7 @@ logUtil!!.put(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getXmlData()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getXmlData()", e)
 
                                     }
                                 
@@ -312,8 +300,7 @@ this.transformInfoInterface= TransformInfoBasic(storeFrontInterface, hashMap, pa
                                     
 
 
-                            throw Exception(
-                            "TransformInfo null")
+                            throw Exception("TransformInfo null")
 
                                     }
                                 
@@ -350,9 +337,7 @@ open fun insert()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(
-                            "inserting", this, 
-                            "insert()")
+                                    logUtil!!.put("inserting", this, "insert()")
 
                                     }
                                 
@@ -362,8 +347,7 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "insert()")
+                                    logUtil!!.put(success, this, "insert()")
 
                                     }
                                 
@@ -381,8 +365,7 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "insert()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insert()", e)
 
                                     }
                                 
@@ -408,9 +391,7 @@ open fun delete()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(
-                            "Deleting", this, 
-                            "delete()")
+                                    logUtil!!.put("Deleting", this, "delete()")
 
                                     }
                                 
@@ -420,8 +401,7 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "delete()")
+                                    logUtil!!.put(success, this, "delete()")
 
                                     }
                                 
@@ -441,8 +421,7 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e)
 
                                     }
                                 
@@ -460,8 +439,7 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "delete()", e2)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "delete()", e2)
 
                                     }
                                 
@@ -495,8 +473,7 @@ open fun viewCategory()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(xmlString, this, 
-                            "viewCategory()")
+                                    logUtil!!.put(xmlString, this, "viewCategory()")
 
                                     }
                                 
@@ -514,8 +491,7 @@ open fun viewCategory()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "viewCategory()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewCategory()", e)
 
                                     }
                                 
@@ -541,8 +517,7 @@ open fun viewCategories()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "viewCategories()")
+                                    logUtil!!.put(success, this, "viewCategories()")
 
                                     }
                                 
@@ -560,8 +535,7 @@ open fun viewCategories()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "viewCategories()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewCategories()", e)
 
                                     }
                                 
@@ -587,8 +561,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "update()")
+                                    logUtil!!.put(success, this, "update()")
 
                                     }
                                 
@@ -606,8 +579,7 @@ open fun update()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 

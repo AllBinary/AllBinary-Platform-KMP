@@ -72,8 +72,7 @@ override fun visit(anyType: Any)
                         else {
                             
         try {
-            TextNotificationUtil.getInstance()!!.fireError(
-                            "Numbers Only")
+            TextNotificationUtil.getInstance()!!.fireError("Numbers Only")
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

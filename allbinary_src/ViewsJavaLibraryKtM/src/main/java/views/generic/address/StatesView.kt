@@ -89,8 +89,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.S
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "toXmlNode", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "toXmlNode", e)
 
                                     }
                                 

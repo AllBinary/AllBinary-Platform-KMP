@@ -52,17 +52,13 @@ open fun getInstance()
             {
             }            
         
-    var NONE: CollisionType = CollisionType(
-                            "None")
+    var NONE: CollisionType = CollisionType("None")
 
-    var DAMAGE: CollisionType = CollisionType(
-                            "Damage")
+    var DAMAGE: CollisionType = CollisionType("Damage")
 
-    var PICKUP: CollisionType = CollisionType(
-                            "Pickup")
+    var PICKUP: CollisionType = CollisionType("Pickup")
 
-    var COLLISION: CollisionType = CollisionType(
-                            "Collision")
+    var COLLISION: CollisionType = CollisionType("Collision")
 
 }
                 

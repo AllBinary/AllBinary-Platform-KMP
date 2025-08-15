@@ -119,8 +119,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Existing Item With MoneyException", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Existing Item With MoneyException", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -138,8 +137,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Item Does Not Exist", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("Item Does Not Exist", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -162,8 +160,7 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "BasicItem is not valid", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("BasicItem is not valid", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -403,8 +400,7 @@ this.downloadableItem= DownloadableItem(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "DownloadableItem is not valid", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("DownloadableItem is not valid", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -427,8 +423,7 @@ this.downloadableItem= DownloadableItem(hashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in validation", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Exception in validation", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -503,8 +498,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(ITEM_NOT_FOUND, this, 
-                            "validationInfo()")
+                                    logUtil!!.put(ITEM_NOT_FOUND, this, "validationInfo()")
 
                                     }
                                 
@@ -525,8 +519,7 @@ open fun validationInfo()
                         
                                     {
                                     stringBuffer!!.append(basicItemValidation!!.validationInfo())
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                                     }
                                 
@@ -544,8 +537,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Category: " +fullCategory, this, 
-                            "validationInfo()")
+                                    logUtil!!.put("Category: " +fullCategory, this, "validationInfo()")
 
                                     }
                                 
@@ -557,13 +549,10 @@ stringBuffer!!.append(
                         if(!categoryFile!!.isDirectory())
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Category ")
+                                    stringBuffer!!.append("Category ")
 stringBuffer!!.append(this.itemInterface!!.getCategory())
-stringBuffer!!.append(
-                            " does not exist.")
-stringBuffer!!.append(
-                            "<br />")
+stringBuffer!!.append(" does not exist.")
+stringBuffer!!.append("<br />")
 
                                     }
                                 
@@ -592,10 +581,8 @@ this.validationInfo(stringBuffer, fileName, size)
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Download File Missing")
-stringBuffer!!.append(
-                            "<br/>")
+                            stringBuffer!!.append("Download File Missing")
+stringBuffer!!.append("<br/>")
 
                         }
                             
@@ -684,8 +671,7 @@ this.validationInfo(stringBuffer, fileName, size)
                                     }
                                 
 stringBuffer!!.append(log)
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                                     }
                                 
@@ -703,9 +689,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -756,8 +740,7 @@ open fun isValid(fileName: String, size: Long)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "File name is not valid: ")
+stringBuffer!!.append("File name is not valid: ")
 stringBuffer!!.append(fileName)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -787,11 +770,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "File Size To Large: ")
+stringBuffer!!.append("File Size To Large: ")
 stringBuffer!!.append(size)
-stringBuffer!!.append(
-                            ">")
+stringBuffer!!.append(">")
 stringBuffer!!.append(fileData!!.MAXDOWNLOADABLEFILESIZE)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -817,11 +798,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "File Size To Small: ")
+stringBuffer!!.append("File Size To Small: ")
 stringBuffer!!.append(size)
-stringBuffer!!.append(
-                            ">")
+stringBuffer!!.append(">")
 stringBuffer!!.append(fileData!!.MINDOWNLOADABLEFILESIZE)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -873,17 +852,13 @@ open fun validationInfo(stringBuffer: StringMaker, fileName: String, size: Long)
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(fileName, fileData!!.MINLEN, fileData!!.MAXLEN))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "File Name must be more than ")
+                                    stringBuffer!!.append("File Name must be more than ")
 stringBuffer!!.append(fileData!!.MINLEN)
-stringBuffer!!.append(
-                            " and less than ")
+stringBuffer!!.append(" and less than ")
 stringBuffer!!.append(fileData!!.MAXLEN)
-stringBuffer!!.append(
-                            " characters in length: ")
+stringBuffer!!.append(" characters in length: ")
 stringBuffer!!.append(fileName)
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                                     }
                                 
@@ -895,14 +870,11 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "File Is Not The Right Size. ")
+                            stringBuffer!!.append("File Is Not The Right Size. ")
 stringBuffer!!.append(fileData!!.MINDOWNLOADABLEFILESIZE)
-stringBuffer!!.append(
-                            "< >")
+stringBuffer!!.append("< >")
 stringBuffer!!.append(fileData!!.MAXDOWNLOADABLEFILESIZE)
-stringBuffer!!.append(
-                            "<br/>")
+stringBuffer!!.append("<br/>")
 
                         }
                             

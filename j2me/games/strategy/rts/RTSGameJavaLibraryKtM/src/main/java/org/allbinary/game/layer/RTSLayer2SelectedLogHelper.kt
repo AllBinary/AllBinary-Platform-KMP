@@ -66,8 +66,7 @@ open fun steeringUp(pathFindingLayerInterface: PathFindingLayerInterface)
 
                     var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " steering - Up")!!.toString(), this, TRACK_TO_FIRE_OR_MOVE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Up")!!.toString(), this, TRACK_TO_FIRE_OR_MOVE)
 }
 
 
@@ -77,8 +76,7 @@ open fun steeringFireOrStop(pathFindingLayerInterface: PathFindingLayerInterface
 
                     var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " steering - Fire/All Stop")!!.toString(), this, TRACK_TO_FIRE_OR_MOVE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Fire/All Stop")!!.toString(), this, TRACK_TO_FIRE_OR_MOVE)
 }
 
 
@@ -88,8 +86,7 @@ open fun buildingAbove(pathFindingLayerInterface: PathFindingLayerInterface)
 
                     var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " Building Above")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Above")!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -102,8 +99,7 @@ open fun buildingChaseLeft(pathFindingLayerInterface: PathFindingLayerInterface,
 
                     var angle = angle
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " steering - Going Left: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Left: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -116,8 +112,7 @@ open fun buildingChaseRight(pathFindingLayerInterface: PathFindingLayerInterface
 
                     var angle = angle
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " steering - Going Right: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Right: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -127,8 +122,7 @@ open fun buildingDown(pathFindingLayerInterface: PathFindingLayerInterface)
 
                     var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " Building Below")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Below")!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -141,8 +135,7 @@ open fun buildingChaseDown(pathFindingLayerInterface: PathFindingLayerInterface,
 
                     var angle = angle
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " steering - Going Down: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Down: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -155,8 +148,7 @@ open fun buildingChaseUp(pathFindingLayerInterface: PathFindingLayerInterface, a
 
                     var angle = angle
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " steering - Going Up: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" steering - Going Up: ")!!.append(angle)!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -166,8 +158,7 @@ open fun buildingLeft(pathFindingLayerInterface: PathFindingLayerInterface)
 
                     var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " Building Left")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Left")!!.toString(), this, BUILDING_CHASE)
 }
 
 
@@ -177,8 +168,7 @@ open fun buildingRight(pathFindingLayerInterface: PathFindingLayerInterface)
 
                     var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
-                            append(pathFindingLayerInterface!!.getName())!!.append(
-                            " Building Right")!!.toString(), this, BUILDING_CHASE)
+                            append(pathFindingLayerInterface!!.getName())!!.append(" Building Right")!!.toString(), this, BUILDING_CHASE)
 }
 
 

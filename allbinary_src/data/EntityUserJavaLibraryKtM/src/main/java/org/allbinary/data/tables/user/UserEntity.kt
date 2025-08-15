@@ -337,8 +337,7 @@ open fun deleteWhere(key: String, value: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "deleteWhere")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "deleteWhere")
 
                                     }
                                 
@@ -348,8 +347,7 @@ open fun deleteWhere(key: String, value: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "deleteWhere", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "deleteWhere", e)
 
                                     }
                                 
@@ -393,8 +391,7 @@ open fun login(userName: String, password: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Command Success but login failed for user: " +userName +" because user did not exist", this, 
-                            "login")
+                                    logUtil!!.put("Command Success but login failed for user: " +userName +" because user did not exist", this, "login")
 
                                     }
                                 
@@ -425,8 +422,7 @@ stringBuffer!!.append(PASSWORD_LABEL)
 stringBuffer!!.append(password)
 stringBuffer!!.append(EQUALS)
 stringBuffer!!.append(result)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "login")
+logUtil!!.put(stringBuffer!!.toString(), this, "login")
 
                                     }
                                 
@@ -456,8 +452,7 @@ stringBuffer!!.append(SuperCrypt(Integer(encryption).
 stringBuffer!!.append(NOT_EQUAL)
 stringBuffer!!.append(result)
 stringBuffer!!.append(END_QUOTES)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "login")
+logUtil!!.put(stringBuffer!!.toString(), this, "login")
 
                                     }
                                 
@@ -475,8 +470,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "login", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "login", e)
 
                                     }
                                 

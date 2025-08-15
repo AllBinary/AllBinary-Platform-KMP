@@ -133,8 +133,7 @@ open fun getItems(storeFrontInterface: StoreFrontInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Getting Items For: " +storeFrontInterface!!.getName(), this, 
-                            "getItems")
+                                    logUtil!!.put("Getting Items For: " +storeFrontInterface!!.getName(), this, "getItems")
 
                                     }
                                 
@@ -264,8 +263,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(BasicItemData.INBASKETS)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(BasicItemData.WEIGHT)
-stringBuffer!!.append(
-                            " VARCHAR(20) NOT NULL,")
+stringBuffer!!.append(" VARCHAR(20) NOT NULL,")
 stringBuffer!!.append(EntryData.getInstance()!!.ENABLE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(BasicItemData.NEWORUSED)
@@ -301,8 +299,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(EntryData.getInstance()!!.TIMECREATED)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(BasicItemData.PRICE)
-stringBuffer!!.append(
-                            " VARCHAR(20) NOT NULL,")
+stringBuffer!!.append(" VARCHAR(20) NOT NULL,")
 stringBuffer!!.append(BasicItemData.COMMENT)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
 stringBuffer!!.append(BasicItemData.CUSTOMS)

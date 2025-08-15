@@ -64,10 +64,7 @@ open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Jsp Tag Exception", 
-                            "AbResponseHandler", 
-                            "sendJspRedirect()", e)
+                                    logUtil!!.put("Jsp Tag Exception", "AbResponseHandler", "sendJspRedirect()", e)
 
                                     }
                                 
@@ -78,10 +75,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in Redirect Handling", 
-                            "AbResponseHandler", 
-                            "sendJspRedirect", e)
+                                    logUtil!!.put("Exception in Redirect Handling", "AbResponseHandler", "sendJspRedirect", e)
 
                                     }
                                 
@@ -115,10 +109,7 @@ open fun sendServletRedirect(pageContext: PageContext, e: Exception)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Jsp Tag Exception", 
-                            "AbResponseHandler", 
-                            "sendJspRedirect()", e)
+                                    logUtil!!.put("Jsp Tag Exception", "AbResponseHandler", "sendJspRedirect()", e)
 
                                     }
                                 
@@ -129,10 +120,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in Redirect Handling", 
-                            "AbResponseHandler", 
-                            "sendJspRedirect", e)
+                                    logUtil!!.put("Exception in Redirect Handling", "AbResponseHandler", "sendJspRedirect", e)
 
                                     }
                                 
@@ -166,10 +154,7 @@ open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Licensing Exception", 
-                            "AbResponseHandler", 
-                            "sendJspTagLicensingRedirect()", e)
+                                    logUtil!!.put("Licensing Exception", "AbResponseHandler", "sendJspTagLicensingRedirect()", e)
 
                                     }
                                 
@@ -180,10 +165,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in Redirect Handling", 
-                            "AbResponseHandler", 
-                            "sendJspTagLicensingRedirect", e)
+                                    logUtil!!.put("Exception in Redirect Handling", "AbResponseHandler", "sendJspTagLicensingRedirect", e)
 
                                     }
                                 
@@ -217,10 +199,7 @@ open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Licensing Exception", 
-                            "AbResponseHandler", 
-                            "sendServletLicensingRedirect()", e)
+                                    logUtil!!.put("Licensing Exception", "AbResponseHandler", "sendServletLicensingRedirect()", e)
 
                                     }
                                 
@@ -231,10 +210,7 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in Redirect Handling", 
-                            "AbResponseHandler", 
-                            "sendServletLicensingRedirect", e)
+                                    logUtil!!.put("Exception in Redirect Handling", "AbResponseHandler", "sendServletLicensingRedirect", e)
 
                                     }
                                 

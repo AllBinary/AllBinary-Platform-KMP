@@ -195,8 +195,7 @@ this.animationBehaviorFactory= animationBehaviorFactory
                                     
 
 
-                            throw Exception(
-                            "Sound Was not Initialized")
+                            throw Exception("Sound Was not Initialized")
 
                                     }
                                 

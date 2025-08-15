@@ -58,8 +58,7 @@ open fun static_toString()
 : String{
     var osBuffer: StringMaker = StringMaker()
 
-osBuffer!!.append(
-                            "Hardware Info: \n")
+osBuffer!!.append("Hardware Info: \n")
 
     
                         if(hardwareInterface != 
@@ -112,8 +111,7 @@ open fun getInstance(operatingSystemInterface: GenericOperatingSystem)
 
                                     }
                                 
-logUtil!!.put(
-                            "Found Hardware", this, commonStrings!!.CONSTRUCTOR)
+logUtil!!.put("Found Hardware", this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }

@@ -85,8 +85,7 @@ open fun toTransformInfoPropertiesHashMap()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Size: " +transformInfoNodeVector!!.size, this, 
-                            "toTransformInfoPropertiesHashMap()")
+                                    logUtil!!.put("Size: " +transformInfoNodeVector!!.size, this, "toTransformInfoPropertiesHashMap()")
 
                                     }
                                 
@@ -122,8 +121,7 @@ transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transf
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toTransformInfoPropertiesHashMap()", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "toTransformInfoPropertiesHashMap()", e)
 
                                     }
                                 

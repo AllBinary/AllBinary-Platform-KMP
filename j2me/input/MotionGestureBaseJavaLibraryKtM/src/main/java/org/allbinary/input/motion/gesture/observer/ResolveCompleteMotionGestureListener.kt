@@ -49,8 +49,7 @@ public constructor        ()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "MotionGesture to CompleteMotionGesture Reciever", this, commonStrings!!.CONSTRUCTOR)
+logUtil!!.put("MotionGesture to CompleteMotionGesture Reciever", this, commonStrings!!.CONSTRUCTOR)
 CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMotionGestureEventListener())
 }
 

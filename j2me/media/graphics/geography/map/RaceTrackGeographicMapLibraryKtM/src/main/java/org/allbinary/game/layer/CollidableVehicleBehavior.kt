@@ -101,8 +101,7 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompo
 {
 
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-ForcedLogUtil.log(
-                            "Don't Use Interface Version It Is Slower", this)
+ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 }
 
 

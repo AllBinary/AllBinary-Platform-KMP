@@ -88,8 +88,7 @@ serviceReference= bundleContext!!.getServiceReference(serviceName)
                                     
 
 
-                            throw Exception(
-                            "No Such Service Reference")
+                            throw Exception("No Such Service Reference")
 
                                     }
                                 

@@ -32,11 +32,9 @@ open public class RaceTrackGameFeature : GameFeature {
 
         companion object {
             
-    val MINI_MAP: GameFeature = RaceTrackGameFeature(
-                            "Mini Map")
+    val MINI_MAP: GameFeature = RaceTrackGameFeature("Mini Map")
 
-    val AUTO_FINISH_AI: GameFeature = RaceTrackGameFeature(
-                            "Auto Finish AI")
+    val AUTO_FINISH_AI: GameFeature = RaceTrackGameFeature("Auto Finish AI")
 
         }
             protected constructor        (name: String)                        

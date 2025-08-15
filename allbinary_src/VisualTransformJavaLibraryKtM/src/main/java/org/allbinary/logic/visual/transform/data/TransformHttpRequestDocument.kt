@@ -199,20 +199,17 @@ open fun log()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "BaseNode: ")
+                                    stringBuffer!!.append("BaseNode: ")
 stringBuffer!!.append(this.baseNode!!.getNodeName())
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Log-Error: BaseNode is Null")
+                            stringBuffer!!.append("Log-Error: BaseNode is Null")
 
                         }
                             
-stringBuffer!!.append(
-                            "\nDocument: ")
+stringBuffer!!.append("\nDocument: ")
 stringBuffer!!.append(DomDocumentHelper.toString(document))
 
 

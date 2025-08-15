@@ -46,8 +46,7 @@ open fun getInstance(key: Any)
 
 
 
-                            throw Exception(
-                            "This Factory Does Not")
+                            throw Exception("This Factory Does Not")
 }
 
 

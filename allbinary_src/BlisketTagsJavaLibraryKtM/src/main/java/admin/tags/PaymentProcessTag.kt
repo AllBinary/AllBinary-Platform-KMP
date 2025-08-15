@@ -76,8 +76,7 @@ open fun process()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "LicensingException", this, commonStrings!!.PROCESS, e)
+                                    logUtil!!.put("LicensingException", this, commonStrings!!.PROCESS, e)
 
                                     }
                                 
@@ -136,8 +135,7 @@ open fun doStartTag()
                             
 
 
-                            throw Exception(
-                            "No Such Payment Processing Command")
+                            throw Exception("No Such Payment Processing Command")
 
                         }
                             

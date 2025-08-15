@@ -86,8 +86,7 @@ open fun validationInfo()
 : String{
 
 
-                            throw Exception(
-                            "validationInfo")
+                            throw Exception("validationInfo")
 }
 
 

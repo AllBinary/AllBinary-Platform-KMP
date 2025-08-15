@@ -207,8 +207,7 @@ open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
                             
 
 
-                            throw Exception(
-                            "PlacementType Not Recognized")
+                            throw Exception("PlacementType Not Recognized")
 
                         }
                             

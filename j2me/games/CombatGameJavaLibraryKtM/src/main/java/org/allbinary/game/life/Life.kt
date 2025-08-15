@@ -67,8 +67,7 @@ this.maxlives= maxlives
                                     
 
 
-                            throw Exception(
-                            "To Many Lives")
+                            throw Exception("To Many Lives")
 
                                     }
                                 

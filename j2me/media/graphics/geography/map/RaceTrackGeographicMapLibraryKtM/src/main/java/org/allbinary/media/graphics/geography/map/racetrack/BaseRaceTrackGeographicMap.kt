@@ -88,9 +88,7 @@ this.miniGeographicMap= miniGeographicMap
                                     {
                                     
     var error: String = StringMaker().
-                            append(
-                            "RaceTrackMap has incorrect Mini Map columns: ")!!.append(miniTiledLayer!!.getColumns())!!.append(
-                            " != ")!!.append(this.getGeographicMapCellPositionFactory()!!.getColumns())!!.toString()!!
+                            append("RaceTrackMap has incorrect Mini Map columns: ")!!.append(miniTiledLayer!!.getColumns())!!.append(" != ")!!.append(this.getGeographicMapCellPositionFactory()!!.getColumns())!!.toString()!!
             
 
 

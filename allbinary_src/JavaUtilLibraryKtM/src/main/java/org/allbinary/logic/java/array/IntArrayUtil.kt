@@ -55,8 +55,7 @@ open fun toString(array: IntArray)
                         if(index < array.size)
                         
                                     {
-                                    stringBuffer!!.append(
-                            ", ")
+                                    stringBuffer!!.append(", ")
 
                                     }
                                 
@@ -85,8 +84,7 @@ open fun toString(array: Array<IntArray?>)
                         for (index in 0 until array.size)
 
 
-        {stringBuffer!!.append(
-                            "{")
+        {stringBuffer!!.append("{")
 
 
 
@@ -100,22 +98,19 @@ open fun toString(array: Array<IntArray?>)
                         if(index2 < array[index]!!.length -1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            ", ")
+                                    stringBuffer!!.append(", ")
 
                                     }
                                 
 }
 
-stringBuffer!!.append(
-                            "}")
+stringBuffer!!.append("}")
 
     
                         if(index < array.size -1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            ", \n")
+                                    stringBuffer!!.append(", \n")
 
                                     }
                                 
@@ -144,8 +139,7 @@ open fun toString(array: Array<Array<IntArray?>?>)
                         for (index in 0 until array.size)
 
 
-        {stringBuffer!!.append(
-                            "{")
+        {stringBuffer!!.append("{")
 
 
 
@@ -153,8 +147,7 @@ open fun toString(array: Array<Array<IntArray?>?>)
                         for (index2 in 0 until array[index]!!.length)
 
 
-        {stringBuffer!!.append(
-                            "{")
+        {stringBuffer!!.append("{")
 
 
 
@@ -168,36 +161,31 @@ open fun toString(array: Array<Array<IntArray?>?>)
                         if(index3 < array[index]!![index2]!!.length -1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            ", ")
+                                    stringBuffer!!.append(", ")
 
                                     }
                                 
 }
 
-stringBuffer!!.append(
-                            "}")
+stringBuffer!!.append("}")
 
     
                         if(index2 < array[index]!!.length -1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            ", ")
+                                    stringBuffer!!.append(", ")
 
                                     }
                                 
 }
 
-stringBuffer!!.append(
-                            "}")
+stringBuffer!!.append("}")
 
     
                         if(index < array.size -1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            ", \n")
+                                    stringBuffer!!.append(", \n")
 
                                     }
                                 

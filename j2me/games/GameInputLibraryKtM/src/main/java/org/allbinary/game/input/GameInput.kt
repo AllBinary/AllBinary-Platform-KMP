@@ -103,8 +103,7 @@ open fun add(gameKeyEvent: GameKeyEvent)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Danger Passed Null GameKeyEvent", this, commonStrings!!.ADD)
+                            logUtil!!.put("Danger Passed Null GameKeyEvent", this, commonStrings!!.ADD)
 
                         }
                             

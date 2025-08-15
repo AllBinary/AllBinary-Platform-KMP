@@ -108,8 +108,7 @@ open fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScor
 
 
                     var highScoresResultsListener = highScoresResultsListener
-logUtil!!.put(
-                            "Getting Remote/Local HighScores", this, FETCH)
+logUtil!!.put("Getting Remote/Local HighScores", this, FETCH)
 this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 }
 

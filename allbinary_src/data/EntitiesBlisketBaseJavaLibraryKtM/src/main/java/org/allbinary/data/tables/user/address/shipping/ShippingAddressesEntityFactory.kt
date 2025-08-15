@@ -79,8 +79,7 @@ open fun getInstance(userName: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getShippingAddressesEntityInstance()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getShippingAddressesEntityInstance()", e)
 
                                     }
                                 

@@ -70,9 +70,7 @@ this.setMediaPlayer(MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "Failed to create media player for: ")!!.append(resource)!!.append(
-                            " with id: ")!!.append(resourceUtil!!.getResourceId(resource)!!.toString())!!.toString())
+                            append("Failed to create media player for: ")!!.append(resource)!!.append(" with id: ")!!.append(resourceUtil!!.getResourceId(resource)!!.toString())!!.toString())
 
                                     }
                                 
@@ -204,8 +202,7 @@ super.start()
 this.mediaPlayer!!.prepare()
 super.stop()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "stop", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }

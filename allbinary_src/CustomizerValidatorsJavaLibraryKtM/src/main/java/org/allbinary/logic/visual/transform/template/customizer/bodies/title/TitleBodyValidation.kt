@@ -79,8 +79,7 @@ public constructor        (document: Document){
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, 
-                            "Constructor(document)")
+                                    logUtil!!.put(this.commonStrings!!.CONSTRUCTOR, this, "Constructor(document)")
 
                                     }
                                 
@@ -119,8 +118,7 @@ this.titleValidation= TitleNotRequiredValidation(titleNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "To Many Body Nodes", this, this.commonStrings!!.CONSTRUCTOR)
+                                    logUtil!!.put("To Many Body Nodes", this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -139,8 +137,7 @@ public constructor        (hashMap: HashMap<Any, Any>){
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.START, this, 
-                            "Constructor(hashmap)")
+                                    logUtil!!.put(this.commonStrings!!.START, this, "Constructor(hashmap)")
 
                                     }
                                 
@@ -172,8 +169,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "TitleBodyValidation", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("TitleBodyValidation", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -215,8 +211,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -240,11 +235,9 @@ open fun validationInfo()
 
 
                             {
-                            stringBuffer!!.append(
-                            "Error: Data submitted is < ")
+                            stringBuffer!!.append("Error: Data submitted is < ")
 stringBuffer!!.append(BodyData.getInstance()!!.MIN)
-stringBuffer!!.append(
-                            " or > ")
+stringBuffer!!.append(" or > ")
 stringBuffer!!.append(AbSqlData.MAXBLOB)
 
                             }
@@ -260,9 +253,7 @@ stringBuffer!!.append(AbSqlData.MAXBLOB)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 
@@ -311,8 +302,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Title Body: " +this.body, this, 
-                            "toXmlNode(document)")
+                                    logUtil!!.put("Title Body: " +this.body, this, "toXmlNode(document)")
 
                                     }
                                 

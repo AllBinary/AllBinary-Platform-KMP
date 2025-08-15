@@ -89,8 +89,7 @@ open fun init(soundsFactoryInterface: SoundsFactoryInterface)
             
 
 logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, 
-                            "Media Manager")
+ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
 Sounds(soundsFactoryInterface).
                             init()
 }

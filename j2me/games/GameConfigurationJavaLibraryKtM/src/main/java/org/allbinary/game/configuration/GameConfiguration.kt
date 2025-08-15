@@ -91,9 +91,7 @@ open fun setValue(value: Integer)
 
 this.value= value
 GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringMaker().
-                            append(this.name)!!.append(
-                            " value: from: ")!!.append(oldValue!!.toInt())!!.append(
-                            " to ")!!.append(this.value.toInt())!!.toString()))
+                            append(this.name)!!.append(" value: from: ")!!.append(oldValue!!.toInt())!!.append(" to ")!!.append(this.value.toInt())!!.toString()))
 
                                     }
                                 
@@ -198,23 +196,17 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Name: ")
+stringBuffer!!.append("Name: ")
 stringBuffer!!.append(this.name)
-stringBuffer!!.append(
-                            " Min: ")
+stringBuffer!!.append(" Min: ")
 stringBuffer!!.append(this.getMinValue()!!.toInt())
-stringBuffer!!.append(
-                            " Max: ")
+stringBuffer!!.append(" Max: ")
 stringBuffer!!.append(this.getMaxValue()!!.toInt())
-stringBuffer!!.append(
-                            " Value: ")
+stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(this.getValue()!!.toInt())
-stringBuffer!!.append(
-                            " Default: ")
+stringBuffer!!.append(" Default: ")
 stringBuffer!!.append(this.getDefaultValue()!!.toInt())
-stringBuffer!!.append(
-                            " Modifiable: ")
+stringBuffer!!.append(" Modifiable: ")
 stringBuffer!!.append(this.isModifiable())
 
 

@@ -84,8 +84,7 @@ public constructor        (commandListener: CommandListener, childNameList: Basi
                             //For kotlin this is before the body of the constructor.
                     
 logUtil!!.put(StringMaker().
-                            append(
-                            "delay: ")!!.append(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("delay: ")!!.append(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
 
     
@@ -103,9 +102,7 @@ this.runnableCanvasRefreshHelper= RunnableCanvasRefreshHelper(this)
                         if(hasParam)
                         
                                     {
-                                    logUtil!!.put(
-                            "commandListener was null", this, 
-                            "initCommands")
+                                    logUtil!!.put("commandListener was null", this, "initCommands")
 
                                     }
                                 
@@ -139,8 +136,7 @@ open fun initCommands(cmdListener: CommandListener)
 {
 
                     var cmdListener = cmdListener
-logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, 
-                            "initCommands")
+logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, "initCommands")
 }
 
 
@@ -289,8 +285,7 @@ open fun setWait(wait: Int)
 loopTimeHelper!!.delay= wait
 this.pauseWait= wait.toLong() *3
 logUtil!!.put(StringMaker().
-                            append(
-                            "setWait - delay: ")!!.append(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("setWait - delay: ")!!.append(this.loopTimeHelper!!.delay)!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
@@ -321,8 +316,7 @@ override fun showNotify()
         try {
             this.stopWaiting()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "showNotify", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "showNotify", e)
 }
 
 }

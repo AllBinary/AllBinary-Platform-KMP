@@ -66,8 +66,7 @@ stringBuffer!!.append(Memory.getInfo())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(GameStatisticsFactory.getInstance()!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(
-                            " Option: ")
+stringBuffer!!.append(" Option: ")
 
     
                         if(Features.getInstance()!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL_AUTO_SELECT))

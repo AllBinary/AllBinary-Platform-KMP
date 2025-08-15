@@ -127,13 +127,10 @@ open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, us
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Returning UserEmailEventHandler for ")
+stringBuffer!!.append("Returning UserEmailEventHandler for ")
 stringBuffer!!.append(userVector!!.size)
-stringBuffer!!.append(
-                            " users.")
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getEventHandler")
+stringBuffer!!.append(" users.")
+logUtil!!.put(stringBuffer!!.toString(), this, "getEventHandler")
 
                                     }
                                 

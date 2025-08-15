@@ -135,8 +135,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-resourcePath= stringMaker!!.append(
-                            "/")!!.append(RES)!!.append(resource.substring(index))!!.toString()
+resourcePath= stringMaker!!.append("/")!!.append(RES)!!.append(resource.substring(index))!!.toString()
 inputStream= resource::class.getResourceAsStream(resourcePath)
 
     var COLON: String = CommonSeps.getInstance()!!.COLON
@@ -195,8 +194,7 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
 
 
 
-                            throw Exception(stringMaker!!.append(
-                            "Unable to obtain: ")!!.append(resource)!!.toString())
+                            throw Exception(stringMaker!!.append("Unable to obtain: ")!!.append(resource)!!.toString())
 
                                     }
                                 

@@ -62,8 +62,7 @@ this.setURIResolver(StoreUriResolver(this.getTransformInfoInterface(), this.getU
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("\nObjectConfig: \n" +objectConfig!!.toString(), this, 
-                            "CompoundTransform(")
+                                    logUtil!!.put("\nObjectConfig: \n" +objectConfig!!.toString(), this, "CompoundTransform(")
 
                                     }
                                 

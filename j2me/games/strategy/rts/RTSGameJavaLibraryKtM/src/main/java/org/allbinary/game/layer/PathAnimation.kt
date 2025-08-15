@@ -197,9 +197,7 @@ this.linePathAnimation!!.paint(graphics, point, nextPoint, tiledLayer)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Cleared Target", this, 
-                            "paint")
+            {logUtil!!.put("Cleared Target", this, "paint")
 }
 
 }

@@ -516,8 +516,7 @@ this.scalableListener!!.scale(ratio.toFloat())
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Found Landscape Orientation", this, commonStrings!!.UPDATE)
+                            logUtil!!.put("Found Landscape Orientation", this, commonStrings!!.UPDATE)
 
     
                         if(aLastWidth > scaleLargestTo)

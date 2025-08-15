@@ -55,11 +55,9 @@ open fun getInstance()
         
     val UNKNOWN: LicenseType = LicenseType(CommonStrings.getInstance()!!.UNKNOWN)
 
-    val DEMO: LicenseType = LicenseType(
-                            "Demo")
+    val DEMO: LicenseType = LicenseType("Demo")
 
-    val NORMAL: LicenseType = LicenseType(
-                            "Normal")
+    val NORMAL: LicenseType = LicenseType("Normal")
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 

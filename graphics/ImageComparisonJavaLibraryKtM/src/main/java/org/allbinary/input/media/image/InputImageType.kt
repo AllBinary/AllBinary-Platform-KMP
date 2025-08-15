@@ -39,14 +39,11 @@ open public class InputImageType
 
     private val TYPE_VECTOR: Vector = Vector()
 
-    var CAPTURE: InputImageType = InputImageType(
-                            "Capture", 0)
+    var CAPTURE: InputImageType = InputImageType("Capture", 0)
 
-    var COMPARISON: InputImageType = InputImageType(
-                            "Comparison", 1)
+    var COMPARISON: InputImageType = InputImageType("Comparison", 1)
 
-    var MOTION: InputImageType = InputImageType(
-                            "Motion", 2)
+    var MOTION: InputImageType = InputImageType("Motion", 2)
 
 open fun getInstance(imageTypeString: String)
         //nullable =  from not(true or (false and false)) = 

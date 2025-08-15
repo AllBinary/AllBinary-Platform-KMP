@@ -59,10 +59,7 @@ open fun printPath(list: BasicArrayList)
             
 
 PreLogUtil.put(StringMaker().
-                            append(
-                            "pathList.add(cellPositionFactory.getInstance")!!.append(anyType!!.toString())!!.append(
-                            ");")!!.toString(), this, 
-                            "printPath")
+                            append("pathList.add(cellPositionFactory.getInstance")!!.append(anyType!!.toString())!!.append(");")!!.toString(), this, "printPath")
 }
 
 }
@@ -81,8 +78,7 @@ open fun printPaths(list: BasicArrayList)
 
 
         {System.out.println(StringMaker().
-                            append(
-                            " Path ")!!.append(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())
+                            append(" Path ")!!.append(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())
 this.printPath(list.get(index) as BasicArrayList)
 }
 

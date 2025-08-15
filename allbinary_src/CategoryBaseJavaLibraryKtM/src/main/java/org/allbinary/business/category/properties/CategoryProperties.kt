@@ -202,8 +202,7 @@ depthIndex++
                                     
 
 
-                            throw Exception(
-                            "Probably Major Error")
+                            throw Exception("Probably Major Error")
 
                                     }
                                 
@@ -234,8 +233,7 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
                         
                                     {
-                                    logUtil!!.put("path = " +pathStringBuffer!!.toString(), this, 
-                            "getPath")
+                                    logUtil!!.put("path = " +pathStringBuffer!!.toString(), this, "getPath")
 
                                     }
                                 
@@ -264,8 +262,7 @@ open fun getWebAppPath()
 : AbPath{
 
 
-                            throw Exception(
-                            "Not Root")
+                            throw Exception("Not Root")
 }
 
 

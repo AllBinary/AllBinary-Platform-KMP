@@ -139,8 +139,7 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Root View Called with: " +viewVector!!.size, this, 
-                            "get(transformInfoInterface)")
+                                    logUtil!!.put("Root View Called with: " +viewVector!!.size, this, "get(transformInfoInterface)")
 
                                     }
                                 
@@ -195,14 +194,11 @@ stringBuffer!!.append(endXMLHeader)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Replacing: ")
+stringBuffer!!.append("Replacing: ")
 stringBuffer!!.append(templateKey)
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(templateValue)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "get()")
+logUtil!!.put(stringBuffer!!.toString(), this, "get()")
 
                                     }
                                 
@@ -217,8 +213,7 @@ rootView= replace.all(rootView)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("End: Result of a compound view: " +rootView, this, 
-                            "get()")
+                                    logUtil!!.put("End: Result of a compound view: " +rootView, this, "get()")
 
                                     }
                                 
@@ -247,8 +242,7 @@ open fun createInputStream()
                         
                                     {
                                     logUtil!!.put("Template: " +completeTemplateViewBytes.decodeToString().
-                            toString(), this, 
-                            "createInputStream()")
+                            toString(), this, "createInputStream()")
 
                                     }
                                 

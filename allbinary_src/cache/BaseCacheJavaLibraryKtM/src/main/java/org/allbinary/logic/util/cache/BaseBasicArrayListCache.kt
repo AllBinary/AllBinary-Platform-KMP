@@ -45,8 +45,7 @@ open fun log()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "S: ")
+stringBuffer!!.append("S: ")
 stringBuffer!!.append(this.list.size())
 
 

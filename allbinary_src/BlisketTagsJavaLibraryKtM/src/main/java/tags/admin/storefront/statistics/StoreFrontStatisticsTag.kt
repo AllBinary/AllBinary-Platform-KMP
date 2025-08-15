@@ -53,10 +53,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation StoreFrontStatistics View")
-this.setObjectFile(
-                            "views.admin.storefront.statistics.ValidationStoreFrontStatisticsView")
+                                    this.setName("Validation StoreFrontStatistics View")
+this.setObjectFile("views.admin.storefront.statistics.ValidationStoreFrontStatisticsView")
 
                                     }
                                 
@@ -79,8 +77,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

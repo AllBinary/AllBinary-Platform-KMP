@@ -89,8 +89,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Could Not Load Object Config", getInstance(), commonStrings!!.GET_INSTANCE, e)
+                                    logUtil!!.put("Could Not Load Object Config", getInstance(), commonStrings!!.GET_INSTANCE, e)
 
                                     }
                                 
@@ -239,8 +238,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, getInstance(), 
-                            "getInstance(document)", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, getInstance(), "getInstance(document)", e)
 
                                     }
                                 

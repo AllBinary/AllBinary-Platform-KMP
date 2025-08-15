@@ -89,8 +89,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failure for: " +className, this, 
-                            "getInstance(classname)", e)
+                                    logUtil!!.put("Failure for: " +className, this, "getInstance(classname)", e)
 
                                     }
                                 
@@ -105,8 +104,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failure for: " +className, this, 
-                            "getInstance(classname)", e)
+                                    logUtil!!.put("Failure for: " +className, this, "getInstance(classname)", e)
 
                                     }
                                 
@@ -191,14 +189,11 @@ constructor= myClass!!.getConstructor(classes)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failure for: ")
+stringBuffer!!.append("Failure for: ")
 stringBuffer!!.append(className)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(ConstructorUtil.view(constructor, 
-                            "\n"))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getInstance(className,params)", e)
+stringBuffer!!.append(ConstructorUtil.view(constructor, "\n"))
+logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", e)
 
                                     }
                                 
@@ -216,14 +211,11 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Failure for: ")
+stringBuffer!!.append("Failure for: ")
 stringBuffer!!.append(className)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(ConstructorUtil.view(constructor, 
-                            "\n"))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getInstance(className,params)", e)
+stringBuffer!!.append(ConstructorUtil.view(constructor, "\n"))
+logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", e)
 
                                     }
                                 
@@ -292,8 +284,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failure for: " +className, this, 
-                            "getClass(className)", e)
+                                    logUtil!!.put("Failure for: " +className, this, "getClass(className)", e)
 
                                     }
                                 
@@ -308,8 +299,7 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LOADERERROR))
                         
                                     {
-                                    logUtil!!.put("Failure for: " +className, this, 
-                            "getClass(className)", e)
+                                    logUtil!!.put("Failure for: " +className, this, "getClass(className)", e)
 
                                     }
                                 

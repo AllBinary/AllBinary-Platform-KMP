@@ -376,8 +376,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "setStatus", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "setStatus", e)
 
                                     }
                                 
@@ -417,8 +416,7 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "setPaymentMethod", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "setPaymentMethod", e)
 
                                     }
                                 
@@ -670,11 +668,9 @@ open fun createTableStatement()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "CREATE TABLE ")
+stringBuffer!!.append("CREATE TABLE ")
 stringBuffer!!.append(tableName)
-stringBuffer!!.append(
-                            " (")
+stringBuffer!!.append(" (")
 stringBuffer!!.append(entryData!!.ID)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(OrderData.ID)
@@ -684,35 +680,27 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(StoreFrontData.getInstance()!!.NAME)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.SHIPPEDDATE)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
 stringBuffer!!.append(OrderHistoryData.ORDERDATE)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.TRANSDATE)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
 stringBuffer!!.append(OrderHistoryData.CANCELDATE)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
 stringBuffer!!.append(OrderHistoryData.STATUS)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(PaymentData.METHOD)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(PaymentData.NAME)
-stringBuffer!!.append(
-                            " VARCHAR(255) ,")
+stringBuffer!!.append(" VARCHAR(255) ,")
 stringBuffer!!.append(PaymentData.TYPE)
-stringBuffer!!.append(
-                            " VARCHAR(255) ,")
+stringBuffer!!.append(" VARCHAR(255) ,")
 stringBuffer!!.append(PaymentData.EXPIRATION)
-stringBuffer!!.append(
-                            " VARCHAR(255) ,")
+stringBuffer!!.append(" VARCHAR(255) ,")
 stringBuffer!!.append(PaymentData.NUMBER)
-stringBuffer!!.append(
-                            " VARCHAR(255) ,")
+stringBuffer!!.append(" VARCHAR(255) ,")
 stringBuffer!!.append(entryData!!.ENCRYPTION)
-stringBuffer!!.append(
-                            " BIGINT(19) UNSIGNED ,")
+stringBuffer!!.append(" BIGINT(19) UNSIGNED ,")
 stringBuffer!!.append(BillingAddressData.NAME)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(BillingAddressData.STREET)
@@ -748,8 +736,7 @@ stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(OrderHistoryData.TOTAL)
 stringBuffer!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)
 stringBuffer!!.append(entryData!!.SPECIAL)
-stringBuffer!!.append(
-                            " VARCHAR(255) ,")
+stringBuffer!!.append(" VARCHAR(255) ,")
 stringBuffer!!.append(OrderData.CUSTOMERCOMMENT)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
 stringBuffer!!.append(OrderData.CUSTOMERCANCELCOMMENT)
@@ -758,11 +745,9 @@ stringBuffer!!.append(OrderData.STORECOMMENT)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
 stringBuffer!!.append(OrderData.STORECANCELCOMMENT)
 stringBuffer!!.append(this.sqlTypeStrings!!.BLOB_NOT_NULL)
-stringBuffer!!.append(
-                            "PRIMARY KEY(")
+stringBuffer!!.append("PRIMARY KEY(")
 stringBuffer!!.append(entryData!!.ID)
-stringBuffer!!.append(
-                            ") )")
+stringBuffer!!.append(") )")
 
 
 

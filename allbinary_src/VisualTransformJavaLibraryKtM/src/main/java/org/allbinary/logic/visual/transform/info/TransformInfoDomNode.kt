@@ -55,8 +55,7 @@ public constructor        (node: Node)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Constructing TransformInfo From TransformInfoDomNode: " +node.getNodeName(), this, 
-                            "TransformInfoDomNode(Node node)")
+                                    logUtil!!.put("Constructing TransformInfo From TransformInfoDomNode: " +node.getNodeName(), this, "TransformInfoDomNode(Node node)")
 
                                     }
                                 
@@ -92,16 +91,12 @@ public constructor        (node: Node)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Constructing Complete TransformInfo Node For: ")
+stringBuffer!!.append("Constructing Complete TransformInfo Node For: ")
 stringBuffer!!.append(name)
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(nodeList!!.getLength())
-stringBuffer!!.append(
-                            " children")
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "TransformInfoObjectConfigComponent(Node node)")
+stringBuffer!!.append(" children")
+logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
                                     }
                                 
@@ -150,16 +145,12 @@ this.transformInfoInterface= TransformInfo(name, objectFileName, objectConfigFil
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Constructing Partial TransformInfo Node For: ")
+stringBuffer!!.append("Constructing Partial TransformInfo Node For: ")
 stringBuffer!!.append(name)
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(nodeList!!.getLength())
-stringBuffer!!.append(
-                            " children")
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "TransformInfoObjectConfigComponent(Node node)")
+stringBuffer!!.append(" children")
+logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigComponent(Node node)")
 
                                     }
                                 
@@ -247,12 +238,9 @@ open fun getReplaceKey()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "<transform:component name=\"")
-stringBuffer!!.append(
-                            "body")
-stringBuffer!!.append(
-                            "\"/>")
+stringBuffer!!.append("<transform:component name=\"")
+stringBuffer!!.append("body")
+stringBuffer!!.append("\"/>")
 
     var key: String = stringBuffer!!.toString()!!
             
@@ -262,8 +250,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Component Key: " +key, this, 
-                            "getReplaceKey()")
+                                    logUtil!!.put("Component Key: " +key, this, "getReplaceKey()")
 
                                     }
                                 

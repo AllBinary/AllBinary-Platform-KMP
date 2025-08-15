@@ -90,14 +90,12 @@ public constructor        (name: String, version: String, specialName: String, s
                         if(this.isHardSale())
                         
                                     {
-                                    logUtil!!.put(
-                            "Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
+                                    logUtil!!.put("Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Don't Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
+                            logUtil!!.put("Don't Use Hard Coded Selling", this, commonStrings!!.CONSTRUCTOR)
 
                         }
                             

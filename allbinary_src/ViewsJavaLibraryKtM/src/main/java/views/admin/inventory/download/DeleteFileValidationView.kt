@@ -79,8 +79,7 @@ open fun getFormData()
                                     
 
 
-                            throw Exception(
-                            "No Request Params Found")
+                            throw Exception("No Request Params Found")
 
                                     }
                                 
@@ -202,8 +201,7 @@ open fun validationInfo()
                                  || !StringValidationUtil.getInstance()!!.isNumber(this.id))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is not valid.<br />")
+                                    stringBuffer!!.append("Id is not valid.<br />")
 
                                     }
                                 
@@ -214,8 +212,7 @@ open fun validationInfo()
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Item does not exist.<br />")
+                                    stringBuffer!!.append("Item does not exist.<br />")
 
                                     }
                                 
@@ -232,8 +229,7 @@ open fun validationInfo()
                         if(vector.size == 0)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "DownloadItem does not exist.<br />")
+                                    stringBuffer!!.append("DownloadItem does not exist.<br />")
 
                                     }
                                 
@@ -242,8 +238,7 @@ open fun validationInfo()
                         if(vector.size > 1)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "To Many DownloadItems exist.<br />")
+                                    stringBuffer!!.append("To Many DownloadItems exist.<br />")
 
                                     }
                                 

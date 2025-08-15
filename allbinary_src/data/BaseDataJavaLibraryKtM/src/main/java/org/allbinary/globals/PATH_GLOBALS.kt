@@ -58,8 +58,7 @@ open fun getInstance()
     var abPathData: AbPathData = AbPathData.getInstance()!!
             
 
-stringBuffer!!.append(
-                            "data")
+stringBuffer!!.append("data")
 stringBuffer!!.append(abPathData!!.SEPARATOR)
 this.DATA_PATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -69,20 +68,17 @@ stringBuffer!!.append(abPathData!!.SEPARATOR)
 this.INIT_PATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(DATA_PATH)
-stringBuffer!!.append(
-                            "log")
+stringBuffer!!.append("log")
 stringBuffer!!.append(abPathData!!.SEPARATOR)
 this.LOG_PATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(DATA_PATH)
-stringBuffer!!.append(
-                            "backup")
+stringBuffer!!.append("backup")
 stringBuffer!!.append(abPathData!!.SEPARATOR)
 this.BACKUP_PATH= stringBuffer!!.toString()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(INIT_PATH)
-stringBuffer!!.append(
-                            "views")
+stringBuffer!!.append("views")
 stringBuffer!!.append(abPathData!!.SEPARATOR)
 this.VIEWS_PATH= stringBuffer!!.toString()
 }

@@ -40,10 +40,8 @@ open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
         try {
-            this.setName(
-                            "Basic Ad View")
-this.setObjectFile(
-                            "views.generic.advertisement.ValidationView")
+            this.setName("Basic Ad View")
+this.setObjectFile("views.generic.advertisement.ValidationView")
 
     
                         if(this.getCommand() != 
@@ -78,8 +76,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: Exception)
             {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 

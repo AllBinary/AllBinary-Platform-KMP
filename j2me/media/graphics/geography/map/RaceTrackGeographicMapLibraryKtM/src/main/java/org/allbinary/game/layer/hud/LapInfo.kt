@@ -98,14 +98,11 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "isDone: ")
+stringBuffer!!.append("isDone: ")
 stringBuffer!!.append(this.isDone())
-stringBuffer!!.append(
-                            " CurrentLap: ")
+stringBuffer!!.append(" CurrentLap: ")
 stringBuffer!!.append(this.getCurrentLap())
-stringBuffer!!.append(
-                            " Total Laps: ")
+stringBuffer!!.append(" Total Laps: ")
 stringBuffer!!.append(this.getTotalLaps())
 
 

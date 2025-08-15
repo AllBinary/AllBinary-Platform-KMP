@@ -48,9 +48,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(
-                            "/touch_button_downgrade_64_by_64.png", 
-                            "/touch_button_downgrade_hint_64_by_64.png"){
+                            : super("/touch_button_downgrade_64_by_64.png", "/touch_button_downgrade_hint_64_by_64.png"){
 
                             //For kotlin this is before the body of the constructor.
                     

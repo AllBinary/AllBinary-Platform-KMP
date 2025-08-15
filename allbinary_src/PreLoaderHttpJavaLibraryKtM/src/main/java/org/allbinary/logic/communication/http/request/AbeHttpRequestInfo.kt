@@ -100,8 +100,7 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
 
 
     
-                        if(key.indexOf(
-                            "user") >= 0)
+                        if(key.indexOf("user") >= 0)
                         this.httpUserAgent= "key: " +key +" value: " +value
 }
 

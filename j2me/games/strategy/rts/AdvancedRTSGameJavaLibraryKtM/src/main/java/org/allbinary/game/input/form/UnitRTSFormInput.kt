@@ -210,17 +210,13 @@ open fun attemptBuild(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTS
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Trying to Build: ")
+stringBuffer!!.append("Trying to Build: ")
 stringBuffer!!.append(layerInterface!!.getName())
-stringBuffer!!.append(
-                            " for: $")
+stringBuffer!!.append(" for: $")
 stringBuffer!!.append(cost)
-stringBuffer!!.append(
-                            " with ")
+stringBuffer!!.append(" with ")
 stringBuffer!!.append(capital.getTotalMoney())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "attemptBuild")
+logUtil!!.put(stringBuffer!!.toString(), this, "attemptBuild")
 
     
                         if(cost <= capital.getTotalMoney())

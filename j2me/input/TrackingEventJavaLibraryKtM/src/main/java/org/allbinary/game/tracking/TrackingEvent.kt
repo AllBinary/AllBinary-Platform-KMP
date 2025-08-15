@@ -95,10 +95,8 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TrackingEvent: \n")
-stringBuffer!!.append(
-                            "LayerInterface: ")
+stringBuffer!!.append("TrackingEvent: \n")
+stringBuffer!!.append("LayerInterface: ")
 stringBuffer!!.append(this.layerInterface!!.toString())
 
 

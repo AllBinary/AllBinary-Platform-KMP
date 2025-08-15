@@ -91,8 +91,7 @@ this.xBorder= xBorder
 this.yBorder= yBorder
 this.updateRectangle()
 logUtil!!.put(StringMaker().
-                            append(
-                            "Created: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
+                            append("Created: ")!!.append(this.toString())!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 override fun paint(graphics: Graphics)
@@ -122,8 +121,7 @@ this.rectangle= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, y
 this.animationX= point.getX()
 this.animationY= point.getY()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "updateRectangle", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }
@@ -167,17 +165,13 @@ override fun toString()
     var stringUtil: StringUtil = StringUtil.getInstance()!!
             
 
-stringBuffer!!.append(
-                            "TouchButton: ")
+stringBuffer!!.append("TouchButton: ")
 stringBuffer!!.append(stringUtil!!.toString(this.rectangle))
-stringBuffer!!.append(
-                            " CellPosition: ")
+stringBuffer!!.append(" CellPosition: ")
 stringBuffer!!.append(stringUtil!!.toString(this.cellPosition))
-stringBuffer!!.append(
-                            " xBorder: ")
+stringBuffer!!.append(" xBorder: ")
 stringBuffer!!.append(this.xBorder)
-stringBuffer!!.append(
-                            " yBorder: ")
+stringBuffer!!.append(" yBorder: ")
 stringBuffer!!.append(this.yBorder)
 
 

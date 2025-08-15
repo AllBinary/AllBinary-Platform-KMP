@@ -33,8 +33,7 @@ open public class SoundThreadPool
 
         companion object {
             
-    private val instance: ThreadPool = ThreadPool(
-                            "Sound", 1)
+    private val instance: ThreadPool = ThreadPool("Sound", 1)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

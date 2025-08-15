@@ -198,8 +198,7 @@ visitor.visit(generatedBufferedImageArray[index2]!![index3]!!, nameEnding, index
 
 }
 
-logUtil!!.put(
-                            "Processing Rows from Cells", this, commonStrings!!.RUN)
+logUtil!!.put("Processing Rows from Cells", this, commonStrings!!.RUN)
 
     var imageUnifierProperties: ImageUnifierProperties = ImageUnifierProperties()
 
@@ -271,8 +270,7 @@ visitor.visit(generatedBufferedImage, nameEnding, index)
     var rows: Int = totalFrames2
 
 generatedBufferedImageArray= arrayOfNulls(rows)
-logUtil!!.put(
-                            "Processing Individual Cells for each Direction", this, commonStrings!!.RUN)
+logUtil!!.put("Processing Individual Cells for each Direction", this, commonStrings!!.RUN)
 
     var nameEnding: String = 
                 null
@@ -326,8 +324,7 @@ imageUnifierProperties!!.setColumns(columns.valueOf())
     var imageUnifierCell: ImageUnifierCell = ImageUnifierCell(Integer(Integer.valueOf(cellWidth -(2 *widthReduction))) +increaseWidth, Integer(Integer.valueOf(cellHeight -(2 *heightReduction) +increaseHeight)))
 
 imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
-logUtil!!.put(
-                            "Processing Rows from Cells for each Direction", this, commonStrings!!.RUN)
+logUtil!!.put("Processing Rows from Cells for each Direction", this, commonStrings!!.RUN)
 
 
 

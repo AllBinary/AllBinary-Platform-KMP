@@ -77,8 +77,7 @@ open fun initialize(cloud: String, overwriteNewer: Boolean, overwriteAll: Boolea
         try {
             
     
-                        if(AbFileSystem.getInstance()!!.isType(
-                            "com.vobject.appengine.java.io"))
+                        if(AbFileSystem.getInstance()!!.isType("com.vobject.appengine.java.io"))
                         
                                     {
                                     
@@ -107,11 +106,9 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
             
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Searched: ")
+stringBuffer!!.append("Searched: ")
 stringBuffer!!.append(path.toFileSystemString())
-stringBuffer!!.append(
-                            " BasicArrayList: ")
+stringBuffer!!.append(" BasicArrayList: ")
 stringBuffer!!.append(size)
 
     var portion: Int = size /total +1
@@ -131,14 +128,11 @@ stringBuffer!!.append(size)
 
                                     }
                                 
-stringBuffer!!.append(
-                            " Section: ")
+stringBuffer!!.append(" Section: ")
 stringBuffer!!.append(start)
-stringBuffer!!.append(
-                            " - ")
+stringBuffer!!.append(" - ")
 stringBuffer!!.append(end)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "initialize()")
+logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
 
 
 
@@ -164,9 +158,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                             
 }
 
-logUtil!!.put(
-                            "Copied Files To Cloud", this, 
-                            "initialize()")
+logUtil!!.put("Copied Files To Cloud", this, "initialize()")
 
                                     }
                                 
@@ -176,9 +168,7 @@ logUtil!!.put(
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Unable to copy installer files into cloud", this, 
-                            "initialize()", e)
+            {logUtil!!.put("Unable to copy installer files into cloud", this, "initialize()", e)
 
 
 

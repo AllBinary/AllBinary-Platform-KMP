@@ -105,8 +105,7 @@ open fun init()
                         if(!features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
-                                    logUtil!!.put(
-                            "Turning on OpenGL", this, commonStrings!!.INIT)
+                                    logUtil!!.put("Turning on OpenGL", this, commonStrings!!.INIT)
 features.addDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)
 logUtil!!.put("Using OpenGL Type Feature: " +this.getType(), this, commonStrings!!.INIT)
 features.addDefault(this.getType())
@@ -123,8 +122,7 @@ features.addDefault(this.getVersionSelector())
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "OpenGL is Off", this, commonStrings!!.INIT)
+                            logUtil!!.put("OpenGL is Off", this, commonStrings!!.INIT)
 
                         }
                             
@@ -137,8 +135,7 @@ features.addDefault(this.getVersionSelector())
                         if(this.isOpenGL() && !features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         
                                     {
-                                    PreLogUtil.put(
-                            "OpenGL is set but not Enabled since Statics where not cleared (Reboot or Complete exit is Required)", this, commonStrings!!.INIT)
+                                    PreLogUtil.put("OpenGL is set but not Enabled since Statics where not cleared (Reboot or Complete exit is Required)", this, commonStrings!!.INIT)
 
                                     }
                                 
@@ -447,20 +444,15 @@ override fun toString()
     var stringUtil: StringUtil = StringUtil.getInstance()!!
             
 
-stringBuffer!!.append(
-                            " isOpenGL: ")
+stringBuffer!!.append(" isOpenGL: ")
 stringBuffer!!.append(this.isOpenGL())
-stringBuffer!!.append(
-                            " VersionSelector: ")
+stringBuffer!!.append(" VersionSelector: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getVersionSelector()))
-stringBuffer!!.append(
-                            " Type: ")
+stringBuffer!!.append(" Type: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getType()))
-stringBuffer!!.append(
-                            " Image Color: ")
+stringBuffer!!.append(" Image Color: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getImageColor()))
-stringBuffer!!.append(
-                            " Color: ")
+stringBuffer!!.append(" Color: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getColor()))
 
 

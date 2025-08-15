@@ -113,8 +113,7 @@ this.addOption(option)
 }
 
 } catch(e: Exception)
-            {this.addOption(
-                            "Error")
+            {this.addOption("Error")
 }
 
 }

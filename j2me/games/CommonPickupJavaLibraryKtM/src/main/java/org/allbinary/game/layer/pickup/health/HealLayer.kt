@@ -67,9 +67,7 @@ override fun visit(healthInterface: HealthInterface)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Heal attempt on dead: Does not currently occur", this, 
-                            "visit")
+                            logUtil!!.put("Heal attempt on dead: Does not currently occur", this, "visit")
 
                         }
                             

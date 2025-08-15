@@ -65,8 +65,7 @@ open fun get(a_Name: String)
                             
 
 
-                            throw Exception(
-                            "No Such MediaData")
+                            throw Exception("No Such MediaData")
 
                         }
                             

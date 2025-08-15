@@ -104,8 +104,7 @@ open fun join(thread: Thread)
                         if(ThreadUtil.getInstance()!!.isRunning(thread))
                         
                                     {
-                                    logUtil!!.put(
-                            "Waiting for Thread To Join/End", this, JOIN)
+                                    logUtil!!.put("Waiting for Thread To Join/End", this, JOIN)
 thread.join()
 
                                     }

@@ -74,8 +74,7 @@ open fun getName()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "getName", 
+    var method: Method = helperClass!!.getMethod("getName", 
                             null)!!
             
 
@@ -97,8 +96,7 @@ open fun getName()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getName()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getName()", e)
 
                                     }
                                 
@@ -122,8 +120,7 @@ open fun getStoreName()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "getStoreName", 
+    var method: Method = helperClass!!.getMethod("getStoreName", 
                             null)!!
             
 
@@ -145,8 +142,7 @@ open fun getStoreName()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getStoreName()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getStoreName()", e)
 
                                     }
                                 

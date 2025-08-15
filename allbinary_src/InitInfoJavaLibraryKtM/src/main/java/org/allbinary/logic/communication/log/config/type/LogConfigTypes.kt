@@ -50,10 +50,7 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
-            PreLogUtil.put(
-                            "Initialize LogconfigTypes", 
-                            "LogConfigTypes", 
-                            "init()")
+            PreLogUtil.put("Initialize LogconfigTypes", "LogConfigTypes", "init()")
 LogConfigTypeFactory.getInstance()
 
     var loggingInitInfo: LoggingInitInfo = LoggingInitInfo()
@@ -62,19 +59,12 @@ LogConfigTypeFactory.getInstance()
     var logConfigTypeVector: BasicArrayList = loggingInitInfo!!.getTypeList()!!
             
 
-PreLogUtil.put("Number Of Log Configs: " +loggingInitInfo!!.getNumberOfLogConfigs(), 
-                            "LogConfigTypes", 
-                            "init()")
-PreLogUtil.put("Number Of Log Config Type Names: " +logConfigTypeVector!!.size(), 
-                            "LogConfigTypes", 
-                            "init()")
+PreLogUtil.put("Number Of Log Configs: " +loggingInitInfo!!.getNumberOfLogConfigs(), "LogConfigTypes", "init()")
+PreLogUtil.put("Number Of Log Config Type Names: " +logConfigTypeVector!!.size(), "LogConfigTypes", "init()")
 LogConfigTypes.LOGGING.addAll(logConfigTypeVector)
 LogConfigTypes.LOGGING.add(LogConfigTypeFactory.getInstance()!!.NETBEANS_MODULE)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "Unable to initialize LogConfigTypes", 
-                            "LogConfigTypes", 
-                            "init()", e)
+            {PreLogUtil.put("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e)
 }
 
 }

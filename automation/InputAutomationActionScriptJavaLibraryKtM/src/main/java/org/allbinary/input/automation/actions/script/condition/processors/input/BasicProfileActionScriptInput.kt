@@ -157,8 +157,7 @@ open fun BasicProfileActionScriptInput_toHashMap()
 
 hashMap!!.put(GenericProfileActionScriptInputData.TYPE, this.getInputRobotInterface()!!.getName())
 hashMap!!.put(GenericProfileActionScriptInputData.DELAY, Integer.toString(this.getTime()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -210,8 +209,7 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(
-                            " Input Type: ")
+stringBuffer!!.append(" Input Type: ")
 
     
                         if(this.getInputRobotInterface() != 
@@ -228,8 +226,7 @@ stringBuffer!!.append(
 
                         }
                             
-stringBuffer!!.append(
-                            " Time: ")
+stringBuffer!!.append(" Time: ")
 stringBuffer!!.append(this.getTime())
 
 

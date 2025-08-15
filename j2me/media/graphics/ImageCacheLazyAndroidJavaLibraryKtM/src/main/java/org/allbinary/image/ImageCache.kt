@@ -156,11 +156,9 @@ open fun get(key: Any)
             logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
 image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+            {logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
-                            append(
-                            "InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, commonStrings!!.GET)
+                            append("InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, commonStrings!!.GET)
 System.gc()
 System.gc()
 logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)

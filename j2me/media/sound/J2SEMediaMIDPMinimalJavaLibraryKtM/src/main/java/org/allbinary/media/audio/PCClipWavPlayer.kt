@@ -76,8 +76,7 @@ clip= this.create(audioInputStream)
                                 )
                         
                                     {
-                                    logUtil!!.put(
-                            "Clip was null", this, commonStrings!!.CONSTRUCTOR, Exception())
+                                    logUtil!!.put("Clip was null", this, commonStrings!!.CONSTRUCTOR, Exception())
 
 
 

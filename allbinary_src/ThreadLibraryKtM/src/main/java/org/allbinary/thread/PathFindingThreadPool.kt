@@ -34,8 +34,7 @@ open public class PathFindingThreadPool : ThreadPool {
 
         companion object {
             
-    private val instance: ThreadPool = PathFindingThreadPool(
-                            "PathFinding", 1, 1)
+    private val instance: ThreadPool = PathFindingThreadPool("PathFinding", 1, 1)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

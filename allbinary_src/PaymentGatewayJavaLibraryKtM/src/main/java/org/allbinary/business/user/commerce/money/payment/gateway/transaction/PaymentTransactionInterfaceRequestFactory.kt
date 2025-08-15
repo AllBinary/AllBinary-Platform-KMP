@@ -160,8 +160,7 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
                         
                                     {
-                                    logUtil!!.put(orderReview!!.getId(), this, 
-                            "getPaymentTransactionInterface()")
+                                    logUtil!!.put(orderReview!!.getId(), this, "getPaymentTransactionInterface()")
 
                                     }
                                 
@@ -183,8 +182,7 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getPaymentTransactionInterface()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPaymentTransactionInterface()", e)
 
                                     }
                                 
@@ -257,11 +255,9 @@ payment.setTenderType(tenderType)
 
 orderReview!!.setStoreName(storeFrontInterface!!.getName())
 orderReview!!.setPaymentMethod(gatewayName)
-orderReview!!.setUserName(
-                            "testing")
+orderReview!!.setUserName("testing")
 
-    var orderId: String = httpServletRequest!!.getParameter(
-                            "orderNumber")!!
+    var orderId: String = httpServletRequest!!.getParameter("orderNumber")!!
             
 
 
@@ -275,43 +271,35 @@ orderReview!!.setUserName(
                             getNext()
 orderReview!!.setId(orderId)
 
-    var account: String = httpServletRequest!!.getParameter(
-                            "account")!!
+    var account: String = httpServletRequest!!.getParameter("account")!!
             
 
 
-    var expirationDate: String = httpServletRequest!!.getParameter(
-                            "expirationDate")!!
+    var expirationDate: String = httpServletRequest!!.getParameter("expirationDate")!!
             
 
 
-    var checkNumber: String = httpServletRequest!!.getParameter(
-                            "checkNumber")!!
+    var checkNumber: String = httpServletRequest!!.getParameter("checkNumber")!!
             
 
 
-    var driversLicense: String = httpServletRequest!!.getParameter(
-                            "driversLicense")!!
+    var driversLicense: String = httpServletRequest!!.getParameter("driversLicense")!!
             
 
 
-    var magneticInkCheckReader: String = httpServletRequest!!.getParameter(
-                            "magneticInkCheckReader")!!
+    var magneticInkCheckReader: String = httpServletRequest!!.getParameter("magneticInkCheckReader")!!
             
 
 
-    var aba: String = httpServletRequest!!.getParameter(
-                            "aba")!!
+    var aba: String = httpServletRequest!!.getParameter("aba")!!
             
 
 
-    var accountType: String = httpServletRequest!!.getParameter(
-                            "accountType")!!
+    var accountType: String = httpServletRequest!!.getParameter("accountType")!!
             
 
 
-    var name: String = httpServletRequest!!.getParameter(
-                            "name")!!
+    var name: String = httpServletRequest!!.getParameter("name")!!
             
 
 payment.setName(name)
@@ -323,23 +311,19 @@ payment.setMagneticInkCheckReader(magneticInkCheckReader)
 payment.setAba(aba)
 payment.setAccountType(accountType)
 
-    var street: String = httpServletRequest!!.getParameter(
-                            "street")!!
+    var street: String = httpServletRequest!!.getParameter("street")!!
             
 
 
-    var city: String = httpServletRequest!!.getParameter(
-                            "city")!!
+    var city: String = httpServletRequest!!.getParameter("city")!!
             
 
 
-    var state: String = httpServletRequest!!.getParameter(
-                            "state")!!
+    var state: String = httpServletRequest!!.getParameter("state")!!
             
 
 
-    var zip: String = httpServletRequest!!.getParameter(
-                            "zip")!!
+    var zip: String = httpServletRequest!!.getParameter("zip")!!
             
 
 
@@ -351,13 +335,11 @@ streetAddress!!.setCity(city)
 streetAddress!!.setState(state)
 streetAddress!!.setCode(zip)
 
-    var email: String = httpServletRequest!!.getParameter(
-                            "email")!!
+    var email: String = httpServletRequest!!.getParameter("email")!!
             
 
 
-    var amount: String = httpServletRequest!!.getParameter(
-                            "amount")!!
+    var amount: String = httpServletRequest!!.getParameter("amount")!!
             
 
 orderReview!!.setTotal(Money(amount))
@@ -386,8 +368,7 @@ orderReview!!.setPaymentInfo(payment)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generatePaymentTransactionInterfaceFromTestData()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "generatePaymentTransactionInterfaceFromTestData()", e)
 
                                     }
                                 

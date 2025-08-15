@@ -66,8 +66,7 @@ this.init()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(commonStrings!!.EXCEPTION, this, 
-                            "AbCrypt(alg,key)", e)
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 }
 
 }
@@ -96,8 +95,7 @@ this.cipher= Cipher.getInstance(algorithm)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(
-                            "init Failed", this, commonStrings!!.INIT, e)
+PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 }
 
 }
@@ -122,8 +120,7 @@ open fun encrypt(array: ByteArray)
 
     var result: ByteArray = ByteArray(ivArray!!.size +encrypted.size)
 
-PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, 
-                            "encrypt")
+PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
 
 
@@ -150,9 +147,7 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this,
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "Encrypt Failed", this, 
-                            "encrypt", e)
+            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -184,8 +179,7 @@ open fun decrypt(array: ByteArray)
         {ivArray[index]= array[index]!!
 }
 
-PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, 
-                            "encrypt")
+PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
     var result: ByteArray = ByteArray(array.size -ivArray!!.size)
 
@@ -209,9 +203,7 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this,
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "decrypt Failed", this, 
-                            "decrypt", e)
+            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 

@@ -201,9 +201,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(CommonLabels.getInstance()!!.INDEX_LABEL)!!.append(this.index)!!.append(
-                            "lastIndex: ")!!.append(this.lastIndex)!!.append(
-                            "size: ")!!.append(this.size)!!.toString()
+                            append(CommonLabels.getInstance()!!.INDEX_LABEL)!!.append(this.index)!!.append("lastIndex: ")!!.append(this.lastIndex)!!.append("size: ")!!.append(this.size)!!.toString()
 }
 
 

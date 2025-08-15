@@ -54,23 +54,17 @@ open fun getInstance()
             {
             }            
         
-    val LOAD_EARLY: ResourceLoadingLevel = ResourceLoadingLevel(
-                            "Load Early", Integer.MAX_VALUE)
+    val LOAD_EARLY: ResourceLoadingLevel = ResourceLoadingLevel("Load Early", Integer.MAX_VALUE)
 
-    val LOAD_TOUCH: ResourceLoadingLevel = ResourceLoadingLevel(
-                            "Load Touch", Integer.MAX_VALUE -1)
+    val LOAD_TOUCH: ResourceLoadingLevel = ResourceLoadingLevel("Load Touch", Integer.MAX_VALUE -1)
 
-    val LOAD_GAME: ResourceLoadingLevel = ResourceLoadingLevel(
-                            "Load Game", Integer.MAX_VALUE -2)
+    val LOAD_GAME: ResourceLoadingLevel = ResourceLoadingLevel("Load Game", Integer.MAX_VALUE -2)
 
-    val LEVEL: ResourceLoadingLevel = ResourceLoadingLevel(
-                            "Level", Integer.MAX_VALUE -99)
+    val LEVEL: ResourceLoadingLevel = ResourceLoadingLevel("Level", Integer.MAX_VALUE -99)
 
-    val MAX_LEVEL: ResourceLoadingLevel = ResourceLoadingLevel(
-                            "Max Level", Integer.MAX_VALUE -100)
+    val MAX_LEVEL: ResourceLoadingLevel = ResourceLoadingLevel("Max Level", Integer.MAX_VALUE -100)
 
-    val LOAD_ALL: ResourceLoadingLevel = ResourceLoadingLevel(
-                            "Load All",  -1)
+    val LOAD_ALL: ResourceLoadingLevel = ResourceLoadingLevel("Load All",  -1)
 
     private val RESOURCE_LOADING_LEVEL_ARRAY: Array<ResourceLoadingLevel?> = arrayOf(this.LOAD_ALL,this.MAX_LEVEL,this.LEVEL,this.LOAD_GAME,this.LOAD_TOUCH,this.LOAD_EARLY)
 

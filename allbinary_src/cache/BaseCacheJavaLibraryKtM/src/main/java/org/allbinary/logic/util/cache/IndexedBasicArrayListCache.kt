@@ -126,8 +126,7 @@ this.list.add(cacheableInterface)
 
 
 
-                            throw Exception(
-                            "No Imple")
+                            throw Exception("No Imple")
 }
 
 override fun clear()

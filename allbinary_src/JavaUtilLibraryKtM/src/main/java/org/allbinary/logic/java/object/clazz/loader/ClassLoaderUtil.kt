@@ -64,8 +64,7 @@ open fun getName(anyType: Any)
 
 
 
-                            throw Exception(
-                            "Unable to get ClassLoader")
+                            throw Exception("Unable to get ClassLoader")
 }
 
 

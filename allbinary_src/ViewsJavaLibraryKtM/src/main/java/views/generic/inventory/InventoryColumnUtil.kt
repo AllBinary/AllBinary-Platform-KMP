@@ -72,8 +72,7 @@ open fun getColumnWhereLike(inventoryEntity: InventoryEntity, category: String, 
 
 
                     var column = column
-logUtil!!.put("Start Category: " +category, this, 
-                            "getKeywords")
+logUtil!!.put("Start Category: " +category, this, "getKeywords")
 
     var keywords: Vector = Vector()
 

@@ -76,8 +76,7 @@ open public class CombatGameCanvas : AllBinaryGameCanvas {
 open fun CombatGameCanvas_init()
         //nullable = true from not(false or (false and true)) = true
 {DestroyEventCircularStaticPool.getInstance()!!.init(this)
-ProgressCanvasFactory.getInstance()!!.addPortion(50, 
-                            "Destroy Events")
+ProgressCanvasFactory.getInstance()!!.addPortion(50, "Destroy Events")
 }
 
 
@@ -98,8 +97,7 @@ open fun initConfigurable(portion: Int)
 
                     var portion = portion
 DestroyedLayerProcessor.init()
-ProgressCanvasFactory.getInstance()!!.addPortion(portion, 
-                            "Basic Processors")
+ProgressCanvasFactory.getInstance()!!.addPortion(portion, "Basic Processors")
 
     var features: Features = Features.getInstance()!!
             

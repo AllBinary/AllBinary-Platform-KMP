@@ -36,11 +36,9 @@ open public class GameMode
             
     var NONE: GameMode = GameMode(StringUtil.getInstance()!!.NULL_STRING)
 
-    var SERVER: GameMode = GameMode(
-                            "Server")
+    var SERVER: GameMode = GameMode("Server")
 
-    var CLIENT: GameMode = GameMode(
-                            "Client")
+    var CLIENT: GameMode = GameMode("Client")
 
         }
             

@@ -136,8 +136,7 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
 
 } catch(e: Exception)
-            {logUtil!!.put("Command Failed: " +INITFILENAME, this, 
-                            "write", e)
+            {logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
 FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
 
@@ -274,8 +273,7 @@ Thread.sleep(2000)
                                     }
                                 
 } catch(se: Exception)
-            {logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, 
-                            "readAgain()", se)
+            {logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", se)
 }
 
 

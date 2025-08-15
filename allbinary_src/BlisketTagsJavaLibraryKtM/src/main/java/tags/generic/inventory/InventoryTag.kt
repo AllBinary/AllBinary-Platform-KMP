@@ -63,8 +63,7 @@ open fun search()
             
 
 
-    var method: Method = addressHelperClass!!.getMethod(
-                            "search", 
+    var method: Method = addressHelperClass!!.getMethod("search", 
                             null)!!
             
 
@@ -88,8 +87,7 @@ pageContext!!.getOut()!!.print(result)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "search()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "search()", e)
 
                                     }
                                 
@@ -103,9 +101,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in Exception Handling", this, 
-                            "search()", e)
+                                    logUtil!!.put("Exception in Exception Handling", this, "search()", e)
 
                                     }
                                 
@@ -132,8 +128,7 @@ open fun viewSummary()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "viewSummary", 
+    var method: Method = helperClass!!.getMethod("viewSummary", 
                             null)!!
             
 
@@ -157,8 +152,7 @@ pageContext!!.getOut()!!.print(result)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "viewSummary()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "viewSummary()", e)
 
                                     }
                                 
@@ -172,9 +166,7 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Exception in Exception Handling", this, 
-                            "viewSummary())", e)
+                                    logUtil!!.put("Exception in Exception Handling", this, "viewSummary())", e)
 
                                     }
                                 
@@ -203,10 +195,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.SEARCH) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Search Inventory View")
-this.setObjectFile(
-                            "views.generic.inventory.AutoSearchValidationInventoryView")
+                                    this.setName("Basic Search Inventory View")
+this.setObjectFile("views.generic.inventory.AutoSearchValidationInventoryView")
 this.search()
 
 
@@ -221,10 +211,8 @@ this.search()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEWSUMMARY) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Inventory View")
-this.setObjectFile(
-                            "views.generic.inventory.AutoValidationInventoryView")
+                                    this.setName("Basic Inventory View")
+this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
 this.viewSummary()
 
 
@@ -239,10 +227,8 @@ this.viewSummary()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Inventory View")
-this.setObjectFile(
-                            "views.generic.inventory.AutoValidationInventoryView")
+                                    this.setName("Basic Inventory View")
+this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
 
 
 
@@ -265,8 +251,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

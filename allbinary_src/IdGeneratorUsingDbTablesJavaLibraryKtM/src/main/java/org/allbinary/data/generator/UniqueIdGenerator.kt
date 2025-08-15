@@ -80,8 +80,7 @@ idGeneratorEntity!!.insert(vector)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "initialize", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 
                                     }
                                 
@@ -136,8 +135,7 @@ this.idGeneratorEntity!!.update(name, newValue)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "getNext", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "getNext", e)
 
                                     }
                                 

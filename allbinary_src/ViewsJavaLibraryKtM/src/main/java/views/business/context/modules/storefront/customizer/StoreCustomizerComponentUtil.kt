@@ -76,8 +76,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Generating Modified Views For: " +transformInfoInterface!!.getName(), this, 
-                            "generateModifiedViews()")
+                                    logUtil!!.put("Generating Modified Views For: " +transformInfoInterface!!.getName(), this, "generateModifiedViews()")
 
                                     }
                                 
@@ -112,8 +111,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("View or component that was modified by a Customizer: " +nextTransformInfoInterface!!.getName(), this, 
-                            "generateModifiedViews()")
+                                    logUtil!!.put("View or component that was modified by a Customizer: " +nextTransformInfoInterface!!.getName(), this, "generateModifiedViews()")
 
                                     }
                                 
@@ -168,8 +166,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Retrieved: " +specifiedTransformInfoInterface!!.getName(), this, 
-                            "generateModifiedViews()")
+                                    logUtil!!.put("Retrieved: " +specifiedTransformInfoInterface!!.getName(), this, "generateModifiedViews()")
 
                                     }
                                 

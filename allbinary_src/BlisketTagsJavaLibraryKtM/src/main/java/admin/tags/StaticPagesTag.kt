@@ -72,8 +72,7 @@ open fun generateStaticPages()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "generateStaticPages", 
+    var method: Method = helperClass!!.getMethod("generateStaticPages", 
                             null)!!
             
 
@@ -101,8 +100,7 @@ open fun generateStaticPages()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "generateStaticPages()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "generateStaticPages()", e)
 
                                     }
                                 
@@ -132,8 +130,7 @@ open fun makePublic()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "makePublic", 
+    var method: Method = helperClass!!.getMethod("makePublic", 
                             null)!!
             
 
@@ -161,8 +158,7 @@ open fun makePublic()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "makePublic()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "makePublic()", e)
 
                                     }
                                 

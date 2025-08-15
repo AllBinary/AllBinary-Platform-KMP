@@ -30,13 +30,11 @@ import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import org.allbinary.graphics.opengles.renderer.AllBinaryRendererBase3
 import org.allbinary.util.BasicArrayList
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.image.ImageCache
 import org.allbinary.image.ImageCacheFactory
 import org.allbinary.image.PreResourceImageUtil
-import org.allbinary.string.CommonLabels
-import org.allbinary.logic.string.StringMaker
+import org.allbinary.thread.SynchObject
 
 open public class OpenGLImageCache : ImageCache {
         
@@ -52,7 +50,7 @@ open public class OpenGLImageCache : ImageCache {
 
     private var gl: GL10
 
-    private val lock: Any = Any()
+    private val lock: SynchObject = SynchObject()
 
     private val list: BasicArrayList = BasicArrayList()
 

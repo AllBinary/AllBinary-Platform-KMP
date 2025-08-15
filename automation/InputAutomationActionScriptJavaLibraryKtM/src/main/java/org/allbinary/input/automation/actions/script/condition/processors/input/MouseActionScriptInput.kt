@@ -147,8 +147,7 @@ this.setPoint(newPoint)
                             
 
 
-                            throw Exception(
-                            "Action Script Input Unknown Node")
+                            throw Exception("Action Script Input Unknown Node")
 
                         }
                             
@@ -161,8 +160,7 @@ this.setPoint(newPoint)
                             
 
 
-                            throw Exception(
-                            "Action Script Input Node Null")
+                            throw Exception("Action Script Input Node Null")
 
                         }
                             
@@ -232,8 +230,7 @@ open fun toHashMap()
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(MouseActionScriptInputData.BUTTONS, Integer.toString(this.getButtonClicks()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -288,8 +285,7 @@ open fun log()
 {
     var buttonStringBuffer: StringMaker = StringMaker()
 
-buttonStringBuffer!!.append(
-                            "1: ")
+buttonStringBuffer!!.append("1: ")
 
     
                         if((this.getButtonClicks() and InputEvent.BUTTON1_MASK) != 0)
@@ -304,8 +300,7 @@ buttonStringBuffer!!.append(
 
                         }
                             
-buttonStringBuffer!!.append(
-                            " 2: ")
+buttonStringBuffer!!.append(" 2: ")
 
     
                         if((this.getButtonClicks() and InputEvent.BUTTON2_MASK) != 0)
@@ -320,8 +315,7 @@ buttonStringBuffer!!.append(
 
                         }
                             
-buttonStringBuffer!!.append(
-                            " 3: ")
+buttonStringBuffer!!.append(" 3: ")
 
     
                         if((this.getButtonClicks() and InputEvent.BUTTON3_MASK) != 0)
@@ -336,8 +330,7 @@ buttonStringBuffer!!.append(
 
                         }
                             
-logUtil!!.put("Input Type: " +this.getInputRobotInterface()!!.getName() +" Point: " +this.getPoint() +" Buttons Clicked: " +buttonStringBuffer!!.toString(), this, 
-                            "log")
+logUtil!!.put("Input Type: " +this.getInputRobotInterface()!!.getName() +" Point: " +this.getPoint() +" Buttons Clicked: " +buttonStringBuffer!!.toString(), this, "log")
 }
 
 

@@ -110,8 +110,7 @@ outputStream= ByteArrayOutputStream()
                         if(fileItem!!.isFormField())
                         
                                     {
-                                    logUtil!!.put("FileItemStream FieldName: " +fileItem!!.getFieldName(), this, 
-                            "write()")
+                                    logUtil!!.put("FileItemStream FieldName: " +fileItem!!.getFieldName(), this, "write()")
 
                                     }
                                 
@@ -119,14 +118,11 @@ outputStream= ByteArrayOutputStream()
                             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Uploaded File FieldName: ")
+stringBuffer!!.append("Uploaded File FieldName: ")
 stringBuffer!!.append(fileItem!!.getFieldName())
-stringBuffer!!.append(
-                            " name = ")
+stringBuffer!!.append(" name = ")
 stringBuffer!!.append(fileItem!!.getName())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "write()")
+logUtil!!.put(stringBuffer!!.toString(), this, "write()")
 
                         }
                             

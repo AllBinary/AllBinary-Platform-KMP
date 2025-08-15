@@ -67,8 +67,7 @@ open fun main(args: Array<String?>)
     var javaHelpUtil: JavaHelpUtil = JavaHelpUtil.getInstance()!!
             
 
-javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet(
-                            "G:/mnt/bc/mydev/working/automation/InputAutomationJavaApplication/AllBinaryInputAutomationHelp/AllBinaryInputAutomation.hs"))
+javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automation/InputAutomationJavaApplication/AllBinaryInputAutomationHelp/AllBinaryInputAutomation.hs"))
 } catch(e: Exception)
             {}
 
@@ -116,8 +115,7 @@ open fun getHelpSet(filePath: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return getHelpSet(helpSetURL)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), 
-                            "set", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 
 
@@ -142,8 +140,7 @@ open fun getHelpSet(url: URL)
                         return HelpSet(
                             null, url)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), 
-                            "set", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "set", e)
 
 
 
@@ -169,12 +166,9 @@ helpBroker!!.setLocation(point)
 helpBroker!!.setSize(dimension)
 CSH.DisplayHelpFromSource(helpBroker).
                             actionPerformed(contextSensitiveHelpActionEvent)
-logUtil!!.put(
-                            "CSH Action", getInstance(), 
-                            "show")
+logUtil!!.put("CSH Action", getInstance(), "show")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), 
-                            "show", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, getInstance(), "show", e)
 }
 
 }

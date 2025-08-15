@@ -95,13 +95,11 @@ override fun toString()
 
 stringBuffer!!.append(PaymentGatewayPrimaryKey::classgetName())
 stringBuffer!!.append(StoreFront::classgetName())
-stringBuffer!!.append(
-                            " =")
+stringBuffer!!.append(" =")
 stringBuffer!!.append(this.getStoreName())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(PaymentGateway::classgetName())
-stringBuffer!!.append(
-                            "=")
+stringBuffer!!.append("=")
 stringBuffer!!.append(this.getName())
 
 

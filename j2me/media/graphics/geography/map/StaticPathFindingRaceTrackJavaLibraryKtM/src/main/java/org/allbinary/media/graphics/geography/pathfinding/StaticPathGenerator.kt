@@ -64,8 +64,7 @@ open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
 
 protected constructor        ()
             : super()
-        {PreLogUtil.put(
-                            "Using Static Path Finding", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
+        {PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
 }
 
 
@@ -193,8 +192,7 @@ pathCacheFactory!!.remove(smallIntegerSingletonFactory!!.getInstance(id))
                                     }
                                 
 logUtil!!.put(StringMaker().
-                            append(
-                            "Using Cached Path(s): ")!!.append(StringUtil.getInstance()!!.toString(list))!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Using Cached Path(s): ")!!.append(StringUtil.getInstance()!!.toString(list))!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
 

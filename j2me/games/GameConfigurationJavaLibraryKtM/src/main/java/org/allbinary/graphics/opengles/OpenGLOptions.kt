@@ -54,22 +54,19 @@ open fun init()
     var openGLMultipleList: BasicArrayList = BasicArrayList()
 
 openGLMultipleList!!.add(openGLFeatureFactory!!.OPENGL)
-GameFeatureChoiceGroups.getMultipleInstance()!!.add(
-                            "OpenGL (Complete Restart)", openGLMultipleList)
+GameFeatureChoiceGroups.getMultipleInstance()!!.add("OpenGL (Complete Restart)", openGLMultipleList)
 
     var openGLVersionSelectorMultipleList: BasicArrayList = BasicArrayList()
 
 openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_AUTO_SELECT)
 openGLVersionSelectorMultipleList!!.add(openGLFeatureFactory!!.OPENGL_MINIMUM)
-GameFeatureChoiceGroups.getExclusiveInstance()!!.add(
-                            "OpenGL Version Selector", openGLVersionSelectorMultipleList)
+GameFeatureChoiceGroups.getExclusiveInstance()!!.add("OpenGL Version Selector", openGLVersionSelectorMultipleList)
 
     var openGLImageColorMultipleList: BasicArrayList = BasicArrayList()
 
 openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_4444)
 openGLImageColorMultipleList!!.add(openGLFeatureFactory!!.IMAGE_COLOR_DEPTH_8888)
-GameFeatureChoiceGroups.getExclusiveInstance()!!.add(
-                            "OpenGL Image Color RGBA", openGLImageColorMultipleList)
+GameFeatureChoiceGroups.getExclusiveInstance()!!.add("OpenGL Image Color RGBA", openGLImageColorMultipleList)
 
                                     }
                                 

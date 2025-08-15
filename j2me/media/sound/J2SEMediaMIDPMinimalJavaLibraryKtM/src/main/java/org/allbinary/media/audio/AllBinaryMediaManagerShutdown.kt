@@ -52,8 +52,7 @@ open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, instance, 
-                            "shutdown")
+logUtil!!.put(commonStrings!!.START, instance, "shutdown")
 AllBinaryMediaManager.shutdown(soundsFactoryInterface)
 }
 

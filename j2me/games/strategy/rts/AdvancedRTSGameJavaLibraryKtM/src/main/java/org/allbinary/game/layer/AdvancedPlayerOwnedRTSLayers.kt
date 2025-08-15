@@ -287,26 +287,19 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(
-                            " Bases: ")
+stringBuffer!!.append(" Bases: ")
 stringBuffer!!.append(this.getBaseList()!!.size())
-stringBuffer!!.append(
-                            " Factory: ")
+stringBuffer!!.append(" Factory: ")
 stringBuffer!!.append(this.getFactoryList()!!.size())
-stringBuffer!!.append(
-                            " Garrison: ")
+stringBuffer!!.append(" Garrison: ")
 stringBuffer!!.append(this.getGarrisonList()!!.size())
-stringBuffer!!.append(
-                            " Labs: ")
+stringBuffer!!.append(" Labs: ")
 stringBuffer!!.append(this.getLabList()!!.size())
-stringBuffer!!.append(
-                            " Houses: ")
+stringBuffer!!.append(" Houses: ")
 stringBuffer!!.append(this.getHouseList()!!.size())
-stringBuffer!!.append(
-                            " Waypoints: ")
+stringBuffer!!.append(" Waypoints: ")
 stringBuffer!!.append(this.getWaypointsList()!!.size())
-stringBuffer!!.append(
-                            " Units: ")
+stringBuffer!!.append(" Units: ")
 stringBuffer!!.append(this.getUnitsList()!!.size())
 
 

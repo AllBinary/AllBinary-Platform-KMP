@@ -113,8 +113,7 @@ open fun getOperatingSystemInstance()
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Failed to get OperatingSystem returning NoOperatingSystem", this, commonStrings!!.GET_INSTANCE, e)
+logUtil!!.put("Failed to get OperatingSystem returning NoOperatingSystem", this, commonStrings!!.GET_INSTANCE, e)
 
 
 

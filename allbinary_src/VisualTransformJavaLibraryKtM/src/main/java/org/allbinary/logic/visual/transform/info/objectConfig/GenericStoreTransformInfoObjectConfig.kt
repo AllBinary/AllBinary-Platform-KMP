@@ -122,8 +122,7 @@ open fun generate(objectConfigDocument: Document)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TransformInfo: ")
+stringBuffer!!.append("TransformInfo: ")
 
     
                         if(this.getTransformInfoInterface() != 
@@ -136,13 +135,11 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "No Owner!?#@")
+                            stringBuffer!!.append("No Owner!?#@")
 
                         }
                             
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "generate()")
+logUtil!!.put(stringBuffer!!.toString(), this, "generate()")
 
                                     }
                                 
@@ -231,8 +228,7 @@ open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objec
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TemplateNameOverride: " +templateNameOverride, this, 
-                            "generate()")
+                                    logUtil!!.put("TemplateNameOverride: " +templateNameOverride, this, "generate()")
 
                                     }
                                 
@@ -293,8 +289,7 @@ open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, 
-                            "generate()")
+                                    logUtil!!.put("Final ObjectConfig: " +DomDocumentHelper.toString(newObjectConfigDocument), this, "generate()")
 
                                     }
                                 

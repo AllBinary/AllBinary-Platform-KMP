@@ -52,14 +52,11 @@ open fun getInstance()
             {
             }            
         
-    val PLAYER_TYPE_ONE: PlayerType = PlayerType(
-                            "Player Type One", 0)
+    val PLAYER_TYPE_ONE: PlayerType = PlayerType("Player Type One", 0)
 
-    val PLAYER_TYPE_TWO: PlayerType = PlayerType(
-                            "Player Type Two", 1)
+    val PLAYER_TYPE_TWO: PlayerType = PlayerType("Player Type Two", 1)
 
-    val PLAYER_TYPE_THREE: PlayerType = PlayerType(
-                            "Player Type Three", 2)
+    val PLAYER_TYPE_THREE: PlayerType = PlayerType("Player Type Three", 2)
 
 }
                 

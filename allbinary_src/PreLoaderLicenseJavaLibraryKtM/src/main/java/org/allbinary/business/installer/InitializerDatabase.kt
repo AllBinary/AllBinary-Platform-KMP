@@ -111,14 +111,11 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 
 hashMap!!.put(key.concatToString(), .concatToString())
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "key: ")
+stringBuffer!!.append("key: ")
 stringBuffer!!.append(key)
-stringBuffer!!.append(
-                            " Value: ")
+stringBuffer!!.append(" Value: ")
 stringBuffer!!.append(values[0]!!)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getFormData()")
+logUtil!!.put(stringBuffer!!.toString(), this, "getFormData()")
 }
 
 this.getFormData(abeClientInformation, hashMap)
@@ -171,9 +168,7 @@ dbConnectionInfo!!.setServer(getAdminServer())
 dbConnectionInfo!!.setPort(getAdminPort())
 this.initDb= DynamicInitDb(abeClientInformation, dbConnectionInfo as DatabaseConnectionInfoInterface)
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Unable to get form data", this, 
-                            "getFormData()", e)
+            {logUtil!!.put("Unable to get form data", this, "getFormData()", e)
 }
 
 }
@@ -268,11 +263,9 @@ open fun getJdbcDriverValidationInfo(jdbcDriver: String)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "The JDBC driver (")
+stringBuffer!!.append("The JDBC driver (")
 stringBuffer!!.append(jdbcDriver)
-stringBuffer!!.append(
-                            ") you have provided is not valid.<br/>")
+stringBuffer!!.append(") you have provided is not valid.<br/>")
 
 
 
@@ -352,9 +345,7 @@ open fun createUsers()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Unable to Create Users", this, 
-                            "createUsers()", e)
+            {logUtil!!.put("Unable to Create Users", this, "createUsers()", e)
 
 
 
@@ -376,9 +367,7 @@ open fun createDatabases()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Unable to Create Databases", this, 
-                            "createDatabases()", e)
+            {logUtil!!.put("Unable to Create Databases", this, "createDatabases()", e)
 
 
 
@@ -400,9 +389,7 @@ open fun createTables()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Unable to Create Tables", this, 
-                            "createTables()", e)
+            {logUtil!!.put("Unable to Create Tables", this, "createTables()", e)
 
 
 

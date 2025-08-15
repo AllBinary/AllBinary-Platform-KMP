@@ -52,7 +52,7 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{this.getTimeIntervalJTextField()!!.setText(delay.toString())
+{this.getTimeIntervalJTextField()!!.setText(this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay.toString())
 this.timeIntervalActionScriptConditionInterface!!.log()
 }
 
@@ -112,10 +112,8 @@ timeIntervalJTextField= javax.swing.JTextField()
 timeIntervalActionJButton= javax.swing.JButton()
 jLabel1= javax.swing.JLabel()
 timeIntervalActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
-titleJLabel!!.setText(
-                            "Time Interval Condition Options")
-okJButton!!.setText(
-                            "OK")
+titleJLabel!!.setText("Time Interval Condition Options")
+okJButton!!.setText("OK")
 okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -129,8 +127,7 @@ okJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel2!!.setText(
-                            "Time (ms):")
+jLabel2!!.setText("Time (ms):")
 
     var timeIntervalActionJDialogLayout: javax.swing.GroupLayout = javax.swing.GroupLayout(timeIntervalActionJDialog!!.getContentPane())
 
@@ -138,8 +135,7 @@ timeIntervalActionJDialog!!.getContentPane()!!.setLayout(timeIntervalActionJDial
 timeIntervalActionJDialogLayout!!.setHorizontalGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(timeIntervalActionJDialogLayout!!.createSequentialGroup()!!.addGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)!!.addGroup(javax.swing.GroupLayout.Alignment.LEADING, timeIntervalActionJDialogLayout!!.createSequentialGroup()!!.addGap(82, 82, 82)!!.addComponent(okJButton))!!.addGroup(javax.swing.GroupLayout.Alignment.LEADING, timeIntervalActionJDialogLayout!!.createSequentialGroup()!!.addGap(32, 32, 32)!!.addGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(timeIntervalActionJDialogLayout!!.createSequentialGroup()!!.addComponent(jLabel2)!!.addGap(16, 16, 16)!!.addComponent(timeIntervalJTextField, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE))!!.addComponent(titleJLabel))))!!.addContainerGap(36, Short.MAX_VALUE)))
 timeIntervalActionJDialogLayout!!.setVerticalGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGroup(timeIntervalActionJDialogLayout!!.createSequentialGroup()!!.addContainerGap()!!.addComponent(titleJLabel)!!.addGap(20, 20, 20)!!.addGroup(timeIntervalActionJDialogLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)!!.addComponent(jLabel2)!!.addComponent(timeIntervalJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))!!.addGap(15, 15, 15)!!.addComponent(okJButton)!!.addContainerGap()))
 setMinimumSize(java.awt.Dimension(100, 0))
-timeIntervalActionJButton!!.setText(
-                            "Edit")
+timeIntervalActionJButton!!.setText("Edit")
 timeIntervalActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -153,8 +149,7 @@ timeIntervalActionJButtonActionPerformed(evt)
 
                                 }
                             )
-jLabel1!!.setText(
-                            "Time Interval:")
+jLabel1!!.setText("Time Interval:")
 
     var layout: javax.swing.GroupLayout = javax.swing.GroupLayout(this)
 

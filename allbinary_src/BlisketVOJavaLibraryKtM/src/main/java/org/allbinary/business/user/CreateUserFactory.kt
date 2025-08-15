@@ -76,8 +76,7 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                             
 
 
-                            throw Exception(
-                            "No Role Specified")
+                            throw Exception("No Role Specified")
 
                         }
                             
@@ -88,8 +87,7 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                             
 
 
-                            throw Exception(
-                            "Null HashMap")
+                            throw Exception("Null HashMap")
 
                         }
                             

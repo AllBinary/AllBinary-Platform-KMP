@@ -167,9 +167,7 @@ open fun scrollY(anchor: Int)
                         if(anchor == Graphics.TOP)
                         
                                     {
-                                    logUtil!!.put(
-                            "Top", this, 
-                            "scrollY")
+                                    logUtil!!.put("Top", this, "scrollY")
 
                                     }
                                 
@@ -178,9 +176,7 @@ open fun scrollY(anchor: Int)
                         if(anchor == Graphics.BOTTOM)
                         
                                     {
-                                    logUtil!!.put(
-                            "Bottom", this, 
-                            "scrollY")
+                                    logUtil!!.put("Bottom", this, "scrollY")
 
     var diffY: Int = (terrainTiledLayer!!.getHeight() -displayInfo!!.getLastHeight())
 
@@ -193,9 +189,7 @@ this.move(0, diffY)
                         if(anchor == Graphics.VCENTER)
                         
                                     {
-                                    logUtil!!.put(
-                            "Center", this, 
-                            "scrollY")
+                                    logUtil!!.put("Center", this, "scrollY")
 
     var diffY: Int = (terrainTiledLayer!!.getHeight() -displayInfo!!.getLastHeight()) /2
 
@@ -207,8 +201,7 @@ this.move(0, diffY)
                             
 
 
-                            throw Exception(
-                            "No Such Anchor Supported")
+                            throw Exception("No Such Anchor Supported")
 
                         }
                             

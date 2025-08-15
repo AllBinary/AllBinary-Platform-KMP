@@ -158,8 +158,7 @@ graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
                         
                                     {
                                     PreLogUtil.put(StringMaker().
-                            append(
-                            "painting beyond maxx: ")!!.append(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
+                            append("painting beyond maxx: ")!!.append(this.rectangle.getMaxX())!!.toString(), this, canvasStrings!!.PAINT)
 
                                     }
                                 

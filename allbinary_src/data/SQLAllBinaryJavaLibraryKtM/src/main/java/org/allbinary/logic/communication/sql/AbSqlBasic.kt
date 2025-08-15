@@ -244,7 +244,7 @@ this.initialize()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(SQL_CONNECTION_RETRY +se.getMessage(), this, this.METHOD_CREATE_CONNECTION, e)
+                                    logUtil!!.put(SQL_CONNECTION_RETRY +se.message, this, this.METHOD_CREATE_CONNECTION, e)
 
                                     }
                                 

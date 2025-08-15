@@ -83,7 +83,7 @@ protected constructor        (originalImage: Image, image: Image, angleInfo: Ang
 this.originalImage= originalImage
 this.halfWidth= (image.getWidth() shr 1)
 this.halfHeight= (image.getHeight() shr 1)
-this.increment= ().toShort()
+this.increment= (this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()).toShort()
 this.imageToShow= image
 this.twoImages[0]= image
 this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImage(image)

@@ -166,8 +166,7 @@ override fun toString()
 
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 stringBuffer!!.append(this.getName())
-stringBuffer!!.append(
-                            " LastKey: ")
+stringBuffer!!.append(" LastKey: ")
 stringBuffer!!.append(CanvasUtil.getKeyName(this.getLastKey()))
 
 

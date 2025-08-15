@@ -260,8 +260,7 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
                                     
 
 
-                            throw Exception(
-                            "Not Mutable")
+                            throw Exception("Not Mutable")
 
                                     }
                                 

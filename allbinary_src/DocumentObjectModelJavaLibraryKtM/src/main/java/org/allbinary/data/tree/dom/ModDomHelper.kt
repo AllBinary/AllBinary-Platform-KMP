@@ -321,8 +321,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                             
 
 
-                            throw Exception("HashMap value is the wrong instance and is: " +ClassUtil.viewAll(anyType, 
-                            "\n"))
+                            throw Exception("HashMap value is the wrong instance and is: " +ClassUtil.viewAll(anyType, "\n"))
 
                         }
                             

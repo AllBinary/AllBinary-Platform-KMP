@@ -34,8 +34,7 @@ open public class ScoreHudWidget : NumberStringHud {
         
 public constructor        (maxscore: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super(
-                            "Pts ", maxscore, location, direction, maxHeight, maxWidth, bufferZone, basicColor){
+                            : super("Pts ", maxscore, location, direction, maxHeight, maxWidth, bufferZone, basicColor){
 
                     var maxscore = maxscore
 

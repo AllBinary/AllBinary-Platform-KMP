@@ -137,8 +137,7 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(
-                            " Selected AI: ")
+stringBuffer!!.append(" Selected AI: ")
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(this.getSelectedArtificialIntelligenceInterface()))
 
 

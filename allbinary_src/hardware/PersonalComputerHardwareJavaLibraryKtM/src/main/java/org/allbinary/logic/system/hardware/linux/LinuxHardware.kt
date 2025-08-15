@@ -118,8 +118,7 @@ public constructor        ()
                                     
 
 
-                            throw Exception(
-                            "Not Enough Data For A Valid License On Linux")
+                            throw Exception("Not Enough Data For A Valid License On Linux")
 
                                     }
                                 
@@ -245,8 +244,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                     
 
 
-                            throw Exception(
-                            "No Linux File Data")
+                            throw Exception("No Linux File Data")
 
                                     }
                                 
@@ -265,8 +263,7 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put(
-                            "PCI File Found", this, this.commonStrings!!.CONSTRUCTOR)
+                                    logUtil!!.put("PCI File Found", this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -309,8 +306,7 @@ nextLine= lineNumberReader!!.readLine()
                                     }
                                 
 componentData!!.append(nextLine)
-componentData!!.append(
-                            "\n")
+componentData!!.append("\n")
 nextLine= lineNumberReader!!.readLine()
 
     var componentType: String = PCComponentFactory.getInstance()!!.getComponentType(nextLine)!!
@@ -321,8 +317,7 @@ nextLine= lineNumberReader!!.readLine()
                                     null
                                 )
         {componentData!!.append(nextLine)
-componentData!!.append(
-                            "\n")
+componentData!!.append("\n")
 nextLine= lineNumberReader!!.readLine()
 
     
@@ -365,8 +360,7 @@ nextLine= lineNumberReader!!.readLine()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
                                     {
-                                    logUtil!!.put(
-                            "Could not load PCI File", this, this.commonStrings!!.CONSTRUCTOR)
+                                    logUtil!!.put("Could not load PCI File", this, this.commonStrings!!.CONSTRUCTOR)
 
                                     }
                                 
@@ -562,14 +556,11 @@ override fun toString()
         {
     var componentInterface: HardwareComponentInterface = componentInterfaceVector!!.get(index) as HardwareComponentInterface
 
-hardwareBuffer!!.append(
-                            "Component ")
+hardwareBuffer!!.append("Component ")
 hardwareBuffer!!.append(index)
-hardwareBuffer!!.append(
-                            ": \n")
+hardwareBuffer!!.append(": \n")
 hardwareBuffer!!.append(componentInterface!!.toString())
-hardwareBuffer!!.append(
-                            "\n")
+hardwareBuffer!!.append("\n")
 }
 
 
@@ -619,8 +610,7 @@ open fun isNextHardware(nextLine: String)
                         
                                     {
                                     
-    var index: Int = nextLine!!.indexOf(
-                            "Bus")!!
+    var index: Int = nextLine!!.indexOf("Bus")!!
             
 
 

@@ -62,8 +62,7 @@ open fun getInstance(node: Node)
                             
 
 
-                            throw Exception(
-                            "No Such ActionScript Output")
+                            throw Exception("No Such ActionScript Output")
 
                         }
                             

@@ -55,9 +55,7 @@ open fun processProfileActionConditions(vector: Vector, frame: Long)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, 
-                            "CaptureWorkerUtil", 
-                            "processProfileActionConditions")
+logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionConditions")
 
     var size: Int = vector.size!!
             

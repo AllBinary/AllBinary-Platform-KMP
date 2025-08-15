@@ -100,8 +100,7 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
     var timeString: String = (System.currentTimeMillis()).toString()!!
             
 
-this.append(TextField(
-                            "Name: ", timeString, 30, TextField.ANY))
+this.append(TextField("Name: ", timeString, 30, TextField.ANY))
 this.initCommands(commandListener)
 }
 

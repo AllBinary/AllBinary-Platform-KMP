@@ -63,11 +63,9 @@ open public class ShippingMethodsFactory
     var sep: String = AbPathData.getInstance()!!.SEPARATOR
 
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "generic")
+stringBuffer!!.append("generic")
 stringBuffer!!.append(sep)
-stringBuffer!!.append(
-                            "shipping")
+stringBuffer!!.append("shipping")
 stringBuffer!!.append(sep)
 SHIPPINGMETHODSFILEPATHSTRING= stringBuffer!!.toString()
 }

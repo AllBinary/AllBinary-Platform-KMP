@@ -204,8 +204,7 @@ this.setRelease(value.concatToString()
                             
 
 
-                            throw Exception(
-                            "Action Script Input Unknown Node")
+                            throw Exception("Action Script Input Unknown Node")
 
                         }
                             
@@ -219,8 +218,7 @@ this.setKeyArray(vector.toArray(arrayOfNulls(vector.size)) as Array<Integer?>)
                             
 
 
-                            throw Exception(
-                            "Action Script Input Node Null")
+                            throw Exception("Action Script Input Node Null")
 
                         }
                             
@@ -352,8 +350,7 @@ open fun setKeyArray(keyArray: Array<Integer?>)
                         if(keyArray != 
                                     null
                                 )
-                        logUtil!!.put(CommonLabels.getInstance()!!.START +keyArray!!.size, this, 
-                            "setKeyArray")
+                        logUtil!!.put(CommonLabels.getInstance()!!.START +keyArray!!.size, this, "setKeyArray")
 this.keyArray= keyArray
 }
 
@@ -379,8 +376,7 @@ open fun setText(text: String)
 {
 
                     var text = text
-logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, 
-                            "setText")
+logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "setText")
 
     var integerArray: Array<Integer?> = this.integerArrayValue(text)!!
             
@@ -394,8 +390,7 @@ open fun integerArrayValue(text: String)
 : Array<Integer?>{
 
                     var text = text
-logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, 
-                            "integerArrayValue")
+logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue")
 
     var vector: Vector = Vector()
 
@@ -431,8 +426,7 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this,
     var nextCharString: String = text.substring(index +2, endIndex)!!
             
 
-logUtil!!.put("Next Char String: " +nextCharString, this, 
-                            "integerArrayValue")
+logUtil!!.put("Next Char String: " +nextCharString, this, "integerArrayValue")
 vector.add(substring.valueOf())
 index= index +nextCharString!!.length +3
 
@@ -483,8 +477,7 @@ open fun toHashMap()
 hashMap!!.put(KeyboardActionScriptInputData.DELAY_BETWEEN_KEYS, Integer.toString(this.getDelayBetweenKeys()))
 hashMap!!.put(KeyboardActionScriptInputData.PRESS, Boolean.toString(this.isPress()))
 hashMap!!.put(KeyboardActionScriptInputData.RELEASE, Boolean.toString(this.isRelease()))
-logUtil!!.put("HashMap: " +hashMap!!.toString(), this, 
-                            "toHashMap()")
+logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 
 
@@ -526,8 +519,7 @@ KeyboardInputAutomationProcessor.process(this)
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.toString(), this, 
-                            "log")
+{logUtil!!.put(this.toString(), this, "log")
 }
 
 override fun toString()
@@ -536,17 +528,13 @@ override fun toString()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())
-stringBuffer!!.append(
-                            " Text: ")
+stringBuffer!!.append(" Text: ")
 stringBuffer!!.append(this.getText())
-stringBuffer!!.append(
-                            " isPress: ")
+stringBuffer!!.append(" isPress: ")
 stringBuffer!!.append(this.isPress())
-stringBuffer!!.append(
-                            " isRelease: ")
+stringBuffer!!.append(" isRelease: ")
 stringBuffer!!.append(this.isRelease())
-stringBuffer!!.append(
-                            " Between Key Delay: ")
+stringBuffer!!.append(" Between Key Delay: ")
 stringBuffer!!.append(this.getDelayBetweenKeys())
 
 

@@ -113,8 +113,7 @@ open fun getExtension(filePath: String)
                                     
 
 
-                            throw Exception(
-                            "Could not be a file path since its less that 4 characters")
+                            throw Exception("Could not be a file path since its less that 4 characters")
 
                                     }
                                 
@@ -130,8 +129,7 @@ open fun getExtension(filePath: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("FileExtension: " +extension, this, 
-                            "getExtension()")
+                                    logUtil!!.put("FileExtension: " +extension, this, "getExtension()")
 
                                     }
                                 
@@ -188,8 +186,7 @@ open fun getWithoutExtension(filePath: String)
                                     
 
 
-                            throw Exception(
-                            "Could not be a file path since its less that 4 characters")
+                            throw Exception("Could not be a file path since its less that 4 characters")
 
                                     }
                                 
@@ -205,8 +202,7 @@ open fun getWithoutExtension(filePath: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("FileWithoutExtension: " +pathWithoutExtension, this, 
-                            "getWithoutExtension()")
+                                    logUtil!!.put("FileWithoutExtension: " +pathWithoutExtension, this, "getWithoutExtension()")
 
                                     }
                                 
@@ -389,8 +385,7 @@ open fun adjust(path: String)
                                 
 
     
-                        if(path.indexOf(
-                            "\\") >= 0)
+                        if(path.indexOf("\\") >= 0)
                         
                                     {
                                     path= path.replace('\\', abPathData!!.SEPARATORCHAR)

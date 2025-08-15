@@ -54,29 +54,21 @@ open fun getInstance()
 
     val NONE: GraphicsFeature = GraphicsFeature(StringUtil.getInstance()!!.NULL_STRING)
 
-    val TRANSPARENT_IMAGE_CREATION: GraphicsFeature = GraphicsFeature(
-                            "Transparent Image Creation")
+    val TRANSPARENT_IMAGE_CREATION: GraphicsFeature = GraphicsFeature("Transparent Image Creation")
 
-    val IMAGE_GRAPHICS: GraphicsFeature = GraphicsFeature(
-                            "Image Graphics")
+    val IMAGE_GRAPHICS: GraphicsFeature = GraphicsFeature("Image Graphics")
 
-    val IMAGE_ROTATION_ON_THE_FLY: GraphicsFeature = GraphicsFeature(
-                            "Image Rotated On The Fly")
+    val IMAGE_ROTATION_ON_THE_FLY: GraphicsFeature = GraphicsFeature("Image Rotated On The Fly")
 
-    val IMAGE_TO_ARRAY_GRAPHICS: GraphicsFeature = GraphicsFeature(
-                            "Image To Array Graphics")
+    val IMAGE_TO_ARRAY_GRAPHICS: GraphicsFeature = GraphicsFeature("Image To Array Graphics")
 
-    val SPRITE_QUARTER_ROTATION_GRAPHICS: GraphicsFeature = GraphicsFeature(
-                            "Sprite Quarter Rotation Graphics")
+    val SPRITE_QUARTER_ROTATION_GRAPHICS: GraphicsFeature = GraphicsFeature("Sprite Quarter Rotation Graphics")
 
-    val SPRITE_FULL_GRAPHICS: GraphicsFeature = GraphicsFeature(
-                            "Sprite Full Rotation Graphics")
+    val SPRITE_FULL_GRAPHICS: GraphicsFeature = GraphicsFeature("Sprite Full Rotation Graphics")
 
-    val VECTOR_GRAPHICS: GraphicsFeature = GraphicsFeature(
-                            "Vector Graphics")
+    val VECTOR_GRAPHICS: GraphicsFeature = GraphicsFeature("Vector Graphics")
 
-    val VECTOR_TO_IMAGE_GRAPHICS: GraphicsFeature = GraphicsFeature(
-                            "Vector To Image Graphics")
+    val VECTOR_TO_IMAGE_GRAPHICS: GraphicsFeature = GraphicsFeature("Vector To Image Graphics")
 
 }
                 

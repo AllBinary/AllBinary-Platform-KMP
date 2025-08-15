@@ -58,8 +58,7 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
                                     
 
 
-                            throw Exception(
-                            "Array Incorrect")
+                            throw Exception("Array Incorrect")
 
                                     }
                                 

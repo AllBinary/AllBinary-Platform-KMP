@@ -54,8 +54,7 @@ open fun getInstance()
             {
             }            
         
-    val NONE: GameKey = GameKey(InputFactory.getInstance()!!.MAX -1, 
-                            "None")
+    val NONE: GameKey = GameKey(InputFactory.getInstance()!!.MAX -1, "None")
 
     val UP: GameKey = GameKey(Canvas.UP, CommonPhoneStrings.getInstance()!!.UP)
 
@@ -65,11 +64,9 @@ open fun getInstance()
 
     val RIGHT: GameKey = GameKey(Canvas.RIGHT, CommonPhoneStrings.getInstance()!!.RIGHT)
 
-    val KEY_POUND: GameKey = GameKey(Canvas.KEY_POUND, 
-                            "POUND")
+    val KEY_POUND: GameKey = GameKey(Canvas.KEY_POUND, "POUND")
 
-    val KEY_STAR: GameKey = GameKey(Canvas.KEY_STAR, 
-                            "STAR")
+    val KEY_STAR: GameKey = GameKey(Canvas.KEY_STAR, "STAR")
 
     val KEY_NUM0: GameKey = GameKey(Canvas.KEY_NUM0, CommonPhoneStrings.getInstance()!!.ZERO)
 
@@ -91,25 +88,19 @@ open fun getInstance()
 
     val KEY_NUM9: GameKey = GameKey(Canvas.KEY_NUM9, CommonPhoneStrings.getInstance()!!.NINE)
 
-    val GAME_A: GameKey = GameKey(Canvas.GAME_A, 
-                            "Game A")
+    val GAME_A: GameKey = GameKey(Canvas.GAME_A, "Game A")
 
-    val GAME_B: GameKey = GameKey(Canvas.GAME_B, 
-                            "Game B")
+    val GAME_B: GameKey = GameKey(Canvas.GAME_B, "Game B")
 
-    val GAME_C: GameKey = GameKey(Canvas.GAME_C, 
-                            "Game C")
+    val GAME_C: GameKey = GameKey(Canvas.GAME_C, "Game C")
 
-    val GAME_D: GameKey = GameKey(Canvas.GAME_D, 
-                            "Game D")
+    val GAME_D: GameKey = GameKey(Canvas.GAME_D, "Game D")
 
     val FIRE: GameKey = GameKey(Canvas.FIRE, CommonPhoneStrings.getInstance()!!.FIRE)
 
-    var LEVEL_DOWN: GameKey = GameKey(Canvas.KEY_NUM9 +1, 
-                            "Cheat Level Up")
+    var LEVEL_DOWN: GameKey = GameKey(Canvas.KEY_NUM9 +1, "Cheat Level Up")
 
-    var LEVEL_UP: GameKey = GameKey(Canvas.KEY_NUM9 +2, 
-                            "Cheat Level Down")
+    var LEVEL_UP: GameKey = GameKey(Canvas.KEY_NUM9 +2, "Cheat Level Down")
 
 }
                 

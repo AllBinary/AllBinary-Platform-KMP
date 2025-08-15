@@ -517,8 +517,7 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "processTick", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 }

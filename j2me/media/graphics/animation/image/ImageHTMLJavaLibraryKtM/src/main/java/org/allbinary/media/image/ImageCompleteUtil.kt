@@ -180,8 +180,7 @@ open fun waitForAll()
     var size: Int = objectArray!!.size
                 
 
-PreLogUtil.put("Total: " +size, this, 
-                            "waitForAll")
+PreLogUtil.put("Total: " +size, this, "waitForAll")
 
 
 

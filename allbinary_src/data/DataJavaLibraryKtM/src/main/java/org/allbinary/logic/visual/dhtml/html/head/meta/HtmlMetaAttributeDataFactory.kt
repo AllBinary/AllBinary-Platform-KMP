@@ -51,14 +51,11 @@ open fun getInstance()
         {}
 
 
-    var NAME: HtmlMetaAttributeData = HtmlMetaAttributeData(0, 
-                            "HTMLMETA_ATTRIBUTE_NAME")
+    var NAME: HtmlMetaAttributeData = HtmlMetaAttributeData(0, "HTMLMETA_ATTRIBUTE_NAME")
 
-    var HTTP_EQUIV: HtmlMetaAttributeData = HtmlMetaAttributeData(1, 
-                            "HTMLMETA_ATTRIBUTE_HTTPEQUIV")
+    var HTTP_EQUIV: HtmlMetaAttributeData = HtmlMetaAttributeData(1, "HTMLMETA_ATTRIBUTE_HTTPEQUIV")
 
-    var CONTENT: HtmlMetaAttributeData = HtmlMetaAttributeData(2, 
-                            "HTMLMETA_ATTRIBUTE_CONTENT")
+    var CONTENT: HtmlMetaAttributeData = HtmlMetaAttributeData(2, "HTMLMETA_ATTRIBUTE_CONTENT")
 
 }
                 

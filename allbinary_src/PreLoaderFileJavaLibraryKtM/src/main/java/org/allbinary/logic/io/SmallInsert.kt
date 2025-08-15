@@ -82,8 +82,7 @@ idOutData!!.writeBytes(text +this.string)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "insertAtBeginning", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insertAtBeginning", e)
 
                                     }
                                 
@@ -154,8 +153,7 @@ idFile!!.close()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "after", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "after", e)
 
                                     }
                                 
@@ -194,8 +192,7 @@ idOutData!!.writeBytes(this.string +text)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "insertAtEnd", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "insertAtEnd", e)
 
                                     }
                                 

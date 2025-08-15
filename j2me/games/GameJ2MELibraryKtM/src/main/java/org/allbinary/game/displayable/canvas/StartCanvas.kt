@@ -587,8 +587,7 @@ DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -628,8 +627,7 @@ UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }
@@ -675,9 +673,7 @@ override fun isPausable()
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{logUtil!!.put(StringMaker().
-                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(
-                            " since not a game")!!.toString(), this, 
-                            "isGameOver")
+                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(" since not a game")!!.toString(), this, "isGameOver")
 
 
 
@@ -692,18 +688,14 @@ override fun isGameOver()
 {
 
                     var hashtable = hashtable
-logUtil!!.put(
-                            "Trying to continue a demo lol - only continue a game canvas not the demo", this, 
-                            "setLoadStateHashtable")
+logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "setLoadStateHashtable")
 }
 
 
                 @Throws(Exception::class)
             override fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(
-                            "Trying to continue a demo lol - only continue a game canvas not the demo", this, 
-                            "getLoadStateHashtable")
+: Hashtable<Any, Any>{logUtil!!.put("Trying to continue a demo lol - only continue a game canvas not the demo", this, "getLoadStateHashtable")
 
 
 
@@ -715,9 +707,7 @@ logUtil!!.put(
                 @Throws(Exception::class)
             override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(
-                            "Trying to save the AI lol", this, 
-                            "getCurrentStateHashtable")
+: Hashtable<Any, Any>{logUtil!!.put("Trying to save the AI lol", this, "getCurrentStateHashtable")
 
 
 
@@ -756,9 +746,7 @@ this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
 
 override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(
-                            "Not Implemented since not a game", this, 
-                            "setGameOver")
+{logUtil!!.put("Not Implemented since not a game", this, "setGameOver")
 }
 
 
@@ -983,8 +971,7 @@ override fun run()
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
             
 
-progressCanvas!!.addPortion(50, 
-                            "Demo Thread")
+progressCanvas!!.addPortion(50, "Demo Thread")
 this.setCurrentThread()
 this.setRunning(true)
 
@@ -997,8 +984,7 @@ this.setRunning(true)
                                     }
                                 
                         else {
-                            progressCanvas!!.addPortion(50, 
-                            "Demo Thread Running")
+                            progressCanvas!!.addPortion(50, "Demo Thread Running")
 
                         }
                             
@@ -1094,8 +1080,7 @@ baseGameStatistics!!.init()
 
                                     }
                                 
-logUtil!!.put(
-                            "Demo End", this, commonStrings!!.RUN)
+logUtil!!.put("Demo End", this, commonStrings!!.RUN)
 this.close()
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
 }
@@ -1137,9 +1122,7 @@ this.state= state
 
 override fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{logUtil!!.put(
-                            "Wow the AI got a high score!", this, 
-                            "isHighScoreSubmitted")
+: Boolean{logUtil!!.put("Wow the AI got a high score!", this, "isHighScoreSubmitted")
 
 
 

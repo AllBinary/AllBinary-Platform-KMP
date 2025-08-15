@@ -186,16 +186,13 @@ mimeBodyParts[0]!!.setText(textBody)
                                     
     var internetHeaders: InternetHeaders = InternetHeaders()
 
-internetHeaders!!.addHeader(
-                            "Content-Type", 
-                            "text/html")
+internetHeaders!!.addHeader("Content-Type", "text/html")
 
     
                         if(!stringValidationUtil!!.isEmpty(contentBase))
                         
                                     {
-                                    internetHeaders!!.addHeader(
-                            "Content-Base", contentBase)
+                                    internetHeaders!!.addHeader("Content-Base", contentBase)
 
                                     }
                                 
@@ -214,8 +211,7 @@ init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(Inte
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "emailConstructor", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "emailConstructor", e)
 
                                     }
                                 
@@ -273,14 +269,11 @@ this.properties.put(SMTP_HOST, server)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Unable to get HostName so using fake", this, 
-                            "init()")
+                                    logUtil!!.put("Unable to get HostName so using fake", this, "init()")
 
                                     }
                                 
-this.properties.put(SMTP_LOCAL_HOST, 
-                            "FakeHostName")
+this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
 
                                     }
                                 
@@ -290,14 +283,11 @@ this.properties.put(SMTP_LOCAL_HOST,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Continuing on Exception: Unable to get HostName", this, 
-                            "init()", e)
+                                    logUtil!!.put("Continuing on Exception: Unable to get HostName", this, "init()", e)
 
                                     }
                                 
-this.properties.put(SMTP_LOCAL_HOST, 
-                            "FakeHostName")
+this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
 }
 
 
@@ -305,8 +295,7 @@ this.properties.put(SMTP_LOCAL_HOST,
                         if(isDebug)
                         
                                     {
-                                    this.properties.put(DEBUG, 
-                            "true")
+                                    this.properties.put(DEBUG, "true")
 
                                     }
                                 
@@ -537,8 +526,7 @@ hashMap!!.put(EmailData.CONTENT, content)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toHashMap()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toHashMap()", e)
 
                                     }
                                 

@@ -63,8 +63,7 @@ override fun run()
 {
         try {
             logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(
-                            "GameCanvasRunnableInterface")!!.toString(), this, commonStrings!!.RUN)
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append("GameCanvasRunnableInterface")!!.toString(), this, commonStrings!!.RUN)
 this.demoGameMidlet!!.commandAction(MyCommandsFactory.getInstance()!!.SET_DISPLAYABLE, ProgressCanvasFactory.getInstance())
 this.demoGameMidlet!!.setGameCanvasRunnableInterface(this.demoGameMidlet!!.createDemoGameCanvasRunnableInterface())
 this.demoGameMidlet!!.demoSetup()

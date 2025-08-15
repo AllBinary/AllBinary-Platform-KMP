@@ -139,8 +139,7 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "No rectangle available for current feature selection or Resource: ")!!.append(resource)!!.toString())
+                            append("No rectangle available for current feature selection or Resource: ")!!.append(resource)!!.toString())
 }
 
 
@@ -331,9 +330,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 
 
 
-                            throw Exception(stringBuffer!!.append(
-                            "No feature resource type available for Resource: ")!!.append(resource)!!.append(
-                            " Resource Factories Available: ")!!.append(result)!!.toString())
+                            throw Exception(stringBuffer!!.append("No feature resource type available for Resource: ")!!.append(resource)!!.append(" Resource Factories Available: ")!!.append(result)!!.toString())
 
                         }
                             

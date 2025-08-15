@@ -244,8 +244,7 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toXmlNode()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlNode()", e)
 
                                     }
                                 
@@ -274,8 +273,7 @@ open fun toXmlDoc()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "toXmlDoc()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "toXmlDoc()", e)
 
                                     }
                                 
@@ -318,8 +316,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -345,8 +342,7 @@ open fun validationInfo()
                         if(this.workFlowName == 
                                     null
                                 )
-                        stringBuffer!!.append(
-                            "No WorkFlow name specified.")
+                        stringBuffer!!.append("No WorkFlow name specified.")
 
 
 
@@ -358,9 +354,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

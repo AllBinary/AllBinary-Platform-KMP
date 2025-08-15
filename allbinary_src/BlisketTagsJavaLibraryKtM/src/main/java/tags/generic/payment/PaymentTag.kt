@@ -42,10 +42,8 @@ open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
         try {
-            this.setName(
-                            "Basic Payment View")
-this.setObjectFile(
-                            "views.generic.payment.ValidationView")
+            this.setName("Basic Payment View")
+this.setObjectFile("views.generic.payment.ValidationView")
 
     
                         if(this.getCommand() != 
@@ -114,8 +112,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

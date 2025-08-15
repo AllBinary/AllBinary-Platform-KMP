@@ -195,8 +195,7 @@ open fun tryAnother(anyType: Any)
 
 
 
-                            throw Exception(
-                            "Tried All Servers But Still Failed")
+                            throw Exception("Tried All Servers But Still Failed")
 }
 
 

@@ -56,8 +56,7 @@ this.gameCanvas= gameCanvas
                         if(this.gameCanvas!!.getStartIntermissionInterface()!!.getTimeDelayHelper()!!.isElapsed(WAIT))
                         
                                     {
-                                    logUtil!!.put(
-                            "Intermission End", this, commonStrings!!.PROCESS)
+                                    logUtil!!.put("Intermission End", this, commonStrings!!.PROCESS)
 this.gameCanvas!!.getStartIntermissionInterface()!!.setEnabled(false)
 
                                     }

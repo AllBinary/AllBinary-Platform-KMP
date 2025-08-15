@@ -66,8 +66,7 @@ open fun applyMotionRectangleConstraints(motionRectangles: MotionRectangles)
 {
 
                     var motionRectangles = motionRectangles
-logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), this, 
-                            "applyMotionRectangleConstraints")
+logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), this, "applyMotionRectangleConstraints")
 
     var bufferedImageArray: Array<BufferedImage?> = motionRectangles!!.getImageComparisonResult()!!.getBufferedImages()!!
             

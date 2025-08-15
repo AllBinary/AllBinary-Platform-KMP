@@ -55,8 +55,7 @@ open public class FileLog
 
     private val fileName: String = .toCharArray().concatToString()
 
-    private val backupFileName: String = fileName!!.concat(
-                            ".bak")!!
+    private val backupFileName: String = fileName!!.concat(".bak")!!
             
 
     private val ORG_ALLBINARY: String = "org.allbinary: "
@@ -88,8 +87,7 @@ open fun createLogFile()
                         else {
                             firstTime= false
 
-    var raFile: RandomAccessFile = RandomAccessFile(logFile, 
-                            "rw")
+    var raFile: RandomAccessFile = RandomAccessFile(logFile, "rw")
 
 raFile!!.seek(raFile!!.length())
 fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
@@ -237,7 +235,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                     {
                                     
     
-                        if(!() || createLogFile() == false)
+                        if(!(createLogFileBackup()) || createLogFile() == false)
                         
                                     {
                                     
@@ -365,7 +363,7 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                                     {
                                     
     
-                        if(!() || createLogFile() == false)
+                        if(!(createLogFileBackup()) || createLogFile() == false)
                         
                                     {
                                     

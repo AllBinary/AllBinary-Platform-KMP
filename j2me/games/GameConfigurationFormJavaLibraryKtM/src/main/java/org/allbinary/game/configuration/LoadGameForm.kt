@@ -98,15 +98,13 @@ this.deleteAll()
                         if(list.size() > 0)
                         
                                     {
-                                    this.add(list, 
-                            "Select A Saved Game", Choice.EXCLUSIVE)
+                                    this.add(list, "Select A Saved Game", Choice.EXCLUSIVE)
 this.areChoices= true
 
                                     }
                                 
                         else {
-                            this.append(StringItem(
-                            "No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING))
+                            this.append(StringItem("No Saved Games", StringUtil.getInstance()!!.EMPTY_STRING))
 this.areChoices= false
 
                         }
@@ -175,8 +173,7 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
     var anyType: Any = list.objectArray[index]!!
 
 logUtil!!.put(StringMaker().
-                            append(
-                            "Adding Choice: ")!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)
+                            append("Adding Choice: ")!!.append(anyType!!.toString())!!.toString(), this, METHOD_NAME)
 choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
 }
 

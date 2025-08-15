@@ -51,11 +51,9 @@ open fun getInstance()
         {}
 
 
-    val ATTACK: SensorAction = SensorAction(
-                            "Attack")
+    val ATTACK: SensorAction = SensorAction("Attack")
 
-    val EVADE: SensorAction = SensorAction(
-                            "Evade")
+    val EVADE: SensorAction = SensorAction("Evade")
 
 }
                 

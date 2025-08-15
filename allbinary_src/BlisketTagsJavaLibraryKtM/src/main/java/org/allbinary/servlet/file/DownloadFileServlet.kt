@@ -175,27 +175,22 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
 response.reset()
 response.setBufferSize(DEFAULT_BUFFER_SIZE)
 response.setContentType(contentType)
-response.setHeader(
-                            "Content-Length", length.concatToString()
+response.setHeader("Content-Length", file.length.concatToString()
 
                                     )
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "attachment; filename=\"")
+stringBuffer!!.append("attachment; filename=\"")
 stringBuffer!!.append(file.getName())
-stringBuffer!!.append(
-                            "\"")
-response.setHeader(
-                            "Content-Disposition", stringBuffer!!.toString())
+stringBuffer!!.append("\"")
+response.setHeader("Content-Disposition", stringBuffer!!.toString())
 StreamUtil.getInstance()!!.get(inputStream, response.getOutputStream(), ByteArray(16348))
 
                                     }
                                 
                         else {
-                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
-                            "You are not Authorized")
+                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "You are not Authorized")
 
                         }
                             
@@ -203,8 +198,7 @@ StreamUtil.getInstance()!!.get(inputStream, response.getOutputStream(), ByteArra
                                     }
                                 
                         else {
-                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, 
-                            "Please Login")
+                            response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Please Login")
 
                         }
                             
@@ -214,8 +208,7 @@ StreamUtil.getInstance()!!.get(inputStream, response.getOutputStream(), ByteArra
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "processRequest()", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "processRequest()", e)
 
                                     }
                                 

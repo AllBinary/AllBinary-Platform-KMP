@@ -119,8 +119,7 @@ this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_EARLY)
                             
 
 
-                            throw Exception(
-                            "No Loading Feature Available")
+                            throw Exception("No Loading Feature Available")
 
                         }
                             

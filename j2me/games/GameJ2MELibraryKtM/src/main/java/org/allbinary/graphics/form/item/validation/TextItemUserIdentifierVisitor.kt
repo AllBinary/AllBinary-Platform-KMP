@@ -89,8 +89,7 @@ override fun visit(anyType: Any)
                         else {
                             
         try {
-            TextNotificationUtil.getInstance()!!.fireError(
-                            "Only Letters & Numbers Allowed")
+            TextNotificationUtil.getInstance()!!.fireError("Only Letters & Numbers Allowed")
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!

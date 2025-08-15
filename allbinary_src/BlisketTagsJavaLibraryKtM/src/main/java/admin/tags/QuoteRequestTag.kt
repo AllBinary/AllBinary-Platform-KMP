@@ -71,8 +71,7 @@ open fun email()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "email", 
+    var method: Method = helperClass!!.getMethod("email", 
                             null)!!
             
 
@@ -100,8 +99,7 @@ open fun email()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "sendEmail()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "sendEmail()", e)
 
                                     }
                                 
@@ -131,8 +129,7 @@ open fun doStartTag()
                                     this.getPropertiesHashMap()!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 
     
-                        if(this.getCommand()!!.compareTo(
-                            "EMAIL") == 0)
+                        if(this.getCommand()!!.compareTo("EMAIL") == 0)
                         
                                     {
                                     this.email()

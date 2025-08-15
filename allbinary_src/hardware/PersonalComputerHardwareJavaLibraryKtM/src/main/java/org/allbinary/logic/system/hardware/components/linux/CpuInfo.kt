@@ -33,59 +33,41 @@ open public class CpuInfo
 
         companion object {
             
-    val PROCESSOR: CpuInfo = CpuInfo(
-                            "processor")
+    val PROCESSOR: CpuInfo = CpuInfo("processor")
 
-    val VENDORID: CpuInfo = CpuInfo(
-                            "vendor_id")
+    val VENDORID: CpuInfo = CpuInfo("vendor_id")
 
-    val CPUFAMILY: CpuInfo = CpuInfo(
-                            "cpu family")
+    val CPUFAMILY: CpuInfo = CpuInfo("cpu family")
 
-    val MODEL: CpuInfo = CpuInfo(
-                            "model")
+    val MODEL: CpuInfo = CpuInfo("model")
 
-    val MODELNAME: CpuInfo = CpuInfo(
-                            "model name")
+    val MODELNAME: CpuInfo = CpuInfo("model name")
 
-    val STEPPING: CpuInfo = CpuInfo(
-                            "stepping")
+    val STEPPING: CpuInfo = CpuInfo("stepping")
 
-    val CPUMHZ: CpuInfo = CpuInfo(
-                            "cpu MHz")
+    val CPUMHZ: CpuInfo = CpuInfo("cpu MHz")
 
-    val CACHESIZE: CpuInfo = CpuInfo(
-                            "cache size")
+    val CACHESIZE: CpuInfo = CpuInfo("cache size")
 
-    val FDIVBUG: CpuInfo = CpuInfo(
-                            "fdiv_bug")
+    val FDIVBUG: CpuInfo = CpuInfo("fdiv_bug")
 
-    val HLTBUG: CpuInfo = CpuInfo(
-                            "hlt_bug")
+    val HLTBUG: CpuInfo = CpuInfo("hlt_bug")
 
-    val F00FBUG: CpuInfo = CpuInfo(
-                            "f00f_bug")
+    val F00FBUG: CpuInfo = CpuInfo("f00f_bug")
 
-    val COMABUG: CpuInfo = CpuInfo(
-                            "coma_bug")
+    val COMABUG: CpuInfo = CpuInfo("coma_bug")
 
-    val FPU: CpuInfo = CpuInfo(
-                            "fpu")
+    val FPU: CpuInfo = CpuInfo("fpu")
 
-    val FPUEXCEPTION: CpuInfo = CpuInfo(
-                            "fpu_exception")
+    val FPUEXCEPTION: CpuInfo = CpuInfo("fpu_exception")
 
-    val CPUIDLEVEL: CpuInfo = CpuInfo(
-                            "cache size")
+    val CPUIDLEVEL: CpuInfo = CpuInfo("cache size")
 
-    val WP: CpuInfo = CpuInfo(
-                            "yes")
+    val WP: CpuInfo = CpuInfo("yes")
 
-    val FLAGS: CpuInfo = CpuInfo(
-                            "flags")
+    val FLAGS: CpuInfo = CpuInfo("flags")
 
-    val BOGOMIPS: CpuInfo = CpuInfo(
-                            "bogomips")
+    val BOGOMIPS: CpuInfo = CpuInfo("bogomips")
 
         }
             

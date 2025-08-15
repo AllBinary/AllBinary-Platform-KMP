@@ -84,8 +84,7 @@ open fun getFormData(storeHashMap: HashMap<Any, Any>)
 {
 
                     var storeHashMap = storeHashMap
-logUtil!!.put(commonStrings!!.START, this, 
-                            "getFormData")
+logUtil!!.put(commonStrings!!.START, this, "getFormData")
 this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as ContextConfigurationInterface)
 }
 

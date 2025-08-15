@@ -66,10 +66,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "New User View")
-this.setObjectFile(
-                            "views.admin.user.NewUserView")
+                                    this.setName("New User View")
+this.setObjectFile("views.admin.user.NewUserView")
 
                                     }
                                 
@@ -78,10 +76,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0 || this.getCommand()!!.compareTo(SqlStrings.getInstance()!!.INSERT_INTO) == 0)
                         
                                     {
-                                    this.setName(
-                            "Add Validation User View")
-this.setObjectFile(
-                            "views.admin.user.AddValidationUserView")
+                                    this.setName("Add Validation User View")
+this.setObjectFile("views.admin.user.AddValidationUserView")
 
                                     }
                                 
@@ -90,10 +86,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation User View")
-this.setObjectFile(
-                            "views.admin.user.ViewValidationUserView")
+                                    this.setName("Validation User View")
+this.setObjectFile("views.admin.user.ViewValidationUserView")
 
                                     }
                                 
@@ -102,10 +96,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation User View")
-this.setObjectFile(
-                            "views.admin.user.EditValidationUserView")
+                                    this.setName("Validation User View")
+this.setObjectFile("views.admin.user.EditValidationUserView")
 
                                     }
                                 
@@ -114,10 +106,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.UPDATE) == 0 || this.getCommand()!!.compareTo(SqlStrings.getInstance()!!.UPDATE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Update Validation User View")
-this.setObjectFile(
-                            "views.admin.user.UpdateValidationUserView")
+                                    this.setName("Update Validation User View")
+this.setObjectFile("views.admin.user.UpdateValidationUserView")
 
                                     }
                                 
@@ -126,10 +116,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Delete Validation User View")
-this.setObjectFile(
-                            "views.admin.user.DeleteValidationUserView")
+                                    this.setName("Delete Validation User View")
+this.setObjectFile("views.admin.user.DeleteValidationUserView")
 
                                     }
                                 
@@ -141,8 +129,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -154,8 +141,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -167,8 +153,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -180,8 +165,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -204,8 +188,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: Exception)
             {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 

@@ -95,8 +95,7 @@ open fun init(keyAsString: String)
 
 this.secretComposite= SecretComposite(secretKey, cipher, key)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "init Failed", this, commonStrings!!.INIT, e)
+            {PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 }
 
 }
@@ -114,9 +113,7 @@ override fun encrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.secretComposite!!.encrypt(array)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "Encrypt Failed", this, 
-                            "encrypt", e)
+            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -139,9 +136,7 @@ override fun decrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.secretComposite!!.decrypt(array)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "decrypt Failed", this, 
-                            "decrypt", e)
+            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 

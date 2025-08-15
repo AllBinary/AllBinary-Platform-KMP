@@ -109,8 +109,7 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "toXmlNode", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlNode", e)
 
                                     }
                                 
@@ -143,8 +142,7 @@ open fun toXmlDoc()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "toXmlDoc", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "toXmlDoc", e)
 
                                     }
                                 
@@ -173,8 +171,7 @@ open fun view()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "view", e)
+                                    logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "view", e)
 
                                     }
                                 

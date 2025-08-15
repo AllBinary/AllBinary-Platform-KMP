@@ -33,20 +33,15 @@ open public class GameSkillType
 
         companion object {
             
-    var MANA: GameSkillType = GameSkillType(
-                            "Mana")
+    var MANA: GameSkillType = GameSkillType("Mana")
 
-    var REPLENISH: GameSkillType = GameSkillType(
-                            "Replenish")
+    var REPLENISH: GameSkillType = GameSkillType("Replenish")
 
-    var TIMED: GameSkillType = GameSkillType(
-                            "Timed")
+    var TIMED: GameSkillType = GameSkillType("Timed")
 
-    var ATTACK: GameSkillType = GameSkillType(
-                            "Attack")
+    var ATTACK: GameSkillType = GameSkillType("Attack")
 
-    var TRANSPORT: GameSkillType = GameSkillType(
-                            "Transport")
+    var TRANSPORT: GameSkillType = GameSkillType("Transport")
 
         }
             

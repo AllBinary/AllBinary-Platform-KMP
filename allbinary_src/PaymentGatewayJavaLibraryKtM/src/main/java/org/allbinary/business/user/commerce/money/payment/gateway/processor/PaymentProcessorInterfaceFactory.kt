@@ -103,8 +103,7 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
 
 
 
-                            throw Exception(
-                            "Error Getting PaymentProcessorInterface")
+                            throw Exception("Error Getting PaymentProcessorInterface")
 } catch(e: Exception)
             {
     

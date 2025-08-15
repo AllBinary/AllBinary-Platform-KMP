@@ -61,8 +61,7 @@ override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
             
 
 logUtil!!.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(highScoresArrayP!!.size)!!.toString(), this, 
-                            "setHighScoresArray")
+                            append(commonStrings!!.START)!!.append(highScoresArrayP!!.size)!!.toString(), this, "setHighScoresArray")
 
                                     }
                                 
@@ -71,8 +70,7 @@ logUtil!!.put(StringMaker().
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, this, 
-                            "setHighScoresArray")
+logUtil!!.put(commonStrings!!.START, this, "setHighScoresArray")
 
                         }
                             

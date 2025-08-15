@@ -77,8 +77,7 @@ this.createDocument()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TransformInfo: ")
+stringBuffer!!.append("TransformInfo: ")
 
     
                         if(this.ownerTransformInfoInterface != 
@@ -91,16 +90,13 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "No Owner!?#@")
+                            stringBuffer!!.append("No Owner!?#@")
 
                         }
                             
-stringBuffer!!.append(
-                            "\nConstructed with document: ")
+stringBuffer!!.append("\nConstructed with document: ")
 stringBuffer!!.append(this.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "Constructor(TransformInfoInterface)")
+logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterface)")
 
                                     }
                                 
@@ -139,8 +135,7 @@ this.document= document
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TransformInfo: ")
+stringBuffer!!.append("TransformInfo: ")
 
     
                         if(this.ownerTransformInfoInterface != 
@@ -153,16 +148,13 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "No Owner!?#@")
+                            stringBuffer!!.append("No Owner!?#@")
 
                         }
                             
-stringBuffer!!.append(
-                            "\nConstructed with document: ")
+stringBuffer!!.append("\nConstructed with document: ")
 stringBuffer!!.append(this.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "Constructor(TransformInfoInterface, Document)")
+logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterface, Document)")
 
                                     }
                                 
@@ -199,8 +191,7 @@ objectConfigNode!!.appendChild(configNameAttr)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "TransformInfo: ")
+stringBuffer!!.append("TransformInfo: ")
 
     
                         if(this.ownerTransformInfoInterface != 
@@ -213,16 +204,13 @@ stringBuffer!!.append(
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "No Owner!?#@")
+                            stringBuffer!!.append("No Owner!?#@")
 
                         }
                             
-stringBuffer!!.append(
-                            "\nConstructed with document: ")
+stringBuffer!!.append("\nConstructed with document: ")
 stringBuffer!!.append(this.toString())
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "Constructor(TransformInfoInterface, name, type)")
+logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterface, name, type)")
 
                                     }
                                 
@@ -408,14 +396,11 @@ open fun getNodeVector(nodeName: String)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Number Of ")
+stringBuffer!!.append("Number Of ")
 stringBuffer!!.append(nodeName)
-stringBuffer!!.append(
-                            " Nodes: ")
+stringBuffer!!.append(" Nodes: ")
 stringBuffer!!.append(numberOfViews)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "getNodeVector(nodename)")
+logUtil!!.put(stringBuffer!!.toString(), this, "getNodeVector(nodename)")
 
                                     }
                                 
@@ -526,8 +511,7 @@ open fun getTransformsGroup(group: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Started: " +group, this, 
-                            "getTransformsGroup()")
+                                    logUtil!!.put("Started: " +group, this, "getTransformsGroup()")
 
                                     }
                                 
@@ -605,8 +589,7 @@ break;
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Number Of Nodes: " +numberOfViews, this, 
-                            "getTransformsGroup()")
+                                    logUtil!!.put("Number Of Nodes: " +numberOfViews, this, "getTransformsGroup()")
 
                                     }
                                 
@@ -643,16 +626,12 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
                                 )
                         
                                     {
-                                    logUtil!!.put(
-                            "Number Of Nodes: NULL", this, 
-                            "getTransformsGroup()")
+                                    logUtil!!.put("Number Of Nodes: NULL", this, "getTransformsGroup()")
 
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Number Of Nodes: 0", this, 
-                            "getTransformsGroup()")
+                            logUtil!!.put("Number Of Nodes: 0", this, "getTransformsGroup()")
 
                         }
                             
@@ -830,8 +809,7 @@ override fun toString()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "DOM Document error", this, commonStrings!!.TOSTRING)
+                                    logUtil!!.put("DOM Document error", this, commonStrings!!.TOSTRING)
 
                                     }
                                 

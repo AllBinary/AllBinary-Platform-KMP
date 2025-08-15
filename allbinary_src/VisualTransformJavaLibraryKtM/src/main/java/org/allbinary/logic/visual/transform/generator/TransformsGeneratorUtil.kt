@@ -79,8 +79,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Started Group: " +group, this, 
-                            "generateComponentsFromObjectConfig(2)")
+                                    logUtil!!.put("Started Group: " +group, this, "generateComponentsFromObjectConfig(2)")
 
                                     }
                                 
@@ -97,8 +96,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("End Group: " +group, this, 
-                            "generateComponentsFromObjectConfig(2)")
+                                    logUtil!!.put("End Group: " +group, this, "generateComponentsFromObjectConfig(2)")
 
                                     }
                                 
@@ -131,8 +129,7 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Started Group: " +group, this, 
-                            "generateComponentsFromObjectConfig()")
+                                    logUtil!!.put("Started Group: " +group, this, "generateComponentsFromObjectConfig()")
 
                                     }
                                 
@@ -148,14 +145,11 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Processing ")
+stringBuffer!!.append("Processing ")
 stringBuffer!!.append(transformInfoObjectConfigComponentVector!!.size)
-stringBuffer!!.append(
-                            " Components Group: ")
+stringBuffer!!.append(" Components Group: ")
 stringBuffer!!.append(group)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "generateComponentsFromObjectConfig()")
+logUtil!!.put(stringBuffer!!.toString(), this, "generateComponentsFromObjectConfig()")
 
                                     }
                                 
@@ -167,8 +161,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                                     
 
 
-                            throw Exception(
-                            "No Pages Generated For Template.")
+                            throw Exception("No Pages Generated For Template.")
 
                                     }
                                 
@@ -194,19 +187,16 @@ TransformGeneratorUtil.getInstance()!!.generate(abeClientInformation, transformI
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Done Group: " +group, this, 
-                            "generateComponentsFromObjectConfig()")
+                                    logUtil!!.put("Done Group: " +group, this, "generateComponentsFromObjectConfig()")
 
                                     }
                                 
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "<!-- Generated all template views successfully for View: ")
+stringBuffer!!.append("<!-- Generated all template views successfully for View: ")
 stringBuffer!!.append(transformInfoInterface!!.getName())
-stringBuffer!!.append(
-                            "-->")
+stringBuffer!!.append("-->")
 
 
 

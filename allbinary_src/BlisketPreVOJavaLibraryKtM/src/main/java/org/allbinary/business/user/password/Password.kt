@@ -105,8 +105,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATION))
                         
                                     {
-                                    logUtil!!.put(
-                            "Password is invalid", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("Password is invalid", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -125,9 +124,7 @@ valid= Boolean.FALSE
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", 
-                            "Password", commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", "Password", commonStrings!!.IS_VALID, e)
 
                                     }
                                 

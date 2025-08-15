@@ -84,14 +84,11 @@ super.init(abeClientInformation, commandListener, level)
             
 
 SmallIntegerSingletonFactory.getInstance()!!.init()
-progressCanvas!!.addPortion(50, 
-                            "Integers")
+progressCanvas!!.addPortion(50, "Integers")
 PointFactory.getInstance()!!.init()
-progressCanvas!!.addPortion(50, 
-                            "Points")
+progressCanvas!!.addPortion(50, "Points")
 AngleFactory.getInstance()
-progressCanvas!!.addPortion(50, 
-                            "Angles")
+progressCanvas!!.addPortion(50, "Angles")
 this.initGame()
 this.resourceInitializationArray[GAME_RESOURCES]!!.init()
 

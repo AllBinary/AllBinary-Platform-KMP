@@ -36,8 +36,7 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
     private val keyvalueDrawString: KeyValueDrawString
 
     private var rtsLayer: RTSLayer
-protected constructor        (){keyvalueDrawString= KeyValueDrawString(
-                            "Owner: ", this.textX)
+protected constructor        (){keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
 

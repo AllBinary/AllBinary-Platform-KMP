@@ -53,8 +53,7 @@ open fun process(abeClientInformation: AbeClientInformationInterface, registrati
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(CommonLabels.getInstance()!!.START_LABEL +"License Registration", 
-                            "LicenseRegistrationUtil", commonStrings!!.PROCESS)
+PreLogUtil.put(CommonLabels.getInstance()!!.START_LABEL +"License Registration", "LicenseRegistrationUtil", commonStrings!!.PROCESS)
 RegistrationConfiguration.getInstance()!!.setRegistrationCode(registrationId)
 RegistrationConfiguration.getInstance()!!.write()
 
@@ -62,15 +61,11 @@ RegistrationConfiguration.getInstance()!!.write()
             
 
 hashtable.put(RegistrationConfiguration.getInstance()!!.NAME, registrationId)
-hashtable.put(
-                            "message", SpecialMessageUtil.getInstance()!!.get())
+hashtable.put("message", SpecialMessageUtil.getInstance()!!.get())
 XmlRpcRemoteLicenseRegistrationClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Exception)
-            {PreLogUtil.put(
-                            "License Registration Exception", 
-                            "LicenseRegistrationUtil", 
-                            "License Registration", e)
+            {PreLogUtil.put("License Registration Exception", "LicenseRegistrationUtil", "License Registration", e)
 }
 
 }

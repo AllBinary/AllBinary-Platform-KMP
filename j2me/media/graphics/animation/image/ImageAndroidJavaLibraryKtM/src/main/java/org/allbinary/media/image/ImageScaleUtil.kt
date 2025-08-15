@@ -316,8 +316,7 @@ image.getGraphics()!!.drawImage(originalImage, 0, 0, anchor)
                             
 
 
-                            throw Exception(
-                            "Not Mutable")
+                            throw Exception("Not Mutable")
 
                         }
                             

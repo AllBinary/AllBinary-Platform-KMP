@@ -69,8 +69,7 @@ this.setName(name)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "InputToGameKeyEventAction", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "InputToGameKeyEventAction", e)
 }
 
 }

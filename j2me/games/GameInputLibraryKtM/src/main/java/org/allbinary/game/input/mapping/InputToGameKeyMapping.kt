@@ -154,9 +154,7 @@ override fun remove(input: Input, mappedToInput: Input)
 
                     var mappedToInput = mappedToInput
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(input))!!.append(
-                            " == ")!!.append(StringUtil.getInstance()!!.toString(mappedToInput))!!.toString(), this, 
-                            "InputToGameKeyMapping::remove")
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(input))!!.append(" == ")!!.append(StringUtil.getInstance()!!.toString(mappedToInput))!!.toString(), this, "InputToGameKeyMapping::remove")
 super.remove(input, mappedToInput)
 this.set(input, gameKeyFactory!!.NONE)
 }

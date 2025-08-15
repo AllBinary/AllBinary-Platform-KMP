@@ -58,11 +58,9 @@ open public class GameInputMappingCanvas : GameCommandCanvas
             
     val NAME: String = "GameInputMappingCanvas"
 
-    val DISPLAY: Command = Command(
-                            "Controls", Command.SCREEN, 2)
+    val DISPLAY: Command = Command("Controls", Command.SCREEN, 2)
 
-    val DEFAULT: Command = Command(
-                            "Default", Command.SCREEN, 2)
+    val DEFAULT: Command = Command("Default", Command.SCREEN, 2)
 
         }
             
@@ -113,8 +111,7 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
                                     
 
 
-                            throw Exception(
-                            "Help Paintable Exception")
+                            throw Exception("Help Paintable Exception")
 
                                     }
                                 
@@ -199,8 +196,7 @@ open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
 
         try {
             logUtil!!.put(StringMaker().
-                            append(
-                            "Raw Device Key Code: ")!!.append(Integer.toHexString(keyCode))!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
+                            append("Raw Device Key Code: ")!!.append(Integer.toHexString(keyCode))!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
             
@@ -211,8 +207,7 @@ open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
 
 this.process(gameKey, input)
 } catch(e: Exception)
-            {logUtil!!.put(
-                            "Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -230,11 +225,9 @@ this.process(gameKey, input)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Start Passed GameKey: ")
+stringBuffer!!.append("Start Passed GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(gameKey))
-stringBuffer!!.append(
-                            " Input: ")
+stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(input))
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
 
@@ -260,9 +253,7 @@ open fun setSelectedAction(gameKey: GameKey)
 
                     var gameKey = gameKey
 logUtil!!.put(StringMaker().
-                            append(
-                            "Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, 
-                            "setSelectedAction")
+                            append("Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, "setSelectedAction")
 this.selectedGameKey= gameKey
 this.selectedInput= NONE
 this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
@@ -283,14 +274,11 @@ open fun gameActionCrud(gameKey: GameKey, input: Input)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Start GameKey: ")
+stringBuffer!!.append("Start GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
-stringBuffer!!.append(
-                            " Input: ")
+stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "gameActionCrud")
+logUtil!!.put(stringBuffer!!.toString(), this, "gameActionCrud")
 
     
                         if(this.selectedInput == NONE)
@@ -310,9 +298,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         
                                     {
                                     logUtil!!.put(StringMaker().
-                            append(
-                            "Already Mapped Input: ")!!.append(this.stringUtil!!.toString(input))!!.toString(), this, 
-                            "gameActionCrud")
+                            append("Already Mapped Input: ")!!.append(this.stringUtil!!.toString(input))!!.toString(), this, "gameActionCrud")
 this.selectedInput= input
 this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
 this.repaintBehavior!!.onChangeRepaint(this)
@@ -370,11 +356,9 @@ logUtil!!.put(commonStrings!!.START, this, METHOD_NAME)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Add Key Mapping : GameKey: ")
+stringBuffer!!.append("Add Key Mapping : GameKey: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedGameKey))
-stringBuffer!!.append(
-                            " Input: ")
+stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(this.stringUtil!!.toString(this.selectedInput))
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 inputMapping!!.getInputMapping()!!.add(this.selectedGameKey, input)
@@ -384,8 +368,7 @@ this.update()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Unable to add Mapping since one already exists or is MENU, HOME, or BACK key and setting selected action to what it is already mapped to", this, METHOD_NAME)
+                            logUtil!!.put("Unable to add Mapping since one already exists or is MENU, HOME, or BACK key and setting selected action to what it is already mapped to", this, METHOD_NAME)
 this.setSelectedAction(gameKey)
 
                         }
@@ -412,13 +395,10 @@ open fun deleteCurrentMapping()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Start GameKey: ")
-stringBuffer!!.append(
-                            "Remove Key Mapping: GameKey: ")
+stringBuffer!!.append("Start GameKey: ")
+stringBuffer!!.append("Remove Key Mapping: GameKey: ")
 stringBuffer!!.append(stringUtil!!.toString(this.selectedGameKey))
-stringBuffer!!.append(
-                            " Input: ")
+stringBuffer!!.append(" Input: ")
 stringBuffer!!.append(stringUtil!!.toString(this.selectedInput))
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 inputMapping!!.getInputMapping()!!.remove(this.selectedGameKey, this.selectedInput)
@@ -428,8 +408,7 @@ this.update()
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Can't Remove Last Key Mapping", this, METHOD_NAME)
+                            logUtil!!.put("Can't Remove Last Key Mapping", this, METHOD_NAME)
 
                         }
                             

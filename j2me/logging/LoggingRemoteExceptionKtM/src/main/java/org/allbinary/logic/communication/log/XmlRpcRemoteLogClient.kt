@@ -42,8 +42,7 @@ open public class XmlRpcRemoteLogClient : XmlRpcAbeClient {
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, 
-                            "SSLLogServ.logUtil"){
+                            : super(clientInfo, "SSLLogServ.logUtil"){
 
                     var clientInfo = clientInfo
 
@@ -70,13 +69,15 @@ open fun get(anyType: Any)
             
 
 
-    var index: Int = serverUrl!!.lastIndexOf(
-                            "/")!!
+    var index: Int = serverUrl!!.lastIndexOf("/")!!
             
 
 serverUrl= serverUrl!!.substring(0, index +1) +"logservssl.php"
-this.setClient(XmlRpcClient(serverUrl))
-this.getClient()!!.setBasicAuthentication(
+
+    var xmlRpcClient: XmlRpcClient = XmlRpcClient(serverUrl)
+
+this.setClient(xmlRpcClient)
+xmlRpcClient!!.setBasicAuthentication(
                             null, 
                             null)
 
@@ -84,7 +85,7 @@ this.getClient()!!.setBasicAuthentication(
 
 param.add(hashtable)
 
-    var result: Any = getClient()!!.execute(this.getRemoteMethod(), param, noCrypt)!!
+    var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, noCrypt)!!
             
 
 System.out.println("Result: \n" +result.toString())
@@ -94,8 +95,7 @@ System.out.println("Result: \n" +result.toString())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
-            {System.out.println(
-                            "IOException Trying Other Servers")
+            {System.out.println("IOException Trying Other Servers")
 
     
                         if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))

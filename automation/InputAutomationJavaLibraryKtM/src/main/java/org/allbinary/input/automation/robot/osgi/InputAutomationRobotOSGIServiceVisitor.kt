@@ -69,8 +69,7 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
                     var osgiServiceInterface = osgiServiceInterface
 
         try {
-            logUtil!!.put(this.commonStrings!!.START, this, 
-                            "visit")
+            logUtil!!.put(this.commonStrings!!.START, this, "visit")
 
     var inputAutomationRobotServiceInterface: InputAutomationRobotServiceInterface = osgiServiceInterface as InputAutomationRobotServiceInterface
 
@@ -85,8 +84,7 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
                         for (index in 0 until inputRobotInterfaceArray!!.size)
 
 
-        {logUtil!!.put("Adding: " +inputRobotInterfaceArray[index]!!.getName(), this, 
-                            "visit")
+        {logUtil!!.put("Adding: " +inputRobotInterfaceArray[index]!!.getName(), this, "visit")
 InputRobotFactory.getInstance()!!.add(inputRobotInterfaceArray[index]!!)
 }
 
@@ -96,8 +94,7 @@ InputRobotFactory.getInstance()!!.add(inputRobotInterfaceArray[index]!!)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "visit", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "visit", e)
 
 
 

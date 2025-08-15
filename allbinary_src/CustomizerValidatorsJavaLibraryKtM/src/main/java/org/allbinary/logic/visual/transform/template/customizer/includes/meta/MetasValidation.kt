@@ -58,16 +58,13 @@ this.metaValidationVector= Vector()
     var contentValue: String = this.storeFrontInterface!!.getName() +" E-Commerce Site"
 
 
-    var keywordsMetaValidation: MetaValidation = MetaValidation(HtmlMetaAttributeDataFactory.getInstance()!!.NAME, 
-                            "Keywords", HtmlMetaAttributeValuesData.getInstance()!!.KEYWORDS, contentValue)
+    var keywordsMetaValidation: MetaValidation = MetaValidation(HtmlMetaAttributeDataFactory.getInstance()!!.NAME, "Keywords", HtmlMetaAttributeValuesData.getInstance()!!.KEYWORDS, contentValue)
 
 
-    var abstractMetaValidation: MetaValidation = MetaValidation(HtmlMetaAttributeDataFactory.getInstance()!!.NAME, 
-                            "Abstract", HtmlMetaAttributeValuesData.getInstance()!!.ABSTRACT, contentValue)
+    var abstractMetaValidation: MetaValidation = MetaValidation(HtmlMetaAttributeDataFactory.getInstance()!!.NAME, "Abstract", HtmlMetaAttributeValuesData.getInstance()!!.ABSTRACT, contentValue)
 
 
-    var descriptionMetaValidation: MetaValidation = MetaValidation(HtmlMetaAttributeDataFactory.getInstance()!!.NAME, 
-                            "Description", HtmlMetaAttributeValuesData.getInstance()!!.DESCRIPTION, contentValue)
+    var descriptionMetaValidation: MetaValidation = MetaValidation(HtmlMetaAttributeDataFactory.getInstance()!!.NAME, "Description", HtmlMetaAttributeValuesData.getInstance()!!.DESCRIPTION, contentValue)
 
 this.metaValidationVector!!.add(keywordsMetaValidation)
 this.metaValidationVector!!.add(abstractMetaValidation)
@@ -102,8 +99,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -135,9 +131,7 @@ open fun validationInfo()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

@@ -70,18 +70,15 @@ open fun send()
             
     var propertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-propertiesHashMap!!.put(
-                            "Subject", this.subject)
-propertiesHashMap!!.put(
-                            "Body", this.body)
+propertiesHashMap!!.put("Subject", this.subject)
+propertiesHashMap!!.put("Body", this.body)
 
     var anyType: Any = BasicTextEmailHelperFactory().
                             getInstance(propertiesHashMap, this.pageContext)!!
             
 
 
-    var method: Method = anyType!!::class.getMethod(
-                            "send", 
+    var method: Method = anyType!!::class.getMethod("send", 
                             null)!!
             
 
@@ -101,8 +98,7 @@ method.invoke(anyType,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "send()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "send()", e)
 
                                     }
                                 

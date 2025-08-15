@@ -161,8 +161,7 @@ this.imageHeight= imageHeight
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
             
 
-logUtil!!.put(
-                            "Images were not the same size? Most likely a resolution change.", this, this.commonStrings!!.CONSTRUCTOR)
+logUtil!!.put("Images were not the same size? Most likely a resolution change.", this, this.commonStrings!!.CONSTRUCTOR)
 logUtil!!.put("1: " +imageUtil!!.toString(bufferedImage), this, this.commonStrings!!.CONSTRUCTOR)
 logUtil!!.put("2: " +imageUtil!!.toString(bufferedImage2), this, this.commonStrings!!.CONSTRUCTOR)
 
@@ -215,12 +214,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(
-                            "ImageComparisonInfo: ")!!.append(this.name)!!.append(
-                            " Number Of Matching Pixels: ")!!.append(this.pixelsThatMatch)!!.append(
-                            "\nNumber Of Non-Matching Pixels: ")!!.append(this.getNonMatchingPixelVector()!!.size())!!.append(
-                            "\nNumber Of Pixels Ignored: ")!!.append(this.pixelsIgnored)!!.append(
-                            "\nMatching Percentage: ")!!.append(this.getMatchingPercent())!!.toString()
+                            append("ImageComparisonInfo: ")!!.append(this.name)!!.append(" Number Of Matching Pixels: ")!!.append(this.pixelsThatMatch)!!.append("\nNumber Of Non-Matching Pixels: ")!!.append(this.getNonMatchingPixelVector()!!.size())!!.append("\nNumber Of Pixels Ignored: ")!!.append(this.pixelsIgnored)!!.append("\nMatching Percentage: ")!!.append(this.getMatchingPercent())!!.toString()
 }
 
 

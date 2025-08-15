@@ -145,8 +145,7 @@ open fun visit(anyType: Any)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "visit", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 
 
 
@@ -216,8 +215,7 @@ open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
 
 
 
-                            throw Exception(
-                            "Error")
+                            throw Exception("Error")
 }
 
 

@@ -80,8 +80,7 @@ override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: High
 
 
                     var highScoresResultsListener = highScoresResultsListener
-logUtil!!.put(
-                            "Getting Local HighScores", this, FETCH)
+logUtil!!.put("Getting Local HighScores", this, FETCH)
 this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 }
 

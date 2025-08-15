@@ -40,10 +40,8 @@ open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
 : Int{
         try {
-            this.setName(
-                            "Add Validation Customizers View")
-this.setObjectFile(
-                            "views.admin.customizers.CustomizersValidationView")
+            this.setName("Add Validation Customizers View")
+this.setObjectFile("views.admin.customizers.CustomizersValidationView")
 
 
 

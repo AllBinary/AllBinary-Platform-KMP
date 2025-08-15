@@ -124,8 +124,7 @@ open fun getCellPosition(direction: Int, oldGeographicMapCellPosition: Geographi
 else -> {
 
 
-                            throw Exception(
-                            "Only Four Directions")
+                            throw Exception("Only Four Directions")
 }
 
         }       

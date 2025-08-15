@@ -64,8 +64,7 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
                                     
 
 
-                            throw Exception(
-                            "No GeographicMapCellPosition")
+                            throw Exception("No GeographicMapCellPosition")
 
                                     }
                                 
@@ -79,8 +78,7 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
                                     
 
 
-                            throw Exception(
-                            "No PathFindingNodeCostInfo")
+                            throw Exception("No PathFindingNodeCostInfo")
 
                                     }
                                 
@@ -125,8 +123,7 @@ override fun toString()
 stringBuffer!!.append(this::class.qualifiedName!!)
 stringBuffer!!.append(CommonLabels.getInstance()!!.COLON_SEP)
 stringBuffer!!.append(this.getPathFindingNodeCostInfo()!!.toString())
-stringBuffer!!.append(
-                            " Path: ")
+stringBuffer!!.append(" Path: ")
 stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
 
     var pathFindingNode: PathFindingNode = this.parent

@@ -155,8 +155,7 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "HighScores: ")
+stringBuffer!!.append("HighScores: ")
 stringBuffer!!.append(this.heading)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(CommonLabels.getInstance()!!.TOTAL_LABEL)

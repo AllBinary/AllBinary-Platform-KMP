@@ -52,6 +52,24 @@ put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
+open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Exception)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var specialMessage = specialMessage
+
+
+                    var anyType = anyType
+
+
+                    var functionName = functionName
+
+
+                    var exception = exception
+put(specialMessage, anyType, functionName, exception as Object)
+}
+
+
     private val LOG_SUCCESS: String = "org.allbinary: "
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
@@ -89,21 +107,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 System.out.print(LOG_SUCCESS)
 System.out.println(message)
-}
-
-
-open fun put(specialMessage: String, className: String, functionName: String)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
-
-
-                    var className = className
-
-
-                    var functionName = functionName
-put(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 

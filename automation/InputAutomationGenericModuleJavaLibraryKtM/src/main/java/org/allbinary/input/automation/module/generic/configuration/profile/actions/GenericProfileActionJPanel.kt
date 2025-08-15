@@ -61,9 +61,7 @@ this.getGenericProfileActionScriptJPanel()!!.updateJTree()
 
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionScriptJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionScriptJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-logUtil!!.put(
-                            "Updated UI", this, 
-                            "updateUI")
+logUtil!!.put("Updated UI", this, "updateUI")
 }
 
 
@@ -124,10 +122,8 @@ blankProfileActionScriptJPanel!!.setLayout(blankProfileActionScriptJPanelLayout)
 blankProfileActionScriptJPanelLayout!!.setHorizontalGroup(blankProfileActionScriptJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 9996, Short.MAX_VALUE))
 blankProfileActionScriptJPanelLayout!!.setVerticalGroup(blankProfileActionScriptJPanelLayout!!.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 9967, Short.MAX_VALUE))
 genericProfileActionScriptJScrollPane!!.setViewportView(blankProfileActionScriptJPanel)
-ifJLabel!!.setText(
-                            "Conditions:")
-newColorAtJButton!!.setText(
-                            "Color Range At")
+ifJLabel!!.setText("Conditions:")
+newColorAtJButton!!.setText("Color Range At")
 newColorAtJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -141,8 +137,7 @@ newColorAtJButtonActionPerformed(evt)
 
                                 }
                             )
-newTimeIntervalJButton!!.setText(
-                            "Time Interval")
+newTimeIntervalJButton!!.setText("Time Interval")
 newTimeIntervalJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -156,8 +151,7 @@ newTimeIntervalJButtonActionPerformed(evt)
 
                                 }
                             )
-newAlwaysJButton!!.setText(
-                            "Always On/Off")
+newAlwaysJButton!!.setText("Always On/Off")
 newAlwaysJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -185,9 +179,7 @@ open fun newTimeIntervalJButtonActionPerformed(evt: java.awt.event.ActionEvent)
 {
 
                     var evt = evt
-logUtil!!.put(
-                            "New Time Interval Action Condition", this, 
-                            "newTimeIntervalJButtonActionPerformed")
+logUtil!!.put("New Time Interval Action Condition", this, "newTimeIntervalJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(TimeIntervalActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
@@ -198,9 +190,7 @@ open fun newAlwaysJButtonActionPerformed(evt: java.awt.event.ActionEvent)
 {
 
                     var evt = evt
-logUtil!!.put(
-                            "New EveryTime Action Condition", this, 
-                            "newEveryTimeJButtonActionPerformed")
+logUtil!!.put("New EveryTime Action Condition", this, "newEveryTimeJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(AlwaysActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }
@@ -211,9 +201,7 @@ open fun newColorAtJButtonActionPerformed(evt: java.awt.event.ActionEvent)
 {
 
                     var evt = evt
-logUtil!!.put(
-                            "New Color At Action Condition", this, 
-                            "newColorAtJButtonActionPerformed")
+logUtil!!.put("New Color At Action Condition", this, "newColorAtJButtonActionPerformed")
 getGenericProfileAction()!!.getGenericProfileActionScript()!!.addCondition(ColorAtActionScriptCondition() as ProfileActionScriptConditionInterface)
 this.updateProfileActionUI()
 }

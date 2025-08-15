@@ -90,18 +90,14 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
             
 
 stringBuffer!!.append(lineBreak)
-stringBuffer!!.append(
-                            "Class: ")
+stringBuffer!!.append("Class: ")
 stringBuffer!!.append(myClass!!.getName())
-stringBuffer!!.append(
-                            " uses ")
+stringBuffer!!.append(" uses ")
 stringBuffer!!.append(classes.size)
-stringBuffer!!.append(
-                            " other classes")
+stringBuffer!!.append(" other classes")
 stringBuffer!!.append(lineBreak)
 stringBuffer!!.append(lineBreak)
-stringBuffer!!.append(
-                            "Classes: ")
+stringBuffer!!.append("Classes: ")
 stringBuffer!!.append(lineBreak)
 
 
@@ -110,8 +106,7 @@ stringBuffer!!.append(lineBreak)
                         for (index in 0 until classes.size)
 
 
-        {stringBuffer!!.append(
-                            "Class: ")
+        {stringBuffer!!.append("Class: ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(lineBreak)
 }

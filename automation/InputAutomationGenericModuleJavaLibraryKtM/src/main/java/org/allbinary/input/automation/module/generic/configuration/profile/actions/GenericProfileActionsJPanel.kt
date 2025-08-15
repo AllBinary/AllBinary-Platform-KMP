@@ -60,10 +60,8 @@ saveJButton= javax.swing.JButton()
 blankGenericProfileActionJPanel= javax.swing.JPanel()
 newProfileActionJDialog!!.setMinimumSize(java.awt.Dimension(250, 150))
 newProfileActionJDialog!!.setResizable(false)
-newProfileActionJLabel!!.setText(
-                            "New Action Name")
-okNewProfileActionJButton!!.setText(
-                            "Ok")
+newProfileActionJLabel!!.setText("New Action Name")
+okNewProfileActionJButton!!.setText("Ok")
 okNewProfileActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -98,8 +96,7 @@ genericProfileActionsJListValueChanged(evt)
                                 }
                             )
 genericProfileActionsJScrollPane!!.setViewportView(genericProfileActionsJList)
-newActionJButton!!.setText(
-                            "New")
+newActionJButton!!.setText("New")
 newActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -113,8 +110,7 @@ newActionJButtonActionPerformed(evt)
 
                                 }
                             )
-deleteActionJButton!!.setText(
-                            "Delete")
+deleteActionJButton!!.setText("Delete")
 deleteActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -128,8 +124,7 @@ deleteActionJButtonActionPerformed(evt)
 
                                 }
                             )
-saveJButton!!.setText(
-                            "Save")
+saveJButton!!.setText("Save")
 saveJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 {
                                 
@@ -192,8 +187,7 @@ open fun saveJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         try {
             this.getGenericProfileActions()!!.save()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "saveJButtonActionPerformed", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "saveJButtonActionPerformed", e)
 }
 
 }
@@ -224,9 +218,7 @@ this.getGenericProfileActionJPanel()!!.updateProfileActionUI()
 
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-logUtil!!.put(
-                            "Setting Configuration Profile Actions JPanel", this, 
-                            "genericProfileActionsJListValueChanged")
+logUtil!!.put("Setting Configuration Profile Actions JPanel", this, "genericProfileActionsJListValueChanged")
 
                                     }
                                 
@@ -245,8 +237,7 @@ open fun genericProfileActionsJListValueChanged(evt: javax.swing.event.ListSelec
 
 this.updateProfileActionUI(profileActionNameString)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "genericProfileActionsJListValueChanged", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "genericProfileActionsJListValueChanged", e)
 }
 
 }
@@ -269,8 +260,7 @@ this.genericProfileActionsJList!!.setSelectedValue(newActionName, true)
 this.newProfileActionJDialog!!.setVisible(false)
 this.updateProfileActionUI(newActionName)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "okNewProfileActionJButtonActionPerformed", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "okNewProfileActionJButtonActionPerformed", e)
 }
 
 }
@@ -302,8 +292,7 @@ this.getGenericProfileActions()!!.remove(nextSelectedValueString)
 
 this.selectFirstElement()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, 
-                            "deleteActionJButtonActionPerformed", e)
+            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "deleteActionJButtonActionPerformed", e)
 }
 
 }

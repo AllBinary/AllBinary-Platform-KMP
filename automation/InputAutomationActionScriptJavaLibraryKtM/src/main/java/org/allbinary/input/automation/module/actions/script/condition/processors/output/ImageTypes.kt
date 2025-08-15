@@ -115,8 +115,7 @@ this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
                             
 
 
-                            throw Exception(
-                            "ImageTypes Unknown Node")
+                            throw Exception("ImageTypes Unknown Node")
 
                         }
                             
@@ -175,8 +174,7 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "ImageTypes: ")
+stringBuffer!!.append("ImageTypes: ")
 
     var size: Int = vector.size!!
             
@@ -195,8 +193,7 @@ stringBuffer!!.append(imageType!!.getName())
 
     
                         if(index < size -1)
-                        stringBuffer!!.append(
-                            ", ")
+                        stringBuffer!!.append(", ")
 }
 
 

@@ -33,8 +33,7 @@ open public class TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceF
         
 public constructor        ()                        
 
-                            : super(
-                            "OpenGL TouchButton Animations"){
+                            : super("OpenGL TouchButton Animations"){
 
                             //For kotlin this is before the body of the constructor.
                     

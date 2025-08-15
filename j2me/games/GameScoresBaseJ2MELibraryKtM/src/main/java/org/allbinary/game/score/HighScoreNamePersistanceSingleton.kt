@@ -159,8 +159,7 @@ open fun delete(abeClientInformation: AbeClientInformationInterface, gameInfo: G
 
         try {
             logUtil!!.put(StringMaker().
-                            append(
-                            "Deleting: ")!!.append(deleteId)!!.toString(), this, commonStrings!!.delete)
+                            append("Deleting: ")!!.append(deleteId)!!.toString(), this, commonStrings!!.delete)
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 recordStore!!.deleteRecord(deleteId)
 } catch(e: Exception)
@@ -178,8 +177,7 @@ recordStore!!.deleteRecord(deleteId)
                                 )
                         
                                     {
-                                    PreLogUtil.put(
-                            "Closing RecordStore", this, commonStrings!!.delete)
+                                    PreLogUtil.put("Closing RecordStore", this, commonStrings!!.delete)
 recordStore!!.closeRecordStore()
 
                                     }
@@ -277,8 +275,7 @@ logUtil!!.put(StringMaker().
                                 )
                         
                                     {
-                                    PreLogUtil.put(
-                            "Closing RecordStore", this, commonStrings!!.LOAD)
+                                    PreLogUtil.put("Closing RecordStore", this, commonStrings!!.LOAD)
 recordStore!!.closeRecordStore()
 
                                     }
@@ -315,8 +312,7 @@ open fun save(abeClientInformation: AbeClientInformationInterface, gameInfo: Gam
 
         try {
             logUtil!!.put(StringMaker().
-                            append(
-                            "Saving: ")!!.append(name)!!.toString(), this, commonStrings!!.SAVE)
+                            append("Saving: ")!!.append(name)!!.toString(), this, commonStrings!!.SAVE)
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
     var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
@@ -345,8 +341,7 @@ this.name= name
                                 )
                         
                                     {
-                                    PreLogUtil.put(
-                            "Closing RecordStore", this, commonStrings!!.SAVE)
+                                    PreLogUtil.put("Closing RecordStore", this, commonStrings!!.SAVE)
 recordStore!!.closeRecordStore()
 
                                     }

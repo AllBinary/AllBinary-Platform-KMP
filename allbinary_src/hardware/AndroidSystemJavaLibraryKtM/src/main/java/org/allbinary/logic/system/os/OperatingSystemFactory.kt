@@ -88,12 +88,10 @@ open fun getOperatingSystemInstance()
                         if(osName!!.indexOf(OperatingSystems.getInstance()!!.ANDROID) >= 0)
                         
                                     {
-                                    logUtil!!.put(
-                            "Found a Linux OS", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Found a Linux OS", this, commonStrings!!.GET_INSTANCE)
 genericOperatingSystem= AndroidOperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()
 logUtil!!.put(StringMaker().
-                            append(
-                            "Operating System Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
+                            append("Operating System Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -102,8 +100,7 @@ logUtil!!.put(StringMaker().
 
 
                             throw Exception(StringMaker().
-                            append(
-                            "OS Not Supported: ")!!.append(osName)!!.toString())
+                            append("OS Not Supported: ")!!.append(osName)!!.toString())
 
                         }
                             

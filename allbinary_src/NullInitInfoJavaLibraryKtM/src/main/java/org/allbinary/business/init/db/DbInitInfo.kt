@@ -50,8 +50,7 @@ open fun getUrl()
     var url: String = super.getUrl()!!
             
 
-PreLogUtil.put("Url: " +url, this, 
-                            "getUrl")
+PreLogUtil.put("Url: " +url, this, "getUrl")
 
 
 

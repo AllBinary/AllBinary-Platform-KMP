@@ -131,8 +131,7 @@ filePathStringBuffer!!.append(ROOT_NAME)
     var filePathStringBuffer1: StringMaker = StringMaker()
 
 filePathStringBuffer1!!.append(filePathStringBuffer!!.toString())
-filePathStringBuffer1!!.append(
-                            "_1")
+filePathStringBuffer1!!.append("_1")
 filePathStringBuffer1!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath1: String = filePathStringBuffer1!!.toString()!!
@@ -142,8 +141,7 @@ filePathStringBuffer1!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension
     var filePathStringBuffer2: StringMaker = StringMaker()
 
 filePathStringBuffer2!!.append(filePathStringBuffer!!.toString())
-filePathStringBuffer2!!.append(
-                            "_2")
+filePathStringBuffer2!!.append("_2")
 filePathStringBuffer2!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath2: String = filePathStringBuffer2!!.toString()!!

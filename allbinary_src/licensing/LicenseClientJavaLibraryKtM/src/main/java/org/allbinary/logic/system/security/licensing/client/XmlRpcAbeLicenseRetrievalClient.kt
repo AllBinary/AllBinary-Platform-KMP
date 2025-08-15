@@ -47,8 +47,7 @@ open public class XmlRpcAbeLicenseRetrievalClient : XmlRpcAbeClient {
             
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, 
-                            "LicServ.getLicense"){
+                            : super(clientInfo, "LicServ.getLicense"){
 
                     var clientInfo = clientInfo
 

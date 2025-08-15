@@ -111,8 +111,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEm
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "Creating New Named UserEmailEventHandler", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Creating New Named UserEmailEventHandler", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 
@@ -139,8 +138,7 @@ this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEven
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "Returning existing UserEmailEventHandler", this, commonStrings!!.GET_INSTANCE)
+                                    logUtil!!.put("Returning existing UserEmailEventHandler", this, commonStrings!!.GET_INSTANCE)
 
                                     }
                                 

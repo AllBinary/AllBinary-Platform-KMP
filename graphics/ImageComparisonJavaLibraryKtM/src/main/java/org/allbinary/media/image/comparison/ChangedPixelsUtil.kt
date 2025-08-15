@@ -114,8 +114,7 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
                                 )
                         
                                     {
-                                    System.out.print(
-                            "ColorDelta")
+                                    System.out.print("ColorDelta")
 System.exit(0)
 
                                     }

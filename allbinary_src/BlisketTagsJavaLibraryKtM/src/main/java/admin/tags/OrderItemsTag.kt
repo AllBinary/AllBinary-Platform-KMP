@@ -78,8 +78,7 @@ open fun setOrderStatus()
             
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "setOrderStatus", 
+    var method: Method = helperClass!!.getMethod("setOrderStatus", 
                             null)!!
             
 
@@ -104,8 +103,7 @@ open fun setOrderStatus()
     var methodParams: Array<KClass<*>?> = arrayOf(this.status.::class)
 
 
-    var method: Method = helperClass!!.getMethod(
-                            "setOrderStatus", methodParams)!!
+    var method: Method = helperClass!!.getMethod("setOrderStatus", methodParams)!!
             
 
 
@@ -137,8 +135,7 @@ open fun setOrderStatus()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "setOrderStatus()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "setOrderStatus()", e)
 
                                     }
                                 

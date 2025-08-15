@@ -131,8 +131,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(
-                            "PixelDelta: Point: ")!!.append(point.toString())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(colorDelta!!.toString())!!.toString()
+                            append("PixelDelta: Point: ")!!.append(point.toString())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(colorDelta!!.toString())!!.toString()
 }
 
 

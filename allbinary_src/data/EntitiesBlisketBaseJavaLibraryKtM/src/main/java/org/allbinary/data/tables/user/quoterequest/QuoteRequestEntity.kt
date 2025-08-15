@@ -163,8 +163,7 @@ open fun deleteWhere(key: String, value: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, 
-                            "deleteWhere")
+                                    logUtil!!.put(this.commonStrings!!.SUCCESS, this, "deleteWhere")
 
                                     }
                                 
@@ -174,8 +173,7 @@ open fun deleteWhere(key: String, value: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "deleteWhere", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "deleteWhere", e)
 
                                     }
                                 

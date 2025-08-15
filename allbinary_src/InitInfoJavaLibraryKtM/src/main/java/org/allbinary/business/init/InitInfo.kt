@@ -91,10 +91,7 @@ open fun set()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    PreLogUtil.put(
-                            "created entity", 
-                            "InitInfo", 
-                            "set()")
+                                    PreLogUtil.put("created entity", "InitInfo", "set()")
 
                                     }
                                 
@@ -108,10 +105,7 @@ open fun set()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    PreLogUtil.put(
-                            "adding", 
-                            "InitInfo", 
-                            "set()")
+                                    PreLogUtil.put("adding", "InitInfo", "set()")
 
                                     }
                                 
@@ -125,10 +119,7 @@ initInfoEntity!!.add()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADER))
                         
                                     {
-                                    PreLogUtil.put(
-                            "update", 
-                            "InitInfo", 
-                            "set()")
+                                    PreLogUtil.put("update", "InitInfo", "set()")
 
                                     }
                                 
@@ -143,10 +134,7 @@ hasRead= false
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(
-                            "error", 
-                            "InitInfo", 
-                            "set()", e)
+                                    PreLogUtil.put("error", "InitInfo", "set()", e)
 
                                     }
                                 
@@ -171,10 +159,7 @@ testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object?) as String)
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(
-                            "error", 
-                            "InitInfo", 
-                            "set()", e)
+                                    PreLogUtil.put("error", "InitInfo", "set()", e)
 
                                     }
                                 
@@ -206,10 +191,7 @@ initInfoEntity!!.get()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(
-                            "error", 
-                            "InitInfo", 
-                            "set()", e)
+                                    PreLogUtil.put("error", "InitInfo", "set()", e)
 
                                     }
                                 
@@ -252,10 +234,7 @@ this.get()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(
-                            "error", 
-                            "InitInfo", 
-                            "updateIfNeeded()", e)
+                                    PreLogUtil.put("error", "InitInfo", "updateIfNeeded()", e)
 
                                     }
                                 
@@ -285,10 +264,7 @@ open fun isTesting()
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         
                                     {
-                                    PreLogUtil.put(
-                            "error", 
-                            "InitInfo", 
-                            "updateIfNeeded()", e)
+                                    PreLogUtil.put("error", "InitInfo", "updateIfNeeded()", e)
 
                                     }
                                 

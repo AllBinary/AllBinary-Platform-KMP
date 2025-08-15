@@ -140,8 +140,7 @@ this.init(abeClientInformation)
                                     }
                                 
                         else {
-                            logUtil!!.put(
-                            "Class Node Null", this, this.commonStrings!!.INIT)
+                            logUtil!!.put("Class Node Null", this, this.commonStrings!!.INIT)
 
                         }
                             
@@ -149,8 +148,7 @@ this.init(abeClientInformation)
                                     }
                                 
                         else {
-                            logUtil!!.put(InputAutomationData.NAME +" Node Has No Children", this, 
-                            "Contructor")
+                            logUtil!!.put(InputAutomationData.NAME +" Node Has No Children", this, "Contructor")
 
                         }
                             
@@ -217,8 +215,7 @@ open fun setName(name: String)
 {
 
                     var name = name
-logUtil!!.put("Name: " +name, this, 
-                            "setName")
+logUtil!!.put("Name: " +name, this, "setName")
 this.name= name
 }
 
@@ -238,8 +235,7 @@ open fun setClassName(className: String)
 {
 
                     var className = className
-logUtil!!.put("ClassName : " +className, this, 
-                            "setClassName")
+logUtil!!.put("ClassName : " +className, this, "setClassName")
 this.className= className
 }
 
@@ -259,8 +255,7 @@ open fun setInputAutomationModuleInterface(inputAutomationModuleInterface: Input
 {
 
                     var inputAutomationModuleInterface = inputAutomationModuleInterface
-logUtil!!.put("InputAutomationModuleFactoryInterface : " +inputAutomationModuleInterface, this, 
-                            "setInputAutomationModuleInterface")
+logUtil!!.put("InputAutomationModuleFactoryInterface : " +inputAutomationModuleInterface, this, "setInputAutomationModuleInterface")
 this.inputAutomationModuleInterface= inputAutomationModuleInterface
 this.setName(this.inputAutomationModuleInterface!!.getName())
 }

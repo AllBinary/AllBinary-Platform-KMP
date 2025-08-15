@@ -90,8 +90,7 @@ open fun searchSingleStaticPage()
 
 
     var file: String = StaticPagesEntity().
-                            getFile(storeFront!!.getName(), Replace(
-                            "-", CommonSeps.getInstance()!!.SPACE).
+                            getFile(storeFront!!.getName(), Replace("-", CommonSeps.getInstance()!!.SPACE).
                             all(columnValueHashMap!!.get(BasicItemData.KEYWORDS) as String))!!
             
 
@@ -120,8 +119,7 @@ stringBuffer!!.append(this.searchRequest!!.getParams()!!.getEndPage())
 stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
-    var filePath: String = Replace(CommonSeps.getInstance()!!.SPACE, 
-                            "%20").
+    var filePath: String = Replace(CommonSeps.getInstance()!!.SPACE, "%20").
                             all(stringBuffer!!.toString())!!
             
 
@@ -139,16 +137,14 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "searchSingleStaticPage", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "searchSingleStaticPage", e)
 
                                     }
                                 
 
 
 
-                            throw Exception(
-                            "Failed retrieve Single Product Page Static")
+                            throw Exception("Failed retrieve Single Product Page Static")
 }
 
 }
@@ -175,16 +171,14 @@ open fun searchSingleDynamicPage()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         
                                     {
-                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, 
-                            "searchSingleDynamicPage", e)
+                                    logUtil!!.put(this.commonStrings!!.FAILURE, this, "searchSingleDynamicPage", e)
 
                                     }
                                 
 
 
 
-                            throw Exception(
-                            "Failed retrieve Single Product Page Dynamically")
+                            throw Exception("Failed retrieve Single Product Page Dynamically")
 }
 
 }

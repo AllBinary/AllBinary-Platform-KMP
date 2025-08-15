@@ -93,14 +93,11 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "EmailEvent Log: \n")
-stringBuffer!!.append(
-                            "Event Name: ")
+stringBuffer!!.append("EmailEvent Log: \n")
+stringBuffer!!.append("Event Name: ")
 stringBuffer!!.append(this.userEmailEventNameData!!.toString())
 stringBuffer!!.append(this.getEmailInfo()!!.toString())
-stringBuffer!!.append(
-                            "\nNumber of Attempts: ")
+stringBuffer!!.append("\nNumber of Attempts: ")
 stringBuffer!!.append(this.getAttempts())
 
 

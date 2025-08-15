@@ -51,20 +51,15 @@ open fun getInstance()
         {}
 
 
-    val REMOVE_DUPLICATE_KEY_PRESSES: InputFeature = InputFeature(
-                            "Remove Duplicate Key Presses")
+    val REMOVE_DUPLICATE_KEY_PRESSES: InputFeature = InputFeature("Remove Duplicate Key Presses")
 
-    val INPUT_MAPPING: InputFeature = InputFeature(
-                            "Input Mapping")
+    val INPUT_MAPPING: InputFeature = InputFeature("Input Mapping")
 
-    val MULTI_KEY_PRESS: InputFeature = InputFeature(
-                            "Multi Key Press")
+    val MULTI_KEY_PRESS: InputFeature = InputFeature("Multi Key Press")
 
-    val SINGLE_KEY_REPEAT_PRESS: InputFeature = InputFeature(
-                            "Single Key Repeat Press")
+    val SINGLE_KEY_REPEAT_PRESS: InputFeature = InputFeature("Single Key Repeat Press")
 
-    val SINGLE_KEY_PRESS: InputFeature = InputFeature(
-                            "Single Key Press")
+    val SINGLE_KEY_PRESS: InputFeature = InputFeature("Single Key Press")
 
 open fun isSingleKeyProcessing()
         //nullable = true from not(false or (false and true)) = true

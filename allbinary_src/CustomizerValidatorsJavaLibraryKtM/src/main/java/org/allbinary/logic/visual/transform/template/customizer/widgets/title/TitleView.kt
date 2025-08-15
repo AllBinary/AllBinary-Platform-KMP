@@ -89,8 +89,7 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Title: " +this.getTitle(), this, 
-                            "Consructor()")
+                                    logUtil!!.put("Title: " +this.getTitle(), this, "Consructor()")
 
                                     }
                                 
@@ -172,8 +171,7 @@ open fun toXmlNode(document: Document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("TitleView HashMap: " +hashMap!!.toString(), this, 
-                            "toXmlNode()")
+                                    logUtil!!.put("TitleView HashMap: " +hashMap!!.toString(), this, "toXmlNode()")
 
                                     }
                                 

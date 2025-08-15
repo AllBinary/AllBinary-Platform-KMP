@@ -91,8 +91,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Started Validation", this, commonStrings!!.IS_VALID)
+                                    logUtil!!.put("Started Validation", this, commonStrings!!.IS_VALID)
 
                                     }
                                 
@@ -128,11 +127,9 @@ open fun isValid()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Pointing ")
+stringBuffer!!.append("Pointing ")
 stringBuffer!!.append(componentVector!!.size)
-stringBuffer!!.append(
-                            " Components")
+stringBuffer!!.append(" Components")
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
                                     }
@@ -238,11 +235,9 @@ newViewNameStringBuffer!!.append(GeneratorTransformInfoData.NAME)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Template Component: ")
+stringBuffer!!.append("Template Component: ")
 stringBuffer!!.append(transformInfoName)
-stringBuffer!!.append(
-                            "\n Now Pointing To View Name: ")
+stringBuffer!!.append("\n Now Pointing To View Name: ")
 stringBuffer!!.append(newViewName)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -257,11 +252,9 @@ templateViewObjectConfig!!.set(newViewName)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Template Component: ")
+stringBuffer!!.append("Template Component: ")
 stringBuffer!!.append(transformInfoName)
-stringBuffer!!.append(
-                            "\n with ObjectConfig: ")
+stringBuffer!!.append("\n with ObjectConfig: ")
 stringBuffer!!.append(templateViewObjectConfig!!.toString())
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
@@ -289,8 +282,7 @@ TransformInfoEntityBuilder.getInstance()!!.update(updatedTransformInfoHashMap)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -311,8 +303,7 @@ open fun validationInfo()
             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Error: Template Name Is Empty.")
+stringBuffer!!.append("Error: Template Name Is Empty.")
 
 
 
@@ -324,9 +315,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

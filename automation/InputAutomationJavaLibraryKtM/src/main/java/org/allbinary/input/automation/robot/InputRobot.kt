@@ -114,14 +114,10 @@ open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
 this.robot.mouseMove(point.x +x, point.y +y)
 
     var message: String = StringMaker().
-                            append(
-                            "Moved Mouse To: x: ")!!.append(point.x)!!.append(
-                            " y: ")!!.append(point.y)!!.append(
-                            " in the middle of: ")!!.append(StringUtil.getInstance()!!.toString(rectangle))!!.toString()!!
+                            append("Moved Mouse To: x: ")!!.append(point.x)!!.append(" y: ")!!.append(point.y)!!.append(" in the middle of: ")!!.append(StringUtil.getInstance()!!.toString(rectangle))!!.toString()!!
             
 
-logUtil!!.put(message, this, 
-                            "moveMouseToTarget")
+logUtil!!.put(message, this, "moveMouseToTarget")
 }
 
 
@@ -145,13 +141,10 @@ open fun mouseMove(x: Int, y: Int)
 this.robot.mouseMove(x, y)
 
     var message: String = StringMaker().
-                            append(
-                            "Moved Mouse To: x: ")!!.append(x)!!.append(
-                            " y: ")!!.append(y)!!.toString()!!
+                            append("Moved Mouse To: x: ")!!.append(x)!!.append(" y: ")!!.append(y)!!.toString()!!
             
 
-logUtil!!.put(message, this, 
-                            "moveMouse")
+logUtil!!.put(message, this, "moveMouse")
 }
 
 

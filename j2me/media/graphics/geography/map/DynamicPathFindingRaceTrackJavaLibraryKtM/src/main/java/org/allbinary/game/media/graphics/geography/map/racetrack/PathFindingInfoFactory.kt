@@ -93,8 +93,7 @@ private constructor        (pathFinderGraphVisitorFactoryInterface: PathFinderGr
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-PreLogUtil.put(
-                            "Using Dynamic Path Finding", this, commonStrings!!.GET_INSTANCE)
+PreLogUtil.put("Using Dynamic Path Finding", this, commonStrings!!.GET_INSTANCE)
 this.basicGeographicMapPathFinder= BasicGeographicMapPathFinder(max)
 this.pathFindingInfo= PathFindingInfo(PathFindingNodeCostInfoFactory(max))
 this.basicGeographicMapGraph= BasicGeographicMapGraph(pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface() as PathFindingNodeCostInfoFactory)

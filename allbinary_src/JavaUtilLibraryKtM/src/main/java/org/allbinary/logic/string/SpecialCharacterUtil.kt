@@ -50,49 +50,30 @@ open fun getHashMap()
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
-hashMap!!.put(
-                            "!", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "@", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("!", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("@", stringUtil!!.EMPTY_STRING)
 hashMap!!.put(commonPhoneStrings!!.POUND, stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "$", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "%", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "^", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("$", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("%", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("^", stringUtil!!.EMPTY_STRING)
 hashMap!!.put(CommonSeps.getInstance()!!.AMP, stringUtil!!.EMPTY_STRING)
 hashMap!!.put(commonPhoneStrings!!.STAR, stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "(", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            ")", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "-", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "_", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "+", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "=", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "\\", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "|", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("(", stringUtil!!.EMPTY_STRING)
+hashMap!!.put(")", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("-", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("_", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("+", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("=", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("\\", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("|", stringUtil!!.EMPTY_STRING)
 hashMap!!.put(AbPathData.getInstance()!!.EXTENSION_SEP, stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            ",", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "<", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            ">", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "?", stringUtil!!.EMPTY_STRING)
+hashMap!!.put(",", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("<", stringUtil!!.EMPTY_STRING)
+hashMap!!.put(">", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("?", stringUtil!!.EMPTY_STRING)
 hashMap!!.put(AbPathData.getInstance()!!.SEPARATOR, stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "~", stringUtil!!.EMPTY_STRING)
-hashMap!!.put(
-                            "`", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("~", stringUtil!!.EMPTY_STRING)
+hashMap!!.put("`", stringUtil!!.EMPTY_STRING)
 
 
 

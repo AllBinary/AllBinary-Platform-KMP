@@ -128,8 +128,7 @@ open fun invalidateSession()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "invalidateSession()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidateSession()", e)
 
                                     }
                                 
@@ -180,17 +179,13 @@ open fun isSessionOld()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Session Is Old - Timeout: ")
+stringBuffer!!.append("Session Is Old - Timeout: ")
 stringBuffer!!.append(sessionTimout)
-stringBuffer!!.append(
-                            " Eval: ")
+stringBuffer!!.append(" Eval: ")
 stringBuffer!!.append(timeFirst)
-stringBuffer!!.append(
-                            " > ")
+stringBuffer!!.append(" > ")
 stringBuffer!!.append(timeCreated)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "isSessionOld()")
+logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
 
                                     }
                                 
@@ -211,9 +206,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put(
-                            "Role Is Not In Session", this, 
-                            "isSessionOld()")
+                                    logUtil!!.put("Role Is Not In Session", this, "isSessionOld()")
 
                                     }
                                 
@@ -264,17 +257,13 @@ open fun isRarelyUsedSession()
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Session Is Rarely Used - Timeout: ")
+stringBuffer!!.append("Session Is Rarely Used - Timeout: ")
 stringBuffer!!.append(lastAccess)
-stringBuffer!!.append(
-                            " Eval: ")
+stringBuffer!!.append(" Eval: ")
 stringBuffer!!.append(timeFirst)
-stringBuffer!!.append(
-                            " > ")
+stringBuffer!!.append(" > ")
 stringBuffer!!.append(inactivityAllowed)
-logUtil!!.put(stringBuffer!!.toString(), this, 
-                            "isRarelyUsedSession()")
+logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
                                     }
                                 
@@ -287,9 +276,7 @@ logUtil!!.put(stringBuffer!!.toString(), this,
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put(
-                            "Role Is Not In Session", this, 
-                            "isRarelyUsedSession()")
+                                    logUtil!!.put("Role Is Not In Session", this, "isRarelyUsedSession()")
 
                                     }
                                 
@@ -311,8 +298,7 @@ open fun validRole()
             
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Trying New login<p/>")
+stringBuffer!!.append("Trying New login<p/>")
 
 
 
@@ -327,8 +313,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "validRole()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "validRole()", e)
 
                                     }
                                 
@@ -350,10 +335,8 @@ open fun invalidRole()
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Sorry your username and password is invalid on this page. ")
-stringBuffer!!.append(
-                            "Trying New login<p/>")
+stringBuffer!!.append("Sorry your username and password is invalid on this page. ")
+stringBuffer!!.append("Trying New login<p/>")
 
 
 
@@ -368,8 +351,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "invalidRole()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "invalidRole()", e)
 
                                     }
                                 
@@ -524,9 +506,7 @@ open fun isAuthenticationSessionValid(roles: Vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATION))
                         
                                     {
-                                    logUtil!!.put(
-                            "Role Is Not In Session", this, 
-                            "isAuthenticationSessionValid()")
+                                    logUtil!!.put("Role Is Not In Session", this, "isAuthenticationSessionValid()")
 
                                     }
                                 
@@ -544,8 +524,7 @@ open fun isAuthenticationSessionValid(roles: Vector)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "isAuthenticatedSessionValid()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "isAuthenticatedSessionValid()", e)
 
                                     }
                                 
@@ -595,8 +574,7 @@ open fun processIfNewLogin(userName: String, password: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put("Starting: " +userName, this, 
-                            "processIfNewLogin()")
+                                    logUtil!!.put("Starting: " +userName, this, "processIfNewLogin()")
 
                                     }
                                 
@@ -664,8 +642,7 @@ this.nextAttempt()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "processIfNewLogin()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "processIfNewLogin()", e)
 
                                     }
                                 
@@ -715,8 +692,7 @@ open fun processInvalidation()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "processInvalidation()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "processInvalidation()", e)
 
                                     }
                                 
@@ -757,38 +733,27 @@ stringBuffer!!.append("Time Since Last Access: " +(calendar.getTimeInMillis() -l
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Auth: ")
+                                    stringBuffer!!.append("Auth: ")
 stringBuffer!!.append(this.authenticated)
-stringBuffer!!.append(
-                            " UserName: ")
+stringBuffer!!.append(" UserName: ")
 stringBuffer!!.append(this.sessionUserName)
-stringBuffer!!.append(
-                            " Role: ")
+stringBuffer!!.append(" Role: ")
 stringBuffer!!.append(this.role.toString())
-stringBuffer!!.append(
-                            "<br/>\n")
-stringBuffer!!.append(
-                            "Time Left: ")
+stringBuffer!!.append("<br/>\n")
+stringBuffer!!.append("Time Left: ")
 stringBuffer!!.append((role.getSessionTimeout() -(calendar.getTimeInMillis() -timeCreated)))
-stringBuffer!!.append(
-                            "<br/>\n")
-stringBuffer!!.append(
-                            "Inactivity Time Allowed: ")
+stringBuffer!!.append("<br/>\n")
+stringBuffer!!.append("Inactivity Time Allowed: ")
 stringBuffer!!.append(role.getSessionTimeout())
-stringBuffer!!.append(
-                            "<br/>\n")
-stringBuffer!!.append(
-                            "Inactivity Time Allowed: ")
+stringBuffer!!.append("<br/>\n")
+stringBuffer!!.append("Inactivity Time Allowed: ")
 stringBuffer!!.append(role.getSessionInactivityTimeout())
-stringBuffer!!.append(
-                            "<br/>\n")
+stringBuffer!!.append("<br/>\n")
 
                                     }
                                 
                         else {
-                            stringBuffer!!.append(
-                            "Role Is Not Set<br/>\n")
+                            stringBuffer!!.append("Role Is Not Set<br/>\n")
 
                         }
                             

@@ -70,8 +70,7 @@ open public class AllBinaryMidlet : MIDlet
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private var destroyed: Boolean= false
-public constructor        (){logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, 
-                            "AllBinaryMidlet::AllBinaryMidlet")
+public constructor        (){logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
 }
 
 
@@ -209,8 +208,7 @@ open fun setStartStateHashtable(hashtable: Hashtable<Any, Any>)
 
                     var hashtable = hashtable
 logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, 
-                            "setStartStateHashtable")
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "setStartStateHashtable")
 this.hashtable= hashtable
 }
 
@@ -220,8 +218,7 @@ this.hashtable= hashtable
 open fun getStartStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{logUtil!!.put(StringMaker().
-                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, 
-                            "getStartStateHashtable")
+                            append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "getStartStateHashtable")
 
 
 
@@ -234,8 +231,7 @@ open fun getStartStateHashtable()
             
 open fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(commonStrings!!.START, this, 
-                            "getStateHashtable")
+: Hashtable<Any, Any>{logUtil!!.put(commonStrings!!.START, this, "getStateHashtable")
 
 
 

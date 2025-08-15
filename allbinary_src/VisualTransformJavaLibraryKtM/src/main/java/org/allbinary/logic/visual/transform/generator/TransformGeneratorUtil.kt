@@ -83,8 +83,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Generating View: " +transformInfoInterface!!.getName(), this, 
-                            "generate()")
+                                    logUtil!!.put("Generating View: " +transformInfoInterface!!.getName(), this, "generate()")
 
                                     }
                                 
@@ -105,8 +104,7 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 
 
     
-                        if(result.indexOf(
-                            "<HTML>") >= 0)
+                        if(result.indexOf("<HTML>") >= 0)
                         
                                     {
                                     httpTransformInfoInterface!!.getPropertiesHashMap()!!.put(inputOutputTypeData!!.NAME, inputOutputTypeData!!.DEFAULT)
@@ -126,9 +124,7 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate a view", this, 
-                            "generate()", e)
+                                    logUtil!!.put("Failed to generate a view", this, "generate()", e)
 
                                     }
                                 

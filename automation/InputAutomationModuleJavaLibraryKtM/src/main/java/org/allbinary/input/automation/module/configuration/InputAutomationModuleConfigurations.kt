@@ -90,8 +90,7 @@ this.setHashMap(HashMap<Any, Any>())
     var nameNodeList: NodeList = document.getElementsByTagName(InputAutomationModuleData.NAME)!!
             
 
-logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, 
-                            "Contructor")
+logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, "Contructor")
 
 
 
@@ -124,8 +123,7 @@ this.setHashMap(HashMap<Any, Any>())
     var nameNodeList: NodeList = document.getElementsByTagName(InputAutomationModuleData.NAME)!!
             
 
-logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, 
-                            "Contructor")
+logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, "Contructor")
 
 
 

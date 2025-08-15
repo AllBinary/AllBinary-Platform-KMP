@@ -55,32 +55,23 @@ open fun getInstance()
         
     var NONE: PickedUpLayerType = PickedUpLayerType(StringUtil.getInstance()!!.NULL_STRING)
 
-    var BEAM: PickedUpLayerType = PickedUpLayerType(
-                            "BEAM")
+    var BEAM: PickedUpLayerType = PickedUpLayerType("BEAM")
 
-    var MINE: PickedUpLayerType = PickedUpLayerType(
-                            "MINE")
+    var MINE: PickedUpLayerType = PickedUpLayerType("MINE")
 
-    var PROJECTILE: PickedUpLayerType = PickedUpLayerType(
-                            "PROJECTILE")
+    var PROJECTILE: PickedUpLayerType = PickedUpLayerType("PROJECTILE")
 
-    var ENHANCEMENT: PickedUpLayerType = PickedUpLayerType(
-                            "Enhancement")
+    var ENHANCEMENT: PickedUpLayerType = PickedUpLayerType("Enhancement")
 
-    var MORPH: PickedUpLayerType = PickedUpLayerType(
-                            "Morph")
+    var MORPH: PickedUpLayerType = PickedUpLayerType("Morph")
 
-    var PART: PickedUpLayerType = PickedUpLayerType(
-                            "Part")
+    var PART: PickedUpLayerType = PickedUpLayerType("Part")
 
-    var HEAL: PickedUpLayerType = PickedUpLayerType(
-                            "Heal")
+    var HEAL: PickedUpLayerType = PickedUpLayerType("Heal")
 
-    var LIFE: PickedUpLayerType = PickedUpLayerType(
-                            "Life")
+    var LIFE: PickedUpLayerType = PickedUpLayerType("Life")
 
-    var POINTS: PickedUpLayerType = PickedUpLayerType(
-                            "Points")
+    var POINTS: PickedUpLayerType = PickedUpLayerType("Points")
 
 }
                 

@@ -113,8 +113,7 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.inse
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "add()")
+                                    logUtil!!.put(success, this, "add()")
 
                                     }
                                 
@@ -132,8 +131,7 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.inse
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "add()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "add()", e)
 
                                     }
                                 
@@ -164,8 +162,7 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.upda
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
                         
                                     {
-                                    logUtil!!.put(success, this, 
-                            "update()")
+                                    logUtil!!.put(success, this, "update()")
 
                                     }
                                 
@@ -183,8 +180,7 @@ QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.upda
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "update()", e)
+                                    logUtil!!.put(commonStrings!!.EXCEPTION, this, "update()", e)
 
                                     }
                                 

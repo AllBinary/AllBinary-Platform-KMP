@@ -58,8 +58,7 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(commonStrings!!.START, this, 
-                            "CategoryPrivateTree(CategoryFactoryInterface categoryFactoryInterface)")
+logUtil!!.put(commonStrings!!.START, this, "CategoryPrivateTree(CategoryFactoryInterface categoryFactoryInterface)")
 
                                     }
                                 
@@ -79,8 +78,7 @@ open fun save(categoryInterface: CategoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Saving Category File: " +categoryInterface!!.getFilePath(), this, 
-                            "save()")
+                                    logUtil!!.put("Saving Category File: " +categoryInterface!!.getFilePath(), this, "save()")
 
                                     }
                                 
@@ -98,9 +96,7 @@ cryptFileWriter!!.write(categoryInterface!!.getFilePath(), document)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "end", this, 
-                            "save()")
+                                    logUtil!!.put("end", this, "save()")
 
                                     }
                                 
@@ -132,8 +128,7 @@ open fun delete(categoryInterface: CategoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put("Removed: " +categoryInterface!!.getFilePath(), this, 
-                            "delete(CategoryInterface)")
+                                    logUtil!!.put("Removed: " +categoryInterface!!.getFilePath(), this, "delete(CategoryInterface)")
 
                                     }
                                 
@@ -149,9 +144,7 @@ open fun delete(categoryInterface: CategoryInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
                                     {
-                                    logUtil!!.put(
-                            "Not a leaf unable to remove", this, 
-                            "delete(CategoryInterface)")
+                                    logUtil!!.put("Not a leaf unable to remove", this, "delete(CategoryInterface)")
 
                                     }
                                 

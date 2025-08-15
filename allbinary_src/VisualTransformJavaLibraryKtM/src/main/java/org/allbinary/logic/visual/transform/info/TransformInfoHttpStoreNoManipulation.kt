@@ -68,8 +68,7 @@ open fun setObjectConfig(value: Object)
 
 
 
-                            throw Exception(
-                            "Should not set from actual config")
+                            throw Exception("Should not set from actual config")
 }
 
 

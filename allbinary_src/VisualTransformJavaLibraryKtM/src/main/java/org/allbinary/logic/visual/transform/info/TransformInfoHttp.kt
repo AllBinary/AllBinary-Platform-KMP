@@ -69,8 +69,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
-                            "Constructor(HashMap, PageContext, boolean)")
+                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HashMap, PageContext, boolean)")
 
                                     }
                                 
@@ -98,8 +97,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
-                            "Constructor(HttpServletRequest, HashMap, PageContext)")
+                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HttpServletRequest, HashMap, PageContext)")
 
                                     }
                                 
@@ -129,8 +127,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
-                            "Constructor(HashMap, HashMap, PageContext)")
+                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HashMap, HashMap, PageContext)")
 
                                     }
                                 
@@ -155,8 +152,7 @@ this.abContext= AbContext(propertiesHashMap, pageContext)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, 
-                            "Constructor(HashMap, PageContext)")
+                                    logUtil!!.put("Properties HashMap: " +propertiesHashMap!!.toString(), this, "Constructor(HashMap, PageContext)")
 
                                     }
                                 
@@ -188,8 +184,7 @@ open fun set(hashMap: HashMap<Any, Any>)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Properties HashMap: " +hashMap!!.toString(), this, 
-                            "set()")
+                                    logUtil!!.put("Properties HashMap: " +hashMap!!.toString(), this, "set()")
 
                                     }
                                 
@@ -241,8 +236,7 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORY))
                         
                                     {
-                                    logUtil!!.put(this.log(), this, 
-                            "set()")
+                                    logUtil!!.put(this.log(), this, "set()")
 
                                     }
                                 

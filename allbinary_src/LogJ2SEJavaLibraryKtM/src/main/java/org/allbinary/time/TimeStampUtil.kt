@@ -50,8 +50,7 @@ open fun getInstance()
 
         }
             
-    private val simpleDataFormat: SimpleDateFormat = SimpleDateFormat(
-                            "yyyy-MM-dd HH:mm:ss.SSS")
+    private val simpleDataFormat: SimpleDateFormat = SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS")
 private constructor        ()
             : super()
         {}

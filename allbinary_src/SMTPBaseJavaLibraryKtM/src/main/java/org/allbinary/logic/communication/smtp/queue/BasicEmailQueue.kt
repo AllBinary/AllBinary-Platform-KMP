@@ -169,8 +169,7 @@ open fun send(emailInterface: EmailInterface)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Sending: " +emailInterface!!.log(), this, 
-                            "send")
+                                    logUtil!!.put("Sending: " +emailInterface!!.log(), this, "send")
 
                                     }
                                 
@@ -180,8 +179,7 @@ Transport.send(emailInterface!!.getMimeMessage())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Email Send Debug: " +emailInterface!!.getDebugInfo(), this, 
-                            "send")
+                                    logUtil!!.put("Email Send Debug: " +emailInterface!!.getDebugInfo(), this, "send")
 
                                     }
                                 
@@ -196,8 +194,7 @@ Transport.send(emailInterface!!.getMimeMessage())
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
                                     {
-                                    logUtil!!.put("Failed Email Send Debug: " +emailInterface!!.getDebugInfo(), this, 
-                            "send", e)
+                                    logUtil!!.put("Failed Email Send Debug: " +emailInterface!!.getDebugInfo(), this, "send", e)
 
                                     }
                                 

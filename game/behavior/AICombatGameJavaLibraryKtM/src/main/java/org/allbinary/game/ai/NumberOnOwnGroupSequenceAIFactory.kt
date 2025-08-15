@@ -100,14 +100,11 @@ list.add(integer)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Total AI Properties: ")
+stringBuffer!!.append("Total AI Properties: ")
 stringBuffer!!.append(list.size())
-stringBuffer!!.append(
-                            " == Total AI: ")
+stringBuffer!!.append(" == Total AI: ")
 stringBuffer!!.append(artificialIntelligenceInterface!!.size)
-stringBuffer!!.append(
-                            " + 1")
+stringBuffer!!.append(" + 1")
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
@@ -121,8 +118,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
                                     
 
 
-                            throw Exception(
-                            "Not enough AI properties.")
+                            throw Exception("Not enough AI properties.")
 
                                     }
                                 
@@ -134,8 +130,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
                                     
 
 
-                            throw Exception(
-                            "Too Many AI properties.")
+                            throw Exception("Too Many AI properties.")
 
                                     }
                                 

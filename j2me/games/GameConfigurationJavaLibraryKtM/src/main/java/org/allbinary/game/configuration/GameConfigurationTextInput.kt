@@ -38,13 +38,9 @@ open public class GameConfigurationTextInput
             
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
-    var SIMULATOR_IP: GameConfigurationTextInput = GameConfigurationTextInput(
-                            "IP: ", 
-                            "192.168.1.3")
+    var SIMULATOR_IP: GameConfigurationTextInput = GameConfigurationTextInput("IP: ", "192.168.1.3")
 
-    var SIMULATOR_PORT: GameConfigurationTextInput = GameConfigurationTextInput(
-                            "Port: ", 
-                            "8010")
+    var SIMULATOR_PORT: GameConfigurationTextInput = GameConfigurationTextInput("Port: ", "8010")
 
 open fun update(textField: TextField)
         //nullable = true from not(false or (false and false)) = true

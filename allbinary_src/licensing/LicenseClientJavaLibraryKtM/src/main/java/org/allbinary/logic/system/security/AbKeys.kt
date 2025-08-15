@@ -70,15 +70,10 @@ open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: St
                     var keyName = keyName
 
         try {
-            logUtil!!.put("Getting Key: " +keyName, this, 
-                            "getKey")
+            logUtil!!.put("Getting Key: " +keyName, this, "getKey")
 
     
-                        if(keyName!!.compareTo(
-                            "DirectX 8") == 0 || keyName!!.compareTo(
-                            "DirectX") == 0 || keyName!!.compareTo(
-                            "Low Level") == 0 || keyName!!.compareTo(
-                            "System Drivers") == 0)
+                        if(keyName!!.compareTo("DirectX 8") == 0 || keyName!!.compareTo("DirectX") == 0 || keyName!!.compareTo("Low Level") == 0 || keyName!!.compareTo("System Drivers") == 0)
                         
                                     {
                                     
@@ -101,14 +96,11 @@ open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: St
                             throw e
 }
  catch(e: Exception)
-            {logUtil!!.put(
-                            "Licensing Failure", this, 
-                            "getKey()", e)
+            {logUtil!!.put("Licensing Failure", this, "getKey()", e)
 
 
 
-                            throw LicensingException(
-                            "Unknown License Failure")
+                            throw LicensingException("Unknown License Failure")
 }
 
 }

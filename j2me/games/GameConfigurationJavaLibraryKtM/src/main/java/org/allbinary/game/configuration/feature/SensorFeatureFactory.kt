@@ -51,29 +51,21 @@ open fun getInstance()
         {}
 
 
-    val NO_ORIENTATION: SensorFeature = SensorFeature(
-                            "No Orientation")
+    val NO_ORIENTATION: SensorFeature = SensorFeature("No Orientation")
 
-    val ORIENTATION_SENSORS: SensorFeature = SensorFeature(
-                            "Orientation Sensors")
+    val ORIENTATION_SENSORS: SensorFeature = SensorFeature("Orientation Sensors")
 
-    val SIMULATED_ORIENTATION_SENSORS: SensorFeature = SensorFeature(
-                            "Simulated Orientation Sensors")
+    val SIMULATED_ORIENTATION_SENSORS: SensorFeature = SensorFeature("Simulated Orientation Sensors")
 
-    val YAW: SensorFeature = SensorFeature(
-                            "Yaw")
+    val YAW: SensorFeature = SensorFeature("Yaw")
 
-    val YAW_MINUS_RIGHT_PLUS_LEFT: SensorFeature = SensorFeature(
-                            "Yaw -Right +Left")
+    val YAW_MINUS_RIGHT_PLUS_LEFT: SensorFeature = SensorFeature("Yaw -Right +Left")
 
-    val YAW_MINUS_LEFT_PLUS_RIGHT: SensorFeature = SensorFeature(
-                            "Yaw -Left +Right ")
+    val YAW_MINUS_LEFT_PLUS_RIGHT: SensorFeature = SensorFeature("Yaw -Left +Right ")
 
-    val PITCH: SensorFeature = SensorFeature(
-                            "Pitch")
+    val PITCH: SensorFeature = SensorFeature("Pitch")
 
-    val ROLL: SensorFeature = SensorFeature(
-                            "Roll")
+    val ROLL: SensorFeature = SensorFeature("Roll")
 
 }
                 

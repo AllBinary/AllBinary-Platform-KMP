@@ -120,8 +120,7 @@ requestHashMap!!.put(UserRoleData.NAME.toString(), roleString)
                             
 
 
-                            throw Exception(
-                            "Null HashMap")
+                            throw Exception("Null HashMap")
 
                         }
                             

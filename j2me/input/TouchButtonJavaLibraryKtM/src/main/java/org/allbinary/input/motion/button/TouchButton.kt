@@ -125,8 +125,7 @@ this.xBorder= xBorder
 this.yBorder= yBorder
 this.updateRectangle()
 logUtil!!.put(StringMaker().
-                            append(
-                            "Created: ")!!.append(this.toString())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
+                            append("Created: ")!!.append(this.toString())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 }
 
 
@@ -166,8 +165,7 @@ this.animationX= point.getX()
 this.animationY= point.getY()
 this.hintAnimationY= animationY -32
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "updateRectangle", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }
@@ -211,17 +209,13 @@ override fun toString()
     var stringUtil: StringUtil = StringUtil.getInstance()!!
             
 
-stringBuffer!!.append(
-                            "TouchButton: ")
+stringBuffer!!.append("TouchButton: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getRectangle()))
-stringBuffer!!.append(
-                            " CellPosition: ")
+stringBuffer!!.append(" CellPosition: ")
 stringBuffer!!.append(stringUtil!!.toString(this.cellPositionP))
-stringBuffer!!.append(
-                            " xBorder: ")
+stringBuffer!!.append(" xBorder: ")
 stringBuffer!!.append(this.xBorder)
-stringBuffer!!.append(
-                            " yBorder: ")
+stringBuffer!!.append(" yBorder: ")
 stringBuffer!!.append(this.yBorder)
 
 

@@ -201,8 +201,7 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
                                     
 
 
-                            throw Exception(
-                            "Input images must not be null.")
+                            throw Exception("Input images must not be null.")
 
                                     }
                                 

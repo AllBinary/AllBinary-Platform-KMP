@@ -54,10 +54,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.ValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.ValidationView")
 
                                     }
                                 
@@ -66,10 +64,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.EditValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.EditValidationView")
 
                                     }
                                 
@@ -78,10 +74,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.NewValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.NewValidationView")
 
                                     }
                                 
@@ -90,10 +84,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.AddValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.AddValidationView")
 
                                     }
                                 
@@ -102,10 +94,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.DeleteValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.DeleteValidationView")
 
                                     }
                                 
@@ -114,10 +104,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(BillingAddressData.SELECT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.SelectValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.SelectValidationView")
 
                                     }
                                 
@@ -126,10 +114,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(BillingAddressData.SETTOSHIPPINGADDRESS) == 0)
                         
                                     {
-                                    this.setName(
-                            "Basic Billing Address View")
-this.setObjectFile(
-                            "views.generic.address.billing.SetValidationView")
+                                    this.setName("Basic Billing Address View")
+this.setObjectFile("views.generic.address.billing.SetValidationView")
 
                                     }
                                 
@@ -152,8 +138,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: LicensingException)
             {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 

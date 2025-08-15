@@ -74,8 +74,7 @@ open fun isValid(tagClass: Any, parentTag: Tag)
                                     
 
 
-                            throw Exception(
-                            "Must have parent tag.")
+                            throw Exception("Must have parent tag.")
 
                                     }
                                 
@@ -87,14 +86,10 @@ open fun isValid(tagClass: Any, parentTag: Tag)
                                     
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Must have at least a ")
-stringBuffer!!.append(
-                            "tags.HelperTag")
-stringBuffer!!.append(
-                            " as parent")
-stringBuffer!!.append(
-                            "and not: ")
+stringBuffer!!.append("Must have at least a ")
+stringBuffer!!.append("tags.HelperTag")
+stringBuffer!!.append(" as parent")
+stringBuffer!!.append("and not: ")
 stringBuffer!!.append(parentTag!!::class.qualifiedName!!)
 
 

@@ -138,8 +138,7 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         try {
             this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "processTick", e)
+            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 }

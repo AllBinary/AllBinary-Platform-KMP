@@ -129,8 +129,7 @@ open fun read()
                             
 
 
-                            throw Exception(
-                            "Invalid FullScreen ActivityConfiguration")
+                            throw Exception("Invalid FullScreen ActivityConfiguration")
 
                         }
                             
@@ -160,8 +159,7 @@ open fun read()
                             
 
 
-                            throw Exception(
-                            "Invalid ProgressBarView ActivityConfiguration")
+                            throw Exception("Invalid ProgressBarView ActivityConfiguration")
 
                         }
                             
@@ -191,13 +189,11 @@ open fun read()
                             
 
 
-                            throw Exception(
-                            "Invalid ShowTitleBar ActivityConfiguration")
+                            throw Exception("Invalid ShowTitleBar ActivityConfiguration")
 
                         }
                             
-logUtil!!.put("Read Configuration: " +this.toString(), this, 
-                            "read")
+logUtil!!.put("Read Configuration: " +this.toString(), this, "read")
 }
 
 
@@ -210,8 +206,7 @@ open fun write()
 
 
         try {
-            logUtil!!.put("Write Configuration: " +this.toString(), this, 
-                            "write")
+            logUtil!!.put("Write Configuration: " +this.toString(), this, "write")
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
             
@@ -397,14 +392,11 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "isFullscreen: ")
+stringBuffer!!.append("isFullscreen: ")
 stringBuffer!!.append(this.isFullscreen())
-stringBuffer!!.append(
-                            " isProgressBarView: ")
+stringBuffer!!.append(" isProgressBarView: ")
 stringBuffer!!.append(this.isProgressBarView())
-stringBuffer!!.append(
-                            " isShowTitleBar: ")
+stringBuffer!!.append(" isShowTitleBar: ")
 stringBuffer!!.append(this.isShowTitleBar())
 
 

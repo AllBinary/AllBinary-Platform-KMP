@@ -90,8 +90,7 @@ open fun getInstance(os: GenericOperatingSystem)
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
 
-logUtil!!.put(
-                            "Ignoring Exception Returning NoHardware", this, commonStrings!!.GET_INSTANCE, e)
+logUtil!!.put("Ignoring Exception Returning NoHardware", this, commonStrings!!.GET_INSTANCE, e)
 
 
 

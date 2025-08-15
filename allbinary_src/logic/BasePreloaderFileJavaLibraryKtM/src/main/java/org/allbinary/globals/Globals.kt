@@ -83,11 +83,9 @@ WebappClassLoaderInfo.setLoader(classLoader)
 
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(
-                            "Setting Up AllBinary System Configuration Args: ")
+stringBuffer!!.append("Setting Up AllBinary System Configuration Args: ")
 stringBuffer!!.append(pathString)
-stringBuffer!!.append(
-                            " ClassLoader: ")
+stringBuffer!!.append(" ClassLoader: ")
 stringBuffer!!.append(classLoader!!::class.qualifiedName!!)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
@@ -100,8 +98,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
                         
                                     {
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "No Path Provided. Using Process Path: ")
+stringBuffer!!.append("No Path Provided. Using Process Path: ")
 stringBuffer!!.append(pathString)
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(CommonSeps.getInstance()!!.EQUALS)
@@ -112,8 +109,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
                                     }
                                 
 stringBuffer!!.delete(0, stringBuffer!!.length())
-stringBuffer!!.append(
-                            "Webapp Path Set To: ")
+stringBuffer!!.append("Webapp Path Set To: ")
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 }

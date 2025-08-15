@@ -231,8 +231,7 @@ numberOfSeps++
                                     
 
 
-                            throw Exception(
-                            "Should Not Have More Than Two Seps")
+                            throw Exception("Should Not Have More Than Two Seps")
 
                                     }
                                 

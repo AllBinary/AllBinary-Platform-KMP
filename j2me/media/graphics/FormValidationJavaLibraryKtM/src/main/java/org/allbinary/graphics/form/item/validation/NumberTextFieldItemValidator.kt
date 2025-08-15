@@ -191,8 +191,7 @@ override fun toList()
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list.add(stringMaker!!.append(name)!!.append(
-                            " is to small")!!.toString())
+list.add(stringMaker!!.append(name)!!.append(" is to small")!!.toString())
 
                                     }
                                 
@@ -202,15 +201,13 @@ list.add(stringMaker!!.append(name)!!.append(
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list.add(stringMaker!!.append(name)!!.append(
-                            " is to large")!!.toString())
+list.add(stringMaker!!.append(name)!!.append(" is to large")!!.toString())
 
                                     }
                                 
 } catch(e: NumberFormatException)
             {stringMaker!!.delete(0, stringMaker!!.length())
-list.add(stringMaker!!.append(name)!!.append(
-                            " is not a number")!!.toString())
+list.add(stringMaker!!.append(name)!!.append(" is not a number")!!.toString())
 }
 
 
@@ -223,8 +220,7 @@ list.add(stringMaker!!.append(name)!!.append(
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list.add(stringMaker!!.append(name)!!.append(
-                            " is to short")!!.toString())
+list.add(stringMaker!!.append(name)!!.append(" is to short")!!.toString())
 
                                     }
                                 
@@ -234,8 +230,7 @@ list.add(stringMaker!!.append(name)!!.append(
                         
                                     {
                                     stringMaker!!.delete(0, stringMaker!!.length())
-list.add(stringMaker!!.append(name)!!.append(
-                            " is to long")!!.toString())
+list.add(stringMaker!!.append(name)!!.append(" is to long")!!.toString())
 
                                     }
                                 

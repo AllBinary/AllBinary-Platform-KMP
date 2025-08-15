@@ -88,8 +88,7 @@ open fun resolve(href: String, base: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XMLLOGGING))
                         
                                     {
-                                    logUtil!!.put("attempt to use xsl:import: href=" +href +"\nBase= " +base +"\nNew path= " +fileAbPath!!.toString() +"\nNote: " +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +" is a urlglobal" +"\nRequired Extension: " +this.basicURIResolver!!.getExtension(), this, 
-                            "resolve")
+                                    logUtil!!.put("attempt to use xsl:import: href=" +href +"\nBase= " +base +"\nNew path= " +fileAbPath!!.toString() +"\nNote: " +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +" is a urlglobal" +"\nRequired Extension: " +this.basicURIResolver!!.getExtension(), this, "resolve")
 
                                     }
                                 

@@ -52,10 +52,8 @@ open fun doStartTag()
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.NEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "New WorkFlow View")
-this.setObjectFile(
-                            "views.admin.workflow.NewView")
+                                    this.setName("New WorkFlow View")
+this.setObjectFile("views.admin.workflow.NewView")
 
                                     }
                                 
@@ -64,10 +62,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.INSERT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Add Validation WorkFlow View")
-this.setObjectFile(
-                            "views.admin.workflow.AddValidationView")
+                                    this.setName("Add Validation WorkFlow View")
+this.setObjectFile("views.admin.workflow.AddValidationView")
 
                                     }
                                 
@@ -76,10 +72,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.VIEW) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation WorkFlow View")
-this.setObjectFile(
-                            "views.admin.workflow.WorkflowsValidationView")
+                                    this.setName("Validation WorkFlow View")
+this.setObjectFile("views.admin.workflow.WorkflowsValidationView")
 
                                     }
                                 
@@ -88,10 +82,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(org.allbinary.globals.GLOBALS2.EDIT) == 0)
                         
                                     {
-                                    this.setName(
-                            "Validation WorkFlow View")
-this.setObjectFile(
-                            "views.admin.workflow.EditValidationView")
+                                    this.setName("Validation WorkFlow View")
+this.setObjectFile("views.admin.workflow.EditValidationView")
 
                                     }
                                 
@@ -100,10 +92,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.UPDATE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Update Validation WorkFlow View")
-this.setObjectFile(
-                            "views.admin.workflow.UpdateValidationView")
+                                    this.setName("Update Validation WorkFlow View")
+this.setObjectFile("views.admin.workflow.UpdateValidationView")
 
                                     }
                                 
@@ -112,10 +102,8 @@ this.setObjectFile(
                         if(this.getCommand()!!.compareTo(this.commonStrings!!.DELETE) == 0)
                         
                                     {
-                                    this.setName(
-                            "Delete Validation WorkFlow View")
-this.setObjectFile(
-                            "views.admin.workflow.DeleteValidationView")
+                                    this.setName("Delete Validation WorkFlow View")
+this.setObjectFile("views.admin.workflow.DeleteValidationView")
 
                                     }
                                 
@@ -127,8 +115,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -140,8 +127,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -153,8 +139,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -166,8 +151,7 @@ this.setObjectFile(
                                     
 
 
-                            throw Exception(
-                            "View not implemented")
+                            throw Exception("View not implemented")
 
                                     }
                                 
@@ -190,8 +174,7 @@ this.setObjectFile(
 
 
 
-                            throw Exception(
-                            "Command Null")
+                            throw Exception("Command Null")
 } catch(e: Exception)
             {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 

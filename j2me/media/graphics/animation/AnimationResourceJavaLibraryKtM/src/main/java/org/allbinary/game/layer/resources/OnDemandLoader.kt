@@ -192,8 +192,7 @@ open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerP
             
 
 PreLogUtil.put(StringMaker().
-                            append(commonStrings!!.START)!!.append(onDemandArray!!.size)!!.toString(), this, 
-                            "initLevel")
+                            append(commonStrings!!.START)!!.append(onDemandArray!!.size)!!.toString(), this, "initLevel")
 
     var onDemandResources: OnDemandResources
 

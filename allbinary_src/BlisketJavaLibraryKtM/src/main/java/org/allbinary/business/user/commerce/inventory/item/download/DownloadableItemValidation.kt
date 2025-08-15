@@ -275,8 +275,7 @@ open fun isValid()
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to validate form", this, commonStrings!!.IS_VALID, e)
+                                    logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
                                     }
                                 
@@ -304,11 +303,9 @@ open fun validationInfo()
                                  || this.downloadableItem!!.getId()!!.length() < 1 || this.downloadableItem!!.getId()!!.length() > AbSqlData.MAXNUM)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is invalid. Must be number < ")
+                                    stringBuffer!!.append("Id is invalid. Must be number < ")
 stringBuffer!!.append(AbSqlData.MAXNUM)
-stringBuffer!!.append(
-                            " and > 0 digits.<br/>")
+stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
                                 
@@ -319,8 +316,7 @@ stringBuffer!!.append(
                                  && !StringValidationUtil.getInstance()!!.isNumber(this.downloadableItem!!.getId()))
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Id is invalid. Must be > 0.<br/>")
+                                    stringBuffer!!.append("Id is invalid. Must be > 0.<br/>")
 
                                     }
                                 
@@ -331,11 +327,9 @@ stringBuffer!!.append(
                                  || this.downloadableItem!!.getSystem()!!.length() < 1 || this.downloadableItem!!.getSystem()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "System value is invalid. Must be < ")
+                                    stringBuffer!!.append("System value is invalid. Must be < ")
 stringBuffer!!.append(AbSqlData.MAXSTRING)
-stringBuffer!!.append(
-                            " and > 0 characters long.<br/>")
+stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
                                 
@@ -346,11 +340,9 @@ stringBuffer!!.append(
                                  || this.downloadableItem!!.getPlatform()!!.length() < 1 || this.downloadableItem!!.getPlatform()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Platform value is invalid. Must be < ")
+                                    stringBuffer!!.append("Platform value is invalid. Must be < ")
 stringBuffer!!.append(AbSqlData.MAXSTRING)
-stringBuffer!!.append(
-                            " and > 0 characters long.<br/>")
+stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
                                 
@@ -361,11 +353,9 @@ stringBuffer!!.append(
                                  || this.downloadableItem!!.getSpecialName()!!.length() < 0 || this.downloadableItem!!.getSpecialName()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Special Name value is invalid. Must be < ")
+                                    stringBuffer!!.append("Special Name value is invalid. Must be < ")
 stringBuffer!!.append(AbSqlData.MAXSTRING)
-stringBuffer!!.append(
-                            " and > 0 characters long.<br/>")
+stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
                                 
@@ -376,11 +366,9 @@ stringBuffer!!.append(
                                  || this.downloadableItem!!.getVersion()!!.length() < 1 || this.downloadableItem!!.getVersion()!!.length() > AbSqlData.MAXSTRING)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Version value is invalid. Must be < ")
+                                    stringBuffer!!.append("Version value is invalid. Must be < ")
 stringBuffer!!.append(AbSqlData.MAXSTRING)
-stringBuffer!!.append(
-                            " and > 0 characters long.<br/>")
+stringBuffer!!.append(" and > 0 characters long.<br/>")
 
                                     }
                                 
@@ -391,11 +379,9 @@ stringBuffer!!.append(
                                  || this.downloadableItem!!.getChanges()!!.length() < 0 || this.downloadableItem!!.getChanges()!!.length() > AbSqlData.MAXBLOB)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Changes value is invalid. Must be < ")
+                                    stringBuffer!!.append("Changes value is invalid. Must be < ")
 stringBuffer!!.append(AbSqlData.MAXBLOB)
-stringBuffer!!.append(
-                            " and >= 0 characters long.<br/>")
+stringBuffer!!.append(" and >= 0 characters long.<br/>")
 
                                     }
                                 
@@ -406,8 +392,7 @@ stringBuffer!!.append(
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "File Size is null")
+                                    stringBuffer!!.append("File Size is null")
 
                                     }
                                 
@@ -421,11 +406,9 @@ stringBuffer!!.append(
                         if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "File Size is invalid. Must be number < ")
+                                    stringBuffer!!.append("File Size is invalid. Must be number < ")
 stringBuffer!!.append(AbSqlData.MAXNUM)
-stringBuffer!!.append(
-                            " and > 0 digits.<br/>")
+stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
                                 
@@ -439,8 +422,7 @@ stringBuffer!!.append(
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Valid Time is null")
+                                    stringBuffer!!.append("Valid Time is null")
 
                                     }
                                 
@@ -454,11 +436,9 @@ stringBuffer!!.append(
                         if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Valid Time is invalid. Must be number < ")
+                                    stringBuffer!!.append("Valid Time is invalid. Must be number < ")
 stringBuffer!!.append(AbSqlData.MAXNUM)
-stringBuffer!!.append(
-                            " and > 0 digits.<br/>")
+stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
                                 
@@ -472,8 +452,7 @@ stringBuffer!!.append(
                                 )
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Retries is null")
+                                    stringBuffer!!.append("Retries is null")
 
                                     }
                                 
@@ -487,11 +466,9 @@ stringBuffer!!.append(
                         if(size.length < 1 || size.length > AbSqlData.MAXNUM)
                         
                                     {
-                                    stringBuffer!!.append(
-                            "Retries is invalid. Must be number < ")
+                                    stringBuffer!!.append("Retries is invalid. Must be number < ")
 stringBuffer!!.append(AbSqlData.MAXNUM)
-stringBuffer!!.append(
-                            " and > 0 digits.<br/>")
+stringBuffer!!.append(" and > 0 digits.<br/>")
 
                                     }
                                 
@@ -509,9 +486,7 @@ stringBuffer!!.append(
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
                                     {
-                                    logUtil!!.put(
-                            "Failed to generate validation error info", this, 
-                            "validationInfo()", e)
+                                    logUtil!!.put("Failed to generate validation error info", this, "validationInfo()", e)
 
                                     }
                                 

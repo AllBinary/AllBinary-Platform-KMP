@@ -96,8 +96,7 @@ open fun set(aParentViewName: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put("Setting: " +aParentViewName, this, 
-                            "set()")
+                                    logUtil!!.put("Setting: " +aParentViewName, this, "set()")
 
                                     }
                                 
@@ -121,9 +120,7 @@ open fun set(aParentViewName: String)
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Replacing", this, 
-                            "set()")
+                                    logUtil!!.put("Replacing", this, "set()")
 
                                     }
                                 
@@ -153,9 +150,7 @@ parentComponentsNodeList!!.item(0)!!.appendChild(TransformInfoDomNodeView(aParen
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
                                     {
-                                    logUtil!!.put(
-                            "Setting", this, 
-                            "set()")
+                                    logUtil!!.put("Setting", this, "set()")
 
                                     }
                                 
