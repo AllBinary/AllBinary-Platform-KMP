@@ -298,7 +298,7 @@ open fun create(append: String, key: String, hashMap: HashMap<Any, Any>)
 
                     var hashMap = hashMap
 
-    var path: String = hashMap!!.get(key as Object?) as String
+    var path: String = hashMap!!.get(key as Object) as String
 
 
     
@@ -323,7 +323,7 @@ open fun create(append: String, key: String, hashMap: HashMap<Any, Any>)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashMap!!.get(path as Object?) as String +append
+                        return hashMap!!.get(path as Object) as String +append
 
                                     }
                                 

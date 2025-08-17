@@ -580,7 +580,7 @@ open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellP
 
                     var geographicMapCellPosition = geographicMapCellPosition
 
-    var pathsList: BasicArrayList = this.pathsHashtable!!.get(geographicMapCellPosition as Object?) as BasicArrayList
+    var pathsList: BasicArrayList = this.pathsHashtable!!.get(geographicMapCellPosition as Object) as BasicArrayList
 
 
 

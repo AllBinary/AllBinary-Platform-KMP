@@ -110,7 +110,7 @@ open fun getResourceId(resource: String)
 
                     var resource = resource
 
-    var value: Integer = this.hashMap!!.get(resource as Object?) as Integer
+    var value: Integer = this.hashMap!!.get(resource as Object) as Integer
 
 
     
@@ -242,7 +242,7 @@ open fun getResourceAsStream(resource: String)
 
                     var resource = resource
 
-    var integer: Integer = this.hashMap!!.get(resource as Object?) as Integer
+    var integer: Integer = this.hashMap!!.get(resource as Object) as Integer
 
 
     var id: Int = integer.toInt()!!

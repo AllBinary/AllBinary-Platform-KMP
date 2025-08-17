@@ -92,7 +92,7 @@ logUtil!!.put("Start Category: " +category, this, "getKeywords")
 
 
         {
-    var hashMap: HashMap<Any, Any> = vectorOfHashMaps!!.get(index as Object?) as HashMap<Any, Any>
+    var hashMap: HashMap<Any, Any> = vectorOfHashMaps!!.get(index as Object) as HashMap<Any, Any>
 
 
     var categoryName: String = hashMap!!.get(BasicItemData.CATEGORY) as String
@@ -102,7 +102,7 @@ logUtil!!.put("Start Category: " +category, this, "getKeywords")
                         if(!StringValidationUtil.getInstance()!!.isEmpty(categoryName) && categoryName!!.startsWith(category))
                         
                                     {
-                                    keywords.add(hashMap!!.get(column as Object?))
+                                    keywords.add(hashMap!!.get(column as Object))
 
                                     }
                                 

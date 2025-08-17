@@ -155,7 +155,7 @@ keyValuePersistance!!.loadAll(abeClientInformation)
     var anyType: Any = this.SCALE.getName() as Object
 
 
-    var value: String = hashtable.get(anyType as Object?) as String
+    var value: String = hashtable.get(anyType as Object) as String
 
 this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(value)!!.toInt()))
 

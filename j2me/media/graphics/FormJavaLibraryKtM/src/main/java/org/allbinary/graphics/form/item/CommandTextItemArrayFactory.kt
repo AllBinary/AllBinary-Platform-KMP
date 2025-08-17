@@ -111,7 +111,7 @@ list.clear()
 
 
     
-                        if(aBoolean!!)
+                        if(aBoolean)
                         
                                     {
                                     textItem= CommandTextItem(command, ImageItem.LAYOUT_DEFAULT, StringUtil.getInstance()!!.EMPTY_STRING, backgroundBasicColor, foregroundBasicColor)

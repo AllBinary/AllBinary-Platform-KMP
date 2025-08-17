@@ -328,7 +328,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.getCssStyleValidation()!!.isValid()!!)
+                        if(!this.getCssStyleValidation()!!.isValid())
                         
                                     {
                                     isValid= Boolean.FALSE

@@ -814,7 +814,7 @@ open fun get(key: Any)
 
                     var key = key
 
-    var image: Image = this.hashtable.get(key as Object?) as Image
+    var image: Image = this.hashtable.get(key as Object) as Image
 
 
     

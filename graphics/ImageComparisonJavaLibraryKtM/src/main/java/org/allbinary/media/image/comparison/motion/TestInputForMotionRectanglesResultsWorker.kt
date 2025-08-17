@@ -160,7 +160,7 @@ timeHelper!!.setStartTime()
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String
 
 
-    var inputRobotInterface: InputRobotInterface = robotHashtable!!.get(inputTypeNameString as Object?) as InputRobotInterface
+    var inputRobotInterface: InputRobotInterface = robotHashtable!!.get(inputTypeNameString as Object) as InputRobotInterface
 
 inputRobotInterface!!.mouseMoveToTarget(rectangle)
 

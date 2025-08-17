@@ -51,7 +51,7 @@ open fun update(textField: TextField)
     var anyType: Any = textField!!.getLabel() as Object
 
 
-    var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(anyType as Object?) as GameConfigurationTextInput
+    var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(anyType as Object) as GameConfigurationTextInput
 
 gameConfigurationTextInput!!.setText(textField!!.getString())
 }

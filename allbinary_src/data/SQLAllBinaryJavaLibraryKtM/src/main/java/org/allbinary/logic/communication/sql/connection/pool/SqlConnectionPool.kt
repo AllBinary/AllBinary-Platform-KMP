@@ -119,7 +119,7 @@ open fun get(url: String)
                                 
                         else {
                             
-    var connectionVector: Vector = this.connectionHashMap!!.get(url as Object?) as Vector
+    var connectionVector: Vector = this.connectionHashMap!!.get(url as Object) as Vector
 
 
     
@@ -287,7 +287,7 @@ connectionVector!!.add(sqlConnection)
                                     }
                                 
                         else {
-                            connectionVector= this.connectionHashMap!!.get(url as Object?) as Vector
+                            connectionVector= this.connectionHashMap!!.get(url as Object) as Vector
 
     
                         if(connectionVector == 

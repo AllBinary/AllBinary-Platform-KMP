@@ -73,7 +73,7 @@ open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, An
             
 
 
-    var value: Any = hashtable.get(key as Object?)!!
+    var value: Any = hashtable.get(key as Object)!!
             
 
 

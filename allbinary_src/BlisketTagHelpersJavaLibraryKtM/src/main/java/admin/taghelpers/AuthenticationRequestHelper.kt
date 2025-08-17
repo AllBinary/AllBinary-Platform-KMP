@@ -271,7 +271,7 @@ open fun changePassword()
 
 
     
-                        if(!password.isValid()!!)
+                        if(!password.isValid())
                         
                                     {
                                     

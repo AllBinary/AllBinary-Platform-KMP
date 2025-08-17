@@ -522,7 +522,7 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     
-                        if(!this.categoryPropertiesInterface!!.isValid()!!)
+                        if(!this.categoryPropertiesInterface!!.isValid())
                         
                                     {
                                     
@@ -558,7 +558,7 @@ open fun isValid()
 
 
     
-                        if(!categoryPropertiesInterface!!.isValid()!!)
+                        if(!categoryPropertiesInterface!!.isValid())
                         
                                     {
                                     
@@ -582,7 +582,7 @@ open fun isValid()
 
 
     
-                        if(!categoryInterface!!.isValid()!!)
+                        if(!categoryInterface!!.isValid())
                         
                                     {
                                     

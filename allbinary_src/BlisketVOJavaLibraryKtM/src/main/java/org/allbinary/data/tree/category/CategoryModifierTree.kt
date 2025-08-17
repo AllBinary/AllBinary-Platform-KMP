@@ -86,7 +86,7 @@ open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInte
                                 
 
     
-                        if(parentCategoryInterface!!.isValid()!!)
+                        if(parentCategoryInterface!!.isValid())
                         
                                     {
                                     parentCategoryInterface!!.addChild(newChildCategoryInterface)
@@ -139,7 +139,7 @@ open fun delete(parentCategoryInterface: CategoryInterface, existingChildCategor
         try {
             
     
-                        if(parentCategoryInterface!!.isValid()!!)
+                        if(parentCategoryInterface!!.isValid())
                         
                                     {
                                     parentCategoryInterface!!.addChild(existingChildCategoryInterface)

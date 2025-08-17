@@ -105,7 +105,7 @@ open fun getIntent(command: Command)
 
                     var command = command
 
-    var url: String = hashtable.get(command as Object?) as String
+    var url: String = hashtable.get(command as Object) as String
 
 
     var uri: Uri = Uri.parse(url)!!

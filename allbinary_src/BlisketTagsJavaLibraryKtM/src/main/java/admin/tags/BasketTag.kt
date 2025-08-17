@@ -93,7 +93,7 @@ open fun isBasketEmpty()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return emptyBoolean!!
+                        return emptyBoolean
 } catch(e: LicensingException)
             {
 
@@ -144,7 +144,7 @@ open fun addItemToBasket()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return emptyBoolean!!
+                        return emptyBoolean
 } catch(e: LicensingException)
             {
 
@@ -198,7 +198,7 @@ open fun removeItemFromBasket()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return emptyBoolean!!
+                        return emptyBoolean
 } catch(e: LicensingException)
             {
 
@@ -252,7 +252,7 @@ open fun adjustBasket()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return emptyBoolean!!
+                        return emptyBoolean
 } catch(e: LicensingException)
             {
 

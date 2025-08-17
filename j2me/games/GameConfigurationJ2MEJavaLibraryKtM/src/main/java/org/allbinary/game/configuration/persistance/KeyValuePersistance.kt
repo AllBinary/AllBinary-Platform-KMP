@@ -228,7 +228,7 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
         {outputStream!!.writeUTF(objectArray[index]!! as String)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
 anyType= objectArray[index]!! as Object
-value= hashtable.get(anyType as Object?) as String
+value= hashtable.get(anyType as Object) as String
 outputStream!!.writeUTF(value)
 }
 

@@ -127,7 +127,7 @@ open fun process(layerPlacementInterface: LayerPlacementInterface)
 
         while(enumeration.hasMoreElements())
         {point= enumeration.nextElement()!! as GPoint
-layerHashtable= hashtable.get(point as Object?) as Hashtable<Any, Any>
+layerHashtable= hashtable.get(point as Object) as Hashtable<Any, Any>
 x= point.getX() +relativePoint!!.getX()
 y= point.getY() +relativePoint!!.getY()
 z= point.getZ() +relativePoint!!.getZ()

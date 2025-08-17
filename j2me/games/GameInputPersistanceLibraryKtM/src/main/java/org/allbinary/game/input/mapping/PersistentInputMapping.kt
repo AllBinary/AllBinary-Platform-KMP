@@ -208,7 +208,7 @@ inputPersistance!!.loadAll(abeClientInformation)
     var mappedToInput: Input = enumeration.nextElement()!! as Input
 
 
-    var gameActionInput: Input = hashtable.get(mappedToInput as Object?) as Input
+    var gameActionInput: Input = hashtable.get(mappedToInput as Object) as Input
 
 totalMappedTo++
 this.getInputMapping()!!.add(gameActionInput, mappedToInput)

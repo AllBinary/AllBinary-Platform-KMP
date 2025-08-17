@@ -211,7 +211,7 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     
-                        if(!super.isValid()!!)
+                        if(!super.isValid())
                         
                                     {
                                     

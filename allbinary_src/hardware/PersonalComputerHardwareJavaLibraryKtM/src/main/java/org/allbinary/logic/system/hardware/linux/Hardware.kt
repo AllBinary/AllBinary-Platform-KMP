@@ -309,7 +309,7 @@ componentData!!.append(nextLine)
 componentData!!.append("\n")
 nextLine= lineNumberReader!!.readLine()
 
-    var componentType: String = PCComponentFactory.getInstance()!!.getComponentType(nextLine)!!
+    var componentType: String = PCComponentFactory.getInstance()!!.java.componentType!!
             
 
 

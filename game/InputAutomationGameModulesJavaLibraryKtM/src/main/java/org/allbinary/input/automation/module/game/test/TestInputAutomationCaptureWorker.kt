@@ -120,7 +120,7 @@ open fun processDataWorkerResults()
     var actionNameString: String = actionNameArray[index]!! as String
 
 
-    var genericProfileAction: GenericProfileAction = hashMap!!.get(actionNameString as Object?) as GenericProfileAction
+    var genericProfileAction: GenericProfileAction = hashMap!!.get(actionNameString as Object) as GenericProfileAction
 
 
     var genericProfileActionScript: GenericProfileActionScript = genericProfileAction!!.getGenericProfileActionScript()!!

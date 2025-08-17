@@ -44,7 +44,7 @@ open fun get(a_Name: String)
 
                     var a_Name = a_Name
 
-    var mediaData: MediaData = MediaData.hashMap!!.get(a_Name as Object?) as MediaData
+    var mediaData: MediaData = MediaData.hashMap!!.get(a_Name as Object) as MediaData
 
 
     

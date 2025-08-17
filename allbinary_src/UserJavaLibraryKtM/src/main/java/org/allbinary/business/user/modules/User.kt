@@ -217,7 +217,7 @@ open fun isValid()
 
 
     
-                        if(!UserName.getInstance()!!.isValid(this.userName)!!)
+                        if(!UserName.getInstance()!!.isValid(this.userName))
                         
                                     {
                                     valid= Boolean.FALSE
@@ -226,7 +226,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.password.isValid()!!)
+                        if(!this.password.isValid())
                         
                                     {
                                     valid= Boolean.FALSE

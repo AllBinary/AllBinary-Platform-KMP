@@ -115,7 +115,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.title.isValid()!!)
+                        if(!this.title.isValid())
                         
                                     {
                                     titleValid= Boolean.FALSE
@@ -124,7 +124,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.logo.isValid()!!)
+                        if(!this.logo.isValid())
                         
                                     {
                                     logoValid= Boolean.FALSE
@@ -138,7 +138,7 @@ open fun isValid()
                             
 
     
-                        if(!titleValid!! && !logoValid!!)
+                        if(!titleValid && !logoValid)
                         
                                     {
                                     valid= Boolean.FALSE
@@ -197,7 +197,7 @@ open fun validationInfo()
 
 
     
-                        if(!this.title.isValid()!!)
+                        if(!this.title.isValid())
                         
                                     {
                                     titleValid= Boolean.FALSE
@@ -206,7 +206,7 @@ open fun validationInfo()
                                 
 
     
-                        if(!this.logo.isValid()!!)
+                        if(!this.logo.isValid())
                         
                                     {
                                     logoValid= Boolean.FALSE
@@ -215,7 +215,7 @@ open fun validationInfo()
                                 
 
     
-                        if(!titleValid!! && !logoValid!!)
+                        if(!titleValid && !logoValid)
                         
                                     {
                                     valid= Boolean.FALSE

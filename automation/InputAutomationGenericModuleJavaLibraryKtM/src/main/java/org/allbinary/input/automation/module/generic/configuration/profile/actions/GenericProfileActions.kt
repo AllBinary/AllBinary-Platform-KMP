@@ -318,7 +318,7 @@ open fun getAction(string: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getHashMap()!!.get(string as Object?) as GenericProfileAction
+                        return this.getHashMap()!!.get(string as Object) as GenericProfileAction
 }
 
 

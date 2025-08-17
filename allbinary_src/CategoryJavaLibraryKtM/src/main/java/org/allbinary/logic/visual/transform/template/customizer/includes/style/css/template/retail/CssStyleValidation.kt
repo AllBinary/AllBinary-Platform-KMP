@@ -94,7 +94,7 @@ open fun isValid()
 
 
     
-                        if(!styleValidationInterface!!.isValid()!!)
+                        if(!styleValidationInterface!!.isValid())
                         
                                     {
                                     isValid= Boolean.FALSE

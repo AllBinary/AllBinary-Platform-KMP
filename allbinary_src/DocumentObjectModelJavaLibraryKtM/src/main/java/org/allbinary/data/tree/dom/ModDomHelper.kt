@@ -279,7 +279,7 @@ open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<A
     var name: String = objectKey as String
 
 
-    var anyType: Any = hashMap!!.get(objectKey as Object?) as Object
+    var anyType: Any = hashMap!!.get(objectKey as Object) as Object
 
 
     
@@ -500,7 +500,7 @@ open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashM
     var name: String = keyArray[i]!! as String
 
 
-    var anyType: Any = hashMap!!.get(name as Object?) as Object
+    var anyType: Any = hashMap!!.get(name as Object) as Object
 
 
     var value: String = stringUtil!!.getInstance(anyType as String)!!

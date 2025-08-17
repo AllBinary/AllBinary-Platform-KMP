@@ -137,7 +137,7 @@ open fun getInstance(moduleName: String)
 
 logUtil!!.put("Getting Module: " +moduleName, this, commonStrings!!.GET_INSTANCE)
 
-    var inputAutomationModuleFactoryInterface: InputAutomationModuleFactoryInterface = this.hashMap!!.get(moduleName as Object?) as InputAutomationModuleFactoryInterface
+    var inputAutomationModuleFactoryInterface: InputAutomationModuleFactoryInterface = this.hashMap!!.get(moduleName as Object) as InputAutomationModuleFactoryInterface
 
 
     

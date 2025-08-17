@@ -121,7 +121,7 @@ open fun validationInfo()
 
 
     
-                        if(UserName.getInstance()!!.isValid(this.userName)!!)
+                        if(UserName.getInstance()!!.isValid(this.userName))
                         
                                     {
                                     

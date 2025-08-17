@@ -364,7 +364,7 @@ logUtil!!.put(StringMaker().
 
 
         {anyType= objectArray[index]!! as Object
-basicArrayList= hashtable.get(anyType as Object?) as BasicArrayList
+basicArrayList= hashtable.get(anyType as Object) as BasicArrayList
 updateExclusive(gameFeature, basicArrayList)
 }
 

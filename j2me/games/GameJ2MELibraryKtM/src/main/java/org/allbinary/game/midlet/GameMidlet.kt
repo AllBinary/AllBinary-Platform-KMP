@@ -1400,7 +1400,7 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
 
         while(enumeration.hasMoreElements())
         {key= enumeration.nextElement()!!
-hashtable.put(key, currentHashtable!!.get(key as Object?))
+hashtable.put(key, currentHashtable!!.get(key as Object))
 }
 
 

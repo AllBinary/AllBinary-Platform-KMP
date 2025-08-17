@@ -155,7 +155,7 @@ open fun getParams()
     var key: String = this.paramVector!!.get(index) as String
 
 
-    var value: String = hashMap!!.get(key as Object?) as String
+    var value: String = hashMap!!.get(key as Object) as String
 
 
     

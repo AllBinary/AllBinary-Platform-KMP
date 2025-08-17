@@ -90,7 +90,7 @@ open fun visit(file: AbFile)
         {nextFileFilterString= list.get(index) as String
 
     
-                        if(this.visit(file, nextFileFilterString)!!)
+                        if(this.visit(file, nextFileFilterString))
                         
                                     {
                                     

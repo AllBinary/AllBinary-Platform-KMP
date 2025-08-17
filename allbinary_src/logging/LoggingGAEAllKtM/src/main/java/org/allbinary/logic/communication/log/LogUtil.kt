@@ -51,7 +51,7 @@ open fun getInstance()
 
         }
             
-    private val logger: Logger = Logger.getLogger(LogUtil::class.getName())!!
+    private val logger: Logger = Logger.getLogger(LogUtil::class.qualifiedName!!)!!
             
 private constructor        ()
             : super()

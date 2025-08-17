@@ -201,7 +201,7 @@ open fun getMappedInput(id: Input)
 
                     var id = id
 
-    var list: BasicArrayList = this.getHashtable()!!.get(id as Object?) as BasicArrayList
+    var list: BasicArrayList = this.getHashtable()!!.get(id as Object) as BasicArrayList
 
 
     

@@ -220,7 +220,7 @@ open fun getPath(aPath: String)
                                     {
                                     beginIndex++
 
-        while(tempPath!![beginIndex] == abPathData!!.SEPARATORCHAR || tempPath!![beginIndex] == filePathData!!.SEPARATORCHAR)
+        while(tempPath[beginIndex] == abPathData!!.SEPARATORCHAR || tempPath[beginIndex] == filePathData!!.SEPARATORCHAR)
         {beginIndex++
 numberOfSeps++
 

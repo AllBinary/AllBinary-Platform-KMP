@@ -145,7 +145,7 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
     var propertyName: String = propertyKeySetArray[index]!! as String
 
 
-    var propertyValue: String = packagePropertiesHashMap!!.get(propertyName as Object?) as String
+    var propertyValue: String = packagePropertiesHashMap!!.get(propertyName as Object) as String
 
 
     var propertyNode: Node = ModDomHelper.createTextNode(document, propertyName, propertyValue)!!
@@ -354,7 +354,7 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
     var nextPropertyName: String = propertyNameSetArray[index]!! as String
 
 
-    var propertyValue: String = StringUtil.getInstance()!!.getInstance(nextPackagePropertiesHashMap!!.get(nextPropertyName as Object?) as String)!!
+    var propertyValue: String = StringUtil.getInstance()!!.getInstance(nextPackagePropertiesHashMap!!.get(nextPropertyName as Object) as String)!!
             
 
 

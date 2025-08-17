@@ -153,7 +153,7 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
 
         {
-    var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(i as Object?) as HashMap<Any, Any>
+    var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
 
     
@@ -213,7 +213,7 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
 
 
         {
-    var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object?) as HashMap<Any, Any>
+    var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
     
@@ -261,7 +261,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
 
 
         {
-    var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object?) as HashMap<Any, Any>
+    var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
     

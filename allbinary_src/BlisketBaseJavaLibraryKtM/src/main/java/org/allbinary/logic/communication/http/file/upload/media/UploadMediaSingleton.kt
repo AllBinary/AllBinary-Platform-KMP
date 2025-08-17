@@ -106,7 +106,7 @@ this.writerFileTypesHashMap= HashMap<Any, Any>()
     var mediaDataName: String = mediaDataNameArray[index]!! as String
 
 
-    var mediaData: MediaData = hashMap!!.get(mediaDataName as Object?) as MediaData
+    var mediaData: MediaData = hashMap!!.get(mediaDataName as Object) as MediaData
 
 this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 }
@@ -269,7 +269,7 @@ open fun isMedia(mediaFileType: String, aMediaType: String, hashMap: HashMap<Any
                         
                                     {
                                     
-    var mediaType: String = hashMap!!.get(mediaFileType as Object?) as String
+    var mediaType: String = hashMap!!.get(mediaFileType as Object) as String
 
 
     

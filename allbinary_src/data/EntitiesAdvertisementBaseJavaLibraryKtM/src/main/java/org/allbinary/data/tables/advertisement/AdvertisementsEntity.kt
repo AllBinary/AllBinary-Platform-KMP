@@ -117,7 +117,7 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
 
         {
-    var hashMap: HashMap<Any, Any> = hashMapVector!!.get(index as Object?) as HashMap<Any, Any>
+    var hashMap: HashMap<Any, Any> = hashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 }
 

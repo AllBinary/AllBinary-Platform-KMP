@@ -89,7 +89,7 @@ keysAndValues!!.put(NAME, name)
                                     }
                                 
 
-    var value: String = hashMap!!.get(VALUE as Object?) as String
+    var value: String = hashMap!!.get(VALUE as Object) as String
 
 
 
@@ -153,7 +153,7 @@ open fun update(hashMap: HashMap<Any, Any>)
 {
 
                     var hashMap = hashMap
-super.updateWhere(NAME, hashMap!!.get(NAME as Object?) as String, hashMap)
+super.updateWhere(NAME, hashMap!!.get(NAME as Object) as String, hashMap)
 }
 
 

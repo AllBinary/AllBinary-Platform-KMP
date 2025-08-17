@@ -137,7 +137,7 @@ open fun get(key: Any)
             
 
 
-    var image: Image = this.hashtable.get(resourceId as Object?) as Image
+    var image: Image = this.hashtable.get(resourceId as Object) as Image
 
 
     

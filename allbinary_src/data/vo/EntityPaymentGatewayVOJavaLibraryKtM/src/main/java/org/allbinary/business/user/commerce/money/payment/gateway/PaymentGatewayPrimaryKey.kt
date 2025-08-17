@@ -93,12 +93,12 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
-stringBuffer!!.append(PaymentGatewayPrimaryKey::class.getName())
-stringBuffer!!.append(StoreFront::class.getName())
+stringBuffer!!.append(PaymentGatewayPrimaryKey::class.qualifiedName!!)
+stringBuffer!!.append(StoreFront::class.qualifiedName!!)
 stringBuffer!!.append(" =")
 stringBuffer!!.append(this.getStoreName())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
-stringBuffer!!.append(PaymentGateway::class.getName())
+stringBuffer!!.append(PaymentGateway::class.qualifiedName!!)
 stringBuffer!!.append("=")
 stringBuffer!!.append(this.getName())
 

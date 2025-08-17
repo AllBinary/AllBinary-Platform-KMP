@@ -114,7 +114,7 @@ open fun addTextFieldsIfSimulated()
                         
                                     {
                                     
-    var list: BasicArrayList = hashtable.get(key as Object?) as BasicArrayList
+    var list: BasicArrayList = hashtable.get(key as Object) as BasicArrayList
 
 
     

@@ -59,7 +59,7 @@ stringbuffer.append(type)
             
 
 
-    var bufferedImageInfo: BufferedImageInfo = hashMap!!.get(key as Object?) as BufferedImageInfo
+    var bufferedImageInfo: BufferedImageInfo = hashMap!!.get(key as Object) as BufferedImageInfo
 
 
     

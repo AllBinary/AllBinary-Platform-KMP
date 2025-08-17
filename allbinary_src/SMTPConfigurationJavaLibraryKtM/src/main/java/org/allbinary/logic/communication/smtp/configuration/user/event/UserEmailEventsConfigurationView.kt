@@ -154,7 +154,7 @@ open fun toXmlNode(document: Document)
     var eventName: String = eventNameArray[index]!! as String
 
 
-    var userEmailEventsConfigurationInterface: UserEmailEventConfigurationInterface = emailEventHashMap!!.get(eventName as Object?) as UserEmailEventConfigurationInterface
+    var userEmailEventsConfigurationInterface: UserEmailEventConfigurationInterface = emailEventHashMap!!.get(eventName as Object) as UserEmailEventConfigurationInterface
 
 
     var userEmailEventConfigurationView: UserEmailEventConfigurationView = UserEmailEventConfigurationView(userEmailEventsConfigurationInterface)

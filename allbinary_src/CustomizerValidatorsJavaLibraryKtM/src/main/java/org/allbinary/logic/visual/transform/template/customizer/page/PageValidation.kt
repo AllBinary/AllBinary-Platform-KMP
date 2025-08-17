@@ -92,7 +92,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.title.isValid()!!)
+                        if(!this.title.isValid())
                         
                                     {
                                     valid= Boolean.FALSE
@@ -142,7 +142,7 @@ open fun validationInfo()
 
 
     
-                        if(!this.title.isValid()!!)
+                        if(!this.title.isValid())
                         
                                     {
                                     stringBuffer!!.append(this.title.validationInfo())

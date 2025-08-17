@@ -176,7 +176,7 @@ logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORK
 
 logUtil!!.put("Processing Action: " +actionNameString, this, this.PROCESS_DATA_WORKER_RESULTS)
 
-    var genericProfileAction: GenericProfileAction = hashMap!!.get(actionNameString as Object?) as GenericProfileAction
+    var genericProfileAction: GenericProfileAction = hashMap!!.get(actionNameString as Object) as GenericProfileAction
 
 
     var genericProfileActionScript: GenericProfileActionScript = genericProfileAction!!.getGenericProfileActionScript()!!

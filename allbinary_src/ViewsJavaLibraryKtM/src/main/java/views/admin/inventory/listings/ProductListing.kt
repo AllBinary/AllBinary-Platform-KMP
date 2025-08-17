@@ -371,7 +371,7 @@ open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFil
     var keywordData: String = keywordArray[index]!! as String
 
 
-    var fileName: String = keywordFilenameHashMap!!.get(keywordData as Object?) as String
+    var fileName: String = keywordFilenameHashMap!!.get(keywordData as Object) as String
 
 insertVector!!.add(storeFront!!.getName())
 insertVector!!.add(keywordData)

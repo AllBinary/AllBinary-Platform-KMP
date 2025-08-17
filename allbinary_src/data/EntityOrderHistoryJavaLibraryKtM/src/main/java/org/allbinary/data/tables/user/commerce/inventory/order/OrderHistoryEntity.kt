@@ -455,7 +455,7 @@ whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.ge
 
 
         {
-    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(i as Object?) as HashMap<Any, Any>
+    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
 
     var orderReview: OrderHistory = OrderHistory(Basket(), orderReviewHashMap)
@@ -501,7 +501,7 @@ whereHashMap!!.put(UserData.USERNAME, userName)
 
 
         {
-    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object?) as HashMap<Any, Any>
+    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
     var orderReview: OrderHistory = OrderHistory(Basket(), orderReviewHashMap)
@@ -553,7 +553,7 @@ whereHashMap!!.put(OrderHistoryData.STATUS, status)
 
 
         {
-    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object?) as HashMap<Any, Any>
+    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
     var orderReview: OrderHistory = OrderHistory(Basket(), orderReviewHashMap)
@@ -598,7 +598,7 @@ open fun getOrders(fromDate: String, toDate: String)
 
 
         {
-    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object?) as HashMap<Any, Any>
+    var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
     var orderReview: OrderHistory = OrderHistory(Basket(), orderReviewHashMap)

@@ -169,7 +169,7 @@ open fun getKey(keyName: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(keyName as Object?) as String
+                        return hashtable.get(keyName as Object) as String
 }
 
 

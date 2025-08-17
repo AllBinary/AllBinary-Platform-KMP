@@ -141,7 +141,7 @@ listOfList[foundIndex]!!.add(image)
             
 
 
-    var image: Image = this.hashtable.get(resourceId as Object?) as Image
+    var image: Image = this.hashtable.get(resourceId as Object) as Image
 
 
     

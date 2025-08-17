@@ -184,7 +184,7 @@ open fun isValid()
                                 
 
     
-                        if(!this.titleValidation!!.isValid()!!)
+                        if(!this.titleValidation!!.isValid())
                         
                                     {
                                     isValid= Boolean.FALSE

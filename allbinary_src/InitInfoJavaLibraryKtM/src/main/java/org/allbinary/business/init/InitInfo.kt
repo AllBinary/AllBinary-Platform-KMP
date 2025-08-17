@@ -150,9 +150,9 @@ open fun set(hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
         try {
-            testing= hashMap!!.get(TESTING as Object?) as String
-mainPath= AbPath(hashMap!!.get(MAINPATH as Object?) as String)
-testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object?) as String)
+            testing= hashMap!!.get(TESTING as Object) as String
+mainPath= AbPath(hashMap!!.get(MAINPATH as Object) as String)
+testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
 } catch(e: Exception)
             {
     

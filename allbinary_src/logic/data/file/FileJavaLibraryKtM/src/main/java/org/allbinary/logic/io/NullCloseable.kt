@@ -44,9 +44,7 @@ open public class NullCloseable
             public constructor() : super()
             {
             }            
-        
-                @Throws(IOException::class)
-            override fun close()
+        override fun close()
         //nullable = true from not(false or (false and true)) = true
 {}
 

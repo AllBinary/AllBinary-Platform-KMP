@@ -105,7 +105,7 @@ open fun process()
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String
 
 
-    var robot: InputRobotInterface = hashtable.get(inputTypeNameString as Object?) as InputRobotInterface
+    var robot: InputRobotInterface = hashtable.get(inputTypeNameString as Object) as InputRobotInterface
 
 
     

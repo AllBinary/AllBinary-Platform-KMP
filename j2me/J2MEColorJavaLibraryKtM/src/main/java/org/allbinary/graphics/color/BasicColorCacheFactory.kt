@@ -71,7 +71,7 @@ open fun getInstance(integer: Integer)
 
                     var integer = integer
 
-    var basicColor: BasicColor = hashtable.get(integer as Object?) as BasicColor
+    var basicColor: BasicColor = hashtable.get(integer as Object) as BasicColor
 
 
     

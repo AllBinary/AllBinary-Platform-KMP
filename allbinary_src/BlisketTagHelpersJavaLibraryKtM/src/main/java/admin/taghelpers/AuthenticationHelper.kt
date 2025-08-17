@@ -462,7 +462,7 @@ open fun isAuthenticationSessionValid(roles: Vector)
 
 
     
-                        if(!userInterface!!.isSessionValid()!!)
+                        if(!userInterface!!.isSessionValid())
                         
                                     {
                                     
@@ -606,7 +606,7 @@ login= userEntityInterface!!.login(userName, password)
 
 
     
-                        if(userInterface!!.isSessionValid()!!)
+                        if(userInterface!!.isSessionValid())
                         
                                     {
                                     this.weblisketSession!!.setAttempts(Integer(0))

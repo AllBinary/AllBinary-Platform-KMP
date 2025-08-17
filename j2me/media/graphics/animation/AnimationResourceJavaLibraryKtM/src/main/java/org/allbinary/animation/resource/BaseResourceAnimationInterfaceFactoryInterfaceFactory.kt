@@ -164,7 +164,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(resource as Object?) as BasicAnimationInterfaceFactoryInterface
+                        return hashtable.get(resource as Object) as BasicAnimationInterfaceFactoryInterface
 }
 
 
@@ -178,7 +178,7 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangleHashtable!!.get(resource as Object?) as Rectangle
+                        return rectangleHashtable!!.get(resource as Object) as Rectangle
 }
 
 
@@ -206,7 +206,7 @@ rectangleHashtable!!.put(resource, rectangle)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangleArrayOfArraysHashtable!!.get(resource as Object?)as Array<Array<Rectangle?>?>
+                        return rectangleArrayOfArraysHashtable!!.get(resource as Object)as Array<Array<Rectangle?>?>
 }
 
 

@@ -307,7 +307,7 @@ open fun isSessionOld()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resultBoolean!!
+                        return resultBoolean
 } catch(e: LicensingException)
             {
 
@@ -366,7 +366,7 @@ open fun isRoleValid()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resultBoolean!!
+                        return resultBoolean
 } catch(e: LicensingException)
             {
 
@@ -541,7 +541,7 @@ open fun isAuthenticationSessionValid()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resultBoolean!!
+                        return resultBoolean
 } catch(e: LicensingException)
             {
 
@@ -600,7 +600,7 @@ open fun processIfNewLogin()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resultBoolean!!
+                        return resultBoolean
 } catch(e: LicensingException)
             {
 
@@ -655,7 +655,7 @@ open fun processInvalidation()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return resultBoolean!!
+                        return resultBoolean
 } catch(e: LicensingException)
             {
 

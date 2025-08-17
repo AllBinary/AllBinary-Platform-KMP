@@ -632,7 +632,7 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
 isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
 
     
-                        if(!isCellVisitedBoolean!!)
+                        if(!isCellVisitedBoolean)
                         
                                     {
                                     this.paintNotVisited(graphics, geographicMapInterface!!.getAllBinaryTiledLayer(), geographicMapCellPosition!!.getPoint())

@@ -68,7 +68,7 @@ open fun getInstance(name: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(name as Object?) as GameConfiguration
+                        return hashtable.get(name as Object) as GameConfiguration
 }
 
 

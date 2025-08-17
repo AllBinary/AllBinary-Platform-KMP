@@ -366,7 +366,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isRarelyUsedSession()!!
+                        return this.isRarelyUsedSession()
 } catch(e: Exception)
             {
     

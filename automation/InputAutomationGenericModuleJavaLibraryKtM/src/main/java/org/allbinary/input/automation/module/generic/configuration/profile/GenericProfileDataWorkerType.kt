@@ -63,7 +63,7 @@ open fun getInstance(node: Node)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashMap!!.get(name as Object?) as GenericProfileDataWorkerType
+                        return hashMap!!.get(name as Object) as GenericProfileDataWorkerType
 }
 
 

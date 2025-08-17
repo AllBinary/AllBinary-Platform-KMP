@@ -141,7 +141,7 @@ listOfList[foundIndex]!!.add(image)
 
                     var key = key
 
-    var image: Image = this.hashtable.get(key as Object?) as Image
+    var image: Image = this.hashtable.get(key as Object) as Image
 
 
     

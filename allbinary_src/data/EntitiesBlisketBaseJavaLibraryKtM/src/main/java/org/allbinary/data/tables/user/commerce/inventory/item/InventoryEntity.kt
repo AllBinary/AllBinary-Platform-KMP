@@ -159,7 +159,7 @@ open fun getItems(storeFrontInterface: StoreFrontInterface)
 
 
         {
-    var itemHashMap: HashMap<Any, Any> = itemHashMapVector!!.get(i as Object?) as HashMap<Any, Any>
+    var itemHashMap: HashMap<Any, Any> = itemHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
 
     

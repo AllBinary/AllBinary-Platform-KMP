@@ -218,7 +218,7 @@ open fun upTo(replace: String, total: Int)
 
 
         {keys= keyArray[index2]!! as Array<String?>
-values= hashMap!!.get(keys as Object?) as Array<String?>
+values= hashMap!!.get(keys as Object) as Array<String?>
 
     var foundTotal: Long = 0
 
@@ -373,7 +373,7 @@ open fun line(replace: String)
 
 
         {key= keyArray[index2]!! as String
-value= hashMap!!.get(key as Object?) as String
+value= hashMap!!.get(key as Object) as String
 
     var index: Int = 0
 

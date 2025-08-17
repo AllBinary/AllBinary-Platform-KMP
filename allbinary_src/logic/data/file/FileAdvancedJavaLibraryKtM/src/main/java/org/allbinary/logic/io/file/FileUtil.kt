@@ -1116,7 +1116,7 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
                                     {
                                     
     
-                        if(fromAbPath!!.toFileSystemString()!![fromAbPath!!.toFileSystemString()!!.length() -1] == java.io.File.separatorChar)
+                        if(fromAbPath!!.toFileSystemString()[fromAbPath!!.toFileSystemString()!!.length() -1] == java.io.File.separatorChar)
                         
                                     {
                                     

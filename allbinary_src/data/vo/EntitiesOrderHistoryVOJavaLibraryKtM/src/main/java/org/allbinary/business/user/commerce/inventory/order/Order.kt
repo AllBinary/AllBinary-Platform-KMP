@@ -456,7 +456,7 @@ open fun toXmlNode(document: Document)
     var name: String = keyArray[i]!! as String
 
 
-    var value: String = hashMap!!.get(name as Object?) as String
+    var value: String = hashMap!!.get(name as Object) as String
 
 value= StringUtil.getInstance()!!.getInstance(value)
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))

@@ -129,7 +129,7 @@ open fun process()
                                 
 
     
-                        if(this.validationDomNodeInterface!!.isValid()!!)
+                        if(this.validationDomNodeInterface!!.isValid())
                         
                                     {
                                     pageContext!!.getOut()!!.print(this.validationDomNodeInterface!!.view())

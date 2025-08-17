@@ -92,7 +92,7 @@ open fun getNewTotal(userRole: UserRole)
 
                     var userRole = userRole
 
-    var numberOfUsersForRoleLong: Long = totalUsersByRoleHashMap!!.get(userRole as Object?) as Long
+    var numberOfUsersForRoleLong: Long = totalUsersByRoleHashMap!!.get(userRole as Object) as Long
 
 
     
@@ -129,7 +129,7 @@ open fun getNumberOfUsersByRole(role: String)
 
                     var role = role
 
-    var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(role as Object?) as Long
+    var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(role as Object) as Long
 
 
 
@@ -169,7 +169,7 @@ hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.
 
         {nextUserRole= userRoleArray[index]!! as UserRole
 
-    var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(nextUserRole as Object?) as Long
+    var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(nextUserRole as Object) as Long
 
 hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 }

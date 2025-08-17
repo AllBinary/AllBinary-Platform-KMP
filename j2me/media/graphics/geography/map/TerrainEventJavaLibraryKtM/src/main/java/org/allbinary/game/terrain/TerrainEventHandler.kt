@@ -52,7 +52,7 @@ open fun getInstance(anyType: Any)
 
                     var anyType = anyType
 
-    var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable.get(anyType as Object?) as TerrainEventHandler
+    var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable.get(anyType as Object) as TerrainEventHandler
 
 
     
