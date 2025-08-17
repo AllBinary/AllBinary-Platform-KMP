@@ -148,10 +148,10 @@ open fun read()
     var iData: AbDataInputStream = AbDataInputStream(iFile)
 
 
-    var decryptedUserName: String = decode.decodeToString()
+    var decryptedUserName: String = decode.toCharArray()
 
 
-    var decryptedPassword: String = decode.decodeToString()
+    var decryptedPassword: String = decode.toCharArray()
 
 this.setUserName(WeakCrypt(1).
                             decrypt(decryptedUserName))

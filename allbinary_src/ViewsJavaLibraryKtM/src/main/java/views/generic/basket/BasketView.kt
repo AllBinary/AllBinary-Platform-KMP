@@ -114,7 +114,7 @@ open fun toXmlNode(document: Document)
 
 
         {
-    var product: String = .concatToString()
+    var product: String = .toCharArray()
 
 
     var itemInterface: ItemInterface = inventoryEntity!!.getItem(product)!!

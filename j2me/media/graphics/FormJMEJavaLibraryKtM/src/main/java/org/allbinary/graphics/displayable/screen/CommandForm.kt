@@ -93,9 +93,7 @@ override fun open()
 {logUtil!!.put(this.commonStrings!!.START, this, "open")
 }
 
-
-                @Throws(Exception::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.CLOSE)
 }

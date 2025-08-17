@@ -76,7 +76,7 @@ open fun getString(fileItem: FileItemStream)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return getBytes.decodeToString()
+                        return getBytes.toCharArray().concatToString(DEFAULT_CHARSET)
 }
 
 

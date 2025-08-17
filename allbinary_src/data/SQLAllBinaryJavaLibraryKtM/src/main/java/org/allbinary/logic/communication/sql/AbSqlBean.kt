@@ -185,7 +185,7 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
         {key= keyArray[i]!! as String
-value= .concatToString()
+value= .toCharArray()
 stringBuffer!!.append(key)
 stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
 stringBuffer!!.append(value)

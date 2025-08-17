@@ -33,8 +33,6 @@ open fun open()
         //nullable = true from not(false or (false and true)) = true
 
 
-                @Throws(Exception::class)
-            
 open fun close()
         //nullable = true from not(false or (false and true)) = true
 

@@ -880,12 +880,12 @@ open fun toHashMap()
 
                                     }
                                 
-hashMap!!.put(key.concatToString(), value.concatToString())
+hashMap!!.put(key.toCharArray().concatToString(), value.toCharArray().concatToString())
 
                                     }
                                 
                         else {
-                            document= this.addNameSpace(key.concatToString(), value.concatToString(), document)
+                            document= this.addNameSpace(key.toCharArray().concatToString(), value.toCharArray().concatToString(), document)
 
                         }
                             
@@ -914,12 +914,12 @@ hashMap!!.put(key.concatToString(), value.concatToString())
 
                                     }
                                 
-hashMap!!.put(key.concatToString(), .concatToString())
+hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
 
                                     }
                                 
                         else {
-                            document= this.addNameSpace(key.concatToString(), .concatToString(), document)
+                            document= this.addNameSpace(key.toCharArray().concatToString(), .toCharArray(), document)
 
                         }
                             

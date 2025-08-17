@@ -146,9 +146,7 @@ this.paintable= NullPaintable.getInstance()
 super.open()
 }
 
-
-                @Throws(Exception::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {this.virtualKeyboardEventHandler!!.close()
 this.paintable= this.pleaseWait

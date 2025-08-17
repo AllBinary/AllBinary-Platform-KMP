@@ -78,7 +78,7 @@ public constructor        (categoryPropertiesHashMap: HashMap<Any, Any>)
         {
 
                     var categoryPropertiesHashMap = categoryPropertiesHashMap
-this.category= .toCharArray().concatToString()
+this.category= .toCharArray()
 }
 
 

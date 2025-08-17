@@ -193,7 +193,7 @@ keysAndValues!!.put(transformInfoData!!.NAME, name)
                                     
     var string: String = anyType as String
 
-hashMap!!.put(transformInfoData!!.OBJECTCONFIG, decode.toCharArray().concatToString())
+hashMap!!.put(transformInfoData!!.OBJECTCONFIG, decode.toCharArray())
 
                                     }
                                 
@@ -211,7 +211,7 @@ hashMap!!.put(transformInfoData!!.OBJECTCONFIG, decode.toCharArray().concatToStr
                                     
     var string: String = objectData as String
 
-hashMap!!.put(transformInfoData!!.DATA, decode.toCharArray().concatToString())
+hashMap!!.put(transformInfoData!!.DATA, decode.toCharArray())
 
                                     }
                                 
@@ -263,7 +263,7 @@ open fun getObjectConfigs(storeName: Object)
         {
     var objectConfigString: String = objectConfigColumnVector!!.get(i) as String
 
-objectConfigString= decode.toCharArray().concatToString()
+objectConfigString= decode.toCharArray()
 objectConfigVector!!.add(this.transformInfoObjectConfigAndManipulatorFactoryInterface!!.getInstance(abeClientInformation, this as TransformInfoInterface, DomDocumentHelper.create(objectConfigString)))
 }
 

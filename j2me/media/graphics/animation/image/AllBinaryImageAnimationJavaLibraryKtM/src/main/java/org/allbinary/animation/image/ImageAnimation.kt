@@ -139,8 +139,6 @@ open fun getImage()
 }
 
 
-                @Throws(Exception::class)
-            
 open fun close()
         //nullable = true from not(false or (false and true)) = true
 {DisposalUtil.getInstance()!!.dispose(this.image)

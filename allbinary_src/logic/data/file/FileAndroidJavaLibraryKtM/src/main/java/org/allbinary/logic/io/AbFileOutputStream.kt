@@ -55,9 +55,7 @@ public constructor        (fileOutputStream: FileOutputStream){
 this.fileOutputStream= fileOutputStream
 }
 
-
-                @Throws(IOException::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {this.fileOutputStream!!.close()
 }

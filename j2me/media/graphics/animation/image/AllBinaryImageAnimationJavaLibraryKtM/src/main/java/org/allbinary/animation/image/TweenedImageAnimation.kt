@@ -164,8 +164,6 @@ graphics.drawImage(this.image, x +currentX, y +currentY, anchor)
 }
 
 
-                @Throws(Exception::class)
-            
 open fun close()
         //nullable = true from not(false or (false and true)) = true
 {DisposalUtil.getInstance()!!.dispose(this.image)

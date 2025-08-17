@@ -281,9 +281,7 @@ GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
 }
 
-
-                @Throws(Exception::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CLOSE)
 BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())

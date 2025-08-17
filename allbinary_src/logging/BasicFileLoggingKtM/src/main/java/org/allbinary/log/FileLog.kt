@@ -51,9 +51,9 @@ open public class FileLog
 
     private val logPath: String = "g:\\log\\"
 
-    private val extension: String = .toCharArray().concatToString()
+    private val extension: String = .toCharArray()
 
-    private val fileName: String = .toCharArray().concatToString()
+    private val fileName: String = .toCharArray()
 
     private val backupFileName: String = fileName!!.concat(".bak")!!
             
@@ -129,7 +129,7 @@ logFileBak= File(logPath, StringBuilder().
 }
 
 
-    var line: String = .toCharArray().concatToString()
+    var line: String = .toCharArray()
 
 
     var tmpOut: BufferedWriter = BufferedWriter(FileWriter(logFileBak))
@@ -217,7 +217,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 
                                     }
                                 
@@ -242,7 +242,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 
                                     }
                                 
@@ -250,20 +250,20 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                     }
                                 
 
-    var className: String = NULL_STRING.toCharArray().concatToString()
+    var className: String = NULL_STRING.toCharArray()
 
 
     
                         if(functionName == 
                                     null
                                 )
-                        functionName= NULL_STRING.toCharArray().concatToString()
+                        functionName= NULL_STRING.toCharArray()
 
     
                         if(specialMessage == 
                                     null
                                 )
-                        specialMessage= NULL_STRING.toCharArray().concatToString()
+                        specialMessage= NULL_STRING.toCharArray()
 
     
                         if(anyType!!::class.qualifiedName!! != 
@@ -282,13 +282,13 @@ fileOut!!.flush()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 } catch(e: Exception)
             {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 }
 
 }
@@ -345,7 +345,7 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 
                                     }
                                 
@@ -370,7 +370,7 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 
                                     }
                                 
@@ -382,13 +382,13 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                         if(functionName == 
                                     null
                                 )
-                        functionName= NULL_STRING.toCharArray().concatToString()
+                        functionName= NULL_STRING.toCharArray()
 
     
                         if(specialMessage == 
                                     null
                                 )
-                        specialMessage= NULL_STRING.toCharArray().concatToString()
+                        specialMessage= NULL_STRING.toCharArray()
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
             
@@ -400,13 +400,13 @@ fileOut!!.flush()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 } catch(e: Exception)
             {
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return .toCharArray().concatToString()
+                        return .toCharArray()
 }
 
 }

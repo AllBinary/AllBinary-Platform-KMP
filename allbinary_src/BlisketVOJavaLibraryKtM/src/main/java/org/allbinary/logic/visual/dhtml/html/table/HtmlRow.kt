@@ -51,8 +51,8 @@ public constructor        (before: String, after: String){
 
 
                     var after = after
-this.before= before.concatToString()
-this.after= after.concatToString()
+this.before= before.toCharArray().concatToString()
+this.after= after.toCharArray().concatToString()
 this.htmlCellsVector= Vector()
 }
 

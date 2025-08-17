@@ -29,6 +29,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+        import kotlin.reflect.full.createInstance
+        
 import java.lang.reflect.Constructor
 import java.lang.reflect.Method
 import org.allbinary.string.CommonStrings

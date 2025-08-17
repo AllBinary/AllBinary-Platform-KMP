@@ -229,9 +229,7 @@ override fun open()
 this.highScoresCanvasInputProcessor!!.open()
 }
 
-
-                @Throws(Exception::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {super.close()
 this.highScoresCanvasInputProcessor!!.close()

@@ -229,25 +229,25 @@ open fun load()
 
         try {
             
-    var decryptedJdbcDriver: String = decode.decodeToString()
+    var decryptedJdbcDriver: String = decode.toCharArray()
 
 
-    var decryptedName: String = decode.decodeToString()
+    var decryptedName: String = decode.toCharArray()
 
 
-    var decryptedUserName: String = decode.decodeToString()
+    var decryptedUserName: String = decode.toCharArray()
 
 
-    var decryptedPassword: String = decode.decodeToString()
+    var decryptedPassword: String = decode.toCharArray()
 
 
-    var decryptedSchema: String = decode.decodeToString()
+    var decryptedSchema: String = decode.toCharArray()
 
 
-    var decryptedServer: String = decode.decodeToString()
+    var decryptedServer: String = decode.toCharArray()
 
 
-    var decryptedPort: String = decode.decodeToString()
+    var decryptedPort: String = decode.toCharArray()
 
 this.setJdbcDriver(WeakCrypt(1).
                             decrypt(decryptedJdbcDriver))

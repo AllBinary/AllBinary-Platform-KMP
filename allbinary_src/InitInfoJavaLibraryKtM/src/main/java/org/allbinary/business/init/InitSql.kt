@@ -240,7 +240,7 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
     var key: String = keyArray[i]!! as String
 
 
-    var value: String = .concatToString()
+    var value: String = .toCharArray()
 
 stringBuffer!!.append(key)
 stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)

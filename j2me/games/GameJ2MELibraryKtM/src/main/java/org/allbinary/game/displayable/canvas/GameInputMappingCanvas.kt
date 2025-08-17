@@ -122,9 +122,7 @@ this.paintable= ProcessPaintable()
 this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(allBinaryGameLayerManager!!.getBackgroundBasicColor(), false)
 }
 
-
-                @Throws(Exception::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {super.close()
 this.paintable.process()

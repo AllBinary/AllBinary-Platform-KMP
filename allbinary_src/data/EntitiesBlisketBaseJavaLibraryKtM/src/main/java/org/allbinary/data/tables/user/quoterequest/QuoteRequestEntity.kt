@@ -233,7 +233,7 @@ open fun createTable()
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
-    var result: String = dropTable.toCharArray().concatToString()
+    var result: String = dropTable.toCharArray()
 
 
 

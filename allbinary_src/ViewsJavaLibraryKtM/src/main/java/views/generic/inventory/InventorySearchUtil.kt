@@ -331,7 +331,7 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
         while(iter.hasNext())
         {
-    var product: String = .concatToString()
+    var product: String = .toCharArray()
 
 
     var itemInterface: ItemInterface = inventoryEntityInterface!!.getItem(product)!!

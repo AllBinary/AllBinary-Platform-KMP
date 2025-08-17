@@ -27,6 +27,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+        import kotlin.reflect.full.createInstance
+        
 import java.lang.reflect.Constructor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.java.anyType.ConstructorUtil
@@ -82,7 +84,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this::class.newInstance()
+                        return this::class.createInstance()
 } catch(e: LicensingException)
             {
     

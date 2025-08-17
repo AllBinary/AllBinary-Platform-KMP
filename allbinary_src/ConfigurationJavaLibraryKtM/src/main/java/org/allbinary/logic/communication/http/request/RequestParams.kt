@@ -141,7 +141,7 @@ stringBuffer!!.append(key)
 stringBuffer!!.append(VALUE)
 stringBuffer!!.append(values[0]!!)
 logUtil!!.put(stringBuffer!!.toString(), this, "toXmlNode(document)")
-node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.concatToString(), .concatToString()))
+node.appendChild(ModDomHelper.createNameValueNodes(document, RequestData.PARAMETER, key.toCharArray().concatToString(), .toCharArray()))
 }
 
 
@@ -196,7 +196,7 @@ open fun toHashMap()
 
     var values: Array<String?> = map.get(key) as Array<String?>
 
-hashMap!!.put(key.concatToString(), .concatToString())
+hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
 }
 
 stringBuffer!!.delete(0, stringBuffer!!.length())

@@ -231,8 +231,8 @@ centsStr= "00"
                                     }
                                 
                         else {
-                            dollarStr= substring.toCharArray().concatToString()
-centsStr= substring.toCharArray().concatToString()
+                            dollarStr= substring.toCharArray()
+centsStr= substring.toCharArray()
 
                         }
                             
@@ -274,7 +274,7 @@ override fun toString()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return convertUnitsTo.toCharArray().concatToString()
+                        return convertUnitsTo.toCharArray()
 }
 
 

@@ -63,7 +63,7 @@ open fun addItem(id: String, num: String)
                         
                                     {
                                     
-    var oldNumStr: String = .concatToString()
+    var oldNumStr: String = .toCharArray()
 
 
     var oldNumInt: Integer = Integer(Integer.valueOf(oldNumStr))!!
@@ -161,7 +161,7 @@ open fun getTotalWeight()
                         for (index in 0 until size)
 
 
-        {product= .concatToString()
+        {product= .toCharArray()
 weightFloat= Float(InventoryEntity().
                             getWeight(product))
 weightFloat= Float(getNumberOf(product)!!.toFloat() *weightFloat!!.toFloat())
@@ -272,7 +272,7 @@ open fun getSubTotal()
 
 
         {
-    var product: String = .concatToString()
+    var product: String = .toCharArray()
 
 
     var itemInterface: ItemInterface = inventoryEntity!!.getItem(product)!!

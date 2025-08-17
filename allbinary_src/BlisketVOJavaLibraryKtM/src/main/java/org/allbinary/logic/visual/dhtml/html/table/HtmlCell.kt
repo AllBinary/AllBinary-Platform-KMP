@@ -62,10 +62,10 @@ public constructor        (before: String, width: String, height: String, after:
 
 
                     var after = after
-this.before= before.concatToString()
-this.after= after.concatToString()
-this.height= height.concatToString()
-this.width= width.concatToString()
+this.before= before.toCharArray().concatToString()
+this.after= after.toCharArray().concatToString()
+this.height= height.toCharArray().concatToString()
+this.width= width.toCharArray().concatToString()
 addAttribute(HEIGHT, this.height)
 addAttribute(WIDTH, this.width)
 }

@@ -109,7 +109,7 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 
     var values: Array<String?> = map.get(key) as Array<String?>
 
-hashMap!!.put(key.concatToString(), .concatToString())
+hashMap!!.put(key.toCharArray().concatToString(), .toCharArray())
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("key: ")
 stringBuffer!!.append(key)

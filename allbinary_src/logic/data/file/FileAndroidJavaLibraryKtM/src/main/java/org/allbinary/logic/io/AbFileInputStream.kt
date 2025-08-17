@@ -76,9 +76,7 @@ override fun markSupported()
                         return this.fileInputStream!!.available()
 }
 
-
-                @Throws(IOException::class)
-            override fun close()
+override fun close()
         //nullable = true from not(false or (false and true)) = true
 {this.fileInputStream!!.close()
 }

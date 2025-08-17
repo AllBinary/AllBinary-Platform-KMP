@@ -145,7 +145,7 @@ public constructor        (transformInfoInterface: TransformInfoInterface, categ
                     var categoryPropertiesHashMap = categoryPropertiesHashMap
 this.transformInfoInterface= transformInfoInterface
 
-    var categoryPath: String = .toCharArray().concatToString()
+    var categoryPath: String = .toCharArray()
 
 this.abPath= AbPath(categoryPath)
 this.category= PathUtil.getInstance()!!.getNameFromPath(categoryPath)

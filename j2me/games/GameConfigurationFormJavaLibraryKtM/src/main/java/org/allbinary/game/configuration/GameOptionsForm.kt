@@ -85,8 +85,6 @@ this.addTextFieldsIfSimulated()
 }
 
 
-                @Throws(Exception::class)
-            
 open fun close(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {

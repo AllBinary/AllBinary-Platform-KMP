@@ -296,8 +296,6 @@ graphics.drawImage(this.imageToShow, x, y, anchor)
 }
 
 
-                @Throws(Exception::class)
-            
 open fun close()
         //nullable = true from not(false or (false and true)) = true
 {super.close()
