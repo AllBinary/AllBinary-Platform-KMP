@@ -72,34 +72,10 @@
             <optional>true</optional>
         </dependency>
 
-<!--
-
-        <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemu-javaseKt</artifactId>
-            <version>2.0.4</version>
-            <optional>true</optional>
-        </dependency>
-
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>android</artifactId>
-            <version>1.5_r3</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.google.android</groupId>
-            <artifactId>android</artifactId>
-            <version>1.5_r3</version>
-            <scope>provided</scope>
-            <classifier>sources</classifier>
-        </dependency>
--->
-
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib</artifactId>
-            <version>2.1.0</version>
+            <version>2.2.10</version>
         </dependency>
 
     </dependencies>
@@ -110,7 +86,7 @@
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
-                <version>2.1.0</version>
+                <version>2.2.10</version>
                 <executions>
                     <execution>
                         <id>compile</id>
