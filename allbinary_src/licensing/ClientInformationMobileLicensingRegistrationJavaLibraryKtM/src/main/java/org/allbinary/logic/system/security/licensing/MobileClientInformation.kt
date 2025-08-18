@@ -44,10 +44,7 @@ open public class MobileClientInformation : AbeClientInformation {
     val ANDROID_DESC: String = "Android" +DESC
 
         }
-            
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-            
-public constructor        (name: String, version: String, specialName: String, shortName: String)                        
+            public constructor        (name: String, version: String, specialName: String, shortName: String)                        
 
                             : super(name, version, StringMaker().
                             append(specialName)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(PartnerIdentifierFileUtil.getInstance()!!.get())!!.toString(), shortName){
@@ -67,7 +64,11 @@ public constructor        (name: String, version: String, specialName: String, s
                             //For kotlin this is before the body of the constructor.
                     
 
-    var number: String = this.getSpecialName()!!.substring(this.getSpecialName()!!.length() -1)!!
+    var string: String = this.getSpecialName()!!
+            
+
+
+    var number: String = string.substring(string.length -1)!!
             
 
 
@@ -101,8 +102,7 @@ public constructor        (name: String, version: String, specialName: String, s
                             
 }
 
-
-open fun toHashtable()
+override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
     var hashtable: Hashtable<Any, Any> = super.toHashtable()!!

@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class PreLogUtil
             : Object
@@ -44,8 +45,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
 
 
                     var functionName = functionName
-put(specialMessage, anyType, functionName, 
-                            null)
+put(specialMessage, anyType, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
@@ -102,8 +102,7 @@ open fun put(specialMessage: String, className: String, functionName: String)
 
 
                     var functionName = functionName
-put(specialMessage, className, functionName, 
-                            null)
+put(specialMessage, className, functionName, NullUtil.getInstance()!!.NULL_OBJECT)
 }
 
 
