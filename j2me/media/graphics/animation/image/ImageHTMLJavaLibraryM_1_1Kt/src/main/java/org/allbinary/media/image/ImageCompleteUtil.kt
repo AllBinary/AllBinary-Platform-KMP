@@ -91,7 +91,7 @@ open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
     var playnImage: PlaynImage = image as PlaynImage
 
 
-    var playnCoreImage: playn.core.Image = playnImage!!.getImage() as Image
+    var playnCoreImage: playn.core.Image = playnImage!!.getImage() as playn.core.Image
 
 
     

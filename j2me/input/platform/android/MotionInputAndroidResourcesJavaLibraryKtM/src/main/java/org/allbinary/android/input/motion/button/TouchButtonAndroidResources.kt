@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -50,8 +50,7 @@ open public class TouchButtonAndroidResources : Init {
             public constructor() : super()
             {
             }            
-        
-open fun init()
+        override fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
@@ -62,7 +61,7 @@ open fun init()
             
 
 
-    var RESOURCE_STRING_ARRAY: Array<TouchButtonResource?> = arrayOf(TouchButtonBlankResource.getInstance(), ,TouchButtonGenericActionResource.getInstance(), ,TouchButtonStartResource.getInstance(), ,TouchButtonUpResource.getInstance(), ,TouchButtonDownResource.getInstance(), ,TouchButtonTurnLeftResource.getInstance(), ,TouchButtonTurnRightResource.getInstance(), ,TouchButtonStrafeLeftResource.getInstance(), ,TouchButtonStrafeRightResource.getInstance())
+    var RESOURCE_STRING_ARRAY: Array<TouchButtonResource?> = arrayOf(TouchButtonBlankResource.getInstance(), TouchButtonGenericActionResource.getInstance(), TouchButtonStartResource.getInstance(), TouchButtonUpResource.getInstance(), TouchButtonDownResource.getInstance(), TouchButtonTurnLeftResource.getInstance(), TouchButtonTurnRightResource.getInstance(), TouchButtonStrafeLeftResource.getInstance(), TouchButtonStrafeRightResource.getInstance())
 
 
     var RESOURCE_ARRAY: IntArray = IntArray(RESOURCE_STRING_ARRAY.size)
@@ -72,21 +71,21 @@ open fun init()
                         if(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE == 128)
                         
                                     {
-                                    RESOURCE_ARRAY[0]= androidResources!!.raw!!.touch_button_128_by_128
-RESOURCE_ARRAY[1]= androidResources!!.raw!!.touch_button_generic_action_128_by_128
-RESOURCE_ARRAY[2]= androidResources!!.raw!!.touch_button_start_128_by_128
-RESOURCE_ARRAY[3]= androidResources!!.raw!!.touch_button_up_arrow_128_by_128
-RESOURCE_ARRAY[4]= androidResources!!.raw!!.touch_button_down_arrow_128_by_128
-RESOURCE_ARRAY[5]= androidResources!!.raw!!.touch_button_turn_left_arrow_128_by_128
-RESOURCE_ARRAY[6]= androidResources!!.raw!!.touch_button_turn_right_arrow_128_by_128
-RESOURCE_ARRAY[7]= androidResources!!.raw!!.touch_button_strafe_left_arrow_128_by_128
-RESOURCE_ARRAY[8]= androidResources!!.raw!!.touch_button_strafe_right_arrow_128_by_128
+                                    RESOURCE_ARRAY[0]= androidResources!!.raw.touch_button_128_by_128
+RESOURCE_ARRAY[1]= androidResources!!.raw.touch_button_generic_action_128_by_128
+RESOURCE_ARRAY[2]= androidResources!!.raw.touch_button_start_128_by_128
+RESOURCE_ARRAY[3]= androidResources!!.raw.touch_button_up_arrow_128_by_128
+RESOURCE_ARRAY[4]= androidResources!!.raw.touch_button_down_arrow_128_by_128
+RESOURCE_ARRAY[5]= androidResources!!.raw.touch_button_turn_left_arrow_128_by_128
+RESOURCE_ARRAY[6]= androidResources!!.raw.touch_button_turn_right_arrow_128_by_128
+RESOURCE_ARRAY[7]= androidResources!!.raw.touch_button_strafe_left_arrow_128_by_128
+RESOURCE_ARRAY[8]= androidResources!!.raw.touch_button_strafe_right_arrow_128_by_128
 
     
                         if(OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan())
                         
                                     {
-                                    resourceUtil!!.addResource(ouya_o.HINT())
+                                    resourceUtil!!.addResource(RESOURCE_STRING_ARRAY[2]!!.HINT, Integer(Integer.valueOf(androidResources!!.raw.ouya_o)))
 
                                     }
                                 
@@ -94,15 +93,15 @@ RESOURCE_ARRAY[8]= androidResources!!.raw!!.touch_button_strafe_right_arrow_128_
                                     }
                                 
                         else {
-                            RESOURCE_ARRAY[0]= androidResources!!.raw!!.touch_button_64_by_64
-RESOURCE_ARRAY[1]= androidResources!!.raw!!.touch_button_generic_action_64_by_64
-RESOURCE_ARRAY[2]= androidResources!!.raw!!.touch_button_start_64_by_64
-RESOURCE_ARRAY[3]= androidResources!!.raw!!.touch_button_up_arrow_64_by_64
-RESOURCE_ARRAY[4]= androidResources!!.raw!!.touch_button_down_arrow_64_by_64
-RESOURCE_ARRAY[5]= androidResources!!.raw!!.touch_button_turn_left_arrow_64_by_64
-RESOURCE_ARRAY[6]= androidResources!!.raw!!.touch_button_turn_right_arrow_64_by_64
-RESOURCE_ARRAY[7]= androidResources!!.raw!!.touch_button_strafe_left_arrow_64_by_64
-RESOURCE_ARRAY[8]= androidResources!!.raw!!.touch_button_strafe_right_arrow_64_by_64
+                            RESOURCE_ARRAY[0]= androidResources!!.raw.touch_button_64_by_64
+RESOURCE_ARRAY[1]= androidResources!!.raw.touch_button_generic_action_64_by_64
+RESOURCE_ARRAY[2]= androidResources!!.raw.touch_button_start_64_by_64
+RESOURCE_ARRAY[3]= androidResources!!.raw.touch_button_up_arrow_64_by_64
+RESOURCE_ARRAY[4]= androidResources!!.raw.touch_button_down_arrow_64_by_64
+RESOURCE_ARRAY[5]= androidResources!!.raw.touch_button_turn_left_arrow_64_by_64
+RESOURCE_ARRAY[6]= androidResources!!.raw.touch_button_turn_right_arrow_64_by_64
+RESOURCE_ARRAY[7]= androidResources!!.raw.touch_button_strafe_left_arrow_64_by_64
+RESOURCE_ARRAY[8]= androidResources!!.raw.touch_button_strafe_right_arrow_64_by_64
 
                         }
                             
@@ -113,7 +112,7 @@ RESOURCE_ARRAY[8]= androidResources!!.raw!!.touch_button_strafe_right_arrow_64_b
                         for (index in 0 until RESOURCE_ARRAY.size)
 
 
-        {resourceUtil!!.addResource(.RESOURCE())
+        {resourceUtil!!.addResource(RESOURCE_STRING_ARRAY[index]!!.RESOURCE, Integer(Integer.valueOf(RESOURCE_ARRAY[index]!!)))
 }
 
 }

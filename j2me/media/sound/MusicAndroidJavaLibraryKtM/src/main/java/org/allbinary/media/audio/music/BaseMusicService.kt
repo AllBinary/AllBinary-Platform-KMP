@@ -21,9 +21,11 @@ import android.app.Service
 import android.content.Intent
 import android.media.MediaPlayer
 import android.os.IBinder
+import org.allbinary.android.NullAndroidCanvas
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStateStrings
 import org.allbinary.string.CommonStrings
+import org.allbinary.thread.NullRunnable
 
 open public class BaseMusicService : Service {
         
@@ -46,17 +48,16 @@ open public class BaseMusicService : Service {
 
     private val WAITING_FOR_MUSIC_TO_END: String = "Waiting for music to end"
 
-    private var player: MediaPlayer
+    private var player: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
 
     private var songId: Int =  -1
 
     private var leftVolume: Int =  -1
 
     private var rightVolume: Int =  -1
-
-open fun onBind(intent: Intent)
+override fun onBind(intent: Intent)
         //nullable = true from not(false or (false and false)) = true
-: IBinder{
+: IBinder?{
 
                     var intent = intent
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.BIND)
@@ -67,14 +68,12 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.BIND)
                         return null
 }
 
-
-open fun onCreate()
+override fun onCreate()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.CREATE)
 }
 
-
-open fun onDestroy()
+override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
 
@@ -92,8 +91,7 @@ player.release()
                                 
 }
 
-
-open fun onStart(intent: Intent, startid: Int)
+override fun onStart(intent: Intent, startid: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -105,8 +103,7 @@ onStartCommand(intent)
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.START)
 }
 
-
-open fun onStartCommand(intent: Intent, flags: Int, startId: Int)
+override fun onStartCommand(intent: Intent, flags: Int, startId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Int{
 
@@ -175,10 +172,9 @@ rightVolume= intent.getIntExtra(musicStrings!!.RIGHT_VOLUME,  -1)
 
 logUtil!!.put(ALREADY_PLAYING, this, commonStateStrings!!.ON_START_COMMAND)
 
-    var runnable: Runnable = object: Runnable()
+    var runnable: Runnable = object: NullRunnable()
                                 {
-                                
-open fun run()
+                                override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
         try {

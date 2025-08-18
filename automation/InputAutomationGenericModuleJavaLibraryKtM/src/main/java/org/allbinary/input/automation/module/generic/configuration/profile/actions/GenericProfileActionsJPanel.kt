@@ -214,7 +214,7 @@ this.setGenericProfileActionJPanel(GenericProfileActionJPanel())
 this.getGenericProfileActionJPanel()!!.setGenericProfileAction(genericProfileAction)
 this.getGenericProfileActionJPanel()!!.updateProfileActionUI()
 
-    var layout: javax.swing.GroupLayout = this.blankGenericProfileActionJPanel!!.getLayout() as GroupLayout
+    var layout: javax.swing.GroupLayout = this.blankGenericProfileActionJPanel!!.getLayout() as javax.swing.GroupLayout
 
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

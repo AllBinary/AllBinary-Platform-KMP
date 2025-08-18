@@ -123,7 +123,7 @@ open fun scale(image: Image, width: Int, height: Int)
                                     
     var originalHTMLImage: PlaynMutableImage = image as PlaynMutableImage
 
-originalPlayNImage= originalHTMLImage!!.getImage() as Image
+originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
 
                                     }
                                 
@@ -131,7 +131,7 @@ originalPlayNImage= originalHTMLImage!!.getImage() as Image
                             
     var originalHTMLImage: PlaynImmutableImage = image as PlaynImmutableImage
 
-originalPlayNImage= originalHTMLImage!!.getImage() as Image
+originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
 
                         }
                             

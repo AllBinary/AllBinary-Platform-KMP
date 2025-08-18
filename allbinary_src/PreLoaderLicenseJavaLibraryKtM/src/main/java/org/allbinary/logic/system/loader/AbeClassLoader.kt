@@ -200,7 +200,7 @@ myClass= defineClass(name, classBytes, 0, classBytes!!.size)
 
                                     }
                                 
-classes.put(name, myClass)
+classes.put(name, myClass::class.java)
 
                                     }
                                 
@@ -209,7 +209,7 @@ classes.put(name, myClass)
 
                         }
                             
-resolveClass(myClass)
+resolveClass(myClass::class.java)
 
 
 
@@ -427,7 +427,7 @@ myClass= defineClass(name, classBytes, 0, classBytes!!.size)
 
                                     }
                                 
-classes.put(name, myClass)
+classes.put(name, myClass::class.java)
 
                                     }
                                 
@@ -444,7 +444,7 @@ classes.put(name, myClass)
 
                         }
                             
-resolveClass(myClass)
+resolveClass(myClass::class.java)
 
 
 

@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import android.graphics.Canvas
+import android.media.MediaPlayer
 
 open public class NullAndroidCanvas
             : Object
@@ -35,6 +36,8 @@ open public class NullAndroidCanvas
         companion object {
             
     val NULL_CANVAS: Canvas = Canvas()
+
+    val NULL_MEDIA_PLAYER: MediaPlayer = MediaPlayer()
 
         }
             

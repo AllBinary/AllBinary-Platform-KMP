@@ -25,12 +25,19 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.logic.NullUtil
 
 open public class AllBinaryEventObject
             : Object
          {
         
 
+        companion object {
+            
+    val NULL_EVENT: AllBinaryEventObject = AllBinaryEventObject(NullUtil.getInstance()!!.NULL_OBJECT)
+
+        }
+            
     private var source: Any
 public constructor        (anyType: Any)
             : super()

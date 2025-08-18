@@ -122,7 +122,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
                                     }
                                 
 
-    var originalSwtImage: org.eclipse.swt.graphics.Image = (originalImage2!!.getImage() as Image)
+    var originalSwtImage: org.eclipse.swt.graphics.Image = (originalImage2!!.getImage() as org.eclipse.swt.graphics.Image)
 
 
     var gc: GC = 
@@ -142,7 +142,7 @@ openGLESImage!!.openGLESImageProperties!!.angle= totalAngle
                                     
     var swtImage: SwtMutableImage = image as SwtMutableImage
 
-copySwtImage= swtImage!!.getImage() as Image
+copySwtImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 gc= swtImage!!.getGc()
 imageSwtRotationUtil!!.rotateImage(originalSwtImage, copySwtImage, gc, totalAngle)
 

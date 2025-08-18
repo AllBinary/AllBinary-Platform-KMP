@@ -91,7 +91,7 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
 
 stringBuffer!!.append(lineBreak)
 stringBuffer!!.append("Class: ")
-stringBuffer!!.append(myClass!!.getName())
+stringBuffer!!.append(myClass!!.qualifiedName!!)
 stringBuffer!!.append(" uses ")
 stringBuffer!!.append(classes.size)
 stringBuffer!!.append(" other classes")
@@ -111,11 +111,11 @@ stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(lineBreak)
 }
 
-stringBuffer!!.append(InterfaceUtil.viewAll(myClass, lineBreak))
+stringBuffer!!.append(InterfaceUtil.viewAll(myClass::class.java, lineBreak))
 stringBuffer!!.append(lineBreak)
-stringBuffer!!.append(ConstructorUtil.viewAll(myClass, lineBreak))
+stringBuffer!!.append(ConstructorUtil.viewAll(myClass::class.java, lineBreak))
 stringBuffer!!.append(lineBreak)
-stringBuffer!!.append(MethodUtil.viewAll(myClass, lineBreak))
+stringBuffer!!.append(MethodUtil.viewAll(myClass::class.java, lineBreak))
 
 
 

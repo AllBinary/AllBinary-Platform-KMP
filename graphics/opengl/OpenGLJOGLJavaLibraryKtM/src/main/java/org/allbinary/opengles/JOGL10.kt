@@ -68,7 +68,7 @@ public constructor        (gl: com.jogamp.opengl.GL)
 
                     var gl = gl
 
-    var gl2: com.jogamp.opengl.GL2 = gl as GL2
+    var gl2: com.jogamp.opengl.GL2 = gl as com.jogamp.opengl.GL2
 
 this.gl10= gl2
 this.glu= GLU.createGLU(this.gl10)

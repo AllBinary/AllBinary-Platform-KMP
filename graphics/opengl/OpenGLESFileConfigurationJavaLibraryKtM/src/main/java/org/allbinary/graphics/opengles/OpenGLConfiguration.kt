@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.Closeable
 import java.io.DataInputStream
 import java.io.InputStream
 import java.io.OutputStream
@@ -35,13 +36,13 @@ import org.allbinary.logic.io.file.FileFactory
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.game.configuration.event.ChangedGameFeatureListener
 import org.allbinary.game.configuration.feature.Feature
 import org.allbinary.game.configuration.feature.Features
 import org.allbinary.game.configuration.feature.MainFeatureFactory
+import org.allbinary.logic.io.NullCloseable
 
 open public class OpenGLConfiguration
             : Object
@@ -302,9 +303,7 @@ PreLogUtil.put("Read Configuration: " +this.toString(), this, "read")
 open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
-    var dataOutputStream: AbDataOutputStream = 
-                null
-            
+    var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
 
 
         try {
@@ -317,7 +316,10 @@ open fun write()
     var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
             
 
-dataOutputStream= AbDataOutputStream(fileOutputStream)
+
+    var dataOutputStream: AbDataOutputStream = AbDataOutputStream(fileOutputStream)
+
+closeable= dataOutputStream
 
     
                         if(this.isOpenGL())
@@ -337,9 +339,15 @@ dataOutputStream!!.writeUTF(this.getType()!!.getName())
 dataOutputStream!!.writeUTF(this.getImageColor()!!.getName())
 dataOutputStream!!.writeUTF(this.getColor()!!.getName())
 dataOutputStream!!.flush()
+} catch(e: Exception)
+            {
+
+
+                            throw e
+}
 
          finally {
-            StreamUtil.getInstance()!!.close(dataOutputStream)
+            StreamUtil.getInstance()!!.close(closeable)
 
          }
         

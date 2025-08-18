@@ -29,6 +29,7 @@ import javax.microedition.media.MediaException
 import javax.microedition.media.Player
 import javax.microedition.media.PlayerListener
 import android.media.MediaPlayer
+import org.allbinary.android.NullAndroidCanvas
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
@@ -41,14 +42,12 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
             
     val NULL_ANDROID_MEDIA_PLAYER_WRAPPER: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper()
 
-    private val NULL_MEDIA_PLAYER: MediaPlayer = MediaPlayer()
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    private var mediaPlayer: MediaPlayer = AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER
+    private var mediaPlayer: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
 private constructor        (){}
 
 public constructor        (resource: String){
@@ -63,7 +62,7 @@ public constructor        (resource: String){
 this.setMediaPlayer(MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil!!.getResourceId(resource)!!.toInt()))
 
     
-                        if(this.getMediaPlayer() == AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER)
+                        if(this.getMediaPlayer() == NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
                                     
@@ -93,7 +92,7 @@ override fun setLoopCount(count: Int)
 super.setLoopCount(count)
 
     
-                        if(this.mediaPlayer != AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER)
+                        if(this.mediaPlayer != NullAndroidCanvas.NULL_MEDIA_PLAYER)
                         
                                     {
                                     
@@ -161,7 +160,7 @@ override fun close()
 {
         try {
             this.mediaPlayer!!.release()
-this.mediaPlayer= AndroidMediaPlayerWrapper.NULL_MEDIA_PLAYER
+this.mediaPlayer= NullAndroidCanvas.NULL_MEDIA_PLAYER
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 }

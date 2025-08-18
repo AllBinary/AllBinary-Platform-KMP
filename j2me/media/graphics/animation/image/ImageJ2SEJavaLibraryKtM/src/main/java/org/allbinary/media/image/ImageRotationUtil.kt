@@ -94,7 +94,7 @@ open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
                                     
     var originalJ2SEImage: J2SEMutableImage = originalImage as J2SEMutableImage
 
-originalAwtImage= originalJ2SEImage!!.getImage() as Image
+originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
                                     }
                                 
@@ -102,7 +102,7 @@ originalAwtImage= originalJ2SEImage!!.getImage() as Image
                             
     var originalJ2SEImage: J2SEImmutableImage = originalImage as J2SEImmutableImage
 
-originalAwtImage= originalJ2SEImage!!.getImage() as Image
+originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
                         }
                             
@@ -150,7 +150,7 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
                                     
     var originalJ2SEImage: J2SEMutableImage = originalImage as J2SEMutableImage
 
-originalAwtImage= originalJ2SEImage!!.getImage() as Image
+originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
                                     }
                                 
@@ -158,7 +158,7 @@ originalAwtImage= originalJ2SEImage!!.getImage() as Image
                             
     var originalJ2SEImage: J2SEImmutableImage = originalImage as J2SEImmutableImage
 
-originalAwtImage= originalJ2SEImage!!.getImage() as Image
+originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
                         }
                             

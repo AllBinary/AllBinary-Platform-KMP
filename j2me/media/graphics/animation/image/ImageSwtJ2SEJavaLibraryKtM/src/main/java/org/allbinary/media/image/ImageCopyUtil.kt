@@ -717,7 +717,7 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 }
 
-getImage = mutableImage2!!.getImage()getImage as Image
+getImage = mutableImage2!!.getImage()getImage as org.eclipse.swt.graphics.Image
 getImage.
                     getImageData()!!.setPixels(0, 0, image.getWidth(), newPixelArray, 0)
 

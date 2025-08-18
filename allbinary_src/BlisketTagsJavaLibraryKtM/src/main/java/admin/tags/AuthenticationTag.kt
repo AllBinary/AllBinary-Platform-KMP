@@ -350,7 +350,7 @@ open fun isRoleValid()
             
 
 
-    var methodParams: Array<KClass<*>?> = arrayOf(this.userName!!.::class, ,this.password.::class, ,this.roles.::class)
+    var methodParams: Array<KClass<*>?> = arrayOf(this.userName!!.::class, this.password.::class, this.roles.::class)
 
 
     var method: Method = addressHelperClass!!.getMethod("isRoleValid", methodParams)!!
@@ -584,7 +584,7 @@ open fun processIfNewLogin()
             
 
 
-    var methodParams: Array<KClass<*>?> = arrayOf(this.userName!!.::class, ,this.password.::class)
+    var methodParams: Array<KClass<*>?> = arrayOf(this.userName!!.::class, this.password.::class)
 
 
     var method: Method = helperClass!!.getMethod("processIfNewLogin", methodParams)!!

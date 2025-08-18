@@ -22,7 +22,7 @@ open public class ViewSwapper
 
         companion object {
             
-    private val NULL_VIEW_ARRAY: Array<View?> = arrayOfNulls(0)
+    val NULL_VIEW_ARRAY: Array<View?> = arrayOfNulls(0)
 
         }
             

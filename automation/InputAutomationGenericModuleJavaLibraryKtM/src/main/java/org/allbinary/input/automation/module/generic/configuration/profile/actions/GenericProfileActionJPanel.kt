@@ -57,7 +57,7 @@ this.setGenericProfileActionScriptJPanel(genericProfileActionScriptJPanel)
 this.getGenericProfileActionScriptJPanel()!!.setGenericProfileActionScript(this.getGenericProfileAction()!!.getGenericProfileActionScript())
 this.getGenericProfileActionScriptJPanel()!!.updateJTree()
 
-    var layout: javax.swing.GroupLayout = this.blankProfileActionScriptJPanel!!.getLayout() as GroupLayout
+    var layout: javax.swing.GroupLayout = this.blankProfileActionScriptJPanel!!.getLayout() as javax.swing.GroupLayout
 
 layout.setHorizontalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 395, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionScriptJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
 layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)!!.addGap(0, 256, Short.MAX_VALUE)!!.addComponent(this.getGenericProfileActionScriptJPanel(), javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))

@@ -103,7 +103,7 @@ open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, bas
                                     
     var swtImage: SwtMutableImage = image as SwtMutableImage
 
-newBufferedImage= swtImage!!.getImage() as Image
+newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                                     }
                                 
@@ -111,7 +111,7 @@ newBufferedImage= swtImage!!.getImage() as Image
                             
     var swtImage: SwtImmutableImage = image as SwtImmutableImage
 
-newBufferedImage= swtImage!!.getImage() as Image
+newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         }
                             
@@ -245,7 +245,7 @@ openGLESImage!!.openGLESImageProperties!!.bluef= basicColor!!.getBlueComponent()
                                     
     var swtImage: SwtMutableImage = image as SwtMutableImage
 
-newBufferedImage= swtImage!!.getImage() as Image
+newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                                     }
                                 
@@ -253,7 +253,7 @@ newBufferedImage= swtImage!!.getImage() as Image
                             
     var swtImage: SwtImmutableImage = image as SwtImmutableImage
 
-newBufferedImage= swtImage!!.getImage() as Image
+newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         }
                             
@@ -398,7 +398,7 @@ open fun setAlpha(image: Image, alphaInt: Int)
                                     
     var swtImage: SwtMutableImage = image as SwtMutableImage
 
-newBufferedImage= swtImage!!.getImage() as Image
+newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                                     }
                                 
@@ -406,7 +406,7 @@ newBufferedImage= swtImage!!.getImage() as Image
                             
     var swtImage: SwtImmutableImage = image as SwtImmutableImage
 
-newBufferedImage= swtImage!!.getImage() as Image
+newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         }
                             

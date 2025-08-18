@@ -16,6 +16,7 @@ import org.allbinary.android.AndroidServicesUtil
 import org.allbinary.data.resource.ResourceUtil
 import org.allbinary.logic.communication.log.PreLogUtil
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.media.audio.NoSound
 import org.allbinary.media.audio.Sound
 import org.allbinary.string.CommonStateStrings
 import org.allbinary.string.CommonStrings
@@ -61,9 +62,11 @@ open public class MusicManager
 
     private val songList: BasicArrayList
 
-    private var currentSongSound: Sound
+    private var currentSongSound: Sound = NoSound.getInstance()!!
+            
 
-    private var nextSongSound: Sound
+    private var nextSongSound: Sound = NoSound.getInstance()!!
+            
 
     private var leftVolume: Int = 100
 
@@ -82,7 +85,7 @@ public constructor        (musicServiceClass: KClass<*>, songList: BasicArrayLis
                     var songList = songList
 PreLogUtil.put(commonStateStrings!!.CONTEXT +resourceUtil!!.getContext(), this, commonStrings!!.CONSTRUCTOR)
 this.musicServiceClass= musicServiceClass
-currentIntent= Intent(resourceUtil!!.getContext(), musicServiceClass)
+currentIntent= Intent(resourceUtil!!.getContext(), musicServiceClass::class.java)
 this.songList= songList
 }
 
@@ -98,6 +101,17 @@ open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
 
 
                     var rightVolume = rightVolume
+
+    
+                        if(nextSongSound == 
+                                    null
+                                )
+                        
+                                    {
+                                    nextSongSound= NoSound.getInstance()
+
+                                    }
+                                
 this.nextSongSound= nextSongSound
 this.leftVolume= leftVolume
 this.rightVolume= rightVolume
@@ -147,7 +161,7 @@ open fun process()
                                     {
                                     
     
-                        if(androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.getName()))
+                        if(androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.qualifiedName!!))
                         
                                     {
                                     
@@ -177,8 +191,7 @@ open fun show()
     var sound: Sound = this.songList!!.get(index) as Sound
 
 
-    var duration: Long = sound.getDuration()!!
-            
+    var duration: Long = sound.getDuration().toLong()
 
 PreLogUtil.put(StringBuilder().
                             append(PLAY)!!.append(sound.getResource())!!.append(FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)
@@ -194,9 +207,7 @@ open fun startNewSong()
             this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
 
     
-                        if(this.nextSongSound == 
-                                    null
-                                )
+                        if(this.nextSongSound == NoSound.getInstance())
                         
                                     {
                                     this.currentSongSound= basicArrayListUtil!!.getRandom(this.songList) as Sound
@@ -205,15 +216,12 @@ open fun startNewSong()
                                 
                         else {
                             this.currentSongSound= this.nextSongSound
-this.nextSongSound= 
-                                        null
-                                    
+this.nextSongSound= NoSound.getInstance()
 
                         }
                             
 
-    var duration: Long = this.currentSongSound!!.getDuration()!!
-            
+    var duration: Long = this.currentSongSound!!.getDuration().toLong()
 
 PreLogUtil.put(StringBuilder().
                             append(PLAY)!!.append(this.currentSongSound!!.getResource())!!.append(FOR)!!.append(duration)!!.toString(), this, commonStrings!!.PROCESS)

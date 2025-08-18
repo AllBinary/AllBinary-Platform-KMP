@@ -181,7 +181,7 @@ open fun setAlpha2(originalImage: Image, image: Image, imageIndex: Int, alpha: F
 
 
     var originalPlaynImage: playn.core.Image = 
-                                    (originalImage as PlaynImage).getImage() as Image
+                                    (originalImage as PlaynImage).getImage() as playn.core.Image
 
 
     var canvas: Canvas = canvasImage!!.canvas()!!
@@ -266,7 +266,7 @@ open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
                     var image = image
 
     var image3: playn.core.Image = 
-                                    (image as PlaynImage).getImage() as Image
+                                    (image as PlaynImage).getImage() as playn.core.Image
 
 
     
