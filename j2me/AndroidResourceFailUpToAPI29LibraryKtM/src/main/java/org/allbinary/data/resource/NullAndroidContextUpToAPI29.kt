@@ -14,7 +14,7 @@
         */
         
         /* Generated Code Do Not Modify */
-        package org.allbinary.android
+        package org.allbinary.data.resource
 
 
 
@@ -25,19 +25,23 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import android.graphics.Canvas
-import android.media.MediaPlayer
+import android.content.Context
 
-open public class NullAndroidCanvas
+open public class NullAndroidContextUpToAPI29
             : Object
          {
         
 
         companion object {
             
-    val NULL_CANVAS: Canvas = Canvas()
+open fun getInstance()
+        //nullable =  from not(true or (false and true)) = 
+: Context{
 
-    val NULL_MEDIA_PLAYER: MediaPlayer = MediaPlayer()
+
+                            throw RuntimeException()
+}
+
 
         }
             

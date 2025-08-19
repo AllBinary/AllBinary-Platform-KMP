@@ -66,7 +66,8 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    private var context: Context = NullAndroidContext.NULL_ANDROID_CONTEXT
+    private var context: Context = NullAndroidContextFactory.getInstance()!!
+            
 
     private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
