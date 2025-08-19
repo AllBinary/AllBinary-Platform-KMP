@@ -27,7 +27,6 @@
         
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
-import org.allbinary.logic.NullUtil
 
 open public class ExceptionUtil
             : Object

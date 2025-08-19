@@ -13,7 +13,7 @@
                 *  Created By: Travis Berthelot    
         */
         
-        /* Do not generate this file */
+        /* Generated Code Do Not Modify */
         package org.allbinary.data.resource
 
 
@@ -84,592 +84,1303 @@ open fun getInstance()
             public constructor() : super()
             {
             }            
+        override fun bindService(service: Intent, conn: ServiceConnection, flags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
 
-    override fun bindService(
-        service: Intent,
-        conn: ServiceConnection,
-        flags: Int
-    ): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun checkCallingOrSelfPermission(permission: String): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkCallingOrSelfUriPermission(
-        uri: Uri?,
-        modeFlags: Int
-    ): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkCallingPermission(permission: String): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkCallingUriPermission(
-        uri: Uri?,
-        modeFlags: Int
-    ): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkPermission(
-        permission: String,
-        pid: Int,
-        uid: Int
-    ): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkSelfPermission(permission: String): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkUriPermission(
-        uri: Uri?,
-        pid: Int,
-        uid: Int,
-        modeFlags: Int
-    ): Int {
-        throw RuntimeException()
-    }
-
-    override fun checkUriPermission(
-        uri: Uri?,
-        readPermission: String?,
-        writePermission: String?,
-        pid: Int,
-        uid: Int,
-        modeFlags: Int
-    ): Int {
-        throw RuntimeException()
-    }
-
-    override fun clearWallpaper() {
-        throw RuntimeException()
-    }
-
-    override fun createConfigurationContext(overrideConfiguration: Configuration): Context? {
-        throw RuntimeException()
-    }
-
-    override fun createContextForSplit(splitName: String?): Context? {
-        throw RuntimeException()
-    }
-
-    override fun createDeviceProtectedStorageContext(): Context? {
-        throw RuntimeException()
-    }
-
-    override fun createDisplayContext(display: Display): Context? {
-        throw RuntimeException()
-    }
-
-    override fun createPackageContext(
-        packageName: String?,
-        flags: Int
-    ): Context? {
-        throw RuntimeException()
-    }
-
-    override fun databaseList(): Array<out String?>? {
-        throw RuntimeException()
-    }
-
-    override fun deleteDatabase(name: String?): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun deleteFile(name: String?): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun deleteSharedPreferences(name: String?): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun enforceCallingOrSelfPermission(
-        permission: String,
-        message: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun enforceCallingOrSelfUriPermission(
-        uri: Uri?,
-        modeFlags: Int,
-        message: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun enforceCallingPermission(permission: String, message: String?) {
-        throw RuntimeException()
-    }
-
-    override fun enforceCallingUriPermission(
-        uri: Uri?,
-        modeFlags: Int,
-        message: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun enforcePermission(
-        permission: String,
-        pid: Int,
-        uid: Int,
-        message: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun enforceUriPermission(
-        uri: Uri?,
-        pid: Int,
-        uid: Int,
-        modeFlags: Int,
-        message: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun enforceUriPermission(
-        uri: Uri?,
-        readPermission: String?,
-        writePermission: String?,
-        pid: Int,
-        uid: Int,
-        modeFlags: Int,
-        message: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun fileList(): Array<out String?>? {
-        throw RuntimeException()
-    }
-
-    override fun getApplicationContext(): Context? {
-        throw RuntimeException()
-    }
-
-    override fun getApplicationInfo(): ApplicationInfo? {
-        throw RuntimeException()
-    }
-
-    override fun getAssets(): AssetManager? {
-        throw RuntimeException()
-    }
-
-    override fun getCacheDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getClassLoader(): ClassLoader? {
-        throw RuntimeException()
-    }
-
-    override fun getCodeCacheDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getContentResolver(): ContentResolver? {
-        throw RuntimeException()
-    }
-
-    override fun getDataDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getDatabasePath(name: String?): File? {
-        throw RuntimeException()
-    }
-
-    override fun getDir(name: String?, mode: Int): File? {
-        throw RuntimeException()
-    }
-
-    override fun getExternalCacheDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getExternalCacheDirs(): Array<out File?>? {
-        throw RuntimeException()
-    }
-
-    override fun getExternalFilesDir(type: String?): File? {
-        throw RuntimeException()
-    }
-
-    override fun getExternalFilesDirs(type: String?): Array<out File?>? {
-        throw RuntimeException()
-    }
-
-    override fun getExternalMediaDirs(): Array<out File?>? {
-        throw RuntimeException()
-    }
-
-    override fun getFileStreamPath(name: String?): File? {
-        throw RuntimeException()
-    }
-
-    override fun getFilesDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getMainLooper(): Looper? {
-        throw RuntimeException()
-    }
-
-    override fun getNoBackupFilesDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getObbDir(): File? {
-        throw RuntimeException()
-    }
-
-    override fun getObbDirs(): Array<out File?>? {
-        throw RuntimeException()
-    }
-
-    override fun getPackageCodePath(): String? {
-        throw RuntimeException()
-    }
-
-    override fun getPackageManager(): PackageManager? {
-        throw RuntimeException()
-    }
-
-    override fun getPackageName(): String? {
-        throw RuntimeException()
-    }
-
-    override fun getPackageResourcePath(): String? {
-        throw RuntimeException()
-    }
-
-    override fun getResources(): Resources? {
-        throw RuntimeException()
-    }
-
-    override fun getSharedPreferences(
-        name: String?,
-        mode: Int
-    ): SharedPreferences? {
-        throw RuntimeException()
-    }
-
-    override fun getSystemService(name: String): Any? {
-        throw RuntimeException()
-    }
-
-    override fun getSystemServiceName(serviceClass: Class<*>): String? {
-        throw RuntimeException()
-    }
-
-    override fun getTheme(): Theme? {
-        throw RuntimeException()
-    }
-
-    override fun getWallpaper(): Drawable? {
-        throw RuntimeException()
-    }
-
-    override fun getWallpaperDesiredMinimumHeight(): Int {
-        throw RuntimeException()
-    }
-
-    override fun getWallpaperDesiredMinimumWidth(): Int {
-        throw RuntimeException()
-    }
-
-    override fun grantUriPermission(
-        toPackage: String?,
-        uri: Uri?,
-        modeFlags: Int
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun isDeviceProtectedStorage(): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun moveDatabaseFrom(
-        sourceContext: Context?,
-        name: String?
-    ): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun moveSharedPreferencesFrom(
-        sourceContext: Context?,
-        name: String?
-    ): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun openFileInput(name: String?): FileInputStream? {
-        throw RuntimeException()
-    }
-
-    override fun openFileOutput(name: String?, mode: Int): FileOutputStream? {
-        throw RuntimeException()
-    }
-
-    override fun openOrCreateDatabase(
-        name: String?,
-        mode: Int,
-        factory: CursorFactory?
-    ): SQLiteDatabase? {
-        throw RuntimeException()
-    }
-
-    override fun openOrCreateDatabase(
-        name: String?,
-        mode: Int,
-        factory: CursorFactory?,
-        errorHandler: DatabaseErrorHandler?
-    ): SQLiteDatabase? {
-        throw RuntimeException()
-    }
-
-    override fun peekWallpaper(): Drawable? {
-        throw RuntimeException()
-    }
-
-    override fun registerReceiver(
-        receiver: BroadcastReceiver?,
-        filter: IntentFilter?
-    ): Intent? {
-        throw RuntimeException()
-    }
-
-    override fun registerReceiver(
-        receiver: BroadcastReceiver?,
-        filter: IntentFilter?,
-        flags: Int
-    ): Intent? {
-        throw RuntimeException()
-    }
-
-    override fun registerReceiver(
-        receiver: BroadcastReceiver?,
-        filter: IntentFilter?,
-        broadcastPermission: String?,
-        scheduler: Handler?
-    ): Intent? {
-        throw RuntimeException()
-    }
-
-    override fun registerReceiver(
-        receiver: BroadcastReceiver?,
-        filter: IntentFilter?,
-        broadcastPermission: String?,
-        scheduler: Handler?,
-        flags: Int
-    ): Intent? {
-        throw RuntimeException()
-    }
-
-    override fun removeStickyBroadcast(intent: Intent?) {
-        throw RuntimeException()
-    }
-
-    override fun removeStickyBroadcastAsUser(
-        intent: Intent?,
-        user: UserHandle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun revokeUriPermission(uri: Uri?, modeFlags: Int) {
-        throw RuntimeException()
-    }
-
-    override fun revokeUriPermission(
-        toPackage: String?,
-        uri: Uri?,
-        modeFlags: Int
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendBroadcast(intent: Intent?) {
-        throw RuntimeException()
-    }
-
-    override fun sendBroadcast(
-        intent: Intent?,
-        receiverPermission: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendBroadcastAsUser(
-        intent: Intent?,
-        user: UserHandle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendBroadcastAsUser(
-        intent: Intent?,
-        user: UserHandle?,
-        receiverPermission: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendOrderedBroadcast(
-        intent: Intent?,
-        receiverPermission: String?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendOrderedBroadcast(
-        intent: Intent,
-        receiverPermission: String?,
-        resultReceiver: BroadcastReceiver?,
-        scheduler: Handler?,
-        initialCode: Int,
-        initialData: String?,
-        initialExtras: Bundle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendOrderedBroadcastAsUser(
-        intent: Intent?,
-        user: UserHandle?,
-        receiverPermission: String?,
-        resultReceiver: BroadcastReceiver?,
-        scheduler: Handler?,
-        initialCode: Int,
-        initialData: String?,
-        initialExtras: Bundle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendStickyBroadcast(intent: Intent?) {
-        throw RuntimeException()
-    }
-
-    override fun sendStickyBroadcastAsUser(
-        intent: Intent?,
-        user: UserHandle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendStickyOrderedBroadcast(
-        intent: Intent?,
-        resultReceiver: BroadcastReceiver?,
-        scheduler: Handler?,
-        initialCode: Int,
-        initialData: String?,
-        initialExtras: Bundle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun sendStickyOrderedBroadcastAsUser(
-        intent: Intent?,
-        user: UserHandle?,
-        resultReceiver: BroadcastReceiver?,
-        scheduler: Handler?,
-        initialCode: Int,
-        initialData: String?,
-        initialExtras: Bundle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun setTheme(resid: Int) {
-        throw RuntimeException()
-    }
-
-    override fun setWallpaper(bitmap: Bitmap?) {
-        throw RuntimeException()
-    }
-
-    override fun setWallpaper(data: InputStream?) {
-        throw RuntimeException()
-    }
-
-    override fun startActivities(intents: Array<out Intent?>?) {
-        throw RuntimeException()
-    }
-
-    override fun startActivities(
-        intents: Array<out Intent?>?,
-        options: Bundle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun startActivity(intent: Intent?) {
-        throw RuntimeException()
-    }
-
-    override fun startActivity(intent: Intent?, options: Bundle?) {
-        throw RuntimeException()
-    }
-
-    override fun startForegroundService(service: Intent?): ComponentName? {
-        throw RuntimeException()
-    }
-
-    override fun startInstrumentation(
-        className: ComponentName,
-        profileFile: String?,
-        arguments: Bundle?
-    ): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun startIntentSender(
-        intent: IntentSender?,
-        fillInIntent: Intent?,
-        flagsMask: Int,
-        flagsValues: Int,
-        extraFlags: Int
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun startIntentSender(
-        intent: IntentSender?,
-        fillInIntent: Intent?,
-        flagsMask: Int,
-        flagsValues: Int,
-        extraFlags: Int,
-        options: Bundle?
-    ) {
-        throw RuntimeException()
-    }
-
-    override fun startService(service: Intent?): ComponentName? {
-        throw RuntimeException()
-    }
-
-    override fun stopService(service: Intent?): Boolean {
-        throw RuntimeException()
-    }
-
-    override fun unbindService(conn: ServiceConnection) {
-        throw RuntimeException()
-    }
-
-    override fun unregisterReceiver(receiver: BroadcastReceiver?) {
-        throw RuntimeException()
-    }
+                    var service = service
+
+
+                    var conn = conn
+
+
+                    var flags = flags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun checkCallingOrSelfPermission(permission: String)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var permission = permission
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkCallingOrSelfUriPermission(uri: Uri, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkCallingPermission(permission: String)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var permission = permission
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkCallingUriPermission(uri: Uri, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkPermission(permission: String, pid: Int, uid: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var permission = permission
+
+
+                    var pid = pid
+
+
+                    var uid = uid
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkSelfPermission(permission: String)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var permission = permission
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkUriPermission(uri: Uri, pid: Int, uid: Int, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var uri = uri
+
+
+                    var pid = pid
+
+
+                    var uid = uid
+
+
+                    var modeFlags = modeFlags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun checkUriPermission(uri: Uri, readPermission: String, writePermission: String, pid: Int, uid: Int, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var uri = uri
+
+
+                    var readPermission = readPermission
+
+
+                    var writePermission = writePermission
+
+
+                    var pid = pid
+
+
+                    var uid = uid
+
+
+                    var modeFlags = modeFlags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+
+                @Throws(IOException::class)
+            override fun clearWallpaper()
+        //nullable = true from not(false or (false and true)) = true
+{}
+
+override fun createConfigurationContext(overrideConfiguration: Configuration)
+        //nullable = true from not(false or (false and false)) = true
+: Context{
+
+                    var overrideConfiguration = overrideConfiguration
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+                @Throws(NameNotFoundException::class)
+            override fun createContextForSplit(splitName: String)
+        //nullable = true from not(false or (false and false)) = true
+: Context{
+
+                    var splitName = splitName
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun createDeviceProtectedStorageContext()
+        //nullable = true from not(false or (false and true)) = true
+: Context{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun createDisplayContext(display: Display)
+        //nullable = true from not(false or (false and false)) = true
+: Context{
+
+                    var display = display
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+                @Throws(NameNotFoundException::class)
+            override fun createPackageContext(packageName: String, flags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Context{
+
+                    var packageName = packageName
+
+
+                    var flags = flags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun databaseList()
+        //nullable = true from not(false or (false and true)) = true
+: Array<String?>{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+override fun deleteDatabase(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun deleteFile(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun deleteSharedPreferences(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun enforceCallingOrSelfPermission(permission: String, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var permission = permission
+
+
+                    var message = message
+}
+
+override fun enforceCallingOrSelfUriPermission(uri: Uri, modeFlags: Int, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+
+
+                    var message = message
+}
+
+override fun enforceCallingPermission(permission: String, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var permission = permission
+
+
+                    var message = message
+}
+
+override fun enforceCallingUriPermission(uri: Uri, modeFlags: Int, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+
+
+                    var message = message
+}
+
+override fun enforcePermission(permission: String, pid: Int, uid: Int, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var permission = permission
+
+
+                    var pid = pid
+
+
+                    var uid = uid
+
+
+                    var message = message
+}
+
+override fun enforceUriPermission(uri: Uri, pid: Int, uid: Int, modeFlags: Int, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var uri = uri
+
+
+                    var pid = pid
+
+
+                    var uid = uid
+
+
+                    var modeFlags = modeFlags
+
+
+                    var message = message
+}
+
+override fun enforceUriPermission(uri: Uri, readPermission: String, writePermission: String, pid: Int, uid: Int, modeFlags: Int, message: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var uri = uri
+
+
+                    var readPermission = readPermission
+
+
+                    var writePermission = writePermission
+
+
+                    var pid = pid
+
+
+                    var uid = uid
+
+
+                    var modeFlags = modeFlags
+
+
+                    var message = message
+}
+
+override fun fileList()
+        //nullable = true from not(false or (false and true)) = true
+: Array<String?>{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+override fun getApplicationContext()
+        //nullable = true from not(false or (false and true)) = true
+: Context{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getApplicationInfo()
+        //nullable = true from not(false or (false and true)) = true
+: ApplicationInfo{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getAssets()
+        //nullable = true from not(false or (false and true)) = true
+: AssetManager{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getCacheDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getClassLoader()
+        //nullable = true from not(false or (false and true)) = true
+: ClassLoader{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getCodeCacheDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getContentResolver()
+        //nullable = true from not(false or (false and true)) = true
+: ContentResolver{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getDataDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getDatabasePath(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: File{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getDir(name: String, mode: Int)
+        //nullable = true from not(false or (false and false)) = true
+: File{
+
+                    var name = name
+
+
+                    var mode = mode
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getExternalCacheDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getExternalCacheDirs()
+        //nullable = true from not(false or (false and true)) = true
+: Array<File?>{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+override fun getExternalFilesDir(type: String)
+        //nullable = true from not(false or (false and false)) = true
+: File{
+
+                    var type = type
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getExternalFilesDirs(type: String)
+        //nullable = true from not(false or (false and false)) = true
+: Array<File?>{
+
+                    var type = type
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+override fun getExternalMediaDirs()
+        //nullable = true from not(false or (false and true)) = true
+: Array<File?>{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+override fun getFileStreamPath(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: File{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getFilesDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getMainLooper()
+        //nullable = true from not(false or (false and true)) = true
+: Looper{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getNoBackupFilesDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getObbDir()
+        //nullable = true from not(false or (false and true)) = true
+: File{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getObbDirs()
+        //nullable = true from not(false or (false and true)) = true
+: Array<File?>{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return arrayOfNulls(0)
+}
+
+override fun getPackageCodePath()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ""
+}
+
+override fun getPackageManager()
+        //nullable = true from not(false or (false and true)) = true
+: PackageManager{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getPackageName()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ""
+}
+
+override fun getPackageResourcePath()
+        //nullable = true from not(false or (false and true)) = true
+: String{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ""
+}
+
+override fun getResources()
+        //nullable = true from not(false or (false and true)) = true
+: Resources{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getSharedPreferences(name: String, mode: Int)
+        //nullable = true from not(false or (false and false)) = true
+: SharedPreferences{
+
+                    var name = name
+
+
+                    var mode = mode
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getSystemService(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: Any{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getSystemServiceName(serviceClass: KClass<*><
+                //Otherwise - typeArguments - type - WildcardType
+>)
+        //nullable = true from not(false or (false and false)) = true
+: String{
+
+                    var serviceClass = serviceClass
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return ""
+}
+
+override fun getTheme()
+        //nullable = true from not(false or (false and true)) = true
+: Theme{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getWallpaper()
+        //nullable = true from not(false or (false and true)) = true
+: Drawable{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun getWallpaperDesiredMinimumHeight()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun getWallpaperDesiredMinimumWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0
+}
+
+override fun grantUriPermission(toPackage: String, uri: Uri, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var toPackage = toPackage
+
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+}
+
+override fun isDeviceProtectedStorage()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun moveDatabaseFrom(sourceContext: Context, name: String)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var sourceContext = sourceContext
+
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun moveSharedPreferencesFrom(sourceContext: Context, name: String)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var sourceContext = sourceContext
+
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
+                @Throws(FileNotFoundException::class)
+            override fun openFileInput(name: String)
+        //nullable = true from not(false or (false and false)) = true
+: FileInputStream{
+
+                    var name = name
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+
+                @Throws(FileNotFoundException::class)
+            override fun openFileOutput(name: String, mode: Int)
+        //nullable = true from not(false or (false and false)) = true
+: FileOutputStream{
+
+                    var name = name
+
+
+                    var mode = mode
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun openOrCreateDatabase(name: String, mode: Int, factory: CursorFactory)
+        //nullable = true from not(false or (false and false)) = true
+: SQLiteDatabase{
+
+                    var name = name
+
+
+                    var mode = mode
+
+
+                    var factory = factory
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun openOrCreateDatabase(name: String, mode: Int, factory: CursorFactory, errorHandler: DatabaseErrorHandler)
+        //nullable = true from not(false or (false and false)) = true
+: SQLiteDatabase{
+
+                    var name = name
+
+
+                    var mode = mode
+
+
+                    var factory = factory
+
+
+                    var errorHandler = errorHandler
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun peekWallpaper()
+        //nullable = true from not(false or (false and true)) = true
+: Drawable{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun registerReceiver(receiver: BroadcastReceiver, filter: IntentFilter)
+        //nullable = true from not(false or (false and false)) = true
+: Intent{
+
+                    var receiver = receiver
+
+
+                    var filter = filter
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun registerReceiver(receiver: BroadcastReceiver, filter: IntentFilter, flags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Intent{
+
+                    var receiver = receiver
+
+
+                    var filter = filter
+
+
+                    var flags = flags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun registerReceiver(receiver: BroadcastReceiver, filter: IntentFilter, broadcastPermission: String, scheduler: Handler)
+        //nullable = true from not(false or (false and false)) = true
+: Intent{
+
+                    var receiver = receiver
+
+
+                    var filter = filter
+
+
+                    var broadcastPermission = broadcastPermission
+
+
+                    var scheduler = scheduler
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun registerReceiver(receiver: BroadcastReceiver, filter: IntentFilter, broadcastPermission: String, scheduler: Handler, flags: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Intent{
+
+                    var receiver = receiver
+
+
+                    var filter = filter
+
+
+                    var broadcastPermission = broadcastPermission
+
+
+                    var scheduler = scheduler
+
+
+                    var flags = flags
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun removeStickyBroadcast(intent: Intent)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+}
+
+override fun removeStickyBroadcastAsUser(intent: Intent, user: UserHandle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var user = user
+}
+
+override fun revokeUriPermission(uri: Uri, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+}
+
+override fun revokeUriPermission(toPackage: String, uri: Uri, modeFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var toPackage = toPackage
+
+
+                    var uri = uri
+
+
+                    var modeFlags = modeFlags
+}
+
+override fun sendBroadcast(intent: Intent)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+}
+
+override fun sendBroadcast(intent: Intent, receiverPermission: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var receiverPermission = receiverPermission
+}
+
+override fun sendBroadcastAsUser(intent: Intent, user: UserHandle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var user = user
+}
+
+override fun sendBroadcastAsUser(intent: Intent, user: UserHandle, receiverPermission: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var user = user
+
+
+                    var receiverPermission = receiverPermission
+}
+
+override fun sendOrderedBroadcast(intent: Intent, receiverPermission: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var receiverPermission = receiverPermission
+}
+
+override fun sendOrderedBroadcast(intent: Intent, receiverPermission: String, resultReceiver: BroadcastReceiver, scheduler: Handler, initialCode: Int, initialData: String, initialExtras: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var receiverPermission = receiverPermission
+
+
+                    var resultReceiver = resultReceiver
+
+
+                    var scheduler = scheduler
+
+
+                    var initialCode = initialCode
+
+
+                    var initialData = initialData
+
+
+                    var initialExtras = initialExtras
+}
+
+override fun sendOrderedBroadcastAsUser(intent: Intent, user: UserHandle, receiverPermission: String, resultReceiver: BroadcastReceiver, scheduler: Handler, initialCode: Int, initialData: String, initialExtras: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var user = user
+
+
+                    var receiverPermission = receiverPermission
+
+
+                    var resultReceiver = resultReceiver
+
+
+                    var scheduler = scheduler
+
+
+                    var initialCode = initialCode
+
+
+                    var initialData = initialData
+
+
+                    var initialExtras = initialExtras
+}
+
+override fun sendStickyBroadcast(intent: Intent)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+}
+
+override fun sendStickyBroadcastAsUser(intent: Intent, user: UserHandle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var user = user
+}
+
+override fun sendStickyOrderedBroadcast(intent: Intent, resultReceiver: BroadcastReceiver, scheduler: Handler, initialCode: Int, initialData: String, initialExtras: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var resultReceiver = resultReceiver
+
+
+                    var scheduler = scheduler
+
+
+                    var initialCode = initialCode
+
+
+                    var initialData = initialData
+
+
+                    var initialExtras = initialExtras
+}
+
+override fun sendStickyOrderedBroadcastAsUser(intent: Intent, user: UserHandle, resultReceiver: BroadcastReceiver, scheduler: Handler, initialCode: Int, initialData: String, initialExtras: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var user = user
+
+
+                    var resultReceiver = resultReceiver
+
+
+                    var scheduler = scheduler
+
+
+                    var initialCode = initialCode
+
+
+                    var initialData = initialData
+
+
+                    var initialExtras = initialExtras
+}
+
+override fun setTheme(resid: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var resid = resid
+}
+
+
+                @Throws(IOException::class)
+            override fun setWallpaper(bitmap: Bitmap)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var bitmap = bitmap
+}
+
+
+                @Throws(IOException::class)
+            override fun setWallpaper(data: InputStream)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var data = data
+}
+
+override fun startActivities(intents: Array<Intent?>)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intents = intents
+}
+
+override fun startActivities(intents: Array<Intent?>, options: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intents = intents
+
+
+                    var options = options
+}
+
+override fun startActivity(intent: Intent)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+}
+
+override fun startActivity(intent: Intent, options: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var options = options
+}
+
+override fun startForegroundService(service: Intent)
+        //nullable = true from not(false or (false and false)) = true
+: ComponentName{
+
+                    var service = service
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun startInstrumentation(className: ComponentName, profileFile: String, arguments: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var className = className
+
+
+                    var profileFile = profileFile
+
+
+                    var arguments = arguments
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
+                @Throws(SendIntentException::class)
+            override fun startIntentSender(intent: IntentSender, fillInIntent: Intent, flagsMask: Int, flagsValues: Int, extraFlags: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var fillInIntent = fillInIntent
+
+
+                    var flagsMask = flagsMask
+
+
+                    var flagsValues = flagsValues
+
+
+                    var extraFlags = extraFlags
+}
+
+
+                @Throws(SendIntentException::class)
+            override fun startIntentSender(intent: IntentSender, fillInIntent: Intent, flagsMask: Int, flagsValues: Int, extraFlags: Int, options: Bundle)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var intent = intent
+
+
+                    var fillInIntent = fillInIntent
+
+
+                    var flagsMask = flagsMask
+
+
+                    var flagsValues = flagsValues
+
+
+                    var extraFlags = extraFlags
+
+
+                    var options = options
+}
+
+override fun startService(service: Intent)
+        //nullable = true from not(false or (false and false)) = true
+: ComponentName{
+
+                    var service = service
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return null
+}
+
+override fun stopService(service: Intent)
+        //nullable = true from not(false or (false and false)) = true
+: Boolean{
+
+                    var service = service
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+override fun unbindService(conn: ServiceConnection)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var conn = conn
+}
+
+override fun unregisterReceiver(receiver: BroadcastReceiver)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var receiver = receiver
+}
+
 
 }
                 

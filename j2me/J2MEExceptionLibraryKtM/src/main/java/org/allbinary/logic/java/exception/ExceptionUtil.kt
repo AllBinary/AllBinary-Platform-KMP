@@ -26,7 +26,6 @@
         import kotlin.reflect.KClass
         
 import java.io.ByteArrayOutputStream
-import org.allbinary.logic.NullUtil
 
 open public class ExceptionUtil
             : Object

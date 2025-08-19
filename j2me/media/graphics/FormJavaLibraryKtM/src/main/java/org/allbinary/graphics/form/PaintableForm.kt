@@ -31,12 +31,6 @@ open public class PaintableForm : CustomForm {
 
         }
             
-    val logUtil: LogUtil = LogUtil.getInstance()!!
-            
-
-    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
-
     val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
             
 
@@ -102,8 +96,7 @@ this.y= point.getY()
 this.formType= formType
 }
 
-
-open fun getWidth()
+override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
 

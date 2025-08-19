@@ -46,11 +46,11 @@
         <module>../EventJ2MELibraryKtM</module>
 
         <module>../../allbinary_src/LogJ2MEJavaLibraryKtM</module>
-<!--        <module>../../allbinary_src/LogAndroidJavaLibraryKtM</module>-->
+        <module>../../allbinary_src/LogAndroidJavaLibraryKtM</module>
         <module>../logging/LoggingNoneKtM</module>
         <module>../logging/LoggingJ2MEAllKtM</module>
         <module>../logging/LoggingJ2MEExceptionKtM</module>
-<!--        <module>../logging/LoggingAndroidAllKtM</module>-->
+        <module>../logging/LoggingAndroidAllKtM</module>
         <!--
         //While it is a possible dependency option it really does not fit here
         //as such it is actually build in the final POM builds instead

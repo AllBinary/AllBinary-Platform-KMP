@@ -14,10 +14,18 @@
 import javax.microedition.lcdui.Graphics
 import org.allbinary.graphics.color.BasicColor
 import org.allbinary.graphics.form.item.CustomItem
+import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringUtil
+import org.allbinary.string.CommonStrings
 
 open public class CustomForm : CustomScreen {
         
+
+    val logUtil: LogUtil = LogUtil.getInstance()!!
+            
+
+    val commonStrings: CommonStrings = CommonStrings.getInstance()!!
+            
 public constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
 
                     var title = title
@@ -130,6 +138,15 @@ open fun get(itemNum: Int)
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CustomItem.NULL_CUSTOM_ITEM
+}
+
+
+open fun getWidth()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+                            throw RuntimeException()
 }
 
 

@@ -87,7 +87,7 @@ open fun findLoadedClass1(name: String)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return classes.get(name) as Class
+                        return classes.get(name) as Class<*>
 }
 
 
