@@ -580,8 +580,7 @@ override fun keyRepeated(keyCode: Int)
 this.keyRepeated(keyCode, 0)
 }
 
-
-open fun keyPressed(keyCode: Int, deviceId: Int)
+override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -592,8 +591,7 @@ open fun keyPressed(keyCode: Int, deviceId: Int)
 this.addGameKeyEvent(keyCode, false)
 }
 
-
-open fun keyReleased(keyCode: Int, deviceId: Int)
+override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -607,8 +605,7 @@ this.removeGameKeyEvent(keyCode, false)
 
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
             
-
-open fun keyRepeated(keyCode: Int, deviceId: Int)
+override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 

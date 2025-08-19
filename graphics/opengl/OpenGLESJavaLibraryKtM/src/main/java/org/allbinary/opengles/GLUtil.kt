@@ -61,17 +61,17 @@ open fun getInstance()
         
     private val BYTES_PER_FLOAT: Int = 4
 
-open fun makeFloatBuffer3($a: Float, $b: Float, $c: Float)
+open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
         //nullable = true from not(false or (false and false)) = true
 : FloatBuffer{
 
-                    var $a = $a
+                    var p_a = p_a
 
 
-                    var $b = $b
+                    var p_b = p_b
 
 
-                    var $c = $c
+                    var p_c = p_c
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(3 *BYTES_PER_FLOAT)!!
             
@@ -81,9 +81,9 @@ b.order(ByteOrder.nativeOrder())
     var buffer: FloatBuffer = b.asFloatBuffer()!!
             
 
-buffer.put($a)
-buffer.put($b)
-buffer.put($c)
+buffer.put(p_a)
+buffer.put(p_b)
+buffer.put(p_c)
 this.position(buffer, 0)
 
 
@@ -93,20 +93,20 @@ this.position(buffer, 0)
 }
 
 
-open fun makeFloatBuffer4($a: Float, $b: Float, $c: Float, $d: Float)
+open fun makeFloatBuffer4(p_a: Float, p_b: Float, p_c: Float, p_d: Float)
         //nullable = true from not(false or (false and false)) = true
 : FloatBuffer{
 
-                    var $a = $a
+                    var p_a = p_a
 
 
-                    var $b = $b
+                    var p_b = p_b
 
 
-                    var $c = $c
+                    var p_c = p_c
 
 
-                    var $d = $d
+                    var p_d = p_d
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(4 *BYTES_PER_FLOAT)!!
             
@@ -116,10 +116,10 @@ b.order(ByteOrder.nativeOrder())
     var buffer: FloatBuffer = b.asFloatBuffer()!!
             
 
-buffer.put($a)
-buffer.put($b)
-buffer.put($c)
-buffer.put($d)
+buffer.put(p_a)
+buffer.put(p_b)
+buffer.put(p_c)
+buffer.put(p_d)
 this.position(buffer, 0)
 
 

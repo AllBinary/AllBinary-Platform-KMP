@@ -48,8 +48,7 @@ open fun getInstance()
         }
             public constructor        (){}
 
-
-open fun process(gl: GL10, anyType: Any)
+override fun process(gl: GL10, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 {
 

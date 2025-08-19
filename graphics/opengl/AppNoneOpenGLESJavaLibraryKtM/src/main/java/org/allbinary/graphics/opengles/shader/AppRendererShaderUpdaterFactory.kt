@@ -50,9 +50,9 @@ open fun getInstance()
             {
             }            
         
-    val shaderCompositeArray: Array<ShaderComposite?> = 
-                null
-            
+    private val NULL_SHADER_COMPOSITE_ARRAY: Array<ShaderComposite?> = arrayOfNulls(0)
+
+    val shaderCompositeArray: Array<ShaderComposite?> = NULL_SHADER_COMPOSITE_ARRAY
 
     private val shaderOpenGLProcessorArray: Array<ShaderOpenGLProcessor?> = arrayOfNulls(0)
 
