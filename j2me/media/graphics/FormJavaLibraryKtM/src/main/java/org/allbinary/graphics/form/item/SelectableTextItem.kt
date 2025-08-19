@@ -53,8 +53,7 @@ public constructor        (label: String, layout: Int, altText: String, backgrou
                     
 }
 
-
-open fun isFocusable()
+override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

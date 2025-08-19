@@ -56,8 +56,7 @@ public constructor        (command: Command, layout: Int, altText: String, backg
 this.command= command
 }
 
-
-open fun isFocusable()
+override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
 

@@ -97,8 +97,7 @@ open fun save()
 gameDifficultyFactory!!.setLevel(this.getSelectedId())
 }
 
-
-open fun initCommands(cmdListener: CommandListener)
+override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 {
 

@@ -88,6 +88,14 @@ this.commandStack= Stack<Any>()
 
 }
 
+
+open fun initCommands(cmdListener: CommandListener)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var cmdListener = cmdListener
+}
+
 override fun open()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(this.commonStrings!!.START, this, "open")

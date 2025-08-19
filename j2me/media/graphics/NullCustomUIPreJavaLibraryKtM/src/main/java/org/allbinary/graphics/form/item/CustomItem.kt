@@ -54,6 +54,16 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 }
 
 
+open fun isFocusable()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+
 open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
 : String{
