@@ -37,8 +37,6 @@ open public class ApplicationConfiguration
             
     private val instance: ApplicationConfiguration = ApplicationConfiguration()
 
-    private val FILE: String = "ReloadConfiguration.dat"
-
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : ApplicationConfiguration{
@@ -59,6 +57,8 @@ open fun getInstance()
     private var showTitleBar: Boolean = false
 
     private var progressBarView: Boolean = false
+
+    private val FILE: String = "ReloadConfiguration.dat"
 private constructor        ()
             : super()
         {

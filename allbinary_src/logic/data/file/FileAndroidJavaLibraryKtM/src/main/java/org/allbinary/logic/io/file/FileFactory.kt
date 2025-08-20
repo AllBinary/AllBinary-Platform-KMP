@@ -25,9 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.File
 import java.io.FileNotFoundException
 import android.content.Context
-import org.allbinary.data.resource.NullAndroidContextFactory
 import org.allbinary.data.resource.ResourceUtil
 
 open public class FileFactory
@@ -51,14 +51,13 @@ open fun getInstance()
 
         }
             
-    private var context: Context = NullAndroidContextFactory.getInstance()!!
-            
+    private var context: Context
 private constructor        (context: Context)
             : super()
         {
 
                     var context = context
-this.setContext(context)
+this.context= context
 }
 
 
@@ -85,15 +84,6 @@ open fun isFile(path: String)
                         return false
 }
 
-}
-
-
-open fun setContext(context: Context)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var context = context
-this.context= context
 }
 
 
