@@ -25,8 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.game.input.event.GameKeyEvent
-import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.input.motion.gesture.observer.MotionGestureEvent
 import org.allbinary.util.BasicArrayListUtil
 
@@ -50,7 +50,7 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(BasicArrayListUtil.getInstance()!!.getImmutableInstance(),  -1, MyCanvas.NULL_MY_CANVAS){
+                            : super(BasicArrayListUtil.getInstance()!!.getImmutableInstance(),  -1, NullCanvas.NULL_CANVAS){
 
                             //For kotlin this is before the body of the constructor.
                     

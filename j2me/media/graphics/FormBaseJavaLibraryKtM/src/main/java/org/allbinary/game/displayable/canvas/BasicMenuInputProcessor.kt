@@ -25,6 +25,8 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Canvas
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.game.input.PlayerGameInput
 import org.allbinary.graphics.displayable.MyCanvas
 import org.allbinary.input.motion.gesture.observer.BaseMotionGestureEventListener
@@ -37,8 +39,8 @@ open public class BasicMenuInputProcessor : PlayerGameInput
 
     val motionGestureEventList: BasicArrayList = BasicArrayList()
 
-    private var canvas: MyCanvas = MyCanvas.NULL_MY_CANVAS
-protected constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas)                        
+    private var canvas: Canvas = NullCanvas.NULL_CANVAS
+protected constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        
 
                             : super(gameKeyEventList, playerInputId){
 
@@ -53,7 +55,7 @@ protected constructor        (gameKeyEventList: BasicArrayList, playerInputId: I
 
                             //For kotlin this is before the body of the constructor.
                     
-this.setCanvas(gameCanvas)
+this.canvas= gameCanvas
 }
 
 override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
@@ -80,7 +82,7 @@ open fun getCanvas()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return canvas
+                        return canvas as MyCanvas
 }
 
 

@@ -25,8 +25,9 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Canvas
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.game.layer.AllBinaryGameLayerManager
-import org.allbinary.graphics.displayable.MyCanvas
 
 open public class ABToGBUtil
             : Object
@@ -54,7 +55,7 @@ open fun getInstance()
             {
             }            
         
-    var abCanvas: MyCanvas = MyCanvas.NULL_MY_CANVAS
+    var abCanvas: Canvas = NullCanvas.NULL_CANVAS
 
     var allBinaryGameLayerManager: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 

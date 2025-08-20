@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import javax.microedition.lcdui.Canvas
 import javax.microedition.lcdui.Graphics
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
@@ -42,7 +43,7 @@ open public class BufferedGameCanvasPaintHelper : ProcessPaintable {
 
         }
             
-    private var gameCanvas: MyCanvas = MyCanvas.NULL_MY_CANVAS
+    private var gameCanvas: Canvas = NullCanvas.NULL_CANVAS
 
     private val offScreenImage: Array<Image?> = arrayOfNulls(MAX_IMAGES)
 
@@ -64,7 +65,10 @@ public constructor        (gameCanvas: AllBinaryGameCanvas){
 
 override fun process()
         //nullable = true from not(false or (false and true)) = true
-{this.gameCanvas!!.draw(this.offScreenImage[this.circularIndexUtil!!.getIndex()]!!.getGraphics())
+{
+    var myCanvas: MyCanvas = (this.gameCanvas as MyCanvas)
+
+myCanvas!!.draw(this.offScreenImage[this.circularIndexUtil!!.getIndex()]!!.getGraphics())
 this.circularIndexUtil!!.next()
 this.drawCircularIndexUtil!!.next()
 }

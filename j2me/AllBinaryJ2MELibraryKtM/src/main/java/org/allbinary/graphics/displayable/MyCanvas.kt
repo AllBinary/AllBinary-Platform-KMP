@@ -45,12 +45,6 @@ open public class MyCanvas : Canvas
                 , MyCommandInterface {
         
 
-        companion object {
-            
-    val NULL_MY_CANVAS: MyCanvas = MyCanvas()
-
-        }
-            
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
