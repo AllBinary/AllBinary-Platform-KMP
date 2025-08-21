@@ -26,8 +26,8 @@
         import kotlin.reflect.KClass
         
 import android.content.Context
-import org.allbinary.data.resource.NullAndroidContextFactory
 import org.allbinary.data.resource.ResourceUtil
+import org.allbinary.logic.NullUtil
 
 open public class FileStreamFactory
             : Object
@@ -50,14 +50,13 @@ open fun getInstance()
 
         }
             
-    private var context: Context = NullAndroidContextFactory.getInstance()!!
-            
+    private var context: Any
 private constructor        (context: Context)
             : super()
         {
 
                     var context = context
-this.setContext(context)
+this.context= context
 }
 
 
@@ -89,12 +88,16 @@ open fun getFileOutputStreamInstance(path: String, fileName: String)
 
 
                     var fileName = fileName
-this.getContext()!!.deleteFile(fileName)
+
+    var context: Context = this.getContext()!!
+            
+
+context.deleteFile(fileName)
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return AbFileOutputStream(this.getContext()!!.openFileOutput(fileName, 0))
+                        return AbFileOutputStream(context.openFileOutput(fileName, 0))
 }
 
 
@@ -112,22 +115,13 @@ this.getContext()!!.deleteFile(fileName)
 }
 
 
-open fun setContext(context: Context)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var context = context
-this.context= context
-}
-
-
 open fun getContext()
         //nullable = true from not(false or (false and true)) = true
 : Context{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return context
+                        return context as Context
 }
 
 

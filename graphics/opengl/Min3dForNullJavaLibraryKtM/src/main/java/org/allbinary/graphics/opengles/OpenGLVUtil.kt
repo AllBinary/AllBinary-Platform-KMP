@@ -25,7 +25,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.khronos.opengles.GL10
 
 open public class OpenGLVUtil : OpenGLVUtilBase {
         

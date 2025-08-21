@@ -28,6 +28,7 @@
 import java.util.Vector
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Graphics
+import javax.microedition.lcdui.NullCommandListener
 import org.allbinary.canvas.Processor
 import org.allbinary.game.commands.GameCommandsFactory
 import org.allbinary.game.configuration.feature.Features
@@ -67,7 +68,6 @@ import org.allbinary.graphics.paint.NullPaintable
 import org.allbinary.graphics.paint.Paintable
 import org.allbinary.input.motion.gesture.observer.BasicMotionGesturesHandler
 import org.allbinary.logic.communication.log.ForcedLogUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.logic.util.event.AllBinaryEventObject
@@ -152,6 +152,11 @@ this.foregroundColor= foregroundBasicColor!!.toInt()
 this.backgroundColor= backgroundBasicColor!!.toInt()
 this.initCommands(cmdListener)
 
+    
+                        if(cmdListener != NullCommandListener.NULL_COMMAND_LISTENER)
+                        
+                                    {
+                                    
         try {
             this.initMenu()
 repaintProcessor!!.process()
@@ -162,6 +167,9 @@ repaintProcessor!!.process()
                             throw RuntimeException()
 }
 
+
+                                    }
+                                
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)

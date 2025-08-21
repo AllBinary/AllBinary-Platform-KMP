@@ -149,9 +149,11 @@ open fun runTaskWithPriority(task: PriorityRunnable)
                     var task = task
 
         
-        //synchronized(this) 
+        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        
+        {
     
                         if(!this.isAlive)
                         
@@ -223,7 +225,7 @@ notify()
 
                                     }
                                 
-
+}
 
 }
 
@@ -235,9 +237,11 @@ open fun runTask(task: Runnable)
                     var task = task
 
         
-        //synchronized(this) 
+        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        
+        {
     
                         if(!isAlive)
                         
@@ -258,7 +262,7 @@ notify()
 
                                     }
                                 
-
+}
 
 }
 
@@ -269,9 +273,11 @@ open fun getTask()
         //nullable = true from not(false or (false and true)) = true
 : Runnable{
         
-        //synchronized(this) 
+        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        
+        {
         while(this.taskQueue!!.size() == 0)
         {
     
@@ -297,7 +303,7 @@ this.wait()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return runnable
-
+}
 
 }
 
@@ -306,9 +312,11 @@ open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(this) 
+        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        
+        {
     
                         if(this.isAlive)
                         
@@ -317,7 +325,7 @@ open fun clear()
 
                                     }
                                 
-
+}
 
 }
 
@@ -326,9 +334,11 @@ open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(this) 
+        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        
+        {
     
                         if(this.isAlive)
                         
@@ -338,7 +348,7 @@ this.taskQueue!!.clear()
 
                                     }
                                 
-
+}
 
 }
 
@@ -347,12 +357,14 @@ open fun join()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(this) 
+        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        this.isAlive= false
+        {this.isAlive= false
 this.taskQueue!!.clear()
 notifyAll()
-
+}
 
 }
 

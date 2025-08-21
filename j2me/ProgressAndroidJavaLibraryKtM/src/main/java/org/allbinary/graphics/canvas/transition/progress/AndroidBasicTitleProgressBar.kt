@@ -458,10 +458,11 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
 
                     var lastHeight = lastHeight
 
+    var image: Image = this.image
+
+
     
-                        if(this.image != 
-                                    null
-                                )
+                        if(image != NullCanvas.NULL_IMAGE)
                         
                                     {
                                     
@@ -476,7 +477,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                 )
                         
                                     {
-                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth.toFloat(), this.image.getWidth().toFloat(), lastHeight.toFloat() -20, this.image.getHeight().toFloat(), false)
+                                    this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -20, image.getHeight().toFloat(), false)
 
                                     }
                                 
@@ -494,7 +495,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                 )
                         
                                     {
-                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), this.image, lastWidth.toFloat(), this.image.getWidth().toFloat(), lastHeight.toFloat() -28, this.image.getHeight().toFloat(), false)
+                                    this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -28, image.getHeight().toFloat(), false)
 
                                     }
                                 

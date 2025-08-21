@@ -33,7 +33,7 @@
         
 import java.io.InputStream
 import javax.microedition.lcdui.Image
-import org.allbinary.logic.communication.log.LogFactory
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
@@ -54,7 +54,7 @@ open public class ImageCache : ImageCacheBase {
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
             
-protected constructor        (){}
+public constructor        (){}
 
 
                 @Throws(Exception::class)
@@ -80,9 +80,7 @@ open fun get(caller: String, width: Int, height: Int)
 
 
     
-                        if(image == 
-                                    null
-                                )
+                        if(image == NullCanvas.NULL_IMAGE)
                         
                                     {
                                     volume += width *height

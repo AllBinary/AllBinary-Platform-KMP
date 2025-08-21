@@ -27,17 +27,16 @@
         
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.khronos.opengles.GL10
-import javax.microedition.khronos.opengles.GL11
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import javax.microedition.lcdui.OpenGLESPostLoadPlatformImage
 import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.graphics.OpenGLBitmap
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.logic.communication.log.LogUtil
-import org.allbinary.string.CommonStrings
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.platform.graphics.PlatformBitmapBaseFactory
 import org.allbinary.platform.opengles.PlatformTextureBaseFactory
+import org.allbinary.string.CommonStrings
 import org.allbinary.util.BasicArrayList
 
 open public class OpenGLESImage : Image
@@ -46,6 +45,8 @@ open public class OpenGLESImage : Image
 
         companion object {
             
+    val NULL_OPENGL_IMAGE: OpenGLESImage = OpenGLESImage(NullCanvas.NULL_IMAGE, PlatformBitmapBaseFactory.NULL_PLATFORM_BITMAP_BASE_FACTORY, PlatformTextureBaseFactory.NULL_PLATFORM_TEXTURE_BASE_FACTORY)
+
     val texture2dList: BasicArrayList = BasicArrayList()
 
     val TYPE: Int = 4

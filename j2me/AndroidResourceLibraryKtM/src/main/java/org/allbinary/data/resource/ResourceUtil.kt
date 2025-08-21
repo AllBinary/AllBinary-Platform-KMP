@@ -66,8 +66,7 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
             
 
-    private var context: Context = NullAndroidContextFactory.getInstance()!!
-            
+    private var context: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
     private var resources: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
@@ -83,7 +82,7 @@ open fun getContext()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return context
+                        return context as Context
 }
 
 

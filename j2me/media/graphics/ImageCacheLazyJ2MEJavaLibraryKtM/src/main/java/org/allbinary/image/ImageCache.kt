@@ -31,6 +31,7 @@
         
 import java.io.InputStream
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.animation.image.LazyImageRotationAnimation
 import org.allbinary.canvas.GameGlobalsFactory
 import org.allbinary.canvas.Processor
@@ -260,7 +261,7 @@ endProcessor= NotHTMLEndProcessor()
 
     private var endProcessor: Processor = Processor.getInstance()!!
             
-protected constructor        (){}
+public constructor        (){}
 
 
 open fun addListener(renderer: Any)
@@ -757,9 +758,7 @@ open fun get(caller: String, width: Int, height: Int)
 
 
     
-                        if(image == 
-                                    null
-                                )
+                        if(image == NullCanvas.NULL_IMAGE)
                         
                                     {
                                     volume += width *height

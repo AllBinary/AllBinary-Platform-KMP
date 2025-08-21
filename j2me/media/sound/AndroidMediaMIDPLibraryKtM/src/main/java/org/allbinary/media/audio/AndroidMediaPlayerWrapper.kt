@@ -59,10 +59,15 @@ public constructor        (resource: String){
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
             
 
-this.setMediaPlayer(MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil!!.getResourceId(resource)!!.toInt()))
+
+    var mediaPlayer: MediaPlayer = MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil!!.getResourceId(resource)!!.toInt())!!
+            
+
 
     
-                        if(this.getMediaPlayer() == NullAndroidCanvas.NULL_MEDIA_PLAYER)
+                        if(mediaPlayer == 
+                                    null
+                                )
                         
                                     {
                                     
@@ -73,6 +78,7 @@ this.setMediaPlayer(MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil
 
                                     }
                                 
+this.setMediaPlayer(mediaPlayer)
 this.mediaPlayer!!.setLooping(false)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.CONSTRUCTOR, e)
@@ -92,7 +98,9 @@ override fun setLoopCount(count: Int)
 super.setLoopCount(count)
 
     
-                        if(this.mediaPlayer != NullAndroidCanvas.NULL_MEDIA_PLAYER)
+                        if(this.mediaPlayer != NullAndroidCanvas.NULL_MEDIA_PLAYER && this.mediaPlayer != 
+                                    null
+                                )
                         
                                     {
                                     

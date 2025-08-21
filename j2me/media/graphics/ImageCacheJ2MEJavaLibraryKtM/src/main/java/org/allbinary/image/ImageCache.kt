@@ -31,8 +31,8 @@
         
 import java.io.InputStream
 import javax.microedition.lcdui.Image
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.data.resource.ResourceUtil
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonStrings
@@ -82,9 +82,7 @@ open fun addListener(renderer: Any)
 
 
     
-                        if(image == 
-                                    null
-                                )
+                        if(image == NullCanvas.NULL_IMAGE)
                         
                                     {
                                     volume += width *height
