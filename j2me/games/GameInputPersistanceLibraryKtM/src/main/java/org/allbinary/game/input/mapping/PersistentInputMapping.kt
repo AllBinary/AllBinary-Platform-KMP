@@ -27,6 +27,7 @@
         
 import java.util.Enumeration
 import java.util.Hashtable
+import org.allbinary.game.configuration.persistance.GamePersistanceStrings
 import org.allbinary.game.input.Input
 import org.allbinary.game.input.InputPersistance
 import org.allbinary.game.input.mapping.event.InputMappingEvent
@@ -48,10 +49,6 @@ open public class PersistentInputMapping
             
     val NULL_PERSISTENT_INPUT_MAPPING: PersistentInputMapping = PersistentInputMapping()
 
-    val DEFAULT_RECORD_ID: String = "_DIM"
-
-    val RECORD_ID: String = "_SIC"
-
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
@@ -65,7 +62,7 @@ open public class PersistentInputMapping
     private val inputPersistance: InputPersistance
 protected constructor        ()
             : super()
-        {inputPersistance= InputPersistance(PersistentInputMapping.RECORD_ID)
+        {inputPersistance= InputPersistance(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
 }
 
 protected constructor        (name: String)

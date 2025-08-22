@@ -43,12 +43,10 @@ open fun getInstance()
 }
 
 
-    private val RECORD_ID: String = "_SG"
-
         }
             private constructor        ()                        
 
-                            : super(GamePersistanceSingleton.RECORD_ID){
+                            : super(GamePersistanceStrings.getInstance()!!.SAVED_GAME_RECORD_ID){
 
                             //For kotlin this is before the body of the constructor.
                     

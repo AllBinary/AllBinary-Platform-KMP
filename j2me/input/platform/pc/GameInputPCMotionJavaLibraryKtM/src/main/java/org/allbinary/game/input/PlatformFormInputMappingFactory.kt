@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -38,8 +36,7 @@ open public class PlatformFormInputMappingFactory
         
 
         companion object {
-
-
+            
     private val instance: PlatformFormInputMappingFactory = PlatformFormInputMappingFactory()
 
 open fun getInstance()
@@ -52,7 +49,6 @@ open fun getInstance()
 }
 
 
-
         }
             
             //Auto Generated
@@ -61,7 +57,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var SINGLETON: InputToGameKeyMapping = InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
 
@@ -71,25 +66,20 @@ open fun getOrCreate()
         try {
             
     
-                        if(SINGLETON == 
-                                    null
-                                )
+                        if(SINGLETON == InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING)
                         
                                     {
                                     
     var pcKeyFactory: PCKeyFactory = PCKeyFactory.getInstance()!!
-            
 
 
     var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping()
 
 
     var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
 
     var basicTouchInputFactory: BasicTouchInputFactory = BasicTouchInputFactory.getInstance()!!
-            
 
 inputToGameKeyMapping!!.add(gameKeyFactory!!.UP, pcKeyFactory!!.DPAD_UP)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.DOWN, pcKeyFactory!!.DPAD_DOWN)
@@ -107,7 +97,6 @@ SINGLETON= inputToGameKeyMapping
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 }

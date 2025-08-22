@@ -38,8 +38,6 @@ open public class AbeClientInformation : ClientInformation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-
-    private val NONE: String = "No License Id"
 public constructor        (name: String, version: String, specialName: String, shortName: String)                        
 
                             : super(name, version, specialName, shortName){
@@ -78,7 +76,10 @@ this.setLicenseServers(licenseInitInfo!!.getServerList())
                         if(stringValidationUtil!!.isEmpty(this.getLicenseId()))
                         
                                     {
-                                    this.setLicenseId(NONE)
+                                    
+    var NONE: String = "No License Id"
+
+this.setLicenseId(NONE)
 
                                     }
                                 
