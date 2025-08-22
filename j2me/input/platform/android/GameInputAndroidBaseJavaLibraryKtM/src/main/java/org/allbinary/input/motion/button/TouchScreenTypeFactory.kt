@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -38,8 +36,7 @@ open public class TouchScreenTypeFactory
         
 
         companion object {
-
-
+            
     private val instance: TouchScreenTypeFactory = TouchScreenTypeFactory()
 
 open fun getInstance()
@@ -50,7 +47,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -67,22 +63,18 @@ open fun update(activity: Activity)
                     var activity = activity
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
-            
 
 
     var touchScreenTypesFactory: TouchScreenTypesFactory = TouchScreenTypesFactory.getInstance()!!
-            
 
 
-    var configuration: Configuration = activity!!.getResources()!!.getConfiguration()!!
-            
+    var configuration: Configuration = activity.getResources()!!.getConfiguration()!!
 
 
-    var touchScreen: Int = configuration!!.touchscreen
+    var touchScreen: Int = configuration.touchscreen
 
 
     
@@ -95,8 +87,7 @@ open fun update(activity: Activity)
                         if(!touchScreenFactory!!.isTouch())
                         
                                     {
-                                    PreLogUtil.put(
-                            "Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings!!.PROCESS)
+                                    PreLogUtil.put("Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings!!.PROCESS)
 touchScreenFactory!!.setTouch(true)
 
                                     }
@@ -115,8 +106,7 @@ touchScreenFactory!!.setTouch(true)
                         if(!touchScreenFactory!!.isTouch())
                         
                                     {
-                                    PreLogUtil.put(
-                            "Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings!!.PROCESS)
+                                    PreLogUtil.put("Not Really Exception: This indicates that a touch screen does exist but is not API8 so we will try it", this, commonStrings!!.PROCESS)
 touchScreenFactory!!.setTouch(true)
 
                                     }

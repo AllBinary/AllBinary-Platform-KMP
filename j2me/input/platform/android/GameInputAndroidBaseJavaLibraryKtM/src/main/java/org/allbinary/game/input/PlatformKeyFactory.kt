@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -20,8 +18,7 @@ open public class PlatformKeyFactory
         
 
         companion object {
-
-
+            
     private val SINGLETON: PlatformKeyFactory = PlatformKeyFactory()
 
 open fun getInstance()
@@ -34,7 +31,6 @@ open fun getInstance()
 }
 
 
-
         }
             
             //Auto Generated
@@ -43,7 +39,6 @@ open fun getInstance()
             }            
         
     private val androidKeyFactory: AndroidKeyFactory = ActivityFractureControllerUtilFactory.getInstance()!!
-            
 
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true

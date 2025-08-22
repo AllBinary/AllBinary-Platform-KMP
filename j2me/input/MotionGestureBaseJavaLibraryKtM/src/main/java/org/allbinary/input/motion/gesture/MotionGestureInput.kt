@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.input.Input
+import org.allbinary.game.input.InputFactory
 
 open public class MotionGestureInput : Input {
         
@@ -41,7 +42,10 @@ public constructor        (id: Int, name: String)
 
                             //For kotlin this is before the body of the constructor.
                     
-this.inputFactory!!.add(this.getId(), this)
+
+    var inputFactory: InputFactory = InputFactory.getInstance()!!
+
+inputFactory!!.add(this.getId(), this)
 }
 
 

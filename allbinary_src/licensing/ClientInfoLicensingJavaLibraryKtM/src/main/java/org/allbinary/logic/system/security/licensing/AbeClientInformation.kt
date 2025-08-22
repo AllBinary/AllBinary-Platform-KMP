@@ -89,6 +89,9 @@ PreLogUtil.put(StringMaker().
                             append("Special Name: ")!!.append(this.getSpecialName())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
             {
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)

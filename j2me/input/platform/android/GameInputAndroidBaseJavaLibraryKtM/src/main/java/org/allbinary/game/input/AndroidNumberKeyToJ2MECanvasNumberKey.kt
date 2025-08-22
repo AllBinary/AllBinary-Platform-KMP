@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -22,8 +20,7 @@ open public class AndroidNumberKeyToJ2MECanvasNumberKey
         
 
         companion object {
-
-
+            
     private val androidtoJavaMicroEditionKeyMap: IntArray = IntArray(17)
 
 open fun init()
@@ -76,7 +73,6 @@ open fun getKey(key: Int)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return key
 }
-
 
 
         }

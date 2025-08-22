@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -18,8 +16,7 @@ open public class AndroidAPI1KeyFactory : AndroidKeyFactory {
         
 
         companion object {
-
-
+            
     private val SINGLETON: AndroidAPI1KeyFactory = AndroidAPI1KeyFactory()
 
 open fun getInstance()
@@ -30,7 +27,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 }
-
 
 
         }

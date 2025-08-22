@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -30,10 +28,8 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
-    val UNKNOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_UNKNOWN, 
-                            "UNKNOWN")
+    val UNKNOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_UNKNOWN, "UNKNOWN")
 
     var KEYCODE_BUTTON_L1: AndroidGameKey = UNKNOWN
 
@@ -97,23 +93,17 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     var KEYCODE_BUTTON_9: AndroidGameKey = UNKNOWN
 
-    val SOFT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SOFT_LEFT, 
-                            "SOFT_LEFT")
+    val SOFT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SOFT_LEFT, "SOFT_LEFT")
 
-    val SOFT_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SOFT_RIGHT, 
-                            "SOFT_RIGHT")
+    val SOFT_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SOFT_RIGHT, "SOFT_RIGHT")
 
-    val HOME: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_HOME, 
-                            "HOME")
+    val HOME: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_HOME, "HOME")
 
-    val BACK: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_BACK, 
-                            "BACK")
+    val BACK: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_BACK, "BACK")
 
-    val CALL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_CALL, 
-                            "CALL")
+    val CALL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_CALL, "CALL")
 
-    val ENDCALL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENDCALL, 
-                            "ENDCALL")
+    val ENDCALL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENDCALL, "ENDCALL")
 
     val ZERO: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_0, CommonPhoneStrings.getInstance()!!.ZERO)
 
@@ -139,211 +129,144 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
     val POUND: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_POUND, CommonPhoneStrings.getInstance()!!.POUND)
 
-    val DPAD_UP: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_UP, 
-                            "UP")
+    val DPAD_UP: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_UP, "UP")
 
-    val DPAD_DOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_DOWN, 
-                            "DOWN")
+    val DPAD_DOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_DOWN, "DOWN")
 
-    val DPAD_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_LEFT, 
-                            "LEFT")
+    val DPAD_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_LEFT, "LEFT")
 
-    val DPAD_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_RIGHT, 
-                            "RIGHT")
+    val DPAD_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_RIGHT, "RIGHT")
 
-    val DPAD_CENTER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_CENTER, 
-                            "CENTER")
+    val DPAD_CENTER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DPAD_CENTER, "CENTER")
 
-    val VOLUME_UP: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_VOLUME_UP, 
-                            "VOLUME_UP")
+    val VOLUME_UP: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_VOLUME_UP, "VOLUME_UP")
 
-    val VOLUME_DOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_VOLUME_DOWN, 
-                            "VOLUME_DOWN")
+    val VOLUME_DOWN: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_VOLUME_DOWN, "VOLUME_DOWN")
 
-    val POWER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_POWER, 
-                            "POWER")
+    val POWER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_POWER, "POWER")
 
-    val CAMERA: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_CAMERA, 
-                            "CAMERA")
+    val CAMERA: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_CAMERA, "CAMERA")
 
-    val CLEAR: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_CLEAR, 
-                            "CLEAR")
+    val CLEAR: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_CLEAR, "CLEAR")
 
-    val A: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_A, 
-                            "A")
+    val A: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_A, "A")
 
-    val B: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_B, 
-                            "B")
+    val B: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_B, "B")
 
-    val C: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_C, 
-                            "C")
+    val C: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_C, "C")
 
-    val D: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_D, 
-                            "D")
+    val D: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_D, "D")
 
-    val E: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_E, 
-                            "E")
+    val E: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_E, "E")
 
-    val F: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_F, 
-                            "F")
+    val F: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_F, "F")
 
-    val G: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_G, 
-                            "G")
+    val G: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_G, "G")
 
-    val H: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_H, 
-                            "H")
+    val H: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_H, "H")
 
-    val I: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_I, 
-                            "I")
+    val I: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_I, "I")
 
-    val J: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_J, 
-                            "J")
+    val J: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_J, "J")
 
-    val K: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_K, 
-                            "K")
+    val K: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_K, "K")
 
-    val L: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_L, 
-                            "L")
+    val L: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_L, "L")
 
-    val M: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_M, 
-                            "M")
+    val M: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_M, "M")
 
-    val N: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_N, 
-                            "N")
+    val N: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_N, "N")
 
-    val O: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_O, 
-                            "O")
+    val O: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_O, "O")
 
-    val P: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_P, 
-                            "P")
+    val P: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_P, "P")
 
-    val Q: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_Q, 
-                            "Q")
+    val Q: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_Q, "Q")
 
-    val R: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_R, 
-                            "R")
+    val R: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_R, "R")
 
-    val S: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_S, 
-                            "S")
+    val S: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_S, "S")
 
-    val T: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_T, 
-                            "T")
+    val T: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_T, "T")
 
-    val U: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_U, 
-                            "U")
+    val U: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_U, "U")
 
-    val V: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_V, 
-                            "V")
+    val V: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_V, "V")
 
-    val W: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_W, 
-                            "W")
+    val W: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_W, "W")
 
-    val X: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_X, 
-                            "X")
+    val X: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_X, "X")
 
-    val Y: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_Y, 
-                            "Y")
+    val Y: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_Y, "Y")
 
-    val Z: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_Z, 
-                            "Z")
+    val Z: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_Z, "Z")
 
-    val COMMA: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_COMMA, 
-                            "COMMA")
+    val COMMA: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_COMMA, "COMMA")
 
     val PERIOD: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_PERIOD, AbPathData.getInstance()!!.EXTENSION_SEP)
 
-    val ALT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ALT_LEFT, 
-                            "ALT_LEFT")
+    val ALT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ALT_LEFT, "ALT_LEFT")
 
-    val ALT_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ALT_RIGHT, 
-                            "ALT_RIGHT")
+    val ALT_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ALT_RIGHT, "ALT_RIGHT")
 
-    val SHIFT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SHIFT_LEFT, 
-                            "SHIFT_LEFT")
+    val SHIFT_LEFT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SHIFT_LEFT, "SHIFT_LEFT")
 
-    val SHIFT_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SHIFT_RIGHT, 
-                            "SHIFT_RIGHT")
+    val SHIFT_RIGHT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SHIFT_RIGHT, "SHIFT_RIGHT")
 
-    val TAB: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_TAB, 
-                            "TAB")
+    val TAB: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_TAB, "TAB")
 
-    val SPACE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SPACE, 
-                            "SPACE")
+    val SPACE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SPACE, "SPACE")
 
-    val SYM: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SYM, 
-                            "SYM")
+    val SYM: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SYM, "SYM")
 
-    val EXPLORER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_EXPLORER, 
-                            "EXPLORER")
+    val EXPLORER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_EXPLORER, "EXPLORER")
 
-    val ENVELOPE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENVELOPE, 
-                            "ENVELOPE")
+    val ENVELOPE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENVELOPE, "ENVELOPE")
 
-    val ENTER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENTER, 
-                            "ENTER")
+    val ENTER: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_ENTER, "ENTER")
 
-    val DEL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DEL, 
-                            "DEL")
+    val DEL: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_DEL, "DEL")
 
-    val GRAVE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_GRAVE, 
-                            "GRAVE")
+    val GRAVE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_GRAVE, "GRAVE")
 
-    val MINUS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_MINUS, 
-                            "MINUS")
+    val MINUS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_MINUS, "MINUS")
 
-    val EQUALS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_EQUALS, 
-                            "EQUALS")
+    val EQUALS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_EQUALS, "EQUALS")
 
-    val LEFT_BRACKET: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_LEFT_BRACKET, 
-                            "LEFT_BRACKET")
+    val LEFT_BRACKET: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_LEFT_BRACKET, "LEFT_BRACKET")
 
-    val RIGHT_BRACKET: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_RIGHT_BRACKET, 
-                            "RIGHT_BRACKET")
+    val RIGHT_BRACKET: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_RIGHT_BRACKET, "RIGHT_BRACKET")
 
-    val BACKSLASH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_BACKSLASH, 
-                            "BACKSLASH")
+    val BACKSLASH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_BACKSLASH, "BACKSLASH")
 
-    val SEMICOLON: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SEMICOLON, 
-                            "SEMICOLON")
+    val SEMICOLON: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SEMICOLON, "SEMICOLON")
 
-    val APOSTROPHE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_APOSTROPHE, 
-                            "APOSTROPHE")
+    val APOSTROPHE: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_APOSTROPHE, "APOSTROPHE")
 
-    val SLASH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SLASH, 
-                            "SLASH")
+    val SLASH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SLASH, "SLASH")
 
-    val AT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_AT, 
-                            "AT")
+    val AT: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_AT, "AT")
 
-    val NUM: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_NUM, 
-                            "NUM")
+    val NUM: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_NUM, "NUM")
 
-    val HEADSETHOOK: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_HEADSETHOOK, 
-                            "HEADSETHOOK")
+    val HEADSETHOOK: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_HEADSETHOOK, "HEADSETHOOK")
 
-    val FOCUS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_FOCUS, 
-                            "FOCUS")
+    val FOCUS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_FOCUS, "FOCUS")
 
-    val PLUS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_PLUS, 
-                            "PLUS")
+    val PLUS: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_PLUS, "PLUS")
 
-    val MENU: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_MENU, 
-                            "MENU")
+    val MENU: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_MENU, "MENU")
 
-    val NOTIFICATION: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_NOTIFICATION, 
-                            "NOTIFICATION")
+    val NOTIFICATION: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_NOTIFICATION, "NOTIFICATION")
 
-    val SEARCH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SEARCH, 
-                            "SEARCH")
+    val SEARCH: AndroidGameKey = AndroidGameKey(KeyEvent.KEYCODE_SEARCH, "SEARCH")
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
-logUtil!!.put(
-                            "Start/End", this, commonStrings!!.INIT)
+logUtil!!.put("Start/End", this, commonStrings!!.INIT)
 }
 
 

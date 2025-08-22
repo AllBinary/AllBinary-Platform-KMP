@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -21,13 +19,11 @@ open public class ActivityFractureControllerUtilFactory
         
 
         companion object {
-
-
+            
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AndroidKeyFactory{
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
-            
 
 
     
@@ -65,7 +61,6 @@ open fun getInstance()
                         }
                             
 }
-
 
 
         }

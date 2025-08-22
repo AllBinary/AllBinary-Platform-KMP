@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -19,8 +17,7 @@ open public class AndroidGameKey : Input {
         
 
         companion object {
-
-
+            
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -28,7 +25,6 @@ open fun getString(keyCode: Int)
                     var keyCode = keyCode
 
     var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
-            
 
 
     
@@ -41,7 +37,7 @@ open fun getString(keyCode: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return input!!.getName()
+                        return input.getName()
 
                                     }
                                 
@@ -57,7 +53,6 @@ open fun getString(keyCode: Int)
 }
 
 
-
         }
              constructor        (keyCode: Int, name: String)                        
 
@@ -71,7 +66,10 @@ open fun getString(keyCode: Int)
 
                             //For kotlin this is before the body of the constructor.
                     
-this.inputFactory!!.inputIntegerArray[this.getId()]= this
+
+    var inputFactory: InputFactory = InputFactory.getInstance()!!
+
+inputFactory!!.inputIntegerArray[this.getId()]= this
 }
 
 override fun toString()
