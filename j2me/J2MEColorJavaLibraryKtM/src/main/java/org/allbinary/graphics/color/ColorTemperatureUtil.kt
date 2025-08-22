@@ -53,7 +53,6 @@ open fun getInstance()
             }            
         
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 open fun getBasicColor(thirdTemp: Int)
         //nullable = true from not(false or (false and false)) = true

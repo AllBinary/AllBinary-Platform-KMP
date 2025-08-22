@@ -39,10 +39,8 @@ open public class TouchButtonsPaintable : Paintable {
     val foregroundColor: Int
 
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     private val touchButtonFactory: TouchButtonFactory = TouchButtonFactory.getInstance()!!
-            
 public constructor        (basicColor: BasicColor){
 
                     var basicColor = basicColor
@@ -57,7 +55,6 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var list: BasicArrayList = touchButtonFactory!!.getList()!!
-            
 
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor, this.foregroundColor)
 

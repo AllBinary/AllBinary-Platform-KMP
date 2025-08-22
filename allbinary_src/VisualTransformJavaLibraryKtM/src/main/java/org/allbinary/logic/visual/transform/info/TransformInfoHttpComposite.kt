@@ -37,10 +37,8 @@ open public class TransformInfoHttpComposite
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoHttpInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)

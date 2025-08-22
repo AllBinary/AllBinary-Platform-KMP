@@ -62,19 +62,14 @@ open fun getInstance()
             }            
         
     private val imageCache: ImageCache = ImageCacheFactory.getInstance()!!
-            
 
     private val imageScaleUtil: ImageScaleUtil = ImageScaleUtil.getInstance()!!
-            
 
     private val openGLUtil: OpenGLUtil = OpenGLUtil.getInstance()!!
-            
 
     private val j2seMath: J2SEMath = J2SEMath.getInstance()!!
-            
 
     private val openGLESImageExclusionUtil: OpenGLESImageExclusionUtil = OpenGLESImageExclusionUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -97,7 +92,6 @@ open fun createImage(image: Image, width: Int, height: Int, scaleWidth: Int, sca
                     var scaleHeight = scaleHeight
 
     var spriteFactory: SpriteFactory = SpriteFactory.getInstance()!!
-            
 
 
     var sprite: Sprite
@@ -134,11 +128,9 @@ sprite= spriteFactory!!.create(scaledImage, width, height)
                                     {
                                     
     var width2: Int = j2seMath!!.round((scaleWidth) -0.5f)!!
-            
 
 
     var height2: Int = j2seMath!!.round((scaleHeight) -0.5f)!!
-            
 
 
     var multiplesOf16Width: Int = width2 /16

@@ -47,7 +47,6 @@ open public class OrderHistoryHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -123,11 +122,9 @@ open fun setOrderStatus()
 
 
     var orderReviewInterface: OrderHistoryInterface = OrderHistoryFactory.getInstance(id)!!
-            
 
 
     var status: String = orderReviewInterface!!.getStatus()!!
-            
 
 
     
@@ -188,7 +185,6 @@ open fun setOrderStatus()
                                     {
                                     
     var orderHistoryEntityInterface: OrderHistoryEntityInterface = OrderHistoryEntityFactory.getInstance()!!
-            
 
 orderHistoryEntityInterface!!.setStatus(id, this.newStatus)
 

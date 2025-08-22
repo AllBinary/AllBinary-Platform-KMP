@@ -47,7 +47,6 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
 
 
     var interfaces: Array<KClass<*>?> = myClass!!.getInterfaces()!!
-            
 
 stringBuffer!!.append(lineBreak)
 stringBuffer!!.append("Interfaces: ")
@@ -132,7 +131,6 @@ open fun isImplemented(clazz: KClass<*>, anyType: Any)
                     var anyType = anyType
 
     var classes: Array<KClass<*>?> = anyType!!::class.getInterfaces()!!
-            
 
 
 
@@ -170,7 +168,6 @@ open fun isImplemented(className: String, anyType: Any)
                     var anyType = anyType
 
     var classes: Array<KClass<*>?> = anyType!!::class.getInterfaces()!!
-            
 
 
 
@@ -215,7 +212,6 @@ open fun isImplementedView(clazz: KClass<*>, anyType: Any)
 
 
     var classes: Array<KClass<*>?> = anyType!!::class.getInterfaces()!!
-            
 
 stringBuffer!!.append("isImplementedView: \n")
 

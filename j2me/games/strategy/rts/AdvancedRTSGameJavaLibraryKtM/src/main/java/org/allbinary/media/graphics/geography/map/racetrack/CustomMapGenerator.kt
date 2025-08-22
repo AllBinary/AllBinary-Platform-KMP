@@ -47,7 +47,6 @@ this.raceTrackGeographicMap= raceTrackGeographicMap
 this.geographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()
 
     var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
-            
 
 this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
@@ -70,7 +69,6 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
         //nullable = true from not(false or (false and true)) = true
 {
     var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
-            
 
 
     var startIndex2: Int = mapArray[0]!!.length -1
@@ -98,7 +96,6 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
 
     private val dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun getCustomType(column: Int, row: Int, currentType: Int)
@@ -114,15 +111,12 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
                     var currentType = currentType
 
     var emptyType: Int = geographicMapCellTypeFactory!!.getEmptyType()!!
-            
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var cellPosition: CellPosition = geographicMapCellPositionFactory!!.getInstance(column, row)!!
-            
 
 
     

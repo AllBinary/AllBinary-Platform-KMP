@@ -44,7 +44,6 @@ open public class Password
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var password: String
 public constructor        (password: String)
@@ -79,7 +78,6 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
@@ -155,7 +153,6 @@ open fun getValidationInfo()
                                 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
 
@@ -174,7 +171,6 @@ this.password= StringUtil.getInstance()!!.getInstance(this.password)
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
-            
 
 
     var vector: Vector = Vector()
@@ -204,7 +200,6 @@ this.password= StringUtil.getInstance()!!.getInstance(this.password)
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
-            
 
 values.put(EntryData.getInstance()!!.ENCRYPTION, Integer(random).
                             toString())

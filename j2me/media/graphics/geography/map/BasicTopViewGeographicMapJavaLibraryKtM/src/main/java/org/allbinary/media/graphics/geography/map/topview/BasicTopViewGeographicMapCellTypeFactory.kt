@@ -40,7 +40,6 @@ open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTy
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val BLOCK_CELL_TYPE: BasicTopViewGeographicMapCellType
 
@@ -60,7 +59,6 @@ open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTy
 private constructor        (){this.maxTileId= 9
 
     var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
-            
 
 
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
@@ -103,21 +101,17 @@ public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId:
                     var maxTileId = maxTileId
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.maxTileId= maxTileId
 
     var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
-            
 
 
     var geographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
-            
 
 
     var geographicMapCellTypeArray: Array<GeographicMapCellType?> = geographicMapCellTypeFactory!!.getGeographicMapCellTypeArray()!!
-            
 
 
     var type: Int = 0
@@ -162,7 +156,6 @@ this.maxTileId= maxTileId
 
 
     var keyArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(tileTypeToTileIdsMap)!!
-            
 
 
     var size: Int = keyArray!!.size

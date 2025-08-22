@@ -57,7 +57,6 @@ open fun init(gameCanvasInterface: AllBinaryGameCanvas, viewPosition: TileLayerP
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 viewPosition!!.setTiledLayer(tiledLayer)
 }

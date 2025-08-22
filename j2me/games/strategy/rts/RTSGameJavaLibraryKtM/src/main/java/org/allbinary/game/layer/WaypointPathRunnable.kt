@@ -36,7 +36,6 @@ open public class WaypointPathRunnable : WaypointPathRunnableBase {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -47,11 +46,9 @@ open fun run()
             pathFindingLayer!!.getWaypointRunnableLogHelper()!!.start(pathFindingLayer)
 
     var waypointBehavior: WaypointBehaviorBase = pathFindingLayer!!.getWaypointBehavior()!!
-            
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
-            
 
 
     
@@ -73,7 +70,6 @@ Thread.sleep(15 +(this.priority *2))
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 this.setRunning(false)

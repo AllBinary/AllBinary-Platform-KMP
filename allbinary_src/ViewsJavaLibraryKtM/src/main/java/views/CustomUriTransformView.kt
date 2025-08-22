@@ -45,13 +45,10 @@ open public class CustomUriTransformView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoInterface
 
@@ -141,11 +138,9 @@ open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var document: Document = this.getTransformInfoInterface()!!.getDataDocument()!!
-            
 
 
     var dataNode: Node = this.getTransformDocumentInterface()!!.getDoc()!!.importNode(document.getFirstChild(), true)!!
-            
 
 
     
@@ -174,12 +169,10 @@ open fun view()
         try {
             
     var success: String = DomDocumentHelper.toString(this.getDoc())!!
-            
 
 
     var result: String = TransformInfoCustomUriTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-            
 
 
 

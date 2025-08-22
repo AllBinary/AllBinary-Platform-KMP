@@ -39,7 +39,6 @@ open public class StoreFrontsTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){this.setTagHelperFactory(StoreFrontsHelperFactory())
 this.setTagRequestHelperFactory(StoreFrontsRequestHelperFactory())
 }
@@ -53,12 +52,10 @@ open fun generateSelect()
         try {
             
     var anyType: Any = this.getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("generateSelect", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -106,12 +103,10 @@ open fun install()
         try {
             
     var anyType: Any = this.getTagRequestHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("install", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -159,12 +154,10 @@ open fun sendStoreCreatedEmails()
         try {
             
     var anyType: Any = this.getTagRequestHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("sendStoreCreatedEmails", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -224,7 +217,6 @@ open fun doStartTag()
                                     {
                                     
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
-            
 
 
     

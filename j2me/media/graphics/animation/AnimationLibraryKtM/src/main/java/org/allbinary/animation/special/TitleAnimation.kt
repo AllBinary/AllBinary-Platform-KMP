@@ -43,7 +43,6 @@ open public class TitleAnimation : SpecialAnimation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var deltaX: Float= 0.0f
 
@@ -68,7 +67,6 @@ open public class TitleAnimation : SpecialAnimation {
     private var lastFrameStartTime: Long
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, basicColorArray: Array<BasicColor?>, dxArray: IntArray, dyArray: IntArray)                        
 
                             : this(animationInterfaceArray, basicColorArray, dxArray, dyArray, 0, Integer.MIN_VALUE, IndexedAnimationBehavior(1, 250)){
@@ -157,7 +155,6 @@ override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
 {
     var currentTime: Long = System.currentTimeMillis()!!
-            
 
 
     var totalTimeElapsed: Long = currentTime -lastFrameStartTime

@@ -50,10 +50,8 @@ open public class TitleView
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var title: String
 public constructor        ()
@@ -68,11 +66,9 @@ public constructor        (node: Node)
                     var node = node
 
     var titleTextNode: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.TEXT, node.getChildNodes())!!
-            
 
 
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, titleTextNode!!.getChildNodes())!!
-            
 
 this.title= DomNodeHelper.getTextNodeValue(valueNode)
 
@@ -164,7 +160,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     

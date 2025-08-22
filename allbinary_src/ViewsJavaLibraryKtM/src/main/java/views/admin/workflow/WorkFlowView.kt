@@ -38,7 +38,6 @@ open public class WorkFlowView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var workFlowInterface: WorkFlowInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

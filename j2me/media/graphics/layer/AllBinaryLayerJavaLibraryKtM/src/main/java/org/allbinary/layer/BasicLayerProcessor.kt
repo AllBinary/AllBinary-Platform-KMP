@@ -41,7 +41,6 @@ open public class BasicLayerProcessor
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val list: BasicArrayList = BasicArrayList()
 protected constructor        ()

@@ -33,7 +33,6 @@ open public class IndexedAnimation : Animation
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val animationBehaviorP: AnimationBehavior
 private constructor        (){this.animationBehaviorP= AnimationBehavior.getInstance()

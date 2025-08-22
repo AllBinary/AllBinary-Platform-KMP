@@ -36,7 +36,6 @@ open public class LazyProgressCanvas : ProgressCanvas {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){

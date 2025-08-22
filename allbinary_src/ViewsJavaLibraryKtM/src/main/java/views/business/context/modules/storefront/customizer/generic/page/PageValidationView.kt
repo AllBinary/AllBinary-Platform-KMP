@@ -48,7 +48,6 @@ open public class PageValidationView : PageView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -88,15 +87,12 @@ open fun isValid()
                                 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var pageObjectConfigInterface: TransformInfoObjectConfigInterface = this.getTransformInfoInterface()!!.getObjectConfigInterface()!!
-            
 
 
     var allViewsToBeModifiedVector: Vector = pageObjectConfigInterface!!.getGroupTransforms()!!
-            
 
 
     
@@ -109,7 +105,6 @@ open fun isValid()
                                 
 
     var size: Int = allViewsToBeModifiedVector!!.size!!
-            
 
 
 
@@ -123,7 +118,6 @@ open fun isValid()
 
 
     var viewNameOfViewToBeModified: String = transformInfoInterface!!.getName()!!
-            
 
 
     
@@ -145,7 +139,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
 
     var specifiedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewNameOfViewToBeModified, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-            
 
 
     
@@ -167,7 +160,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
 
     var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length())!!
-            
 
 
     
@@ -202,12 +194,10 @@ logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
                                     {
                                     
     var document: Document = DomDocumentHelper.create()!!
-            
 
 document.appendChild(pageValidation!!.toXmlNode(document))
 
     var documentString: String = DomDocumentHelper.toString(document)!!
-            
 
 
     
@@ -266,22 +256,18 @@ open fun validationInfo()
 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var objectConfig: TransformInfoObjectConfigInterface = this.getTransformInfoInterface()!!.getObjectConfigInterface()!!
-            
 
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = this.getTransformInfoInterface() as TransformInfoHttpInterface
 
 
     var allViewsToBeModifiedVector: Vector = objectConfig!!.getGroupTransforms()!!
-            
 
 
     var size: Int = allViewsToBeModifiedVector!!.size!!
-            
 
 
 
@@ -295,18 +281,15 @@ open fun validationInfo()
 
 
     var viewNameOfViewToBeModified: String = transformInfoInterface!!.getName()!!
-            
 
 
     var specifiedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewNameOfViewToBeModified, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
     var title: String = specifiedTransformInfoInterface!!.getName()!!.substring(this.getTransformInfoInterface()!!.getStoreName()!!.length())!!
-            
 
 
     

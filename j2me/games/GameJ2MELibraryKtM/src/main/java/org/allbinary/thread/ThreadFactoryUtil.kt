@@ -69,7 +69,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getInstance(runnable: GameCanvasRunnableInterface)
         //nullable =  from not(true or (false and false)) = 
@@ -107,11 +106,9 @@ open fun getInstance(runnable: Runnable, type: Int)
                     var type = type
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -130,7 +127,6 @@ PreLogUtil.put(StringMaker().
                             append("Using Pseudo Thread for DemoCanvas/AllBinaryGameCanvas under PlayN/HTML5: ")!!.append(StringUtil.getInstance()!!.toString(runnable))!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 
     var primaryThreadPool: ThreadPool = PrimaryThreadPool.getInstance()!!
-            
 
 primaryThreadPool!!.runTask(demoGameSingleThreadStartRunnable)
 
@@ -141,7 +137,6 @@ primaryThreadPool!!.runTask(demoGameSingleThreadStartRunnable)
                             append("Using Pseudo Thread for Runnable under PlayN/HTML5: ")!!.append(StringUtil.getInstance()!!.toString(runnable))!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 
     var primaryThreadPool: ThreadPool = PrimaryThreadPool.getInstance()!!
-            
 
 primaryThreadPool!!.runTask(runnable)
 

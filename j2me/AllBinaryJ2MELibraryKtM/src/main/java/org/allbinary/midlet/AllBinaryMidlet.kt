@@ -54,10 +54,8 @@ open public class AllBinaryMidlet : MIDlet
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val SET_DISPLAY: String = "setDisplay"
 
@@ -113,7 +111,6 @@ open fun setDisplay(newDisplay: Displayable)
                                 
 
     var display: Display = getDisplay()!!
-            
 
 display.setCurrent(newDisplay)
 }

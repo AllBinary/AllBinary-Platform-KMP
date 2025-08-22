@@ -52,7 +52,6 @@ open fun getInstance()
         }
             
     private val logger: Logger = Logger.getLogger(LogUtil::class.qualifiedName!!)!!
-            
 private constructor        ()
             : super()
         {}
@@ -71,7 +70,6 @@ open fun put(log: Log)
                     var log = log
 
     var exception: Any = log.getThrowable()!!
-            
 
 
         try {
@@ -84,22 +82,18 @@ open fun put(log: Log)
                                     {
                                     
     var specialMessage: String = log.getSpecialMessage()!!
-            
 
 
     var anyType: Any = log.getObject()!!
-            
 
 
     var functionName: String = log.getFunctionName()!!
-            
 
 
     var className: String = CommonStrings.getInstance()!!.EMPTY
 
 
     var clazz: KClass<*> = anyType!!::class!!
-            
 
 
     
@@ -114,7 +108,6 @@ open fun put(log: Log)
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 logger.log(Level.INFO, message)
 
@@ -147,7 +140,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
     var clazz: KClass<*> = anyType!!::class!!
-            
 
 
     
@@ -162,7 +154,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
-            
 
 
     

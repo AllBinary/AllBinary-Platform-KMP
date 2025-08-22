@@ -82,7 +82,6 @@ open fun getInstanceNoCache(geographicMapInterface: BasicGeographicMap, pathFind
                     var totalPaths = totalPaths
 
     var geographicMapCellPositionBasicArrayList: BasicArrayList = this.create(geographicMapInterface, pathFindingInfo, totalPaths)!!
-            
 
 
 
@@ -130,19 +129,15 @@ open fun create(geographicMapInterface: BasicGeographicMap, pathFindingInfo: Pat
                     var totalPaths = totalPaths
 
     var startPathFindingNodeList: BasicArrayList = pathFindingInfo!!.getStartPathFindingNodeList()!!
-            
 
 
     var endPathFindingNodeList: BasicArrayList = pathFindingInfo!!.getEndPathFindingNodeList()!!
-            
 
 
     var geographicPathFinderInterface: GeographicPathFinderBase = pathFindingInfo!!.getPathFinder()!!
-            
 
 
     var geographicMapCellPositionBasicArrayList: BasicArrayList = geographicPathFinderInterface!!.search(startPathFindingNodeList, endPathFindingNodeList, totalPaths)!!
-            
 
 
 
@@ -170,19 +165,15 @@ open fun createN(geographicMapInterface: BasicGeographicMap, pathFindingInfo: Pa
                     var multipassState = multipassState
 
     var startPathFindingNodeList: BasicArrayList = pathFindingInfo!!.getStartPathFindingNodeList()!!
-            
 
 
     var endPathFindingNodeList: BasicArrayList = pathFindingInfo!!.getEndPathFindingNodeList()!!
-            
 
 
     var geographicPathFinderInterface: GeographicPathFinderBase = pathFindingInfo!!.getPathFinder()!!
-            
 
 
     var geographicMapCellPositionBasicArrayList: BasicArrayList = geographicPathFinderInterface!!.searchN(startPathFindingNodeList, endPathFindingNodeList, totalPaths, multipassState)!!
-            
 
 
 

@@ -52,7 +52,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

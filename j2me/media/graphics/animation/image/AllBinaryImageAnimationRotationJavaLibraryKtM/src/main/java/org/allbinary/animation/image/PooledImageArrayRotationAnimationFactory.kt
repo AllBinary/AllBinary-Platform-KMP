@@ -181,7 +181,6 @@ open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncr
 
 
     var imageArray: Array<Image?> = ImageToRotationImageArrayUtil.getInstance()!!.generate(image, angleIncrement, totalAngle)!!
-            
 
 allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray, angleIncrement, totalAngle, dx, dy)
 }

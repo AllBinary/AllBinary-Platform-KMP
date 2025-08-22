@@ -56,7 +56,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var categoryNode: Node = document.createElement(CategoryData.getInstance()!!.NAME)!!
-            
 
 
     var newCategoryNode: Element = categoryNode as Element

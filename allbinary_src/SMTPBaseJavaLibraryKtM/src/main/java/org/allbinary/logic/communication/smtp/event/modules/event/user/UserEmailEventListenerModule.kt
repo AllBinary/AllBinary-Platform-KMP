@@ -40,7 +40,6 @@ open public class UserEmailEventListenerModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userInterface: UserInterface
 public constructor        (userInterface: UserInterface)
@@ -61,7 +60,6 @@ open fun onEmailSendFailure(emailEvent: EmailEvent)
                     var emailEvent = emailEvent
 
     var to: String = this.userInterface!!.getSecondaryEmail()!!
-            
 
 
     var email: BasicEmail = BasicEmail(emailEvent!!.getEmailInfo(), to)
@@ -88,7 +86,6 @@ open fun onEmailSendRequest(emailEvent: EmailEvent)
                                 
 
     var to: String = this.userInterface!!.getMainEmail()!!
-            
 
 
     var email: BasicEmail = BasicEmail(emailEvent!!.getEmailInfo(), to)

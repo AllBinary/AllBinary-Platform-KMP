@@ -64,7 +64,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        (){}
 
 
@@ -130,7 +129,6 @@ open fun processAllUnsent()
         //nullable = true from not(false or (false and true)) = true
 {
     var size: Int = queueVector!!.size()!!
-            
 
 
 

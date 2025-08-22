@@ -70,7 +70,6 @@ open fun addListener(vector: Vector)
                     var vector = vector
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -115,7 +114,6 @@ open fun fireEmailEvent()
 
 
     var size: Int = emailVector!!.size!!
-            
 
 
 

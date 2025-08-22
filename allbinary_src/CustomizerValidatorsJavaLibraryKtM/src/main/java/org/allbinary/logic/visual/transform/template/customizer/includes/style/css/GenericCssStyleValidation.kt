@@ -43,7 +43,6 @@ open public class GenericCssStyleValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 public constructor        (document: Document){
@@ -51,7 +50,6 @@ public constructor        (document: Document){
                     var document = document
 
     var nodeList: NodeList = document.getElementsByTagName(StylesData.getInstance()!!.NAME)!!
-            
 
 }
 
@@ -186,7 +184,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, BodyData.getInstance()!!.NAME, StringUtil.getInstance()!!.EMPTY_STRING)!!
-            
 
 
 

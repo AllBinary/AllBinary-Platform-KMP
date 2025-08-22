@@ -60,13 +60,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val ANIMATIONS_LABELS: Array<String?> = arrayOf("Row Total:","Column Total:","Column Total:","Row Total:","Column Total:","Row Total:")
 
@@ -119,7 +116,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, totalFrames: Int, tot
 
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
-            
 
 
 
@@ -152,7 +148,6 @@ logUtil!!.put("Processing Individual Cells columns: " +columns +" rows: " +rows,
 logUtil!!.put("Processing Individual Cells cellHeight: " +cellHeight +" cellWidth: " +cellWidth, this, commonStrings!!.RUN)
 
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 
     var nameEnding: String = 
@@ -233,7 +228,6 @@ nameEnding= StringMaker().
 
 
     var generatedBufferedImage: BufferedImage = ImageUnifierUtil.getInstance()!!.getImage(tempBufferedImageArray, imageUnifierProperties)!!
-            
 
 visitor.visit(generatedBufferedImage, nameEnding, index)
 }
@@ -350,7 +344,6 @@ nameEnding= StringMaker().
 
 
     var generatedBufferedImage: BufferedImage = ImageUnifierUtil.getInstance()!!.getImage(tempBufferedImageArray, imageUnifierProperties)!!
-            
 
 visitor.visit(generatedBufferedImage, nameEnding, index)
 }

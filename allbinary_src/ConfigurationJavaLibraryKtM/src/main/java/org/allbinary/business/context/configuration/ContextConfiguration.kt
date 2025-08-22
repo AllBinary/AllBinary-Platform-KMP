@@ -38,10 +38,8 @@ open public class ContextConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor        ()

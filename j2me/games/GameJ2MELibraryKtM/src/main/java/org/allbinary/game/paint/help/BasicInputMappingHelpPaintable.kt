@@ -69,7 +69,6 @@ open fun update(selectedGameKey: GameKey, selectedInput: Input)
                     var selectedInput = selectedInput
 
     var gameKeyMapping: PersistentInputMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
-            
 
 
     var EQUAL: String = " = "
@@ -118,7 +117,6 @@ open fun get(keyList: BasicArrayList)
                     var keyList = keyList
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

@@ -61,7 +61,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
                     var pageContext = pageContext
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
 
 

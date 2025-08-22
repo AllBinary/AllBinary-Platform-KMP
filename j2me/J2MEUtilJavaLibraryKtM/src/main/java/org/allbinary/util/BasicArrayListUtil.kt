@@ -58,7 +58,6 @@ open fun main(args: Array<String?>)
                     var args = args
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
 
     var list: BasicArrayList = BasicArrayList()
@@ -85,7 +84,6 @@ System.out.println(list)
             }            
         
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
     private val immutableInstance: BasicArrayList = ImmutableBasicArrayList(0)
 
@@ -96,7 +94,6 @@ open fun getRandom(list: BasicArrayList)
                     var list = list
 
     var i_random: Int = this.getRandomIndex(list)!!
-            
 
 
 
@@ -159,7 +156,6 @@ open fun log(list: BasicArrayList)
                     var list = list
 
     var size: Int = list.size()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

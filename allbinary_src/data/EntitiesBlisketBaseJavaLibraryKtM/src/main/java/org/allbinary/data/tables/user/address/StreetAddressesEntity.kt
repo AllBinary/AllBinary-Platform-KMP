@@ -46,7 +46,6 @@ open public class StreetAddressesEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userName: String
 public constructor        ()                        
@@ -140,7 +139,6 @@ values.add(address.getCode())
 values.add(address.getCountry())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -183,7 +181,6 @@ open fun update(address: StreetAddress)
         try {
             
     var addressHashMap: HashMap<Any, Any> = address.toHashMap()!!
-            
 
 
     var whereKeyValuePairs: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -239,11 +236,9 @@ open fun get()
 keyAndValue!!.put(UserData.USERNAME, userName)
 
     var addressList: Vector = super.getRows(keyAndValue)!!
-            
 
 
     var size: Int = addressList!!.size!!
-            
 
 
 
@@ -310,7 +305,6 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
     var addressHashMap: HashMap<Any, Any> = super.getRow(keyAndValue)!!
-            
 
 
     
@@ -450,7 +444,6 @@ open fun setDefault(value: String)
 whereKeyAndValue!!.put(UserData.USERNAME, userName)
 
     var streetAddress: StreetAddress = getDefault()!!
-            
 
 
     

@@ -87,7 +87,6 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
 
 
     var classes: Array<KClass<*>?> = myClass!!.getClasses()!!
-            
 
 stringBuffer!!.append(lineBreak)
 stringBuffer!!.append("Class: ")

@@ -51,7 +51,6 @@ open fun getInstance(id: Int)
 
 
     private val MIN: Int = TouchMotionGestureFactory.getInstance()!!.LAST_MOTION.getId()!!
-            
 
         }
             

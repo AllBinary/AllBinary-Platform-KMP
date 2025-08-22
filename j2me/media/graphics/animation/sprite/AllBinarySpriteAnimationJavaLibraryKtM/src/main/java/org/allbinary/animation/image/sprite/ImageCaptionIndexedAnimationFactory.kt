@@ -46,10 +46,8 @@ open public class ImageCaptionIndexedAnimationFactory
         
 
     val animationFactoryImageScaleUtil: AnimationFactoryImageScaleUtil = AnimationFactoryImageScaleUtil.getInstance()!!
-            
 
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
-            
 
     private var captionImage: Image
 
@@ -169,21 +167,18 @@ this.animationBehaviorFactory= animationBehaviorFactory
                     var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.captionImage, this.captionImage!!.getWidth(), this.captionImage!!.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
     var animationInterface: Animation = ImageAnimation(scaledImage, this.animationBehaviorFactory!!.getOrCreateInstance())
 
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.spriteMovieImage, this.frameWidth, this.frameHeight, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
     var movieIndexedAnimationInterface: IndexedAnimation = SpriteIndexedAnimation(sprite, this.spriteMovieImage, this.animationBehaviorFactory!!.getOrCreateInstance())
 
 
     var player: Player = this.soundInterface!!.getPlayerP()!!
-            
 
 
     

@@ -37,7 +37,6 @@ open public class BasicGroupItemsHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -56,7 +55,6 @@ open fun create()
         try {
             
     var success: String = BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!!.createTable()!!
-            
 
 
     
@@ -101,7 +99,6 @@ open fun drop()
         try {
             
     var success: String = BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!!.dropTable()!!
-            
 
 
     
@@ -149,11 +146,9 @@ open fun restore()
 
 
     var basicGroupItemsEntity: BasicGroupItemsEntity = BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!!
-            
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(basicGroupItemsEntity, this.portion)!!
-            
 
 
     
@@ -201,7 +196,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance())!!
-            
 
 
     

@@ -54,7 +54,6 @@ open fun isContinue()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
-            
 
 
     
@@ -146,7 +145,6 @@ open fun postDemoSetup()
 {logUtil!!.put(commonStrings!!.START, this, "setDemo")
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.start()
 PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
@@ -162,12 +160,10 @@ PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
 logUtil!!.put(commonStrings!!.START, this, CREATE_GAME)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.start()
 
     var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
-            
 
 this.setStartStateHashtable(NullUtil.getInstance()!!.NULL_TABLE)
 PrimaryThreadPool.getInstance()!!.runTask(CreateGameRunnable(this, hashtable))

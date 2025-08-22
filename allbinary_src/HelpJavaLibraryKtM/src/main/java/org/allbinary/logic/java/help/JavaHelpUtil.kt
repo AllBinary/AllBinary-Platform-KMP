@@ -65,7 +65,6 @@ open fun main(args: Array<String?>)
         try {
             
     var javaHelpUtil: JavaHelpUtil = JavaHelpUtil.getInstance()!!
-            
 
 javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automation/InputAutomationJavaApplication/AllBinaryInputAutomationHelp/AllBinaryInputAutomation.hs"))
 } catch(e: Exception)
@@ -77,7 +76,6 @@ javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automatio
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val point: Point = Point(0, 0)
 
@@ -87,7 +85,6 @@ javaHelpUtil!!.show(javaHelpUtil!!.getHelpSet("G:/mnt/bc/mydev/working/automatio
                             null)
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -103,11 +100,9 @@ open fun getHelpSet(filePath: String)
             
     var helpSetURI: URI = File(filePath).
                             toURI()!!
-            
 
 
     var helpSetURL: URL = helpSetURI!!.toURL()!!
-            
 
 
 
@@ -160,7 +155,6 @@ open fun show(helpSet: HelpSet)
         try {
             
     var helpBroker: HelpBroker = helpSet!!.createHelpBroker()!!
-            
 
 helpBroker!!.setLocation(point)
 helpBroker!!.setSize(dimension)

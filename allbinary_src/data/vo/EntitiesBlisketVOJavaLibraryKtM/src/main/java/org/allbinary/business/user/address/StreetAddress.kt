@@ -44,7 +44,6 @@ open public class StreetAddress
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var id: String
 
@@ -72,32 +71,26 @@ public constructor        (node: Node)
                     var node = node
 
     var nameNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, node.getChildNodes())!!
-            
 
 this.name= DomNodeHelper.getTextNodeValue(nameNode)
 
     var streetNode: Node = DomSearchHelper.getNode(StreetAddressData.STREET, node.getChildNodes())!!
-            
 
 this.street= DomNodeHelper.getTextNodeValue(streetNode)
 
     var cityNode: Node = DomSearchHelper.getNode(StreetAddressData.CITY, node.getChildNodes())!!
-            
 
 this.city= DomNodeHelper.getTextNodeValue(cityNode)
 
     var stateNode: Node = DomSearchHelper.getNode(StreetAddressData.STATE, node.getChildNodes())!!
-            
 
 this.state= DomNodeHelper.getTextNodeValue(stateNode)
 
     var codeNode: Node = DomSearchHelper.getNode(StreetAddressData.CODE, node.getChildNodes())!!
-            
 
 this.code= DomNodeHelper.getTextNodeValue(codeNode)
 
     var countryNode: Node = DomSearchHelper.getNode(StreetAddressData.COUNTRY, node.getChildNodes())!!
-            
 
 this.country= DomNodeHelper.getTextNodeValue(countryNode)
 this.log()
@@ -439,7 +432,6 @@ open fun validationInfo()
 stringBuffer!!.append("Address Failed To Validate - All fields must contain data.<br></br>")
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -528,7 +520,6 @@ open fun toValidationInfoNode(document: Document)
         try {
             
     var node: Node = document.createElement(StreetAddressData.FORM)!!
-            
 
 node.appendChild(this.toXmlNode(document))
 
@@ -544,7 +535,6 @@ node.appendChild(this.toXmlNode(document))
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoNode", e)
 
@@ -589,19 +579,15 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -609,7 +595,6 @@ open fun toXmlNode(document: Document)
 
 
     var node: Node = document.createElement(StreetAddressData.ADDRESS)!!
-            
 
 
 
@@ -623,7 +608,6 @@ open fun toXmlNode(document: Document)
 
 
     var value: String = stringUtil!!.getInstance(hashMap!!.get(name as Object) as String)!!
-            
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 }

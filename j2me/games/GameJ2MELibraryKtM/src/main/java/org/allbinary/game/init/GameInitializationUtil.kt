@@ -77,7 +77,6 @@ open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: M
                     var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 
     
@@ -86,11 +85,9 @@ open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: M
                                     {
                                     
     var gameInitializationInterface: GameInitializationInterface = gameInitializationInterfaceFactoryInterface!!.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -108,7 +105,6 @@ open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: M
                                     {
                                     
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 gameInitializationInterface!!.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_EARLY.getLevel())
 this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_EARLY)
@@ -150,11 +146,9 @@ open fun initGame(abeClientInformation: AbeClientInformationInterface, canvas: M
                                     {
                                     
     var gameInitializationInterface: GameInitializationInterface = gameInitializationInterfaceFactoryInterface!!.getInstance()!!
-            
 
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 gameInitializationInterface!!.init(abeClientInformation, canvas.getCustomCommandListener(), resourceLoadingLevelFactory!!.LOAD_ALL.getLevel())
 this.EVENT.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_ALL)

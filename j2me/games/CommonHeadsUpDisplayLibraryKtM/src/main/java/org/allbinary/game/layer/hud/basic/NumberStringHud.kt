@@ -84,7 +84,6 @@ public constructor        (prependString: String, max: Int, location: Int, direc
 this.PREPEND_STRING= prependString!!.toCharArray()
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 this.offset= myFont!!.stringWidth(prependString) +myFont!!.charWidth()
 this.valueString= PrimitiveLongSingleton.getInstance()!!.NUMBER_CHAR_ARRAYS[0]!!

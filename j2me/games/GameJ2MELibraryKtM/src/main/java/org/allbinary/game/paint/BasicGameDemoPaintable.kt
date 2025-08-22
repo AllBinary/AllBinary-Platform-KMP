@@ -40,7 +40,6 @@ open public class BasicGameDemoPaintable : StatePaintable {
     private val helpPaintableInterface: Paintable
 
     private var currentStatePaintable: Paintable = NullPaintable.getInstance()!!
-            
 public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable){
 
                     var mainDemoStatePaintable = mainDemoStatePaintable

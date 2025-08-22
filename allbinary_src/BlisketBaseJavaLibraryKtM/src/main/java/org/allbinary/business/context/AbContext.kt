@@ -38,10 +38,8 @@ open public class AbContext
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var propertiesHashMap: HashMap<Any, Any>
 

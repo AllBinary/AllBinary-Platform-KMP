@@ -94,7 +94,6 @@ open fun generate(objectConfigDocument: Document)
                     var objectConfigDocument = objectConfigDocument
 
     var newObjectConfigDocument: Document = super.generate(objectConfigDocument)!!
-            
 
 
 

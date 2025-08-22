@@ -37,7 +37,6 @@ open public class AbSqlColumn : AbSqlTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val LARGEST_INT_VALUE_IN_COLUMN: String = "\nLargest Int Value in column: "
 
@@ -85,7 +84,6 @@ stringBuffer!!.append(value)
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
         try {
@@ -94,13 +92,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     var rset: ResultSet = executeSQLStatement(sqlStatement)!!
-            
 
 
         while(rset.next())
         {
     var intValue: Int = rset.getInt(columnName)!!
-            
 
 
     
@@ -116,7 +112,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var largestAsString: String = Integer(largest).
                             toString()!!
-            
 
 
     
@@ -174,19 +169,16 @@ stringBuffer!!.append(sqlStrings!!.FROM)
 stringBuffer!!.append(this.getTableName())
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
         try {
             
     var rset: ResultSet = executeSQLStatement(sqlStatement)!!
-            
 
 
         while(rset.next())
         {
     var field: String = rset.getObject(columnName)!!.toString()!!
-            
 
 column.add(field)
 }
@@ -255,7 +247,6 @@ stringBuffer!!.append(value)
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     var column: Vector = Vector()

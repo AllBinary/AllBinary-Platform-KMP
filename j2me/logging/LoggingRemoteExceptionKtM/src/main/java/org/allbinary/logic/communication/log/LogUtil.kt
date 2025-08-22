@@ -92,19 +92,15 @@ open fun put(log: Log)
                                 
 
     var specialMessage: String = log.getSpecialMessage()!!
-            
 
 
     var anyType: Any = log.getObject()!!
-            
 
 
     var functionName: String = log.getFunctionName()!!
-            
 
 
     var exception: Any = log.getThrowable()!!
-            
 
 this.put(specialMessage, anyType, functionName, exception)
 }
@@ -198,7 +194,6 @@ this.isFirstException= false
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 
         try {
@@ -219,7 +214,6 @@ this.isFirstException= false
                                 
 
     var hashtable: Hashtable<Any, Any> = abeClientInformation!!.toHashtable()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(message)

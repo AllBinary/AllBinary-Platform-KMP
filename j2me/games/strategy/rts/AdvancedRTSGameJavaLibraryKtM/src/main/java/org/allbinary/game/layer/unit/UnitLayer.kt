@@ -175,19 +175,14 @@ open fun getPartialpositionlist()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
-            
 
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
-            
 
     private val angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
     private val maxResourceLoad: Short
 
@@ -214,7 +209,6 @@ open fun getPartialpositionlist()
     private val initPathAnimation: PathAnimation
 
     private var pathAnimation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 
     private val captionAnimationHelper: CaptionAnimationHelperBase = CaptionAnimationHelper(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(CaptionResources.getInstance()!!.RESOURCE)!!.getInstance(0),  -23,  -25, 6, 0)
 
@@ -227,7 +221,6 @@ open fun getPartialpositionlist()
     private var weaponRange: Int= 0
 
     var rtsLogHelper: RTSLayerLogHelper = RTSLayerLogHelper.getInstance()!!
-            
 
     var rotationAnimationInterface: RotationAnimation
 
@@ -614,11 +607,9 @@ hashtable.put(AllBinaryGameLayerManager.ID, allBinaryGameLayerManagerP)
 this.setWaypointBehavior(UnitWaypointBehavior2(this, waypointLayerInterfaceFactoryInterface!!.getInstance(hashtable, x, y, z) as AdvancedRTSGameLayer))
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-            
 
 
     var waypoint: WaypointBase = if(isHTML) {
@@ -668,7 +659,6 @@ open fun updateSensorGeographicMapCellPositionList()
                                     {
                                     
     var currentGeographicMapCellPosition: GeographicMapCellPosition = this.getCurrentGeographicMapCellPosition()!!
-            
 
 this.sensorGeographicMapCellPositionList!!.clear()
 this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
@@ -683,22 +673,18 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var totalCells: Int = (sensorRange /tiledLayer!!.getCellHeight()) /2
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var column: Int = currentGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var row: Int = currentGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var lastColumn: Int = column +totalCells
@@ -764,7 +750,6 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 
         {
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(index, index2)!!
-            
 
 
     
@@ -980,7 +965,6 @@ open fun initRangeHack()
 
 
     var weaponProperties: WeaponProperties = basicWeaponPart!!.getWeaponProperties()!!
-            
 
 this.weaponRange= weaponProperties!!.getRange()
 this.initRangeAnimation= AdjustedCircleAnimation(weaponRange, weaponRange, this.getWidth(), this.basicColorFactory!!.GREEN)
@@ -1012,7 +996,6 @@ open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
                                     {
                                     
     var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()!!
-            
 
 
     var size: Int = this.destroyAnimationInterface!!.getSize() -1
@@ -1071,7 +1054,6 @@ open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var point: GPoint = geographicMapCellPosition!!.getMidPoint()!!
-            
 
 this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHeight(), this.z)
 }
@@ -1089,7 +1071,6 @@ open fun getCurrentGeographicMapCellPosition()
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(this.x +this.getHalfWidth(), this.y +this.getHalfHeight())!!
-            
 
 
     var raceTrackGeographicMap: RaceTrackGeographicMap = geographicMapInterface as RaceTrackGeographicMap
@@ -1165,7 +1146,6 @@ open fun down()
         //nullable = true from not(false or (false and true)) = true
 {
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
-            
 
 
     
@@ -1183,7 +1163,6 @@ open fun up()
         //nullable = true from not(false or (false and true)) = true
 {
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
-            
 
 
     
@@ -1218,11 +1197,9 @@ open fun processInput(layerManager: AllBinaryLayerManager)
                     var layerManager = layerManager
 
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -1233,11 +1210,9 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
         {
     var anyType: Any = list.get(index)!!
-            
 
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
-            
 
 this.inputProcessorArray[key]!!.process(layerManager, null as GameKeyEvent)
 }
@@ -1266,7 +1241,6 @@ open fun fireAll(layerManager: AllBinaryLayerManager)
                     var layerManager = layerManager
 
     var angleInfo: AngleInfo = this.rotationAnimationInterface!!.getAngleInfoP()!!
-            
 
 
     var angle: Short = (angleInfo!!.getAngle() +this.slightAngle).toShort()
@@ -1303,7 +1277,6 @@ open fun groundFriction()
         //nullable = true from not(false or (false and true)) = true
 {
     var vehicleFrictionProperties: VehicleFrictionProperties = this.getVehicleProperties()!!.getVehicleFrictionProperties()!!
-            
 
 this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.getVehicleProperties()!!.getVelocityProperties(), vehicleFrictionProperties!!.getTireFrictionNominator())
 }
@@ -1317,11 +1290,9 @@ this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.get
                     var reason = reason
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
-            
 
 
     var point: GPoint = nextUnvisitedPathGeographicMapCellPosition!!.getMidPoint()!!
-            
 
 
     var dx: Int = (this.getXP() +this.getHalfWidth()) -point.getX()
@@ -1365,7 +1336,6 @@ open fun turnTo(dx: Int, dy: Int, targetAngle: Int)
                     var targetAngle = targetAngle
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
-            
 
 
     var evading: Boolean = false
@@ -1383,16 +1353,13 @@ targetAngle += 180
                                 
 
     var angleInfo: AngleInfo = this.rotationAnimationInterface!!.getAngleInfoP()!!
-            
 
 
     var angle: Int = FrameUtil.getInstance()!!.adjustAngleToFrameAngle(angleInfo!!.getAngle() -270)!!
-            
 
 this.rtsLogHelper!!.turnTo(this, dx, dy, angleInfo, angle, movementAngle, evading, targetAngle)
 
     var gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
 
     
@@ -1588,7 +1555,6 @@ open fun handleDeltalX(dx: Int, dy: Int)
                     var dy = dy
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
-            
 
 
     
@@ -1620,7 +1586,6 @@ open fun handleDeltalY(dx: Int, dy: Int)
                     var dy = dy
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
-            
 
 
     
@@ -1657,7 +1622,6 @@ open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
                     var targetAngle = targetAngle
 
     var list: BasicArrayList = this.getUnitWaypointBehavior()!!.getSteeringVisitorList()!!
-            
 
 
     
@@ -1677,7 +1641,6 @@ open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
 
     var anyType: Any = steeringVisitor!!.visit(
                             null)!!
-            
 
 
     
@@ -1714,7 +1677,6 @@ open fun fireOrMove()
         //nullable = true from not(false or (false and true)) = true
 {
     var gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
 
     
@@ -1753,15 +1715,12 @@ open fun move()
         try {
             
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
-            
 
 
     var velocityXScaled: Long = velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()!!
-            
 
 
     var velocityYScaled: Long = velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled()!!
-            
 
 this.getUnitWaypointBehavior()!!.move()
 
@@ -1789,11 +1748,9 @@ layerPartialCellPositionsUtil!!.getAll(geographicMapInterface, this, velocityXSc
                                     {
                                     
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var tiledLayerUtil: TiledLayerUtil = TiledLayerUtil.getInstance()!!
-            
 
 
     var x: Int = this.x +velocityXScaled.toInt()
@@ -1810,7 +1767,6 @@ this.setPosition(x, y, this.z)
                         else {
                             
     var allbinaryLayer: AllBinaryLayer = DropCellPositionHistory.getInstance()!!.getLayerInterface(cellPosition)!!
-            
 
 this.getUnitWaypointBehavior()!!.setMovingFromStopped(false)
 this.getUnitWaypointBehavior()!!.addBuildingChase(allbinaryLayer, cellPosition)
@@ -1854,7 +1810,6 @@ open fun allStop()
         //nullable = true from not(false or (false and true)) = true
 {
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
-            
 
 velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
 velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
@@ -1874,15 +1829,12 @@ open fun paint(graphics: Graphics)
                                     super.paint(graphics)
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 
     var viewX: Int = viewPosition!!.getX()!!
-            
 
 
     var viewY: Int = viewPosition!!.getY()!!
-            
 
 this.decalAnimation!!.paint(graphics, viewX, viewY)
 this.rangeAnimation!!.paint(graphics, viewX, viewY)
@@ -1985,7 +1937,6 @@ BuildingEventHandler.getInstance()!!.removeListener(this)
                                     {
                                     
     var damage: Int = this.getHealthInterface()!!.getMaxHealth()!!
-            
 
 
     
@@ -2114,7 +2065,6 @@ open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
     var rtsLayerHudPaintable: RTSLayerHudPaintable = RTSLayerHudPaintable.getInstance()!!
-            
 
 rtsLayerHudPaintable!!.setBasicColorP(this.allBinaryGameLayerManagerP!!.getForegroundBasicColor())
 rtsLayerHudPaintable!!.setRtsLayer(this)
@@ -2130,7 +2080,6 @@ open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
     var rtsLayerHudPaintable: RTSLayerHudPaintable = RTSLayerHudPaintable.getInstance()!!
-            
 
 
 

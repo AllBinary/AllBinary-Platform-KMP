@@ -76,11 +76,9 @@ open fun invoke(proxyObject: Any, proxyMethod: Method, proxyArgs: Array<Any?>)
                     var proxyArgs = proxyArgs
 
     var methodName: String = proxyMethod!!.getName()!!
-            
 
 
     var realMethod: Method = this.anyType!!.::class.getMethod(methodName, proxyMethod!!.getParameterTypes())!!
-            
 
 
     

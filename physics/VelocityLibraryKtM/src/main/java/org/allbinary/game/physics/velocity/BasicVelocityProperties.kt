@@ -43,7 +43,6 @@ open public class BasicVelocityProperties
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val velocityXBasicDecimal: BasicDecimal
 
@@ -52,7 +51,6 @@ open public class BasicVelocityProperties
     val velocityZBasicDecimal: BasicDecimal
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {this.velocityXBasicDecimal= BasicDecimal()
@@ -97,7 +95,6 @@ open fun getVelocityZBasicDecimalP()
 
 
     val directionUtil: DirectionUtil = DirectionUtil.getInstance()!!
-            
 override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -111,11 +108,9 @@ override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Directi
                     var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
-            
 
 
     var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
-            
 
 this.setVelocity(magnitudeBasicDecimal, angle, otherAngle)
 }
@@ -133,11 +128,9 @@ override fun setVelocity(magnitude: Long, direction: Direction, otherDirection: 
                     var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
-            
 
 
     var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
-            
 
 this.setVelocity(magnitude, angle, otherAngle)
 }
@@ -155,11 +148,9 @@ override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Directi
                     var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
-            
 
 
     var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
-            
 
 this.addVelocity(magnitudeBasicDecimal, angle, otherAngle)
 }
@@ -177,11 +168,9 @@ override fun addVelocity(magnitude: Long, direction: Direction, otherDirection: 
                     var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
-            
 
 
     var otherAngle: Angle = directionUtil!!.getAngle(otherDirection)!!
-            
 
 this.addVelocity(magnitude, angle, otherAngle)
 }
@@ -199,7 +188,6 @@ override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, othe
                     var otherAngle = otherAngle
 
     var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
-            
 
 this.setVelocity(magnitude, angle, otherAngle)
 }
@@ -217,7 +205,6 @@ override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, othe
                     var otherAngle = otherAngle
 
     var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
-            
 
 this.addVelocity(magnitude, angle, otherAngle)
 }
@@ -305,18 +292,15 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 stringBuffer!!.append("Velocity ")
 stringBuffer!!.append(positionStrings!!.X_LABEL)

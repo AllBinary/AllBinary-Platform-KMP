@@ -35,7 +35,6 @@ open public class PathFindingNodeCostInfo
         
 
     private val pathFindingNodeCostInfoData: PathFindingNodeCostInfoData = PathFindingNodeCostInfoData.getInstance()!!
-            
 
     var costFromStart: Long
 

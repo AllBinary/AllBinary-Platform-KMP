@@ -45,10 +45,8 @@ open public class RemoteHighScoresProcessor
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        ()
@@ -72,18 +70,15 @@ open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeCl
 logUtil!!.put("Begin Remote HighScores Retrieval", this, commonStrings!!.PROCESS)
 
     var gameInfoData: GameInfoData = GameInfoData.getInstance()!!
-            
 
 
     var hashtable: Hashtable<Any, Any> = abeClientInformation!!.toHashtable()!!
-            
 
 HashtableUtil.getInstance()!!.putAll(gameInfo!!.toHashtable(), hashtable)
 hashtable.put(gameInfoData!!.SOFTWARE_INFORMATION, remoteHighScores!!.getSoftwareInformation()!!.toString())
 hashtable.put(remoteHighScores!!.ASCENDING, remoteHighScores!!.getAscending()!!.toString())
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 hashtable.put(displayInfoSingleton!!.ORIENTATION, BooleanFactory.getInstance()!!.toString(displayInfoSingleton!!.isPortrait()))
 hashtable.put(RemoteHighScoresData.getInstance()!!.GAME_CONFIGURATION, GameConfigurationCentral.getInstance()!!.toString())

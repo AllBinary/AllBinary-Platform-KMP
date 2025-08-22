@@ -82,11 +82,9 @@ this.trackingList= BasicArrayList()
 this.update()
 
     var direction: Direction = this.setFiringDirectionForTargetIfInRange()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     
@@ -142,11 +140,9 @@ open fun setFiringDirectionForTargetIfInRange()
         //nullable = true from not(false or (false and true)) = true
 : Direction{
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var direction: Direction = directionFactory!!.NOT_BORDERED_WITH
@@ -162,7 +158,6 @@ open fun setFiringDirectionForTargetIfInRange()
 
 
     var size: Int = this.trackingList!!.size()!!
-            
 
 
 
@@ -175,11 +170,9 @@ open fun setFiringDirectionForTargetIfInRange()
 lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
     var x: Int = lastTrackingLayerInterface!!.getXP()!!
-            
 
 
     var y: Int = lastTrackingLayerInterface!!.getYP()!!
-            
 
 
     var yDistance: Int = ownerLayerInterface!!.getYP() -y -ownerLayerInterface!!.getHeight()
@@ -189,11 +182,9 @@ lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
 
     var absXDistance: Int = Math.abs(xDistance)!!
-            
 
 
     var absYDistance: Int = Math.abs(yDistance)!!
-            
 
 
     

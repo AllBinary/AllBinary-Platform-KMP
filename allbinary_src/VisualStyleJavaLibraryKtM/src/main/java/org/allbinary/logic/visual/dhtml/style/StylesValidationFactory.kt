@@ -78,7 +78,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -93,11 +92,9 @@ open fun getInstance(document: Document)
                     var document = document
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var nodeList: NodeList = document.getElementsByTagName(StylesData.getInstance()!!.NAME)!!
-            
 
 
     
@@ -126,11 +123,9 @@ open fun getInstance(document: Document)
 
         {
     var stylesNode: Node = nodeList!!.item(index)!!
-            
 
 
     var styleNodeList: Vector = DomSearchHelper.getAllNodes(StyleData.getInstance()!!.NAME, stylesNode!!.getChildNodes())!!
-            
 
 
     
@@ -153,7 +148,6 @@ open fun getInstance(document: Document)
 
 
     var cssElementStyleNodeList: Vector = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, styleNode!!.getChildNodes())!!
-            
 
 
     

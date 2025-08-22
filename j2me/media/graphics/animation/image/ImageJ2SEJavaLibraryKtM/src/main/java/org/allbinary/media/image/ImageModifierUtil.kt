@@ -120,11 +120,9 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
 
     var width: Int = image.getWidth()!!
-            
 
 
     var height: Int = image.getHeight()!!
-            
 
 
     var colorModel: ColorModel
@@ -232,11 +230,9 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
 
     var width: Int = image.getWidth()!!
-            
 
 
     var height: Int = image.getHeight()!!
-            
 
 
     var colorModel: ColorModel
@@ -330,15 +326,12 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
                             
 
     var width: Int = image.getWidth()!!
-            
 
 
     var height: Int = image.getHeight()!!
-            
 
 
     var raster: WritableRaster = newBufferedImage!!.getAlphaRaster()!!
-            
 
 
 
@@ -391,7 +384,6 @@ open fun getImageArray(originalImageArray: Array<Image?>)
         {originalImage= originalImageArray[index]!!
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-            
 
 image.getGraphics()!!.drawImage(originalImage, 0, 0, Anchor.TOP_LEFT)
 newImageArray[index]= image
@@ -405,7 +397,6 @@ newImageArray[index]= image
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 

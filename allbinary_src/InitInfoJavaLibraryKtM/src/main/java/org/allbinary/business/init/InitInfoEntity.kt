@@ -94,7 +94,6 @@ open fun get()
 keyAndValue!!.put(NOTHING, NOTHING)
 
     var hashMap: HashMap<Any, Any> = getRow(keyAndValue)!!
-            
 
 
     
@@ -160,7 +159,6 @@ open fun is()
 keyAndValue!!.put(NOTHING, NOTHING)
 
     var hashMap: HashMap<Any, Any> = getRow(keyAndValue)!!
-            
 
 
     

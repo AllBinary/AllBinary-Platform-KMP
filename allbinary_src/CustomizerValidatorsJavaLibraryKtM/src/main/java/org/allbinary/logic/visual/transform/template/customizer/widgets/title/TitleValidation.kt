@@ -38,7 +38,6 @@ open public class TitleValidation : TitleView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(){

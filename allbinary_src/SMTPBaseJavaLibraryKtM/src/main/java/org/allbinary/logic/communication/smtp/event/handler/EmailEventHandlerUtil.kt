@@ -71,19 +71,15 @@ open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformat
                     var userInterface = userInterface
 
     var userConfigurationInterface: UserConfigurationInterface = userInterface!!.getUserConfigurationInterface()!!
-            
 
 
     var userEmailConfigurationInterface: UserEmailConfigurationInterface = userConfigurationInterface!!.getUserEmailConfigurationInterface()!!
-            
 
 
     var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface = userEmailConfigurationInterface!!.getUserEmailEventsConfigurationInterface()!!
-            
 
 
     var userEmailEventListenerInterface: UserEmailEventListenerInterface = userEmailEventsConfigurationInterface!!.getEventListener(abeClientInformation, userEmailEventNameData, userInterface)!!
-            
 
 
     var vector: Vector = Vector()
@@ -100,7 +96,6 @@ vector.add(userEmailEventListenerInterface)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -140,7 +135,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getEventHandler")
 userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
     var size: Int = userVector!!.size!!
-            
 
 
 
@@ -154,7 +148,6 @@ userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
 
     var vector: Vector = EmailEventHandlerUtil.getUserEmailEventListenerVector(abeClientInformation, userEmailEventNameData, userInterface)!!
-            
 
 userEmailEventHandler!!.addListener(vector)
 }

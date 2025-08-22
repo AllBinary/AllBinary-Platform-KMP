@@ -42,7 +42,6 @@ open public class EditValidationUserView : UserView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userName: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -60,7 +59,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
     var hashMap: HashMap<Any, Any> = RequestParams(httpServletRequest).
                             toHashMap()!!
-            
 
 this.userName= UserName(hashMap).
                             get()

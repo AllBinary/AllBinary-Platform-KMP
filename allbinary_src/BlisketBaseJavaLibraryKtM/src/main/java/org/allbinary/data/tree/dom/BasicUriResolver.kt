@@ -45,7 +45,6 @@ open public class BasicUriResolver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val IMPORT_URL: String = "/{import url}"
 

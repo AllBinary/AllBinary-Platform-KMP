@@ -98,7 +98,6 @@ this.update()
 
 
     private val geographicMapDirectionUtil: GeographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -112,11 +111,9 @@ open fun goTowardNextChosenOnPathPosition(currentGeographicMapCellPosition: Geog
 
 
     var goToGeographicMapCellPosition: GeographicMapCellPosition = this.geographicMapCellPathHistoryInfo!!.getNextChosenOnPathGeographicMapCellPosition()!!
-            
 
 
     var geographicMapDirectionData: Direction = geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(currentGeographicMapCellPosition, goToGeographicMapCellPosition)!!
-            
 
 
     

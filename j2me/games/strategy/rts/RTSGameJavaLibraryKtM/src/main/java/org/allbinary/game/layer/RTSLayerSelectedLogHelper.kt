@@ -63,13 +63,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
     private val TRACKTO_TURNTO: String = "trackTo:turnTo"
 
@@ -179,7 +176,6 @@ stringBuffer!!.append(movementAngle!!.getValue())
                                     {
                                     
     var angleIncrement: Int = angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()!!
-            
 
 stringBuffer!!.append(" angleIncrement: ")
 stringBuffer!!.append(angleIncrement)
@@ -331,7 +327,6 @@ open fun notOnPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, ge
                     var pathList = pathList
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(' ')!!.append(geographicMapCellHistory!!.getTotalVisited())!!.append(' ')!!.append(stringUtil!!.toString(currentGeographicMapCellPosition))!!.append(" - trying to move but not on path: ")!!.append(stringUtil!!.toString(pathList))!!.toString(), this, "turnTo")

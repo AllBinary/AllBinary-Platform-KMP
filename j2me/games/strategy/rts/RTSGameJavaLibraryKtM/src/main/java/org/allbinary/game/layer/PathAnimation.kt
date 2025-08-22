@@ -43,7 +43,6 @@ open public class PathAnimation : Animation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val linePathAnimation: LinePathAnimation
 
@@ -100,7 +99,6 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
         try {
             
     var waypointBehaviorBase: WaypointBehaviorBase = this.pathFindingLayer!!.getWaypointBehavior()!!
-            
 
 
     
@@ -111,15 +109,12 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
                                     {
                                     
     var geographicMapCellHistory: GeographicMapCellHistory = waypointBehaviorBase!!.getCurrentGeographicMapCellHistory()!!
-            
 
 
     var list: BasicArrayList = geographicMapCellHistory!!.getTracked()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     
@@ -134,7 +129,6 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = 

@@ -46,7 +46,6 @@ open public class InsertHeaderValidationView : TopBarView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val LOGOPATH: String = "logo/"
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -61,11 +60,9 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
     var multipartRequestHashMap: HashMap<Any, Any> = MultipartRequestParams(this.getPageContext()).
                             toHashMap()!!
-            
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var fullPath: String = URLGLOBALS.getWebappPath() +storeFrontInterface!!.getCurrentHostNamePath() +LOGOPATH
@@ -102,7 +99,6 @@ open fun isValid()
                                 
 
     var isValid: Boolean = this.heading.isValid()!!
-            
 
 
     

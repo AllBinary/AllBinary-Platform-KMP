@@ -115,7 +115,6 @@ this.collided= true
 
 
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
-            
 override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

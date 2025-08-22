@@ -46,7 +46,6 @@ open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
     var sensorFeatureFactory: SensorFeatureFactory = SensorFeatureFactory.getInstance()!!
-            
 
 
     

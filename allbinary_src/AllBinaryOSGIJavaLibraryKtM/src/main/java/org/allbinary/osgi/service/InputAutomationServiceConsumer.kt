@@ -39,13 +39,10 @@ open public class InputAutomationServiceConsumer
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val osgiServiceUtil: OSGIServiceUtil = OSGIServiceUtil.getInstance()!!
-            
 
     private var registryName: String
 
@@ -76,12 +73,10 @@ open fun process()
 {logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
     var vector: Vector = osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
-            
 
 logUtil!!.put("Processing " +vector.size +" Services", this, commonStrings!!.PROCESS)
 
     var size: Int = vector.size!!
-            
 
 
     var osgiServiceInterface: OSGIServiceInterface

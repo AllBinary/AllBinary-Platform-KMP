@@ -38,7 +38,6 @@ open public class MetaView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var metasValidation: MetasValidation
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

@@ -36,7 +36,6 @@ open public class LogUserEmailEventListenerModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}

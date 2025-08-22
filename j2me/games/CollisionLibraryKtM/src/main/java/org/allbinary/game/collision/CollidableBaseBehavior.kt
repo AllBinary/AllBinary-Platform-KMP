@@ -40,10 +40,8 @@ open public class CollidableBaseBehavior
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var collidable: Boolean = true
 
@@ -108,7 +106,6 @@ override fun isCollidable()
 
 
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
-            
 override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

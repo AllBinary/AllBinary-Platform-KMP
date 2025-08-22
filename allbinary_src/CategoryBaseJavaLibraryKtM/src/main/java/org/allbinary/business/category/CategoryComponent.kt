@@ -94,7 +94,6 @@ open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var document: Document = DomDocumentHelper.create()!!
-            
 
 document.appendChild(CategoryView(this.getCategoryInterface()).
                             toXmlNode(document))

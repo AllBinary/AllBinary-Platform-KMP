@@ -73,11 +73,9 @@ open fun registerAsService(bundleContext: BundleContext, anyType: Any, serviceNa
                     var properties = properties
 
     var serviceRegistration: ServiceRegistration = bundleContext!!.registerService(serviceName, anyType, properties)!!
-            
 
 
     var serviceReference: ServiceReference = serviceRegistration!!.getReference()!!
-            
 
 serviceReference= bundleContext!!.getServiceReference(serviceName)
 

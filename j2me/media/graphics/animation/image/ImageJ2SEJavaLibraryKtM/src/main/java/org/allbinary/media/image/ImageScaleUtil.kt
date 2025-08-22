@@ -55,10 +55,8 @@ open fun getInstance()
         }
             
     private val imageJ2SEUtil: ImageJ2SEUtil = ImageJ2SEUtil.getInstance()!!
-            
 
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -127,11 +125,9 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
                     var mutable = mutable
 
     var width: Int = originalImage!!.getWidth()!!
-            
 
 
     var height: Int = originalImage!!.getHeight()!!
-            
 
 
     var scaleX: Float = scaleNominatorX /scaleDenominatorX
@@ -268,11 +264,9 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
                             
 
     var at: AffineTransform = AffineTransform.getScaleInstance(scaleX, scaleY)!!
-            
 
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
 g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())

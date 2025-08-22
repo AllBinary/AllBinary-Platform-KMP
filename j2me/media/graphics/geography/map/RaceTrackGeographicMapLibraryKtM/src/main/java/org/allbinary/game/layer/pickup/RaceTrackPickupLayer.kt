@@ -48,7 +48,6 @@ open public class RaceTrackPickupLayer : PickupLayer {
 
 
     private val viewPositionEventHandler: ViewPositionEventHandler = ViewPositionEventHandler.getInstance()!!
-            
 
 open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true

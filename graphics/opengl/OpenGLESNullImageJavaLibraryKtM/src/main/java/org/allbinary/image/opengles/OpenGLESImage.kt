@@ -50,17 +50,14 @@ open public class OpenGLESImage : Image
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val textureFactory: PlatformTextureBaseFactory
 
     val openGLBitmap: PlatformBitmapBase
 
     var imageProcessor: OpenGLESImageProcessor = OpenGLESImageProcessor.getInstance()!!
-            
 
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
-            
 
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory){

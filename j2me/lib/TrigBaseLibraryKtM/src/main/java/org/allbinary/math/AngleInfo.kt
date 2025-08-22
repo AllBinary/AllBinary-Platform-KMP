@@ -66,7 +66,6 @@ this.angleIncrementInfo= angleIncrementInfo
 
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-            
 
 open fun adjustAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true

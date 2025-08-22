@@ -55,35 +55,27 @@ public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameI
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var x: Int = ownerLayerInterface!!.getXP()!!
-            
 
 
     var y: Int = ownerLayerInterface!!.getYP()!!
-            
 
 
     var x2: Int = ownerLayerInterface!!.getX2()!!
-            
 
 
     var y2: Int = ownerLayerInterface!!.getY2()!!
-            
 
 
     var width: Int = ownerLayerInterface!!.getWidth()!!
-            
 
 
     var height: Int = ownerLayerInterface!!.getHeight()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     

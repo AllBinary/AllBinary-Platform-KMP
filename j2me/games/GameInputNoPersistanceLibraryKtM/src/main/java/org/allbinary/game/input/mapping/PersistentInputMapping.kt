@@ -55,10 +55,8 @@ open public class PersistentInputMapping
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val inputMapping: InputToGameKeyMapping = InputToGameKeyMapping()
 
@@ -179,7 +177,6 @@ inputPersistance!!.loadAll(abeClientInformation)
 
 
     var list: BasicArrayList = inputPersistance!!.getList()!!
-            
 
 
     var totalMappedTo: Int = 0
@@ -196,7 +193,6 @@ inputPersistance!!.loadAll(abeClientInformation)
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
-            
 
 
         while(enumeration.hasMoreElements())

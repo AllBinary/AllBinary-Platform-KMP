@@ -75,7 +75,6 @@ open fun update()
 
 
     var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
-            
 
 
     var rotationAnimationInterfaceCompositeInterface: RotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface() as RotationAnimationInterfaceCompositeInterface
@@ -94,7 +93,6 @@ rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIG
 
 
     var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
-            
 
 
     var rotationAnimationInterfaceCompositeInterface: RotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface() as RotationAnimationInterfaceCompositeInterface

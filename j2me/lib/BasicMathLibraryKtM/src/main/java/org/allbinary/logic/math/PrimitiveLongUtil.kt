@@ -34,10 +34,8 @@ open public class PrimitiveLongUtil
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var powerOfTen: Int
 
@@ -50,7 +48,6 @@ open public class PrimitiveLongUtil
     private var currentTotalDigits: Int= 0
 
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
-            
 public constructor        (powerOfTen: Int)                        
 
                             : this(powerOfTen, false){

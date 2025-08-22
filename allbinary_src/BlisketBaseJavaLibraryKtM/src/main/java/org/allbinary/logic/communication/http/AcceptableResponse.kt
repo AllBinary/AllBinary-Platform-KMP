@@ -34,10 +34,8 @@ open public class AcceptableResponse
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 protected constructor        (candidate: String, tagName: String, index: Int)
             : super()
         {
@@ -52,7 +50,6 @@ protected constructor        (candidate: String, tagName: String, index: Int)
 logUtil!!.put(tagName, this, this.commonStrings!!.CONSTRUCTOR)
 
     var acceptableResponseUtil: AcceptableResponseUtil = AcceptableResponseUtil.getInstance()!!
-            
 
 acceptableResponseUtil!!.candidateVector!!.add(index, candidate)
 acceptableResponseUtil!!.tagNameVector!!.add(index, tagName)

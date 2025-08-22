@@ -43,7 +43,6 @@ open public class BasketRequestHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val weblisketSession: WeblisketSession
 
@@ -115,7 +114,6 @@ open fun addItemToBasket()
                                     {
                                     
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
-            
 
 
     
@@ -183,7 +181,6 @@ open fun removeItemFromBasket()
                                     {
                                     
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
-            
 
 basket.removeItem(id)
 
@@ -229,7 +226,6 @@ open fun adjustBasket()
         try {
             
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
-            
 
 
     

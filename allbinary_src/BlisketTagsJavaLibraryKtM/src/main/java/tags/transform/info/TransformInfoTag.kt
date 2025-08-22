@@ -39,7 +39,6 @@ open public class TransformInfoTag : ModifyTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String
 

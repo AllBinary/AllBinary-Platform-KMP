@@ -46,7 +46,6 @@ open public class ImageActionScriptOutput : BasicProfileActionScriptOutput
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var saved: Boolean = false
 
@@ -67,7 +66,6 @@ public constructor        (node: Node)
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 
     var actionNode: Node = DomSearchHelper.getNode(ImageActionScriptOutputData.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -78,7 +76,6 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
                                     {
                                     
     var nodeList: NodeList = actionNode!!.getChildNodes()!!
-            
 
 
 
@@ -89,7 +86,6 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
 
         {
     var childNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -98,7 +94,6 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
                                     {
                                     
     var booleanString: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.setSaved(.
                             )
@@ -112,7 +107,6 @@ this.setSaved(.
                                     {
                                     
     var booleanString: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.setSaved(.
                             )
@@ -200,11 +194,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 
     var newNode: Node = ModDomHelper.createNodeWithValueNodes(document, ImageActionScriptOutputData.NAME, this.toHashMap())!!
-            
 
 newNode!!.appendChild(this.getImageTypes()!!.toXmlNode(document))
 node.appendChild(newNode)

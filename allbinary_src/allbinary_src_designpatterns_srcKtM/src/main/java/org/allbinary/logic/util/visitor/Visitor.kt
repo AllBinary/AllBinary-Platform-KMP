@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
 : Any{

@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -88,7 +87,6 @@ open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 stringBuilder!!.delete(0, stringBuilder!!.length())
 
@@ -100,7 +98,6 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 tokenizer.getTokens(string, list)
 
     var size: Int = list.size()!!
-            
 
 
     var word: String

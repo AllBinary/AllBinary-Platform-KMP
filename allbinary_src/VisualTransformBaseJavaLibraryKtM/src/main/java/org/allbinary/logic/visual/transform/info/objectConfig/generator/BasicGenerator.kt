@@ -31,7 +31,6 @@ open public class BasicGenerator : TransformInfoObjectConfigGenerator {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 

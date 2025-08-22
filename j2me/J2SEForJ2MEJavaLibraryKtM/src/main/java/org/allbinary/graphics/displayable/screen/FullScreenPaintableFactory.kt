@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     var paintable: Paintable = NullPaintable.getInstance()!!
-            
 
 }
                 

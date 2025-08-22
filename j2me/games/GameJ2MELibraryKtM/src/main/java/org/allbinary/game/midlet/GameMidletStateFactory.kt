@@ -38,7 +38,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var currentGameState: GameState = GameState.NO_GAME_STATE
 private constructor        ()

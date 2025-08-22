@@ -34,7 +34,6 @@ open public class DateRangeOrderHistoryTag : StoreValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var status: String
 public constructor        ()                        

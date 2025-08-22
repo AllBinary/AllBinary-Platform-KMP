@@ -53,10 +53,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 
     val TOUCH_BUTTON_SOURCE_ID: Int = 2
 

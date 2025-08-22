@@ -89,7 +89,6 @@ open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
-            
 
 
     
@@ -139,7 +138,6 @@ open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
                                 
 
     var licenseInitInfo: LicenseInitInfo = this.getLicenseInitInfo()!!
-            
 
 System.out.println("License Serv Example: http://www.dartstatistics.com/LicServ/serverssl.php")
 licenseInitInfo!!.clearServers()
@@ -156,7 +154,6 @@ licenseInitInfo!!.clearServers()
         while(true)
         {
     var line: String = lineNumberReader!!.readLine()!!
-            
 
 
     

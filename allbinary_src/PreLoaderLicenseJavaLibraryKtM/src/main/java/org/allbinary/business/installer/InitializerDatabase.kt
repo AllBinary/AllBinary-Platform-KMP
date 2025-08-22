@@ -55,7 +55,6 @@ open public class InitializerDatabase
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var adminDbUserName: String
 
@@ -86,11 +85,9 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 
 
     var keys: Set = map.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -145,7 +142,6 @@ open fun getFormData(abeClientInformation: AbeClientInformationInterface, hashMa
         try {
             
     var initializerData: InitializerData = InitializerData.getInstance()!!
-            
 
 setAdminDbUserName(hashMap!!.get(initializerData!!.DBUSER) as String)
 setAdminDbPassword(hashMap!!.get(initializerData!!.DBPASSWORD) as String)
@@ -195,7 +191,6 @@ open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
@@ -227,7 +222,6 @@ open fun isValid()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -297,7 +291,6 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.getAdminJdbcDriver()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     

@@ -61,10 +61,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
 
@@ -80,23 +78,18 @@ open fun getOperatingSystemInstance()
         try {
             
     var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
-            
 
 
     var systemProperties: SystemProperties = SystemProperties.getInstance()!!
-            
 
 
     var osName: String = systemProperties!!.getName()!!
-            
 
 
     var osArch: String = systemProperties!!.getArch()!!
-            
 
 
     var osVersion: String = systemProperties!!.getVersion()!!
-            
 
 
     
@@ -171,7 +164,6 @@ this.genericOperatingSystem= Solaris() as GenericOperatingSystem
 
     var log: Log = LogFactory.getInstance(StringMaker().
                             append("OperatingSystem Info: ")!!.append(StringUtil.getInstance()!!.toString(this.genericOperatingSystem))!!.toString(), this, commonStrings!!.GET_INSTANCE)!!
-            
 
 System.out.println(log.toString())
 logUtil!!.put(log)

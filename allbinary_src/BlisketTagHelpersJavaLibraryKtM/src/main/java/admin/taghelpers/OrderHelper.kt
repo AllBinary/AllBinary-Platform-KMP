@@ -49,7 +49,6 @@ open public class OrderHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -94,7 +93,6 @@ open fun setPaymentGateway()
 
 
     var orderInterface: OrderInterface = this.weblisketSession!!.getOrder()!!
-            
 
 
     var requestPaymentGateway: String = request.getParameter(PaymentGatewayData.NAME.toString()) as String
@@ -115,7 +113,6 @@ paymentGatewayBoolean= Boolean.TRUE
 
 
     var paymentTypeVector: Vector = paymentGatewayEntityInterface!!.findPaymentTypeVectorByStore(this.weblisketSession!!.getStoreName())!!
-            
 
 
     
@@ -130,7 +127,6 @@ paymentGatewayBoolean= Boolean.TRUE
 
 
     var paymentGateway: String = paymentGatewayInterface!!.getName()!!
-            
 
 this.weblisketSession!!.setPaymentMethod(paymentGateway)
 orderInterface!!.setPaymentMethod(paymentGateway)
@@ -173,7 +169,6 @@ stringBuffer!!.append("Failed to set PaymentGateway for Order: ")
         try {
             
     var orderInterface: OrderInterface = this.weblisketSession!!.getOrder()!!
-            
 
 
     
@@ -212,12 +207,10 @@ open fun process()
         try {
             
     var order: OrderInterface = this.weblisketSession!!.getOrder()!!
-            
 
 order.setStoreName(this.storeFrontInterface!!.getName())
 
     var result: String = OrderProcessorUtil.getInstance()!!.process(this.weblisketSession!!.getUserName(), order as Order)!!
-            
 
 
     
@@ -247,7 +240,6 @@ stringBuffer!!.append("Failed to Process Order: ")
 
 
     var error: String = stringBuffer!!.toString()!!
-            
 
 
     

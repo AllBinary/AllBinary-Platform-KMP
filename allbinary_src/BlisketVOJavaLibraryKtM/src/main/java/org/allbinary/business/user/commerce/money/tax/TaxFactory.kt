@@ -70,10 +70,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val TAXATIONFILENAME: String = "taxationMethod.xml"
 private constructor        ()
@@ -107,20 +105,16 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
 
     var transformInfoObjectConfigData: TransformInfoObjectConfigData = TransformInfoObjectConfigData.getInstance()!!
-            
 
 
     var data: String = CryptFileReader(transformInfoObjectConfigData!!.UNCRYPTED_EXTENSION, transformInfoObjectConfigData!!.ENCRYPTED_EXTENSION).
                             get(abPath)!!
-            
 
 
     var document: Document = DomDocumentHelper.create(data)!!
-            
 
 
     var taxNameNodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
-            
 
 
 
@@ -131,11 +125,9 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
         {
     var node: Node = taxNameNodeList!!.item(index)!!
-            
 
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
     
@@ -146,7 +138,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     var classNameNode: Node = DomSearchHelper.getNode(DynamicObjectData.NAME, nodeList)!!
-            
 
 
     
@@ -157,7 +148,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                                     {
                                     
     var className: String = DomNodeHelper.getTextNodeValue(classNameNode)!!
-            
 
 
 

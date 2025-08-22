@@ -70,7 +70,6 @@ this.currentHomeLocation= Replace(CommonSeps.getInstance()!!.SPACE, "%20").
                         else {
                             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.storeFrontInterface= StoreFront()
 this.currentLocation= stringUtil!!.EMPTY_STRING

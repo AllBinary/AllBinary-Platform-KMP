@@ -34,7 +34,6 @@ open public class TitleProgressBarSetProgressRunnable : ProgressRunnable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
 
                             : super(midletActivity, progressCanvas){
@@ -57,7 +56,6 @@ override fun run()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

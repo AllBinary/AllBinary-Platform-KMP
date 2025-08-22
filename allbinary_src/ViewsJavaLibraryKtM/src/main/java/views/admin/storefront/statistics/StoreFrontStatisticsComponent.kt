@@ -38,7 +38,6 @@ open public class StoreFrontStatisticsComponent : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var newStoreFrontInterface: StoreFrontInterface
 

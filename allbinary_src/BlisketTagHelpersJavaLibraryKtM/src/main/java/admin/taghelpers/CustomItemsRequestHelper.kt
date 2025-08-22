@@ -41,7 +41,6 @@ open public class CustomItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -85,7 +84,6 @@ values.put(DynamicObjectData.NAME, this.className)
 values.put(CustomItemData.PACKAGE, this.packageName)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -107,7 +105,6 @@ open fun insert()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -217,7 +214,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.getHashMap()!!
-            
 
 CustomItemsEntityFactory.getInstance()!!.getCustomItemsEntityInstance()!!.update(values)
 

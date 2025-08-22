@@ -50,7 +50,6 @@ open fun getInstance()
         }
             
     private var LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
     private var list: BasicArrayList = LIST
 

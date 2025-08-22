@@ -40,7 +40,6 @@ open public class PermissionItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "permissionitems"
 public constructor        ()                        

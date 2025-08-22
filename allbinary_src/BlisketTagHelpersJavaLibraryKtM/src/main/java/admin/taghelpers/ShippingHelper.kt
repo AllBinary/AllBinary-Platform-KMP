@@ -40,7 +40,6 @@ open public class ShippingHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -96,7 +95,6 @@ open fun setShippingType()
 
 
     var order: OrderInterface = this.weblisketSession!!.getOrder()!!
-            
 
 order.setShippingMethod(shippingType)
 

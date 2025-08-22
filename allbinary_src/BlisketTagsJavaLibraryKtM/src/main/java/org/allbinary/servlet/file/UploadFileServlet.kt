@@ -58,10 +58,8 @@ open public class UploadFileServlet : HttpServlet {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var requestHashMap: HashMap<Any, Any>
 
@@ -242,7 +240,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "saveFile()")
 HttpFileUploadUtil.log(fileItem)
 
     var byteArray: ByteArray = fileItem!!.get()!!
-            
 
 
     

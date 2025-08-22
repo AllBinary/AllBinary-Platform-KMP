@@ -48,12 +48,10 @@ open public class AllBinaryGameLayer : AllBinaryLayer
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val RED: BasicColor = BasicColorFactory.getInstance()!!.RED
 
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     private val paintable: Paintable = if(SWTUtil.isSWT) {
                             
@@ -220,15 +218,12 @@ open fun paintDebug(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 
     var viewX: Int = viewPosition!!.getX()!!
-            
 
 
     var viewY: Int = viewPosition!!.getY()!!
-            
 
 this.basicSetColorUtil!!.setBasicColorP(graphics, RED)
 graphics.drawRect(viewX, viewY, this.getWidth(), this.getHeight())

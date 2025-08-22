@@ -54,10 +54,8 @@ open public class HighScoreUtil
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val highScoresFactoryInterface: HighScoresFactoryInterface
 
@@ -178,7 +176,6 @@ open fun submit(myCanvas: MyCanvas)
                     var myCanvas = myCanvas
 
     var commandListener: CommandListener = myCanvas!!.getCustomCommandListener()!!
-            
 
 commandListener!!.commandAction(SUBMIT_TEXTBOX_COMMAND, myCanvas)
 }

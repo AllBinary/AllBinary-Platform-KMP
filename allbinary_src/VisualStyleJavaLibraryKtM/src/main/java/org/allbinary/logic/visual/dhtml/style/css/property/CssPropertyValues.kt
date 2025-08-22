@@ -47,7 +47,6 @@ open public class CssPropertyValues
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var propertyValueVector: Vector
 public constructor        ()
@@ -66,7 +65,6 @@ public constructor        (node: Node)
 this.propertyValueVector= Vector()
 
     var cssPropertyNodeVector: Vector = DomSearchHelper.getAllNodes(CssPropertyValueData.getInstance()!!.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -79,7 +77,6 @@ this.propertyValueVector= Vector()
                                 
 
     var size: Int = cssPropertyNodeVector!!.size!!
-            
 
 
 
@@ -93,11 +90,9 @@ this.propertyValueVector= Vector()
 
 
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, cssPropertyValueNode!!.getChildNodes())!!
-            
 
 
     var propertyValue: String = DomNodeHelper.getTextNodeValue(valueNode)!!
-            
 
 
     
@@ -110,11 +105,9 @@ this.propertyValueVector= Vector()
                                 
 
     var indexNode: Node = DomSearchHelper.getNode(DomData.INDEX, cssPropertyValueNode!!.getChildNodes())!!
-            
 
 
     var indexValue: String = DomNodeHelper.getTextNodeValue(indexNode)!!
-            
 
 indexPropertyValueHashMap!!.put(indexValue, propertyValue)
 }
@@ -142,11 +135,9 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var cssPropertyValueData: CssPropertyValueData = CssPropertyValueData.getInstance()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -156,7 +147,6 @@ open fun toHashMap()
 
 
     var size: Int = propertyValueVector!!.size!!
-            
 
 
 
@@ -199,7 +189,6 @@ open fun toXmlNode(document: Document)
                                     {
                                     
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 logUtil!!.put("CssPropertyValues HashMap: " +hashMap!!.toString(), this, "toXmlNode()")
 

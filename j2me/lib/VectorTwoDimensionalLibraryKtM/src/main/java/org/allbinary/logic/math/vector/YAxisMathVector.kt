@@ -59,7 +59,6 @@ open fun calculate()
         //nullable = true from not(false or (false and true)) = true
 {
     var result: Long = YAxisMathVectorUtil.calculate(this.getMagnitude()!!.getUnscaled(), this.getDirection())!!
-            
 
 this.resultBasicDecimal= BasicDecimal(result)
 }

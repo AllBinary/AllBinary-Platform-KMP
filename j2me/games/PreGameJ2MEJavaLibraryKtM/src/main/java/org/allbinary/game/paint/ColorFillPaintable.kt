@@ -33,7 +33,6 @@ open public class ColorFillPaintable : ColorFillBasePaintable {
         
 
     val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 public constructor        (basicColor: BasicColor)                        
 
                             : super(basicColor){

@@ -38,7 +38,6 @@ open public class InsertTemplateCustomizerTransformInfoObjectConfig : NoTemplate
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
@@ -102,11 +101,9 @@ open fun set(aParentViewName: String)
                                 
 
     var document: Document = this.toXmlDoc()!!
-            
 
 
     var parentComponentsNodeList: NodeList = document.getElementsByTagName(TransformInfosData.getInstance()!!.NAME)!!
-            
 
 
     
@@ -126,7 +123,6 @@ open fun set(aParentViewName: String)
                                 
 
     var componentNode: Node = parentComponentsNodeList!!.item(0)!!.getChildNodes()!!.item(0)!!
-            
 
 
     
@@ -156,11 +152,9 @@ parentComponentsNodeList!!.item(0)!!.appendChild(TransformInfoDomNodeView(aParen
                                 
 
     var objectConfigNode: Node = document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
-            
 
 
     var parentComponentsNode: Node = document.createElement(TransformInfosData.getInstance()!!.NAME)!!
-            
 
 objectConfigNode!!.appendChild(parentComponentsNode)
 

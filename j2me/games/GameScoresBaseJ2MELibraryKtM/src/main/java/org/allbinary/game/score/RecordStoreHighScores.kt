@@ -101,13 +101,10 @@ hashTable!!.put(highScores!!.getName(), highScores)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val platformRecordIdUtil: PlatformRecordIdUtil = PlatformRecordIdUtil.getInstance()!!
-            
 
     private val RECORD_ID: String = "_HS"
 
@@ -187,11 +184,9 @@ this.removeLowestHighScore()
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
     var highScoreBytes: ByteArray = newHighScore!!.getAsBytes()!!
-            
 
 
     var recordId: Int = recordStore!!.addRecord(highScoreBytes, 0, highScoreBytes!!.size)!!
-            
 
 this.load()
 } catch(e: RecordStoreException)
@@ -239,7 +234,6 @@ open fun removeLowestHighScore()
             recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-            
 
 
     var scoreComparator: ScoreComparator = (this.recordComparatorInterface as ScoreComparator)
@@ -260,7 +254,6 @@ open fun removeLowestHighScore()
         while(recordEnum!!.hasNextElement())
         {
     var id: Int = recordEnum!!.nextRecordId()!!
-            
 
 recordAsBytes= recordStore!!.getRecord(id)
 
@@ -274,11 +267,9 @@ recordAsBytes= recordStore!!.getRecord(id)
 inputStream= DataInputStream(byteArrayInputStream)
 
     var name: String = inputStream!!.readUTF()!!
-            
 
 
     var nextScore: Long = inputStream!!.readLong()!!
-            
 
 
     var nextCurrentHighScore: HighScore = HighScore(id, name, GameInfo.NONE, nextScore)
@@ -351,7 +342,6 @@ open fun load()
 this.setList(BasicArrayList())
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-            
 
 
     var recordAsBytes: ByteArray
@@ -366,7 +356,6 @@ this.setList(BasicArrayList())
         while(recordEnum!!.hasNextElement())
         {
     var id: Int = recordEnum!!.nextRecordId()!!
-            
 
 recordAsBytes= recordStore!!.getRecord(id)
 
@@ -382,22 +371,18 @@ inputStream= DataInputStream(byteArrayInputStream)
         try {
             
     var name: String = inputStream!!.readUTF()!!
-            
 
 
     var score: Long = inputStream!!.readLong()!!
-            
 
 
     var newHighScore: HighScore = HighScore(id, name, GameInfo.NONE, score)
 
 
     var list: BasicArrayList = this.getList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     var lastIndex: Int = size
@@ -534,11 +519,9 @@ open fun isTooManyHighScores()
                         else {
                             
     var list: BasicArrayList = this.getList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -593,11 +576,9 @@ override fun toString()
 stringBuffer!!.append(super.toString())
 
     var list: BasicArrayList = this.getList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 

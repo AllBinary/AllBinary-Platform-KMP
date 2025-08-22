@@ -54,7 +54,6 @@ open fun toXmlNode(document: Document)
 hashMap!!.put(UrlGlobalsData.WEBAPPPATH, org.allbinary.globals.URLGLOBALS.getWebappPath())
 
     var node: Node = ModDomHelper.createNameValueNodes(document, UrlGlobalsData.NAME, hashMap)!!
-            
 
 
 

@@ -44,7 +44,6 @@ open fun getName(anyType: Any)
                     var anyType = anyType
 
     var classLoader: ClassLoader = anyType!!::class.java.classLoader!!
-            
 
 
     

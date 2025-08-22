@@ -57,7 +57,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val list: BasicArrayList = BasicArrayList()
 
@@ -84,7 +83,6 @@ open fun getNextGroup(name: String)
                     var name = name
 
     var group: Group = this.getNextGroup()!!
-            
 
 group.setName(name)
 
@@ -108,7 +106,6 @@ open fun init(groups: Short, nameArray: Array<String?>)
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var TEAM: String = "Team "
@@ -117,7 +114,6 @@ list.clear()
 index= 0
 
     var size: Int = list.size()!!
-            
 
 
         while(size < groups)

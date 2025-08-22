@@ -57,7 +57,6 @@ open public class MultipassNoCacheWaypoint : WaypointBase
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val ownerLayer: PathFindingLayerInterface
 public constructor        (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
@@ -103,7 +102,6 @@ open fun releaseCachedPaths()
 
 
     var endGeographicMapCellPosition: GeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition)!!
-            
 
 
     
@@ -160,7 +158,6 @@ open fun releaseCachedPaths()
 
 
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()!!
-            
 
 
     var customMapGenerator: CustomMapGenerator = raceTrackGeographicMap!!.getCustomMapGenerator() as CustomMapGenerator
@@ -168,13 +165,11 @@ open fun releaseCachedPaths()
 customMapGenerator!!.copyMapIntoCustomMap()
 
     var customMapArray: Array<IntArray?> = customMapGenerator!!.getCustomMapArray()!!
-            
 
 customMapArray[startGeographicMapCellPosition!!.getRow()]!![startGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getStartType()
 customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
     var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstance(raceTrackGeographicMap, customMapArray)!!
-            
 
 
 
@@ -222,7 +217,6 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 
 
     var list: BasicArrayList = PathGenerator.getInstance()!!.createN(geographicMapInterface, pathFindingInfo, 2, multipassState)!!
-            
 
 
     
@@ -259,7 +253,6 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
 
@@ -281,7 +274,6 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
                     var startGeographicMapCellPosition = startGeographicMapCellPosition
 
     var endList: BasicArrayList = this.ownerLayer!!.getEndGeographicMapCellPositionList()!!
-            
 
 
     var endGeographicMapCellPosition: GeographicMapCellPosition = BasicArrayListUtil.getInstance()!!.getRandom(endList) as GeographicMapCellPosition
@@ -370,7 +362,6 @@ open fun visit(unitLayer: PathFindingLayerInterface)
                                 
 
     var size: Int = this.getConnectedWaypointList()!!.size()!!
-            
 
 
     

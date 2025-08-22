@@ -46,7 +46,6 @@ open public class LogoValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var logoFileItem: FileItem
 
@@ -128,7 +127,6 @@ open fun isValid()
 
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     
@@ -322,7 +320,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -364,7 +361,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
 

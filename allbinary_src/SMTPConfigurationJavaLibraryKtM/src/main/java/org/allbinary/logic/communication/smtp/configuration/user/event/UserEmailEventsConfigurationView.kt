@@ -43,10 +43,8 @@ open public class UserEmailEventsConfigurationView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        (node: Node)
@@ -57,15 +55,12 @@ public constructor        (node: Node)
 this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as UserEmailEventsConfigurationInterface
 
     var childNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var emailEventConfigurationNodeVector: Vector = DomSearchHelper.getAllNodesNoThrow(UserEmailEventConfigurationData.NAME, childNodeList)!!
-            
 
 
     var size: Int = emailEventConfigurationNodeVector!!.size!!
-            
 
 
 
@@ -116,15 +111,12 @@ open fun toXmlNode(document: Document)
 
 
     var node: Node = document.createElement(UserEmailEventsConfigurationData.NAME)!!
-            
 
 
     var emailEventHashMap: HashMap<Any, Any> = this.getUserEmailEventsConfigurationInterface()!!.getEventConfigurationHashMap()!!
-            
 
 
     var set: Set = emailEventHashMap!!.keys!!
-            
 
 
     
@@ -137,7 +129,6 @@ open fun toXmlNode(document: Document)
                                 
 
     var eventNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = eventNameArray!!.size

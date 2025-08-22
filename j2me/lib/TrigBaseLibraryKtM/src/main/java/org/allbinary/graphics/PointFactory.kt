@@ -48,7 +48,6 @@ open fun getInstance()
         }
             
     var ZERO_ZERO: GPoint = this.getInstance(0, 0, 0)!!
-            
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true

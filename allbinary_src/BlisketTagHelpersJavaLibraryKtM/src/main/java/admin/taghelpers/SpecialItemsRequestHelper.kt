@@ -40,7 +40,6 @@ open public class SpecialItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -96,7 +95,6 @@ values.put(SpecialItemData.END_TIME, this.endTime)
 values.put(BasicItemData.PRICE, this.price)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -118,7 +116,6 @@ open fun insert()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -231,7 +228,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.getHashMap()!!
-            
 
 SpecialItemsEntityFactory.getInstance()!!.getSpecialItemsEntityInstance()!!.update(values)
 

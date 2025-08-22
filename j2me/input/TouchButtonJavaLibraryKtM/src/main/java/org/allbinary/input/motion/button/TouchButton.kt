@@ -43,10 +43,8 @@ open public class TouchButton : Paintable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val touchButtonInput: TouchButtonInput
 
@@ -159,7 +157,6 @@ open fun updateRectangle()
 this.rectangleP= Rectangle(PointFactory.getInstance()!!.getInstance(x +xBorder, y +yBorder), this.rawRectangle!!.getWidth(), this.rawRectangle!!.getHeight())
 
     var point: GPoint = rectangleP!!.getPoint()!!
-            
 
 this.animationX= point.getX()
 this.animationY= point.getY()
@@ -207,7 +204,6 @@ override fun toString()
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 stringBuffer!!.append("TouchButton: ")
 stringBuffer!!.append(stringUtil!!.toString(this.getRectangle()))

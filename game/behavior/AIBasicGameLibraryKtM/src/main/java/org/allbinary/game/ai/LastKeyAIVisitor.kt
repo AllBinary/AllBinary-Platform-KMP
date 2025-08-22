@@ -34,7 +34,6 @@ open public class LastKeyAIVisitor : Visitor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val TRUE: Boolean = BooleanFactory.getInstance()!!.TRUE
 public constructor        (){}
@@ -51,7 +50,6 @@ override fun visit(anyType: Any)
 
 
     var key: Int = basicAI!!.getLastKey()!!
-            
 
 
     
@@ -65,7 +63,6 @@ override fun visit(anyType: Any)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
 }

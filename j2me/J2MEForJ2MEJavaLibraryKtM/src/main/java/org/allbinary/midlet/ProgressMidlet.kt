@@ -58,13 +58,11 @@ open fun exit(isProgress: Boolean)
                     var isProgress = isProgress
 
     var processor: Processor = MidletExitProcessorFactory.getInstance()!!.getInstance(this)!!
-            
 
 
         try {
             
     var primaryThreadPool: ThreadPool = PrimaryThreadPool.getInstance()!!
-            
 
 
     var runnable: Runnable = ExitRunnable(this, processor, isProgress)

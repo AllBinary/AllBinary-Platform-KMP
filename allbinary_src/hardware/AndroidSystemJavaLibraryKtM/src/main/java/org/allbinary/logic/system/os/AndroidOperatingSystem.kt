@@ -41,7 +41,6 @@ open public class AndroidOperatingSystem : GenericOperatingSystem {
     private val LINE_1_NUMBER: String = "Line1Number"
 public constructor        (){
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
-            
 
 
     
@@ -54,11 +53,9 @@ public constructor        (){
                                 
 
     var properties: AndroidSystemProperties = AndroidSystemProperties.getInstance()!!
-            
 
 
     var commonStrings: CommonSeps = CommonSeps.getInstance()!!
-            
 
 stringBuffer!!.append(DEVICE_ID)
 stringBuffer!!.append(commonStrings!!.EQUALS)
@@ -128,7 +125,6 @@ override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var properties: AndroidSystemProperties = AndroidSystemProperties.getInstance()!!
-            
 
 
     

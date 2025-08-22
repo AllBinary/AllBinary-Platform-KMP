@@ -36,7 +36,6 @@ open public class CategoryHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -55,7 +54,6 @@ open fun drop()
         try {
             
     var success: String = CategoryEntityFactory.getInstance()!!.getCategoryEntityInstance()!!.dropTable()!!
-            
 
 
     
@@ -100,7 +98,6 @@ open fun create()
         try {
             
     var success: String = CategoryEntityFactory.getInstance()!!.getCategoryEntityInstance()!!.createTable()!!
-            
 
 
     
@@ -148,7 +145,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(CategoryEntityFactory.getInstance()!!.getCategoryEntityInstance(), this.portion)!!
-            
 
 
     
@@ -196,7 +192,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(CategoryEntityFactory.getInstance()!!.getCategoryEntityInstance())!!
-            
 
 
     

@@ -37,7 +37,6 @@ open public class EditMetaValidationView : MetaView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

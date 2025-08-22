@@ -34,7 +34,6 @@ open public class ScreenCaptureFactory
         companion object {
             
     private val instance: ScreenCapture = ScreenCaptureNoneFactory.getInstance()!!
-            
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 

@@ -70,7 +70,6 @@ open fun init(ROOT: String, sizeString: String)
 super.init(ROOT, sizeString)
 
     var string: String = GameGraphicsResourceUtil.getInstance()!!.getName()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(ROOT)

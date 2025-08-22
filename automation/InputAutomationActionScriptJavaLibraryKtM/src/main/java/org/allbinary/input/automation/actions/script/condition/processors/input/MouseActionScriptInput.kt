@@ -50,7 +50,6 @@ open public class MouseActionScriptInput : BasicProfileActionScriptInput
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var point: Point
 
@@ -70,7 +69,6 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
 this.point= Point()
 
     var actionNode: Node = DomSearchHelper.getNode(MouseActionScriptInputData.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -81,7 +79,6 @@ this.point= Point()
                                     {
                                     
     var nodeList: NodeList = actionNode!!.getChildNodes()!!
-            
 
 
 
@@ -92,7 +89,6 @@ this.point= Point()
 
         {
     var childNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -101,7 +97,6 @@ this.point= Point()
                                     {
                                     
     var buttons: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.setButtonClicks(Integer.valueOf(buttons)!!.toInt())
 
@@ -114,27 +109,21 @@ this.setButtonClicks(Integer.valueOf(buttons)!!.toInt())
                                     {
                                     
     var mouseXNode: Node = DomSearchHelper.getNode(MouseActionScriptInputData.MOVE_X, childNode!!.getChildNodes())!!
-            
 
 
     var mouseXString: String = DomNodeHelper.getTextNodeValue(mouseXNode)!!
-            
 
 
     var mouseXInteger: Integer = Integer(Integer.valueOf(mouseXString))!!
-            
 
 
     var mouseYNode: Node = DomSearchHelper.getNode(MouseActionScriptInputData.MOVE_Y, childNode!!.getChildNodes())!!
-            
 
 
     var mouseYString: String = DomNodeHelper.getTextNodeValue(mouseYNode)!!
-            
 
 
     var mouseYInteger: Integer = Integer(Integer.valueOf(mouseYString))!!
-            
 
 
     var newPoint: Point = Point(mouseXInteger!!.toInt(), mouseYInteger!!.toInt())
@@ -248,11 +237,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 
     var mouseNode: Node = ModDomHelper.createNodeWithValueNodes(document, MouseActionScriptInputData.NAME, this.toHashMap())!!
-            
 
 node.appendChild(mouseNode)
 

@@ -78,11 +78,9 @@ open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var gameAdState: GameAdState = GameAdStateFactory.getInstance()!!.getCurrentInstance()!!
-            
 
 
     

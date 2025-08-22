@@ -64,7 +64,6 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
     private val doubleClickTimeHelper: TimeDelayHelper = TimeDelayHelper(DOUBLE_CLICK_DELAY)
 
     val isSingleKeyProcessing: Boolean = InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
-            
 
     private var form: ScrollSelectionForm
 
@@ -144,16 +143,13 @@ open fun processCommand()
 
 
     var command: Command = commandCurrentSelectionForm!!.getSelectedCommand()!!
-            
 
 logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     
@@ -202,15 +198,12 @@ logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
         try {
             
     var motionInputsIndex: Int = this.processMotionInputs()!!
-            
 
 
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     var key: Int = 0
@@ -320,11 +313,9 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                     var motionGestureEvent = motionGestureEvent
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
-            
 
 
     var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
-            
 
 
     
@@ -333,7 +324,6 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                     {
                                     
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-            
 
 
     
@@ -342,7 +332,6 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                     {
                                     
     var index: Int = this.form.getSelectedIndex(point)!!
-            
 
 
     

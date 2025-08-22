@@ -89,15 +89,12 @@ open fun toHashMap()
 
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 
     var rootFileName: String = pathUtil!!.getNameFromPath(pathUtil!!.getWithoutExtension(file.getPath()))!!
-            
 
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 filePropertyHashMap!!.put(fileData!!.ROOT_NAME, rootFileName)
 filePropertyHashMap!!.put(fileData!!.ISFILE, Boolean.valueOf(file.isFile())!!.toString())

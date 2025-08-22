@@ -43,10 +43,8 @@ open public class BasicItemView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val itemInterface: ItemInterface
 
@@ -82,7 +80,6 @@ open fun toXmlNode(document: Document)
                                 
 
     var hashMap: HashMap<Any, Any> = itemInterface!!.toHashMap()!!
-            
 
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -90,19 +87,15 @@ open fun toXmlNode(document: Document)
 hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var node: Node = document.createElement(BasicItemData.ITEM)!!
-            
 
 
     var nameArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size2: Int = nameArray!!.size
@@ -127,12 +120,10 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 
     var totalNode: Node = ModDomHelper.createNameValueNodes(document, BasicItemData.TOTAL, this.itemInterface!!.getTotal()!!.toString())!!
-            
 
 node.appendChild(totalNode)
 
     var size: Int = this.vector.size!!
-            
 
 
 
@@ -146,7 +137,6 @@ node.appendChild(totalNode)
 
 
     var customNode: Node = domNodeInterface!!.toXmlNode(document)!!
-            
 
 node.appendChild(customNode)
 }

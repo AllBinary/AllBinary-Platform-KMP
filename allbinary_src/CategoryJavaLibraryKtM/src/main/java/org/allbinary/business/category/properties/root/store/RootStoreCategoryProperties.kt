@@ -55,7 +55,6 @@ open public class RootStoreCategoryProperties
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var fileAbPath: AbPath
 
@@ -117,7 +116,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface, node:
 this.transformInfoInterface= transformInfoInterface
 
     var categoryPath: String = CategoryUtil.getNameFromNode(node)!!
-            
 
 this.abPath= AbPath(categoryPath)
 this.category= PathUtil.getInstance()!!.getNameFromPath(categoryPath)
@@ -173,7 +171,6 @@ open fun initPath()
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(transformInfoHttpStoreInterface!!.getStoreName())!!
-            
 
 
     var postPath: String = storeFrontInterface!!.getCurrentHostNamePath() +storeFrontInterface!!.getCategoryPath()

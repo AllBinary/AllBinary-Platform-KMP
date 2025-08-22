@@ -42,7 +42,6 @@ open public class AllBinaryTiledLayer : Layer
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var cellWidth: Int
 
@@ -110,11 +109,9 @@ stringBuffer!!.append(this.getColumns())
 logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
 
     var rows: Int = this.getRows()!!
-            
 
 
     var columns: Int = this.getColumns()!!
-            
 
 
 
@@ -151,11 +148,9 @@ open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: 
                     var toTileId = toTileId
 
     var rows: Int = this.getRows()!!
-            
 
 
     var columns: Int = this.getColumns()!!
-            
 
 
 

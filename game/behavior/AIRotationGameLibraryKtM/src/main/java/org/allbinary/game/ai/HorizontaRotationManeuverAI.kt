@@ -47,7 +47,6 @@ open public class HorizontaRotationManeuverAI : BasicAI
         
 
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(10, Integer.MAX_VALUE)!!
-            
 
     private var currentSpeedDivisor: Int = 5
 
@@ -82,7 +81,6 @@ this.velocityInterface= baseVelocityInterface as VelocityInterface
 
 
     var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
-            
 
 rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIGHT_FRAME.toInt())
 }
@@ -94,7 +92,6 @@ override fun transition()
 
 
     var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
-            
 
 
     var rotationAnimationInterfaceCompositeInterface: RotationAnimationInterfaceCompositeInterface = this.getOwnerLayerInterface() as RotationAnimationInterfaceCompositeInterface
@@ -102,7 +99,6 @@ override fun transition()
 rotationAnimationInterfaceCompositeInterface!!.setFrame(angleIncrementInfo!!.RIGHT_FRAME.toInt())
 
     var allbinaryLayer: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 allbinaryLayer!!.setPosition(allbinaryLayer!!.getXP(), 1, allbinaryLayer!!.getZP())
 }
@@ -119,15 +115,12 @@ allbinaryLayer!!.setPosition(allbinaryLayer!!.getXP(), 1, allbinaryLayer!!.getZP
 
 
     var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
-            
 
 
     var frame: Int = this.rotationAnimationInterface!!.getFrame()!!
-            
 
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     
@@ -141,7 +134,6 @@ this.drop()
                                 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     
@@ -156,7 +148,6 @@ this.drop()
                                 
 
     var index: Int = circularIndexUtil!!.getIndex()!!
-            
 
 
     
@@ -197,11 +188,9 @@ open fun reverse()
 
 
     var angleIncrementInfo: AngleIncrementInfo = rotationAnimationInterface!!.getAngleInfoP()!!.getAngleIncrementInfo()!!
-            
 
 
     var frame: Int = this.rotationAnimationInterface!!.getFrame()!!
-            
 
 
     
@@ -250,15 +239,12 @@ open fun drop()
         //nullable = true from not(false or (false and true)) = true
 {
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var y: Int = ownerLayerInterface!!.getYP()!!
-            
 
 
     

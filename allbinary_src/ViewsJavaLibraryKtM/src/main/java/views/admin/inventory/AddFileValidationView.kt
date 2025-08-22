@@ -61,7 +61,6 @@ open public class AddFileValidationView : InventoryItemView
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -139,13 +138,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.itemInterface!!.getCategory())
 
     var fullCategory: String = StringMaker().
                             append(URLGLOBALS.getWebappPath())!!.append(storeFrontInterface!!.getCurrentHostNamePath())!!.append(this.itemInterface!!.getCategory())!!.toString()!!
-            
 
 
     var categoryFile: AbFile = AbFile(fullCategory)
@@ -198,7 +195,6 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
                                 
 
     var imageFileItemObject: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
-            
 
 
     
@@ -210,11 +206,9 @@ this.itemInterface!!.setCategory(storeFrontInterface!!.getCategoryPath() +this.i
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 HttpFileUploadUtil.log(fileItem)
 
@@ -319,12 +313,10 @@ stringBuffer!!.append("<br/>")
                                 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var fullCategory: String = StringMaker().
                             append(URLGLOBALS.getWebappPath())!!.append(storeFrontInterface!!.getCurrentHostNamePath())!!.append(this.itemInterface!!.getCategory())!!.toString()!!
-            
 
 
     
@@ -376,7 +368,6 @@ stringBuffer!!.append(" does not exist.<br />")
 
 
     var anyType: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
-            
 
 
     
@@ -388,15 +379,12 @@ stringBuffer!!.append(" does not exist.<br />")
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var fileItemFieldName: String = fileItem!!.getFieldName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 this.validationInfo(stringBuffer, fileName, fileItemFieldName, size)
 
@@ -439,7 +427,6 @@ open fun isValid(fileName: String, size: Long)
                     var size = size
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     
@@ -467,15 +454,12 @@ open fun isValid(fileName: String, size: Long)
                         else {
                             
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 
     var extension: String = pathUtil!!.getExtension(fileName)!!
-            
 
 
     var uploadMedia: UploadMediaSingleton = UploadMediaSingleton.getInstance()!!
-            
 
 
     
@@ -574,7 +558,6 @@ open fun validationInfo(stringBuffer: StringMaker, fileName: String, fileItemFie
                     var size = size
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     
@@ -607,15 +590,12 @@ stringBuffer!!.append("<br/>")
                         else {
                             
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 
     var extension: String = pathUtil!!.getExtension(fileName)!!
-            
 
 
     var uploadMedia: UploadMediaSingleton = UploadMediaSingleton.getInstance()!!
-            
 
 
     

@@ -35,7 +35,6 @@ open public class HighScoresBase
         
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 protected constructor        ()
             : super()
         {}

@@ -76,7 +76,6 @@ open fun put(log: Log)
                                 
 
     var exception: Any = log.getThrowable()!!
-            
 
 
     
@@ -95,15 +94,12 @@ open fun put(log: Log)
                                 
 
     var specialMessage: String = log.getSpecialMessage()!!
-            
 
 
     var anyType: Any = log.getObject()!!
-            
 
 
     var functionName: String = log.getFunctionName()!!
-            
 
 put(specialMessage, anyType, functionName, exception)
 }
@@ -154,7 +150,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 System.out.print(LOG_SUCCESS)
 System.out.println(message)

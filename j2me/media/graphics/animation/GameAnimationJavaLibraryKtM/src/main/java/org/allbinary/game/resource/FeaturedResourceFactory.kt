@@ -42,7 +42,6 @@ open public class FeaturedResourceFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val list: BasicArrayList = BasicArrayList()
 public constructor        ()
@@ -51,7 +50,6 @@ public constructor        ()
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val ANIMATION_FEATURES: String = "Animation Features: Vector: "
 
@@ -80,7 +78,6 @@ open fun init(level: Int)
                     var level = level
 
     var size: Int = this.list.size()!!
-            
 
 
 
@@ -94,11 +91,9 @@ open fun init(level: Int)
 
 
     var isLoadingLevel: Boolean = featureInterface!!.isLoadingLevel(level)!!
-            
 
 
     var isFeature: Boolean = featureInterface!!.isFeature()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(this.GAME_FEATURE_CONTROLLED)!!.append(featureInterface!!.toString())!!.append(this.IS_LOADING_LEVEL_LABEL)!!.append(ResourceLoadingLevelFactory.getInstance()!!.getLevelString(level))!!.append(CommonSeps.getInstance()!!.COLON_SEP)!!.append(isLoadingLevel)!!.append(this.IS_FEATURE)!!.append(isFeature)!!.toString(), this, commonStrings!!.INIT)
@@ -115,11 +110,9 @@ logUtil!!.put(StringMaker().
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

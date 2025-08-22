@@ -57,11 +57,9 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var aWidth: Int = allBinaryTiledLayer!!.getWidth()!!
-            
 
 
     var aHeight: Int = allBinaryTiledLayer!!.getHeight()!!
-            
 
 this.image= PaintableToImageUtil.getImage(allBinaryTiledLayer, aWidth, aHeight)
 }

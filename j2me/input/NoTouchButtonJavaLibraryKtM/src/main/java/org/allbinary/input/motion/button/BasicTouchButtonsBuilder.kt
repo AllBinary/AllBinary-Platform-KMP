@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 override fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{

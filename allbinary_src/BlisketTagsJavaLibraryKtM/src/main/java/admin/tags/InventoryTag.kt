@@ -81,7 +81,6 @@ open fun doStartTag()
                                     {
                                     
     var parentTag: Tag = this.getParent()!!
-            
 
 ParentInventoryTagHelper.getInstance()!!.isValid(this, parentTag)
 this.getPropertiesHashMap()!!.put(AbTagData.PARENT, parentTag)

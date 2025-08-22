@@ -45,7 +45,6 @@ open fun getVector(nodeList: NodeList)
 
 
     var size: Int = nodeList!!.getLength()!!
-            
 
 
 

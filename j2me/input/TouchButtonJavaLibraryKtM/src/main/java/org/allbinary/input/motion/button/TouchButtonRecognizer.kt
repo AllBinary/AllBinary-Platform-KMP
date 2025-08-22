@@ -40,21 +40,16 @@ open public class TouchButtonRecognizer
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
-            
 
     private val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
-            
 
     private val downGameKeyEventHandler: DownGameKeyEventHandler = DownGameKeyEventHandler.getInstance()!!
-            
 
     private var lastPressedTouchButtonInput: TouchButtonInput = BasicTouchInputFactory.getInstance()!!.NONE
 
     private val currentlyPressedTouchButtonSingleton: CurrentlyPressedTouchButtonSingleton = CurrentlyPressedTouchButtonSingleton.getInstance()!!
-            
 
 open public inner class ReleaseHelper
             : Object
@@ -90,11 +85,9 @@ open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
 
         {
     var nextTouchButtonInput: TouchButtonInput = currentlyPressedTouchButtonSingleton!!.get(index)!!
-            
 
 
     var gameKeyEvent: GameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
-            
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
@@ -132,7 +125,6 @@ public constructor        (touchButtonRecognizer: TouchButtonRecognizer)
                     var deviceId = deviceId
 
     var cancelTouchButtonInput: TouchButtonInput = CancelTouchButtonInputFactory.getInstance()!!.getCancel(touchButtonInput)!!
-            
 
 
 
@@ -143,7 +135,6 @@ public constructor        (touchButtonRecognizer: TouchButtonRecognizer)
 
         {
     var nextTouchButtonInput: TouchButtonInput = currentlyPressedTouchButtonSingleton!!.get(index)!!
-            
 
 
     
@@ -152,7 +143,6 @@ public constructor        (touchButtonRecognizer: TouchButtonRecognizer)
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = nextTouchButtonInput!!.getGameKeyEvent()!!
-            
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
@@ -201,7 +191,6 @@ open fun processRelease(touchButtonInput: TouchButtonInput, deviceId: Int)
 this.releaseHelper!!.release(touchButtonInput, deviceId)
 
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
-            
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
@@ -243,7 +232,6 @@ this.processRelease(touchButtonInput, deviceId)
                         else {
                             
     var list: BasicArrayList = TouchButtonFactory.getInstance()!!.getList()!!
-            
 
 
     var rectangle: Rectangle
@@ -307,7 +295,6 @@ open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
                     var deviceId = deviceId
 
     var list: BasicArrayList = TouchButtonFactory.getInstance()!!.getList()!!
-            
 
 
     var rectangle: Rectangle
@@ -347,7 +334,6 @@ lastPressedTouchButtonInput= touchButtonInput
 currentlyPressedTouchButtonSingleton!!.add(touchButtonInput)
 
     var gameKeyEvent: GameKeyEvent = touchButtonInput!!.getGameKeyEvent()!!
-            
 
 downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)

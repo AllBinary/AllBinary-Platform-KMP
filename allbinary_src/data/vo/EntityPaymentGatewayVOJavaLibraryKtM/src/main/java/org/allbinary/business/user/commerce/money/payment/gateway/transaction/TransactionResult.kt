@@ -42,10 +42,8 @@ open public class TransactionResult
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var keyValuePairs: HashMap<Any, Any>
 
@@ -63,14 +61,12 @@ public constructor        (result: String)
 
 
     var tokens: BasicArrayList = tokenizer.getTokens(result, BasicArrayList())!!
-            
 
 
     var tokenizer2: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.EQUALS)
 
 
     var hashtable: Hashtable<Any, Any> = tokenizer2.getTokens(tokens)!!
-            
 
 keyValuePairs!!.putAll(hashtable)
 } catch(e: Exception)
@@ -115,7 +111,6 @@ open fun getAllPossibleKeys()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     var paymentTransactionKeysFactory: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory.getInstance()!!
-            
 
 
     var verisignResponseKeys: Vector = Vector()
@@ -154,14 +149,12 @@ open fun getValues()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     var keyVector: Vector = this.getAllPossibleKeys()!!
-            
 
 
     var valueVector: Vector = Vector()
 
 
     var size: Int = keyVector!!.size!!
-            
 
 
 
@@ -185,7 +178,6 @@ open fun getValues()
                         else {
                             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 valueVector!!.add(stringUtil!!.EMPTY_STRING)
 

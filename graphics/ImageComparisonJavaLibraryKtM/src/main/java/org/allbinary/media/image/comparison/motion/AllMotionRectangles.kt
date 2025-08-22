@@ -60,11 +60,9 @@ open fun createMotionRectangles(imageComparisonInfo: ImageComparisonResult)
                     var imageComparisonInfo = imageComparisonInfo
 
     var vector: Vector = imageComparisonInfo!!.getNonMatchingPixelVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -91,11 +89,9 @@ open fun addPixelDeltaToExistingMotionRectangle(pixelDelta: PixelDelta)
                     var pixelDelta = pixelDelta
 
     var vector: Vector = this.getVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

@@ -81,22 +81,18 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
                     var anchor = anchor
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var openGLFeatureUtil: OpenGLFeatureUtil = OpenGLFeatureUtil.getInstance()!!
-            
 
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-            
 
 
     var offsetY: Int = 0
@@ -134,7 +130,6 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
                                 
 
     var size: Int = string.length!!
-            
 
 
     var offsetX: Int = 0
@@ -222,7 +217,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
                     var y = y
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
@@ -247,7 +241,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
                                     {
                                     
     var width: Int = graphics.getFont()!!.stringWidth(string)!!
-            
 
 
     var minTotalLines: Int = 1
@@ -272,7 +265,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
 
 
     var size: Int = string.length!!
-            
 
 
         while(offset < size)

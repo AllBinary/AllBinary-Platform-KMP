@@ -57,10 +57,8 @@ open fun getInstance()
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val rendererStrings: RendererStrings = RendererStrings.getInstance()!!
-            
 
 open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
         //nullable = true from not(false or (false and false)) = true

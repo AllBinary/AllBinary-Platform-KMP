@@ -76,13 +76,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val platformRecordIdUtil: PlatformRecordIdUtil = PlatformRecordIdUtil.getInstance()!!
-            
 
     private val RECORD_ID: String = "_SN"
 
@@ -108,7 +105,6 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface, gameInfo
                     var gameInfo = gameInfo
 
     var size: Int = nameBasicArrayList!!.size()!!
-            
 
 
 
@@ -222,11 +218,9 @@ open fun load(abeClientInformation: AbeClientInformationInterface, gameInfo: Gam
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var recordAsBytes: ByteArray
@@ -241,7 +235,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
         while(recordEnum!!.hasNextElement())
         {
     var id: Int = recordEnum!!.nextRecordId()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(LOADING_ID)!!.append(id)!!.toString(), this, commonStrings!!.LOAD)
@@ -323,7 +316,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 outputStream!!.writeUTF(name)
 
     var savedGameBytes: ByteArray = byteArrayOutputStream!!.toByteArray()!!
-            
 
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 this.name= name

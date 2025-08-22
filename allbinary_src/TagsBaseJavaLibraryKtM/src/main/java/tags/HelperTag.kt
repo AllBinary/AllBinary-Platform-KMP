@@ -32,7 +32,6 @@ open public class HelperTag : PropertiesTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tagHelperFactoryInterface: TagHelperFactoryInterface
 

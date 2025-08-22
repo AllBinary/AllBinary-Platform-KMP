@@ -38,10 +38,8 @@ open public class GameInput
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val gameKeyEventList: BasicArrayList
 
@@ -178,7 +176,6 @@ open fun update()
 
 
     var size: Int = removeList!!.size()!!
-            
 
 
 

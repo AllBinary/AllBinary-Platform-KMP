@@ -34,7 +34,6 @@ open public class BasketHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 

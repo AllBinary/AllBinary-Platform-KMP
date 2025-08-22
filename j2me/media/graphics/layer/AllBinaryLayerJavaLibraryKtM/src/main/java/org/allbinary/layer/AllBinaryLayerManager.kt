@@ -33,7 +33,6 @@ open public class AllBinaryLayerManager : LayerManager {
         
 
     private val layerManagerEventHandler: LayerManagerEventHandler = LayerManagerEventHandler.getInstance()!!
-            
 
     private val createLayerManagerEvent: LayerManagerEvent = LayerManagerEvent(this, this.layerManagerEventHandler!!.CREATE)
 

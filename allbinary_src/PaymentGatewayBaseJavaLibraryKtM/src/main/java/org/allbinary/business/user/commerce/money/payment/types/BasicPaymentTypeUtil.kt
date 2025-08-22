@@ -74,7 +74,6 @@ open fun get(paymentTypeString: String)
                     var paymentTypeString = paymentTypeString
 
     var size: Int = paymentTypeVector!!.size!!
-            
 
 
 
@@ -131,7 +130,6 @@ open fun difference(a_PaymentTypeVector: Vector)
 
 
     var size: Int = paymentTypeVector!!.size!!
-            
 
 
 

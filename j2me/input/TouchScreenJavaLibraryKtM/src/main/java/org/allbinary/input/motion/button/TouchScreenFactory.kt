@@ -52,7 +52,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var touch: Boolean= false
 
@@ -70,7 +69,6 @@ this.setMultiTouch(false)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, SINGLETON, commonStrings!!.GET_INSTANCE, e)
 }

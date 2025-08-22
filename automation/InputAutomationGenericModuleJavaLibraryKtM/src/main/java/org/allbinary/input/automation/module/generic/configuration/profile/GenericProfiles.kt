@@ -60,7 +60,6 @@ open public class GenericProfiles
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var hashMap: HashMap<Any, Any>
 
@@ -89,22 +88,18 @@ this.hashMap= HashMap<Any, Any>()
 
 
     var length: Int = idFile!!.read(bytes)!!
-            
 
 
     var data: String = bytes.decodeToString()
 
 
     var endIndex: Int = data.lastIndexOf('>')!!
-            
 
 
     var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
-            
 
 
     var nodeList: NodeList = document.getElementsByTagName(GenericProfilesData.NAME)!!
-            
 
 logUtil!!.put("Number Of Profiles Specified: " +nodeList!!.getLength(), this, "Contructor")
 
@@ -148,7 +143,6 @@ open fun initProfiles(node: Node)
                     var node = node
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
 
@@ -159,7 +153,6 @@ open fun initProfiles(node: Node)
 
         {
     var profileNameNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -208,7 +201,6 @@ open fun get(name: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("No Generic Profile Named: " +name +" availability was: " +this.hashMap, this, commonStrings!!.GET)
 
@@ -259,15 +251,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(GenericProfilesData.NAME)!!
-            
 
 
     var set: Set = this.hashMap!!.keys!!
-            
 
 
     var nameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = nameArray!!.size
@@ -300,11 +289,9 @@ open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var document: Document = DomDocumentHelper.create()!!
-            
 
 
     var node: Node = this.toXmlNode(document)!!
-            
 
 document.appendChild(node)
 
@@ -327,7 +314,6 @@ open fun save()
 
 
     var documentString: String = DomDocumentHelper.toString(this.toXmlDoc())!!
-            
 
 idOutData!!.writeBytes(documentString)
 }

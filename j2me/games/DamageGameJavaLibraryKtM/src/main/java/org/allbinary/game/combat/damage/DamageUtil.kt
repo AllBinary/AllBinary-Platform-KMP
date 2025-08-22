@@ -52,7 +52,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val COLLIDE: String = "collide"
 private constructor        ()
@@ -89,7 +88,6 @@ open fun debugDamage(collidableInterfaceCompositeInterface1: CollidableComposite
 
 
     var damage: Int = collidableDestroyableDamageableLayer!!.getDamage(0)!!
-            
 
 
     

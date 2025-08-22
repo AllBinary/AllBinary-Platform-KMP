@@ -59,14 +59,12 @@ open fun getBundleContext()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -100,11 +98,9 @@ open fun registerAsService()
 
 
     var serviceRegistration: ServiceRegistration = context.registerService(CRYPT_REGISTRY_NAME, CryptServiceFactory(), properties)!!
-            
 
 
     var serviceReference: ServiceReference = serviceRegistration!!.getReference()!!
-            
 
 serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
 

@@ -48,7 +48,6 @@ open public class CollidableCompositeLayer : AllBinaryGameLayer
         }
             
     private var collidableInferface: CollidableBaseBehavior = CollidableNeverCollideBehaviorFactory.getInstance()!!
-            
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
                             : super(layerInfo, viewPosition){
@@ -175,7 +174,6 @@ override fun toString(stringBuffer: StringMaker)
                     var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 super.toString(stringBuffer)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)

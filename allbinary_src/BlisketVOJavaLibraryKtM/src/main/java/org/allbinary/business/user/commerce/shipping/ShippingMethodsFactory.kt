@@ -104,13 +104,11 @@ stringBuffer!!.append(this.SHIPPINGMETHODSFILEPATHSTRING)
 
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(abPath)!!
-            
 
 this.document= DomDocumentHelper.create(data)
 this.shippingVector= Vector()
 
     var nodeList: NodeList = document.getElementsByTagName(ShippingMethodsData.NAME)!!
-            
 
 
 
@@ -121,23 +119,18 @@ this.shippingVector= Vector()
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     var shippingMethodNodeChildren: NodeList = node.getChildNodes()!!
-            
 
 
     var shippingMethodNameNode: Node = DomSearchHelper.getNode(ShippingMethodData.NAME, shippingMethodNodeChildren)!!
-            
 
 
     var classNameNode: Node = DomSearchHelper.getNode(DynamicObjectData.NAME, shippingMethodNameNode!!.getChildNodes())!!
-            
 
 
     var shippingMethodClassName: String = DomNodeHelper.getTextNodeValue(classNameNode)!!
-            
 
 
     var shippingMethodInterface: ShippingInterface = AbeFactory.getInstance()!!.getInstance(abeClientInformation, shippingMethodClassName) as ShippingInterface
@@ -145,11 +138,9 @@ this.shippingVector= Vector()
 shippingVector!!.add(shippingMethodInterface)
 
     var defaultShippingMethodNameNode: Node = DomSearchHelper.getNode(ShippingMethodData.DEFAULT, shippingMethodNameNode!!.getChildNodes())!!
-            
 
 
     var defaultShippingMethodNameNodeValue: String = DomNodeHelper.getTextNodeValue(defaultShippingMethodNameNode)!!
-            
 
 
     

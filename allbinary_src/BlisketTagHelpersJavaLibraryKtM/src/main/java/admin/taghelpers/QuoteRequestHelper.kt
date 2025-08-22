@@ -41,7 +41,6 @@ open public class QuoteRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -102,7 +101,6 @@ open fun insert()
         try {
             
     var values: Vector = this.quoteRequest!!.toVector()!!
-            
 
 QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.insert(values)
 
@@ -151,7 +149,6 @@ open fun update()
         try {
             
     var values: HashMap<Any, Any> = this.quoteRequest!!.toHashMap()!!
-            
 
 QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.update(this.quoteRequest!!.getUserName(), values)
 

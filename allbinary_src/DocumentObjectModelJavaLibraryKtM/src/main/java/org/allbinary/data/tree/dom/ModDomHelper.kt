@@ -57,11 +57,9 @@ open fun createTextNode(document: Document, name: String, text: String)
                     var text = text
 
     var newValueNode: Node = document.createElement(name)!!
-            
 
 
     var newValueTextNode: Node = document.createTextNode(text)!!
-            
 
 newValueNode!!.appendChild(newValueTextNode)
 
@@ -145,7 +143,6 @@ open fun createNameValueNodes(document: Document, elementName: String, nameText:
                     var valueText = valueText
 
     var newNode: Node = document.createElement(elementName)!!
-            
 
 newNode!!.appendChild(ModDomHelper.createNameNode(document, nameText))
 newNode!!.appendChild(ModDomHelper.createValueNode(document, valueText))
@@ -172,7 +169,6 @@ open fun createNameValueNodes(document: Document, elementNameAndNameText: String
                     var valueText = valueText
 
     var newNode: Node = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, elementNameAndNameText, valueText)!!
-            
 
 
 
@@ -200,7 +196,6 @@ open fun createNameValueIndexNodes(document: Document, elementNameAndNameText: S
                     var valueText = valueText
 
     var newNode: Node = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, valueText)!!
-            
 
 newNode!!.appendChild(ModDomHelper.createIndexNode(document, index))
 
@@ -226,7 +221,6 @@ open fun createNameValueNodes(document: Document, rootNode: String, hashMap: Has
                     var hashMap = hashMap
 
     var node: Node = document.createElement(rootNode)!!
-            
 
 
 
@@ -251,15 +245,12 @@ open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<A
                     var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -302,7 +293,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                                     {
                                     
     var value: String = stringUtil!!.getInstance(anyType as String)!!
-            
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
@@ -353,15 +343,12 @@ open fun createNameValueNodes(document: Document, rootNodeName: String, duplicat
                     var valueVector = valueVector
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var node: Node = document.createElement(rootNodeName)!!
-            
 
 
     var size: Int = valueVector!!.size!!
-            
 
 
 
@@ -372,7 +359,6 @@ open fun createNameValueNodes(document: Document, rootNodeName: String, duplicat
 
         {
     var value: String = stringUtil!!.getInstance(valueVector!!.get(i) as String)!!
-            
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, value))
 }
@@ -403,15 +389,12 @@ open fun createNameValueIndexNodes(document: Document, rootNodeName: String, dup
                     var valueVector = valueVector
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var node: Node = document.createElement(rootNodeName)!!
-            
 
 
     var size: Int = valueVector!!.size!!
-            
 
 
 
@@ -422,7 +405,6 @@ open fun createNameValueIndexNodes(document: Document, rootNodeName: String, dup
 
         {
     var value: String = stringUtil!!.getInstance(valueVector!!.get(index) as String)!!
-            
 
 node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeName, index, value))
 }
@@ -450,7 +432,6 @@ open fun createNodeWithValueNodes(document: Document, rootNode: String, hashMap:
                     var hashMap = hashMap
 
     var node: Node = document.createElement(rootNode)!!
-            
 
 
 
@@ -475,15 +456,12 @@ open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashM
                     var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -504,7 +482,6 @@ open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashM
 
 
     var value: String = stringUtil!!.getInstance(anyType as String)!!
-            
 
 node.appendChild(ModDomHelper.createTextNode(document, name, value))
 }

@@ -51,13 +51,10 @@ open public class PathFinder : GeographicPathFinderBase {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
     private val openPriorityQueue: PriorityQueue<PathFindingNodeCost> = PriorityQueue<>()
 
@@ -77,12 +74,10 @@ open fun init(geographicMapInterface: BasicGeographicMap)
 this.geographicMapInterface= geographicMapInterface
 
     var tiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 this.costArray= arrayOfNulls(tiledLayer!!.getColumns())
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var node: PathFindingNodeCost
@@ -111,7 +106,6 @@ this.costArray= arrayOfNulls(tiledLayer!!.getColumns())
 
         {
     var geographicMapCellType: GeographicMapCellType = this.geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getInstance(column, row))!!
-            
 
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
@@ -147,7 +141,6 @@ open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
 
@@ -227,7 +220,6 @@ open fun search(startPathFindingNode: PathFindingNode, endPathFindingNode: PathF
                     var endPathFindingNode = endPathFindingNode
 
     var list: BasicArrayList = this.findPath(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition)!!
-            
 
 
     var pathList: BasicArrayList = BasicArrayList()
@@ -273,7 +265,6 @@ open fun searchN(startPathFindingNode: PathFindingNode, endPathFindingNode: Path
                     var multipassState = multipassState
 
     var list: BasicArrayList = this.findPathEnd(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition, multipassState)!!
-            
 
 
     
@@ -324,11 +315,9 @@ this.closedSet!!.clear()
 
 
     var targetColumn: Int = target.getColumn()!!
-            
 
 
     var targetRow: Int = target.getRow()!!
-            
 
 
     var sizeX: Int = costArray!!.size
@@ -366,11 +355,9 @@ node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
 openPriorityQueue!!.add(startNode)
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!
@@ -506,11 +493,9 @@ this.closedSet!!.clear()
 
 
     var targetColumn: Int = target.getColumn()!!
-            
 
 
     var targetRow: Int = target.getRow()!!
-            
 
 
     var sizeX: Int = costArray!!.size
@@ -565,11 +550,9 @@ open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCell
                     var multipassState = multipassState
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var targetNode: PathFindingNodeCost = costArray[target.getColumn()]!![target.getRow()]!!

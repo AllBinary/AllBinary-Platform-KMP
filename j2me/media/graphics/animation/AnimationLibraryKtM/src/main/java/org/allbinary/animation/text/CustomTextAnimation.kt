@@ -35,7 +35,6 @@ open public class CustomTextAnimation : TextAnimation {
         
 
     val fontDebugFactory: FontDebugFactory = FontDebugFactory.getInstance()!!
-            
 
     val fontSize: Int
 
@@ -76,7 +75,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 
     var existingFont: Font = graphics.getFont()!!
-            
 
 fontDebugFactory!!.setFont(this.font, graphics)
 super.paint(graphics, x, y)

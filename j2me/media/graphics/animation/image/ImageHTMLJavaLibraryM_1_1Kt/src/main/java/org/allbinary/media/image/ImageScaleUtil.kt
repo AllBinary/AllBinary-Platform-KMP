@@ -176,7 +176,6 @@ open fun createImage(originalImage: Image, scaleX: Float, scaleY: Float)
                     var scaleY = scaleY
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance((originalImage!!.getWidth() *scaleX).toInt(), (originalImage!!.getHeight() *scaleY).toInt())!!
-            
 
 
     
@@ -216,7 +215,6 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
 
 
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
-            
 
 canvasSurface!!.drawImage(originalPlayNImage, 0, 0, image.getWidth(), image.getHeight(), 0, 0, originalImage!!.getWidth(), originalImage!!.getHeight())
 

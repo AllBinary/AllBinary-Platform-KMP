@@ -37,7 +37,6 @@ open public class BasicItemValidation : Validation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val MAXWEIGHT: Int = 14
 
@@ -72,7 +71,6 @@ open fun isValid()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -434,7 +432,6 @@ open fun validationInfo()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     

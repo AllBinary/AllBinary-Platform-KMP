@@ -100,7 +100,6 @@ open fun remove(cellPosition: CellPosition)
                     var cellPosition = cellPosition
 
     var index: Int = this.positionList!!.indexOf(cellPosition)!!
-            
 
 
     
@@ -203,7 +202,6 @@ open fun getLayerInterface(cellPosition: CellPosition)
                     var cellPosition = cellPosition
 
     var index: Int = this.positionList!!.indexOf(cellPosition)!!
-            
 
 
     

@@ -45,7 +45,6 @@ open public class TransformInfoHttp : TransformInfo
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abContext: AbContext
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext, crud: Boolean)                        
@@ -190,7 +189,6 @@ open fun set(hashMap: HashMap<Any, Any>)
                                 
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 this.setName(hashMap!!.get(transformInfoData!!.NAME) as String)
 this.setStoreName(hashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String)
@@ -198,7 +196,6 @@ this.setObjectFile(hashMap!!.get(transformInfoData!!.OBJECTFILENAME) as String)
 this.setObject(hashMap!!.get(transformInfoData!!.OBJECT) as String)
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var objectConfigString: String = hashMap!!.get(transformInfoData!!.OBJECTCONFIG) as String

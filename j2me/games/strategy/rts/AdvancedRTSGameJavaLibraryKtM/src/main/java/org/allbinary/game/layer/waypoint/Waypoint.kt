@@ -56,7 +56,6 @@ open public class Waypoint : WaypointBase
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val ownerLayer: PathFindingLayerInterface
 
@@ -95,7 +94,6 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     
@@ -263,7 +261,6 @@ open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
                                 
 
     var endGeographicMapCellPosition: GeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition)!!
-            
 
 
     
@@ -320,7 +317,6 @@ open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
 
 
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()!!
-            
 
 
     var customMapGenerator: CustomMapGenerator = raceTrackGeographicMap!!.getCustomMapGenerator() as CustomMapGenerator
@@ -328,17 +324,14 @@ open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
 customMapGenerator!!.copyMapIntoCustomMap()
 
     var customMapArray: Array<IntArray?> = customMapGenerator!!.getCustomMapArray()!!
-            
 
 customMapArray[startGeographicMapCellPosition!!.getRow()]!![startGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getStartType()
 customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
     var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstance(raceTrackGeographicMap, customMapArray)!!
-            
 
 
     var list: BasicArrayList = PathGenerator.getInstance()!!.getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2)!!
-            
 
 
     
@@ -429,7 +422,6 @@ open fun visit(unitLayer: PathFindingLayerInterface)
                                 
 
     var size: Int = this.getConnectedWaypointList()!!.size()!!
-            
 
 
     

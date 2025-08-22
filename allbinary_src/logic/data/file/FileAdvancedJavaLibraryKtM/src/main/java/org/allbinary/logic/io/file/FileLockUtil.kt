@@ -54,7 +54,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -75,7 +74,6 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -89,7 +87,6 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
 
 
     var fileLock: FileLock = getLock(file)!!
-            
 
 
     
@@ -152,7 +149,6 @@ open fun getAllOrNone(vector: Vector)
                     var vector = vector
 
     var fileLockVector: Vector = getAll(vector, true)!!
-            
 
 
     
@@ -220,7 +216,6 @@ open fun getLock(fileOutputStream: AbFileOutputStream)
         try {
             
     var fileLock: FileLock = getLock(fileOutputStream!!.getChannel())!!
-            
 
 
 
@@ -256,7 +251,6 @@ open fun getLock(fileChannel: FileChannel)
         try {
             
     var fileLock: FileLock = fileChannel!!.tryLock()!!
-            
 
 
 

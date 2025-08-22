@@ -37,7 +37,6 @@ open public class CssPropertyView
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var cssProperty: CssProperty
 public constructor        (name: String)

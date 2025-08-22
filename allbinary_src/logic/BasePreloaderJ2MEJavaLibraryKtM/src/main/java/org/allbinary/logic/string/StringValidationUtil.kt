@@ -48,7 +48,6 @@ open fun getInstance()
         }
             
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -97,7 +96,6 @@ open fun isNumber(value: String)
 
         {
     var digit: Char = value[index]!!
-            
 
 
     

@@ -42,12 +42,10 @@ open public class HighScoresPaintable : Paintable
         
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var highScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
-            
 public constructor        (){}
 
 override fun onEvent(eventObject: AllBinaryEventObject)
@@ -73,16 +71,13 @@ override fun paint(graphics: Graphics)
 
 
     var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
-            
 
 
     var height: Int = this.displayInfoSingleton!!.getLastHeight()!!
-            
 
 graphics.setColor(getBasicColorP()!!.toInt())
 
     var heading: String = this.highScores!!.getHeading()!!
-            
 
 
     var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(heading) shr 1)
@@ -91,11 +86,9 @@ graphics.drawString(heading, (width shr 1) -topScoresWidth, charHeight, anchor)
 graphics.drawString(this.highScores!!.getColumnOneHeading(), 10, charHeight *3, anchor)
 
     var columnTwoHeading: String = this.highScores!!.getColumnTwoHeading()!!
-            
 
 
     var columnTwoHeadingWidth: Int = graphics.getFont()!!.stringWidth(columnTwoHeading)!!
-            
 
 graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeight *3, anchor)
 
@@ -106,11 +99,9 @@ graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeig
 
 
     var list: BasicArrayList = this.highScores!!.getList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     var vectorIndex: Int = 0
@@ -122,7 +113,6 @@ graphics.drawString(columnTwoHeading, width -10 -columnTwoHeadingWidth, charHeig
 
 
     var nextScoreWidth: Int = graphics.getFont()!!.stringWidth(highScore!!.getScoreString())!!
-            
 
 
     

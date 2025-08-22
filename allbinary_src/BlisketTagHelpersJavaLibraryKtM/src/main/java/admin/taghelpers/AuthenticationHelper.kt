@@ -51,7 +51,6 @@ open public class AuthenticationHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -153,15 +152,12 @@ open fun isSessionOld()
                                     {
                                     
     var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
-            
 
 
     var sessionTimout: Long = this.role.getSessionTimeout()!!
-            
 
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var timeFirst: Long = calendar.getTimeInMillis() -sessionTimout
@@ -232,19 +228,15 @@ open fun isRarelyUsedSession()
                                     {
                                     
     var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
-            
 
 
     var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
-            
 
 
     var inactivityAllowed: Long = role.getSessionInactivityTimeout()!!
-            
 
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var timeFirst: Long = calendar.getTimeInMillis() -lastAccess
@@ -422,11 +414,9 @@ open fun isAuthenticationSessionValid(roles: Vector)
                                     {
                                     
     var basicUserRole: BasicUserRole = role.getBasicUserRole()!!
-            
 
 
     var basicUserRoleArray: Array<Any?> = roles.toArray()!!
-            
 
 
     var size: Int = basicUserRoleArray!!.size
@@ -454,11 +444,9 @@ open fun isAuthenticationSessionValid(roles: Vector)
                                     {
                                     
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
-            
 
 
     var userInterface: UserInterface = userEntityInterface!!.getUser(sessionUserName)!!
-            
 
 
     
@@ -592,7 +580,6 @@ open fun processIfNewLogin(userName: String, password: String)
 
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
-            
 
 login= userEntityInterface!!.login(userName, password)
 
@@ -602,7 +589,6 @@ login= userEntityInterface!!.login(userName, password)
                                     {
                                     
     var userInterface: UserInterface = userEntityInterface!!.getUser(userName)!!
-            
 
 
     
@@ -712,18 +698,15 @@ open fun outputSessionInfo()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
-            
 
 stringBuffer!!.append("Time Since Last Access: " +(calendar.getTimeInMillis() -lastAccess) +"<br/>\n")
 

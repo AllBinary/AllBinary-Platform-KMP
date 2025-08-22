@@ -75,7 +75,6 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.addConfiguration()
 
     var gameFeatureFormUtil: GameFeatureFormUtil = GameFeatureFormUtil.getInstance()!!
-            
 
 gameFeatureFormUtil!!.addChoiceGroup(this, GameFeatureChoiceGroups.getExclusiveInstance()!!.get(), Choice.EXCLUSIVE)
 gameFeatureFormUtil!!.addChoiceGroup(this, GameFeatureChoiceGroups.getMultipleInstance()!!.get(), Choice.MULTIPLE)
@@ -102,7 +101,6 @@ open fun addTextFieldsIfSimulated()
 
 
     var hashtable: Hashtable<Any, Any> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!
-            
 
 
     
@@ -135,15 +133,12 @@ open fun addTextFields()
         //nullable = true from not(false or (false and true)) = true
 {
     var hashtable: Hashtable<Any, Any> = GameConfigurationTextInput.getHashtable()!!
-            
 
 
     var size: Int = hashtable.size!!
-            
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
 
@@ -174,14 +169,12 @@ open fun addConfiguration()
 
 
     var list: BasicArrayList = GameConfigurationSingleton.getInstance()!!.getOptionsBasicArrayList()!!
-            
 
 
     var GAUGE_CHANGE: Command = MyCommandsFactory.getInstance()!!.GAUGE_CHANGE
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -212,7 +205,6 @@ override fun initCommands(cmdListener: CommandListener)
                     var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 this.removeAllCommands()
 this.addCommand(gameCommandsFactory!!.CLOSE_OPTIONS)
@@ -237,7 +229,6 @@ open fun save(abeClientInformation: AbeClientInformationInterface)
 
         {
     var item: Item = this.get(index)!!
-            
 
 
     
@@ -269,13 +260,11 @@ GameConfigurationUtil.getInstance()!!.updateCompetitionValue()
 hashtable.put(SCALE.getName(), SCALE.getValue()!!.toString())
 
     var keyValuePersistance: KeyValuePersistance = GameConfigurationPersistanceSingleton.getInstance()!!
-            
 
 keyValuePersistance!!.clear()
 keyValuePersistance!!.loadAll(abeClientInformation)
 
     var list: BasicArrayList = keyValuePersistance!!.getIds()!!
-            
 
 keyValuePersistance!!.save(abeClientInformation, hashtable)
 

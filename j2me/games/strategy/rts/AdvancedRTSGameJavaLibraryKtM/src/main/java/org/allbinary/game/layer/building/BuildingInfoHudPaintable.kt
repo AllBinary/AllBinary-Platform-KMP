@@ -57,10 +57,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val myFont: MyFont = MyFont.getInstance()!!
-            
 
     private var productivityHud: NumberStringHud
 
@@ -80,7 +78,6 @@ private constructor        (){
 
 
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
-            
 
 
     var DEFAULT_CHAR_HEIGHT: Int = myFont!!.DEFAULT_CHAR_HEIGHT
@@ -97,7 +94,6 @@ this.maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basi
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
@@ -143,7 +139,6 @@ this.productivityHud!!.set(buildingLayer!!.getProductivity())
 this.efficiencyHud!!.set(buildingLayer!!.getEfficiency() /100)
 
     var health: Int = buildingLayer!!.getHealthInterface()!!.getHealth()!!
-            
 
 this.healthHud!!.set(health)
 

@@ -42,7 +42,6 @@ open public class StoreCategoryFactory : CategoryAbstractFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoInterface
 public constructor        (transformInfoInterface: TransformInfoInterface){
@@ -102,7 +101,6 @@ open fun getRootInstance(categoryPath: AbPath)
         try {
             
     var level: Int = CategoryUtil.getPathLevel(categoryPath)!!
-            
 
 
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreCategoryPropertiesFactory(this.transformInfoInterface, categoryPath) as CategoryPropertiesFactoryInterface
@@ -147,7 +145,6 @@ open fun getRootInstanceFromNode(node: Node)
 
 
     var level: Int = CategoryUtil.getPathLevel(categoryPath)!!
-            
 
 
 

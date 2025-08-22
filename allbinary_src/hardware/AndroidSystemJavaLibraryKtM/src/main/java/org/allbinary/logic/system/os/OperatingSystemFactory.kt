@@ -51,7 +51,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
 
@@ -65,17 +64,14 @@ open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             
     var systemProperties: SystemProperties = SystemProperties.getInstance()!!
-            
 
 
     var osName: String = systemProperties!!.getName()!!
-            
 
 
     

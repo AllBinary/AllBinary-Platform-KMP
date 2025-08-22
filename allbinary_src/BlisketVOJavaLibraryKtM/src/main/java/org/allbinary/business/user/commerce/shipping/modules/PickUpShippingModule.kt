@@ -36,7 +36,6 @@ open public class PickUpShippingModule
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val name: String = "No Shipping (For Pickup Orders Only)"
 

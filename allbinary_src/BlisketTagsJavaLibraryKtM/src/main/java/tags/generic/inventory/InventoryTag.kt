@@ -37,7 +37,6 @@ open public class InventoryTag : StoreValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(){
@@ -56,16 +55,13 @@ open fun search()
             
     var anyType: Any = InventoryHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("search", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -121,16 +117,13 @@ open fun viewSummary()
             
     var anyType: Any = InventoryHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("viewSummary", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 

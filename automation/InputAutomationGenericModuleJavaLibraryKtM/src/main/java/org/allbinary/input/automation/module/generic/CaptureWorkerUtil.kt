@@ -49,16 +49,13 @@ open fun processProfileActionConditions(vector: Vector, frame: Long)
                     var frame = frame
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionConditions")
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -91,7 +88,6 @@ logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionC
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}

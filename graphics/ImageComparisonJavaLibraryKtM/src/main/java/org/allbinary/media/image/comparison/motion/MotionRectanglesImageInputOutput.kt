@@ -51,7 +51,6 @@ open public class MotionRectanglesImageInputOutput
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val NUMBER_OF_IMAGES: Int = 1
 public constructor        ()
@@ -68,7 +67,6 @@ open fun save(frame: Long)
                     var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var motionRectanglesResultsFrameCacheable: MotionRectanglesResultsFrameCacheable = 
@@ -83,7 +81,6 @@ open fun save(frame: Long)
                                     {
                                     
     var motionRectangles: MotionRectangles = motionRectanglesResultsFrameCacheable!!.getMotionRectangles()!!
-            
 
 this.save(motionRectangles, frame)
 motionRectanglesResultsFrameCacheable= 
@@ -117,7 +114,6 @@ open fun save(motionRectangles: MotionRectangles, frame: Long)
                     var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var filePathStringBuffer: StringMaker = StringMaker()
@@ -151,18 +147,15 @@ logUtil!!.put("Motion Image File Path 2: " +filePathStringBuffer3!!.toString(), 
 
 
     var imageComparisonInfo: ImageComparisonResult = motionRectangles!!.getImageComparisonResult()!!
-            
 
 
     var originalBufferedImage: BufferedImage = imageComparisonInfo!!.getBufferedImages()[0]!!
 
 
     var bufferedImageInfo: BufferedImageInfo = BufferedImageInfoFactory.getInstance(imageComparisonInfo!!.imageWidth, imageComparisonInfo!!.imageHeight, originalBufferedImage!!.getType())!!
-            
 
 
     var poolInterface: PoolInterface = BufferedImagePoolSingleton.getInstance()!!
-            
 
 
 
@@ -200,11 +193,9 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
 
     var rectangelList: Vector = motionRectangles!!.getVector()!!
-            
 
 
     var size: Int = rectangelList!!.size!!
-            
 
 
 
@@ -218,7 +209,6 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
 
     var rectangle: Rectangle = motionRectangle!!.getRectangle()!!
-            
 
 
 
@@ -235,7 +225,6 @@ bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle
 
 
     var imagePersistanceUtil: ImagePersistanceUtil = ImagePersistanceUtil.getInstance()!!
-            
 
 
     

@@ -69,7 +69,6 @@ open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterfa
                     var startIndex = startIndex
 
     var size: Int = layerManager!!.getSize()!!
-            
 
 
 
@@ -102,11 +101,9 @@ open fun collide(layerManager: LayerManager, collidableInterfaceCompositeInterfa
                     var collidableInterfaceCompositeInterface2 = collidableInterfaceCompositeInterface2
 
     var collidableBase2: CollidableBaseBehavior = collidableInterfaceCompositeInterface2!!.getCollidableInferface()!!
-            
 
 
     var collidableBase: CollidableBaseBehavior = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!
-            
 
 
     

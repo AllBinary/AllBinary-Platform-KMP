@@ -70,7 +70,6 @@ open fun getFormData()
 {
     var hashMap: HashMap<Any, Any> = RequestParams(request).
                             toHashMap()!!
-            
 
 
     
@@ -128,7 +127,6 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
                                 
 
     var downloadable: Int = Integer.parseInt(this.itemInterface!!.getDownloads())!!
-            
 
 
     
@@ -137,11 +135,9 @@ this.itemInterface= InventoryEntityFactory.getInstance()!!.getInventoryEntityIns
                                     {
                                     
     var downloadItemsEntity: DownloadItemsEntity = DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!
-            
 
 
     var vector: Vector = downloadItemsEntity!!.getForItem(this.id, this.downloadItemId)!!
-            
 
 
     
@@ -231,7 +227,6 @@ open fun validationInfo()
                                 
 
     var downloadable: Int = Integer.parseInt(this.itemInterface!!.getDownloads())!!
-            
 
 
     

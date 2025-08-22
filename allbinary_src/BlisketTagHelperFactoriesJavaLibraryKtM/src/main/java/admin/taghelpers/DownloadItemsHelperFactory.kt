@@ -34,7 +34,6 @@ open public class DownloadItemsHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 

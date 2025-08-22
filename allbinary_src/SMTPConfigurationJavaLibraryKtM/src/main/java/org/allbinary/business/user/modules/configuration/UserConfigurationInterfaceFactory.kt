@@ -54,7 +54,6 @@ open fun getInstance(document: Document)
                     var document = document
 
     var configurationNode: Node = DomSearchHelper.getNode(UserConfigurationData.NAME, document.getChildNodes())!!
-            
 
 
 
@@ -78,11 +77,9 @@ open fun getInstance(userRole: UserRole)
 
     var documentString: String = CryptFileReader(UserConfigurationData.UNCRYPTED_EXTENSION, UserConfigurationData.ENCRYPTED_EXTENSION).
                             get(abPath)!!
-            
 
 
     var document: Document = DomDocumentHelper.create(documentString)!!
-            
 
 
 

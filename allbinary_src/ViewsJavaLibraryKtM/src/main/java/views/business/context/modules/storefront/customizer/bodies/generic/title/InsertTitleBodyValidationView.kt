@@ -43,7 +43,6 @@ open public class InsertTitleBodyValidationView : TitleBodyCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -56,7 +55,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
     var requestHashMap: HashMap<Any, Any> = RequestParams(this.getPageContext()).
                             toHashMap()!!
-            
 
 this.titleBody= TitleBodyValidation(requestHashMap)
 }
@@ -89,7 +87,6 @@ open fun isValid()
                                 
 
     var isValid: Boolean = this.titleBody!!.isValid()!!
-            
 
 
     

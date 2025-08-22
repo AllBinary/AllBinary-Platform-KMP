@@ -69,7 +69,6 @@ InstallerInfo.hasRead= value
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -90,17 +89,14 @@ open fun write()
 newFile!!.createNewFile()
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
-            
 
 
     var cryptedUserName: ByteArray = WeakCrypt(1).
                             encrypt(this.getUserName())!!.encodeToByteArray()!!
-            
 
 
     var cryptedPassword: ByteArray = WeakCrypt(2).
                             encrypt(this.getPassword())!!.encodeToByteArray()!!
-            
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedUserName))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedPassword))

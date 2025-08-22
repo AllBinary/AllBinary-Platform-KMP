@@ -39,10 +39,8 @@ open public class AllBinaryJ2SEImageRotationAnimation : ImageBaseRotationAnimati
         
 
     private val imageRotationUtil: ImageRotationUtil = ImageRotationUtil.getInstance()!!
-            
 
     private val imageModifierUtil: ImageModifierUtil = ImageModifierUtil.getInstanceOrCreate()!!
-            
 
     private val realOriginalImage: Image
 
@@ -63,16 +61,12 @@ open public class AllBinaryJ2SEImageRotationAnimation : ImageBaseRotationAnimati
     private var maxScaleY: Float= 0.0f
 
     private var alphaProcessor: ModifierBaseProcessor = ModifierBaseProcessor.getInstance()!!
-            
 
     private var setColorProcessor: ModifierBaseProcessor = ModifierBaseProcessor.getInstance()!!
-            
 
     private var changeColorProcessor: ModifierBaseProcessor = ModifierBaseProcessor.getInstance()!!
-            
 
     private var scaleProcessor: ScaleBaseProcessor = ScaleProcessor.getInstance()!!
-            
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
@@ -301,7 +295,6 @@ open fun close()
 {super.close()
 
     var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
-            
 
 
     var size2: Int = this.twoImages!!.size
@@ -343,7 +336,6 @@ open fun finalize()
 {super.finalize()
 
     var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
-            
 
 
     var size2: Int = this.twoImages!!.size

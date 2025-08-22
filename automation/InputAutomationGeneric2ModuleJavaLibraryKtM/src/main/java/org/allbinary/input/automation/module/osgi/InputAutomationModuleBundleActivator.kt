@@ -45,10 +45,8 @@ open public class InputAutomationModuleBundleActivator
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var inputAutomationModuleInterface: Array<InputAutomationModuleFactoryInterface?>
 
@@ -79,7 +77,6 @@ open fun getInputAutomationConfigurationModuleChangeListener(context: BundleCont
                     var context = context
 
     var serviceReference: ServiceReference = context.getServiceReference(InputAutomationConfigurationModuleChangeListener::class.qualifiedName!!)!!
-            
 
 
     
@@ -129,7 +126,6 @@ open fun addModules(context: BundleContext)
             logUtil!!.put(this.commonStrings!!.START, this, "addModules")
 
     var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = this.getInputAutomationConfigurationModuleChangeListener(context)!!
-            
 
 
     
@@ -147,7 +143,6 @@ open fun addModules(context: BundleContext)
 
         {
     var inputAutomationConfigurationModuleChangeEvent: InputAutomationConfigurationModuleChangeEvent = InputAutomationConfigurationUtil.getChangeEvent(this.getInputAutomationModuleInterface()[index]!!)!!
-            
 
 inputAutomationConfigurationModuleChangeListener!!.onAdd(inputAutomationConfigurationModuleChangeEvent)
 }
@@ -183,7 +178,6 @@ open fun removeModules(context: BundleContext)
             logUtil!!.put(this.commonStrings!!.START, this, "removeModules")
 
     var inputAutomationConfigurationModuleChangeListener: InputAutomationConfigurationModuleChangeListener = this.getInputAutomationConfigurationModuleChangeListener(context)!!
-            
 
 
     
@@ -201,7 +195,6 @@ open fun removeModules(context: BundleContext)
 
         {
     var inputAutomationConfigurationModuleChangeEvent: InputAutomationConfigurationModuleChangeEvent = InputAutomationConfigurationUtil.getChangeEvent(this.getInputAutomationModuleInterface()[index]!!)!!
-            
 
 inputAutomationConfigurationModuleChangeListener!!.onRemove(inputAutomationConfigurationModuleChangeEvent)
 }

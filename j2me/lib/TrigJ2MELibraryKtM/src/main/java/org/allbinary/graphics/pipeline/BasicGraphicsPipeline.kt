@@ -75,11 +75,9 @@ open fun translate(x: Int, y: Int)
 
 
     var size: Int = pointBasicArrayList!!.size()!!
-            
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
-            
 
 
     var secondPoint: GPoint
@@ -124,7 +122,6 @@ this.rotate(angle.getValue().toInt())
 
 
     private val noDecimalTrigTable: NoDecimalTrigTable = NoDecimalTrigTable.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -153,11 +150,9 @@ open fun rotate(angle: Int)
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
-            
 
 
     var size: Int = this.pointBasicArrayList!!.size()!!
-            
 
 
     var sin: Long= 0
@@ -208,7 +203,6 @@ open fun mirror(width: Int)
                     var width = width
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
-            
 
 
     var halfWidth: Int = (width shr 1)
@@ -227,7 +221,6 @@ open fun mirror(width: Int)
 
 
     var size: Int = this.pointBasicArrayList!!.size()!!
-            
 
 
 

@@ -42,7 +42,6 @@ open public class AdvertisementsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "advertisements"
 
@@ -100,14 +99,12 @@ open fun get(storeName: String)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
     var hashMapVector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var vector: Vector = Vector()
 
 
     var size: Int = hashMapVector!!.size!!
-            
 
 
 
@@ -144,7 +141,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 keysAndValues!!.put(AdvertisementData.getInstance()!!.NAME, advertismentName)
 
     var hashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
 
@@ -158,7 +154,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var advertisementData: AdvertisementData = AdvertisementData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -178,7 +173,6 @@ open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var returnStr: String = super.createTable(this.createTableStatement())!!
-            
 
 
 

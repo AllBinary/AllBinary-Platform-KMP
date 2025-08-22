@@ -40,7 +40,6 @@ open public class NewGenericBodyValidationView : GenericBodyCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

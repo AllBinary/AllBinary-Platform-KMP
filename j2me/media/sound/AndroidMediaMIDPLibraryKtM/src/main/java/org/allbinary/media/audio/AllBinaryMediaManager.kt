@@ -86,11 +86,9 @@ open fun init(soundsFactoryInterface: SoundsFactoryInterface)
                     var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
 AllBinaryMediaManager.shutdown(soundsFactoryInterface)
@@ -111,11 +109,9 @@ open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
                     var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonString!!.START, THIS, "shutdown")
 
@@ -127,7 +123,6 @@ logUtil!!.put(commonString!!.START, THIS, "shutdown")
                             stopAll()
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
-            
 
 
     var player: Player
@@ -210,7 +205,6 @@ open fun createPlayer(resource: String)
 mostUsedTotal++
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     

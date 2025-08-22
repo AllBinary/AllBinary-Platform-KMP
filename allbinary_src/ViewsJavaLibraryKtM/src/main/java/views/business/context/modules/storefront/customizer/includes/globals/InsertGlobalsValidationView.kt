@@ -39,7 +39,6 @@ open public class InsertGlobalsValidationView : GlobalsView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

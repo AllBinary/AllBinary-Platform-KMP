@@ -51,7 +51,6 @@ this.basicColor= basicColor
     private var anchor: Int = Anchor.TOP_LEFT
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -59,7 +58,6 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var width: Int = this.displayInfoSingleton!!.getLast()[this.displayInfoSingleton!!.WIDTH]!!

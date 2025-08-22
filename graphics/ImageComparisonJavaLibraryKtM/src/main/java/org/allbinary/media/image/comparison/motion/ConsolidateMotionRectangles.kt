@@ -39,7 +39,6 @@ open public class ConsolidateMotionRectangles : MotionRectangles {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (motionRectangles: MotionRectangles)                        
 
                             : super(NAME, motionRectangles!!.getImageComparisonResult()){
@@ -51,11 +50,9 @@ public constructor        (motionRectangles: MotionRectangles)
                     
 
     var vector: Vector = motionRectangles!!.getVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -78,7 +75,6 @@ open fun consolidateMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
 {
     var vector: Vector = this.getVector()!!
-            
 
 logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRectangleConstraints")
 
@@ -86,7 +82,6 @@ logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRect
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -110,11 +105,9 @@ logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRect
 
 
     var rectangle: Rectangle = motionRectangle!!.getRectangle()!!
-            
 
 
     var rectangle2: Rectangle = motionRectangle2!!.getRectangle()!!
-            
 
 
     var x2: Int = rectangle.x +rectangle.width
@@ -152,11 +145,9 @@ open fun remove(removeVector: Vector)
                     var removeVector = removeVector
 
     var vector: Vector = this.getVector()!!
-            
 
 
     var size: Int = removeVector!!.size!!
-            
 
 
 

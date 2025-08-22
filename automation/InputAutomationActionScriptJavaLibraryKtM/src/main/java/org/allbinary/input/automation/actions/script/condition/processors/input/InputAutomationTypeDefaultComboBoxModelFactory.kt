@@ -45,11 +45,9 @@ open fun getInstance()
 
 
     var set: Set = InputRobotFactory.getInstance()!!.get()!!.keySet()!!
-            
 
 
     var nameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = nameArray!!.size

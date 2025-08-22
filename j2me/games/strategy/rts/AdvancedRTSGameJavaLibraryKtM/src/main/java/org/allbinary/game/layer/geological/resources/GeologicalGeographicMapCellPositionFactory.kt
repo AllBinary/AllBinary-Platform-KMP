@@ -74,7 +74,6 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, 
                     var height = height
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var resources: Int = this.resourcePerMapCellType[tiledLayer!!.getCell(i_column, i_row)] +MyRandomFactory.getInstance()!!.getAbsoluteNextInt(1000)

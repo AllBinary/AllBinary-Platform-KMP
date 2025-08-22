@@ -42,7 +42,6 @@ open public class InventoryRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val itemInterface: ItemInterface
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -56,7 +55,6 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
 
 
     var itemView: InventoryItemView = InventoryItemViewParentTagHelper.getInstance()!!.getInventoryItemView(inventoryTag)!!
-            
 
 this.itemInterface= itemView!!.getItemInterface()
 }
@@ -73,7 +71,6 @@ open fun insert()
 
 
     var values: Vector = dataMappingInterface!!.toVector()!!
-            
 
 InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(values)
 
@@ -137,7 +134,6 @@ stringBuffer!!.append(id)
 stringBuffer!!.append(" from to the Inventory table")
 
     var success: String = stringBuffer!!.toString()!!
-            
 
 
     

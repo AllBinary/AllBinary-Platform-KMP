@@ -38,10 +38,8 @@ open public class CryptServiceFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var cryptService: CryptService = CryptService()
 public constructor        ()

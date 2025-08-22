@@ -213,7 +213,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var hashMap: HashMap<Any, Any> = super.toHashMap()!!
-            
 
 hashMap!!.put(ShippingMethodData.GROUP, this.group)
 hashMap!!.put(OrderHistoryData.TAX, this.tax)

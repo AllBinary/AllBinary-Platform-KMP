@@ -48,7 +48,6 @@ open public class DynamicRaceTracksPathPrinter : RaceTracksPathPrinter {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrackGeographicMapInterfaceFactoryInterface, pathFindingInfo: PathFindingInfo, size: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -72,11 +71,9 @@ open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrac
 
         {
     var geographicMapInterface: BasicGeographicMap = raceTrackGeographicMapInterfaceFactoryInterface!!.getTrackInstance(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index))!!
-            
 
 
     var list: BasicArrayList = PathGenerator.getInstance()!!.getInstance(geographicMapInterface, RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance(), pathFindingInfo, 10)!!
-            
 
 System.out.println("Track " +index)
 this.printPaths(list)
@@ -85,7 +82,6 @@ this.printPaths(list)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }

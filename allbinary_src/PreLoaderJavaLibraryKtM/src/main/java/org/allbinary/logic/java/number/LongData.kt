@@ -35,7 +35,6 @@ open public class LongData
             
     var MAX_LONG_LENGTH: Int = Long.MAX_VALUE as Long.
                             toString()!!.length()!!
-            
 
         }
             private constructor        ()

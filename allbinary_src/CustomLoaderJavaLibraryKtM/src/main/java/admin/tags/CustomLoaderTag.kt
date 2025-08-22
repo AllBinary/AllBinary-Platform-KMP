@@ -38,7 +38,6 @@ open public class CustomLoaderTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 
@@ -75,11 +74,9 @@ open fun setCustomLoaderWebappPath()
             
     var anyType: Any = CustomLoaderHelperFactory().
                             getInstance(this.propertiesHashMap, pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var methodParams: Array<KClass<*>?> = arrayOf(this.webappPath!!.::class)
@@ -89,7 +86,6 @@ open fun setCustomLoaderWebappPath()
 
 
     var setMethod: Method = helperClass!!.getMethod("setWebappPath", methodParams)!!
-            
 
 setMethod!!.invoke(anyType, methodArgs)
 } catch(e: LicensingException)

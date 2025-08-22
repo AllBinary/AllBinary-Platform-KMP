@@ -34,7 +34,6 @@ open public class RTSLayerTextAnimation : Animation {
         
 
     private val myFont: MyFont = MyFont.getInstance()!!
-            
 
     private val image: Image
 

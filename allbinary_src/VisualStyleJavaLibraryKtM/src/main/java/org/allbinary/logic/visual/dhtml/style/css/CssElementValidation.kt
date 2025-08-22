@@ -36,7 +36,6 @@ open public class CssElementValidation : CssElementView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(){

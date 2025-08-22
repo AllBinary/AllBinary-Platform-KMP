@@ -62,7 +62,6 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = dataMappingInterface!!.toHashMap()!!
-            
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, EMPTY_STRING)
 hashMap!!.put(EntryData.getInstance()!!.ENCRYPTION, EMPTY_STRING)

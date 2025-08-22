@@ -56,7 +56,6 @@ stringbuffer.append(height)
 stringbuffer.append(type)
 
     var key: String = stringbuffer.toString()!!
-            
 
 
     var bufferedImageInfo: BufferedImageInfo = hashMap!!.get(key as Object) as BufferedImageInfo

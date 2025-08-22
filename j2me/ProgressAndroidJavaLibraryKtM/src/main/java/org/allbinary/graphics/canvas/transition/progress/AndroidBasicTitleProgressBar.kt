@@ -77,16 +77,12 @@ AndroidBasicTitleProgressBar.background= background
         }
             
     private var showTitleProgressBarRunnable: NullRunnable = NullRunnable.getInstance()!!
-            
 
     private var dismissTitleProgressBarRunnable: NullRunnable = NullRunnable.getInstance()!!
-            
 
     private var titleProgressDialogPortionSetProgressRunnable: NullRunnable = NullRunnable.getInstance()!!
-            
 
     private var titleProgressDialogSetProgressRunnable: NullRunnable = NullRunnable.getInstance()!!
-            
 
     private var midletActivity: Activity = NULL_ACTIVITY
 
@@ -97,7 +93,6 @@ AndroidBasicTitleProgressBar.background= background
     private var image: Image = NullCanvas.NULL_IMAGE
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
  constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, backgroundBasicColor, foregroundBasicColor){
@@ -189,7 +184,6 @@ open fun updateCurrent()
                                     {
                                     
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var currentImage: Image
@@ -264,15 +258,12 @@ open fun loadProgressImages()
         try {
             
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var lastWidth: Int = displayInfo!!.getLastWidth()!!
-            
 
 
     var lastHeight: Int = displayInfo!!.getLastHeight()!!
-            
 
 
     
@@ -519,7 +510,6 @@ logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
 
     var size: Int = this.IMAGE.size
@@ -560,7 +550,6 @@ this.initOpenGL(graphics)
 this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
 
     var size: Int = this.IMAGE.size

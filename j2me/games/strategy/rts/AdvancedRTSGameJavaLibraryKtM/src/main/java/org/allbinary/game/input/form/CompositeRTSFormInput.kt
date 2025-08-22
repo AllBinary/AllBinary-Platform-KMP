@@ -44,7 +44,6 @@ open public class CompositeRTSFormInput : RTSFormInput {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val rtsFormInputArray: Array<RTSFormInput?>
 
@@ -137,11 +136,9 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
                     var point = point
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
-            
 
 
     var index: Int = scrollSelectionForm!!.getSelectedIndex(point)!!
-            
 
 
     
@@ -195,7 +192,6 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
                     var index = index
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(CommonLabels.getInstance()!!.INDEX_LABEL +index +" > " +this.itemIndex[0], this, commonStrings!!.PROCESS)
 

@@ -42,7 +42,6 @@ open public class TagHelperFactory
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class, LicensingException::class)
             

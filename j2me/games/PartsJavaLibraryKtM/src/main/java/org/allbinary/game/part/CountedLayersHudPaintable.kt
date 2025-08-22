@@ -43,12 +43,10 @@ open public class CountedLayersHudPaintable
     private val XXString: String = "XX"
 
     private val XXStringWidth: Int = MyFont.getInstance()!!.stringWidth(XXString)!!
-            
 
         }
             
     private val myFont: MyFont = MyFont.getInstance()!!
-            
 
     private val partInterfaceArray: Array<PartInterface?>
 
@@ -102,7 +100,6 @@ override fun paint(graphics: Graphics)
                                 
 
     var lastWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastWidth()!!
-            
 
 
     var count: Int = 0

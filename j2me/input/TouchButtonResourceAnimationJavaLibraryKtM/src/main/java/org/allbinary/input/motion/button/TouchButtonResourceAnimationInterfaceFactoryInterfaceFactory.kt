@@ -100,91 +100,70 @@ this.init(ImageCacheFactory.getInstance(), level)
 
     var loadingString: String = StringMaker().
                             append(this.toString())!!.append(" Loading: ")!!.toString()!!
-            
 
 
     var index: Int = 0
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(portion, loadingString, index++)
 
     var touchButtonBlankResource: TouchButtonResource = TouchButtonBlankResource.getInstance()!!
-            
 
 
     var touchButtonGenericActionResource: TouchButtonResource = TouchButtonGenericActionResource.getInstance()!!
-            
 
 
     var touchButtonStartResource: TouchButtonResource = TouchButtonStartResource.getInstance()!!
-            
 
 
     var touchButtonUpResource: TouchButtonResource = TouchButtonUpResource.getInstance()!!
-            
 
 
     var touchButtonDownResource: TouchButtonResource = TouchButtonDownResource.getInstance()!!
-            
 
 
     var touchButtonTurnLeftResource: TouchButtonResource = TouchButtonTurnLeftResource.getInstance()!!
-            
 
 
     var touchButtonTurnRightResource: TouchButtonResource = TouchButtonTurnRightResource.getInstance()!!
-            
 
 
     var touchButtonStrafeLeftResource: TouchButtonResource = TouchButtonStrafeLeftResource.getInstance()!!
-            
 
 
     var touchButtonStrafeRightResource: TouchButtonResource = TouchButtonStrafeRightResource.getInstance()!!
-            
 
 
     var touchButtonBlankResourceImage: Image = imageCache!!.get(touchButtonBlankResource!!.RESOURCE)!!
-            
 
 
     var touchButtonGenericActionResourceImage: Image = imageCache!!.get(touchButtonGenericActionResource!!.RESOURCE)!!
-            
 
 
     var touchButtonStartResourceImage: Image = imageCache!!.get(touchButtonStartResource!!.RESOURCE)!!
-            
 
 
     var touchButtonUpResourceImage: Image = imageCache!!.get(touchButtonUpResource!!.RESOURCE)!!
-            
 
 
     var touchButtonDownResourceImage: Image = imageCache!!.get(touchButtonDownResource!!.RESOURCE)!!
-            
 
 
     var touchButtonTurnLeftResourceImage: Image = imageCache!!.get(touchButtonTurnLeftResource!!.RESOURCE)!!
-            
 
 
     var touchButtonTurnRightResourceImage: Image = imageCache!!.get(touchButtonTurnRightResource!!.RESOURCE)!!
-            
 
 
     var touchButtonStrafeLeftResourceImage: Image = imageCache!!.get(touchButtonStrafeLeftResource!!.RESOURCE)!!
-            
 
 
     var touchButtonStrafeRightResourceImage: Image = imageCache!!.get(touchButtonStrafeRightResource!!.RESOURCE)!!
-            
 
 
     var nullAnimationFactory: NullAnimationFactory = NullAnimationFactory.getFactoryInstance()!!
-            
 
 
     
@@ -198,7 +177,6 @@ progressCanvas!!.addPortion(portion, loadingString, index++)
 progressCanvas!!.addPortion(portion, loadingString, index++)
 
     var imageCompleteUtil: ImageCompleteUtil = ImageCompleteUtil.getInstance()!!
-            
 
 progressCanvas!!.addPortion(portion, loadingString, index++)
 imageCompleteUtil!!.waitFor(touchButtonBlankResourceImage, touchButtonBlankResource!!.RESOURCE)
@@ -242,7 +220,6 @@ this.add(touchButtonStrafeRightResource!!.HINT, nullAnimationFactory)
                                     {
                                     
     var touchButtonStartHintResource: Image = imageCache!!.get(TouchButtonStartResource.getInstance()!!.HINT)!!
-            
 
 this.add(touchButtonStartResource!!.HINT, OneRowSpriteIndexedAnimationFactory(touchButtonStartHintResource))
 
@@ -263,7 +240,6 @@ override fun isLoadingLevel(level: Int)
                     var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     

@@ -43,7 +43,6 @@ open public class TestInputAutomationCaptureWorker : AbstractInputAutomationWork
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var genericProfileActions: GenericProfileActions
 
@@ -95,15 +94,12 @@ open fun processDataWorkerResults()
 
 
     var hashMap: HashMap<Any, Any> = this.getGenericProfileActions()!!.getHashMap()!!
-            
 
 
     var set: Set = hashMap!!.keys!!
-            
 
 
     var actionNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = actionNameArray!!.size
@@ -124,11 +120,9 @@ open fun processDataWorkerResults()
 
 
     var genericProfileActionScript: GenericProfileActionScript = genericProfileAction!!.getGenericProfileActionScript()!!
-            
 
 
     var vector: Vector = genericProfileActionScript!!.getProfileActionConditionInterfaceVector()!!
-            
 
 }
 

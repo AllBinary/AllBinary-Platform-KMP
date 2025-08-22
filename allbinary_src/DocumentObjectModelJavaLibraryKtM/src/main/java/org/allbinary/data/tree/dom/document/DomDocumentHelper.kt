@@ -49,15 +49,12 @@ open fun create()
         try {
             
     var factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()!!
-            
 
 
     var builder: DocumentBuilder = factory.newDocumentBuilder()!!
-            
 
 
     var document: Document = builder.newDocument()!!
-            
 
 
 
@@ -86,15 +83,12 @@ open fun create(inputStream: InputStream)
         try {
             
     var factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()!!
-            
 
 
     var builder: DocumentBuilder = factory.newDocumentBuilder()!!
-            
 
 
     var document: Document = builder.parse(inputStream)!!
-            
 
 
 
@@ -122,15 +116,12 @@ open fun create(xmlString: String)
         try {
             
     var factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()!!
-            
 
 
     var builder: DocumentBuilder = factory.newDocumentBuilder()!!
-            
 
 
     var document: Document = builder.parse(StringBufferInputStream(xmlString))!!
-            
 
 
 
@@ -167,11 +158,9 @@ open fun toString(document: Document)
 
 
     var copyTransformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 
     var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
-            
 
 copyTransformer!!.transform(domSource, streamResult)
 

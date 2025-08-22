@@ -61,11 +61,9 @@ open fun getFromString(booleanString: String)
                     var booleanString = booleanString
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
 
     
@@ -82,7 +80,6 @@ open fun getFromString(booleanString: String)
                                 
 
     var booleanStringLowerCase: String = booleanString!!.lowercase()!!
-            
 
 
     
@@ -130,11 +127,9 @@ open fun isStringBoolean(booleanString: String)
                     var booleanString = booleanString
 
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
 
     var booleanStringLowerCase: String = booleanString!!.lowercase()!!
-            
 
 
     

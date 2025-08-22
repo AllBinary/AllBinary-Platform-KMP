@@ -36,7 +36,6 @@ open public class PaymentGatewayTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){this.setTagHelperFactory(PaymentGatewayHelperFactory())
 this.setTagRequestHelperFactory(PaymentGatewayHelperFactory())
 }
@@ -51,16 +50,13 @@ open fun process()
             
     var anyType: Any = PaymentGatewayHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.PROCESS, 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -115,7 +111,6 @@ open fun doStartTag()
                                     {
                                     
     var output: String = this.process()!!
-            
 
 
 

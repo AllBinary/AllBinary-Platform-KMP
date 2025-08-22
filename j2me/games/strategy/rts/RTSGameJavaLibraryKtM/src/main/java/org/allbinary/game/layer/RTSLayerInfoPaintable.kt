@@ -33,7 +33,6 @@ open public class RTSLayerInfoPaintable : InitUpdatePaintable {
         
 
     private var initUpdatePaintable: InitUpdatePaintable = NullInitUpdatePaintable.getInstance()!!
-            
 public constructor        (){}
 
 

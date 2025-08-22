@@ -87,7 +87,6 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
         while(index < stringVector!!.size)
@@ -99,7 +98,6 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
 
 
     var keywordVector: BasicArrayList = tokenizer.getTokens(keywords, BasicArrayList())!!
-            
 
 
 
@@ -128,7 +126,6 @@ hashSet!!.add(cleanString)
 
 
     var subKeywordVector: BasicArrayList = spaceTokenizer!!.getTokens(cleanString, BasicArrayList())!!
-            
 
 
 

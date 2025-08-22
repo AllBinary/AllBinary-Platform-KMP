@@ -53,7 +53,6 @@ open fun getInstance()
     val LOAD_SHADER: String = "loadShader"
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val GL_VERTEX_SHADER: Int
 

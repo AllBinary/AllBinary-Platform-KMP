@@ -152,7 +152,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 
     var frame: Int = this.getFrame()!!
-            
 
 
     var currentX: Int = dx *frame

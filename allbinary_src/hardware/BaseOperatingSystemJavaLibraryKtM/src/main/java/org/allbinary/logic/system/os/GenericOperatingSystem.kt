@@ -50,11 +50,9 @@ public constructor        ()
             : super()
         {
     var systemProperties: SystemProperties = SystemProperties.getInstance()!!
-            
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING

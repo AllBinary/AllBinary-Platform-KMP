@@ -41,7 +41,6 @@ open public class HighScoresHelperBase
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var highScoresArrayP: Array<HighScores?> = LastFetchHighScoresFactory.getInstance()!!.highScoresArray
 override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
@@ -58,7 +57,6 @@ override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(commonStrings!!.START)!!.append(highScoresArrayP!!.size)!!.toString(), this, "setHighScoresArray")
@@ -68,7 +66,6 @@ logUtil!!.put(StringMaker().
                         else {
                             
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, "setHighScoresArray")
 

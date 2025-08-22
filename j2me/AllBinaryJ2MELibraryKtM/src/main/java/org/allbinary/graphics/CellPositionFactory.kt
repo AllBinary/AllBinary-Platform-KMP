@@ -51,7 +51,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val NONE: CellPosition = CellPosition( -1,  -1,  -1,  -1)
 
@@ -78,7 +77,6 @@ this.columns= columns
 this.rows= rows
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -128,7 +126,6 @@ open fun getInstance(i_column: Int, i_row: Int)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append("columns: ")!!.append(this.getColumns())!!.append(" rows: ")!!.append(this.getRows())!!.append(" col: ")!!.append(i_column)!!.append(" row: ")!!.append(i_row)!!.toString(), this, commonStrings!!.GET_INSTANCE, e)

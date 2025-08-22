@@ -48,7 +48,6 @@ open public class BasicProfileActionScriptInput : BasicProfileActionScriptProces
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var inputRobotInterface: InputRobotInterface
 
@@ -68,15 +67,12 @@ public constructor        (label: String, node: Node)
 logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
 
     var actionNode: Node = DomSearchHelper.getNode(GenericProfileActionScriptInputData.TYPE, node.getChildNodes())!!
-            
 
 
     var inputTypeString: String = DomNodeHelper.getTextNodeValue(actionNode)!!
-            
 
 
     var timeNode: Node = DomSearchHelper.getNodeNoThrow(GenericProfileActionScriptInputData.DELAY, node.getChildNodes())!!
-            
 
 
     
@@ -87,7 +83,6 @@ logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
                                     {
                                     
     var delayString: String = DomNodeHelper.getTextNodeValue(timeNode)!!
-            
 
 this.setTime(Integer.valueOf(delayString)!!.toInt())
 
@@ -113,18 +108,15 @@ public constructor        (label: String)
 logUtil!!.put(commonStrings!!.START +label, this, commonStrings!!.CONSTRUCTOR)
 
     var inputRobotFactory: InputRobotFactory = InputRobotFactory.getInstance()!!
-            
 
 
     var hashtable: Hashtable<Any, Any> = inputRobotFactory!!.get() as Hashtable<Any, Any>
 
 
     var set: Set = hashtable.keys!!
-            
 
 
     var iterator: Iterator = set.iterator()!!
-            
 
 this.setInputRobotInterface(inputRobotFactory!!.get(iterator.next() as String))
 this.setTime(0)
@@ -175,7 +167,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, GenericProfileActionScriptInputData.NAME, this.BasicProfileActionScriptInput_toHashMap())!!
-            
 
 
 

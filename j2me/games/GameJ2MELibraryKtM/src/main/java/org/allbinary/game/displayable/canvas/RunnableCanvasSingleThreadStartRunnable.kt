@@ -33,7 +33,6 @@ open public class RunnableCanvasSingleThreadStartRunnable : GameRunnable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val runnableCanvas: RunnableCanvas
 public constructor        (demoCanvas: RunnableCanvas){
@@ -50,7 +49,6 @@ override fun run()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

@@ -58,7 +58,6 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
@@ -71,7 +70,6 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
     private var preSelectedRTSLayersList: BasicArrayList = BasicArrayList()
 
     private var paintSelectedRTSLayersList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
     private var rtsPlayerLayerInterface: RTSPlayerLayerInterface
 
@@ -109,11 +107,9 @@ this.list= list
 this.selectRTSLayerVisitorInterface= selectRTSLayerVisitorFactoryInterface!!.getInstance(this)
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.upgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.UPGRADE, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
 this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
@@ -194,11 +190,9 @@ open fun upgrade()
                                     {
                                     
     var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
-            
 
 
     var upgradeCost: Int = rtsLayer!!.getUpgradeCost()!!
-            
 
 
     
@@ -280,12 +274,10 @@ open fun downgrade()
 rtsPlayerLayerInterface!!.add(DowngradeSound.getInstance())
 
     var downgradeCost: Int = rtsLayer!!.getDowngradeCost()!!
-            
 
 rtsLayer!!.downgrade()
 
     var capital: Capital = this.rtsPlayerLayerInterface!!.getCapital()!!
-            
 
 capital.addMoney(downgradeCost)
 
@@ -357,7 +349,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
         try {
             
     var size: Int = list.size()!!
-            
 
 
     var key: Int = 0
@@ -474,7 +465,6 @@ this.deselectAll()
                                     this.getPreSelectedRTSLayersList()!!.clear()
 
     var tempList: BasicArrayList = this.getPreSelectedRTSLayersList()!!
-            
 
 this.preSelectedRTSLayersList= this.selectedRTSLayersList
 this.selectedRTSLayersList= tempList

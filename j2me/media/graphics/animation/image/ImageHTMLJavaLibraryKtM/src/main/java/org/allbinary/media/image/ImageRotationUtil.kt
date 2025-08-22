@@ -70,7 +70,6 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
                     var rotationInDegrees = rotationInDegrees
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-            
 
 
     
@@ -110,7 +109,6 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
 
 
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
-            
 
 canvasSurface!!.translate(originalPlayNImage!!.width() /2, originalPlayNImage!!.height() /2)
 canvasSurface!!.rotate(Math.toRadians(rotationInDegrees).toFloat())

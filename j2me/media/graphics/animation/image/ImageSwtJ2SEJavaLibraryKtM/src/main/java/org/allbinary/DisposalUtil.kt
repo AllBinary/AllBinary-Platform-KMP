@@ -60,7 +60,6 @@ open fun getInstance()
             }            
         
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 open fun dispose(image: Image)
         //nullable = true from not(false or (false and false)) = true

@@ -59,10 +59,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val TOTAL_ANGLE: String = "totalAngle: "
 
@@ -110,7 +108,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, input: String, visito
 
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
-            
 
 
 

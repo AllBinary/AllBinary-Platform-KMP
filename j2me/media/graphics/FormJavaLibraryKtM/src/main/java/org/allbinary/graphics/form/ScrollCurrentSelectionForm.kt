@@ -132,7 +132,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 
     
@@ -151,7 +150,6 @@ dy= y
                                     {
                                     
     var size: Int = this.size()!!
-            
 
 
     var totalWidth: Int = 0
@@ -204,7 +202,6 @@ dy= y +(this.rectangle.getHeight() shr 1)
 
 
     var size: Int = this.size()!!
-            
 
 
 
@@ -215,7 +212,6 @@ dy= y +(this.rectangle.getHeight() shr 1)
 
         {
     var item2: CustomItem = this.get(index)!!
-            
 
 
     
@@ -286,19 +282,15 @@ override fun paint(graphics: Graphics)
 
 
     var deltaX: Int = getDx()!!
-            
 
 
     var deltaY: Int = getDy()!!
-            
 
 
     var size: Int = this.size()!!
-            
 
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 
 

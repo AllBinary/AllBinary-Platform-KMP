@@ -63,22 +63,16 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val NULL_WRITER: Writer = Writer.nullWriter()!!
-            
 
     val NULL_READER: Reader = Reader.nullReader()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 
 open fun loadFileAsList(inputStream: InputStream, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true

@@ -50,7 +50,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -81,7 +80,6 @@ open fun getInstance(storeName: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

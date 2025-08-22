@@ -51,10 +51,8 @@ open public class InputAutomationModuleConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var className: String
 
@@ -114,7 +112,6 @@ open fun init(abeClientInformation: AbeClientInformationInterface, node: Node)
                     var node = node
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
     
@@ -125,7 +122,6 @@ open fun init(abeClientInformation: AbeClientInformationInterface, node: Node)
                                     {
                                     
     var classNameNode: Node = DomSearchHelper.getNode(DynamicObjectData.NAME, nodeList)!!
-            
 
 
     
@@ -185,11 +181,9 @@ open fun toDomNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(InputAutomationModuleData.NAME)!!
-            
 
 
     var classNameNode: Node = ModDomHelper.createTextNode(document, DynamicObjectData.NAME, this.getClassName())!!
-            
 
 node.appendChild(classNameNode)
 

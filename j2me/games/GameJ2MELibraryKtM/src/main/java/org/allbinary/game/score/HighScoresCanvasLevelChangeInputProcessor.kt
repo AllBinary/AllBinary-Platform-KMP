@@ -39,7 +39,6 @@ open public class HighScoresCanvasLevelChangeInputProcessor : HighScoresCanvasIn
         
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private val INSTRUCTIONS: String = "(Right = Next Track, Left = Previous Track)"
 
@@ -69,11 +68,9 @@ override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -87,7 +84,6 @@ override fun update()
 
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
-            
 
 
     
@@ -120,11 +116,9 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var width: Int = this.displayInfoSingleton!!.getLastWidth()!!
-            
 
 
     var topScoresWidth: Int = (graphics.getFont()!!.stringWidth(INSTRUCTIONS) shr 1)

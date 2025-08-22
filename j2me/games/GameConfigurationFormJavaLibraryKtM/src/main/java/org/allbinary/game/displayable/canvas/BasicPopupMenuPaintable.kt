@@ -55,7 +55,6 @@ open public class BasicPopupMenuPaintable : Paintable {
         }
             
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     private val label: String
 
@@ -82,15 +81,12 @@ label= NAME
 this.rectangle= rectangle
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-            
 
 
     var isOpenGL: Boolean = features.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL)!!
-            
 
 
     var BORDER: Int = 0
@@ -147,7 +143,6 @@ open fun init(rectangle: Rectangle)
 this.rectangle= rectangle
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var heightOffset: Int = rectangle.getHeight() -(myFont!!.DEFAULT_CHAR_HEIGHT *NAME.length)
@@ -178,11 +173,9 @@ this.rectangle= rectangle
 this.offset= (heightOffset shr 1)
 
     var width: Int = this.rectangle.getWidth()!!
-            
 
 
     var height: Int = this.rectangle.getHeight()!!
-            
 
 
     
@@ -205,7 +198,6 @@ rectangleFilledAnimation!!.setHeight(height)
 
 
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
-            
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -213,23 +205,18 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var point: GPoint = this.rectangle.getPoint()!!
-            
 
 
     var x: Int = point.getX()!!
-            
 
 
     var y: Int = point.getY()!!
-            
 
 
     var width: Int = this.rectangle.getWidth()!!
-            
 
 
     var height: Int = this.rectangle.getHeight()!!
-            
 
 this.animationInterface!!.paint(graphics, x, y)
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor)

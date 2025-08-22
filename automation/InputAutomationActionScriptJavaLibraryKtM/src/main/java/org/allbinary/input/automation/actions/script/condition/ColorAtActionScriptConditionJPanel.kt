@@ -36,10 +36,8 @@ open public class ColorAtActionScriptConditionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface
 public constructor        (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface){
@@ -56,7 +54,6 @@ open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
     var colorRangeInterface: ColorRangeInterface = this.colorAtActionScriptConditionInterface!!.getColorRangeInterface()!!
-            
 
 this.getMinRedJTextField()!!.setText(colorRangeInterface!!.getMinRed().toString())
 this.getMaxRedJTextField()!!.setText(colorRangeInterface!!.getMaxRed().toString())
@@ -74,7 +71,6 @@ open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var colorRangeInterface: ColorRangeInterface = this.colorAtActionScriptConditionInterface!!.getColorRangeInterface()!!
-            
 
 colorRangeInterface!!.setMinRed(Integer.valueOf(this.getMinRedJTextField()!!.getText())!!.toInt())
 colorRangeInterface!!.setMaxRed(Integer.valueOf(this.getMaxRedJTextField()!!.getText())!!.toInt())
@@ -84,7 +80,6 @@ colorRangeInterface!!.setMinBlue(Integer.valueOf(this.getMinBlueJTextField()!!.g
 colorRangeInterface!!.setMaxBlue(Integer.valueOf(this.getMaxBlueJTextField()!!.getText())!!.toInt())
 
     var xString: String = this.getColorAtXJTextField()!!.getText()!!
-            
 
 
     
@@ -97,7 +92,6 @@ colorRangeInterface!!.setMaxBlue(Integer.valueOf(this.getMaxBlueJTextField()!!.g
                                 
 
     var yString: String = this.getColorAtYJTextField()!!.getText()!!
-            
 
 
     

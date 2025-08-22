@@ -94,7 +94,6 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
                     var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
     

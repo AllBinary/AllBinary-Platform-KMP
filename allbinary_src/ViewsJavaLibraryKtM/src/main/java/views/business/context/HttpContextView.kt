@@ -37,10 +37,8 @@ open public class HttpContextView : HttpComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -72,12 +70,10 @@ open fun view()
             this.toXmlDoc()
 
     var success: String = DomDocumentHelper.toString(this.getDoc())!!
-            
 
 
     var result: String = ContextTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-            
 
 
 

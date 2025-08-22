@@ -38,7 +38,6 @@ open public class ReverseVelocityBoundsVisitor
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var velocityInterface: VelocityInterface
 

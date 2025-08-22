@@ -73,7 +73,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var EXTENSION: String = ".adb"
 
@@ -118,16 +117,12 @@ open fun getInstance()
     private val NEW_LINE: String = "\\n"
 
     val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
-            
 
 open fun getOutputStream(backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
@@ -211,14 +206,12 @@ open fun backupFile(path: AbPath, backupPath: String, tableName: String)
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var timeLong: Long = calendar.getTimeInMillis() as Long
 
 
     var time: String = timeLong!!.toString()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -301,7 +294,6 @@ open fun convertNewLines(value: String)
                                     {
                                     
     var nextLine: String = value.substring(lastIndex, index -1)!!
-            
 
 stringBuffer!!.append(nextLine)
 stringBuffer!!.append(NEW_LINE)
@@ -342,7 +334,6 @@ open fun backupTable(abSqlTable: AbSqlTable)
                     var abSqlTable = abSqlTable
 
     var tableName: String = abSqlTable!!.getTableName()!!
-            
 
 
         try {
@@ -374,27 +365,22 @@ open fun backupTable(abSqlTable: AbSqlTable)
                                 
 
     var rset: ResultSet = abSqlTable!!.executeSQLStatement(sqlStatement)!!
-            
 
 
     var rsmd: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
     var colNum: Int = rsmd.getColumnCount()!!
-            
 
 
     var QUERY_START: String = StringBuilder().
                             append(this.sqlStrings!!.INSERT_INTO)!!.append(tableName)!!.append(this.sqlStrings!!.VALUES)!!.toString()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var outputStream: OutputStream = this.getOutputStream(path, tableName)!!
-            
 
 
         while(rset.next())
@@ -409,7 +395,6 @@ stringBuffer!!.append(QUERY_START)
 
         {
     var value: String = rset.getString(i)!!
-            
 
 stringBuffer!!.append(this.convertNewLines(value))
 stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
@@ -419,7 +404,6 @@ stringBuffer!!.append(rset.getString(colNum))
 stringBuffer!!.append(END)
 
     var sqlStatementLine: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -469,7 +453,6 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
                     var portion = portion
 
     var tableName: String = abSqlTable!!.getTableName()!!
-            
 
 
         try {
@@ -478,7 +461,6 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
 
 
     var current: Int = portion.getCurrent()!!.toInt()!!
-            
 
 
     
@@ -513,7 +495,6 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
 
 
     var size: Long = bufferedLineReader!!.getSize()!!
-            
 
 
     var section: Long = size /portion.getTotal()!!.toInt() +1

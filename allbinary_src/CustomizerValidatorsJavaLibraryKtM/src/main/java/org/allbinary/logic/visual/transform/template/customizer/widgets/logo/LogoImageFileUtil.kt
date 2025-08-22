@@ -38,7 +38,6 @@ open public class LogoImageFileUtil
         
 
     private val directory: Directory = Directory.getInstance()!!
-            
 
     private val fileName: String
 

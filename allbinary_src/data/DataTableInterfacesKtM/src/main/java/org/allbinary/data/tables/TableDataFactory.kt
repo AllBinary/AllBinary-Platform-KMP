@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     val INTEGER_MAX_VALUE_STRING: String = Integer.toString(Integer.MAX_VALUE)!!
-            
 
     val ZERO_STRING: String = CommonPhoneStrings.getInstance()!!.ZERO
 

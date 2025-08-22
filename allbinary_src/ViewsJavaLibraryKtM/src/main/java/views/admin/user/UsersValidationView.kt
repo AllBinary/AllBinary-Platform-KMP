@@ -41,7 +41,6 @@ open public class UsersValidationView : UsersView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -59,7 +58,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 
     var userRole: UserRole = UserRoleB.getRole(role)!!
-            
 
 this.userVector= UserEntityFactory.getInstance()!!.getUsersWithRole(userRole)
 }

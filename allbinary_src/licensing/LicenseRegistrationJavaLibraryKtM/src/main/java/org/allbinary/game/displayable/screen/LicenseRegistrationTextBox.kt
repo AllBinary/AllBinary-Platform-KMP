@@ -54,12 +54,10 @@ open public class LicenseRegistrationTextBox : CustomTextBox {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val pleaseWaitPaintable: Paintable = SimpleTextPaintable(commonStrings!!.PLEASE_WAIT, BasicColorFactory.getInstance()!!.WHITE)
 
     private var paintable: Paintable = NullPaintable.getInstance()!!
-            
 public constructor        (cmdListener: CommandListener, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
@@ -97,7 +95,6 @@ open fun open()
         try {
             
     var virtualKeyboardEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance()!!
-            
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT)
 } catch(e: Exception)
@@ -116,7 +113,6 @@ open fun close()
         try {
             
     var virtualKeyboardEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance()!!
-            
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.HIDE_EVENT)
 } catch(e: Exception)
@@ -143,7 +139,6 @@ open fun submit()
         //nullable = true from not(false or (false and true)) = true
 {
     var commandListener: CommandListener = this.getCustomCommandListener()!!
-            
 
 commandListener!!.commandAction(SUBMIT_COMMAND, this)
 }

@@ -40,7 +40,6 @@ open public class Scoreable
     val NULL_SCOREABLE: Scoreable = Scoreable( -1)
 
     var ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(3)!!
-            
 
         }
             

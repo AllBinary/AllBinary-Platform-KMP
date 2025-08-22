@@ -47,10 +47,8 @@ open public class BasicHud_1
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
     private var location: Int= 0
 
@@ -69,7 +67,6 @@ open public class BasicHud_1
     private var y: Int= 0
 
     private val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.BLACK
 
@@ -169,7 +166,6 @@ open fun getHudGraphicsPosition(width: Int, height: Int)
 
 
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
-            
 
 
     
@@ -274,7 +270,6 @@ open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         try {
             
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 this.hudGraphicsPosition= this.getHudGraphicsPosition(displayInfo!!.getLastWidth(), displayInfo!!.getLastHeight())
 x= this.hudGraphicsPosition!!.getPoint()!!.getX()
@@ -282,7 +277,6 @@ this.setY(this.hudGraphicsPosition!!.getPoint()!!.getY())
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT, e)
 }
@@ -456,7 +450,6 @@ open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, 
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
 
     var y: Int = getY()!!
-            
 
 graphics.drawChars(charArray, offset, len, x +xOffset, y, hudGraphicsPosition!!.getAnchor())
 graphics.drawChars(charArray2, offset2, len2, x +xOffset2, y, hudGraphicsPosition!!.getAnchor())
@@ -492,7 +485,6 @@ open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int, 
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
 
     var y: Int = getY()!!
-            
 
 graphics.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor())
 graphics.drawChars(charArray2, offset2, len2, x +xOffset, y, hudGraphicsPosition!!.getAnchor())
@@ -516,7 +508,6 @@ open fun paint(graphics: Graphics, charArray: CharArray, offset: Int, len: Int)
 this.basicSetColorUtil!!.setBasicColorP(graphics, getBasicColorP())
 
     var y: Int = getY()!!
-            
 
 graphics.drawChars(charArray, offset, len, x, y, hudGraphicsPosition!!.getAnchor())
 }

@@ -57,7 +57,6 @@ open fun run()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var finishedListenerInterface: FileJDialogListenerInterface
 public constructor        ()                        
@@ -131,7 +130,6 @@ open fun jFileChooser1ActionPerformed(evt: java.awt.event.ActionEvent)
 logUtil!!.put("Starting Action Command: " +evt.getActionCommand(), this, "ActionPerformed")
 
     var files: Array<File?> = this.getJFileChooser1()!!.getSelectedFiles()!!
-            
 
 
     

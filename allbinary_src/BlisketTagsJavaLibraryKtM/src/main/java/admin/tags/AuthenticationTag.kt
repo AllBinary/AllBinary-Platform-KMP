@@ -47,7 +47,6 @@ open public class AuthenticationTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 
@@ -62,7 +61,6 @@ open public class AuthenticationTag : CustomTagSupport {
     private var propertiesHashMap: HashMap<Any, Any>
 public constructor        (){
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.userName= stringUtil!!.EMPTY_STRING
 this.password= stringUtil!!.EMPTY_STRING
@@ -123,16 +121,13 @@ open fun changePassword()
             
     var anyType: Any = AuthenticationRequestHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("changePassword", 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 
@@ -178,16 +173,13 @@ open fun newPassword()
             
     var anyType: Any = AuthenticationRequestHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("newPassword", 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 
@@ -233,16 +225,13 @@ open fun invalidateSession()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("invalidateSession", 
                             null)!!
-            
 
 
     var resultInteger: Integer = method.invoke(anyType, 
@@ -288,16 +277,13 @@ open fun isSessionOld()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("isSessionOld", 
                             null)!!
-            
 
 
     var resultBoolean: Boolean = method.invoke(anyType, 
@@ -343,18 +329,15 @@ open fun isRoleValid()
             
     var anyType: Any = AuthenticationRequestHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var methodParams: Array<KClass<*>?> = arrayOf(this.userName!!.::class, this.password.::class, this.roles.::class)
 
 
     var method: Method = addressHelperClass!!.getMethod("isRoleValid", methodParams)!!
-            
 
 
     var methodArgs: Array<Any?> = arrayOf(this.userName,this.password,this.roles)
@@ -402,16 +385,13 @@ open fun validRole()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("validRole", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -460,16 +440,13 @@ open fun invalidRole()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("invalidRole", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -518,18 +495,15 @@ open fun isAuthenticationSessionValid()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var methodParams: Array<KClass<*>?> = arrayOf(this.roles.::class)
 
 
     var method: Method = addressHelperClass!!.getMethod("isAuthenticationSessionValid", methodParams)!!
-            
 
 
     var methodArgs: Array<Any?> = arrayOf(this.roles)
@@ -577,18 +551,15 @@ open fun processIfNewLogin()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var methodParams: Array<KClass<*>?> = arrayOf(this.userName!!.::class, this.password.::class)
 
 
     var method: Method = helperClass!!.getMethod("processIfNewLogin", methodParams)!!
-            
 
 
     var methodArgs: Array<Any?> = arrayOf(this.userName,this.password)
@@ -636,16 +607,13 @@ open fun processInvalidation()
             
     var anyType: Any = AuthenticationHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("processInvalidation", 
                             null)!!
-            
 
 
     var resultBoolean: Boolean = method.invoke(anyType, 
@@ -690,7 +658,6 @@ open fun doStartTag()
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     

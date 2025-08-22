@@ -41,7 +41,6 @@ open public class DeleteCloud
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -78,11 +77,9 @@ stringBuffer!!.append(prePath)
 
 
     var fileBasicArrayList: BasicArrayList = Directory.getInstance()!!.search(file, true)!!
-            
 
 
     var size: Int = fileBasicArrayList!!.size()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Searched: ")

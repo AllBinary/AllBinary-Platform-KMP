@@ -48,11 +48,9 @@ open fun getInstance()
 } catch(e: Exception)
             {
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, "ServerLicenseRequestEntityFactory", commonStrings!!.GET_INSTANCE, e)
 

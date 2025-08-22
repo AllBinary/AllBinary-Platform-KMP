@@ -92,14 +92,12 @@ open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeIn
 
         {
     var keyInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(indexX, indexY)))!!
-            
 
 
     var colorCacheable: ColorCacheable = ColorCacheFactory.getInstance()!!.get(keyInteger) as ColorCacheable
 
 
     var color: Color = colorCacheable!!.getColor()!!
-            
 
 processColorRangeResults(imageAnalysisResults, colorRangeInterface, color)
 processImageColorResults(imageAnalysisResults!!.getImageColorResults(), colorRangeInterface, color)
@@ -112,11 +110,9 @@ blueTotal += color.getBlue()
 
 
     var totalPixels: Long = imageAnalysisResults!!.getImageColorRangeResults()!!.getTotalPixelsChecked()!!
-            
 
 
     var colorAverage: ColorAverage = imageAnalysisResults!!.getImageColorResults()!!.getColorAverage()!!
-            
 
 colorAverage!!.setAvgRed(redTotal.toFloat() /totalPixels)
 colorAverage!!.setAvgGreen(greenTotal.toFloat() /totalPixels)
@@ -228,7 +224,6 @@ open fun processImageColorResults(imageColorResults: ImageColorResults, colorRan
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -246,7 +241,6 @@ open fun process(bufferedImageArray: Array<BufferedImage?>, colorRangeInterface:
                     var colorRangeInterface = colorRangeInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(CommonLabels.getInstance()!!.START +colorRangeInterface!!.toString(), this, commonStrings!!.PROCESS)
 

@@ -41,10 +41,8 @@ open public class ImageComparisonWorker : BasicEventHandler
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val bufferedImageVector: Vector = Vector()
 
@@ -136,11 +134,9 @@ capturedImageWorkerResultsEvent[1]= this.bufferedImageVector!!.get(1) as Capture
                                     {
                                     
     var imageComparisonResult: ImageComparisonResult = this.imageComparator!!.compare(capturedImageWorkerResultsEvent[0]!!.getBufferedImage(), capturedImageWorkerResultsEvent[1]!!.getBufferedImage(), capturedImageWorkerResultsEvent[0]!!.getFrame(), capturedImageWorkerResultsEvent[1]!!.getFrame(), 0)!!
-            
 
 
     var frame: Long = capturedImageWorkerResultsEvent[1]!!.getFrame()!!
-            
 
 
     var imageComparisonResultFrameCacheable: ImageComparisonResultFrameCacheable = ImageComparisonResultFrameCacheable(imageComparisonResult, frame)
@@ -165,7 +161,6 @@ index2++
 
     var message: String = StringMaker().
                             append("Frame: ")!!.append(index2)!!.append(CommonLabels.getInstance()!!.ELAPSED)!!.append(timeHelper!!.getElapsed())!!.toString()!!
-            
 
 logUtil!!.put(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)

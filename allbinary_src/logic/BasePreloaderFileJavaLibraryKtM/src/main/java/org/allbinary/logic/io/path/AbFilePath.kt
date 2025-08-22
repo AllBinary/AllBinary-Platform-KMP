@@ -39,7 +39,6 @@ public constructor        (aPath: String)
                     
 
     var abPathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 this.schema= this.getSchema(aPath)
 this.setName(abPathUtil!!.getNameFromPath(aPath))

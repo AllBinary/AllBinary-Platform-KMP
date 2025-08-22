@@ -34,7 +34,6 @@ open public class OverlayPaintable : InitUpdatePaintable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 override fun update()
@@ -44,7 +43,6 @@ override fun update()
             } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }

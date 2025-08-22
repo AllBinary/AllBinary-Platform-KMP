@@ -47,7 +47,6 @@ open public class NumberOnOwnGroupSequenceAIFactory
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -107,7 +106,6 @@ stringBuffer!!.append(artificialIntelligenceInterface!!.size)
 stringBuffer!!.append(" + 1")
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 

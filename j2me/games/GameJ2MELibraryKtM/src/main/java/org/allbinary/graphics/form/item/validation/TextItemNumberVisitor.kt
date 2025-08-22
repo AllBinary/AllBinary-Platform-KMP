@@ -36,7 +36,6 @@ open public class TextItemNumberVisitor : Visitor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 override fun visit(anyType: Any)
@@ -54,7 +53,6 @@ override fun visit(anyType: Any)
                                     {
                                     
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -76,7 +74,6 @@ override fun visit(anyType: Any)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
 }

@@ -60,19 +60,14 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val imageCopyUtil: ImageCopyUtil = ImageCopyUtil.getInstance()!!
-            
 
     private val gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
     private val features: Features = Features.getInstance()!!
-            
 
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
 private constructor        ()
@@ -157,11 +152,9 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
                                 
 
     var width: Int = originalImage!!.getWidth()!!
-            
 
 
     var height: Int = originalImage!!.getHeight()!!
-            
 
 
     var scaleX: Float = scaleNominatorX /scaleDenominatorX
@@ -171,7 +164,6 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
 
 
     var scaledImage: Image = this.imageCopyUtil!!.createImage(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
-            
 
 
 
@@ -246,15 +238,12 @@ open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageTo
                     var mutable = mutable
 
     var width: Int = originalImage!!.getWidth()!!
-            
 
 
     var height: Int = originalImage!!.getHeight()!!
-            
 
 
     var scaledImage: Image = this.imageCopyUtil!!.createImage(originalImage, (scaleX *width).toInt(), (scaleY *height).toInt(), mutable)!!
-            
 
 originalImageArray[0]= scaledImage
 }

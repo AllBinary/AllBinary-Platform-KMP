@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var eventListenerInterfaceList: BasicArrayList
 public constructor        ()
@@ -82,7 +81,6 @@ open fun addListeners(vector: BasicArrayList)
 
 
     var size: Int = vector.size()!!
-            
 
 
 
@@ -180,7 +178,6 @@ this.process(keyCode, deviceId, repeated, eventListenerInterface)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
@@ -244,7 +241,6 @@ stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }

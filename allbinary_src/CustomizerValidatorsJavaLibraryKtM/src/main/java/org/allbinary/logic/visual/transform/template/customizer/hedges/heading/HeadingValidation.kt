@@ -44,7 +44,6 @@ open public class HeadingValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var title: TitleValidation
 
@@ -58,15 +57,12 @@ public constructor        (document: Document){
                     var document = document
 
     var headingNodeList: NodeList = document.getElementsByTagName(HeadingData.NAME)!!
-            
 
 
     var titleNode: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.NAME, headingNodeList!!.item(0)!!.getChildNodes())!!
-            
 
 
     var logoNode: Node = DomSearchHelper.getNode(LogoData.getInstance()!!.NAME, headingNodeList!!.item(0)!!.getChildNodes())!!
-            
 
 this.title= TitleValidation(titleNode)
 this.logo= LogoValidation(logoNode)
@@ -288,7 +284,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(HeadingData.NAME)!!
-            
 
 node.appendChild(this.logo.toXmlNode(document))
 node.appendChild(this.title.toXmlNode(document))

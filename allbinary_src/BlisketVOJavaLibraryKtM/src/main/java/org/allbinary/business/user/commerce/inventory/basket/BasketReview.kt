@@ -82,7 +82,6 @@ open fun removeItem(id: String)
                     var id = id
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -122,7 +121,6 @@ open fun adjustItem(id: String, num: String)
                     var num = num
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -159,7 +157,6 @@ open fun getTotalWeight()
 
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -205,7 +202,6 @@ open fun getIds()
 
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -239,7 +235,6 @@ open fun getNumberOf(id: String)
                     var id = id
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -287,11 +282,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(BasketData.BASKET)!!
-            
 
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size

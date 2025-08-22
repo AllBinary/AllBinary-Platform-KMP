@@ -54,7 +54,6 @@ open public class CategoryProperties
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var category: String
 public constructor        (name: String)
@@ -131,7 +130,6 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
                     var categoryHierarchyInterface = categoryHierarchyInterface
 
     var abPathData: AbPathData = AbPathData.getInstance()!!
-            
 
 
     var pathStringBuffer: StringMaker = StringMaker()
@@ -141,7 +139,6 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
 
 
     var nextParentCategoryInterface: CategoryInterface = categoryHierarchyInterface!!.getParent()!!
-            
 
 
     
@@ -215,7 +212,6 @@ pathStringBuffer!!.delete(0, pathStringBuffer!!.length())
 pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(this.getValue())
 
     var size: Int = list.size()!!
-            
 
 
 

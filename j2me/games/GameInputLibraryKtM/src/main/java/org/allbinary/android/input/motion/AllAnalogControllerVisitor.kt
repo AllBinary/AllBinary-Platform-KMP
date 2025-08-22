@@ -47,7 +47,6 @@ open public class AllAnalogControllerVisitor : AnalogControllerVisitor {
                     var analogLocationInputProcessor = analogLocationInputProcessor
 
     var analogLocationInputList: BasicArrayList = AnalogLocationInputFactory.getInstance()!!.getList()!!
-            
 
 
     var analogLocationInput: AnalogLocationInput

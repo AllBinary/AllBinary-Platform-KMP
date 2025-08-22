@@ -46,10 +46,8 @@ open public class ShippingAddressHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -98,7 +96,6 @@ open fun drop()
             
     var success: String = ShippingAddressesEntity(stringUtil!!.EMPTY_STRING).
                             drop()!!
-            
 
 
     
@@ -144,7 +141,6 @@ open fun create()
             
     var success: String = ShippingAddressesEntity(stringUtil!!.EMPTY_STRING).
                             createTable()!!
-            
 
 
     
@@ -192,7 +188,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(ShippingAddressesEntity(StringUtil.getInstance()!!.EMPTY_STRING), portion)!!
-            
 
 
     
@@ -240,7 +235,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(ShippingAddressesEntity(StringUtil.getInstance()!!.EMPTY_STRING))!!
-            
 
 
     
@@ -375,7 +369,6 @@ open fun setToBillingAddress()
         try {
             
     var streetAddress: StreetAddress = BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!!.getUserName())!!.getDefault()!!
-            
 
 
     

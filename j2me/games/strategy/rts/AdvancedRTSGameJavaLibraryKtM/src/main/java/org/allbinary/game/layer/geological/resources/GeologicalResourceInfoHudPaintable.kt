@@ -50,7 +50,6 @@ open fun updateSelectionInfo()
 {super.updateSelectionInfo()
 
     var list: BasicArrayList = this.getRtsLayer()!!.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     var total: Int = 0

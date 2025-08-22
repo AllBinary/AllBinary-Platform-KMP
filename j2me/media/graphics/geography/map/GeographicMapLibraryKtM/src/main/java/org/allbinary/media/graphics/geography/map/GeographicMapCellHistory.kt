@@ -46,10 +46,8 @@ open public class GeographicMapCellHistory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
     private val list: BasicArrayList
 
@@ -107,7 +105,6 @@ open fun track(list: BasicArrayList)
                     var list = list
 
     var size: Int = list.size()!!
-            
 
 this.list.ensureCapacity(size)
 this.visitedList!!.ensureCapacity(size)
@@ -176,7 +173,6 @@ open fun getAfterIfNotLast(geographicMapCellPosition: GeographicMapCellPosition)
 
 
     var index: Int = localList!!.indexOf(geographicMapCellPosition)!!
-            
 
 
     
@@ -209,7 +205,6 @@ open fun getFirstUnvisited()
 
 
     var size: Int = localVisitedList!!.size()!!
-            
 
 
     var value: Boolean
@@ -252,7 +247,6 @@ open fun getFirstUnvisitedIndex()
 
 
     var size: Int = localVisitedList!!.size()!!
-            
 
 
     var value: Boolean
@@ -301,7 +295,6 @@ open fun getInPathButNotTracked(pathList: BasicArrayList)
 
 
     var size: Int = pathList!!.size()!!
-            
 
 
     var geographicMapCellPosition: GeographicMapCellPosition
@@ -340,7 +333,6 @@ open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var index: Int = this.list.indexOf(geographicMapCellPosition)!!
-            
 
 
     
@@ -385,7 +377,6 @@ open fun visit(geographicMapCellPosition: GeographicMapCellPosition)
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var index: Int = this.list.indexOf(geographicMapCellPosition)!!
-            
 
 
     var value: Boolean
@@ -496,7 +487,6 @@ open fun isVisited(basicDecimal: BasicDecimal)
                     var basicDecimal = basicDecimal
 
     var size: Int = this.getSize()!!
-            
 
 
     var numberRequired: Int = (size shl basicDecimal!!.getScaledFactor()) /basicDecimal!!.getUnscaled().toInt()
@@ -541,7 +531,6 @@ open fun reset()
 
 
     var size: Int = localVisitedList!!.size()!!
-            
 
 
 
@@ -585,7 +574,6 @@ open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, po
                                 
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var height: Int = 2 *myFont!!.DEFAULT_CHAR_HEIGHT
@@ -595,7 +583,6 @@ this.animation.paint(graphics, x +halfWidth, y +(height))
 
 
     private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
-            
 
 open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
@@ -613,7 +600,6 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
 
 
     var size: Int = localVisitedList!!.size()!!
-            
 
 
     var geographicMapCellPosition: GeographicMapCellPosition
@@ -644,7 +630,6 @@ isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintNotVisited", e)
 }

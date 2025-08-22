@@ -35,7 +35,6 @@ open public class AbstractArrayListPool
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var buffers: BasicArrayList = BasicArrayList()
 

@@ -57,18 +57,15 @@ open fun init(abeClientInformation: AbeClientInformationInterface)
                     var abeClientInformation = abeClientInformation
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var INPUT_AUTOMATION_CONFIGURATION: String = "InputAutomationConfiguration"
 
 
     var file: File = InputAutomationConfiguration.getFile()!!
-            
 
 
     
@@ -78,25 +75,20 @@ open fun init(abeClientInformation: AbeClientInformationInterface)
                                     logUtil!!.put("LoadingConfiguration", INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
     var jaxbContext: JAXBContext = JAXBContext.newInstance(InputAutomationConfiguration::class)!!
-            
 
 
     var unmarshaller: Unmarshaller = jaxbContext!!.createUnmarshaller()!!
-            
 
 
     var root: JAXBElement<InputAutomationConfiguration> = unmarshaller.unmarshal(StreamSource(FileInputStream(file)), InputAutomationConfiguration::class)!!
-            
 
 inputAutomationConfiguration= root.getValue() as InputAutomationConfiguration
 
     var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration> = inputAutomationConfiguration!!.getInputAutomationModuleConfigurationList()!!
-            
 
 logUtil!!.put("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INPUT_AUTOMATION_CONFIGURATION, commonStrings!!.INIT)
 
     var size: Int = inputAutomationModuleConfigurationList!!.size!!
-            
 
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
@@ -138,7 +130,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

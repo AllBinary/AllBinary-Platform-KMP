@@ -52,10 +52,8 @@ open public class TransformHttpRequestDocument
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var baseNode: Node
 
@@ -72,20 +70,16 @@ public constructor        (pageContext: PageContext, weblisketSession: Weblisket
         try {
             
     var contentType: String = AcceptableResponseGenerator.getInstance()!!.get(pageContext!!.getRequest() as HttpServletRequest)!!
-            
 
 this.document= DomDocumentHelper.create()
 
     var contentTypeNode: Node = document.createElement(contentType)!!
-            
 
 
     var languageTypeNode: Node = document.createElement(language)!!
-            
 
 
     var localTypeNode: Node = document.createElement(local)!!
-            
 
 this.baseNode= localTypeNode
 languageTypeNode!!.appendChild(localTypeNode)
@@ -127,20 +121,16 @@ public constructor        (searchRequest: SearchRequest)
         try {
             
     var contentType: String = searchRequest!!.getContentType()!!
-            
 
 this.document= DomDocumentHelper.create()
 
     var contentTypeNode: Node = document.createElement(contentType)!!
-            
 
 
     var languageTypeNode: Node = document.createElement(language)!!
-            
 
 
     var localTypeNode: Node = document.createElement(local)!!
-            
 
 this.baseNode= localTypeNode
 languageTypeNode!!.appendChild(localTypeNode)

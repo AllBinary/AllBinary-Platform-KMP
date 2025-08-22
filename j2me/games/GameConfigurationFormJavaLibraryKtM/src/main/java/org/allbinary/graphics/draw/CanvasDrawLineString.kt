@@ -50,7 +50,6 @@ this.y= y
 
 
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
-            
 
 open fun paint(graphics: Graphics, string: String, line: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -65,7 +64,6 @@ open fun paint(graphics: Graphics, string: String, line: Int)
                     var line = line
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 drawStringUtil!!.drawCenterString(graphics, string, 0, string.length, x, y +(line *myFont!!.DEFAULT_CHAR_HEIGHT))
 }

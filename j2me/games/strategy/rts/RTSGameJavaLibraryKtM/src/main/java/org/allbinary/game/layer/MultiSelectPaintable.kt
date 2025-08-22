@@ -52,7 +52,6 @@ open fun update(list: BasicArrayList)
 this.clear()
 
     var size: Int = list.size()!!
-            
 
 this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
@@ -120,10 +119,8 @@ open fun clear()
     private val TOTAL: String = "Total Selected: "
 
     private val totalWidth: Int = MyFont.getInstance()!!.stringWidth(TOTAL)!!
-            
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
-            
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true

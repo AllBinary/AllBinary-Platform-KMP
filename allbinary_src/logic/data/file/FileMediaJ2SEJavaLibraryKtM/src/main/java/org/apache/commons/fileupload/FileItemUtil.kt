@@ -46,7 +46,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val DEFAULT_CHARSET: String = "ISO-8859-1"
 
@@ -89,7 +88,6 @@ open fun getBytes(fileItem: FileItemStream)
                     var fileItem = fileItem
 
     var streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 
 
     var inputStream: InputStream = 

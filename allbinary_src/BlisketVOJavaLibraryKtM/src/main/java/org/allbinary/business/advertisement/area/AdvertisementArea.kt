@@ -59,7 +59,6 @@ this.description= hashMap!!.get(AdvertisementAreaData.getInstance()!!.DESCRIPTIO
 
 
     var document: Document = DomDocumentHelper.create(constraintsDomString)!!
-            
 
 this.advertisementAreaConstraintsInterface= AdvertisementAreaConstraints(document)
 this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as String

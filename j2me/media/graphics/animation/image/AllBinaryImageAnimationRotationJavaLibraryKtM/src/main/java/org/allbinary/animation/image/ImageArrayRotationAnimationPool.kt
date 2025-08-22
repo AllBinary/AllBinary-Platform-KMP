@@ -69,7 +69,6 @@ open fun remove(key: Any)
                     var key = key
 
     var cacheableInterface: CacheableInterface = super.remove(key)!!
-            
 
 
     var allBinaryImageRotationAnimationInfo: ImageArrayRotationAnimationInfo = key as ImageArrayRotationAnimationInfo

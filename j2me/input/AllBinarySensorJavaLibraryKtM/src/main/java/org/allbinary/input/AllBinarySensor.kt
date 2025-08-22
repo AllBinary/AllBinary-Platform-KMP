@@ -63,10 +63,8 @@ open fun getMax()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 protected constructor        ()
             : super()
         {}

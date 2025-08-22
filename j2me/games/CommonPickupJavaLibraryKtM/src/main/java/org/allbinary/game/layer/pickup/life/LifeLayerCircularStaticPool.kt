@@ -58,7 +58,6 @@ open fun visit(sourceLayerInterface: AllBinaryLayer)
 
 
     var lifeInterface: Life = lifeInterfaceCompositeInterface!!.getLifeInterface()!!
-            
 
 lifeLayer!!.visit(lifeInterface)
 }

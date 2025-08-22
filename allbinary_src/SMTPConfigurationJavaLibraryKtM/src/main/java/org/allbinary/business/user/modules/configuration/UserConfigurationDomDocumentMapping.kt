@@ -52,12 +52,10 @@ open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var document: Document = DomDocumentHelper.create()!!
-            
 
 
     var node: Node = UserConfigurationView(this.userConfigurationInterface).
                             toXmlNode(document)!!
-            
 
 document.appendChild(node)
 

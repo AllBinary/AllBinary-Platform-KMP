@@ -57,7 +57,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val FILE_NAME: String = "partner.txt"
 
@@ -67,7 +66,6 @@ open fun get()
         try {
             
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var chars: CharArray = 
@@ -86,7 +84,6 @@ open fun get()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 

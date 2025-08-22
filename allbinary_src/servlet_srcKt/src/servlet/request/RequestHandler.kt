@@ -43,7 +43,6 @@ open public class RequestHandler : HttpServlet {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(ServletException::class)
             
@@ -76,11 +75,9 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
             response.setContentType("text/html")
 
     var out: PrintWriter = response.getWriter()!!
-            
 
 
     var workflowInterface: WorkFlowInterface = RequestWorkFlowFactory.getInstance(request as ServletRequest, response as ServletResponse, this.getServletConfig(), this.getServletContext())!!
-            
 
 
     

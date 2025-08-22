@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val FILE_NAME: String = "partner.txt"
 
@@ -69,11 +68,9 @@ open fun get()
         try {
             
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(this.FILE_NAME)!!
-            
 
 
     var inputStreamReader: InputStreamReader = InputStreamReader(inputStream)
@@ -86,7 +83,6 @@ open fun get()
 
 
     var size: Int = inputStreamReader!!.read(chars)!!
-            
 
 
     var partnerString: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -111,7 +107,6 @@ inputStreamReader!!.close()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 

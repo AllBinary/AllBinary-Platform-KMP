@@ -36,7 +36,6 @@ open public class NoShippingModuleView : NoShippingModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -92,7 +91,6 @@ open fun toXmlNode(document: org.w3c.dom.Document)
         try {
             
     var shippingMethodNode: Node = document.createElement(ShippingMethodData.NAME)!!
-            
 
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodData.NAME, this.getName()))
 shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, ShippingMethodData.DESCRIPTION, this.getDescription()))

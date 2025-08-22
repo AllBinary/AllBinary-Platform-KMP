@@ -104,7 +104,6 @@ public constructor        (cmdListener: CommandListener, label: String, text: St
                     
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var textFieldItem: TextFieldItem = TextFieldItem(this, TextItemVisitor(), stringUtil!!.EMPTY_STRING, stringUtil!!.EMPTY_STRING, maxSize, 0, stringUtil!!.EMPTY_STRING, font, backgroundBasicColor, foregroundBasicColor)
@@ -121,7 +120,6 @@ open fun submit()
 
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
 open fun onEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -177,11 +175,9 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
 
     var platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
-            
 
 
     var input: Input = inputFactory!!.getInstance(keyCode)!!
-            
 
 
     

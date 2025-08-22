@@ -39,7 +39,6 @@ open public class PaymentTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var storeName: String
 
@@ -67,16 +66,13 @@ open fun select()
             
     var anyType: Any = PaymentHelperFactory().
                             getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("select", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -143,7 +139,6 @@ this.propertiesHashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName
                                     {
                                     
     var output: String = this.select()!!
-            
 
 
     

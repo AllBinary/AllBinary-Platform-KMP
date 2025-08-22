@@ -38,7 +38,6 @@ open public class QuoteRequestTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var storeName: String
 public constructor        (){this.setTagHelperFactory(QuoteHelperFactory())
@@ -64,16 +63,13 @@ open fun email()
             
     var anyType: Any = QuoteHelperFactory().
                             getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("email", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 

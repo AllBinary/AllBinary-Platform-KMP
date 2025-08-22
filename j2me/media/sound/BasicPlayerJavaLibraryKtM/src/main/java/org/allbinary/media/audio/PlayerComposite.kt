@@ -43,10 +43,8 @@ open public class PlayerComposite
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val player: Player
 
@@ -189,7 +187,6 @@ override fun setMediaTime(now: Long)
 
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 override fun start()
         //nullable = true from not(false or (false and true)) = true
 {

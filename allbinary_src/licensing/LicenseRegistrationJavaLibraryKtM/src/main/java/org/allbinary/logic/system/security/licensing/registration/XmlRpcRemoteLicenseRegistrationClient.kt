@@ -44,7 +44,6 @@ open public class XmlRpcRemoteLicenseRegistrationClient : XmlRpcAbeClient {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val PAGE: String = "licenseregistrationserverssl.php"
 public constructor        (clientInfo: AbeClientInformationInterface)                        
@@ -74,7 +73,6 @@ open fun get(anyType: Any, cryptInterface: CryptInterface)
         try {
             
     var server: String = getClientInfo()!!.getLicenseServer(this.getServer())!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -89,11 +87,9 @@ logUtil!!.put(CommonLabels.getInstance()!!.START_LABEL +stringBuffer!!.toString(
 
 
     var serverUrl: String = getClientInfo()!!.getLicenseServer(this.getServer())!!
-            
 
 
     var index: Int = serverUrl!!.lastIndexOf("/")!!
-            
 
 serverUrl= serverUrl!!.substring(0, index +1) +PAGE
 
@@ -110,7 +106,6 @@ logUtil!!.put(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
 param.add(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
-            
 
 logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
 isOnline= true

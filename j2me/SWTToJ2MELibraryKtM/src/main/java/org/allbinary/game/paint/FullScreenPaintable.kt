@@ -62,26 +62,21 @@ open fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var halfWidth: Int = displayInfo!!.getLastHalfWidth()!!
-            
 
 
     var height: Int = displayInfo!!.getLastHeight()!!
-            
 
 
     var font: Font = graphics.getFont()!!
-            
 
 
     var beginWidth: Int = (font.stringWidth(this.FULLSCREEN_TEXT) shr 1)
 
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var Y: Int = 4 *myFont!!.DEFAULT_CHAR_HEIGHT

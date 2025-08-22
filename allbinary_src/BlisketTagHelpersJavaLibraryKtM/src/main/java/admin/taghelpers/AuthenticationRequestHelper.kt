@@ -49,10 +49,8 @@ open public class AuthenticationRequestHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -93,7 +91,6 @@ open fun generateNewPassword()
                                     {
                                     
     var startIndex: Int = this.weblisketSession!!.getId()!!.length()!!
-            
 
 
     
@@ -136,11 +133,9 @@ open fun newPassword()
         try {
             
     var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
-            
 
 
     var email: String = request.getParameter(UserData.MAINEMAIL)!!
-            
 
 
     
@@ -153,11 +148,9 @@ open fun newPassword()
                                 
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
-            
 
 
     var userInterface: UserInterface = userEntityInterface!!.getUser(userName)!!
-            
 
 
     
@@ -193,12 +186,10 @@ open fun newPassword()
                                 
 
     var newPassword: String = this.generateNewPassword()!!
-            
 
 userInterface!!.setPassword(newPassword)
 
     var newPasswordHashMap: HashMap<Any, Any> = userInterface!!.toPasswordHashMap()!!
-            
 
 UserEntityFactory.getInstance()!!.update(userName, newPasswordHashMap)
 NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
@@ -243,19 +234,15 @@ open fun changePassword()
         try {
             
     var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
-            
 
 
     var passwordString: String = request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
-            
 
 
     var newPassword: String = request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
-            
 
 
     var newReenteredPassword: String = request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
-            
 
 
     
@@ -315,19 +302,15 @@ open fun changePassword()
                                 
 
     var sessionPassword: String = this.weblisketSession!!.getPassword()!!
-            
 
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
-            
 
 
     var userInterface: UserInterface = userEntityInterface!!.getUser(userName)!!
-            
 
 
     var login: String = userEntityInterface!!.login(userName, passwordString)!!
-            
 
 
     
@@ -346,7 +329,6 @@ open fun changePassword()
 
     var newPasswordHashMap: HashMap<Any, Any> = password.toHashMap(
                             null)!!
-            
 
 UserEntityFactory.getInstance()!!.update(userName, newPasswordHashMap)
 NewPasswordEmail(this.abeClientInformation, userInterface, newPassword).
@@ -408,11 +390,9 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
         try {
             
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
-            
 
 
     var userInterface: UserInterface = userEntityInterface!!.getUser(userName)!!
-            
 
 
     
@@ -440,7 +420,6 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
                                 
 
     var basicUserRoleArray: Array<Any?> = roles.toArray()!!
-            
 
 
     var size: Int = basicUserRoleArray!!.size

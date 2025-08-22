@@ -48,10 +48,8 @@ open public class CssElementView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val TITLE: String = "title"
 
@@ -71,7 +69,6 @@ public constructor        ()
         {this.cssPropertyVector= Vector()
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.title= stringUtil!!.EMPTY_STRING
 this.description= stringUtil!!.EMPTY_STRING
@@ -87,12 +84,10 @@ public constructor        (node: Node)
         try {
             
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
-            
 
 this.value= DomNodeHelper.getTextNodeValue(valueNode)
 
     var titleValueNode: Node = DomSearchHelper.getNodeNoThrow(TITLE, node.getChildNodes())!!
-            
 
 
     
@@ -108,7 +103,6 @@ this.value= DomNodeHelper.getTextNodeValue(valueNode)
                         else {
                             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.title= stringUtil!!.EMPTY_STRING
 
@@ -116,7 +110,6 @@ this.title= stringUtil!!.EMPTY_STRING
                             
 
     var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(DESCRIPTION, node.getChildNodes())!!
-            
 
 
     
@@ -146,7 +139,6 @@ this.title= stringUtil!!.EMPTY_STRING
                                 
 
     var cssElementStyleNodeVector: Vector = DomSearchHelper.getAllNodes(CssElementData.getInstance()!!.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -160,7 +152,6 @@ this.title= stringUtil!!.EMPTY_STRING
 this.cssElementVector= CssElementsValidationFactory.getInstance(cssElementStyleNodeVector)
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
 } catch(e: Exception)
@@ -218,7 +209,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     
@@ -231,11 +221,9 @@ open fun toXmlNode(document: Document)
                                 
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, CssElementData.getInstance()!!.NAME, hashMap)!!
-            
 
 
     var size: Int = cssPropertyVector!!.size!!
-            
 
 
 
@@ -252,7 +240,6 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 
 
     var size2: Int = cssElementVector!!.size!!
-            
 
 
 

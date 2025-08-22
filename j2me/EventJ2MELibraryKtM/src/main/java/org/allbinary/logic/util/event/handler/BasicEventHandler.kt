@@ -40,13 +40,10 @@ open public class BasicEventHandler
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val eventStrings: EventStrings = EventStrings.getInstance()!!
-            
 
     var eventListenerInterfaceList: BasicArrayList
 public constructor        ()
@@ -69,7 +66,6 @@ override fun addListeners(vector: BasicArrayList)
 
 
     var size: Int = vector.size()!!
-            
 
 
 
@@ -95,7 +91,6 @@ open fun removeListeners(vector: BasicArrayList)
 
 
     var size: Int = vector.size()!!
-            
 
 
 

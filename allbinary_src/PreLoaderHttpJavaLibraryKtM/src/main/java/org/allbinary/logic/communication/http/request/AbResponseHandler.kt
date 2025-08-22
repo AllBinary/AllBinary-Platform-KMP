@@ -55,7 +55,6 @@ open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
                     var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -100,7 +99,6 @@ open fun sendServletRedirect(pageContext: PageContext, e: Exception)
                     var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -145,7 +143,6 @@ open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
                     var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -190,7 +187,6 @@ open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
                     var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -241,7 +237,6 @@ open fun sendRedirect(pageContext: PageContext, page: String)
 
 
     var requestDispatcher: RequestDispatcher = request.getRequestDispatcher(page)!!
-            
 
 
     
@@ -269,7 +264,6 @@ open fun sendRedirect(pageContext: PageContext, page: String)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

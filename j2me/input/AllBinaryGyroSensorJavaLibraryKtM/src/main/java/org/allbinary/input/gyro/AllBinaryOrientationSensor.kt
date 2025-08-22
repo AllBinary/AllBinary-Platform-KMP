@@ -35,10 +35,8 @@ open public class AllBinaryOrientationSensor : AllBinarySensor {
         
 
     var sensorDataFloatArray: FloatArray = PrimitiveFloatUtil.getArrayInstance()!!
-            
 
     var listener: CompleteMotionGestureInputEventListenerInterface = NoCompleteMotionGestureInputEventListener.getInstance()!!
-            
 
 open fun setCompleteMotionGestureInputEventListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true

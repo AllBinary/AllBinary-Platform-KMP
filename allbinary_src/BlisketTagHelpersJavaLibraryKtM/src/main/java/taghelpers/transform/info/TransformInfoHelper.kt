@@ -37,7 +37,6 @@ open public class TransformInfoHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -123,7 +122,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(TransformInfoEntityBuilder.getInstance(), this.portion)!!
-            
 
 
     
@@ -171,7 +169,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(TransformInfoEntityBuilder.getInstance())!!
-            
 
 
     

@@ -52,7 +52,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -67,7 +66,6 @@ open fun view(validationComponentInterface: ValidationComponentInterface)
                     var validationComponentInterface = validationComponentInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {

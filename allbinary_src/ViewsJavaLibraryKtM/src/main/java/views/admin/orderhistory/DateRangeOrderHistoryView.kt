@@ -52,7 +52,6 @@ open public class DateRangeOrderHistoryView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val VIEWALLORDERS: String = "View All"
 
@@ -200,7 +199,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "view")
                                 
 
     var node: Node = document.createElement(OrderData.ORDERS)!!
-            
 
 
     
@@ -220,11 +218,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, "view")
                                 
 
     var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PREPROCESSING, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHistoryVector!!.size!!
-            
 
 
 
@@ -260,11 +256,9 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                 
 
     var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.SHIPPED, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHistoryVector!!.size!!
-            
 
 
 
@@ -300,11 +294,9 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                 
 
     var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PARTIALLYSHIPPED, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHistoryVector!!.size!!
-            
 
 
 
@@ -340,11 +332,9 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                 
 
     var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.PROCESSING, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHistoryVector!!.size!!
-            
 
 
 
@@ -380,11 +370,9 @@ node.appendChild(orderHistory!!.toXmlNode(document))
                                 
 
     var orderHistoryVector: Vector = OrderHistoryEntityFactory.getInstance()!!.getOrders(OrderHistoryData.CANCELLED, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHistoryVector!!.size!!
-            
 
 
 
@@ -465,11 +453,9 @@ open fun isValid()
                                     {
                                     
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var currentTime: Long = calendar.getTimeInMillis()!!
-            
 
 
     var rangeDate: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -539,7 +525,6 @@ rangeDate= thirtyDays as Long.
 
     var rangeDateLong: Long = rangeDate as Long.
                             longValue()!!
-            
 
 this.fromDate= currentTime -rangeDateLong as Long.
                             toString()
@@ -559,7 +544,6 @@ this.toDate= time
                                     {
                                     
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 TimeUtil.getInstance()!!.setCalendar(calendar, fromYear, fromMonth, fromDay, fromHour)
 this.fromDate= calendar.getTimeInMillis() as Long.

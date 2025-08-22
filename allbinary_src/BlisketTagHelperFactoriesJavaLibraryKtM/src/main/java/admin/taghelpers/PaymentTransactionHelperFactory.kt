@@ -34,7 +34,6 @@ open public class PaymentTransactionHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 

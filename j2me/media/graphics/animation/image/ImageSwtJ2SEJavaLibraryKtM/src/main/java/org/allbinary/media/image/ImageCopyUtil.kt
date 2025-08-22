@@ -68,29 +68,22 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
     private val features: Features = Features.getInstance()!!
-            
 
     private val openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
     private val openGLUtil: OpenGLUtil = OpenGLUtil.getInstance()!!
-            
 
     private val openGLESImageExclusionUtil: OpenGLESImageExclusionUtil = OpenGLESImageExclusionUtil.getInstance()!!
-            
 
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
 
@@ -317,7 +310,6 @@ originalImage2= openGLESImage!!.openGLBitmap!!.getImage()
                                     {
                                     
     var imageData: ImageData = originalMutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
-            
 
 image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
 
@@ -344,7 +336,6 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
                                     {
                                     
     var imageData: ImageData = originalImmutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
-            
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
 
@@ -416,7 +407,6 @@ open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Bo
                                     {
                                     
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     
@@ -425,11 +415,9 @@ open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Bo
                                     {
                                     
     var width2: Int = originalImage!!.getWidth()!!
-            
 
 
     var height2: Int = originalImage!!.getHeight()!!
-            
 
 
     var openGLESImage: OpenGLESImage = (originalImage as OpenGLESImage)
@@ -539,7 +527,6 @@ image= openGLESImage
                                     {
                                     
     var imageData: ImageData = originalMutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
-            
 
 image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
 
@@ -566,7 +553,6 @@ image= SwtMutableImage(SwtDeviceComponent.createImage(imageData))
                                     {
                                     
     var imageData: ImageData = originalImmutableImage!!.image.getImageData()!!.scaledTo(width, height)!!
-            
 
 image= SwtImmutableImage(originalImage!!.getName(), SwtDeviceComponent.createImage(imageData))
 
@@ -653,7 +639,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                                 
 
     var image: Image = this.createImage(originalImage, newWidth, newHeight)!!
-            
 
 
     
@@ -663,7 +648,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                                     
     var originalImageData: ImageData = 
                                     (getImage as Image).getImageData()!!
-            
 
 
     var mutableImage2: SwtMutableImage = image as SwtMutableImage
@@ -682,11 +666,9 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 
     var width: Int = originalImage!!.getWidth()!!
-            
 
 
     var height: Int = originalImage!!.getHeight()!!
-            
 
 
 

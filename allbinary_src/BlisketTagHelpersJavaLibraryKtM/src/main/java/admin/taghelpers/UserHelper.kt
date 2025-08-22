@@ -48,7 +48,6 @@ open public class UserHelper : Table {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val hashMap: HashMap<Any, Any>
 
@@ -80,7 +79,6 @@ open fun delete()
             
     var requestHashMap: HashMap<Any, Any> = RequestParams(this.request).
                             toHashMap()!!
-            
 
 
     var userName: UserName = UserName(requestHashMap)
@@ -96,7 +94,6 @@ stringBuffer!!.append(userName!!.get())
 stringBuffer!!.append(" from to the user table")
 
     var success: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -143,7 +140,6 @@ open fun insert()
         try {
             
     var userInterface: UserInterface = NewUserFactory.getInstance(this.request, hashMap)!!
-            
 
 
     var enable: String = this.hashMap!!.get(EntryData.getInstance()!!.ENABLE) as String
@@ -159,7 +155,6 @@ open fun insert()
                                 
 
     var values: Vector = userInterface!!.toVector()!!
-            
 
 UserEntityFactory.getInstance()!!.insert(values)
 
@@ -208,11 +203,9 @@ open fun update()
         try {
             
     var user: UserInterface = NewUserFactory.getInstance(this.request, hashMap)!!
-            
 
 
     var values: HashMap<Any, Any> = user.toHashMap()!!
-            
 
 UserEntityFactory.getInstance()!!.update(user.getUserName(), values)
 
@@ -261,7 +254,6 @@ open fun drop()
         try {
             
     var success: String = UserEntityFactory.getInstance()!!.dropTable()!!
-            
 
 
     
@@ -306,7 +298,6 @@ open fun create()
         try {
             
     var success: String = UserEntityFactory.getInstance()!!.createTable()!!
-            
 
 
     
@@ -354,7 +345,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(UserEntityFactory.getInstance(), this.portion)!!
-            
 
 
     
@@ -402,7 +392,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(UserEntityFactory.getInstance())!!
-            
 
 
     

@@ -39,7 +39,6 @@ open public class TransformInfoObjectConfigGenerator
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             

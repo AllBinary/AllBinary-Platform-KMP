@@ -71,7 +71,6 @@ open fun getInstance()
     val ON_DISPLAY_CHANGE_EVENT: String = "onDisplayChangeEvent"
 
     val EMPTY_CHILD_NAME_LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
     val ABOUT: String = "About"
 

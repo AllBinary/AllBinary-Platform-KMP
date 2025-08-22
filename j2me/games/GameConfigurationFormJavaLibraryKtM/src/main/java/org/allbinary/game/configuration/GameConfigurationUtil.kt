@@ -60,10 +60,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -78,11 +76,9 @@ open fun change(gameOptionsForm: GameOptionsForm, gauge: GameConfigurationGauge)
 this.update(gauge)
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
-            
 
 
     var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(gauge.getLabel())!!
-            
 
 this.updateChallange(gameOptionsForm, gameConfiguration)
 }
@@ -103,19 +99,15 @@ open fun update(gauge: GameConfigurationGauge)
                     var gauge = gauge
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
-            
 
 
     var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(gauge.getLabel())!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var value: Integer = smallIntegerSingletonFactory!!.getInstance(gauge.getValue() +gameConfiguration!!.getMinValue()!!.toInt())!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -140,11 +132,9 @@ open fun setDefault(gauge: GameConfigurationGauge)
                     var gauge = gauge
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
-            
 
 
     var gameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(gauge.getLabel())!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -171,11 +161,9 @@ open fun updateChallange(gameOptionsForm: GameOptionsForm, gameConfiguration: Ga
                     var gameConfiguration = gameConfiguration
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
-            
 
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
-            
 
 
     
@@ -196,7 +184,6 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
         {
     var item: Item = gameOptionsForm!!.get(index)!!
-            
 
 
     
@@ -208,11 +195,9 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
 
     var name: String = item.getLabel()!!
-            
 
 
     var nextGameConfiguration: GameConfiguration = gameConfigurationSingleton!!.getInstance(name)!!
-            
 
 
     
@@ -268,7 +253,6 @@ open fun updateCompetitionValue()
 {logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
-            
 
 COMPETITION_VALUE= gameConfigurationCentral!!.COLLIDE_DAMAGE.getValue()!!.toInt() +gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.getValue()!!.toInt() +gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.getValue()!!.toInt() +gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.getValue()!!.toInt()
 COMPETITION_VALUE= (COMPETITION_VALUE shr 2)

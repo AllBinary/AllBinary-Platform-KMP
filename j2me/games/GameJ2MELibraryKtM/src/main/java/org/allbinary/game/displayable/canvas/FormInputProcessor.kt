@@ -48,25 +48,18 @@ open public class FormInputProcessor : InputProcessor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
     private val downKeyEventHandler: DownKeyEventHandler = DownKeyEventHandler.getInstance()!!
-            
 
     private val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
-            
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
     private val platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
-            
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
 public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
@@ -89,11 +82,9 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
                             append(inputFactory!!.KEY_CODE_LABEL)!!.append(keyCode)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(inputFactory!!.DEVICE_ID_LABEL)!!.append(deviceId)!!.toString(), this, this.gameInputStrings!!.KEY_PRESSED)
 
     var input: Input = inputFactory!!.getInstance(keyCode)!!
-            
 
 
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this.allBinaryGameCanvas, input)!!
-            
 
 downKeyEventHandler!!.fireEvent(gameKeyEvent)
 } catch(e: Exception)
@@ -117,7 +108,6 @@ override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         try {
             
     var input: Input = this.inputFactory!!.getInstance(keyCode)!!
-            
 
 
     
@@ -131,7 +121,6 @@ override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
 
 
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(canvas as GameKeyEventSourceInterface, gameKey)!!
-            
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)

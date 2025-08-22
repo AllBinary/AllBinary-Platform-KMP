@@ -46,7 +46,6 @@ open public class NameSpaceRequestParams : RequestParams {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(){
@@ -120,15 +119,12 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
                     var packagePropertiesHashMap = packagePropertiesHashMap
 
     var node: Node = document.createElement(packageName)!!
-            
 
 
     var propertyKeySet: Set = packagePropertiesHashMap!!.keys!!
-            
 
 
     var propertyKeySetArray: Array<Any?> = propertyKeySet!!.toArray()!!
-            
 
 
     var size: Int = propertyKeySetArray!!.size
@@ -149,7 +145,6 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
 
 
     var propertyNode: Node = ModDomHelper.createTextNode(document, propertyName, propertyValue)!!
-            
 
 node.appendChild(propertyNode)
 }
@@ -180,19 +175,15 @@ open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameS
                     var packagePropertiesHashMap = packagePropertiesHashMap
 
     var beginIndex: Int = packageName!!.indexOf('[')!!
-            
 
 
     var indexValue: String = packageName!!.substring(beginIndex +1, packageName!!.length -1)!!
-            
 
 
     var multiElementPackage: String = packageName!!.substring(0, beginIndex)!!
-            
 
 
     var selectedValue: String = nameSpaceRequestParam!!.getValue()!!
-            
 
 
     var propertyValue: String = packagePropertiesHashMap!!.get(DomData.VALUE) as String
@@ -217,11 +208,9 @@ open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameS
                                 
 
     var nextNode: Node = ModDomHelper.createNameValueNodes(document, multiElementPackage, selectedValue)!!
-            
 
 
     var indexNode: Node = ModDomHelper.createTextNode(document, DomData.INDEX, indexValue)!!
-            
 
 nextNode!!.appendChild(indexNode)
 
@@ -247,7 +236,6 @@ open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashM
                     var document = document
 
     var rootNode: Node = DomSearchHelper.getNodeNoThrow(rootElementPackage, document.getChildNodes())!!
-            
 
 
     
@@ -267,7 +255,6 @@ open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashM
                                 
 
     var node: Node = this.createPackageNode(document, rootElementPackage, packagePropertiesHashMap)!!
-            
 
 document.appendChild(node)
 
@@ -333,11 +320,9 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                                 
 
     var propertyNameSet: Set = nextPackagePropertiesHashMap!!.keys!!
-            
 
 
     var propertyNameSetArray: Array<Any?> = propertyNameSet!!.toArray()!!
-            
 
 
     var size: Int = propertyNameSetArray!!.size
@@ -355,11 +340,9 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
 
 
     var propertyValue: String = StringUtil.getInstance()!!.getInstance(nextPackagePropertiesHashMap!!.get(nextPropertyName as Object) as String)!!
-            
 
 
     var valueNode: Node = DomSearchHelper.getNodeNoThrow(nextPropertyName, node.getChildNodes())!!
-            
 
 
     
@@ -370,7 +353,6 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                                     {
                                     
     var existingElementNodeTextNodeValue: String = DomNodeHelper.getTextNodeValue(valueNode)!!
-            
 
 
     
@@ -417,7 +399,6 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
                                 
 
     var newPropertyNode: Node = ModDomHelper.createTextNode(document, nextPropertyName, propertyValue)!!
-            
 
 node.appendChild(newPropertyNode)
 
@@ -457,7 +438,6 @@ open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, 
 
 
     var valueNode: Node = DomSearchHelper.getNodeNoThrow(DomData.VALUE, node.getChildNodes())!!
-            
 
 
     
@@ -468,7 +448,6 @@ open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, 
                                     {
                                     
     var existingElementNodeTextNodeValue: String = DomNodeHelper.getTextNodeValue(valueNode)!!
-            
 
 
     
@@ -533,7 +512,6 @@ open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any,
                                 
 
     var size: Int = elementNodeVector!!.size!!
-            
 
 
 
@@ -586,11 +564,9 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
 
 
     var packageVector: Vector = nameSpaceRequestParam!!.getPackages()!!
-            
 
 
     var size: Int = packageVector!!.size!!
-            
 
 
 
@@ -614,11 +590,9 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
                                 
 
     var nextPackagePropertiesHashMap: HashMap<Any, Any> = nameSpaceRequestParam!!.getPackageProperties(index)!!
-            
 
 
     var elementNodeVector: Vector = DomSearchHelper.getAllNodesNoThrow(nextPackageName, node.getChildNodes())!!
-            
 
 
     
@@ -631,7 +605,6 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
                                 
 
     var isElementValueTextNodeUniqueIndex: Int = this.isElementValueTextNodeUnique(nextPackagePropertiesHashMap, elementNodeVector)!!
-            
 
 
     
@@ -640,7 +613,6 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
                                     {
                                     
     var nextNode: Node = this.createPackageNode(document, nextPackageName, nextPackagePropertiesHashMap)!!
-            
 
 node.appendChild(nextNode)
 node= nextNode
@@ -673,7 +645,6 @@ logUtil!!.put("\nAppended Document Created: " +DomDocumentHelper.toString(docume
                                 
 
     var nextNode: Node = this.createPackageMultiNode(document, nameSpaceRequestParam, nextPackageName, nextPackagePropertiesHashMap)!!
-            
 
 node.appendChild(nextNode)
 node= nextNode
@@ -753,11 +724,9 @@ open fun addNameSpace(key: String, value: String, document: Document)
 
 
     var packageVector: Vector = nameSpaceRequestParam!!.getPackages()!!
-            
 
 
     var size: Int = packageVector!!.size!!
-            
 
 
 
@@ -771,11 +740,9 @@ open fun addNameSpace(key: String, value: String, document: Document)
 
 
     var packagePropertiesHashMap: HashMap<Any, Any> = nameSpaceRequestParam!!.getPackageProperties(packageVector!!.indexOf(packageName))!!
-            
 
 
     var rootNode: Node = this.getRootNode(packageName, packagePropertiesHashMap, document)!!
-            
 
 
     
@@ -806,18 +773,15 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var document: Document = DomDocumentHelper.create()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
     var keys: Set = this.getMap()!!.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
-            
 
 
     var keySize: Int = keyArray!!.size
@@ -844,7 +808,6 @@ open fun toHashMap()
 
 
     var anyType: Any = this.getMap()!!.get(key)!!
-            
 
 
     var className: String = anyType!!::class.qualifiedName!! as String

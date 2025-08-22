@@ -90,7 +90,6 @@ open fun getFileOutputStreamInstance(path: String, fileName: String)
                     var fileName = fileName
 
     var context: Context = this.getContext()!!
-            
 
 context.deleteFile(fileName)
 

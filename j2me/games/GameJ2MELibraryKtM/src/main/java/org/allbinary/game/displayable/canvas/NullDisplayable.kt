@@ -38,7 +38,6 @@ open fun getInstance()
 
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
-            
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {

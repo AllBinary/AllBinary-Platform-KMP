@@ -60,7 +60,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun create(image: Image, frameWidth: Int, frameHeight: Int)
         //nullable = true from not(false or (false and false)) = true

@@ -82,12 +82,10 @@ open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
 
 
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
-            
 
 canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeight() /2)
 
     var image2: Image = this.rotateImage(originalImage, image, canvasSurface, totalAngle)!!
-            
 
 this.drawImage(originalImage, image, canvasSurface)
 
@@ -244,11 +242,9 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
                     var rotationInDegrees = rotationInDegrees
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-            
 
 
     var rotatedImage: Image = this.rotateImage(originalImage, image, rotationInDegrees)!!
-            
 
 
     

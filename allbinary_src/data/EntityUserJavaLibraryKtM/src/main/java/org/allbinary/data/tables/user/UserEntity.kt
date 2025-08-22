@@ -51,7 +51,6 @@ open public class UserEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "user"
 
@@ -139,11 +138,9 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), UserRoleFactory.getInstance()!
 keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
     var usersHashMapVector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = usersHashMapVector!!.size!!
-            
 
 
 
@@ -199,11 +196,9 @@ open fun getUsersWithRole(userRole: UserRole)
 keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
 
     var usersHashMapVector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = usersHashMapVector!!.size!!
-            
 
 
 
@@ -247,11 +242,9 @@ open fun getUsers(storeFrontInterface: StoreFrontInterface)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.getName())
 
     var usersHashMapVector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = usersHashMapVector!!.size!!
-            
 
 
 
@@ -292,7 +285,6 @@ open fun getUser(userName: String)
 row.put(UserData.USERNAME, userName)
 
     var userHashMap: HashMap<Any, Any> = super.getRow(row)!!
-            
 
 
     
@@ -371,11 +363,9 @@ open fun login(userName: String, password: String)
 
 
     var result: String = super.getField(UserData.USERNAME, userName, UserData.PASSWORD)!!
-            
 
 
     var encryption: String = super.getField(UserData.USERNAME, userName, EntryData.getInstance()!!.ENCRYPTION)!!
-            
 
 
     
@@ -510,7 +500,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var entryData: EntryData = EntryData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

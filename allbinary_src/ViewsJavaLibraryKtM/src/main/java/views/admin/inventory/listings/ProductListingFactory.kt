@@ -43,7 +43,6 @@ open fun getInstance(searchRequest: SearchRequest)
                     var searchRequest = searchRequest
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -60,7 +59,6 @@ open fun getInstance(searchRequest: SearchRequest)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, "ProductListingFactory", commonStrings!!.GET_INSTANCE, e)
 

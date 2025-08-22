@@ -61,7 +61,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var path: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -101,7 +100,6 @@ open fun getResourceAsStream(resource: String)
                     var resource = resource
 
     var inputStream: InputStream = this.getResourceAsStream(resource, 2)!!
-            
 
 
     
@@ -152,7 +150,6 @@ open fun getResourceAsStream(resource: String, startIndex: Int)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var inputStream: InputStream = FileInputStream(StringMaker().

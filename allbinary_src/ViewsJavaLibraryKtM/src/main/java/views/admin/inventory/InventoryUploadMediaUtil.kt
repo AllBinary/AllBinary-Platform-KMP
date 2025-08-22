@@ -47,10 +47,8 @@ open public class InventoryUploadMediaUtil
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val mediaUtil: MediaUtil = MediaUtil.getInstance()!!
-            
 
     private val LARGEWIDTH: Int = 1024
 
@@ -122,7 +120,6 @@ open fun saveFiles(byteArray: ByteArray, fileName: String, mediaData: MediaData)
                                 
 
     var fileUtil: FileUtil = FileUtil.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -132,7 +129,6 @@ stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
 stringBuffer!!.append(itemInterface!!.getCategory())
 
     var fullPath: String = stringBuffer!!.toString()!!
-            
 
 
     var imageDirectoryFile: AbFile = AbFile(fullPath)
@@ -170,7 +166,6 @@ originalImageFile!!.createNewFile()
 fileUtil!!.write(ByteArrayInputStream(byteArray), originalImageFile)
 
     var uploadMedia: UploadMediaSingleton = UploadMediaSingleton.getInstance()!!
-            
 
 
     var isMediaSupported: Boolean = uploadMedia!!.isWriterSupported(mediaData!!.getName()) || uploadMedia!!.isReaderSupported(mediaData!!.getName())
@@ -191,7 +186,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "saveFiles()")
                                 
 
     var defaultMediaData: MediaData = MediaData.getDefault()!!
-            
 
 this.setFileNames(fileName)
 
@@ -201,7 +195,6 @@ this.setFileNames(fileName)
                                     {
                                     
     var isMediaResizable: Boolean = uploadMedia!!.isWriterMedia(mediaData!!.getName(), MediaTypeData.getInstance()!!.RESIZABLE_MEDIA)!!
-            
 
 
     
@@ -242,7 +235,6 @@ mediaUtil!!.saveImageFile(originalImageFile, itemInterface!!.getLargeImage(), fu
                         else {
                             
     var isConvertable: Boolean = mediaData!!.isConvertableTo(defaultMediaData)!!
-            
 
 
     
@@ -312,7 +304,6 @@ fileUtil!!.write(ByteArrayInputStream(byteArray), largeImageFile)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.END, this, "saveFiles()")
 
@@ -339,7 +330,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(MediaData.getDefault()!!.getName())
 
     var END: String = stringBuffer!!.toString()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(fileName)
@@ -347,7 +337,6 @@ stringBuffer!!.append(SMALL)
 stringBuffer!!.append(END)
 
     var newImageFileName: String = stringBuffer!!.toString()!!
-            
 
 this.itemInterface!!.setSmallImage(newImageFileName)
 stringBuffer!!.delete(0, stringBuffer!!.length())

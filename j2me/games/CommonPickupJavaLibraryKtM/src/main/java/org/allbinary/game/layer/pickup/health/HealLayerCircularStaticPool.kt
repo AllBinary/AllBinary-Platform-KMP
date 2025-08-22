@@ -58,7 +58,6 @@ open fun visit(sourceLayerInterface: AllBinaryLayer)
 
 
     var healthInterface: HealthInterface = healthInterfaceCompositeInterface!!.getHealthInterface()!!
-            
 
 healLayer!!.visit(healthInterface)
 }

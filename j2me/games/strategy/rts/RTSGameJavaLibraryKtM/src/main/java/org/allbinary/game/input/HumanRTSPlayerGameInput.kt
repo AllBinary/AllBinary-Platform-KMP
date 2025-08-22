@@ -76,7 +76,6 @@ open public class HumanRTSPlayerGameInput : RTSPlayerGameInput
     private var isDragging: Boolean = false
 
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
-            
 
     private val PRESSED: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.PRESSED
 
@@ -151,7 +150,6 @@ public constructor        (gameCanvas: AllBinaryGameCanvas, inputList: BasicArra
 this.touchButtonsBuilderFactory= touchButtonsBuilderFactory
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.notYoursGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NOT_YOURS, SmallIntegerSingletonFactory.getInstance()!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
 BasicMotionGesturesHandler.getInstance()!!.addListener(this)
@@ -187,7 +185,6 @@ open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
 
 
     var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
-            
 
 
     
@@ -196,7 +193,6 @@ open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
                                     {
                                     
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-            
 
 
     
@@ -217,7 +213,6 @@ open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
                                     {
                                     
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-            
 
 
     
@@ -235,7 +230,6 @@ open fun processDraggingMotionInput(layerManager: AllBinaryLayerManager)
                                     {
                                     
     var previousRtsFormInput: RTSFormInput = this.getSelectedRtsFormInput()!!
-            
 
 this.select(motionGestureEvent)
 this.getSelectedBuildingPlayerGameInput()!!.selectAllPreselected()
@@ -290,19 +284,15 @@ open fun makeSelection()
 
 
     var rectX1: Int = this.startPoint!!.getX()!!
-            
 
 
     var rectY1: Int = this.startPoint!!.getY()!!
-            
 
 
     var rectX2: Int = this.endPoint!!.getX()!!
-            
 
 
     var rectY2: Int = this.endPoint!!.getY()!!
-            
 
 
     
@@ -372,7 +362,6 @@ this.getSelectedBuildingPlayerGameInput()!!.addSelectedRTSLayer(rtsLayer)
 
 
     var lastRTSLayer: RTSLayer = this.getSelectedBuildingPlayerGameInput()!!.getLastSelectedRtsLayer()!!
-            
 
 
     
@@ -411,11 +400,9 @@ open fun processSelectionBoxMotionInput(layerManager: AllBinaryLayerManager)
 
 
     var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
-            
 
 
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-            
 
 
     
@@ -463,7 +450,6 @@ open fun processMotionInput(layerManager: AllBinaryLayerManager)
                                     {
                                     
     var endDrag: Boolean = this.processDraggingMotionInput(layerManager)!!
-            
 
 
     
@@ -497,7 +483,6 @@ open fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
                     var selectedRtsFormInput = selectedRtsFormInput
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START)!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, "setSelectedRtsFormInput")
@@ -514,7 +499,6 @@ open fun updateForm(rtsLayer: RTSLayer)
                     var rtsLayer = rtsLayer
 
     var scrollSelectionForm: ScrollSelectionForm = rtsLayer!!.getScrollSelectionForm()!!
-            
 
 
     
@@ -583,7 +567,6 @@ GameNotificationEventHandler.getInstance()!!.fireEvent(notYoursGameNotificationE
                                 
 
     var gameCanvas: AllBinaryGameCanvas = this.getGameCanvas()!!
-            
 
 
     
@@ -688,7 +671,6 @@ open fun updatePaintable()
         //nullable = true from not(false or (false and true)) = true
 {
     var list: BasicArrayList = this.getSelectedBuildingPlayerGameInput()!!.getSelectedBasicArrayList()!!
-            
 
 
     
@@ -741,19 +723,15 @@ super.paint(graphics)
                                     graphics.setColor(BasicColorFactory.getInstance()!!.RED.toInt())
 
     var rectX1: Int = this.startPoint!!.getX()!!
-            
 
 
     var rectY1: Int = this.startPoint!!.getY()!!
-            
 
 
     var rectX2: Int = this.endPoint!!.getX()!!
-            
 
 
     var rectY2: Int = this.endPoint!!.getY()!!
-            
 
 
     

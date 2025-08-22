@@ -63,7 +63,6 @@ this.gameCanvas= gameCanvas
                                     {
                                     
     var highScores: HighScores = this.gameCanvas!!.highScoresHelper!!.getSelectedHighScores()!!
-            
 
 
     

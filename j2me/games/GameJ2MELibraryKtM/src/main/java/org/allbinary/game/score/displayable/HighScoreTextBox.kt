@@ -50,14 +50,12 @@ open public class HighScoreTextBox : CustomTextBox {
         
 
     private val virtualKeyboardEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance()!!
-            
 
     private val highScoreUtil: HighScoreUtil
 
     private val pleaseWait: Paintable = SimpleTextPaintable(commonStrings!!.PLEASE_WAIT, BasicColorFactory.getInstance()!!.WHITE)
 
     private var paintable: Paintable = NullPaintable.getInstance()!!
-            
 
     var submitted: Boolean = false
 public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
@@ -96,7 +94,6 @@ public constructor        (highScoresFactoryInterface: HighScoresFactoryInterfac
 highScoreUtil= HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeClientInformation, gameInfo, cmdListener, name, highScore)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     
@@ -105,7 +102,6 @@ highScoreUtil= HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeCl
                                     {
                                     
     var username: String = InApplicationPurchaseFactory.getInstance()!!.getUserName()!!
-            
 
 
     
@@ -177,7 +173,6 @@ this.repaintBehavior!!.onChangeRepaint(this)
         //nullable = true from not(false or (false and true)) = true
 {
     var name: String = this.getTextFieldItem()!!.getString()!!
-            
 
 this.highScoreUtil!!.update(name)
 super.update()

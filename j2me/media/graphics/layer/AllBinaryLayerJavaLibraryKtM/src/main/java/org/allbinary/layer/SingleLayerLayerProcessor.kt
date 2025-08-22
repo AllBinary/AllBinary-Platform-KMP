@@ -45,7 +45,6 @@ public constructor        ()
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var layerManager: LayerManager = this.getLayerManager()!!
-            
 
 this.process(allBinaryLayerManager, layerManager!!.getLayerAt(0) as AllBinaryLayer, 0)
 }

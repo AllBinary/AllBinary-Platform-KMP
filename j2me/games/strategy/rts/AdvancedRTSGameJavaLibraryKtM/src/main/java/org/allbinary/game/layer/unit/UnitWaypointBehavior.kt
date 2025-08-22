@@ -61,7 +61,6 @@ open public class UnitWaypointBehavior : WaypointBehaviorBase
         }
             
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private var longWeaponRange: Int = 0
 
@@ -296,7 +295,6 @@ open fun setRandomGeographicMapCellHistory(pathsList: BasicArrayList)
                     var pathsList = pathsList
 
     var size: Int = pathsList!!.size()!!
-            
 
 this.associatedAdvancedRTSGameLayer!!.waypointLogHelper!!.setRandomGeographicMapCellHistory(this.associatedAdvancedRTSGameLayer, pathsList)
 
@@ -403,11 +401,9 @@ open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
                     var buildingLayer = buildingLayer
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
-            
 
 
     var list: BasicArrayList = buildingLayer!!.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     
@@ -423,7 +419,6 @@ open fun moveAwayFromBuilding(buildingLayer: BuildingLayer)
 this.setCurrentTargetLayerInterface(this.FAKE_WAYPOINT_LAYER as CollidableDestroyableDamageableLayer)
 
     var pathsList: BasicArrayList = buildingLayer!!.getMoveOutOfBuildAreaPath(geographicMapCellPosition)!!
-            
 
 this.associatedAdvancedRTSGameLayer!!.setClosestGeographicMapCellHistory(pathsList)
 

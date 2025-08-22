@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val SPRITE: String = "_sprite"
 
@@ -72,7 +71,6 @@ public constructor        ()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
@@ -86,14 +84,12 @@ open fun getString()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
-            
 
 
     var graphicsFeature: GraphicsFeature = graphicsFeatureFactory!!.NONE
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -151,12 +147,10 @@ open fun getString(graphicsFeature: GraphicsFeature)
 
 
     var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 
     var features: Features = Features.getInstance()!!
-            
 
 
     

@@ -79,11 +79,9 @@ open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource
         try {
             
     var transformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 
     var transformer: Transformer = transformerFactory!!.newTransformer(xsltStreamSource)!!
-            
 
 transformer.transform(xmlStreamSource, streamResult)
 
@@ -121,12 +119,10 @@ open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStr
         try {
             
     var tFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 tFactory!!.setURIResolver(resolver)
 
     var transformer: Transformer = tFactory!!.newTransformer(xsltStreamSource)!!
-            
 
 transformer.transform(xmlStreamSource, streamResult)
 

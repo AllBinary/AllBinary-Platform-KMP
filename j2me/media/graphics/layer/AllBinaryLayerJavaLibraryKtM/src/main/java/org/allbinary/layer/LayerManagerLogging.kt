@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val stringBuilder: StringMaker = StringMaker()
 
@@ -185,11 +184,9 @@ open fun log(layerManager: LayerManager)
 stringBuilder!!.delete(0, stringBuilder!!.length())
 
     var size: Int = layerManager!!.getSize()!!
-            
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 stringBuilder!!.append(Integer.toHexString(layerManager!!.hashCode()))!!.append(commonSeps!!.COLON_SEP)
 stringBuilder!!.append(size)!!.append(commonSeps!!.COLON_SEP)

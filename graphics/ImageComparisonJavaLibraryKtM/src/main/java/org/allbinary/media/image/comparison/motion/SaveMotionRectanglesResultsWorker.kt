@@ -39,10 +39,8 @@ open public class SaveMotionRectanglesResultsWorker
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var running: Boolean= false
 
@@ -116,7 +114,6 @@ timeHelper!!.setStartTime()
 
 
     var motionRectangles: MotionRectangles = motionRectanglesResultsEvent!!.getMotionRectangles()!!
-            
 
 MotionRectanglesImageInputOutput().
                             save(motionRectangles, motionRectanglesResultsEvent!!.getFrame())

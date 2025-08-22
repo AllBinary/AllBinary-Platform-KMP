@@ -58,7 +58,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

@@ -36,13 +36,10 @@ open public class BaseMusicService : Service {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
-            
 
     private val ALREADY_PLAYING: String = "This is one song per music service"
 
@@ -131,7 +128,6 @@ open fun onStartCommand(intent: Intent)
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND)
 
     var musicStrings: MusicStrings = MusicStrings.getInstance()!!
-            
 
 
     

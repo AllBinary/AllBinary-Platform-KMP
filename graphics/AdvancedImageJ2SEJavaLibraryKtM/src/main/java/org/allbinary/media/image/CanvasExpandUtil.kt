@@ -56,10 +56,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -79,11 +77,9 @@ open fun process(imageProcessorInput: ImageProcessorInput, increaseX: Int, incre
                     var visitor = visitor
 
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
-            
 
 
     var subBufferedImageArray: Array<BufferedImage?> = arrayOfNulls(bufferedImageArray!!.size)

@@ -41,7 +41,6 @@ open public class OrderTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 
@@ -78,16 +77,13 @@ open fun process()
             
     var anyType: Any = OrderHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.PROCESS, 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -136,16 +132,13 @@ open fun setPaymentGateway()
             
     var anyType: Any = OrderHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("setPaymentGateway", 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 

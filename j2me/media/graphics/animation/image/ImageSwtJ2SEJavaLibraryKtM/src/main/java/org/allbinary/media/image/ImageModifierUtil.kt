@@ -65,10 +65,8 @@ open fun getInstanceOrCreate()
             }            
         
     private val imageCopyUtil: ImageCopyUtil = ImageCopyUtil.getInstance()!!
-            
 
     private val features: Features = Features.getInstance()!!
-            
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
@@ -126,15 +124,12 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
 
     var width: Int = image.getWidth()!!
-            
 
 
     var height: Int = image.getHeight()!!
-            
 
 
     var imageData: ImageData = newBufferedImage!!.getImageData()!!
-            
 
 
     
@@ -271,11 +266,9 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
 
     var width: Int = image.getWidth()!!
-            
 
 
     var height: Int = image.getHeight()!!
-            
 
 
     var rx: Int= 0
@@ -288,7 +281,6 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
 
     var imageData: ImageData = newBufferedImage!!.getImageData()!!
-            
 
 
     
@@ -441,7 +433,6 @@ open fun getImageArray(originalImageArray: Array<Image?>)
         {originalImage= originalImageArray[index]!!
 
     var image: Image = this.imageCopyUtil!!.createImage(originalImage)!!
-            
 
 newImageArray[index]= image
 }
@@ -454,7 +445,6 @@ newImageArray[index]= image
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 

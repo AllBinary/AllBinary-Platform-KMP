@@ -40,7 +40,6 @@ open public class EndLevelNoBuildingSelectedTouchButtonsBuilder : TouchButtonsLi
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true

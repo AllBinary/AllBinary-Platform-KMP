@@ -32,7 +32,6 @@ open public class IndexedBasicArrayListCache : BaseBasicArrayListCache
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var size: Int = 0
 

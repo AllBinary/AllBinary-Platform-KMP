@@ -58,7 +58,6 @@ open fun getInstance()
             }            
         
     private val imageScaleUtil: ImageJ2MEScaleUtil = ImageJ2MEScaleUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -132,7 +131,6 @@ open fun processAdjust(baseImageAnimationFactory: BaseImageAnimationFactory)
                     var baseImageAnimationFactory = baseImageAnimationFactory
 
     var scaleProperties: ScaleProperties = baseImageAnimationFactory!!.getScalePropertiesP()!!
-            
 
 
     
@@ -141,7 +139,6 @@ open fun processAdjust(baseImageAnimationFactory: BaseImageAnimationFactory)
                                     {
                                     
     var animationFactoryInitializationVisitor: AnimationFactoryInitializationVisitor = baseImageAnimationFactory!!.getAnimationFactoryInitializationVisitorP()!!
-            
 
 
     var scaleX: Float = (scaleProperties!!.scaleWidth.toFloat()) /(animationFactoryInitializationVisitor!!.width.toFloat())

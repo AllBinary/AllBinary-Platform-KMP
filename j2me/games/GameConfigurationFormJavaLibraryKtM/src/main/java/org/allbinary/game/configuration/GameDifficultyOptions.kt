@@ -69,7 +69,6 @@ this.update()
 this.initCommands(commandListener)
 
     var gameDifficultyFactory: GameDifficultyFactory = GameDifficultyFactory.getInstance()!!
-            
 
 this.setSelectedId(gameDifficultyFactory!!.getLevel())
 }
@@ -92,7 +91,6 @@ open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
     var gameDifficultyFactory: GameDifficultyFactory = GameDifficultyFactory.getInstance()!!
-            
 
 gameDifficultyFactory!!.setLevel(this.getSelectedId())
 }
@@ -104,7 +102,6 @@ override fun initCommands(cmdListener: CommandListener)
                     var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 this.removeAllCommands()
 this.addCommand(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS)
@@ -134,7 +131,6 @@ open fun add(list: BasicArrayList, name: String, option: Int)
                     var option = option
 
     var choiceGroup: ChoiceGroup = this.getChoiceGroup(list, name, option)!!
-            
 
 
     
@@ -171,7 +167,6 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -228,7 +223,6 @@ open fun getSelectedText()
 
 
     var value: Int = Integer.valueOf(choiceGroup!!.getString(choiceGroup!!.getSelectedIndex()))!!.toInt()!!
-            
 
 
 

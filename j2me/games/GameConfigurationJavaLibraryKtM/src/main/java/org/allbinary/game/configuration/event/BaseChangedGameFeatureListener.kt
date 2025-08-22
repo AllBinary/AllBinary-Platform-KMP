@@ -48,10 +48,8 @@ open public class BaseChangedGameFeatureListener
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val gameFeatureUtil: GameFeatureUtil = GameFeatureUtil.getInstance()!!
-            
 
     val list: BasicArrayList = BasicArrayList()
 
@@ -119,7 +117,6 @@ open fun isChanged(gameFeature: Feature)
                     var gameFeature = gameFeature
 
     var isChanged: Boolean = list.contains(gameFeature)!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

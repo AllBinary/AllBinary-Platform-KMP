@@ -68,7 +68,6 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
 
     var hashMap: HashMap<Any, Any> = RequestParams(httpServletRequest).
                             toHashMap()!!
-            
 
 
     var role: String = httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(UserRoleData.NAME.toString()) as String
@@ -102,7 +101,6 @@ open fun getInstance(httpServletRequest: HttpServletRequest, propertiesHashMap: 
                                     
     var requestHashMap: HashMap<Any, Any> = RequestParams(httpServletRequest).
                             toHashMap()!!
-            
 
 
     var roleString: String = propertiesHashMap!!.get(UserRoleData.NAME.toString()) as String

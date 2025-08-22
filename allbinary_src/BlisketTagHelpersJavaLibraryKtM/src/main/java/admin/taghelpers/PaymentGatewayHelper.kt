@@ -42,7 +42,6 @@ open public class PaymentGatewayHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -86,7 +85,6 @@ open fun insert()
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
                             getInstance(httpServletRequest)!!
-            
 
 paymentGatewayInterface!!.setStoreName(this.weblisketSession!!.getStoreName())
 PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
@@ -137,7 +135,6 @@ open fun update()
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
                             getInstance(httpServletRequest)!!
-            
 
 paymentGatewayInterface!!.setStoreName(this.weblisketSession!!.getStoreName())
 
@@ -204,16 +201,13 @@ open fun delete()
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
                             getInstance(httpServletRequest)!!
-            
 
 paymentGatewayInterface!!.setStoreName(this.weblisketSession!!.getStoreName())
 
     var storeName: String = paymentGatewayInterface!!.getStoreName()!!
-            
 
 
     var gatewayName: String = paymentGatewayInterface!!.getName()!!
-            
 
 PaymentGatewayEntityFactory.getInstance()!!.remove(storeName, BasicPaymentTypeUtil.getInstance()!!.get(gatewayName))
 
@@ -225,7 +219,6 @@ stringBuffer!!.append(" and gateway name=")
 stringBuffer!!.append(gatewayName)
 
     var success: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -270,7 +263,6 @@ open fun drop()
         try {
             
     var success: String = PaymentGatewayEntityFactory.getInstance()!!.dropTable()!!
-            
 
 
     
@@ -315,7 +307,6 @@ open fun create()
         try {
             
     var success: String = PaymentGatewayEntityFactory.getInstance()!!.createTable()!!
-            
 
 
     
@@ -363,7 +354,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(PaymentGatewayEntityFactory.getInstance(), this.portion)!!
-            
 
 
     
@@ -411,7 +401,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(PaymentGatewayEntityFactory.getInstance())!!
-            
 
 
     

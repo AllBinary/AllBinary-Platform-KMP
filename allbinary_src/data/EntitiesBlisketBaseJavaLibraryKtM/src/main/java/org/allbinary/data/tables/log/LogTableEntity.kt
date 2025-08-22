@@ -50,7 +50,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var abeHttpRequestInfoData: AbeHttpRequestInfoData = AbeHttpRequestInfoData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

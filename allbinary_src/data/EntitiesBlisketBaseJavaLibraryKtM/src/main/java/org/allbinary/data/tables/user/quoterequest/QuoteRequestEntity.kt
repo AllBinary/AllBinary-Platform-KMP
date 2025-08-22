@@ -43,7 +43,6 @@ open public class QuoteRequestEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "quoterequest"
 public constructor        ()                        
@@ -105,7 +104,6 @@ row.put(UserData.USERNAME, userName)
 row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
 
     var quoteRequestHashMap: HashMap<Any, Any> = super.getRow(row)!!
-            
 
 
     
@@ -186,7 +184,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

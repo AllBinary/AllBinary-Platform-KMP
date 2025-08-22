@@ -44,10 +44,8 @@ open public class OrderHistoryRequestHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -161,7 +159,6 @@ open fun setOrderStatus(newStatus: String)
 OrderHistoryEntityFactory.getInstance()!!.setStatus(id, newStatus)
 
     var orderHistory: OrderHistory = OrderHistoryEntityFactory.getInstance()!!.getOrder(id)!!
-            
 
 OrderStatusEmail(this.abeClientInformation, orderHistory).
                             process()

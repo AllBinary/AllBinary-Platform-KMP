@@ -43,7 +43,6 @@ open public class PopupMenuInputProcessor : BasicMenuInputProcessor {
         
 
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
-            
 
     private val CLICK_DELAY: Int = 120
 
@@ -120,15 +119,12 @@ gameCanvas!!.toggleMenu()
         try {
             
     var motionInputsIndex: Int = this.processMotionInputs()!!
-            
 
 
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     var key: Int = 0
@@ -256,11 +252,9 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                 
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
-            
 
 
     var motionGestureInput: MotionGestureInput = motionGestureEvent!!.getMotionGesture()!!
-            
 
 
     
@@ -269,11 +263,9 @@ open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
                                     {
                                     
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-            
 
 
     var rectPoint: GPoint = rectangle.getPoint()!!
-            
 
 
     

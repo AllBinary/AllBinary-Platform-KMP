@@ -48,7 +48,6 @@ open public class CountedLayerInterfaceFactoryPart
         }
             
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 
     private var total: Int= 0
 
@@ -145,7 +144,6 @@ this.total= total
 this.totalString= this.primitiveLongUtil!!.getCharArray(total)
 
     var font: MyFont = MyFont.getInstance()!!
-            
 
 this.setXOffset(font.charsWidth(totalString, 0, this.primitiveLongUtil!!.getCurrentTotalDigits()) +(font.getSize() shr 1))
 }

@@ -39,7 +39,6 @@ open public class BasicTable
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             

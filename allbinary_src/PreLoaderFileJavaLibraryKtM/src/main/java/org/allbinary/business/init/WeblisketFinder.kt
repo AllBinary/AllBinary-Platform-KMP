@@ -66,11 +66,9 @@ open fun main(args: Array<String?>)
                     var args = args
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var vector: BasicArrayList = WeblisketFinder.getInstance()!!.findAll(stringUtil!!.EMPTY_STRING)!!
-            
 
 System.out.println(vector.size())
 }
@@ -79,13 +77,10 @@ System.out.println(vector.size())
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val subDirectory: SubDirectory = SubDirectory.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -134,11 +129,9 @@ open fun getInstallationPath(file: AbFile)
         try {
             
     var filePath: String = file.getPath()!!
-            
 
 
     var end: Int = filePath!!.indexOf(KEY)!!
-            
 
 
     

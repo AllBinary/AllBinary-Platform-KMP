@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     private val subDirectory: SubDirectory = SubDirectory.getInstance()!!
-            
 
 open fun getFiles(path: String)
         //nullable = true from not(false or (false and false)) = true
@@ -70,7 +69,6 @@ open fun getFiles(path: String)
         try {
             
     var files: BasicArrayList = subDirectory!!.search(AbFile(path))!!
-            
 
 
 
@@ -109,7 +107,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
 
 
     var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
-            
 
 
 
@@ -151,7 +148,6 @@ includeExtensionBasicArrayList!!.add(includeExtension)
 
 
     var files: BasicArrayList = subDirectory!!.search(visitorFileFilter, AbFile(path))!!
-            
 
 
 

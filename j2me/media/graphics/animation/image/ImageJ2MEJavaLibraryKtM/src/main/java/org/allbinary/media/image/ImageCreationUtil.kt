@@ -65,7 +65,6 @@ open fun getInstance(width: Int, height: Int)
                     var height = height
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(this::class.qualifiedName!!, width, height)!!
-            
 
 
 
@@ -93,7 +92,6 @@ open fun createImage(width: Int, height: Int, maxScaleX: Float, maxScaleY: Float
                     var maxScaleY = maxScaleY
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(this::class.qualifiedName!!, (width *maxScaleX).toInt() +1, (height *maxScaleY).toInt() +1)!!
-            
 
 
 

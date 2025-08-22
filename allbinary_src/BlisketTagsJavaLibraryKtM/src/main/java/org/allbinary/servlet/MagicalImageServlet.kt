@@ -48,10 +48,8 @@ open public class MagicalImageServlet : HttpServlet {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(ServletException::class, IOException::class)
             
@@ -73,7 +71,6 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
             BlisketServletUtil.getInstance()!!.init(request)
 
     var requestURI: String = request.getRequestURI()!!
-            
 
 
     var file: AbFile = AbFile(URLGLOBALS.getWebappPath() +requestURI)
@@ -84,7 +81,6 @@ inputStream= CloudStreamUtil.getInstance()!!.getFileAnyWhere(file)
 
 
     var byteArray: ByteArray = StreamUtil.getInstance()!!.getByteArray(inputStream, outputStream, ByteArray(16384))!!
-            
 
 response.setContentType("image/jpeg;charset=utf-8")
 response.getOutputStream()!!.write(byteArray)

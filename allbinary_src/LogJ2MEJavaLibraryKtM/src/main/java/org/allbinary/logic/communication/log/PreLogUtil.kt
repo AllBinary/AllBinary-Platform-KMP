@@ -85,7 +85,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 System.out.print(LOG_SUCCESS)
 System.out.println(message)
@@ -108,7 +107,6 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                     var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 System.out.print(LOG_SUCCESS)
 System.out.println(message)

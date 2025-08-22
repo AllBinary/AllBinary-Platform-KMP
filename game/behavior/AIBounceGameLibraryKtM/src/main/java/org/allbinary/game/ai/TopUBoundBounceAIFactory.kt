@@ -77,11 +77,9 @@ open public class TopUBoundBounceAIFactory
 
 
     var point: GPoint = PointFactory.getInstance()!!.getInstance(halfWidth, halfHeight +60)!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var rectangle: Rectangle = Rectangle(point, (displayInfo!!.getLastWidth() -halfWidth -point.getX()), (displayInfo!!.getLastHeight() -halfHeight -point.getY()))

@@ -59,13 +59,11 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun createFormRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var rectangle: Rectangle = Rectangle(PointFactory.getInstance()!!.getInstance(30, 10), displayInfo!!.getLastWidth() -30, displayInfo!!.getLastHeight() -35)
@@ -82,11 +80,9 @@ open fun createPopupMenuRectangle()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var popupMenuRectangle: Rectangle = RectangleFactory.SINGLETON

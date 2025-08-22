@@ -39,7 +39,6 @@ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : CompleteMotionGestureListenerInterface{
     var configuration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
-            
 
 
     

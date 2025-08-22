@@ -58,7 +58,6 @@ open fun getInstance()
 : RunnableInterface{
     var genericProfile: GenericProfile = 
                                     (getConfigurationJPanel as GenericModuleConfigurationJPanel).getSelectedGenericProfile()!!
-            
 
 
     var inputAutomationActionInterface: InputAutomationActionInterface = GenericInputAutomationAction() as InputAutomationActionInterface

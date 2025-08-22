@@ -249,7 +249,6 @@ open fun getLastAccessedTime()
         //nullable = true from not(false or (false and true)) = true
 : Long{
     var lastAccessedTime: Long = session.getLastAccessedTime()!!
-            
 
 
 

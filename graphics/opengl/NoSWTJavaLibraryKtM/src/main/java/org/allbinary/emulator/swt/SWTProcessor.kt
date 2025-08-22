@@ -57,7 +57,6 @@ open fun getInstance()
             }            
         
     var runnable: Runnable = NullRunnable.getInstance()!!
-            
 
 open fun process(display: Display)
         //nullable = true from not(false or (false and false)) = true

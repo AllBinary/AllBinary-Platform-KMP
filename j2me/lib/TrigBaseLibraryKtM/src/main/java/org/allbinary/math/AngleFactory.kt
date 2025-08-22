@@ -60,7 +60,6 @@ open fun main(args: Array<String?>)
 
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 
 
@@ -79,7 +78,6 @@ LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val TOTAL_ANGLE: Short = 360
 
@@ -102,7 +100,6 @@ public constructor        ()
             : super()
         {
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
 
     var total: Short = angleArray!!.size.toShort()
@@ -159,7 +156,6 @@ angleArray[270]= LEFT
 
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-            
 
 open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 

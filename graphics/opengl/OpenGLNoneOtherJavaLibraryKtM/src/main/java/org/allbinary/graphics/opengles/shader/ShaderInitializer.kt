@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 open fun init(gl: GL10, shader: Array<Shader?>, attributeArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true

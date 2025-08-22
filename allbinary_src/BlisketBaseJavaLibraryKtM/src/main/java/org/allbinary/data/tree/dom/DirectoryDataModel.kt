@@ -108,11 +108,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var dirNode: Node = document.createElement("dir")!!
-            
 
 
     var size: Int = this.fileBasicArrayList!!.size()!!
-            
 
 
     var nextFile: AbFile
@@ -159,7 +157,6 @@ open fun view()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var node: Node = this.toXmlNode(this.getTransformDocumentInterface()!!.getDoc())!!
-            
 
 this.getTransformDocumentInterface()!!.getBaseNode()!!.appendChild(node)
 

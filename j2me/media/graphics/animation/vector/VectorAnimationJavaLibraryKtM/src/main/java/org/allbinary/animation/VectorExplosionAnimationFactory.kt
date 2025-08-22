@@ -62,7 +62,6 @@ this.setBasicColorP(basicColor)
 
 
     private val vectorExplosionGenerator: VectorExplosionGenerator = VectorExplosionGenerator.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
@@ -75,15 +74,12 @@ this.setBasicColorP(basicColor)
 
 
     var frame: Int = vectorRotationAnimationInterface!!.getFrame()!!
-            
 
 
     var framePoints: Array<IntArray?> = vectorRotationAnimationInterface!!.getPoints(frame)!!
-            
 
 
     var points: Array<Array<IntArray?>?> = vectorExplosionGenerator!!.getInstance(framePoints, 6, vectorExplosionGenerator!!.ROTATION)!!
-            
 
 
 

@@ -66,7 +66,6 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
                     var point = point
 
     var isCollsionWithAvoidRectangles: Boolean = this.imageComparatorConstraintsInterface!!.isCollisionWithAvoidRectangles(point)!!
-            
 
 
     
@@ -75,37 +74,30 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
                                     {
                                     
     var rgb1: Int = imageComparisonInfo!!.getBufferedImages()[0]!!.getRGB(point.getX(), point.getY())!!
-            
 
 
     var rgb2: Int = imageComparisonInfo!!.getBufferedImages()[1]!!.getRGB(point.getX(), point.getY())!!
-            
 
 
     var automaticCacheInterface: AutomaticCacheInterface = ColorCacheFactory.getInstance()!!
-            
 
 
     var colorInteger: Integer = Integer(Integer.valueOf(rgb1))!!
-            
 
 
     var colorCacheable: ColorCacheable = automaticCacheInterface!!.get(colorInteger) as ColorCacheable
 
 
     var color: Color = colorCacheable!!.getColor()!!
-            
 
 
     var colorInteger2: Integer = Integer(Integer.valueOf(rgb2))!!
-            
 
 
     var colorCacheable2: ColorCacheable = automaticCacheInterface!!.get(colorInteger) as ColorCacheable
 
 
     var color2: Color = colorCacheable!!.getColor()!!
-            
 
 
     

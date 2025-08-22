@@ -39,7 +39,6 @@ open public class IdGeneratorEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "idgenerator"
 
@@ -73,7 +72,6 @@ open fun get(name: String)
 keysAndValues!!.put(NAME, name)
 
     var hashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
     
@@ -161,7 +159,6 @@ open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var returnStr: String = super.createTable(tableData)!!
-            
 
 
 

@@ -427,15 +427,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMapOrder()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -443,7 +440,6 @@ open fun toXmlNode(document: Document)
 
 
     var node: Node = document.createElement(OrderData.ORDER)!!
-            
 
 
 

@@ -51,10 +51,8 @@ open public class InventorySearch
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val searchRequest: SearchRequest
 public constructor        (searchRequest: SearchRequest)                        
@@ -78,21 +76,17 @@ open fun searchSingleStaticPage()
         try {
             
     var storeFront: StoreFrontInterface = this.searchRequest!!.getStoreFront()!!
-            
 
 
     var searchParams: SearchParams = this.searchRequest!!.getParams()!!
-            
 
 
     var columnValueHashMap: HashMap<Any, Any> = searchParams!!.get()!!
-            
 
 
     var file: String = StaticPagesEntity().
                             getFile(storeFront!!.getName(), Replace("-", CommonSeps.getInstance()!!.SPACE).
                             all(columnValueHashMap!!.get(BasicItemData.KEYWORDS) as String))!!
-            
 
 
     
@@ -121,7 +115,6 @@ stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
     var filePath: String = Replace(CommonSeps.getInstance()!!.SPACE, "%20").
                             all(stringBuffer!!.toString())!!
-            
 
 
 
@@ -158,7 +151,6 @@ open fun searchSingleDynamicPage()
         try {
             
     var str: Array<String?> = search()!!
-            
 
 
 
@@ -190,15 +182,12 @@ open fun search()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
 
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
-            
 
 
     var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(searchRequest)!!
-            
 
 
 
@@ -217,7 +206,6 @@ open fun getProduct(product: String)
                     var product = product
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
 
 

@@ -37,10 +37,8 @@ open public class SmallDelete
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var fileName: String
 
@@ -78,7 +76,6 @@ endIndex= this.string.indexOf(end)
                                     {
                                     
     var text: String = this.string.substring(endIndex, this.string.length)!!
-            
 
 
     var idFile: FileOutputStream = FileOutputStream(this.fileName)
@@ -146,11 +143,9 @@ endIndex= this.string.indexOf(end)
                                     {
                                     
     var newStart: String = this.string.substring(0, beginIndex)!!
-            
 
 
     var text: String = this.string.substring(endIndex +end.length, this.string.length)!!
-            
 
 
     var idFile: FileOutputStream = FileOutputStream(this.fileName)

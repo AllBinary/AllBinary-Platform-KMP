@@ -59,7 +59,6 @@ open fun main(args: Array<String?>)
                     var args = args
 
     var randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
 
     var intArray: IntArray = IntArray(52)
@@ -151,7 +150,6 @@ System.out.println(stringBuilder!!.toString())
         }
             
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
     private var rand: Random
 private constructor        ()

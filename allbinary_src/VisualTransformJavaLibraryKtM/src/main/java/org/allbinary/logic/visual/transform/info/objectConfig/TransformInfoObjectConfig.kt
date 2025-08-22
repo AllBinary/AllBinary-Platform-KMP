@@ -52,10 +52,8 @@ open public class TransformInfoObjectConfig
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val ownerTransformInfoInterface: TransformInfoInterface
 
@@ -114,7 +112,6 @@ this.ownerTransformInfoInterface= transformInfoInterface
 this.document= document
 
     var node: Node = DomSearchHelper.getNodeNoThrow(OutputTypeData.getInstance()!!.NAME, this.getRootNode()!!.getChildNodes())!!
-            
 
 
     
@@ -175,12 +172,10 @@ this.ownerTransformInfoInterface= transformInfoInterface
 this.createDocument()
 
     var configNameAttr: Attr = this.document.createAttribute(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
-            
 
 configNameAttr!!.setValue(name)
 
     var objectConfigNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
-            
 
 objectConfigNode!!.appendChild(configNameAttr)
 
@@ -222,7 +217,6 @@ open fun createDocument()
 {this.document= DomDocumentHelper.create()
 
     var objectConfigNode: Node = document.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
-            
 
 this.document.appendChild(objectConfigNode)
 }
@@ -266,15 +260,12 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
                     var transformInfoInterface = transformInfoInterface
 
     var objectConfigNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
-            
 
 
     var viewNodeList: NodeList = objectConfigNode!!.getChildNodes()!!
-            
 
 
     var numberOfViews: Int = viewNodeList!!.getLength()!!
-            
 
 
 
@@ -285,11 +276,9 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
 
         {
     var viewNode: Node = viewNodeList!!.item(index)!!
-            
 
 
     var viewAttributes: NamedNodeMap = viewNode!!.getAttributes()!!
-            
 
 
     var attrNode: Attr = viewAttributes!!.getNamedItem(TransformInfoData.getInstance()!!.NAME) as Attr
@@ -323,7 +312,6 @@ open fun getTemplateAttributes()
         //nullable = true from not(false or (false and true)) = true
 : NamedNodeMap{
     var componentNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
-            
 
 
 
@@ -371,7 +359,6 @@ open fun getNodeVector(nodeName: String)
                     var nodeName = nodeName
 
     var componentsNodeList: NodeList = this.document.getElementsByTagName(nodeName)!!
-            
 
 
     
@@ -382,11 +369,9 @@ open fun getNodeVector(nodeName: String)
                                     {
                                     
     var viewNodeVector: Vector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNodeList!!.item(0)!!.getChildNodes())!!
-            
 
 
     var numberOfViews: Int = viewNodeVector!!.size!!
-            
 
 
     
@@ -432,11 +417,9 @@ open fun getTransformDomNodes(nodeName: String)
 
 
     var viewNodeVector: Vector = this.getNodeVector(nodeName)!!
-            
 
 
     var size: Int = viewNodeVector!!.size!!
-            
 
 
 
@@ -471,11 +454,9 @@ open fun getTransforms(nodeName: String)
 
 
     var viewNodeVector: Vector = this.getNodeVector(nodeName)!!
-            
 
 
     var size: Int = viewNodeVector!!.size!!
-            
 
 
 
@@ -523,7 +504,6 @@ open fun getTransformsGroup(group: String)
 
 
     var componentsNodeList: NodeList = this.document.getElementsByTagName(GROUP)!!
-            
 
 
     
@@ -534,11 +514,9 @@ open fun getTransformsGroup(group: String)
                                     {
                                     
     var componentsNode: Node = componentsNodeList!!.item(0)!!
-            
 
 
     var length: Int = componentsNodeList!!.getLength()!!
-            
 
 
 
@@ -549,18 +527,15 @@ open fun getTransformsGroup(group: String)
 
         {
     var node: Node = componentsNodeList!!.item(index)!!
-            
 
 
     var attributes: NamedNodeMap = node.getAttributes()!!
-            
 
 
     var attrNode: Attr = attributes.getNamedItem(GROUP) as Attr
 
 
     var value: String = attrNode!!.getValue()!!
-            
 
 
     
@@ -578,11 +553,9 @@ break;
 
 
     var viewNodeVector: Vector = DomSearchHelper.getAllNodes(TransformInfoData.getInstance()!!.NAME, componentsNode!!.getChildNodes())!!
-            
 
 
     var numberOfViews: Int = viewNodeVector!!.size!!
-            
 
 
     
@@ -595,7 +568,6 @@ break;
                                 
 
     var size: Int = viewNodeVector!!.size!!
-            
 
 
 
@@ -734,7 +706,6 @@ open fun getInputOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var node: Node = DomSearchHelper.getNode(InputOutputTypeData.getInstance()!!.NAME, this.getRootNode()!!.getChildNodes())!!
-            
 
 
 
@@ -750,7 +721,6 @@ open fun getInputOutputTypeFile()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var node: Node = DomSearchHelper.getNode(InputOutputTypeData.getInstance()!!.FILE, this.getRootNode()!!.getChildNodes())!!
-            
 
 
 
@@ -766,7 +736,6 @@ open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var node: Node = DomSearchHelper.getNode(XslData.getInstance()!!.ROOT_IMPORT_URI, this.getRootNode()!!.getChildNodes())!!
-            
 
 
 

@@ -65,7 +65,6 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 
     var animationInterfaceArray: Array<Animation?> = this.createArray(size)!!
-            
 
 
 

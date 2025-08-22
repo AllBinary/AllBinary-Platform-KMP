@@ -168,51 +168,38 @@ open public class AllBinaryGameCanvas : RunnableCanvas
     private val id: Int = 0
 
     val SHOW_END_RESULT_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_END_RESULT_GAME_STATE")!!
-            
 
     val SHOW_HIGH_SCORE_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_HIGH_SCORE_GAME_STATE")!!
-            
 
     val TYPE: Int = 2
 
         }
             
     val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     val touchFeatureFactory: TouchFeatureFactory = TouchFeatureFactory.getInstance()!!
-            
 
     val openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
     val touchButtonFactory: TouchButtonFactory = TouchButtonFactory.getInstance()!!
-            
 
     val gameAdStateFactory: GameAdStateFactory = GameAdStateFactory.getInstance()!!
-            
 
     val gameStrings: GameStrings = GameStrings.getInstance()!!
-            
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
-            
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 
     private val gameTickDisplayInfoSingleton: GameTickDisplayInfoSingleton = GameTickDisplayInfoSingleton.getInstance()!!
-            
 
     val gameRunnable: GameCanvasRunnable = GameCanvasRunnable(this)
 
     val gamePauseRunnable: GameCanvasPauseRunnable = GameCanvasPauseRunnable(this)
 
     var gameSpecificPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private val sensorGameUpdateProcessor: SensorGameUpdateProcessor = SingleSensorGameUpdateProcessor()
 
@@ -239,7 +226,6 @@ open public class AllBinaryGameCanvas : RunnableCanvas
     private val realHighScoresPaintable: HighScoresPaintable = HighScoresPaintable()
 
     private var highScoresPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var localPlayerGameInputList: BasicArrayList = BasicArrayList()
 
@@ -252,109 +238,78 @@ open public class AllBinaryGameCanvas : RunnableCanvas
     private var gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory = BasicBuildGameInitializerFactory.NULL_BASE_BUILD_GMAE_INITIALIZER_FACTORY
 
     private var touchButtonsPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     var touchPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var cheatProcessor: PlayerGameInput = NoPlayerGameInput.getInstance()!!
-            
 
     private var gameInputProcessor: Processor = Processor.getInstance()!!
-            
 
     private var endGameProcessor: Processor = Processor.getInstance()!!
-            
 
     private var realEndGameProcessor: Processor = Processor.getInstance()!!
-            
 
     private var startIntermissionProcessor: Processor = Processor.getInstance()!!
-            
 
     private var realStartIntermissionProcessor: Processor = Processor.getInstance()!!
-            
 
     private var endGamePaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var endGameStatePaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     var nonBotPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var intermissionPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var startIntermissionPaintable: InitUpdatePaintable = NullInitUpdatePaintable.getInstance()!!
-            
 
     private var mainStateProcessor: Processor = Processor.getInstance()!!
-            
 
     private var processGameProcessor: Processor = Processor.getInstance()!!
-            
 
     private val highScoresFactoryInterface: HighScoresFactoryInterface
 
     private var startLevel: Int= 0
 
     private var mainMenuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
-            
 
     private var popupMenuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
-            
 
     private var menuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
-            
 
     private var menuForm: ScrollSelectionForm = ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM
 
     private var formPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var openMenuPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var menuPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var currentTouchInputFactory: BaseTouchInput = NoButtonsTouchInputFactory.getInstance()!!
-            
 
     var colorFillPaintable: ColorFillBasePaintable = ColorFillPaintableFactory.getInstance()!!.getInstance(basicColorFactory!!.BLACK, true)!!
-            
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
-            
 
     private val primaryPlayerQueue: PlayerQueue = PrimaryPlayerQueueFactory.getInstance()!!
-            
 
     private val secondaryPlayerQueue: PlayerQueue = SecondaryPlayerQueueFactory.getInstance()!!
-            
 
     val BUILD_GAME: String = "buildGame"
 
     val gameTypeFactory: GameTypeFactory = GameTypeFactory.getInstance()!!
-            
 
     val screenCapture: ScreenCapture = ScreenCaptureFactory.getInstance()!!
-            
 
     private val basicMotionGesturesHandler: BasicMotionGesturesHandler = BasicMotionGesturesHandler.getInstance()!!
-            
 
     private val gameKeyEventHandler: GameKeyEventHandler = GameKeyEventHandler.getInstance()!!
-            
 
     private val gameBehavior: DemoGameBehavior
 
     private val menuBehavior: BaseMenuBehavior
 
     private var progressPaintable: PaintableInterface = ProgressCanvasFactory.getLazyInstance()!!
-            
 public constructor        (commandListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
 
                             : super(commandListener, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
@@ -446,11 +401,9 @@ override fun setCurrentThread()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-            
 
 
     
@@ -500,7 +453,6 @@ open fun updateMenu(displayChangeEvent: DisplayChangeEvent)
                     var displayChangeEvent = displayChangeEvent
 
     var popupMenuRectangle: Rectangle = FormUtil.getInstance()!!.createPopupMenuRectangle()!!
-            
 
 
     var basicPopupMenuPaintable: BasicPopupMenuPaintable = (this.getOpenMenuPaintable() as BasicPopupMenuPaintable)
@@ -520,15 +472,12 @@ popupMenuInputProcessor!!.init(popupMenuRectangle)
                                 
 
     var formUtil: FormUtil = FormUtil.getInstance()!!
-            
 
 
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
-            
 
 
     var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
-            
 
 this.menuForm!!.init(rectangle, formType)
 
@@ -584,11 +533,9 @@ open fun initPopupMenu()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     var popupMenuRectangle: Rectangle = FormUtil.getInstance()!!.createPopupMenuRectangle()!!
-            
 
 
     
@@ -622,36 +569,28 @@ open fun initMenu2()
 {this.closeMenu()
 
     var formUtil: FormUtil = FormUtil.getInstance()!!
-            
 
 
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
-            
 
 
     var gameLimitedCommandTextItemArrayFactory: GameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory.getInstance()!!
-            
 
 
     var commandTextItemArrayFactory: CommandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory!!.getCommandTextItemArrayFactory()!!
-            
 
 
     var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
-            
 
 
     var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
-            
 
 this.setMenuForm(CommandCurrentSelectionFormFactory.getInstance(StringUtil.getInstance()!!.EMPTY_STRING, items, rectangle, formType, 25, false, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor()))
 
     var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -702,20 +641,16 @@ open fun updateMenu2()
         //nullable = true from not(false or (false and true)) = true
 {
     var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
-            
 
 scrollSelectionForm!!.deleteAll()
 
     var gameLimitedCommandTextItemArrayFactory: GameLimitedCommandTextItemArrayFactory = GameLimitedCommandTextItemArrayFactory.getInstance()!!
-            
 
 
     var commandTextItemArrayFactory: CommandTextItemArrayFactory = gameLimitedCommandTextItemArrayFactory!!.getCommandTextItemArrayFactory()!!
-            
 
 
     var items: Array<CustomItem?> = commandTextItemArrayFactory!!.getInstance(this.getCommandStack() as Vector<Any>, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())!!
-            
 
 
     var size: Int = items.size
@@ -733,15 +668,12 @@ scrollSelectionForm!!.deleteAll()
 
 
     var formUtil: FormUtil = FormUtil.getInstance()!!
-            
 
 
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
-            
 
 
     var rectangle: Rectangle = formUtil!!.createFormRectangle()!!
-            
 
 scrollSelectionForm!!.init(rectangle, formType)
 }
@@ -918,7 +850,6 @@ logUtil!!.put(BUFF_MESSAGE, this, commonStrings!!.CONSTRUCTOR)
 this.setGameInputProcessor(Processor.getInstance())
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -1000,17 +931,14 @@ open fun initConfigurable(abeClientInformation: AbeClientInformationInterface)
                     var abeClientInformation = abeClientInformation
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(50, "Setting Configurables")
 GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, gameInitializationInterfaceFactoryInterface)
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
 
     var changedGameFeatureListener: ChangedGameFeatureListener = ChangedGameFeatureListener.getInstance()!!
-            
 
 
     
@@ -1019,7 +947,6 @@ GameInitializationUtil.getInstance()!!.initGame(abeClientInformation, this, game
                                     {
                                     
     var features: Features = Features.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append("Sound Changing To: ")!!.append(features.isFeature(gameFeatureFactory!!.SOUND))!!.toString(), this, "initConfigurable")
@@ -1030,7 +957,6 @@ changedGameFeatureListener!!.remove(gameFeatureFactory!!.SOUND)
                                 
 
     var sensorFeatureFactory: SensorFeatureFactory = SensorFeatureFactory.getInstance()!!
-            
 
 
     
@@ -1045,7 +971,6 @@ changedGameFeatureListener!!.remove(sensorFeatureFactory!!.SIMULATED_ORIENTATION
                                 
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 this.loadResources(resourceLoadingLevelFactory!!.LOAD_GAME)
 }
@@ -1075,7 +1000,6 @@ open fun initTouch()
 
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 gameInitializedEvent!!.setResourceLoadingLevel(resourceLoadingLevelFactory!!.LOAD_TOUCH)
 GameInitializedEventHandler.getInstance()!!.fireEvent(gameInitializedEvent)
@@ -1120,7 +1044,6 @@ open fun updateTouch2()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -1165,15 +1088,12 @@ open fun addCommands()
         //nullable = true from not(false or (false and true)) = true
 {
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 
     var myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
-            
 
 
     var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-            
 
 
     
@@ -1189,11 +1109,9 @@ this.addCommand(myCommandsFactory!!.PAUSE_COMMAND)
 this.addCommand(gameCommandsFactory!!.QUIT_COMMAND)
 
     var isOverScan: Boolean = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -1242,7 +1160,6 @@ override fun itemStateChanged(item: Item)
         try {
             
     var itemLabel: String = item.getLabel()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(commonLabels!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
@@ -1253,7 +1170,6 @@ logUtil!!.put(StringMaker().
                                     {
                                     
     var gameFeatureUtil: GameFeatureUtil = GameFeatureUtil.getInstance()!!
-            
 
 
     
@@ -1295,7 +1211,6 @@ open fun updateScreenButtonPaintable2()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -1441,7 +1356,6 @@ open fun setGameState()
         //nullable = true from not(false or (false and true)) = true
 {
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.processAdState(this.gameState, this.gameLayerManager!!.getGameInfo()!!.getGameType())
 
@@ -1560,7 +1474,6 @@ open fun cleanupGame()
 {logUtil!!.put(commonStrings!!.START, this, this.commonStrings!!.CLEANUP)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(10, "Cleaning Up")
 primaryPlayerQueue!!.clear()
@@ -1617,11 +1530,9 @@ screenCapture!!.endRecording()
 screenCapture!!.startRecording()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 progressCanvas!!.addPortion(portion, "Generic Build")
 this.removeAllGameKeyInputListenersOnBuild()
@@ -1754,7 +1665,6 @@ open fun loadState()
 {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.LOAD)
 
     var hashtable: Hashtable<Any, Any> = getLoadStateHashtable()!!
-            
 
 
     
@@ -1768,11 +1678,9 @@ open fun loadState()
 
 
     var level: Int = Integer.valueOf(levelAsString)!!.toInt()!!
-            
 
 
     var gameInfo: GameInfo = this.gameLayerManager!!.getGameInfo()!!
-            
 
 gameInfo!!.setCurrentLevel(level)
 
@@ -1810,7 +1718,6 @@ override fun getCurrentStateHashtable()
 
 
     var level: Int = this.gameLayerManager!!.getGameInfo()!!.getCurrentLevel()!!
-            
 
 hashtable.put(GameInfo.LEVEL_NAME.toString(), level.toString())
 logUtil!!.put(StringMaker().
@@ -1901,7 +1808,6 @@ open fun paintIntermission(graphics: Graphics)
     private val rawInputProcessor: InputProcessor = FormInputProcessor(this)
 
     private var inputProcessor: InputProcessor = getRawGameInputProcessor()!!
-            
 override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -1999,11 +1905,9 @@ open fun endProgress(isProgress: Boolean)
                                     {
                                     
     var myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
-            
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.start()
 this.getCustomCommandListener()!!.commandAction(myCommandsFactory!!.SET_DISPLAYABLE, progressCanvas)
@@ -2071,10 +1975,12 @@ open fun notifyDonePainting()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(this) 
-        //mutex.withLock
-        this.threadObjectUtil!!.notifyObject(this)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
 
+        //mutex.withLock
+        {this.threadObjectUtil!!.notifyObject(this)
+}
 
 }
 
@@ -2087,7 +1993,6 @@ open fun shouldWait()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -2113,7 +2018,6 @@ open fun shouldWait()
                                     {
                                     
     var openGLImageSpecificFactory: OpenGLImageSpecificFactory = OpenGLImageSpecificFactory.getInstance()!!
-            
 
 
         while(openGLImageSpecificFactory!!.updating)
@@ -2135,7 +2039,6 @@ override fun run()
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(50, "Game Thread")
 this.setCurrentThread()
@@ -2163,7 +2066,6 @@ this.threadInit()
 this.open()
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.init()
 gameAdState!!.setGameIsReady(true)
@@ -2182,11 +2084,9 @@ open fun run2()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     var htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-            
 
 
     
@@ -2213,7 +2113,6 @@ open fun run2()
                                 
 
     var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
-            
 
 currentDisplayableFactory!!.setRunnable(gameRunnable)
 currentDisplayableFactory!!.setDisplayable(this)
@@ -2271,7 +2170,6 @@ super.setRunning(running)
         try {
             
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -2294,7 +2192,6 @@ super.setRunning(running)
                                     {
                                     
     var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
-            
 
 currentDisplayableFactory!!.clearRunnable()
 
@@ -2337,7 +2234,6 @@ open fun endGameThread()
 GameLevelDisplayChangeEventListenersFactory.getInstance()!!.clear()
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.notPlayingAdState()
 }
@@ -2350,7 +2246,6 @@ open fun createHighScore(score: Long)
                     var score = score
 
     var gameInfo: GameInfo = this.gameLayerManager!!.getGameInfo()!!
-            
 
 
 
@@ -2404,7 +2299,6 @@ open fun setHighScore2(abeClientInformation: AbeClientInformationInterface, name
                     var isLast = isLast
 
     var highScore: HighScore = this.createHighScore(score)!!
-            
 
 
     var textBox: HighScoreTextBox = HighScoreTextBox(this.highScoresFactoryInterface, highScoresHelper, abeClientInformation, this.gameLayerManager!!.getGameInfo(), this.getCustomCommandListener(), name, highScore, this.gameLayerManager!!.getBackgroundBasicColor(), this.gameLayerManager!!.getForegroundBasicColor())
@@ -2436,7 +2330,6 @@ open class SaveHighScoreRunnable
             }            
         
     private val progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -3028,11 +2921,9 @@ open fun isRunningInAnotherThread()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     

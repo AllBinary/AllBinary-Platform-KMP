@@ -45,7 +45,6 @@ open public class CategoryLoader : CategoryModifierTree
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
 
                             : super(categoryFactoryInterface){
@@ -116,14 +115,12 @@ this.save(categoryInterface)
                                 
 
     var fileAbPath: AbPath = categoryInterface!!.getFilePath()!!
-            
 
 
     var cryptFileReader: CryptFileReader = CryptFileReader(CategoryData.getInstance()!!.UNCRYPTED_EXTENSION, CategoryData.getInstance()!!.ENCRYPTED_EXTENSION)
 
 
     var document: Document = DomDocumentHelper.create(cryptFileReader!!.get(fileAbPath))!!
-            
 
 
 
@@ -177,11 +174,9 @@ open fun get(categoryInterface: CategoryInterface)
         try {
             
     var document: Document = this.getDoc(categoryInterface)!!
-            
 
 
     var categoryNode: Node = DomSearchHelper.getNode(CategoryData.getInstance()!!.NAME, document.getChildNodes())!!
-            
 
 
 
@@ -217,11 +212,9 @@ open fun get(document: Document)
         try {
             
     var categoryNode: Node = DomSearchHelper.getNode(CategoryData.getInstance()!!.NAME, document.getChildNodes())!!
-            
 
 
     var loadedCategoryInterface: CategoryInterface = this.categoryFactoryInterface!!.getRootInstanceFromNode(categoryNode)!!
-            
 
 
 
@@ -257,7 +250,6 @@ open fun getAll(categoryInterface: CategoryInterface)
         try {
             
     var document: Document = this.getDoc(categoryInterface)!!
-            
 
 
 
@@ -293,11 +285,9 @@ open fun getAll(document: Document)
         try {
             
     var categoryNode: Node = DomSearchHelper.getNode(CategoryData.getInstance()!!.NAME, document.getChildNodes())!!
-            
 
 
     var loadedCategoryInterface: CategoryInterface = this.categoryFactoryInterface!!.getRootInstanceFromNode(categoryNode)!!
-            
 
 
 
@@ -350,7 +340,6 @@ open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: No
 
         {
     var categoryNode: Node = categoryNodeList!!.item(index)!!
-            
 
 
     
@@ -422,7 +411,6 @@ open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeL
 
         {
     var categoryNode: Node = categoryNodeList!!.item(index)!!
-            
 
 
     

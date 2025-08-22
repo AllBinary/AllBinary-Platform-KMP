@@ -37,7 +37,6 @@ open public class TransformStoreDocument : TransformHttpRequestDocument {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (pageContext: PageContext, weblisketSession: WeblisketSession)                        
 
                             : super(pageContext, weblisketSession){
@@ -54,7 +53,6 @@ public constructor        (pageContext: PageContext, weblisketSession: Weblisket
         try {
             
     var storeName: String = weblisketSession!!.getStoreName()!!
-            
 
 
     

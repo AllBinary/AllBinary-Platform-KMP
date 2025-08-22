@@ -51,7 +51,6 @@ open fun getInstance()
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val LOAD_SHADER: String = "loadShader"
 

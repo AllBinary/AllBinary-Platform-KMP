@@ -49,7 +49,6 @@ open public class UniqueIdGenerator
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var newFile: AbFile
 
@@ -69,7 +68,6 @@ open fun initialize(value: Int)
             newFile!!.createNewFile()
 
     var idData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
-            
 
 idData!!.writeLong(value)
 } catch(e: Exception)
@@ -80,7 +78,6 @@ idData!!.writeLong(value)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 
@@ -147,7 +144,6 @@ idOutData!!.writeLong(id +1)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getNext", e)
 

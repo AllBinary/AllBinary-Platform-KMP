@@ -48,13 +48,10 @@ open public class DbInitInfo : DbConnectionInfo {
         
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val directory: Directory = Directory.getInstance()!!
-            
 
     private val httpData: HttpData = HttpData.getInstance()!!
-            
 
     private val GET_URL: String = "getUrl"
 
@@ -97,7 +94,6 @@ open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var url: String = super.getUrl()!!
-            
 
 
     
@@ -135,44 +131,36 @@ this.directory.create(PATH)
 newFile!!.createNewFile()
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
-            
 
 
         try {
             
     var cryptedJdbcDriver: ByteArray = WeakCrypt(1).
                             encrypt(this.getJdbcDriver())!!.encodeToByteArray()!!
-            
 
 
     var cryptedName: ByteArray = WeakCrypt(2).
                             encrypt(this.getName())!!.encodeToByteArray()!!
-            
 
 
     var cryptedUserName: ByteArray = WeakCrypt(3).
                             encrypt(this.getUserName())!!.encodeToByteArray()!!
-            
 
 
     var cryptedPassword: ByteArray = WeakCrypt(4).
                             encrypt(this.getPassword())!!.encodeToByteArray()!!
-            
 
 
     var cryptedSchema: ByteArray = WeakCrypt(5).
                             encrypt(this.getSchema())!!.encodeToByteArray()!!
-            
 
 
     var cryptedServer: ByteArray = WeakCrypt(6).
                             encrypt(this.getServer())!!.encodeToByteArray()!!
-            
 
 
     var cryptedPort: ByteArray = WeakCrypt(7).
                             encrypt(this.getPort())!!.encodeToByteArray()!!
-            
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedJdbcDriver))
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(cryptedName))
@@ -265,7 +253,6 @@ this.setPort(WeakCrypt(7).
                             decrypt(decryptedPort))
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
          finally {

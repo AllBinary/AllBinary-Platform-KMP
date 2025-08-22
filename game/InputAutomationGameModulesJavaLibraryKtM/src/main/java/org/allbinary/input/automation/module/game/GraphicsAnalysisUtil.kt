@@ -67,18 +67,15 @@ open fun getNominator(bufferedImage: BufferedImage, min_x: Integer, max_x: Integ
 
         {
     var colorInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(index, y.toInt())))!!
-            
 
 
     var automaticCacheInterface: AutomaticCacheInterface = ColorCacheFactory.getInstance()!!
-            
 
 
     var colorCacheable: ColorCacheable = automaticCacheInterface!!.get(colorInteger) as ColorCacheable
 
 
     var color: Color = colorCacheable!!.getColor()!!
-            
 
 
     

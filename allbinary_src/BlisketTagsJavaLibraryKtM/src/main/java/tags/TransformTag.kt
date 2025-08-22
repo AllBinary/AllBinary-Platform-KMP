@@ -38,7 +38,6 @@ open public class TransformTag : TransformInfoTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(ViewHelperFactory()){

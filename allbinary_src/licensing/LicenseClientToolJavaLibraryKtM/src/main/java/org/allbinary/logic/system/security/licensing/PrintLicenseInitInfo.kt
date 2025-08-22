@@ -72,7 +72,6 @@ open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
-            
 
 
     
@@ -106,12 +105,10 @@ open fun printInitInfo()
         try {
             
     var licenseInitInfo: LicenseInitInfo = this.getLicenseInitInfo()!!
-            
 
 System.out.println("License ID: " +licenseInitInfo!!.getLicenseId())
 
     var list: BasicArrayList = licenseInitInfo!!.getServerList()!!
-            
 
 
 

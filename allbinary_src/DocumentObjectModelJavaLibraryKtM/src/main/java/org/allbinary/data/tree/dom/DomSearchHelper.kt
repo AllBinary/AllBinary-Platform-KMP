@@ -46,7 +46,6 @@ open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
                     var nodeList = nodeList
 
     var numberOfNodes: Int = nodeList!!.getLength()!!
-            
 
 
 
@@ -57,7 +56,6 @@ open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -94,7 +92,6 @@ open fun getNode(nodeName: String, nodeList: NodeList)
                     var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNodeNoThrow(nodeName, nodeList)!!
-            
 
 
     
@@ -134,7 +131,6 @@ open fun getChildNodeList(nodeName: String, nodeList: NodeList)
                     var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNode(nodeName, nodeList)!!
-            
 
 
 
@@ -156,7 +152,6 @@ open fun getAllNodes(nodeName: String, nodeList: NodeList)
                     var nodeList = nodeList
 
     var vector: Vector = DomSearchHelper.getAllNodesNoThrow(nodeName, nodeList)!!
-            
 
 
     
@@ -197,7 +192,6 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
 
 
     var numberOfNodes: Int = nodeList!!.getLength()!!
-            
 
 
 
@@ -208,7 +202,6 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     

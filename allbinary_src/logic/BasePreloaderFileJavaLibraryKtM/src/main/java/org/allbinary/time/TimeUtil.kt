@@ -49,7 +49,6 @@ open fun getInstance()
 
 
     private val calendar: Calendar = Calendar.getInstance()!!
-            
 
         }
             
@@ -78,22 +77,18 @@ open fun setCalendar(calendar: Calendar, yearString: String, monthString: String
 
     var year: Int = Integer(yearString).
                             toInt()!!
-            
 
 
     var month: Int = Integer(monthString).
                             toInt()!!
-            
 
 
     var day: Int = Integer(dayString).
                             toInt()!!
-            
 
 
     var hour: Int = Integer(hourString).
                             toInt()!!
-            
 
 calendar.set(year, month, day, hour, 0)
 }
@@ -125,32 +120,26 @@ open fun setCalendar(calendar: Calendar, yearString: String, monthString: String
 
     var year: Int = Integer(yearString).
                             toInt()!!
-            
 
 
     var month: Int = Integer(monthString).
                             toInt()!!
-            
 
 
     var day: Int = Integer(dayString).
                             toInt()!!
-            
 
 
     var hour: Int = Integer(hourString).
                             toInt()!!
-            
 
 
     var minute: Int = Integer(minuteString).
                             toInt()!!
-            
 
 
     var second: Int = Integer(secondString).
                             toInt()!!
-            
 
 calendar.set(year, month, day, hour, minute, second)
 }
@@ -229,12 +218,10 @@ open fun getTotalTime(yearString: String, monthString: String, dayString: String
                     var secondString = secondString
 
     var time: Long = calendar.getTimeInMillis()!!
-            
 
 this.setExpirationCalendar(calendar, yearString, monthString, dayString, hourString, minuteString, secondString)
 
     var timeDelta: Long = calendar.getTimeInMillis()!!
-            
 
 
 

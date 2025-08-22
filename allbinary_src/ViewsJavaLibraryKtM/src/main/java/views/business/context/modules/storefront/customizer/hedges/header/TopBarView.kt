@@ -38,7 +38,6 @@ open public class TopBarView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var heading: HeadingValidation
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

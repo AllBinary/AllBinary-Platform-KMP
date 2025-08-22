@@ -60,7 +60,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var notificationManager: NotificationManager = ResourceUtil.getInstance()!!.getContext()!!.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -69,7 +68,6 @@ private constructor        ()
             : super()
         {
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
-            
 
 
     
@@ -101,22 +99,18 @@ open fun notify(command: Command, resource: String, message: String)
                     var message = message
 
     var context: Context = ResourceUtil.getInstance()!!.getContext()!!
-            
 
 
     var intent: Intent = CommandUriAction.getInstance()!!.getIntent(command)!!
-            
 
 
     var integer: Integer = ResourceUtil.getInstance()!!.getResourceId(resource)!!
-            
 
 
     var FLAG_IMMUTABLE: Int = 1 shl 26
 
 
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
-            
 
 
     var pendingIntent: PendingIntent = PendingIntent.getActivity(context, 0, intent, if(SDK_VERSION > 22) {
@@ -127,7 +121,6 @@ open fun notify(command: Command, resource: String, message: String)
                             0
                             }
     )!!
-            
 
 
     
@@ -138,7 +131,6 @@ open fun notify(command: Command, resource: String, message: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.NOT_IMPLEMENTED)
 

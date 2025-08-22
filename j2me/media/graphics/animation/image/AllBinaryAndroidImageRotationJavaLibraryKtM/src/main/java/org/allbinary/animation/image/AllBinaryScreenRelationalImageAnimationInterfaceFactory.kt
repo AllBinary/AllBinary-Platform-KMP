@@ -72,7 +72,6 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
                                 
 
     var scale: Float = ScreenRelationalUtil.getInstance()!!.getScale(image)!!
-            
 
 lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), this.getImage(), scale, scale, false)
 }

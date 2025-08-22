@@ -35,7 +35,6 @@ open public class TransformInfoRequestHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 

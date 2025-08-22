@@ -37,7 +37,6 @@ open public class CategoryPropertiesFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var categoryPropertiesInterface: CategoryPropertiesInterface
 public constructor        (name: String)
@@ -77,7 +76,6 @@ open fun getInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

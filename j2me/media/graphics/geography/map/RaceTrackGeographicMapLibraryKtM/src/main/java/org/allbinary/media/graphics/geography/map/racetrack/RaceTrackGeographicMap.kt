@@ -37,7 +37,6 @@ open public class RaceTrackGeographicMap : BaseRaceTrackGeographicMap {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val customMapGenerator: CustomMapGeneratorBase
 public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayerFactoryInterface: AllBinaryTiledLayerFactoryInterface, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory, customMapGeneratorBaseFactory: CustomMapGeneratorBaseFactory)                        

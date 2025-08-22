@@ -101,7 +101,6 @@ open fun scale(image: Image, width: Int, height: Int)
                     var height = height
 
     var scaledImage: Image = ImageCopyUtil.getInstance()!!.createImage(image, width, height)!!
-            
 
 
 

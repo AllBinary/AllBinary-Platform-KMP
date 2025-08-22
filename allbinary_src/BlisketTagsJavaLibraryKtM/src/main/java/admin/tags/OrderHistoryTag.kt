@@ -39,7 +39,6 @@ open public class OrderHistoryTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var status: String
 public constructor        (){this.setTagHelperFactory(OrderHistoryHelperFactory())
@@ -68,7 +67,6 @@ open fun setOrderStatus()
 
     var anyType: Any = OrderHistoryRequestHelperFactory().
                             getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     
@@ -79,12 +77,10 @@ open fun setOrderStatus()
                                     {
                                     
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("setOrderStatus", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -101,14 +97,12 @@ open fun setOrderStatus()
                         else {
                             
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var methodParams: Array<KClass<*>?> = arrayOf(this.status.::class)
 
 
     var method: Method = helperClass!!.getMethod("setOrderStatus", methodParams)!!
-            
 
 
     var methodArgs: Array<Any?> = arrayOf(this.status)

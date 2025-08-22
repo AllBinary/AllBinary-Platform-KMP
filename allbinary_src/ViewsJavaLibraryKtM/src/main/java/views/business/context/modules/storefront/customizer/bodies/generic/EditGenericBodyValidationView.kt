@@ -39,7 +39,6 @@ open public class EditGenericBodyValidationView : GenericBodyCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -58,12 +57,10 @@ open fun isValid()
         try {
             
     var document: Document = CustomizerUtil.getInstance()!!.getViewDataForComponentsInObjectConfig(this.getTransformInfoInterface())!!
-            
 
 this.body= GenericBodyValidation(document)
 
     var isValid: Boolean = this.body.isValid()!!
-            
 
 
 

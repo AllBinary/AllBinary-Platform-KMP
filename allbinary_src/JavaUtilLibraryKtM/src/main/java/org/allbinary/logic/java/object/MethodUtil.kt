@@ -48,7 +48,6 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
 
 
     var method: Array<Method?> = myClass!!.getMethods()!!
-            
 
 stringBuffer!!.append("Methods: ")
 stringBuffer!!.append(lineBreak)

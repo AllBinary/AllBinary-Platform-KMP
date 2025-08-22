@@ -69,10 +69,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val PAYMENTGATEWAYFILEPATHSTRING: String
 
@@ -126,7 +124,6 @@ open fun get(paymentTypeString: String)
                     var paymentTypeString = paymentTypeString
 
     var size: Int = this.paymentTypeVector!!.size!!
-            
 
 
 
@@ -195,15 +192,12 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
 
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(abPath)!!
-            
 
 
     var document: Document = DomDocumentHelper.create(data)!!
-            
 
 
     var nodeList: NodeList = document.getElementsByTagName(PaymentGatewaysData.NAME)!!
-            
 
 
 
@@ -214,15 +208,12 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     var defaultPaymentGatewayNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.DEFAULT, node.getChildNodes())!!
-            
 
 
     var defaultPaymentGatewayNodeValue: String = DomNodeHelper.getTextNodeValue(defaultPaymentGatewayNode)!!
-            
 
 
     
@@ -310,7 +301,6 @@ open fun difference(a_PaymentTypeVector: Vector)
 
 
     var size: Int = this.paymentTypeVector!!.size!!
-            
 
 
 

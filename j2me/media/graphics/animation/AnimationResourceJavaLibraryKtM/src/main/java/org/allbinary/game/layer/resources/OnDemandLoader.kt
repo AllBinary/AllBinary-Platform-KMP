@@ -78,7 +78,6 @@ open fun init(imageCache: ImageCache, level: Int, loadingString: String)
                     var loadingString = loadingString
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     
@@ -109,7 +108,6 @@ this.initAll(imageCache, loadingString)
                                     {
                                     
     var layerPlacementInterfaceBasicArrayListFactoryInterface: LayerPlacementInterfaceBasicArrayListFactoryInterface = this.gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory!!.getInstance(level)!!
-            
 
 this.initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache, level, loadingString)
 
@@ -179,7 +177,6 @@ open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerP
                     var loadingString = loadingString
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var portion: Int = 120
@@ -189,7 +186,6 @@ open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerP
 
 
     var onDemandArray: IntArray = layerPlacementInterfaceBasicArrayListFactoryInterface!!.getOnDemandResources()!!
-            
 
 PreLogUtil.put(StringMaker().
                             append(commonStrings!!.START)!!.append(onDemandArray!!.size)!!.toString(), this, "initLevel")

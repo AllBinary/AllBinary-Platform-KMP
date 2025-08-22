@@ -50,7 +50,6 @@ open fun getInstance()
         }
             
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
                             : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size)){

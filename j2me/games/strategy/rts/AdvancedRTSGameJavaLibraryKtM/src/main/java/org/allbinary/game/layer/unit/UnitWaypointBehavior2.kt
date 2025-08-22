@@ -94,16 +94,12 @@ open public class UnitWaypointBehavior2 : UnitWaypointBehavior {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
-            
 
     private val pathFindingThreadPool: ThreadPool = PathFindingThreadPool.getInstance()!!
-            
 
     private var sensorRange: Int = 0
 
@@ -140,11 +136,9 @@ this.progressTimeDelayHelper= TimeDelayHelper(5000)
 this.wanderPathsList= BasicArrayList()
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-            
 
 this.waypointPathRunnable= if(isHTML) {
                             
@@ -334,7 +328,6 @@ open fun onEnemyMovement(layerInterface: AdvancedRTSGameLayer)
                     var layerInterface = layerInterface
 
     var anotherTargetDistance: Int = layerDistanceUtil!!.getDistance(this.associatedAdvancedRTSGameLayer, layerInterface)!!
-            
 
 
     
@@ -457,17 +450,14 @@ this.targetList!!.clear()
                                     {
                                     
     var geographicMapCellPosition: GeographicMapCellPosition = associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
-            
 
 
     var waypoint: WaypointBase = currentTargetLayerInterface = this.currentTargetLayerInterfacecurrentTargetLayerInterface as PathFindingLayerInterface
 currentTargetLayerInterface.
                     getWaypointBehavior()!!.getWaypoint()!!
-            
 
 
     var list: BasicArrayList = waypoint.getPathsListFromCacheOnly(geographicMapCellPosition)!!
-            
 
 this.setWaypointPathsList(list)
 
@@ -562,7 +552,6 @@ open fun processWaypoint()
         //nullable = true from not(false or (false and true)) = true
 {
     var size: Int = this.targetList!!.size()!!
-            
 
 
     
@@ -586,7 +575,6 @@ this.removeWaypoint(targetLayer, WAYPOINT_DESTROYED)
                         else {
                             
     var geographicMapCellPosition: GeographicMapCellPosition = associatedAdvancedRTSGameLayer!!.getCurrentGeographicMapCellPosition()!!
-            
 
 
     
@@ -631,7 +619,6 @@ this.removeWaypoint(this.currentTargetLayerInterface as AdvancedRTSGameLayer, AL
                                     {
                                     
     var list: BasicArrayList = targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsListFromCacheOnly(geographicMapCellPosition)!!
-            
 
 this.setWaypointPathsList(list)
 
@@ -705,11 +692,9 @@ open fun visitIfAtMidPoint(geographicMapCellPosition: GeographicMapCellPosition)
                                     {
                                     
     var point: GPoint = geographicMapCellPosition!!.getMidPoint()!!
-            
 
 
     var afterNextPoint: GPoint = this.afterNextUnvisitedPathGeographicMapCellPosition!!.getMidPoint()!!
-            
 
 
     var beyondMidPoint: Boolean = true
@@ -905,7 +890,6 @@ this.clearTarget()
                                     this.updateCurrentPathGeographicMapCellPosition()
 
     var point: GPoint = this.nextUnvisitedPathGeographicMapCellPosition!!.getMidPoint()!!
-            
 
 dx= associatedAdvancedRTSGameLayer!!.getXP() +associatedAdvancedRTSGameLayer!!.getHalfWidth() -point.getX()
 dy= associatedAdvancedRTSGameLayer!!.getYP() +associatedAdvancedRTSGameLayer!!.getHalfHeight() -point.getY()
@@ -1241,7 +1225,6 @@ open fun visit(anyType: Any)
 
 
     var clear: Boolean = this@UnitWaypointBehavior2.buildingChase(allbinaryLayer, cellPosition)!!
-            
 
 
     
@@ -1274,7 +1257,6 @@ this.positionList!!.clear()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "visit", e)
 

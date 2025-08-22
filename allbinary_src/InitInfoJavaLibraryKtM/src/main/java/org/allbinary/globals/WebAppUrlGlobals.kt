@@ -86,7 +86,6 @@ open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var mainPath: String = InitInfo.getInstance()!!.getMainPath()!!
-            
 
 
     

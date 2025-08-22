@@ -100,7 +100,6 @@ override fun run()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN)
 }

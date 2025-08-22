@@ -37,7 +37,6 @@ open public class ValidationViewHelper : ViewHelper
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var viewInterface: ValidationComponentInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        

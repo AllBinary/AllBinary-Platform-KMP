@@ -50,7 +50,6 @@ open public class PaymentGatewayEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "paymentgateways"
 public constructor        ()                        
@@ -97,7 +96,6 @@ vector.addAll(PaymentGatewayEncryptedMapping(paymentGatewayInterface).
                             toVector())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -140,7 +138,6 @@ open fun update(paymentGatewayInterface: PaymentGatewayInterface)
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -170,7 +167,6 @@ whereKeyValuePairs!!.put(PaymentGatewayData.NAME.toString(), paymentGatewayInter
 
     var updateHashMap: HashMap<Any, Any> = PaymentGatewayEncryptedMapping(paymentGatewayInterface).
                             toHashMap()!!
-            
 
 super.updateWhere(whereKeyValuePairs, updateHashMap)
 
@@ -273,7 +269,6 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
 
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
                             getInstance(paymentGatewayHashMap)!!
-            
 
 
     
@@ -345,7 +340,6 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
 
 
     var size: Int = paymentGatewayNameVector!!.size!!
-            
 
 
 
@@ -359,7 +353,6 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
 
 
     var paymentType: BasicPaymentType = BasicPaymentTypeUtil.getInstance()!!.get(paymentTypeString)!!
-            
 
 paymentGatewayVector!!.add(paymentType)
 }

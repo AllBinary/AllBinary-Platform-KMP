@@ -57,7 +57,6 @@ open fun getHashtable()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -68,7 +67,6 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap)
                     var geographicMapInterface = geographicMapInterface
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = hashtable.get(allBinaryTiledLayer!!.getDataId()) as BasicGeographicMapCellPositionFactory
@@ -82,7 +80,6 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append("Reusing GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId())!!.toString(), this, commonStrings!!.GET_INSTANCE)
@@ -97,7 +94,6 @@ logUtil!!.put(StringMaker().
                         else {
                             
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append("Creating GeographicMapCellPositionFactory for TileLayer: ")!!.append(allBinaryTiledLayer!!.getDataId())!!.toString(), this, commonStrings!!.GET_INSTANCE)

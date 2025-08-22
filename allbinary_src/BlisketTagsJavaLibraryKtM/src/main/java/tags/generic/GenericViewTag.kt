@@ -33,7 +33,6 @@ open public class GenericViewTag : TransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var output: String
 

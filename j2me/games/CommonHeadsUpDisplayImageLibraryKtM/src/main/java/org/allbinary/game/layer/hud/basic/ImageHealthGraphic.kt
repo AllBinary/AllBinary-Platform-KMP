@@ -57,7 +57,6 @@ public constructor        (animationInterface: AnimationInterface, healthInterfa
 image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
     var imageCacheFactory: ImageCacheFactory = ImageCacheFactory.getInstance()!!
-            
 
 
 

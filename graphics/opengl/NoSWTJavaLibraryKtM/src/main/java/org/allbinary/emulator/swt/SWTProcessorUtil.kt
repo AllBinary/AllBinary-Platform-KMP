@@ -53,7 +53,6 @@ open fun getInstance()
             }            
         
     var swtProcessor: SWTProcessor = SWTProcessor.getInstance()!!
-            
 
 }
                 

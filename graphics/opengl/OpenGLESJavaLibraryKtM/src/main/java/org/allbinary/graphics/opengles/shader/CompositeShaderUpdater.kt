@@ -50,10 +50,8 @@ open fun getInstance()
         }
             
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     val shaderStrings: ShaderStrings = ShaderStrings.getInstance()!!
-            
 
     val uniformBlockHandleArray: IntArray
 

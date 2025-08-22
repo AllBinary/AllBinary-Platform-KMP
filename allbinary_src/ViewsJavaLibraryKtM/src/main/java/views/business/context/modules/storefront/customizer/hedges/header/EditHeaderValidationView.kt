@@ -39,7 +39,6 @@ open public class EditHeaderValidationView : TopBarView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -59,7 +58,6 @@ open fun isValid()
             this.heading= HeadingValidation(CustomizerUtil.getInstance()!!.getViewDataForComponentsInObjectConfig(this.getTransformInfoInterface()))
 
     var isValid: Boolean = this.heading.isValid()!!
-            
 
 
 

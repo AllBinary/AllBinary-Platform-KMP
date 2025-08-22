@@ -67,7 +67,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel: Int, lastLevel: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -82,7 +81,6 @@ open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel
                     var lastLevel = lastLevel
 
     var reloadTime: Long = weaponProperties!!.getReloadTime()!!
-            
 
 
     

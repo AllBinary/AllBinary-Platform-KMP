@@ -56,7 +56,6 @@ open public class ColorAtActionScriptCondition : BasicProfileActionScriptConditi
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var colorAtActionScriptConditionJPanel: ColorAtActionScriptConditionJPanel
 
@@ -75,7 +74,6 @@ public constructor        (node: Node)
 this.point= Point(0, 0)
 
     var actionNode: Node = DomSearchHelper.getNode(ColorAtActionScriptConditionData.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -86,7 +84,6 @@ this.point= Point(0, 0)
                                     {
                                     
     var nodeList: NodeList = actionNode!!.getChildNodes()!!
-            
 
 
 
@@ -97,7 +94,6 @@ this.point= Point(0, 0)
 
         {
     var childNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -106,7 +102,6 @@ this.point= Point(0, 0)
                                     {
                                     
     var locationX: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.point.x= Integer(Integer.valueOf(locationX))
 
@@ -119,7 +114,6 @@ this.point.x= Integer(Integer.valueOf(locationX))
                                     {
                                     
     var locationY: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.point.y= Integer(Integer.valueOf(locationY))
 
@@ -132,7 +126,6 @@ this.point.y= Integer(Integer.valueOf(locationY))
                                     {
                                     
     var string: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getColorRangeInterface()!!.setMinRed(string.valueOf())
 
@@ -145,7 +138,6 @@ this.getColorRangeInterface()!!.setMinRed(string.valueOf())
                                     {
                                     
     var string: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getColorRangeInterface()!!.setMaxRed(string.valueOf())
 
@@ -158,7 +150,6 @@ this.getColorRangeInterface()!!.setMaxRed(string.valueOf())
                                     {
                                     
     var string: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getColorRangeInterface()!!.setMinGreen(string.valueOf())
 
@@ -171,7 +162,6 @@ this.getColorRangeInterface()!!.setMinGreen(string.valueOf())
                                     {
                                     
     var string: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getColorRangeInterface()!!.setMaxGreen(string.valueOf())
 
@@ -184,7 +174,6 @@ this.getColorRangeInterface()!!.setMaxGreen(string.valueOf())
                                     {
                                     
     var string: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getColorRangeInterface()!!.setMinBlue(string.valueOf())
 
@@ -197,7 +186,6 @@ this.getColorRangeInterface()!!.setMinBlue(string.valueOf())
                                     {
                                     
     var string: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getColorRangeInterface()!!.setMaxBlue(string.valueOf())
 
@@ -292,7 +280,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionScriptConditionData.NAME, this.toHashMap()))
 
@@ -318,22 +305,18 @@ open fun shouldProcess(frame: Long)
 
 
     var bufferedImage: BufferedImage = capturedBufferedImageCacheable!!.getBufferedImage()!!
-            
 
 
     var automaticCacheInterface: AutomaticCacheInterface = ColorCacheFactory.getInstance()!!
-            
 
 
     var colorInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(this.getPoint()!!.x, this.getPoint()!!.y)))!!
-            
 
 
     var colorCacheable: ColorCacheable = automaticCacheInterface!!.get(colorInteger) as ColorCacheable
 
 
     var color: Color = colorCacheable!!.getColor()!!
-            
 
 
     

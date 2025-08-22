@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -85,11 +84,9 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
                                 
 
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
-            
 
 
     var result: String = this.generateComponentsFromObjectConfig(abeClientInformation, transformInfoObjectConfigInterface, transformInfoInterface, group)!!
-            
 
 
     
@@ -135,7 +132,6 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
                                 
 
     var transformInfoObjectConfigComponentVector: Vector = transformInfoObjectConfigInterface!!.getTransformsGroup(group)!!
-            
 
 
     
@@ -167,7 +163,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generateComponentsFromObjectConf
                                 
 
     var size: Int = transformInfoObjectConfigComponentVector!!.size!!
-            
 
 
 

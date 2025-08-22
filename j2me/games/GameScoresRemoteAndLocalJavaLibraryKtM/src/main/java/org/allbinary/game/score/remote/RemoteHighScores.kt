@@ -97,7 +97,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwa
                     var preload = preload
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -124,7 +123,6 @@ hashTable!!.put(gameInfo, highScores)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.getInstance(), commonStrings!!.GET_INSTANCE, e)
 
@@ -140,7 +138,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.g
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface
 
@@ -234,7 +231,6 @@ this.getList()!!.clear()
 
 
     var longScore: Long = Long.parseLong(score)!!
-            
 
 
     var highScore: HighScore = HighScore( -1, displayName, 
@@ -249,11 +245,9 @@ this.getList()!!.add(highScore)
                         else {
                             
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var enumeration: Enumeration<Any?> = hashtable.elements()!!
-            
 
 
     var nextElement: Any

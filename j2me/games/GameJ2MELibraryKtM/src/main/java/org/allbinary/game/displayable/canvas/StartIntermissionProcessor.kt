@@ -33,10 +33,8 @@ open public class StartIntermissionProcessor : Processor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var gameCanvas: AllBinaryGameCanvas
 

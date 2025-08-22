@@ -39,7 +39,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var inputAutomationGenericModuleServiceFactory: InputAutomationGenericModuleServiceFactory = InputAutomationGenericModuleServiceFactory.getInstance()!!
-            
 
 this.setInputAutomationModuleInterface(inputAutomationGenericModuleServiceFactory!!.getInputAutomationModuleInterfaceArray())
 this.setServiceFactory(inputAutomationGenericModuleServiceFactory)

@@ -38,7 +38,6 @@ open public class AbeClientInformation : ClientInformation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val NONE: String = "No License Id"
 public constructor        (name: String, version: String, specialName: String, shortName: String)                        
@@ -68,13 +67,11 @@ override fun init()
             this.setOperatingSystemInterface(OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance())
 
     var licenseInitInfo: LicenseInitInfo = LicenseInitInfoUtil.getInstance()!!.read()!!
-            
 
 this.setLicenseId(licenseInitInfo!!.getLicenseId())
 this.setLicenseServers(licenseInitInfo!!.getServerList())
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -87,14 +84,12 @@ this.setLicenseServers(licenseInitInfo!!.getServerList())
                                 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(StringMaker().
                             append("Special Name: ")!!.append(this.getSpecialName())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }

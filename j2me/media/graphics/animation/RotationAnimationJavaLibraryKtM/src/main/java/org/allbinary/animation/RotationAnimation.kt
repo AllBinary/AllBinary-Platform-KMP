@@ -39,10 +39,8 @@ open public class RotationAnimation : IndexedAnimation
         
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-            
 
     val directionUtil: DirectionUtil = DirectionUtil.getInstance()!!
-            
 
     val angleInfo: AngleInfo
 
@@ -123,7 +121,6 @@ override fun setFrame(index: Int)
 this.circularIndexUtil!!.setIndex(index)
 
     var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 this.angleInfo!!.adjustAngle(newFrame)
 }
@@ -135,7 +132,6 @@ override fun setFrame(direction: Direction)
                     var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
-            
 
 this.adjustFrame(angle)
 }

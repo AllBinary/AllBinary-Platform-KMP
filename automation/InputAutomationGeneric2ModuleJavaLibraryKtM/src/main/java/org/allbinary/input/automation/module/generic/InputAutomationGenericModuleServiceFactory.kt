@@ -49,7 +49,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){
         try {
             

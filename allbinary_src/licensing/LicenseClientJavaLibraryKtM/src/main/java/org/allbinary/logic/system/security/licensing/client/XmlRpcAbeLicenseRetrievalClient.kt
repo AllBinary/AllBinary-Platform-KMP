@@ -44,7 +44,6 @@ open public class XmlRpcAbeLicenseRetrievalClient : XmlRpcAbeClient {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
                             : super(clientInfo, "LicServ.getLicense"){
@@ -71,7 +70,6 @@ open fun get(anyType: Any, cryptInterface: CryptInterface)
         try {
             
     var server: String = getClientInfo()!!.getLicenseServer(this.getServer())!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -93,13 +91,11 @@ xmlRpcClient!!.setBasicAuthentication(
                             null)
 
     var hashtable: Hashtable<Any, Any> = this.getClientInfo()!!.toHashtable()!!
-            
 
 logUtil!!.put(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
 param.add(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
-            
 
 logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
 

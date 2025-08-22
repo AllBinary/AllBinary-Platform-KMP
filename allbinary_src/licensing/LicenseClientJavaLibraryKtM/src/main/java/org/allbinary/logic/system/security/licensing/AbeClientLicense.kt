@@ -47,7 +47,6 @@ open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
                     var resultHashtable = resultHashtable
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
-            
 
 
     
@@ -93,11 +92,9 @@ public constructor        (hashtable: Hashtable<Any, Any>)
 this.hashtable= Hashtable<Any, Any>()
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
-            
 
 
     var keyValue: Any = hashtable.get(abeClientInformationData!!.KEY)!!
-            
 
 
     
@@ -125,7 +122,6 @@ this.id= hashtable.get(abeClientInformationData!!.LICENSEID) as String
 this.servers= BasicArrayList()
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -139,12 +135,10 @@ this.servers= BasicArrayList()
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.setSpecial(stringUtil!!.getInstance(hashtable.get(abeClientInformationData!!.SPECIAL) as String))
 
     var licenseTypeString: String = stringUtil!!.getInstance(hashtable.get(abeClientInformationData!!.LICENSE_TYPE) as String)!!
-            
 
 this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeString)
 }
@@ -197,7 +191,6 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -238,11 +231,9 @@ stringBuffer!!.append(this.hashtable.toString())
 stringBuffer!!.append(BREAK)
 
     var serverVector: BasicArrayList = this.getServers()!!
-            
 
 
     var size: Int = serverVector!!.size()!!
-            
 
 
 

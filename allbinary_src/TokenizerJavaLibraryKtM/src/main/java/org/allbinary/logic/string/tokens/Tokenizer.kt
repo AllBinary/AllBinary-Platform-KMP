@@ -91,7 +91,6 @@ open fun getInsideSep(string: String)
 
 
     var size: Int = string.length!!
-            
 
 
         while(index < size)
@@ -103,7 +102,6 @@ open fun getInsideSep(string: String)
                                     {
                                     
     var end: Int = string.indexOf(endSep, index +sep.length)!!
-            
 
 
     
@@ -200,7 +198,6 @@ open fun getTokens(stringVector: BasicArrayList)
 
 
     var size: Int = stringVector!!.size()!!
-            
 
 
 

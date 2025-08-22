@@ -79,7 +79,6 @@ override fun toString()
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
 stringBuffer!!.append(positionStrings!!.X_LABEL)
 stringBuffer!!.append(x.toString())

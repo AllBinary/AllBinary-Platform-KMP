@@ -39,10 +39,8 @@ open public class SaveCapturedImageWorker : BasicEventHandler
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var running: Boolean= false
 
@@ -103,7 +101,6 @@ timeHelper!!.setStartTime()
 
 
     var screenBufferedImage: BufferedImage = capturedImageWorkerResultsEvent!!.getBufferedImage()!!
-            
 
 CapturedImageInputOutput().
                             save(screenBufferedImage, capturedImageWorkerResultsEvent!!.getFrame())

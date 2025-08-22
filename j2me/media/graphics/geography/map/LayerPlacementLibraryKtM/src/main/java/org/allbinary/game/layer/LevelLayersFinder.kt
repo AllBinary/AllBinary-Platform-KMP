@@ -66,14 +66,12 @@ open fun get(hashtable: Hashtable<Any, Any>)
                     var hashtable = hashtable
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var list: BasicArrayList = BasicArrayList()
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
-            
 
 
         while(enumeration.hasMoreElements())
@@ -85,7 +83,6 @@ open fun get(hashtable: Hashtable<Any, Any>)
 
 
     var cachedInteger: Integer = smallIntegerSingletonFactory!!.getInstance(integer.toInt())!!
-            
 
 
     

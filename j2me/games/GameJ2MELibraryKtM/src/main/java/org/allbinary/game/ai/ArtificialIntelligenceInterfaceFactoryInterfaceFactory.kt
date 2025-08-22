@@ -58,7 +58,6 @@ open fun getInstance()
             }            
         
     private var list: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
@@ -76,7 +75,6 @@ open fun getInstance(hashtable: Hashtable<Any, Any>)
 
 
     var type: Int = typeInteger!!.toInt()!!
-            
 
 
     var artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface = list.objectArray[type -1]!! as ArtificialIntelligenceInterfaceFactoryInterface

@@ -45,7 +45,6 @@ open public class OrderHistoryView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -87,18 +86,15 @@ open fun toXmlNode(document: Document)
         try {
             
     var node: Node = document.createElement(OrderData.ORDERS)!!
-            
 
 
     var orderHistoryEntity: OrderHistoryEntity = OrderHistoryEntity()
 
 
     var orderReviewVector: Vector = orderHistoryEntity!!.getOrders(this.getWeblisketSession()!!.getUserName())!!
-            
 
 
     var size: Int = orderReviewVector!!.size!!
-            
 
 
 
@@ -112,11 +108,9 @@ open fun toXmlNode(document: Document)
 
 
     var orderHistoryNode: Node = orderHistory!!.toXmlNode(document)!!
-            
 
 
     var orderNode: Node = document.createElement(orderHistory!!.getPaymentMethod())!!
-            
 
 node.appendChild(orderHistory!!.toXmlNode(document))
 }

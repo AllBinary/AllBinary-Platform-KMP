@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     private val imageJ2SERotationUtil: ImageJ2SERotationUtil = ImageJ2SERotationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -130,7 +129,6 @@ open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
                     var rotationInDegrees = rotationInDegrees
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-            
 
 
     
@@ -170,7 +168,6 @@ originalAwtImage= originalJ2SEImage!!.getImage() as java.awt.Image
 
 
     var bufferedImage: BufferedImage = ImageJ2SERotationUtil.getInstance()!!.getRotatedImage(originalAwtImage, newBufferedImage, rotationInDegrees)!!
-            
 
 
 

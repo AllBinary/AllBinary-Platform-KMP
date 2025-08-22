@@ -60,10 +60,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -129,7 +127,6 @@ open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
         try {
             
     var iter: Iterator = ImageIO.getImageWritersByFormatName("jpeg")!!
-            
 
 
     
@@ -150,7 +147,6 @@ ios= ImageIO.createImageOutputStream(file)
 writer.setOutput(ios)
 
     var iwp: ImageWriteParam = writer.getDefaultWriteParam()!!
-            
 
 iwp.setCompressionMode(ImageWriteParam.MODE_EXPLICIT)
 iwp.setCompressionQuality(0.95f)

@@ -52,13 +52,10 @@ open public class TrueTypeFontUtilBase
                                                     
 
     val size: Int = pattern.length!!
-            
 
     val lastCapIndex: Int = pattern.indexOf('Z')!!
-            
 
     var currentFont: Font = Font.getDefaultFont()!!
-            
 
     val scale: Int
 

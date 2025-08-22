@@ -40,10 +40,8 @@ open public class InputAutomationRobotOSGIServiceVisitor
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -75,7 +73,6 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
 
 
     var inputRobotInterfaceArray: Array<InputRobotInterface?> = inputAutomationRobotServiceInterface!!.getInputRobotInterfaceArray()!!
-            
 
 
 

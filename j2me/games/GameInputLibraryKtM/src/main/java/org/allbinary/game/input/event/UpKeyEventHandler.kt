@@ -50,7 +50,6 @@ open fun getInstance()
         }
             
     private val playerInputIdFactory: LocalPlayerInputIdFactory = LocalPlayerInputIdFactory.getInstance()!!
-            
 
 open fun getInstance(deviceId: Int)
         //nullable =  from not(true or (false and false)) = 
@@ -59,7 +58,6 @@ open fun getInstance(deviceId: Int)
                     var deviceId = deviceId
 
     var playerInputId: Int = playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
-            
 
 
 

@@ -42,10 +42,8 @@ open public class AllBinaryHTMLImageRotationAnimation : ImageBaseRotationAnimati
         
 
     private val imageRotationUtil: ImageRotationUtil = ImageRotationUtil.getInstance()!!
-            
 
     private val imageModifierUtil: ImageModifierUtil = ImageModifierUtil.getInstanceOrCreate()!!
-            
 
     private val originalImage: Image
 
@@ -58,7 +56,6 @@ open public class AllBinaryHTMLImageRotationAnimation : ImageBaseRotationAnimati
     private var bufferedImageIndex: Int= 0
 
     private var alphaProcessor: AlphaBaseProcessor = AlphaBaseProcessor.getInstance()!!
-            
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
                             : super(image, angleInfo, totalAngle, animationBehavior){
@@ -102,7 +99,6 @@ open fun getCanvasSurface(image: Image)
 
 
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
-            
 
 canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeight() /2)
 

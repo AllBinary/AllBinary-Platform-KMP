@@ -56,11 +56,9 @@ open fun toXmlNode(document: Document)
 
     var node: Node = StoreThemeCategoryView(categoryInterface).
                             toXmlNode(document)!!
-            
 
 
     var childArray: Array<Any?> = this.categoryInterface!!.getChildNodes()!!.toArray()!!
-            
 
 
     var size: Int = childArray!!.size
@@ -79,7 +77,6 @@ open fun toXmlNode(document: Document)
 
     var childCategoryNode: Node = StoreThemeCategoriesView(childCategoryInterface as StoreThemeCategoryInterface).
                             toXmlNode(document)!!
-            
 
 node.appendChild(childCategoryNode)
 }

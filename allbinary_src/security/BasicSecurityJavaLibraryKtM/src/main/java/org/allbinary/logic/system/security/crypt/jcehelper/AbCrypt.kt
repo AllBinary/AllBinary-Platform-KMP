@@ -62,7 +62,6 @@ open fun init(keyAsString: String)
                     var keyAsString = keyAsString
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
@@ -75,23 +74,18 @@ open fun init(keyAsString: String)
 
 
     var key: ByteArray = keyAsString!!.encodeToByteArray()!!
-            
 
 
     var keySpec: KeySpec = KeySpecFactory.getInstance()!!.getInstance(this.algorithm, key)!!
-            
 
 
     var keyFactory: SecretKeyFactory = SecretKeyFactory.getInstance(algorithm)!!
-            
 
 
     var secretKey: SecretKey = keyFactory!!.generateSecret(keySpec)!!
-            
 
 
     var cipher: Cipher = Cipher.getInstance(algorithm)!!
-            
 
 this.secretComposite= SecretComposite(secretKey, cipher, key)
 } catch(e: Exception)

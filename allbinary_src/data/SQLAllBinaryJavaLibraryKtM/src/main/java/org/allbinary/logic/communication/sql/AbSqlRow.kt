@@ -41,7 +41,6 @@ open public class AbSqlRow : AbSqlColumn {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val EQUAL_QUOTE: String = "=\""
 
@@ -133,7 +132,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
         try {
             
     var keyArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -148,7 +146,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
         {
     var columnName: String = keyArray[i]!!.toString()!!
-            
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(columnName)
@@ -193,7 +190,6 @@ stringBuffer!!.append(this.getValue(value))
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -240,7 +236,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
         try {
             
     var keyArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -255,7 +250,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
         {
     var columnName: String = keyArray[i]!!.toString()!!
-            
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(columnName)
@@ -305,11 +299,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 stringBuffer!!.append(sqlStrings!!.WHERE)
 
     var set: Set = whereKeyValuePairs!!.keySet()!!
-            
 
 
     var keyArray2: Array<Any?> = set.toArray()!!
-            
 
 
     var size2: Int = keyArray2!!.size
@@ -351,7 +343,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -405,7 +396,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
         try {
             
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -448,11 +438,9 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
         try {
             
     var set: Set = keysAndValues!!.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -488,7 +476,6 @@ stringBuffer!!.append(this.sqlStrings!!.CLOSE_QUOTE)
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -537,7 +524,6 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
         {
     var value: String = this.getValue(values.get(i) as String)!!
-            
 
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
                             all(value)
@@ -547,7 +533,6 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 
 
     var value: String = this.getValue(values.lastElement() as String)!!
-            
 
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
                             all(value)
@@ -555,7 +540,6 @@ stringBuffer!!.append(value)
 stringBuffer!!.append(INSERT_END)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -602,11 +586,9 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
     var set: Set = keysAndValues!!.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -642,7 +624,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -655,18 +636,15 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                                 
 
     var rset: ResultSet = this.executeSQLStatement(sqlStatement)!!
-            
 
 
     var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
         while(rset.next())
         {result= HashMap<Any, Any>()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
-            
 
 
 
@@ -677,11 +655,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
-            
 
 
     var field: String = rset.getString(columnName)!!
-            
 
 result.put(columnName, field)
 }
@@ -770,11 +746,9 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
     var set: Set = keysAndValues!!.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -820,15 +794,12 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 stringBuffer!!.append(more)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     var rset: ResultSet = this.executeSQLStatement(sqlStatement)!!
-            
 
 
     var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
         while(rset.next())
@@ -837,7 +808,6 @@ stringBuffer!!.append(more)
 
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
-            
 
 
 
@@ -848,18 +818,15 @@ stringBuffer!!.append(more)
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
-            
 
 
     var field: String = rset.getString(columnName)!!
-            
 
 result.put(columnName, field)
 }
 
 
     var resultAsString: String = result.toString()!!
-            
 
 
     
@@ -921,15 +888,12 @@ stringBuffer!!.append(this.getTableName())
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     var rset: ResultSet = this.executeSQLStatement(sqlStatement)!!
-            
 
 
     var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
         while(rset.next())
@@ -938,7 +902,6 @@ stringBuffer!!.append(this.getTableName())
 
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
-            
 
 
 
@@ -949,11 +912,9 @@ stringBuffer!!.append(this.getTableName())
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
-            
 
 
     var field: String = rset.getString(columnName)!!
-            
 
 result.put(columnName, field)
 }
@@ -1022,7 +983,6 @@ stringBuffer!!.append(this.getTableName())
 stringBuffer!!.append(sqlStrings!!.WHERE)
 
     var set: Set = whereKeyValuePairs!!.keySet()!!
-            
 
 
     var key: String
@@ -1032,7 +992,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
     var keyArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -1065,7 +1024,6 @@ stringBuffer!!.append(largest)
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -1078,11 +1036,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                                 
 
     var rset: ResultSet = this.executeSQLStatement(sqlStatement)!!
-            
 
 
     var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
     var result: HashMap<Any, Any>
@@ -1186,7 +1142,6 @@ stringBuffer!!.append(largest)
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -1199,11 +1154,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                                 
 
     var rset: ResultSet = this.executeSQLStatement(sqlStatement)!!
-            
 
 
     var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
     var columnName: String

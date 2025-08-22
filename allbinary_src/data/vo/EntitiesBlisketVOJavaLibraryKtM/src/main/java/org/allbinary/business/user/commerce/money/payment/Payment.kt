@@ -151,7 +151,6 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var aFalse: Boolean = Boolean.FALSE
@@ -600,11 +599,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, PaymentData.PAYMENT, hashMap)!!
-            
 
 
 

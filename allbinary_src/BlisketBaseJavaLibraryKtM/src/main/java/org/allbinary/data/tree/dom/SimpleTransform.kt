@@ -63,11 +63,9 @@ open fun transform()
 
 
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(AbFile(dataFilePath)))!!
-            
 
 
     var result: String = XslHelper.getInstance()!!.translate(StreamSource(inputStream), StreamSource(StringBufferInputStream(DomDocumentHelper.toString(document))))!!
-            
 
 
 

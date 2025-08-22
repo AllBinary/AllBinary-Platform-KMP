@@ -94,7 +94,6 @@ open fun isMotionGestureArrayEquals(aList: BasicArrayList)
                     var aList = aList
 
     var size: Int = aList!!.size()!!
-            
 
 
     

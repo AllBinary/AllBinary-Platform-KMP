@@ -34,7 +34,6 @@ open public class EmailInfo
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var basicEmailInfo: BasicEmailInfo
 
@@ -53,7 +52,6 @@ public constructor        (basicEmailInfo: BasicEmailInfo)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
@@ -82,7 +80,6 @@ public constructor        (basicEmailInfo: BasicEmailInfo, htmlAttachment: Strin
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 

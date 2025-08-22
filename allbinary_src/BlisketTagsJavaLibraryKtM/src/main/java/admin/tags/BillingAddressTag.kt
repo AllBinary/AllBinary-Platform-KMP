@@ -37,7 +37,6 @@ open public class BillingAddressTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var value: String
 public constructor        (){this.setTagHelperFactory(BillingAddressHelperFactory())
@@ -63,16 +62,13 @@ open fun set()
             
     var anyType: Any = BillingAddressHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("set", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -121,16 +117,13 @@ open fun setToShippingAddress()
             
     var anyType: Any = BillingAddressHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("setToShippingAddress", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 

@@ -66,11 +66,9 @@ override fun repaint(canvas: Canvas)
                     var canvas = canvas
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     
@@ -94,7 +92,6 @@ DisplayInfoSingleton.getInstance()!!.process()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

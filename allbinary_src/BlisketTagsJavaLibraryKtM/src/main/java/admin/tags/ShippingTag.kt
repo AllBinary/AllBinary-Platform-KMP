@@ -39,7 +39,6 @@ open public class ShippingTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 
@@ -76,16 +75,13 @@ open fun setShippingType()
             
     var anyType: Any = ShippingHelperFactory().
                             getInstance(propertiesHashMap, this.pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("setShippingType", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 

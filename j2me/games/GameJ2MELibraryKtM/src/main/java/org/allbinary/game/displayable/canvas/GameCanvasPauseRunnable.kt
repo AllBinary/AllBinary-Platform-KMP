@@ -32,7 +32,6 @@ open public class GameCanvasPauseRunnable : GameRunnable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
 public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
@@ -55,7 +54,6 @@ override fun run()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

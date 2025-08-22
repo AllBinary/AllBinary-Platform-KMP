@@ -56,11 +56,9 @@ private constructor        ()
             : super()
         {
     var features: Features = Features.getInstance()!!
-            
 
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
 
     

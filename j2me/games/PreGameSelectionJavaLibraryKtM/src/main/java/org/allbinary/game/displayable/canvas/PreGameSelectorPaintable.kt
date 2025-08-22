@@ -48,7 +48,6 @@ public constructor        (title: String, preGameScrollSelectionForm: PreGameScr
 this.title= title
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 this.canvasDrawLineString= CanvasDrawLineString(displayInfo!!.getLastHalfWidth(), 0)
 this.preGameScrollSelectionForm= preGameScrollSelectionForm
@@ -59,7 +58,6 @@ open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 this.canvasDrawLineString= CanvasDrawLineString(displayInfo!!.getLastHalfWidth(), 0)
 }

@@ -39,10 +39,8 @@ open public class TransformDocument
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var baseNode: Node
 
@@ -54,7 +52,6 @@ public constructor        ()
             this.document= DomDocumentHelper.create()
 
     var allbinaryNode: Node = document.createElement("allbinary")!!
-            
 
 this.baseNode= allbinaryNode
 document.appendChild(this.baseNode)

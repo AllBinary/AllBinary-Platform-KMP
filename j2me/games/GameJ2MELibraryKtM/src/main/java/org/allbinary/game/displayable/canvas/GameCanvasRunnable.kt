@@ -34,7 +34,6 @@ open public class GameCanvasRunnable : GameRunnable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
 public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
@@ -45,7 +44,6 @@ this.allBinaryGameCanvas= allBinaryGameCanvas
 
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 override fun run()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -55,7 +53,6 @@ allBinaryGameCanvas!!.processGame()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

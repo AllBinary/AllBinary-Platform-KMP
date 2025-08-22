@@ -50,7 +50,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -67,11 +66,9 @@ open fun getOperatingSystemInstance()
 
 
     var systemProperties: SystemProperties = SystemProperties.getInstance()!!
-            
 
 
     var osName: String = systemProperties!!.getName()!!
-            
 
 
     
@@ -111,7 +108,6 @@ open fun getOperatingSystemInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Failed to get OperatingSystem returning NoOperatingSystem", this, commonStrings!!.GET_INSTANCE, e)
 

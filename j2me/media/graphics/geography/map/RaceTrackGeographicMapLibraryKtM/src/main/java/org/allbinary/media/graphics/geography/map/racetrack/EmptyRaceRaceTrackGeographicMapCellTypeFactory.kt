@@ -48,7 +48,6 @@ open fun getInstance()
         }
             private constructor        (){
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 this.EMPTY_CELL_TYPE= RaceTrackGeographicMapCellType(commonStrings!!.EMPTY, 0, PathFindingNodeCostInfoData.getInstance()!!.MAX_NODE_COST)
 this.EASY_CELL_TYPE= RaceTrackGeographicMapCellType("Easy", 19, 1)

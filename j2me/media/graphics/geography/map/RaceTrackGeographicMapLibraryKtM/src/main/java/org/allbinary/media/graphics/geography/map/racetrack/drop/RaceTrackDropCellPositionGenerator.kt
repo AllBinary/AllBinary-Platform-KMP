@@ -109,11 +109,9 @@ this.raceTrackGeographicMap= geographicMapInterface as BaseRaceTrackGeographicMa
 this.raceTrackGeographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
 
     var roadGeographicMapCellHistory: GeographicMapCellHistory = RaceTrackRoadsGeographicMapCellHistoryFactory.getInstance()!!
-            
 
 
     var trackedList: BasicArrayList = roadGeographicMapCellHistory!!.getTracked()!!
-            
 
 
     var geographicMapCellPosition: GeographicMapCellPosition
@@ -170,7 +168,6 @@ ahead++
 
 
     var size: Int = this.list.size()!!
-            
 
 
 
@@ -186,7 +183,6 @@ ahead++
 
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -202,7 +198,6 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
                                     {
                                     
     var index: Int = basicArrayListUtil!!.getRandomIndex(this.list)!!
-            
 
 this.drop(allBinaryLayerManager, index)
 

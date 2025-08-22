@@ -60,7 +60,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -87,18 +86,15 @@ open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: 
                                 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var viewName: String = transformInfoInterface!!.getName()!!
-            
 
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = customizerTransformInfoInterface as TransformInfoHttpInterface
 
 
     var customizedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewName, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-            
 
 
 
@@ -129,18 +125,15 @@ open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransfo
                                 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var viewName: String = transformInfoInterface!!.getName()!!
-            
 
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = customizerTransformInfoInterface as TransformInfoHttpInterface
 
 
     var customizedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewName, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-            
 
 
 
@@ -168,7 +161,6 @@ open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Obje
                                 
 
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
-            
 
 
 
@@ -196,7 +188,6 @@ open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface:
                                 
 
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
-            
 
 
 
@@ -227,20 +218,16 @@ open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface
                                 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var allViewsToBeModified: Vector = this.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
-            
 
 
     var document: Document = DomDocumentHelper.create()!!
-            
 
 document.appendChild(domNodeInterface!!.toXmlNode(document))
 
     var documentString: String = DomDocumentHelper.toString(document)!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -261,7 +248,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 transformInfoInterface!!.setData(documentString)
 
     var size: Int = allViewsToBeModified!!.size!!
-            
 
 
 
@@ -275,7 +261,6 @@ transformInfoInterface!!.setData(documentString)
 
 
     var viewNameOfViewToBeModified: String = transformInfo!!.getName()!!
-            
 
 
     
@@ -295,7 +280,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "insert()")
 
 
     var specifiedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewNameOfViewToBeModified, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-            
 
 
     
@@ -376,7 +360,6 @@ open fun write(specifiedTransformInfoInterface: TransformInfoInterface, document
                                 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 specifiedTransformInfoInterface!!.setData(documentString)
 transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMap())
@@ -401,19 +384,15 @@ open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
                                 
 
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = transformInfoInterface!!.getObjectConfigInterface()!!
-            
 
 
     var allViewsToBeModified: Vector = transformInfoObjectConfigInterface!!.getGroupTransforms()!!
-            
 
 
     var transformInfoEntityInterface: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var size: Int = allViewsToBeModified!!.size!!
-            
 
 
 
@@ -427,14 +406,12 @@ open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
 
 
     var viewNameOfViewToBeModified: String = nextTransformInfoInterface!!.getName()!!
-            
 
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = transformInfoInterface as TransformInfoHttpInterface
 
 
     var specifiedTransformInfoInterface: TransformInfoInterface = transformInfoEntityInterface!!.get(viewNameOfViewToBeModified, httpTransformInfoInterface!!.getPropertiesHashMap(), httpTransformInfoInterface!!.getPageContext())!!
-            
 
 
 

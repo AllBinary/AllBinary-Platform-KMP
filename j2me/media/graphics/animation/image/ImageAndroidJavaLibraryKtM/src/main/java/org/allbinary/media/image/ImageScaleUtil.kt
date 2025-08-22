@@ -58,14 +58,12 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var anchor: Int = Anchor.TOP_LEFT
 
@@ -173,7 +171,6 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float
                     var cached = cached
 
     var originalBitmap: Bitmap = originalImage!!.getBitmap()!!
-            
 
 
     var width: Int = (originalBitmap!!.getWidth() *scaleX).toInt()
@@ -183,7 +180,6 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float
 
 
     var index: Int = imageBasicArrayList!!.indexOf(originalImage)!!
-            
 
 
     var alreadyAvailable: Boolean = false
@@ -198,14 +194,12 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float
 
 
     var scaleX2: Float = scaleX2Float!!.toFloat()!!
-            
 
 
     var scaleY2Float: Float = this.scaleYBasicArrayList!!.get(index) as Float
 
 
     var scaleY2: Float = scaleY2Float!!.toFloat()!!
-            
 
 
     
@@ -235,7 +229,6 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleX: Float
                         else {
                             
     var scaledImage: Image = this.getScaledImage(imageCache, originalImage, scaleX, scaleY, width, height, cached)!!
-            
 
 imageBasicArrayList!!.add(originalImage)
 scaledImageBasicArrayList!!.add(scaledImage)
@@ -340,7 +333,6 @@ open fun scale(image: Image, matrix: Matrix, scaleX: Float, scaleY: Float)
 matrix.setScale(scaleX, scaleY)
 
     var canvas: Canvas = image.getCanvas()!!
-            
 
 canvas.concat(matrix)
 }

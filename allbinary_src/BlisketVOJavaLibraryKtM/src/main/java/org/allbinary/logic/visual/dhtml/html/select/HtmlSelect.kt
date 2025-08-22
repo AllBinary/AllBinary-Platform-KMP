@@ -107,7 +107,6 @@ open fun addOptions(fileName: String)
         while(lineReader!!.hasNext())
         {
     var option: String = lineReader!!.next()!!
-            
 
 this.addOption(option)
 }
@@ -151,14 +150,12 @@ open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var result: String = stringUtil!!.EMPTY_STRING
 
 
     var optionsArray: Array<Any?> = options.toArray()!!
-            
 
 
     var optionsSize: Int = optionsArray!!.size
@@ -201,14 +198,12 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var result: String = stringUtil!!.EMPTY_STRING
 
 
     var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toArray()!!
-            
 
 
     var attributeSize: Int = attributeKeys!!.size

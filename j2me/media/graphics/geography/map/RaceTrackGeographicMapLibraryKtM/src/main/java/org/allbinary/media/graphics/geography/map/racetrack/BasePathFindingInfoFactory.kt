@@ -47,7 +47,6 @@ open public class BasePathFindingInfoFactory
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -76,7 +75,6 @@ public constructor        ()
             : super()
         {
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
-            
 
 this.startLineId= raceTrackGeographicMapCellTypeFactory!!.getStartType()
 this.finishLineId= raceTrackGeographicMapCellTypeFactory!!.getEndType()
@@ -95,11 +93,9 @@ open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellP
                     var cellPosition = cellPosition
 
     var row: Int = cellPosition!!.getRow()!!
-            
 
 
     var column: Int = cellPosition!!.getColumn()!!
-            
 
 
         try {
@@ -108,7 +104,6 @@ open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellP
 
 
     var geographicCellType: Int = geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId)!!
-            
 
 
     
@@ -143,11 +138,9 @@ open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellP
                                 
 
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = geographicMapInterface!!.getGeographicMapCellTypeFactory()!!
-            
 
 
     var geographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
-            
 
 
     

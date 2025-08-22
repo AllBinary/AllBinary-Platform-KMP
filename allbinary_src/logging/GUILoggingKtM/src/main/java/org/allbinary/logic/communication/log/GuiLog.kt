@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -146,7 +145,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
         try {
             
     var data: String = LogFormatUtil.getInstance()!!.get(specialMessage, anyType!!::class.qualifiedName!!, functionName, exception)!!
-            
 
 this.showDialog(data)
 System.out.println(data)
@@ -205,7 +203,6 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
         try {
             
     var data: String = LogFormatUtil.getInstance()!!.get(specialMessage, className, functionName, exception)!!
-            
 
 this.showDialog(data)
 System.out.println(data)

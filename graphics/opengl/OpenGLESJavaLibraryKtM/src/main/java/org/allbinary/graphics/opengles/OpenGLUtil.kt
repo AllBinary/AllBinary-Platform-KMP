@@ -60,22 +60,16 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val renderStrings: RendererStrings = RendererStrings.getInstance()!!
-            
 
     val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
     val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private val preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
     private val lockObject: SynchObject = SynchObject()
 
@@ -155,7 +149,6 @@ surfaceCreatedAndInitialized= true
 graphics.update()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.update(graphics)
 getInstance = OpenGLImageCacheFactory.getInstance()getInstance as OpenGLImageCache
@@ -173,7 +166,6 @@ open fun add(image: Image)
                     var image = image
 
     var encapsulateImage: Image = preResourceImageUtil!!.encapsulate(image)!!
-            
 
 
     
@@ -182,10 +174,12 @@ open fun add(image: Image)
                                     {
                                     
         
-        //synchronized(anyType) 
-        //mutex.withLock
-        list.add(encapsulateImage)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(anyType) 
 
+        //mutex.withLock
+        {list.add(encapsulateImage)
+}
 
 
 
@@ -207,10 +201,12 @@ open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(anyType) 
-        //mutex.withLock
-        list.clear()
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(anyType) 
 
+        //mutex.withLock
+        {list.clear()
+}
 
 }
 
@@ -222,9 +218,11 @@ open fun add(runnable: Runnable)
                     var runnable = runnable
 
         
-        //synchronized(lockObject) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lockObject) 
+
         //mutex.withLock
-        
+        {
     
                         if(!this.runnableList!!.contains(runnable))
                         
@@ -234,7 +232,7 @@ displayInfoSingleton!!.add(this.canvasStrings!!.SCALED_IMAGES)
 
                                     }
                                 
-
+}
 
 }
 
@@ -243,14 +241,15 @@ open fun processRunnables()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(lockObject) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lockObject) 
+
         //mutex.withLock
-        
+        {
     var runnable: Runnable
 
 
     var size: Int = this.runnableList!!.size()!!
-            
 
 
 
@@ -264,7 +263,7 @@ runnable.run()
 }
 
 this.runnableList!!.clear()
-
+}
 
 }
 
@@ -278,7 +277,6 @@ open fun set(gl: GL10)
                     var gl = gl
 
     var size: Int = this.list.size()!!
-            
 
 
     var image: Any

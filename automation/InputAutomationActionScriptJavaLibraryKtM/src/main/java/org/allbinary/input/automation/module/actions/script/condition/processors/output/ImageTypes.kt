@@ -58,7 +58,6 @@ open fun valueOf(anyType: Array<Any?>)
 
         {
     var imageType: InputImageType = InputImageType.getInstance(anyType[index]!! as String)!!
-            
 
 imageTypes!!.getVector()!!.add(imageType)
 }
@@ -85,7 +84,6 @@ public constructor        (node: Node)
                     var node = node
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
 
@@ -96,7 +94,6 @@ public constructor        (node: Node)
 
         {
     var childNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -105,7 +102,6 @@ public constructor        (node: Node)
                                     {
                                     
     var nextImageTypeString: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.getVector()!!.add(InputImageType.getInstance(nextImageTypeString))
 
@@ -143,11 +139,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var newNode: Node = document.createElement(ImageActionScriptOutputData.TYPES)!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -177,7 +171,6 @@ override fun toString()
 stringBuffer!!.append("ImageTypes: ")
 
     var size: Int = vector.size!!
-            
 
 
 

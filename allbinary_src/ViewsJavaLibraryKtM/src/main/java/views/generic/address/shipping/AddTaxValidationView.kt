@@ -45,7 +45,6 @@ open public class AddTaxValidationView : ShippingAddressView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -67,11 +66,9 @@ open fun isValid()
             this.streetAddress= StreetAddress(this.getRequest())
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName())!!
-            
 
 
     var taxInterface: TaxModuleInterface = TaxFactory.getInstance()!!.getInstance(this.abeClientInformation, storeFrontInterface)!!
-            
 
 
     
@@ -106,7 +103,6 @@ open fun isValid()
 
 
     var streetAddressList: Vector = billingAddressesEntity!!.get()!!
-            
 
 
     
@@ -125,7 +121,6 @@ open fun isValid()
                                 
 
     var size: Int = streetAddressList!!.size!!
-            
 
 
 
@@ -188,11 +183,9 @@ open fun validationInfo()
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName())!!
-            
 
 
     var taxInterface: TaxModuleInterface = TaxFactory.getInstance()!!.getInstance(this.abeClientInformation, storeFrontInterface)!!
-            
 
 
     
@@ -223,11 +216,9 @@ open fun validationInfo()
 
 
     var streetAddressList: Vector = billingAddressesEntity!!.get()!!
-            
 
 
     var size: Int = streetAddressList!!.size!!
-            
 
 
 

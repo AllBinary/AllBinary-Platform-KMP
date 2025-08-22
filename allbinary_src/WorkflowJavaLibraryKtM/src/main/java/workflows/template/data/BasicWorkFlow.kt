@@ -46,13 +46,10 @@ open public class BasicWorkFlow
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var validationDomNodeInterface: ValidationComponentInterface
 

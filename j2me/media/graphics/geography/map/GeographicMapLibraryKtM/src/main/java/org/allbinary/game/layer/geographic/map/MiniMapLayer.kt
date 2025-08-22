@@ -114,7 +114,6 @@ open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: 
 
 
     var index: Int = this.list.indexOf(colorCompositeInterface)!!
-            
 
 
     
@@ -145,7 +144,6 @@ open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: Geogra
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -173,11 +171,9 @@ break;
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(geographicMapCellPositionEvent!!.getGeographicMapCellPosition())!!
-            
 
 
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 
     
@@ -187,7 +183,6 @@ break;
                                     this.list.add(colorCompositeInterface)
 
     var basicColor: BasicColor = colorCompositeInterface!!.getBasicColorP()!!
-            
 
 this.basicColorList!!.add(basicColor)
 this.positionList!!.add(point)
@@ -216,7 +211,6 @@ open fun paintDots(graphics: Graphics)
 
 
     var length: Int = localPositionList!!.size()!!
-            
 
 
     var point: GPoint

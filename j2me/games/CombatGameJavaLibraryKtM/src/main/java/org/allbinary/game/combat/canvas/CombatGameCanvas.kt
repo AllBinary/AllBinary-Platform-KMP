@@ -100,11 +100,9 @@ DestroyedLayerProcessor.init()
 ProgressCanvasFactory.getInstance()!!.addPortion(portion, "Basic Processors")
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
 
     

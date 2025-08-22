@@ -91,7 +91,6 @@ paint2(graphics)
                                 {
                                 
     private val pathFindingThreadPool: ThreadPool = PathFindingThreadPool.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -104,7 +103,6 @@ open override fun process()
                             
 
     var inGameProcessor: Processor = Processor.getInstance()!!
-            
  constructor        (){this.paintable= NullPaintable.getInstance()
 this.backgroundBasicColor= BasicColorFactory.getInstance()!!.WHITE
 this.gauge= CustomGaugeItem.NULL_GAUGE_ITEM
@@ -186,7 +184,6 @@ open fun startBackground(background: Boolean)
 logUtil!!.put(commonStrings!!.START, this, START_BACKGROUND)
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 this.setBackground(background)
 this.gauge.setHeight(myFont!!.DEFAULT_CHAR_HEIGHT +2)
@@ -319,7 +316,6 @@ open fun paint2(graphics: Graphics)
                     var graphics = graphics
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 graphics.setColor(backgroundBasicColor!!.toInt())
 graphics.fillRect(0, 0, displayInfoSingleton!!.getLastWidth(), displayInfoSingleton!!.getLastHeight())

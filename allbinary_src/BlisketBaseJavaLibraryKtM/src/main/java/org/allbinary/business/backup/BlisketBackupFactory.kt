@@ -68,13 +68,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val directory: Directory = Directory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -109,14 +106,12 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
     var backupPath: String = stringBuffer!!.toString()!!
-            
 
 
     var path: AbPath = AbPath(backupPath)
 
 
     var fileBasicArrayList: BasicArrayList = this.getFileBasicArrayList(backupPath)!!
-            
 
 this.backup(fileBasicArrayList, path.toFileSystemString() +"backup.zip")
 } catch(e: Exception)
@@ -138,7 +133,6 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
     var backupPath: String = stringBuffer!!.toString()!!
-            
 
 
     var path: AbPath = AbPath(backupPath)
@@ -148,15 +142,12 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
-            
 
 
     var storeFrontNamesBasicArrayList: Vector = storeFrontsEntity!!.getStoreFrontNames()!!
-            
 
 
     var size: Int = storeFrontNamesBasicArrayList!!.size!!
-            
 
 
 
@@ -174,7 +165,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.VIEWS_PATH)
 stringBuffer!!.append(nextStore)
 
     var viewsPath: String = stringBuffer!!.toString()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Backup Store Views: ")
@@ -205,7 +195,6 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
     var backupPath: String = stringBuffer!!.toString()!!
-            
 
 
     var path: AbPath = AbPath(backupPath)
@@ -215,15 +204,12 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
-            
 
 
     var storeFrontNamesBasicArrayList: Vector = storeFrontsEntity!!.getStoreFrontNames()!!
-            
 
 
     var size: Int = storeFrontNamesBasicArrayList!!.size!!
-            
 
 
 
@@ -237,7 +223,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 
     var storeFrontInterface: StoreFrontInterface = storeFrontsEntity!!.getStoreFrontInterface(nextStore)!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
@@ -245,7 +230,6 @@ stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
 stringBuffer!!.append(storeFrontInterface!!.getCategoryPath())
 
     var resourcesPath: String = stringBuffer!!.toString()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append("Backup Store Resrouces: ")
@@ -276,7 +260,6 @@ stringBuffer!!.append(URLGLOBALS.getWebappPath())
 stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
     var backupPath: String = stringBuffer!!.toString()!!
-            
 
 
     var path: AbPath = AbPath(backupPath)
@@ -286,15 +269,12 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 
     var storeFrontsEntity: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
-            
 
 
     var storeFrontNamesBasicArrayList: Vector = storeFrontsEntity!!.getStoreFrontNames()!!
-            
 
 
     var size: Int = storeFrontNamesBasicArrayList!!.size!!
-            
 
 
 

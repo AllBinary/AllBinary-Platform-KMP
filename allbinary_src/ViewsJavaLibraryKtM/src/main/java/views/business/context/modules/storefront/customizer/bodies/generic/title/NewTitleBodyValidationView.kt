@@ -40,7 +40,6 @@ open public class NewTitleBodyValidationView : TitleBodyCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

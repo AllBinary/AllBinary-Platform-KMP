@@ -49,7 +49,6 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
 
 
     var constructor: Array<Constructor?> = myClass!!.getConstructors()!!
-            
 
 stringBuffer!!.append("Constructors: ")
 stringBuffer!!.append(lineBreak)
@@ -88,7 +87,6 @@ open fun view(constructor: Constructor, lineBreak: String)
                                     {
                                     
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -96,7 +94,6 @@ open fun view(constructor: Constructor, lineBreak: String)
 stringBuffer!!.append(constructor.getName())
 
     var classes: Array<KClass<*>?> = constructor.getParameterTypes()!!
-            
 
 
 

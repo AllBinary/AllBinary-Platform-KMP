@@ -35,7 +35,6 @@ open public class BasicStoreFrontsEntity : InitSql {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "storefronts"
 public constructor        ()                        
@@ -61,7 +60,6 @@ open fun getStoreFrontInterface(name: String)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 
     var storeHashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
     

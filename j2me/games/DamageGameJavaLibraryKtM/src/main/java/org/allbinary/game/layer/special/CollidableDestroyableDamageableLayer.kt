@@ -80,7 +80,6 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
     private var initZ: Int= 0
 
     var partInterfaceArrayP: Array<PartInterface?> = PartInterfaceUtil.getZeroArray()!!
-            
 
     private var pickupBehavior: PickupBehavior = PickupBehavior.NULL_PICKUP_BEHAVIOR
 
@@ -558,17 +557,14 @@ override fun toString(stringBuffer: StringMaker)
                     var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
 super.toString(stringBuffer)
 stringBuffer!!.append(commonSeps!!.NEW_LINE)
 
     var groupInterfaceArray: Array<Group?> = this.getGroupInterface()!!
-            
 
 
     var size: Int = groupInterfaceArray!!.size
@@ -587,7 +583,6 @@ stringBuffer!!.append(commonSeps!!.COMMA)
 
 
     var pickupBehavior: PickupBehavior = this.getPickupBehavior()!!
-            
 
 
     

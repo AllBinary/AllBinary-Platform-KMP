@@ -76,11 +76,9 @@ open fun changeDirectionIfCliffReached()
         //nullable = true from not(false or (false and true)) = true
 {
     var list: BasicArrayList = this.terrainEventListener!!.getList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -94,11 +92,9 @@ open fun changeDirectionIfCliffReached()
 
 
     var basicTerrainInfo: BasicTerrainInfo = terrainEvent!!.getBasicTerrainInfo()!!
-            
 
 
     var angle: Angle = basicTerrainInfo!!.getAngle()!!
-            
 
 
     

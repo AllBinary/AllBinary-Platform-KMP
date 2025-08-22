@@ -54,7 +54,6 @@ open fun getInstance()
             }            
         
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
 open fun getDistance(x1: Int, y1: Int, x2: Int, y2: Int)
         //nullable = true from not(false or (false and false)) = true

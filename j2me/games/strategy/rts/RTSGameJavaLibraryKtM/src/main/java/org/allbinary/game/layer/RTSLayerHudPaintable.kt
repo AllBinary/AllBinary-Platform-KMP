@@ -51,10 +51,8 @@ open fun getInstance()
         }
             
     private val myFont: MyFont = MyFont.getInstance()!!
-            
 
     private var weaponProperties: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
-            
 
     private var rtsLayer: RTSLayer
 

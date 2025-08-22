@@ -45,7 +45,6 @@ open public class OverrideObjectConfigRootContextView : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
@@ -92,7 +91,6 @@ stringBuffer!!.append(this.getTransformInfoInterface()!!.getStoreName())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 
     var nameStart: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -122,7 +120,6 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
                             
 
     var overrideObjectConfigDocument: Document = this.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toXmlDoc()!!
-            
 
 
     
@@ -135,22 +132,18 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
                                 
 
     var transformFactory: TransformFactory = TransformFactory.getInstance()!!
-            
 
 
     var rootComponentInterface: TransformInterface = transformFactory!!.getInstance(this.abeClientInformation, rootTransformInfoInterface!!.getName(), rootTransformInfoInterface)!!
-            
 
 
     var transformTemplateInterface: TransformTemplateInterface = rootComponentInterface as TransformTemplateInterface
 
 
     var componentInterface: TransformInterface = transformFactory!!.getInstance(this.abeClientInformation, transformTemplateInterface!!.getName(), rootComponentInterface!!.getTransformInfoInterface())!!
-            
 
 
     var transformInfoObjectConfigInterface: TransformInfoObjectConfigInterface = TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(this.abeClientInformation, componentInterface!!.getTransformInfoInterface(), overrideObjectConfigDocument)!!
-            
 
 componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(transformInfoObjectConfigInterface)
 

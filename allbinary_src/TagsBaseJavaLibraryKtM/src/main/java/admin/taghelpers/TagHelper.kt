@@ -39,7 +39,6 @@ open public class TagHelper
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 }
                 

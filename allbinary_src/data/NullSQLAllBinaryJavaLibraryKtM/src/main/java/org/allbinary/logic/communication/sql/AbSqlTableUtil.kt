@@ -60,16 +60,12 @@ open fun getInstance()
     private val TABLE_LABEL: String = "Table: "
 
     val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
-            
 
 open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
@@ -78,7 +74,6 @@ open fun backupTable(abSqlTable: AbSqlTable)
                     var abSqlTable = abSqlTable
 
     var tableName: String = abSqlTable!!.getTableName()!!
-            
 
 
 
@@ -98,7 +93,6 @@ open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
                     var portion = portion
 
     var tableName: String = abSqlTable!!.getTableName()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

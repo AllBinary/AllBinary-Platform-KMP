@@ -41,7 +41,6 @@ open public class ImageCacheBase
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -278,7 +277,6 @@ open fun createImage(key: Any, inputStream: InputStream)
                     var inputStream = inputStream
 
     var image: Image = Image.createImage(inputStream)!!
-            
 
 
 
@@ -307,11 +305,9 @@ override fun toString()
 
 
     var total: Int = listOfList[index]!!.size()!!
-            
 
 
     var totalAvailable: Int = availableListOfList[index]!!.size()!!
-            
 
 stringBuffer!!.append(" w: ")
 stringBuffer!!.append(width)

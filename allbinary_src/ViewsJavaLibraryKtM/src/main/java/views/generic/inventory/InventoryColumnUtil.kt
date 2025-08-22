@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getColumnWhereLike(inventoryEntity: InventoryEntity, category: String, column: String)
         //nullable = true from not(false or (false and false)) = true
@@ -78,11 +77,9 @@ logUtil!!.put("Start Category: " +category, this, "getKeywords")
 
 
     var vectorOfHashMaps: Vector = inventoryEntity!!.getAllRows()!!
-            
 
 
     var size: Int = vectorOfHashMaps!!.size!!
-            
 
 
 

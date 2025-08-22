@@ -39,10 +39,8 @@ open public class ImageComparisonResult
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val bufferedImages: Array<BufferedImage?> = arrayOfNulls(2)
 
@@ -98,11 +96,9 @@ this.frameTwo= frameTwo
 this.setTolerance(0)
 
     var imageHeight: Int = bufferedImage!!.getHeight()!!
-            
 
 
     var imageWidth: Int = bufferedImage!!.getWidth()!!
-            
 
 
     
@@ -159,7 +155,6 @@ this.imageHeight= imageHeight
                                     {
                                     
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 logUtil!!.put("Images were not the same size? Most likely a resolution change.", this, this.commonStrings!!.CONSTRUCTOR)
 logUtil!!.put("1: " +imageUtil!!.toString(bufferedImage), this, this.commonStrings!!.CONSTRUCTOR)

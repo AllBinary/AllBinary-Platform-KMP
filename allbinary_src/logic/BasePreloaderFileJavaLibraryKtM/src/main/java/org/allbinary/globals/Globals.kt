@@ -56,7 +56,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -72,7 +71,6 @@ open fun init(classLoader: ClassLoader, pathString: String)
                     var pathString = pathString
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var appUrlGlobals: AppUrlGlobals = AppUrlGlobals()
@@ -90,7 +88,6 @@ stringBuffer!!.append(classLoader!!::class.qualifiedName!!)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     

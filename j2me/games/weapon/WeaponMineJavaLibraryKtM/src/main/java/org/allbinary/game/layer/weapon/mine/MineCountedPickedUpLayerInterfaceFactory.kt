@@ -67,7 +67,6 @@ open fun getInstance()
         }
             
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool = MineLayerCircularStaticPool.getInstance()!!
-            
 private constructor        ()                        
 
                             : super(PickedUpLayerTypeFactory.getInstance()!!.MINE, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_ICON_RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_RESOURCE)!!.getInstance(0)){
@@ -89,7 +88,6 @@ override fun getTotal()
     private val weaponProperties: WeaponProperties = WeaponProperties(0, 8000, 10.toShort())
 
     private val smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)

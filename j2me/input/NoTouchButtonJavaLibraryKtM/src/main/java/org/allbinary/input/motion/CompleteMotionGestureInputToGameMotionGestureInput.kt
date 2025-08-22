@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true

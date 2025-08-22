@@ -56,11 +56,9 @@ public constructor        (gameKeyEventList: BasicArrayList, gameCanvas: Runnabl
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     var gameKeyEvent: GameKeyEvent

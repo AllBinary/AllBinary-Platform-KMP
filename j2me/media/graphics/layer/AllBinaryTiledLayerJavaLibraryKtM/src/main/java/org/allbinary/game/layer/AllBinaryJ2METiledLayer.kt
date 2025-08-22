@@ -73,7 +73,6 @@ this.tiledLayer!!.paint(graphics)
 
 
     val font2: Font = Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, 4)!!
-            
 
 open fun paintDebug(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
@@ -82,17 +81,14 @@ open fun paintDebug(graphics: Graphics)
                     var graphics = graphics
 
     var font: Font = graphics.getFont()!!
-            
 
 graphics.setFont(font2)
 graphics.setColor(debugColor)
 
     var x: Int = this.tiledLayer!!.getX()!!
-            
 
 
     var y: Int = this.tiledLayer!!.getY()!!
-            
 
 
     var firstColumn: Int = 0
@@ -102,11 +98,9 @@ graphics.setColor(debugColor)
 
 
     var totalColumns: Int = this.tiledLayer!!.getColumns()!!
-            
 
 
     var totalRows: Int = this.tiledLayer!!.getRows()!!
-            
 
 
     var x0: Int = x
@@ -116,15 +110,12 @@ graphics.setColor(debugColor)
 
 
     var tileHeight: Int = this.tiledLayer!!.getCellHeight()!!
-            
 
 
     var tileWidth: Int = this.tiledLayer!!.getCellWidth()!!
-            
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var stringMaker: StringMaker = StringMaker()

@@ -50,7 +50,6 @@ open public class StoreFrontsHelper : BasicTable {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -69,7 +68,6 @@ open fun drop()
         try {
             
     var success: String = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.dropTable()!!
-            
 
 
     
@@ -114,7 +112,6 @@ open fun create()
         try {
             
     var success: String = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.createTable()!!
-            
 
 
     
@@ -162,7 +159,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance(), this.portion)!!
-            
 
 
     
@@ -210,7 +206,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance())!!
-            
 
 
     
@@ -250,7 +245,6 @@ open fun backup()
 
 
     private val commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
 open fun generateSelect()
         //nullable = true from not(false or (false and true)) = true
@@ -261,7 +255,6 @@ open fun generateSelect()
 
 
     var storeNamesVector: Vector = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.getStoreFrontNames()!!
-            
 
 
     var storeSelect: HtmlSelect = HtmlSelect(StringUtil.getInstance()!!.EMPTY_STRING, commonPhoneStrings!!.ONE, StoreFrontData.getInstance()!!.SELECTSTORENAME, StringUtil.getInstance()!!.EMPTY_STRING)
@@ -269,7 +262,6 @@ open fun generateSelect()
 storeSelect!!.addAttribute(CLASS, TEXT)
 
     var size: Int = storeNamesVector!!.size!!
-            
 
 
 

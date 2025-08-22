@@ -57,7 +57,6 @@ open fun isValid()
 
 
     var streetAddressList: Vector = billingAddressesEntity!!.get()!!
-            
 
 
     
@@ -76,7 +75,6 @@ open fun isValid()
                                 
 
     var size: Int = streetAddressList!!.size!!
-            
 
 
 

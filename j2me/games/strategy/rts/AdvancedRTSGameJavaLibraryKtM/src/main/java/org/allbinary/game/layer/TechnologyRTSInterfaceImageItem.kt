@@ -37,7 +37,6 @@ open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
         
 
     private val myFont: MyFont = MyFont.getInstance()!!
-            
 
     private val rtsInterface: RTSInterface
 
@@ -48,7 +47,6 @@ open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
     private val adjustedCostY: Int
 
     private var costString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-            
 
     private var costLength: Int= 0
 
@@ -57,7 +55,6 @@ open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
     private val adjustedLevelY: Int
 
     private var levelString: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-            
 
     private var levelLength: Int= 0
 
@@ -101,7 +98,6 @@ this.rtsInterface= rtsInterface
 
 
     var image: Image = this.getImage()!!
-            
 
 
     

@@ -87,29 +87,22 @@ open public class GameCommandCanvas : MyCanvas
         }
             
     private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.getInstance(this)!!
-            
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
-            
 
     val foregroundBasicColor: BasicColor
 
     val backgroundBasicColor: BasicColor
 
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
-            
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
     private val downGameKeyEventHandler: DownGameKeyEventHandler = DownGameKeyEventHandler.getInstance()!!
-            
 
     private val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
-            
 
     val repaintBehavior: RepaintBehavior
 
@@ -118,15 +111,12 @@ open public class GameCommandCanvas : MyCanvas
     var backgroundColor: Int
 
     private var menuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
-            
 
     private var menuPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var menuForm: PaintableForm = PaintableForm.NULL_PAINTABLE_FORM
 
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
-            
 public constructor        (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
@@ -190,7 +180,6 @@ override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
             logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 
     var rectangle: Rectangle = this.createRectangle(this.menuForm!!.size())!!
-            
 
 this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
 this.update()
@@ -218,7 +207,6 @@ open fun initMenu()
         //nullable = true from not(false or (false and true)) = true
 {
     var form: ScrollSelectionForm = this.createForm()!!
-            
 
 this.menuForm= form
 
@@ -242,11 +230,9 @@ open fun createForm()
 : ScrollSelectionForm{
     var items: Array<CustomItem?> = CommandTextItemArrayFactory(AllCommandsVisitor()).
                             getInstance(this.getCommandStack() as Vector<Any>, this.backgroundBasicColor, this.foregroundBasicColor)!!
-            
 
 
     var rectangle: Rectangle = this.createRectangle(items.size)!!
-            
 
 
 
@@ -263,7 +249,6 @@ open fun createRectangle(size: Int)
                     var size = size
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var height: Int = size *MyFont.getInstance()!!.DEFAULT_CHAR_HEIGHT
@@ -400,7 +385,6 @@ open fun addGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         try {
             
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
-            
 
 
     
@@ -409,7 +393,6 @@ open fun addGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
-            
 
 downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
@@ -444,7 +427,6 @@ open fun removeGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         try {
             
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
-            
 
 
     
@@ -453,7 +435,6 @@ open fun removeGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
-            
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)

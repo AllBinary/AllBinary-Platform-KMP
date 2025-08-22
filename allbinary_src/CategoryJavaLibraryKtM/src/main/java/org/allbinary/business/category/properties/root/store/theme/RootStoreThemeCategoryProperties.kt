@@ -104,7 +104,6 @@ open fun initPath()
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(transformInfoHttpStoreInterface!!.getStoreName())!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

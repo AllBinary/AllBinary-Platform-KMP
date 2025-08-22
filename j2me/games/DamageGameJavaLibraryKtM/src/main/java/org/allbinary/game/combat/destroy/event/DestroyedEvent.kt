@@ -36,7 +36,6 @@ open public class DestroyedEvent : AllBinaryEventObject {
         
 
     private var allBinaryGameCanvas: AllBinaryGameCanvas = NullGameCanvas.getInstance()!!
-            
 
     private var allBinaryLayerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 public constructor        (combatGameCanvas: AllBinaryGameCanvas)                        

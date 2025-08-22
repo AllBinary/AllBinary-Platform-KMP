@@ -41,10 +41,8 @@ open public class KeyboardActionScriptInputJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var keyActionScriptInputInterface: KeyboardActionScriptInputInterface
 public constructor        (keyActionScriptInputInterface: KeyboardActionScriptInputInterface){
@@ -102,7 +100,6 @@ open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
     var inputTypeComboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
-            
 
 inputTypeComboBoxModel!!.setSelectedItem(this.keyActionScriptInputInterface!!.getInputRobotInterface()!!.getName())
 this.textJTextField!!.setText(this.keyActionScriptInputInterface!!.getText())
@@ -118,7 +115,6 @@ open fun updateInputType()
         //nullable = true from not(false or (false and true)) = true
 {
     var comboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
-            
 
 
     var selectedItem: String = comboBoxModel!!.getSelectedItem() as String
@@ -139,7 +135,6 @@ open fun getSelectedKey()
         //nullable = true from not(false or (false and true)) = true
 : Integer{
     var comboBoxModel: ComboBoxModel = this.keyNameJComboBox!!.getModel()!!
-            
 
 
     var selectedItem: String = comboBoxModel!!.getSelectedItem() as String
@@ -169,7 +164,6 @@ open fun updateKeys()
         //nullable = true from not(false or (false and true)) = true
 {
     var text: String = this.textJTextField!!.getText()!!
-            
 
 this.keyActionScriptInputInterface!!.setText(text)
 }
@@ -470,7 +464,6 @@ open fun keyNameJComboBoxActionPerformed(evt: java.awt.event.ActionEvent)
                     var evt = evt
 
     var integer: Integer = getSelectedKey()!!
-            
 
 this.prependText(integer)
 this.keyIntegerJComboBox!!.setSelectedIndex(this.keyNameJComboBox!!.getSelectedIndex())

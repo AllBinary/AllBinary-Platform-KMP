@@ -48,26 +48,21 @@ public constructor        (node: Node)
 this.setFtpConfigurationInterface(FtpConfiguration() as FtpConfigurationInterface)
 
     var chileNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var server: String = DomNodeHelper.getTextNodeValue(FtpConfigurationData.SERVER, chileNodeList)!!
-            
 
 this.getFtpConfigurationInterface()!!.setServer(server)
 
     var userName: String = DomNodeHelper.getTextNodeValue(FtpConfigurationData.USERNAME, chileNodeList)!!
-            
 
 this.getFtpConfigurationInterface()!!.setUserName(userName)
 
     var password: String = DomNodeHelper.getTextNodeValue(FtpConfigurationData.PASSWORD, chileNodeList)!!
-            
 
 this.getFtpConfigurationInterface()!!.setPassword(password)
 
     var path: String = DomNodeHelper.getTextNodeValue(FtpConfigurationData.PATH, chileNodeList)!!
-            
 
 this.getFtpConfigurationInterface()!!.setPath(path)
 }
@@ -93,11 +88,9 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = ftpConfigurationMapping!!.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, FtpConfigurationData.NAME, hashMap)!!
-            
 
 
 

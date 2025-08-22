@@ -47,13 +47,10 @@ open public class CryptService
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val abCryptUtil: AbCryptUtil = AbCryptUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {Globals.getInstance()!!.init(this::class.java.classLoader, "./")
@@ -76,11 +73,9 @@ open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInter
         try {
             
     var key: String = AbKeys.getInstance()!!.getKey(abeClientInformation, name)!!
-            
 
 
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(inputStream, key)!!
-            
 
 
 
@@ -120,7 +115,6 @@ open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, 
         try {
             
     var abeLicenseInterface: AbeLicenseInterface = AbeLicenseInterfaceFactory.getInstance()!!.getLicenseInstance(abeClientInformation)!!
-            
 
 
     

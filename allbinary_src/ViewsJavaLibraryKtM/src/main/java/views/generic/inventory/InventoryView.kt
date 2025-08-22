@@ -48,7 +48,6 @@ open public class InventoryView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -81,21 +80,17 @@ open fun toXmlNode(document: Document)
                                 
 
     var inventoryEntityInterface: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var inventoryNode: Node = document.createElement(InventoryData.INVENTORY)!!
-            
 
 
     var itemVector: Vector = inventoryEntityInterface!!.getItems(StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName()))!!
-            
 
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.TOTAL_NUMBER_ITEMS_ON_THIS_PAGE, Integer(itemVector!!.size).
                             toString()))
 
     var size: Int = itemVector!!.size!!
-            
 
 
 
@@ -117,7 +112,6 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchDa
                                     
     var node: Node = BasicItemView(itemInterface, Vector()).
                             toXmlNode(document)!!
-            
 
 inventoryNode!!.appendChild(node)
 

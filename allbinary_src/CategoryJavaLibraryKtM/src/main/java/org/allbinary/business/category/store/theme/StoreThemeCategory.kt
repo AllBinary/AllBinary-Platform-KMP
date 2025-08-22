@@ -155,11 +155,9 @@ open fun addThemes(node: Node)
                     var node = node
 
     var themesNode: Node = DomSearchHelper.getNode(ThemesData.getInstance()!!.NAME, node.getChildNodes())!!
-            
 
 
     var nodeList: NodeList = themesNode!!.getChildNodes()!!
-            
 
 
 
@@ -170,7 +168,6 @@ open fun addThemes(node: Node)
 
         {
     var themeNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -236,7 +233,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var categoryHashMap: HashMap<Any, Any> = super.toHashMap()!!
-            
 
 categoryHashMap!!.put(ThemesData.getInstance()!!.NAME, this.themeVector)
 
@@ -253,7 +249,6 @@ open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     var categoryVector: Vector = super.toVector()!!
-            
 
 
 

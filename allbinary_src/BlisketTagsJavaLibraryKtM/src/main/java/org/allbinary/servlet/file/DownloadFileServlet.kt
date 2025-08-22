@@ -54,10 +54,8 @@ open public class DownloadFileServlet : HttpServlet {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val DOWNLOAD: String = "download"
 
@@ -83,7 +81,6 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
             BlisketServletUtil.getInstance()!!.init(request)
 
     var requestPath: String = request.getRequestURI()!!
-            
 
 
     
@@ -103,7 +100,6 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                 
 
     var beginIndex: Int = requestPath!!.indexOf(DOWNLOAD)!!
-            
 
 
     var filePath: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -159,7 +155,6 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
                                     inputStream= CloudStreamUtil.getInstance()!!.getFile(file)
 
     var contentType: String = getServletContext()!!.getMimeType(file.getName())!!
-            
 
 
     

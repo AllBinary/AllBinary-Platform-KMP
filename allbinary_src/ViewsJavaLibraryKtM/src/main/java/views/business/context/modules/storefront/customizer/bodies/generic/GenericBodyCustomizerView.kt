@@ -51,7 +51,6 @@ open public class GenericBodyCustomizerView : HttpStoreComponentView
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var body: GenericBodyValidation
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -84,7 +83,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var pageName: String = TransformTemplateCustomizerUtil.getInstance()!!.getPageNameHack(this.getTransformInfoInterface()!!.getName(), this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     
@@ -112,12 +110,10 @@ open fun view()
             this.addDomNodeInterfaces()
 
     var success: String = DomDocumentHelper.toString(this.getDoc())!!
-            
 
 
     var result: String = StoreTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-            
 
 
 

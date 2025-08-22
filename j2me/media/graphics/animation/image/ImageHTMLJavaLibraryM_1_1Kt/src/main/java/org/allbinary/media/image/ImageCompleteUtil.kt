@@ -127,7 +127,6 @@ open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
                                 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(COMPLETE +image.getName(), this, commonStrings!!.SUCCESS)
 

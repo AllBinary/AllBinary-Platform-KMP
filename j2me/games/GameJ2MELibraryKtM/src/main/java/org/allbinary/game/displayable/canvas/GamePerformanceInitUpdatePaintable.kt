@@ -41,7 +41,6 @@ open public class GamePerformanceInitUpdatePaintable : InitUpdatePaintable {
             }            
         
     private val halfHeight: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfHeight()!!
-            
 
     private val yArray: IntArray = intArrayOf(halfHeight +30,halfHeight +30,halfHeight +30 +15,halfHeight +30 +15,halfHeight +30 +30,halfHeight +30 +30,halfHeight +30 +45,halfHeight +30 +45)
 
@@ -57,7 +56,6 @@ override fun update()
 
 
     private val RED: Int = BasicColorFactory.getInstance()!!.RED.toInt()!!
-            
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -65,7 +63,6 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 graphics.setColor(RED)
 

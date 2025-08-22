@@ -40,7 +40,6 @@ open public class ScoreComparator
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val isHighestBest: Boolean
 public constructor        (isHighestBest: Boolean)
@@ -103,21 +102,18 @@ scoreTwo= inputStreamTwo!!.readLong()
 } catch(e: EOFException)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: IOException)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }

@@ -42,7 +42,6 @@ open public class AbTransformer
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoInterface
 
@@ -150,7 +149,6 @@ open fun translate(xmlDocumentStr: String)
                                 
 
     var result: String = XslHelper.getInstance()!!.translate(this.getURIResolver(), StreamSource(this.getInputStream()), StreamSource(StringBufferInputStream(xmlDocumentStr)))!!
-            
 
 
     
@@ -163,7 +161,6 @@ open fun translate(xmlDocumentStr: String)
                                 
 
     var transformInfoObjectConfigGeneratorInterface: TransformInfoObjectConfigGenerator = TransformInfoObjectConfigGeneratorFactory.getInstance()!!.getInstance(this.getTransformInfoInterface())!!
-            
 
 
 

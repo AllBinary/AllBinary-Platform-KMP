@@ -40,10 +40,8 @@ open public class PaymentGatewayView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var paymentGatewayInterface: PaymentGatewayInterface
 public constructor        (paymentGatewayInterface: PaymentGatewayInterface)
@@ -101,12 +99,10 @@ open fun toXmlNode(document: Document)
 
     var hashMap: HashMap<Any, Any> = PaymentGatewayMapping(this.paymentGatewayInterface).
                             toHashMap()!!
-            
 
 hashMap!!.putAll(this.toHashMap())
 
     var paymentGatewayNode: Node = ModDomHelper.createNodeWithValueNodes(document, PaymentGatewayData.NAME.toString(), hashMap)!!
-            
 
 
 

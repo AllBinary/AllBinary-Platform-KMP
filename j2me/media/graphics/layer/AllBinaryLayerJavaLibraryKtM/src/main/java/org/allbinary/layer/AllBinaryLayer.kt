@@ -115,7 +115,6 @@ public constructor        (name: String, rectangle: Rectangle, viewPosition: Vie
 this.name= localName
 
     var point: GPoint = rectangle.getPoint()!!
-            
 
 this.setPosition(point.getX(), point.getY(), point.getZ())
 this.setHalfWidth((this.getWidth() shr 1))
@@ -323,15 +322,12 @@ override fun toString(stringBuffer: StringMaker)
                     var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 stringBuffer!!.append(this.getName())
 stringBuffer!!.append(commonSeps!!.COLON)

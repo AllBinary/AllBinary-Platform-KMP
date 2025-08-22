@@ -73,11 +73,9 @@ public constructor        (max: Int){
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(comingFromGeographicMapCellPosition)!!
-            
 
 
     var geographicMapCellType2: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(geographicMapCellPosition)!!
-            
 
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType

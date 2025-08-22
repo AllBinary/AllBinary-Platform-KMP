@@ -60,10 +60,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var list: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -85,14 +83,12 @@ list= BasicArrayList()
 
 
     var countedBasicArrayList: BasicArrayList = CountedPickedUpLayerInterfaceFactoryPool.getInstance()!!.getList()!!
-            
 
 
     var layerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactory
 
 
     var size: Int = countedBasicArrayList!!.size()!!
-            
 
 
 
@@ -114,7 +110,6 @@ stringBuffer!!.append(" Counted: ")
 stringBuffer!!.append(countedBasicArrayList!!.size())
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 

@@ -57,11 +57,9 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
-            
 
 
     var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(this.ownerLayer)!!
-            
 
 
     

@@ -50,7 +50,6 @@ open public class RunnableCanvas : MyCanvas
         
 
     val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 
     private var thread: Thread = NullThread.NULL_THREAD
 
@@ -61,13 +60,10 @@ open public class RunnableCanvas : MyCanvas
     val loopTimeHelper: TimeDelayHelper = TimeDelayHelper(NullWaitGameRunnable.getInstance()!!.WAIT)
 
     var runnableCanvasRefreshHelper: Processor = Processor.getInstance()!!
-            
 
     val commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
     val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
-            
 public constructor        (commandListener: CommandListener, childNameList: BasicArrayList, hasParam: Boolean)                        
 
                             : super(CommonStrings.getInstance()!!.UNKNOWN, childNameList){
@@ -190,10 +186,12 @@ this.running= running
                                     this.thread= NullThread.NULL_THREAD
 
         
-        //synchronized(this) 
-        //mutex.withLock
-        threadObjectUtil!!.notifyObject(this)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
 
+        //mutex.withLock
+        {threadObjectUtil!!.notifyObject(this)
+}
 
 
                                     }
@@ -475,7 +473,6 @@ logUtil!!.put(stringMaker!!.append(END_PAUSE)!!.append(System.currentTimeMillis(
                                 
 
     var elapsedTime: Long = this.loopTimeHelper!!.getElapsed()!!
-            
 
 
     var wait: Long = this.loopTimeHelper!!.delay.toLong()

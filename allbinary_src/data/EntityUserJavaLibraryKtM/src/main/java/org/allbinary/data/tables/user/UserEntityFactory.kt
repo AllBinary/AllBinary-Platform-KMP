@@ -39,7 +39,6 @@ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : UserEntity{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -51,7 +50,6 @@ open fun getInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

@@ -41,7 +41,6 @@ open public class CustomItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "customitems"
 public constructor        ()                        

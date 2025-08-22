@@ -69,7 +69,6 @@ open fun getInstance()
         }
             
     private val preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
     private val widthFloatArray: FloatArray
 
@@ -136,11 +135,9 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
                                     {
                                     
     var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
 
     var openGLCapabilities: OpenGLCapabilities = OpenGLCapabilities.getInstance()!!
-            
 
 
     
@@ -152,7 +149,6 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
 
 
     var image: Image = Image.createImage(ResourceUtil.getInstance()!!.getResourceAsStream(FONT_ATLAS_1024))!!
-            
 
 image.setName(canvasStrings!!.FONT_ATLAS)
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
@@ -169,7 +165,6 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
 
     var image: Image = Image.createImage(ResourceUtil.getInstance()!!.getResourceAsStream(FONT_ATLAS_512))!!
-            
 
 image.setName(canvasStrings!!.FONT_ATLAS)
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
@@ -182,7 +177,6 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
 
     var image: Image = Image.createImage(ResourceUtil.getInstance()!!.getResourceAsStream(FONT_ATLAS_512))!!
-            
 
 image.setName(canvasStrings!!.FONT_ATLAS)
 this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
@@ -209,7 +203,6 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 
@@ -226,7 +219,6 @@ open fun saveFontAtlasAsFile()
 {
     var image: Image = this.getFontBitmap2(
                             null, cellSize, BasicColorFactory.getInstance()!!.WHITE)!!
-            
 
 
     var imageLoader: ImageLoader = ImageLoader()
@@ -235,7 +227,6 @@ open fun saveFontAtlasAsFile()
     var imageData: ImageData = image = imageimage as SwtMutableImage
 image.
                     image.getImageData()!!
-            
 
 imageData!!.transparentPixel= imageData!!.getPixel(0, 0)
 imageLoader!!.data= arrayOf(imageData)
@@ -274,11 +265,9 @@ open fun getFontBitmap2(filename: String, cellSize: Int, basicColor: BasicColor)
 
 
     var image: Image = Image.createImage(textureSize, textureSize)!!
-            
 
 
     var graphics: Graphics = image.getGraphics()!!
-            
 
 graphics.setColor(basicColor!!.toInt())
 
@@ -361,7 +350,6 @@ open fun getFontWidths(filename: String, fontSize: Int)
                     var fontSize = fontSize
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
 
@@ -383,7 +371,6 @@ open fun getFontWidths(filename: String, fontSize: Int)
                         else {
                             
     var shortPatternIndex: Int = this.shortPattern!!.indexOf(characterArray[0]!!)!!
-            
 
 
     var w: Int = (widthFloatArray[shortPatternIndex] /75).toInt() +19

@@ -35,7 +35,6 @@ open public class BasicWorkFlowTag : StoreWorkFlowTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))

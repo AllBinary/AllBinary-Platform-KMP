@@ -54,7 +54,6 @@ open fun getInstance()
             }            
         
     private val noDecimalTrigTable: NoDecimalTrigTable = NoDecimalTrigTable.getInstance()!!
-            
 
 open fun calculateX(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true

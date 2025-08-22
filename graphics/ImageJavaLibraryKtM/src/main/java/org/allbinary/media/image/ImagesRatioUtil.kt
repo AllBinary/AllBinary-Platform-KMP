@@ -52,14 +52,12 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
 
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -163,11 +161,9 @@ open fun fudge(bufferedImage: BufferedImage, ratio: Double)
 
 
     var newHeight: Int = bufferedImage!!.getHeight()!!
-            
 
 
     var newWidth: Int = bufferedImage!!.getWidth()!!
-            
 
 
     
@@ -187,16 +183,13 @@ point.y= (newHeight -bufferedImage!!.getHeight()) /2
                             
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 logUtil!!.put(commonLabels!!.WIDTH_LABEL +bufferedImage!!.getWidth() +" newWidth: " +newWidth +commonLabels!!.HEIGHT_LABEL +bufferedImage!!.getHeight() +" newHeight: " +newHeight +" needed ratio: " +(newWidth.toDouble() /newHeight), this, "fudge")
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(newWidth, newHeight)!!
-            
 
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 
     
@@ -205,11 +198,9 @@ logUtil!!.put(commonLabels!!.WIDTH_LABEL +bufferedImage!!.getWidth() +" newWidth
                                     {
                                     
     var firstColumnBufferedImage: BufferedImage = bufferedImage!!.getSubimage(0, 0, 1, bufferedImage!!.getHeight())!!
-            
 
 
     var lastColumnBufferedImage: BufferedImage = bufferedImage!!.getSubimage(bufferedImage!!.getWidth() -1, 0, 1, bufferedImage!!.getHeight())!!
-            
 
 logUtil!!.put("Draw some columns to fill in gap", this, "fudge")
 
@@ -235,11 +226,9 @@ g.drawImage(lastColumnBufferedImage, newWidth -index, 0,
                                     {
                                     
     var firstRowBufferedImage: BufferedImage = bufferedImage!!.getSubimage(0, 0, bufferedImage!!.getWidth(), 1)!!
-            
 
 
     var lastRowBufferedImage: BufferedImage = bufferedImage!!.getSubimage(0, bufferedImage!!.getHeight() -1, bufferedImage!!.getWidth(), 1)!!
-            
 
 logUtil!!.put("Draw some rows to fill in gap", this, "fudge")
 

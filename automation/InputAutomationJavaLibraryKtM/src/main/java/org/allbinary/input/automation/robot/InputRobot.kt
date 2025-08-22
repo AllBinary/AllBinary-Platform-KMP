@@ -48,7 +48,6 @@ open public class InputRobot
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var robot: Robot
 public constructor        (graphicsDevice: GraphicsDevice)
@@ -84,7 +83,6 @@ open fun getMousePoint()
         //nullable = true from not(false or (false and true)) = true
 : Point{
     var point: Point = MouseInfo.getPointerInfo()!!.getLocation()!!
-            
 
 
 
@@ -109,13 +107,11 @@ open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
                     var y = y
 
     var point: Point = PointHelper.getCenterPoint(rectangle)!!
-            
 
 this.robot.mouseMove(point.x +x, point.y +y)
 
     var message: String = StringMaker().
                             append("Moved Mouse To: x: ")!!.append(point.x)!!.append(" y: ")!!.append(point.y)!!.append(" in the middle of: ")!!.append(StringUtil.getInstance()!!.toString(rectangle))!!.toString()!!
-            
 
 logUtil!!.put(message, this, "moveMouseToTarget")
 }
@@ -142,7 +138,6 @@ this.robot.mouseMove(x, y)
 
     var message: String = StringMaker().
                             append("Moved Mouse To: x: ")!!.append(x)!!.append(" y: ")!!.append(y)!!.toString()!!
-            
 
 logUtil!!.put(message, this, "moveMouse")
 }

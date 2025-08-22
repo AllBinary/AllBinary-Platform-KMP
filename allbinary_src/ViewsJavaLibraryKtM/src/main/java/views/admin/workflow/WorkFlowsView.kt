@@ -42,7 +42,6 @@ open public class WorkFlowsView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var workFlowsVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -104,11 +103,9 @@ open fun toXmlNode(document: Document)
         try {
             
     var node: Node = document.createElement(WorkFlowData.getInstance()!!.WORKFLOWS)!!
-            
 
 
     var size: Int = workFlowsVector!!.size!!
-            
 
 
 

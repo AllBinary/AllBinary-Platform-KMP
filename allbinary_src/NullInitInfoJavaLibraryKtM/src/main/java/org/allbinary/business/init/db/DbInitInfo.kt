@@ -48,7 +48,6 @@ open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var url: String = super.getUrl()!!
-            
 
 PreLogUtil.put("Url: " +url, this, "getUrl")
 

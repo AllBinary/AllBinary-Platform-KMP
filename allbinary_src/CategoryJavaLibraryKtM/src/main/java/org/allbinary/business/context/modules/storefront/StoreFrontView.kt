@@ -41,7 +41,6 @@ open public class StoreFrontView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var storeFrontInterface: StoreFrontInterface
 public constructor        (storeFrontInterface: StoreFrontInterface)
@@ -56,7 +55,6 @@ public constructor        (storeFrontInterface: StoreFrontInterface)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Constructing: StoreFrontView for: " +storeFrontInterface!!.getName(), this, commonStrings!!.GET_INSTANCE)
 
@@ -75,11 +73,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.storeFrontInterface!!.toHashMap()!!
-            
 
 
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
-            
 
 hashMap!!.put(storeFrontData!!.CURRENTHOMEHOSTNAME, this.storeFrontInterface!!.getCurrentHomeHostName())
 hashMap!!.put(storeFrontData!!.CURRENTHOMEHOSTNAMEPATH, this.storeFrontInterface!!.getCurrentHomeHostNamePath())
@@ -88,7 +84,6 @@ hashMap!!.put(storeFrontData!!.CURRENTHOSTNAMEPATH, this.storeFrontInterface!!.g
 hashMap!!.put(BasketData.NAME, this.storeFrontInterface!!.getBasketName())
 
     var node: Node = ModDomHelper.createNameValueNodes(document, storeFrontData!!.NAME, hashMap)!!
-            
 
 
 

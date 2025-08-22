@@ -56,11 +56,9 @@ open fun accept(f: File)
                                 
 
     var s: String = f.getName()!!
-            
 
 
     var i: Int = s.lastIndexOf('.')!!
-            
 
 
     
@@ -69,7 +67,6 @@ open fun accept(f: File)
                                     {
                                     
     var ext: String = s.substring(i +1)!!.lowercase()!!
-            
 
 
     

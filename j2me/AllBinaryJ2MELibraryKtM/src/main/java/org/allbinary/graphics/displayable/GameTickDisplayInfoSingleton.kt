@@ -53,19 +53,14 @@ open fun getInstance()
             }            
         
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private var lastWidth: Int = displayInfoSingleton!!.getLastWidth()!!
-            
 
     private var lastHeight: Int = displayInfoSingleton!!.getLastHeight()!!
-            
 
     private var lastHalfWidth: Int = displayInfoSingleton!!.getLastHalfWidth()!!
-            
 
     private var lastHalfHeight: Int = displayInfoSingleton!!.getLastHalfHeight()!!
-            
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true

@@ -34,7 +34,6 @@ open public class LayerProcessor
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val layerManager: LayerManager
 public constructor        (layerManager: LayerManager)
@@ -95,11 +94,9 @@ override fun getLayerManager()
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var layerManager: LayerManager = this.getLayerManager()!!
-            
 
 
     var size: Int = layerManager!!.getSize()!!
-            
 
 
 

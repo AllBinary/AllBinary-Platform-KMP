@@ -42,7 +42,6 @@ open public class UpgradeDowngradeTouchButtonsBuilder : BaseTouchInput {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
@@ -57,7 +56,6 @@ open fun getList()
 
 
     var cellPositionFactory: CellPositionFactory = CellPositionFactory.getInstance()!!
-            
 
 
     var basicTouchButtonCellPositionFactory: BasicTouchButtonCellPositionFactory = BasicTouchButtonCellPositionFactory()
@@ -69,7 +67,6 @@ open fun getList()
                                     {
                                     
     var commonButtons: CommonButtons = CommonButtons.getInstance()!!
-            
 
 
     var UP: TouchButton = TouchButton(BasicTouchInputFactory.getInstance()!!.SPECIAL_BUTTON_TWO, TouchButtonUpgradeResource.getInstance(), commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.SECOND_FROM_TOP_LEFT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())

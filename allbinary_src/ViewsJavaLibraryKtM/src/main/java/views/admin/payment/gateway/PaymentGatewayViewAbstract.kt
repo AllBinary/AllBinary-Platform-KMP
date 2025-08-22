@@ -55,11 +55,9 @@ open fun getFormData(request: HttpServletRequest)
                     var request = request
 
     var storeName: String = this.getWeblisketSession()!!.getStoreName()!!
-            
 
 
     var gatewayName: String = request.getParameter(PaymentGatewayData.NAME.toString())!!
-            
 
 this.setPaymentGatewayPrimaryKey(PaymentGatewayPrimaryKey(storeName, gatewayName))
 }

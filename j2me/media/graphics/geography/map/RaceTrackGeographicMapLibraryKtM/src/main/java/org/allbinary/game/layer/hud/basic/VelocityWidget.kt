@@ -78,7 +78,6 @@ this.velocity= 0
 this.primitiveLongUtil= PrimitiveLongUtil(powerOfTenVelocity)
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 this.offset= myFont!!.stringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFont!!.stringWidth(2)
 }
@@ -143,7 +142,6 @@ this.velocity= value
                             
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 this.offset2= this.offset -myFont!!.stringWidth(this.totalDigits) -myFont!!.stringWidth(2)
 

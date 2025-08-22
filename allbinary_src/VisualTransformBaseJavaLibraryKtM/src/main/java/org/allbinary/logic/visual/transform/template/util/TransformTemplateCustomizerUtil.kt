@@ -58,7 +58,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val CUSTOMIZER_NAME: String
 
@@ -79,7 +78,6 @@ private constructor        ()
             : super()
         {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var SPACE: String = CommonSeps.getInstance()!!.SPACE
@@ -129,7 +127,6 @@ hashMap!!.put(arrayOf(GLOBALS_UPDATE), ONE_EMPTY_STRING_ARRAY)
 
 
     var rootViewName: String = replace.all(viewName)!!
-            
 
 
     

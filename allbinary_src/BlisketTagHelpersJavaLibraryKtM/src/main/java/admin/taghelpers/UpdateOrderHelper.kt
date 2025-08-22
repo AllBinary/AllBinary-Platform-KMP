@@ -44,7 +44,6 @@ open public class UpdateOrderHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 

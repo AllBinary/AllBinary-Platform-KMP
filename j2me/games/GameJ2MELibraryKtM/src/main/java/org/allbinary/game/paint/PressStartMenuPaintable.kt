@@ -110,14 +110,12 @@ override fun paint(graphics: Graphics)
                                     {
                                     
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var beginWidth: Int = (graphics.getFont()!!.stringWidth(startString) shr 1)
 
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var line: Int = (4 *myFont!!.DEFAULT_CHAR_HEIGHT) +(myFont!!.DEFAULT_CHAR_HEIGHT shr 1)

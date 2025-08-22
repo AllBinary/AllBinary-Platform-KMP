@@ -33,7 +33,6 @@ open public class StoreWorkFlowWrapper : WorkFlowWrapper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (anyType: Any)                        
 
                             : super(anyType){
@@ -54,12 +53,10 @@ open fun getStoreName()
         try {
             
     var helperClass: KClass<*> = this.getWorkFlowObject()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("getStoreName", 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.getWorkFlowObject(), 
@@ -81,7 +78,6 @@ open fun getStoreName()
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getStoreName()", e)
 

@@ -315,16 +315,13 @@ open fun getInstance(instanceId: Int)
                     var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
     var openGLUtil: OpenGLUtil = OpenGLUtil.getInstance()!!
-            
 
 scaledImage= openGLUtil!!.add(scaledImage)
 
     var copyOfScaledImage: Image = ImageCopyUtil.getInstance()!!.createImageForRotation(scaledImage)!!
-            
 
 
     

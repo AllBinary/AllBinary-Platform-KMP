@@ -42,10 +42,8 @@ open public class BaseResourceAnimationInterfaceFactoryInterfaceFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val hashtable: Hashtable<Any, Any>
 
@@ -106,7 +104,6 @@ open fun getName()
                     var level = level
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append("Available List of Animations: ")!!.append(hashtable.toString())!!.toString(), this, commonStrings!!.INIT)
@@ -239,7 +236,6 @@ override fun isLoadingLevel(level: Int)
                     var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     

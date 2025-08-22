@@ -69,7 +69,6 @@ open fun getInstance()
             }            
         
     private val basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
-            
 
     val INSTALLER: UserRole = UserRoleB(basicUserRoleFactory!!.INSTALLER, 
                             null)

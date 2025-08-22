@@ -38,7 +38,6 @@ open public class TextAnimation : IndexedAnimation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var textArray: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 
@@ -89,7 +88,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
 
     var height: Int = this.getHeight()!!
-            
 
 
     var size: Int = textArray!!.size
@@ -195,7 +193,6 @@ open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
 

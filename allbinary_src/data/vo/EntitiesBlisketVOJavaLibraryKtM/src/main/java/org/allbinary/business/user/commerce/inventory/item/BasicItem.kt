@@ -47,10 +47,8 @@ open public class BasicItem
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var itemId: String
 
@@ -423,7 +421,6 @@ this.downloads= value
                                     {
                                     
     var downloadInteger: Integer = Integer(Integer.valueOf(this.downloads))!!
-            
 
 
     
@@ -844,12 +841,10 @@ hashMap!!.put(BasicItemData.MEDIUMIMAGE, this.mediumImage)
 hashMap!!.put(BasicItemData.LARGEIMAGE, this.largeImage)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
                             toString()!!
-            
 
 hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 hashMap!!.put(BasicItemData.PRICE, this.price.toString())
@@ -903,12 +898,10 @@ values.add(this.getMediumImage())
 values.add(this.getLargeImage())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
                             toString()!!
-            
 
 values.add(time)
 values.add(time)

@@ -47,18 +47,14 @@ open public class BasicAI : ArtificialIntelligence
         companion object {
             
     val AI_VISITOR: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
-            
 
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(1)!!
-            
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val ownerLayerInterface: AllBinaryLayer
 
@@ -67,7 +63,6 @@ open public class BasicAI : ArtificialIntelligence
     private var lastKey: Int =  -1
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput){
 
                     var ownerLayerInterface = ownerLayerInterface

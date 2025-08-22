@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (context: Context)
             : super()
         {

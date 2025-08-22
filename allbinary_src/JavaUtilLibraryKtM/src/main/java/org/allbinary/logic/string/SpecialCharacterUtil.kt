@@ -41,11 +41,9 @@ open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()

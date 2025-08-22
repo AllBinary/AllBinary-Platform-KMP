@@ -66,11 +66,9 @@ open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
                     var layer = layer
 
     var featureReleaseList: BasicArrayList = this.getList()!!
-            
 
 
     var size: Int = getList()!!.size()!!
-            
 
 
 
@@ -89,7 +87,6 @@ open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
                                     {
                                     
     var list: BasicArrayList = featureInterface!!.getResourceRelativeRelationshipList(resource)!!
-            
 
 
     

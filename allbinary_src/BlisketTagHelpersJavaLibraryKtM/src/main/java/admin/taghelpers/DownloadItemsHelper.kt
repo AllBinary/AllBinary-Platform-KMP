@@ -36,7 +36,6 @@ open public class DownloadItemsHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -55,7 +54,6 @@ open fun create()
         try {
             
     var success: String = DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.createTable()!!
-            
 
 
     
@@ -100,7 +98,6 @@ open fun drop()
         try {
             
     var success: String = DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.dropTable()!!
-            
 
 
     
@@ -148,7 +145,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance(), this.portion)!!
-            
 
 
     
@@ -196,7 +192,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance())!!
-            
 
 
     

@@ -44,7 +44,6 @@ open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor<V, E> 
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
 
                             : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight){
@@ -97,11 +96,9 @@ open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>,
                     var startPathFindingNodeList = startPathFindingNodeList
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var tiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
 
@@ -118,11 +115,9 @@ open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>,
 
 
     var column: Int = geographicMapCellPosition!!.getColumn()!!
-            
 
 
     var row: Int = geographicMapCellPosition!!.getRow()!!
-            
 
 
     var nextRow: Int = row +1
@@ -134,7 +129,6 @@ open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>,
                                     {
                                     
     var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, nextRow)!!
-            
 
 graph.removeEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
@@ -157,11 +151,9 @@ open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, e
                     var endPathFindingNodeList = endPathFindingNodeList
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var tiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
 
@@ -179,11 +171,9 @@ open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, e
 graph.addVertex(geographicMapCellPosition)
 
     var column: Int = geographicMapCellPosition!!.getColumn()!!
-            
 
 
     var row: Int = geographicMapCellPosition!!.getRow()!!
-            
 
 
     var nextRow: Int = row +1
@@ -195,7 +185,6 @@ graph.addVertex(geographicMapCellPosition)
                                     {
                                     
     var geographicMapCellPositionNeighbor: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, nextRow)!!
-            
 
 graph.addEdge(geographicMapCellPosition, geographicMapCellPositionNeighbor)
 
@@ -215,14 +204,12 @@ open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeight
                     var graph = graph
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var raceTrackGeographicMap: RaceTrackGeographicMap = this.geographicMapInterface as RaceTrackGeographicMap
 
 
     var CellPositionArray: Array<CellPosition?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getOverPassGeographicMapCellPositionArray()!!
-            
 
 
 
@@ -237,15 +224,12 @@ open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeight
 logUtil!!.put("Fixing Over Pass: " +overPassGeographicMapCellPosition!!.getColumn() +", " +overPassGeographicMapCellPosition!!.getRow(), this, "fixOverPassEdges")
 
     var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
-            
 
 
     var rightUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn() +1, overPassGeographicMapCellPosition!!.getRow())!!
-            
 
 
     var leftUnderPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn() -1, overPassGeographicMapCellPosition!!.getRow())!!
-            
 
 graph.removeEdge(underPassGeographicMapCellPosition, rightUnderPassGeographicMapCellPosition)
 graph.removeEdge(underPassGeographicMapCellPosition, leftUnderPassGeographicMapCellPosition)
@@ -316,14 +300,12 @@ open fun removeOverPassEdges(pathList: BasicArrayList)
                     var pathList = pathList
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var raceTrackGeographicMap: RaceTrackGeographicMap = this.geographicMapInterface as RaceTrackGeographicMap
 
 
     var CellPositionArray: Array<CellPosition?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getOverPassGeographicMapCellPositionArray()!!
-            
 
 
 
@@ -337,11 +319,9 @@ open fun removeOverPassEdges(pathList: BasicArrayList)
 
 
     var underPassGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(overPassGeographicMapCellPosition!!.getColumn(), overPassGeographicMapCellPosition!!.getRow())!!
-            
 
 
     var indexOf: Int = pathList!!.indexOf(overPassGeographicMapCellPosition)!!
-            
 
 
     

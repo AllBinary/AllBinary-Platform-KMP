@@ -62,16 +62,12 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private val ENEMY_POSSIBLE_TARGET: String = " Enemy Possible Target: "
 

@@ -51,7 +51,6 @@ public constructor        ()
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 this.totalColumns= displayInfo!!.getLastWidth() /buttonSize
 this.totalRows= displayInfo!!.getLastHeight() /buttonSize

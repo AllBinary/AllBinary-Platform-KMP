@@ -50,7 +50,6 @@ open public class CapturedImageInputOutput
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -61,7 +60,6 @@ open fun save(frame: Long)
                     var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var capturedBufferedImageCacheable: BufferedImageFrameCacheable = (
@@ -82,11 +80,9 @@ open fun save(bufferedImage: BufferedImage, frame: Long)
                     var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 
     var filePathStringBuffer: StringMaker = StringMaker()
@@ -96,12 +92,10 @@ filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
 filePathStringBuffer!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath: String = filePathStringBuffer!!.toString()!!
-            
 
 logUtil!!.put(("Image File Path: " +filePath +imageUtil!!.toString(bufferedImage)), this, commonStrings!!.SAVE)
 
     var imagePersistanceUtil: ImagePersistanceUtil = ImagePersistanceUtil.getInstance()!!
-            
 
 imagePersistanceUtil!!.saveWithImageIO(filePath, bufferedImage)
 }

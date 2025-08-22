@@ -39,7 +39,6 @@ open public class StaticPagesTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var xslFile: String
 public constructor        (){this.setTagHelperFactory(StaticPagesHelperFactory())
@@ -65,16 +64,13 @@ open fun generateStaticPages()
             
     var anyType: Any = StaticPagesRequestHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("generateStaticPages", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -123,16 +119,13 @@ open fun makePublic()
             
     var anyType: Any = StaticPagesRequestHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("makePublic", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -198,7 +191,6 @@ open fun doStartTag()
                                     this.getPropertiesHashMap()!!.put(TransformInfoData.getInstance()!!.TEMPLATEFILENAME, this.xslFile)
 
     var output: String = this.generateStaticPages()!!
-            
 
 
     
@@ -219,7 +211,6 @@ open fun doStartTag()
                                     {
                                     
     var output: String = this.makePublic()!!
-            
 
 
     

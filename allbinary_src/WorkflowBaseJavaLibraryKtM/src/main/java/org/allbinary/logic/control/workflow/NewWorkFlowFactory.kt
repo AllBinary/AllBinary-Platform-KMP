@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -93,7 +92,6 @@ params[0]= hashMap as Object
 params[1]= pageContext as Object
 
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className, classes, params)!!
-            
 
 
 
@@ -108,7 +106,6 @@ params[1]= pageContext as Object
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
@@ -127,7 +124,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
@@ -156,7 +152,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     
@@ -169,7 +164,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className, 
                             null, 
                             null)!!
-            
 
 
 
@@ -191,7 +185,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
@@ -210,7 +203,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

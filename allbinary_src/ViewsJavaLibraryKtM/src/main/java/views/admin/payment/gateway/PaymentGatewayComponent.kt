@@ -38,7 +38,6 @@ open public class PaymentGatewayComponent : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var paymentGatewayInterface: PaymentGatewayInterface
 public constructor        (transformInfoInterface: TransformInfoInterface, paymentGatewayInterface: PaymentGatewayInterface)                        
@@ -63,11 +62,9 @@ open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
     var paymentType: BasicPaymentType = BasicPaymentTypeUtil.getInstance()!!.get(this.paymentGatewayInterface!!.getName())!!
-            
 
 
     var paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface = paymentType!!.getPaymentGatewayDomNodeFactoryInterface()!!
-            
 
 
     var domNodeInterface: DomNodeInterface = paymentGatewayDomNodeFactoryInterface!!.getInstance(this.paymentGatewayInterface) as DomNodeInterface

@@ -40,7 +40,6 @@ open public class ImageWaitCompleteUtil : ImageCompleteUtil {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val METHOD_NAME: String = "waitForLoad"
 
@@ -140,11 +139,9 @@ open fun waitForAll()
 {this.allTimeDelayHelper!!.setStartTime()
 
     var hashtable: Hashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtableP()!!
-            
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
     var size: Int = objectArray!!.size

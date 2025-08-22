@@ -55,14 +55,12 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val COPYRIGHT: String = "AllBinary Copyright (c) 2011"
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var color: Int = basicColor!!.toInt()!!
-            
 private constructor        (){}
 
 
@@ -76,23 +74,18 @@ open fun paint(graphics: Graphics)
 graphics.setColor(color)
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var halfWidth: Int = displayInfo!!.getLastHalfWidth()!!
-            
 
 
     var height: Int = displayInfo!!.getLastHeight()!!
-            
 
 
     var font: Font = graphics.getFont()!!
-            
 
 
     var beginWidth: Int = (font.stringWidth(COPYRIGHT) shr 1)

@@ -38,10 +38,8 @@ open public class CustomLoaderHelper
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
         {

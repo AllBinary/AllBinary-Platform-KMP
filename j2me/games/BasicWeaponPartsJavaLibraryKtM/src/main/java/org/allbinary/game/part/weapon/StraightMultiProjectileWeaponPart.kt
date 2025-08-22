@@ -90,7 +90,6 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 
     private val noDecimalTrigTable: NoDecimalTrigTable = NoDecimalTrigTable.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
@@ -112,7 +111,6 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                     var scoreableInterface = scoreableInterface
 
     var sourceLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var reducedWidth: Int = (sourceLayerInterface!!.getWidth() *8 /10)
@@ -122,11 +120,9 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 
     var x: Int = this.relativeRelationship!!.getX()!!
-            
 
 
     var y: Int = this.relativeRelationship!!.getY()!!
-            
 
 
     var sine: Long= 0

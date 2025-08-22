@@ -125,44 +125,32 @@ open public class StartCanvas : RunnableCanvas
         }
             
     val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
     val features: Features = Features.getInstance()!!
-            
 
     val htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-            
 
     val openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
     val myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
-            
 
     val gameAdStateFactory: GameAdStateFactory = GameAdStateFactory.getInstance()!!
-            
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
-            
 
     private var basicGameDemoPaintable: StatePaintable = StatePaintableFactory.getInstance()!!
-            
 
     private var specialAnimationInterface: SpecialAnimation = SpecialAnimation.getInstance()!!
-            
 
     var paintedSpecialAnimationInterface: Animation = SpecialAnimation.getInstance()!!
-            
 
     private val fullScreenUtil: FullScreenUtil = FullScreenUtil.getInstance()!!
-            
 
     private val highScoresHelper: HighScoresHelper = HighScoresHelper()
 
     private val realHighScoresPaintable: HighScoresPaintable = HighScoresPaintable()
 
     private var highScoresPaintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private var state: Int = 0
 
@@ -171,7 +159,6 @@ open public class StartCanvas : RunnableCanvas
     private val highScoresFactoryInterface: HighScoresFactoryInterface
 
     private var menuInputProcessor: BasicMenuInputProcessor = NoMenuInputProcessor.getInstance()!!
-            
 
     private var menuForm: ScrollSelectionForm = ScrollSelectionForm.NULL_SCROLL_SELECTION_FORM
 
@@ -180,23 +167,18 @@ open public class StartCanvas : RunnableCanvas
     private var initialized: Boolean= false
 
     private var defaultPaintableInterface: Paintable = NullPaintable.getInstance()!!
-            
 
     private var paintableInterface: PaintableInterface = NullPaintable.getInstance()!!
-            
 
     private val overlayPaintable: InitUpdatePaintable
 
     private var tempWait: Int = NullWaitGameRunnable.getInstance()!!.WAIT
 
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
-            
 
     private var gameRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
-            
 
     private var progressPaintable: PaintableInterface = ProgressCanvasFactory.getLazyInstance()!!
-            
 public constructor        (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, highScoresFactoryInterface: HighScoresFactoryInterface, paintable: Paintable, overlayPaintable: InitUpdatePaintable, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, isContinue: Boolean)                        
 
                             : super(commandListener, CurrentDisplayableFactory.getInstance()!!.DEFAULT_CHILD_NAME_LIST){
@@ -270,7 +252,6 @@ override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         try {
             
     var scrollSelectionForm: ScrollSelectionForm = this.getMenuForm()!!
-            
 
 
     
@@ -281,11 +262,9 @@ override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
                                     {
                                     
     var formType: FormType = FormTypeFactory.getInstance()!!.getFormType()!!
-            
 
 
     var rectangle: Rectangle = FormUtil.getInstance()!!.createFormRectangle()!!
-            
 
 scrollSelectionForm!!.init(rectangle, formType)
 
@@ -303,7 +282,6 @@ open fun getCustomCommands()
         //nullable = true from not(false or (false and true)) = true
 : Array<Command?>{
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 
     
@@ -328,7 +306,6 @@ open fun getCustomCommands()
 commandList!!.add(gameCommandsFactory!!.START_COMMAND)
 
     var inApplicationPurchaseFactory: InApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance()!!
-            
 
 
     
@@ -337,7 +314,6 @@ commandList!!.add(gameCommandsFactory!!.START_COMMAND)
                                     {
                                     
     var list: BasicArrayList = LockableFeatureFactory.getInstance()!!.getList()!!
-            
 
 
     
@@ -356,7 +332,6 @@ commandList!!.add(HighScoreCommands.getInstance()!!.DISPLAY)
         try {
             
     var isOverScan: Boolean = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!.isOverScan()!!
-            
 
 
     
@@ -403,7 +378,6 @@ override fun initCommands(cmdListener: CommandListener)
 this.removeAllCommands()
 
     var commandArray: Array<Command?> = getCustomCommands()!!
-            
 
 
     var size: Int = commandArray!!.size
@@ -524,7 +498,6 @@ this.removeGameKeyEvent(keyCode, false)
 
 
     private var isSingleKeyRepeatableProcessing: Boolean = features.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
-            
 override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -548,7 +521,6 @@ override fun keyRepeated(keyCode: Int, deviceId: Int)
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
 open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -562,7 +534,6 @@ open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         try {
             
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
-            
 
 
     
@@ -571,7 +542,6 @@ open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
-            
 
 DownGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -602,7 +572,6 @@ open fun removeGameKeyEvent(keyCode: Int, repeated: Boolean)
         try {
             
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
-            
 
 
     
@@ -611,7 +580,6 @@ open fun removeGameKeyEvent(keyCode: Int, repeated: Boolean)
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this, gameKey)!!
-            
 
 UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
@@ -778,7 +746,6 @@ open fun demoStateChange()
                         else {
                             
     var highScores: HighScores = this.highScoresHelper!!.getNextHighScores()!!
-            
 
 
     
@@ -842,7 +809,6 @@ this.getSpecialAnimationInterface()!!.reset()
                                 
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.processPageAdState()
 }
@@ -894,7 +860,6 @@ open fun create()
 {this.highScoresPaintable= NullPaintable.getInstance()
 
     var randomLevel: Int = this.getNextRandom()!!
-            
 
 }
 
@@ -966,7 +931,6 @@ override fun run()
         try {
             
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(50, "Demo Thread")
 this.setCurrentThread()
@@ -1040,7 +1004,6 @@ super.setRunning(running)
                                     {
                                     
     var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
-            
 
 currentDisplayableFactory!!.clearRunnable()
 this.end()
@@ -1055,7 +1018,6 @@ this.end()
 
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -1063,7 +1025,6 @@ open fun end()
         //nullable = true from not(false or (false and true)) = true
 {
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 baseGameStatistics!!.add(StringMaker().
                             append(BOT_GAME_STATS)!!.append(baseGameStatistics!!.toString())!!.append(CommonSeps.getInstance()!!.NEW_LINE)!!.toString())
@@ -1314,11 +1275,9 @@ open fun isRunningInAnotherThread()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     

@@ -69,11 +69,9 @@ open fun generateBufferedImageChacheables(imageComparisonInfo: ImageComparisonRe
 bufferedImageCacheables= arrayOfNulls(2)
 
     var bufferedImageInfo: BufferedImageInfo = BufferedImageInfoFactory.getInstance(imageComparisonInfo!!.imageWidth, imageComparisonInfo!!.imageHeight, originalBufferedImage!!.getType())!!
-            
 
 
     var poolInterface: PoolInterface = BufferedImagePoolSingleton.getInstance()!!
-            
 
 
 
@@ -91,11 +89,9 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
 
 
     var vector: Vector = imageComparisonInfo!!.getNonMatchingPixelVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

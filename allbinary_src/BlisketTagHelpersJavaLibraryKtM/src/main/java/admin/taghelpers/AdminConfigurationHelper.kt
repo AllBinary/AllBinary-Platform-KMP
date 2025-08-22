@@ -33,7 +33,6 @@ open public class AdminConfigurationHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
 
                     var hashMap = hashMap

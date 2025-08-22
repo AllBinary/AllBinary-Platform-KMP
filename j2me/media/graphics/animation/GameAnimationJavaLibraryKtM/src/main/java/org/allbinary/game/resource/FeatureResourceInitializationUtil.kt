@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -67,12 +66,10 @@ open fun init(level: Int)
                     var level = level
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var featuredResourceFactory: FeaturedResourceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!
-            
 
 featuredResourceFactory!!.init(level)
 FeaturedResourceRelativeRelationshipFactory.getInstance()!!.init(level)

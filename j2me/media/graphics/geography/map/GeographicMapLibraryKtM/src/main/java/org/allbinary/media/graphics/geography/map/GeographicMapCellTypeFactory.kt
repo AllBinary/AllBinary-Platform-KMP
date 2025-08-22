@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val geographicMapCellTypeArray: Array<GeographicMapCellType?> = arrayOfNulls(512)
 

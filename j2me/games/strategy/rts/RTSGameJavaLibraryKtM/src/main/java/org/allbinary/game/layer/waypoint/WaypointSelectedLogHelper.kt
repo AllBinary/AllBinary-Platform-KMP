@@ -62,13 +62,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 open fun onWaypointEvent(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -219,7 +216,6 @@ open fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathF
                     var pathsList = pathsList
 
     var size: Int = pathsList!!.size()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

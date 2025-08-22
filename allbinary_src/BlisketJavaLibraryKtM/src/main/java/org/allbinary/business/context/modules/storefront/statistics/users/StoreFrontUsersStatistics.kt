@@ -51,16 +51,13 @@ public constructor        (storeFrontInterface: StoreFrontInterface)
 this.totalUsersByRoleHashMap= HashMap<Any, Any>()
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
-            
 
 
     var userVector: Vector = userEntityInterface!!.getCustomers()!!
-            
 
 this.totalNumberOfUsers= userVector!!.size as Long
 
     var size: Int = userVector!!.size!!
-            
 
 
 
@@ -74,11 +71,9 @@ this.totalNumberOfUsers= userVector!!.size as Long
 
 
     var nextUserRole: UserRole = userInterface!!.getRole()!!
-            
 
 
     var currentNumberOfUsersForRole: Long = this.getNewTotal(nextUserRole)!!
-            
 
 totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
 }
@@ -147,14 +142,12 @@ open fun toHashMap()
 hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.getNumberOfUsers()!!.toString())
 
     var setOfUserRoles: Set = this.totalUsersByRoleHashMap!!.keys!!
-            
 
 
     var nextUserRole: UserRole
 
 
     var userRoleArray: Array<Any?> = setOfUserRoles!!.toArray()!!
-            
 
 
     var size: Int = userRoleArray!!.size

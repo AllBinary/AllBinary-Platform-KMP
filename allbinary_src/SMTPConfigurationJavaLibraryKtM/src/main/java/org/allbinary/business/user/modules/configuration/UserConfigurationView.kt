@@ -52,11 +52,9 @@ public constructor        (node: Node)
 this.userConfigurationInterface= UserConfiguration() as UserConfigurationInterface
 
     var childNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var emailConfigurationNode: Node = DomSearchHelper.getNode(UserEmailConfigurationData.NAME, childNodeList)!!
-            
 
 
     var userEmailConfigurationView: UserEmailConfigurationView = UserEmailConfigurationView(emailConfigurationNode)
@@ -67,7 +65,6 @@ this.userConfigurationInterface= UserConfiguration() as UserConfigurationInterfa
 userConfigurationInterface!!.setUserEmailConfigurationInterface(userEmailConfigurationInterface)
 
     var timeCreatedNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.TIMECREATED, childNodeList)!!
-            
 
 
     var timeCreatedView: TimeCreatedView = TimeCreatedView(timeCreatedNode)
@@ -75,7 +72,6 @@ userConfigurationInterface!!.setUserEmailConfigurationInterface(userEmailConfigu
 this.userConfigurationInterface!!.setTimeCreated(timeCreatedView!!.getTimeCreated())
 
     var timeLastModifiedNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.LASTMODIFIED, childNodeList)!!
-            
 
 
     var timeLastModifiedView: TimeLastModifiedView = TimeLastModifiedView(timeLastModifiedNode)
@@ -111,7 +107,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(UserConfigurationData.NAME)!!
-            
 
 
     var userEmailConfigurationView: UserEmailConfigurationView = UserEmailConfigurationView(this.userConfigurationInterface!!.getUserEmailConfigurationInterface())

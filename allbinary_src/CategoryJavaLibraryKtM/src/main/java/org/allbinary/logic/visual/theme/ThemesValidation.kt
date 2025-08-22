@@ -103,11 +103,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(ThemesData.getInstance()!!.NAME)!!
-            
 
 
     var size: Int = themeVector!!.size!!
-            
 
 
 

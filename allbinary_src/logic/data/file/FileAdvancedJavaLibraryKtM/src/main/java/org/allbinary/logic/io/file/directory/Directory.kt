@@ -91,7 +91,6 @@ open fun create(directory: String)
         try {
             
     var directoryFile: AbFile = FileFactory.getInstance()!!.getInstance(directory)!!
-            
 
 
     
@@ -141,7 +140,6 @@ open fun remove(existingDirectory: String)
                     var existingDirectory = existingDirectory
 
     var existingDirectoryFile: AbFile = FileFactory.getInstance()!!.getInstance(existingDirectory)!!
-            
 
 
     
@@ -223,7 +221,6 @@ open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean
                                     {
                                     
     var fileArray: Array<Any?> = file.listFiles(fileFilter)!!
-            
 
 
     
@@ -242,7 +239,6 @@ open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean
                                 
 
     var files: Array<AbFile?> = FileWrapperUtil.wrapFiles(fileArray)!!
-            
 
 
     
@@ -328,7 +324,6 @@ open fun search(file: AbFile, isRecursiveSearch: Boolean)
                                     {
                                     
     var fileArray: Array<Any?> = file.listFiles()!!
-            
 
 
     
@@ -347,7 +342,6 @@ open fun search(file: AbFile, isRecursiveSearch: Boolean)
                                 
 
     var files: Array<AbFile?> = FileWrapperUtil.wrapFiles(fileArray)!!
-            
 
 
     
@@ -435,7 +429,6 @@ open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
                                     {
                                     
     var fileArray: Array<Any?> = file.listFiles()!!
-            
 
 
     
@@ -454,7 +447,6 @@ open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
                                 
 
     var files: Array<AbFile?> = FileWrapperUtil.wrapFiles(fileArray)!!
-            
 
 
     
@@ -550,7 +542,6 @@ open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
                                     {
                                     
     var fileArray: Array<Any?> = file.listFiles()!!
-            
 
 
     
@@ -569,7 +560,6 @@ open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
                                 
 
     var files: Array<AbFile?> = FileWrapperUtil.wrapFiles(fileArray)!!
-            
 
 
     

@@ -49,7 +49,6 @@ open public class InventoryHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -85,11 +84,9 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
                                     {
                                     
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(storeName)!!
-            
 
 
     var contentType: String = AcceptableResponseGenerator.getInstance()!!.get(this.request)!!
-            
 
 
     var searchParams: SearchParams = SearchParams(this.request)
@@ -114,11 +111,9 @@ open fun viewSummary()
         try {
             
     var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(searchRequest)!!
-            
 
 
     var result: String = inventoryViewSearchInterface!!.getProduct(this.id)!!
-            
 
 
     
@@ -163,7 +158,6 @@ open fun search()
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var keywords: String = this.searchRequest!!.getParams()!!.get()!!.get(BasicItemData.KEYWORDS) as String
@@ -185,11 +179,9 @@ open fun search()
                                 
 
     var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(searchRequest)!!
-            
 
 
     var result: String = inventoryViewSearchInterface!!.searchSingleDynamicPage()!!
-            
 
 
     

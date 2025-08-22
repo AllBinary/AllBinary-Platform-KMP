@@ -63,16 +63,12 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val ORIENTATION: String = "ORIENTATION"
 
@@ -231,7 +227,6 @@ stringMaker!!.delete(0, stringMaker!!.length())
 logUtil!!.put(stringMaker!!.append(FULL_WIDTH)!!.append(aFullWidth)!!.append(FULL_HEIGHT)!!.append(aFullHeight)!!.append(this.toString())!!.toString(), this, SET_LAST_SIZE_METHOD_NAME)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     
@@ -416,7 +411,6 @@ open fun processForced()
         try {
             
     var swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
-            
 
 swtJOGLProcessor!!.clear()
 DisplayChangeEventHandler.getInstance()!!.fireEvent(displayChangeEvent)
@@ -439,11 +433,9 @@ open fun update(displayable: Displayable, reason: String)
                     var reason = reason
 
     var aLastWidth: Int = displayable.getWidth()!!
-            
 
 
     var aLastHeight: Int = displayable.getHeight()!!
-            
 
 
     var aFullWidth: Int = aLastWidth
@@ -469,7 +461,6 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
 logUtil!!.put(stringMaker!!.append(UPDATE_FROM_ORIENTATION_CHANGE)!!.toString(), this, commonStrings!!.UPDATE)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     

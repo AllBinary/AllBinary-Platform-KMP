@@ -57,10 +57,8 @@ open public class UpdateFileValidationView : DownloadableInventoryItemView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -106,7 +104,6 @@ open fun isValid()
         try {
             
     var inventoryEntity: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 this.itemInterface= inventoryEntity!!.getItem(id)
 } catch(e: MoneyException)
@@ -170,12 +167,10 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                                 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var fullCategory: String = StringMaker().
                             append(URLGLOBALS.getWebappPath())!!.append(storeFrontInterface!!.getCurrentHostNamePath())!!.append(this.itemInterface!!.getCategory())!!.toString()!!
-            
 
 
     var categoryFile: AbFile = AbFile(fullCategory)
@@ -204,7 +199,6 @@ this.itemInterface= inventoryEntity!!.getItem(id)
                                 
 
     var downloadableFileObject: Any = this.getRequestHashMap()!!.get(DownloadItemData.FILE)!!
-            
 
 
     
@@ -216,11 +210,9 @@ this.itemInterface= inventoryEntity!!.getItem(id)
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 HttpFileUploadUtil.log(fileItem)
 
@@ -252,7 +244,6 @@ this.getRequestHashMap()!!.put(DownloadItemData.SIZE, (size).toString())
                             
 
     var licenseFileObject: Any = this.getRequestHashMap()!!.get(DownloadItemData.LICENSE_FILE)!!
-            
 
 
     
@@ -264,11 +255,9 @@ this.getRequestHashMap()!!.put(DownloadItemData.SIZE, (size).toString())
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 HttpFileUploadUtil.log(fileItem)
 
@@ -294,7 +283,6 @@ HttpFileUploadUtil.log(fileItem)
                             
 
     var extraFilesObject: Any = this.getRequestHashMap()!!.get(DownloadItemData.EXTRA_FILES)!!
-            
 
 
     
@@ -306,11 +294,9 @@ HttpFileUploadUtil.log(fileItem)
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 HttpFileUploadUtil.log(fileItem)
 
@@ -337,12 +323,10 @@ this.unzip(fileItem)
                             
 
     var hashMap: HashMap<Any, Any> = this.getRequestHashMap()!!
-            
 
 hashMap!!.put(BasicItemData.ID, this.itemInterface!!.getId())
 
     var licenseObject: Any = hashMap!!.get(DownloadItemData.LICENSE_FILE)!!
-            
 
 
     
@@ -363,7 +347,6 @@ hashMap!!.put(BasicItemData.ID, this.itemInterface!!.getId())
                             
 
     var fileObject: Any = hashMap!!.get(DownloadItemData.FILE)!!
-            
 
 
     
@@ -521,12 +504,10 @@ stringBuffer!!.append("<br/>")
                                 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var fullCategory: String = StringMaker().
                             append(URLGLOBALS.getWebappPath())!!.append(storeFrontInterface!!.getCurrentHostNamePath())!!.append(this.itemInterface!!.getCategory())!!.toString()!!
-            
 
 
     
@@ -554,7 +535,6 @@ stringBuffer!!.append("<br />")
                                 
 
     var downloadableFileObject: Any = this.getRequestHashMap()!!.get(DownloadItemData.FILE)!!
-            
 
 
     
@@ -566,11 +546,9 @@ stringBuffer!!.append("<br />")
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 this.validationInfo(stringBuffer, fileName, size)
 
@@ -584,7 +562,6 @@ stringBuffer!!.append("<br/>")
                             
 
     var licenseFileObject: Any = this.getRequestHashMap()!!.get(DownloadItemData.LICENSE_FILE)!!
-            
 
 
     
@@ -596,11 +573,9 @@ stringBuffer!!.append("<br/>")
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 this.validationInfo(stringBuffer, fileName, size)
 
@@ -612,7 +587,6 @@ this.validationInfo(stringBuffer, fileName, size)
                             
 
     var extraFilesObject: Any = this.getRequestHashMap()!!.get(DownloadItemData.EXTRA_FILES)!!
-            
 
 
     
@@ -624,11 +598,9 @@ this.validationInfo(stringBuffer, fileName, size)
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 this.validationInfo(stringBuffer, fileName, size)
 
@@ -655,7 +627,6 @@ this.validationInfo(stringBuffer, fileName, size)
                                     {
                                     
     var log: String = downloadableItemValidation!!.validationInfo()!!
-            
 
 
     
@@ -711,7 +682,6 @@ open fun isValid(fileName: String, size: Long)
                     var size = size
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     
@@ -831,7 +801,6 @@ open fun validationInfo(stringBuffer: StringMaker, fileName: String, size: Long)
                     var size = size
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     

@@ -45,10 +45,8 @@ open public class StoreThemeCategoryFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
@@ -110,7 +108,6 @@ open fun getRootInstance(categoryAbPath: AbPath)
         try {
             
     var level: Int = CategoryUtil.getPathLevel(categoryAbPath)!!
-            
 
 
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreThemeCategoryPropertiesFactory(this.transformInfoInterface, categoryAbPath) as CategoryPropertiesFactoryInterface
@@ -155,7 +152,6 @@ open fun getRootInstanceFromNode(node: Node)
 
 
     var level: Int = CategoryUtil.getPathLevel(categoryPath)!!
-            
 
 
 

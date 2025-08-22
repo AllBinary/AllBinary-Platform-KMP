@@ -41,7 +41,6 @@ open public class DownloadItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "downloaditems"
 public constructor        ()                        
@@ -141,11 +140,9 @@ open fun getForItem(id: String)
 keysAndValues!!.put(BasicItemData.ID, id)
 
     var vector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -195,11 +192,9 @@ keysAndValues!!.put(BasicItemData.ID, id)
 keysAndValues!!.put(DownloadItemData.ID, downloadItemId)
 
     var vector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

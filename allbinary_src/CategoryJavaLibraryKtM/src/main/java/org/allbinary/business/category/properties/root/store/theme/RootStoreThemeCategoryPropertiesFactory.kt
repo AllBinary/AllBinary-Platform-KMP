@@ -41,7 +41,6 @@ open public class RootStoreThemeCategoryPropertiesFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var categoryPropertiesInterface: CategoryPropertiesInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
@@ -98,7 +97,6 @@ open fun getInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

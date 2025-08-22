@@ -57,7 +57,6 @@ public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: 
 this.keys= arrayOfNulls(hashtable.size)
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
     var size: Int = objectArray!!.size

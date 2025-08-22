@@ -43,7 +43,6 @@ open public class KeyValueDrawCharArray
     private var valueX: Int
 
     private var value: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-            
 
     private var len: Int= 0
 public constructor        (label: String, x: Int)

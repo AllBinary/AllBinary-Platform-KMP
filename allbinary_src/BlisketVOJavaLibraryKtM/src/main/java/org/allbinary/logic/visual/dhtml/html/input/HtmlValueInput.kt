@@ -56,7 +56,6 @@ public constructor        (before: String, type: String, name: String, value: St
                     
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.value= stringUtil!!.EMPTY_STRING
 addAttribute(VALUE, value)

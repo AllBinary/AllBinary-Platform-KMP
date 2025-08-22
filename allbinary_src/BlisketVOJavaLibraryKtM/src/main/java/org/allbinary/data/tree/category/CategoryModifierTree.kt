@@ -37,13 +37,10 @@ open public class CategoryModifierTree : CategoryPrivateTree
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val directory: Directory = Directory.getInstance()!!
-            
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
 
                             : super(categoryFactoryInterface){

@@ -40,7 +40,6 @@ open public class ImageComparatorConstraints
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var avoidVector: Vector
 
@@ -95,11 +94,9 @@ open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
 
 
     var avoidVector: Vector = this.getAvoidVector()!!
-            
 
 
     var size: Int = avoidVector!!.size!!
-            
 
 
 
@@ -140,11 +137,9 @@ open fun isCollisionWithAvoidRectangles(point: GPoint)
 
 
     var avoidVector: Vector = this.getAvoidVector()!!
-            
 
 
     var size: Int = avoidVector!!.size!!
-            
 
 
 
@@ -258,11 +253,9 @@ open fun log()
         //nullable = true from not(false or (false and true)) = true
 {
     var avoidVector: Vector = this.getAvoidVector()!!
-            
 
 
     var size: Int = avoidVector!!.size!!
-            
 
 
 

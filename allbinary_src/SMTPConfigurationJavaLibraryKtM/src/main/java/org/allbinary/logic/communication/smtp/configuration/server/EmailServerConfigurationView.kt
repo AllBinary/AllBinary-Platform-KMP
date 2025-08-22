@@ -47,19 +47,15 @@ public constructor        (node: Node)
                     var node = node
 
     var childNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var server: String = DomNodeHelper.getTextNodeValue(EmailServerConfigurationData.SERVER, childNodeList)!!
-            
 
 
     var accountName: String = DomNodeHelper.getTextNodeValue(EmailServerConfigurationData.ACCOUNT, childNodeList)!!
-            
 
 
     var password: String = DomNodeHelper.getTextNodeValue(EmailServerConfigurationData.PASSWORD, childNodeList)!!
-            
 
 this.emailServerConfigurationInterface= EmailServerConfiguration(accountName, password, server) as EmailServerConfigurationInterface
 }
@@ -95,11 +91,9 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = emailConfigurationMapping!!.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, EmailServerConfigurationData.NAME, hashMap)!!
-            
 
 
 

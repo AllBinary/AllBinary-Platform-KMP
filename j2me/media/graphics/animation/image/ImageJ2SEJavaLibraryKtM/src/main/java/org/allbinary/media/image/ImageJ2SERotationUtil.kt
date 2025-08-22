@@ -52,10 +52,8 @@ open fun getInstance()
         }
             
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
     private val imageJ2SEUtil: ImageJ2SEUtil = ImageJ2SEUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -89,7 +87,6 @@ open fun getRotatedImage(bufferedImage: Image, radians: Double)
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
                             null))!!
-            
 
 
 
@@ -144,7 +141,6 @@ open fun rotateImage(bufferedImage: Image, newBufferedImage: BufferedImage, tota
                     var totalAngle = totalAngle
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 g.setBackground(imageJ2SEUtil!!.TRANSPARENT_COLOR)
 g.clearRect(0, 0, newBufferedImage!!.getWidth(), newBufferedImage!!.getHeight())
@@ -169,7 +165,6 @@ open fun getRotatedImage(bufferedImage: Image, newBufferedImage: BufferedImage, 
                     var totalAngle = totalAngle
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 
 
@@ -262,11 +257,9 @@ rows= (size /columns)
     var bufferedImage: BufferedImage = this.imageUtil!!.create(firstBufferedImage!!.getWidth(
                             null) *columns, firstBufferedImage!!.getHeight(
                             null) *rows)!!
-            
 
 
     var g: Graphics2D = bufferedImage!!.createGraphics()!!
-            
 
 
     var columnIndex: Int = 0

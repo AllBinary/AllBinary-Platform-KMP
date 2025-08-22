@@ -84,7 +84,6 @@ open fun initAnimations()
         //nullable = true from not(false or (false and true)) = true
 {
     var nullAnimation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 
 
 
@@ -137,7 +136,6 @@ open fun update(index: Int, item: CustomItem)
                     var item = item
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 
     var buttonColor: BasicColor = basicColorFactory!!.TRANSPARENT_GREY
@@ -147,11 +145,9 @@ open fun update(index: Int, item: CustomItem)
 
 
     var width: Int = item.getMinimumWidth()!!
-            
 
 
     var height: Int = item.getMinimumHeight()!!
-            
 
 
     var adjustedBorder: Int = 1
@@ -195,7 +191,6 @@ open fun getSelectedCommand()
         //nullable = true from not(false or (false and true)) = true
 : Command{
     var index: Int = super.getSelectedIndex()!!
-            
 
 
     var commandTextItem: CommandTextItem = this.get(index) as CommandTextItem
@@ -214,7 +209,6 @@ override fun append(item: CustomItem)
                     var item = item
 
     var result: Int = super.append(item)!!
-            
 
 this.update(result, item)
 

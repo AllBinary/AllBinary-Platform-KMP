@@ -86,11 +86,9 @@ open fun save(file: AbFile, document: Document)
         try {
             
     var copyTransformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 
     var copyTransformer: Transformer = copyTransformerFactory!!.newTransformer()!!
-            
 
 
     var domSource: DOMSource = DOMSource(document)

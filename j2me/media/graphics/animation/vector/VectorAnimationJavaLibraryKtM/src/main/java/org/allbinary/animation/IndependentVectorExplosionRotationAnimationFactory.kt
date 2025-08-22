@@ -69,7 +69,6 @@ open fun init()
 
 
     private val vectorExplosionGenerator: VectorExplosionGenerator = VectorExplosionGenerator.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
@@ -96,7 +95,6 @@ frame= rotationAnimationInterface!!.getFrame()
                                 
 
     var points: Array<Array<IntArray?>?> = vectorExplosionGenerator!!.getInstance(framePoints[frame]!!, 6, vectorExplosionGenerator!!.ROTATION)!!
-            
 
 
 

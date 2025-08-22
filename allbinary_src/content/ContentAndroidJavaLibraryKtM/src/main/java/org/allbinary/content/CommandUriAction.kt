@@ -60,7 +60,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -85,13 +84,11 @@ open fun process(command: Command)
         try {
             
     var intent: Intent = getIntent(command)!!
-            
 
 ResourceUtil.getInstance()!!.getContext()!!.startActivity(intent)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
@@ -109,7 +106,6 @@ open fun getIntent(command: Command)
 
 
     var uri: Uri = Uri.parse(url)!!
-            
 
 
     var intent: Intent = Intent(Intent.ACTION_VIEW, uri)

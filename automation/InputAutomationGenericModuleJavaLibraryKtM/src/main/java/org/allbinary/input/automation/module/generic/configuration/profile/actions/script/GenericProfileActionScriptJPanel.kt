@@ -40,10 +40,8 @@ open public class GenericProfileActionScriptJPanel : javax.swing.JPanel
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var defaultMutableTreeNode: DefaultMutableTreeNode = DefaultMutableTreeNode("Root")
 
@@ -141,7 +139,6 @@ open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
                     var evt = evt
 
     var button: Int = evt.getButton()!!
-            
 
 
     
@@ -150,7 +147,6 @@ open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
                                     {
                                     
     var treePath: TreePath = this.getActionScriptJTree()!!.getSelectionPath()!!
-            
 
 
     
@@ -161,7 +157,6 @@ open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
                                     {
                                     
     var anyType: Any = treePath!!.getLastPathComponent()!!
-            
 
 
     
@@ -173,7 +168,6 @@ open fun actionScriptJTreeMouseReleased(evt: java.awt.event.MouseEvent)
 
 
     var jPopupMenu: JPopupMenu = customTreeNodeInterface!!.getJPopupMenu()!!
-            
 
 jPopupMenu!!.show(evt.getSource() as JComponent, evt.getX(), evt.getY())
 

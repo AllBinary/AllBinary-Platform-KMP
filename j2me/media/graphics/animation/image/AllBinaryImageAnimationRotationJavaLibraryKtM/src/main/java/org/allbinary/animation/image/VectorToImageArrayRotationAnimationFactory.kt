@@ -128,7 +128,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 this.angleIncrement= angleFactory!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()
 this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.getImage(), this.getAngleIncrement(), angleFactory!!.TOTAL_ANGLE)

@@ -60,7 +60,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val SCALE: GameConfiguration
 
@@ -97,7 +96,6 @@ private constructor        ()
             : super()
         {
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 SCALE= GameConfiguration("Scale", smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(3))
 ORIENTATION= GameConfiguration("Orientation", smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(0), smallIntegerSingletonFactory!!.getInstance(8))
@@ -124,23 +122,19 @@ open fun load(abeClientInformation: AbeClientInformationInterface)
                     var abeClientInformation = abeClientInformation
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var keyValuePersistance: KeyValuePersistance = GameConfigurationPersistanceSingleton.getInstance()!!
-            
 
 keyValuePersistance!!.clear()
 keyValuePersistance!!.loadAll(abeClientInformation)
 
     var list: BasicArrayList = keyValuePersistance!!.getIds()!!
-            
 
 
     
@@ -149,7 +143,6 @@ keyValuePersistance!!.loadAll(abeClientInformation)
                                     {
                                     
     var hashtable: Hashtable<Any, Any> = keyValuePersistance!!.get(0)!!
-            
 
 
     var anyType: Any = this.SCALE.getName() as Object
@@ -198,7 +191,6 @@ override fun toString()
 
 
     var commonStrings: CommonSeps = CommonSeps.getInstance()!!
-            
 
 stringBuffer!!.append(commonStrings!!.COMMA_SEP)
 stringBuffer!!.append(this.SCALE.getName())

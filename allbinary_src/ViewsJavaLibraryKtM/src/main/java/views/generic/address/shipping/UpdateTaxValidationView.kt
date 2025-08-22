@@ -59,7 +59,6 @@ open fun isValid()
 : Boolean{this.streetAddress= StreetAddress(this.getRequest())
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getTransformInfoInterface()!!.getStoreName())!!
-            
 
 
     
@@ -79,7 +78,6 @@ open fun isValid()
 
 
     var streetAddressList: Vector = billingAddressesEntity!!.get()!!
-            
 
 
     
@@ -101,7 +99,6 @@ open fun isValid()
 
 
     var size: Int = streetAddressList!!.size!!
-            
 
 
 

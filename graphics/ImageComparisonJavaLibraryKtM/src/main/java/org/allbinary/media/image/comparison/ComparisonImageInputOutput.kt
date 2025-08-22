@@ -50,7 +50,6 @@ open public class ComparisonImageInputOutput
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -65,7 +64,6 @@ open fun save(frame: Long)
                     var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -85,7 +83,6 @@ open fun save(frame: Long)
                                     {
                                     
     var imageComparisonResult: ImageComparisonResult = imageComparisonResultFrameCacheable!!.getImageComparisonResult()!!
-            
 
 this.save(imageComparisonResult, imageComparisonResultFrameCacheable!!.getFrame())
 
@@ -119,7 +116,6 @@ open fun save(imageComparisonResult: ImageComparisonResult, frame: Long)
                     var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var filePathStringBuffer: StringMaker = StringMaker()
@@ -135,7 +131,6 @@ filePathStringBuffer1!!.append("_1")
 filePathStringBuffer1!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath1: String = filePathStringBuffer1!!.toString()!!
-            
 
 
     var filePathStringBuffer2: StringMaker = StringMaker()
@@ -145,11 +140,9 @@ filePathStringBuffer2!!.append("_2")
 filePathStringBuffer2!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath2: String = filePathStringBuffer2!!.toString()!!
-            
 
 
     var bufferedImageCacheables: Array<BufferedImageCacheable?> = ChangedPixelsUtil.generateBufferedImageChacheables(imageComparisonResult)!!
-            
 
 logUtil!!.put("Comparison Image File Path 1: " +filePath1, this, commonStrings!!.SAVE)
 logUtil!!.put("Comparison Image File Path 2: " +filePath2, this, commonStrings!!.SAVE)
@@ -160,7 +153,6 @@ bufferedImageArray[0]= bufferedImageCacheables[0]!!.getBufferedImage()
 bufferedImageArray[1]= bufferedImageCacheables[1]!!.getBufferedImage()
 
     var imagePersistanceUtil: ImagePersistanceUtil = ImagePersistanceUtil.getInstance()!!
-            
 
 imagePersistanceUtil!!.saveWithImageIO(filePath1, bufferedImageArray[0]!!)
 imagePersistanceUtil!!.saveWithImageIO(filePath2, bufferedImageArray[1]!!)

@@ -54,7 +54,6 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
                     var list = list
 
     var rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
-            
 
 
     var point: GPoint
@@ -115,7 +114,6 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
                     var yCellSize = yCellSize
 
     var rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
-            
 
 
     var point: GPoint

@@ -47,19 +47,16 @@ public constructor        (node: Node)
                     var node = node
 
     var childNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
     var name: String = DomNodeHelper.getTextNodeValue(UserEmailEventConfigurationData.NAME, childNodeList)!!
-            
 
 hashMap!!.put(UserEmailEventConfigurationData.NAME, name)
 
     var eventListenerClassPath: String = DomNodeHelper.getTextNodeValue(UserEmailEventConfigurationData.LISTENER_CLASSPATH, childNodeList)!!
-            
 
 hashMap!!.put(UserEmailEventConfigurationData.LISTENER_CLASSPATH, eventListenerClassPath)
 this.setUserEmailEventConfigurationInterface(UserEmailEventConfiguration(hashMap) as UserEmailEventConfigurationInterface)
@@ -86,11 +83,9 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = userEmailEventConfigurationMapping!!.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, UserEmailEventConfigurationData.NAME, hashMap)!!
-            
 
 
 

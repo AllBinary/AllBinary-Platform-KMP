@@ -39,10 +39,8 @@ open public class ShippingMethods
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var shippingVector: Vector
 
@@ -84,7 +82,6 @@ open fun getShippingInterface(name: String)
 
 
     var size: Int = shippingVector!!.size!!
-            
 
 
 

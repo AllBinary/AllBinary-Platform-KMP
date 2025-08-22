@@ -46,10 +46,8 @@ open public class AndroidHardware
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var componentInterfaceVector: BasicArrayList = BasicArrayList()
 
@@ -132,7 +130,6 @@ componentInterfaceVector= BasicArrayList()
 logUtil!!.put("File Found", this, commonStrings!!.CONSTRUCTOR)
 
     var nextLine: String = lineNumberReader!!.readLine()!!
-            
 
 
         while(nextLine != 
@@ -168,7 +165,6 @@ override fun toString()
 
 
     var size: Int = this.componentInterfaceVector!!.size()!!
-            
 
 
 

@@ -71,7 +71,6 @@ public constructor        (image: Image, sequenceArray: IntArray, animationBehav
                     var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
 

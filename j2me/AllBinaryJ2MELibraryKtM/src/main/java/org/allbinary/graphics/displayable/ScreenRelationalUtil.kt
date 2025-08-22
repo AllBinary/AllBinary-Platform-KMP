@@ -81,11 +81,9 @@ open fun getScale(aWidth: Int, aHeight: Int, add: Int)
                     var add = add
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var last: IntArray = displayInfoSingleton!!.getLast()!!
-            
 
 
     var width: Float = last[displayInfoSingleton!!.WIDTH]!!.toFloat()

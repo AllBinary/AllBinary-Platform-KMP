@@ -72,7 +72,6 @@ open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
     var displayChangeEventHandler: BasicEventHandler = DisplayChangeEventHandler.getInstance()!!
-            
 
 
     var displayChangeEventListener: DisplayChangeEventListener

@@ -51,7 +51,6 @@ open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: Transfo
                     var transformInfoFactoryInterface = transformInfoFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -63,7 +62,6 @@ open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: Transfo
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

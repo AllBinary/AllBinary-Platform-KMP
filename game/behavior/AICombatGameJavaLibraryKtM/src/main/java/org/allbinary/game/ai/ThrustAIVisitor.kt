@@ -35,7 +35,6 @@ open public class ThrustAIVisitor : Visitor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val TRUE: Boolean = BooleanFactory.getInstance()!!.TRUE
 public constructor        (){}
@@ -54,7 +53,6 @@ basicAI!!.processAI(Canvas.UP)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.VISIT, e)
 }

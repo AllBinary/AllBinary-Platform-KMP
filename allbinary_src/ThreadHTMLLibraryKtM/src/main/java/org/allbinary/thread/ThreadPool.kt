@@ -39,16 +39,12 @@ open public class ThreadPool
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val threadPoolStrings: ThreadPoolStrings = ThreadPoolStrings.getInstance()!!
-            
 
     val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
-            
 
     private var isAlive: Boolean= false
 
@@ -126,7 +122,6 @@ open fun runATask()
         //nullable = true from not(false or (false and true)) = true
 {
     var runnable: Runnable = this.getTask()!!
-            
 
 
     
@@ -180,7 +175,6 @@ open fun runTaskWithPriority(task: PriorityRunnable)
                                     {
                                     
     var size: Int = this.taskQueue!!.size()!!
-            
 
 
     var runnable: PriorityRunnable
@@ -224,7 +218,6 @@ break;
                         else {
                             
     var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)!!
-            
 
 this.taskQueue!!.add(index, task)
 
@@ -315,12 +308,14 @@ open fun join()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(this) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        isAlive= false
+        {isAlive= false
 taskQueue!!.clear()
 this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
-
+}
 
 }
 

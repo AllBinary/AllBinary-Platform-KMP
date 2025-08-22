@@ -39,7 +39,6 @@ open public class StoreFrontTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 
@@ -76,12 +75,10 @@ open fun getCurrentLocation()
             
     var anyType: Any = StoreFrontHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("getCurrentLocation", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -130,12 +127,10 @@ open fun getCurrentHomeLocation()
             
     var anyType: Any = StoreFrontHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("getCurrentHomeLocation", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 

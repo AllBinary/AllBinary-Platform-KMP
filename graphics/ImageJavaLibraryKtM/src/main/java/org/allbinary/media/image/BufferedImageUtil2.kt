@@ -41,7 +41,6 @@ open fun getInstance()
             }            
         
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
         //nullable = true from not(false or (false and false)) = true
@@ -81,11 +80,9 @@ rows= (bufferedImageArray!!.size /columns)
     var bufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImageArray[0]!!.getWidth(
                             null) *columns, bufferedImageArray[0]!!.getHeight(
                             null) *rows)!!
-            
 
 
     var g: Graphics2D = bufferedImage!!.createGraphics()!!
-            
 
 
     var columnIndex: Int = 0

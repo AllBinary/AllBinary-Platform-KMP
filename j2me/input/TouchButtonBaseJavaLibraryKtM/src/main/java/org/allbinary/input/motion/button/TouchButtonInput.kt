@@ -39,10 +39,8 @@ open public class TouchButtonInput : Input
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
     private val TOUCH_BUTTON_SOURCE_ID: Int = this.gameKeyEventFactory!!.TOUCH_BUTTON_SOURCE_ID
 
@@ -72,13 +70,11 @@ open fun update(inputToGameKeyMapping: InputToGameKeyMapping)
         try {
             
     var gameKey: GameKey = inputToGameKeyMapping!!.getInstance(this.getId())!!
-            
 
 this.gameKeyEvent= this.gameKeyEventFactory!!.getInstance(this, gameKey)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }

@@ -37,7 +37,6 @@ open public class AdvancedRTSLayerFormFactory : RTSLayerFormFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var scrollSelectionForm: ScrollSelectionForm
 protected constructor        (label: String, itemArrayFactoryInterface: ItemArraySingletonFactoryInterface){
@@ -50,13 +49,11 @@ protected constructor        (label: String, itemArrayFactoryInterface: ItemArra
         try {
             
     var items: Array<CustomItem?> = itemArrayFactoryInterface!!.getItems()!!
-            
 
 this.scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }

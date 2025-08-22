@@ -56,11 +56,9 @@ open fun toString(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
                     var z = z
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

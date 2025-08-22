@@ -37,7 +37,6 @@ open public class GenericProfileActionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var genericProfileAction: GenericProfileAction
 

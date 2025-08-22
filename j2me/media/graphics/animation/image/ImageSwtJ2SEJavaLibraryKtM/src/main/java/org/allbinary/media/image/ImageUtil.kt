@@ -64,13 +64,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private var IIOIMAGE_POOL_NAME: String = "IIOIMAGE_POOL_NAME"
 
@@ -97,7 +94,6 @@ open fun create(width: Int, height: Int)
                     var height = height
 
     var display: Display = BareMain.shell.getDisplay()!!
-            
 
 
 
@@ -318,7 +314,6 @@ open fun createBufferedImage(bufferedImage: org.eclipse.swt.graphics.Image, newW
                     var allowTranslate = allowTranslate
 
     var imageData: ImageData = bufferedImage!!.getImageData()!!
-            
 
 
     var width: Float = imageData!!.width
@@ -458,14 +453,12 @@ open fun toString(bufferedImage: org.eclipse.swt.graphics.Image)
                     var bufferedImage = bufferedImage
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var imageData: ImageData = bufferedImage!!.getImageData()!!
-            
 
 stringBuffer!!.append(" org.eclipse.swt.graphics.Image: ")
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)

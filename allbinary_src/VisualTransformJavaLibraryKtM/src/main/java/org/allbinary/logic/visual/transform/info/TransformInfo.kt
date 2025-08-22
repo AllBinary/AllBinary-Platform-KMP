@@ -61,13 +61,10 @@ open public class TransformInfo
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var isChild: Boolean = false
 
@@ -136,11 +133,9 @@ open fun override(hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var aName: String = hashMap!!.get(transformInfoData!!.NAME) as String
@@ -224,7 +219,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
     var fileDataString: String = CryptFileReader(TransformInfoObjectData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(AbPath(fileAbPath!!.toString(), aObject))!!
-            
 
 
     
@@ -334,7 +328,6 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
 
     var fileDataString: String = CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(AbPath(fileAbPath!!.toString(), aTemplate))!!
-            
 
 
     
@@ -380,7 +373,6 @@ this.getObjectConfigInterface()!!.setOutputTypeName(type)
 
     var fileDataString: String = CryptFileReader(TransformInfoDataData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoDataData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(AbPath(fileAbPath!!.toString(), aData))!!
-            
 
 
     
@@ -556,7 +548,6 @@ open fun setObjectConfig(value: Object)
                     var value = value
 
     var document: Document = DomDocumentHelper.create(value)!!
-            
 
 this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(abeClientInformation, this, document))
 }
@@ -680,11 +671,9 @@ open fun getData()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var dataFileString: String = this.getDataFile()!!
-            
 
 
     
@@ -696,7 +685,6 @@ open fun getData()
             
     var fileData: String = CryptFileReader(TransformInfoDataData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoDataData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(this.getDataFilePath())!!
-            
 
 
     
@@ -806,11 +794,9 @@ open fun getDataDocument()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var localData: String = this.getData()!!
-            
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -837,7 +823,6 @@ open fun getDataDocument()
                         else {
                             
     var document: Document = DomDocumentHelper.create(localData)!!
-            
 
 
 
@@ -864,7 +849,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -881,7 +865,6 @@ hashMap!!.put(transformInfoData!!.DATAFILENAME, this.dataFileName)
 hashMap!!.put(transformInfoData!!.DATA, Encoder.encode(this.data.encodeToByteArray()))
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -914,7 +897,6 @@ vector.add(this.dataFileName)
 vector.add(Encoder.encode(this.data.encodeToByteArray()))
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.

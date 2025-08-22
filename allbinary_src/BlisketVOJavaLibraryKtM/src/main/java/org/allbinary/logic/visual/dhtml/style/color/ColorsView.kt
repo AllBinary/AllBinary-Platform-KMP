@@ -41,7 +41,6 @@ open public class ColorsView
         
 
     private val commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
     private val HEXRADIX: Int = 16
 
@@ -104,7 +103,6 @@ hexColorStringBuffer!!.append(greenIndex, HEXRADIX.toString())
 hexColorStringBuffer!!.append(blueIndex, HEXRADIX.toString())
 
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
-            
 
 
 
@@ -123,11 +121,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, ColorsData.getInstance()!!.NAME, "RGB Colors In Hex")!!
-            
 
 
     var blackNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, "000000")!!
-            
 
 node.appendChild(blackNode)
 
@@ -172,14 +168,12 @@ hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 hexColorStringBuffer!!.append(index, HEXRADIX.toString())
 
     var colorNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, hexColorStringBuffer!!.toString())!!
-            
 
 node.appendChild(colorNode)
 }
 
 
     var whiteNode: Node = ModDomHelper.createNameValueNodes(document, ColorData.getInstance()!!.NAME, "FFFFFF")!!
-            
 
 node.appendChild(whiteNode)
 

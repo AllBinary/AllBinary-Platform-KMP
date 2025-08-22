@@ -40,7 +40,6 @@ open public class BasicNeededTouchButtonsBuilder : BaseTouchInput {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 override fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
@@ -57,11 +56,9 @@ override fun getList()
 
 
     var commonButtons: CommonButtons = CommonButtons.getInstance()!!
-            
 
 
     var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 
 
     var UP: TouchButton = TouchButton(BasicTouchInputFactory.getInstance()!!.UP, animationInterface, animationInterface, commonButtons!!.NORMAL_BUTTON, basicTouchButtonCellPositionFactory!!.SECOND_FROM_BOTTOM_LEFT, touchButtonLocationHelper!!.getColumnsRemainderHalf(), touchButtonLocationHelper!!.getRowsRemainderHalf())

@@ -217,7 +217,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
             this.processMotionInput(layerManager)
 
     var size: Int = inputList!!.size()!!
-            
 
 
     var key: Int = 0
@@ -279,7 +278,6 @@ open fun select(motionGestureEvent: MotionGestureEvent)
                     var motionGestureEvent = motionGestureEvent
 
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
-            
 
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
@@ -289,7 +287,6 @@ open fun select(motionGestureEvent: MotionGestureEvent)
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var x: Int = point.getX() +allBinaryTiledLayer!!.getXP()
@@ -299,7 +296,6 @@ open fun select(motionGestureEvent: MotionGestureEvent)
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAtNoThrow(x, y)!!
-            
 
 
     
@@ -334,7 +330,6 @@ this.setSelectedRTSLayer(foundRTSLayer, geographicMapCellPosition)
                         else {
                             
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append("Off Of Map -")!!.append(commonLabels!!.WIDTH_LABEL)!!.append(allBinaryTiledLayer!!.getWidth())!!.append(commonLabels!!.HEIGHT_LABEL)!!.append(allBinaryTiledLayer!!.getHeight())!!.toString(), this, "select")
@@ -365,7 +360,6 @@ open fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getSelectedRtsFormInput()!!.getSelectedGeographicCellPosition()!!
-            
 
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = gameCanvas!!.getLayerManager() as GeographicMapCompositeInterface
@@ -375,12 +369,10 @@ open fun paint(graphics: Graphics)
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 graphics.setColor(BasicColorFactory.getInstance()!!.GREEN.toInt())
 
     var list: BasicArrayList = this.getSelectedBuildingPlayerGameInput()!!.getPaintSelectedRTSLayersList()!!
-            
 
 
     var width: Int = 0
@@ -420,7 +412,6 @@ graphics.drawRect(rtsLayer!!.getXP() -allBinaryTiledLayer!!.getXP(), rtsLayer!!.
                                     {
                                     
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 width= allBinaryTiledLayer!!.getCellWidth()
 height= allBinaryTiledLayer!!.getCellHeight()

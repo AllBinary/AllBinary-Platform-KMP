@@ -80,7 +80,6 @@ open public class Hardware
     private val MINHARDWARE: Int = 0
 
     private val componentFactory: ComponentFactory = ComponentFactory.getInstance()!!
-            
 public constructor        ()
             : super()
         {
@@ -377,7 +376,6 @@ override fun toString()
 
 
     var size: Int = componentInterfaceVector!!.size!!
-            
 
 
 

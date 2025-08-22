@@ -38,7 +38,6 @@ open public class GeographicMapCellType
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val type: Int
 public constructor        (type: Int)
@@ -54,11 +53,9 @@ this.type= type
                                     {
                                     
     var geographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
-            
 
 
     var geographicMapCellTypeArray: Array<GeographicMapCellType?> = geographicMapCellTypeFactory!!.getGeographicMapCellTypeArray()!!
-            
 
 
     

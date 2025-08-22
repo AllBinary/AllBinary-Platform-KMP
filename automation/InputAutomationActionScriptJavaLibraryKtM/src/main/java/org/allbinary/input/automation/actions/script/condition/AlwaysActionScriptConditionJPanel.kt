@@ -32,10 +32,8 @@ open public class AlwaysActionScriptConditionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface
 public constructor        (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface){

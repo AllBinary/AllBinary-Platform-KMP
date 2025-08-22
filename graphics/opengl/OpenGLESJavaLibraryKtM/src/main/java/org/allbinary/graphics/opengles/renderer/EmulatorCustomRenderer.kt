@@ -46,13 +46,10 @@ open public class EmulatorCustomRenderer
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val renderStrings: RendererStrings = RendererStrings.getInstance()!!
-            
 
 open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
@@ -65,7 +62,6 @@ open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
 logUtil!!.put(commonStrings!!.START, this, this.renderStrings!!.ON_SURFACE_CREATED)
 
     var initEmulatorFactory: InitEmulatorFactory = InitEmulatorFactory.getInstance()!!
-            
 
 
     

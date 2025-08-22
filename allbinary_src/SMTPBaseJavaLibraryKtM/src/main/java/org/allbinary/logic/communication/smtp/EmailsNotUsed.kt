@@ -40,10 +40,8 @@ open public class EmailsNotUsed
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var emailInfoVector: Vector
 public constructor        ()
@@ -72,11 +70,9 @@ open fun toXmlNode(document: Document)
                                 
 
     var node: Node = document.createElement(EmailData.NAME)!!
-            
 
 
     var size: Int = emailInfoVector!!.size!!
-            
 
 
 
@@ -90,7 +86,6 @@ open fun toXmlNode(document: Document)
 
 
     var emailNode: Node = email.toXmlNode(document)!!
-            
 
 
     

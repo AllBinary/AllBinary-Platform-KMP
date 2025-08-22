@@ -54,7 +54,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -74,12 +73,10 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface, objectConfi
         try {
             
     var transformInfoObjectConfigData: TransformInfoObjectConfigData = TransformInfoObjectConfigData.getInstance()!!
-            
 
 
     var data: String = CryptFileReader(transformInfoObjectConfigData!!.UNCRYPTED_EXTENSION, transformInfoObjectConfigData!!.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(objectConfigFileAbPath)!!
-            
 
 
 
@@ -89,7 +86,6 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface, objectConfi
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

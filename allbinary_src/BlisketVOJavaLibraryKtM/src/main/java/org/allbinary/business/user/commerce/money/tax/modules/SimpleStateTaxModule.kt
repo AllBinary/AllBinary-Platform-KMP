@@ -52,10 +52,8 @@ open public class SimpleStateTaxModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var streetAddress: StreetAddress
 
@@ -91,7 +89,6 @@ this.storeFrontInterface= storeFrontInterface
 
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(fileAbPath)!!
-            
 
 this.document= DomDocumentHelper.create(data)
 
@@ -105,16 +102,13 @@ this.document= DomDocumentHelper.create(data)
                                 
 
     var state: String = this.streetAddress!!.getState()!!
-            
 
 
     var country: String = this.streetAddress!!.getCountry()!!
-            
 
 state= state.uppercase()
 
     var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
-            
 
 
 
@@ -125,22 +119,18 @@ state= state.uppercase()
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     var taxNodeChildren: NodeList = node.getChildNodes()!!
-            
 
 
     var streetAddressNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, taxNodeChildren)!!
-            
 
 
     var taxableStreetAddress: StreetAddress = StreetAddress(streetAddressNode)
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -158,11 +148,9 @@ state= state.uppercase()
                                     {
                                     
     var rateNode: Node = DomSearchHelper.getNode(TaxData.RATE, taxNodeChildren)!!
-            
 
 
     var taxRate: String = DomNodeHelper.getTextNodeValue(rateNode)!!
-            
 
 
     var taxRateFloat: Float = Float(Float(taxRate).
@@ -207,7 +195,6 @@ this.storeFrontInterface= storeFrontInterface
 
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(fileAbPath)!!
-            
 
 this.document= DomDocumentHelper.create(data)
 
@@ -221,15 +208,12 @@ this.document= DomDocumentHelper.create(data)
                                 
 
     var country: String = this.streetAddress!!.getCountry()!!
-            
 
 
     var rootNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
-            
 
 
     var nodeList: NodeList = document.getElementsByTagName(TaxData.NAME)!!
-            
 
 
 
@@ -240,15 +224,12 @@ this.document= DomDocumentHelper.create(data)
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     var taxNodeChildren: NodeList = node.getChildNodes()!!
-            
 
 
     var streetAddressNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, taxNodeChildren)!!
-            
 
 
     
@@ -273,7 +254,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -295,7 +275,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                     {
                                     
     var state: String = this.streetAddress!!.getState()!!
-            
 
 
     

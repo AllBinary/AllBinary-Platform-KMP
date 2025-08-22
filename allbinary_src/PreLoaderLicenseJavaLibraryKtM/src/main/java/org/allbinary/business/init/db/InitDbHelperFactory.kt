@@ -60,7 +60,6 @@ classes[0]=
 params[0]= databaseConnectionInfoInterface as Object
 
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, CLASSNAME, classes, params)!!
-            
 
 
 
@@ -81,7 +80,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface)
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, CLASSNAME, 
                             null, 
                             null)!!
-            
 
 
 

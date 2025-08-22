@@ -66,15 +66,12 @@ open fun turnAI(frame: Int)
 
 
     var directionAngle: Int = this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame)!!
-            
 
 
     var angle: Short = this.angleInfo!!.getAngle()!!
-            
 
 
     var degrees: Int = Math.abs(directionAngle -angle)!!
-            
 
 
     
@@ -172,11 +169,9 @@ open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
 
 
     var angleIncrementInfo: AngleIncrementInfo = this.angleInfo!!.getAngleIncrementInfo()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     

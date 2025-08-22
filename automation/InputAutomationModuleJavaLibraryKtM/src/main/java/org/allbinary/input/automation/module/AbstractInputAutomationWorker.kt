@@ -43,10 +43,8 @@ open public class AbstractInputAutomationWorker
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var index: Long= 0
 

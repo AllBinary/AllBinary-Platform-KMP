@@ -40,7 +40,6 @@ open public class Group
         companion object {
             
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(10)!!
-            
 
     private val GROUP_NAME_LABEL: String = "Group Name: "
 

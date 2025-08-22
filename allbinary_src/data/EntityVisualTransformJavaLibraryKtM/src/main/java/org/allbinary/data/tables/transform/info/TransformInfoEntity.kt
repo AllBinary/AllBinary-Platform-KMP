@@ -49,12 +49,10 @@ open public class TransformInfoEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "transforminfo"
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private val transformInfoFactoryInterface: TransformInfoFactoryInterface
 
@@ -162,7 +160,6 @@ open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
                     var pageContext = pageContext
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -170,7 +167,6 @@ open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
 keysAndValues!!.put(transformInfoData!!.NAME, name)
 
     var hashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
     
@@ -181,7 +177,6 @@ keysAndValues!!.put(transformInfoData!!.NAME, name)
                                     {
                                     
     var anyType: Any = hashMap!!.get(transformInfoData!!.OBJECTCONFIG)!!
-            
 
 
     
@@ -199,7 +194,6 @@ hashMap!!.put(transformInfoData!!.OBJECTCONFIG, decode.toCharArray())
                                 
 
     var objectData: Any = hashMap!!.get(transformInfoData!!.DATA)!!
-            
 
 
     
@@ -247,11 +241,9 @@ open fun getObjectConfigs(storeName: Object)
 
 
     var objectConfigColumnVector: Vector = this.getColumnWhere(TransformInfoData.getInstance()!!.OBJECTCONFIG, StoreFrontData.getInstance()!!.NAME, storeName)!!
-            
 
 
     var size: Int = objectConfigColumnVector!!.size!!
-            
 
 
 
@@ -287,11 +279,9 @@ open fun getNames(storeName: String)
 
 
     var columnVector: Vector = this.getColumnWhere(TransformInfoData.getInstance()!!.NAME, StoreFrontData.getInstance()!!.NAME, storeName)!!
-            
 
 
     var size: Int = columnVector!!.size!!
-            
 
 
 
@@ -318,7 +308,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

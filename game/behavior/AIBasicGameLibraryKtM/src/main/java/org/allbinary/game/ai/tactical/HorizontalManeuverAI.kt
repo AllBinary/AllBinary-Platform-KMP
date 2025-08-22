@@ -62,11 +62,9 @@ currentSpeed= 5
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var x: Int = ownerLayerInterface!!.getXP()!!
-            
 
 
     
@@ -170,11 +168,9 @@ open fun drop()
         //nullable = true from not(false or (false and true)) = true
 {
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var y: Int = ownerLayerInterface!!.getYP()!!
-            
 
 
     

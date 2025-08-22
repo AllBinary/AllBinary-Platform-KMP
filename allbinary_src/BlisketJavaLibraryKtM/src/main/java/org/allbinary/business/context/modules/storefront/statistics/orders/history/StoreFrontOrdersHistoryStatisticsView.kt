@@ -56,11 +56,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.storeFrontOrdersHistoryStatisticsInterface!!.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, StoreFrontOrdersHistoryStatisticsData.getInstance()!!.NAME, hashMap)!!
-            
 
 
 

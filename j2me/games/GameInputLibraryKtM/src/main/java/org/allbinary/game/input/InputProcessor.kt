@@ -38,7 +38,6 @@ open public class InputProcessor
             }            
         
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
-            
 
 open fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true

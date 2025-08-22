@@ -49,7 +49,6 @@ public constructor        (emailInfo: EmailInfo, to: String)
                     var to = to
 
     var basicEmailInfo: BasicEmailInfo = emailInfo!!.getBasicEmailInfo()!!
-            
 
 this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.getSmtpServer(), basicEmailInfo!!.getEmailServerConfigurationInterface()!!.getAccountName(), to, basicEmailInfo!!.getSubject(), basicEmailInfo!!.getTextBody(), emailInfo!!.getHtmlAttachment(), emailInfo!!.getContentBase())
 }

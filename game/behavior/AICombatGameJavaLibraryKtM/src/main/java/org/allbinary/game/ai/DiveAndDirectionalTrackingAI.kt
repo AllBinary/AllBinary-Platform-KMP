@@ -66,7 +66,6 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
         }
             
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(500)
 
@@ -81,7 +80,6 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
     private var dive: Boolean= false
 
     private var directionOfTarget: Direction = Direction.getInstance(0)!!
-            
 
     private val MIN_DISTANCE: Int = 40
 
@@ -94,10 +92,8 @@ open public class DiveAndDirectionalTrackingAI : BasicAI
     private var lastDirection: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
 
     private val directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 public constructor        (ownerLayerInterface: AllBinaryLayer, artificialIntelligenceInterface: ArtificialIntelligenceInterface, gameInput: GameInput, visitor: Visitor)                        
 
                             : super(ownerLayerInterface, gameInput){
@@ -203,7 +199,6 @@ this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     
@@ -220,11 +215,9 @@ this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
                                 
 
     var x: Int = this.lastTrackingLayerInterface!!.getXP()!!
-            
 
 
     var y: Int = this.lastTrackingLayerInterface!!.getYP()!!
-            
 
 
     var yDistance: Int = ownerLayerInterface!!.getYP() -y -ownerLayerInterface!!.getHeight()
@@ -234,7 +227,6 @@ this.lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     
@@ -336,7 +328,6 @@ open fun verticalTargeting(x: Int)
                     var x = x
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     
@@ -377,7 +368,6 @@ open fun horizontalTargeting(y: Int)
                     var y = y
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     
@@ -666,7 +656,6 @@ open fun setLastDirection(lastDirection: Direction)
 this.lastDirection= lastDirection
 
     var value: Int = this.getLastDirection()!!.getValue()!!
-            
 
 
     

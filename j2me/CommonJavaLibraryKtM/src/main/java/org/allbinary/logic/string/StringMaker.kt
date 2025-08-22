@@ -37,7 +37,6 @@ open fun append(string: String)
                     var string = string
 
     var stringLength: Int = string.length!!
-            
 
 ensureCapacity(currentLength +stringLength)
 string.toCharArray(charArray,
@@ -221,7 +220,6 @@ open fun ensureCapacity(minSize: Int)
 
 
     var min: Int = min(charArray!!.size, newCapacity)!!
-            
 
 System.arraycopy(charArray, 0, copy, 0, min)
 charArray= copy

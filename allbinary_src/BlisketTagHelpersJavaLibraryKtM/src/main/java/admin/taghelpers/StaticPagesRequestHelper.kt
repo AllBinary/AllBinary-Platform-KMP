@@ -58,10 +58,8 @@ open public class StaticPagesRequestHelper : AbContext
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -112,7 +110,6 @@ open fun email()
                                 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.storeName)!!
-            
 
 
     var adminEmailSubject: String = "Generated Static Pages Email Notification"
@@ -134,11 +131,9 @@ open fun email()
 
 
     var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.STOREGENERATINGSTATICPAGES)!!
-            
 
 
     var storeAdminUserEmailEventHandler: UserEmailEventHandler = StoreAdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(UserEmailEventNameData.STOREGENERATINGSTATICPAGES, this.abeClientInformation, storeFrontInterface)!!
-            
 
 storeAdminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERATINGSTATICPAGES, storeAdminEmailInfo)
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERATINGSTATICPAGES, adminEmailInfo)
@@ -163,7 +158,6 @@ open fun generateStaticPages()
         try {
             
     var contentType: String = AcceptableResponseGenerator.getInstance()!!.get(this.request)!!
-            
 
 
     var searchRequest: SearchRequest = SearchRequest(
@@ -171,7 +165,6 @@ open fun generateStaticPages()
 
 
     var success: String = ProductListingFactory.getInstance(searchRequest)!!.generateAll(storeName)!!
-            
 
 this.email()
 
@@ -217,7 +210,6 @@ open fun makePublic()
         try {
             
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.storeName)!!
-            
 
 
     var fromAbPath: AbPath = AbPath(storeFrontInterface!!.getTestHtmlPath() +storeFrontInterface!!.getStaticPath())

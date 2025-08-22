@@ -39,7 +39,6 @@ open public class TestInputAutomationActionWorker : AbstractInputAutomationWorke
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var sleep: Int
 public constructor        (sleep: Int, inputAutomationActionInterface: InputAutomationActionInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
@@ -80,15 +79,12 @@ open fun process()
 {logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
     var hashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
-            
 
 
     var set: Set = hashtable.keys!!
-            
 
 
     var inputTypeNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = inputTypeNameArray!!.size

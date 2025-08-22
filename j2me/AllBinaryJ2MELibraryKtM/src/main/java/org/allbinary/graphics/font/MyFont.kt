@@ -50,13 +50,10 @@ open fun getInstance()
         }
             
     private val defaultFont: Font = Font.getDefaultFont()!!
-            
 
     var DEFAULT_CHAR_HEIGHT: Int = defaultFont!!.getHeight()!!
-            
 
     private var DEFAULT_CHAR_WIDTH: Int = defaultFont!!.charWidth('C')!!
-            
 private constructor        ()
             : super()
         {}

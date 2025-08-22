@@ -52,7 +52,6 @@ open public class BasicWeaponPart
         }
             
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 
     private var ownerLayerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 
@@ -196,15 +195,12 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.getOwnerLayerInterface()!!.getViewPosition()!!
-            
 
 
     var viewX: Int = viewPosition!!.getX()!!
-            
 
 
     var viewY: Int = viewPosition!!.getY()!!
-            
 
 this.animationInterface!!.paint(graphics, viewX, viewY)
 }

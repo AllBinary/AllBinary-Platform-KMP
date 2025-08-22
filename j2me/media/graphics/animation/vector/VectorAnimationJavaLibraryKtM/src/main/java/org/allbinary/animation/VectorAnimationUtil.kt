@@ -63,7 +63,6 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
                     var pointsPerFrame = pointsPerFrame
 
     var size: Int = vector.size()!!
-            
 
 
     var points: Array<Array<IntArray?>?> = Array(size) { Array(pointsPerFrame) { IntArray(2) } }
@@ -80,7 +79,6 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
 
     var frame: Array<IntArray?> = toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
-            
 
 
 
@@ -110,7 +108,6 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
                     var vector = vector
 
     var size: Int = vector.size()!!
-            
 
 
     var points: Array<Array<IntArray?>?> = Array(size) { Array(0) { IntArray(0) } }
@@ -127,7 +124,6 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
 
     var framePoints: Array<IntArray?> = toFrameArrayFromPointBasicArrayList(nextBasicArrayList)!!
-            
 
 points[index]= Array(framePoints!!.size) { IntArray(2) }
 
@@ -161,7 +157,6 @@ open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
 
 
     var size: Int = list.size()!!
-            
 
 
 

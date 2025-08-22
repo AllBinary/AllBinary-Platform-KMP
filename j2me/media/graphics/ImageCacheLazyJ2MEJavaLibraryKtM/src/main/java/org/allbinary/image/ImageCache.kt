@@ -65,24 +65,18 @@ open public class ImageCache : ImageCacheBase {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val concurrentImageLoadingProcessor: BaseImageLoadingProcessor = ConcurrentImageLoadingProcessor(this)
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     val resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
     private val gameGlobalsFactory: GameGlobalsFactory = GameGlobalsFactory.getInstance()!!
-            
 
     private val gdResources: GDResources = GDResources.getInstance()!!
-            
 
     val loadNowList: BasicArrayList = BasicArrayList()
 
@@ -141,7 +135,6 @@ open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.endIfPaintedSinceStart()
 }
@@ -179,7 +172,6 @@ open fun process()
                                     {
                                     
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.endIfPaintedSinceStart()
 
@@ -192,7 +184,6 @@ progressCanvas!!.endIfPaintedSinceStart()
                                     {
                                     
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.endIfPaintedSinceStart()
 endProcessor= NotHTMLEndProcessor()
@@ -225,7 +216,6 @@ open fun process()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 isHTML= features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)
 
@@ -260,7 +250,6 @@ endProcessor= NotHTMLEndProcessor()
     private var processor: Processor = FirstProcessor()
 
     private var endProcessor: Processor = Processor.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -283,7 +272,6 @@ open fun waitForLoadNow()
                                     {
                                     
     var abToGBUtil: ABToGBUtil = ABToGBUtil.getInstance()!!
-            
 
 
     var abCanvas: AllBinaryGameCanvas = abToGBUtil!!.abCanvas as AllBinaryGameCanvas
@@ -313,9 +301,11 @@ open fun loadImageForAnimation()
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     
                         if(loadNowList!!.isEmpty())
                         
@@ -400,7 +390,7 @@ open fun loadImageForAnimation()
                                     }
                                 
 lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
-
+}
 
 
     
@@ -409,10 +399,12 @@ lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
                                     {
                                     
         
-        //synchronized(lock) 
-        //mutex.withLock
-        loadNowList!!.remove(lazyImageRotationAnimation)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
 
+        //mutex.withLock
+        {loadNowList!!.remove(lazyImageRotationAnimation)
+}
 
 
     
@@ -421,15 +413,15 @@ lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
                                     {
                                     
     var list: BasicArrayList = this.getAssociated(lazyImageRotationAnimation)!!
-            
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     var size: Int = list.size()!!
-            
 
 
     
@@ -440,14 +432,13 @@ lazyImageRotationAnimation= loadNowList!!.get(0) as LazyImageRotationAnimation
 
                                     }
                                 
-
+}
 
 
                                     }
                                 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     
@@ -520,13 +511,15 @@ open fun loadRemainingAnimations()
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     
                         if(!this.loadAfterList!!.isEmpty())
                         lazyImageRotationAnimation= this.loadAfterList!!.remove(0) as LazyImageRotationAnimation
-
+}
 
 
     
@@ -553,7 +546,6 @@ open fun loadImageForAnimation(lazyImageRotationAnimation: LazyImageRotationAnim
                     var lazyImageRotationAnimation = lazyImageRotationAnimation
 
     var image: Image = lazyImageRotationAnimation!!.animationInterfaceFactoryInterface!!.getImage()!!
-            
 
 
     
@@ -588,9 +580,11 @@ open fun loadImage()
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     
                         if(loadList!!.size() == 0)
                         
@@ -604,7 +598,7 @@ open fun loadImage()
                                     }
                                 
 image= loadList!!.remove(0) as Image
-
+}
 
 this.loadImage(image)
 }
@@ -658,11 +652,9 @@ open fun loadImage(image: Image)
                         else {
                             
     var key: String = image.getName()!!
-            
 
 
     var image2: Image = this.creatImage(key)!!
-            
 
 
     
@@ -720,11 +712,9 @@ open fun creatImage(key: String)
                     var key = key
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key)!!
-            
 
 
     var image: Image = Image.createImage(inputStream)!!
-            
 
 image.setName(key)
 
@@ -750,11 +740,9 @@ open fun get(caller: String, width: Int, height: Int)
                     var height = height
 
     var foundIndex: Int = this.getIndex(width, height)!!
-            
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!
-            
 
 
     
@@ -860,7 +848,6 @@ open fun getIndex(key: Any)
                     var key = key
 
     var gdResources: GDResources = GDResources.getInstance()!!
-            
 
 
     var resourceStringArray: Array<String?> = gdResources!!.resourceStringArray
@@ -912,7 +899,6 @@ open fun createImage(key: Any, inputStream: InputStream)
                     var inputStream = inputStream
 
     var gdLazyResources: GDLazyResources = GDLazyResources.getInstance()!!
-            
 
 
     var resourceStringArray: Array<String?> = gdLazyResources!!.requiredResourcesBeforeLoadingArray
@@ -946,7 +932,6 @@ open fun createImage(key: Any, inputStream: InputStream)
 this.runTask()
 
     var index: Int = this.getIndex(key)!!
-            
 
 
     var width: Int = gdLazyResources!!.imageResourceWidthArray[index]!!
@@ -956,14 +941,15 @@ this.runTask()
 
 
     var image: Image = this.createImageLater(key as String, width, height)!!
-            
 
 
         
-        //synchronized(lock) 
-        //mutex.withLock
-        loadList!!.add(image)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
 
+        //mutex.withLock
+        {loadList!!.add(image)
+}
 
 
 
@@ -1004,16 +990,17 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     var lazyImageRotationAnimation2: LazyImageRotationAnimation = 
                 null
             
 
 
     var size: Int = this.loadAfterList!!.size()!!
-            
 
 
 
@@ -1036,7 +1023,6 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
 
 
     var size2: Int = list.size()!!
-            
 
 
 
@@ -1048,7 +1034,7 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
         {this.loadAfterList!!.remove(list.get(index))
 }
 
-
+}
 
 
 
@@ -1065,10 +1051,12 @@ open fun add(lazyImageRotationAnimation: LazyImageRotationAnimation)
                     var lazyImageRotationAnimation = lazyImageRotationAnimation
 
         
-        //synchronized(lock) 
-        //mutex.withLock
-        this.loadAfterList!!.add(lazyImageRotationAnimation)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
 
+        //mutex.withLock
+        {this.loadAfterList!!.add(lazyImageRotationAnimation)
+}
 
 }
 
@@ -1091,11 +1079,13 @@ open fun insertFirst(lazyImageRotationAnimation: LazyImageRotationAnimation)
                         else {
                             
         
-        //synchronized(lock) 
-        //mutex.withLock
-        this.loadNowList!!.add(lazyImageRotationAnimation)
-this.loadAfterList!!.remove(lazyImageRotationAnimation)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
 
+        //mutex.withLock
+        {this.loadNowList!!.add(lazyImageRotationAnimation)
+this.loadAfterList!!.remove(lazyImageRotationAnimation)
+}
 
 
                         }

@@ -56,13 +56,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private var IIOIMAGE_POOL_NAME: String = "IIOIMAGE_POOL_NAME"
 
@@ -83,11 +80,9 @@ open fun getDefaultConfiguration()
         //nullable = true from not(false or (false and true)) = true
 : GraphicsConfiguration{
     var ge: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
-            
 
 
     var gd: GraphicsDevice = ge.getDefaultScreenDevice()!!
-            
 
 
 
@@ -107,7 +102,6 @@ open fun create(width: Int, height: Int)
                     var height = height
 
     var graphicsConfiguration: GraphicsConfiguration = this.getDefaultConfiguration()!!
-            
 
 
 
@@ -320,11 +314,9 @@ open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHei
                     var allowTranslate = allowTranslate
 
     var width: Double = bufferedImage!!.getWidth()!!
-            
 
 
     var height: Double = bufferedImage!!.getHeight()!!
-            
 
 
     var d_newWidth: Double = newWidth
@@ -356,7 +348,6 @@ ratioY= heightRatio
                                 
 
     var affineTransform: AffineTransform = AffineTransform.getScaleInstance(ratioX, ratioY)!!
-            
 
 logUtil!!.put(StringMaker().
                             append(width.toFloat())!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(height.toFloat())!!.append(this.commonSeps!!.COLON)!!.append(newWidth)!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(newHeight)!!.append(this.commonSeps!!.COLON)!!.append(widthRatio.toFloat())!!.append(this.commonSeps!!.FORWARD_SLASH)!!.append(heightRatio.toFloat())!!.toString(), this, CREATE_BUFFERED_IMAGE)
@@ -382,7 +373,6 @@ affineTransform!!.translate(dx, dy)
 
 
     var graphics: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 graphics.drawRenderedImage(bufferedImage, affineTransform)
 
@@ -400,7 +390,6 @@ open fun toString(bufferedImage: BufferedImage)
                     var bufferedImage = bufferedImage
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

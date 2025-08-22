@@ -39,10 +39,8 @@ open public class ExitRunnable
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val midlet: AllBinaryMidlet
 

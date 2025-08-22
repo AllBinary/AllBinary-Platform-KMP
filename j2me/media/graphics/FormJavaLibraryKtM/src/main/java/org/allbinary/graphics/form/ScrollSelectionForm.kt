@@ -56,7 +56,6 @@ open public class ScrollSelectionForm : PaintableForm {
         }
             
     private val rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
-            
 
     val border: Int
 
@@ -65,7 +64,6 @@ open public class ScrollSelectionForm : PaintableForm {
     private var buttonBasicColor: BasicColor
 
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
-            
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : this(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
@@ -153,7 +151,6 @@ open fun getSelectedItem(point: GPoint)
                     var point = point
 
     var index: Int = this.getSelectedIndex(point)!!
-            
 
 
     
@@ -189,7 +186,6 @@ open fun getItemIndex(item: CustomItem)
                     var item = item
 
     var size: Int = this.size()!!
-            
 
 
 
@@ -243,27 +239,21 @@ open fun getSelectedIndex(point: GPoint)
                     var point = point
 
     var start: Int = this.getStartIndex()!!
-            
 
 
     var size: Int = this.size()!!
-            
 
 
     var dx: Int = this.getDx()!!
-            
 
 
     var dy: Int = this.getDy()!!
-            
 
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -409,7 +399,6 @@ open fun processInput(gameKeyCode: Int)
                     var gameKeyCode = gameKeyCode
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 
     
@@ -426,7 +415,6 @@ open fun processInput(gameKeyCode: Int)
                                 
 
     var index: Int = this.getSelectedIndex()!!
-            
 
 
     
@@ -571,15 +559,12 @@ open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x:
                     var y = y
 
     var width: Int = item.getMinimumWidth()!!
-            
 
 
     var height: Int = item.getMinimumHeight()!!
-            
 
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 item.paint(graphics, x, y)
 graphics.setColor(this.getButtonBasicColor()!!.toInt())
@@ -655,17 +640,14 @@ open fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInt
                     var y = y
 
     var width: Int = item.getMinimumWidth()!!
-            
 
 
     var height: Int = item.getMinimumHeight()!!
-            
 
 graphics.setColor(this.getButtonBasicColor()!!.toInt())
 item.paintUnselected(graphics, x, y)
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 
     

@@ -55,10 +55,8 @@ open fun getInstance()
         }
             
     private val timeStampUtil: TimeStampUtil = TimeStampUtil.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val LOG_ERROR: String = "\nLog-Error: "
 
@@ -94,7 +92,6 @@ open fun get(className: String, functionName: String, specialMessage: String, ex
                     var exception = exception
 
     var stringBuffer: StringMaker = get(className, functionName)!!
-            
 
 stringBuffer!!.append(this.get(exception))
 stringBuffer!!.append(SPECIAL_MESSAGE)
@@ -121,7 +118,6 @@ open fun get(className: String, functionName: String, specialMessage: String)
                     var specialMessage = specialMessage
 
     var stringBuffer: StringMaker = get(className, functionName)!!
-            
 
 stringBuffer!!.append(SPECIAL_MESSAGE)
 stringBuffer!!.append(specialMessage)
@@ -160,13 +156,10 @@ stringBuffer!!.append(functionName)
 
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private val exceptionUtil: ExceptionUtil = ExceptionUtil.getInstance()!!
-            
 
     private val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 
 open fun get(exception: Any)
         //nullable = true from not(false or (false and false)) = true
@@ -184,7 +177,6 @@ open fun get(exception: Any)
 stringBuffer!!.append(LOG_ERROR)
 
     var exceptionAsString: String = exception.toString()!!
-            
 
 
     

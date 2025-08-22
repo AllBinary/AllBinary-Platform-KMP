@@ -45,7 +45,6 @@ open fun getInstance()
             }            
         
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
 open fun copyOf(original: Array<Any?>, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -337,7 +336,6 @@ open fun toString(twoDimensionalIntArray: Array<IntArray?>)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var endIndex: Int = twoDimensionalIntArray!!.size
@@ -388,7 +386,6 @@ open fun toString(objectArray: Array<Any?>)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
 
@@ -419,7 +416,6 @@ open fun toString(byteArray: ByteArray)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
 

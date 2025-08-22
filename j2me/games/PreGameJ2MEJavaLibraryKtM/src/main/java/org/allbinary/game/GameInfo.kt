@@ -47,10 +47,8 @@ open public class GameInfo
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val gameInfoData: GameInfoData = GameInfoData.getInstance()!!
-            
 
     private val gameType: GameType
 
@@ -261,7 +259,6 @@ override fun toString()
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 stringBuffer!!.append(this.gameInfoData!!.GAME_TYPE)
 stringBuffer!!.append(commonSeps!!.EQUALS)

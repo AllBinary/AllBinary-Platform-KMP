@@ -64,7 +64,6 @@ open fun startRandomPage()
         //nullable = true from not(false or (false and true)) = true
 {
     var size: Int = this.pageList!!.size()!!
-            
 
 
     
@@ -73,7 +72,6 @@ open fun startRandomPage()
                                     {
                                     
     var random: Int = myRandomFactory!!.getAbsoluteNextInt(size)!!
-            
 
 
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.pageList!!.objectArray[random]!! as AdvertisementProcessorInterface
@@ -86,7 +84,6 @@ advertisementProcessorInterface!!.start()
 
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
 open fun processRandomPage()
         //nullable = true from not(false or (false and true)) = true
@@ -97,7 +94,6 @@ open fun processRandomPage()
                                     {
                                     
     var size: Int = this.pageList!!.size()!!
-            
 
 
     
@@ -106,7 +102,6 @@ open fun processRandomPage()
                                     {
                                     
     var random: Int = myRandomFactory!!.getAbsoluteNextInt(size)!!
-            
 
 
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.pageList!!.objectArray[random]!! as AdvertisementProcessorInterface

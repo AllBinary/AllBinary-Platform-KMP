@@ -67,10 +67,8 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var jPopupMenu: JPopupMenu
 public constructor        (label: String, node: Node)                        

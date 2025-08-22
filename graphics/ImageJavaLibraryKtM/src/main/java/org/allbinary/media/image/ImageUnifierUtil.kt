@@ -52,10 +52,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -65,11 +63,9 @@ open fun getDefaultConfiguration()
         //nullable = true from not(false or (false and true)) = true
 : GraphicsConfiguration{
     var ge: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
-            
 
 
     var gd: GraphicsDevice = ge.getDefaultScreenDevice()!!
-            
 
 
 
@@ -89,16 +85,13 @@ open fun getImage(bufferedImageArray: Array<BufferedImage?>, imageUnifierPropert
                     var imageUnifierProperties = imageUnifierProperties
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(imageUnifierProperties!!.getWidth(), imageUnifierProperties!!.getHeight())!!
-            
 
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 logUtil!!.put("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!.getWidth() +commonLabels!!.HEIGHT_LABEL +newBufferedImage!!.getHeight(), this, "getImage")
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 
     var columnIndex: Int = 0

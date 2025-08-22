@@ -65,7 +65,6 @@ open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, fore
                     var foregroundBasicColor = foregroundBasicColor
 
     var size: Int = vector.size!!
-            
 
 list.clear()
 
@@ -76,7 +75,6 @@ list.clear()
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var isLargeEnoughDisplayForBigMenu: Boolean = (displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() >= ScreenInfo.getInstance()!!.MEDIUM_WIDTH) || (!displayInfo!!.isPortrait() && displayInfo!!.getLastWidth() >= ScreenInfo.getInstance()!!.MEDIUM_WIDTH)

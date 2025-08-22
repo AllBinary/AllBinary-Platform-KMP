@@ -57,7 +57,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 
     var ax: Int = this.allbinaryLayer!!.getViewPosition()!!.getX()!!
-            
 
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.colorP)
 graphics.fillRect(ax, this.getY() -1, x2, this.thickness)

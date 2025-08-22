@@ -55,7 +55,6 @@ open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFi
                     var index = index
 
     var list: BasicArrayList = pathFindingInfo!!.getStartPathFindingNodeList()!!
-            
 
 
     var startPathFindingNode: PathFindingNode = list.get(index) as PathFindingNode
@@ -65,7 +64,6 @@ open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFi
 
 
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 
 

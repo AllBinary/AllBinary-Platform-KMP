@@ -56,11 +56,9 @@ open fun getInstance()
 
                 init{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var STATIC_BLOCK: String = "Static Block"
@@ -82,7 +80,6 @@ logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

@@ -71,7 +71,6 @@ open public class OrderHistoryEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "orderhistory"
 public constructor        ()                        
@@ -100,46 +99,36 @@ open fun insert(userName: String, order: Order)
             
     var paymentInterface: PaymentInterface = PaymentEntity().
                             getDefault(userName)!!
-            
 
 
     var billingAddress: StreetAddress = BillingAddressesEntity(userName).
                             getDefault()!!
-            
 
 
     var shippingAddress: StreetAddress = ShippingAddressesEntity(userName).
                             getDefault()!!
-            
 
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(order.getStoreName())!!
-            
 
 
     var shippingInterface: ShippingInterface = ShippingMethods(abeClientInformation, storeFrontInterface).
                             getShippingInterface(order.getShippingMethod())!!
-            
 
 
     var shippingCost: Money = shippingInterface!!.getCost(order)!!
-            
 
 
     var basketInterface: BasketInterface = order.getBasket()!!
-            
 
 
     var subTotal: Money = basketInterface!!.getSubTotal()!!
-            
 
 
     var taxRate: Float = TaxFactory.getInstance()!!.getInstance(abeClientInformation, storeFrontInterface)!!.getTaxRate(shippingAddress, storeFrontInterface)!!
-            
 
 
     var tax: Money = Money()
@@ -165,7 +154,6 @@ vector.add(userName)
 vector.add(order.getStoreName())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -191,7 +179,6 @@ vector.add(paymentInterface!!.getExpiration())
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
-            
 
 vector.add(SuperCrypt(random).
                             encrypt(paymentInterface!!.getNumber()))
@@ -340,7 +327,6 @@ open fun setStatus(orderId: String, status: String)
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -397,7 +383,6 @@ open fun setPaymentMethod(orderId: String, paymentMethod: String)
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -441,11 +426,9 @@ open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
 whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.getName())
 
     var orderHashMapVector: Vector = super.getRows(whereHashMap)!!
-            
 
 
     var size: Int = orderHashMapVector!!.size!!
-            
 
 
 
@@ -487,11 +470,9 @@ open fun getOrders(userName: String)
 whereHashMap!!.put(UserData.USERNAME, userName)
 
     var orderHashMapVector: Vector = super.getRows(whereHashMap)!!
-            
 
 
     var size: Int = orderHashMapVector!!.size!!
-            
 
 
 
@@ -539,11 +520,9 @@ open fun getOrders(status: String, fromDate: String, toDate: String)
 whereHashMap!!.put(OrderHistoryData.STATUS, status)
 
     var orderHashMapVector: Vector = super.getRowsWhereBetween(whereHashMap, OrderHistoryData.ORDERDATE, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHashMapVector!!.size!!
-            
 
 
 
@@ -584,11 +563,9 @@ open fun getOrders(fromDate: String, toDate: String)
 
 
     var orderHashMapVector: Vector = super.getRowsWhereBetween(OrderHistoryData.ORDERDATE, fromDate, toDate)!!
-            
 
 
     var size: Int = orderHashMapVector!!.size!!
-            
 
 
 
@@ -627,7 +604,6 @@ open fun getOrder(id: String)
 whereHashMap!!.put(OrderData.ID, id)
 
     var orderReviewHashMap: HashMap<Any, Any> = super.getRow(whereHashMap)!!
-            
 
 
     
@@ -663,7 +639,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var entryData: EntryData = EntryData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

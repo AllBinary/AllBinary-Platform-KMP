@@ -57,7 +57,6 @@ open public class ClientInformation
     private var licenseId: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var licenseServers: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 public constructor        (name: String, version: String, specialName: String, shortName: String)
             : super()
         {
@@ -163,7 +162,6 @@ override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
-            
 
 
     var clientInfoHashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
@@ -178,11 +176,9 @@ clientInfoHashtable!!.put(abeClientInformationData!!.OSVERSION, this.getOperatin
 clientInfoHashtable!!.put(abeClientInformationData!!.OS, this.getOperatingSystemInterface()!!.toString())
 
     var hardwareInterface: HardwareInterface = SystemHardwareFactory.getInstance()!!.getInstance(getOperatingSystemInterface())!!
-            
 
 
     var hardwareString: String = hardwareInterface!!.toString()!!
-            
 
 clientInfoHashtable!!.put(abeClientInformationData!!.HARDWARE, hardwareString)
 

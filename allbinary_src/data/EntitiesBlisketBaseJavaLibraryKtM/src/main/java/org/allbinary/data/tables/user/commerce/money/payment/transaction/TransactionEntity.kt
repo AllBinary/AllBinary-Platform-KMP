@@ -43,7 +43,6 @@ open public class TransactionEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "vtrans"
 public constructor        ()                        
@@ -117,7 +116,6 @@ values.add(userName)
 values.addAll(paymentTransactionInterface!!.toVector())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -155,7 +153,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var paymentTransactionKeysFactory: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

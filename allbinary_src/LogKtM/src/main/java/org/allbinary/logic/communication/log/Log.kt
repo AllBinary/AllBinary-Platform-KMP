@@ -35,10 +35,8 @@ open public class Log
         
 
     private val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 
     private val logFormatUtil: LogFormatUtil = LogFormatUtil.getInstance()!!
-            
 
     private val specialMessage: String
 
@@ -51,7 +49,6 @@ public constructor        ()
             : super()
         {
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.specialMessage= stringUtil!!.EMPTY_STRING
 this.anyType= nullUtil!!.NULL_OBJECT
@@ -143,7 +140,6 @@ override fun toString()
 
 
     var clazz: KClass<*> = anyType!!::class!!
-            
 
 
     

@@ -71,7 +71,6 @@ open fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var rectange: Rectangle = this.layerBounds!!.getRectangleP()!!
-            
 
 graphics.drawRect(rectange.getPoint()!!.getX(), rectange.getPoint()!!.getY(), rectange.getWidth(), rectange.getHeight())
 }

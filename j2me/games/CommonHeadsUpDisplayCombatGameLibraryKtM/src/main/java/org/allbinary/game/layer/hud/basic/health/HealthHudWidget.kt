@@ -52,7 +52,6 @@ open public class HealthHudWidget : BasicHud
     private var xArray: IntArray
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 public constructor        (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
 
                             : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2){

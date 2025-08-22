@@ -48,7 +48,6 @@ open public class ImageCache : ImageCacheBase {
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -74,11 +73,9 @@ open fun addListener(renderer: Any)
                     var height = height
 
     var foundIndex: Int = this.getIndex(width, height)!!
-            
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!
-            
 
 
     
@@ -150,11 +147,9 @@ listOfList[foundIndex]!!.add(image)
                                     {
                                     
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(key as String)!!
-            
 
 
     

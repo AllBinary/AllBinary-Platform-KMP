@@ -56,7 +56,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 
     var storeThemeCategoryInterface: StoreThemeCategoryInterface = this.getCategoryInterface() as StoreThemeCategoryInterface

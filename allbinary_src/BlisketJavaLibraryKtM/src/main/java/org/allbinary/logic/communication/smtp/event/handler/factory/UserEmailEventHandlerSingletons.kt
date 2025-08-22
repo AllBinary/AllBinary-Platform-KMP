@@ -58,10 +58,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val userEmailEventHandlerHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 private constructor        ()
@@ -124,7 +122,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEm
 
 
     var vector: Vector = EmailEventHandlerUtil.getUserEmailEventListenerVector(abeClientInformation, userEmailEventNameData, userInterface)!!
-            
 
 newUserEmailEventHandler!!.addListener(vector)
 newUserEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())

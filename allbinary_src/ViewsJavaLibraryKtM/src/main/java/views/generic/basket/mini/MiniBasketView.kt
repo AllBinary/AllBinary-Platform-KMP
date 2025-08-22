@@ -40,7 +40,6 @@ open public class MiniBasketView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -64,37 +63,29 @@ open fun toXmlNode(document: Document)
         try {
             
     var basketInterface: BasketInterface = this.getWeblisketSession()!!.getOrder()!!.getBasket()!!
-            
 
 
     var basketNode: Node = document.createElement(BasketData.BASKET)!!
-            
 
 
     var totalNumberNode: Node = document.createElement(SearchData.TOTAL_NUMBER_ITEMS)!!
-            
 
 
     var totalNumberTextNode: Node = document.createTextNode(basketInterface!!.getNumberOfItems()!!.toString())!!
-            
 
 totalNumberNode!!.appendChild(totalNumberTextNode)
 
     var totalWeightNode: Node = document.createElement(BasketData.TOTALWEIGHT)!!
-            
 
 
     var totalWeightTextNode: Node = document.createTextNode(basketInterface!!.getTotalWeight()!!.toString())!!
-            
 
 totalWeightNode!!.appendChild(totalWeightTextNode)
 
     var subTotalNode: Node = document.createElement(BasketData.SUBTOTAL)!!
-            
 
 
     var subTotalTextNode: Node = document.createTextNode(basketInterface!!.getSubTotal()!!.toString())!!
-            
 
 subTotalNode!!.appendChild(subTotalTextNode)
 basketNode!!.appendChild(totalNumberNode)

@@ -34,7 +34,6 @@ open public class RemoveActionScriptItemJPanel : java.awt.Panel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 
@@ -80,7 +79,6 @@ open fun removeJButtonActionPerformed(evt: java.awt.event.ActionEvent)
                     var evt = evt
 
     var genericProfileAction: GenericProfileAction = this.genericProfileActionJPanel!!.getGenericProfileAction()!!
-            
 
 
     

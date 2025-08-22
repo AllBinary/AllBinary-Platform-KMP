@@ -39,7 +39,6 @@ open public class BuildingScrollTouchButtonsBuilder : BaseTouchInput {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
@@ -54,7 +53,6 @@ open fun getList()
 
 
     var commonButtons: CommonButtons = CommonButtons.getInstance()!!
-            
 
 
     var basicTouchButtonCellPositionFactory: BasicTouchButtonCellPositionFactory = BasicTouchButtonCellPositionFactory()

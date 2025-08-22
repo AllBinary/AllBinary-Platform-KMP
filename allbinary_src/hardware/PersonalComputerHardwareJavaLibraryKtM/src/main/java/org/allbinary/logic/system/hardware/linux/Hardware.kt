@@ -67,10 +67,8 @@ open public class Hardware
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var componentInterfaceVector: Vector
 
@@ -220,7 +218,6 @@ lineNumberReader= LineNumberReader(pciFile)
                                     {
                                     
     var fileVector: BasicArrayList = SubDirectory.getInstance()!!.search(filePath, AbFile(FilePathData.getInstance()!!.SEPARATOR))!!
-            
 
 
     
@@ -269,7 +266,6 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                 
 
     var nextLine: String = lineNumberReader!!.readLine()!!
-            
 
 
         while(lineNumberReader != 
@@ -310,7 +306,6 @@ componentData!!.append("\n")
 nextLine= lineNumberReader!!.readLine()
 
     var componentType: String = PCComponentFactory.getInstance()!!.java.componentType!!
-            
 
 
         while(lineNumberReader != 
@@ -336,7 +331,6 @@ nextLine= lineNumberReader!!.readLine()
 
 
     var componentInterface: HardwareComponentInterface = PCComponentFactory.getInstance()!!.getInstance(componentType, componentData!!.toString())!!
-            
 
 
     
@@ -544,7 +538,6 @@ override fun toString()
 
 
     var size: Int = componentInterfaceVector!!.size!!
-            
 
 
 
@@ -611,7 +604,6 @@ open fun isNextHardware(nextLine: String)
                                     {
                                     
     var index: Int = nextLine!!.indexOf("Bus")!!
-            
 
 
     

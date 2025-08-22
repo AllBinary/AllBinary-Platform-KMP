@@ -41,7 +41,6 @@ open public class Validation
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             

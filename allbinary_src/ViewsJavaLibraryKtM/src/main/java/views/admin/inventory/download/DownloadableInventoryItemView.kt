@@ -60,7 +60,6 @@ open public class DownloadableInventoryItemView : HttpStoreComponentView
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val request: HttpServletRequest
 
@@ -180,11 +179,9 @@ open fun processFile(fileItem: FileItem)
                     var fileItem = fileItem
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var fullPath: String = this.getItemFilePath()!!
-            
 
 
     var itemResourceFile: AbFile = AbFile(fullPath)
@@ -203,7 +200,6 @@ logUtil!!.put(file.getPath(), this, "processFiles()")
 file.createNewFile()
 
     var byteArray: ByteArray = fileItem!!.get()!!
-            
 
 FileUtil.getInstance()!!.write(ByteArrayInputStream(byteArray), file)
 }
@@ -218,11 +214,9 @@ open fun unzip(fileItem: FileItem)
                     var fileItem = fileItem
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var fullPath: String = this.getItemFilePath()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -242,11 +236,9 @@ open fun getItemFilePath()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var filePathData: FilePathData = FilePathData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

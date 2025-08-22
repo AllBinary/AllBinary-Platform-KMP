@@ -46,7 +46,6 @@ open public class GenericBodyValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var body: String
 public constructor        (){this.body= StringUtil.getInstance()!!.EMPTY_STRING
@@ -57,7 +56,6 @@ public constructor        (document: Document){
                     var document = document
 
     var nodeList: NodeList = document.getElementsByTagName(BodyData.getInstance()!!.NAME)!!
-            
 
 
 
@@ -68,11 +66,9 @@ public constructor        (document: Document){
 
         {
     var aBodyNode: Node = nodeList!!.item(index)!!
-            
 
 
     var aBodyValueNode: Node = DomSearchHelper.getNode(DomData.VALUE, aBodyNode!!.getChildNodes())!!
-            
 
 this.body= DomNodeHelper.getTextNodeValue(aBodyValueNode)
 }
@@ -230,7 +226,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, BodyData.getInstance()!!.NAME, this.body)!!
-            
 
 
 

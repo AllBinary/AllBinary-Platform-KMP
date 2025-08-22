@@ -62,7 +62,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -85,7 +84,6 @@ open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: Stri
                                 
 
     var endIndex: Int = HttpRequestUtil.getInstance()!!.getLastSeparatorIndex(filePath)!!
-            
 
 
     var fullPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +filePath!!.substring(0, endIndex))
@@ -95,15 +93,12 @@ open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: Stri
 
 
     var userRoles: Vector = downloadFilePermissions!!.getUserRoles()!!
-            
 
 
     var userRole: UserRole = authenticationHelper!!.getRole()!!
-            
 
 
     var basicUserRole: BasicUserRole = userRole!!.getBasicUserRole()!!
-            
 
 
     

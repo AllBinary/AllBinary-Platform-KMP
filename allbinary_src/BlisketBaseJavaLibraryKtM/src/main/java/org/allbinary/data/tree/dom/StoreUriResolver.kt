@@ -47,7 +47,6 @@ open public class StoreUriResolver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var basicURIResolver: BasicUriResolver
 

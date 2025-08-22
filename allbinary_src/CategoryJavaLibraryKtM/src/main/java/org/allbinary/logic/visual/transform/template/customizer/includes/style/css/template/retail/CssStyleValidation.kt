@@ -43,7 +43,6 @@ open public class CssStyleValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var cssStyleElementVector: Vector
 public constructor        (){this.cssStyleElementVector= Vector()
@@ -80,7 +79,6 @@ open fun isValid()
                                 
 
     var size: Int = cssStyleElementVector!!.size!!
-            
 
 
 
@@ -201,16 +199,13 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(StylesData.getInstance()!!.NAME)!!
-            
 
 
     var styleNode: Node = document.createElement(StyleData.getInstance()!!.NAME)!!
-            
 
 node.appendChild(styleNode)
 
     var size: Int = cssStyleElementVector!!.size!!
-            
 
 
 

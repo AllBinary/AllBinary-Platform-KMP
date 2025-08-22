@@ -61,14 +61,12 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
 
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -99,11 +97,9 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, viewNa
 
 
     var transformInfoEntity: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var transformInfoInterface: TransformInfoInterface = transformInfoEntity!!.get(viewName, ownerTransformInfoHttpInterface!!.getPropertiesHashMap(), ownerTransformInfoHttpInterface!!.getPageContext())!!
-            
 
 
     
@@ -122,7 +118,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, viewNa
 transformInfoInterface!!.setChild()
 
     var anyType: Any = TransformInfoObjectFactory.getInstance()!!.getInstance(abeClientInformation, transformInfoInterface)!!
-            
 
 
     
@@ -174,7 +169,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
         try {
             
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     
@@ -187,11 +181,9 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
                                 
 
     var transformInfoEntity: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var transformInfoInterface: TransformInfoInterface = transformInfoEntity!!.get(propertiesHashMap!!.get(transformInfoData!!.NAME) as String, propertiesHashMap, pageContext)!!
-            
 
 
     
@@ -211,7 +203,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
                             
 
     var anyType: Any = TransformInfoObjectFactory.getInstance()!!.getInstance(abeClientInformation, transformInfoInterface)!!
-            
 
 
     
@@ -275,7 +266,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                                 
 
     var anyType: Any = TransformInfoObjectFactory.getInstance()!!.getInstance(abeClientInformation, transformInfoInterface)!!
-            
 
 
     

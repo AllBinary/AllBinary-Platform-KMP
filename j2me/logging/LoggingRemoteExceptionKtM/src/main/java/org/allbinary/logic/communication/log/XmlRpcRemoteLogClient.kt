@@ -66,11 +66,9 @@ open fun get(anyType: Any)
 
 
     var serverUrl: String = getClientInfo()!!.getLicenseServer(this.getServer())!!
-            
 
 
     var index: Int = serverUrl!!.lastIndexOf("/")!!
-            
 
 serverUrl= serverUrl!!.substring(0, index +1) +"logservssl.php"
 
@@ -86,7 +84,6 @@ xmlRpcClient!!.setBasicAuthentication(
 param.add(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, noCrypt)!!
-            
 
 System.out.println("Result: \n" +result.toString())
 

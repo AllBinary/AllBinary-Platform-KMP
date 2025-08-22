@@ -46,7 +46,6 @@ open fun addCommands(anyType: Any)
                     var anyType = anyType
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 
     var canvas: Canvas = anyType as Canvas

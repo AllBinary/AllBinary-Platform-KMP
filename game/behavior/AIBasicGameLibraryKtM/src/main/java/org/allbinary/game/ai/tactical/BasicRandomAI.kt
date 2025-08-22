@@ -71,7 +71,6 @@ this.visitor= visitor
 
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
@@ -90,7 +89,6 @@ this.visitor= visitor
 
 
     var repeatLikelyhoodIntegerArray: Array<Integer?> = this.inputProbability!!.getRepeatLikelyhoodIntegerArray()!!
-            
 
 
     
@@ -108,7 +106,6 @@ this.visitor= visitor
                                     {
                                     
     var likelyhoodIntegerArray: Array<Array<Integer?>?> = this.inputProbability!!.getLikelyhoodIntegerArray()!!
-            
 
 i_random= myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 

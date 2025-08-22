@@ -42,10 +42,8 @@ open public class NewView : WorkFlowView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

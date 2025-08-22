@@ -35,7 +35,6 @@ open public class PathFindingNodeCost : PathFindingNode
         
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     var pathFindingNodeCostInfo: PathFindingNodeCostInfo
 public constructor        (parent: PathFindingNodeCost, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        

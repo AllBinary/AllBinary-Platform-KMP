@@ -62,10 +62,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val componentFactory: ComponentFactory = ComponentFactory.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -203,7 +201,6 @@ open fun getInstance(component: String, componentData: String)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

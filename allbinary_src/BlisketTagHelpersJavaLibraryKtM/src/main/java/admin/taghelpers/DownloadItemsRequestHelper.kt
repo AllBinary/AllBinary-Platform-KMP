@@ -40,7 +40,6 @@ open public class DownloadItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val downloadableItem: DownloadableItem
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -54,11 +53,9 @@ public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
 
     var inventoryItemViewParentTagHelper: InventoryItemViewParentTagHelper = InventoryItemViewParentTagHelper.getInstance()!!
-            
 
 
     var downloadableInventoryItemView: DownloadableInventoryItemView = inventoryItemViewParentTagHelper!!.getDownloadableInventoryItemView(inventoryTag)!!
-            
 
 this.downloadableItem= downloadableInventoryItemView!!.getDownloadableItem()
 }
@@ -70,7 +67,6 @@ open fun insert()
         try {
             
     var vector: Vector = this.downloadableItem!!.toVector()!!
-            
 
 DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.insert(vector)
 
@@ -167,7 +163,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.downloadableItem!!.toHashMap()!!
-            
 
 DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.update(values)
 

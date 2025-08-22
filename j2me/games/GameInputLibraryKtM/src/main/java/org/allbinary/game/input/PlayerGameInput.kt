@@ -43,7 +43,6 @@ open public class PlayerGameInput : GameInput
         
 
     val gameInputStrings: GameInputStrings = GameInputStrings.getInstance()!!
-            
 
     private val playerInputId: Int
 public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int)                        

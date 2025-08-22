@@ -192,7 +192,6 @@ open fun generate(data: IntArray, visitor: Visitor)
                     var visitor = visitor
 
     var iterations: Long = this.factorial(data.size)!!
-            
 
 System.out.print(TOTAL_ITERATIONS_TABLE)
 System.out.println(iterations)

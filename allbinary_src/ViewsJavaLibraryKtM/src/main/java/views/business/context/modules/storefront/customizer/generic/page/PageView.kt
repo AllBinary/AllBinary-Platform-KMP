@@ -33,7 +33,6 @@ open public class PageView : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

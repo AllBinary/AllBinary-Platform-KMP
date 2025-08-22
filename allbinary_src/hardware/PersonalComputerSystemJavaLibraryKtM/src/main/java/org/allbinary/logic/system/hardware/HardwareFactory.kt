@@ -48,7 +48,6 @@ open fun getInstance(os: GenericOperatingSystem)
         try {
             
     var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
-            
 
 
     

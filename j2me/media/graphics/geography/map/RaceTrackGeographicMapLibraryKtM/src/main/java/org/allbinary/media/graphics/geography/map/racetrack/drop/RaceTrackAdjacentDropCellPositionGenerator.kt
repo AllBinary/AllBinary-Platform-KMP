@@ -65,7 +65,6 @@ open fun getInstance()
         }
             
     private val layerCoveringCellPositionsUtil: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil.getInstance()!!
-            
 
     private var surroundingCellPositions: Array<GeographicMapCellPosition?> = arrayOfNulls(4)
 private constructor        (){}
@@ -88,7 +87,6 @@ open fun getFirstNonRoadAdjacentCellPosition(column: Int, row: Int)
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = this.raceTrackGeographicMap!!.getGeographicMapCellPositionFactory()!!
-            
 
 surroundingCellPositions[0]= geographicMapCellPositionFactory!!.getInstance(column, row -1)
 surroundingCellPositions[1]= geographicMapCellPositionFactory!!.getInstance(column, row +1)
@@ -152,7 +150,6 @@ super.update(allBinaryGameLayerManager, geographicMapInterface)
 
 
     private val geographicMapDirectionUtil: GeographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -169,7 +166,6 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
 
 
     var randomGeographicMapCellPosition: GeographicMapCellPosition = this.getFirstNonRoadAdjacentCellPosition(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow())!!
-            
 
 
     
@@ -188,7 +184,6 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
                                 
 
     var dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
-            
 
 
     
@@ -197,32 +192,25 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
                                     {
                                     
     var direction: Direction = geographicMapDirectionUtil!!.getDirectionFromCellPositionToAdjacentCellPosition(randomGeographicMapCellPosition, geographicMapCellPosition)!!
-            
 
 hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
 
     var point: GPoint = randomGeographicMapCellPosition!!.getPoint()!!
-            
 
 
     var x: Int = point.getX()!!
-            
 
 
     var y: Int = point.getY()!!
-            
 
 
     var z: Int = point.getZ()!!
-            
 
 
     var layerInterface: AllBinaryLayer = RaceTrackAdjacentDropLayerFactory.getInstance()!!.getRandomInstance()!!.getInstance(hashtable, x, y, z)!!
-            
 
 
     var list: BasicArrayList = layerCoveringCellPositionsUtil!!.getAll(this.raceTrackGeographicMap, randomGeographicMapCellPosition, layerInterface, BasicArrayList())!!
-            
 
 
     

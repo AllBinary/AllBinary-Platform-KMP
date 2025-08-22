@@ -34,10 +34,8 @@ open public class KeylessBasicArrayListCache : IndexedBasicArrayListCache {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
 public constructor        (){}
 
 public constructor        (size: Int)                        

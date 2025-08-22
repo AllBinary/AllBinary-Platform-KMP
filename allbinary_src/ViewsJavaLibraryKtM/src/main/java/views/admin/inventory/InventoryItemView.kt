@@ -60,7 +60,6 @@ open public class InventoryItemView : HttpStoreComponentView
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val request: HttpServletRequest
 
@@ -120,7 +119,6 @@ open fun getFormData()
                             toHashMap())
 
     var imageFileItemObject: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
-            
 
 
     
@@ -140,7 +138,6 @@ open fun getFormData()
                                     this.imageFileName= HttpRequestUtil.getInstance()!!.generateFileName(fileItem!!.getName())
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 this.mediaData= MediaData.get(pathUtil!!.getExtension(this.imageFileName))
 this.imageFileName= pathUtil!!.getWithoutExtension(this.imageFileName)
@@ -180,7 +177,6 @@ open fun addDomNodeInterfaces()
 
 
     var size: Int = this.downloadableItemVector!!.size!!
-            
 
 
 
@@ -244,11 +240,9 @@ open fun processImageFiles()
         //nullable = true from not(false or (false and true)) = true
 {
     var set: Set = this.getRequestHashMap()!!.keys!!
-            
 
 
     var fieldNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = fieldNameArray!!.size
@@ -271,7 +265,6 @@ open fun processImageFiles()
                                     {
                                     
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var inventoryUploadMediaUtil: InventoryUploadMediaUtil = InventoryUploadMediaUtil(storeFrontInterface, this.itemInterface)

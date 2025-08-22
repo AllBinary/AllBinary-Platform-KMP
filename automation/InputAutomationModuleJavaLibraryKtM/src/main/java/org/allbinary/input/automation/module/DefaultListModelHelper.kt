@@ -48,7 +48,6 @@ open fun initDefaultModelList()
 {this.defaultListModel= DefaultListModel()
 
     var size: Int = this.vector.size!!
-            
 
 
 

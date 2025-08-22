@@ -44,7 +44,6 @@ open public class InputAutomationModuleConfigurations
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var hashMap: HashMap<Any, Any>
 public constructor        (abeClientInformation: AbeClientInformationInterface, file: File)
@@ -64,22 +63,18 @@ this.setHashMap(HashMap<Any, Any>())
 
 
     var length: Int = idFile!!.read(bytes)!!
-            
 
 
     var data: String = bytes.decodeToString()
 
 
     var endIndex: Int = data.lastIndexOf('>')!!
-            
 
 
     var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
-            
 
 
     var nodeList: NodeList = document.getElementsByTagName(NewInputAutomationModulesData.NAME)!!
-            
 
 
     
@@ -88,7 +83,6 @@ this.setHashMap(HashMap<Any, Any>())
                                     {
                                     
     var nameNodeList: NodeList = document.getElementsByTagName(InputAutomationModuleData.NAME)!!
-            
 
 logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, "Contructor")
 
@@ -100,7 +94,6 @@ logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), thi
 
         {
     var node: Node = nameNodeList!!.item(index)!!
-            
 
 this.add(InputAutomationModuleConfiguration(abeClientInformation, node))
 }
@@ -121,7 +114,6 @@ public constructor        (abeClientInformation: AbeClientInformationInterface, 
 this.setHashMap(HashMap<Any, Any>())
 
     var nameNodeList: NodeList = document.getElementsByTagName(InputAutomationModuleData.NAME)!!
-            
 
 logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), this, "Contructor")
 
@@ -133,7 +125,6 @@ logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), thi
 
         {
     var node: Node = nameNodeList!!.item(index)!!
-            
 
 this.add(InputAutomationModuleConfiguration(abeClientInformation, node))
 }
@@ -148,7 +139,6 @@ public constructor        (inputAutomationModuleConfigurationList: List<InputAut
 this.setHashMap(HashMap<Any, Any>())
 
     var size: Int = inputAutomationModuleConfigurationList!!.size!!
-            
 
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration

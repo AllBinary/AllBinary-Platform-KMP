@@ -41,10 +41,8 @@ open public class CreateGameRunnable
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val demoGameMidlet: DemoGameMidlet
 
@@ -71,7 +69,6 @@ override fun run()
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 this.demoGameMidlet!!.commandAction(MyCommandsFactory.getInstance()!!.SET_DISPLAYABLE, progressCanvas)
 this.demoGameMidlet!!.stopGameCanvasRunnableInterface()

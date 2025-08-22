@@ -48,11 +48,9 @@ open fun getInstance(genericProfile: GenericProfile)
                     var genericProfile = genericProfile
 
     var vector: Vector = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

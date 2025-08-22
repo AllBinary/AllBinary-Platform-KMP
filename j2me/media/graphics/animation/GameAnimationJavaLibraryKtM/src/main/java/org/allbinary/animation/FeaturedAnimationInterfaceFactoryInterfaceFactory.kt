@@ -86,15 +86,12 @@ open fun getRectangle(resource: String, x: Int, y: Int)
                     var y = y
 
     var list: BasicArrayList = this.getList()!!
-            
 
 
     var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()!!
-            
 
 
     var size: Int = getList()!!.size()!!
-            
 
 
 
@@ -113,7 +110,6 @@ open fun getRectangle(resource: String, x: Int, y: Int)
                                     {
                                     
     var rectangle: Rectangle = featureInterface!!.getRectangle(resource)!!
-            
 
 
     
@@ -182,14 +178,12 @@ open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
                     var resource = resource
 
     var list: BasicArrayList = this.getList()!!
-            
 
 
     var resourceTypeAvailableList: BasicArrayList = BasicArrayList()
 
 
     var size: Int = getList()!!.size()!!
-            
 
 
 
@@ -209,7 +203,6 @@ open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
                                     resourceTypeAvailableList!!.add(featureInterface)
 
     var animationInterfaceFactoryInterface: BasicAnimationInterfaceFactoryInterface = featureInterface!!.getBasicAnimationInterfaceFactoryInstance(resource)!!
-            
 
 
     
@@ -324,7 +317,6 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 
 
     var result: String = stringBuffer!!.toString()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 

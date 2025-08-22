@@ -40,7 +40,6 @@ open public class PermissionItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -112,7 +111,6 @@ values.put(PermissionItemData.END_TIME, this.endTime)
 values.put(BasicItemData.PRICE, this.price)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -134,7 +132,6 @@ open fun insert()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -251,7 +248,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.getHashMap()!!
-            
 
 PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.update(values)
 

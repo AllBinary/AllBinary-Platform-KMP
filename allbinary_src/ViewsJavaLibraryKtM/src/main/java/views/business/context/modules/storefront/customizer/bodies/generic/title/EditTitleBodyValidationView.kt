@@ -39,7 +39,6 @@ open public class EditTitleBodyValidationView : TitleBodyCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -58,12 +57,10 @@ open fun isValid()
         try {
             
     var document: Document = CustomizerUtil.getInstance()!!.getViewDataForComponentsInObjectConfig(this.getTransformInfoInterface())!!
-            
 
 this.titleBody= TitleBodyValidation(document)
 
     var isValid: Boolean = this.titleBody!!.isValid()!!
-            
 
 
 

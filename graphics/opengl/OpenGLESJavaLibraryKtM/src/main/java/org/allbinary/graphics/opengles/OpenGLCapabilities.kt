@@ -66,12 +66,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val CUSTOM_GL_SURFACE_VIEW: Boolean = true
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private var glVersionString: String = stringUtil!!.EMPTY_STRING
 
@@ -137,15 +135,12 @@ open fun initCapabilities(gl: GL10)
         try {
             
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     var openGLImageSpecificFactory: OpenGLImageSpecificFactory = OpenGLImageSpecificFactory.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -177,7 +172,6 @@ glShaderVersionString= gl.glGetString(GL_SHADING_LANGUAGE_VERSION)
                                     {
                                     
     var startIndex: Int = glShaderVersionString!!.lastIndexOf(' ')!!
-            
 
 
     
@@ -195,7 +189,6 @@ shaderVersion= Integer.parseInt(glShaderVersionString!!.replace(CommonSeps.getIn
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
@@ -357,7 +350,6 @@ this.glVersion= this.VERSION_UNK
                                 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     
@@ -401,7 +393,6 @@ this.maxTextureSize= maxTextureSizeArray[0]!!
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
@@ -416,7 +407,6 @@ open fun isExtension(gameFeature: OpenGLFeature)
                     var gameFeature = gameFeature
 
     var index: Int = glExtensions!!.indexOf(gameFeature!!.getName())!!
-            
 
 
     
@@ -446,7 +436,6 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -477,7 +466,6 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
 
 
     var list: BasicArrayList = tokenizer.getTokens(glExtensions, BasicArrayList())!!
-            
 
 
 
@@ -493,7 +481,6 @@ stringBuffer!!.append(stringUtil!!.toString(list.objectArray[index]!!))
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }

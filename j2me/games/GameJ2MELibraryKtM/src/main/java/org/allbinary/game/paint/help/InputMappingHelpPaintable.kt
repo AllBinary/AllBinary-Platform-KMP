@@ -60,13 +60,10 @@ open public class InputMappingHelpPaintable : HelpPaintable {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private var gameInputMappingArray: Array<GameInputMapping?>
 
@@ -81,7 +78,6 @@ open public class InputMappingHelpPaintable : HelpPaintable {
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 protected constructor        (gameInputMappingArray: Array<GameInputMapping?>, backgroundBasicColor: BasicColor, basicColor: BasicColor)                        
 
                             : super("Input Mapping", backgroundBasicColor, basicColor){
@@ -130,7 +126,6 @@ open fun update(selectedGameKey: GameKey, selectedInput: Input)
 logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.append("selected GameKey: ")!!.append(this.stringUtil!!.toString(selectedGameKey))!!.append(" Input: ")!!.append(this.stringUtil!!.toString(selectedInput))!!.toString(), this, commonStrings!!.UPDATE)
 
     var gameKeyMapping: PersistentInputMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!
-            
 
 
     var size: Int = gameInputMappingArray!!.size
@@ -169,7 +164,6 @@ gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
 
     var size2: Int = list.size()!!
-            
 
 inputBasicColorArray[index]= arrayOfNulls(size2)
 
@@ -192,7 +186,6 @@ logUtil!!.put(stringMaker!!.append("Found: selected GameKey: ")!!.append(this.st
 actionBasicColor[index]= this.selectedBasicColor
 
     var indexOfSelectedInput: Int = list.indexOf(selectedInput)!!
-            
 
 
     
@@ -292,7 +285,6 @@ override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var inputInfo: Array<String?> = this.inputInfo
@@ -316,11 +308,9 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var font: Font = graphics.getFont()!!
-            
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var stringMaker: StringMaker = StringMaker()
@@ -330,14 +320,12 @@ override fun paint(graphics: Graphics)
 
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
 
     var halfWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfWidth()!!
-            
 
 
     var beginWidth: Int = (font.stringWidth(this.TITLE) shr 1)

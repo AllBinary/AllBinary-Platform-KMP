@@ -52,10 +52,8 @@ open public class LazyImageRotationAnimation : RotationAnimation {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val layoutIndex: Int
 
@@ -94,7 +92,6 @@ this.instanceId= instanceId
 this.animationInterfaceFactoryInterface= animationInterfaceFactoryInterface
 
     var imageCache: ImageCache = ImageCacheFactory.getInstance()!!
-            
 
 imageCache!!.add(this)
 this.scaleProperties= scaleProperties
@@ -478,11 +475,9 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var image: Image = this.animationInterfaceFactoryInterface!!.getImage()!!
-            
 
 
 

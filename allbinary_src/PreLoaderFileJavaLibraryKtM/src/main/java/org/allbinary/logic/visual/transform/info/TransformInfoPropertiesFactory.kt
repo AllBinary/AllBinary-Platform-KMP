@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -70,22 +69,18 @@ open fun getInstance(node: Node)
                     var node = node
 
     var transformInfoChildNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     var attributes: NamedNodeMap = node.getAttributes()!!
-            
 
 
     var attrNode: Attr = attributes.getNamedItem(transformInfoData!!.NAME) as Attr
 
 
     var name: String = attrNode!!.getValue()!!
-            
 
 
     
@@ -98,11 +93,9 @@ open fun getInstance(node: Node)
                                 
 
     var labelNode: Node = DomSearchHelper.getNodeNoThrow(transformInfoData!!.LABEL, transformInfoChildNodeList)!!
-            
 
 
     var label: String = DomNodeHelper.getTextNodesValue(labelNode)!!
-            
 
 
     
@@ -117,35 +110,27 @@ open fun getInstance(node: Node)
                                 
 
     var descriptionNode: Node = DomSearchHelper.getNode(transformInfoData!!.DESCRIPTION, transformInfoChildNodeList)!!
-            
 
 
     var description: String = DomNodeHelper.getTextNodesValue(descriptionNode)!!
-            
 
 
     var objectFileNode: Node = DomSearchHelper.getNode(transformInfoData!!.OBJECTFILENAME, transformInfoChildNodeList)!!
-            
 
 
     var objectFileName: String = DomNodeHelper.getTextNodeValue(objectFileNode)!!
-            
 
 
     var objectConfigFileNode: Node = DomSearchHelper.getNode(transformInfoData!!.OBJECTCONFIGFILENAME, transformInfoChildNodeList)!!
-            
 
 
     var objectConfigFileName: String = DomNodeHelper.getTextNodeValue(objectConfigFileNode)!!
-            
 
 
     var templateFileNode: Node = DomSearchHelper.getNode(transformInfoData!!.TEMPLATEFILENAME, transformInfoChildNodeList)!!
-            
 
 
     var templateFileName: String = DomNodeHelper.getTextNodeValue(templateFileNode)!!
-            
 
 
     var transformInfoProperties: TransformInfoProperties = TransformInfoProperties(name, label, description, objectFileName, objectConfigFileName, templateFileName)

@@ -44,7 +44,6 @@ open public class HealthBarThreedAnimation : HealthBarAnimation {
     private var rectangle: Rectangle
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 public constructor        (layerInterface: AllBinaryLayer, location: Int)                        
 
                             : super(layerInterface, location){
@@ -70,11 +69,9 @@ open fun updateColor()
         //nullable = true from not(false or (false and true)) = true
 {
     var colorBufferList: ColorBufferList = rectangle.getVertices()!!.getColor4BufferList()!!
-            
 
 
     var size: Int = colorBufferList!!.size()!!
-            
 
 
 
@@ -93,7 +90,6 @@ open fun updateSize()
         //nullable = true from not(false or (false and true)) = true
 {
     var number3dBufferList: Number3dBufferList = rectangle.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
-            
 
 
     var width: Int = x2
@@ -162,7 +158,6 @@ this.updateSize()
 
 
     private val object3dProcessor: Object3dProcessor = Object3dProcessorUtil.getInstance()!!.getInstanceObject3dProcessor()!!
-            
 
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -183,15 +178,12 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
 
     var gl: GL10 = openGLESGraphics!!.getGl10()!!
-            
 
 
     var viewPosition: ViewPosition = this.allbinaryLayer!!.getViewPosition()!!
-            
 
 
     var positionNumber3d: Number3d = this.rectangle.getPosition()!!
-            
 
 positionNumber3d!!.x=  -(viewPosition!!.getX().toFloat())
 positionNumber3d!!.z=  -(viewPosition!!.getY().toFloat())

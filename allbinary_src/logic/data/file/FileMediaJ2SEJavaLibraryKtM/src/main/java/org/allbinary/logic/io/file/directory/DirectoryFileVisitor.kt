@@ -68,7 +68,6 @@ open fun visit(anyType: Any)
 
 
     var aFile: File = file.getParentFile()!!
-            
 
 
         while((aFile= aFile!!.getParentFile()) != 

@@ -70,7 +70,6 @@ open fun update()
 {super.update()
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
@@ -80,7 +79,6 @@ this.costY1= (y +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -(charHeight
 this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE -myFont!!.charWidth()
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     
@@ -112,7 +110,6 @@ this.setName(this.getRtsLayer()!!.getName())
     private var percentCompleteX: Int= 0
 
     private var percentCompleteArray: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-            
 
     private var currentTotalDigits: Int= 0
 

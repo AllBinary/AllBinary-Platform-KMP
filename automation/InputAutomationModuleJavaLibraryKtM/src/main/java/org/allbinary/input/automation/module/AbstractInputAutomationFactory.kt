@@ -62,7 +62,6 @@ this.name= name
 this.jPanel= jPanel
 
     var url: URL = this::class.getResource("/help/Help.hs")!!
-            
 
 this.helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
 }

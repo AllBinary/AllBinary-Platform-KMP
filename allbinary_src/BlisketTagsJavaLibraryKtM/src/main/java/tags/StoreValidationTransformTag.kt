@@ -34,7 +34,6 @@ open public class StoreValidationTransformTag : ValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var storeName: String
 public constructor        ()                        

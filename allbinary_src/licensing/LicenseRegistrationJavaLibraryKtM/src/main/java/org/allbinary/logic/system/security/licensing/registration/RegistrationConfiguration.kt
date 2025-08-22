@@ -61,7 +61,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var registrationCode: String = "No Registration Code"
 
@@ -89,7 +88,6 @@ private constructor        ()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
@@ -103,11 +101,9 @@ open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileInputStream: InputStream = fileInputStreamFactory!!.getFileInputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
-            
 
 
     var dataInputStream: DataInputStream = DataInputStream(fileInputStream)
@@ -133,11 +129,9 @@ open fun write()
                             append("Write Configuration: ")!!.append(this.toString())!!.toString(), this, "write")
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
-            
 
 dataOutputStream= AbDataOutputStream(fileOutputStream)
 dataOutputStream!!.writeUTF(this.getRegistrationCode())

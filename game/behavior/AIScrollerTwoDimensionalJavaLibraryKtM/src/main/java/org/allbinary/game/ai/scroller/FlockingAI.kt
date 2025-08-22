@@ -79,15 +79,12 @@ this.allowedDistance= allowedDistance!!.toInt()
 
 
     var groupLayerManagerListener: GroupLayerManagerListener = GroupLayerManagerListener.getInstance()!!
-            
 
 
     var list: BasicArrayList = groupLayerManagerListener!!.getList(BasicGroupFactory.getInstance()!!.ENEMY)!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -106,7 +103,6 @@ this.allowedDistance= allowedDistance!!.toInt()
                                     {
                                     
     var distance: Int = this.getXYDistance(allBinaryLayer)!!
-            
 
 
     
@@ -146,7 +142,6 @@ farAllbinaryLayer= allBinaryLayer
                                     {
                                     
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     
@@ -200,7 +195,6 @@ open fun getXYDistance(allBinaryLayer: AllBinaryLayer)
                     var allBinaryLayer = allBinaryLayer
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var xTotalDistance: Int = (allBinaryLayer!!.getXP() +allBinaryLayer!!.getHalfWidth()) -(ownerLayerInterface!!.getXP() +ownerLayerInterface!!.getHalfWidth())
@@ -210,7 +204,6 @@ open fun getXYDistance(allBinaryLayer: AllBinaryLayer)
 
 
     var mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
 
     var totalDistance: Int = mathUtil!!.abs(xTotalDistance) +mathUtil!!.abs(yTotalDistance)

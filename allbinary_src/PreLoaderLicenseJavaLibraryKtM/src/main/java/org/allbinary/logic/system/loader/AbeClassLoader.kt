@@ -53,10 +53,8 @@ open public class AbeClassLoader : ClassLoader {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abCryptUtil: AbCryptUtil = AbCryptUtil.getInstance()!!
-            
 
     private val ENCRYPTED_EXTENSION: String = AbPathData.getInstance()!!.EXTENSION_SEP +"abc"
 
@@ -126,7 +124,6 @@ open fun loadClass(name: String, resolve: Boolean)
         try {
             
     var myClass: KClass<*> = this.findLoadedClass1(name)!!
-            
 
 
     
@@ -140,7 +137,6 @@ open fun loadClass(name: String, resolve: Boolean)
             loadedWith= "super.loadClass"
 
     var normalClass: KClass<*> = super.loadClass(name, resolve)!!
-            
 
 
     
@@ -169,7 +165,6 @@ open fun loadClass(name: String, resolve: Boolean)
 
 
     var classBytes: ByteArray = this.loadClassBytesFromFile(name)!!
-            
 
 
     
@@ -255,7 +250,6 @@ open fun loadClassBytesFromFile(name: String)
 in= FileInputStream(cname)
 
     var decrypted: ByteArray = this.abCryptUtil!!.decrypt(in, this.key)!!
-            
 
 
 
@@ -328,7 +322,6 @@ open fun oldLoadClass(name: String, resolve: Boolean)
         try {
             
     var myClass: KClass<*> = this.findLoadedClass1(name)!!
-            
 
 
     
@@ -342,7 +335,6 @@ open fun oldLoadClass(name: String, resolve: Boolean)
             loadedWith= "super.loadClass"
 
     var normalClass: KClass<*> = super.loadClass(name, resolve)!!
-            
 
 
     
@@ -396,7 +388,6 @@ open fun oldLoadClass(name: String, resolve: Boolean)
 loadedWith= "loadClassBytes"
 
     var classBytes: ByteArray = this.loadClassBytesFromFile(name)!!
-            
 
 
     

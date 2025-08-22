@@ -67,7 +67,6 @@ open fun getStackTrace(e: Throwable)
 e.printStackTrace()
 
     var output: String = bs.toString()!!
-            
 
 
     

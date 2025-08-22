@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -80,7 +79,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Creating View: " +transformInfoInterface!!.getName(), this, commonStrings!!.GET_INSTANCE)
 
@@ -165,7 +163,6 @@ stringBuffer!!.append(transformInfoInterface!!.getObjectFile())
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(error, this, commonStrings!!.GET_INSTANCE, e)
 
@@ -198,7 +195,6 @@ logUtil!!.put(error, this, commonStrings!!.GET_INSTANCE, e)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(error, this, commonStrings!!.GET_INSTANCE, e)
 

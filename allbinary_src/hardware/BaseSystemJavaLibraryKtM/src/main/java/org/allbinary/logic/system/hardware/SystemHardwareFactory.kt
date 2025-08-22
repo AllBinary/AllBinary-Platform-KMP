@@ -51,7 +51,6 @@ open fun getInstance()
 
 
     private var hardwareInterface: HardwareInterface = NoHardware.getInstance()!!
-            
 
 open fun static_toString()
         //nullable = true from not(false or (false and true)) = true
@@ -86,10 +85,8 @@ osBuffer!!.append("Hardware Info: \n")
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

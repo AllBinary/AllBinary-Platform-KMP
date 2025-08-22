@@ -35,7 +35,6 @@ open public class XmlValidationTransformTag : TransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -47,12 +46,10 @@ open fun isValid()
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.IS_VALID, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(this.getHelper(), 

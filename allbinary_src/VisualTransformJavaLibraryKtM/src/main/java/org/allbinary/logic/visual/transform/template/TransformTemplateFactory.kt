@@ -56,7 +56,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -82,11 +81,9 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, templa
         try {
             
     var transformInfoEntity: TransformInfoEntity = TransformInfoEntityBuilder.getInstance()!!
-            
 
 
     var transformInfoInterface: TransformInfoInterface = transformInfoEntity!!.get(templateName, propertiesHashMap, pageContext)!!
-            
 
 
 

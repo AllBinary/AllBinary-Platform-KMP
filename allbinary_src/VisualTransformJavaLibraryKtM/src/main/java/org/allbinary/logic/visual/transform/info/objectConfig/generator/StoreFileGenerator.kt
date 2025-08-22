@@ -51,10 +51,8 @@ open public class StoreFileGenerator : TransformInfoObjectConfigGenerator {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val output: String
 
@@ -84,7 +82,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     

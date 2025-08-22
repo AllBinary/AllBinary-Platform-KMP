@@ -73,7 +73,6 @@ private constructor        ()
             : super()
         {
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 NUMBER_ON_SAME_TEAM_SEQUENCE_ZERO= smallIntegerSingletonFactory!!.getInstance(100)
 NUMBER_ON_SAME_TEAM_SEQUENCE_ONE= smallIntegerSingletonFactory!!.getInstance(101)

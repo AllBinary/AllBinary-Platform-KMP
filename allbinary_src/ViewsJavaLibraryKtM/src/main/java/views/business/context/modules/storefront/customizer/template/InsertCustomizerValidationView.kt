@@ -52,7 +52,6 @@ open public class InsertCustomizerValidationView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var viewName: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -76,7 +75,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
     var requestHashMap: HashMap<Any, Any> = RequestParams(this.getPageContext()).
                             toHashMap()!!
-            
 
 this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as String
 }
@@ -113,11 +111,9 @@ open fun isValid()
 
 
     var componentVector: Vector = objectConfig!!.getGroupTransforms()!!
-            
 
 
     var size: Int = componentVector!!.size!!
-            
 
 
     
@@ -146,7 +142,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
 
     var transformInfoName: String = transformInfo!!.getName()!!
-            
 
 
     
@@ -159,25 +154,21 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
                                 
 
     var componentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, transformInfoName, this.getTransformInfoInterface())!!
-            
 
 
     var templateViewObjectConfig: InsertTemplateCustomizerTransformInfoObjectConfig = InsertTemplateCustomizerTransformInfoObjectConfig(componentInterface!!.getTransformInfoInterface(), componentInterface!!.getTransformInfoInterface()!!.getObjectConfigInterface()!!.toXmlDoc())
 
 
     var storeName: String = this.getTransformInfoInterface()!!.getStoreName()!!
-            
 
 
     var endIndex: Int = this.viewName!!.indexOf(storeName) +storeName!!.length
 
 
     var storePrepend: String = this.viewName!!.substring(0, endIndex)!!
-            
 
 
     var viewNamePostfix: String = this.viewName!!.substring(endIndex, this.viewName!!.length)!!
-            
 
 
     var newViewNameStringBuffer: StringMaker = StringMaker()
@@ -185,11 +176,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 newViewNameStringBuffer!!.append(storePrepend)
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var transformInfosData: TransformInfosData = TransformInfosData.getInstance()!!
-            
 
 
     
@@ -225,7 +214,6 @@ newViewNameStringBuffer!!.append(GeneratorTransformInfoData.NAME)
                                 
 
     var newViewName: String = newViewNameStringBuffer!!.toString()!!
-            
 
 
     
@@ -263,7 +251,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 componentInterface!!.getTransformInfoInterface()!!.setObjectConfigInterface(templateViewObjectConfig)
 
     var updatedTransformInfoHashMap: HashMap<Any, Any> = componentInterface!!.getTransformInfoInterface()!!.toHashMap()!!
-            
 
 TransformInfoEntityBuilder.getInstance()!!.update(updatedTransformInfoHashMap)
 }

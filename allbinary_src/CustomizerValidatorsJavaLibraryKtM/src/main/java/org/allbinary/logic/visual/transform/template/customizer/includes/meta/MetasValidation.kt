@@ -44,7 +44,6 @@ open public class MetasValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var storeFrontInterface: StoreFrontInterface
 
@@ -177,7 +176,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(HtmlMetasData.getInstance()!!.NAME)!!
-            
 
 
     var metaArray: Array<MetaValidation?> = this.metaValidationVector!!.toArray(arrayOfNulls(0)) as Array<MetaValidation?>

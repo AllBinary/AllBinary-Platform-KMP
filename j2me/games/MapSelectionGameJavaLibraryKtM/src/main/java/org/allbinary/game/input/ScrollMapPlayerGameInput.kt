@@ -45,7 +45,6 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
@@ -96,7 +95,6 @@ open fun move(dx: Int, dy: Int)
                     var dy = dy
 
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 terrainTiledLayer!!.move( -dx,  -dy)
 scrollMapEvent!!.setDxDy( -dx,  -dy)
@@ -117,11 +115,9 @@ open fun scrollMiddleX()
         //nullable = true from not(false or (false and true)) = true
 {
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 this.move( -terrainTiledLayer!!.getXP(), 0)
 
@@ -156,11 +152,9 @@ open fun scrollY(anchor: Int)
                     var anchor = anchor
 
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     
@@ -317,7 +311,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
         try {
             
     var size: Int = inputList!!.size()!!
-            
 
 
     var key: Int = 0
@@ -361,11 +354,9 @@ open fun getSpecialHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     
@@ -396,11 +387,9 @@ open fun getSpecialWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     
@@ -434,7 +423,6 @@ open fun keepOnMapMaxY(newY: Int)
                     var newY = newY
 
     var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
-            
 
 
     
@@ -468,7 +456,6 @@ open fun keepOnMapMinY(newY: Int)
                     var newY = newY
 
     var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
-            
 
 
     
@@ -502,7 +489,6 @@ open fun keepOnMapMaxX(newX: Int)
                     var newX = newX
 
     var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
-            
 
 
     
@@ -536,7 +522,6 @@ open fun keepOnMapMinX(newX: Int)
                     var newX = newX
 
     var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
-            
 
 
     

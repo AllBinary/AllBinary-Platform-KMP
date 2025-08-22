@@ -36,7 +36,6 @@ open public class UserEmailEventConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String
 

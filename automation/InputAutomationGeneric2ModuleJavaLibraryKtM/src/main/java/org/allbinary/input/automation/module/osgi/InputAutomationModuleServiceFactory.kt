@@ -40,10 +40,8 @@ open public class InputAutomationModuleServiceFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>
 public constructor        ()

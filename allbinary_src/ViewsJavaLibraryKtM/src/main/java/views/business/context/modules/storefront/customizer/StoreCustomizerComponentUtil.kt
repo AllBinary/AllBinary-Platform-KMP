@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -82,15 +81,12 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                                 
 
     var customizerUtil: CustomizerUtil = CustomizerUtil.getInstance()!!
-            
 
 
     var allCustomizedViews: Vector = customizerUtil!!.getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface)!!
-            
 
 
     var size: Int = allCustomizedViews!!.size!!
-            
 
 
 
@@ -104,7 +100,6 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 
 
     var allViewsToBeModified: Vector = customizerUtil!!.getTransformInfoObjectConfigComponentNodesToCustomize(transformInfoInterface, nextTransformInfoInterface)!!
-            
 
 
     
@@ -141,11 +136,9 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                     var allViewsToBeModifiedVector = allViewsToBeModifiedVector
 
     var customizerUtil: CustomizerUtil = CustomizerUtil.getInstance()!!
-            
 
 
     var size: Int = allViewsToBeModifiedVector!!.size!!
-            
 
 
 
@@ -159,7 +152,6 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 
 
     var specifiedTransformInfoInterface: TransformInfoInterface = customizerUtil!!.getTransformInfoInterfaceToCustomize(transformInfoInterface, nextTransformInfoInterface)!!
-            
 
 
     

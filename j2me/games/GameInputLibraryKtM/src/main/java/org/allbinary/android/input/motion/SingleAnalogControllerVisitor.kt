@@ -49,7 +49,6 @@ override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocatio
                     var analogLocationInputProcessor = analogLocationInputProcessor
 
     var analogLocationInput: AnalogLocationInput = AnalogLocationInputFactory.getInstance()!!.getInstance(playerInputId)!!
-            
 
 analogLocationInputProcessor!!.process(allbinaryLayerManager, analogLocationInput)
 }

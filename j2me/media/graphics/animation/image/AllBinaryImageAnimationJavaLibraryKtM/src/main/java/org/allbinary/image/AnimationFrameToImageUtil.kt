@@ -70,11 +70,9 @@ open fun getInstanceTranslate(width: Int, height: Int, animationInterface: Anima
                     var animationInterface = animationInterface
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.qualifiedName!!, ((width *3) shr 1), ((height *3) shr 1))!!
-            
 
 
     var graphics: Graphics = image.getGraphics()!!
-            
 
 
     var tranlateX: Int = (width shr 2)
@@ -108,11 +106,9 @@ open fun getInstance(width: Int, height: Int, animationInterface: Animation)
                     var animationInterface = animationInterface
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.qualifiedName!!, width, height)!!
-            
 
 
     var graphics: Graphics = image.getGraphics()!!
-            
 
 animationInterface!!.paint(graphics, 0, 0)
 

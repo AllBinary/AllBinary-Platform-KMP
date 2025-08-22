@@ -40,7 +40,6 @@ open public class EditValidationView : WorkFlowView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var workFlowName: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

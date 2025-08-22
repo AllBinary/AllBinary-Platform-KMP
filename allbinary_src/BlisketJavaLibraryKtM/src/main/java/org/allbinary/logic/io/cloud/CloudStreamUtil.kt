@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -70,7 +69,6 @@ open fun getFile(file: AbFile)
 
 
     var available: Int = inputStream!!.available()!!
-            
 
 
     
@@ -109,7 +107,6 @@ open fun getFileAnyWhere(file: AbFile)
 
 
     var available: Int = inputStream!!.available()!!
-            
 
 
     
@@ -171,7 +168,6 @@ open fun getFileLocal(file: AbFile)
 
 
     var available: Int = inputStream!!.available()!!
-            
 
 
     

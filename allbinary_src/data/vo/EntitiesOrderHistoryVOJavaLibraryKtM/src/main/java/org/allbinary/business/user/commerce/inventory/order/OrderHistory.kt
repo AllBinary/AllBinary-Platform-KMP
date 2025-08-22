@@ -439,15 +439,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -455,17 +452,14 @@ open fun toXmlNode(document: Document)
 
 
     var node: Node = document.createElement(OrderHistoryData.ORDERHISTORY)!!
-            
 
 node.appendChild(super.toXmlNode(document))
 
     var billingAddressNode: Node = document.createElement(BillingAddressData.BILLINGADDRESS)!!
-            
 
 billingAddressNode!!.appendChild(this.billingAddress!!.toXmlNode(document))
 
     var shippingAddressNode: Node = document.createElement(ShippingAddressData.SHIPPINGADDRESS)!!
-            
 
 shippingAddressNode!!.appendChild(this.shippingAddress!!.toXmlNode(document))
 node.appendChild(billingAddressNode)

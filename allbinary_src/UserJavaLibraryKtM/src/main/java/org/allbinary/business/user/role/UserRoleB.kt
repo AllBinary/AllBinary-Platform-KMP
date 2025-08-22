@@ -51,11 +51,9 @@ UserRoleFactory.getInstance()
                                     {
                                     
     var roleVector: Vector = UserRoleB.getAll()!!
-            
 
 
     var size: Int = roleVector!!.size!!
-            
 
 
 

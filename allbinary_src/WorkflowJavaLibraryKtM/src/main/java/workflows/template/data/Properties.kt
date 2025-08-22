@@ -36,10 +36,8 @@ open public class Properties
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var propertiesHashMap: HashMap<Any, Any>
 public constructor        ()

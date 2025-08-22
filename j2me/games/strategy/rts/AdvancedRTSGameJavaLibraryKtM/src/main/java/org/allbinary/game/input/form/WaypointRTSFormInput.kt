@@ -66,7 +66,6 @@ open public class WaypointRTSFormInput : RTSFormInput {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var isPrimaryWaypointCreator: Boolean
 
@@ -96,11 +95,9 @@ public constructor        (groupInterface: Array<Group?>, isPrimaryWaypointCreat
 this.isPrimaryWaypointCreator= isPrimaryWaypointCreator
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.dragToSpotGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.DRAG_TO_SPOT, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
 this.spotTakenGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SPOT_TAKEN, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
@@ -173,7 +170,6 @@ super.process(layerManager)
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var x: Int = point.getX() +allBinaryTiledLayer!!.getXP()
@@ -183,7 +179,6 @@ super.process(layerManager)
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(x, y)!!
-            
 
 this.process(rtsPlayerLayerInterface, layerManager, geographicMapCellPosition)
 
@@ -236,7 +231,6 @@ open fun process(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager:
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var itemIndex: Int = this.getSelectedStickyItemIndex()!!
-            
 
 
     
@@ -252,7 +246,6 @@ open fun process(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager:
                         else {
                             
     var cellPoint: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getZP())
 
@@ -337,7 +330,6 @@ logUtil!!.put("Layer: " +layerInterface, this, "attemptBuild")
 
 
     var list: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     
@@ -409,11 +401,9 @@ logUtil!!.put("Layer: " +layerInterface, this, "attemptBuild")
 
 
     var cost: Int = layerInterface!!.getCost()!!
-            
 
 
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -438,7 +428,6 @@ capital.removeMoney(cost)
 WaypointCellPositionHistory.getInstance()!!.add(list, layerInterface)
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(layerInterface!!.getXP(), layerInterface!!.getYP())!!
-            
 
 
     var waypointLayer: WaypointLayer = layerInterface as WaypointLayer
@@ -509,7 +498,6 @@ open fun addWayPoint(layerInterface: WaypointLayer)
     var list: BasicArrayList = stickyAssociatedRtsLayer = stickyAssociatedRtsLayerstickyAssociatedRtsLayer as AdvancedRTSGameLayer
 stickyAssociatedRtsLayer.
                     getWaypointBehavior()!!.getOwnedWaypointList()!!
-            
 
 RTSLayerUtil.getInstance()!!.destroyAndClear(list)
 list.add(layerInterface)

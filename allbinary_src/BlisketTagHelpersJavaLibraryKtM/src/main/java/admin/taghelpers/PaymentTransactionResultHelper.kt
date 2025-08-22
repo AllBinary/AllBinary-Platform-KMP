@@ -36,7 +36,6 @@ open public class PaymentTransactionResultHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -56,7 +55,6 @@ open fun drop()
             
     var success: String = TransactionResultEntity().
                             dropTable()!!
-            
 
 
     
@@ -102,7 +100,6 @@ open fun create()
             
     var success: String = TransactionResultEntity().
                             createTable()!!
-            
 
 
     
@@ -150,7 +147,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(TransactionResultEntity(), this.portion)!!
-            
 
 
     
@@ -198,7 +194,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(TransactionResultEntity())!!
-            
 
 
     

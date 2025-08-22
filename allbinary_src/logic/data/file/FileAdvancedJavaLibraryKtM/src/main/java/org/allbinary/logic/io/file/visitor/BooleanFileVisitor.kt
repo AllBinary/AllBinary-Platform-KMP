@@ -38,7 +38,6 @@ open public class BooleanFileVisitor
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var filterStringBasicArrayList: BasicArrayList
 public constructor        (filterStringBasicArrayList: BasicArrayList)
@@ -71,11 +70,9 @@ open fun visit(file: AbFile)
                     var file = file
 
     var list: BasicArrayList = this.getFilterStringBasicArrayList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
     var nextFileFilterString: String

@@ -46,7 +46,6 @@ open public class UniqueIdGenerator
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val idGeneratorEntity: IdGeneratorEntity
 
@@ -78,7 +77,6 @@ idGeneratorEntity!!.insert(vector)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 
@@ -111,13 +109,11 @@ open fun getNext()
         try {
             
     var idLong: Long = this.idGeneratorEntity!!.get(name)!!
-            
 
 
     var newValue: Long = .concatToString()
 
                                     !!
-            
 
 this.idGeneratorEntity!!.update(name, newValue)
 
@@ -133,7 +129,6 @@ this.idGeneratorEntity!!.update(name, newValue)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getNext", e)
 

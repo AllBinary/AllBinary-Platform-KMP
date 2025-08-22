@@ -36,10 +36,8 @@ open public class AndroidMediaPlayerWrapperListener
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var androidMediaPlayerWrapper: AndroidMediaPlayerWrapper = AndroidMediaPlayerWrapper.NULL_ANDROID_MEDIA_PLAYER_WRAPPER
 public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper, listeningLevel: Int)
@@ -56,7 +54,6 @@ public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper,
 this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
 
     var mediaPlayer: MediaPlayer = androidMediaPlayerWrapper!!.getMediaPlayer()!!
-            
 
 
     
@@ -92,7 +89,6 @@ public constructor        (androidMediaPlayerWrapper: AndroidMediaPlayerWrapper)
 this.androidMediaPlayerWrapper= androidMediaPlayerWrapper
 
     var mediaPlayer: MediaPlayer = androidMediaPlayerWrapper!!.getMediaPlayer()!!
-            
 
 mediaPlayer!!.setOnCompletionListener(mOnCompletionListener)
 mediaPlayer!!.setOnBufferingUpdateListener(mOnBufferingUpdateListener)

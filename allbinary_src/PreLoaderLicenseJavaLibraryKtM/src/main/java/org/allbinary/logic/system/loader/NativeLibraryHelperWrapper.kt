@@ -69,21 +69,17 @@ classes[0]= getLibraryName()!!.::class
 this.loader= NativeLibraryClassLoader(this::class.java.classLoader)
 
     var myClass: KClass<*> = loader.loadClass("dynamic.NativeLibraryHelper")!!
-            
 
 
     var constructor: Constructor = myClass!!.getConstructor(classes)!!
-            
 
 this.anyType= constructor.newInstance(params)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var method: Method = anyType!!::class.getMethod(commonStrings!!.LOAD, 
                             null)!!
-            
 
 method.invoke(anyType, 
                             null)

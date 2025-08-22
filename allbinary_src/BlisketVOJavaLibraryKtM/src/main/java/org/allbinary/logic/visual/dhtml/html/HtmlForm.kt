@@ -99,14 +99,12 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var result: String = stringUtil!!.EMPTY_STRING
 
 
     var inputArray: Array<Any?> = inputs.toArray()!!
-            
 
 
     var inputSize: Int = inputArray!!.size

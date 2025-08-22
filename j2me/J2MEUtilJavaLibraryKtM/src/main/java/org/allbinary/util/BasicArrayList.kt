@@ -29,7 +29,6 @@ open public class BasicArrayList
         }
             
     private val arrayUtil: ArrayUtil = ArrayUtil.getInstance()!!
-            
 
     var objectArray: Array<Any?>
 
@@ -273,7 +272,6 @@ open fun removeAll2(list: BasicArrayList)
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -339,7 +337,6 @@ open fun addAll(list: BasicArrayList)
                     var list = list
 
     var newObjectArray: Array<Any?> = list.toArray()!!
-            
 
 
 
@@ -702,7 +699,6 @@ override fun clone()
 
 
     var size: Int = this.size()!!
-            
 
 
     var anyType: Any

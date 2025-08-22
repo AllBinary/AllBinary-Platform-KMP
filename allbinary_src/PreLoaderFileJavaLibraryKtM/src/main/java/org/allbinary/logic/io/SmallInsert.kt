@@ -39,10 +39,8 @@ open public class SmallInsert
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var fileName: String
 
@@ -108,7 +106,6 @@ open fun after(text: String, after: String)
         try {
             
     var index: Int = this.string.indexOf(after)!!
-            
 
 
     
@@ -127,11 +124,9 @@ open fun after(text: String, after: String)
 index= index +after.length
 
     var start: String = this.string.substring(0, index)!!
-            
 
 
     var end: String = this.string.substring(index +1, this.string.length)!!
-            
 
 
     var idFile: FileOutputStream = FileOutputStream(this.fileName)

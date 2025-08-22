@@ -28,10 +28,8 @@ open public class AbDatabaseManagement : AbSqlBean {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val sqlCommandLog: StringMaker = StringMaker()
 
@@ -97,7 +95,6 @@ open fun getHostName()
         try {
             
     var addr: InetAddress = InetAddress.getLocalHost()!!
-            
 
 
 
@@ -146,7 +143,6 @@ stringBuffer!!.append(password)
 stringBuffer!!.append(this.WITH_GRANT_OPTION)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.sqlCommandLog!!.append(sqlStatement)
 this.sqlCommandLog!!.append(this.commonSeps!!.NEW_LINE)
@@ -175,7 +171,6 @@ open fun addDbUser(db: String, userName: String, password: String)
             this.addDbUser(this.AT_LOCALHOST, db, userName, password)
 
     var hostName: String = this.getHostName()!!
-            
 
 
     

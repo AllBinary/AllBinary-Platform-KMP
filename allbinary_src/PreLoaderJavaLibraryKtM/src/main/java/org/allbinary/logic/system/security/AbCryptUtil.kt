@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

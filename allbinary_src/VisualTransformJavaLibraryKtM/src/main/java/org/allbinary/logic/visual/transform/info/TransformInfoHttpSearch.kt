@@ -62,7 +62,6 @@ public constructor        (searchRequest: SearchRequest)
                             
 
     var dataFileName: String = searchRequest!!.getXslFile()!!
-            
 
 this.setTemplateFile(dataFileName)
 }

@@ -45,10 +45,8 @@ open public class QuoteRequest
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var id: String
 
@@ -73,7 +71,6 @@ public constructor        (userName: String, request: HttpServletRequest)
                     var request = request
 
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
-            
 
 this.id= QuoteRequestIdGenerator().
                             getNext()
@@ -101,7 +98,6 @@ public constructor        (hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
-            
 
 this.id= hashMap!!.get(quoteRequestData!!.ID) as String
 this.setUserName(hashMap!!.get(UserData.USERNAME) as String)
@@ -332,7 +328,6 @@ values.add(this.timeFrame)
 values.add(this.comments)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -353,7 +348,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
-            
 
 
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -366,7 +360,6 @@ values.put(quoteRequestData!!.TIMEFRAME, this.timeFrame)
 values.put(quoteRequestData!!.COMMENTS, this.comments)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -435,7 +428,6 @@ open fun setComments(value: String)
 this.comments= value
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     

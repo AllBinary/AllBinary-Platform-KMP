@@ -46,10 +46,8 @@ open public class HttpComponentView : TransformInfoHttpComposite
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var domNodeInterfaceVector: Vector
 
@@ -125,7 +123,6 @@ open fun toXmlDoc()
         try {
             
     var size: Int = domNodeInterfaceVector!!.size!!
-            
 
 
 
@@ -170,11 +167,9 @@ open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var document: Document = this.getTransformInfoInterface()!!.getDataDocument()!!
-            
 
 
     var node: Node = DomNodeHelper.getFirstChildElement(document)!!
-            
 
 
     
@@ -185,7 +180,6 @@ open fun getDoc()
                                     {
                                     
     var dataNode: Node = this.getTransformDocumentInterface()!!.getDoc()!!.importNode(node, true)!!
-            
 
 
     
@@ -218,12 +212,10 @@ open fun view()
             this.toXmlDoc()
 
     var success: String = DomDocumentHelper.toString(this.getDoc())!!
-            
 
 
     var result: String = BasicTransformer(this.abeClientInformation, this.getTransformInfoInterface()).
                             translate(success)!!
-            
 
 
 

@@ -59,7 +59,6 @@ open fun log(fileItem: FileItemStream)
                     var fileItem = fileItem
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -96,7 +95,6 @@ open fun log(fileItem: FileItem)
                     var fileItem = fileItem
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -129,7 +127,6 @@ stringBuffer!!.append(fileItem!!.getSize())
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

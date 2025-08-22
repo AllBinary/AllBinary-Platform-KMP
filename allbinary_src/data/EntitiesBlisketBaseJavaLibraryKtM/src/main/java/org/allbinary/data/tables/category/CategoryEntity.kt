@@ -40,7 +40,6 @@ open public class CategoryEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "categories"
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
@@ -74,7 +73,6 @@ open fun insert(category: Category)
         try {
             
     var categoryVector: Vector = category.toVector()!!
-            
 
 
     var values: Vector = Vector()

@@ -49,7 +49,6 @@ open public class CompoundContextTransformInfoObjectConfig : GenericStoreTransfo
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
                             : super(abeClientInformation, transformInfoInterface){
@@ -110,14 +109,12 @@ open fun get()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var storeName: String = this.getTransformInfoInterface()!!.getStoreName()!!
-            
 
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = this.getTransformInfoInterface() as TransformInfoHttpInterface
 
 
     var templateNameOverride: String = StringUtil.getInstance()!!.getInstance(httpTransformInfoInterface!!.getPropertiesHashMap()!!.get(TransformInfoData.getInstance()!!.PARTIAL) as String)!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -128,11 +125,9 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 stringBuffer!!.append(RootTransformInfoData.NAME)
 
     var rootComponentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(abeClientInformation, stringBuffer!!.toString(), this.getTransformInfoInterface())!!
-            
 
 
     var viewVector: Vector = this.getTransformDomNodes()!!
-            
 
 
     
@@ -145,7 +140,6 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
                                 
 
     var rootView: String = rootComponentInterface!!.view()!!
-            
 
 
     var startXMLHeader: String = "<xsl:text disable-output-escaping=\"yes\" ><![CDATA["
@@ -155,7 +149,6 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
 
     var size: Int = viewVector!!.size!!
-            
 
 
 
@@ -169,15 +162,12 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
 
     var templateKey: String = objectConfigTransformInfoDomNode!!.getReplaceKey()!!
-            
 
 
     var componentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(abeClientInformation, objectConfigTransformInfoDomNode!!.getTransformInfoInterface()!!.getName(), this.getTransformInfoInterface())!!
-            
 
 
     var replacementViewString: String = componentInterface!!.view()!!
-            
 
 replacementViewString= DocumentToNode.convertDocumentToNodeString(replacementViewString)
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -186,7 +176,6 @@ stringBuffer!!.append(replacementViewString)
 stringBuffer!!.append(endXMLHeader)
 
     var templateValue: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -231,7 +220,6 @@ open fun createInputStream()
         //nullable = true from not(false or (false and true)) = true
 : InputStream{
     var completeTemplateViewBytes: ByteArray = this.get()!!.encodeToByteArray()!!
-            
 
 
     var bais: ByteArrayInputStream = ByteArrayInputStream(completeTemplateViewBytes)

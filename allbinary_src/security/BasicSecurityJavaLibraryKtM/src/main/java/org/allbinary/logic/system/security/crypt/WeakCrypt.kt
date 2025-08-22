@@ -57,7 +57,6 @@ public constructor        (key: Int)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "SuperCrypt(key)", e)
 }
@@ -74,7 +73,6 @@ open fun encrypt(value: String)
         try {
             
     var crypted: ByteArray = this.abCrypt!!.encrypt(value.encodeToByteArray())!!
-            
 
 
 
@@ -102,7 +100,6 @@ open fun decrypt(value: String)
         try {
             
     var decrypted: ByteArray = abCrypt!!.decrypt(DatabaseEncoder.decode(value))!!
-            
 
 
 

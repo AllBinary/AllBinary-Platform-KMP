@@ -67,7 +67,6 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
 
     private var paintable: PaintableInterface = NullPaintable.getInstance()!!
-            
 override fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
 {}
@@ -212,7 +211,6 @@ open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicA
 
 
     var size: Int = list.size()!!
-            
 
 
 

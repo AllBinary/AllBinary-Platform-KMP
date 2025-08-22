@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val UNREALIZED: String = "UNREALIZED"
 

@@ -57,10 +57,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -80,7 +78,6 @@ open fun getInstance(vectorRotationInfo: VectorInfo)
 
 
     private val angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
         //nullable =  from not(true or (false and false)) = 
@@ -112,7 +109,6 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
-            
 
 
     var size: Int = points.size
@@ -140,7 +136,6 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 
 
     var newPoints: Array<Array<IntArray?>?> = vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList, pointBasicArrayList!!.size())!!
-            
 
 
 
@@ -150,7 +145,6 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

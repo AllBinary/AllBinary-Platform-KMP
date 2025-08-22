@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
 private constructor        ()
@@ -65,14 +64,12 @@ open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
 : GenericOperatingSystem{
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             
     var osString: String = StringMaker().
                             append("OperatingSystem Info: ")!!.append(genericOperatingSystem!!.toString())!!.toString()!!
-            
 
 System.out.println(osString)
 logUtil!!.put(osString, this, commonStrings!!.GET_INSTANCE)

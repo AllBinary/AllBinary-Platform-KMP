@@ -48,7 +48,6 @@ open public class WaypointPathRunnableBase
             }            
         
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
-            
 
     var pathFindingLayer: PathFindingLayerInterface
 
@@ -114,7 +113,6 @@ open fun setPriority()
                                     {
                                     
     var distance: Int = layerDistanceUtil!!.getDistance(targetLayer, pathFindingLayer)!!
-            
 
 
     var distanceCategory: Int = distance /70

@@ -65,11 +65,9 @@ open public class MobileClientInformation : AbeClientInformation {
                     
 
     var string: String = this.getSpecialName()!!
-            
 
 
     var number: String = string.substring(string.length -1)!!
-            
 
 
     
@@ -84,7 +82,6 @@ open public class MobileClientInformation : AbeClientInformation {
                                 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -106,11 +103,9 @@ override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>{
     var hashtable: Hashtable<Any, Any> = super.toHashtable()!!
-            
 
 
     var registrationConfiguration: RegistrationConfiguration = RegistrationConfiguration.getInstance()!!
-            
 
 hashtable.put(registrationConfiguration!!.NAME, registrationConfiguration!!.getRegistrationCode())
 

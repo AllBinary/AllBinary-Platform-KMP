@@ -75,7 +75,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
                     var y = y
 
     var stringComponent: StringComponent = this.getLabelStringComponent()!!
-            
 
 
     

@@ -57,10 +57,8 @@ open fun getInstance()
     val FALSE: Boolean = false
 
     val TRUE_STRING: String = TRUE.toString()!!
-            
 
     val FALSE_STRING: String = FALSE.toString()!!
-            
 
     val YES: String = "yes"
 

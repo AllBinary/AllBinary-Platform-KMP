@@ -62,7 +62,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
                     var httpServletRequest = httpServletRequest
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -74,7 +73,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
 
 
     var abeFactory: AbeFactory = AbeFactory.getInstance()!!
-            
 
 classes[0]= hashMap!!::class
 classes[1]= abeFactory!!::class
@@ -82,7 +80,6 @@ params[0]= hashMap as Object
 params[1]= httpServletRequest as Object
 
     var anyType: Any = abeFactory!!.getInstance(abeClientInformation, className, classes, params)!!
-            
 
 
 
@@ -151,7 +148,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
                     var pageContext = pageContext
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -163,7 +159,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
 
 
     var abeFactory: AbeFactory = AbeFactory.getInstance()!!
-            
 
 classes[0]= hashMap!!::class
 classes[1]= abeFactory!!::class
@@ -171,7 +166,6 @@ params[0]= hashMap as Object
 params[1]= pageContext as Object
 
     var anyType: Any = abeFactory!!.getInstance(abeClientInformation, className, classes, params)!!
-            
 
 
 
@@ -204,7 +198,6 @@ logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
@@ -244,7 +237,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
                     var pageContext = pageContext
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -256,7 +248,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
 
 
     var abeFactory: AbeFactory = AbeFactory.getInstance()!!
-            
 
 classes[0]= hashMap!!::class
 classes[1]= specialhashMap!!::class
@@ -266,7 +257,6 @@ params[1]= specialhashMap as Object
 params[2]= pageContext as Object
 
     var anyType: Any = abeFactory!!.getInstance(abeClientInformation, className, classes, params)!!
-            
 
 
 
@@ -299,7 +289,6 @@ logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
@@ -330,13 +319,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
                     var className = className
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
             
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className)!!
-            
 
 
 
@@ -351,7 +338,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
@@ -370,7 +356,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getInstance(String, String, HashMap, PageContext)", e)
 
@@ -389,7 +374,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}

@@ -170,11 +170,9 @@ open fun waitForAll()
 {this.allTimeDelayHelper!!.setStartTime()
 
     var hashtable: Hashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtable()!!
-            
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
     var size: Int = objectArray!!.size

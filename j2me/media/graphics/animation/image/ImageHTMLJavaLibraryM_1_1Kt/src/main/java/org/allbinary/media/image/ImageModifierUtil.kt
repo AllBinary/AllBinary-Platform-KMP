@@ -64,13 +64,10 @@ open fun getInstanceOrCreate()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val resourceCallbackStrings: ResourceCallbackStrings = ResourceCallbackStrings.getInstance()!!
-            
 
     private var alphaArray: BooleanArray
 
@@ -185,7 +182,6 @@ open fun setAlpha2(originalImage: Image, image: Image, imageIndex: Int, alpha: F
 
 
     var canvas: Canvas = canvasImage!!.canvas()!!
-            
 
 canvas.clear()
 canvas.setAlpha(alpha)
@@ -215,7 +211,6 @@ open fun setAlpha3(image: Image, alpha: Float)
 
 
     var canvas: Canvas = canvasImage!!.canvas()!!
-            
 
 canvas.setAlpha(alphaFloat)
 }
@@ -341,11 +336,9 @@ open fun copy(imageArray: Array<Image?>, index: Int, image: Image, image3: playn
         try {
             
     var image2: Image = Image.createImage(image3.width(), image3.height())!!
-            
 
 
     var graphics: Graphics = image2.getGraphics()!!
-            
 
 graphics.drawImage(image, 0, 0, Anchor.TOP_LEFT)
 imageArray[index]= image2

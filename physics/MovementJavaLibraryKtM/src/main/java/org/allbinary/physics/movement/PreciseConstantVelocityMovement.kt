@@ -63,11 +63,9 @@ override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
                     var layer = layer
 
     var mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
 
     var velocityProperties: BasicVelocityProperties = this.getVelocityProperties()!!
-            
 
 accumulatedX= (accumulatedX +velocityProperties!!.getVelocityXBasicDecimalP()!!.getUnscaled()).toInt()
 accumulatedY= (accumulatedY +velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled()).toInt()

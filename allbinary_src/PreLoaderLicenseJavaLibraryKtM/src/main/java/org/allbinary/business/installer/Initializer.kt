@@ -56,7 +56,6 @@ open public class Initializer
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userJdbcDriver: String
 
@@ -140,11 +139,9 @@ public constructor        (map: Map)
 
 
     var keys: Set = map.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -193,7 +190,6 @@ open fun getFormData(hashMap: HashMap<Any, Any>)
         try {
             
     var initializerData: InitializerData = InitializerData.getInstance()!!
-            
 
 userJdbcDriver= hashMap!!.get(initializerData!!.CUSTOMERJDBCDRIVER) as String
 userName= hashMap!!.get(initializerData!!.CUSTOMERNAME) as String
@@ -258,7 +254,6 @@ open fun isJdbcDriverValid(jdbcDriverClassPathString: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.IS_VALID, e)
 
@@ -290,7 +285,6 @@ open fun isValid()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -532,7 +526,6 @@ stringBuffer!!.append(this.getJdbcDriverValidationInfo(this.userJdbcDriver))
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     

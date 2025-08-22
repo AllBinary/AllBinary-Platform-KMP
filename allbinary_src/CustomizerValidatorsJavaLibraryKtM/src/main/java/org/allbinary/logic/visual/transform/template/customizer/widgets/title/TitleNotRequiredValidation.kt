@@ -38,7 +38,6 @@ open public class TitleNotRequiredValidation : TitleView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(){

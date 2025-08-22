@@ -34,7 +34,6 @@ open public class BasicGroupItemsHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 

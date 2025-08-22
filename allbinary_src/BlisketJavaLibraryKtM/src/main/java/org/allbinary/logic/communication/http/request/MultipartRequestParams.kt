@@ -39,7 +39,6 @@ open public class MultipartRequestParams : RequestParams {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var special: Boolean = false
 public constructor        (request: HttpServletRequest)                        
@@ -85,7 +84,6 @@ open fun processMultipartRequest(request: HttpServletRequest)
 
 
     var multipartRequestList: List = AbFileUploadFactory.getInstance()!!.getFileItemStreamList(request)!!
-            
 
 
     
@@ -105,7 +103,6 @@ open fun processMultipartRequest(request: HttpServletRequest)
                                 
 
     var fileItemArray: Array<Any?> = multipartRequestList!!.toArray()!!
-            
 
 
     var size: Int = fileItemArray!!.size
@@ -123,7 +120,6 @@ open fun processMultipartRequest(request: HttpServletRequest)
 
 
     var name: String = fileItem!!.getName()!!
-            
 
 
     

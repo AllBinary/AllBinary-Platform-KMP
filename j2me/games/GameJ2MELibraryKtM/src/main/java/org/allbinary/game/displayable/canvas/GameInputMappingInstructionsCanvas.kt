@@ -86,7 +86,6 @@ this.setCommandListener(cmdListener)
     private var anchor: Int = Anchor.TOP_LEFT
 
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
-            
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -94,7 +93,6 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var charHeight: Int = myFont!!.DEFAULT_CHAR_HEIGHT
@@ -102,11 +100,9 @@ override fun paint(graphics: Graphics)
 this.colorFillPaintable!!.paint(graphics)
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var halfWidth: Int = displayInfo!!.getLastHalfWidth()!!
-            
 
 
     var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.TITLE) shr 1)

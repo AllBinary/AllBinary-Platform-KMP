@@ -68,10 +68,8 @@ open public class HighScoresCanvas : GameCommandCanvas
         }
             
     private var paintable: Paintable = NullPaintable.getInstance()!!
-            
 
     private val highScoreCommandsFactory: HighScoreCommandsFactory = HighScoreCommandsFactory.getInstance()!!
-            
 
     private val waitPaintable: SimpleTextPaintable = SimpleTextPaintable(commonStrings!!.PLEASE_WAIT_FOR_SERVER, BasicColorFactory.getInstance()!!.WHITE)
 
@@ -158,11 +156,9 @@ this.setPaintable(this.getHighScoresPaintable())
                             
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var isHTML: Boolean = features.isDefault(HTMLFeatureFactory.getInstance()!!.HTML)!!
-            
 
 SecondaryThreadPool.getInstance()!!.runTask(object: NullRunnable()
                                 {
@@ -324,7 +320,6 @@ logUtil!!.put(StringMaker().
                             append(commonStrings!!.START)!!.append(this.stringUtil!!.toString(command))!!.toString(), this, commonStrings!!.UPDATE)
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 
     
@@ -333,14 +328,12 @@ logUtil!!.put(StringMaker().
                                     {
                                     
     var index: Int = highScoreCommandsFactory!!.getIndex(command)!!
-            
 
 
     var nextIndex: Int = index +1
 
 
     var highScoresArray: Array<HighScores?> = this.highScoresHelper!!.getHighScoresArray()!!
-            
 
 
     

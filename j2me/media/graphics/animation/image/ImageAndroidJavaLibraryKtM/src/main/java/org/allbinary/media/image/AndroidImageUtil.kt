@@ -92,7 +92,6 @@ open fun paint(image: Image, originalImage: Image, paint: Paint)
 image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
     var canvas: Canvas = image.getCanvas()!!
-            
 
 canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
 }
@@ -115,7 +114,6 @@ open fun rotate(image: Image, originalImage: Image, matrix: Matrix, paint: Paint
 image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
     var canvas: Canvas = image.getCanvas()!!
-            
 
 canvas.concat(matrix)
 canvas.drawBitmap(originalImage!!.getBitmap(), 0.0f, 0.0f, paint)
@@ -136,7 +134,6 @@ open fun rotate(image: Image, originalImage: Image, matrix: Matrix)
 image.getBitmap()!!.eraseColor(Color.TRANSPARENT)
 
     var canvas: Canvas = image.getCanvas()!!
-            
 
 canvas.concat(matrix)
 image.getGraphics()!!.drawImage(originalImage, 0, 0, 0)

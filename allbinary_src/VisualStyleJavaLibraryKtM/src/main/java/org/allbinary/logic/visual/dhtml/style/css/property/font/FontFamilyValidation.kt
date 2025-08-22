@@ -36,7 +36,6 @@ open public class FontFamilyValidation : FontFamilyView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(){

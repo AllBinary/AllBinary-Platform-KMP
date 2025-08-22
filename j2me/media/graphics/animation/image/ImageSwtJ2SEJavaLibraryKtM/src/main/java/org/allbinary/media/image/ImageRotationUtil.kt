@@ -56,14 +56,12 @@ open fun getInstance()
         }
             
     private val imageSwtRotationUtil: ImageSwtRotationUtil = ImageSwtRotationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
 
 
     private val features: Features = Features.getInstance()!!
-            
 
 open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true

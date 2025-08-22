@@ -53,11 +53,9 @@ open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeL
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
-            
 
 
     var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(this.ownerLayer)!!
-            
 
 
     
@@ -123,11 +121,9 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
-            
 
 
     var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(this.ownerLayer)!!
-            
 
 
     

@@ -58,7 +58,6 @@ open public class PreGameSelectionGameInputProcessor : Processor
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val gameCanvas: AllBinaryGameCanvas
 
@@ -88,7 +87,6 @@ this.setRunning(false)
             {this.setRunning(false)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
@@ -134,7 +132,6 @@ open fun onInput(list: BasicArrayList)
                     var list = list
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -145,11 +142,9 @@ open fun onInput(list: BasicArrayList)
 
         {
     var anyType: Any = list.get(index)!!
-            
 
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
-            
 
 
     
@@ -179,7 +174,6 @@ break;
                                     {
                                     
     var selectedIndex: Int = this.preGameSelectorPaintable!!.getPreGameSelectionForm()!!.getSelectedIndex()!!
-            
 
 
     

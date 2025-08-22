@@ -43,7 +43,6 @@ open public class CustomUriResolver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var path: String
 

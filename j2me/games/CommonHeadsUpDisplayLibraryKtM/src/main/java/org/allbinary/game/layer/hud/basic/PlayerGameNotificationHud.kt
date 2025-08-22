@@ -55,10 +55,8 @@ open public class PlayerGameNotificationHud : GameNotificationHud {
     private var string: String = this.EMPTY_STRING
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
 
@@ -71,7 +69,6 @@ open public class PlayerGameNotificationHud : GameNotificationHud {
     private var point: CustomGPoint = CustomGPoint.NULL_CUSTOM_POINT
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
                             : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
@@ -99,7 +96,6 @@ public constructor        (location: Int, direction: Int, maxHeight: Int, maxWid
 this.circularIndexUtil= CircularIndexUtil.getInstance(0)
 
     var gameNotificationEventHandler: GameNotificationEventHandler = GameNotificationEventHandler.getInstance()!!
-            
 
 gameNotificationEventHandler!!.removeAllListeners()
 gameNotificationEventHandler!!.addListener(this)
@@ -180,7 +176,6 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
                                     {
                                     
     var gameAdState: GameAdState = GameAdStateFactory.getInstance()!!.getCurrentInstance()!!
-            
 
 
     
@@ -232,7 +227,6 @@ open fun setAndRemove()
 {this.string= this.gameNotification!!.stringList!!.remove(0) as String
 
     var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
-            
 
 this.setX((displayInfo!!.getLastWidth() -width) shr 1)
 this.point.setX(this.getX())
@@ -263,12 +257,10 @@ open fun setNextUnremoveable()
         //nullable = true from not(false or (false and true)) = true
 {
     var index: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 this.string= this.permanentGameNotification!!.stringList!!.objectArray[index]!! as String
 
     var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
-            
 
 this.setX((displayInfo!!.getLastWidth() -width) shr 1)
 this.point.setX(this.getX())

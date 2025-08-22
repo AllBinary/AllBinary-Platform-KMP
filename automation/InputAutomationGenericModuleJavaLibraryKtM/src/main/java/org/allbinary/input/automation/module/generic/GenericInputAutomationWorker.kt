@@ -46,7 +46,6 @@ open public class GenericInputAutomationWorker : AbstractInputAutomationWorker {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val PROCESS_DATA_WORKER_RESULTS: String = "processDataWorkerResults"
 
@@ -81,11 +80,9 @@ this.setMotionRectanglesWorker(MotionRectanglesWorker(motionRectangleConstraints
 this.setGenericProfile(genericProfile)
 
     var vector: Vector = this.getGenericProfile()!!.getGenericProfileDataWorkerTypeVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -132,7 +129,6 @@ this.waitForDataWorkers()
 
 
     var keyArray: Array<Any?> = cacheInterface!!.keySet()!!.toArray()!!
-            
 
 
     
@@ -149,16 +145,13 @@ setFrame(keyArray[keyArray!!.size -1]!! as Long)
                                     logUtil!!.put("Processing new frame: " +getFrame(), this, this.PROCESS_DATA_WORKER_RESULTS)
 
     var hashMap: HashMap<Any, Any> = this.getGenericProfile()!!.getGenericProfileActions()!!.getHashMap()!!
-            
 
 
     var set: Set = hashMap!!.keys!!
-            
 
 logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORKER_RESULTS)
 
     var actionNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = actionNameArray!!.size
@@ -180,11 +173,9 @@ logUtil!!.put("Processing Action: " +actionNameString, this, this.PROCESS_DATA_W
 
 
     var genericProfileActionScript: GenericProfileActionScript = genericProfileAction!!.getGenericProfileActionScript()!!
-            
 
 
     var vector: Vector = genericProfileActionScript!!.getProfileActionConditionInterfaceVector()!!
-            
 
 CaptureWorkerUtil.processProfileActionConditions(vector, getFrame())
 }

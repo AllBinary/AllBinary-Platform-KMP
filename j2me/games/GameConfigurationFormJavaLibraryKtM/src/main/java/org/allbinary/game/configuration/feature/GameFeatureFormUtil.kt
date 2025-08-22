@@ -64,7 +64,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -88,7 +87,6 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var ADD_CHOICE: String = ": Adding Choice: "
@@ -98,7 +96,6 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -154,11 +151,9 @@ open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, optio
 
 
     var size: Int = hashtable.size!!
-            
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
 
@@ -194,7 +189,6 @@ open fun setDefault(form: CommandForm)
 
         {
     var item: Item = form.get(index)!!
-            
 
 
     

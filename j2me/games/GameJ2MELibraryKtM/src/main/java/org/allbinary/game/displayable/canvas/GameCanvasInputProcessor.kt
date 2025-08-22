@@ -47,24 +47,18 @@ open public class GameCanvasInputProcessor : InputProcessor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
 
     private val downGameKeyEventHandler: DownGameKeyEventHandler = DownGameKeyEventHandler.getInstance()!!
-            
 
     private val upGameKeyEventHandler: UpGameKeyEventHandler = UpGameKeyEventHandler.getInstance()!!
-            
 
     private val downKeyEventHandler: DownKeyEventHandler = DownKeyEventHandler.getInstance()!!
-            
 
     private val smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
-            
 public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
 
                     var allBinaryGameCanvas = allBinaryGameCanvas
@@ -76,7 +70,6 @@ this.inputToGameKeyMapping!!.init(this.allBinaryGameCanvas)
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -89,7 +82,6 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
         try {
             
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this.allBinaryGameCanvas, keyCode)!!
-            
 
 
     
@@ -98,7 +90,6 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(this.allBinaryGameCanvas, gameKey)!!
-            
 
 downGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
@@ -113,7 +104,6 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                             
 
     var keyCodeAsInteger: Integer = smallIntegerSingletonFactory!!.getInstanceNoThrow(keyCode)!!
-            
 
 downKeyEventHandler!!.fireEvent(keyCodeAsInteger)
 downKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(keyCodeAsInteger)
@@ -156,7 +146,6 @@ open fun removeGameKeyEvent(canvas: Canvas, keyCode: Int, deviceId: Int, repeate
         try {
             
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(canvas, keyCode)!!
-            
 
 
     
@@ -165,7 +154,6 @@ open fun removeGameKeyEvent(canvas: Canvas, keyCode: Int, deviceId: Int, repeate
                                     {
                                     
     var gameKeyEvent: GameKeyEvent = gameKeyEventFactory!!.getInstance(canvas as GameKeyEventSourceInterface, gameKey)!!
-            
 
 upGameKeyEventHandler!!.fireEvent(gameKeyEvent)
 upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)

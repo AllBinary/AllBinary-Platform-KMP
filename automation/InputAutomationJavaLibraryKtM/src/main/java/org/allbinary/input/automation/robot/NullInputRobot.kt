@@ -47,7 +47,6 @@ open public class NullInputRobot : AbstractInputRobot
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()                        
 
                             : super(

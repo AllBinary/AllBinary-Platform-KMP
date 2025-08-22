@@ -60,7 +60,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -86,7 +85,6 @@ open fun getResourceAsStream(resource: String)
                     var resource = resource
 
     var inputStream: InputStream = this.getResourceAsStream(resource, 2)!!
-            
 
 
     
@@ -137,19 +135,15 @@ open fun getResourceAsStream(resource: String, startIndex: Int)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var index: Int = resource.indexOf(commonSeps!!.COLON)!!
-            
 
 
     var resourcePath: String = resource.substring(index +startIndex)!!
-            
 
 
     var inputStream: InputStream = resource::class.getResourceAsStream(resourcePath)!!
-            
 
 
     

@@ -43,7 +43,6 @@ open public class BasicGameResources
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var RESOURCE: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -65,7 +64,6 @@ open fun init(ROOT: String, SIZE: Array<String?>)
         try {
             
     var scale: Int = GameConfigurationCentral.getInstance()!!.SCALE.getValue()!!.toInt()!!
-            
 
 
     
@@ -88,7 +86,6 @@ open fun init(ROOT: String, SIZE: Array<String?>)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
@@ -123,7 +120,6 @@ open fun init(ROOT: String, sizeString: String)
 
 
     var string: String = this.getString()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(ROOT)

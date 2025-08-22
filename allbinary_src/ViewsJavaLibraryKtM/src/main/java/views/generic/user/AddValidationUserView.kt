@@ -41,7 +41,6 @@ open public class AddValidationUserView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var user: UserInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

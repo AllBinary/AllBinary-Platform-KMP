@@ -67,10 +67,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var readerFileTypesHashMap: HashMap<Any, Any>
 
@@ -81,15 +79,12 @@ private constructor        ()
 this.writerFileTypesHashMap= HashMap<Any, Any>()
 
     var hashMap: HashMap<Any, Any> = MediaData.toHashMap()!!
-            
 
 
     var set: Set = hashMap!!.keys!!
-            
 
 
     var mediaDataNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = mediaDataNameArray!!.size
@@ -113,14 +108,12 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 
 
     var mediaIOUtil: MediaIOUtil = MediaIOUtil.getInstance()!!
-            
 
 
     var RESIZABLE_MEDIA: String = MediaTypeData.getInstance()!!.RESIZABLE_MEDIA
 
 
     var readerFileTypes: Array<String?> = mediaIOUtil!!.getReaderFormatNames()!!
-            
 
 
 
@@ -134,7 +127,6 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 
 
     var writerFileTypes: Array<String?> = mediaIOUtil!!.getWriterFormatNames()!!
-            
 
 
 

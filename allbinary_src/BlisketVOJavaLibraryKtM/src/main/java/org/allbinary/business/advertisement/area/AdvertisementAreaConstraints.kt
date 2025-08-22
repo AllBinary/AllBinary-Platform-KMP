@@ -49,7 +49,6 @@ public constructor        (document: Document)
                     var document = document
 
     var node: Node = DomSearchHelper.getNode(AdvertisementAreaData.getInstance()!!.NAME, document.getChildNodes())!!
-            
 
 this.displayInBrowserContraintsInterface= DisplayInBrowserContraints(node)
 this.twoDimensionConstraintsInterface= TwoDimensionalConstraint(node)

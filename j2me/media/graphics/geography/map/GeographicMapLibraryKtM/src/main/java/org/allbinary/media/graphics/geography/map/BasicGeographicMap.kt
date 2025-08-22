@@ -38,7 +38,6 @@ open public class BasicGeographicMap : SimpleGeographicMap
         
 
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
     private val geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory
 
@@ -303,15 +302,12 @@ open fun getCellPositionAt(x: Int, y: Int)
                     var y = y
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
-            
 
 
     var i_column: Int = mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
-            
 
 
     var i_row: Int = mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
-            
 
 
 
@@ -333,15 +329,12 @@ open fun getCellPositionAtNoThrow(x: Int, y: Int)
                     var y = y
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
-            
 
 
     var i_column: Int = mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
-            
 
 
     var i_row: Int = mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
-            
 
 
     
@@ -377,15 +370,12 @@ open fun isOnMap(geographicMapCellPosition: GeographicMapCellPosition)
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
-            
 
 
     var i_column: Int = geographicMapCellPosition!!.getColumn()!!
-            
 
 
     var i_row: Int = geographicMapCellPosition!!.getRow()!!
-            
 
 
     
@@ -434,15 +424,12 @@ open fun getCellPositionAtNoThrow(x: Int, y: Int, x2: Int, y2: Int, geographicMa
 geographicMapCellPositionList!!.clear()
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
-            
 
 
     var i_columnMin: Int = mathUtil!!.abs(x /allBinaryTiledLayer!!.getCellHeight())!!
-            
 
 
     var i_rowMin: Int = mathUtil!!.abs(y /allBinaryTiledLayer!!.getCellWidth())!!
-            
 
 
     var i_columnMax: Int = mathUtil!!.abs(x2 /allBinaryTiledLayer!!.getCellHeight()) +1
@@ -569,7 +556,6 @@ open fun getCellTypeAt(x: Int, y: Int)
                     var y = y
 
     var cellPosition: GeographicMapCellPosition = this.getCellPositionAt(x, y)!!
-            
 
 
 

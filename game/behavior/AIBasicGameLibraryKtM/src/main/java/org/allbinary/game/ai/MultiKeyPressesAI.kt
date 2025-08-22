@@ -42,7 +42,6 @@ open public class MultiKeyPressesAI : KeyPressesAI {
     private val toggleTimeHelper: TimeDelayHelper = TimeDelayHelper(600)
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
                             : super(hashtable, ownerLayerInterface, gameInput){
@@ -72,7 +71,6 @@ this.update()
 
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -80,7 +78,6 @@ open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var gameInput: GameInput = this.getGameInput()!!
-            
 
 
     var keys: Array<Integer?> = this.keys
@@ -103,7 +100,6 @@ open fun update()
 
         {
     var key: Int = keys[index]!!.toInt()!!
-            
 
 
     
@@ -129,7 +125,6 @@ open fun update()
 
         {
     var key: Int = keys[index]!!.toInt()!!
-            
 
 
     

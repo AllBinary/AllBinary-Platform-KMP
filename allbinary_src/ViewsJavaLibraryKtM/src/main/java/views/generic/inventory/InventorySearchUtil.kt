@@ -87,13 +87,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -104,19 +101,15 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
                     var searchRequest = searchRequest
 
     var inventoryEntityInterface: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var storeFrontInterface: StoreFrontInterface = searchRequest!!.getStoreFront()!!
-            
 
 
     var inventorySearchUtil: InventoryColumnUtil = InventoryColumnUtil.getInstance()!!
-            
 
 
     var column: Vector = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, storeFrontInterface!!.getCategoryPath(), BasicItemData.ID)!!
-            
 
 
     
@@ -129,11 +122,9 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
                                 
 
     var subStoreVector: BasicArrayList = storeFrontInterface!!.getSubStores()!!
-            
 
 
     var size: Int = subStoreVector!!.size()!!
-            
 
 
 
@@ -147,7 +138,6 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
 
 
     var substoreIdColumn: Vector = inventorySearchUtil!!.getColumnWhereLike(inventoryEntityInterface, subStore, BasicItemData.ID)!!
-            
 
 column.addAll(substoreIdColumn)
 }
@@ -183,7 +173,6 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS, commonPhoneStrings!!.ZERO))
 
     var success: String = DomDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
-            
 
 
     
@@ -217,35 +206,28 @@ open fun search(abeClientInformation: AbeClientInformationInterface, searchReque
         try {
             
     var inventoryEntityInterface: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var searchParams: SearchParams = searchRequest!!.getParams()!!
-            
 
 
     var startPage: Int = searchParams!!.getStartPageInt()!!.toInt()!!
-            
 
 
     var endPage: Int = searchParams!!.getEndPageInt()!!.toInt()!!
-            
 
 
     var pageLength: Int = searchParams!!.getLengthInt()!!.toInt()!!
-            
 
 
     var savedPagesInRange: Int = 0
 
 
     var columnValueHashMap: HashMap<Any, Any> = searchParams!!.get()!!
-            
 
 
     var keyword: String = Replace("-", CommonSeps.getInstance()!!.SPACE).
                             all(columnValueHashMap!!.get(BasicItemData.KEYWORDS) as String)!!
-            
 
 
     
@@ -291,7 +273,6 @@ open fun search(abeClientInformation: AbeClientInformationInterface, searchReque
 
 
     var iter: ListIterator = column.listIterator()!!
-            
 
 keyword= keyword.uppercase()
 
@@ -305,11 +286,9 @@ keyword= keyword.uppercase()
 
 
     var viewDocumentInterface: TransformDocumentInterface = TransformStoreDocumentFactory.getInstance(searchRequest)!!
-            
 
 
     var inventoryNode: Node = viewDocumentInterface!!.getDoc()!!.createElement(InventoryData.INVENTORY)!!
-            
 
 viewDocumentInterface!!.getBaseNode()!!.appendChild(inventoryNode)
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.PAGE, Integer(startPage).
@@ -335,11 +314,9 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
 
     var itemInterface: ItemInterface = inventoryEntityInterface!!.getItem(product)!!
-            
 
 
     var keywords: String = itemInterface!!.getKeywords()!!
-            
 
 keywords= keywords.uppercase()
 
@@ -355,7 +332,6 @@ keywords= keywords.uppercase()
                                     
     var itemNode: Node = BasicItemView(itemInterface, Vector()).
                             toXmlNode(viewDocumentInterface!!.getDoc())!!
-            
 
 itemNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), BasketData.ITEMTOTALINBASKET, commonPhoneStrings!!.ONE))
 inventoryNode!!.appendChild(itemNode!!.cloneNode(true))
@@ -506,7 +482,6 @@ inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocume
 
 
     var success: String = DomDocumentHelper.toString(tempDocument)!!
-            
 
 productListingPages[index]= StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest) as TransformInfoInterface).
                             translate(success)
@@ -522,7 +497,6 @@ productListingPages[index]= StoreTransformer(abeClientInformation, TransformInfo
                                     {
                                     
     var result: String = this.getNoResults(viewDocumentInterface, inventoryNode)!!
-            
 
 productListingPages[0]= StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest)).
                             translate(result)

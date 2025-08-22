@@ -40,7 +40,6 @@ open public class BasicGroupItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -116,7 +115,6 @@ values.put(BasicGroupItemData.ITEM_NINE, this.itemNine)
 values.put(BasicGroupItemData.ITEM_TEN, this.itemTen)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -138,7 +136,6 @@ open fun insert()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -256,7 +253,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.getHashMap()!!
-            
 
 BasicGroupItemsEntityFactory.getInstance()!!.getBasicGroupItemsEntityInstance()!!.update(values)
 

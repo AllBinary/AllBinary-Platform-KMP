@@ -53,16 +53,12 @@ open public class InitSql
         
 
     val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     val sqlTypeStrings: SqlTypeStrings = SqlTypeStrings.getInstance()!!
-            
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
-            
 
     val INSERT: String = "insert"
 
@@ -87,7 +83,6 @@ open public class InitSql
     private val INIT_SQL: String = "InitSql"
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val EQUAL_QUOTE: String = "=\""
 
@@ -219,11 +214,9 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
     var set: Set = keysAndValues!!.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -259,7 +252,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -272,18 +264,15 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
                                 
 
     var rset: ResultSet = this.executeSQLStatement(sqlStatement)!!
-            
 
 
     var resultSetMetaData: ResultSetMetaData = rset.getMetaData()!!
-            
 
 
         while(rset.next())
         {result= HashMap<Any, Any>()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
-            
 
 
 
@@ -294,11 +283,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
-            
 
 
     var field: String = rset.getString(columnName)!!
-            
 
 result.put(columnName, field)
 }
@@ -374,7 +361,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
         try {
             
     var columnArray: Array<Any?> = updatedKeyValuePairs!!.keySet()!!.toArray()!!
-            
 
 
     var size: Int = columnArray!!.size
@@ -389,7 +375,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
         {
     var columnName: String = columnArray[i]!!.toString()!!
-            
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(columnName)
@@ -432,7 +417,6 @@ stringBuffer!!.append(this.getValue(value))
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -474,7 +458,6 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
         try {
             
     var size: Int = values.size!!
-            
 
 
 
@@ -485,7 +468,6 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
         {
     var value: String = this.getValue(values.get(i) as String)!!
-            
 
 stringBuffer!!.append(value)
 stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
@@ -493,13 +475,11 @@ stringBuffer!!.append(this.sqlStrings!!.SINGLE_QUOTE_COMMA_SEP)
 
 
     var value: String = this.getValue(values.lastElement() as String)!!
-            
 
 stringBuffer!!.append(value)
 stringBuffer!!.append(INSERT_END)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 this.executeSQLStatement(sqlStatement)
 
@@ -578,12 +558,10 @@ open fun executeSQLStatement(statement: String)
                                 
 
     var stmt: Statement = conn.createStatement()!!
-            
 
 stmt.execute(statement)
 
     var rset: ResultSet = stmt.getResultSet()!!
-            
 
 stmt.close()
 
@@ -666,7 +644,6 @@ open fun initialize()
         try {
             
     var jdbcDriver: String = this.databaseConnectionInfoInterface!!.getJdbcDriver()!!
-            
 
 PreLogUtil.put(StringBuilder().
                             append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.qualifiedName!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")

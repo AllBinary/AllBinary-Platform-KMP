@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -70,7 +69,6 @@ open fun getInstance(orderReview: OrderHistory)
         try {
             
     var gatewayName: String = orderReview!!.getPaymentMethod()!!
-            
 
 
     
@@ -81,15 +79,12 @@ open fun getInstance(orderReview: OrderHistory)
                                     {
                                     
     var paymentType: PaymentType = PaymentTypeUtil.getInstance()!!.get(gatewayName)!!
-            
 
 
     var paymentTransactionInterfaceFactoryInterface: PaymentTransactionInterfaceFactoryInterface = paymentType!!.getPaymentTransactionInterfaceFactoryInterface()!!
-            
 
 
     var paymentTransactionInterface: PaymentTransactionInterface = paymentTransactionInterfaceFactoryInterface!!.getInstance(orderReview)!!
-            
 
 
 
@@ -111,7 +106,6 @@ open fun getInstance(orderReview: OrderHistory)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Failed to generate test data", this, commonStrings!!.GET_INSTANCE, e)
 

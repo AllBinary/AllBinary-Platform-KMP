@@ -63,18 +63,15 @@ override fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
 
     var result: Boolean = booleanFactory!!.TRUE
 
 
     var string: String = this.textFieldItem!!.getString()!!
-            
 
 
     var textLength: Int = string.length!!
-            
 
 
     
@@ -120,11 +117,9 @@ override fun toList()
 
 
     var string: String = this.textFieldItem!!.getString()!!
-            
 
 
     var textLength: Int = string.length!!
-            
 
 
     
@@ -137,11 +132,9 @@ override fun toList()
                         else {
                             
     var label: String = this.textFieldItem!!.getLabel()!!
-            
 
 
     var name: String = label.substring(0, label.length -2)!!
-            
 
 
     

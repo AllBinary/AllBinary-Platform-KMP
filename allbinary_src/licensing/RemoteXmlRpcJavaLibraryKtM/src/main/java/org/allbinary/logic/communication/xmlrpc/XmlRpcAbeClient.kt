@@ -49,10 +49,8 @@ open public class XmlRpcAbeClient
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val remoteMethod: String
 
@@ -93,7 +91,6 @@ open public class XmlRpcAbeClient
     val HOST_NOT_RESOLVED: String = "Host is unresolved"
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 public constructor        (clientInfo: AbeClientInformationInterface, remoteMethod: String)
             : super()
         {

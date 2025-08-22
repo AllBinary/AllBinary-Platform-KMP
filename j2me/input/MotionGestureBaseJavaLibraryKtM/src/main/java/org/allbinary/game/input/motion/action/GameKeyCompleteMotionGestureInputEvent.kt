@@ -40,7 +40,6 @@ open public class GameKeyCompleteMotionGestureInputEvent : CompleteMotionGesture
         
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-            
 
     private val SOURCE_ID: Int = gameKeyEventFactory!!.MOTION_GESTURE_SOURCE_ID
 
@@ -88,7 +87,6 @@ this.setGameKeyEvent(this.gameKeyEventFactory!!.getInstance(this, getGameKey()))
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }

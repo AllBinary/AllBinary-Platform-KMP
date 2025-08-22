@@ -67,7 +67,6 @@ open fun generate(image: Image, angleIncrement: Int, totalAngle: Int)
                     var totalAngle = totalAngle
 
     var imageRotationUtil: ImageRotationUtil = ImageRotationUtil.getInstance()!!
-            
 
 
     var totalFrames: Int = totalAngle /angleIncrement

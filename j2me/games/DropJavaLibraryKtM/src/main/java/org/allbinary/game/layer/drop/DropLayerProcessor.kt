@@ -59,11 +59,9 @@ open fun getInstance()
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var list: BasicArrayList = this.getList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 

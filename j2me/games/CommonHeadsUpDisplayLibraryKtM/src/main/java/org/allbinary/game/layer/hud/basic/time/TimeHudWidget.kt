@@ -77,7 +77,6 @@ this.timer= timer
 this.set()
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.stringWidth(3)
 

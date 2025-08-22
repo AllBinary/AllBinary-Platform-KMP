@@ -38,7 +38,6 @@ open public class TransformInfoRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoHttpInterface
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -60,7 +59,6 @@ open fun update()
 
 
     var hashMapData: HashMap<Any, Any> = this.transformInfoInterface!!.toHashMap()!!
-            
 
 TransformInfoEntityBuilder.getInstance()!!.update(hashMapData)
 
@@ -109,7 +107,6 @@ open fun insert()
 
 
     var values: Vector = this.transformInfoInterface!!.toVector()!!
-            
 
 TransformInfoEntityBuilder.getInstance()!!.insert(values)
 

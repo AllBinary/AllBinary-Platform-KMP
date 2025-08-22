@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     private val directory: Directory = Directory.getInstance()!!
-            
 
 open fun isTestHtmlPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true

@@ -65,7 +65,6 @@ licensingTest!!.test()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var vector: BasicArrayList = BasicArrayList()
 public constructor        (options: Array<String?>)
@@ -102,7 +101,6 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
         while(true)
         {
     var line: String = lineNumberReader!!.readLine()!!
-            
 
 
     
@@ -172,7 +170,6 @@ licenseInitInfo!!.addServer(serverName)
 LicenseInitInfoUtil.getInstance()!!.write(licenseInitInfo)
 
     var abeClientInformation: AbeClientInformationInterface = AbeClientInformationInterfaceFactory.getInstance()!!
-            
 
 
     var xmlRpcAbeLicenseClient: XmlRpcAbeLicenseRetrievalClient = XmlRpcAbeLicenseRetrievalClient(abeClientInformation)

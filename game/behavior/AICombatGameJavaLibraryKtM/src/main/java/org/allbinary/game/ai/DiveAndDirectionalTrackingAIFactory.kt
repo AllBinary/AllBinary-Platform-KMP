@@ -72,13 +72,11 @@ open public class DiveAndDirectionalTrackingAIFactory
 
     var hashtable2: Hashtable<Any, Any> = BasicProbabilityAIDataFactory().
                             getInstance()!!
-            
 
 hashtable2.put(BasicAI.AI_VISITOR, LastKeyAIVisitorFactory.getInstance())
 
     var artificialIntelligenceInterface: ArtificialIntelligenceInterface = BasicRandomAIFactory().
                             getInstance(hashtable2, ownerLayerInterface, gameInput)!!
-            
 
 
 

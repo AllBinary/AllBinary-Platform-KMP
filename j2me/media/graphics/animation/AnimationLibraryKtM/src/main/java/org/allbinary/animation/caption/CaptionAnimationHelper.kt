@@ -44,7 +44,6 @@ open public class CaptionAnimationHelper : CaptionAnimationHelperBase {
     private val captionAnimation: Animation
 
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 public constructor        (captionAnimation: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int){
 
                     var captionAnimation = captionAnimation

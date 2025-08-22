@@ -48,10 +48,8 @@ open public class TestInputForMotionRectanglesResultsWorker
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var index: Long= 0
 
@@ -127,7 +125,6 @@ timeHelper!!.setStartTime()
 
 
     var motionRectangleVector: Vector = motionRectangles!!.getVector()!!
-            
 
 
     
@@ -139,11 +136,9 @@ timeHelper!!.setStartTime()
 
 
     var robotHashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
-            
 
 
     var inputTypeNameArray: Array<Any?> = robotHashtable!!.keys.toTypedArray()!!
-            
 
 
     var size: Int = inputTypeNameArray!!.size

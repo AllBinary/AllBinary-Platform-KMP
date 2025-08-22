@@ -35,10 +35,8 @@ open public class ImageActionScriptOutputJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface
 public constructor        (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface){
@@ -56,18 +54,15 @@ open fun set()
 {this.setImageTypeJlistModel()
 
     var imageTypes: ImageTypes = this.capturedImageActionScriptOutputInterface!!.getImageTypes()!!
-            
 
 
     var vector: Vector = imageTypes!!.getVector()!!
-            
 
 
     var selectedArray: IntArray = IntArray(vector.size)
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -109,13 +104,11 @@ open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var anyType: Array<Any?> = this.itemTypesJList!!.getSelectedValues()!!
-            
 
 
     var imageTypes: ImageTypes = anyType.concatToString()
 
                                     !!
-            
 
 this.capturedImageActionScriptOutputInterface!!.setImageTypes(imageTypes)
 
@@ -157,11 +150,9 @@ open fun setImageTypeJlistModel()
 
 
     var vector: Vector = InputImageType.getAllAsVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

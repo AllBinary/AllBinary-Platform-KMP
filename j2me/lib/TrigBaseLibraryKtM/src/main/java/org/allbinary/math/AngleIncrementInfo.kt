@@ -58,11 +58,9 @@ public constructor        (angleIncrement: Short)
 this.angleIncrement= angleIncrement
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 this.DOWN_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.DOWN.getValue() /this.angleIncrement)
 this.UP_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.UP.getValue().toInt())
@@ -72,7 +70,6 @@ this.RIGHT_FRAME= smallIntegerSingletonFactory!!.getInstance(angleFactory!!.RIGH
 
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-            
 
 open fun getFrameAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -114,7 +111,6 @@ open fun getClosestGeneralDirection(angle: Short)
                     var angle = angle
 
     var closestDirection: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(360)!!
-            
 
 
     

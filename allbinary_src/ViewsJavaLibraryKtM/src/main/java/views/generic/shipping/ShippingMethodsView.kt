@@ -52,7 +52,6 @@ open public class ShippingMethodsView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var shippingMethods: ShippingMethods
 
@@ -82,31 +81,24 @@ open fun toXmlNode(document: Document)
         try {
             
     var shippingMethodsNode: Node = document.createElement(ShippingMethodsData.SHIPPINGMETHODSORDERSUMMARIES)!!
-            
 
 
     var order: OrderInterface = this.getWeblisketSession()!!.getOrder()!!
-            
 
 
     var basket: BasketInterface = this.getWeblisketSession()!!.getOrder()!!.getBasket()!!
-            
 
 
     var shippingAddressesEntityInterface: StreetAddressesEntityInterface = ShippingAddressesEntityFactory.getInstance()!!.getInstance(this.getWeblisketSession()!!.getUserName())!!
-            
 
 
     var streetAddress: StreetAddress = shippingAddressesEntityInterface!!.getDefault()!!
-            
 
 
     var shippingVector: Vector = this.shippingMethods!!.get()!!
-            
 
 
     var size: Int = shippingVector!!.size!!
-            
 
 
 
@@ -117,7 +109,6 @@ open fun toXmlNode(document: Document)
 
         {
     var shippingMethodNode: Node = document.createElement(ShippingMethodsData.SHIPPINGMETHODORDERSUMMARY)!!
-            
 
 
     var shipping: ShippingInterface = shippingVector!!.get(index) as ShippingInterface
@@ -128,15 +119,12 @@ open fun toXmlNode(document: Document)
 shippingMethodNode!!.appendChild(shippingView!!.toXmlNode(document))
 
     var shippingCost: Money = shipping.getCost(order)!!
-            
 
 
     var subTotal: Money = basket.getSubTotal()!!
-            
 
 
     var taxRate: Float = TaxFactory.getInstance()!!.getInstance(this.abeClientInformation, storeFrontInterface)!!.getTaxRate(streetAddress, storeFrontInterface)!!
-            
 
 
     var tax: Money = Money()

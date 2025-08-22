@@ -38,12 +38,10 @@ open public class VectorAnimation : IndexedAnimation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
 
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
-            
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){

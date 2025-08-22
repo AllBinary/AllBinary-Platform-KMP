@@ -46,7 +46,6 @@ open public class AddValidationStoreFrontView : HttpContextView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var newStoreFrontInterface: StoreFrontInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

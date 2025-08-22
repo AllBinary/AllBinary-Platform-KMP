@@ -36,7 +36,6 @@ open public class CategoryPropertiesValidationView : CategoryPropertiesView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (categoryPropertiesInterface: CategoryPropertiesInterface)                        
 
                             : super(categoryPropertiesInterface){

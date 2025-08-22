@@ -39,7 +39,6 @@ open public class MultipassWaypointPathRunnable : WaypointPathRunnableBase {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var done: Boolean = false
 
@@ -60,7 +59,6 @@ open fun run()
 reset2()
 
     var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
-            
 
 
     
@@ -97,7 +95,6 @@ list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geograp
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 setRunning(false)
@@ -118,7 +115,6 @@ open fun run()
         try {
             
     var geographicMapCellPosition: GeographicMapCellPosition = pathFindingLayer!!.getCurrentGeographicMapCellPosition()!!
-            
 
 list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geographicMapCellPosition, pathFindingInfo, multipassState)
 
@@ -135,7 +131,6 @@ list= targetLayer!!.getWaypointBehavior()!!.getWaypoint()!!.getPathsList(geograp
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 setRunning(false)
@@ -156,14 +151,12 @@ open fun run()
         try {
             
     var waypointBehavior: WaypointBehaviorBase = pathFindingLayer!!.getWaypointBehavior()!!
-            
 
 waypointBehavior!!.setWaypointPathsList(list)
 pathFindingLayer!!.getWaypointRunnableLogHelper()!!.end(pathFindingLayer)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 setRunning(false)
@@ -220,7 +213,6 @@ open fun run()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 this.setRunning(false)

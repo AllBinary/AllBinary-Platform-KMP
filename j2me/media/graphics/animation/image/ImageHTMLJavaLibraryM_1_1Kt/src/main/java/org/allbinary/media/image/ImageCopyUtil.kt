@@ -56,10 +56,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -91,7 +89,6 @@ open fun createImage(originalImage: Image)
                     var originalImage = originalImage
 
     var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-            
 
 
     
@@ -165,7 +162,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                                 
 
     var image: Image = imageCreationUtil!!.getInstance(newWidth, newHeight)!!
-            
 
 
     
@@ -180,7 +176,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 
     var graphics: Graphics = image.getGraphics()!!
-            
 
 graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, anchor)
 

@@ -56,7 +56,6 @@ open fun showProgress(demoCanvas: DemoCanvas, background: Boolean)
                     var background = background
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.startBackground(background)
 

@@ -37,7 +37,6 @@ open public class SimpleGeographicMap
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val id: Integer
 
@@ -115,7 +114,6 @@ open fun getAllBinaryTiledLayer()
 
 
     private val geographicMapCellTypeFactory: GeographicMapCellTypeFactory = GeographicMapCellTypeFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -126,15 +124,12 @@ open fun getCellTypeAt(cellPosition: GeographicMapCellPosition)
                     var cellPosition = cellPosition
 
     var i_column: Int = cellPosition!!.getColumn()!!
-            
 
 
     var i_row: Int = cellPosition!!.getRow()!!
-            
 
 
     var cellTypeId: Int = this.tiledLayer!!.getCell(i_column, i_row)!!
-            
 
 
     

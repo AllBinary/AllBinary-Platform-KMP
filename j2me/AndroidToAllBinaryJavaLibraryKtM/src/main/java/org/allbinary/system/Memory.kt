@@ -43,11 +43,9 @@ open fun getInfo()
 
 
     var maxUtilizedMemoryAvailable: Long = Runtime.getRuntime()!!.maxMemory()!!
-            
 
 
     var memoryUsed: Long = Runtime.getRuntime()!!.totalMemory()!!
-            
 
 stringBuffer!!.append("APK Memory: Available: ")
 stringBuffer!!.append(maxUtilizedMemoryAvailable)

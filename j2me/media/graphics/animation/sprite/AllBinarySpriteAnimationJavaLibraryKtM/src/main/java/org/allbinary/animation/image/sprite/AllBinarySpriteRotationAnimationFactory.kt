@@ -39,7 +39,6 @@ open public class AllBinarySpriteRotationAnimationFactory : BaseImageAnimationFa
         
 
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
-            
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any)                        
 
                             : this(image, dx, dy){
@@ -205,7 +204,6 @@ public constructor        (image: Image, unused: Any, animationBehaviorFactory: 
                     var instanceId = instanceId
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
     

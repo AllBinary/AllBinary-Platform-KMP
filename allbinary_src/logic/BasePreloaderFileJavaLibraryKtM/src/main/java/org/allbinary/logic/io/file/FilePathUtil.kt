@@ -42,15 +42,12 @@ open fun adjust(path: String)
                     var path = path
 
     var abPathData: AbPathData = AbPathData.getInstance()!!
-            
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var filePathData: FilePathData = FilePathData.getInstance()!!
-            
 
 
     

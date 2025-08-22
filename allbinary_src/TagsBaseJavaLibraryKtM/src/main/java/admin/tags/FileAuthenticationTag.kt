@@ -50,7 +50,6 @@ open public class FileAuthenticationTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var attemptsInteger: Integer
 
@@ -178,19 +177,15 @@ open fun changePassword()
         try {
             
     var userName: String = request.getParameter(WeblisketSessionData.REMOVABLEUSERNAME)!!
-            
 
 
     var password: String = request.getParameter(WeblisketSessionData.REMOVABLEPASSWORD)!!
-            
 
 
     var newPassword: String = request.getParameter(WeblisketSessionData.REMOVABLENEWPASSWORD)!!
-            
 
 
     var newReenteredPassword: String = request.getParameter(WeblisketSessionData.REMOVABLEREENTERNEWPASSWORD)!!
-            
 
 
     
@@ -302,15 +297,12 @@ open fun isSessionOld()
                                     {
                                     
     var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
-            
 
 
     var sessionTimout: Long = this.role.getSessionTimeout()!!
-            
 
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var timeFirst: Long = calendar.getTimeInMillis() -sessionTimout
@@ -398,19 +390,15 @@ open fun isRarelyUsedSession()
                                     {
                                     
     var timeCreated: Long = this.weblisketSession!!.getCreationTime()!!
-            
 
 
     var lastAccess: Long = this.weblisketSession!!.getLastAccessedTime()!!
-            
 
 
     var timePassed: Long = role.getSessionInactivityTimeout()!!
-            
 
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var timeFirst: Long = calendar.getTimeInMillis() -lastAccess
@@ -580,7 +568,6 @@ open fun isAuthenticationSessionValid()
                                     {
                                     
     var size: Int = roles.size!!
-            
 
 
 
@@ -795,7 +782,6 @@ open fun doStartTag()
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.request= pageContext!!.getRequest() as HttpServletRequest
 this.weblisketSession= BasicWeblisketSession(pageContext)

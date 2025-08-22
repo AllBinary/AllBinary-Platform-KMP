@@ -47,13 +47,10 @@ open public class LicenseServerInitFileUtil
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val NULL_OUTPUT_STREAM: OutputStream = OutputStream.nullOutputStream()!!
-            
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
@@ -93,19 +90,16 @@ open fun write()
         try {
             
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var filePath: String = LicenseInitInfoUtil.getInstance()!!.INITFILENAME
 
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(filePath)!!
-            
 
 logUtil!!.put("Writing Default License File", this, commonStrings!!.INIT)
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 fileOutputStream= fileStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, filePath)
 

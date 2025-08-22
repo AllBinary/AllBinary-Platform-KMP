@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (poolName: String, numThreads: Int)                        
 
                             : super(poolName, numThreads){

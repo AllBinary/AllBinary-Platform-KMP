@@ -40,10 +40,8 @@ open public class WorkFlowRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var workFlowInterface: WorkFlowInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -64,7 +62,6 @@ open fun delete()
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 WorkFlowEntityFactory.getInstance()!!.create2()!!.delete(this.workFlowInterface!!.getName(), stringUtil!!.EMPTY_STRING)
 

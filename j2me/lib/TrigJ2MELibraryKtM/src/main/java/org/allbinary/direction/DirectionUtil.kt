@@ -56,11 +56,9 @@ private constructor        ()
             : super()
         {
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 directionArray[directionFactory!!.LEFT.getValue()]= angleFactory!!.LEFT
 directionArray[directionFactory!!.RIGHT.getValue()]= angleFactory!!.RIGHT

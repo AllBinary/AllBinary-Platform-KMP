@@ -36,12 +36,10 @@ open public class NullCompleteMotionGestureReceiver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Null Gesture Reciever", this, commonStrings!!.CONSTRUCTOR)
 }

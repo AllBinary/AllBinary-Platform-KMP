@@ -43,7 +43,6 @@ open public class InsertThemeValidationView : ThemeCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var requestHashMap: HashMap<Any, Any>
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

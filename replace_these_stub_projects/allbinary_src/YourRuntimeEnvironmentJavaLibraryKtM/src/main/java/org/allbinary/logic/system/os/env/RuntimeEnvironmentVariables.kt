@@ -30,10 +30,8 @@ open public class RuntimeEnvironmentVariables
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -56,7 +54,6 @@ open fun getVariable(var: String)
                     var var = var
 
     var environmentVariables: Properties = this.get()!!
-            
 
 
 
@@ -78,11 +75,9 @@ open fun get()
 
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     var osName: String = operatingSystemInterface!!.getName()!!
-            
 
 
     var linuxCommand: String = "env"
@@ -95,7 +90,6 @@ open fun get()
 
 
     var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
-            
 
 
     
@@ -147,15 +141,12 @@ open fun get()
                                 )
         {
     var index: Int = keyValuePair!!.indexOf('=')!!
-            
 
 
     var key: String = keyValuePair!!.substring(0, index)!!
-            
 
 
     var value: String = keyValuePair!!.substring(index +1)!!
-            
 
 environmentVariables!!.put(key, value)
 }
@@ -281,7 +272,6 @@ open fun updateLibraryPath(libPath: String)
         try {
             
     var existingPath: String = this.getLibraryPath()!!
-            
 
 System.setProperty("java.library.path", libPath +":" +existingPath)
 } catch(e: Exception)
@@ -391,15 +381,12 @@ open fun setVariable(var: String, val: String)
 
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     var operatingSystems: OperatingSystems = OperatingSystems.getInstance()!!
-            
 
 
     var osName: String = operatingSystemInterface!!.getName()!!
-            
 
 
     var windowsCommand: String = "cmd.exe /c set" +var +"=" +val

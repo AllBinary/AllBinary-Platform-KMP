@@ -38,10 +38,8 @@ open public class ImageComparisonSearch
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var isSameHeight: Boolean= false
 
@@ -132,7 +130,6 @@ this.imageWidth= bufferedImage!!.getWidth()
                                     {
                                     
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 logUtil!!.put("Images were not the same size? Most likely a resolution change.", this, this.commonStrings!!.CONSTRUCTOR)
 logUtil!!.put("1: " +imageUtil!!.toString(bufferedImage), this, this.commonStrings!!.CONSTRUCTOR)

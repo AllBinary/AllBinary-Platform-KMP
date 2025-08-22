@@ -109,7 +109,6 @@ open fun getInstance(algorithm: String, keyData: ByteArray)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

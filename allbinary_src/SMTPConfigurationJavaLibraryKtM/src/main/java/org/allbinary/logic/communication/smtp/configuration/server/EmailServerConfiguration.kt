@@ -37,7 +37,6 @@ open public class EmailServerConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var accountName: String
 
@@ -53,7 +52,6 @@ public constructor        ()
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
@@ -74,7 +72,6 @@ public constructor        (hashMap: HashMap<Any, Any>)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
 
@@ -104,7 +101,6 @@ public constructor        (account: String, password: String, server: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, "EmailServerConfiguration(HashMap)")
 

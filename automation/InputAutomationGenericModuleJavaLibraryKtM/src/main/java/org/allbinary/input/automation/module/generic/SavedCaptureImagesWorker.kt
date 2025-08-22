@@ -57,10 +57,8 @@ open public class SavedCaptureImagesWorker : BasicEventHandler
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var running: Boolean= false
 
@@ -128,7 +126,6 @@ filePathStringBuffer!!.append(LongUtil.fillIn(frame.toString()))
 filePathStringBuffer!!.append(MediaDataFactory.getInstance()!!.JPG.getExtension())
 
     var filePath: String = filePathStringBuffer!!.toString()!!
-            
 
 logUtil!!.put("Loading Image File Path: " +filePath, this, this.commonStrings!!.RUN)
 
@@ -141,7 +138,6 @@ logUtil!!.put("Loading Image File Path: " +filePath, this, this.commonStrings!!.
                                     {
                                     
     var bufferedImage: BufferedImage = ImageIO.read(file)!!
-            
 
 index++
 CapturedBufferedImagesCacheSingleton.getInstance()!!.add(BufferedImageFrameCacheable(bufferedImage, frame))

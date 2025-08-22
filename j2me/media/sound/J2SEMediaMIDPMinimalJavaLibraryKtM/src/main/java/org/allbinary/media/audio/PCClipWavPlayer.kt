@@ -51,7 +51,6 @@ open public class PCClipWavPlayer : BasicPlayer
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val audioInputStream: AudioInputStream
 
@@ -172,7 +171,6 @@ open fun create(audioInputStream: AudioInputStream)
                     var audioInputStream = audioInputStream
 
     var clip: Clip = AudioSystem.getClip()!!
-            
 
 clip.addLineListener(this)
 clip.open(audioInputStream)
@@ -303,7 +301,6 @@ override fun update(event: LineEvent)
                                     {
                                     
     var size: Int = this.listenersList!!.size()!!
-            
 
 
 

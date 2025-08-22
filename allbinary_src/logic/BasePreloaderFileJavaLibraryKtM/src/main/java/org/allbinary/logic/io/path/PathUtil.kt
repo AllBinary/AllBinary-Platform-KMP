@@ -51,10 +51,8 @@ open fun getInstance()
         }
             
     private val abPathData: AbPathData = AbPathData.getInstance()!!
-            
 
     private val filePathData: FilePathData = FilePathData.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -67,11 +65,9 @@ open fun getExtensionIndex(filePath: String)
                     var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = filePath!!.lastIndexOf(abPathData!!.EXTENSION_SEP)!!
-            
 
 
     var indexOfLatDelimiter: Int = filePath!!.lastIndexOf(abPathData!!.SEPARATORCHAR)!!
-            
 
 
     
@@ -140,7 +136,6 @@ open fun getExtension(filePath: String)
                     var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
-            
 
 
     var extension: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -201,7 +196,6 @@ open fun getWithoutExtension(filePath: String)
                     var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
-            
 
 
     var pathWithoutExtension: String = filePath
@@ -294,7 +288,6 @@ open fun isValidEnd(path: String)
                     var path = path
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -385,7 +378,6 @@ open fun adjust(path: String)
                     var path = path
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -424,7 +416,6 @@ open fun getNameFromPath(categoryPath: String)
                     var categoryPath = categoryPath
 
     var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
-            
 
 
     
@@ -450,7 +441,6 @@ open fun getNameFromPath(categoryPath: String)
                                     {
                                     
     var categoryName: String = categoryPath!!.substring(0, endIndex)!!
-            
 
 
 
@@ -463,7 +453,6 @@ open fun getNameFromPath(categoryPath: String)
                         else {
                             
     var categoryName: String = categoryPath!!.substring(endIndex +1)!!
-            
 
 
 
@@ -485,7 +474,6 @@ open fun removeNameFromPath(path: String)
                     var path = path
 
     var endIndex: Int = path.lastIndexOf(abPathData!!.SEPARATOR)!!
-            
 
 
     
@@ -525,7 +513,6 @@ open fun removeNameFromPath(path: String)
                         else {
                             
     var categoryName: String = path.substring(0, endIndex)!!
-            
 
 
 

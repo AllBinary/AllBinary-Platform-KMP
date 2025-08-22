@@ -59,7 +59,6 @@ open fun getLastSeparatorIndex(requestPath: String)
                     var requestPath = requestPath
 
     var beginIndex: Int = requestPath!!.lastIndexOf(AbPathData.getInstance()!!.SEPARATOR)!!
-            
 
 
     
@@ -87,7 +86,6 @@ open fun generateFileName(requestPath: String)
                     var requestPath = requestPath
 
     var beginIndex: Int = this.getLastSeparatorIndex(requestPath)!!
-            
 
 
     

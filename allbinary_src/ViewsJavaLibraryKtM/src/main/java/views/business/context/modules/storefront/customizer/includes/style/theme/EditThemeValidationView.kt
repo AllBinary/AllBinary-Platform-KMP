@@ -46,7 +46,6 @@ open public class EditThemeValidationView : ThemeCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -71,7 +70,6 @@ open fun isValid()
 
 
     var categoryLoaderInterface: CategoryLoaderInterface = CategoryLoaderFactory.getInstance(categoryFactoryInterface)!!
-            
 
 
     var rootStoreThemeCategoryInterface: StoreThemeCategoryInterface = categoryFactoryInterface!!.getRootInstance() as StoreThemeCategoryInterface
@@ -86,12 +84,10 @@ isValid= this.validationInterface!!.isValid()
 
 
     var document: Document = DomDocumentHelper.create()!!
-            
 
 document.appendChild(domNodeInterface!!.toXmlNode(document))
 
     var documentString: String = DomDocumentHelper.toString(document)!!
-            
 
 
     

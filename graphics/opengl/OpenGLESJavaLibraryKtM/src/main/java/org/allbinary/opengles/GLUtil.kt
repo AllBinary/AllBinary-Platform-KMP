@@ -74,12 +74,10 @@ open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
                     var p_c = p_c
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(3 *BYTES_PER_FLOAT)!!
-            
 
 b.order(ByteOrder.nativeOrder())
 
     var buffer: FloatBuffer = b.asFloatBuffer()!!
-            
 
 buffer.put(p_a)
 buffer.put(p_b)
@@ -109,12 +107,10 @@ open fun makeFloatBuffer4(p_a: Float, p_b: Float, p_c: Float, p_d: Float)
                     var p_d = p_d
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(4 *BYTES_PER_FLOAT)!!
-            
 
 b.order(ByteOrder.nativeOrder())
 
     var buffer: FloatBuffer = b.asFloatBuffer()!!
-            
 
 buffer.put(p_a)
 buffer.put(p_b)
@@ -136,12 +132,10 @@ open fun makeFloatBuffer(byteBuffer: ByteBuffer)
                     var byteBuffer = byteBuffer
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(byteBuffer!!.limit() *BYTES_PER_FLOAT)!!
-            
 
 b.order(ByteOrder.nativeOrder())
 
     var buffer: FloatBuffer = b.asFloatBuffer()!!
-            
 
 
     var unsigned: Int= 0
@@ -197,15 +191,12 @@ open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: 
                     var pivotV = pivotV
 
     var angleRad: Double = Math.toRadians(angleDegrees)!!
-            
 
 
     var cosA: Double = Math.cos(angleRad)!!
-            
 
 
     var sinA: Double = Math.sin(angleRad)!!
-            
 
 
 

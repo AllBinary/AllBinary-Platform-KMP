@@ -58,7 +58,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -176,19 +175,15 @@ open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosi
                     var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
-            
 
 
     

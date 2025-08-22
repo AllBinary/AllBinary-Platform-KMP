@@ -58,10 +58,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var opengl: Boolean = false
 
@@ -88,7 +86,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -158,11 +155,9 @@ open fun update(gameFeature: Feature, colorLocked: Boolean)
                     var colorLocked = colorLocked
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     var modified: Boolean = false
@@ -442,7 +437,6 @@ override fun toString()
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 stringBuffer!!.append(" isOpenGL: ")
 stringBuffer!!.append(this.isOpenGL())

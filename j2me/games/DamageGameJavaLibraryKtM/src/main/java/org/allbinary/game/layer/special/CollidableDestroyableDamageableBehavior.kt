@@ -35,7 +35,6 @@ open public class CollidableDestroyableDamageableBehavior : CollidableBaseBehavi
         
 
     val damageUtil: DamageUtil = DamageUtil.getInstance()!!
-            
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){

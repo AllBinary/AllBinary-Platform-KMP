@@ -67,7 +67,6 @@ public constructor        (column: Int, row: Int, columns: Int, rows: Int, width
 
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
-            
 
 this.point= pointFactory!!.getInstance(x, y)
 this.midPoint= pointFactory!!.getInstance(x +(width shr 1), y +(height shr 1))

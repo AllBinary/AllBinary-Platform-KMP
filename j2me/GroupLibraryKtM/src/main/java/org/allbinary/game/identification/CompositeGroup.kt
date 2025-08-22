@@ -45,7 +45,6 @@ open public class CompositeGroup
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val groupInterface: Group
 
@@ -72,7 +71,6 @@ open fun add(groupInterface: Group)
                     var groupInterface = groupInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

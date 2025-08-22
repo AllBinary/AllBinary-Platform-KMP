@@ -47,7 +47,6 @@ open public class BasicPlayer
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var state: Int= 0
 

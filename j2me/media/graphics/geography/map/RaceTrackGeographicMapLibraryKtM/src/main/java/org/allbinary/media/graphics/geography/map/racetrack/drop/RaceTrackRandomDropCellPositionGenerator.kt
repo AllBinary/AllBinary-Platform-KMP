@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
     private val cellsPerRowOrColumn: Int = 3
 
@@ -86,7 +85,6 @@ open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographic
 super.update(allBinaryGameLayerManager, geographicMapInterface)
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 this.cellWidth= tiledLayer!!.getCellWidth() /this.cellsPerRowOrColumn
 this.cellHeight= tiledLayer!!.getCellHeight() /this.cellsPerRowOrColumn
@@ -108,11 +106,9 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
 
 
     var point: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 
     var randomCell: Int = myRandomFactory!!.getAbsoluteNextInt(this.totalCells)!!
-            
 
 
     var row: Int = this.rowArray[randomCell]!!
@@ -128,11 +124,9 @@ open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
 
 
     var pickedUpLayerInterfaceFactory: PickedUpLayerInterfaceFactoryInterface = DropLayerFactory.getInstance()!!.getRandomInstance()!!
-            
 
 
     var tiledLayer: AllBinaryTiledLayer = this.raceTrackGeographicMap!!.getAllBinaryTiledLayer()!!
-            
 
 
     var pickupLayer: RaceTrackPickupLayer = PickupLayerCircularStaticPool.getInstance()!!.getInstance(pickedUpLayerInterfaceFactory, x, y, tiledLayer!!.getZP() +3) as RaceTrackPickupLayer

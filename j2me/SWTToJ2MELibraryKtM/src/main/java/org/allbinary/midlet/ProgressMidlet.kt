@@ -40,7 +40,6 @@ open public class ProgressMidlet : AllBinaryMidlet {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val abeClientInformation: AbeClientInformationInterface
 public constructor        (clientInformationFactory: ClientInformationFactory){
@@ -63,13 +62,11 @@ open fun exit(isProgress: Boolean)
                     var isProgress = isProgress
 
     var processor: Processor = MidletExitProcessorFactory.getInstance()!!.getInstance(this)!!
-            
 
 
         try {
             
     var primaryThreadPool: ThreadPool = PrimaryThreadPool.getInstance()!!
-            
 
 
     var runnable: Runnable = ExitRunnable(this, processor, isProgress)

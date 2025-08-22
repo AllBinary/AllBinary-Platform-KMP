@@ -45,7 +45,6 @@ open public class InputAutomationModuleFactoryFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var hashMap: HashMap<Any, Any>
 
@@ -62,15 +61,12 @@ this.defaultListModelHelper= DefaultListModelHelper()
 this.hashMap= HashMap<Any, Any>()
 
     var inputAutomationModuleConfigurations: InputAutomationModuleConfigurations = InputAutomationModuleConfigurationsSingletonFactory.getInstance()!!
-            
 
 
     var collection: Collection = inputAutomationModuleConfigurations!!.getHashMap()!!.values()!!
-            
 
 
     var iterator: Iterator = collection.iterator()!!
-            
 
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
@@ -93,13 +89,11 @@ open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfigurat
                     var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 
     var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface = inputAutomationModuleConfiguration!!.getInputAutomationModuleInterface()!!
-            
 
 this.hashMap!!.put(inputAutomationModuleConfiguration!!.getName(), inputAutomationModuleInterface)
 this.defaultListModelHelper!!.add(inputAutomationModuleConfiguration!!.getName())
 
     var helpSet: HelpSet = inputAutomationModuleInterface!!.getHelpSet()!!
-            
 
 
     
@@ -133,7 +127,6 @@ open fun getInstance(moduleName: String)
                     var moduleName = moduleName
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Getting Module: " +moduleName, this, commonStrings!!.GET_INSTANCE)
 

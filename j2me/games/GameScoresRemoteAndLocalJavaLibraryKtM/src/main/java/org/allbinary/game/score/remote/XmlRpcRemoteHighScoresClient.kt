@@ -41,7 +41,6 @@ open public class XmlRpcRemoteHighScoresClient : XmlRpcAbeClient {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var page: String
 public constructor        (clientInfo: AbeClientInformationInterface, page: String, remoteMethod: String)                        
@@ -81,11 +80,9 @@ open fun get(anyType: Any, cryptInterface: CryptInterface)
 
 
     var serverUrl: String = getClientInfo()!!.getLicenseServer(this.getServer())!!
-            
 
 
     var index: Int = serverUrl!!.lastIndexOf('/')!!
-            
 
 serverUrl= serverUrl!!.substring(0, index +1) +page
 
@@ -110,7 +107,6 @@ logUtil!!.put(CLIENT_INFO +hashtable.toString(), this, commonStrings!!.GET)
 param.addElement(hashtable)
 
     var result: Any = xmlRpcClient!!.execute(this.getRemoteMethod(), param, cryptInterface)!!
-            
 
 logUtil!!.put(RESULT +result.toString(), this, commonStrings!!.GET)
 isOnline= true

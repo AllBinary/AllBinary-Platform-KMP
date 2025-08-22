@@ -58,10 +58,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val userEmailEventHandlerHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 private constructor        ()
@@ -121,11 +119,9 @@ open fun getInstance(userEmailEventNameData: UserEmailEventNameData, abeClientIn
                                 
 
     var userVector: Vector = UserEntityFactory.getInstance()!!.getStoreManagers(storeFrontInterface)!!
-            
 
 
     var newUserEmailEventHandler: UserEmailEventHandler = EmailEventHandlerUtil.getInstance()!!.getEventHandler(abeClientInformation, userEmailEventNameData, userVector)!!
-            
 
 this.userEmailEventHandlerHashMap!!.put(userEmailEventNameData, newUserEmailEventHandler)
 

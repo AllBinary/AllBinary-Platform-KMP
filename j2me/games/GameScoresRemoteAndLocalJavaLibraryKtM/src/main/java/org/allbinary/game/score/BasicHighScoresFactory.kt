@@ -72,7 +72,6 @@ open fun loaded(index2: Int)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface
 
@@ -135,11 +134,9 @@ open fun run()
 highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
 
     var gameType: GameType = gameInfo!!.getGameType()!!
-            
 
 
     var gameTypeFactory: GameTypeFactory = GameTypeFactory.getInstance()!!
-            
 
 
     var gameInfo2: GameInfo = gameInfo

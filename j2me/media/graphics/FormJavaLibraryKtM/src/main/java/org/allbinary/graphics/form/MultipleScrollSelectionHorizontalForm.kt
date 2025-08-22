@@ -26,7 +26,6 @@ open public class MultipleScrollSelectionHorizontalForm : ScrollSelectionForm {
         
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
-            
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
                             : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
@@ -106,15 +105,12 @@ override fun paint(graphics: Graphics)
         try {
             
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
-            
 
 
     var start: Int = this.getStartIndex()!!
-            
 
 
     var size: Int = this.size()!!
-            
 
 
     var dx: Int = x
@@ -138,7 +134,6 @@ graphics.fillRect(x, y, this.rectangle.getWidth(), this.rectangle.getHeight())
                             
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
 

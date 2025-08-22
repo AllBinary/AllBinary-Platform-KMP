@@ -64,7 +64,6 @@ this.init()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 }
@@ -82,18 +81,15 @@ open fun init()
 Security.addProvider(sunJce)
 
     var keySpec: KeySpec = KeySpecFactory.getInstance()!!.getInstance(this.algorithm, this.key)!!
-            
 
 
     var keyFactory: SecretKeyFactory = SecretKeyFactory.getInstance(algorithm)!!
-            
 
 this.secretKey= keyFactory!!.generateSecret(keySpec)
 this.cipher= Cipher.getInstance(algorithm)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 }
@@ -111,11 +107,9 @@ open fun encrypt(array: ByteArray)
             cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
     var ivArray: ByteArray = secretKey!!.getEncoded()!!
-            
 
 
     var encrypted: ByteArray = cipher.doFinal(array)!!
-            
 
 
     var result: ByteArray = ByteArray(ivArray!!.size +encrypted.size)
@@ -195,7 +189,6 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
 
     var decrypted: ByteArray = cipher.doFinal(result)!!
-            
 
 
 

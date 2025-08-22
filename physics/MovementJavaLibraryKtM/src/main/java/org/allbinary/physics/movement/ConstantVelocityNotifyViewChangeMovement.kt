@@ -40,7 +40,6 @@ open public class ConstantVelocityNotifyViewChangeMovement : Movement {
     private var speedBasicDecimal: BasicDecimal
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-            
 public constructor        (){this.speedBasicDecimal= BasicDecimal.ZERO_BIGDECIMAL
 this.basicVelocityProperties= BasicVelocityProperties()
 }
@@ -59,7 +58,6 @@ override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
 this.speedBasicDecimal= speedBasicDecimal
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 basicVelocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInstance(angle), angleFactory!!.getInstance(otherAngle))
 }
@@ -81,7 +79,6 @@ open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, othe
                     var otherAngle = otherAngle
 
     var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
-            
 
 
     var xVector: Int = (axisMathVectorUtil!!.calculateX(radius, angle) /scaleFactorValue).toInt()
@@ -104,15 +101,12 @@ layer.move(xVector, yVector, zVector)
                     var layer = layer
 
     var x: Int = this.basicVelocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()!!
-            
 
 
     var y: Int = this.basicVelocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled()!!
-            
 
 
     var z: Int = this.basicVelocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled()!!
-            
 
 layer.move(x, y, z)
 

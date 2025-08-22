@@ -49,7 +49,6 @@ open public class TitleBodyValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var body: String
 
@@ -65,7 +64,6 @@ public constructor        (){
                                 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.body= stringUtil!!.EMPTY_STRING
 this.titleValidation= TitleNotRequiredValidation()
@@ -85,7 +83,6 @@ public constructor        (document: Document){
                                 
 
     var nodeList: NodeList = document.getElementsByTagName(BodyData.getInstance()!!.NAME)!!
-            
 
 
 
@@ -96,16 +93,13 @@ public constructor        (document: Document){
 
         {
     var aBodyNode: Node = nodeList!!.item(index)!!
-            
 
 
     var aBodyValueNode: Node = DomSearchHelper.getNode(DomData.VALUE, aBodyNode!!.getChildNodes())!!
-            
 
 this.body= DomNodeHelper.getTextNodeValue(aBodyValueNode)
 
     var titleNode: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.NAME, aBodyNode!!.getChildNodes())!!
-            
 
 this.titleValidation= TitleNotRequiredValidation(titleNode)
 
@@ -308,7 +302,6 @@ open fun toXmlNode(document: Document)
                                 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, BodyData.getInstance()!!.NAME, this.body)!!
-            
 
 node.appendChild(this.titleValidation!!.toXmlNode(document))
 

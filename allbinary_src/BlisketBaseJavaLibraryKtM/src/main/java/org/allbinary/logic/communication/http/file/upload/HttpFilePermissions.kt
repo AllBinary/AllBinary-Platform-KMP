@@ -38,10 +38,8 @@ open public class HttpFilePermissions
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val file: AbFile
 

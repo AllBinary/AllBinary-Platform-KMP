@@ -41,22 +41,18 @@ open public class GeographicMapCellPositionArea
         
 
     private val cellPositionsUtil: CellPositionsUtil = CellPositionsUtil.getInstance()!!
-            
 
     private val layerCoveringCellPositionsUtil: LayerCoveringCellPositionsUtil = LayerCoveringCellPositionsUtil.getInstance()!!
-            
 
     private val reusableOccupyingGeographicMapCellPositionList: BasicArrayList = BasicArrayList(4)
 
     private val reusableSurroundingGeographicMapCellPositionList: BasicArrayList = BasicArrayList(12)
 
     private val surroundingCircularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
-            
 
     private val layerInterface: AllBinaryLayer
 
     private var LIST: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
     private var occupyingGeographicMapCellPositionList: BasicArrayList = LIST
 

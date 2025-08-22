@@ -57,7 +57,6 @@ open fun getInstance(nodeList: NodeList)
 
         {
     var node: Node = nodeList!!.item(index)!!
-            
 
 
     

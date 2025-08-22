@@ -44,7 +44,6 @@ open fun getFirstChildElement(parentNode: Node)
                     var parentNode = parentNode
 
     var node: Node = parentNode!!.getFirstChild()!!
-            
 
 
     
@@ -55,7 +54,6 @@ open fun getFirstChildElement(parentNode: Node)
                                     {
                                     
     var nodeList: NodeList = parentNode!!.getChildNodes()!!
-            
 
 
 
@@ -96,7 +94,6 @@ open fun getTextNodeValue(node: Node)
                     var node = node
 
     var nodeTextNode: Node = node.getFirstChild()!!
-            
 
 
     
@@ -137,7 +134,6 @@ open fun getTextNodeValue(nodeName: String, nodeList: NodeList)
                     var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNode(nodeName, nodeList)!!
-            
 
 
 
@@ -157,7 +153,6 @@ open fun getTextNodesValue(node: Node)
 
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
 
@@ -168,7 +163,6 @@ open fun getTextNodesValue(node: Node)
 
         {
     var nodeTextNode: Node = nodeList!!.item(index)!!
-            
 
 
     

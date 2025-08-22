@@ -49,7 +49,6 @@ open public class PickupLayer : MultiPlayerGameLayer
     private var destroyed: Boolean= false
 
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 public constructor        (name: String, remoteInfo: RemoteInfo, viewPosition: ViewPosition)                        
 
                             : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition){
@@ -179,15 +178,12 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 
     var viewX: Int = viewPosition!!.getX()!!
-            
 
 
     var viewY: Int = viewPosition!!.getY()!!
-            
 
 this.animationInterface!!.paint(graphics, viewX, viewY)
 }
@@ -199,15 +195,12 @@ override fun paintThreed(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 
     var viewX: Int = viewPosition!!.getX()!!
-            
 
 
     var viewY: Int = viewPosition!!.getY()!!
-            
 
 this.animationInterface!!.paintThreed(graphics, viewX, viewY, 3)
 }

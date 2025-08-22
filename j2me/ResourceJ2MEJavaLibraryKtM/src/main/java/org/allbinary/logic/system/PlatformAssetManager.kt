@@ -63,11 +63,9 @@ open fun getResourceAsStream(resource: String)
                     var resource = resource
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var inputStream: InputStream = resourceUtil!!.getResourceAsStream(resource)!!
-            
 
 
 

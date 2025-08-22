@@ -62,7 +62,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                                     {
                                     
     var role: UserRole = UserRoleB.getRole(roleString)!!
-            
 
 
 

@@ -38,7 +38,6 @@ open public class BasicTouchButtonsBuilder : BaseTouchInput {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 override fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList{
@@ -49,7 +48,6 @@ override fun getList()
 
 
     var commonButtons: CommonButtons = CommonButtons.getInstance()!!
-            
 
 
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()

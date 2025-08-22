@@ -36,7 +36,6 @@ open public class AdminEmailInfo : BasicEmailInfo {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (subject: String, textBody: String)                        
 
                             : super(subject, textBody){
@@ -56,7 +55,6 @@ public constructor        (subject: String, textBody: String)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
@@ -75,11 +73,9 @@ open fun init()
 
 
     var contextConfigurationInterface: ContextConfigurationInterface = adminConfigurationInterface!!.getContextConfigurationInterface()!!
-            
 
 
     var emailServerConfigurationInterface: EmailServerConfigurationInterface = contextConfigurationInterface!!.getEmailServerConfigurationInterface()!!
-            
 
 this.setEmailServerConfigurationInterface(emailServerConfigurationInterface)
 }

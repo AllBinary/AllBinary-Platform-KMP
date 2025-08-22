@@ -66,11 +66,9 @@ open fun getInstance(document: Document)
                     var document = document
 
     var contextConfigurationData: ContextConfigurationData = ContextConfigurationData.getInstance()!!
-            
 
 
     var contextConfigurationNode: Node = DomSearchHelper.getNode(contextConfigurationData!!.NAME, document.getChildNodes())!!
-            
 
 
 
@@ -90,20 +88,16 @@ open fun getInstance(contextName: String)
                     var contextName = contextName
 
     var abPath: AbPath = ContextConfigurationPathUtil.getAbPath(contextName)!!
-            
 
 
     var contextConfigurationData: ContextConfigurationData = ContextConfigurationData.getInstance()!!
-            
 
 
     var documentString: String = CryptFileReader(contextConfigurationData!!.UNCRYPTED_EXTENSION, contextConfigurationData!!.ENCRYPTED_EXTENSION).
                             get(abPath)!!
-            
 
 
     var document: Document = DomDocumentHelper.create(documentString)!!
-            
 
 
 

@@ -63,10 +63,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
     private val realFontSize: Int = 18
 
@@ -86,11 +84,9 @@ open fun saveFontAtlasAsFile()
         try {
             
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var file: File = ResourceUtil.getInstance()!!.getContext()!!.getFilesDir()!!
-            
 
 
     var path: String = file.getAbsolutePath() +CanvasStrings.getInstance()!!.FONT_ATLAS
@@ -101,13 +97,11 @@ logUtil!!.put(path, this, commonStrings!!.CONSTRUCTOR)
 
 
     var bitmap: Bitmap = this.fontImage!!.openGLBitmap!!.getImage()!!.getBitmap()!!
-            
 
 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 }
@@ -159,11 +153,9 @@ open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: Ba
 
 
     var textureSize: Int = this.getAsTextureSize(CELLS_PER_ROW *cellSize)!!
-            
 
 
     var bitmap: Bitmap = Bitmap.createBitmap(textureSize, textureSize, Bitmap.Config.ARGB_8888)!!
-            
 
 
     var canvas: Canvas = Canvas(bitmap)

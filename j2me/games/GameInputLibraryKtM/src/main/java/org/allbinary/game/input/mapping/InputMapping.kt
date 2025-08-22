@@ -40,10 +40,8 @@ open public class InputMapping
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -103,7 +101,6 @@ open fun remove(input: Input, mappedToInput: Input)
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 stringBuffer!!.append(CommonLabels.getInstance()!!.START_LABEL)
 stringBuffer!!.append(stringUtil!!.toString(input))
@@ -112,7 +109,6 @@ stringBuffer!!.append(stringUtil!!.toString(mappedToInput))
 logUtil!!.put(stringBuffer!!.toString(), this, "InputMapping::remove")
 
     var list: BasicArrayList = this.getMappedInput(input)!!
-            
 
 
     
@@ -167,7 +163,6 @@ open fun add(input: Input, mappedToInput: Input)
                     var mappedToInput = mappedToInput
 
     var list: BasicArrayList = this.getMappedInput(input)!!
-            
 
 
     

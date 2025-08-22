@@ -70,7 +70,6 @@ open fun getDoc()
 
 
     var document: Document = DomDocumentHelper.create(AbFileLocalInputStream(file))!!
-            
 
 
 
@@ -105,24 +104,19 @@ open fun read()
         try {
             
     var document: Document = LoggingInitInfo.getDoc()!!
-            
 
 
     var logConfigsNodeList: NodeList = document.getElementsByTagName(LogConfigsData.getInstance()!!.NAME)!!
-            
 
 
     var logConfigsNode: Node = logConfigsNodeList!!.item(0)!!
-            
 
 
     var logConfigNodeVector: Vector = DomSearchHelper.getAllNodes(LogConfigData.getInstance()!!.NAME, logConfigsNode!!.getChildNodes())!!
-            
 
 LoggingInitInfo.logConfigInfoList= BasicArrayList()
 
     var size: Int = logConfigNodeVector!!.size!!
-            
 
 
 
@@ -222,7 +216,6 @@ open fun getTypeNameList()
 
 
     var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
-            
 
 
 
@@ -236,7 +229,6 @@ open fun getTypeNameList()
 
 
     var logTypeVector: BasicArrayList = logConfigInfo!!.getTypeVector()!!
-            
 
 
     
@@ -267,7 +259,6 @@ open fun getTypeList()
 
 
     var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
-            
 
 
 
@@ -281,7 +272,6 @@ open fun getTypeList()
 
 
     var logTypeVector: BasicArrayList = logConfigInfo!!.getTypeVector()!!
-            
 
 
     
@@ -345,7 +335,6 @@ override fun toString()
         try {
             
     var document: Document = LoggingInitInfo.getDoc()!!
-            
 
 
 

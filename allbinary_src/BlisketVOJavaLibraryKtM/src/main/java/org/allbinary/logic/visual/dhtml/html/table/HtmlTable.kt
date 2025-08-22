@@ -126,14 +126,12 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var result: String = stringUtil!!.EMPTY_STRING
 
 
     var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toArray()!!
-            
 
 result= before
 result += START
@@ -170,7 +168,6 @@ result += "\" "
 result += END
 
     var size: Int = htmlRowsVector!!.size!!
-            
 
 
 

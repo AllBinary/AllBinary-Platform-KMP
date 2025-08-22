@@ -73,14 +73,12 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
 
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -96,14 +94,12 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
 
 
     var pageContext: PageContext = httpTransformInfoInterface!!.getPageContext()!!
-            
 
 
     var httpServletRequest: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
 
 
     var command: String = httpServletRequest!!.getParameter(org.allbinary.globals.GLOBALS2.ADMINCOMMAND)!!
-            
 
 
     
@@ -123,34 +119,27 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
                         else {
                             
     var propertiesHashMap: HashMap<Any, Any> = httpTransformInfoInterface!!.getPropertiesHashMap()!!
-            
 
 
     var weblisketSession: WeblisketSession = WeblisketSession(propertiesHashMap, pageContext)
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(weblisketSession!!.getStoreName())!!
-            
 
 
     var order: OrderInterface = weblisketSession!!.getOrder()!!
-            
 
 
     var orderId: String = order.getId()!!
-            
 
 
     var orderHistoryEntityInterface: OrderHistoryEntityInterface = OrderHistoryEntityFactory.getInstance()!!
-            
 
 
     var orderReview: OrderHistory = orderHistoryEntityInterface!!.getOrder(orderId)!!
-            
 
 
     var orderPaymentInfo: Payment = orderReview!!.getPaymentInfo()!!
-            
 
 orderPaymentInfo!!.setTransactionType(TransactionTypeFactory.getInstance()!!.SALE.toString())
 orderPaymentInfo!!.setTenderType(TenderTypeFactory.getInstance()!!.CREDITCARD.toString())
@@ -166,7 +155,6 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
                                 
 
     var paymentTransactionInterface: PaymentTransactionInterface = PaymentTransactionInterfaceFactory.getInstance()!!.getInstance(orderReview)!!
-            
 
 
 
@@ -209,18 +197,15 @@ open fun generateFromTestData(transformInfoInterface: TransformInfoInterface)
 
 
     var propertiesHashMap: HashMap<Any, Any> = httpTransformInfoInterface!!.getPropertiesHashMap()!!
-            
 
 
     var pageContext: PageContext = httpTransformInfoInterface!!.getPageContext()!!
-            
 
 
     var weblisketSession: WeblisketSession = WeblisketSession(propertiesHashMap, pageContext)
 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(weblisketSession!!.getStoreName())!!
-            
 
 
     var httpServletRequest: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
@@ -239,11 +224,9 @@ open fun generateFromTestData(transformInfoInterface: TransformInfoInterface)
                                 
 
     var transactionType: String = httpServletRequest!!.getParameter(PaymentData.TRANSACTIONTYPE)!!
-            
 
 
     var tenderType: String = httpServletRequest!!.getParameter(PaymentData.TENDERTYPE)!!
-            
 
 
     var payment: Payment = Payment()
@@ -258,7 +241,6 @@ orderReview!!.setPaymentMethod(gatewayName)
 orderReview!!.setUserName("testing")
 
     var orderId: String = httpServletRequest!!.getParameter("orderNumber")!!
-            
 
 
     
@@ -272,35 +254,27 @@ orderReview!!.setUserName("testing")
 orderReview!!.setId(orderId)
 
     var account: String = httpServletRequest!!.getParameter("account")!!
-            
 
 
     var expirationDate: String = httpServletRequest!!.getParameter("expirationDate")!!
-            
 
 
     var checkNumber: String = httpServletRequest!!.getParameter("checkNumber")!!
-            
 
 
     var driversLicense: String = httpServletRequest!!.getParameter("driversLicense")!!
-            
 
 
     var magneticInkCheckReader: String = httpServletRequest!!.getParameter("magneticInkCheckReader")!!
-            
 
 
     var aba: String = httpServletRequest!!.getParameter("aba")!!
-            
 
 
     var accountType: String = httpServletRequest!!.getParameter("accountType")!!
-            
 
 
     var name: String = httpServletRequest!!.getParameter("name")!!
-            
 
 payment.setName(name)
 payment.setNumber(account)
@@ -312,19 +286,15 @@ payment.setAba(aba)
 payment.setAccountType(accountType)
 
     var street: String = httpServletRequest!!.getParameter("street")!!
-            
 
 
     var city: String = httpServletRequest!!.getParameter("city")!!
-            
 
 
     var state: String = httpServletRequest!!.getParameter("state")!!
-            
 
 
     var zip: String = httpServletRequest!!.getParameter("zip")!!
-            
 
 
     var streetAddress: StreetAddress = StreetAddress()
@@ -336,11 +306,9 @@ streetAddress!!.setState(state)
 streetAddress!!.setCode(zip)
 
     var email: String = httpServletRequest!!.getParameter("email")!!
-            
 
 
     var amount: String = httpServletRequest!!.getParameter("amount")!!
-            
 
 orderReview!!.setTotal(Money(amount))
 orderReview!!.setBillingAddress(streetAddress)
@@ -355,7 +323,6 @@ orderReview!!.setBillingAddress(streetAddress)
 orderReview!!.setPaymentInfo(payment)
 
     var paymentTransactionInterface: PaymentTransactionInterface = PaymentTransactionInterfaceFactory.getInstance()!!.getInstance(orderReview)!!
-            
 
 
 

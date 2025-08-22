@@ -42,7 +42,6 @@ open public class GenericProfileAction
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String
 
@@ -59,7 +58,6 @@ public constructor        (genericProfileActionJPanel: GenericProfileActionJPane
                     var node = node
 
     var actionNameNode: Node = DomSearchHelper.getNode(GenericProfileActionData.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -136,7 +134,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, GenericProfileActionData.NAME, this.toHashMap())!!
-            
 
 node.appendChild(getGenericProfileActionScript()!!.toXmlNode(document))
 

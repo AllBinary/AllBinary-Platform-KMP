@@ -46,7 +46,6 @@ open fun init(allBinaryEventObjectFactoryInterface: AllBinaryEventObjectFactoryI
 this.circularIndexUtil!!.setIndex(0)
 
     var size: Int = this.circularIndexUtil!!.getSize()!!
-            
 
 
 

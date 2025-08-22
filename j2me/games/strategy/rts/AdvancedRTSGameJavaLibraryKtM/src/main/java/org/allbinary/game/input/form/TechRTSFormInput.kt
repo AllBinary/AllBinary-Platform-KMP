@@ -54,7 +54,6 @@ open public class TechRTSFormInput : RTSFormInput {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val EVENT: AllBinaryEventObject = AllBinaryEventObject(this)
 
@@ -70,7 +69,6 @@ public constructor        (groupInterface: Array<Group?>)
                     
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, SmallIntegerSingletonFactory.getInstance()!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
 }
@@ -116,14 +114,12 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
 super.process(layerManager)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var technologyRTSInterfaceImageItem: TechnologyRTSInterfaceImageItem = item as TechnologyRTSInterfaceImageItem
 
 
     var rtsInterface: RTSInterface = technologyRTSInterfaceImageItem!!.getRtsInterface()!!
-            
 
 logUtil!!.put("isUpgradeable: " +rtsInterface!!.isUpgradeable(), this, commonStrings!!.PROCESS)
 
@@ -133,11 +129,9 @@ logUtil!!.put("isUpgradeable: " +rtsInterface!!.isUpgradeable(), this, commonStr
                                     {
                                     
     var cost: Int = rtsInterface!!.getUpgradeCost()!!
-            
 
 
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
-            
 
 logUtil!!.put(cost +"<=" +capital.getTotalMoney(), this, commonStrings!!.PROCESS)
 

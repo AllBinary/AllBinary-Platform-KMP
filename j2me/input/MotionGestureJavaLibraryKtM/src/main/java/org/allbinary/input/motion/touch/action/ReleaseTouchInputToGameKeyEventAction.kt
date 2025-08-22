@@ -67,7 +67,6 @@ this.setGameKeyEvent(GameKeyEventFactory.getInstance()!!.getInstance(this, NONE)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }

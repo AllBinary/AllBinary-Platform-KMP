@@ -54,7 +54,6 @@ open public class BasicColor
     val alpha: Short
 
     private val basicColorUtil: BasicColorUtil = BasicColorUtil.getInstance()!!
-            
 public constructor        (value: Int)                        
 
                             : this(value, StringUtil.getInstance()!!.EMPTY_STRING){

@@ -77,7 +77,6 @@ open fun getAll(geographicMapInterface: BasicGeographicMap, topRightGeographicMa
 reusableList!!.clear()
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var lastColumn: Int = topRightGeographicMapCellPosition!!.getColumn() +columns
@@ -114,7 +113,6 @@ reusableList!!.clear()
 
         {
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(topRightGeographicMapCellPosition!!.getColumn() +columnIndex, topRightGeographicMapCellPosition!!.getRow() +rowIndex)!!
-            
 
 reusableList!!.add(geographicMapCellPosition)
 }
@@ -157,7 +155,6 @@ reusableList!!.clear()
 
 
     var surroundingGeographicMapCellPositionList: BasicArrayList = getAllSurrounding(geographicMapInterface, layerGeographicMapCellPosition, reusableSingleThreadedSurroundingList)!!
-            
 
 
 
@@ -215,11 +212,9 @@ open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, layerGeog
 reusableSurroundingList!!.clear()
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var row: Int= 0
@@ -243,7 +238,6 @@ row= layerGeographicMapCellPosition!!.getRow() +surroundArray[index]!![1]
                                     {
                                     
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(column, row)!!
-            
 
 reusableSurroundingList!!.add(geographicMapCellPosition)
 

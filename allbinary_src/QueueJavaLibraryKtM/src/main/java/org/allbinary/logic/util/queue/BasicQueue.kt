@@ -67,7 +67,6 @@ open fun removeLast()
         //nullable = true from not(false or (false and true)) = true
 : Any{
     var anyType: Any = this.queueVector!!.lastElement()!!
-            
 
 this.queueVector!!.remove(anyType)
 

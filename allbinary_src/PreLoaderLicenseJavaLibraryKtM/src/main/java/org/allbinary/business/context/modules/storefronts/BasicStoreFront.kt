@@ -105,7 +105,6 @@ public constructor        (storeHashMap: HashMap<Any, Any>)
                     var storeHashMap = storeHashMap
 
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
-            
 
 this.name= storeHashMap!!.get(storeFrontData!!.NAME) as String
 this.userName= storeHashMap!!.get(UserData.USERNAME) as String
@@ -415,7 +414,6 @@ open fun getSubStores()
 
 
     var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayList())!!
-            
 
 
 

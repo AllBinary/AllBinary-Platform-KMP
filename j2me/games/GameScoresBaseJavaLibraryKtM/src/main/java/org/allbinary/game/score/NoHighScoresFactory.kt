@@ -48,7 +48,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val NO_HIGH_SCORES: Array<HighScores?> = arrayOfNulls(0)
 private constructor        (){}

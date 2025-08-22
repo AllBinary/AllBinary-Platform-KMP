@@ -57,7 +57,6 @@ LogConfigTypeFactory.getInstance()
 
 
     var logConfigTypeVector: BasicArrayList = loggingInitInfo!!.getTypeList()!!
-            
 
 PreLogUtil.put("Number Of Log Configs: " +loggingInitInfo!!.getNumberOfLogConfigs(), "LogConfigTypes", "init()")
 PreLogUtil.put("Number Of Log Config Type Names: " +logConfigTypeVector!!.size(), "LogConfigTypes", "init()")
@@ -79,15 +78,12 @@ open fun getInstance(node: Node)
                     var node = node
 
     var nameValueNode: Node = DomSearchHelper.getNode(LogConfigTypeData.getInstance()!!.NAME, node.getChildNodes())!!
-            
 
 
     var name: String = DomNodeHelper.getTextNodeValue(nameValueNode)!!
-            
 
 
     var descriptionValueNode: Node = DomSearchHelper.getNodeNoThrow(LogConfigTypeData.getInstance()!!.DESCRIPTION, node.getChildNodes())!!
-            
 
 
     
@@ -98,7 +94,6 @@ open fun getInstance(node: Node)
                                     {
                                     
     var description: String = DomNodeHelper.getTextNodeValue(descriptionValueNode)!!
-            
 
 
                                     }
@@ -108,7 +103,6 @@ open fun getInstance(node: Node)
 
 
     var size: Int = availableLogConfigTypes!!.size()!!
-            
 
 
     var logConfigType: LogConfigType

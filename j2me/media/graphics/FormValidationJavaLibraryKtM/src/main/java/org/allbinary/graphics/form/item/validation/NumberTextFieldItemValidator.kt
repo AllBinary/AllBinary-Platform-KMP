@@ -96,11 +96,9 @@ override fun isValid()
 
 
     var string: String = this.textFieldItem!!.getString()!!
-            
 
 
     var textLength: Int = string.length!!
-            
 
 
     
@@ -153,23 +151,18 @@ override fun toList()
 
 
     var string: String = this.textFieldItem!!.getString()!!
-            
 
 
     var textLength: Int = string.length!!
-            
 
 
     var label: String = this.textFieldItem!!.getLabel()!!
-            
 
 
     var name: String = label.substring(0, label.length -2)!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var stringMaker: StringMaker = StringMaker()
@@ -183,7 +176,6 @@ override fun toList()
         try {
             
     var number: Integer = smallIntegerSingletonFactory!!.createInstance(Integer.parseInt(this.textFieldItem!!.getString()))!!
-            
 
 
     

@@ -53,7 +53,6 @@ private constructor        ()
             : super()
         {
     var basicTouchInputFactory: BasicTouchInputFactory = BasicTouchInputFactory.getInstance()!!
-            
 
 
 

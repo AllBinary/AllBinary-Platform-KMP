@@ -43,7 +43,6 @@ open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
                     var categoryFactoryInterface = categoryFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -55,7 +54,6 @@ open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

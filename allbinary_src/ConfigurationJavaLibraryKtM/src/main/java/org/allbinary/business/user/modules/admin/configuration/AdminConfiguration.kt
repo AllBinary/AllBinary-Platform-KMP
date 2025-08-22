@@ -45,10 +45,8 @@ open public class AdminConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var contextConfigurationInterface: ContextConfigurationInterface
 public constructor        ()

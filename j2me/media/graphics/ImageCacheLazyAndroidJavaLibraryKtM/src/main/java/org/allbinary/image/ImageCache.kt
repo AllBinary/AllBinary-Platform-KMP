@@ -50,10 +50,8 @@ open public class ImageCache : ImageCacheBase {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -72,11 +70,9 @@ open fun get(caller: String, width: Int, height: Int)
                     var height = height
 
     var foundIndex: Int = this.getIndex(width, height)!!
-            
 
 
     var image: Image = this.getFromAvailable(foundIndex, width, height)!!
-            
 
 
     
@@ -128,11 +124,9 @@ open fun get(key: Any)
                     var key = key
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var resourceId: Integer = resourceUtil!!.getResourceId(key as String)!!
-            
 
 
     var image: Image = this.hashtable.get(resourceId as Object) as Image

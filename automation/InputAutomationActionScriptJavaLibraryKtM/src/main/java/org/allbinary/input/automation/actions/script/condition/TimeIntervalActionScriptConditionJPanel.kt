@@ -34,10 +34,8 @@ open public class TimeIntervalActionScriptConditionJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface
 public constructor        (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface){

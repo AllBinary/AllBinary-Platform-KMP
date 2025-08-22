@@ -36,25 +36,18 @@ open public class MusicManager
     private val FOR: String = " for: "
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val musicStrings: MusicStrings = MusicStrings.getInstance()!!
-            
 
     private val commonStateStrings: CommonStateStrings = CommonStateStrings.getInstance()!!
-            
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
 
     private val resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
     private val androidServicesUtil: AndroidServicesUtil = AndroidServicesUtil.getInstance()!!
-            
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
 
@@ -63,10 +56,8 @@ open public class MusicManager
     private val songList: BasicArrayList
 
     private var currentSongSound: Sound = NoSound.getInstance()!!
-            
 
     private var nextSongSound: Sound = NoSound.getInstance()!!
-            
 
     private var leftVolume: Int = 100
 

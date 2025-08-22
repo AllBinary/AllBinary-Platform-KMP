@@ -26,7 +26,6 @@ open public class OpenGLESGraphics
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     var gl: GL10 = NullGL10.NULL_GL10
  constructor        ()

@@ -55,13 +55,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -70,10 +67,8 @@ private constructor        ()
     private var anchor: Int = Anchor.TOP_LEFT
 
     private val gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
     private val features: Features = Features.getInstance()!!
-            
 
     private val NO_COPY: String = "J2ME does not need to copy images after initial loading"
 
@@ -115,7 +110,6 @@ open fun createImage(originalImage: Image)
                                 
 
     var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
-            
 
 
     
@@ -203,7 +197,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
                                 
 
     var image: Image = imageCreationUtil!!.getInstance(newWidth, newHeight)!!
-            
 
 
     
@@ -218,7 +211,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
 
     var graphics: Graphics = image.getGraphics()!!
-            
 
 graphics.drawImage(originalImage, halfWidthDelta, halfHeightDelta, anchor)
 

@@ -36,7 +36,6 @@ open public class BasicGeographicMapCellPositionFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val geographicMapCellPositionArray: Array<Array<GeographicMapCellPosition?>?>
 
@@ -73,19 +72,15 @@ open fun init()
 
 
     var columns: Int = this.getColumns()!!
-            
 
 
     var rows: Int = this.getRows()!!
-            
 
 
     var width: Int = tiledLayer!!.getCellWidth()!!
-            
 
 
     var height: Int = tiledLayer!!.getCellHeight()!!
-            
 
 
 
@@ -121,11 +116,9 @@ open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMa
 
 
     var columns: Int = this.getColumns()!!
-            
 
 
     var rows: Int = this.getRows()!!
-            
 
 
         try {

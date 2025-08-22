@@ -43,10 +43,8 @@ open public class NewPasswordEmail
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface
 
@@ -108,7 +106,6 @@ open fun notifyStoreAdmin()
 
 
     var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(abeClientInformation, UserEmailEventNameData.NEWPASSWORD)!!
-            
 
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, emailInfo)
 } catch(e: Exception)
@@ -155,7 +152,6 @@ open fun notifyUser()
 
 
     var userEmailEventHandler: UserEmailEventHandler = UserEmailEventHandlerSingletons.getInstance()!!.getInstance(abeClientInformation, UserEmailEventNameData.NEWPASSWORD, this.userInterface)!!
-            
 
 userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, emailInfo)
 } catch(e: Exception)

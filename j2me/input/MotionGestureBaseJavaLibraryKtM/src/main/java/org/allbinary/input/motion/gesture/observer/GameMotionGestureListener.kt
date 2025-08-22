@@ -42,10 +42,8 @@ open public class GameMotionGestureListener
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var motionGestureCollection: BasicArrayList = BasicArrayList()
 
@@ -171,7 +169,6 @@ override fun onMotionGestureEvent(ev: MotionGestureEvent)
         try {
             
     var motionGestureInput: MotionGestureInput = ev.getMotionGesture()!!
-            
 
 
     

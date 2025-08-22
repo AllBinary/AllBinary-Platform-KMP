@@ -45,7 +45,6 @@ open public class FileLog
         companion object {
             
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private val logLength: Long = 33000000
 
@@ -56,7 +55,6 @@ open public class FileLog
     private val fileName: String = .toCharArray()
 
     private val backupFileName: String = fileName!!.concat(".bak")!!
-            
 
     private val ORG_ALLBINARY: String = "org.allbinary: "
 
@@ -96,7 +94,6 @@ fileOut= BufferedWriter(FileWriter(raFile!!.getFD()))
                             
 
     var canWrite: Boolean = logFile!!.canWrite()!!
-            
 
 
 
@@ -226,7 +223,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 
 
     var length: Long = logFile!!.length()!!
-            
 
 
     
@@ -273,7 +269,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 fileOut!!.write(message, 0, message.length)
 fileOut!!.newLine()
@@ -354,7 +349,6 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                                 
 
     var length: Long = logFile!!.length()!!
-            
 
 
     
@@ -391,7 +385,6 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                         specialMessage= NULL_STRING.toCharArray()
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 fileOut!!.write(message, 0, message.length)
 fileOut!!.newLine()

@@ -42,7 +42,6 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
         
 
     val myFont: MyFont = MyFont.getInstance()!!
-            
 
     val y: Int = CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +17
 
@@ -78,7 +77,6 @@ open fun update()
 
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 this.x= CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +touchButtonLocationHelper!!.getColumnsRemainderHalf()
 this.textX= this.getX() +4
@@ -99,7 +97,6 @@ open fun updateInfo()
 
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
-            
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true

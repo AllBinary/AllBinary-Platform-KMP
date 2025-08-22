@@ -38,10 +38,8 @@ open public class WorkFlowWrapper
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var anyType: Any
 public constructor        (anyType: Any)
@@ -71,12 +69,10 @@ open fun getName()
         try {
             
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("getName", 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.anyType, 
@@ -117,12 +113,10 @@ open fun getStoreName()
         try {
             
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("getStoreName", 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.anyType, 
@@ -163,12 +157,10 @@ open fun process()
         try {
             
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.PROCESS, 
                             null)!!
-            
 
 
     var result: Integer = method.invoke(this.anyType, 

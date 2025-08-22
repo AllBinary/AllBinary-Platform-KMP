@@ -41,7 +41,6 @@ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AdvertisementsEntityInterface{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -58,7 +57,6 @@ open fun getInstance()
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, "AdvertisementEntityFactory", commonStrings!!.GET_INSTANCE, e)
 

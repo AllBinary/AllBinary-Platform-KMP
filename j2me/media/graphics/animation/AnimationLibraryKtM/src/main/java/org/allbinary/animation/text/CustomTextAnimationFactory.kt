@@ -41,7 +41,6 @@ open public class CustomTextAnimationFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val animationBehaviorFactory: AnimationBehaviorFactory
 

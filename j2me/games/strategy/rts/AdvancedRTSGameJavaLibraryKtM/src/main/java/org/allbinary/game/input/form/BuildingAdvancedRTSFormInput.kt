@@ -63,7 +63,6 @@ public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolea
                     
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.atLeastOneHouseGameNotificationEvent= GameNotificationEvent(this, "Build At Least One House First", SmallIntegerSingletonFactory.getInstance()!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
 }
@@ -129,11 +128,9 @@ open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, l
 
 
     var advancedPlayerOwnedRTSLayers: AdvancedPlayerOwnedRTSLayers = advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!
-            
 
 
     var totalHouses: Int = advancedPlayerOwnedRTSLayers!!.getHouseList()!!.size()!!
-            
 
 
     

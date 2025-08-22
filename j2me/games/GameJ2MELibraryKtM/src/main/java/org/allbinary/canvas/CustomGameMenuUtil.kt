@@ -45,7 +45,6 @@ open fun add(canvas: MyCanvas)
                     var canvas = canvas
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 
     

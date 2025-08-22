@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -88,7 +87,6 @@ open fun getInstance(os: GenericOperatingSystem)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Ignoring Exception Returning NoHardware", this, commonStrings!!.GET_INSTANCE, e)
 

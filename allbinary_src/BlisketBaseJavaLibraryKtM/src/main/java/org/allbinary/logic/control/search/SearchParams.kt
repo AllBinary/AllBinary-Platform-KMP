@@ -61,7 +61,6 @@ this.setLength(request.getParameter(SearchData.LENGTH))
 this.setOrder(request.getParameter(SearchData.ORDER))
 
     var page: String = request.getParameter(SearchData.PAGE)!!
-            
 
 this.setStartPage(page)
 this.setEndPage(page)
@@ -71,11 +70,9 @@ this.setSortBy(request.getParameter(SearchData.SORTBY))
 
 
     var columnName: String = request.getParameter(SearchData.COLUMNNAME +"[0]")!!
-            
 
 
     var columnValue: String = request.getParameter(SearchData.COLUMNVALUE +"[0]")!!
-            
 
 
         while(columnName != 
@@ -288,7 +285,6 @@ open fun getParamsNode(document: Document)
                     var document = document
 
     var paramsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.PARAMS, SearchData.PARAMS)!!
-            
 
 paramsNode!!.appendChild(this.getFieldsNode(document))
 paramsNode!!.appendChild(this.getOrderNode(document))
@@ -312,15 +308,12 @@ open fun getFieldsNode(document: Document)
 
     var fieldsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.FIELDS, Integer(columnsAndSearchValues!!.size()).
                             toString())!!
-            
 
 
     var set: Set = this.columnsAndSearchValues!!.keySet()!!
-            
 
 
     var searchValueArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = searchValueArray!!.size

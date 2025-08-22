@@ -36,19 +36,14 @@ open public class MusicManager
         
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 
     private val playerStateUtil: PlayerStateUtil = PlayerStateUtil.getInstance()!!
-            
 
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(0)
 
@@ -100,10 +95,8 @@ PreLogUtil.put(event, this, commonStrings!!.PROCESS)
     private val songList: BasicArrayList
 
     private var currentSongSound: Sound = NoSound.getInstance()!!
-            
 
     private var nextSongSound: Sound = NoSound.getInstance()!!
-            
 
     private var reset: Boolean= false
 
@@ -228,7 +221,6 @@ this.nextSongSound= NoSound.getInstance()
 
 
     var duration: Long = this.currentSongSound!!.getDuration()!!
-            
 
 this.timeDelayHelper!!.delay= duration.toInt()
 

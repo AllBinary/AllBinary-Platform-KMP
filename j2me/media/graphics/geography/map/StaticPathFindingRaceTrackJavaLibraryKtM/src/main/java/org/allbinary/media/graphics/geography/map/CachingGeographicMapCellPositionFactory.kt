@@ -58,7 +58,6 @@ open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
                     var height = height
 
     var cellPositionKey: String = GeographicMapCellPosition.toString(i_column, i_row)!!
-            
 
 
     var cellPosition: GeographicMapCellPosition = GeographicMapCellPositionFactory.getHashtable()!!.get(cellPositionKey as Object) as GeographicMapCellPosition

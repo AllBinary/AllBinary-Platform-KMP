@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     private val cellPositionsUtil: CellPositionsUtil = CellPositionsUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -82,7 +81,6 @@ open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllB
                     var reusableList = reusableList
 
     var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(x, y)!!
-            
 
 
 

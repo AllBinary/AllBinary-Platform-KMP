@@ -46,7 +46,6 @@ open public class PickupBehavior
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val countedIndex: Int
 
@@ -85,7 +84,6 @@ override fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
@@ -101,15 +99,12 @@ override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
         try {
             
     var pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface = pickupLayerInterface!!.getPickedUpLayerInterfaceFactoryInterface()!!
-            
 
 
     var pickedUpLayerType: PickedUpLayerType = pickedUpLayerInterfaceFactoryInterface!!.getPickedUpLayerType()!!
-            
 
 
     var pickedUpLayerTypeFactory: PickedUpLayerTypeFactory = PickedUpLayerTypeFactory.getInstance()!!
-            
 
 
     
@@ -146,7 +141,6 @@ pickupLayerInterface!!.setPickedUp()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 }
@@ -188,7 +182,6 @@ open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: A
                     var pickedUpLayerTypeArray = pickedUpLayerTypeArray
 
     var partInterfaceArray: Array<PartInterface?> = this.ownerLayerInterface!!.getPartInterfaceArray()!!
-            
 
 
     var size: Int = partInterfaceArray!!.size
@@ -261,7 +254,6 @@ open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
 
 
     var partInterfaceArray: Array<PartInterface?> = this.ownerLayerInterface!!.getPartInterfaceArray()!!
-            
 
 
     var size: Int = partInterfaceArray!!.size

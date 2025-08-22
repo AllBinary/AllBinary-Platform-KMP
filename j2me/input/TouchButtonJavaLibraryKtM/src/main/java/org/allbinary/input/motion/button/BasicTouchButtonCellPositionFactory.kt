@@ -36,10 +36,8 @@ open public class BasicTouchButtonCellPositionFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val TOP_RIGHT: CellPosition
 
@@ -90,7 +88,6 @@ public constructor        ()
 
 
     var cellPositionFactory: CellPositionFactory = CellPositionFactory.getInstance()!!
-            
 
 cellPositionFactory!!.init(touchButtonLocationHelper!!.getTotalColumns(), touchButtonLocationHelper!!.getTotalRows())
 TOP_LEFT= cellPositionFactory!!.getInstance(0, 0)

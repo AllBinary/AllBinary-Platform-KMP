@@ -44,10 +44,8 @@ open public class MouseActionScriptInputJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var mouseActionScriptInputInterface: MouseActionScriptInputInterface
 public constructor        (mouseActionScriptInputInterface: MouseActionScriptInputInterface){
@@ -71,7 +69,6 @@ open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
     var inputTypeComboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
-            
 
 inputTypeComboBoxModel!!.setSelectedItem(this.mouseActionScriptInputInterface!!.getInputRobotInterface()!!.getName())
 
@@ -115,7 +112,6 @@ open fun updateInputType()
         //nullable = true from not(false or (false and true)) = true
 {
     var comboBoxModel: ComboBoxModel = this.inputAutomationTypeJComboBox!!.getModel()!!
-            
 
 
     var selectedItem: String = comboBoxModel!!.getSelectedItem() as String
@@ -205,7 +201,6 @@ logUtil!!.put("Button 2 Deselected: " +this.mouseActionScriptInputInterface!!.ge
                             
 
     var mouseXString: String = this.mouseXJTextField!!.getText()!!
-            
 
 
     
@@ -218,7 +213,6 @@ logUtil!!.put("Button 2 Deselected: " +this.mouseActionScriptInputInterface!!.ge
                                 
 
     var mouseYString: String = this.mouseYJTextField!!.getText()!!
-            
 
 
     

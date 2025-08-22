@@ -83,14 +83,12 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var result: String = stringUtil!!.EMPTY_STRING
 
 
     var attributeKeys: Array<Any?> = otherAttributes!!.keySet()!!.toArray()!!
-            
 
 
     var attributeSize: Int = attributeKeys!!.size

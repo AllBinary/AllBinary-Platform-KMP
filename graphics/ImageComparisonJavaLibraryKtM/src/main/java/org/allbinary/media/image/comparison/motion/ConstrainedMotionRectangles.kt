@@ -40,7 +40,6 @@ open public class ConstrainedMotionRectangles : MotionRectangles {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface
 public constructor        (motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, motionRectangles: MotionRectangles)                        
@@ -69,7 +68,6 @@ open fun applyMotionRectangleConstraints(motionRectangles: MotionRectangles)
 logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), this, "applyMotionRectangleConstraints")
 
     var bufferedImageArray: Array<BufferedImage?> = motionRectangles!!.getImageComparisonResult()!!.getBufferedImages()!!
-            
 
 
     var bufferedImage: BufferedImage = bufferedImageArray[1]!!
@@ -79,11 +77,9 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
 
 
     var vector2: Vector = motionRectangles!!.getVector()!!
-            
 
 
     var size: Int = vector2.size!!
-            
 
 
 
@@ -97,11 +93,9 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
 
 
     var rectangle: Rectangle = motionRectangle!!.getRectangle()!!
-            
 
 
     var isTooSmall: Boolean = this.getMotionRectangleConstraintsInterface()!!.isTooSmall(rectangle)!!
-            
 
 
     
@@ -117,7 +111,6 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
                                 
 
     var isAreaTooSmall: Boolean = this.getMotionRectangleConstraintsInterface()!!.isAreaTooSmall(rectangle)!!
-            
 
 
     
@@ -133,7 +126,6 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
                                 
 
     var isTooBig: Boolean = this.getMotionRectangleConstraintsInterface()!!.isTooBig(rectangle)!!
-            
 
 
     
@@ -149,7 +141,6 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
                                 
 
     var isValid: Boolean = this.getMotionRectangleConstraintsInterface()!!.isValid(this.getImageComparisonResult()!!.getFrameTwo(), bufferedImage, motionRectangle!!.getRectangle())!!
-            
 
 
     

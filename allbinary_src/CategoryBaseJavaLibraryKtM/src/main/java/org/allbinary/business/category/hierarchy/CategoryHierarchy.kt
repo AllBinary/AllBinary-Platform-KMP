@@ -85,7 +85,6 @@ public constructor        (rootCategoryInterface: CategoryInterface, parentCateg
                     var categoryPropertiesHashMap = categoryPropertiesHashMap
 
     var levelString: String = StringUtil.getInstance()!!.getInstance(categoryPropertiesHashMap!!.get(CategoryData.getInstance()!!.LEVEL) as String)!!
-            
 
 this.level= Integer.valueOf(levelString)!!.toInt()
 this.setRoot(rootCategoryInterface)

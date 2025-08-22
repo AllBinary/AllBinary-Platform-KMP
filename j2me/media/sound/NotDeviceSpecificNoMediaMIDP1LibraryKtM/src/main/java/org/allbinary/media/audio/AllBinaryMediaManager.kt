@@ -80,11 +80,9 @@ open fun init(soundsFactoryInterface: SoundsFactoryInterface)
                     var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonString!!.START, THIS, commonString!!.INIT)
 ProgressCanvasFactory.getInstance()!!.addPortion(50, "Media Manager")
@@ -118,11 +116,9 @@ open fun createPlayer(stream: InputStream, type: String)
                     var type = type
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonString!!.START, THIS, "creatPlayer(InputStream)")
 
@@ -140,11 +136,9 @@ open fun createPlayer(locator: String)
                     var locator = locator
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonString: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonString!!.START, THIS, "creatPlayer(locator)")
 

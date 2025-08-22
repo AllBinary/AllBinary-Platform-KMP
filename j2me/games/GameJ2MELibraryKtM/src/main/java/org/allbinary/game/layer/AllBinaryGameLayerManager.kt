@@ -46,7 +46,6 @@ open public class AllBinaryGameLayerManager : AllBinaryLayerManager {
     val NULL_ALLBINARY_LAYER_MANAGER: AllBinaryGameLayerManager = AllBinaryGameLayerManager(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, GameInfo.NONE)
 
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(22)!!
-            
 
         }
             
@@ -70,7 +69,6 @@ this.backgroundBasicColor= backgroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 
     var itemColorFactory: ItemColorFactory = ItemColorFactory.getInstance()!!
-            
 
 itemColorFactory!!.INVERT_PAINT= this.backgroundBasicColor!!.toInt()
 itemColorFactory!!.PAINT= this.foregroundBasicColor!!.toInt()

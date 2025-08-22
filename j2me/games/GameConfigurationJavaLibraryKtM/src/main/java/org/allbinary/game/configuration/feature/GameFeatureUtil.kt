@@ -61,7 +61,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val ON_GAME_FEATURE_CHANGE: String = "onGameFeatureChange"
 
@@ -91,14 +90,12 @@ open fun setDefault(choiceGroup: ChoiceGroup)
 
 
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
-            
 
 stringBuffer!!.append("Multiple Total Choices: ")
 stringBuffer!!.append(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var features: Features = Features.getInstance()!!
-            
 
 
 
@@ -118,11 +115,9 @@ stringBuffer!!.append(isSelected)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
-            
 
 
     var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
-            
 
 
     
@@ -169,14 +164,12 @@ open fun updateMultiple(choiceGroup: ChoiceGroup)
 
 
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
-            
 
 stringBuffer!!.append("Multiple Total Choices: ")
 stringBuffer!!.append(total)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var features: Features = Features.getInstance()!!
-            
 
 
 
@@ -196,11 +189,9 @@ stringBuffer!!.append(isSelected)
 logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
-            
 
 
     var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
-            
 
 
     
@@ -249,7 +240,6 @@ open fun updateExclusive(choiceGroup: ChoiceGroup)
 
 
     var total: Int = choiceGroup!!.getSelectedFlags(selectedArray_return)!!
-            
 
 stringBuffer!!.append("Exclusive Total Choices: 1==")
 stringBuffer!!.append(total)
@@ -277,7 +267,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
                                     {
                                     
     var selectedChoiceLabel: String = choiceGroup!!.getString(index)!!
-            
 
 updateExclusive(selectedChoiceLabel)
 
@@ -295,7 +284,6 @@ open fun isExclusive(itemLabel: String)
                     var itemLabel = itemLabel
 
     var enumeration: Enumeration<Any?> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.keys()!!
-            
 
 
         while(enumeration.hasMoreElements())
@@ -336,15 +324,12 @@ logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(selectedChoiceLabel)!!.toString(), this, "updateExclusive")
 
     var gameFeature: Feature = Feature.getInstance(selectedChoiceLabel)!!
-            
 
 
     var hashtable: Hashtable<Any, Any> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!
-            
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
     var basicArrayList: BasicArrayList
@@ -388,15 +373,12 @@ open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
                                     {
                                     
     var features: Features = Features.getInstance()!!
-            
 
 
     var addIndex: Int = list.indexOf(gameFeature)!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 

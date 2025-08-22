@@ -65,7 +65,6 @@ open fun getInstance(basicColor: BasicColor, forThreedCanvas: Boolean)
                     var forThreedCanvas = forThreedCanvas
 
     var operatingSystem: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     

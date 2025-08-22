@@ -45,11 +45,9 @@ open public class KeySingletonFactory
 
                 init{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var STATIC_BLOCK: String = "Static Block"
@@ -65,7 +63,6 @@ open public class KeySingletonFactory
 
         {
     var keyAsString: String = KeyEvent.getKeyText(keyArray[index]!!)!!
-            
 
 keyStringHashtable!!.put(keyAsString, keyArray[index]!!)
 }
@@ -112,7 +109,6 @@ open fun getArray()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

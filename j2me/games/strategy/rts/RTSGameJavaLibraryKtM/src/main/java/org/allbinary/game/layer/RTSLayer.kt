@@ -136,7 +136,6 @@ open fun isRTSLayer(layerInterface: AllBinaryLayer)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val debug: Boolean = true
 
@@ -145,16 +144,12 @@ open fun isRTSLayer(layerInterface: AllBinaryLayer)
     val inputProcessorArray: Array<GameInputProcessor?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
 
     var rtsLayer2LogHelper: RTSLayer2LogHelper = RTSLayer2LogHelper.getInstance()!!
-            
 
     var waypointLogHelper: WaypointLogHelper = WaypointLogHelper.getInstance()!!
-            
 
     var waypoint2LogHelper: Waypoint2LogHelper = Waypoint2LogHelper.getInstance()!!
-            
 
     var waypointRunnableLogHelper: WaypointRunnableLogHelper = WaypointRunnableLogHelper.getInstance()!!
-            
 
     private val rtsFormInput: RTSFormInput
 
@@ -389,7 +384,6 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var viewPosition2: TileLayerPositionIntoViewPosition = this.getViewPosition() as TileLayerPositionIntoViewPosition
@@ -564,15 +558,12 @@ open fun paint(graphics: Graphics)
 super.paintFirst(graphics)
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 
     var viewX: Int = viewPosition!!.getX()!!
-            
 
 
     var viewY: Int = viewPosition!!.getY()!!
-            
 
 this.getAnimationInterface()!!.paint(graphics, viewX, viewY)
 }
@@ -602,7 +593,6 @@ open fun getSourceId()
 
 
     private val rtsLayerUtil: RTSLayerUtil = RTSLayerUtil.getInstance()!!
-            
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
@@ -806,7 +796,6 @@ this.animationInterface= animationInterface
 
 
     private val layerDistanceUtil: LayerDistanceUtil = LayerDistanceUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -817,11 +806,9 @@ open fun setTarget(targetGameLayer: PathFindingLayerInterface)
                     var targetGameLayer = targetGameLayer
 
     var anotherTargetDistance: Int = layerDistanceUtil!!.getDistance(this as AllBinaryLayer, targetGameLayer as AllBinaryLayer)!!
-            
 
 
     var waypointBehaviorBase: WaypointBehaviorBase = this.getWaypointBehavior()!!
-            
 
 waypointBehaviorBase!!.setTarget(targetGameLayer as PathFindingLayerInterface, anotherTargetDistance)
 }

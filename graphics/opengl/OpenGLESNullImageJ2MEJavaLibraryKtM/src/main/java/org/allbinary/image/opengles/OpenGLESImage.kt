@@ -52,7 +52,6 @@ open public class OpenGLESImage
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val textureFactory: PlatformTextureBaseFactory
 

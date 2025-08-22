@@ -46,15 +46,12 @@ open public class DefaultGameInitializationListener
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
-            
 public constructor        ()
             : super()
         {
     var gameInitializedEventHandler: GameInitializedEventHandler = GameInitializedEventHandler.getInstance()!!
-            
 
 gameInitializedEventHandler!!.removeAllListeners()
 gameInitializedEventHandler!!.addListener(this as GameInitializedListenerInterface)
@@ -82,7 +79,6 @@ open fun onGameInitialized(gameInitializedEvent: GameInitializedEvent)
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {

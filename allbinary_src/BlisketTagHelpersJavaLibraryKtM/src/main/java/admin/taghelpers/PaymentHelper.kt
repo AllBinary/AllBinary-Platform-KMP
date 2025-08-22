@@ -44,7 +44,6 @@ open public class PaymentHelper : Table {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -81,11 +80,9 @@ open fun insert()
 
 
     var paymentEntity: PaymentEntity = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!
-            
 
 
     var paymentInterface: PaymentInterface = PaymentFactory.getInstance(request)!!
-            
 
 paymentEntity!!.add(this.weblisketSession!!.getUserName(), paymentInterface)
 paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(paymentEntity!!.getLastId(this.weblisketSession!!.getUserName())))
@@ -135,7 +132,6 @@ open fun select()
 
 
     var paymentEntity: PaymentEntity = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!
-            
 
 paymentEntity!!.setDefault(this.weblisketSession!!.getUserName(), Integer(this.value))
 
@@ -184,12 +180,10 @@ open fun delete()
 
 
     var paymentEntity: PaymentEntity = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!
-            
 
 paymentEntity!!.remove(this.weblisketSession!!.getUserName(), Integer(this.value))
 
     var paymentInterface: PaymentInterface = paymentEntity!!.getDefault(this.weblisketSession!!.getUserName())!!
-            
 
 
     
@@ -245,11 +239,9 @@ open fun drop()
         try {
             
     var paymentEntity: PaymentEntity = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!
-            
 
 
     var success: String = paymentEntity!!.dropTable()!!
-            
 
 
     
@@ -294,11 +286,9 @@ open fun create()
         try {
             
     var paymentEntity: PaymentEntity = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!
-            
 
 
     var success: String = paymentEntity!!.createTable()!!
-            
 
 
     
@@ -346,7 +336,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance(), portion)!!
-            
 
 
     
@@ -394,7 +383,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance())!!
-            
 
 
     

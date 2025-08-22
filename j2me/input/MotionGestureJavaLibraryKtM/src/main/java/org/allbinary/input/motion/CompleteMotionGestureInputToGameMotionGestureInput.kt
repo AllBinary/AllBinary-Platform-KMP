@@ -69,24 +69,20 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             PreLogUtil.put("Compound Motion Gestures", this, commonStrings!!.INIT)
 
     var motionGestureConfiguration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
-            
 
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
-            
 
 
     var list: BasicArrayList = BasicArrayList()

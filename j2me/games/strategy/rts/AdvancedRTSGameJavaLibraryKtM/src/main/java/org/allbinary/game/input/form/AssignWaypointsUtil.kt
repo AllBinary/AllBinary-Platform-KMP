@@ -62,7 +62,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val WAYPOINT_EVENT: RTSLayerEvent = RTSLayerEvent(
                             null)
@@ -79,7 +78,6 @@ open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLay
         try {
             
     var list: BasicArrayList = ownerAdvancedRTSGameLayer!!.getWaypointBehavior()!!.getOwnedWaypointList()!!
-            
 
 
     var unitWaypointBehavior: UnitWaypointBehavior = unitLayer!!.getWaypointBehavior() as UnitWaypointBehavior
@@ -100,7 +98,6 @@ unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
 
 
     var waypointLayer: RTSLayer = PrimaryWaypointHelper.getInstance()!!.getWaypointLayer()!!
-            
 
 
     
@@ -117,7 +114,6 @@ unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "set", e)
 }

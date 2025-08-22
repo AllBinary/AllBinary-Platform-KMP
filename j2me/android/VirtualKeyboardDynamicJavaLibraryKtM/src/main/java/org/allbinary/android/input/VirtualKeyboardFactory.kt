@@ -46,7 +46,6 @@ open fun init(activity: Activity)
                     var activity = activity
 
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
-            
 
 
     

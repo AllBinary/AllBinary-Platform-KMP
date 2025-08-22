@@ -55,11 +55,9 @@ open fun toXmlNode(document: Document)
 
     var node: Node = CategoryView(categoryInterface).
                             toXmlNode(document)!!
-            
 
 
     var childArray: Array<Any?> = this.categoryInterface!!.getChildNodes()!!.toArray()!!
-            
 
 
     var size: Int = childArray!!.size
@@ -78,7 +76,6 @@ open fun toXmlNode(document: Document)
 
     var childCategoryNode: Node = CategoriesView(childCategoryInterface).
                             toXmlNode(document)!!
-            
 
 node.appendChild(childCategoryNode)
 }

@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
     private val noDecimalSin: LongArray
 
@@ -1475,7 +1474,6 @@ dy[3]= (screenY2 -targetY2)
 
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 
     var angle: Angle

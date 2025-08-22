@@ -54,7 +54,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val TRACK_TO_FIRE_OR_MOVE: String = "trackTo:fireOrMove"
 

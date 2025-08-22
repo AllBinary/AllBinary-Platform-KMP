@@ -36,7 +36,6 @@ open public class GeneratorStoreFrontContextView : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -67,7 +66,6 @@ open fun view(group: String)
                     var group = group
 
     var result: String = TransformsGeneratorUtil.getInstance()!!.generateComponentsFromObjectConfig(this.abeClientInformation, this.getTransformInfoInterface(), group)!!
-            
 
 
     

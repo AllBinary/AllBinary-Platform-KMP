@@ -69,23 +69,18 @@ open fun getDirectionFromCellPositionToAdjacentCellPosition(fromGeographicMapCel
                     var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     
@@ -184,23 +179,18 @@ open fun getEightDirectionFromCellPositionToAdjacentCellPosition(fromGeographicM
                     var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     
@@ -375,23 +365,18 @@ open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPositio
                     var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     
@@ -450,7 +435,6 @@ open fun getDirectionFromCellPositionToCellPosition(fromGeographicMapCellPositio
 
 
     var string: String = stringMaker!!.append(CellPosition.toString(fromGeographicMapCellPosition))!!.append(" == ")!!.append(CellPosition.toString(toGeographicMapCellPosition))!!.toString()!!
-            
 
 stringMaker!!.delete(0, stringMaker!!.length())
 
@@ -476,23 +460,18 @@ open fun getEightDirectionFromCellPositionToCellPosition(fromGeographicMapCellPo
                     var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var fromRow: Int = fromGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var goColumn: Int = toGeographicMapCellPosition!!.getColumn()!!
-            
 
 
     var goRow: Int = toGeographicMapCellPosition!!.getRow()!!
-            
 
 
     var directionFactory: DirectionFactory = DirectionFactory.getInstance()!!
-            
 
 
     

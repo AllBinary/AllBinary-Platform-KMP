@@ -56,10 +56,8 @@ open fun getInstance()
             }            
         
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
     private val angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             

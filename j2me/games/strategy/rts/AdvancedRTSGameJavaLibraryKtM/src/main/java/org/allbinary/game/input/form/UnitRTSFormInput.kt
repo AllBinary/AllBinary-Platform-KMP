@@ -62,12 +62,10 @@ open public class UnitRTSFormInput : RTSFormInput {
         companion object {
             
     val DECAL_ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(23)!!
-            
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val noMoneyGameNotificationEvent: GameNotificationEvent
 
@@ -83,11 +81,9 @@ public constructor        (groupInterface: Array<Group?>)
                     
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.noMoneyGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NO_MONEY, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
 this.newUnitGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.NEW_UNIT, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.WHITE, BooleanFactory.getInstance()!!.FALSE)
@@ -139,7 +135,6 @@ super.process(layerManager)
 
 
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionArea!!.getNextSurroundingGeographicMapCellPosition()!!
-            
 
 this.getHashtable()!!.put(Layer.ID, associatedRtsLayer)
 this.getHashtable()!!.put(UnitRTSFormInput.DECAL_ID, 
@@ -158,7 +153,6 @@ this.getHashtable()!!.put(UnitRTSFormInput.DECAL_ID,
                         else {
                             
     var cellPoint: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getZP())
 
@@ -173,7 +167,6 @@ this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.geographicMapCellPositi
                             
 
     var cellPoint: GPoint = geographicMapCellPosition!!.getMidPoint()!!
-            
 
 this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX() -this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getHalfWidth(), cellPoint!!.getY() -this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getHalfHeight(), this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.getZP())
 this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!, itemIndex)
@@ -201,11 +194,9 @@ open fun attemptBuild(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTS
                     var itemIndex = itemIndex
 
     var cost: Int = layerInterface!!.getCost()!!
-            
 
 
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -235,7 +226,6 @@ layerManager!!.append(layerInterface, PlayersSingletonFactory.total)
 
 
     var advancedPlayerOwnedRTSLayers: AdvancedPlayerOwnedRTSLayers = advancedRTSPlayerLayerInterface!!.getAdvancedPlayerOwnedRTSLayers()!!
-            
 
 advancedPlayerOwnedRTSLayers!!.addUnit(layerInterface)
 

@@ -37,7 +37,6 @@ open public class DownloadableItemValidation : Validation {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var downloadableItem: DownloadableItem
 public constructor        (downloadableItem: DownloadableItem){
@@ -174,7 +173,6 @@ open fun isValid()
                         else {
                             
     var size: String = this.downloadableItem!!.getSize()!!.toString()!!
-            
 
 
     
@@ -210,7 +208,6 @@ open fun isValid()
                         else {
                             
     var size: String = this.downloadableItem!!.getValidTime()!!.toString()!!
-            
 
 
     
@@ -246,7 +243,6 @@ open fun isValid()
                         else {
                             
     var size: String = this.downloadableItem!!.getRetries()!!.toString()!!
-            
 
 
     
@@ -399,7 +395,6 @@ stringBuffer!!.append(" and >= 0 characters long.<br/>")
                         else {
                             
     var size: String = this.downloadableItem!!.getSize()!!.toString()!!
-            
 
 
     
@@ -429,7 +424,6 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         else {
                             
     var size: String = this.downloadableItem!!.getValidTime()!!.toString()!!
-            
 
 
     
@@ -459,7 +453,6 @@ stringBuffer!!.append(" and > 0 digits.<br/>")
                         else {
                             
     var size: String = this.downloadableItem!!.getRetries()!!.toString()!!
-            
 
 
     

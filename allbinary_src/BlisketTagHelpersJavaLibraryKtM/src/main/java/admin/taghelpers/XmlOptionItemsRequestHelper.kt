@@ -40,7 +40,6 @@ open public class XmlOptionItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -84,7 +83,6 @@ values.put(XmlOptionItemData.XML_FILE_STATUS, this.xmlFileStatus)
 values.put(XmlOptionItemData.OPTION_XML_FILE, this.optionXmlFile)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -106,7 +104,6 @@ open fun insert()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -216,7 +213,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.getHashMap()!!
-            
 
 XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.update(values)
 

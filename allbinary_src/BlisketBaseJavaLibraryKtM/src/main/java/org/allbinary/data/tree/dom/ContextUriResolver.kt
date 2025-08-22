@@ -46,7 +46,6 @@ open public class ContextUriResolver
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var basicURIResolver: BasicUriResolver
 public constructor        (basicURIResolver: BasicUriResolver)

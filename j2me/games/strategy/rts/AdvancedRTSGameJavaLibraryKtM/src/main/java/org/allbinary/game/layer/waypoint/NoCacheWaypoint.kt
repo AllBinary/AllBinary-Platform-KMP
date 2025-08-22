@@ -122,7 +122,6 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
                     var startGeographicMapCellPosition = startGeographicMapCellPosition
 
     var endList: BasicArrayList = this.ownerLayer!!.getEndGeographicMapCellPositionList()!!
-            
 
 
     var endGeographicMapCellPosition: GeographicMapCellPosition = BasicArrayListUtil.getInstance()!!.getRandom(endList) as GeographicMapCellPosition
@@ -173,7 +172,6 @@ open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
                     var startGeographicMapCellPosition = startGeographicMapCellPosition
 
     var endGeographicMapCellPosition: GeographicMapCellPosition = this.getEndGeographicMapCellPosition(startGeographicMapCellPosition)!!
-            
 
 
     
@@ -230,7 +228,6 @@ open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
 
 
     var raceTrackGeographicMapCellTypeFactory: GeographicMapCellTypeFactory = raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()!!
-            
 
 
     var customMapGenerator: CustomMapGenerator = raceTrackGeographicMap!!.getCustomMapGenerator() as CustomMapGenerator
@@ -238,17 +235,14 @@ open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
 customMapGenerator!!.copyMapIntoCustomMap()
 
     var customMapArray: Array<IntArray?> = customMapGenerator!!.getCustomMapArray()!!
-            
 
 customMapArray[startGeographicMapCellPosition!!.getRow()]!![startGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getStartType()
 customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPosition!!.getColumn()]= raceTrackGeographicMapCellTypeFactory!!.getEndType()
 
     var pathFindingInfo: PathFindingInfo = PathFindingInfoFactory.getInstance()!!.getInstance(raceTrackGeographicMap, customMapArray)!!
-            
 
 
     var list: BasicArrayList = PathGenerator.getInstance()!!.getInstanceNoCache(geographicMapInterface, pathFindingInfo, 2)!!
-            
 
 
     
@@ -317,7 +311,6 @@ open fun visit(unitLayer: PathFindingLayerInterface)
                                 
 
     var size: Int = this.getConnectedWaypointList()!!.size()!!
-            
 
 
     

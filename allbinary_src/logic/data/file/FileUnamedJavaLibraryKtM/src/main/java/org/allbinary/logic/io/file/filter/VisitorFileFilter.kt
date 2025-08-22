@@ -54,13 +54,11 @@ open fun accept(file: File)
                     var file = file
 
     var abFile: AbFile = FileWrapperUtil.wrapFile(file)!!
-            
 
 
     var isFileAcceptable: Boolean = visit = this.booleanVisitorInterface!!.visit(abFile)visit as Boolean
 visit.
                     !!
-            
 
 
 
@@ -79,7 +77,6 @@ open fun accept(file: AbFile)
     var isFileAcceptable: Boolean = visit = this.booleanVisitorInterface!!.visit(file)visit as Boolean
 visit.
                     !!
-            
 
 
 

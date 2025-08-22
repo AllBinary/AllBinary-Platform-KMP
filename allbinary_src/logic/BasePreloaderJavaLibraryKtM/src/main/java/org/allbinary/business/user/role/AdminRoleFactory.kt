@@ -73,7 +73,6 @@ private constructor        ()
             : super()
         {
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
-            
 
 adminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
 storeAdminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)

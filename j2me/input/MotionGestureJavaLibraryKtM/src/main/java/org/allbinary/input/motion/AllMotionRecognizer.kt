@@ -43,7 +43,6 @@ open public class AllMotionRecognizer : MotionRecognizer {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val motionGestureRecognizer: MotionGestureRecognizer
 

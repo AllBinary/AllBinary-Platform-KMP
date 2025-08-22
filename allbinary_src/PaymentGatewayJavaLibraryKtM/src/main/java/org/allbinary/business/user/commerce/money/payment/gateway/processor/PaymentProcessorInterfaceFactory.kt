@@ -56,7 +56,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -73,11 +72,9 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
         try {
             
     var paymentTransactionInterface: PaymentTransactionInterface = PaymentTransactionInterfaceRequestFactory.getInstance()!!.getInstance(transformInfoInterface)!!
-            
 
 
     var gatewayName: String = paymentTransactionInterface!!.getOrderHistory()!!.getPaymentMethod()!!
-            
 
 
     
@@ -86,11 +83,9 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
                                     {
                                     
     var paymentType: PaymentType = PaymentTypeUtil.getInstance()!!.get(gatewayName)!!
-            
 
 
     var paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface = paymentType!!.getPaymentProcessorInterfaceFactoryInterface()!!
-            
 
 
 
@@ -112,7 +107,6 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

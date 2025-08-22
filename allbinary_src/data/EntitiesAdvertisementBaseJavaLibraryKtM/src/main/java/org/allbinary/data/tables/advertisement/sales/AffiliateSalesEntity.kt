@@ -40,7 +40,6 @@ open public class AffiliateSalesEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "affiliate"
 public constructor        ()                        
@@ -89,7 +88,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var entryData: EntryData = EntryData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -110,7 +108,6 @@ open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var returnStr: String = super.createTable(this.createTableStatement())!!
-            
 
 
 

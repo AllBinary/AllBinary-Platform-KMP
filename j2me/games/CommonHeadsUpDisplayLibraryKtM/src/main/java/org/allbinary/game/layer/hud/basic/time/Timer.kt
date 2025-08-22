@@ -52,7 +52,6 @@ open public class Timer
     private val MAX: CharArray = charArrayOf('L','O','L')
 
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 public constructor        (maxTime: Int)
             : super()
         {

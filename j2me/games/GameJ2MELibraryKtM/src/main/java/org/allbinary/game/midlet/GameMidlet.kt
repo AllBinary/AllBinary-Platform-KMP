@@ -117,25 +117,18 @@ open public class GameMidlet : ProgressMidlet
         
 
     val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
     val features: Features = Features.getInstance()!!
-            
 
     val htmlFeatureFactory: HTMLFeatureFactory = HTMLFeatureFactory.getInstance()!!
-            
 
     val midletStrings: MidletStrings = MidletStrings.getInstance()!!
-            
 
     val myCommandsFactory: MyCommandsFactory = MyCommandsFactory.getInstance()!!
-            
 
     val gameStrings: GameStrings = GameStrings.getInstance()!!
-            
 
     val gameAdStateFactory: GameAdStateFactory = GameAdStateFactory.getInstance()!!
-            
 
     private val DISPLAYABLE: String = " Displayable: "
 
@@ -147,25 +140,20 @@ open public class GameMidlet : ProgressMidlet
 
     private val COMMAND_ACTION: String = StringMaker().
                             append("GameMidlet::")!!.append(midletStrings!!.COMMAND_ACTION)!!.toString()!!
-            
 
     private val PAUSE_APP_BACKGROUND: String = "pauseAppBackground"
 
     private val UN_PAUSE_APP_BACKGROUND: String = "unPauseAppBackground"
 
     private val aboutCommandProcessor: AboutCommandProcessor = AboutCommandProcessor.getInstance()!!
-            
 
     private val webCommandProcessor: WebCommandProcessor = WebCommandProcessor.getInstance()!!
-            
 
     private val gameMidletStateFactory: GameMidletStateFactory = GameMidletStateFactory.getInstance()!!
-            
 
     val gameStartTimeHelper: TimeDelayHelper = TimeDelayHelper(240)
 
     private val fullScreenUtil: FullScreenUtil = FullScreenUtil.getInstance()!!
-            
 
     private val debugInterface: DebugInterface
 
@@ -190,7 +178,6 @@ public constructor        (clientInformationFactory: ClientInformationFactory)
 SmallIntegerSingletonFactory.getInstance()!!.init(0x291, 6)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.init(this)
 GameFeatureEventHandler.getInstance()!!.addListener(ChangedGameFeatureListener.getInstance())
@@ -247,7 +234,6 @@ override fun pauseApp()
 {this.pauseAppBackground(true)
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.getAdvertisements()!!.stopAll()
 }
@@ -282,7 +268,6 @@ open fun unPauseApp()
 {this.unPauseAppBackground(true)
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.getAdvertisements()!!.startAll()
 }
@@ -324,7 +309,6 @@ override fun destroyApp(unconditional: Boolean, isProgress: Boolean)
                     var isProgress = isProgress
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     
@@ -361,7 +345,6 @@ override fun destroyApp(unconditional: Boolean)
             PreLogUtil.put(GameStatisticsFactory.getInstance()!!.toString(), this, METHOD_NAME)
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.getAdvertisements()!!.stopAll()
 
@@ -395,7 +378,6 @@ override fun startApp()
         try {
             
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
-            
 
 gameAdState!!.getAdvertisements()!!.startAll()
 
@@ -484,7 +466,6 @@ PreLogUtil.put(StringMaker().
                             append(COMMAND_NAME)!!.append(label)!!.append(DISPLAYABLE)!!.append(displayableAsString)!!.toString(), this, this.COMMAND_ACTION)
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 
     
@@ -602,11 +583,9 @@ gameMidletStateFactory!!.setCurrentGameState(GameState.PLAYING_GAME_STATE)
                                     {
                                     
     var inApplicationPurchaseFactory: InApplicationPurchaseFactory = InApplicationPurchaseFactory.getInstance()!!
-            
 
 
     var list: BasicArrayList = LockableFeatureFactory.getInstance()!!.getList()!!
-            
 
 
     var lockableFeature: LockableFeature = list.get(0) as LockableFeature
@@ -869,12 +848,10 @@ gameInputMappingCanvas!!.setDefault()
                                     this.pauseAppBackground(false)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(50, "In Game Options")
 
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
-            
 
 InGameOptionsFormFactory.getInstance()!!.init(this, InGameFeatures(), "Options In Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
 
@@ -906,7 +883,6 @@ GameFeatureFormUtil.getInstance()!!.setDefault(inGameOptionsForm)
 this.stopAll()
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 isFullScreen= features.isFeature(mainFeatureFactory!!.FULL_SCREEN)
 ResizableListenerHandler.getInstance()!!.fireEvent(true)
@@ -952,7 +928,6 @@ AllBinaryMediaManager.setMuted(false)
                                     this.pauseAppBackground(false)
 
     var keyValuePersistance: KeyValuePersistance = GamePersistanceSingleton.getInstance()!!
-            
 
 keyValuePersistance!!.clear()
 keyValuePersistance!!.loadAll(abeClientInformation)
@@ -963,7 +938,6 @@ keyValuePersistance!!.loadAll(abeClientInformation)
                                     {
                                     
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
-            
 
 this.setLoadGameForm(LoadGameForm(this, "Load Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor()))
 
@@ -985,7 +959,6 @@ this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, this.getLoadGameF
                                     {
                                     
     var index: Int = this.getLoadGameForm()!!.getSelectedId()!!
-            
 
 
     
@@ -994,12 +967,10 @@ this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, this.getLoadGameF
                                     {
                                     
     var keyValuePersistance: KeyValuePersistance = GamePersistanceSingleton.getInstance()!!
-            
 
 this.setStartStateHashtable(keyValuePersistance!!.get(index))
 
     var menuListener: MenuListener = this.getLoadGameForm()!!
-            
 
 menuListener!!.close()
 PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, COMMAND_ACTION)
@@ -1018,7 +989,6 @@ PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, COMM
                                     {
                                     
     var index: Int = this.getLoadGameForm()!!.getSelectedText()!!
-            
 
 
     
@@ -1027,7 +997,6 @@ PreLogUtil.put(BasicMotionGesturesHandler.getInstance()!!.toString(), this, COMM
                                     {
                                     
     var keyValuePersistance: KeyValuePersistance = GamePersistanceSingleton.getInstance()!!
-            
 
 keyValuePersistance!!.delete(abeClientInformation, index)
 keyValuePersistance!!.clear()
@@ -1046,7 +1015,6 @@ this.getLoadGameForm()!!.update()
                                     {
                                     
     var keyValuePersistance: KeyValuePersistance = GamePersistanceSingleton.getInstance()!!
-            
 
 this.pauseAppBackground(false)
 keyValuePersistance!!.save(abeClientInformation, this.getCurrentStateHashtable())
@@ -1102,7 +1070,6 @@ this.commandAction(gameCommandsFactory!!.CLOSE_AND_SHOW_GAME_CANVAS, displayable
                                     {
                                     
     var virtualKeyboardEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance()!!
-            
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT)
 
@@ -1115,11 +1082,9 @@ virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT
                                     {
                                     
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 
     var isFullScreen: Boolean = features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
-            
 
 
     
@@ -1159,15 +1124,12 @@ open fun updateFullScreen()
         //nullable = true from not(false or (false and true)) = true
 {
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 
     var isFullScreen: Boolean = features.isFeature(mainFeatureFactory!!.FULL_SCREEN)!!
-            
 
 
     var displayable: Displayable = this.getDisplay()!!.getCurrent()!!
-            
 
 
     
@@ -1257,7 +1219,6 @@ open fun startGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
 {
     var threadFactoryUtil: ThreadFactoryUtil = ThreadFactoryUtil.getInstance()!!
-            
 
 thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
 logUtil!!.put(StringMaker().
@@ -1296,7 +1257,6 @@ gameCanvasRunnableInterface!!.setRunning(false)
 ThreadUtil.getInstance()!!.join(this.thread)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     
@@ -1352,7 +1312,6 @@ open fun getGameOptionsForm()
         //nullable = true from not(false or (false and true)) = true
 : CommandForm{
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
-            
 
 
 
@@ -1369,7 +1328,6 @@ open fun save()
 {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.SAVE)
 
     var hashtable: Hashtable<Any, Any> = this.getCurrentStateHashtable()!!
-            
 
 GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
 }
@@ -1389,11 +1347,9 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
                                     {
                                     
     var currentHashtable: Hashtable<Any, Any> = this.allbinaryGameCanvasRunnableInterface!!.getCurrentStateHashtable()!!
-            
 
 
     var enumeration: Enumeration<Any?> = currentHashtable!!.keys()!!
-            
 
 
     var key: Any
@@ -1472,7 +1428,6 @@ open fun isDemoLoading()
                                 
 
     var displayable: Displayable = this.getDisplay()!!.getCurrent()!!
-            
 
 
     

@@ -61,10 +61,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val aboutCommandProcessor: AboutCommandProcessor = AboutCommandProcessor.getInstance()!!
-            
 
     val list: BasicArrayList = BasicArrayList()
 
@@ -85,7 +83,6 @@ open fun process(midletCommandListener: CommandListener, command: Command, canva
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }

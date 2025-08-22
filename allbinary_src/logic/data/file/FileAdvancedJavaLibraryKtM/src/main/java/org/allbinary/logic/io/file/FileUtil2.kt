@@ -53,13 +53,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

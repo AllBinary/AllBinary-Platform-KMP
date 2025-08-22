@@ -36,7 +36,6 @@ open public class TouchButtonsMappingPaintable : Paintable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var foregroundColor: Int
 
@@ -59,7 +58,6 @@ open fun init()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
@@ -73,22 +71,18 @@ open fun createPaintableTable()
         //nullable = true from not(false or (false and true)) = true
 : Array<Array<Paintable?>?>{
     var totalColumns: Int = touchButtonLocationHelper!!.getTotalColumns()!!
-            
 
 
     var totalRows: Int = touchButtonLocationHelper!!.getTotalRows()!!
-            
 
 
     var paintableTable: Array<Array<Paintable?>?> = arrayOfNulls(totalColumns)
 
 
     var cellPositionFactory: CellPositionFactory = CellPositionFactory.getInstance()!!
-            
 
 
     var commonButtons: CommonButtons = CommonButtons.getInstance()!!
-            
 
 
 
@@ -123,11 +117,9 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var totalColumns: Int = touchButtonLocationHelper!!.getTotalColumns()!!
-            
 
 
     var totalRows: Int = touchButtonLocationHelper!!.getTotalRows()!!
-            
 
 
 

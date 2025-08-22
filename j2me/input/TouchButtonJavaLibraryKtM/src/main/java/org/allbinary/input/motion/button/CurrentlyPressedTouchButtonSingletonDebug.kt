@@ -176,7 +176,6 @@ override fun remove(index: Int)
                     var index = index
 
     var touchButtonInput: TouchButtonInput = super.remove(index)!!
-            
 
 this.listString= list.toString()
 this.string= StringMaker().
@@ -195,7 +194,6 @@ override fun remove(touchButtonInput: TouchButtonInput)
                     var touchButtonInput = touchButtonInput
 
     var isRemoved: Boolean = super.remove(touchButtonInput)!!
-            
 
 this.listString= list.toString()
 this.string= StringMaker().

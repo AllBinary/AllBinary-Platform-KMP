@@ -48,17 +48,14 @@ open public class HorizontalScreenPatrolAI : BasicAI {
         companion object {
             
     val SOUND: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(433)!!
-            
 
         }
             
     var keyDirection: Int = Canvas.LEFT
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private var firingX: Int = displayInfoSingleton!!.getLastHalfWidth()!!
-            
 
     private var firedIndex: Int = 0
 
@@ -67,7 +64,6 @@ open public class HorizontalScreenPatrolAI : BasicAI {
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(240)
 
     private val secondaryPlayerQueue: PlayerQueue = SecondaryPlayerQueueFactory.getInstance()!!
-            
 
     private val sound: Sound
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
@@ -117,11 +113,9 @@ super.processAI(this.keyDirection)
                                     {
                                     
     var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var currentOwnerLayerX: Int = layerInterface!!.getXP()!!
-            
 
 
     
@@ -130,7 +124,6 @@ super.processAI(this.keyDirection)
                                     {
                                     
     var y: Int = MyRandomFactory.getInstance()!!.getAbsoluteNextIntAllowZero(50)!!
-            
 
 layerInterface!!.setPosition(displayInfoSingleton!!.getLastWidth() +layerInterface!!.getWidth() +50, y, layerInterface!!.getZP())
 firedIndex= 0

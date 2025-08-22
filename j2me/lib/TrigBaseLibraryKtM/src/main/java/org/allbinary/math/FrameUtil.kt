@@ -93,7 +93,6 @@ open fun adjustAngleToFrameAngle(currentAngle: Int)
                     var currentAngle = currentAngle
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 
     

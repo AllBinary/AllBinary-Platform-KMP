@@ -65,19 +65,15 @@ open fun getInstance(request: ServletRequest, response: ServletResponse, servlet
 
 
     var requestCommand: String = httpRequest!!.getPathInfo()!!
-            
 
 
     var index: Int = requestCommand!!.indexOf(AbPathData.getInstance()!!.SEPARATOR)!!
-            
 
 
     var storeName: String = requestCommand!!.substring(0, index)!!
-            
 
 
     var requestName: String = requestCommand!!.substring(index, requestCommand!!.length)!!
-            
 
 
 
@@ -105,7 +101,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
 
     var storeName: String = weblisketSession!!.getStoreName()!!
-            
 
 
 

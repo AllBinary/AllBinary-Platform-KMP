@@ -41,10 +41,8 @@ open public class DemoRunnable
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val demoGameMidlet: DemoGameMidlet
 

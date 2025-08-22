@@ -58,7 +58,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -151,7 +150,6 @@ open fun run(allBinaryGameCanvas: AllBinaryGameCanvas)
                     var allBinaryGameCanvas = allBinaryGameCanvas
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(GameTypeFactory.getInstance()!!.BOT.toString(), this, commonStrings!!.RUN)
 }

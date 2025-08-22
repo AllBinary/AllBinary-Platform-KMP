@@ -176,7 +176,6 @@ override fun nextAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
     var frame: Int = this.getFrame()!!
-            
 
 this.circularIndexUtil!!.next()
 this.setFrame(frame)
@@ -186,7 +185,6 @@ override fun previousAnimation()
         //nullable = true from not(false or (false and true)) = true
 {
     var frame: Int = this.getFrame()!!
-            
 
 this.circularIndexUtil!!.previous()
 this.setFrame(frame)
@@ -199,7 +197,6 @@ override fun setAnimation(index: Int)
                     var index = index
 
     var frame: Int = this.getFrame()!!
-            
 
 this.circularIndexUtil!!.setIndex(index)
 this.setFrame(frame)

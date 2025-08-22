@@ -65,7 +65,6 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, graphArray: Arr
                     var graphArray = graphArray
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.START, this, commonStrings!!.GET_INSTANCE)
 

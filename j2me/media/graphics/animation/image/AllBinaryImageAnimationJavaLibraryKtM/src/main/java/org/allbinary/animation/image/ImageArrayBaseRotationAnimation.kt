@@ -41,7 +41,6 @@ open public class ImageArrayBaseRotationAnimation : RotationAnimation {
         
 
     private val imageModifierUtil: ImageModifierUtil = ImageModifierUtil.getInstanceOrCreate()!!
-            
 
     private val originalImageArray: Array<Image?>
 
@@ -95,7 +94,6 @@ override fun setAlpha(alpha: Int)
 imageModifierUtil!!.reset()
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 
@@ -108,7 +106,6 @@ override fun nextRotation()
 {super.nextRotation()
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 this.currentImage= this.imageArray[index]!!
@@ -119,7 +116,6 @@ override fun previousRotation()
 {super.previousRotation()
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 this.currentImage= this.imageArray[index]!!
@@ -133,7 +129,6 @@ override fun setFrame(index2: Int)
 super.setFrame(index2)
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 imageModifierUtil!!.setAlpha(this.originalImageArray[index]!!, this.imageArray[index]!!, index, this.alphaP)
 this.currentImage= this.imageArray[index]!!
@@ -187,7 +182,6 @@ open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
     var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
-            
 
 
     var size2: Int = this.imageArray!!.size
@@ -226,7 +220,6 @@ disposalUtil!!.dispose(this.currentImage)
         //nullable = true from not(false or (false and true)) = true
 {
     var disposalUtil: DisposalUtil = DisposalUtil.getInstance()!!
-            
 
 
     var size2: Int = this.imageArray!!.size

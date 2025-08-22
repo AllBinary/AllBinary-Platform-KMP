@@ -40,10 +40,8 @@ open public class StoreTagWorkFlowHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var storeWorkFlowInterface: StoreWorkFlowInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){

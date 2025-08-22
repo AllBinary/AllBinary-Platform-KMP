@@ -34,7 +34,6 @@ open public class HealthBarAnimation : Animation {
         
 
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
     var x2: Int= 0
 
@@ -53,7 +52,6 @@ this.allbinaryLayer= layerInterface
 this.location= location
 
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
-            
 
 
     
@@ -145,7 +143,6 @@ open fun getY()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
-            
 
 
     

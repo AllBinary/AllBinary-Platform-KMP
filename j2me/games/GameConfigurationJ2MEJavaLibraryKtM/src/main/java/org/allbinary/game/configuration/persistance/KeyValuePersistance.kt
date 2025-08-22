@@ -84,7 +84,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
             recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-            
 
 
     var hashtable: Hashtable<String, String>
@@ -97,7 +96,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -115,7 +113,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
         while(recordEnum!!.hasNextElement())
         {
     var id: Int = recordEnum!!.nextRecordId()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.append(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
@@ -205,11 +202,9 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashtable)!!
-            
 
 
     var anyType: Any
@@ -234,7 +229,6 @@ outputStream!!.writeUTF(value)
 
 
     var savedGameBytes: ByteArray = byteArrayOutputStream!!.toString()!!.encodeToByteArray()!!
-            
 
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 } catch(e: Exception)

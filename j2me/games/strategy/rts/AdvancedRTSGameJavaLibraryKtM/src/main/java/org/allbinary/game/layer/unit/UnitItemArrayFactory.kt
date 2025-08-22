@@ -56,7 +56,6 @@ open public class UnitItemArrayFactory
         }
             
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
@@ -85,7 +84,6 @@ open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryI
 
 
     var index: Int = name.indexOf(commonSeps!!.SPACE)!!
-            
 
 
     
@@ -119,11 +117,9 @@ open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInt
                     var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
     var IMAGE_CACHE: ImageCache = GameFeatureImageCacheFactory.getInstance()!!
-            
 
 
     var image: Image = IMAGE_CACHE.get(flagResources!!.RESOURCE_ICON)!!
-            
 
 
     var item: CustomItem = LayerInterfaceFactoryImageItem(name, image, ImageItem.LAYOUT_DEFAULT, flagResources!!.NAME, basicColor, arrayOf(RTSLayerTextAnimation(RTSGameStrings.getInstance()!!.DRAGGABLE, image)), layerInterfaceFactoryInterface)

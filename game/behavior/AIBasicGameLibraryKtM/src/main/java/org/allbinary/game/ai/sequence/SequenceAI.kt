@@ -77,7 +77,6 @@ open fun next()
 {this.index++
 
     var artificialIntelligenceInterface: ArtificialIntelligenceInterface = this.getSelectedArtificialIntelligenceInterface()!!
-            
 
 
     

@@ -79,7 +79,6 @@ open fun getInventoryItemView(inventoryTag: HelperTag)
 
 
     var viewObject: TransformInterface = validationViewHelper!!.getViewObject()!!
-            
 
 
     
@@ -138,7 +137,6 @@ open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
 
 
     var viewObject: TransformInterface = validationViewHelper!!.getViewObject()!!
-            
 
 
     
@@ -197,7 +195,6 @@ open fun getRequestMapInterface(inventoryTag: HelperTag)
 
 
     var viewObject: TransformInterface = validationViewHelper!!.getViewObject()!!
-            
 
 
     

@@ -39,7 +39,6 @@ open public class TransformInfoHttpContext : TransformInfoHttp {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(databaseHashMap, propertiesHashMap, pageContext){

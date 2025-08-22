@@ -53,10 +53,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -78,11 +76,9 @@ logUtil!!.put("Starting", this, "getImage")
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImage!!.getWidth(
                             null), bufferedImage!!.getHeight(
                             null))!!
-            
 
 
     var g: Graphics2D = newBufferedImage!!.createGraphics()!!
-            
 
 
     
@@ -91,7 +87,6 @@ logUtil!!.put("Starting", this, "getImage")
                                     {
                                     
     var tx: AffineTransform = AffineTransform.getScaleInstance(1,  -1)!!
-            
 
 tx.translate(0,  -bufferedImage!!.getHeight(
                             null))
@@ -110,7 +105,6 @@ bufferedImage= op.filter(bufferedImage,
                                     {
                                     
     var tx: AffineTransform = AffineTransform.getScaleInstance( -1, 1)!!
-            
 
 tx.translate( -bufferedImage!!.getWidth(
                             null), 0)
@@ -148,11 +142,9 @@ open fun getImages(bufferedImage: BufferedImage, verticle: Boolean, horizontal: 
                     var horizontal = horizontal
 
     var width: Int = bufferedImage!!.getWidth()!!
-            
 
 
     var height: Int = bufferedImage!!.getHeight()!!
-            
 
 
     var cellHeight: Int = height

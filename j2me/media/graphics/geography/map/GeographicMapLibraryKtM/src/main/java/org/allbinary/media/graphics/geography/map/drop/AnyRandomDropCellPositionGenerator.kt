@@ -59,15 +59,12 @@ open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographic
 this.geographicMapInterface= geographicMapInterface
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var total: Int = tiledLayer!!.getColumns() *tiledLayer!!.getRows()

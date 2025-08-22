@@ -39,10 +39,8 @@ open public class AllBinaryNoFlickerAndroidImageRotationAnimation : ImageBaseRot
         
 
     private val imageModifierUtil: ImageModifierUtil = ImageModifierUtil.getInstanceOrCreate()!!
-            
 
     private val androidImageUtil: AndroidImageUtil = AndroidImageUtil.getInstance()!!
-            
 
     private val matrix: Matrix = Matrix()
 
@@ -185,12 +183,10 @@ open fun setFrame(index: Int)
                     var index = index
 
     var currentFrame: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 this.circularIndexUtil!!.setIndex(index)
 
     var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 this.angleInfo!!.adjustAngle(newFrame)
 matrix.setRotate((newFrame -currentFrame) *increment, this.halfWidth, this.halfHeight)

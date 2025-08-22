@@ -84,7 +84,6 @@ private constructor        ()
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 UP_LEFT= Direction("UP LEFT", stringBuffer!!.append(UP.getOtherName())!!.append(commonSeps!!.SPACE)!!.append(LEFT.getOtherName())!!.toString(), 4)
 stringBuffer!!.delete(0, stringBuffer!!.length())

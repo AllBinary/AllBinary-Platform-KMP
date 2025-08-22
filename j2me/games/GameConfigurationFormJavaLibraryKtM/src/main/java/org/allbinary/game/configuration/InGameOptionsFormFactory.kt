@@ -59,7 +59,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var SINGLETON: CommandForm = CommandForm.NULL_COMMAND_FORM
 
@@ -95,7 +94,6 @@ SINGLETON= InGameOptionsForm(commandListener, title, backgrounBasicColor, foregr
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }

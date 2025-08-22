@@ -102,7 +102,6 @@ override fun updateRectangle()
 this.rectangleP= Rectangle(PointFactory.getInstance()!!.getInstance(x, y), this.rawRectangle!!.getWidth() +(2 *xBorder), this.rawRectangle!!.getHeight() +(2 *yBorder))
 
     var point: GPoint = this.rectangleP!!.getPoint()!!
-            
 
 this.animationX= point.getX() +xBorder
 this.animationY= point.getY() +yBorder

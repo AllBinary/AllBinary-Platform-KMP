@@ -74,15 +74,12 @@ open fun paint(graphics: Graphics)
                                     this.timeDelayHelper!!.delay= Integer.MAX_VALUE
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var width: Int = myFont!!.stringWidth(VIBRATING)!!
-            
 
 graphics.drawString(VIBRATING, displayInfoSingleton!!.getLastHalfWidth() -(width shr 1), 0, anchor)
 

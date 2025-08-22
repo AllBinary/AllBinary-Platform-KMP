@@ -45,13 +45,11 @@ open fun getInstance(storeName: String)
                     var storeName = storeName
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
             
     var storeFronts: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
-            
 
 
 
@@ -61,7 +59,6 @@ open fun getInstance(storeName: String)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -85,7 +82,6 @@ open fun getInstance(storeName: String)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

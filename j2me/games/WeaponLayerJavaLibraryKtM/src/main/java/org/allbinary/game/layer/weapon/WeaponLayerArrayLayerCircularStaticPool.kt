@@ -56,7 +56,6 @@ open fun getInstance()
     private val MAX: Int = 5
 
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX)!!
-            
 
     private var ALL_WEAPONLAYER_ARRAY: Array<Array<Array<Any?>?>?> = arrayOfNulls(4)
 

@@ -64,15 +64,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.itemInterface!!.toHashMap()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var node: Node = document.createElement(ItemData.ITEM)!!
-            
 
 
     var basicItemView: BasicItemView = BasicItemView(this.itemInterface, vector)
@@ -80,11 +77,9 @@ open fun toXmlNode(document: Document)
 node.appendChild(basicItemView!!.toXmlNode(document))
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var nameArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = nameArray!!.size
@@ -109,7 +104,6 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 
     var shippingAddressNode: Node = document.createElement(StreetAddressData.NAME)!!
-            
 
 shippingAddressNode!!.appendChild(this.itemInterface!!.getShippingAddress()!!.toXmlNode(document))
 

@@ -55,16 +55,12 @@ open fun getInstance()
             }            
         
     val START_LEVEL_INTERMISSION_GAME_STATE: GameState = GameStateFactory.getInstance("START_LEVEL_INTERMISSION_GAME_STATE")!!
-            
 
     val WAIT_LEVEL_INTERMISSION_GAME_STATE: GameState = GameStateFactory.getInstance("WAIT_LEVEL_INTERMISSION_GAME_STATE")!!
-            
 
     val SHOW_RESULTS_LEVEL_INTERMISSION_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_RESULTS_LEVEL_INTERMISSION_GAME_STATE")!!
-            
 
     val SHOW_HIGH_SCORE_LEVEL_INTERMISSION_GAME_STATE: GameState = GameStateFactory.getInstance("SHOW_HIGH_SCORE_LEVEL_INTERMISSION_GAME_STATE")!!
-            
 
 }
                 

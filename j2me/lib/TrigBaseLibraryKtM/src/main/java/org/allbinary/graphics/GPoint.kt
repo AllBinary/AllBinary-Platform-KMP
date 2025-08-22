@@ -54,7 +54,6 @@ open fun toStringStatic(x: Int, y: Int, z: Int)
 
 
     var positionStrings: PositionStrings = PositionStrings.getInstance()!!
-            
 
 stringBuffer!!.append(POINT_LABEL)
 stringBuffer!!.append(positionStrings!!.X_LABEL)

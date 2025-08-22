@@ -47,7 +47,6 @@ open public class GenericStoreTransformInfoObjectConfig : TransformInfoObjectCon
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val abeClientInformation: AbeClientInformationInterface
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
@@ -148,11 +147,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generate()")
 
 
     var objectConfigDocumentString: String = DomDocumentHelper.toString(objectConfigDocument)!!
-            
 
 
     var replaceHashMap: HashMap<Any, Any> = this.createReplaceHashMap(transformInfoHttpStoreInterface, objectConfigDocumentString)!!
-            
 
 
 
@@ -174,20 +171,16 @@ open fun createReplaceHashMap(transformInfoHttpStoreInterface: TransformInfoHttp
                     var objectConfigDocumentString = objectConfigDocumentString
 
     var storeName: String = transformInfoHttpStoreInterface!!.getStoreName()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = this.createHashMap(transformInfoHttpStoreInterface, objectConfigDocumentString)!!
-            
 
 
     var transformInfoObjectConfigData: TransformInfoObjectConfigData = TransformInfoObjectConfigData.getInstance()!!
-            
 
 hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +StoreFrontData.getInstance()!!.NAME, storeName)
 
     var pageName: String = TransformTemplateCustomizerUtil.getInstance()!!.getPageNameHack(this.getTransformInfoInterface()!!.getName(), storeName)!!
-            
 
 hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
 
@@ -213,15 +206,12 @@ open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objec
 
 
     var storeName: String = transformInfoHttpStoreInterface!!.getStoreName()!!
-            
 
 
     var propertiesHashMap: HashMap<Any, Any> = transformInfoHttpStoreInterface!!.getPropertiesHashMap()!!
-            
 
 
     var templateNameOverride: String = StringUtil.getInstance()!!.getInstance(propertiesHashMap!!.get(TransformInfoData.getInstance()!!.PARTIAL) as String)!!
-            
 
 
     
@@ -249,11 +239,9 @@ templateNameStringBuffer!!.append(RootTransformInfoData.NAME)
                                     {
                                     
     var templateInterface: TransformTemplateInterface = TransformTemplateFactory.getInstance()!!.getInstance(abeClientInformation, templateNameStringBuffer!!.toString(), transformInfoHttpStoreInterface!!.getPropertiesHashMap(), transformInfoHttpStoreInterface!!.getPageContext())!!
-            
 
 
     var selectedTemplate: String = templateInterface!!.getName()!!
-            
 
 hashMap!!.put(templateNameKey, selectedTemplate)
 
@@ -282,7 +270,6 @@ open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>
 
 
     var newObjectConfigDocument: Document = DomDocumentHelper.create(replace.all(objectConfigDocumentString))!!
-            
 
 
     

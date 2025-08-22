@@ -59,7 +59,6 @@ open fun getSize()
 
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
 
 open fun getRandomInstance()
         //nullable = true from not(false or (false and true)) = true

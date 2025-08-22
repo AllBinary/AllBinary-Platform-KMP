@@ -49,7 +49,6 @@ open fun getInstance()
         }
             
     private val SINGLETON: HardwareInterface = NoHardware.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

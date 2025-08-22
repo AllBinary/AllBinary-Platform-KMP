@@ -54,7 +54,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val SPECIAL_BUTTON_SEVEN_TESTING_ONLY: TouchButtonInput
 

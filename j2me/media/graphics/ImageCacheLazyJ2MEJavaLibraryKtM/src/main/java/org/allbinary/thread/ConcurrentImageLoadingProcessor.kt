@@ -36,10 +36,8 @@ open public class ConcurrentImageLoadingProcessor : BaseImageLoadingProcessor {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val imageCache: ImageCache
 
@@ -57,7 +55,6 @@ imageCache!!.loadRemainingAnimations()
 this.setRunning(false)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     

@@ -43,7 +43,6 @@ open fun init(inputProcessorArray: Array<GameInputProcessor?>)
 
 
     var noInputProcessor: GameInputProcessor = GameInputProcessor.getInstance()!!
-            
 
 
     var total: Int = InputFactory.getInstance()!!.MAX

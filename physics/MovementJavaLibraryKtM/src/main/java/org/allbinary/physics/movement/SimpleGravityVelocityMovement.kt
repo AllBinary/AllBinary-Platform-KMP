@@ -45,7 +45,6 @@ public constructor        (speedBasicDecimal: BasicDecimal)
 
 
     private val gravityUtil: GravityUtil = GravityUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)

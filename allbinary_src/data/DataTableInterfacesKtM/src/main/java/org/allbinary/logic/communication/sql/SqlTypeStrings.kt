@@ -63,31 +63,24 @@ open fun getInstance()
 
     val ONE_KB_CHAR_COLUMN: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append("(1024)")!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val MAX_CHAR_COLUMN: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(MAX_SIZE)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val MAX_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(MAX_SIZE)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val SIXTY_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(SIXTY_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val ONE_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(ONE_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val SIX_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(SIX_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val TWELVE_CHAR_COLUMN_NOT_NULL: String = StringBuilder().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(CHAR_COLUMN)!!.append(this.TWELVE_SIZE)!!.append(NOT_NULL)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.toString()!!
-            
 
     val TWO_INT_NOT_NULL: String = " INT(2) NOT NULL, "
 

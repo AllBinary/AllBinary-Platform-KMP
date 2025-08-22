@@ -45,7 +45,6 @@ open public class GameKeyFromMotionGestureEventListener : CompleteMotionGestureI
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var previousGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 override fun onEvent(eventObject: AllBinaryEventObject)
@@ -68,7 +67,6 @@ override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: 
 
 
     var gameKeyEvent: GameKeyEvent = gameKeyCompleteMotionGestureInputEvent!!.getGameKeyEvent()!!
-            
 
 
     
@@ -102,7 +100,6 @@ previousGameKeyEvent= gameKeyEvent
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "onCompleteMotionGestureInputEvent", e)
 }

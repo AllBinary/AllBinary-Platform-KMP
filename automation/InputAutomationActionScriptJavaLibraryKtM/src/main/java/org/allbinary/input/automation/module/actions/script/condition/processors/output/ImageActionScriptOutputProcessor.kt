@@ -51,24 +51,19 @@ open fun process(imageActionScriptOutputInterface: ImageActionScriptOutputInterf
                     var frame = frame
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toString(), "ImageActionScriptOutputProcessor", commonStrings!!.PROCESS)
 
     var imageTypes: ImageTypes = imageActionScriptOutputInterface!!.getImageTypes()!!
-            
 
 
     var vector: Vector = imageTypes!!.getVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -82,7 +77,6 @@ logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toSt
 
 
     var imageIOInterface: ImageIOInterface = InputImageIOInterfaceFactory.getInstance(imageType)!!
-            
 
 imageIOInterface!!.save(frame)
 }
@@ -93,7 +87,6 @@ imageIOInterface!!.save(frame)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

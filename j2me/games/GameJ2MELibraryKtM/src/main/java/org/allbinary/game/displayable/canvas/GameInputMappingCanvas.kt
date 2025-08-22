@@ -73,7 +73,6 @@ open public class GameInputMappingCanvas : GameCommandCanvas
     private val inputMapping: PersistentInputMapping
 
     private val inputToGameKeyMapping: InputToGameKeyMapping = PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()!!
-            
 
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 
@@ -181,7 +180,6 @@ super.keyPressed(keyCode, 0)
 
 
     private val inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
 open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -197,11 +195,9 @@ open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
                             append("Raw Device Key Code: ")!!.append(Integer.toHexString(keyCode))!!.toString(), this, this.gameInputStrings!!.ADD_KEY_EVENT)
 
     var gameKey: GameKey = this.inputToGameKeyMapping!!.getInstance(this, keyCode)!!
-            
 
 
     var input: Input = inputFactory!!.getInstance(keyCode)!!
-            
 
 this.process(gameKey, input)
 } catch(e: Exception)
@@ -284,11 +280,9 @@ logUtil!!.put(stringBuffer!!.toString(), this, "gameActionCrud")
                                     {
                                     
     var list: BasicArrayList = inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
-            
 
 
     var isInputAlreadyMappedToSelectedAction: Boolean = list.contains(input)!!
-            
 
 
     
@@ -344,7 +338,6 @@ open fun addNewMapping(gameKey: GameKey, input: Input)
 logUtil!!.put(commonStrings!!.START, this, METHOD_NAME)
 
     var isInputAlreadyMapped: Boolean = inputMapping!!.getInputMapping()!!.isMapped(input)!!
-            
 
 
     
@@ -383,7 +376,6 @@ open fun deleteCurrentMapping()
 
 
     var list: BasicArrayList = inputMapping!!.getInputMapping()!!.getMappedInput(this.selectedGameKey)!!
-            
 
 
     

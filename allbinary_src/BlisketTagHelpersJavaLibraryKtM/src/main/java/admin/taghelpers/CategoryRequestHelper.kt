@@ -57,12 +57,10 @@ open public class CategoryRequestHelper : ModifyTable {
             
     private val categoryRequest: String = StringMaker().
                             append("<")!!.append(CategoryData.getInstance()!!.REQUEST)!!.append(">")!!.toString()!!
-            
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var pageContext: PageContext
 
@@ -110,19 +108,15 @@ open fun getXmlData()
         try {
             
     var map: Map = this.request.getParameterMap()!!
-            
 
 
     var categoryData: CategoryData = CategoryData.getInstance()!!
-            
 
 
     var keys: Set = map.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -161,11 +155,9 @@ open fun getXmlData()
                                 
 
     var document: Document = DomDocumentHelper.create(xmlRequest)!!
-            
 
 
     var requestNode: Node = DomSearchHelper.getNode(categoryData!!.REQUEST, document.getChildNodes())!!
-            
 
 
     
@@ -179,11 +171,9 @@ open fun getXmlData()
 this.setCategoryLoader(requestNode)
 
     var parentCategoryNode: Node = DomSearchHelper.getNode(categoryData!!.PARENT, requestNode!!.getChildNodes())!!
-            
 
 
     var categoryNode: Node = DomSearchHelper.getNode(categoryData!!.NAME, parentCategoryNode!!.getChildNodes())!!
-            
 
 this.categoryInterface= StoreCategoryFactory(this.transformInfoInterface).
                             getRootInstanceFromNode(categoryNode) as CategoryInterface
@@ -200,7 +190,6 @@ logUtil!!.put("Loaded Parent Category", this, "getXmlData()")
                                 
 
     var childCategoryNode: Node = DomSearchHelper.getNodeNoThrow(categoryData!!.NAME, requestNode!!.getChildNodes())!!
-            
 
 
     
@@ -265,7 +254,6 @@ open fun setCategoryLoader(requestNode: Node)
                     var requestNode = requestNode
 
     var storeNameNode: Node = DomSearchHelper.getNode(StoreFrontData.getInstance()!!.NAME, requestNode!!.getChildNodes())!!
-            
 
 
     
@@ -276,7 +264,6 @@ open fun setCategoryLoader(requestNode: Node)
                                     {
                                     
     var storeName: String = DomNodeHelper.getTextNodeValue(storeNameNode)!!
-            
 
 
     
@@ -287,7 +274,6 @@ open fun setCategoryLoader(requestNode: Node)
                                     {
                                     
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(storeName)!!
-            
 
 this.transformInfoInterface= TransformInfoBasic(storeFrontInterface, hashMap, pageContext) as TransformInfoInterface
 
@@ -462,11 +448,9 @@ open fun viewCategory()
             
     var document: Document = CategoryComponent(this.childCategoryInterface).
                             toXmlDoc()!!
-            
 
 
     var xmlString: String = DomDocumentHelper.toString(document)!!
-            
 
 
     

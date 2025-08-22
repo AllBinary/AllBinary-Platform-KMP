@@ -63,7 +63,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val INDENT_NUMBER: String = "indent-number"
 
@@ -86,11 +85,9 @@ open fun init(indent: Int, ignoreDeclaration: Boolean)
         try {
             
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
 
     var transformerFactory: TransformerFactory = TransformerFactory.newInstance()!!
-            
 
 transformerFactory!!.setAttribute(INDENT_NUMBER, indent)
 transformer= transformerFactory!!.newTransformer()
@@ -107,7 +104,6 @@ transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
@@ -127,7 +123,6 @@ open fun format(xmlString: String)
 
 
     var document: Document = DocumentBuilderFactory.newInstance()!!.newDocumentBuilder()!!.parse(src)!!
-            
 
 
     var out: Writer = StringWriter()

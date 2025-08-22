@@ -42,10 +42,8 @@ open public class ReleaseControlledMotionGestureListener
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var currentMotionGesture: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.NO_MOTION
 
@@ -185,7 +183,6 @@ override fun onMotionGestureEvent(ev: MotionGestureEvent)
                         return 
 
     var motionGestureInput: MotionGestureInput = ev.getMotionGesture()!!
-            
 
 
     

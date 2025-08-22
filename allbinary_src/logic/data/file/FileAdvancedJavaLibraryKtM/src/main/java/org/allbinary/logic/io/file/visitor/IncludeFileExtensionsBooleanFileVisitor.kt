@@ -78,7 +78,6 @@ open fun visit(file: AbFile, fileNameString: String)
                     var fileNameString = fileNameString
 
     var fileNameAndExtension: String = file.getPath()!!
-            
 
 
     
@@ -90,7 +89,6 @@ open fun visit(file: AbFile, fileNameString: String)
 
 
     var fileName: String = fileNameAndExtension!!.substring(startIndex)!!
-            
 
 
     

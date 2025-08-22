@@ -150,19 +150,15 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
                     var mapArray = mapArray
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var totalColumns: Int = allBinaryTiledLayer!!.getColumns()!!
-            
 
 
     var totalRows: Int = allBinaryTiledLayer!!.getRows()!!
-            
 
 
 

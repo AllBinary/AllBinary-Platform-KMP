@@ -39,10 +39,8 @@ open public class SaveImageComparisonWorker
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var running: Boolean= false
 
@@ -105,7 +103,6 @@ timeHelper!!.setStartTime()
 
 
     var imageComparisonInfo: ImageComparisonResult = imageComparisonResultsEvent!!.getImageComparisonResult()!!
-            
 
 logUtil!!.put(imageComparisonInfo!!.toString(), this, this.commonStrings!!.RUN)
 ComparisonImageInputOutput().

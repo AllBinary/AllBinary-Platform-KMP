@@ -55,7 +55,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true

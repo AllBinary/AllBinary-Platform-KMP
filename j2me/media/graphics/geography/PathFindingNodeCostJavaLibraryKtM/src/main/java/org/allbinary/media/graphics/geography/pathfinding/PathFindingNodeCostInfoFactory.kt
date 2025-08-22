@@ -80,7 +80,6 @@ open fun getInstance(goingToGeographicMapCellPosition: GeographicMapCellPosition
                     var costToEnd = costToEnd
 
     var pathFindingNodeCostInfo: PathFindingNodeCostInfo = this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition)!!
-            
 
 
     

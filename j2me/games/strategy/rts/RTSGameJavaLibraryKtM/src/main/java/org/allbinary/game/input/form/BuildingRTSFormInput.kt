@@ -64,7 +64,6 @@ open public class BuildingRTSFormInput : RTSFormInput {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var isUnitProducer: Boolean
 
@@ -87,7 +86,6 @@ open public class BuildingRTSFormInput : RTSFormInput {
     private val mapEdgeGameNotificationEvent: GameNotificationEvent
 
     private val dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
-            
 public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
                             : super(groupInterface){
@@ -103,11 +101,9 @@ public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolea
 this.isUnitProducer= isUnitProducer
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 this.buildOnPathGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.BUILD_ON_PATH, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
 this.spotTakenGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.getInstance()!!.SPOT_TAKEN, smallIntegerSingletonFactory!!.getInstance(2), basicColorFactory!!.PINK, BooleanFactory.getInstance()!!.FALSE)
@@ -235,7 +231,6 @@ open fun buildFromMotionInput(rtsPlayerLayerInterface: RTSPlayerLayerInterface, 
                     var itemIndex = itemIndex
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, "buildFromMotionInput")
 
@@ -275,7 +270,6 @@ LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getF
                                 
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getSelectedGeographicCellPosition()!!
-            
 
 
     
@@ -291,7 +285,6 @@ LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getF
                                     {
                                     
     var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(geographicMapCellPosition)!!
-            
 
 
     var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory = geographicMapInterface!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
@@ -315,7 +308,6 @@ LockedFeatureNotificationUtil.getInstance()!!.fire(geographicMapInterface!!.getF
                         else {
                             
     var cellPoint: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.setPosition(cellPoint!!.getX(), cellPoint!!.getY(), cellPoint!!.getZ())
 this.newUnconstructedRTSLayerInterfaceArray[itemIndex]!!.geographicMapCellPositionArea!!.update(geographicMapInterface)
@@ -400,7 +392,6 @@ logUtil!!.put(StringMaker().
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     
@@ -462,11 +453,9 @@ geographicMapCellType= geographicMapInterface!!.getCellTypeAt(occupyList!!.get(i
 
 
     var cost: Int = layerInterface!!.getCost()!!
-            
 
 
     var capital: Capital = rtsPlayerLayerInterface!!.getCapital()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -534,7 +523,6 @@ open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, l
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     
@@ -635,7 +623,6 @@ open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: All
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 dropCellPositionHistory!!.add(occupyList, layerInterface)
 
@@ -666,19 +653,15 @@ open fun isSurroundingCellsOffMap(layerInterface: RTSLayer)
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     var surroundList: BasicArrayList = geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
-            
 
 
     var occupySize: Int = occupyList!!.size()!!
-            
 
 
     var surroundSize: Int = surroundList!!.size()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

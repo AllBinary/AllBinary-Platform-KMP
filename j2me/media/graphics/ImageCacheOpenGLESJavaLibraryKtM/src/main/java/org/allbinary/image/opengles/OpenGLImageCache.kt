@@ -40,13 +40,10 @@ open public class OpenGLImageCache : ImageCache {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val imageCache: ImageCache = ImageCacheFactory.getInstance()!!
-            
 
     private val preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
     private var gl: GL10
 
@@ -77,9 +74,11 @@ open fun update(gl: GL10)
 this.gl= gl
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
 
 
 
@@ -102,7 +101,7 @@ this.gl= gl
                                 
 }
 
-
+}
 
 }
 
@@ -140,23 +139,23 @@ width= textureSize
 height= textureSize
 
     var image2: Image = this.imageCache!!.get(caller, width, height)!!
-            
 
 
     var image: Image = preResourceImageUtil!!.encapsulate(image2)!!
-            
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     
                         if(image != 
                                     null
                                 )
                         list.add(image)
-
+}
 
 
 
@@ -177,23 +176,23 @@ height= textureSize
                     var inputStream = inputStream
 
     var cachedImage: Image = this.imageCache!!.get(key)!!
-            
 
 
     var image: Image = preResourceImageUtil!!.encapsulate(cachedImage)!!
-            
 
 
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     
                         if(image != 
                                     null
                                 )
                         list.add(image)
-
+}
 
 
 
@@ -222,9 +221,11 @@ open fun init(image: Image)
         try {
             
         
-        //synchronized(lock) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(lock) 
+
         //mutex.withLock
-        
+        {
     
                         if(list.contains(image))
                         
@@ -237,7 +238,7 @@ open fun init(image: Image)
                                     }
                                 
 list.add(image)
-
+}
 
 this.renderer.add(image)
 } catch(e: Exception)

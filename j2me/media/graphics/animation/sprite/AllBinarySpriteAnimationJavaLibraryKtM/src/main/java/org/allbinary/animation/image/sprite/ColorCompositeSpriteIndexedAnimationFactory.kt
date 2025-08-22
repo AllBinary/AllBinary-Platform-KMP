@@ -39,7 +39,6 @@ open public class ColorCompositeSpriteIndexedAnimationFactory : BaseImageAnimati
         
 
     private val animationFactorySpriteScaleUtil: AnimationFactorySpriteScaleUtil = AnimationFactorySpriteScaleUtil.getInstance()!!
-            
 
     private val basicColorArray: Array<BasicColor?>
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
@@ -95,7 +94,6 @@ this.basicColorArray= basicColorArray
                     var instanceId = instanceId
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
-            
 
 
 

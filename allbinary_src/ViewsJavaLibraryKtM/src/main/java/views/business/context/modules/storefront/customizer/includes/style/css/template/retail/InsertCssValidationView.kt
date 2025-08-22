@@ -44,7 +44,6 @@ open public class InsertCssValidationView : CssCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -57,7 +56,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
     var requestHashMap: HashMap<Any, Any> = NameSpaceRequestParams(this.getPageContext()).
                             toHashMap()!!
-            
 
 this.styleValidationInterface= CssStyleValidation(requestHashMap)
 }

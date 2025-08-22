@@ -70,10 +70,8 @@ open public class Email
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var msg: MimeMessage
 
@@ -169,7 +167,6 @@ open fun init(from: String, to: String, subject: String, server: String, textBod
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var mimeBodyParts: Array<MimeBodyPart?> = arrayOfNulls(
@@ -209,7 +206,6 @@ init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(Inte
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "emailConstructor", e)
 
@@ -301,7 +297,6 @@ this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
                                 
 
     var session: Session = Session.getInstance(properties, authenticator)!!
-            
 
 
     
@@ -403,7 +398,6 @@ open fun toHashMap()
 hashMap!!.put(EmailData.SERVER, properties.get(SMTP_HOST) as String)
 
     var addresses: Array<Address?> = msg.getFrom()!!
-            
 
 
     
@@ -548,7 +542,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, EmailData.NAME, this.toHashMap())!!
-            
 
 
 

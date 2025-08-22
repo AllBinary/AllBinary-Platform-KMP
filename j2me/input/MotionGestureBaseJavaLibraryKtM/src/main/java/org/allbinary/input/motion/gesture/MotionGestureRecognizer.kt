@@ -47,10 +47,8 @@ open public class MotionGestureRecognizer
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val j2seMath: J2SEMath = J2SEMath.getInstance()!!
-            
 
     private val origin: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 
@@ -84,7 +82,6 @@ movedMotionGesturesHandler= MovedMotionGesturesHandler.getInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
@@ -111,7 +108,6 @@ intermediate= origin
 previous= origin
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.PRESSED)!!
-            
 
 event.setPreviousPoint(previous)
 event.setCurrentPoint(current)
@@ -139,7 +135,6 @@ open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
                     var button = button
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.RELEASED)!!
-            
 
 event.setPreviousPoint(previous)
 event.setCurrentPoint(current)
@@ -184,7 +179,6 @@ line.setP1(previous)
 line.setP2(current)
 
     var minimumMotionGesture: Int = MotionGestureConfigurationFactory.getInstance()!!.getMinimumMotionGesture()!!
-            
 
 
     
@@ -202,18 +196,15 @@ line.setP2(current)
                                 
 
     var gradient: Double = line.getGradient()!!
-            
 
 
     var absGradient: Double = j2seMath!!.abs(gradient.toFloat()).toDouble()
 
 
     var conf: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
-            
 
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
-            
 
 
     var newMotionGesture: MotionGestureInput = touchMotionGestureFactory!!.NO_MOTION
@@ -330,7 +321,6 @@ previous= current
 intermediate= current
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(newMotionGesture)!!
-            
 
 event.setPreviousPoint(previous)
 event.setCurrentPoint(current)
@@ -358,7 +348,6 @@ open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
                     var button = button
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.NO_MOTION)!!
-            
 
 event.setPreviousPoint(previous)
 event.setCurrentPoint(current)

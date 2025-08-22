@@ -115,7 +115,6 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

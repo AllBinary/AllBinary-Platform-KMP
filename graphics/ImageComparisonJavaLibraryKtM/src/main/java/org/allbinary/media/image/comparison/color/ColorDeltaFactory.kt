@@ -45,11 +45,9 @@ open public class ColorDeltaFactory
 
                 init{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var STATIC_BLOCK: String = "Static Block"
@@ -103,7 +101,6 @@ open fun getInstance(rgb1: Int, rgb2: Int)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

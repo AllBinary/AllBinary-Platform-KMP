@@ -59,7 +59,6 @@ open fun getPrimaryScreenSize()
         //nullable = true from not(false or (false and true)) = true
 : Rectangle{
     var dimension: Dimension = Toolkit.getDefaultToolkit()!!.getScreenSize()!!
-            
 
 
 
@@ -73,11 +72,9 @@ open fun getScreenSizesAsRectangleArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<Rectangle?>{
     var graphicsEnvironment: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
-            
 
 
     var graphicsDeviceArray: Array<GraphicsDevice?> = graphicsEnvironment!!.getScreenDevices()!!
-            
 
 
     var graphicsDevice: GraphicsDevice

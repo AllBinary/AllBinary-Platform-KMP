@@ -67,11 +67,9 @@ open fun addItem(id: String, num: String)
 
 
     var oldNumInt: Integer = Integer(Integer.valueOf(oldNumStr))!!
-            
 
 
     var numInt: Integer = Integer(Integer.valueOf(num))!!
-            
 
 
     var newNumInt: Integer = Integer(oldNumInt!!.toInt() +numInt!!.toInt())
@@ -126,7 +124,6 @@ open fun getTotalWeight()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var itemsAndNumberInBasket: HashMap<Any, Any> = getItems()!!
-            
 
 
     var totalWeight: Money = Money()
@@ -138,7 +135,6 @@ open fun getTotalWeight()
                                     {
                                     
     var items: Set = itemsAndNumberInBasket!!.keySet()!!
-            
 
 
     var product: String
@@ -148,7 +144,6 @@ open fun getTotalWeight()
 
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -193,7 +188,6 @@ open fun getIds()
         //nullable = true from not(false or (false and true)) = true
 : Set{
     var set: Set = items.keySet()!!
-            
 
 
 
@@ -235,7 +229,6 @@ open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
 : Money{
     var itemsAndNumberInBasket: HashMap<Any, Any> = getItems()!!
-            
 
 
     var subTotal: Money = Money()
@@ -247,18 +240,15 @@ open fun getSubTotal()
                                     {
                                     
     var items: Set = itemsAndNumberInBasket!!.keySet()!!
-            
 
 
     var inventoryEntityFactory: InventoryEntityFactory = InventoryEntityFactory.getInstance()!!
-            
 
 
     var inventoryEntity: InventoryEntity = inventoryEntityFactory!!.getInventoryEntityInstance() as InventoryEntity
 
 
     var itemArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = itemArray!!.size
@@ -276,11 +266,9 @@ open fun getSubTotal()
 
 
     var itemInterface: ItemInterface = inventoryEntity!!.getItem(product)!!
-            
 
 
     var productTotal: Money = itemInterface!!.getPrice()!!
-            
 
 productTotal!!.multiply(getNumberOf(product)!!.toInt())
 subTotal!!.add(productTotal!!.toString())

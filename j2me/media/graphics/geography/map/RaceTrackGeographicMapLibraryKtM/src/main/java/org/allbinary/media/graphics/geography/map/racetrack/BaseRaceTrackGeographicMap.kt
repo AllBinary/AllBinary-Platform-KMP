@@ -40,7 +40,6 @@ open public class BaseRaceTrackGeographicMap : BasicGeographicMap
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var raceTrackInfo: RaceTrackInfo
 
@@ -79,7 +78,6 @@ this.setRaceTrackData(raceTrackData)
 this.miniGeographicMap= miniGeographicMap
 
     var miniTiledLayer: AllBinaryTiledLayer = this.miniGeographicMap!!.getAllBinaryTiledLayer()!!
-            
 
 
     
@@ -89,11 +87,9 @@ this.miniGeographicMap= miniGeographicMap
                                     
     var error: String = StringMaker().
                             append("RaceTrackMap has incorrect Mini Map columns: ")!!.append(miniTiledLayer!!.getColumns())!!.append(" != ")!!.append(this.getGeographicMapCellPositionFactory()!!.getColumns())!!.toString()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
@@ -113,7 +109,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 

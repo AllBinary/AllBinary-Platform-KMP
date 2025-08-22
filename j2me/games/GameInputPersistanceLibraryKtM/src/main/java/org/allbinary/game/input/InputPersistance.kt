@@ -52,7 +52,6 @@ open public class InputPersistance : BasicPersitance {
         
 
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
-            
 public constructor        (name: String)                        
 
                             : super(name){
@@ -80,7 +79,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
             recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-            
 
 
     var gameActionInputId: Long= 0
@@ -99,18 +97,15 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
 
 
     var gameKeyFactory: GameKeyMappingFactory = GameKeyMappingFactory.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var recordAsBytes: ByteArray
@@ -125,7 +120,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         while(recordEnum!!.hasNextElement())
         {
     var id: Int = recordEnum!!.nextRecordId()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.append(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
@@ -147,7 +141,6 @@ hashtable= Hashtable<Any, Any>()
         while(inputStream!!.available() > 0)
         {
     var gameActionInputIdAsString: String = inputStream!!.readUTF()!!
-            
 
 value= Integer.parseInt(gameActionInputIdAsString)
 gameActionInputId= value.toLong()
@@ -284,15 +277,12 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var inputObjectArray: Array<Any?> = hashtableUtil!!.getKeysAsArray(hashtable)!!
-            
 
 
     var size: Int = inputObjectArray!!.size
@@ -316,14 +306,12 @@ list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
         {
     var gameActionInputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(gameActionInput!!.getId())!!.toString()!!
-            
 
 outputStream!!.writeUTF(gameActionInputIdAsString)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
 input= list.objectArray[index2]!! as Input
 
     var inputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(input.getId())!!.toString()!!
-            
 
 outputStream!!.writeUTF(inputIdAsString)
 }

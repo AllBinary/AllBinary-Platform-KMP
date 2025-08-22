@@ -48,7 +48,6 @@ open public class TimeIntervalActionScriptCondition : BasicProfileActionScriptCo
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var timeIntervalActionScriptConditionJPanel: TimeIntervalActionScriptConditionJPanel
 
@@ -64,7 +63,6 @@ public constructor        (node: Node)
                     
 
     var actionNode: Node = DomSearchHelper.getNode(TimeIntervalActionScriptConditionData.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -75,7 +73,6 @@ public constructor        (node: Node)
                                     {
                                     
     var nodeList: NodeList = actionNode!!.getChildNodes()!!
-            
 
 
 
@@ -86,7 +83,6 @@ public constructor        (node: Node)
 
         {
     var childNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -95,7 +91,6 @@ public constructor        (node: Node)
                                     {
                                     
     var interval: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.setTimeDelayHelper(TimeDelayHelper(Integer(Integer.valueOf(interval))))
 
@@ -172,7 +167,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalActionScriptConditionData.NAME, this.toHashMap()))
 
@@ -217,7 +211,6 @@ open fun shouldProcess(frame: Long)
                     var frame = frame
 
     var timeHelper: TimeDelayHelper = this.getTimeDelayHelper()!!
-            
 
 
     

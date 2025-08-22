@@ -41,7 +41,6 @@ open public class NameSpaceRequestParam
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var nameSpaceVector: Vector
 
@@ -61,7 +60,6 @@ this.nameSpacePropertiesHashMap= HashMap<Any, Any>()
 this.value= value
 
     var beginIndex: Int = nameSpace!!.indexOf(NameSpaceRequestParamData.NAME)!!
-            
 
 
     
@@ -77,14 +75,12 @@ this.value= value
                                 
 
     var packages: String = nameSpace!!.substring(beginIndex +NameSpaceRequestParamData.NAME.length() +NameSpaceRequestParamData.SEP.length())!!
-            
 
 
     var sepTokenizer: Tokenizer = Tokenizer(NameSpaceRequestParamData.SEP)
 
 
     var nameSpaceWithPropertiesVector: BasicArrayList = sepTokenizer!!.getTokens(packages, BasicArrayList())!!
-            
 
 
     
@@ -109,7 +105,6 @@ this.value= value
 
 
     var size: Int = nameSpaceWithPropertiesVector!!.size()!!
-            
 
 
         while(index < size)
@@ -119,7 +114,6 @@ this.value= value
 list.clear()
 
     var nameSpaceAndPropertiesVector: BasicArrayList = nameSpaceAndPropertiesTokenizer!!.getTokens(nameSpaceWithProperties, list)!!
-            
 
 
     
@@ -163,7 +157,6 @@ this.nameSpaceVector!!.add(packageName)
 
 
     var packagePropertiesHashMap: HashMap<Any, Any> = this.generatePackagePropertiesHashMap(properties)!!
-            
 
 this.nameSpacePropertiesHashMap!!.put(packageIndex.toString(), packagePropertiesHashMap)
 
@@ -276,7 +269,6 @@ open fun generatePackagePropertiesHashMap(properties: String)
 
 
     var propertyVector: BasicArrayList = propertiesTokenizer!!.getTokens(properties, BasicArrayList())!!
-            
 
 
     var list: BasicArrayList = BasicArrayList()
@@ -289,7 +281,6 @@ open fun generatePackagePropertiesHashMap(properties: String)
 
 
     var size: Int = propertyVector!!.size()!!
-            
 
 
         while(index < size)
@@ -299,7 +290,6 @@ open fun generatePackagePropertiesHashMap(properties: String)
 list.clear()
 
     var propertyNameValueVector: BasicArrayList = propertyTokenizer!!.getTokens(property, list)!!
-            
 
 
     var index2: Int = 0

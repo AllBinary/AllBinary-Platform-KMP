@@ -36,7 +36,6 @@ open public class WorkFlowHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val hashMap: HashMap<Any, Any>
 
@@ -128,7 +127,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(WorkFlowEntityFactory.getInstance()!!.create2(), this.portion)!!
-            
 
 
     
@@ -176,7 +174,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(WorkFlowEntityFactory.getInstance()!!.create2())!!
-            
 
 
     

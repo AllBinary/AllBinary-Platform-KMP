@@ -43,7 +43,6 @@ open public class MultipartRequestParamForwardHelper
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val pageContext: PageContext
 
@@ -92,7 +91,6 @@ open fun forward()
                                     {
                                     
     var params: String = this.getParams()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -106,7 +104,6 @@ this.pageContext!!.forward(stringBuffer!!.toString())
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -135,14 +132,12 @@ open fun getParams()
 
 
     var hashMap: HashMap<Any, Any> = this.requestMapInterface!!.getRequestHashMap()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var size: Int = this.paramVector!!.size!!
-            
 
 
 
@@ -188,7 +183,6 @@ open fun shouldForward()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var hashMap: HashMap<Any, Any> = this.requestMapInterface!!.getRequestHashMap()!!
-            
 
 
     var requestCommand: String = hashMap!!.get(GLOBALS2.ADMINCOMMAND) as String

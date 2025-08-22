@@ -95,11 +95,9 @@ open fun isScreenChange(isFullScreen: Boolean)
                     var isFullScreen = isFullScreen
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     

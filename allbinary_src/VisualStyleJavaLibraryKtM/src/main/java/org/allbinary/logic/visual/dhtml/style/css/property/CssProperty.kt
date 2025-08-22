@@ -42,7 +42,6 @@ open public class CssProperty
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var propertyName: String
 
@@ -63,7 +62,6 @@ public constructor        (node: Node)
                     var node = node
 
     var propertyNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
-            
 
 this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)
 
@@ -77,7 +75,6 @@ this.propertyName= DomNodeHelper.getTextNodeValue(propertyNode)
                                 
 
     var propertyValuesNode: Node = DomSearchHelper.getNode(CssPropertyData.getInstance()!!.VALUES, node.getChildNodes())!!
-            
 
 this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
 }
@@ -116,7 +113,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     
@@ -129,7 +125,6 @@ open fun toXmlNode(document: Document)
                                 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, CssPropertyData.getInstance()!!.NAME, this.propertyName)!!
-            
 
 node.appendChild(this.cssPropertyValues!!.toXmlNode(document))
 

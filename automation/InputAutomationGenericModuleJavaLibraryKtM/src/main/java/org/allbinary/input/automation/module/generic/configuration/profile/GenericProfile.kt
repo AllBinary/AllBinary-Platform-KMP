@@ -40,7 +40,6 @@ open public class GenericProfile
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String
 
@@ -56,7 +55,6 @@ this.setName(DomNodeHelper.getTextNodeValue(node))
 this.vector= Vector()
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength(), this, "Contructor")
 
@@ -68,7 +66,6 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
 
         {
     var profileNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -77,7 +74,6 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
                                     {
                                     
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = GenericProfileDataWorkerType.getInstance(profileNode)!!
-            
 
 logUtil!!.put("Adding GenericProfileDataWorkerType: " +genericProfileDataWorkerType!!.toString(), this, "Contructor")
 this.vector.add(genericProfileDataWorkerType)
@@ -138,11 +134,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, name)!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

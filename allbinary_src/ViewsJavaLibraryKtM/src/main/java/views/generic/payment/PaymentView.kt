@@ -41,7 +41,6 @@ open public class PaymentView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -65,16 +64,13 @@ open fun toXmlNode(document: Document)
         try {
             
     var paymentNode: Node = document.createElement(PaymentData.PAYMENT)!!
-            
 
 document.appendChild(paymentNode)
 
     var paymentVector: Vector = PaymentEntityFactory.getInstance()!!.getPaymentEntityInstance()!!.get(this.getWeblisketSession()!!.getUserName())!!
-            
 
 
     var size: Int = paymentVector!!.size!!
-            
 
 
 

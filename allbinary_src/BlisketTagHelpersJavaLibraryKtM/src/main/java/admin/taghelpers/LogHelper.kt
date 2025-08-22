@@ -37,7 +37,6 @@ open public class LogHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -123,11 +122,9 @@ open fun restore()
 
 
     var logTableEntity: LogTableEntity = LogTableEntityFactory.getInstance()!!.getLogTableEntityInstance()!!
-            
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(logTableEntity, this.portion)!!
-            
 
 
     
@@ -175,7 +172,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(LogTableEntityFactory.getInstance()!!.getLogTableEntityInstance())!!
-            
 
 
     

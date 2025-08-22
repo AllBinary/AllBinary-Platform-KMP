@@ -64,7 +64,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var context: Any = NullUtil.getInstance()!!.NULL_OBJECT
 
@@ -172,7 +171,6 @@ open fun containsDuplicate(resource: String, value: Integer)
                     var value = value
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashMap)!!
-            
 
 
 
@@ -246,12 +244,10 @@ open fun getResourceAsStream(resource: String)
 
 
     var id: Int = integer.toInt()!!
-            
 
 
     var inputStream: InputStream = 
                                     (resources as Resources).openRawResource(id)!!
-            
 
 
     

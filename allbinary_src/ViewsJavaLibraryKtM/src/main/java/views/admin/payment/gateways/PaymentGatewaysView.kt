@@ -45,7 +45,6 @@ open public class PaymentGatewaysView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var paymentGatewayVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface, gatewayVector: Vector)                        
@@ -75,15 +74,12 @@ open fun toXmlNode(document: Document)
         try {
             
     var storeName: String = this.getTransformInfoInterface()!!.getStoreName()!!
-            
 
 
     var paymentGatewaysNode: Node = document.createElement(PaymentGatewaysData.NAME)!!
-            
 
 
     var size: Int = this.paymentGatewayVector!!.size!!
-            
 
 
 
@@ -97,12 +93,10 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = paymentType!!.toHashMap()!!
-            
 
 hashMap!!.put(EntryData.getInstance()!!.DEFAULT, PaymentTypeUtil.getInstance()!!.getDefault(storeName)!!.getBasicPaymentType()!!.getName())
 
     var paymentGatewayNode: Node = ModDomHelper.createNodeWithValueNodes(document, PaymentGatewayData.NAME.toString(), hashMap)!!
-            
 
 paymentGatewaysNode!!.appendChild(paymentGatewayNode)
 }

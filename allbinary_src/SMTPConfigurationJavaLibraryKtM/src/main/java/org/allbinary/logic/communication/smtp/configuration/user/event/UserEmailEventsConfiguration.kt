@@ -40,10 +40,8 @@ open public class UserEmailEventsConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var emailEventHashMap: HashMap<Any, Any>
 public constructor        ()

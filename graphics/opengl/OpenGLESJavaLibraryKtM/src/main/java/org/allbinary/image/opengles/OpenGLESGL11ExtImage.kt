@@ -43,7 +43,6 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var a: Int= 0
 

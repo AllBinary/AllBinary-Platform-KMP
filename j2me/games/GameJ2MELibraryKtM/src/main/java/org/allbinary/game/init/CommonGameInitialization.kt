@@ -40,7 +40,6 @@ open public class CommonGameInitialization : BaseGameInitialization {
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 protected constructor        (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)                        
 
                             : super(resourceInitializationArray, portion){
@@ -71,7 +70,6 @@ protected constructor        (resourceInitializationArray: Array<ResourceInitial
 super.init(abeClientInformation, commandListener, level)
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     
@@ -81,7 +79,6 @@ super.init(abeClientInformation, commandListener, level)
                                     this.setGameInitialized(true)
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 SmallIntegerSingletonFactory.getInstance()!!.init()
 progressCanvas!!.addPortion(50, "Integers")

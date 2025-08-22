@@ -59,10 +59,8 @@ open public class QuoteHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private val weblisketSession: WeblisketSession
 
@@ -108,7 +106,6 @@ open fun emailUser(quoteRequest: QuoteRequest)
                     var quoteRequest = quoteRequest
 
     var user: UserInterface = UserEntityFactory.getInstance()!!.getUser(quoteRequest!!.getUserName())!!
-            
 
 
     var userEmailSubject: String = "Quote Request Receipt"
@@ -121,7 +118,6 @@ stringBuffer!!.append("We usually respond to quote request within 24 hours.")
 stringBuffer!!.append("\n\nThank You For Your Business.")
 
     var userEmailTextBody: String = stringBuffer!!.toString()!!
-            
 
 
     var basicEmailInfo: BasicEmailInfo = StoreEmailInfo(this.storeFrontInterface, userEmailSubject, userEmailTextBody) as BasicEmailInfo
@@ -131,7 +127,6 @@ stringBuffer!!.append("\n\nThank You For Your Business.")
 
 
     var userEmailEventHandler: UserEmailEventHandler = UserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.QUOTEREQUEST, user)!!
-            
 
 userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUEST, emailInfo)
 }
@@ -164,7 +159,6 @@ stringBuffer!!.append("\nComments: \n")
 stringBuffer!!.append(quoteRequest!!.getComments())
 
     var adminEmailTextBody: String = stringBuffer!!.toString()!!
-            
 
 
     var basicEmailInfo: BasicEmailInfo = StoreEmailInfo(this.storeFrontInterface, adminEmailSubject, adminEmailTextBody) as BasicEmailInfo
@@ -174,11 +168,9 @@ stringBuffer!!.append(quoteRequest!!.getComments())
 
 
     var storeAdminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.QUOTEREQUEST)!!
-            
 
 
     var adminUserEmailEventHandler: UserEmailEventHandler = StoreAdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(UserEmailEventNameData.QUOTEREQUEST, this.abeClientInformation, this.storeFrontInterface)!!
-            
 
 storeAdminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUEST, emailInfo)
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.QUOTEREQUEST, emailInfo)
@@ -193,15 +185,12 @@ open fun email()
         try {
             
     var quoteRequestEntity: QuoteRequestEntity = QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!
-            
 
 
     var userName: String = this.weblisketSession!!.getUserName()!!
-            
 
 
     var vector: Vector = quoteRequestEntity!!.getIds(userName)!!
-            
 
 
     var id: Int = 0
@@ -217,7 +206,6 @@ open fun email()
     var nextId: Int = get = vector.get(index)get as Integer
 get.
                     toInt()!!
-            
 
 
     
@@ -232,7 +220,6 @@ get.
 
 
     var quoteRequest: QuoteRequest = quoteRequestEntity!!.get(userName, id)!!
-            
 
 
     
@@ -285,7 +272,6 @@ open fun drop()
         try {
             
     var success: String = QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.dropTable()!!
-            
 
 
     
@@ -330,7 +316,6 @@ open fun create()
         try {
             
     var success: String = QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance()!!.createTable()!!
-            
 
 
     
@@ -378,7 +363,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance(), portion)!!
-            
 
 
     
@@ -426,7 +410,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(QuoteRequestEntityFactory.getInstance()!!.getQuoteRequestEntityInstance())!!
-            
 
 
     

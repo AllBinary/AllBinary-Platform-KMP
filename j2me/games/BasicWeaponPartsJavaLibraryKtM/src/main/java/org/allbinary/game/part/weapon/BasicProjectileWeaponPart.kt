@@ -101,7 +101,6 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                     var scoreableInterface = scoreableInterface
 
     var weaponLayer: WeaponLayer = weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), this.relativeRelationship!!.getZ(), angle.toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)!!
-            
 
 allbinaryLayerManager!!.append(weaponLayer)
 }

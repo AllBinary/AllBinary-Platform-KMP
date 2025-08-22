@@ -68,11 +68,9 @@ this.numberOnSameTeam= numberOnSameTeam
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
-            
 
 
     var index: Int = this.getIndex()!!
-            
 
 
     
@@ -81,7 +79,6 @@ this.numberOnSameTeam= numberOnSameTeam
                                     {
                                     
     var size: Int = GroupLayerManagerListener.getInstance()!!.getGroupSize(layerInterface)!!
-            
 
 
     

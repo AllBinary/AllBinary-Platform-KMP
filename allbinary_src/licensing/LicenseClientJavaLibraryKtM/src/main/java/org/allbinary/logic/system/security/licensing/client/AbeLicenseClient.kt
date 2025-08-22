@@ -41,10 +41,8 @@ open public class AbeLicenseClient
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val MINSERVERS: Int = 3
 public constructor        ()
@@ -71,11 +69,9 @@ open fun get(abeClientInformation: AbeClientInformationInterface)
 
 
     var licenseId: String = abeLicenseInterface!!.getLicenseId()!!
-            
 
 
     var servers: BasicArrayList = abeLicenseInterface!!.getServers()!!
-            
 
 
     var isNewLicenseId: Boolean = false
@@ -85,7 +81,6 @@ open fun get(abeClientInformation: AbeClientInformationInterface)
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -112,7 +107,6 @@ open fun get(abeClientInformation: AbeClientInformationInterface)
                                     {
                                     
     var initInfo: LicenseInitInfo = LicenseInitInfoUtil.getInstance()!!.read()!!
-            
 
 initInfo!!.setLicenseId(licenseId)
 initInfo!!.setServerList(servers)

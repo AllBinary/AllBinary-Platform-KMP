@@ -39,7 +39,6 @@ open public class HelpPaintable : Paintable {
     var TITLE: String = "Help Screen"
 
     var inputInfo: Array<String?> = StringUtil.getInstance()!!.getArrayInstance()!!
-            
 
     var basicColor: BasicColor
 public constructor        (title: String, backgroundBasicColor: BasicColor, basicColor: BasicColor){
@@ -75,7 +74,6 @@ open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
 
@@ -93,11 +91,9 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 
     var halfWidth: Int = DisplayInfoSingleton.getInstance()!!.getLastHalfWidth()!!
-            
 
 
     var beginWidth: Int = (graphics.getFont()!!.stringWidth(this.TITLE) shr 1)

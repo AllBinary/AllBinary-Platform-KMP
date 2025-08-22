@@ -37,7 +37,6 @@ open public class BasicTextEmailTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var subject: String
 
@@ -75,12 +74,10 @@ propertiesHashMap!!.put("Body", this.body)
 
     var anyType: Any = BasicTextEmailHelperFactory().
                             getInstance(propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("send", 
                             null)!!
-            
 
 method.invoke(anyType, 
                             null)

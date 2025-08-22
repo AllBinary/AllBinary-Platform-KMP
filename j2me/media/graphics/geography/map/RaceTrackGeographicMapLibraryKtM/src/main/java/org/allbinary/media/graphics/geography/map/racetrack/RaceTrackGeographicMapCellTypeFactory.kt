@@ -70,7 +70,6 @@ open fun getInstance()
     var FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 public constructor        (){
     var raceTrackGeographicMapCellTypes: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance()!!
-            
 
 BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.BOTTOM_LEFT_TURN_ROAD_CELL_TYPE
 BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE

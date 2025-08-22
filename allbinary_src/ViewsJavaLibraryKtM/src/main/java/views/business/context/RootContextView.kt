@@ -41,7 +41,6 @@ open public class RootContextView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -80,11 +79,9 @@ open fun view()
                                 
 
     var viewName: String = this.getName()!!
-            
 
 
     var componentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, viewName, this.getTransformInfoInterface())!!
-            
 
 
 
@@ -121,7 +118,6 @@ open fun getName()
 
 
     var componentsVector: Vector = objectConfig!!.getTransforms()!!
-            
 
 
     
@@ -152,7 +148,6 @@ open fun getName()
 
 
     var viewName: String = transformInfoInterface!!.getName()!!
-            
 
 
     

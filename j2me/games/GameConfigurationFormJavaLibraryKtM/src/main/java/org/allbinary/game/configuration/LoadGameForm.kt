@@ -74,7 +74,6 @@ override fun initCommands(cmdListener: CommandListener)
                     var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 this.removeAllCommands()
 this.addCommand(gameCommandsFactory!!.LOAD_FILE)
@@ -89,7 +88,6 @@ this.setCommandListener(cmdListener)
         //nullable = true from not(false or (false and true)) = true
 {
     var list: BasicArrayList = GamePersistanceSingleton.getInstance()!!.getIds()!!
-            
 
 this.deleteAll()
 
@@ -125,7 +123,6 @@ open fun add(list: BasicArrayList, name: String, option: Int)
                     var option = option
 
     var choiceGroup: ChoiceGroup = this.getChoiceGroup(list, name, option)!!
-            
 
 
     
@@ -159,7 +156,6 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -226,7 +222,6 @@ open fun getSelectedText()
 
 
     var value: Int = Integer.valueOf(choiceGroup!!.getString(choiceGroup!!.getSelectedIndex()))!!.toInt()!!
-            
 
 
 

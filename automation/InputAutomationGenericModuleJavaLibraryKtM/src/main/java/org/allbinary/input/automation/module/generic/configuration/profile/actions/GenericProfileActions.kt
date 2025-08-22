@@ -72,7 +72,6 @@ open fun getFile(name: String)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String
 
@@ -160,7 +159,6 @@ open fun load()
         //nullable = true from not(false or (false and true)) = true
 {
     var file: File = getFile(getName())!!
-            
 
 
     
@@ -194,22 +192,18 @@ open fun fileInit(fileInputStream: FileInputStream)
 
 
     var length: Int = fileInputStream!!.read(bytes)!!
-            
 
 
     var data: String = bytes.decodeToString()
 
 
     var endIndex: Int = data.lastIndexOf('>')!!
-            
 
 
     var document: Document = DomDocumentHelper.create(data.substring(0, endIndex +1))!!
-            
 
 
     var nameNodeList: NodeList = document.getElementsByTagName(GenericProfileActionsData.NAME)!!
-            
 
 logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this, "Contructor")
 
@@ -221,11 +215,9 @@ logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this
 
         {
     var node: Node = nameNodeList!!.item(index)!!
-            
 
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
     
@@ -269,7 +261,6 @@ open fun initActions(nodeList: NodeList)
 
         {
     var actionNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -376,15 +367,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(GenericProfileActionsData.NAME)!!
-            
 
 
     var set: Set = this.getHashMap()!!.keys!!
-            
 
 
     var actionNameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = actionNameArray!!.size
@@ -420,11 +408,9 @@ open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document{
     var document: Document = DomDocumentHelper.create()!!
-            
 
 
     var node: Node = this.toXmlNode(document)!!
-            
 
 document.appendChild(node)
 

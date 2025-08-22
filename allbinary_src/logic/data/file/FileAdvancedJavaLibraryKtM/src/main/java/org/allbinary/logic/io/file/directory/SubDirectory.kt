@@ -86,7 +86,6 @@ stringBuffer!!.append(NEW_LINE)
         }
             
     private val directory: Directory = Directory.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

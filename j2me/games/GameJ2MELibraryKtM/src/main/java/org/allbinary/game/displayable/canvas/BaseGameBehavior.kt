@@ -61,7 +61,6 @@ open fun getInstance()
         //nullable = true from not(false or (false and true)) = true
 {
     var gameAdState: GameAdState = GameAdStateFactory.getInstance()!!.getCurrentInstance()!!
-            
 
 gameAdState!!.playingAdState()
 }
@@ -73,7 +72,6 @@ override fun pause(allBinaryGameCanvas: AllBinaryGameCanvas)
                     var allBinaryGameCanvas = allBinaryGameCanvas
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -82,7 +80,6 @@ override fun pause(allBinaryGameCanvas: AllBinaryGameCanvas)
                                     {
                                     
     var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
-            
 
 currentDisplayableFactory!!.setRunnable(allBinaryGameCanvas!!.gamePauseRunnable)
 
@@ -102,7 +99,6 @@ override fun unPause(allBinaryGameCanvas: AllBinaryGameCanvas)
                                     {
                                     
     var currentDisplayableFactory: CurrentDisplayableFactory = CurrentDisplayableFactory.getInstance()!!
-            
 
 currentDisplayableFactory!!.setRunnable(allBinaryGameCanvas!!.gameRunnable)
 currentDisplayableFactory!!.setDisplayable(allBinaryGameCanvas)

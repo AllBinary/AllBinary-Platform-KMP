@@ -53,7 +53,6 @@ open fun logError(gl: GL10)
                     var gl = gl
 
     var error: Int = gl.glGetError()!!
-            
 
 
     
@@ -113,7 +112,6 @@ open fun logError(gl: GL10, image: Image)
                     var image = image
 
     var error: Int = gl.glGetError()!!
-            
 
 
     

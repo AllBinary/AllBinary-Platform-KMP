@@ -162,7 +162,6 @@ open fun upgrade()
 {this.level++
 
     var unitTechnologySingletonFactory: UnitTechnologySingletonFactory = UnitTechnologySingletonFactory.getInstance()!!
-            
 
 unitTechnologySingletonFactory!!.setReload(unitTechnologySingletonFactory!!.getReload() +(this.getLevel() *10))
 }

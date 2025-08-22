@@ -58,7 +58,6 @@ open public class DragVelocityBehavior : VelocityBehaviorBase {
                                     {
                                     
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityXBasicDecimalP()!!
-            
 
 basicDecimal!!.multiply(nominator)
 basicDecimal!!.divide(denominator)
@@ -72,7 +71,6 @@ basicDecimal!!.divide(denominator)
                                     {
                                     
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityYBasicDecimalP()!!
-            
 
 basicDecimal!!.multiply(nominator)
 basicDecimal!!.divide(denominator)
@@ -94,7 +92,6 @@ override fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int
                     var denominator = denominator
 
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityXBasicDecimalP()!!
-            
 
 
     
@@ -126,7 +123,6 @@ override fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int
                                     {
                                     
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityYBasicDecimalP()!!
-            
 
 basicDecimal!!.multiply(nominator)
 basicDecimal!!.divide(denominator)

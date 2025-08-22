@@ -41,7 +41,6 @@ open public class OnDemandResources
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 protected constructor        ()
             : super()
         {}

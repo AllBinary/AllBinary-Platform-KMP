@@ -57,14 +57,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 
     var storeThemeCategoryInterface: StoreThemeCategoryInterface = this.getCategoryInterface() as StoreThemeCategoryInterface
 
 
     var themeArray: Array<Any?> = storeThemeCategoryInterface!!.getThemes()!!.toArray()!!
-            
 
 
     var size: Int = themeArray!!.size

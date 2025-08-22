@@ -41,7 +41,6 @@ open public class StaticPagesEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val TABLENAME: String = "staticpages"
 public constructor        ()                        
@@ -101,7 +100,6 @@ whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, store)
 whereHashMap!!.put(BasicItemData.KEYWORDS, keywords)
 
     var file: String = super.getField(whereHashMap, SearchData.PAGE)!!
-            
 
 
 
@@ -124,7 +122,6 @@ open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var returnStr: String = super.dropTable()!!
-            
 
 
 

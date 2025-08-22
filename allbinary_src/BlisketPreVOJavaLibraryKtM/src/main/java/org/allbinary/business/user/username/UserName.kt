@@ -81,7 +81,6 @@ open fun getValidationInfo(aUserName: String)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userName: String
 private constructor        ()
@@ -143,13 +142,11 @@ open fun isValid(aUserName: String)
                     var aUserName = aUserName
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
 
     var valid: Boolean = booleanFactory!!.TRUE

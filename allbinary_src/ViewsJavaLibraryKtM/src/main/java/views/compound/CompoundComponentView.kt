@@ -34,7 +34,6 @@ open public class CompoundComponentView : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -55,12 +54,10 @@ open fun view()
         try {
             
     var success: String = DomDocumentHelper.toString(this.getDoc())!!
-            
 
 
     var result: String = CompoundTransform(this.getTransformInfoInterface()).
                             translate(success)!!
-            
 
 
 

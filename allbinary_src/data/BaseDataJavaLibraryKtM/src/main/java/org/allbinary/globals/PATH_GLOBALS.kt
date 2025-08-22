@@ -56,7 +56,6 @@ open fun getInstance()
 
 
     var abPathData: AbPathData = AbPathData.getInstance()!!
-            
 
 stringBuffer!!.append("data")
 stringBuffer!!.append(abPathData!!.SEPARATOR)

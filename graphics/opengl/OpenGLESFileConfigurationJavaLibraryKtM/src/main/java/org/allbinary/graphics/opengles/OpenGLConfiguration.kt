@@ -66,12 +66,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val FILE: String = "OpenGLConfiguration.dat"
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var opengl: Boolean = false
 
@@ -113,22 +111,18 @@ open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileInputStream: InputStream = fileInputStreamFactory!!.getFileInputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
-            
 
 
     var dataInputStream: DataInputStream = DataInputStream(fileInputStream)
 
 
     var openGLValue: Int = dataInputStream!!.readInt()!!
-            
 
 
     
@@ -158,7 +152,6 @@ open fun read()
                             
 
     var version: String = dataInputStream!!.readUTF()!!
-            
 
 
     
@@ -188,7 +181,6 @@ open fun read()
                             
 
     var type: String = dataInputStream!!.readUTF()!!
-            
 
 
     
@@ -218,7 +210,6 @@ open fun read()
                             
 
     var imageColor: String = dataInputStream!!.readUTF()!!
-            
 
 
     
@@ -257,7 +248,6 @@ open fun read()
                             
 
     var color: String = dataInputStream!!.readUTF()!!
-            
 
 
     
@@ -310,11 +300,9 @@ open fun write()
             PreLogUtil.put("Write Configuration: " +this.toString(), this, "write")
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
-            
 
 
     var dataOutputStream: AbDataOutputStream = AbDataOutputStream(fileOutputStream)
@@ -360,7 +348,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -430,11 +417,9 @@ open fun update(gameFeature: Feature, colorLocked: Boolean)
                     var colorLocked = colorLocked
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     var modified: Boolean = false
@@ -723,7 +708,6 @@ override fun toString()
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 stringBuffer!!.append(" isOpenGL: ")
 stringBuffer!!.append(this.isOpenGL())

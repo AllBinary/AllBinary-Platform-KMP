@@ -101,11 +101,9 @@ open fun scale(image: Image, width: Int, height: Int)
                     var height = height
 
     var sourceWidth: Int = image.getWidth()!!
-            
 
 
     var sourceHeight: Int = image.getHeight()!!
-            
 
 
     var originalData: IntArray = IntArray(image.getWidth() *image.getHeight())
@@ -152,7 +150,6 @@ scaledData[scaledIndex--]= originalData[(sourceWidth *dy) +dx]!!
 
 
     var scaledImage: Image = Image.createRGBImage(scaledData, width, height, true)!!
-            
 
 
 

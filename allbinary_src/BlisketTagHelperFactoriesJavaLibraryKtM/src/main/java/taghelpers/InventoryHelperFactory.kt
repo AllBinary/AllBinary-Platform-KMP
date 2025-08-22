@@ -37,7 +37,6 @@ open public class InventoryHelperFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -68,7 +67,6 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

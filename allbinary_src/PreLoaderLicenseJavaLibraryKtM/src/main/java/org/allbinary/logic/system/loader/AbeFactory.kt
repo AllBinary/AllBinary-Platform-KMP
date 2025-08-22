@@ -60,7 +60,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var useCustomLoader: Boolean = false
 private constructor        ()
@@ -145,7 +144,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
         try {
             
     var parent: ClassLoader = WebappClassLoaderInfo.getLoader()!!
-            
 
 
     
@@ -157,7 +155,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
 
 
     var myClass: KClass<*> = loader.loadClass(className)!!
-            
 
 constructor= myClass!!.getConstructor(classes)
 
@@ -171,7 +168,6 @@ constructor= myClass!!.getConstructor(classes)
                         else {
                             
     var myClass: KClass<*> = parent.loadClass(className)!!
-            
 
 constructor= myClass!!.getConstructor(classes)
 
@@ -245,7 +241,6 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
         try {
             
     var parent: ClassLoader = WebappClassLoaderInfo.getLoader()!!
-            
 
 
     
@@ -257,7 +252,6 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
 
 
     var c: KClass<*> = loader.loadClass(className)!!
-            
 
 
 
@@ -270,7 +264,6 @@ open fun ::class(abeClientInformation: AbeClientInformationInterface, className:
                         else {
                             
     var c: KClass<*> = parent.loadClass(className)!!
-            
 
 
 

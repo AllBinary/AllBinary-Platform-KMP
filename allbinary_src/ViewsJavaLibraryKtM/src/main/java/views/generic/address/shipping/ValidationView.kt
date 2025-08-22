@@ -70,7 +70,6 @@ this.streetAddressList= billingAddressesEntity!!.get()
                                 
 
     var size: Int = streetAddressList!!.size()!!
-            
 
 
 

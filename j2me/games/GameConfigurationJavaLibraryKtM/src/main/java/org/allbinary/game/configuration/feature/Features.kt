@@ -58,10 +58,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val list: BasicArrayList
 
@@ -157,19 +155,15 @@ open fun init()
         try {
             
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
 
     var inputFeatureFactory: InputFeatureFactory = InputFeatureFactory.getInstance()!!
-            
 
 
     var sensorFeatureFactory: SensorFeatureFactory = SensorFeatureFactory.getInstance()!!
-            
 
 
     var touchFeatureFactory: TouchFeatureFactory = TouchFeatureFactory.getInstance()!!
-            
 
 this.addDefault(gameFeatureFactory!!.ARTIFICIAL_INTELLEGENCE_PROCESSOR)
 this.addDefault(gameFeatureFactory!!.COLLIDABLE_INTERFACE_LAYER_PROCESSOR)
@@ -181,7 +175,6 @@ this.addDefault(gameFeatureFactory!!.SCREEN_SHAKE)
 this.addDefault(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION)
 
     var operatingSystemInterface: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
-            
 
 
     

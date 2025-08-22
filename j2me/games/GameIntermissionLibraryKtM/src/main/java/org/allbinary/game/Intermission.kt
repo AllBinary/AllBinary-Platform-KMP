@@ -38,7 +38,6 @@ open public class Intermission
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
 
     private var intermissionEnableListener: IntermissionEnableListenerInterface = NullIntermissionEnableListener.getInstance()!!
-            
 public constructor        ()
             : super()
         {}

@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var connectionHashMap: HashMap<Any, Any> = 
                 null
@@ -182,7 +181,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
 
     var size: Int = connectionVector!!.size!!
-            
 
 
 

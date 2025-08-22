@@ -59,11 +59,9 @@ this.taxesMoney= Money()
 this.totalMoney= Money()
 
     var orderHistoryEntityInterface: OrderHistoryEntityInterface = OrderHistoryEntityFactory.getInstance()!!
-            
 
 
     var orderHistoryInterfaceVector: Vector = orderHistoryEntityInterface!!.getStoreOrders(storeFrontInterface)!!
-            
 
 
     var numberOfOrders: Long = 0
@@ -73,7 +71,6 @@ this.totalMoney= Money()
 
 
     var size: Int = orderHistoryInterfaceVector!!.size!!
-            
 
 
 
@@ -151,7 +148,6 @@ open fun toHashMap()
 
 
     var storeFrontOrdersHistoryStatisticsData: StoreFrontOrdersHistoryStatisticsData = StoreFrontOrdersHistoryStatisticsData.getInstance()!!
-            
 
 hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.NUMBEROFORDERS, this.getNumberOfOrders()!!.toString())
 hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.SUBTOTAL, this.getSubTotal()!!.toString())

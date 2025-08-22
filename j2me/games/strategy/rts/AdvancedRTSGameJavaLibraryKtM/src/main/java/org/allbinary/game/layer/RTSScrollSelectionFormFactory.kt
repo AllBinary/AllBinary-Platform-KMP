@@ -55,14 +55,12 @@ open fun getInstance(formLabel: String, items: Array<CustomItem?>)
                     var items = items
 
     var basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
-            
 
 
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
 
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var menuX: Int = CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +touchButtonLocationHelper!!.getColumnsRemainderHalf()

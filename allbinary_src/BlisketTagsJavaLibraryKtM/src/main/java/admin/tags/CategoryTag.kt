@@ -39,7 +39,6 @@ open public class CategoryTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var xsl: String
 public constructor        (){this.setTagHelperFactory(CategoryHelperFactory())
@@ -65,16 +64,13 @@ open fun viewCategory()
             
     var anyType: Any = CategoryRequestHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("viewCategory", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -123,16 +119,13 @@ open fun viewCategories()
             
     var anyType: Any = CategoryRequestHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("viewCategories", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -198,7 +191,6 @@ open fun doStartTag()
                                     {
                                     
     var output: String = this.viewCategory()!!
-            
 
 
     
@@ -219,7 +211,6 @@ open fun doStartTag()
                                     {
                                     
     var output: String = this.viewCategories()!!
-            
 
 
     

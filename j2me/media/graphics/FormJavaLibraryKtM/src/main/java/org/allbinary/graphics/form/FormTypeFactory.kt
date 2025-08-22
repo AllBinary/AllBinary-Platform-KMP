@@ -67,7 +67,6 @@ open fun getFormType()
         //nullable = true from not(false or (false and true)) = true
 : FormType{
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var formType: FormType

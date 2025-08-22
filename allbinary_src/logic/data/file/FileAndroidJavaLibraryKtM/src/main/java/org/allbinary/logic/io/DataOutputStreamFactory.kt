@@ -86,11 +86,9 @@ open fun getInstance(filePath: String, fileName: String)
                     var fileName = fileName
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileOutputStream: AbFileOutputStream = fileStreamFactory!!.getFileOutputStreamInstance(filePath, fileName)!!
-            
 
 
     var idOutData: AbDataOutputStream = AbDataOutputStream(fileOutputStream)

@@ -43,16 +43,12 @@ open public class BasePatrolAI : BasicAI {
         companion object {
             
     val MAX_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(2)!!
-            
 
     val DIRECTION_ARRAY: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(3)!!
-            
 
     val FIRING_DISTANCE: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(4)!!
-            
 
     var SPEED: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(5)!!
-            
 
         }
             
@@ -99,7 +95,6 @@ open fun updateTotalDistance()
 
 
     var velocityProperties: BasicVelocityProperties = velocityInterfaceCompositeInterface!!.getVelocityProperties()!!
-            
 
 xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
 }
@@ -109,11 +104,9 @@ open fun changeDirectionIfReachedPacingAreaMax()
         //nullable = true from not(false or (false and true)) = true
 {
     var mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
 
     var totalDistance: Int = mathUtil!!.abs(xTotalDistance)!!
-            
 
 
     

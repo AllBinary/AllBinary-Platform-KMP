@@ -65,10 +65,8 @@ open public class ThemeValidation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoInterface
 
@@ -97,7 +95,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface, cssSt
 this.transformInfoInterface= transformInfoInterface
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemePath)
 this.themeName= pathUtil!!.getNameFromPath(categoryThemePath)
@@ -119,7 +116,6 @@ this.transformInfoInterface= transformInfoInterface
 
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 this.categoryAbPath= pathUtil!!.removeNameFromPath(categoryThemeAbPath!!.toString())
 this.themeName= pathUtil!!.getNameFromPath(categoryThemeAbPath!!.toString())
@@ -156,20 +152,16 @@ this.transformInfoInterface= storeThemeCategoryInterface!!.getTransformInfoInter
 this.categoryAbPath= storeThemeCategoryInterface!!.getPath()
 
     var themeNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.NAME, node.getChildNodes())!!
-            
 
 
     var valueNode: Node = DomSearchHelper.getNode(DomData.VALUE, themeNameNode!!.getChildNodes())!!
-            
 
 this.themeName= DomNodeHelper.getTextNodeValue(valueNode)
 
     var previewImageNameNode: Node = DomSearchHelper.getNode(ThemeData.getInstance()!!.PREVIEW_IMAGE_NAME, node.getChildNodes())!!
-            
 
 
     var previewImageNameValueNode: Node = DomSearchHelper.getNode(DomData.VALUE, previewImageNameNode!!.getChildNodes())!!
-            
 
 this.themePreviewImageName= DomNodeHelper.getTextNodeValue(previewImageNameValueNode)
 this.webAppAbPath= storeThemeCategoryInterface!!.getWebAppPath()
@@ -186,7 +178,6 @@ open fun init()
 
 
     var categoryLoaderInterface: CategoryLoaderInterface = CategoryLoaderFactory.getInstance(categoryFactoryInterface)!!
-            
 
 
     var rootStoreThemeCategoryInterface: StoreThemeCategoryInterface = categoryFactoryInterface!!.getRootInstance() as StoreThemeCategoryInterface
@@ -278,7 +269,6 @@ open fun getCssStyleValidation()
 
 
     var document: Document = DomDocumentHelper.create(cryptFileReader!!.get(cssStyleFileAbPath))!!
-            
 
 this.styleValidationInterface= CssStyleValidation(document)
 
@@ -456,7 +446,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var themeData: ThemeData = ThemeData.getInstance()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -482,7 +471,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, ThemeData.getInstance()!!.NAME, this.toHashMap())!!
-            
 
 
     var domNodeInterface: DomNodeInterface = this.getCssStyleValidation() as DomNodeInterface

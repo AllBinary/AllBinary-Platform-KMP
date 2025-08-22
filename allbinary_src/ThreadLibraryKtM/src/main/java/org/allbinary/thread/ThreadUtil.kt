@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val JOIN: String = "join"
 

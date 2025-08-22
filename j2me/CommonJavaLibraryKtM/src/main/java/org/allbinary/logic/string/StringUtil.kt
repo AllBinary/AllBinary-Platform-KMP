@@ -114,7 +114,6 @@ open fun count(string: String, aChar: Char)
 
 
     var size: Int = string.length!!
-            
 
 
 

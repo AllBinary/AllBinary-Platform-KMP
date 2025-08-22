@@ -74,7 +74,6 @@ this.velocityInterface!!.getVelocityYBasicDecimalP()!!.set(0)
                                     {
                                     
     var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
-            
 
 basicDecimal!!.set(0)
 basicDecimal!!.add(y)
@@ -89,7 +88,6 @@ this.index++
                                     {
                                     
     var basicDecimal: BasicDecimal = this.velocityInterface!!.getVelocityYBasicDecimalP()!!
-            
 
 basicDecimal!!.set(0)
 basicDecimal!!.subtract(y)

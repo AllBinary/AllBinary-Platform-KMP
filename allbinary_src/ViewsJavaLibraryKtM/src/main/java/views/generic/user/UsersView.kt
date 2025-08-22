@@ -41,7 +41,6 @@ open public class UsersView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var userVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -65,11 +64,9 @@ open fun toXmlNode(document: Document)
         try {
             
     var usersNode: Node = document.createElement(UsersData.NAME)!!
-            
 
 
     var size: Int = userVector!!.size!!
-            
 
 
 
@@ -91,7 +88,6 @@ open fun toXmlNode(document: Document)
                                     
     var node: Node = UserDomNode(userInterface).
                             toXmlNode(document)!!
-            
 
 usersNode!!.appendChild(node)
 

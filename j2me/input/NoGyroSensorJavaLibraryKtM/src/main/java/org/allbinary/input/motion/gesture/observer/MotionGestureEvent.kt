@@ -137,7 +137,6 @@ override fun toString()
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 stringBuffer!!.append(stringUtil!!.toString(this.motionGesture))
 stringBuffer!!.append(CURRENT)

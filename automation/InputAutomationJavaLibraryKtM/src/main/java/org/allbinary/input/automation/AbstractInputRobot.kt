@@ -37,7 +37,6 @@ open public class AbstractInputRobot
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var helpSet: HelpSet
 public constructor        (helpSet: HelpSet)
@@ -84,7 +83,6 @@ open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
                     var y = y
 
     var point: Point = PointHelper.getCenterPoint(rectangle)!!
-            
 
 this.mouseMove(point.x +x, point.y +y)
 logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle of: " +rectangle, this, "moveMouseToTarget")

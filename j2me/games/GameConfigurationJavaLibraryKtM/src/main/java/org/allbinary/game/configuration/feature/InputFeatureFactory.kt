@@ -65,7 +65,6 @@ open fun isSingleKeyProcessing()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var features: Features = Features.getInstance()!!
-            
 
 
     

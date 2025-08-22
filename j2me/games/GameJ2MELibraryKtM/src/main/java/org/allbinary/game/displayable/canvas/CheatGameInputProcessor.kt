@@ -62,22 +62,18 @@ this.gameCanvas= gameCanvas
 
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
             
     var gameLayerManager: AllBinaryGameLayerManager = this.gameCanvas!!.getLayerManager()!!
-            
 
 
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -91,7 +87,6 @@ override fun update()
 
 
     var key: Int = GameKeyEventUtil.getKey(anyType)!!
-            
 
 
     

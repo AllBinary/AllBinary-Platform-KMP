@@ -91,7 +91,6 @@ private constructor        (pathFinderGraphVisitorFactoryInterface: PathFinderGr
                     var max = max
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put("Using Dynamic Path Finding", this, commonStrings!!.GET_INSTANCE)
 this.basicGeographicMapPathFinder= BasicGeographicMapPathFinder(max)
@@ -162,29 +161,24 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
                     var cellPosition = cellPosition
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var cellTypeId: Int = mapArray[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]!!
 
 
     var geographicMapCellType: GeographicMapCellType = GeographicMapCellTypeFactory.getInstance()!!.getInstance(geographicMapInterface!!.getCellTypeFromMapCellTypeInt(cellTypeId))!!
-            
 
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = geographicMapCellType as RaceTrackGeographicMapCellType
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase = pathFindingInfo!!.getPathFindingNodeCostInfoFactoryInterface()!!
-            
 
 
     var basicGeographicMapUtil: BasicGeographicMapUtil = BasicGeographicMapUtil.getInstance()!!
-            
 
 
     var row: Int= 0
@@ -242,19 +236,15 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
                     var mapArray = mapArray
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
-            
 
 
     var totalColumns: Int = allBinaryTiledLayer!!.getColumns()!!
-            
 
 
     var totalRows: Int = allBinaryTiledLayer!!.getRows()!!
-            
 
 
 

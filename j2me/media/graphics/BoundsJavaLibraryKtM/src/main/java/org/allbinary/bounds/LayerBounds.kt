@@ -40,7 +40,6 @@ open public class LayerBounds
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var rectangle: Rectangle
 protected constructor        (rectangle: Rectangle)

@@ -57,7 +57,6 @@ open fun getInstance(node: Node)
                     var node = node
 
     var name: String = DomNodeHelper.getTextNodeValue(node)!!
-            
 
 
 
@@ -108,7 +107,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileDataWorkerData.NAME, name)!!
-            
 
 
 

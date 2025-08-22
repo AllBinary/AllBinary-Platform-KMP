@@ -48,7 +48,6 @@ open public class InGameFeatures : Init {
 
 
     var orientationData: OrientationData = OrientationData.getInstance()!!
-            
 
 
     var exclusiveOrientationSensorVector: BasicArrayList = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.get(orientationData!!.ORIENTATION_SENSOR_INPUT as Object) as BasicArrayList
@@ -82,7 +81,6 @@ InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTA
                                 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -94,7 +92,6 @@ InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTA
 
 
     var touchFeatureFactory: TouchFeatureFactory = TouchFeatureFactory.getInstance()!!
-            
 
 exclusiveScreenButtonsVector!!.add(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS)
 exclusiveScreenButtonsVector!!.add(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS)
@@ -110,11 +107,9 @@ open fun isAny()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var features: Features = Features.getInstance()!!
-            
 
 
     var touchFeatureFactory: TouchFeatureFactory = TouchFeatureFactory.getInstance()!!
-            
 
 
     

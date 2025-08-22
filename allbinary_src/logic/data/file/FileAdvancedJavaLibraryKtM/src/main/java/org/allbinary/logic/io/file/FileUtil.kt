@@ -74,7 +74,6 @@ open fun getNewDirectory(fromFile: AbFile)
                     var fromFile = fromFile
 
     var newDirectory: String = fromFile!!.getPath()!!
-            
 
 
     var separatorChar: String = java.io.File.separator
@@ -90,7 +89,6 @@ open fun getNewDirectory(fromFile: AbFile)
                                 
 
     var lastIndex: Int = newDirectory!!.lastIndexOf(separatorChar)!!
-            
 
 
     
@@ -113,19 +111,14 @@ lastIndex= newDirectory!!.lastIndexOf(separatorChar)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val directory: Directory = Directory.getInstance()!!
-            
 
     private val logConfigTypeFactory: LogConfigTypeFactory = LogConfigTypeFactory.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -143,7 +136,6 @@ open fun write(inputStream: InputStream, file: AbFile)
                     var file = file
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(file)!!
-            
 
 this.write(inputStream, dataOutputStream)
 }
@@ -243,7 +235,6 @@ open fun fixPath(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
 
 
     var endIndex: Int = file.getPath()!!.indexOf(file.getName())!!
-            
 
 
     var fixedPathString: String = realPath!!.toFileSystemString() +file.getPath()!!.substring(beginIndex, endIndex)
@@ -254,7 +245,6 @@ open fun fixPath(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
 this.directory.create(fixedPath)
 
     var string: String = fixedPath!!.toFileSystemString()!!
-            
 
 
     
@@ -322,7 +312,6 @@ open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String
         try {
             
     var outPath: AbPath = fixPath(file, path, realPath, cloud)!!
-            
 
 
     var outFile: AbFile = AbFile(outPath)
@@ -363,7 +352,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud")
                             
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(outFile)!!
-            
 
 
     var fileInputStream: AbFileInputStream = AbFileLocalInputStream(file)
@@ -463,7 +451,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud")
                             
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(outFile)!!
-            
 
 
     var fileInputStream: AbFileInputStream = AbFileLocalInputStream(file)
@@ -682,7 +669,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
                                 
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(toFile)!!
-            
 
 
     var fileInputStream: AbFileInputStream = AbFileInputStream(fromFile)
@@ -753,11 +739,9 @@ open fun copyDirectoryPortion(fromDirectoryAbPath: AbPath, toDirectoryAbPath: Ab
                                 
 
     var fileList: BasicArrayList = directory.search(file, true)!!
-            
 
 
     var size: Int = fileList!!.size()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -819,11 +803,9 @@ stringBuffer!!.append(end)
                             
     var path: String = AbPath(nextFile!!.getPath()).
                             getPath()!!
-            
 
 
     var beginIndex: Int = fromDirectoryAbPath!!.getPath()!!.length()!!
-            
 
 
     
@@ -880,7 +862,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
                                 
 
     var newDirectory: String = getNewDirectory(fromFile)!!
-            
 
 
     var newDirectoryAbPath: AbPath = AbPath(to.getPath() +AbPathData.getInstance()!!.SEPARATOR +newDirectory)
@@ -899,7 +880,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
                                 
 
     var fileArray: Array<AbFile?> = FileWrapperUtil.wrapFiles(fromFile!!.listFiles())!!
-            
 
 
     var size: Int = fileArray!!.size
@@ -1130,7 +1110,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
                                 
 
     var fileArray: Array<AbFile?> = FileWrapperUtil.wrapFiles(fromLocationFile!!.listFiles())!!
-            
 
 
 
@@ -1276,7 +1255,6 @@ open fun readAsString(fileName: String, bytes: ByteArray)
             idFile= FileInputStream(fileName)
 
     var size: Int = idFile!!.read(bytes)!!
-            
 
 
     
@@ -1389,11 +1367,9 @@ open fun write(filePath: String, string: String)
                             append(this.WRITE_LABEL)!!.append(filePath)!!.append(DATA_LABEL)!!.append(string)!!.toString(), this, this.WRITE_METHOD)
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, filePath)!!
-            
 
 dataOutputStream= AbDataOutputStream(fileOutputStream)
 dataOutputStream!!.write(string.encodeToByteArray()0, string.length)

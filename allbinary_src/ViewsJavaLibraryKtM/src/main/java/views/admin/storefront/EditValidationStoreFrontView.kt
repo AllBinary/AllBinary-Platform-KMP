@@ -38,7 +38,6 @@ open public class EditValidationStoreFrontView : StoreFrontComponent
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){

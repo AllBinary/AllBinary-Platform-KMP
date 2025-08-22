@@ -60,11 +60,9 @@ open fun getAsString()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var date: Date = calendar.getTime()!!
-            
 
 
 

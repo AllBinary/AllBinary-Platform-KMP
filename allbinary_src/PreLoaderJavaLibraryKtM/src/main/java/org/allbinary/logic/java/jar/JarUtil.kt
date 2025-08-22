@@ -73,7 +73,6 @@ open fun show()
         try {
             
     var conn: URLConnection = jarURL!!.openConnection()!!
-            
 
 
     var jis: JarInputStream = JarInputStream(conn.getInputStream())
@@ -82,7 +81,6 @@ open fun show()
         while(true)
         {
     var entry: JarEntry = jis.getNextJarEntry()!!
-            
 
 
     

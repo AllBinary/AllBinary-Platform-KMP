@@ -60,7 +60,6 @@ public constructor        (pickeUpLayerType: PickedUpLayerType, iconLayer: IconL
                     
 
     var list: BasicArrayList = CountedPickedUpLayerInterfaceFactoryPool.getInstance()!!.getList()!!
-            
 
 this.id= list.size()
 list.add(this)

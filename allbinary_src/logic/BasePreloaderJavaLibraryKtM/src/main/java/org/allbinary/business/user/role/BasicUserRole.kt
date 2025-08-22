@@ -47,11 +47,9 @@ open fun getRole(role: String)
                     var role = role
 
     var roleVector: Vector<Any> = BasicUserRole.getAll()!!
-            
 
 
     var size: Int = roleVector!!.size!!
-            
 
 
 

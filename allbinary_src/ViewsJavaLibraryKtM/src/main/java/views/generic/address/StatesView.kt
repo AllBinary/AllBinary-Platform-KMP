@@ -43,10 +43,8 @@ open public class StatesView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -61,7 +59,6 @@ open fun toXmlNode(document: Document)
         try {
             
     var node: Node = document.createElement(StreetAddressData.STATES)!!
-            
 
 
     var statesFile: String = URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.LINEDATAPATH +"states.txt"
@@ -73,7 +70,6 @@ open fun toXmlNode(document: Document)
         while(lineReader!!.hasNext())
         {
     var option: String = lineReader!!.next()!!
-            
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, StreetAddressData.STATE, option))
 }

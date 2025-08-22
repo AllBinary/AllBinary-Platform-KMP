@@ -52,7 +52,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var gameNotificationHud: GameNotificationHud = GameNotificationHud.NULL_GAME_NOTIFICATION
 private constructor        ()
@@ -61,13 +60,11 @@ private constructor        ()
         try {
             
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
-            
 
 this.gameNotificationHud= GameNotificationHud(basicHudFactory!!.TOPCENTER, basicHudFactory!!.HORIZONTAL, 14, 40, 2, BasicColorFactory.getInstance()!!.RED)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }

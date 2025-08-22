@@ -55,7 +55,6 @@ open fun isTime()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var currentTime: Long = System.currentTimeMillis()!!
-            
 
 
     
@@ -86,7 +85,6 @@ open fun isTimeSince(delay: Int)
                     var delay = delay
 
     var currentTime: Long = System.currentTimeMillis()!!
-            
 
 
     
@@ -344,7 +342,6 @@ open fun toString(currentTime: Long)
                     var currentTime = currentTime
 
     var elapsed: Long = this.getElapsed(currentTime)!!
-            
 
 
     
@@ -353,11 +350,9 @@ open fun toString(currentTime: Long)
                                     {
                                     
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var elapsedAsString: String = (elapsed).toString()!!
-            
 
 
 
@@ -383,11 +378,9 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var currentTime: Long = System.currentTimeMillis()!!
-            
 
 
     var elapsed: Long = this.getElapsed(currentTime)!!
-            
 
 
     
@@ -396,11 +389,9 @@ override fun toString()
                                     {
                                     
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var elapsedAsString: String = (elapsed).toString()!!
-            
 
 
 

@@ -70,11 +70,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(StoreFrontStatisticsData.getInstance()!!.NAME)!!
-            
 
 
     var storeFrontAdvertisementsStatisticsInterface: StoreFrontAdvertisementsStatisticsInterface = this.storeFrontStatisticsInterface!!.getAdvertisements()!!
-            
 
 
     var storeFrontAdvertisementsStatisticsDomNodeInterface: DomNodeInterface = StoreFrontAdvertisementsStatisticsView(storeFrontAdvertisementsStatisticsInterface)
@@ -82,7 +80,6 @@ open fun toXmlNode(document: Document)
 node.appendChild(storeFrontAdvertisementsStatisticsDomNodeInterface!!.toXmlNode(document))
 
     var storeFrontInventoryStatisticsInterface: StoreFrontInventoryStatisticsInterface = this.storeFrontStatisticsInterface!!.getInventory()!!
-            
 
 
     var storeFrontInventoryStatisticsDomNodeInterface: DomNodeInterface = StoreFrontInventoryStatisticsView(storeFrontInventoryStatisticsInterface)
@@ -90,7 +87,6 @@ node.appendChild(storeFrontAdvertisementsStatisticsDomNodeInterface!!.toXmlNode(
 node.appendChild(storeFrontInventoryStatisticsDomNodeInterface!!.toXmlNode(document))
 
     var storeFrontOrdersHistoryStatisticsInterface: StoreFrontOrdersHistoryStatisticsInterface = this.storeFrontStatisticsInterface!!.getOrders()!!
-            
 
 
     var storeFrontOrdersHistoryStatisticsDomNodeInterface: DomNodeInterface = StoreFrontOrdersHistoryStatisticsView(storeFrontOrdersHistoryStatisticsInterface)
@@ -103,7 +99,6 @@ node.appendChild(storeFrontOrdersHistoryStatisticsDomNodeInterface!!.toXmlNode(d
                                     {
                                     
     var storeFrontUsersStatisticsInterface: StoreFrontUsersStatisticsInterface = this.storeFrontStatisticsInterface!!.getUsers()!!
-            
 
 
     var storeFrontUsersStatisticsDomNodeInterface: DomNodeInterface = StoreFrontUsersStatisticsView(storeFrontUsersStatisticsInterface)

@@ -43,7 +43,6 @@ open public class BasicTopViewGeographicMapCellType
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val name: String
 
@@ -147,7 +146,6 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
                     var cost = cost
 
     var size: Int = types.size()!!
-            
 
 
     var typeArray: IntArray = IntArray(size)

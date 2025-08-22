@@ -53,10 +53,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var time: Long = 0
 
@@ -157,11 +155,9 @@ open fun isTimeToGetKey()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var currentTime: Long = calendar.getTimeInMillis()!!
-            
 
 
     

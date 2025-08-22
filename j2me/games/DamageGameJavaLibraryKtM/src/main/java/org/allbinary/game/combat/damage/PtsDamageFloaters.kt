@@ -47,7 +47,6 @@ open public class PtsDamageFloaters : DamageFloaters {
         }
             
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     private var layerInterface: AllBinaryLayer
 
@@ -58,7 +57,6 @@ open public class PtsDamageFloaters : DamageFloaters {
     private var lastDamageStringSizeArray: IntArray = IntArray(5)
 
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(5)!!
-            
 
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor        (layerInterface: AllBinaryLayer){
@@ -68,7 +66,6 @@ this.primitiveLongUtil= PrimitiveLongUtil(100000)
 this.layerInterface= layerInterface
 
     var CHAR_ARRAY: CharArray = CharArrayFactory.getInstance()!!.getZeroCharArray()!!
-            
 
 
 
@@ -89,7 +86,6 @@ override fun add(damage: Int)
                     var damage = damage
 
     var index: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 this.lastDamage[index]= damage
 this.lastDamageString[index]= this.primitiveLongUtil!!.getCharArray(this.lastDamage[index]!!)
@@ -99,7 +95,6 @@ this.circularIndexUtil!!.next()
 
 
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -107,15 +102,12 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.layerInterface!!.getViewPosition()!!
-            
 
 
     var x: Int = viewPosition!!.getX()!!
-            
 
 
     var y: Int = viewPosition!!.getY()!!
-            
 
 
 

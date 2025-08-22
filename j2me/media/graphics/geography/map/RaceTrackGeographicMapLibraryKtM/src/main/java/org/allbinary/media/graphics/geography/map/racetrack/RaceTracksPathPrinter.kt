@@ -56,7 +56,6 @@ open fun printPath(list: BasicArrayList)
 
         {
     var anyType: Any = list.get(index)!!
-            
 
 PreLogUtil.put(StringMaker().
                             append("pathList.add(cellPositionFactory.getInstance")!!.append(anyType!!.toString())!!.append(");")!!.toString(), this, "printPath")

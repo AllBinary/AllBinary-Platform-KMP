@@ -64,11 +64,9 @@ override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : AllBinaryEventObject{
     var inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
 
     var input: Input = inputFactory!!.getInstance(index++)!!
-            
 
 
     

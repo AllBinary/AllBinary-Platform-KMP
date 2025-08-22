@@ -40,7 +40,6 @@ open public class LogConfigType
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String
 

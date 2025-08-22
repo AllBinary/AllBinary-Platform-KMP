@@ -38,7 +38,6 @@ open public class AnimationDamageFloaters : DamageFloaters {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var layerInterface: AllBinaryLayer
 
@@ -85,7 +84,6 @@ override fun add(damage: Int)
                     var damage = damage
 
     var i: Int = this.circularIndexUtil!!.getIndex()!!
-            
 
 animationInterfaceArray[i]!!.setFrame(0)
 this.circularIndexUtil!!.next()
@@ -100,15 +98,12 @@ override fun paint(graphics: Graphics)
         try {
             
     var viewPosition: ViewPosition = this.layerInterface!!.getViewPosition()!!
-            
 
 
     var x: Int = viewPosition!!.getX()!!
-            
 
 
     var y: Int = viewPosition!!.getY()!!
-            
 
 
 
@@ -138,11 +133,9 @@ animationInterface!!.nextFrame()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 }

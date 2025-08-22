@@ -61,16 +61,12 @@ open fun getInstance()
     private val radioOn: ByteArray = byteArrayOf( -119,80,78,71,13,10,26,10,0,0,0,13,73,72,68,82,0,0,0,11,0,0,0,11,2,3,0,0,0, -44, -62, -97, -75,0,0,0,12,80,76,84,69, -1, -1, -1, -69, -69, -69,106,106,106,2,2,2,106, -103,14, -47,0,0,0,50,73,68,65,84,120, -38,5, -63,65,13,0,32,12,4, -63, -19, -11, -117,1,18,68, -100,10,52,19,94,72,64,17,101, -122,44, -44, -29,98, -52,89,77, -102,40,2,85, -95, -73, -63, -104, -63,37, -117,15, -40,119,10,41,78,26, -79,59,0,0,0,0,73,69,78,68, -82,66,96, -126)
 
     private val imgMultiOffO: Image = Image.createImage(multiOff, 0, multiOff!!.size)!!
-            
 
     private val imgMultiOnO: Image = Image.createImage(multiOn, 0, multiOn!!.size)!!
-            
 
     private val imgRadioOffO: Image = Image.createImage(radioOff, 0, radioOff!!.size)!!
-            
 
     private val imgRadioOnO: Image = Image.createImage(radioOn, 0, radioOn!!.size)!!
-            
 
     var imgMultiOff: Image = imgMultiOffO
 

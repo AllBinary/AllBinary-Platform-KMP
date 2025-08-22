@@ -42,13 +42,10 @@ open public class Sounds
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val soundStrings: SoundStrings = SoundStrings.getInstance()!!
-            
 
     private val soundsFactoryInterface: SoundsFactoryInterface
 public constructor        (soundsFactoryInterface: SoundsFactoryInterface)
@@ -67,20 +64,16 @@ open fun init()
 {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 soundsFactoryInterface!!.init()
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
-            
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var indexInteger: Integer
@@ -136,11 +129,9 @@ open fun stopAll()
 {logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
-            
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     var player: Player
@@ -187,11 +178,9 @@ open fun closeAll()
 {logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
-            
 
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 
     var player: Player

@@ -35,7 +35,6 @@ open public class HighScoreCommandsBaseFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val HIGH_SCORE_COMMANDS: Array<Command?>
 protected constructor        (HIGH_SCORE_COMMANDS: Array<Command?>)

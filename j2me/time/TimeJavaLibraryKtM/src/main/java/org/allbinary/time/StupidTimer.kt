@@ -31,16 +31,12 @@ open public class StupidTimer
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val nullUtil: NullUtil = NullUtil.getInstance()!!
-            
 
     private val threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
-            
 
 open fun visitBool(visitorInterface: Visitor)
         //nullable = true from not(false or (false and false)) = true
@@ -52,7 +48,6 @@ open fun visitBool(visitorInterface: Visitor)
 
 
     var result2: Boolean = result!!
-            
 
 
 
@@ -98,10 +93,12 @@ PreLogUtil.put(StringMaker().
 index++
 
         
-        //synchronized(this) 
-        //mutex.withLock
-        this.threadObjectUtil!!.waitObject(this, 1800)
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
 
+        //mutex.withLock
+        {this.threadObjectUtil!!.waitObject(this, 1800)
+}
 
 
     

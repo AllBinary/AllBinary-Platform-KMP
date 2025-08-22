@@ -51,13 +51,10 @@ open public class CommandForm : Form
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val repaintProcessor: Processor = ScreenRepaintProcessorFactory.getInstance()!!.getInstance(this)!!
-            
 
     private var commandStack: Stack<Any>
 public constructor        (commandListener: CommandListener, formTitle: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        

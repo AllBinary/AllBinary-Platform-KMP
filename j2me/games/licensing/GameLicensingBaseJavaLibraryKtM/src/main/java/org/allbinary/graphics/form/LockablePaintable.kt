@@ -35,7 +35,6 @@ open public class LockablePaintable : ItemPaintable {
         
 
     private val animation: Animation = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(LockedResources.getInstance()!!.LOCKED_DEMO_GAME_FEATURE_RESOURCE)!!.getInstance(0)!!
-            
 
     private val lockedIndex: Int
 public constructor        (lockedIndex: Int){

@@ -48,10 +48,8 @@ open public class CollidableUnitBehavior : CollidableRTSBehavior {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val layerPartialCellPositionsUtil: LayerPartialCellPositionsUtil = LayerPartialCellPositionsUtil.getInstance()!!
-            
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
                             : super(ownerLayer, collidable){
@@ -115,7 +113,6 @@ open fun visit(anyType: Any)
 
 
     var clear: Boolean = this@CollidableUnitBehavior.steer(allbinaryLayer)!!
-            
 
 
     
@@ -176,11 +173,9 @@ open fun steer(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
 
 
     var angleInfo2: AngleInfo = unitLayer!!.getRotationAnimationInterface()!!.getAngleInfoP()!!
-            
 
 
     var angleInfo: AngleInfo = ownerUnitLayer!!.getRotationAnimationInterface()!!.getAngleInfoP()!!
-            
 
 
     var angle: Int = angleInfo!!.getAngle() -angleInfo2!!.getAngle()
@@ -248,7 +243,6 @@ open fun chase(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
 
 
     var list: BasicArrayList = ownerUnitLayer!!.getUnitWaypointBehavior()!!.getSteeringVisitorList()!!
-            
 
 
     
@@ -277,7 +271,6 @@ open fun collideUnit(unitLayer: UnitLayer)
 
 
     var partialPositionList: BasicArrayList = ownerUnitLayer!!.getPartialpositionlist()!!
-            
 
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = ownerUnitLayer!!.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
@@ -290,15 +283,12 @@ open fun collideUnit(unitLayer: UnitLayer)
 
 
     var dropCellPositionHistory: DropCellPositionHistory = DropCellPositionHistory.getInstance()!!
-            
 
 
     var tiledLayerUtil: TiledLayerUtil = TiledLayerUtil.getInstance()!!
-            
 
 
     var tiledLayer: AllBinaryTiledLayer = basicGeographicMap!!.getAllBinaryTiledLayer()!!
-            
 
 
     
@@ -319,7 +309,6 @@ this.layerPartialCellPositionsUtil!!.getAll(basicGeographicMap, this.ownerLayer,
 
 
     var y: Int = this.ownerLayer!!.getYP()!!
-            
 
 x= tiledLayerUtil!!.keepOnMapX(tiledLayer, x, this.ownerLayer!!.getWidth())
 y= tiledLayerUtil!!.keepOnMapY(tiledLayer, y, this.ownerLayer!!.getHeight())
@@ -338,7 +327,6 @@ this.layerPartialCellPositionsUtil!!.getAll(basicGeographicMap, unitLayer, diff,
 
 
     var y: Int = unitLayer!!.getYP()!!
-            
 
 x= tiledLayerUtil!!.keepOnMapX(tiledLayer, x, unitLayer!!.getWidth())
 y= tiledLayerUtil!!.keepOnMapY(tiledLayer, y, unitLayer!!.getHeight())
@@ -365,7 +353,6 @@ this.layerPartialCellPositionsUtil!!.getAll(basicGeographicMap, this.ownerLayer,
                                     {
                                     
     var x: Int = this.ownerLayer!!.getXP()!!
-            
 
 
     var y: Int = unitLayer!!.getYP() -diff
@@ -384,7 +371,6 @@ this.layerPartialCellPositionsUtil!!.getAll(basicGeographicMap, unitLayer, 0, di
                                     {
                                     
     var x: Int = unitLayer!!.getXP()!!
-            
 
 
     var y: Int = unitLayer!!.getYP() +diff

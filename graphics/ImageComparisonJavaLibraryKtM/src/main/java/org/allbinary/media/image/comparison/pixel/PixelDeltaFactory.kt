@@ -49,11 +49,9 @@ open public class PixelDeltaFactory
 
                 init{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var STATIC_BLOCK: String = "Static Block"
@@ -90,11 +88,9 @@ open fun getInstance(x: Int, y: Int, rgb1: Int, rgb2: Int)
                     var rgb2 = rgb2
 
     var point: GPoint = PointFactory.getInstance()!!.getInstance(x, y)!!
-            
 
 
     var colorDelta: ColorDelta = ColorDeltaFactory.getInstance(rgb1, rgb2)!!
-            
 
 
     var pixelDelta: PixelDelta = cacheInterface!!.get(PixelDelta.getKey(point, colorDelta)) as PixelDelta
@@ -121,7 +117,6 @@ open fun getInstance(x: Int, y: Int, rgb1: Int, rgb2: Int)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

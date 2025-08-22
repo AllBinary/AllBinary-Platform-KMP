@@ -44,7 +44,6 @@ open public class GameFeatureItemCommandListener
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var gameOptionsForm: GameOptionsForm
 public constructor        (gameOptionsForm: GameOptionsForm)
@@ -67,7 +66,6 @@ override fun commandAction(command: Command, item: Item)
         try {
             
     var itemLabel: String = item.getLabel()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, MidletStrings.getInstance()!!.COMMAND_ACTION)
@@ -83,7 +81,6 @@ logUtil!!.put(StringMaker().
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, MidletStrings.getInstance()!!.COMMAND_ACTION, e)
 }

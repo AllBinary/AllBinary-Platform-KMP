@@ -38,7 +38,6 @@ open public class OrderItemsRequestHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 

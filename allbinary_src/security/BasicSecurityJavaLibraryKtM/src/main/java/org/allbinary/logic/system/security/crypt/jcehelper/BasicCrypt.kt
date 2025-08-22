@@ -38,7 +38,6 @@ open public class BasicCrypt
         
 
     private val byteUtil: ByteUtil = ByteUtil.getInstance()!!
-            
 
     private val key: ByteArray
 public constructor        (keyAsString: String)
@@ -55,7 +54,6 @@ public constructor        (keyAsString: String)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 }

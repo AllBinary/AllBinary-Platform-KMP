@@ -53,7 +53,6 @@ open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageCont
                     var pageContext = pageContext
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -67,7 +66,6 @@ open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageCont
                                     {
                                     
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(weblisketSession!!.getStoreName())!!
-            
 
 
     
@@ -112,7 +110,6 @@ open fun getInstance(propertiesHashMap: HashMap<Any, Any>, pageContext: PageCont
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, "TransformInfoFactory", commonStrings!!.GET_INSTANCE, e)
 

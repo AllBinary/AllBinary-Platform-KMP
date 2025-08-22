@@ -44,11 +44,9 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     var sensorFeatureFactory: SensorFeatureFactory = SensorFeatureFactory.getInstance()!!
-            
 
 
     

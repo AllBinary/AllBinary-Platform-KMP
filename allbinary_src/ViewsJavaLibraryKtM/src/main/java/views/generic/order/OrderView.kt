@@ -43,7 +43,6 @@ open public class OrderView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -72,7 +71,6 @@ open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
 {
     var id: String = request.getParameter(OrderData.ID)!!
-            
 
 
     
@@ -99,11 +97,9 @@ open fun toXmlNode(document: Document)
         try {
             
     var orderHistoryNode: Node = orderHistory!!.toXmlNode(document)!!
-            
 
 
     var node: Node = document.createElement(orderHistory!!.getPaymentMethod())!!
-            
 
 orderHistoryNode!!.appendChild(basketReview!!.toXmlNode(document))
 node.appendChild(orderHistoryNode)

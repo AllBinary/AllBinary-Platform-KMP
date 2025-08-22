@@ -43,7 +43,6 @@ open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -67,7 +66,6 @@ this.setName(name)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "InputToGameKeyEventAction", e)
 }

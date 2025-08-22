@@ -59,7 +59,6 @@ open public class UpdateFileValidationView : InventoryItemView
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -128,7 +127,6 @@ open fun isValid()
                                 
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -138,7 +136,6 @@ stringBuffer!!.append(storeFrontInterface!!.getCurrentHostNamePath())
 stringBuffer!!.append(this.itemInterface!!.getCategory())
 
     var fullCategory: String = stringBuffer!!.toString()!!
-            
 
 
     var categoryFile: AbFile = AbFile(fullCategory)
@@ -167,7 +164,6 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
                                 
 
     var inventoryEntity: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     
@@ -186,7 +182,6 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
                                 
 
     var anyType: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
-            
 
 
     
@@ -198,11 +193,9 @@ stringBuffer!!.append(this.itemInterface!!.getCategory())
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 HttpFileUploadUtil.log(fileItem)
 
@@ -298,7 +291,6 @@ stringBuffer!!.append(BasicItemValidation(this.itemInterface).
                             validationInfo())
 
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
-            
 
 
     var fullCategory: String = URLGLOBALS.getWebappPath() as String +storeFrontInterface!!.getCurrentHostNamePath() +this.itemInterface!!.getCategory()
@@ -339,7 +331,6 @@ stringBuffer!!.append(BasicItemValidation(this.itemInterface).
 
 
     var anyType: Any = this.getRequestHashMap()!!.get(BasicItemData.IMAGE)!!
-            
 
 
     
@@ -351,15 +342,12 @@ stringBuffer!!.append(BasicItemValidation(this.itemInterface).
 
 
     var size: Long = fileItem!!.getSize()!!
-            
 
 
     var fileName: String = fileItem!!.getName()!!
-            
 
 
     var fileItemFieldName: String = fileItem!!.getFieldName()!!
-            
 
 this.validationInfo(stringBuffer, fileName, fileItemFieldName, size)
 
@@ -385,7 +373,6 @@ open fun isValid(fileName: String, size: Long)
                     var size = size
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     
@@ -466,7 +453,6 @@ open fun validationInfo(stringBuffer: StringMaker, fileName: String, fileItemFie
                     var size = size
 
     var fileData: FileData = FileData.getInstance()!!
-            
 
 
     

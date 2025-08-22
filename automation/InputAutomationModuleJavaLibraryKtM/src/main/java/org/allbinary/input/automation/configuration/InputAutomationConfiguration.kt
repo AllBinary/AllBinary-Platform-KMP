@@ -65,7 +65,6 @@ open fun getFile()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var installed: Boolean= false
 
@@ -111,7 +110,6 @@ open fun save()
         //nullable = true from not(false or (false and true)) = true
 {
     var document: Document = DomDocumentHelper.create()!!
-            
 
 
                     //Otherwise - statement - EmptyStmt
@@ -122,11 +120,9 @@ open fun save()
 FileUtil.getInstance()!!.copy(AbPath(file.getAbsolutePath()), AbPath(file.getAbsolutePath() +".bak.xml"))
 
     var jaxbContext: JAXBContext = JAXBContext.newInstance(InputAutomationConfiguration::class)!!
-            
 
 
     var marshaller: Marshaller = jaxbContext!!.createMarshaller()!!
-            
 
 marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true)
 marshaller.marshal(this, document)

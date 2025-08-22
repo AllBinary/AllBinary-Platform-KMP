@@ -45,7 +45,6 @@ open public class AndroidMediaPlayerWrapper : BasicPlayer {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var mediaPlayer: MediaPlayer = NullAndroidCanvas.NULL_MEDIA_PLAYER
 private constructor        (){}
@@ -57,11 +56,9 @@ public constructor        (resource: String){
         try {
             
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var mediaPlayer: MediaPlayer = MediaPlayer.create(resourceUtil!!.getContext(), resourceUtil!!.getResourceId(resource)!!.toInt())!!
-            
 
 
     
@@ -223,7 +220,6 @@ open fun update(event: String)
 logUtil!!.put("LineEvent: " +event, this, commonStrings!!.UPDATE)
 
     var size: Int = this.listenersList!!.size()!!
-            
 
 
 

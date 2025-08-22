@@ -42,10 +42,8 @@ open public class ImageComparisonSearchWorker : BasicEventHandler
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val imageComparisonInfoVector: Vector
 

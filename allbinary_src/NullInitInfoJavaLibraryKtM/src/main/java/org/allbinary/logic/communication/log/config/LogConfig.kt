@@ -74,30 +74,24 @@ public constructor        (node: Node)
                     var node = node
 
     var enabledValueNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.ENABLE, node.getChildNodes())!!
-            
 
 
     var isEnabledString: String = DomNodeHelper.getTextNodeValue(enabledValueNode)!!
-            
 
 this.isEnabled= BooleanUtil.getInstance()!!.getFromString(isEnabledString)
 
     var logConfigData: LogConfigData = LogConfigData.getInstance()!!
-            
 
 
     var nameValueNode: Node = DomSearchHelper.getNode(logConfigData!!.NAME, node.getChildNodes())!!
-            
 
 this.name= DomNodeHelper.getTextNodeValue(nameValueNode)
 
     var descriptionValueNode: Node = DomSearchHelper.getNode(logConfigData!!.DESCRIPTION, node.getChildNodes())!!
-            
 
 this.description= DomNodeHelper.getTextNodeValue(descriptionValueNode)
 
     var fileValueNode: Node = DomSearchHelper.getNode(logConfigData!!.FILE, node.getChildNodes())!!
-            
 
 this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)
 }

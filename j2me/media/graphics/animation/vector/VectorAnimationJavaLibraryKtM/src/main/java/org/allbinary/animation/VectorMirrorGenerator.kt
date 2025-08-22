@@ -54,10 +54,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -75,7 +73,6 @@ open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
         try {
             
     var pointFactory: PointFactory = PointFactory.getInstance()!!
-            
 
 
     var pointBasicArrayList: BasicArrayList
@@ -128,7 +125,6 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
 
 
     var newPoints: Array<Array<IntArray?>?> = vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList)!!
-            
 
 
 
@@ -138,7 +134,6 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 

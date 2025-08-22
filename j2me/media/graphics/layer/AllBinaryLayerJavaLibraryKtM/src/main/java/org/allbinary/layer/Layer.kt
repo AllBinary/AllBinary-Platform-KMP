@@ -42,12 +42,10 @@ open public class Layer
         companion object {
             
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(0)!!
-            
 
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var x: Int= 0
 
@@ -206,11 +204,9 @@ open fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
 }

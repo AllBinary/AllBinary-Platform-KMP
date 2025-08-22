@@ -25,10 +25,8 @@ open public class LayerManager
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val layerManagerLogging: LayerManagerLoggingBase
 
@@ -75,7 +73,6 @@ open fun insert(layerInterface: AllBinaryLayer)
 
 
     var size: Int = this.list.size()!!
-            
 
 
 
@@ -141,15 +138,16 @@ open fun remove(layerInterface: AllBinaryLayer)
                     var layerInterface = layerInterface
 
         
-        //synchronized(anyType) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(anyType) 
+
         //mutex.withLock
-        this.layerManagerLogging!!.remove(layerInterface)
+        {this.layerManagerLogging!!.remove(layerInterface)
 
     var result: Boolean = this.list.remove(layerInterface)!!
-            
 
 this.layerManagerLogging!!.remove(this, layerInterface, result)
-
+}
 
 }
 
@@ -183,13 +181,15 @@ open fun cleanup()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(anyType) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(anyType) 
+
         //mutex.withLock
-        this.list.clear()
+        {this.list.clear()
 this.layerManagerLogging!!.clear()
 System.gc()
 System.gc()
-
+}
 
 }
 
@@ -207,9 +207,11 @@ open fun paint(g: Graphics, x: Int, y: Int)
                     var y = y
 
         
-        //synchronized(anyType) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(anyType) 
+
         //mutex.withLock
-        
+        {
     var comp: Layer
 
 
@@ -233,7 +235,7 @@ open fun paint(g: Graphics, x: Int, y: Int)
                                 
 }
 
-
+}
 
 }
 

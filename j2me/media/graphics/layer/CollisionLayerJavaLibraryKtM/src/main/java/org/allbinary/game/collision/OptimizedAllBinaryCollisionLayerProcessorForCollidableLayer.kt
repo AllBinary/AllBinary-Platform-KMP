@@ -59,7 +59,6 @@ public constructor        ()
 
 
     var collidableBase: CollidableBaseBehavior = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!
-            
 
 
     
@@ -68,11 +67,9 @@ public constructor        ()
                                     {
                                     
     var layerManager: LayerManager = this.getLayerManager()!!
-            
 
 
     var size: Int = layerManager!!.getSize()!!
-            
 
 
     var collidableInterfaceCompositeInterface2: CollidableCompositeLayer

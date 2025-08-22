@@ -37,7 +37,6 @@ open public class GatewayView : PaymentGatewayViewAbstract {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -76,7 +75,6 @@ open fun view()
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayEntityFactory.getInstance()!!.getPaymentGatewayInterface(this.getPaymentGatewayPrimaryKey()!!.getStoreName(), BasicPaymentTypeUtil.getInstance()!!.get(this.getPaymentGatewayPrimaryKey()!!.getName()))!!
-            
 
 
 

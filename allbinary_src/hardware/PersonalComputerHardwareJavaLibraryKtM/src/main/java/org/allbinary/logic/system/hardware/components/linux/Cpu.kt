@@ -50,10 +50,8 @@ open public class Cpu
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val CPUFILE: String = "/proc/cpuinfo"
 
@@ -133,7 +131,6 @@ cpuHashMap= HashMap<Any, Any>()
                                     {
                                     
     var fileVector: BasicArrayList = SubDirectory.getInstance()!!.search(filePath, AbFile(FilePathData.getInstance()!!.SEPARATOR))!!
-            
 
 
     
@@ -169,7 +166,6 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                     {
                                     
     var nextLine: String = lineNumberReader!!.readLine()!!
-            
 
 
         while(lineNumberReader != 
@@ -179,7 +175,6 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                 )
         {
     var index: Int = nextLine!!.indexOf(':')!!
-            
 
 
     
@@ -188,14 +183,12 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                     {
                                     
     var key: String = nextLine!!.substring(0, index)!!
-            
 
 
     var valueIndex: Int = index +1
 
 
     var value: String = nextLine!!.substring(valueIndex, nextLine!!.length)!!
-            
 
 
     
@@ -361,11 +354,9 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var stringMaker: StringMaker = StringMaker()

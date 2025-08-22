@@ -62,7 +62,6 @@ open fun getInstance(layerInterface: AllBinaryLayer, healthInterface: Health, lo
                                     {
                                     
     var featuredAnimationInterfaceFactoryInterfaceFactory: FeaturedAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!
-            
 
 
     var healthBarAnimationInterfaceFactory: HealthBarAnimationInterfaceFactory = featuredAnimationInterfaceFactoryInterfaceFactory!!.get(Health.NAME) as HealthBarAnimationInterfaceFactory

@@ -51,7 +51,6 @@ open public class BasicProfileActionScriptCondition : ProfileActionScriptItem
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var profileActionProcessorInterfaceVector: Vector
 
@@ -71,7 +70,6 @@ public constructor        (label: String, node: Node)
 this.init()
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
 
@@ -82,7 +80,6 @@ this.init()
 
         {
     var actionItemNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -133,7 +130,6 @@ open fun addProcessorNodes(node: Node)
                     var node = node
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
 
@@ -144,7 +140,6 @@ open fun addProcessorNodes(node: Node)
 
         {
     var processorActionItemNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -318,15 +313,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(GenericProfileActionScriptConditionData.NAME)!!
-            
 
 
     var profileActionConditionInterfaceVector: Vector = this.getProfileActionConditionInterfaceVector()!!
-            
 
 
     var size: Int = profileActionConditionInterfaceVector!!.size!!
-            
 
 
 
@@ -343,11 +335,9 @@ node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 
 
     var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!
-            
 
 
     var size2: Int = profileActionProcessorInterfaceVector!!.size!!
-            
 
 
 
@@ -523,11 +513,9 @@ open fun shouldProcess(frame: Long)
                     var frame = frame
 
     var profileActionConditionInterfaceVector: Vector = this.getProfileActionConditionInterfaceVector()!!
-            
 
 
     var size: Int = profileActionConditionInterfaceVector!!.size!!
-            
 
 
 
@@ -573,11 +561,9 @@ logUtil!!.put(StringMaker().
                             append("Start - Processing ")!!.append(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, commonStrings!!.PROCESS)
 
     var profileActionProcessorInterfaceVector: Vector = this.getProfileActionProcessorInterfaceVector()!!
-            
 
 
     var size: Int = profileActionProcessorInterfaceVector!!.size!!
-            
 
 
 

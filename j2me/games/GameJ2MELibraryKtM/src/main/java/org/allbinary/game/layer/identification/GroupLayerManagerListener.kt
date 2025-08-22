@@ -60,7 +60,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val list: BasicArrayList = BasicArrayList()
 private constructor        (){LayerManagerEventHandler.getInstance()!!.addListener(this)
@@ -74,7 +73,6 @@ open fun clear()
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -97,7 +95,6 @@ open fun getGroupSize(groupInterfaceCompositeInterface: GroupInterfaceCompositeI
                     var groupInterfaceCompositeInterface = groupInterfaceCompositeInterface
 
     var groupInterfaceArray: Array<Group?> = groupInterfaceCompositeInterface!!.getGroupInterface()!!
-            
 
 
 
@@ -165,7 +162,6 @@ open fun getGroupSize(groupId: Int)
 
 
     var size: Int = groupList!!.size()!!
-            
 
 
 
@@ -185,7 +181,6 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
 
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -201,7 +196,6 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
                                     {
                                     
     var groupSize: Int = this.getGroupSize(index)!!
-            
 
 
     
@@ -241,7 +235,6 @@ open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
                     var excludeGroupList = excludeGroupList
 
     var size: Int = excludeGroupList!!.size()!!
-            
 
 
     var groupInterfaceArray: Array<Group?>
@@ -308,7 +301,6 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
                     var maxSize = maxSize
 
     var size: Int = list.size()!!
-            
 
 
 
@@ -324,7 +316,6 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
                                     {
                                     
     var groupSize: Int = this.getGroupSize(index)!!
-            
 
 
     
@@ -381,11 +372,9 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                     var layerManagerEvent = layerManagerEvent
 
     var layerInterface: AllBinaryLayer = layerManagerEvent!!.getLayerInterface()!!
-            
 
 
     var groupInterfaceArray: Array<Group?> = layerInterface!!.getGroupInterface()!!
-            
 
 
     var size: Int = groupInterfaceArray!!.size
@@ -444,11 +433,9 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
                     var layerManagerEvent = layerManagerEvent
 
     var layerInterface: AllBinaryLayer = layerManagerEvent!!.getLayerInterface()!!
-            
 
 
     var groupInterfaceArray: Array<Group?> = layerInterface!!.getGroupInterface()!!
-            
 
 
     var size: Int = groupInterfaceArray!!.size
@@ -491,7 +478,6 @@ open fun log()
 
 
     var size: Int = list.size()!!
-            
 
 
 

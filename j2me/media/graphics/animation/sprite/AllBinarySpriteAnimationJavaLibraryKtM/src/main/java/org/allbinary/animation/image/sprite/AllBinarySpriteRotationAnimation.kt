@@ -73,7 +73,6 @@ override fun setFrame(direction: Direction)
                     var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
-            
 
 this.adjustFrame(angle)
 }
@@ -105,7 +104,6 @@ this.adjustFrame(angle.getValue())
 
 
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
-            
 override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
 {

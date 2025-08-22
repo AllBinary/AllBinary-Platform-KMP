@@ -62,15 +62,12 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var features: Features = Features.getInstance()!!
-            
 
 
     var choiceGroupFactory: ChoiceGroupImageFactory = ChoiceGroupImageFactory.getInstance()!!
-            
 
 
     var imageArray: Array<Image?> = choiceGroupFactory!!.getImageArray()!!
-            
 
 
     
@@ -79,7 +76,6 @@ open fun init()
                                     {
                                     
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
 
     var size: Int = imageArray!!.size
@@ -109,15 +105,12 @@ open fun update(gl: GL)
                     var gl = gl
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var choiceGroupFactory: ChoiceGroupImageFactory = ChoiceGroupImageFactory.getInstance()!!
-            
 
 
     var imageArray: Array<Image?> = choiceGroupFactory!!.getImageArray()!!
-            
 
 
     
@@ -126,7 +119,6 @@ open fun update(gl: GL)
                                     {
                                     
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
 
     var size: Int = imageArray!!.size
@@ -156,15 +148,12 @@ open fun update(graphics: Graphics)
                     var graphics = graphics
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var choiceGroupFactory: ChoiceGroupImageFactory = ChoiceGroupImageFactory.getInstance()!!
-            
 
 
     var imageArray: Array<Image?> = choiceGroupFactory!!.getImageArray()!!
-            
 
 
     
@@ -173,7 +162,6 @@ open fun update(graphics: Graphics)
                                     {
                                     
     var preResourceImageUtil: PreResourceImageUtil = PreResourceImageUtil.getInstance()!!
-            
 
 
     var size: Int = imageArray!!.size

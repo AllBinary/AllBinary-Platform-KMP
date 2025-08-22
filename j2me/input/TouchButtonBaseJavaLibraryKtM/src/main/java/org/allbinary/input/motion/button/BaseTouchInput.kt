@@ -35,10 +35,8 @@ open public class BaseTouchInput
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-            
  constructor        ()
             : super()
         {}

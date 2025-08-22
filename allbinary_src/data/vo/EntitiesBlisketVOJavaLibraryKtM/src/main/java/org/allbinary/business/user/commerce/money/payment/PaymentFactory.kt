@@ -43,7 +43,6 @@ open fun getInstance(request: ServletRequest)
                     var request = request
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -55,7 +54,6 @@ open fun getInstance(request: ServletRequest)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

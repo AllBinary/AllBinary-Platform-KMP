@@ -44,13 +44,11 @@ open fun getInstance(storeName: String)
                     var storeName = storeName
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
             
     var storeFronts: StoreFrontsEntity = StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!
-            
 
 
 
@@ -60,7 +58,6 @@ open fun getInstance(storeName: String)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

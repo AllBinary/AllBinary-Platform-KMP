@@ -67,7 +67,6 @@ open fun add(gameFeature: GameFeature)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var gameOptionsForm: GameOptionsForm
 public constructor        (gameOptionsForm: GameOptionsForm)
@@ -78,7 +77,6 @@ public constructor        (gameOptionsForm: GameOptionsForm)
 this.gameOptionsForm= gameOptionsForm
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
 GameFeatureItemStateListener.add(gameFeatureFactory!!.ARTIFICIAL_INTELLEGENCE_PROCESSOR)
 GameFeatureItemStateListener.add(gameFeatureFactory!!.COLLIDABLE_INTERFACE_LAYER_PROCESSOR)
@@ -99,7 +97,6 @@ override fun itemStateChanged(item: Item)
         try {
             
     var itemLabel: String = item.getLabel()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(itemLabel)!!.toString(), this, "itemStateChanged")
@@ -119,7 +116,6 @@ logUtil!!.put(StringMaker().
                                     {
                                     
     var gameFeatureUtil: GameFeatureUtil = GameFeatureUtil.getInstance()!!
-            
 
 
     
@@ -141,7 +137,6 @@ logUtil!!.put(StringMaker().
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)
 }

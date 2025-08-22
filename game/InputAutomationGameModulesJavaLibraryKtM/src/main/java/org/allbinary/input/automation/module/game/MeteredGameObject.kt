@@ -84,7 +84,6 @@ this.setSize(maxX -minX)
 
         {
     var nominator: Double = GraphicsAnalysisUtil.getNominator(bufferedImage[index]!!, this.getMinX(), this.getMaxX(), this.getY())!!
-            
 
 this.getRatios()[index]= Double(nominator /this.getSize())
 }

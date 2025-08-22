@@ -40,10 +40,8 @@ open public class CompoundTransform : AbTransformer {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -68,7 +66,6 @@ this.setURIResolver(StoreUriResolver(this.getTransformInfoInterface(), this.getU
                                 
 
     var templateInputStream: InputStream = objectConfig!!.createInputStream()!!
-            
 
 this.setInputStream(templateInputStream)
 }

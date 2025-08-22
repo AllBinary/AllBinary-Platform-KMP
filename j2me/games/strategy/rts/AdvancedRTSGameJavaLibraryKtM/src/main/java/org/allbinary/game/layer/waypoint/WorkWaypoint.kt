@@ -43,7 +43,6 @@ open public class WorkWaypoint : Waypoint {
         companion object {
             
     val ID: Integer = SmallIntegerSingletonFactory.getInstance()!!.getInstance(25)!!
-            
 
         }
             public constructor        (ownerLayer: PathFindingLayerInterface)                        
@@ -80,7 +79,6 @@ open fun visit(unitLayer: UnitLayer)
                                 
 
     var size: Int = this.getConnectedWaypointList()!!.size()!!
-            
 
 
     
@@ -89,7 +87,6 @@ open fun visit(unitLayer: UnitLayer)
                                     {
                                     
     var occupyList: BasicArrayList = this.ownerLayer!!.getGeographicMapCellPositionArea()!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     var outOfResources: Boolean = true

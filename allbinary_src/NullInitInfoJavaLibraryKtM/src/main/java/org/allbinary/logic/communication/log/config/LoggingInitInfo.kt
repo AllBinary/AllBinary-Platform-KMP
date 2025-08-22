@@ -145,7 +145,6 @@ open fun getTypeList()
 
 
     var size: Int = LoggingInitInfo.logConfigInfoList!!.size()!!
-            
 
 
 
@@ -159,7 +158,6 @@ open fun getTypeList()
 
 
     var logTypeVector: BasicArrayList = logConfigInfo!!.getTypeVector()!!
-            
 
 
     

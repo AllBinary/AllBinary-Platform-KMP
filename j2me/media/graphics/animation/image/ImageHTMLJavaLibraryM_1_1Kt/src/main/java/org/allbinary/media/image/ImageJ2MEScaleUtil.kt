@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -137,7 +136,6 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
                             
 
     var scaledImage: Image = Image.createImage(width, height)!!
-            
 
 
     var htmlImage: PlaynMutableImage = scaledImage as PlaynMutableImage
@@ -147,7 +145,6 @@ originalPlayNImage= originalHTMLImage!!.getImage() as playn.core.Image
 
 
     var canvasSurface: CanvasSurface = htmlImage!!.getCanvasSurface(canvasImage)!!
-            
 
 canvasSurface!!.drawImage(originalPlayNImage, 0, 0, scaledImage!!.getWidth(), scaledImage!!.getHeight(), 0, 0, image.getWidth(), image.getHeight())
 

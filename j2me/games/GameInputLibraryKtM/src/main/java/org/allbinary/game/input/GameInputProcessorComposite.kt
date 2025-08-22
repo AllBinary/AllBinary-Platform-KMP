@@ -57,7 +57,6 @@ override fun update()
         try {
             
     var list: BasicArrayList = this.getGameKeyEventList()!!
-            
 
 this.gameInputProcessorInterface!!.onInput(list)
 } catch(e: Exception)

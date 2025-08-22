@@ -57,7 +57,6 @@ private constructor        ()
             : super()
         {
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
-            
 
 roles.add(basicUserRoleFactory!!.CUSTOMER)
 roles.add(basicUserRoleFactory!!.SUBSCRIBERCUSTOMER)

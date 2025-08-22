@@ -208,11 +208,9 @@ open fun convertUsdToUnits(usDollarStr: String)
 
 
     var index: Int = usDollarStr!!.indexOf(AbPathData.getInstance()!!.EXTENSION_SEP)!!
-            
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var dollarStr: String = stringUtil!!.EMPTY_STRING

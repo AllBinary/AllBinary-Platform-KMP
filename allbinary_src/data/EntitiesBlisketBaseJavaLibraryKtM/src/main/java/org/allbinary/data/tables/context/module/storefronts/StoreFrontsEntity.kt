@@ -40,7 +40,6 @@ open public class StoreFrontsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "storefronts"
 public constructor        ()                        
@@ -130,7 +129,6 @@ open fun getStoreFrontInterface(name: String)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 
     var storeHashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
     
@@ -163,7 +161,6 @@ open fun getStoreFrontNames()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     var storeFrontNames: Vector = super.getColumn(StoreFrontData.getInstance()!!.NAME)!!
-            
 
 
 
@@ -186,7 +183,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

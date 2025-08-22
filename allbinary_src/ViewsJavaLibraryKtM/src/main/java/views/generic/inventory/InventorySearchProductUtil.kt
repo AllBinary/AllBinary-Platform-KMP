@@ -68,10 +68,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val ITEM_NOT_FOUND: String = "Item Not Found."
 
@@ -92,11 +90,9 @@ open fun getProduct(abeClientInformation: AbeClientInformationInterface, searchR
         try {
             
     var inventoryEntityInterface: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var itemInterface: ItemInterface = inventoryEntityInterface!!.getItem(product)!!
-            
 
 
     
@@ -107,18 +103,15 @@ open fun getProduct(abeClientInformation: AbeClientInformationInterface, searchR
                                     {
                                     
     var viewDocumentInterface: TransformDocumentInterface = TransformStoreDocumentFactory.getInstance(searchRequest)!!
-            
 
 viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface, Vector()).
                             toXmlNode(viewDocumentInterface!!.getDoc()))
 
     var success: String = DomDocumentHelper.toString(viewDocumentInterface!!.getDoc())!!
-            
 
 
     var outputStr: String = StoreTransformer(abeClientInformation, TransformInfoHttpSearch(searchRequest) as TransformInfoInterface).
                             translate(success)!!
-            
 
 
 

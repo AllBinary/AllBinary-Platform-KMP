@@ -52,11 +52,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, JvmStatisticsData.NAME, hashMap)!!
-            
 
 
 

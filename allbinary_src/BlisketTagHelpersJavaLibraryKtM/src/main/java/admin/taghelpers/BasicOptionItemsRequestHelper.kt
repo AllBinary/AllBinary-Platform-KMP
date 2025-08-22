@@ -40,7 +40,6 @@ open public class BasicOptionItemsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -127,7 +126,6 @@ values.put(BasicOptionItemData.OPTION_ONE_NINE_ITEM, this.optionItem!!.get(8))
 values.put(BasicOptionItemData.OPTION_ONE_NINE_VALUE, this.optionValue!!.get(8))
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -149,7 +147,6 @@ open fun insert()
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -268,7 +265,6 @@ open fun update()
 
 
     var values: HashMap<Any, Any> = this.getHashMap()!!
-            
 
 BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance()!!.update(values)
 

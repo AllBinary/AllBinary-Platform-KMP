@@ -66,7 +66,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val INITFILENAME: String = "licenseinitdata.dat"
 
@@ -107,17 +106,14 @@ open fun write(initData: LicenseInitInfo)
         try {
             
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(this.filePath, INITFILENAME)!!
-            
 
 
     var licenseIdCrypted: ByteArray = WeakCrypt(1).
                             encrypt(initData!!.getLicenseId())!!.encodeToByteArray()!!
-            
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseIdCrypted))
 
     var numberOfLicenseServers: Int = initData!!.getNumberOfServers()!!
-            
 
 dataOutputStream!!.writeInt(numberOfLicenseServers)
 
@@ -130,7 +126,6 @@ dataOutputStream!!.writeInt(numberOfLicenseServers)
         {
     var licenseServerCrypted: ByteArray = WeakCrypt(3).
                             encrypt(initData!!.getServer(index))!!.encodeToByteArray()!!
-            
 
 dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
@@ -185,11 +180,9 @@ open fun readAgain(initializeCounter: Int)
             logUtil!!.put("LicenseInitInfo File: " +INITFILENAME, this, METHOD_NAME)
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var iFile: AbFileInputStream = fileStreamFactory!!.getFileInputStreamInstance(this.filePath, INITFILENAME)!!
-            
 
 
     
@@ -206,7 +199,6 @@ open fun readAgain(initializeCounter: Int)
 
 
     var decodedByteArray: ByteArray = DatabaseEncoder.decode(iData!!.readUTF())!!
-            
 
 
     var licenseIdDecoded: String = decodedByteArray.decodeToString()
@@ -215,7 +207,6 @@ initInfo!!.setLicenseId(WeakCrypt(1).
                             decrypt(licenseIdDecoded))
 
     var numberOfLicenseServers: Int = iData!!.readInt()!!
-            
 
 
     var NEXT_FILE: String = "Next License Server From File: "

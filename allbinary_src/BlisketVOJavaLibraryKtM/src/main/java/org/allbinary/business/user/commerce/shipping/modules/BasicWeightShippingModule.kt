@@ -37,7 +37,6 @@ open public class BasicWeightShippingModule
         
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val name: String = "Basic Shipping (5 to 7 working days)"
 
@@ -54,7 +53,6 @@ open fun getCost(order: OrderInterface)
                     var order = order
 
     var basket: BasketInterface = order.getBasket()!!
-            
 
 
     var money: Money = Money()

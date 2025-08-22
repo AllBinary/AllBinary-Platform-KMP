@@ -71,19 +71,14 @@ open public class StoreFront
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val directory: Directory = Directory.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private val abPathUtil: AbPathUtil = AbPathUtil.getInstance()!!
-            
 
     private var name: String = stringUtil!!.EMPTY_STRING
 
@@ -192,7 +187,6 @@ this.getFormData(hashMap)
                                     {
                                     
     var document: Document = DomDocumentHelper.create(domDocumentString)!!
-            
 
 this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(document))
 
@@ -351,7 +345,6 @@ open fun getFormData(storeHashMap: HashMap<Any, Any>)
                     var storeHashMap = storeHashMap
 
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
-            
 
 this.name= storeHashMap!!.get(storeFrontData!!.NAME) as String
 this.basketName= storeHashMap!!.get(storeFrontData!!.NAME) as String
@@ -404,7 +397,6 @@ open fun isNameValid()
 
 
     var storeNameEscaped: String = StringEscapeUtils.escapeHtml3(this.name)!!
-            
 
 
     
@@ -417,7 +409,6 @@ open fun isNameValid()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var isSpacesContained: Boolean = false
@@ -438,7 +429,6 @@ open fun isNameValid()
                                     {
                                     
     var hashMap: HashMap<Any, Any> = SpecialCharacterUtil.getHashMap()!!
-            
 
 hashMap!!.put(arrayOf(CommonSeps.getInstance()!!.SPACE), ONE_EMPTY_STRING_ARRAY)
 this.name= Replace(hashMap).
@@ -465,7 +455,6 @@ open fun isValid()
 valid= this.isNameValid()
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -712,7 +701,6 @@ open fun nameValidationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -747,7 +735,6 @@ open fun validationInfo()
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -1263,7 +1250,6 @@ open fun getSubStores()
 
 
     var subStoreVector: BasicArrayList = tokenizer.getTokens(this.subStores, BasicArrayList())!!
-            
 
 
 
@@ -1756,7 +1742,6 @@ stringBuffer!!.append(URLGLOBALS.getMainPath())
 stringBuffer!!.append(FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH)
 
     var viewPath: String = stringBuffer!!.toString()!!
-            
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(viewPath)
@@ -2005,7 +1990,6 @@ dataVector!!.add(this.testFtpUserName)
 dataVector!!.add(this.testFtpPassword)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -2028,7 +2012,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
-            
 
 
     var dataHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -2063,7 +2046,6 @@ dataHashMap!!.put(storeFrontData!!.TESTFTPUSERNAME, this.testFtpUserName)
 dataHashMap!!.put(storeFrontData!!.TESTFTPPASSWORD, this.testFtpPassword)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.

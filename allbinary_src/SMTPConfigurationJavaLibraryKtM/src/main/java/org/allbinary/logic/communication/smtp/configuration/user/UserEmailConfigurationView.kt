@@ -45,10 +45,8 @@ open public class UserEmailConfigurationView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var userEmailConfigurationInterface: UserEmailConfigurationInterface
 public constructor        (node: Node)
@@ -68,11 +66,9 @@ public constructor        (node: Node)
 this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfigurationInterface
 
     var childNodeList: NodeList = node.getChildNodes()!!
-            
 
 
     var userEmailEventsConfigurationNode: Node = DomSearchHelper.getNodeNoThrow(UserEmailEventsConfigurationData.NAME, childNodeList)!!
-            
 
 
     var userEmailEventsConfigurationView: UserEmailEventsConfigurationView = UserEmailEventsConfigurationView(userEmailEventsConfigurationNode)
@@ -111,19 +107,15 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = emailConfigurationMapping!!.toHashMap()!!
-            
 
 
     var node: Node = ModDomHelper.createNameValueNodes(document, UserEmailConfigurationData.NAME, hashMap)!!
-            
 
 
     var userEmailConfigurationInterface: UserEmailConfigurationInterface = this.getEmailConfigurationInterface()!!
-            
 
 
     var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface = userEmailConfigurationInterface!!.getUserEmailEventsConfigurationInterface()!!
-            
 
 
     var userEmailEventsConfigurationView: UserEmailEventsConfigurationView = UserEmailEventsConfigurationView(userEmailEventsConfigurationInterface)

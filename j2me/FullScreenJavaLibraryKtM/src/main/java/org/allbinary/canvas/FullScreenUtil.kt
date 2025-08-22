@@ -90,11 +90,9 @@ open fun init(fullScreenInterface: Canvas)
                     var fullScreenInterface = fullScreenInterface
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     
@@ -120,11 +118,9 @@ open fun isScreenChange(isFullScreen: Boolean)
                     var isFullScreen = isFullScreen
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     

@@ -54,7 +54,6 @@ open fun main(args: Array<String?>)
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var appUrlGlobals: AppUrlGlobals = AppUrlGlobals()
@@ -84,10 +83,8 @@ System.out.println("New String: " +testString)
         }
             
     private val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val REPLACERS_: String = "Replacers: "
 
@@ -194,7 +191,6 @@ open fun upTo(replace: String, total: Int)
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var keys: Array<String?>
@@ -204,7 +200,6 @@ open fun upTo(replace: String, total: Int)
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -229,7 +224,6 @@ values= hashMap!!.get(keys as Object) as Array<String?>
         while(index < replace.length)
         {
     var begin: Int = replace.indexOf(keys[0]!!, index)!!
-            
 
 
     
@@ -262,7 +256,6 @@ replace= newStringBuffer!!.toString()
                                     {
                                     
     var begin2: Int = replace.indexOf(keys[1]!!, index)!!
-            
 
 
     
@@ -349,7 +342,6 @@ open fun line(replace: String)
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var key: String
@@ -359,7 +351,6 @@ open fun line(replace: String)
 
 
     var keyArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -382,7 +373,6 @@ value= hashMap!!.get(key as Object) as String
         {newStringBuffer!!.delete(0, newStringBuffer!!.length())
 
     var begin: Int = replace.indexOf(key, index)!!
-            
 
 
     

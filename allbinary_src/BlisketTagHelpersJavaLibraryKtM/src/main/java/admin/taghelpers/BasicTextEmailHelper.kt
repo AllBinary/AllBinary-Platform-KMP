@@ -40,7 +40,6 @@ open public class BasicTextEmailHelper : TagHelper {
         
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var hashMap: HashMap<Any, Any>
 
@@ -74,7 +73,6 @@ open fun send()
 
 
     var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.INSTALLER)!!
-            
 
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.INSTALLER, adminEmailInfo)
 }

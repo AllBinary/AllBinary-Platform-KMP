@@ -48,7 +48,6 @@ open public class InputToGameKeyMapping : InputMapping {
         }
             
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
     private val mappedGameKeys: Array<GameKey?> = arrayOf(this.gameKeyFactory!!.UP,this.gameKeyFactory!!.DOWN,this.gameKeyFactory!!.LEFT,this.gameKeyFactory!!.RIGHT)
 
@@ -94,7 +93,6 @@ override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 
         {
     var input: Input = inputToGameKeyMapping!!.getInstance(index)!!
-            
 
 
     
@@ -170,7 +168,6 @@ open fun set(input: Input, mappedToInput: Input)
                     var mappedToInput = mappedToInput
 
     var id: Int = mappedToInput!!.getId()!!
-            
 
 
     
@@ -204,7 +201,6 @@ open fun getReverseInstance(id: Int)
 
 
     var inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
 
 
@@ -220,7 +216,6 @@ open fun getReverseInstance(id: Int)
                                     {
                                     
     var input: Input = inputFactory!!.getInstance(index)!!
-            
 
 
     
@@ -258,7 +253,6 @@ open fun init(canvas: Canvas, gameKey: GameKey)
                     var gameKey = gameKey
 
     var key: Int = canvas.getKeyCode(gameKey!!.getId())!!
-            
 
 
     
@@ -347,7 +341,6 @@ open fun init(canvas: Canvas)
 
 
     var smallestKey: Int = this.getSmallestCanvasGameKeyCode(canvas)!!
-            
 
 
     

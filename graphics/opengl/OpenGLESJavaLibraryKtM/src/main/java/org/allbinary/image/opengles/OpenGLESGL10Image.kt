@@ -42,23 +42,18 @@ open public class OpenGLESGL10Image : OpenGLESImage {
         
 
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private val glUtil: GLUtil = GLUtil.getInstance()!!
-            
 
     private val textureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-            
 
     val regionRectangleFloatArray: FloatArray = floatArrayOf(0,0,0,0,0,0,0,0,0,0,0,0)
 
     val regionRectangleVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *3)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-            
 
     private val regionTextureRectangleFloatArray: FloatArray = FloatArray(8)
 
     private val regionTextureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-            
 
     private val realOpenGLESImageDraw: OpenGLESImageDraw = object: OpenGLESImageDraw()
                                 {
@@ -94,11 +89,9 @@ open override fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Flo
                     var z = z
 
     var imageWidth: Int = getWidth()!!
-            
 
 
     var imageHeight: Int = getHeight()!!
-            
 
 regionRectangleFloatArray[7]= viewHeight
 regionRectangleFloatArray[1]= regionRectangleFloatArray[7] -height
@@ -159,11 +152,9 @@ open override fun draw(gl: GL10, x: Int, y: Int, z: Int)
                     var z = z
 
     var width: Int = getWidth()!!
-            
 
 
     var height: Int = getHeight()!!
-            
 
 regionRectangleFloatArray[7]= displayInfoSingleton!!.getLastHeight()
 regionRectangleFloatArray[1]= regionRectangleFloatArray[7] -height
@@ -207,7 +198,6 @@ gl.glPopMatrix()
                             
 
     private var openGLESImageDraw: OpenGLESImageDraw = OpenGLESImageDraw.getInstance()!!
-            
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
                             : super(image, bitmapFactory, textureFactory){

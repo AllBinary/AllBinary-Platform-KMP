@@ -40,10 +40,8 @@ open public class CommandRunnable
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val commandFormInputProcessor: CommandFormInputProcessor
 
@@ -67,11 +65,9 @@ override fun run()
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
     var canvas: MyCanvas = this.commandFormInputProcessor!!.getCanvas()!!
-            
 
 
     var commandListener: CommandListener = canvas.getCustomCommandListener()!!
-            
 
 commandListener!!.commandAction(command, canvas)
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)

@@ -43,7 +43,6 @@ open fun getInstance(z: Int)
                     var z = z
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
 

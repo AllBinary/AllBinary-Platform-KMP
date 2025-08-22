@@ -51,7 +51,6 @@ open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
 
 
     var propertyStringArray: Array<String?> = bufferedImage!!.getPropertyNames()!!
-            
 
 
     
@@ -69,7 +68,6 @@ open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
 
         {
     var propertyObject: Any = bufferedImage!!.getProperty(propertyStringArray[index]!!)!!
-            
 
 hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
 }
@@ -88,7 +86,6 @@ hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -132,7 +129,6 @@ open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, cate
                                 
 
     var bufferedImage: BufferedImage = ImageIOUtil.read(originalImageFile)!!
-            
 
 
     
@@ -155,7 +151,6 @@ open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, cate
                                     {
                                     
     var hashMap: HashMap<Any, Any> = this.getImageBufferPropertyHashMap(bufferedImage)!!
-            
 
 logUtil!!.put("Image Properties: " +hashMap!!.toString(), this, "saveImageFile()")
 
@@ -167,15 +162,12 @@ logUtil!!.put("Image Properties: " +hashMap!!.toString(), this, "saveImageFile()
 imageFile!!.createNewFile()
 
     var imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
 
     var newBufferedImage: BufferedImage = imageUtil!!.createBufferedImage(bufferedImage, newWidth, newHeight)!!
-            
 
 
     var isWritten: Boolean = ImageIOUtil.write(newBufferedImage as RenderedImage, mediaData!!.getName(), imageFile)!!
-            
 
 
     
@@ -196,7 +188,6 @@ imageFile!!.createNewFile()
                                     {
                                     
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

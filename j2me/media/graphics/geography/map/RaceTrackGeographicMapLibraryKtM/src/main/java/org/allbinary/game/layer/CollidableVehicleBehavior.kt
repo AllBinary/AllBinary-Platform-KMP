@@ -62,11 +62,9 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer
                     var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
-            
 
 
     var collisionType: CollisionType = collidableInterfaceCompositeInterface!!.getCollidableInferface()!!.getCollisionTypeWith(this.ownerLayer)!!
-            
 
 
     
@@ -119,11 +117,9 @@ open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesComposite
 
 
     var ownerVehicleProperties: VehicleProperties = ownerVehicleLayerInterface!!.getVehicleProperties()!!
-            
 
 
     var vehicleProperties: VehicleProperties = vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!
-            
 
 
     var impactVelocityX: Long = ownerVehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.getUnscaled() -vehicleProperties!!.getVelocityProperties()!!.getVelocityXBasicDecimalP()!!.getUnscaled()
@@ -174,7 +170,6 @@ open fun collideFriction(vehiclePropertiesCompositeInterface: VehiclePropertiesC
                     var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var vehicleFrictionProperties: VehicleFrictionProperties = vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!.getVehicleFrictionProperties()!!
-            
 
 vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!.getVelocityProperties(), vehicleFrictionProperties!!.getCrashFrictionNominator())
 }

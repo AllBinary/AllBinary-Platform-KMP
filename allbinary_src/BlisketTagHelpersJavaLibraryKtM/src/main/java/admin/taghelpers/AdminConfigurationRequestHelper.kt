@@ -36,7 +36,6 @@ open public class AdminConfigurationRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){

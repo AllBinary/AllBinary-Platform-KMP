@@ -46,7 +46,6 @@ open public class ShippingAddressesView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -88,11 +87,9 @@ open fun toXmlNode(document: Document)
         try {
             
     var billingAddressesNode: Node = document.createElement(ShippingAddressData.MULTIPLE)!!
-            
 
 
     var size: Int = streetAddressList!!.size!!
-            
 
 
 

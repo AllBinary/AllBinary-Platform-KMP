@@ -41,7 +41,6 @@ open public class GlobalsValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var storeFrontInterface: StoreFrontInterface
 public constructor        (storeName: String){
@@ -156,7 +155,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(GlobalsData.NAME)!!
-            
 
 node.appendChild(StoreFrontView(this.storeFrontInterface).
                             toXmlNode(document))

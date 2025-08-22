@@ -50,7 +50,6 @@ open public class BaseGameStatistics
     private var totalFrames: Long= 0
 
     val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -95,7 +94,6 @@ open fun getRefreshRate()
         //nullable = true from not(false or (false and true)) = true
 : Short{
     var elapsed: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
-            
 
 
     
@@ -156,13 +154,11 @@ open fun getTimeDelayHelper()
     private val CHAR_ARRAY: Array<CharArray?> = arrayOf(charArrayOf('F','r','a','m','e','s','/','1','0',' ','S','e','c',':'),charArrayOf('X','X'),charArrayOf('P','a','i','n','t','s','/','1','0',' ','S','e','c',':'),charArrayOf('X','X'))
 
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
-            
 
 open fun toCharArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<CharArray?>{
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
-            
 
 totalTime= (totalTime shr DEFAULT_SCALE_FACTOR)
 
@@ -255,7 +251,6 @@ open fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>{
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
-            
 
 totalTime= (totalTime /10000)
 
@@ -329,7 +324,6 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
-            
 
 totalTime= (totalTime /1000)
 

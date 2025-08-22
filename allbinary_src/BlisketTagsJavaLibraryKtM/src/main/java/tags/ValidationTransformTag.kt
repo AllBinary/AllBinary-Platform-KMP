@@ -38,7 +38,6 @@ open public class ValidationTransformTag : TransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var xslFile: String
 
@@ -80,12 +79,10 @@ open fun isValid()
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.IS_VALID, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(this.getHelper(), 
@@ -123,12 +120,10 @@ open fun validationInfo()
         try {
             
     var addressHelperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("validationInfo", 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.getHelper(), 

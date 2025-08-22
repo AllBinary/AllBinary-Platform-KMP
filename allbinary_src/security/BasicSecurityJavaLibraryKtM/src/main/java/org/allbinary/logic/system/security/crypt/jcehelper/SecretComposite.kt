@@ -34,7 +34,6 @@ open public class SecretComposite : BaseSecretComposite {
         
 
     private val byteUtil: ByteUtil = ByteUtil.getInstance()!!
-            
 
     private val cipher: Cipher
 

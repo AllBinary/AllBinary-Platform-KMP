@@ -37,7 +37,6 @@ open public class PaymentProcessorComponent : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -56,7 +55,6 @@ open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
 {
     var paymentProcessorInterface: PaymentProcessorInterface = PaymentProcessorInterfaceFactory.getInstance()!!.getInstance(this.getTransformInfoInterface())!!
-            
 
 paymentProcessorInterface!!.process()
 

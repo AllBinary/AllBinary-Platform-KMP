@@ -58,7 +58,6 @@ open fun getInstance()
     private val YELLOW: BasicColor = BasicColorFactory.getInstance()!!.YELLOW
 
     val COLOR_INT: Int = YELLOW.toInt()!!
-            
 
 open fun getForegroundColor(gameCanvasInterface: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
@@ -83,7 +82,6 @@ open fun getForegroundColor(gameCanvasInterface: AllBinaryGameCanvas)
                                     {
                                     
     var foregroundBasicColor: BasicColor = geographicMapInterface!!.getForegroundBasicColor()!!
-            
 
 color= foregroundBasicColor
 

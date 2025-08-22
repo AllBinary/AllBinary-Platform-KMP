@@ -64,7 +64,6 @@ open fun process(list: BasicArrayList)
                     var list = list
 
     var size: Int = list.size()!!
-            
 
 
     var layerPlacementInterface: LayerPlacementInterface
@@ -92,19 +91,15 @@ open fun process(layerPlacementInterface: LayerPlacementInterface)
                     var layerPlacementInterface = layerPlacementInterface
 
     var relativePoint: GPoint = this.getPoint(layerPlacementInterface)!!
-            
 
 
     var layerInterfaceFactory: LayerInterfaceFactory = LayerInterfaceFactory.getInstance()!!
-            
 
 
     var hashtable: Hashtable<Any, Any> = layerPlacementInterface!!.getInstance()!!
-            
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
-            
 
 
     var point: GPoint
@@ -147,7 +142,6 @@ open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
                     var layerPlacementInterface = layerPlacementInterface
 
     var layerPlacementType: LayerPlacementType = layerPlacementInterface!!.getLayerType()!!
-            
 
 
     
@@ -156,11 +150,9 @@ open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
                                     {
                                     
     var width: Int = layerPlacementInterface!!.getWidth()!!
-            
 
 
     var height: Int = layerPlacementInterface!!.getHeight()!!
-            
 
 
     var x: Int = ((dimension.getX() -width) /2)
@@ -183,11 +175,9 @@ open fun getPoint(layerPlacementInterface: LayerPlacementInterface)
                                     {
                                     
     var width: Int = layerPlacementInterface!!.getWidth()!!
-            
 
 
     var height: Int = layerPlacementInterface!!.getHeight()!!
-            
 
 
     var x: Int = ((dimension.getX() -width) /2)

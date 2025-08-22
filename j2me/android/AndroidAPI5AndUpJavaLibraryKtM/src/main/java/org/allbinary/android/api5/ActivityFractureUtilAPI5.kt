@@ -68,11 +68,9 @@ override fun process(activity: Activity)
                     var activity = activity
 
     var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
-            
 
 
     var touchScreenTypeFactory: TouchScreenTypeFactory = TouchScreenTypeFactory.getInstance()!!
-            
 
 touchScreenFactory!!.setTouch(this.isTouch(activity))
 touchScreenFactory!!.setMultiTouch(this.isMultiTouch(activity))
@@ -80,7 +78,6 @@ touchScreenFactory!!.setMultiTouchDistinct(this.isMultiTouchDistinct(activity))
 touchScreenTypeFactory!!.update(activity)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(touchScreenFactory!!.toString(), this, commonStrings!!.PROCESS)
 }

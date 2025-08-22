@@ -43,7 +43,6 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
-            
 
 
     

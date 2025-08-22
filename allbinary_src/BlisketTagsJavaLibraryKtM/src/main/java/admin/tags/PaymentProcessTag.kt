@@ -37,7 +37,6 @@ open public class PaymentProcessTag : StoreValidationTransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (){}
 
 
@@ -50,16 +49,13 @@ open fun process()
             
     var anyType: Any = PaymentProcessHelperFactory().
                             getInstance(this.getPropertiesHashMap(), this.pageContext)!!
-            
 
 
     var helperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.PROCESS, 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 

@@ -50,7 +50,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var fullscreen: Boolean = true
 
@@ -80,7 +79,6 @@ private constructor        ()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
@@ -94,18 +92,15 @@ open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileInputStream: InputStream = fileInputStreamFactory!!.getFileInputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
-            
 
 
     var dataInputStream: AbDataInputStream = AbDataInputStream(fileInputStream)
 
 
     var fullScreen: Int = dataInputStream!!.readInt()!!
-            
 
 
     
@@ -135,7 +130,6 @@ open fun read()
                             
 
     var progressBarView: Int = dataInputStream!!.readInt()!!
-            
 
 
     
@@ -165,7 +159,6 @@ open fun read()
                             
 
     var showTitleBar: Int = dataInputStream!!.readInt()!!
-            
 
 
     
@@ -209,11 +202,9 @@ open fun write()
             logUtil!!.put("Write Configuration: " +this.toString(), this, "write")
 
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
-            
 
 
     var fileOutputStream: OutputStream = fileInputStreamFactory!!.getFileOutputStreamInstance(StringUtil.getInstance()!!.EMPTY_STRING, FILE)!!
-            
 
 
     var dataOutputStream: AbDataOutputStream = AbDataOutputStream(fileOutputStream)
@@ -291,7 +282,6 @@ open fun update(gameFeature: Feature)
                                     {
                                     
     var features: Features = Features.getInstance()!!
-            
 
 
     

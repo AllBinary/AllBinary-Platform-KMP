@@ -50,13 +50,10 @@ open public class ThreadPool
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val threadPoolStrings: ThreadPoolStrings = ThreadPoolStrings.getInstance()!!
-            
 
     private val poolName: String
 
@@ -65,7 +62,6 @@ open public class ThreadPool
     private var isAlive: Boolean = false
 
     private var taskQueue: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
     private var threadID: Int= 0
 
@@ -149,7 +145,7 @@ open fun runTaskWithPriority(task: PriorityRunnable)
                     var task = task
 
         
-        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
@@ -171,7 +167,6 @@ open fun runTaskWithPriority(task: PriorityRunnable)
                                     {
                                     
     var size: Int = this.taskQueue!!.size()!!
-            
 
 
     var runnable: PriorityRunnable
@@ -215,7 +210,6 @@ break;
                         else {
                             
     var index: Int = this.taskQueue!!.indexOf(lowerPriorityRunnable)!!
-            
 
 this.taskQueue!!.add(index, task)
 
@@ -237,7 +231,7 @@ open fun runTask(task: Runnable)
                     var task = task
 
         
-        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
@@ -273,7 +267,7 @@ open fun getTask()
         //nullable = true from not(false or (false and true)) = true
 : Runnable{
         
-        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
@@ -312,7 +306,7 @@ open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
@@ -334,7 +328,7 @@ open fun close()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
@@ -357,7 +351,7 @@ open fun join()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //This is now allowed for Kotlin native. Instead use Coroutine logic instead.
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
@@ -481,7 +475,6 @@ override fun run()
 {threadStarted()
 
     var threadObjectUtil: ThreadObjectUtil = ThreadObjectUtil.getInstance()!!
-            
 
 
         while(true)

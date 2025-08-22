@@ -44,13 +44,10 @@ open public class ViewHelper
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private var componentInterface: TransformInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)

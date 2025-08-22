@@ -48,7 +48,6 @@ open public class StaticPathGenerator
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -83,7 +82,6 @@ open fun getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(
 
 
     var size: Int = pathList!!.size()!!
-            
 
 
     var basicGeographicMapCellPosition: CellPosition
@@ -129,21 +127,17 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCe
                     var totalPaths = totalPaths
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             
     var pathCacheFactory: PathCacheFactory = PathCacheFactory.getInstance()!!
-            
 
 
     var mapIdInteger: Integer = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getDataId()!!
-            
 
 
     var list: BasicArrayList = pathCacheFactory!!.getInstance(mapIdInteger)!!
-            
 
 
     
@@ -155,22 +149,18 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCe
                                     list= BasicArrayList()
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     var id: Int = PathData.getInstance()!!.OFFSET +mapIdInteger!!.toInt()
 
 
     var basicList: BasicArrayList = pathCacheFactory!!.getInstance(smallIntegerSingletonFactory!!.getInstance(id))!!
-            
 
 
     var size: Int = basicList!!.size()!!
-            
 
 
     var pathList: BasicArrayList

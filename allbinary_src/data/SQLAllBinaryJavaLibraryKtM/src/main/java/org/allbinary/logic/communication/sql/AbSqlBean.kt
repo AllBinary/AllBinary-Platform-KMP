@@ -36,7 +36,6 @@ open public class AbSqlBean : AbSqlRow {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val METHOD_GET_FIELD: String = "getField"
 
@@ -78,7 +77,6 @@ stringBuffer!!.append(value)
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
         try {
@@ -87,7 +85,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     var rset: ResultSet = executeSQLStatement(sqlStatement)!!
-            
 
 
         while(rset.next())
@@ -161,11 +158,9 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
     var set: Set = keysAndValues!!.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -203,11 +198,9 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     var rset: ResultSet = executeSQLStatement(sqlStatement)!!
-            
 
 
         while(rset.next())
@@ -241,7 +234,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_FIELD)
 } catch(e: Exception)
             {
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -281,7 +273,6 @@ stringBuffer!!.append(sqlStrings!!.SELECT)
         try {
             
     var keyArray: Array<Any?> = columnsAndValues!!.keySet()!!.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -309,11 +300,9 @@ stringBuffer!!.append(value)
 stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     var rset: ResultSet = executeSQLStatement(sqlStatement)!!
-            
 
 
     var columnName: String
@@ -325,7 +314,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
         while(rset.next())
         {
     var keyArray2: Array<Any?> = columnsAndValues!!.keySet()!!.toArray()!!
-            
 
 
     var size2: Int = keyArray2!!.size
@@ -382,7 +370,6 @@ field= rset.getObject(columnName)!!.toString()
 } catch(e: Exception)
             {
     var sqlStatement: String = stringBuffer!!.toString()!!
-            
 
 
     

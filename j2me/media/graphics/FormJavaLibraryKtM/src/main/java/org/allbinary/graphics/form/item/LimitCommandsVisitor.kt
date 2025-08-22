@@ -38,7 +38,6 @@ open public class LimitCommandsVisitor : Visitor {
     private val isNotSmallDisplay: Boolean
 public constructor        (){
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 isNotSmallDisplay= (displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() > ScreenInfo.getInstance()!!.SMALL_WIDTH) || (!displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() > ScreenInfo.getInstance()!!.SMALL_HEIGHT)
 }
@@ -53,7 +52,6 @@ override fun visit(anyType: Any)
 
 
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
-            
 
 
     

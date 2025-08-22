@@ -44,7 +44,6 @@ open fun add(list: BasicArrayList)
                     var list = list
 
     var size: Int = baseTouchInputList!!.size()!!
-            
 
 
 

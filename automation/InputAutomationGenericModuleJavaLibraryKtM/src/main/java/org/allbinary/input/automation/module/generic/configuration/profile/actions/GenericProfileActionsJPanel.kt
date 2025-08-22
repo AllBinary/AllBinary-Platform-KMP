@@ -33,10 +33,8 @@ open public class GenericProfileActionsJPanel : javax.swing.JPanel {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var genericProfileActions: GenericProfileActions
 
@@ -164,7 +162,6 @@ open fun setModel()
         //nullable = true from not(false or (false and true)) = true
 {
     var defaultListModelHelper: DefaultListModelHelper = this.getGenericProfileActions()!!.getDefaultListModelHelper()!!
-            
 
 
     
@@ -208,7 +205,6 @@ this.blankGenericProfileActionJPanel!!.removeAll()
                                     {
                                     
     var genericProfileAction: GenericProfileAction = this.getGenericProfileActions()!!.getAction(profileActionNameString)!!
-            
 
 this.setGenericProfileActionJPanel(GenericProfileActionJPanel())
 this.getGenericProfileActionJPanel()!!.setGenericProfileAction(genericProfileAction)
@@ -252,7 +248,6 @@ open fun okNewProfileActionJButtonActionPerformed(evt: java.awt.event.ActionEven
         try {
             
     var newActionName: String = this.newProfileActionJTextField!!.getText()!!
-            
 
 this.getGenericProfileActions()!!.add(newActionName)
 this.setModel()
@@ -275,7 +270,6 @@ open fun deleteActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         try {
             
     var anyType: Array<Any?> = this.genericProfileActionsJList!!.getSelectedValues()!!
-            
 
 
 

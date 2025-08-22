@@ -60,19 +60,14 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
-            
 
     private val gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
-            
 
     private val features: Features = Features.getInstance()!!
-            
 
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
 private constructor        ()
@@ -269,11 +264,9 @@ rows= (size /columns)
 
 
     var imageData: ImageData = firstBufferedImage!!.getImageData()!!
-            
 
 
     var bufferedImage: org.eclipse.swt.graphics.Image = this.imageUtil!!.create(imageData!!.width *columns, imageData!!.height *rows)!!
-            
 
 
     var gc: GC = GC(bufferedImage)

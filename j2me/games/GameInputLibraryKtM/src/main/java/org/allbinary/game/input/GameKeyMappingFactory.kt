@@ -52,7 +52,6 @@ private constructor        ()
             : super()
         {
     var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
 this.set(gameKeyFactory!!.NONE)
 this.set(gameKeyFactory!!.UP)

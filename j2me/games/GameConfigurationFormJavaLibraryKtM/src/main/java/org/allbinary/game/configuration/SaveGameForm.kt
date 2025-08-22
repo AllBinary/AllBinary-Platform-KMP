@@ -98,7 +98,6 @@ open fun getInstance()
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
     var timeString: String = (System.currentTimeMillis()).toString()!!
-            
 
 this.append(TextField("Name: ", timeString, 30, TextField.ANY))
 this.initCommands(commandListener)
@@ -111,7 +110,6 @@ override fun initCommands(cmdListener: CommandListener)
                     var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
-            
 
 this.removeAllCommands()
 this.addCommand(gameCommandsFactory!!.SAVE)

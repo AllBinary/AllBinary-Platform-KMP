@@ -61,7 +61,6 @@ open fun visit(anyType: Any)
                                     {
                                     
     var list: BasicArrayList = selectedRTSLayersPlayerGameInput!!.getSelectedBasicArrayList()!!
-            
 
 
 

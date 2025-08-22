@@ -46,19 +46,14 @@ open public class MyCanvas : Canvas
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
     val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
     private val name: String
 
@@ -161,7 +156,6 @@ override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 {
     var size: Int = commandStack!!.size!!
-            
 
 
 

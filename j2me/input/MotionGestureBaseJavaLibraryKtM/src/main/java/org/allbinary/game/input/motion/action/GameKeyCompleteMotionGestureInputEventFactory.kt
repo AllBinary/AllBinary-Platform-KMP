@@ -57,7 +57,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val eventList: BasicArrayList = BasicArrayList()
 

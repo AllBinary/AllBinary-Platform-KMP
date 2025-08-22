@@ -39,7 +39,6 @@ open public class ModifyTag : HelperTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
                             : super(tagHelperFactoryInterface){
@@ -69,12 +68,10 @@ open fun insert()
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("insert", 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.getHelper(), 
@@ -116,12 +113,10 @@ open fun delete()
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.delete, 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.getHelper(), 
@@ -163,12 +158,10 @@ open fun update()
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("update", 
                             null)!!
-            
 
 
     var result: String = method.invoke(this.getHelper(), 
@@ -245,7 +238,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                                     this.setHelper()
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -254,7 +246,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                                     {
                                     
     var output: String = this.insert()!!
-            
 
 
     
@@ -275,7 +266,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                                     {
                                     
     var output: String = this.delete()!!
-            
 
 
     
@@ -296,7 +286,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                                     {
                                     
     var output: String = this.update()!!
-            
 
 
     

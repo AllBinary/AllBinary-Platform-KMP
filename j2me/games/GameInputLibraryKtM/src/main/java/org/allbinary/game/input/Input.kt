@@ -38,7 +38,6 @@ open public class Input
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     val inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 public constructor        (id: Int, name: String)
             : super()
         {

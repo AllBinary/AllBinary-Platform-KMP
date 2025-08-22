@@ -43,7 +43,6 @@ open public class PlayerQueue
         }
             
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val list: BasicArrayList = BasicArrayList()
 
@@ -84,7 +83,6 @@ open fun process()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var sound: Sound = NoSound.getInstance()!!
-            
 
 
         try {

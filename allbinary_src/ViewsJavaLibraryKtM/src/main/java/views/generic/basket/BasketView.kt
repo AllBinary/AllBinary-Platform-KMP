@@ -50,7 +50,6 @@ open public class BasketView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val request: HttpServletRequest
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -77,30 +76,24 @@ open fun toXmlNode(document: Document)
         try {
             
     var inventoryEntity: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var basketInterface: BasketInterface = this.getWeblisketSession()!!.getOrder()!!.getBasket()!!
-            
 
 
     var basketNode: Node = document.createElement(BasketData.BASKET)!!
-            
 
 
     var itemsAndNumberInBasket: HashMap<Any, Any> = basketInterface!!.getItems()!!
-            
 
 
     var numberOfResults: Int = 1
 
 
     var items: Set = itemsAndNumberInBasket!!.keySet()!!
-            
 
 
     var productArray: Array<Any?> = items.toArray()!!
-            
 
 
     var size: Int = productArray!!.size
@@ -118,7 +111,6 @@ open fun toXmlNode(document: Document)
 
 
     var itemInterface: ItemInterface = inventoryEntity!!.getItem(product)!!
-            
 
 
     
@@ -132,16 +124,13 @@ open fun toXmlNode(document: Document)
 
 
     var node: Node = basicItemView!!.toXmlNode(document)!!
-            
 
 
     var numberInBasket: String = basketInterface!!.getNumberOf(product)!!.toString()!!
-            
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, BasketData.ITEMTOTALINBASKET, numberInBasket))
 
     var itemPrice: Money = itemInterface!!.getPrice()!!
-            
 
 
     var itemTotal: Money = Money(itemPrice)
@@ -162,29 +151,23 @@ numberOfResults++
 
 
     var totalNumberNode: Node = document.createElement(SearchData.TOTAL_NUMBER_ITEMS)!!
-            
 
 
     var totalNumberTextNode: Node = document.createTextNode(basketInterface!!.getNumberOfItems()!!.toString())!!
-            
 
 totalNumberNode!!.appendChild(totalNumberTextNode)
 
     var totalWeightNode: Node = document.createElement(BasketData.TOTALWEIGHT)!!
-            
 
 
     var totalWeightTextNode: Node = document.createTextNode(basketInterface!!.getTotalWeight()!!.toString())!!
-            
 
 totalWeightNode!!.appendChild(totalWeightTextNode)
 
     var subTotalNode: Node = document.createElement(BasketData.SUBTOTAL)!!
-            
 
 
     var subTotalTextNode: Node = document.createTextNode(basketInterface!!.getSubTotal()!!.toString())!!
-            
 
 subTotalNode!!.appendChild(subTotalTextNode)
 basketNode!!.appendChild(totalNumberNode)

@@ -43,10 +43,8 @@ open public class RequestParams
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var map: Map
 public constructor        ()
@@ -105,18 +103,15 @@ open fun toXmlNode(document: Document)
         try {
             
     var node: Node = document.createElement(RequestData.REQUEST)!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
 
 
     var keys: Set = map.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size
@@ -170,11 +165,9 @@ open fun toHashMap()
 
 
     var keys: Set = map.keySet()!!
-            
 
 
     var keyArray: Array<Any?> = keys.toArray()!!
-            
 
 
     var size: Int = keyArray!!.size

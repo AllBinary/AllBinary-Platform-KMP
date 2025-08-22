@@ -57,7 +57,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val XML_START: String = "<?xml"
 
@@ -96,14 +95,12 @@ buffer.write(ch)
 
 
     var decrypted: ByteArray = cryptInterface!!.decrypt(buffer.toByteArray())!!
-            
 
 
     var decryptedString: String = decrypted.decodeToString()
 
 
     var index: Int = decryptedString!!.indexOf(XML_START)!!
-            
 
 
     

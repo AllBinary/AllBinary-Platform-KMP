@@ -305,7 +305,6 @@ open fun getInstance(instanceId: Int)
 
 
     var image: Image = this.getImage()!!
-            
 
 
 

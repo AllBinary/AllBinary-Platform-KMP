@@ -62,13 +62,10 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
     private val SERVICE_LIMIT_MAX: Int = 1000
 
@@ -86,7 +83,6 @@ open fun isServiceRunning(name: String)
 
 
     var runningServicesList: List<RunningServiceInfo> = activityManager!!.getRunningServices(SERVICE_LIMIT_MAX)!!
-            
 
 
     var runningServiceInfo: ActivityManager.RunningServiceInfo
@@ -99,7 +95,6 @@ open fun isServiceRunning(name: String)
 
 
     var size: Int = runningServicesList!!.size!!
-            
 
 
 

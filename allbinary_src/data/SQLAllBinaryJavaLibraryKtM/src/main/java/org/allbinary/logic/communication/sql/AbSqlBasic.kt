@@ -47,10 +47,8 @@ open public class AbSqlBasic
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val sqlConnectionPool: SqlConnectionPool = SqlConnectionPool.getInstance()!!
-            
 
     private var databaseConnectionInfoInterface: DbConnectionInfo
 
@@ -59,19 +57,14 @@ open public class AbSqlBasic
     var conn: Connection
 
     val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     val sqlTypeStrings: SqlTypeStrings = SqlTypeStrings.getInstance()!!
-            
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
-            
 
     val INSERT: String = "insert"
 
@@ -125,12 +118,10 @@ open fun executeSQLStatement(statement: String)
             initialize()
 
     var stmt: Statement = conn.createStatement()!!
-            
 
 stmt.execute(statement)
 
     var rset: ResultSet = stmt.getResultSet()!!
-            
 
 stmt.close()
 
@@ -266,11 +257,9 @@ open fun initialize()
         try {
             
     var loader: ClassLoader = Thread.currentThread()!!.getContextClassLoader()!!
-            
 
 
     var jdbcDriverClass: KClass<*> = loader.loadClass(this.getDatabaseConnectionInfoInterface()!!.getJdbcDriver())!!
-            
 
 jdbcDriverClass!!.newInstance()
 } catch(e: Exception)

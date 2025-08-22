@@ -50,7 +50,6 @@ open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: Inde
                     var sequentialAnimationInterface = sequentialAnimationInterface
 
     var size: Int = sequentialAnimationInterface!!.getAnimationSize()!!
-            
 
 
     var imageArray: Array<Image?> = arrayOfNulls(size)

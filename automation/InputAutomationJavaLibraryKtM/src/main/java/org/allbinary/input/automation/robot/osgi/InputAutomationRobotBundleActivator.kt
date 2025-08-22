@@ -43,10 +43,8 @@ open public class InputAutomationRobotBundleActivator
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var inputRobotInterface: Array<InputRobotInterface?>
 
@@ -88,7 +86,6 @@ open fun getInputAutomationRobotChangeListener(context: BundleContext)
                     var context = context
 
     var serviceReference: ServiceReference = context.getServiceReference(InputAutomationRobotChangeListener::class.qualifiedName!!)!!
-            
 
 
     
@@ -138,7 +135,6 @@ open fun addRobots(context: BundleContext)
             logUtil!!.put(this.commonStrings!!.START, this, "addRobots")
 
     var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = this.getInputAutomationRobotChangeListener(context)!!
-            
 
 
     
@@ -156,7 +152,6 @@ open fun addRobots(context: BundleContext)
 
         {
     var inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent = InputAutomationRobotUtil.getChangeEvent(this.getInputRobotInterface()[index]!!)!!
-            
 
 inputAutomationRobotChangeListener!!.onAdd(inputAutomationRobotChangeEvent)
 }
@@ -181,7 +176,6 @@ open fun removeRobots(context: BundleContext)
             logUtil!!.put(this.commonStrings!!.START, this, "removeRobots")
 
     var inputAutomationRobotChangeListener: InputAutomationRobotChangeListener = this.getInputAutomationRobotChangeListener(context)!!
-            
 
 
     
@@ -199,7 +193,6 @@ open fun removeRobots(context: BundleContext)
 
         {
     var inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent = InputAutomationRobotUtil.getChangeEvent(this.getInputRobotInterface()[index]!!)!!
-            
 
 inputAutomationRobotChangeListener!!.onRemove(inputAutomationRobotChangeEvent)
 }

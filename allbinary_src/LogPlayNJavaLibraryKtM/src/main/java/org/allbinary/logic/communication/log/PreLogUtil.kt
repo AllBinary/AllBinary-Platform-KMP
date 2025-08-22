@@ -51,7 +51,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
                     var functionName = functionName
 
     var className: String = PreLogUtil.getClassName(anyType)!!
-            
 
 
     
@@ -68,7 +67,6 @@ className= StringMaker().
                             append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
-            
 
 PlayN.log()!!.debug(LOG_SUCCESS +message)
 }
@@ -92,7 +90,6 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                     var exception = exception
 
     var className: String = PreLogUtil.getClassName(anyType)!!
-            
 
 
     
@@ -109,7 +106,6 @@ className= StringMaker().
                             append(className)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(StringUtil.getInstance()!!.toString(anyType))!!.toString()
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 }
@@ -128,7 +124,6 @@ open fun put(specialMessage: String, className: String, functionName: String)
                     var functionName = functionName
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
-            
 
 PlayN.log()!!.debug(LOG_SUCCESS +message)
 }
@@ -150,7 +145,6 @@ open fun put(specialMessage: String, className: String, functionName: String, ex
                     var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 }

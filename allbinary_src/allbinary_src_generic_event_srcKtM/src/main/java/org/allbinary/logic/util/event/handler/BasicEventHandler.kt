@@ -47,7 +47,6 @@ open public class BasicEventHandler
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var eventListenerInterfaceList: BasicArrayList
 public constructor        ()
@@ -80,7 +79,6 @@ stringBuffer!!.append(StringUtil.getInstance()!!.toString(eventListenerInterface
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
@@ -176,7 +174,6 @@ this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }

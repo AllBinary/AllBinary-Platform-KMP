@@ -42,16 +42,12 @@ open public class BasicPersitance
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val persistanceStrings: PersistanceStrings = PersistanceStrings.getInstance()!!
-            
 
     private val platformRecordIdUtil: PlatformRecordIdUtil = PlatformRecordIdUtil.getInstance()!!
-            
 
     private val recordId: String
 
@@ -87,7 +83,6 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
                     var abeClientInformation = abeClientInformation
 
     var size: Int = idList!!.size()!!
-            
 
 
 

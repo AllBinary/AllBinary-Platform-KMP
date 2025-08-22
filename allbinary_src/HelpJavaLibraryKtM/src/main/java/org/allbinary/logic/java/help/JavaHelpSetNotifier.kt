@@ -58,15 +58,12 @@ open fun isNotified(helpSet: HelpSet)
 
 
     var url: URL = helpSet!!.getHelpSetURL()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
     var urlArray: Array<Any?> = vector.toArray()!!
-            
 
 
 

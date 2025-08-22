@@ -22,10 +22,8 @@ open public class CustomForm : CustomScreen {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
 
                     var title = title

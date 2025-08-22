@@ -43,7 +43,6 @@ open public class MetaValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var label: String
 
@@ -190,7 +189,6 @@ open fun toHashMap()
 
 
     var htmlMetaAttributeDataFactory: HtmlMetaAttributeDataFactory = HtmlMetaAttributeDataFactory.getInstance()!!
-            
 
 hashMap!!.put(HtmlMetaData.getInstance()!!.LABEL.toString(), this.label)
 hashMap!!.put(htmlMetaAttributeDataFactory!!.NAME.toString(), this.name)
@@ -213,7 +211,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, HtmlMetaData.getInstance()!!.NAME.toString(), this.toHashMap())!!
-            
 
 
 

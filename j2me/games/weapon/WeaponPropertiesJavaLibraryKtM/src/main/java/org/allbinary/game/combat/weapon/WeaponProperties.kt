@@ -82,7 +82,6 @@ public constructor        (reloadTime: Long, targetingTime: Long, speed: Long, d
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(StringMaker().
                             append(MESSAGE)!!.append(speed)!!.toString(), this, commonStrings!!.CONSTRUCTOR)

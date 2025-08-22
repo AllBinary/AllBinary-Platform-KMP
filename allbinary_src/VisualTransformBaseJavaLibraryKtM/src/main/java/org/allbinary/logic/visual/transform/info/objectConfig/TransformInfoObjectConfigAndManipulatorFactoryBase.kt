@@ -43,7 +43,6 @@ open public class TransformInfoObjectConfigAndManipulatorFactoryBase
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
                 @Throws(Exception::class)
             

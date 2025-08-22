@@ -162,7 +162,6 @@ this.file= hashMap!!.get(DownloadItemData.FILE) as String
 
 
     var totalTime: Long = TimeUtil.getInstance()!!.getTotalTime(totalYears, totalMonths, totalDays, totalHours, totalMinutes, totalSeconds)!!
-            
 
 this.validTime= totalTime as Long
 
@@ -176,12 +175,10 @@ open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
                             toString()!!
-            
 
 
     var values: Vector = Vector()
@@ -229,7 +226,6 @@ values.put(DownloadItemData.VALID_TIME, this.getValidTime()!!.toString())
 values.put(DownloadItemData.RETRIES, this.getRetries())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.

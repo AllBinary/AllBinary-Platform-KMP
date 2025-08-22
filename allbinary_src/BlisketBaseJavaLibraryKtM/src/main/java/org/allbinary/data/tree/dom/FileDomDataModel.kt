@@ -59,7 +59,6 @@ open fun toXmlNode(document: Document)
 
 
     var hashMap: HashMap<Any, Any> = tableMappingInterface!!.toHashMap()!!
-            
 
 
 

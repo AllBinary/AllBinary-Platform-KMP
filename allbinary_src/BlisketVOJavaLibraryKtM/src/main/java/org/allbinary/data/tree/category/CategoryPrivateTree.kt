@@ -41,7 +41,6 @@ open public class CategoryPrivateTree
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var categoryFactoryInterface: CategoryFactoryInterface
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
@@ -56,7 +55,6 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, "CategoryPrivateTree(CategoryFactoryInterface categoryFactoryInterface)")
 
@@ -85,7 +83,6 @@ open fun save(categoryInterface: CategoryInterface)
 
     var document: Document = CategoryComponent(categoryInterface).
                             toXmlDoc()!!
-            
 
 
     var cryptFileWriter: CryptFileWriter = CryptFileWriter(CategoryData.getInstance()!!.UNCRYPTED_EXTENSION, CategoryData.getInstance()!!.ENCRYPTED_EXTENSION)

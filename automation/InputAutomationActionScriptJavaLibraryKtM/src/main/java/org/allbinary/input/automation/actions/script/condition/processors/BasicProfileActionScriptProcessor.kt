@@ -100,7 +100,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(GenericProfileActionScriptProcessorData.NAME)!!
-            
 
 
 

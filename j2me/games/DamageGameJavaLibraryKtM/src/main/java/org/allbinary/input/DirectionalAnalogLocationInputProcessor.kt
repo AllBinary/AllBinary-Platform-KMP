@@ -42,12 +42,10 @@ open public class DirectionalAnalogLocationInputProcessor : AnalogLocationInputP
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val inputProcessorArray: Array<GameInputProcessor?>
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
     private var leftGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 
@@ -75,7 +73,6 @@ this.rightTriggerGameKeyEvent= GameKeyEventFactory.getInstance()!!.getInstance(t
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
@@ -98,19 +95,15 @@ override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocatio
 customGPoint= analogLocationInput!!.getCustomGPoint()
 
     var x: Int = customGPoint!!.getX()!!
-            
 
 
     var y: Int = customGPoint!!.getY()!!
-            
 
 
     var leftTrigger: Int = analogLocationInput!!.getLeftTrigger()!!
-            
 
 
     var rightTrigger: Int = analogLocationInput!!.getRightTrigger()!!
-            
 
 
     
@@ -169,7 +162,6 @@ customGPoint= analogLocationInput!!.getCustomGPoint()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Unable to process analog input", this, commonStrings!!.PROCESS, e)
 }

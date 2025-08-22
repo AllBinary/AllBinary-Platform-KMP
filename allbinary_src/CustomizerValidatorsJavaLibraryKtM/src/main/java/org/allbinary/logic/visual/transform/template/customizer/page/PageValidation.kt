@@ -42,7 +42,6 @@ open public class PageValidation : Validation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var title: TitleValidation
 public constructor        (){this.title= TitleValidation()
@@ -53,7 +52,6 @@ public constructor        (document: Document){
                     var document = document
 
     var node: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.NAME, document.getElementsByTagName(PageData.getInstance()!!.NAME))!!
-            
 
 this.title= TitleValidation(node)
 }
@@ -206,7 +204,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(PageData.getInstance()!!.NAME)!!
-            
 
 node.appendChild(this.title.toXmlNode(document))
 

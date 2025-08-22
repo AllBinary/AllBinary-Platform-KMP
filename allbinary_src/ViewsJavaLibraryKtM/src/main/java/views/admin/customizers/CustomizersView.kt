@@ -50,10 +50,8 @@ open public class CustomizersView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val customizersVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -78,14 +76,12 @@ open fun toXmlNode(document: Document)
         try {
             
     var node: Node = document.createElement(TransformTemplateCustomizersData.NAME)!!
-            
 
 
     var unsortedCustomizerViewVector: Vector = Vector()
 
 
     var size: Int = customizersVector!!.size!!
-            
 
 
 
@@ -124,7 +120,6 @@ Arrays.sort(objectArray, StringComparator())
 
 
     var viewNameNode: Node = ModDomHelper.createNameValueNodes(document, TransformTemplateCustomizerData.NAME, viewName, TransformTemplateCustomizerUtil.getInstance()!!.getPageNameHack(viewName, this.getWeblisketSession()!!.getStoreName()))!!
-            
 
 node.appendChild(viewNameNode)
 }

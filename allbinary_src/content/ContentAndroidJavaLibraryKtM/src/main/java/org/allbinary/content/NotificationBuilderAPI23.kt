@@ -63,7 +63,6 @@ open public class NotificationBuilderAPI23 : NotificationBuilder {
 
     var notification: Notification = Builder(context).
                             setSmallIcon(integer.toInt())!!.setTicker(message)!!.setWhen(System.currentTimeMillis())!!.setContentTitle(command.getLabel())!!.setContentText(message)!!.setContentIntent(pendingIntent)!!.build()!!
-            
 
 
 

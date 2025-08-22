@@ -45,7 +45,6 @@ open fun getInstance()
 
 
     var keyArray: Array<Integer?> = KeySingletonFactory.getArray()!!
-            
 
 
 
@@ -56,7 +55,6 @@ open fun getInstance()
 
         {
     var keyAsString: String = KeyEvent.getKeyText(keyArray[index]!!)!!
-            
 
 defaultComboBoxModel!!.addElement(keyAsString)
 }

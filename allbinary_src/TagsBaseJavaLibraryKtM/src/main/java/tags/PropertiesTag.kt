@@ -32,7 +32,6 @@ open public class PropertiesTag : CommandTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var propertiesHashMap: HashMap<Any, Any>
 public constructor        (){

@@ -35,7 +35,6 @@ open public class GeographicMapCellPositionEventUtil
     private val geographicMapCellPositionEvent: GeographicMapCellPositionEvent
 
     private val geographicMapCellPositionEventHandler: GeographicMapCellPositionEventHandler = GeographicMapCellPositionEventHandler.getInstance()!!
-            
 public constructor        (anyType: Any)
             : super()
         {

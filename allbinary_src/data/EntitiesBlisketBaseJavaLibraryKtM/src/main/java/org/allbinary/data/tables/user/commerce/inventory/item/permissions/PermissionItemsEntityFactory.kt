@@ -51,7 +51,6 @@ open fun getPermissionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
 : PermissionItemsEntity{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -63,7 +62,6 @@ open fun getPermissionItemsEntityInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -87,7 +85,6 @@ open fun getPermissionItemsEntityInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

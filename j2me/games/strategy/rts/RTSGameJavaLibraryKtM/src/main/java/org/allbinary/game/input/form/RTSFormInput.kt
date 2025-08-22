@@ -49,7 +49,6 @@ open public class RTSFormInput
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -113,7 +112,6 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
                     var point = point
 
     var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)!!
-            
 
 
     
@@ -130,11 +128,9 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
                                 
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
-            
 
 
     var item: CustomItem = scrollSelectionForm!!.get(index)!!
-            
 
 
     
@@ -206,7 +202,6 @@ open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RT
                     var point = point
 
     var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)!!
-            
 
 
     
@@ -223,11 +218,9 @@ open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RT
                                 
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
-            
 
 
     var item: CustomItem = scrollSelectionForm!!.get(index)!!
-            
 
 
     
@@ -289,7 +282,6 @@ logUtil!!.put(StringMaker().
                             append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
-            
 
 
 
@@ -313,7 +305,6 @@ logUtil!!.put(StringMaker().
                             append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
     var scrollSelectionForm: ScrollSelectionForm = rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!
-            
 
 
 
@@ -341,11 +332,9 @@ open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geo
 
 
     var layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface = item.getLayerInterfaceFactoryInterface()!!
-            
 
 
     var cellPoint: GPoint = geographicMapCellPosition!!.getPoint()!!
-            
 
 
     

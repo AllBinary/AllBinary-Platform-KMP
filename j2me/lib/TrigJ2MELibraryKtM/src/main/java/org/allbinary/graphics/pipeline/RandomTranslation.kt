@@ -47,14 +47,12 @@ open fun getInstance(vector: BasicArrayList, howMuch: Int)
                     var howMuch = howMuch
 
     var myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
 
     var x: Int =  -myRandomFactory!!.getNextInt(howMuch)
 
 
     var y: Int = myRandomFactory!!.getNextInt(howMuch)!!
-            
 
 
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(vector)

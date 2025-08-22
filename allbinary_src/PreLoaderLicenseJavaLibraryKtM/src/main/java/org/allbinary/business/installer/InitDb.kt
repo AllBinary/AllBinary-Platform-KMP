@@ -84,12 +84,10 @@ open fun getHostName()
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = dynamicClass!!.getMethod(METHOD_CALL_GET_HOST_NAME, 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -117,12 +115,10 @@ open fun addUsers()
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = dynamicClass!!.getMethod(METHOD_CALL_ADD_USERS, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 
@@ -150,12 +146,10 @@ open fun addDatabases()
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = dynamicClass!!.getMethod(METHOD_CALL_ADD_DATABASES, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 
@@ -183,12 +177,10 @@ open fun addTables()
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = dynamicClass!!.getMethod(METHOD_CALL_ADD_TABLES, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 
@@ -216,12 +208,10 @@ open fun useTemporaryMainPath()
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = dynamicClass!!.getMethod(METHOD_CALL_TEMP_MAIN_PATH, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 
@@ -249,12 +239,10 @@ open fun useNormalMainPath()
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = dynamicClass!!.getMethod(METHOD_CALL_MAIN_PATH, 
                             null)!!
-            
 
 
     var result: Boolean = method.invoke(anyType, 

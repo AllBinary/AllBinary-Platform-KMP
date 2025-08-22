@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val list: BasicArrayList = BasicArrayList()
 private constructor        (){}

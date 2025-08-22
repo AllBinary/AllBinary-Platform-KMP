@@ -52,15 +52,12 @@ public constructor        (storeFrontInterface: StoreFrontInterface)
 this.totalInventorySaleValueMoney= Money()
 
     var inventoryEntityInterface: InventoryEntityInterface = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var itemVector: Vector = inventoryEntityInterface!!.getItems(storeFrontInterface)!!
-            
 
 
     var size: Int = itemVector!!.size!!
-            
 
 
 
@@ -74,12 +71,10 @@ this.totalInventorySaleValueMoney= Money()
 
 
     var numberInStock: Int = Integer.valueOf(itemInterface!!.getNumber())!!.toInt()!!
-            
 
 this.totalNumberOfItems= this.totalNumberOfItems +numberInStock
 
     var itemPriceMoney: Money = itemInterface!!.getPrice()!!
-            
 
 itemPriceMoney!!.multiply(numberInStock)
 this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())

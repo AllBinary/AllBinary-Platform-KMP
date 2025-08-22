@@ -55,7 +55,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -86,7 +85,6 @@ classes[0]= hashMap!!::class
 params[0]= hashMap as Object
 
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, className, classes, params)!!
-            
 
 
 
@@ -101,7 +99,6 @@ params[0]= hashMap as Object
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 
@@ -120,7 +117,6 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getInstance(HashMap)", e)
 

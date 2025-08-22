@@ -34,10 +34,8 @@ open public class GameState
         companion object {
             
     var NO_GAME_STATE: GameState = GameStateFactory.getInstance("NO_GAME_STATE")!!
-            
 
     var PLAYING_GAME_STATE: GameState = GameStateFactory.getInstance("PLAYING_GAME_STATE")!!
-            
 
         }
             

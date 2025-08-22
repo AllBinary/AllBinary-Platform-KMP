@@ -53,10 +53,8 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val ORIENTATION_SENSOR_INPUT: String = "Orientation Sensor Input"
 

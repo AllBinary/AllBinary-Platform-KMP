@@ -64,17 +64,14 @@ open fun putAll(fromHashtable: Hashtable<Any, Any>, hashtable: Hashtable<Any, An
                     var hashtable = hashtable
 
     var enumeration: Enumeration<Any?> = fromHashtable!!.keys()!!
-            
 
 
         while(enumeration.hasMoreElements())
         {
     var key: Any = enumeration.nextElement()!!!!
-            
 
 
     var value: Any = hashtable.get(key as Object)!!
-            
 
 
     
@@ -109,7 +106,6 @@ open fun getKeysAsArray(hashtable: Hashtable<Any, Any>)
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
-            
 
 
         while(enumeration.hasMoreElements())
@@ -134,7 +130,6 @@ open fun getKeysAsList(hashtable: Hashtable<Any, Any>)
 
 
     var enumeration: Enumeration<Any?> = hashtable.keys()!!
-            
 
 
         while(enumeration.hasMoreElements())

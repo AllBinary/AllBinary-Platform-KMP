@@ -42,10 +42,8 @@ open public class AbeHttpRequestInfo
     private val NAME: String = "AbeHttpRequestInfo"
 
     private val abeHttpRequestInfoData: AbeHttpRequestInfoData = AbeHttpRequestInfoData.getInstance()!!
-            
 
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private var httpUserAgent: String
 
@@ -65,7 +63,6 @@ public constructor        (hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.httpUserAgent= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.HTTP_USER_AGENT) as String)
 this.remoteAddress= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInfoData!!.REMOTE_ADDRESS) as String)
@@ -82,12 +79,10 @@ public constructor        (httpServletRequest: HttpServletRequest)
                     var httpServletRequest = httpServletRequest
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 this.httpUserAgent= stringUtil!!.EMPTY_STRING
 
     var enumuration: Enumeration<Any?> = httpServletRequest!!.getHeaderNames()!!
-            
 
 
         while(enumuration.hasMoreElements())
@@ -96,7 +91,6 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
 
 
     var value: String = httpServletRequest!!.getHeader(key)!!
-            
 
 
     

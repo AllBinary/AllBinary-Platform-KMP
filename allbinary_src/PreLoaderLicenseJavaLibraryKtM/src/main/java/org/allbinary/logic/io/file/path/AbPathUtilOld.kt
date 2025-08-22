@@ -56,13 +56,10 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abPathData: AbPathData = AbPathData.getInstance()!!
-            
 
     private val filePathData: FilePathData = FilePathData.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -122,7 +119,6 @@ open fun getExtension(filePath: String)
 
 
     var extension: String = filePath!!.substring(beginIndex +1)!!
-            
 
 
     
@@ -195,7 +191,6 @@ open fun getWithoutExtension(filePath: String)
 
 
     var pathWithoutExtension: String = filePath!!.substring(0, endIndex)!!
-            
 
 
     
@@ -407,7 +402,6 @@ open fun getNameFromPath(categoryPath: String)
                     var categoryPath = categoryPath
 
     var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
-            
 
 
     
@@ -433,7 +427,6 @@ open fun getNameFromPath(categoryPath: String)
                                     {
                                     
     var categoryName: String = categoryPath!!.substring(0, endIndex)!!
-            
 
 
 
@@ -446,7 +439,6 @@ open fun getNameFromPath(categoryPath: String)
                         else {
                             
     var categoryName: String = categoryPath!!.substring(endIndex +1)!!
-            
 
 
 
@@ -468,7 +460,6 @@ open fun removeNameFromPath(categoryPath: String)
                     var categoryPath = categoryPath
 
     var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
-            
 
 
     
@@ -508,7 +499,6 @@ open fun removeNameFromPath(categoryPath: String)
                         else {
                             
     var categoryName: String = categoryPath!!.substring(0, endIndex)!!
-            
 
 
 

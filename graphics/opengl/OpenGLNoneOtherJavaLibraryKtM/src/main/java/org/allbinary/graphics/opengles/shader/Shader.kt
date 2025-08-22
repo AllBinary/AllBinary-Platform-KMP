@@ -42,7 +42,6 @@ open public class Shader
     var shaderName: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     var shaderStringList: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
     var shaderAsString: String = StringUtil.getInstance()!!.EMPTY_STRING
 

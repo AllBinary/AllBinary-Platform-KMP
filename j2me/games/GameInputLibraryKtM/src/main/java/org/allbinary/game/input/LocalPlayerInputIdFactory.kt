@@ -51,7 +51,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val MAX_NUMBER_OF_PLAYERS: Int = 6
 

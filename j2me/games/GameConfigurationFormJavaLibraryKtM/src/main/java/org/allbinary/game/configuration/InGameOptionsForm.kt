@@ -68,7 +68,6 @@ open public class InGameOptionsForm : CommandForm {
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 
     var gameFeatureFormUtil: GameFeatureFormUtil = GameFeatureFormUtil.getInstance()!!
-            
 
 gameFeatureFormUtil!!.addChoiceGroup(this, InGameFeatureChoiceGroups.getExclusiveInstance()!!.get(), Choice.EXCLUSIVE)
 gameFeatureFormUtil!!.addChoiceGroup(this, InGameFeatureChoiceGroups.getMultipleInstance()!!.get(), Choice.MULTIPLE)

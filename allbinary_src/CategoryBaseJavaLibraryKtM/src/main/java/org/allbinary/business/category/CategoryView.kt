@@ -41,7 +41,6 @@ open public class CategoryView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var categoryInterface: CategoryInterface
 public constructor        (categoryInterface: CategoryInterface)
@@ -72,11 +71,9 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(CategoryData.getInstance()!!.NAME)!!
-            
 
 
     var childCategoryVector: Vector = this.categoryInterface!!.getChildNodes()!!
-            
 
 
     
@@ -89,7 +86,6 @@ open fun toXmlNode(document: Document)
                                 
 
     var size: Int = childCategoryVector!!.size!!
-            
 
 
 
@@ -100,7 +96,6 @@ open fun toXmlNode(document: Document)
 
         {
     var anyType: Any = childCategoryVector!!.get(i)!!
-            
 
 
     var categoryPropertiesInterface: CategoryPropertiesInterface = 
@@ -131,7 +126,6 @@ categoryPropertiesInterface= categoryInterface!!.getProperties()
                         else {
                             
     var isImpl: String = InterfaceUtil.viewAll(anyType!!::class, "\n")!!
-            
 
 
 
@@ -143,7 +137,6 @@ categoryPropertiesInterface= categoryInterface!!.getProperties()
 
     var childCategoryNode: Node = CategoryPropertiesView(categoryPropertiesInterface).
                             toXmlNode(document)!!
-            
 
 node.appendChild(childCategoryNode)
 }

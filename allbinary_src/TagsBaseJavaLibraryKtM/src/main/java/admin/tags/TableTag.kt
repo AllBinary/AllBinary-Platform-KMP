@@ -44,7 +44,6 @@ open public class TableTag : PropertiesTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var enabled: String
 
@@ -195,16 +194,13 @@ open fun drop()
         try {
             
     var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("drop", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -246,16 +242,13 @@ open fun create()
         try {
             
     var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("create", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -297,16 +290,13 @@ open fun restore()
         try {
             
     var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("restore", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -348,16 +338,13 @@ open fun backup()
         try {
             
     var anyType: Any = getTagHelperFactoryInterface()!!.getInstance(this.getPropertiesHashMap(), pageContext)!!
-            
 
 
     var addressHelperClass: KClass<*> = anyType!!::class!!
-            
 
 
     var method: Method = addressHelperClass!!.getMethod("backup", 
                             null)!!
-            
 
 
     var result: String = method.invoke(anyType, 
@@ -399,12 +386,10 @@ open fun insert()
         try {
             
     var helperClass: KClass<*> = requestObject!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("insert", 
                             null)!!
-            
 
 
     var result: String = method.invoke(requestObject, 
@@ -446,12 +431,10 @@ open fun delete()
         try {
             
     var helperClass: KClass<*> = requestObject!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.delete, 
                             null)!!
-            
 
 
     var result: String = method.invoke(requestObject, 
@@ -493,12 +476,10 @@ open fun update()
         try {
             
     var helperClass: KClass<*> = requestObject!!::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod("update", 
                             null)!!
-            
 
 
     var result: String = method.invoke(requestObject, 
@@ -653,7 +634,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                                     {
                                     
     var output: String = this.backup()!!
-            
 
 
     
@@ -681,7 +661,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
 this.getPropertiesHashMap()!!.put("total", this.getTotal())
 
     var output: String = this.restore()!!
-            
 
 
     
@@ -707,7 +686,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     {
                                     
     var output: String = this.drop()!!
-            
 
 
     
@@ -733,7 +711,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     {
                                     
     var output: String = this.create()!!
-            
 
 
     
@@ -759,7 +736,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     {
                                     
     var output: String = this.insert()!!
-            
 
 
     
@@ -780,7 +756,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     {
                                     
     var output: String = this.delete()!!
-            
 
 
     
@@ -801,7 +776,6 @@ this.getPropertiesHashMap()!!.put("total", this.getTotal())
                                     {
                                     
     var output: String = this.update()!!
-            
 
 
     

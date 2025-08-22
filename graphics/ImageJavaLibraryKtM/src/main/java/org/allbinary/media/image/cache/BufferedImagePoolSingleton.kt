@@ -45,11 +45,9 @@ open public class BufferedImagePoolSingleton
 
                 init{
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var STATIC_BLOCK: String = "Static Block"

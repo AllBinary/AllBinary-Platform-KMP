@@ -41,7 +41,6 @@ open public class BillingAddressView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var request: HttpServletRequest
 
@@ -80,7 +79,6 @@ open fun toXmlNode(document: Document)
         try {
             
     var formNode: Node = document.createElement(StreetAddressData.FORM)!!
-            
 
 formNode!!.appendChild(streetAddress!!.toXmlNode(document))
 

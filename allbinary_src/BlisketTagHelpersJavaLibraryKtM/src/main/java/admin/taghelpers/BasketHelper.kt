@@ -38,7 +38,6 @@ open public class BasketHelper : TagHelper {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var weblisketSession: WeblisketSession
 
@@ -81,7 +80,6 @@ open fun isBasketEmpty()
         try {
             
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
-            
 
 
     

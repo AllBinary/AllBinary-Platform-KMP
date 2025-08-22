@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -95,7 +94,6 @@ stringBuffer!!.append("->")
 stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
@@ -134,7 +132,6 @@ stringBuffer!!.append("->")
 stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 
@@ -163,7 +160,6 @@ stringBuffer!!.append("->")
 stringBuffer!!.append(instance::class.qualifiedName!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 

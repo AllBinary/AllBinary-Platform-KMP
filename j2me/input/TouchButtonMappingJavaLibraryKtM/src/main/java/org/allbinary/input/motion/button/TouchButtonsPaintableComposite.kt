@@ -49,10 +49,8 @@ open public class TouchButtonsPaintableComposite : ProcessPaintable
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var inputMappingInterface: InputMappingInterface
 
@@ -98,18 +96,15 @@ override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: 
             logUtil!!.put(commonStrings!!.START, this, "onCompleteMotionGestureInputEvent")
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
-            
 
 
     var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = completeMotionGestureInputEvent as GameKeyCompleteMotionGestureInputEvent
 
 
     var gameKey: GameKey = gameKeyCompleteMotionGestureInputEvent!!.getGameKey()!!
-            
 
 
     var motionGestureInput: MotionGestureInput = completeMotionGestureInputEvent!!.getMotionGestureInput()!!
-            
 
 
     

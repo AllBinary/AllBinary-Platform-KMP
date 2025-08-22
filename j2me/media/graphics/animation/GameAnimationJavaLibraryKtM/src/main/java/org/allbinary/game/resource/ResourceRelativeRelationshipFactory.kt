@@ -79,7 +79,6 @@ this.setInitialized(true)
                     var hardPoint = hardPoint
 
     var list: BasicArrayList = this.getResourceRelativeRelationshipList(resource)!!
-            
 
 
     

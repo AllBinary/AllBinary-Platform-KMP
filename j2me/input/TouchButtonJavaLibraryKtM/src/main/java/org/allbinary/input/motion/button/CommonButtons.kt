@@ -59,7 +59,6 @@ private constructor        ()
             : super()
         {
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var commonButtonSize: Int = 128

@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -76,7 +75,6 @@ open fun getInstance(transformInfoInterface: TransformInfoInterface)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Generating Instance for type: " +type, this, commonStrings!!.GET_INSTANCE)
 

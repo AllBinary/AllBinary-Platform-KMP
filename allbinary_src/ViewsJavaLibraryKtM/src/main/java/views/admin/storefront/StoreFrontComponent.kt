@@ -36,7 +36,6 @@ open public class StoreFrontComponent : HttpStoreComponentView {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var newStoreFrontInterface: StoreFrontInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

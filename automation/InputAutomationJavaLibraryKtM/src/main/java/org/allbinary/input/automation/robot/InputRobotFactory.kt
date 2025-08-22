@@ -69,12 +69,10 @@ open fun loadLibraries(collection: Collection)
                     var collection = collection
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 logUtil!!.put("Loading Libraries", "InputRobotFactory", "loadLibraries")
 
     var iterator: Iterator = collection.iterator()!!
-            
 
 
         while(iterator.hasNext())
@@ -93,7 +91,6 @@ open fun loadLibrary(inputRobotInterface: InputRobotInterface)
                     var inputRobotInterface = inputRobotInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     
@@ -114,10 +111,8 @@ securedNativeLibraryInterface!!.load()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -128,11 +123,9 @@ private constructor        ()
         try {
             
     var graphenv: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
-            
 
 
     var screens: Array<GraphicsDevice?> = graphenv.getScreenDevices()!!
-            
 
 
     var inputRobotInterface: InputRobotInterface
@@ -177,7 +170,6 @@ logUtil!!.put("Adding InputRobotInterface: " +inputRobotInterface!!.getName(), t
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
 
     var helpSet: HelpSet = inputRobotInterface!!.getHelpSet()!!
-            
 
 
     
@@ -230,12 +222,10 @@ open fun loadLibraries()
         //nullable = true from not(false or (false and true)) = true
 {
     var set: Set = this.get()!!.keySet()!!
-            
 
 logUtil!!.put("Loading Libraries", this, "loadLibraries")
 
     var nameArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = nameArray!!.size
@@ -250,7 +240,6 @@ logUtil!!.put("Loading Libraries", this, "loadLibraries")
 
         {
     var inputRobotInterface: InputRobotInterface = InputRobotFactory.getInstance()!!.get(nameArray[index]!! as String)!!
-            
 
 loadLibrary(inputRobotInterface)
 }
@@ -265,14 +254,12 @@ open fun unloadLibraries()
 {logUtil!!.put("Unloading Libraries", this, "unloadLibraries")
 
     var set: Set = this.get()!!.keySet()!!
-            
 
 
     var inputRobotInterface: InputRobotInterface
 
 
     var inputRobotArray: Array<Any?> = set.toArray()!!
-            
 
 
     var size: Int = inputRobotArray!!.size

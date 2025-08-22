@@ -56,11 +56,9 @@ open fun main(args: Array<String?>)
         {Globals.getInstance()!!.init(this::class.java.classLoader, PATH)
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, "Test", "TestClass", Exception("Pretend Exception"))
 }

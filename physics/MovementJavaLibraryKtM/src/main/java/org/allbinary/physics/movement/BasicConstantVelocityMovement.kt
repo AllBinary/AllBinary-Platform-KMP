@@ -42,7 +42,6 @@ open public class BasicConstantVelocityMovement : Movement
     private var speedBasicDecimal: BasicDecimal = BasicDecimal.ZERO_BIGDECIMAL
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-            
 public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties){
 
                     var basicDecimal = basicDecimal
@@ -71,7 +70,6 @@ override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
 this.speedBasicDecimal= speedBasicDecimal
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
-            
 
 this.velocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInstance(angle), angleFactory!!.getInstance(otherAngle))
 }
@@ -93,7 +91,6 @@ open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, othe
                     var otherAngle = otherAngle
 
     var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
-            
 
 
     var xVector: Int = (axisMathVectorUtil!!.calculateX(radius, angle) /scaleFactorValue).toInt()

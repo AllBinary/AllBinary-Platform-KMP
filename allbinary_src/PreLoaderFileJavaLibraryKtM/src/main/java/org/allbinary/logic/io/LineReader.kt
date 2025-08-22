@@ -35,10 +35,8 @@ open public class LineReader
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var fileName: String
 
@@ -82,7 +80,6 @@ open fun hasNext()
         try {
             
     var nextIndex: Int = string.indexOf("\n", index)!!
-            
 
 
     
@@ -128,7 +125,6 @@ open fun next()
         try {
             
     var nextIndex: Int = string.indexOf("\n", index)!!
-            
 
 
     
@@ -144,7 +140,6 @@ open fun next()
                                 
 
     var temp: String = string.substring(index, nextIndex)!!
-            
 
 index= nextIndex +1
 

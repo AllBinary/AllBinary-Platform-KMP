@@ -41,10 +41,8 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
         
 
     private val glUtil: GLUtil = GLUtil.getInstance()!!
-            
 
     private var textureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-            
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
                             : super(image, bitmapFactory, textureFactory){
@@ -105,12 +103,10 @@ OpenGLLogUtil.getInstance()!!.logError(gl10, this)
     val regionRectangleFloatArray: FloatArray = floatArrayOf(0,0,0,0,0,0,0,0,0,0,0,0)
 
     var regionRectangleVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *3)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-            
 
     private val regionTextureRectangleFloatArray: FloatArray = FloatArray(8)
 
     private var regionTextureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
-            
 
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true

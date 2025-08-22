@@ -96,7 +96,6 @@ override fun isLoadingLevel(level: Int)
                     var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     

@@ -40,13 +40,10 @@ open public class GenericModuleConfigurationJPanel : javax.swing.JPanel
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var genericProfiles: GenericProfiles
 
@@ -427,11 +424,9 @@ open fun updateProfileOptions()
 {logUtil!!.put(this.commonStrings!!.START, this, "updateProfileOptions")
 
     var genericProfile: GenericProfile = this.getSelectedGenericProfile()!!
-            
 
 
     var vector: Vector = genericProfile!!.getGenericProfileDataWorkerTypeVector()!!
-            
 
 this.screenCaptureJRadioButton!!.setSelected(false)
 this.savedCaptureJRadioButton!!.setSelected(false)
@@ -439,7 +434,6 @@ this.captureComparisonJCheckBox!!.setSelected(false)
 this.captureMotionAnalysisJCheckBox!!.setSelected(false)
 
     var size: Int = vector.size!!
-            
 
 
 
@@ -592,7 +586,6 @@ open fun deleteProfileJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         try {
             
     var anyType: Array<Any?> = this.genericProfilesJList!!.getSelectedValues()!!
-            
 
 
 
@@ -624,7 +617,6 @@ open fun okNewProfileJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         try {
             
     var newProfileName: String = this.newProfileNameJTextField!!.getText()!!
-            
 
 this.getGenericProfiles()!!.add(newProfileName)
 this.genericProfilesJList!!.setModel(this.getGenericProfiles()!!.getDefaultListModelHelper()!!.getListModel())

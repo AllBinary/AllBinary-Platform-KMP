@@ -40,7 +40,6 @@ open public class XmlOptionItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "xmloptionitems"
 public constructor        ()                        

@@ -54,20 +54,16 @@ open public class OpenGLESImage : Image
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     val textureFactory: PlatformTextureBaseFactory
 
     val openGLBitmap: OpenGLBitmap
 
     var imageProcessor: OpenGLESImageProcessor = OpenGLESImageProcessor.getInstance()!!
-            
 
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
-            
 
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
@@ -236,7 +232,6 @@ override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String{
     var graphicsStrings: GraphicsStrings = GraphicsStrings.getInstance()!!
-            
 
 
 

@@ -82,7 +82,6 @@ open fun encode(value: ByteArray)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 
@@ -107,14 +106,12 @@ open fun decode(value: String)
 
 
     var vector: BasicArrayList = tokenizer.getTokens(value, BasicArrayList())!!
-            
 
 
     var byteVector: BasicArrayList = BasicArrayList()
 
 
     var size: Int = vector.size()!!
-            
 
 
     var byteOfData: String
@@ -127,7 +124,7 @@ open fun decode(value: String)
 
 
         {byteOfData= vector.objectArray[index]!! as String
-byteVector!!.add(byteOfData)
+byteVector!!.add(byteOfData.toByte())
 }
 
 
@@ -159,7 +156,6 @@ decodeIndex++
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, "DatabaseEncoder", "decode", e)
 

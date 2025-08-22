@@ -39,7 +39,6 @@ open public class RTSTouchButtonsBuilder : BaseTouchInput {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true

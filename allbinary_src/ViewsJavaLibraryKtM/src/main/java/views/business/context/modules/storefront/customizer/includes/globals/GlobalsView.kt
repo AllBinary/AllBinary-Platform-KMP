@@ -38,7 +38,6 @@ open public class GlobalsView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     var globalsValidation: GlobalsValidation
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

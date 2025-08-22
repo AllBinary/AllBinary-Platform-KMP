@@ -56,7 +56,6 @@ open public class KeyPressesAIFactory
                     var gameInput = gameInput
 
     var isSingleKeyProcessing: Boolean = InputFeatureFactory.getInstance()!!.isSingleKeyProcessing()!!
-            
 
 
     

@@ -50,7 +50,6 @@ open fun get(document: Document, errorText: String)
         try {
             
     var node: Node = document.createElement(ErrorData.getInstance()!!.NAME)!!
-            
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstance()!!.TEXT, errorText))
 

@@ -46,10 +46,8 @@ open public class WorkFlowEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     val tableName: String = "workflows"
 
@@ -157,7 +155,6 @@ keysAndValues!!.put(WorkFlowData.getInstance()!!.NAME, name)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
     var hashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
 
@@ -214,11 +211,9 @@ open fun get(storeName: String)
 keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
     var hashMapVector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = hashMapVector!!.size!!
-            
 
 
 
@@ -300,7 +295,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var workFlowData: WorkFlowData = WorkFlowData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

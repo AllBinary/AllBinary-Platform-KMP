@@ -41,7 +41,6 @@ open public class UpdateValidationUserView : HttpContextView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var user: UserInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        

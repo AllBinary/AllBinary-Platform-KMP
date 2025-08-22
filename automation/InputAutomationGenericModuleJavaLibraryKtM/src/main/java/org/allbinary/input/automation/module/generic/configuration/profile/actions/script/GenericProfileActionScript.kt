@@ -51,10 +51,8 @@ open public class GenericProfileActionScript : DefaultMutableTreeNode
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var genericProfileActionJPanel: GenericProfileActionJPanel
 
@@ -75,7 +73,6 @@ this.genericProfileActionJPanel= genericProfileActionJPanel
 this.setProfileActionConditionInterfaceVector(Vector())
 
     var actionScriptNode: Node = DomSearchHelper.getNode(GenericProfileActionData.SCRIPT, node.getChildNodes())!!
-            
 
 
     
@@ -86,7 +83,6 @@ this.setProfileActionConditionInterfaceVector(Vector())
                                     {
                                     
     var nodeList: NodeList = actionScriptNode!!.getChildNodes()!!
-            
 
 
 
@@ -97,7 +93,6 @@ this.setProfileActionConditionInterfaceVector(Vector())
 
         {
     var actionConditionNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -195,15 +190,12 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = document.createElement(GenericProfileActionData.SCRIPT)!!
-            
 
 
     var vector: Vector = this.getProfileActionConditionInterfaceVector()!!
-            
 
 
     var size: Int = vector.size!!
-            
 
 
 

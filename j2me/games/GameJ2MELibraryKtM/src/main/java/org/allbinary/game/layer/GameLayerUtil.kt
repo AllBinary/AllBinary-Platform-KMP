@@ -43,11 +43,9 @@ open fun isOnScreen(layer: AllBinaryLayer)
                     var layer = layer
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 
     var viewPosition: ViewPosition = layer.getViewPosition()!!
-            
 
 
 

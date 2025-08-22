@@ -49,7 +49,6 @@ open public class PaymentEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "payment"
 public constructor        ()                        
@@ -94,7 +93,6 @@ open fun setDefault(userName: String, index: Integer)
 whereKeyAndValue!!.put(UserData.USERNAME, userName)
 
     var paymentInterface: PaymentInterface = getDefault(userName)!!
-            
 
 
     
@@ -152,11 +150,9 @@ open fun get(userName: String)
 keyAndValue!!.put(UserData.USERNAME, userName)
 
     var paymentList: Vector = super.getRows(keyAndValue)!!
-            
 
 
     var size: Int = paymentList!!.size!!
-            
 
 
 
@@ -344,7 +340,6 @@ vector.add(paymentInterface!!.getExpiration())
 
     var random: Int = Random().
                             nextInt(SuperCrypt.KEYMAX)!!
-            
 
 vector.add(SuperCrypt(random).
                             encrypt(paymentInterface!!.getNumber()))
@@ -352,7 +347,6 @@ vector.add(Integer(random).
                             toString())
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -389,7 +383,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var entryData: EntryData = EntryData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

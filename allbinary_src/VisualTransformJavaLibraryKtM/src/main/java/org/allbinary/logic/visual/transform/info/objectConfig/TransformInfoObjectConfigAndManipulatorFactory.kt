@@ -54,7 +54,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        (){}
 
 
@@ -76,7 +75,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
             
     var data: String = CryptFileReader(TransformInfoObjectConfigData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoObjectConfigData.getInstance()!!.ENCRYPTED_EXTENSION).
                             get(objectConfigFileAbPath)!!
-            
 
 
 
@@ -116,7 +114,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -192,7 +189,6 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     

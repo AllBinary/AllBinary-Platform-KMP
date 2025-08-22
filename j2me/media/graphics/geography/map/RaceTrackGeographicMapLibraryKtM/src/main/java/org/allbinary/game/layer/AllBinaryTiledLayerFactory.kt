@@ -60,7 +60,6 @@ open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
 
     var tiledLayer: TiledLayer = TiledLayerFactory().
                             getInstance(raceTrackData)!!
-            
 
 allbinaryTiledLayer= AllBinaryJ2METiledLayer(raceTrackData!!.getId(), tiledLayer, raceTrackData!!.getMapArray(), BasicColorFactory.getInstance()!!.RED.toInt())
 allbinaryTiledLayer!!.setCells(raceTrackData!!.getMapArray())
@@ -81,12 +80,10 @@ open fun getMiniInstance(raceTrackData: RaceTrackData)
                     var raceTrackData = raceTrackData
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var tiledLayer: TiledLayer = TiledLayerFactory().
                             getMiniInstance(raceTrackData)!!
-            
 
 
     var allbinaryTiledLayer: AllBinaryTiledLayer = AllBinaryJ2METiledLayer(smallIntegerSingletonFactory!!.getInstance(raceTrackData!!.getId()!!.toInt() +100 +1), tiledLayer, raceTrackData!!.getMapArray(), BasicColorFactory.getInstance()!!.RED.toInt())

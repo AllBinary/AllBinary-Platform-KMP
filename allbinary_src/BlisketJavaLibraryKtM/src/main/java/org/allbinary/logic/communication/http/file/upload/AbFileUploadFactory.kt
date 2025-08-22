@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -77,7 +76,6 @@ open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
 
 
     var iterator: FileItemIterator = fileUpload!!.getItemIterator(httpServletRequest)!!
-            
 
 
     var items: List = ArrayList()
@@ -86,7 +84,6 @@ open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
         while(iterator.hasNext())
         {
     var fileItemStream: FileItemStream = iterator.next()!!
-            
 
 HttpFileUploadUtil.log(fileItemStream)
 
@@ -108,7 +105,6 @@ items.add(fileItem)
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "get()", e)
 
@@ -143,7 +139,6 @@ open fun getFileItemList(httpServletRequest: HttpServletRequest)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     

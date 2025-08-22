@@ -46,10 +46,8 @@ open public class ScreenCaptureImagesWorker : BasicEventHandler
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var running: Boolean= false
 

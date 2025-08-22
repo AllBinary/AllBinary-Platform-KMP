@@ -57,7 +57,6 @@ open public class OrderItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "orderitems"
 public constructor        ()                        
@@ -85,11 +84,9 @@ open fun insert(userName: String, order: OrderInterface)
         try {
             
     var basket: BasketInterface = order.getBasket()!!
-            
 
 
     var items: Set = basket.getIds()!!
-            
 
 
     var ZERO_STRING: String = TableDataFactory.getInstance()!!.ZERO_STRING
@@ -99,11 +96,9 @@ open fun insert(userName: String, order: OrderInterface)
 
 
     var inventoryEntity: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
-            
 
 
     var itemsArray: Array<Any?> = items.toArray()!!
-            
 
 
     var itemsSize: Int = itemsArray!!.size
@@ -121,7 +116,6 @@ open fun insert(userName: String, order: OrderInterface)
 
 
     var itemInterface: ItemInterface = inventoryEntity!!.getItem(item)!!
-            
 
 vector= Vector()
 vector.add(OrderItemIdGenerator().
@@ -242,11 +236,9 @@ open fun isEverythingShipped(orderId: String)
         try {
             
     var itemStatusVector: Vector = super.getColumnWhere(OrderHistoryData.STATUS, OrderData.ID, orderId)!!
-            
 
 
     var itemStatusIter: ListIterator = itemStatusVector!!.listIterator()!!
-            
 
 
         while(itemStatusIter!!.hasNext())
@@ -309,11 +301,9 @@ open fun getBasketReview(orderId: String)
 keyValues!!.put(OrderData.ID, orderId)
 
     var items: Vector = super.getRows(keyValues)!!
-            
 
 
     var entryData: EntryData = EntryData.getInstance()!!
-            
 
 
     
@@ -327,7 +317,6 @@ keyValues!!.put(OrderData.ID, orderId)
 
 
     var itemsArray: Array<Any?> = items.toArray()!!
-            
 
 
     var itemsSize: Int = itemsArray!!.size
@@ -398,7 +387,6 @@ open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
 : String{
     var entryData: EntryData = EntryData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

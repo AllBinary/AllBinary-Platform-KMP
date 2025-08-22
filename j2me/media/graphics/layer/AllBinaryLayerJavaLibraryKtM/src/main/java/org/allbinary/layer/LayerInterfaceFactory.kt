@@ -62,10 +62,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var list: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
-            
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
@@ -93,7 +91,6 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
                     var z = z
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(StringMaker().
                             append(HASHTABLE_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, commonStrings!!.GET_INSTANCE)

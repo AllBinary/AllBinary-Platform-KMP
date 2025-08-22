@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     private val mathUtil: MathUtil = MathUtil.getInstance()!!
-            
 
 open fun getDistance(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true

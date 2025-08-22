@@ -46,7 +46,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 open fun makeToast(view: View, context: Context, message: String, time: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -86,7 +85,6 @@ override fun run()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

@@ -57,7 +57,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -89,18 +88,15 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
                                 
 
     var componentInterface: TransformInterface = TransformFactory.getInstance()!!.getInstance(abeClientInformation, transformInfoInterface!!.getName(), ownerTransformInfoInterface)!!
-            
 
 
     var result: String = componentInterface!!.view()!!
-            
 
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = componentInterface!!.getTransformInfoInterface() as TransformInfoHttpInterface
 
 
     var inputOutputTypeData: InputOutputTypeData = InputOutputTypeData.getInstance()!!
-            
 
 
     

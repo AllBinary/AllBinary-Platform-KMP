@@ -41,7 +41,6 @@ open public class NoTemplateTransformInfoObjectConfig : TransformInfoObjectConfi
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: Object)                        
 
                             : super(transformInfoInterface){
@@ -96,7 +95,6 @@ open fun generate(objectConfigDocument: Document)
                     var objectConfigDocument = objectConfigDocument
 
     var docString: String = DomDocumentHelper.toString(objectConfigDocument)!!
-            
 
 
     
@@ -109,11 +107,9 @@ open fun generate(objectConfigDocument: Document)
                                 
 
     var storeName: String = this.getTransformInfoInterface()!!.getStoreName()!!
-            
 
 
     var viewName: String = this.getTransformInfoInterface()!!.getName()!!
-            
 
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -125,7 +121,6 @@ hashMap!!.put(VARKEY +StoreFrontData.getInstance()!!.NAME, storeName)
 hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.OWNER, viewName)
 
     var pageName: String = TransformTemplateCustomizerUtil.getInstance()!!.getPageNameHack(this.getTransformInfoInterface()!!.getName(), this.getTransformInfoInterface()!!.getStoreName())!!
-            
 
 hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
 
@@ -133,7 +128,6 @@ hashMap!!.put(VARKEY +TransformInfoData.getInstance()!!.PARTIAL, pageName)
 
 
     var newObjectConfigDocument: Document = DomDocumentHelper.create(replace.all(docString))!!
-            
 
 
     

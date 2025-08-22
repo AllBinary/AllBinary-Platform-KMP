@@ -43,7 +43,6 @@ open public class InputPersistance : BasicPersitance {
         
 
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
-            
 public constructor        (name: String)                        
 
                             : super(name){
@@ -65,11 +64,9 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
                     var abeClientInformation = abeClientInformation
 
     var recordStore: RecordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
-            
 
 
     var recordEnum: RecordEnumeration = recordStore!!.enumerateRecords(NullRecordFilter.NULL_RECORD_FILTER, NullRecordComparator.NULL_RECORD_COMPARATOR, true)!!
-            
 
 
     var hashtable: Hashtable<Any, Any>
@@ -79,7 +76,6 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 
     var id: Int= 0
@@ -112,7 +108,6 @@ PreLogUtil.put(StringMaker().
                             append(this.persistanceStrings!!.NOT_SAVING)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, this.commonStrings!!.SAVE)
 
     var recordStore: RecordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
-            
 
 
     var gameActionInput: Input
@@ -125,7 +120,6 @@ PreLogUtil.put(StringMaker().
 
 
     var inputObjectArray: Array<Any?> = this.hashtableUtil!!.getKeysAsArray(hashtable)!!
-            
 
 
     var size: Int = inputObjectArray!!.size

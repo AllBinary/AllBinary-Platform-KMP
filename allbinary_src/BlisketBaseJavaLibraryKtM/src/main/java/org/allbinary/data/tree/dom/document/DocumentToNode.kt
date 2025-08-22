@@ -103,7 +103,6 @@ open fun remove(documentString: String, start: String, end: String)
                                     {
                                     
     var endIndex: Int = documentString!!.indexOf(end, startIndex)!!
-            
 
 
     
@@ -112,11 +111,9 @@ open fun remove(documentString: String, start: String, end: String)
                                     {
                                     
     var startString: String = documentString!!.substring(0, startIndex)!!
-            
 
 
     var resultString: String = documentString!!.substring(endIndex +1)!!
-            
 
 
 

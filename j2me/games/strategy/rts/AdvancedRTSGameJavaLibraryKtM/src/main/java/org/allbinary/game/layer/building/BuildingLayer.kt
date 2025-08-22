@@ -92,7 +92,6 @@ open fun getStaticType()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var buildingLevelCost: Int= 0
 
@@ -327,7 +326,6 @@ open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
                                     {
                                     
     var currentFrame: Int = this.destroyAnimationInterface!!.getFrame()!!
-            
 
 
     var size: Int = this.destroyAnimationInterface!!.getSize() -1
@@ -393,7 +391,6 @@ open fun getCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var total: Int = RTSLayerUtil.getInstance()!!.getCostExponential(this.getLevel() *this.getBuildingLevelCost())!!
-            
 
 
 
@@ -407,7 +404,6 @@ open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var downgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() -1) *getBuildingLevelCost())!!
-            
 
 logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
 
@@ -422,7 +418,6 @@ open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
 : Int{
     var upgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() +1) *getBuildingLevelCost())!!
-            
 
 
 
@@ -513,18 +508,15 @@ open fun generateMoveOutOfBuildAreaPaths()
         //nullable = true from not(false or (false and true)) = true
 {
     var occupyList: BasicArrayList = this.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 
     var surroundList: BasicArrayList = this.geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
-            
 
 
     var NO_DIRECTION: Direction = DirectionFactory.getInstance()!!.NO_DIRECTION
 
 
     var geographicMapDirectionUtil: GeographicMapDirectionUtil = GeographicMapDirectionUtil.getInstance()!!
-            
 
 
     var pathsList: BasicArrayList
@@ -670,12 +662,10 @@ open fun addVisibility()
 
 
     var occupyList: BasicArrayList = geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(occupyList)
 
     var surroundList: BasicArrayList = geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
-            
 
 VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(surroundList)
 }
@@ -685,12 +675,10 @@ open fun removeVisibility()
         //nullable = true from not(false or (false and true)) = true
 {
     var occupyList: BasicArrayList = this.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
-            
 
 VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(occupyList)
 
     var surroundList: BasicArrayList = this.geographicMapCellPositionArea!!.getSurroundingGeographicMapCellPositionList()!!
-            
 
 VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(surroundList)
 }
@@ -727,7 +715,6 @@ TrackingEventHandler.getInstance()!!.removeListener(this)
                                     {
                                     
     var damage: Int = this.getHealthInterface()!!.getMaxHealth()!!
-            
 
 
     
@@ -781,7 +768,6 @@ open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
     var buildingInfoHudPaintable: BuildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance()!!
-            
 
 buildingInfoHudPaintable!!.setBasicColorP(this.allBinaryGameLayerManagerP!!.getForegroundBasicColor())
 buildingInfoHudPaintable!!.setRtsLayer(this)
@@ -797,7 +783,6 @@ open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable{
     var buildingInfoHudPaintable: BuildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance()!!
-            
 
 
 

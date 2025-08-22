@@ -294,11 +294,9 @@ open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
 : OrderInterface{
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getStoreName())!!
-            
 
 
     var basketName: String = storeFrontInterface!!.getBasketName()!!
-            
 
 
     
@@ -381,11 +379,9 @@ open fun removeBasket()
         //nullable = true from not(false or (false and true)) = true
 {
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getStoreName())!!
-            
 
 
     var basketName: String = storeFrontInterface!!.getBasketName()!!
-            
 
 
     

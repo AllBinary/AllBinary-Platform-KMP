@@ -49,7 +49,6 @@ open fun getInstance()
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
-            
 
 likelyhoodIntegerArray[Canvas.UP]!![0]= smallIntegerSingletonFactory!!.getInstance(0)
 likelyhoodIntegerArray[Canvas.UP]!![1]= smallIntegerSingletonFactory!!.getInstance(10)

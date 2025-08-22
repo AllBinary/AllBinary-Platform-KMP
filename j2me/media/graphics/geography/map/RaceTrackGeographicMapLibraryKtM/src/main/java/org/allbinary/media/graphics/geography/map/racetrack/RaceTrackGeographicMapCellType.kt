@@ -49,7 +49,6 @@ public constructor        (type: Int, travelCost: Int)
 this.travelCost= travelCost
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 this.name= commonStrings!!.UNKNOWN
 }

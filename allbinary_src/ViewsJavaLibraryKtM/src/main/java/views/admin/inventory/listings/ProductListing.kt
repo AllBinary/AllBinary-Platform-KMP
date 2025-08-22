@@ -69,10 +69,8 @@ open public class ProductListing
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val directory: Directory = Directory.getInstance()!!
-            
 
     private val storeFronts: StoreFrontsEntity
 
@@ -104,19 +102,15 @@ open fun getHashSet(storeFront: StoreFrontInterface)
                     var storeFront = storeFront
 
     var inventoryColumnUtil: InventoryColumnUtil = InventoryColumnUtil.getInstance()!!
-            
 
 
     var keywords: Vector = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, storeFront!!.getCategoryPath(), BasicItemData.KEYWORDS)!!
-            
 
 
     var subStoreVector: BasicArrayList = storeFront!!.getSubStores()!!
-            
 
 
     var size: Int = subStoreVector!!.size()!!
-            
 
 
 
@@ -130,7 +124,6 @@ open fun getHashSet(storeFront: StoreFrontInterface)
 
 
     var substoreKeywords: Vector = inventoryColumnUtil!!.getColumnWhereLike(this.inventory, AbPathData.getInstance()!!.SEPARATOR +subStore, BasicItemData.CATEGORY)!!
-            
 
 keywords.addAll(substoreKeywords)
 }
@@ -140,7 +133,6 @@ keywords.addAll(substoreKeywords)
 
 
     var keywordHashSet: HashSet = uniqueTokens!!.getWhithoutDashesAndSkipNumberOnlyTokens(keywords)!!
-            
 
 
 
@@ -189,7 +181,6 @@ newFile!!.createNewFile()
                                     {
                                     
     var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(newFile)!!
-            
 
 idOutData!!.writeBytes(data)
 idOutData!!.flush()
@@ -238,17 +229,14 @@ open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, 
 
 
     var hashMap: HashMap<Any, Any> = SpecialCharacterUtil.getHashMap()!!
-            
 
 hashMap!!.put(CommonSeps.getInstance()!!.SPACE, StringUtil.getInstance()!!.EMPTY_STRING)
 
     var pageName: String = Replace(hashMap).
                             all(keywordData)!!
-            
 
 
     var searchParams: SearchParams = this.searchRequest!!.getParams()!!
-            
 
 searchParams!!.add(BasicItemData.KEYWORDS, keywordData)
 searchParams!!.setStartPage(CommonPhoneStrings.getInstance()!!.ZERO)
@@ -256,15 +244,12 @@ this.searchRequest!!.setParams(searchParams)
 this.searchRequest!!.setFileBaseName(pageName)
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
 
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
-            
 
 
     var productListingPages: Array<String?> = inventorySearchUtil!!.search(abeClientInformation, searchRequest, vector)!!
-            
 
 
 
@@ -317,7 +302,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.EXTENSION_SEP)
 stringBuffer!!.append(InputOutputTypeData.getInstance()!!.DEFAULT)
 
     var file: String = stringBuffer!!.toString()!!
-            
 
 
     
@@ -347,11 +331,9 @@ open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFil
                     var keywordFilenameHashMap = keywordFilenameHashMap
 
     var keywordHashSet: Set = keywordFilenameHashMap!!.keys!!
-            
 
 
     var keywordArray: Array<Any?> = keywordHashSet!!.toArray()!!
-            
 
 
     var size: Int = keywordArray!!.size
@@ -390,7 +372,6 @@ open fun generateAll()
         try {
             
     var storeFront: StoreFrontInterface = this.searchRequest!!.getStoreFront()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -413,11 +394,9 @@ stringBuffer!!.append(storeFront!!.getStaticPath())
                                 
 
     var keywordHashSet: HashSet = this.getHashSet(storeFront)!!
-            
 
 
     var keywordArray: Array<Any?> = keywordHashSet!!.toArray()!!
-            
 
 
     var size: Int = keywordArray!!.size
@@ -445,11 +424,9 @@ stringBuffer!!.append(" Store Not Found")
                                 
 
     var inventorySearchUtil: InventorySearchUtil = InventorySearchUtil.getInstance()!!
-            
 
 
     var vector: Vector = inventorySearchUtil!!.getBasicItemIdColumn(searchRequest)!!
-            
 
 
 
@@ -527,11 +504,9 @@ stringBuffer!!.append("<br />")
                         else {
                             
     var storeFrontVector: Vector = this.storeFronts!!.getStoreFrontNames()!!
-            
 
 
     var size: Int = storeFrontVector!!.size!!
-            
 
 
 

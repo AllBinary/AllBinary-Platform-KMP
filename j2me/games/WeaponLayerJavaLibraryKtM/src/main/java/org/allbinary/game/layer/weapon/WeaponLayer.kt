@@ -68,7 +68,6 @@ open fun getStaticType()
         }
             
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
-            
 
     var initAnimationInterface: Animation
 
@@ -83,7 +82,6 @@ open fun getStaticType()
     private var destroyed: Boolean = true
 
     var scoreableInterface: ScoreableInterface = NoScoreable.getInstance()!!
-            
 
     private var movement: Movement
 
@@ -254,7 +252,6 @@ open fun setGroupInterface()
         //nullable = true from not(false or (false and true)) = true
 {
     var basicGroupFactory: BasicGroupFactory = BasicGroupFactory.getInstance()!!
-            
 
 
     
@@ -294,7 +291,6 @@ open fun setGroupInterface()
 
 
     var currentFrame: Int = indexedAnimationInterface!!.getFrame()!!
-            
 
 
     
@@ -531,7 +527,6 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 this.animationInterface!!.paint(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight())
 }
@@ -543,7 +538,6 @@ override fun paintThreed(graphics: Graphics)
                     var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
-            
 
 this.animationInterface!!.paintThreed(graphics, viewPosition!!.getX() -this.getHalfWidth(), viewPosition!!.getY() -this.getHalfHeight(), viewPosition!!.getZ() -this.getHalfDepth())
 }

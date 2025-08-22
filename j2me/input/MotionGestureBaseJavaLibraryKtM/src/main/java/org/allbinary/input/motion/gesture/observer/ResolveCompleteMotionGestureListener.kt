@@ -42,12 +42,10 @@ open public class ResolveCompleteMotionGestureListener
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("MotionGesture to CompleteMotionGesture Reciever", this, commonStrings!!.CONSTRUCTOR)
 CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMotionGestureEventListener())
@@ -62,15 +60,12 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMo
                     var list = list
 
     var configuration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
-            
 
 
     var commandActionsList: BasicArrayList = configuration.getAssociateCommandActionsList()!!
-            
 
 
     var size: Int = commandActionsList!!.size()!!
-            
 
 
 

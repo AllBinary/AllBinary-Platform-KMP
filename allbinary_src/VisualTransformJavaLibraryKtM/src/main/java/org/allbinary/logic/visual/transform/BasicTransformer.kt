@@ -48,10 +48,8 @@ open public class BasicTransformer : AbTransformer {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface
 public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
@@ -98,7 +96,6 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
 
 
     var decrypted: ByteArray = abCrypt!!.decrypt(outputStream!!.toByteArray())!!
-            
 
 
     
@@ -169,7 +166,6 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
 
 
     var decrypted: ByteArray = abCrypt!!.decrypt(outputStream!!.toByteArray())!!
-            
 
 
     
@@ -234,11 +230,9 @@ open fun setTemplateAsInputStream()
                                 
 
     var transformInfoTemplateData: TransformInfoTemplateData = TransformInfoTemplateData.getInstance()!!
-            
 
 
     var pathUtil: PathUtil = PathUtil.getInstance()!!
-            
 
 
     
@@ -249,11 +243,9 @@ open fun setTemplateAsInputStream()
                                     {
                                     
     var extension: String = pathUtil!!.getExtension(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
-            
 
 
     var filePath: String = pathUtil!!.getWithoutExtension(this.getTransformInfoInterface()!!.getTemplateFilePath())!!
-            
 
 
     

@@ -51,7 +51,6 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -66,21 +65,17 @@ open fun get(httpServletRequest: HttpServletRequest)
                     var httpServletRequest = httpServletRequest
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
         try {
             
     var acceptableResponseUtil: AcceptableResponseUtil = AcceptableResponseUtil.getInstance()!!
-            
 
 
     var acceptable: String = httpServletRequest!!.getHeader("accept")!!
-            
 
 
     var result: String = acceptableResponseUtil!!.getTagName(0)!!
-            
 
 
     
@@ -100,7 +95,6 @@ open fun get(httpServletRequest: HttpServletRequest)
                                     {
                                     
     var size: Int = acceptableResponseUtil!!.size()!!
-            
 
 
 

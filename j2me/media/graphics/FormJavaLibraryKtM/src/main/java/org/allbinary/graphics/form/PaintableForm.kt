@@ -32,7 +32,6 @@ open public class PaintableForm : CustomForm {
         }
             
     val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
     var rectangle: Rectangle = RectangleFactory.SINGLETON
 
@@ -89,7 +88,6 @@ open fun init(rectangle: Rectangle, formType: FormType)
 this.rectangle= rectangle
 
     var point: GPoint = this.rectangle.getPoint()!!
-            
 
 this.x= point.getX()
 this.y= point.getY()

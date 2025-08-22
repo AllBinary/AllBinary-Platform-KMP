@@ -69,13 +69,10 @@ open fun getInstance()
         }
             
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val canvasStrings: CanvasStrings = CanvasStrings.getInstance()!!
-            
 
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
     private val SET_DISPLAYABLE: String = "setDisplayable"
 
@@ -92,16 +89,12 @@ open fun getInstance()
     val DEFAULT_CHILD_NAME_LIST: BasicArrayList = BasicArrayList()
 
     private var displayable: Displayable = NullDisplayable.getInstance()!!
-            
 
     private var openGlReadydisplayable: Displayable = NullDisplayable.getInstance()!!
-            
 
     private var runnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
-            
 
     private var usedRunnable: GameRunnable = NullWaitGameRunnable.getInstance()!!
-            
 private constructor        ()
             : super()
         {this.DEFAULT_CHILD_NAME_LIST.add(this.canvasStrings!!.ABOUT)
@@ -212,15 +205,15 @@ open fun update()
         //nullable = true from not(false or (false and true)) = true
 {
         
-        //synchronized(this) 
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
         //mutex.withLock
-        
+        {
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 
     var features: Features = Features.getInstance()!!
-            
 
 
     var stringMaker: StringMaker = StringMaker()
@@ -262,7 +255,7 @@ this.setUsedRunnable(NullWaitGameRunnable.getInstance())
 
                         }
                             
-
+}
 
 }
 

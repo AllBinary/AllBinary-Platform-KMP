@@ -40,7 +40,6 @@ open public class BasicGroupItemsEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val tableName: String = "basicgroupeditems"
 public constructor        ()                        

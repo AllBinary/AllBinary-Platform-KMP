@@ -40,10 +40,8 @@ open public class CategoryAbstractFactory
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        ()
             : super()
         {}

@@ -38,7 +38,6 @@ open public class CustomLoaderTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 

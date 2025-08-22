@@ -60,7 +60,6 @@ open fun toString(i_column: Int, i_row: Int)
 
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
 stringBuffer!!.append(commonSeps!!.PARENTHESIS_OPEN)
 stringBuffer!!.append(i_column)

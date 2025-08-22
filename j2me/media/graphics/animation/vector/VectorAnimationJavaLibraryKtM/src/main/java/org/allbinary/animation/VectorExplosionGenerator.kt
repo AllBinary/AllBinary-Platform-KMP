@@ -57,7 +57,6 @@ open fun getInstance()
     val ROTATION: VectorExplosionType = VectorExplosionType()
 
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}
@@ -78,7 +77,6 @@ open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionTy
                     var type = type
 
     var size: Int = list.size()!!
-            
 
 
     var points: Array<IntArray?> = Array(size) { IntArray(2) }
@@ -120,14 +118,12 @@ open fun getInstance(points: Array<IntArray?>, howMuch: Int, type: VectorExplosi
                     var type = type
 
     var pointsBasicArrayList: BasicArrayList = getInstance(points, howMuch, type, true)!!
-            
 
 
     var tempBasicArrayList: BasicArrayList = pointsBasicArrayList!!.objectArray[0]!! as BasicArrayList
 
 
     var newPoints: Array<Array<IntArray?>?> = vectorAnimationUtil!!.toAnimationArrayFromBasicArrayListOfPointBasicArrayList(pointsBasicArrayList, tempBasicArrayList!!.size())!!
-            
 
 
 
@@ -169,7 +165,6 @@ pointsBasicArrayList!!.add(createPointsBasicArrayList(points))
 
 
     var pointBasicArrayList: BasicArrayList = getInstance(tempBasicArrayList, points, howMuch, type)!!
-            
 
 pointsBasicArrayList!!.add(pointBasicArrayList)
 frameIndex++
@@ -200,7 +195,6 @@ frameIndex++
 
 
     private val randomRotationFactory: RandomRotationFactory = RandomRotationFactory.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -258,7 +252,6 @@ sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howM
                                 
 
     var size: Int = sectionBasicArrayList!!.size()!!
-            
 
 
 

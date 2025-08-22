@@ -50,10 +50,8 @@ open public class BasicWorkFlow
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var workFlowDoc: Document
 
@@ -66,7 +64,6 @@ public constructor        ()
 this.workFlowDoc= DomDocumentHelper.create()
 
     var workFlowNode: Node = this.workFlowDoc!!.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
-            
 
 this.workFlowDoc!!.appendChild(workFlowNode)
 }
@@ -86,7 +83,6 @@ this.storeName= weblisketSession!!.getStoreName()
 
     var requestHashMap: HashMap<Any, Any> = RequestParams(pageContext).
                             toHashMap()!!
-            
 
 this.workFlowName= requestHashMap!!.get(WorkFlowData.getInstance()!!.NAME) as String
 this.workFlowDoc= DomDocumentHelper.create(requestHashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)
@@ -145,7 +141,6 @@ values.add(this.storeName)
 values.add(DomDocumentHelper.toString(this.workFlowDoc))
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -174,7 +169,6 @@ hashMap!!.put(StoreFrontData.getInstance()!!.NAME, this.storeName)
 hashMap!!.put(WorkFlowData.getInstance()!!.DATA, DomDocumentHelper.toString(this.workFlowDoc))
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -199,19 +193,15 @@ open fun toXmlNode(document: Document)
         try {
             
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
-            
 
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var node: Node = document.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
-            
 
 
     var nameArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = nameArray!!.size

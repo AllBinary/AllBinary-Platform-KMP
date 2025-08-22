@@ -39,7 +39,6 @@ open public class StoreWorkFlowTag : HelperTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var viewName: String
 
@@ -89,12 +88,10 @@ open fun process()
                                 
 
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
-            
 
 
     var method: Method = helperClass!!.getMethod(commonStrings!!.PROCESS, 
                             null)!!
-            
 
 
     var result: Integer = method.invoke(this.getHelper(), 

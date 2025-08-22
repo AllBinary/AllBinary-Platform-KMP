@@ -53,7 +53,6 @@ open fun getInstance()
         }
             
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val LABEL: String = "org.allbinary"
 private constructor        ()
@@ -68,19 +67,15 @@ open fun put(log: Log)
                     var log = log
 
     var specialMessage: String = log.getSpecialMessage()!!
-            
 
 
     var anyType: Any = log.getObject()!!
-            
 
 
     var functionName: String = log.getFunctionName()!!
-            
 
 
     var exception: Any = log.getThrowable()!!
-            
 
 this.put(specialMessage, anyType, functionName, exception)
 }
@@ -123,7 +118,6 @@ className= StringMaker().
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
-            
 
 android.util.Log.i(LABEL, message)
 }

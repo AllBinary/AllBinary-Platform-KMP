@@ -41,7 +41,6 @@ open public class TransformInfoHttpStore : TransformInfoHttp
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
                             : super(propertiesHashMap, pageContext, true){

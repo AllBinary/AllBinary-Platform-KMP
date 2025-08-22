@@ -41,7 +41,6 @@ open public class BasketTag : CustomTagSupport {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var command: String
 
@@ -78,12 +77,10 @@ open fun isBasketEmpty()
             
     var anyType: Any = BasketHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("isBasketEmpty", 
                             null)!!
-            
 
 
     var emptyBoolean: Boolean = method.invoke(anyType, 
@@ -129,12 +126,10 @@ open fun addItemToBasket()
             
     var anyType: Any = BasketRequestHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("addItemToBasket", 
                             null)!!
-            
 
 
     var emptyBoolean: Boolean = method.invoke(anyType, 
@@ -183,12 +178,10 @@ open fun removeItemFromBasket()
             
     var anyType: Any = BasketRequestHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("removeItemFromBasket", 
                             null)!!
-            
 
 
     var emptyBoolean: Boolean = method.invoke(anyType, 
@@ -237,12 +230,10 @@ open fun adjustBasket()
             
     var anyType: Any = BasketRequestHelperFactory().
                             getInstance(this.propertiesHashMap, this.pageContext)!!
-            
 
 
     var method: Method = anyType!!::class.getMethod("adjustBasket", 
                             null)!!
-            
 
 
     var emptyBoolean: Boolean = method.invoke(anyType, 

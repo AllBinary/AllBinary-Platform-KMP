@@ -39,7 +39,6 @@ open public class DemoGameStartupRunnable : ABRunnable {
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val demoCanvas: DemoCanvas
 public constructor        (demoCanvas: DemoCanvas){
@@ -61,7 +60,6 @@ this.setRunning(false)
             {this.setRunning(false)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }

@@ -129,7 +129,6 @@ ChangedGameFeatureListener.getInstance()!!.remove(InputFeatureFactory.getInstanc
                     var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     
@@ -154,7 +153,6 @@ this.initKeyMapping(abeClientInformation, getPortion())
 GameKeyEventFactory.getInstance()!!.init()
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
-            
 
 progressCanvas!!.addPortion(localPortion, "Game Key Events")
 BasicTouchInputFactory.getInstance()!!.init(PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
@@ -183,7 +181,6 @@ open fun resourceInitialization(level: Int)
                     var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
-            
 
 
     
@@ -230,11 +227,9 @@ open fun resourceAnimationChange()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
     var changedGameFeatureListener: ChangedGameFeatureListener = ChangedGameFeatureListener.getInstance()!!
-            
 
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
-            
 
 
     
@@ -276,7 +271,6 @@ open fun clearResources()
 GameFeatureImageCacheFactory.releaseAll()
 
     var featuredAnimationInterfaceFactoryInterfaceFactory: FeaturedAnimationInterfaceFactoryInterfaceFactory = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!
-            
 
 featuredAnimationInterfaceFactoryInterfaceFactory!!.clear()
 FeaturedResourceRelativeRelationshipFactory.getInstance()!!.clear()

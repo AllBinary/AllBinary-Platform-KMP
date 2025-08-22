@@ -38,10 +38,8 @@ open public class UserEmailConfiguration
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        ()

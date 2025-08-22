@@ -40,7 +40,6 @@ open public class Animation
         
 
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 

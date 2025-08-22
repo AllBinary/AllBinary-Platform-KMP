@@ -50,7 +50,6 @@ open fun loaded(index2: Int)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface
 public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){

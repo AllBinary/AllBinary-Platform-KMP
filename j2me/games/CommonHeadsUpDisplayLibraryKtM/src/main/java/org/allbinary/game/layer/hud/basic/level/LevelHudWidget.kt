@@ -87,7 +87,6 @@ public constructor        (maxlevel: Int, location: Int, direction: Int, maxWidt
                     
 
     var myFont: MyFont = MyFont.getInstance()!!
-            
 
 this.primitiveLongUtil= PrimitiveLongUtil(1000)
 

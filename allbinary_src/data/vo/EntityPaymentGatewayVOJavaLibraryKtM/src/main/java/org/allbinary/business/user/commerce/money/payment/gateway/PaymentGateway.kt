@@ -123,7 +123,6 @@ open fun getFormData(hashMap: HashMap<Any, Any>)
                     var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var empty: String = stringUtil!!.EMPTY_STRING

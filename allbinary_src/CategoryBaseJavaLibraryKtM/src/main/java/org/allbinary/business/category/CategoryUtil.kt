@@ -49,7 +49,6 @@ open fun getPathLevel(categoryPath: AbPath)
                     var categoryPath = categoryPath
 
     var count: Int = StringUtils.countMatches(categoryPath!!.toString(), AbPathData.getInstance()!!.SEPARATOR)!!
-            
 
 
 
@@ -66,7 +65,6 @@ open fun getNameFromNode(node: Node)
                     var node = node
 
     var attributes: NamedNodeMap = node.getAttributes()!!
-            
 
 
     var attrNode: Attr = attributes.getNamedItem(CategoryData.getInstance()!!.LABEL) as Attr
@@ -89,7 +87,6 @@ open fun getNameFromNode(node: Node)
                         else {
                             
     var labelNode: Node = DomSearchHelper.getNodeNoThrow(CategoryData.getInstance()!!.LABEL, node.getChildNodes())!!
-            
 
 
     

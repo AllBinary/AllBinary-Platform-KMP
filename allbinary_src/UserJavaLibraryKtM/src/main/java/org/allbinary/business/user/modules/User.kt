@@ -59,7 +59,6 @@ open public class User
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userName: String
 
@@ -143,15 +142,12 @@ this.userName= UserName(userHashMap).
                             get()
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var passwordString: String = stringUtil!!.getInstance(userHashMap!!.get(UserData.PASSWORD) as String)!!
-            
 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -165,11 +161,9 @@ passwordString= stringUtil!!.getInstance(userHashMap!!.get(WeblisketSessionData.
                                 
 
     var encryption: String = stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!!.ENCRYPTION) as String)!!
-            
 
 
     var secret: String = stringUtil!!.getInstance(userHashMap!!.get(UserData.SECRET) as String)!!
-            
 
 this.password= Password(passwordString)
 this.prefixName= stringUtil!!.getInstance(userHashMap!!.get(UserData.PREFIXNAME) as String)
@@ -235,7 +229,6 @@ open fun isValid()
                                 
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -277,7 +270,6 @@ open fun isValid()
                                     {
                                     
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
@@ -299,7 +291,6 @@ open fun validationInfo()
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -811,7 +802,6 @@ values.addAll(this.password.toVector(this.secret))
 values.add(this.enable)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.
@@ -871,7 +861,6 @@ values.putAll(this.password.toHashMap(this.secret))
 values.put(EntryData.getInstance()!!.ENABLE, this.enable)
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var time: String = calendar.getTimeInMillis() as Long.

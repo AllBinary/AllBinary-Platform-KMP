@@ -43,7 +43,6 @@ open fun getInstance(id: String)
                     var id = id
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
 
         try {
@@ -58,7 +57,6 @@ open fun getInstance(id: String)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     
@@ -82,7 +80,6 @@ open fun getInstance(id: String)
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 private constructor        ()
             : super()
         {}

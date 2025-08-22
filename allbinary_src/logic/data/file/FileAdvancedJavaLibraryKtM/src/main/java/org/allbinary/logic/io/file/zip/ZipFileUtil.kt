@@ -67,10 +67,8 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 open fun create(outFilename: String, fileBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
@@ -100,7 +98,6 @@ zipFile!!.createNewFile()
 
 
     var streamUtil: StreamUtil = StreamUtil.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()
@@ -113,7 +110,6 @@ zipFile!!.createNewFile()
 
 
     var size: Int = fileBasicArrayList!!.size()!!
-            
 
 
     var current: Int = 0
@@ -203,7 +199,6 @@ open fun unzip(path: String, zipFile: AbFile, fileName: String)
 
 
     var fileUtil: FileUtil = FileUtil.getInstance()!!
-            
 
 
         while((zipEntry= inputStream!!.getNextEntry()) != 
@@ -211,7 +206,6 @@ open fun unzip(path: String, zipFile: AbFile, fileName: String)
                                 )
         {
     var entryName: String = zipEntry!!.getName()!!
-            
 
 
     
@@ -237,7 +231,6 @@ stringBuffer!!.append(entryFile!!.getParent())
 logUtil!!.put(stringBuffer!!.toString(), this, "unzip")
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(entryFile)!!
-            
 
 fileUtil!!.write(inputStream, dataOutputStream, buffer)
 

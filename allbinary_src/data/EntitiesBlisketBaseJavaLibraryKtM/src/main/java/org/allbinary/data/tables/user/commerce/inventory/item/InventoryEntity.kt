@@ -44,7 +44,6 @@ open public class InventoryEntity : AbSqlBean
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val tableName: String = "basicinventory"
 public constructor        ()                        
@@ -145,11 +144,9 @@ open fun getItems(storeFrontInterface: StoreFrontInterface)
 
 
     var itemHashMapVector: Vector = super.getRows(keysAndValues)!!
-            
 
 
     var size: Int = itemHashMapVector!!.size!!
-            
 
 
 
@@ -206,7 +203,6 @@ open fun getItem(id: String)
 keysAndValues!!.put(BasicItemData.ID, id)
 
     var itemHashMap: HashMap<Any, Any> = super.getRow(keysAndValues)!!
-            
 
 
     

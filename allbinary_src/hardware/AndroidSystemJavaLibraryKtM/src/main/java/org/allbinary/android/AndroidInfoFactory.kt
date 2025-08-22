@@ -56,7 +56,6 @@ open fun getInstance()
             }            
         
     private val version: Int = Integer.parseInt(Build.VERSION.SDK)!!
-            
 
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true

@@ -41,7 +41,6 @@ open public class AdvertisementAreaView : HttpStoreComponentView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var advertisementAreaName: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
@@ -68,11 +67,9 @@ open fun toXmlNode(document: Document)
         try {
             
     var advertisementAreasEntityInterface: AdvertisementAreasEntityInterface = AdvertisementAreasEntityFactory.getInstance()!!
-            
 
 
     var advertisementAreaInterface: AdvertisementAreaInterface = advertisementAreasEntityInterface!!.get(this.getTransformInfoInterface()!!.getStoreName(), advertisementAreaName)!!
-            
 
 
 

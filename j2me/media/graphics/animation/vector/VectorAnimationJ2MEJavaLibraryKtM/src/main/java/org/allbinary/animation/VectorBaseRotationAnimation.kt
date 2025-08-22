@@ -39,7 +39,6 @@ open public class VectorBaseRotationAnimation : RotationAnimation
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var currentPoints: Array<Array<IntArray?>?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY_ARRAY
 public constructor        (angleInfo: AngleInfo, currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        

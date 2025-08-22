@@ -58,7 +58,6 @@ public constructor        (artificialIntelligenceInterface: Array<ArtificialInte
                     var allBinaryLayerManager = allBinaryLayerManager
 
     var artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?> = this.getArtificialIntelligenceInterface()!!
-            
 
 
     var size: Int = artificialIntelligenceInterfaceArray!!.size

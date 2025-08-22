@@ -39,10 +39,8 @@ open public class ScreenScavangerRobot
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 public constructor        ()
             : super()
         {}
@@ -55,14 +53,12 @@ open fun getScreenAsBufferedImages()
 : Array<BufferedImage?>{logUtil!!.put(this.commonStrings!!.START, this, "getScreenAsBufferedImages")
 
     var dimScreenSize: Dimension = Toolkit.getDefaultToolkit()!!.getScreenSize()!!
-            
 
 
     var rectScreenSize: Rectangle = Rectangle(dimScreenSize)
 
 
     var robotHashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
-            
 
 
     var bufferedImageArray: Array<BufferedImage?> = arrayOfNulls(1)

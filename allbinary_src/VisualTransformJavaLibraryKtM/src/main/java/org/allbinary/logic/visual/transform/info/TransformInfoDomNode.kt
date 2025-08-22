@@ -40,7 +40,6 @@ open public class TransformInfoDomNode
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var transformInfoInterface: TransformInfoInterface
 
@@ -61,22 +60,18 @@ public constructor        (node: Node)
                                 
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
-            
 
 
     var attributes: NamedNodeMap = node.getAttributes()!!
-            
 
 
     var attrNode: Attr = attributes.getNamedItem(transformInfoData!!.NAME) as Attr
 
 
     var name: String = attrNode!!.getValue()!!
-            
 
 
     var nodeList: NodeList = node.getChildNodes()!!
-            
 
 
     
@@ -102,35 +97,27 @@ logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoObjectConfigCompone
                                 
 
     var objectFileNameNode: Node = DomSearchHelper.getNode(transformInfoData!!.OBJECTFILENAME, nodeList)!!
-            
 
 
     var objectFileName: String = DomNodeHelper.getTextNodeValue(objectFileNameNode)!!
-            
 
 
     var objectConfigFileNameNode: Node = DomSearchHelper.getNode(transformInfoData!!.OBJECTCONFIGFILENAME, nodeList)!!
-            
 
 
     var objectConfigFileName: String = DomNodeHelper.getTextNodeValue(objectConfigFileNameNode)!!
-            
 
 
     var templateFileNameNode: Node = DomSearchHelper.getNode(transformInfoData!!.TEMPLATEFILENAME, nodeList)!!
-            
 
 
     var templateFileName: String = DomNodeHelper.getTextNodeValue(templateFileNameNode)!!
-            
 
 
     var dataFileNameNode: Node = DomSearchHelper.getNode(transformInfoData!!.DATAFILENAME, nodeList)!!
-            
 
 
     var dataFileName: String = DomNodeHelper.getTextNodeValue(dataFileNameNode)!!
-            
 
 this.transformInfoInterface= TransformInfo(name, objectFileName, objectConfigFileName, templateFileName, dataFileName) as TransformInfoInterface
 
@@ -243,7 +230,6 @@ stringBuffer!!.append("body")
 stringBuffer!!.append("\"/>")
 
     var key: String = stringBuffer!!.toString()!!
-            
 
 
     

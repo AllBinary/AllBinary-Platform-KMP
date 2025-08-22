@@ -49,10 +49,8 @@ open public class OrderStatusEmail
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface
 
@@ -73,7 +71,6 @@ this.abeClientInformation= abeClientInformation
 this.orderHistory= orderHistory
 
     var storeName: String = orderHistory!!.getStoreName()!!
-            
 
 this.storeFrontInterface= StoreFrontFactory.getInstance(storeName)
 this.user= UserEntityFactory.getInstance()!!.getUser(orderHistory!!.getUserName())
@@ -124,15 +121,12 @@ open fun notifyStoreAdmin()
 
 
     var userEmailEventNameData: UserEmailEventNameData = UserEmailEventNameData.getInstance(this.orderHistory!!.getStatus())!!
-            
 
 
     var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, userEmailEventNameData)!!
-            
 
 
     var storeAdminUserEmailEventHandler: UserEmailEventHandler = StoreAdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(userEmailEventNameData, this.abeClientInformation, this.storeFrontInterface)!!
-            
 
 storeAdminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, storeAdminEmailInfo)
 adminUserEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, adminEmailInfo)
@@ -180,11 +174,9 @@ open fun notifyUser()
 
 
     var userEmailEventNameData: UserEmailEventNameData = UserEmailEventNameData.getInstance(this.orderHistory!!.getStatus())!!
-            
 
 
     var userEmailEventHandler: UserEmailEventHandler = UserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, userEmailEventNameData, this.user)!!
-            
 
 userEmailEventHandler!!.receiveEmailInfo(userEmailEventNameData, emailInfo)
 } catch(e: Exception)

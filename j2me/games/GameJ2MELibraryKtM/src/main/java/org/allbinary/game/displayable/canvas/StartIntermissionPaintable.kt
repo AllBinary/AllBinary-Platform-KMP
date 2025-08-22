@@ -41,10 +41,8 @@ open public class StartIntermissionPaintable : InitUpdatePaintable {
         
 
     val fontDebugFactory: FontDebugFactory = FontDebugFactory.getInstance()!!
-            
 
     val basicSetColorUtil: BasicColorSetUtil = BasicColorSetUtil.getInstance()!!
-            
 
     var gameCanvas: AllBinaryGameCanvas
 
@@ -117,12 +115,10 @@ override fun paint(graphics: Graphics)
                     var graphics = graphics
 
     var existingFont: Font = graphics.getFont()!!
-            
 
 fontDebugFactory!!.setFont(this.font, graphics)
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
-            
 
 basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
 
@@ -160,7 +156,6 @@ override fun update()
         //nullable = true from not(false or (false and true)) = true
 {
     var level: Int = gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
-            
 
 this.stringArray[0]= StringMaker().
                             append(BEGIN_LEVEL)!!.append(level)!!.toString()

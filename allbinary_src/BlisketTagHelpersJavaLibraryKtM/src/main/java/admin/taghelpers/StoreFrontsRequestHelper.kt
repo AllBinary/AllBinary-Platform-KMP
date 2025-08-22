@@ -51,10 +51,8 @@ open public class StoreFrontsRequestHelper : ModifyTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
-            
 
     private val pageContext: PageContext
 
@@ -99,7 +97,6 @@ open fun update()
 
 
     var hashMapData: HashMap<Any, Any> = this.modifyingStoreFrontInterface!!.toHashMap()!!
-            
 
 StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.update(hashMapData)
 
@@ -167,7 +164,6 @@ stringBuffer!!.append("UserName: ")
 stringBuffer!!.append(this.weblisketSession!!.getUserName())
 
     var adminEmailTextBody: String = stringBuffer!!.toString()!!
-            
 
 
     var adminBasicEmailInfo: BasicEmailInfo = AdminEmailInfo(adminEmailSubject, adminEmailTextBody) as BasicEmailInfo
@@ -183,11 +179,9 @@ stringBuffer!!.append(this.weblisketSession!!.getUserName())
 
 
     var adminUserEmailEventHandler: UserEmailEventHandler = AdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(this.abeClientInformation, UserEmailEventNameData.STORECREATED)!!
-            
 
 
     var storeAdminUserEmailEventHandler: UserEmailEventHandler = StoreAdminUserEmailEventHandlerSingletons.getInstance()!!.getInstance(UserEmailEventNameData.STORECREATED, this.abeClientInformation, this.modifyingStoreFrontInterface)!!
-            
 
 storeAdminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATED, storeAdminEmailInfo)
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATED, adminEmailInfo)
@@ -207,7 +201,6 @@ stringBuffer!!.append(" of ")
 stringBuffer!!.append(this.portion.getTotal()!!.toInt())
 
     var success: String = stringBuffer!!.toString()!!
-            
 
 this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(), this.portion.getTotal()!!.toInt())
 
@@ -256,7 +249,6 @@ open fun insert()
 
 
     var values: Vector = this.modifyingStoreFrontInterface!!.toVector()!!
-            
 
 StoreFrontsEntityFactory.getInstance()!!.getStoreFrontsEntityInstance()!!.insert(values)
 

@@ -134,7 +134,6 @@ this.animationBehaviorFactory= animationBehaviorFactory
                     var instanceId = instanceId
 
     var image: Image = ImageCopyUtil.getInstance()!!.createImage(this.getImage())!!
-            
 
 
 

@@ -36,7 +36,6 @@ open public class PermissionItemsHelper : BasicTable {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val portion: Portion
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
@@ -55,7 +54,6 @@ open fun create()
         try {
             
     var success: String = PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.createTable()!!
-            
 
 
     
@@ -100,7 +98,6 @@ open fun drop()
         try {
             
     var success: String = PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance()!!.dropTable()!!
-            
 
 
     
@@ -148,7 +145,6 @@ open fun restore()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.restoreTable(PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance(), this.portion)!!
-            
 
 
     
@@ -196,7 +192,6 @@ open fun backup()
 
 
     var result: String = AbSqlTableUtil.getInstance()!!.backupTable(PermissionItemsEntityFactory.getInstance()!!.getPermissionItemsEntityInstance())!!
-            
 
 
     

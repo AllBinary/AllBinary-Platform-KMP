@@ -44,10 +44,8 @@ open public class AbPath
         }
             
     private val commonSeps: CommonSeps = CommonSeps.getInstance()!!
-            
 
     private val abPathData: AbPathData = AbPathData.getInstance()!!
-            
 
     var schema: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -60,7 +58,6 @@ open public class AbPath
     private var numberOfSeps: Int = 0
 
     private val abPathUtil: PathUtil = PathUtil.getInstance()!!
-            
 public constructor        ()
             : super()
         {init()
@@ -75,7 +72,6 @@ public constructor        (aPath: String)
                     var aPath = aPath
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -105,7 +101,6 @@ public constructor        (aPath: String, name: String)
                     var name = name
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
-            
 
 
     
@@ -150,7 +145,6 @@ open fun getSchema(aPath: String)
                     var aPath = aPath
 
     var beginIndex: Int = aPath!!.indexOf(commonSeps!!.COLON)!!
-            
 
 
     
@@ -194,7 +188,6 @@ open fun getPath(aPath: String)
                     var aPath = aPath
 
     var filePathData: FilePathData = FilePathData.getInstance()!!
-            
 
 
     var tempPath: String = aPath
@@ -211,7 +204,6 @@ open fun getPath(aPath: String)
                         else {
                             
     var beginIndex: Int = tempPath!!.indexOf(commonSeps!!.COLON)!!
-            
 
 
     
@@ -304,7 +296,6 @@ open fun toFileSystemString()
                                     {
                                     
     var filePathData: FilePathData = FilePathData.getInstance()!!
-            
 
 
     var stringBuffer: StringMaker = StringMaker()

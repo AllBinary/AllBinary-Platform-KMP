@@ -45,10 +45,8 @@ open public class DownloadableItemView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var downloadableItem: DownloadableItem
 public constructor        (downloadableItem: DownloadableItem)
@@ -78,64 +76,49 @@ open fun toXmlNode(document: Document)
                                 
 
     var hashMap: HashMap<Any, Any> = downloadableItem!!.toHashMap()!!
-            
 
 
     var totalTime: Long = downloadableItem!!.getValidTime()!!.longValue()!!
-            
 
 
     var calendar: Calendar = Calendar.getInstance()!!
-            
 
 
     var year: Int = calendar.get(Calendar.YEAR)!!
-            
 
 
     var month: Int = calendar.get(Calendar.MONTH)!!
-            
 
 
     var day: Int = calendar.get(Calendar.DAY_OF_MONTH)!!
-            
 
 
     var hour: Int = calendar.get(Calendar.HOUR)!!
-            
 
 
     var minute: Int = calendar.get(Calendar.MINUTE)!!
-            
 
 
     var second: Int = calendar.get(Calendar.SECOND)!!
-            
 
 calendar.setTimeInMillis(calendar.getTimeInMillis() +totalTime)
 
     var yearDelta: Int = calendar.get(Calendar.YEAR)!!
-            
 
 
     var monthDelta: Int = calendar.get(Calendar.MONTH)!!
-            
 
 
     var dayDelta: Int = calendar.get(Calendar.DAY_OF_MONTH)!!
-            
 
 
     var hourDelta: Int = calendar.get(Calendar.HOUR)!!
-            
 
 
     var minuteDelta: Int = calendar.get(Calendar.MINUTE)!!
-            
 
 
     var secondDelta: Int = calendar.get(Calendar.SECOND)!!
-            
 
 hashMap!!.put(DownloadItemData.VALID_TIME_YEARS, Integer(Integer.valueOf(yearDelta -year)))
 hashMap!!.put(DownloadItemData.VALID_TIME_MONTHS, Integer(Integer.valueOf(monthDelta -month)))
@@ -145,19 +128,15 @@ hashMap!!.put(DownloadItemData.VALID_TIME_MINUTES, Integer(Integer.valueOf(minut
 hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secondDelta -second)))
 
     var keySet: Set = hashMap!!.keys!!
-            
 
 
     var node: Node = document.createElement(DownloadItemData.NAME)!!
-            
 
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
-            
 
 
     var nameArray: Array<Any?> = keySet!!.toArray()!!
-            
 
 
     var size: Int = nameArray!!.size

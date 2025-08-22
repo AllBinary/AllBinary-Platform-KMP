@@ -45,7 +45,6 @@ open public class AlwaysActionScriptCondition : BasicProfileActionScriptConditio
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var alwaysActionScriptConditionJPanel: AlwaysActionScriptConditionJPanel
 
@@ -61,7 +60,6 @@ public constructor        (node: Node)
                     
 
     var actionNode: Node = DomSearchHelper.getNode(AlwaysActionScriptConditionData.NAME, node.getChildNodes())!!
-            
 
 
     
@@ -72,7 +70,6 @@ public constructor        (node: Node)
                                     {
                                     
     var nodeList: NodeList = actionNode!!.getChildNodes()!!
-            
 
 
 
@@ -83,7 +80,6 @@ public constructor        (node: Node)
 
         {
     var childNode: Node = nodeList!!.item(index)!!
-            
 
 
     
@@ -92,7 +88,6 @@ public constructor        (node: Node)
                                     {
                                     
     var booleanString: String = DomNodeHelper.getTextNodeValue(childNode)!!
-            
 
 this.setIsOn(.
                             )
@@ -188,7 +183,6 @@ open fun toXmlNode(document: Document)
                     var document = document
 
     var node: Node = super.toXmlNode(document)!!
-            
 
 node.appendChild(ModDomHelper.createNodeWithValueNodes(document, AlwaysActionScriptConditionData.NAME, this.toHashMap()))
 

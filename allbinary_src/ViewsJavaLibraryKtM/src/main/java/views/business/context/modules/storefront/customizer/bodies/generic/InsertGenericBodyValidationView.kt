@@ -43,7 +43,6 @@ open public class InsertGenericBodyValidationView : GenericBodyCustomizerView
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
                             : super(transformInfoInterface){
@@ -56,7 +55,6 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
     var requestHashMap: HashMap<Any, Any> = RequestParams(this.getPageContext()).
                             toHashMap()!!
-            
 
 this.body= GenericBodyValidation(requestHashMap)
 }
@@ -89,7 +87,6 @@ open fun isValid()
                                 
 
     var isValid: Boolean = this.body.isValid()!!
-            
 
 
     

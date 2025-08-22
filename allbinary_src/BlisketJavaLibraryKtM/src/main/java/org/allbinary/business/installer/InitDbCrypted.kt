@@ -60,7 +60,6 @@ open public class InitDbCrypted : AbDatabaseManagement {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var userDbInitInfo: UserDbInitInfo
 
@@ -97,15 +96,12 @@ staticpagesDbInitInfo= StaticPagesDbInitInfo()
 logDbInitInfo= LogDbInitInfo()
 
     var CUSTOMERDB: String = userDbInitInfo!!.getName()!!
-            
 
 
     var CUSTOMERDBUSER: String = userDbInitInfo!!.getUserName()!!
-            
 
 
     var CUSTOMERDBPASSWORD: String = userDbInitInfo!!.getPassword()!!
-            
 
 
     
@@ -123,15 +119,12 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var INVENTORYDB: String = inventoryDbInitInfo!!.getName()!!
-            
 
 
     var INVENTORYDBUSER: String = inventoryDbInitInfo!!.getUserName()!!
-            
 
 
     var INVENTORYDBPASSWORD: String = inventoryDbInitInfo!!.getPassword()!!
-            
 
 
     
@@ -149,15 +142,12 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var HISTORYDB: String = historyDbInitInfo!!.getName()!!
-            
 
 
     var HISTORYDBUSER: String = historyDbInitInfo!!.getUserName()!!
-            
 
 
     var HISTORYDBPASSWORD: String = historyDbInitInfo!!.getPassword()!!
-            
 
 
     
@@ -175,15 +165,12 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var STATICPAGESDB: String = staticpagesDbInitInfo!!.getName()!!
-            
 
 
     var STATICPAGESDBUSER: String = staticpagesDbInitInfo!!.getUserName()!!
-            
 
 
     var STATICPAGESDBPASSWORD: String = staticpagesDbInitInfo!!.getPassword()!!
-            
 
 
     
@@ -201,15 +188,12 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var LOGDB: String = logDbInitInfo!!.getName()!!
-            
 
 
     var LOGDBUSER: String = logDbInitInfo!!.getUserName()!!
-            
 
 
     var LOGDBPASSWORD: String = logDbInitInfo!!.getPassword()!!
-            
 
 
     
@@ -255,7 +239,6 @@ staticpagesDbInitInfo= StaticPagesDbInitInfo()
 logDbInitInfo= LogDbInitInfo()
 
     var CUSTOMERDB: String = userDbInitInfo!!.getName()!!
-            
 
 
     
@@ -273,7 +256,6 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var INVENTORYDB: String = inventoryDbInitInfo!!.getName()!!
-            
 
 
     
@@ -291,7 +273,6 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var HISTORYDB: String = historyDbInitInfo!!.getName()!!
-            
 
 
     
@@ -309,7 +290,6 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var STATICPAGESDB: String = staticpagesDbInitInfo!!.getName()!!
-            
 
 
     
@@ -327,7 +307,6 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var LOGDB: String = logDbInitInfo!!.getName()!!
-            
 
 
     
@@ -345,12 +324,10 @@ logDbInitInfo= LogDbInitInfo()
                                 
 
     var file: AbFile = FileFactory.getInstance()!!.getInstance(SQL_FILE)!!
-            
 
 file.createNewFile()
 
     var idOutData: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(file)!!
-            
 
 idOutData!!.writeBytes(this.sqlCommandLog!!.toString())
 

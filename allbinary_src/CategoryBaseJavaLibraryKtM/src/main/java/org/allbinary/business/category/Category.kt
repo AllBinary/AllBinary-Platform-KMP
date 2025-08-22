@@ -54,10 +54,8 @@ open public class Category
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
     private var categoryHierarchyInterface: CategoryHierarchyInterface
 
@@ -140,7 +138,6 @@ open fun getRootFilePath()
 
 
     var categoryInterface: CategoryInterface = this.categoryHierarchyInterface!!.getRoot()!!
-            
 
 
     
@@ -180,7 +177,6 @@ open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
 : AbPath{
     var categoryInterface: CategoryInterface = this.categoryHierarchyInterface!!.getRoot()!!
-            
 
 
 
@@ -233,7 +229,6 @@ this.removeDuplicateChild(categoryInterface)
                                 
 
     var childCategoryHierarchyInterface: CategoryHierarchyInterface = categoryInterface!!.getHierarchy()!!
-            
 
 childCategoryHierarchyInterface!!.setParent(this)
 childCategoryHierarchyInterface!!.setRoot(this.getHierarchy()!!.getRoot())
@@ -270,7 +265,6 @@ open fun removeChild(categoryInterface: CategoryInterface)
 
 
     var size: Int = this.childCategoryVector!!.size!!
-            
 
 
 
@@ -286,7 +280,6 @@ open fun removeChild(categoryInterface: CategoryInterface)
                                     {
                                     
     var anyType: Any = this.childCategoryVector!!.get(index)!!
-            
 
 
     var currentCategoryInterface: CategoryInterface = anyType as CategoryInterface
@@ -322,7 +315,6 @@ open fun removal(removalVector: Vector)
                     var removalVector = removalVector
 
     var removalSize: Int = removalVector!!.size!!
-            
 
 
 
@@ -333,11 +325,9 @@ open fun removal(removalVector: Vector)
 
         {
     var anyType: Any = removalVector!!.get(index)!!
-            
 
 
     var objectIndex: Int = this.childCategoryVector!!.indexOf(anyType)!!
-            
 
 this.typeVector!!.remove(objectIndex)
 this.childCategoryVector!!.remove(objectIndex)
@@ -359,7 +349,6 @@ open fun removeDuplicateChild(categoryInterface: CategoryInterface)
 
 
     var size: Int = this.childCategoryVector!!.size!!
-            
 
 
 
@@ -370,7 +359,6 @@ open fun removeDuplicateChild(categoryInterface: CategoryInterface)
 
         {
     var anyType: Any = this.childCategoryVector!!.get(index)!!
-            
 
 
     
@@ -406,7 +394,6 @@ break;
 
 
     var categoryPropertiesInterface: CategoryPropertiesInterface = existingCategoryInterface!!.getProperties()!!
-            
 
 
     
@@ -535,7 +522,6 @@ open fun isValid()
                                 
 
     var size: Int = this.childCategoryVector!!.size!!
-            
 
 
 
@@ -546,7 +532,6 @@ open fun isValid()
 
         {
     var anyType: Any = this.childCategoryVector!!.get(index)!!
-            
 
 
     
@@ -651,7 +636,6 @@ open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>{
     var categoryHashMap: HashMap<Any, Any> = this.categoryPropertiesInterface!!.toHashMap()!!
-            
 
 
 
@@ -667,7 +651,6 @@ open fun toVector()
         //nullable = true from not(false or (false and true)) = true
 : Vector{
     var categoryVector: Vector = this.categoryPropertiesInterface!!.toVector()!!
-            
 
 categoryVector!!.add(this.childCategoryVector)
 
