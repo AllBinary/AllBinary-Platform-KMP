@@ -82,6 +82,37 @@ protected constructor        ()
 }
 
 
+open fun getImage(resourceId: Any)
+        //nullable = true from not(false or (false and false)) = true
+: Image{
+
+                    var resourceId = resourceId
+
+    var imageCanBeNull: Image? = this.hashtable.get(resourceId as Object) as Image
+
+
+    
+                        if(imageCanBeNull == 
+                                    null
+                                )
+                        
+                                    {
+                                    
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return NullCanvas.NULL_IMAGE
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return imageCanBeNull
+}
+
+
 open fun releaseAll()
         //nullable = true from not(false or (false and true)) = true
 {

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -41,7 +39,6 @@ open public class GeographicMapTopViewGameLayerBehavior2 : GeographicMapTopViewL
         
 
     private val gravityUtil: GravityUtil = GravityUtil.getInstance()!!
-            
 
     private val geographicMapBehavior: MultiGeographicMapBehavior = MultiGeographicMapBehavior()
 
@@ -105,7 +102,6 @@ this.offsetY= offsetY
                                     geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition)
 
     var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
-            
 
 
     
@@ -145,10 +141,10 @@ open fun getPositionTopLeft(geographicMapInterfaceArray: Array<BasicGeographicMa
 
                     var y = y
 
-    var xCellPosition: Int = layer!!.getXP() + -x
+    var xCellPosition: Int = layer.getXP() + -x
 
 
-    var yCellPosition: Int = layer!!.getYP() + -y
+    var yCellPosition: Int = layer.getYP() + -y
 
 
 
@@ -175,10 +171,10 @@ open fun getPositionTopRight(geographicMapInterfaceArray: Array<BasicGeographicM
 
                     var y = y
 
-    var xCellPosition: Int = layer!!.getXP() + -x +layer!!.getWidth()
+    var xCellPosition: Int = layer.getXP() + -x +layer.getWidth()
 
 
-    var yCellPosition: Int = layer!!.getYP() + -y
+    var yCellPosition: Int = layer.getYP() + -y
 
 
 
@@ -205,10 +201,10 @@ open fun getPositionBottomLeft(geographicMapInterfaceArray: Array<BasicGeographi
 
                     var y = y
 
-    var xCellPosition: Int = layer!!.getXP() + -x
+    var xCellPosition: Int = layer.getXP() + -x
 
 
-    var yCellPosition: Int = layer!!.getYP() + -y +layer!!.getHeight()
+    var yCellPosition: Int = layer.getYP() + -y +layer.getHeight()
 
 
 
@@ -235,10 +231,10 @@ open fun getPositionBottomRight(geographicMapInterfaceArray: Array<BasicGeograph
 
                     var y = y
 
-    var xCellPosition: Int = layer!!.getXP() + -x +layer!!.getWidth()
+    var xCellPosition: Int = layer.getXP() + -x +layer.getWidth()
 
 
-    var yCellPosition: Int = layer!!.getYP() + -y +layer!!.getHeight()
+    var yCellPosition: Int = layer.getYP() + -y +layer.getHeight()
 
 
 
@@ -259,11 +255,10 @@ open fun getLeftPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>
 
                     var layer = layer
 
-    var xCellPosition: Int = layer!!.getXP()!!
-            
+    var xCellPosition: Int = layer.getXP()!!
 
 
-    var yCellPosition: Int = layer!!.getYP() +layer!!.getHeight()
+    var yCellPosition: Int = layer.getYP() +layer.getHeight()
 
 
 
@@ -284,10 +279,10 @@ open fun getRightPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?
 
                     var layer = layer
 
-    var xCellPosition: Int = layer!!.getXP() +layer!!.getWidth()
+    var xCellPosition: Int = layer.getXP() +layer.getWidth()
 
 
-    var yCellPosition: Int = layer!!.getYP() +layer!!.getHeight()
+    var yCellPosition: Int = layer.getYP() +layer.getHeight()
 
 
 
@@ -325,7 +320,6 @@ open fun getRightPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?
 
 
     var topLeftGeographicMapCellPosition: GeographicMapCellPosition = this.getPositionTopLeft(geographicMapInterfaceArray, layer, x, y)!!
-            
 
 geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, topLeftGeographicMapCellPosition, velocityProperties, layer)
 
@@ -345,7 +339,6 @@ geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOff
                                 
 
     var topRightGeographicMapCellPosition: GeographicMapCellPosition = this.getPositionTopRight(geographicMapInterfaceArray, layer, x, y)!!
-            
 
 geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, topRightGeographicMapCellPosition, velocityProperties, layer)
 
@@ -365,7 +358,6 @@ geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOff
                                 
 
     var bottomLeftGeographicMapCellPosition: GeographicMapCellPosition = this.getPositionBottomLeft(geographicMapInterfaceArray, layer, x, y)!!
-            
 
 geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, bottomLeftGeographicMapCellPosition, velocityProperties, layer)
 
@@ -385,7 +377,6 @@ geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOff
                                 
 
     var bottomRightGeographicMapCellPosition: GeographicMapCellPosition = this.getPositionBottomRight(geographicMapInterfaceArray, layer, x, y)!!
-            
 
 geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, bottomRightGeographicMapCellPosition, velocityProperties, layer)
 
@@ -440,7 +431,6 @@ geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOff
 
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterfaceArray[0]!!.getAllBinaryTiledLayer()!!
-            
 
 
     
@@ -450,11 +440,9 @@ geographicMapCellPosition= this.getGeographicMapCellPositionIfNotSolidBlockOrOff
                                     geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
     var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
-            
 
 
     var hasOffMap: Boolean = this.isOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
-            
 
 
     
@@ -536,7 +524,7 @@ this.previousGeographicMapCellPosition=
                                     {
                                     layer = layerlayer as TopViewCharacterInterface
 layer.
-                                terrainMove(geographicMapInterfaceArray, geographicMapCellTypeArray, x, y)
+                    terrainMove(geographicMapInterfaceArray, geographicMapCellTypeArray, x, y)
 
                                     }
                                 
@@ -570,7 +558,6 @@ layer.
                     var y = y
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getGeographicMapCellPositionIfNotSolidBlockOrOffMap(geographicMapInterfaceArray, geographicMapCellTypeArray, velocityProperties, layer, x, y)!!
-            
 
 this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geographicMapCellPosition, velocityProperties, layer, x, y)
 
@@ -617,7 +604,6 @@ this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geogra
                     var layer = layer
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getLeftPosition(geographicMapInterfaceArray, layer)!!
-            
 
 
     
@@ -628,12 +614,10 @@ this.moveAndLand(geographicMapInterfaceArray, geographicMapCellTypeArray, geogra
                                     {
                                     
     var possibleStepGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!.getInstance(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow() -1)!!
-            
 
 geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
     var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
-            
 
 
     
@@ -647,7 +631,7 @@ geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMap
                                     {
                                     layer = layerlayer as TopViewCharacterInterface
 layer.
-                                leftp()
+                    leftp()
 
                                     }
                                 
@@ -662,7 +646,7 @@ layer.
                         else {
                             layer = layerlayer as TopViewCharacterInterface
 layer.
-                                leftp()
+                    leftp()
 
                         }
                             
@@ -689,7 +673,6 @@ layer.
                     var layer = layer
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getRightPosition(geographicMapInterfaceArray, layer)!!
-            
 
 
     
@@ -700,12 +683,10 @@ layer.
                                     {
                                     
     var possibleStepGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!.getInstance(geographicMapCellPosition!!.getColumn(), geographicMapCellPosition!!.getRow() -1)!!
-            
 
 geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, possibleStepGeographicMapCellPosition)
 
     var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
-            
 
 
     
@@ -719,7 +700,7 @@ geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMap
                                     {
                                     layer = layerlayer as TopViewCharacterInterface
 layer.
-                                rightp()
+                    rightp()
 
                                     }
                                 
@@ -734,7 +715,7 @@ layer.
                         else {
                             layer = layerlayer as TopViewCharacterInterface
 layer.
-                                rightp()
+                    rightp()
 
                         }
                             

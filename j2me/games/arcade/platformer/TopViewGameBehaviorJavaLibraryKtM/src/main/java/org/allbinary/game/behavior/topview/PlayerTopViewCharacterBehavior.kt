@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -51,7 +49,6 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
                 @Throws(Exception::class)
             
@@ -95,7 +92,6 @@ open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<B
                     var y = y
 
     var basicGeographicMapUtil: BasicGeographicMapUtil = BasicGeographicMapUtil.getInstance()!!
-            
 
 basicGeographicMapUtil!!.setPosition(geographicMapInterfaceArray, x, y)
 }

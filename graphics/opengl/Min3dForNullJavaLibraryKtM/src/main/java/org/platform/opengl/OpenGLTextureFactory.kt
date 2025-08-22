@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -21,8 +19,7 @@ open public class OpenGLTextureFactory : PlatformTextureBaseFactory {
         
 
         companion object {
-
-
+            
     private val instance: OpenGLTextureFactory = OpenGLTextureFactory()
 
 open fun getInstance()
@@ -35,11 +32,9 @@ open fun getInstance()
 }
 
 
-
         }
             
     private val gluUtils: OpenGLGLUUtils = OpenGLGLUUtils.getInstance()!!
-            
 private constructor        (){}
 
 override fun load(gl: GL10, target: Int, level: Int, image: Image, border: Int, flip: Boolean)

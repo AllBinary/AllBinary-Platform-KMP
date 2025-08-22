@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -40,7 +38,6 @@ open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTy
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     val BLOCK_CELL_TYPE: BasicPlatormGeographicMapCellType
 
@@ -57,7 +54,6 @@ public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId:
                     var maxTileId = maxTileId
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 this.maxTileId= maxTileId
@@ -84,7 +80,6 @@ this.maxTileId= maxTileId
 
 
     var enumeration: Enumeration<Any?> = tileTypeToTileIdsMap!!.keys()!!
-            
 
 
     var idsWithTypeList: BasicArrayList
@@ -96,14 +91,14 @@ this.maxTileId= maxTileId
     var basicPlatormGeographicMapCellType: BasicPlatormGeographicMapCellType
 
 
-        while(enumeration!!.hasMoreElements())
-        {key= enumeration!!.nextElement()!! as String
+        while(enumeration.hasMoreElements())
+        {key= enumeration.nextElement()!! as String
 logUtil!!.put(key, this, commonStrings!!.INIT)
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithTypeList)
 
     
-                        if(key!!.equals(PLATFORM))
+                        if(key.equals(PLATFORM))
                         
                                     {
                                     BLOCK_CELL_TYPE= basicPlatormGeographicMapCellType
@@ -112,7 +107,7 @@ basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithType
                                 
 
     
-                        if(key!!.equals(JUMP_TRHU))
+                        if(key.equals(JUMP_TRHU))
                         
                                     {
                                     JUMP_THRU_CELL_TYPE= basicPlatormGeographicMapCellType
@@ -121,7 +116,7 @@ basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithType
                                 
 
     
-                        if(key!!.equals(LADDER))
+                        if(key.equals(LADDER))
                         
                                     {
                                     LADDER_CELL_TYPE= basicPlatormGeographicMapCellType

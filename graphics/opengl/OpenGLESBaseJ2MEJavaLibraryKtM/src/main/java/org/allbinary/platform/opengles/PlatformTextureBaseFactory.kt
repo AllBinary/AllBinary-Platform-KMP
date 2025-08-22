@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -36,13 +34,18 @@ open public class PlatformTextureBaseFactory
          {
         
 
+        companion object {
+            
+    val NULL_PLATFORM_TEXTURE_BASE_FACTORY: PlatformTextureBaseFactory = PlatformTextureBaseFactory()
+
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
             }            
         
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 open fun load(gl: GL10, target: Int, level: Int, image: Image, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true

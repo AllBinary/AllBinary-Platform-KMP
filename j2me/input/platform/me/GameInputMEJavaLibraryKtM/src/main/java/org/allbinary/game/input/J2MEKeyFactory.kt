@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -34,8 +32,7 @@ open public class J2MEKeyFactory
         
 
         companion object {
-
-
+            
     private val instance: J2MEKeyFactory = J2MEKeyFactory()
 
 open fun getInstance()
@@ -48,7 +45,6 @@ open fun getInstance()
 }
 
 
-
         }
             private constructor        ()
             : super()
@@ -56,7 +52,6 @@ open fun getInstance()
 
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
@@ -65,7 +60,6 @@ open fun init()
 
 
     var inputFactory: InputFactory = InputFactory.getInstance()!!
-            
 
 
 

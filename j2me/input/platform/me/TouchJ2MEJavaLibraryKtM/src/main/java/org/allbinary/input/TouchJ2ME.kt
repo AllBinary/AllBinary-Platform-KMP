@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -40,7 +38,6 @@ open public class TouchJ2ME
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val DEVICE_ID: Int = 0
 
@@ -49,7 +46,6 @@ public constructor        ()
             : super()
         {
     var motionGesturesHandler: BasicMotionGesturesHandler = motionRecognizer!!.getMotionGestureRecognizer()!!.getMotionGesturesHandler()!!
-            
 
 motionGesturesHandler!!.addListener(GameMotionGestureListener(MotionGestureReceiveInterfaceFactory.getInstance()))
 }
@@ -69,10 +65,8 @@ open fun pointerDragged(x: Int, y: Int)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "pointerDragged", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerDragged", e)
 }
 
 }
@@ -92,10 +86,8 @@ open fun pointerPressed(x: Int, y: Int)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "pointerPressed", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerPressed", e)
 }
 
 }
@@ -115,10 +107,8 @@ open fun pointerReleased(x: Int, y: Int)
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
-logUtil!!.put(commonStrings!!.EXCEPTION, this, 
-                            "pointerReleased", e)
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerReleased", e)
 }
 
 }

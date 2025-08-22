@@ -18,15 +18,14 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.game.configuration.persistance.GamePersistanceStrings
 import org.allbinary.game.input.mapping.InputToGameKeyMapping
 import org.allbinary.game.input.mapping.PersistentInputMapping
 import org.allbinary.input.motion.button.BasicTouchInputFactory
@@ -36,17 +35,15 @@ open public class MotionJ2MEDefaultGameInputMapping : PersistentInputMapping {
         
 public constructor        ()                        
 
-                            : super(PersistentInputMapping.DEFAULT_RECORD_ID){
+                            : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID){
 
                             //For kotlin this is before the body of the constructor.
                     
 
     var inputToGameKeyMapping: InputToGameKeyMapping = this.getInputMapping()!!
-            
 
 
     var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
 inputToGameKeyMapping!!.add(gameKeyFactory!!.UP, gameKeyFactory!!.KEY_NUM2)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, gameKeyFactory!!.KEY_NUM4)
@@ -77,7 +74,6 @@ inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, TouchMotionGestureFactory.get
 inputToGameKeyMapping!!.add(gameKeyFactory!!.RIGHT, TouchMotionGestureFactory.getInstance()!!.RIGHT)
 
     var basicTouchInputFactory: BasicTouchInputFactory = BasicTouchInputFactory.getInstance()!!
-            
 
 inputToGameKeyMapping!!.add(gameKeyFactory!!.UP, basicTouchInputFactory!!.UP)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.LEFT, basicTouchInputFactory!!.LEFT)

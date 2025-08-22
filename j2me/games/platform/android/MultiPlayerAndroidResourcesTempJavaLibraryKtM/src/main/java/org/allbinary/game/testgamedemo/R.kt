@@ -11,10 +11,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -27,17 +25,14 @@ open public class R
         
 
         companion object {
-
-
-open public inner class attr
+            
+open public class attr
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
-
+            *//*
         }
             */
 
@@ -50,19 +45,17 @@ open public inner class attr
 }
                 
             
-open public inner class drawable
+open public class drawable
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val testgamedemo_icon: Int = 0x7f020000
 
     val testgamedemo_wait_256_by_256: Int = 0x7f020001
-
-
+/*
         }
             */
 
@@ -75,14 +68,13 @@ open public inner class drawable
 }
                 
             
-open public inner class id
+open public class id
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val ad_area_bottom: Int = 0x7f060002
 
     val ad_area_left: Int = 0x7f060003
@@ -94,8 +86,7 @@ open public inner class id
     val testgamedemo: Int = 0x7f060000
 
     val testgamedemo_gl: Int = 0x7f060005
-
-
+/*
         }
             */
 
@@ -108,21 +99,19 @@ open public inner class id
 }
                 
             
-open public inner class layout
+open public class layout
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val testgamedemo_ad_overlay_layout: Int = 0x7f030000
 
     val testgamedemo_gl_layout: Int = 0x7f030001
 
     val testgamedemo_layout: Int = 0x7f030002
-
-
+/*
         }
             */
 
@@ -135,14 +124,13 @@ open public inner class layout
 }
                 
             
-open public inner class raw
+open public class raw
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val error: Int = 0x7f040000
 
     val licenseinitdata: Int = 0x7f040001
@@ -230,8 +218,7 @@ open public inner class raw
     val touch_button_up_arrow_64_by_64: Int = 0x7f040043
 
     val touch_button_generic_action_arrow_64_by_64: Int = 0x7f040009
-
-
+/*
         }
             */
 
@@ -244,19 +231,17 @@ open public inner class raw
 }
                 
             
-open public inner class string
+open public class string
             : Object
          {
         
 /*Static stuff is not allowed for Kotlin inner classes
         companion object {
-
-
+            */
     val progressbar_in_title_string: Int = 0x7f050001
 
     val testgamedemo_app_name: Int = 0x7f050000
-
-
+/*
         }
             */
 
@@ -269,7 +254,6 @@ open public inner class string
 }
                 
             
-
         }
             
             //Auto Generated

@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -34,8 +32,7 @@ open public class J2MEGameKey : Input {
         
 
         companion object {
-
-
+            
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
 : String{
@@ -43,7 +40,6 @@ open fun getString(keyCode: Int)
                     var keyCode = keyCode
 
     var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
-            
 
 
     
@@ -56,7 +52,7 @@ open fun getString(keyCode: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return input!!.getName()
+                        return input.getName()
 
                                     }
                                 
@@ -70,7 +66,6 @@ open fun getString(keyCode: Int)
                         }
                             
 }
-
 
 
         }
@@ -88,14 +83,16 @@ open fun getString(keyCode: Int)
                     
 
     var id: Int = this.getId()!!
-            
 
 
     
                         if(id >= 0)
                         
                                     {
-                                    inputFactory!!.add(id, this)
+                                    
+    var inputFactory: InputFactory = InputFactory.getInstance()!!
+
+inputFactory!!.add(id, this)
 
                                     }
                                 
@@ -108,8 +105,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(
-                            "J2MEGameKey: ")!!.append(super.toString())!!.toString()
+                            append("J2MEGameKey: ")!!.append(super.toString())!!.toString()
 }
 
 

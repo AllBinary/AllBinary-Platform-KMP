@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -35,10 +33,8 @@ open public class PlatformBitmapBaseFactory
         
 
         companion object {
-
-
+            
     val NULL_PLATFORM_BITMAP_BASE_FACTORY: PlatformBitmapBaseFactory = PlatformBitmapBaseFactory()
-
 
         }
             

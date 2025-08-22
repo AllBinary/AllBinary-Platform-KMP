@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -80,7 +78,6 @@ open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: In
                     var geographicMapCellPosition = geographicMapCellPosition
 
     var maxColumns: Int = geographicMapInterfaceArray[0]!!.getAllBinaryTiledLayer()!!.getColumns()!!
-            
 
 
     
@@ -94,7 +91,6 @@ open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: In
 
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterfaceArray[0]!!.getGeographicMapCellPositionFactory()!!
-            
 
 
     
@@ -117,7 +113,6 @@ open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: In
 geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMapCellTypeArray, nextTerrainGeographicMapCellPosition)
 
     var hasSolidBlock: Boolean = this.hasSolidBlock(geographicMapInterfaceArray, geographicMapCellTypeArray)!!
-            
 
 
     
@@ -126,7 +121,6 @@ geographicMapBehavior!!.getCellTypeAt(geographicMapInterfaceArray, geographicMap
                                     {
                                     
     var terrainEvent: TerrainEvent = TerrainEventCircularStaticPool.getInstance()!!.getInstance(this.CLIFF)!!
-            
 
 TerrainEventHandler.getInstance(layer)!!.fireEvent(terrainEvent)
 
@@ -152,7 +146,7 @@ open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<B
 
 
                     var y = y
-layer!!.move(x, y)
+layer.move(x, y)
 }
 
 

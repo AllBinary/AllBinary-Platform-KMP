@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -34,8 +32,7 @@ open public class TouchScreenTypeFactory
         
 
         companion object {
-
-
+            
     private val instance: TouchScreenTypeFactory = TouchScreenTypeFactory()
 
 open fun getInstance()
@@ -46,7 +43,6 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return instance
 }
-
 
 
         }
@@ -60,7 +56,6 @@ open fun TouchScreenTypeFactory()
         //nullable = true from not(false or (false and true)) = true
 {
     var touchScreenFactory: TouchScreenFactory = TouchScreenFactory.getInstance()!!
-            
 
 touchScreenFactory!!.setTouch(true)
 }

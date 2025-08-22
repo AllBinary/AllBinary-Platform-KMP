@@ -18,10 +18,10 @@
 
 
 
+
+        import java.lang.Object        
+        
         import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
         
         
         import kotlin.Array
@@ -54,7 +54,7 @@ public constructor        (types: IntArray)
 
                     var types = types
 
-    var size: Int = types!!.size
+    var size: Int = types.size
                 
 
 
@@ -78,8 +78,7 @@ public constructor        (types: BasicArrayList)
 
                     var types = types
 
-    var size: Int = types!!.size()!!
-            
+    var size: Int = types.size()!!
 
 
     var typeArray: IntArray = IntArray(size)
@@ -94,9 +93,9 @@ public constructor        (types: BasicArrayList)
                         for (index in 0 until size)
 
 
-        {type= get = types!!.get(index)get as Integer
+        {type= get = types.get(index)get as Integer
 get.
-                                toInt()
+                    toInt()
 
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
 
@@ -116,7 +115,7 @@ open fun isType(type: GeographicMapCellType)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.isType(type!!.getType())
+                        return this.isType(type.getType())
 }
 
 
@@ -126,7 +125,7 @@ open fun isType(type: Int)
 
                     var type = type
 
-    var size: Int = types!!.size
+    var size: Int = types.size
                 
 
 

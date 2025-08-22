@@ -18,15 +18,14 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import org.allbinary.game.configuration.persistance.GamePersistanceStrings
 import org.allbinary.game.input.mapping.InputToGameKeyMapping
 import org.allbinary.game.input.mapping.PersistentInputMapping
 
@@ -34,21 +33,18 @@ open public class DesktopDefaultGameInputMapping : PersistentInputMapping {
         
 public constructor        ()                        
 
-                            : super(PersistentInputMapping.DEFAULT_RECORD_ID){
+                            : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID){
 
                             //For kotlin this is before the body of the constructor.
                     
 
     var inputToGameKeyMapping: InputToGameKeyMapping = this.getInputMapping()!!
-            
 
 
     var pcKeyFactory: PCKeyFactory = PCKeyFactory.getInstance()!!
-            
 
 
     var gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
-            
 
 inputToGameKeyMapping!!.add(gameKeyFactory!!.FIRE, pcKeyFactory!!.ENTER)
 inputToGameKeyMapping!!.add(gameKeyFactory!!.KEY_NUM1, pcKeyFactory!!.FOUR)

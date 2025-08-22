@@ -129,13 +129,11 @@ open fun get(key: Any)
     var resourceId: Integer = resourceUtil!!.getResourceId(key as String)!!
 
 
-    var image: Image = this.hashtable.get(resourceId as Object) as Image
+    var image: Image = this.getImage(resourceId)!!
 
 
     
-                        if(image == 
-                                    null
-                                )
+                        if(image == NullCanvas.NULL_IMAGE)
                         
                                     {
                                     

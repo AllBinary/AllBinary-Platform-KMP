@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -43,10 +41,8 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private val randomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
-            
 
 open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
@@ -64,7 +60,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
 
     var mapArray: Array<IntArray?> = tileLayer!!.getMapArray()!!
-            
 
 
     var size: Int = mapData!!.size
@@ -113,7 +108,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
                                     {
                                     
     var randomInt: Int = randomFactory!!.getAbsoluteNextIntAllowZero(3)!!
-            
 
 
     
@@ -152,7 +146,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
                                     {
                                     
     var randomInt: Int = randomFactory!!.getAbsoluteNextIntAllowZero(3)!!
-            
 
 
     
@@ -199,7 +192,6 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
                                     {
                                     
     var randomInt: Int = randomFactory!!.getAbsoluteNextIntAllowZero(4)!!
-            
 
 
     
@@ -266,7 +258,6 @@ open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: In
                     var index2 = index2
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 
     var countX: Int = 0

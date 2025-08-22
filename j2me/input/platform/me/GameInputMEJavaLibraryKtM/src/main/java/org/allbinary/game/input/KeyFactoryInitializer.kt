@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -39,7 +37,6 @@ open public class KeyFactoryInitializer : Init {
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 override fun init()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.INIT)

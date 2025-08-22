@@ -54,11 +54,9 @@ open public class TouchButtonAndroidResources : Init {
         //nullable = true from not(false or (false and true)) = true
 {
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
-            
 
 
     var androidResources: AndroidResources = AndroidResources.getInstance()!!
-            
 
 
     var RESOURCE_STRING_ARRAY: Array<TouchButtonResource?> = arrayOf(TouchButtonBlankResource.getInstance(), TouchButtonGenericActionResource.getInstance(), TouchButtonStartResource.getInstance(), TouchButtonUpResource.getInstance(), TouchButtonDownResource.getInstance(), TouchButtonTurnLeftResource.getInstance(), TouchButtonTurnRightResource.getInstance(), TouchButtonStrafeLeftResource.getInstance(), TouchButtonStrafeRightResource.getInstance())

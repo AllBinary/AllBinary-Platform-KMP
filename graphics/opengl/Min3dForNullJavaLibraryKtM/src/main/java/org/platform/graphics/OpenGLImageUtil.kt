@@ -4,10 +4,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -25,8 +23,7 @@ open public class OpenGLImageUtil
         
 
         companion object {
-
-
+            
     private val instance: OpenGLImageUtil = OpenGLImageUtil()
 
 open fun getInstance()
@@ -51,7 +48,6 @@ open fun createImage(inputStream: InputStream)
 
                             throw RuntimeException()
 }
-
 
 
         }

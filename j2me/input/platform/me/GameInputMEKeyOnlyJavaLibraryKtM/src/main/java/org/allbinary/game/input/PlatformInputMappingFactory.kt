@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -37,8 +35,7 @@ open public class PlatformInputMappingFactory
         
 
         companion object {
-
-
+            
     private val instance: PlatformInputMappingFactory = PlatformInputMappingFactory()
 
 open fun getInstance()
@@ -51,7 +48,6 @@ open fun getInstance()
 }
 
 
-
         }
             
             //Auto Generated
@@ -60,7 +56,6 @@ open fun getInstance()
             }            
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
-            
 
     private var SINGLETON: PersistentInputMapping = PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING
 
@@ -70,9 +65,7 @@ open fun getPersistentInputMappingInstance()
         try {
             
     
-                        if(SINGLETON == 
-                                    null
-                                )
+                        if(SINGLETON == PersistentInputMapping.NULL_PERSISTENT_INPUT_MAPPING)
                         
                                     {
                                     SINGLETON= NormalJ2MEGameInputMapping()
@@ -82,7 +75,6 @@ open fun getPersistentInputMappingInstance()
 } catch(e: Exception)
             {
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
-            
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 }

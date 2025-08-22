@@ -18,10 +18,8 @@
 
 
 
-        import java.lang.Integer
-        import java.lang.Math
-        import java.lang.Object
-        import java.lang.System
+
+        import java.lang.Object        
         
         
         import kotlin.Array
@@ -110,7 +108,7 @@ open fun up(velocityProperties: VelocityProperties, acceleration: BasicAccelerat
                         
                                     {
                                     
-    var acceleration2: Int =  -acceleration!!.getForward() *accelerationMultiplier
+    var acceleration2: Int =  -acceleration.getForward() *accelerationMultiplier
 
 velocityProperties!!.getVelocityYBasicDecimalP()!!.add(acceleration2)
 velocityProperties!!.limitXYToForwardAndReverseMaxVelocity()
