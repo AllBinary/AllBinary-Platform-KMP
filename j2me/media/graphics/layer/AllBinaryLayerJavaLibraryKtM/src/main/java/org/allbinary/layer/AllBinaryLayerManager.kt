@@ -139,7 +139,7 @@ layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
 
 
 
-                        for (index in this.basicLayerProcessorArray!!.size downTo 0)
+                        for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
 
         {layerProcessorInterface= basicLayerProcessorArray[index]!!
@@ -172,7 +172,7 @@ layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
 
 
 
-                        for (index in this.basicLayerProcessorArray!!.size downTo 0)
+                        for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
 
         {layerProcessorInterface= basicLayerProcessorArray[index]!!

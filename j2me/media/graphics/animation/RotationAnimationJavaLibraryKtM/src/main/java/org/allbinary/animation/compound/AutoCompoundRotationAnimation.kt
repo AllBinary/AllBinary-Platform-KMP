@@ -275,7 +275,7 @@ this.animationInterfaceArray= animationInterfaceArray
 
 
 
-                        for (index in this.animationInterfaceArray!!.size downTo 0)
+                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
 
         {this.animationInterfaceArray[index]!!.set(gl)

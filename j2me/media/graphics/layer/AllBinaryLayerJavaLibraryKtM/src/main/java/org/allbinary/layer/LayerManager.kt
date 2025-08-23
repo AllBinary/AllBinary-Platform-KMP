@@ -218,7 +218,7 @@ open fun paint(g: Graphics, x: Int, y: Int)
 
 
 
-                        for (index in this.list.size()!! downTo 0)
+                        for (index in this.list.size()!!  - 1  downTo 0)
 
 
         {comp= list.objectArray[index]!! as Layer

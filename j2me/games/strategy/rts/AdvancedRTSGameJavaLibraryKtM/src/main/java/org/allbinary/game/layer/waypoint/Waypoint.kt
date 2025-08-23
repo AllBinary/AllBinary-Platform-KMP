@@ -120,14 +120,14 @@ open fun releaseCachedPaths()
 
 
 
-                        for (columnIndex in paths.size downTo 0)
+                        for (columnIndex in paths.size  - 1  downTo 0)
 
 
         {
 
 
 
-                        for (rowIndex in paths.size downTo 0)
+                        for (rowIndex in paths.size  - 1  downTo 0)
 
 
         {
@@ -373,14 +373,14 @@ open fun onBuildingEvent(event: RTSLayerEvent)
 
 
 
-                        for (columnIndex in paths.size downTo 0)
+                        for (columnIndex in paths.size  - 1  downTo 0)
 
 
         {
 
 
 
-                        for (rowIndex in paths.size downTo 0)
+                        for (rowIndex in paths.size  - 1  downTo 0)
 
 
         {this.paths[columnIndex]!![rowIndex]= 

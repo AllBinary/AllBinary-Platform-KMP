@@ -306,7 +306,7 @@ open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
 
 
 
-                        for (index in mappedGameKeys!!.size downTo 0)
+                        for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
 
         {nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
@@ -362,7 +362,7 @@ negativePlatformToGameKeyMapping= arrayOfNulls( -smallestKey)
 
 
 
-                        for (index in negativePlatformToGameKeyMapping!!.size downTo 0)
+                        for (index in negativePlatformToGameKeyMapping!!.size  - 1  downTo 0)
 
 
         {negativePlatformToGameKeyMapping[index]= gameKeyFactory!!.NONE
@@ -376,7 +376,7 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
 
 
 
-                        for (index in mappedGameKeys!!.size downTo 0)
+                        for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
 
         {this.init(canvas, mappedGameKeys[index]!!)

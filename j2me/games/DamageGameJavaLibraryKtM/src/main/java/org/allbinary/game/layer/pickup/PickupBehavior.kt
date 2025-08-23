@@ -206,7 +206,7 @@ countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCoun
 
 
 
-                        for (index2 in pickedUpLayerTypeArray!!.size downTo 0)
+                        for (index2 in pickedUpLayerTypeArray!!.size  - 1  downTo 0)
 
 
         {

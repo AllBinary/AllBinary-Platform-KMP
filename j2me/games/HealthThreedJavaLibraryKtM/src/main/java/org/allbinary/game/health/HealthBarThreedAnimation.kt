@@ -77,7 +77,7 @@ open fun updateColor()
 
 
 
-                        for (index in size downTo 0)
+                        for (index in size  - 1  downTo 0)
 
 
         {colorBufferList!!.set(index, this.basicColor)

@@ -97,7 +97,7 @@ super.removeListener(eventListenerInterface)
 
 
 
-                        for (index in this.list.size()!! downTo 0)
+                        for (index in this.list.size()!!  - 1  downTo 0)
 
 
         {
@@ -131,7 +131,7 @@ open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
 
 
 
-                        for (index in this.list.size()!! downTo 0)
+                        for (index in this.list.size()!!  - 1  downTo 0)
 
 
         {

@@ -93,7 +93,7 @@ open fun addAll(usedList: BasicArrayList)
 
 
 
-                        for (index in usedList!!.size()!! downTo 0)
+                        for (index in usedList!!.size()!!  - 1  downTo 0)
 
 
         {
@@ -117,7 +117,7 @@ open fun releaseUsedBackToPool(usedList: BasicArrayList)
 
 
 
-                        for (index in usedList!!.size()!! downTo 0)
+                        for (index in usedList!!.size()!!  - 1  downTo 0)
 
 
         {

@@ -58,7 +58,7 @@ open fun updateSelectionInfo()
 
 
 
-                        for (index in list.size()!! downTo 0)
+                        for (index in list.size()!!  - 1  downTo 0)
 
 
         {

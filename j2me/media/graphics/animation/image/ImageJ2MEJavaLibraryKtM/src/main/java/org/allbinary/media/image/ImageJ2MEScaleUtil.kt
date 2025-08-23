@@ -72,7 +72,7 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
 
 
-                        for (index in images.size downTo 0)
+                        for (index in images.size  - 1  downTo 0)
 
 
         {scaledImages[index]= this.scale(images[index]!!, width, height)
@@ -131,7 +131,7 @@ image.getRGB(originalData, 0, image.getWidth(), 0, 0, image.getWidth(), image.ge
 
 
 
-                        for (index in height downTo 0)
+                        for (index in height  - 1  downTo 0)
 
 
         {dy= (index *heightRatioFactor) shr 3
@@ -139,7 +139,7 @@ image.getRGB(originalData, 0, image.getWidth(), 0, 0, image.getWidth(), image.ge
 
 
 
-                        for (index2 in width downTo 0)
+                        for (index2 in width  - 1  downTo 0)
 
 
         {dx= (index2 *widthRatioFactor) shr 3

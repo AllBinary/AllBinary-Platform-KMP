@@ -222,7 +222,7 @@ open fun paintDots(graphics: Graphics)
 
 
 
-                        for (index in length downTo 0)
+                        for (index in length  - 1  downTo 0)
 
 
         {point= localPositionList!!.get(index) as GPoint

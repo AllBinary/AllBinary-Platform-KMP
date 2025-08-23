@@ -82,7 +82,7 @@ this.geographicMapInterface= geographicMapInterface
 
 
 
-                        for (index in total downTo 0)
+                        for (index in total  - 1  downTo 0)
 
 
         {randomColumn= randomFactory!!.getAbsoluteNextInt(tiledLayer!!.getColumns())

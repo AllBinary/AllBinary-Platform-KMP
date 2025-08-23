@@ -89,7 +89,7 @@ open fun initAnimations()
 
 
 
-                        for (index in selectedAnimationArray!!.size downTo 0)
+                        for (index in selectedAnimationArray!!.size  - 1  downTo 0)
 
 
         {this.selectedAnimationArray[index]= nullAnimation
@@ -99,7 +99,7 @@ open fun initAnimations()
 
 
 
-                        for (index in unSelectedAnimationArray!!.size downTo 0)
+                        for (index in unSelectedAnimationArray!!.size  - 1  downTo 0)
 
 
         {this.unSelectedAnimationArray[index]= nullAnimation
@@ -117,7 +117,7 @@ open fun update(items: Array<CustomItem?>)
 
 
 
-                        for (index in items.size downTo 0)
+                        for (index in items.size  - 1  downTo 0)
 
 
         {this.update(index, items[index]!!)

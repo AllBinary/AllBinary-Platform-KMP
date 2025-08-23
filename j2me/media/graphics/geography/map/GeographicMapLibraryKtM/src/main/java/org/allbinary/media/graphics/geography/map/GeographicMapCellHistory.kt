@@ -611,7 +611,7 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
 
 
 
-                        for (index in size downTo 0)
+                        for (index in size  - 1  downTo 0)
 
 
         {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition

@@ -370,7 +370,7 @@ logUtil!!.put("Layer: " +layerInterface, this, "attemptBuild")
 
 
 
-                        for (index in list.size()!! downTo 0)
+                        for (index in list.size()!!  - 1  downTo 0)
 
 
         {geographicMapCellType= geographicMapInterface!!.getCellTypeAt(list.get(index) as GeographicMapCellPosition)

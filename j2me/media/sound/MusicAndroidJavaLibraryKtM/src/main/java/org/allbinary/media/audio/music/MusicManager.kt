@@ -175,7 +175,7 @@ open fun show()
 
 
 
-                        for (index in this.songList!!.size()!! downTo 0)
+                        for (index in this.songList!!.size()!!  - 1  downTo 0)
 
 
         {

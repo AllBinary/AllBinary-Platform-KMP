@@ -101,7 +101,7 @@ open fun visit(unitLayer: UnitLayer)
 
 
 
-                        for (index in occupyList!!.size()!! downTo 0)
+                        for (index in occupyList!!.size()!!  - 1  downTo 0)
 
 
         {geologicalGeographicMapCellPosition= occupyList!!.get(index) as GeologicalGeographicMapCellPosition

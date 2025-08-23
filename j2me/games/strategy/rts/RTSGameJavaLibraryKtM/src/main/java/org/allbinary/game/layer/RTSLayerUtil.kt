@@ -124,7 +124,7 @@ rtsLayer!!.setLevel(rtsLayer!!.getLevel() -1)
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length downTo 0)
+                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
 
 
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
@@ -148,7 +148,7 @@ rtsLayer!!.setLevel(rtsLayer!!.getLevel() +1)
 
 
 
-                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length downTo 0)
+                        for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
 
 
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart

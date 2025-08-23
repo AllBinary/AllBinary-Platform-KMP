@@ -102,7 +102,7 @@ open fun fireEvent(eventObject: Integer)
 
 
 
-                        for (index in this.list.size()!! downTo 0)
+                        for (index in this.list.size()!!  - 1  downTo 0)
 
 
         {
@@ -150,7 +150,7 @@ open fun fireEvent(eventObject: GameKeyEvent)
 
 
 
-                        for (index in this.list.size()!! downTo 0)
+                        for (index in this.list.size()!!  - 1  downTo 0)
 
 
         {

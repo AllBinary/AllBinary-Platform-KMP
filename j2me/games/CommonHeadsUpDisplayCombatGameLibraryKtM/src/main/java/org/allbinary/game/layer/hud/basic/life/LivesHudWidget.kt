@@ -120,7 +120,7 @@ override fun paint(graphics: Graphics)
 
 
 
-                        for (index in this.getLifeInterface()!!.get()!! downTo 0)
+                        for (index in this.getLifeInterface()!!.get()!!  - 1  downTo 0)
 
 
         {this.animationInterface!!.paint(graphics, xArray[index]!!, this.getY())

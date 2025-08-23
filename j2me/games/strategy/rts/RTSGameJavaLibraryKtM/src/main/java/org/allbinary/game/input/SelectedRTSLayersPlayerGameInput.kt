@@ -259,7 +259,7 @@ open fun downgrade()
 
 
 
-                        for (index in this.getSelectedBasicArrayList()!!.size()!! downTo 0)
+                        for (index in this.getSelectedBasicArrayList()!!.size()!!  - 1  downTo 0)
 
 
         {

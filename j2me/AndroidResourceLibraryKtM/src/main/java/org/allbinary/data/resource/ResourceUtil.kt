@@ -176,7 +176,7 @@ open fun containsDuplicate(resource: String, value: Integer)
 
 
 
-                        for (index in objectArray!!.size downTo 0)
+                        for (index in objectArray!!.size  - 1  downTo 0)
 
 
         {

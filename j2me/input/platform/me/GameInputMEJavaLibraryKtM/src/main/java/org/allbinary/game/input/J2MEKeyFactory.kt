@@ -65,7 +65,7 @@ open fun init()
 
 
 
-                        for (index in gameKeyArray!!.size downTo 0)
+                        for (index in gameKeyArray!!.size  - 1  downTo 0)
 
 
         {inputFactory!!.add(gameKeyArray[index]!!.getId(), gameKeyArray[index]!!)
