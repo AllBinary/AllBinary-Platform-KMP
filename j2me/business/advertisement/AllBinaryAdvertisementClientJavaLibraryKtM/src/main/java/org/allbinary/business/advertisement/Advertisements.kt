@@ -122,7 +122,7 @@ open fun stopAllPage()
 
 
 
-                        for (index in this.pageList!!.size()!! downTo 0)
+                        for (index in this.pageList!!.size()!!  - 1  downTo 0)
 
 
         {
@@ -157,7 +157,7 @@ open fun startAll()
 
 
 
-                        for (index in this.bannerList!!.size()!! downTo 0)
+                        for (index in this.bannerList!!.size()!!  - 1  downTo 0)
 
 
         {
@@ -175,7 +175,7 @@ open fun stopAllBanner()
 
 
 
-                        for (index in this.bannerList!!.size()!! downTo 0)
+                        for (index in this.bannerList!!.size()!!  - 1  downTo 0)
 
 
         {

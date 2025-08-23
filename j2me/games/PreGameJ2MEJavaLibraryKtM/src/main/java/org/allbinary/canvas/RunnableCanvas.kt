@@ -327,7 +327,15 @@ override fun showNotify()
 open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
 {this.notified= true
-ThreadObjectUtil.getInstance()!!.notifyObject(this)
+
+        
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
+        //mutex.withLock
+        {this.threadObjectUtil!!.notifyObject(this)
+}
+
 this.repaint()
 }
 

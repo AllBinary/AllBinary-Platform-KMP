@@ -136,7 +136,15 @@ break;
             
 open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
-{this.threadObjectUtil!!.notifyObject(this)
+{
+        
+        //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+        synchronized(this) 
+
+        //mutex.withLock
+        {this.threadObjectUtil!!.notifyObject(this)
+}
+
 }
 
 

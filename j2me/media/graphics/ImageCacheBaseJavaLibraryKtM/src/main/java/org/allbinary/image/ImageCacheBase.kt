@@ -88,7 +88,7 @@ open fun getImage(resourceId: Any)
 
                     var resourceId = resourceId
 
-    var imageCanBeNull: Image? = this.hashtable.get(resourceId as Object) as Image
+    var imageCanBeNull: Any? = this.hashtable.get(resourceId as Object)
 
 
     
@@ -109,7 +109,7 @@ open fun getImage(resourceId: Any)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return imageCanBeNull
+                        return imageCanBeNull as Image
 }
 
 
