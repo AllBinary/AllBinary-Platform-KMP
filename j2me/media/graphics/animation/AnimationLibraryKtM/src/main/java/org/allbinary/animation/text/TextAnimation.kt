@@ -167,7 +167,23 @@ index++
                         if(list.size() > 0)
                         
                                     {
-                                    this.textArray= list.toArray(arrayOfNulls(list.size())) as Array<String?>
+                                    
+    var textArray: Array<String?> = arrayOfNulls(list.size())
+
+
+    var size: Int = list.size()!!
+
+
+
+
+
+                        for (index in 0 until size)
+
+
+        {textArray[index]= list.get(index) as String
+}
+
+this.textArray= list.toArray() as Array<String?>
 
                                     }
                                 

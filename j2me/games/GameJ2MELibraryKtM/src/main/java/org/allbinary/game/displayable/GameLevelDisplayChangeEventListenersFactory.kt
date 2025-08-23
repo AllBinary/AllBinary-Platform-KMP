@@ -80,7 +80,7 @@ open fun clear()
 
 
 
-                        for (index in this.list.size()!! downTo 0)
+                        for (index in this.list.size()!!  - 1  downTo 0)
 
 
         {displayChangeEventListener= this.list.objectArray[index]!! as DisplayChangeEventListener

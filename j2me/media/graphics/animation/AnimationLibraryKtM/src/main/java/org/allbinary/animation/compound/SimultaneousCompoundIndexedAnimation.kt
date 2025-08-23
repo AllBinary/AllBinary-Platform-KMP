@@ -58,7 +58,7 @@ override fun setFrame(frameIndex: Int)
 
 
 
-                        for (index in this.animationInterfaceArray!!.size downTo 0)
+                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
 
         {this.animationInterfaceArray[index]!!.setFrame(frameIndex)
@@ -90,7 +90,7 @@ override fun previousFrame()
 
 
 
-                        for (index in this.animationInterfaceArray!!.size downTo 0)
+                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
 
         {this.animationInterfaceArray[index]!!.previousFrame()
@@ -122,7 +122,7 @@ override fun getSequence()
 
 
 
-                        for (index in this.animationInterfaceArray!!.size downTo 0)
+                        for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
 
         {this.animationInterfaceArray[index]!!.nextFrame()

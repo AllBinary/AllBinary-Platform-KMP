@@ -49,7 +49,7 @@ override fun paint(graphics: Graphics)
 
 
 
-                        for (index in paintableArray!!.size downTo 0)
+                        for (index in paintableArray!!.size  - 1  downTo 0)
 
 
         {this.paintableArray[index]!!.paint(graphics)
@@ -69,7 +69,7 @@ override fun paintThreed(graphics: Graphics)
 
 
 
-                        for (index in paintableArray!!.size downTo 0)
+                        for (index in paintableArray!!.size  - 1  downTo 0)
 
 
         {paintableInterface= this.paintableArray[index]!! as PaintableInterface

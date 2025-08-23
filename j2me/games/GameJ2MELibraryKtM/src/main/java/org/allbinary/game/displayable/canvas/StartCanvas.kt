@@ -280,7 +280,7 @@ this.overlayPaintable!!.init()
 
 open fun getCustomCommands()
         //nullable = true from not(false or (false and true)) = true
-: Array<Command?>{
+: Array<Any?>{
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
 
@@ -289,7 +289,7 @@ open fun getCustomCommands()
                         
                                     {
                                     
-    var commandArray: Array<Command?> = arrayOf(gameCommandsFactory!!.START_COMMAND,HighScoreCommands.getInstance()!!.DISPLAY,GameInputMappingCanvas.DISPLAY,gameCommandsFactory!!.DISPLAY_ABOUT)
+    var commandArray: Array<Any?> = arrayOf(gameCommandsFactory!!.START_COMMAND,HighScoreCommands.getInstance()!!.DISPLAY,GameInputMappingCanvas.DISPLAY,gameCommandsFactory!!.DISPLAY_ABOUT)
 
 
 
@@ -358,7 +358,7 @@ commandList!!.add(GameInputMappingCanvas.DISPLAY)
 
 commandList!!.add(gameCommandsFactory!!.DISPLAY_ABOUT)
 
-    var commandArray: Array<Command?> = commandList!!.toArray(arrayOfNulls(commandList!!.size())) as Array<Command?>
+    var commandArray: Array<Any?> = commandList!!.toArray()!!
 
 
 
@@ -377,7 +377,7 @@ override fun initCommands(cmdListener: CommandListener)
                     var cmdListener = cmdListener
 this.removeAllCommands()
 
-    var commandArray: Array<Command?> = getCustomCommands()!!
+    var commandArray: Array<Any?> = getCustomCommands()!!
 
 
     var size: Int = commandArray!!.size
@@ -390,7 +390,7 @@ this.removeAllCommands()
                         for (index in 0 until size)
 
 
-        {this.addCommand(commandArray[index]!!)
+        {this.addCommand(commandArray[index]!! as Command)
 }
 
 CustomGameMenuUtil.add(this)
