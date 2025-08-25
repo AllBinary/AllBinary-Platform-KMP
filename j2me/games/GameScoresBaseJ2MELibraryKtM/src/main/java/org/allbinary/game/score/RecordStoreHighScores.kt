@@ -76,17 +76,24 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameIn
 
                     var recordComparatorInterface = recordComparatorInterface
 
-    var highScores: HighScores = hashTable!!.get(highScoreName as Object) as HighScores
+    var highScoresCanBeNull: Any? = hashTable!!.get(highScoreName as Object)
 
 
     
-                        if(highScores == 
+                        if(highScoresCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    highScores= RecordStoreHighScores(abeClientInformation, gameInfo, highScoreName, heading, columnTwoHeading, recordComparatorInterface)
+                                    
+    var highScores: HighScores = RecordStoreHighScores(abeClientInformation, gameInfo, highScoreName, heading, columnTwoHeading, recordComparatorInterface)
+
 hashTable!!.put(highScores!!.getName(), highScores)
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return highScores
 
                                     }
                                 
@@ -94,7 +101,7 @@ hashTable!!.put(highScores!!.getName(), highScores)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return highScores
+                        return highScoresCanBeNull as HighScores
 }
 
 
