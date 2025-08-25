@@ -52,7 +52,7 @@ open fun getInstance()
             {
             }            
         
-    private val angleIncrementInfoArray: Array<AngleIncrementInfo?> = arrayOfNulls(AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt())
+    private val angleIncrementInfo: Array<AngleIncrementInfo?> = arrayOfNulls(AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt())
 
 open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
@@ -63,17 +63,17 @@ open fun getInstance(angleIncrement: Short)
     var halfAngleIncrement: Int = (angleIncrement.toInt() shr 1)
 
 
-    var angleIncrementInfo: AngleIncrementInfo = angleIncrementInfoArray[halfAngleIncrement]!!
+    var angleIncrementInfoCanBeNull: AngleIncrementInfo? = angleIncrementInfo[halfAngleIncrement]
 
 
     
-                        if(angleIncrementInfo == 
+                        if(angleIncrementInfoCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    angleIncrementInfo= AngleIncrementInfo(angleIncrement)
-angleIncrementInfoArray[halfAngleIncrement]= angleIncrementInfo
+                                    angleIncrementInfoCanBeNull= AngleIncrementInfo(angleIncrement)
+angleIncrementInfo[halfAngleIncrement]= angleIncrementInfoCanBeNull
 
                                     }
                                 
@@ -81,7 +81,7 @@ angleIncrementInfoArray[halfAngleIncrement]= angleIncrementInfo
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return angleIncrementInfo
+                        return angleIncrementInfoCanBeNull
 }
 
 

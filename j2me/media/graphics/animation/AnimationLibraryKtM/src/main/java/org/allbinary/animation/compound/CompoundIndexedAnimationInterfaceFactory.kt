@@ -69,19 +69,16 @@ override fun createArray(size: Int)
                         return arrayOfNulls(size)
 }
 
-override fun getInstance(animationInterfaceArray: Array<Animation?>)
+override fun getInstance(animationArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
 : Animation{
 
-                    var animationInterfaceArray = animationInterfaceArray
-
-    var indexedAnimationArray: Array<IndexedAnimation?> = animationInterfaceArray as Array<IndexedAnimation?>
-
+                    var animationArray = animationArray
 
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return CompoundIndexedAnimation(indexedAnimationArray, this.animationBehaviorFactory!!.getOrCreateInstance())
+                        return CompoundIndexedAnimation(animationArray, this.animationBehaviorFactory!!.getOrCreateInstance())
 }
 
 

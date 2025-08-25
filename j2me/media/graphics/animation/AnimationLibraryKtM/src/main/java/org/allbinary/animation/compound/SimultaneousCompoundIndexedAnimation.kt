@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Graphics
+import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.logic.math.PrimitiveIntUtil
@@ -33,8 +34,8 @@ import org.allbinary.logic.math.PrimitiveIntUtil
 open public class SimultaneousCompoundIndexedAnimation : IndexedAnimation {
         
 
-    private var animationInterfaceArray: Array<IndexedAnimation?>
-public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, animationBehavior: AnimationBehavior)                        
+    private var animationInterfaceArray: Array<Animation?>
+public constructor        (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
 
@@ -55,13 +56,17 @@ override fun setFrame(frameIndex: Int)
 
                     var frameIndex = frameIndex
 
+    var indexedAnimation: IndexedAnimation
+
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
 
-        {this.animationInterfaceArray[index]!!.setFrame(frameIndex)
+        {indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
+indexedAnimation!!.setFrame(frameIndex)
 }
 
 }
@@ -69,31 +74,41 @@ override fun setFrame(frameIndex: Int)
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+    var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[0]!! as IndexedAnimation
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getFrame()
+                        return indexedAnimation!!.getFrame()
 }
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+    var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[0]!! as IndexedAnimation
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[0]!!.getSize()
+                        return indexedAnimation!!.getSize()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
 {
+    var indexedAnimation: IndexedAnimation
+
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
 
-        {this.animationInterfaceArray[index]!!.previousFrame()
+        {indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
+indexedAnimation!!.previousFrame()
 }
 
 }
@@ -190,7 +205,7 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IndexedAnimation?>{
+: Array<Animation?>{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -198,7 +213,7 @@ open fun getAnimationInterfaceArray()
 }
 
 
-open fun setAnimationInterfaceArray(animationInterfaceArray: Array<IndexedAnimation?>)
+open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
         //nullable = true from not(false or (false and false)) = true
 {
 

@@ -37,6 +37,8 @@ open public class NullAnimationFactory
 
         companion object {
             
+    var NULL_NOT_FOR_USE_ANIMATION_FACTORY: NullAnimationFactory = NullAnimationFactory()
+
     private var NULL_ANIMATION_FACTORY: NullAnimationFactory = NullAnimationFactory()
 
 open fun getFactoryInstance()

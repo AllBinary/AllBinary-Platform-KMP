@@ -113,7 +113,21 @@ stringBuffer!!.append(countedBasicArrayList!!.size())
 
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
-    var newPartInterfaceArray: Array<PartInterface?> = list.toArray(arrayOfNulls(list.size())) as Array<PartInterface?>
+    var newPartInterfaceArray: Array<PartInterface?> = arrayOfNulls(list.size())
+
+
+    var newSize: Int = newPartInterfaceArray!!.size
+                
+
+
+
+
+
+                        for (index in 0 until newSize)
+
+
+        {newPartInterfaceArray[index]= list.get(index) as PartInterface
+}
 
 
 

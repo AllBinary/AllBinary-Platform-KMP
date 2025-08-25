@@ -27,6 +27,7 @@
         
 import javax.microedition.khronos.opengles.GL
 import javax.microedition.lcdui.Graphics
+import org.allbinary.animation.Animation
 import org.allbinary.animation.AnimationBehavior
 import org.allbinary.animation.IndexedAnimation
 import org.allbinary.logic.math.PrimitiveIntUtil
@@ -38,8 +39,8 @@ open public class CompoundIndexedAnimation : IndexedAnimation
 
     private var circularIndexUtil: CircularIndexUtil
 
-    private var animationInterfaceArray: Array<IndexedAnimation?>
-public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, animationBehavior: AnimationBehavior)                        
+    private var animationInterfaceArray: Array<Animation?>
+public constructor        (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
 
                             : super(animationBehavior){
 
@@ -60,30 +61,42 @@ override fun setFrame(index: Int)
 {
 
                     var index = index
-this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.setFrame(index)
+
+    var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!! as IndexedAnimation
+
+indexedAnimation!!.setFrame(index)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+    var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!! as IndexedAnimation
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.getFrame()
+                        return indexedAnimation!!.getFrame()
 }
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
 : Int{
+    var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!! as IndexedAnimation
+
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.getSize()
+                        return indexedAnimation!!.getSize()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!.previousFrame()
+{
+    var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!! as IndexedAnimation
+
+indexedAnimation!!.previousFrame()
 }
 
 override fun setSequence(sequence: IntArray)
@@ -146,7 +159,7 @@ override fun getCurrentAnimation()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!!
+                        return this.animationInterfaceArray[this.circularIndexUtil!!.getIndex()]!! as IndexedAnimation
 }
 
 override fun nextAnimation()
@@ -182,7 +195,7 @@ this.setFrame(frame)
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IndexedAnimation?>{
+: Array<Animation?>{
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -190,7 +203,7 @@ open fun getAnimationInterfaceArray()
 }
 
 
-open fun setAnimationInterfaceArray(animationInterfaceArray: Array<IndexedAnimation?>)
+open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
         //nullable = true from not(false or (false and false)) = true
 {
 

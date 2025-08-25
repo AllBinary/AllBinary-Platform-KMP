@@ -39,7 +39,7 @@ open fun init(inputProcessorArray: Array<GameInputProcessor?>)
 
                     var inputProcessorArray = inputProcessorArray
 
-    var inputProcessor: GameInputProcessor
+                    //Otherwise - statement - EmptyStmt
 
 
     var noInputProcessor: GameInputProcessor = GameInputProcessor.getInstance()!!
@@ -54,10 +54,12 @@ open fun init(inputProcessorArray: Array<GameInputProcessor?>)
                         for (index in 0 until total)
 
 
-        {inputProcessor= inputProcessorArray[index]!!
+        {
+    var inputProcessorCanBeNull: GameInputProcessor? = inputProcessorArray[index]
+
 
     
-                        if(inputProcessor == 
+                        if(inputProcessorCanBeNull == 
                                     null
                                 )
                         

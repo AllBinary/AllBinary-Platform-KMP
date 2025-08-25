@@ -30,6 +30,7 @@ import org.allbinary.game.configuration.GameConfigurationCentral
 import org.allbinary.game.resource.FeaturedResourceFactory
 import org.allbinary.graphics.PointFactory
 import org.allbinary.graphics.Rectangle
+import org.allbinary.graphics.RectangleFactory
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.logic.string.StringUtil
 import org.allbinary.string.CommonSeps
@@ -113,9 +114,7 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
 
     
-                        if(rectangle != 
-                                    null
-                                )
+                        if(rectangle != RectangleFactory.SINGLETON)
                         
                                     {
                                     
@@ -186,29 +185,29 @@ open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
     var size: Int = getList()!!.size()!!
 
 
+    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface
+
+
+    var animationInterfaceFactoryInterface: BasicAnimationInterfaceFactoryInterface
+
+
 
 
 
                         for (index in 0 until size)
 
 
-        {
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
-
+        {featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
     
                         if(featureInterface!!.isFeature())
                         
                                     {
                                     resourceTypeAvailableList!!.add(featureInterface)
-
-    var animationInterfaceFactoryInterface: BasicAnimationInterfaceFactoryInterface = featureInterface!!.getBasicAnimationInterfaceFactoryInstance(resource)!!
-
+animationInterfaceFactoryInterface= featureInterface!!.getBasicAnimationInterfaceFactoryInstance(resource)
 
     
-                        if(animationInterfaceFactoryInterface != 
-                                    null
-                                )
+                        if(animationInterfaceFactoryInterface != NullAnimationFactory.NULL_NOT_FOR_USE_ANIMATION_FACTORY)
                         
                                     {
                                     
@@ -273,9 +272,7 @@ stringBuffer!!.append(resource)
 
 
         {stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
-
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
-
+featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
     
                         if(featureInterface!!.isFeature())
@@ -308,9 +305,7 @@ stringBuffer!!.append(RESOURCES_LABEL)
                         for (index in 0 until size)
 
 
-        {
-    var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
-
+        {featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 stringBuffer!!.append(featureInterface!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 }

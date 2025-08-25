@@ -27,8 +27,10 @@
         
 import java.util.Hashtable
 import org.allbinary.animation.BasicAnimationInterfaceFactoryInterface
+import org.allbinary.animation.NullAnimationFactory
 import org.allbinary.game.resource.ResourceLoadingLevelFactory
 import org.allbinary.graphics.Rectangle
+import org.allbinary.graphics.RectangleFactory
 import org.allbinary.image.ImageCache
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.string.StringMaker
@@ -158,10 +160,28 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
                     var resource = resource
 
+    var basicAnimationInterfaceFactoryInterfaceCanBeNull: Any? = hashtable.get(resource as Object)
+
+
+    
+                        if(basicAnimationInterfaceFactoryInterfaceCanBeNull == 
+                                    null
+                                )
+                        
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return hashtable.get(resource as Object) as BasicAnimationInterfaceFactoryInterface
+                        return NullAnimationFactory.NULL_NOT_FOR_USE_ANIMATION_FACTORY
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return basicAnimationInterfaceFactoryInterfaceCanBeNull as BasicAnimationInterfaceFactoryInterface
 }
 
 
@@ -172,10 +192,28 @@ hashtable.put(resource, animationInterfaceFactoryInterface)
 
                     var resource = resource
 
+    var rectangleCanBeNull: Any? = rectangleHashtable!!.get(resource as Object)
+
+
+    
+                        if(rectangleCanBeNull == 
+                                    null
+                                )
+                        
+                                    {
+                                    
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return rectangleHashtable!!.get(resource as Object) as Rectangle
+                        return RectangleFactory.SINGLETON
+
+                                    }
+                                
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return rectangleCanBeNull as Rectangle
 }
 
 
