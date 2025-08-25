@@ -47,7 +47,7 @@ open public class CollidableCompositeLayer : AllBinaryGameLayer
 
         }
             
-    private var collidableInferface: CollidableBaseBehavior = CollidableNeverCollideBehaviorFactory.getInstance()!!
+    private var collidableInferface: CollidableBaseBehavior
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
                             : super(layerInfo, viewPosition){
@@ -63,6 +63,7 @@ public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition, col
 
                             //For kotlin this is before the body of the constructor.
                     
+this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 this.setCollidableInferface(collidableInferface)
 }
 
@@ -84,6 +85,7 @@ public constructor        (name: String, layerInfo: Rectangle, viewPosition: Vie
 
                             //For kotlin this is before the body of the constructor.
                     
+this.collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 this.setCollidableInferface(collidableInferface)
 }
 
@@ -99,6 +101,7 @@ public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)
 
                             //For kotlin this is before the body of the constructor.
                     
+collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
@@ -116,6 +119,7 @@ public constructor        (name: String, layerInfo: Rectangle, viewPosition: Vie
 
                             //For kotlin this is before the body of the constructor.
                     
+collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 public constructor        (layerInfo: Rectangle)                        
@@ -127,6 +131,7 @@ public constructor        (layerInfo: Rectangle)
 
                             //For kotlin this is before the body of the constructor.
                     
+collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 }
 
 

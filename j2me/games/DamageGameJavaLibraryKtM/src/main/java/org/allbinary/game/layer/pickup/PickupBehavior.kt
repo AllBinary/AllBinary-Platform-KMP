@@ -26,6 +26,7 @@
         import kotlin.reflect.KClass
         
 import org.allbinary.game.health.HealthInterfaceCompositeInterface
+import org.allbinary.game.layer.CollidableCompositeLayer
 import org.allbinary.game.layer.special.CollidableDestroyableDamageableLayer
 import org.allbinary.game.part.CountedLayerInterfaceFactoryPart
 import org.allbinary.game.part.PartInterface
@@ -41,7 +42,7 @@ open public class PickupBehavior
 
         companion object {
             
-    val NULL_PICKUP_BEHAVIOR: PickupBehavior = PickupBehavior(CollidableDestroyableDamageableLayer.NULL_COLLIDABLE_DESTROYABLE_DAMAGE_LAYER, 0)
+    val NULL_PICKUP_BEHAVIOR: PickupBehavior = PickupBehavior(CollidableCompositeLayer.NULL_COLLIDABLE_COMPOSITE_LAYER, 0)
 
         }
             
@@ -49,8 +50,8 @@ open public class PickupBehavior
 
     private val countedIndex: Int
 
-    private val ownerLayerInterface: CollidableDestroyableDamageableLayer
-public constructor        (ownerLayerInterface: CollidableDestroyableDamageableLayer, countedIndex: Int)
+    private val ownerLayerInterface: CollidableCompositeLayer
+public constructor        (ownerLayerInterface: CollidableCompositeLayer, countedIndex: Int)
             : super()
         {
 
@@ -120,7 +121,10 @@ override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
                         if(pickedUpLayerInterfaceFactoryInterface!!.getPickedUpLayerType() == pickedUpLayerTypeFactory!!.PART)
                         
                                     {
-                                    this.ownerLayerInterface!!.addPart(pickedUpLayerInterfaceFactoryInterface)
+                                    
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayerInterface as CollidableDestroyableDamageableLayer
+
+collidableDestroyableDamageableLayer!!.addPart(pickedUpLayerInterfaceFactoryInterface)
 
                                     }
                                 
@@ -169,7 +173,10 @@ open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayer
 
                     var partIndex = partIndex
 
-    var countedLayerInterfaceFactory: CountedLayerInterfaceFactoryPart = this.ownerLayerInterface!!.getPartInterfaceArray()[partIndex]!! as CountedLayerInterfaceFactoryPart
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayerInterface as CollidableDestroyableDamageableLayer
+
+
+    var countedLayerInterfaceFactory: CountedLayerInterfaceFactoryPart = collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[partIndex]!! as CountedLayerInterfaceFactoryPart
 
 countedLayerInterfaceFactory!!.setTotal(countedLayerInterfaceFactory!!.getTotal() +countedPickedUpLayerInterfaceFactoryInterface!!.getTotal())
 }
@@ -181,7 +188,10 @@ open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: A
 
                     var pickedUpLayerTypeArray = pickedUpLayerTypeArray
 
-    var partInterfaceArray: Array<PartInterface?> = this.ownerLayerInterface!!.getPartInterfaceArray()!!
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayerInterface as CollidableDestroyableDamageableLayer
+
+
+    var partInterfaceArray: Array<PartInterface?> = collidableDestroyableDamageableLayer!!.getPartInterfaceArray()!!
 
 
     var size: Int = partInterfaceArray!!.size
@@ -200,7 +210,7 @@ open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: A
                         for (index in this.countedIndex until size)
 
 
-        {nextCountedLayerInterfaceFactory= this.ownerLayerInterface!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
+        {nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
 countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()
 
 
@@ -253,7 +263,10 @@ open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
     var currentSlot: Int = 0
 
 
-    var partInterfaceArray: Array<PartInterface?> = this.ownerLayerInterface!!.getPartInterfaceArray()!!
+    var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayerInterface as CollidableDestroyableDamageableLayer
+
+
+    var partInterfaceArray: Array<PartInterface?> = collidableDestroyableDamageableLayer!!.getPartInterfaceArray()!!
 
 
     var size: Int = partInterfaceArray!!.size
@@ -269,7 +282,7 @@ open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
                         for (index in this.countedIndex until size)
 
 
-        {nextCountedLayerInterfaceFactory= this.ownerLayerInterface!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
+        {nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
 
     
                         if(nextCountedLayerInterfaceFactory!!.getTotal() > 0)

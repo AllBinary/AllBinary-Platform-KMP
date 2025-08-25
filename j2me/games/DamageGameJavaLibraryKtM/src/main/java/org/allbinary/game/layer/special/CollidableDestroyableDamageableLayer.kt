@@ -81,7 +81,7 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
 
     var partInterfaceArrayP: Array<PartInterface?> = PartInterfaceUtil.getZeroArray()!!
 
-    private var pickupBehavior: PickupBehavior = PickupBehavior.NULL_PICKUP_BEHAVIOR
+    private var pickupBehavior: PickupBehavior
 
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 public constructor        (groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
@@ -102,6 +102,7 @@ public constructor        (groupInterface: Array<Group?>, layerInfo: Rectangle, 
 this.initWidth= layerInfo!!.getWidth()
 this.initHeight= layerInfo!!.getHeight()
 this.groupInterface= groupInterface
+this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
 }
 
 public constructor        (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
@@ -125,6 +126,7 @@ public constructor        (groupInterface: Array<Group?>, name: String, layerInf
 this.initWidth= layerInfo!!.getWidth()
 this.initHeight= layerInfo!!.getHeight()
 this.groupInterface= groupInterface
+this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
 }
 
 
