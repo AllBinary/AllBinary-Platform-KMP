@@ -45,7 +45,7 @@ open public class BasicProbabilityAIDataFactory
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : Hashtable<Any, Any>{
-    var likelyhoodIntegerArray: Array<Array<Integer?>?> = arrayOfNulls(Canvas.KEY_NUM9 +1)
+    var likelyhoodIntegerArray: Array<Array<Integer?>?> = Array(Canvas.KEY_NUM9 +1) { Array(2) { null } }
 
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!

@@ -75,7 +75,7 @@ this.geographicMapInterface= geographicMapInterface
 
     var tiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
-this.costArray= arrayOfNulls(tiledLayer!!.getColumns())
+this.costArray= Array(tiledLayer!!.getColumns()) { Array(tiledLayer!!.getRows()) { null } }
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 

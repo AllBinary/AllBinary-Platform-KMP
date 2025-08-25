@@ -34,7 +34,7 @@ open public class PointFactory
 
         companion object {
             
-    private var pointArray: Array<Array<Point?>?> = arrayOfNulls(3000)
+    private var pointArray: Array<Array<Point?>?> = Array(3000) { Array(3000) { null } }
 
 open fun getInstance(x: Int, y: Int)
         //nullable =  from not(true or (false and false)) = 

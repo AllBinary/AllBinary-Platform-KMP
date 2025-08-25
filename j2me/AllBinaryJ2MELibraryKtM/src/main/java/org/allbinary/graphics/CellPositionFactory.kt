@@ -54,7 +54,7 @@ open fun getInstance()
 
     val NONE: CellPosition = CellPosition( -1,  -1,  -1,  -1)
 
-    private var cellPositionArray: Array<Array<CellPosition?>?> = arrayOfNulls(0)
+    private var cellPositionArray: Array<Array<CellPosition?>?> = Array(0) { Array(0) { null } }
 
     private var columns: Int= 0
 
@@ -72,7 +72,7 @@ open fun init(columns: Int, rows: Int)
 
 
                     var rows = rows
-this.cellPositionArray= arrayOfNulls(columns)
+this.cellPositionArray= Array(columns) { Array(rows) { null } }
 this.columns= columns
 this.rows= rows
 

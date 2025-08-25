@@ -57,7 +57,7 @@ open fun getTotalMapped()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.getHashtable()!!.size
+                        return this.hashtable.size
 }
 
 
@@ -83,7 +83,7 @@ open fun getDefault()
 
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-{this.getHashtable()!!.clear()
+{this.hashtable.clear()
 this.mappedList!!.clear()
 }
 
@@ -196,17 +196,19 @@ open fun getMappedInput(id: Input)
 
                     var id = id
 
-    var list: BasicArrayList = this.getHashtable()!!.get(id as Object) as BasicArrayList
+    var mappingInputCanBeNullList: Any? = this.hashtable.get(id as Object)
 
 
     
-                        if(list == 
+                        if(mappingInputCanBeNullList == 
                                     null
                                 )
                         
                                     {
-                                    list= BasicArrayList()
-this.getHashtable()!!.put(id, list)
+                                    
+    var list: BasicArrayList = BasicArrayList()
+
+this.hashtable.put(id, list)
 
                                     }
                                 
@@ -214,7 +216,7 @@ this.getHashtable()!!.put(id, list)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return list
+                        return mappingInputCanBeNullList as BasicArrayList
 }
 
 

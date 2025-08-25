@@ -54,15 +54,13 @@ open fun getInstance()
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    val nullUtil: NullUtil = NullUtil.getInstance()!!
-
     val TOUCH_BUTTON_SOURCE_ID: Int = 2
 
     val MOTION_GESTURE_SOURCE_ID: Int = 3
 
     private val MAX_SOURCES: Int = 4
 
-    private var ARRAY: Array<Array<GameKeyEvent?>?> = arrayOfNulls(MAX_SOURCES)
+    private var ARRAY: Array<Array<GameKeyEvent?>?> = Array(MAX_SOURCES) { Array(InputFactory.getInstance()!!.MAX) { null } }
 private constructor        ()
             : super()
         {}
@@ -71,6 +69,9 @@ private constructor        ()
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
+    var nullUtil: NullUtil = NullUtil.getInstance()!!
+
+
     var size: Int = InputFactory.getInstance()!!.MAX
 
 

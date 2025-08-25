@@ -110,7 +110,7 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
                                     }
                                 
 this.endList= this.ownerLayer!!.getEndGeographicMapCellPositionList()
-this.paths= arrayOfNulls(tiledLayer!!.getColumns())
+this.paths= Array(tiledLayer!!.getColumns()) { Array(tiledLayer!!.getRows()) { null } }
 }
 
 
