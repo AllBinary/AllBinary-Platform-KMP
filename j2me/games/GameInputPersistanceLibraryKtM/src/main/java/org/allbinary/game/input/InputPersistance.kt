@@ -151,9 +151,7 @@ gameActionInput= gameKeyFactory!!.getInstance(gameActionInputId.toInt())
 input= inputFactory!!.getInstance(inputId.toInt())
 
     
-                        if(input == 
-                                    null
-                                 || gameActionInput == 
+                        if(input == inputFactory!!.NO_INPUT || gameActionInput == 
                                     null
                                 )
                         
@@ -161,9 +159,7 @@ input= inputFactory!!.getInstance(inputId.toInt())
                                     stringBuffer!!.delete(0, stringBuffer!!.length())
 
     
-                        if(input == 
-                                    null
-                                )
+                        if(input == inputFactory!!.NO_INPUT)
                         
                                     {
                                     stringBuffer!!.append(this.persistanceStrings!!.ERROR_LOADING_ID)

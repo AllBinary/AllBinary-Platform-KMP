@@ -78,9 +78,7 @@ open fun toggle(save: Boolean, list: BasicArrayList)
                     var list = list
 
     
-                        if(list != 
-                                    null
-                                )
+                        if(list != BasicArrayListUtil.getInstance()!!.getImmutableInstance())
                         
                                     {
                                     this.savedList= list

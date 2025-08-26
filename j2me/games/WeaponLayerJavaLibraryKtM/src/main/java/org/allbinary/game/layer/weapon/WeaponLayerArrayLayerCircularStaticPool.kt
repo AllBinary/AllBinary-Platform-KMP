@@ -64,15 +64,15 @@ open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
     var WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX *2)
-                                                        
+                                                            
 
 
     var TWO_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX)
-                                                        
+                                                            
 
 
     var THREE_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX)
-                                                        
+                                                            
 
 
 

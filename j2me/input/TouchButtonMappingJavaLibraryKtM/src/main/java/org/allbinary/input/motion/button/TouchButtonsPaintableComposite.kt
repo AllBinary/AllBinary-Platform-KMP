@@ -123,9 +123,7 @@ released= true
                                 
 
     
-                        if(motionGestureInput == 
-                                    null
-                                 && !this.timeHelper!!.isTime())
+                        if(motionGestureInput == TouchMotionGestureFactory.getInstance()!!.NO_MOTION && !this.timeHelper!!.isTime())
                         
                                     {
                                     logUtil!!.put(FAST_REPEAT, this, METHOD_NAME)

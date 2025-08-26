@@ -35,8 +35,8 @@ open public class PathFindingNodeCostInfoFactory : PathFindingNodeCostInfoFactor
 public constructor        (max: Int){
 
                     var max = max
-this.pathFindingNodeCostInfoAdjacencyList= arrayOfNulls<Array<PathFindingNodeCostInfo?>>(max)
-                                                        
+this.pathFindingNodeCostInfoAdjacencyList= Array(max) { arrayOfNulls<PathFindingNodeCostInfo?>(max) }
+                                                            
 }
 
 

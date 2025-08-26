@@ -77,7 +77,7 @@ override fun getInstance()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return MotionGestureEvent(this.source, this.id, null as MotionGestureInput)
+                        return MotionGestureEvent(this.source, this.id, TouchMotionGestureFactory.getInstance()!!.NO_MOTION as MotionGestureInput)
 
                                     }
                                 
