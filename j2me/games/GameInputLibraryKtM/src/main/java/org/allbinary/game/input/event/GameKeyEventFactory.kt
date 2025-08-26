@@ -60,7 +60,8 @@ open fun getInstance()
 
     private val MAX_SOURCES: Int = 4
 
-    private var ARRAY: Array<Array<GameKeyEvent?>?> = Array(MAX_SOURCES) { Array(InputFactory.getInstance()!!.MAX) { null } }
+    private var ARRAY: Array<Array<GameKeyEvent?>?> = arrayOfNulls<Array<GameKeyEvent?>>(MAX_SOURCES)
+                                                        
 private constructor        ()
             : super()
         {}

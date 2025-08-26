@@ -64,7 +64,7 @@
         
         <!-- Several Move to PostPlatforms -->
         
-        <module>../../media/sound/MusicJ2MEJavaLibraryKtM</module>
+<!--        <module>../../media/sound/MusicJ2MEJavaLibraryKtM</module>-->
         <module>../../media/sound/MusicAndroidJavaLibraryKtM</module>
 
         <!--

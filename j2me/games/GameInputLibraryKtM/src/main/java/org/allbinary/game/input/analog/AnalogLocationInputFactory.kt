@@ -59,9 +59,7 @@ open fun addPlayer(playerInputId: Int)
                                 
 
     
-                        if(analogLocationInput == 
-                                    null
-                                )
+                        if(analogLocationInput == AnalogLocationInput.NULL_ANALOG_LOCATION_INPUT)
                         
                                     {
                                     analogLocationInput= AnalogLocationInput(playerInputId)

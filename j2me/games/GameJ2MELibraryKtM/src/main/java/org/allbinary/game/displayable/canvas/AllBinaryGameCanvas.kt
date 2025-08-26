@@ -482,9 +482,7 @@ popupMenuInputProcessor!!.init(popupMenuRectangle)
 this.menuForm!!.init(rectangle, formType)
 
     
-                        if(this.currentTouchInputFactory != 
-                                    null
-                                )
+                        if(this.currentTouchInputFactory != NoButtonsTouchInputFactory.getInstance())
                         
                                     {
                                     touchButtonFactory!!.toggle(this.isPaused(), this.currentTouchInputFactory!!.getList())

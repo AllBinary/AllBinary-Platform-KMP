@@ -57,18 +57,22 @@ open fun getInstance()
 
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(MAX)!!
 
-    private var ALL_WEAPONLAYER_ARRAY: Array<Array<Array<Any?>?>?> = 
+    private var ALL_WEAPONLAYER_ARRAY: Array<Array<Array<Any?>?>?> = arrayOfNulls(4)
+                                                        
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 {
-    var WEAPONLAYER_ARRAY: Array<Array<Any?>?> = Array(MAX *2) { Array() { null } }
+    var WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX *2)
+                                                        
 
 
-    var TWO_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = Array(MAX) { Array() { null } }
+    var TWO_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX)
+                                                        
 
 
-    var THREE_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = Array(MAX) { Array() { null } }
+    var THREE_WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX)
+                                                        
 
 
 

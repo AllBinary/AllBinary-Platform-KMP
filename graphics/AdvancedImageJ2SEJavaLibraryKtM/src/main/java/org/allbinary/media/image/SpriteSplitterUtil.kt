@@ -143,7 +143,8 @@ logUtil!!.put(spriteType, this, commonStrings!!.RUN)
 
     var rows: Int = totalAnimations
 
-generatedBufferedImageArray= Array(rows) { Array(columns) { null } }
+generatedBufferedImageArray= arrayOfNulls<Array<BufferedImage?>>(rows)
+                                                        
 logUtil!!.put("Processing Individual Cells columns: " +columns +" rows: " +rows, this, commonStrings!!.RUN)
 logUtil!!.put("Processing Individual Cells cellHeight: " +cellHeight +" cellWidth: " +cellWidth, this, commonStrings!!.RUN)
 
@@ -263,7 +264,8 @@ visitor.visit(generatedBufferedImage, nameEnding, index)
 
     var rows: Int = totalFrames2
 
-generatedBufferedImageArray= Array(rows) { Array(columns) { null } }
+generatedBufferedImageArray= arrayOfNulls<Array<BufferedImage?>>(rows)
+                                                        
 logUtil!!.put("Processing Individual Cells for each Direction", this, commonStrings!!.RUN)
 
     var nameEnding: String = 

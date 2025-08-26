@@ -31,7 +31,6 @@ import org.allbinary.game.combat.destroy.event.DestroyedEventHandler
 import org.allbinary.layer.AllBinaryLayer
 import org.allbinary.layer.AllBinaryLayerManager
 import org.allbinary.layer.BasicLayerProcessor
-import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.util.BasicArrayList
 
 open public class DestroyedLayerProcessor : BasicLayerProcessor {
@@ -80,10 +79,10 @@ open fun getInstance()
     var destroyEventCircularStaticPool: DestroyEventCircularStaticPool = DestroyEventCircularStaticPool.getInstance()!!
 
 
-    var layerInterface: AllBinaryLayer
-
-
     var destroyedEvent: DestroyedEvent
+
+
+    var layerInterface: AllBinaryLayer
 
 
 
@@ -92,15 +91,18 @@ open fun getInstance()
                         for (index in 0 until size)
 
 
-        {layerInterface= list.objectArray[index]!! as AllBinaryLayer
+        {
+    var layerInterfaceCanBeNull: Any? = list.objectArray[index]
+
 
     
-                        if(layerInterface != 
+                        if(layerInterfaceCanBeNull != 
                                     null
                                 )
                         
                                     {
-                                    allBinaryLayerManager!!.remove(layerInterface)
+                                    layerInterface= layerInterfaceCanBeNull as AllBinaryLayer
+allBinaryLayerManager!!.remove(layerInterface)
 destroyedEvent= destroyEventCircularStaticPool!!.getInstance(layerInterface)
 destroyedEventHandler!!.fireEvent(destroyedEvent)
 

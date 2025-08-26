@@ -39,7 +39,8 @@ open public class TouchButtonsMappingPaintable : Paintable {
 
     var foregroundColor: Int
 
-    private var paintableTable: Array<Array<Paintable?>?> = Array(0) { Array(0) { null } }
+    private var paintableTable: Array<Array<Paintable?>?> = arrayOfNulls<Array<Paintable?>>(0)
+                                                        
 
     private var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
 public constructor        (basicColor: BasicColor){
@@ -76,7 +77,8 @@ open fun createPaintableTable()
     var totalRows: Int = touchButtonLocationHelper!!.getTotalRows()!!
 
 
-    var paintableTable: Array<Array<Paintable?>?> = Array(totalColumns) { Array(totalRows) { null } }
+    var paintableTable: Array<Array<Paintable?>?> = arrayOfNulls<Array<Paintable?>>(totalColumns)
+                                                        
 
 
     var cellPositionFactory: CellPositionFactory = CellPositionFactory.getInstance()!!

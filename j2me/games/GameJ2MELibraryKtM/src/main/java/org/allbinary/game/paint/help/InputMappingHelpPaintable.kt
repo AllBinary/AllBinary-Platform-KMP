@@ -71,7 +71,8 @@ open public class InputMappingHelpPaintable : HelpPaintable {
 
     private var actionBasicColor: Array<BasicColor?> = arrayOfNulls(0)
 
-    private var inputBasicColorArray: Array<Array<BasicColor?>?> = Array(0) { Array(0) { null } }
+    private var inputBasicColorArray: Array<Array<BasicColor?>?> = arrayOfNulls<Array<BasicColor?>>(0)
+                                                        
 
     private var selectedBasicColor: BasicColor
 
@@ -141,7 +142,8 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
     var actionBasicColor: Array<BasicColor?> = arrayOfNulls(size)
 
 
-    var inputBasicColorArray: Array<Array<BasicColor?>?> = Array(size) { Array() { null } }
+    var inputBasicColorArray: Array<Array<BasicColor?>?> = arrayOfNulls<Array<BasicColor?>>(size)
+                                                        
 
 
     var gameInputMapping: GameInputMapping

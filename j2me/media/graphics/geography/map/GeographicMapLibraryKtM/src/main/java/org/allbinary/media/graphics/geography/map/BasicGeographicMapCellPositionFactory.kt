@@ -58,7 +58,8 @@ this.geographicMapCellPositionFactoryInterface= this.geographicMapInterface!!.ge
 this.tiledLayer= this.geographicMapInterface!!.getAllBinaryTiledLayer()
 this.columns= this.tiledLayer!!.getColumns()
 this.rows= this.tiledLayer!!.getRows()
-this.geographicMapCellPositionArray= Array(rows) { Array(columns) { null } }
+this.geographicMapCellPositionArray= arrayOfNulls<Array<GeographicMapCellPosition?>>(rows)
+                                                        
 this.init()
 }
 
