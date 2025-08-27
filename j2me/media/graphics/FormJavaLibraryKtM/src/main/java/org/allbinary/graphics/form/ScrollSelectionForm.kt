@@ -568,7 +568,10 @@ open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x:
 
 item.paint(graphics, x, y)
 graphics.setColor(this.getButtonBasicColor()!!.toInt())
-graphics.drawRect(x -halfBorder, y -halfBorder, width +border, height +border)
+
+    var adjustedBorder: Int = 3
+
+graphics.drawRect(x -halfBorder -adjustedBorder, y -halfBorder -adjustedBorder, width +border -adjustedBorder, height +border -adjustedBorder)
 
     
                         if(this.formType == formTypeFactory!!.HORIZONTAL_FORM)

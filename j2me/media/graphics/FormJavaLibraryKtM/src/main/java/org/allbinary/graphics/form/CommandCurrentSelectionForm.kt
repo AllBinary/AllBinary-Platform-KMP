@@ -150,7 +150,7 @@ open fun update(index: Int, item: CustomItem)
     var height: Int = item.getMinimumHeight()!!
 
 
-    var adjustedBorder: Int = 1
+    var adjustedBorder: Int = 3
 
 
     var offset: Int =  -(halfBorder +adjustedBorder)
@@ -169,7 +169,7 @@ open fun update(index: Int, item: CustomItem)
 
                         }
                             
-adjustedBorder= 2
+adjustedBorder= 4
 
     
                         if(J2MEUtil.isJ2ME())
