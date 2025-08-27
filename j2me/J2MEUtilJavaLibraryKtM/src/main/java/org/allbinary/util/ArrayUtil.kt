@@ -268,7 +268,6 @@ open fun reverse(intArray: IntArray)
 
                         for (index in 0 until size)
 
-
         {temp= intArray[index]!!
 intArray[index]= intArray[length -index]!!
 intArray[length -index]= temp
@@ -306,13 +305,11 @@ open fun flip(intArray: IntArray, width: Int, height: Int)
 
                         for (y in 0 until length /2)
 
-
         {
 
 
 
                         for (x in 0 until width)
-
 
         {rowIndex= ((length -y) *width)
 index= x +(y *width)
@@ -351,14 +348,12 @@ open fun toString(twoDimensionalIntArray: Array<IntArray?>)
 
                         for (index in 0 until endIndex)
 
-
         {stringBuffer!!.append(commonSeps!!.BRACE_OPEN)
 
 
 
 
                         for (index2 in 0 until endIndex2)
-
 
         {stringBuffer!!.append(twoDimensionalIntArray[index]!![index2]!!)
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
@@ -393,7 +388,6 @@ open fun toString(objectArray: Array<Any?>)
 
                         for (index in 0 until objectArray!!.size)
 
-
         {stringBuffer!!.append(StringUtil.getInstance()!!.toString(objectArray[index]!!))
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
@@ -422,7 +416,6 @@ open fun toString(byteArray: ByteArray)
 
 
                         for (index in 0 until byteArray!!.size)
-
 
         {stringBuffer!!.append(byteArray[index]!!)
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)

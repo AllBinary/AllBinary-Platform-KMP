@@ -43,7 +43,6 @@ open public class CapitalEventHandlerFactory
 
                         for (index in capitalEventHandlerArray!!.size -1 downTo 0)
 
-
         {capitalEventHandlerArray[index]= CapitalEventHandler()
 }
 
@@ -69,7 +68,6 @@ open fun removeAll()
 
 
                         for (index in capitalEventHandlerArray!!.size -1 downTo 0)
-
 
         {capitalEventHandlerArray[index]!!.removeAllListeners()
 }

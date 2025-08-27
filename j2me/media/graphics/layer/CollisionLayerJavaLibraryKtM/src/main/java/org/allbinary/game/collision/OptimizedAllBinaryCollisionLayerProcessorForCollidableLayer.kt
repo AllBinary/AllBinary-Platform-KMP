@@ -83,7 +83,6 @@ public constructor        ()
 
                         for (index in startIndex +1 until size)
 
-
         {collidableInterfaceCompositeInterface2= layerManager!!.getLayerAt(index) as CollidableCompositeLayer
 collidableBase2= collidableInterfaceCompositeInterface2!!.getCollidableInferface()
 

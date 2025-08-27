@@ -97,7 +97,6 @@ override fun isAnyHighScores()
 
                         for (index in highScoresArrayP!!.size -1 downTo 0)
 
-
         {highScores= highScoresArrayP[index]!!
 
     

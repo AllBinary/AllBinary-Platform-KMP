@@ -91,7 +91,6 @@ logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), thi
 
                         for (index in 0 until nameNodeList!!.getLength()!!)
 
-
         {
     var node: Node = nameNodeList!!.item(index)!!
 
@@ -122,7 +121,6 @@ logUtil!!.put("Number Of Module(s) Specified: " +nameNodeList!!.getLength(), thi
 
                         for (index in 0 until nameNodeList!!.getLength()!!)
 
-
         {
     var node: Node = nameNodeList!!.item(index)!!
 
@@ -148,7 +146,6 @@ this.setHashMap(HashMap<Any, Any>())
 
 
                         for (index in 0 until size)
-
 
         {inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get(index)
 this.add(inputAutomationModuleConfiguration)

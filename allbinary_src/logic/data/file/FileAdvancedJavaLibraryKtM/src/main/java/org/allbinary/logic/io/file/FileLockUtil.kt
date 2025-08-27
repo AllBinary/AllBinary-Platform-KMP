@@ -81,7 +81,6 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
 
                         for (index in 0 until size)
 
-
         {
     var file: AbFile = vector.get(index) as AbFile
 

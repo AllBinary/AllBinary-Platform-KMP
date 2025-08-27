@@ -134,7 +134,6 @@ basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
 
                         for (index in basicLayerProcessor!!.size  - 1  downTo 0)
 
-
         {basicLayerProcessor[index]!!.process(this.gameLayerManager)
 }
 
@@ -150,7 +149,6 @@ basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
 
 
                         for (index in basicLayerProcessor!!.size  - 1  downTo 0)
-
 
         {basicLayerProcessor[index]!!.getList()!!.clear()
 }

@@ -56,13 +56,11 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index in 0 until size)
 
-
         {
 
 
 
                         for (index2 in 0 until size2)
-
 
         {mapData[index]!![index2]= 1
 mapData[index]!![index2 +1]= 17

@@ -103,7 +103,6 @@ super.removeListener(eventListenerInterface)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -144,23 +143,26 @@ stringBuffer!!.append(super.toString())
 stringBuffer!!.append(TOTAL_LISTENERS)
 stringBuffer!!.append(this.list.size())
 
+    var eventListenerInterface: EventListenerInterface
 
 
+    var size: Int = this.list.size()!!
 
-                        for (index in 0 until this.list.size()!!)
+
+    var index: Int = 0
 
 
+        while(index < size)
         {
         try {
-            
-    var eventListenerInterface: EventListenerInterface = this.list.get(index) as EventListenerInterface
-
+            eventListenerInterface= this.list.get(index) as EventListenerInterface
 stringBuffer!!.append(LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 
+index++
 }
 
 

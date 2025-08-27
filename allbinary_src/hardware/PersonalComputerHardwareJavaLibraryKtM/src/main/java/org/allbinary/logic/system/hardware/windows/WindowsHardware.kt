@@ -383,7 +383,6 @@ override fun toString()
 
                         for (index in 0 until size)
 
-
         {
     var componentInterface: HardwareComponentInterface = componentInterfaceVector!!.get(index) as HardwareComponentInterface
 

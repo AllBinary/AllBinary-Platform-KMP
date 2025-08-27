@@ -74,7 +74,6 @@ open fun process(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {layerPlacementInterface= list.objectArray[index]!! as LayerPlacementInterface
 this.process(layerPlacementInterface)
 }

@@ -114,7 +114,6 @@ open fun processMultipartRequest(request: HttpServletRequest)
 
                         for (index in 0 until size)
 
-
         {
     var fileItem: FileItem = fileItemArray[index]!! as FileItem
 

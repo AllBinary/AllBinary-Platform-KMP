@@ -136,7 +136,6 @@ private constructor        ()
 
                         for (i in 0 until screens.size)
 
-
         {inputRobotInterface= InputRobot(screens[i]!!) as InputRobotInterface
 logUtil!!.put("Adding Robot: " +inputRobotInterface!!.getName(), this, "getRobots")
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
@@ -237,7 +236,6 @@ logUtil!!.put("Loading Libraries", this, "loadLibraries")
 
                         for (index in 0 until size)
 
-
         {
     var inputRobotInterface: InputRobotInterface = InputRobotFactory.getInstance()!!.get(nameArray[index]!! as String)!!
 
@@ -270,7 +268,6 @@ open fun unloadLibraries()
 
 
                         for (index in 0 until size)
-
 
         {inputRobotInterface= this.get(inputRobotArray[index]!! as String)
 

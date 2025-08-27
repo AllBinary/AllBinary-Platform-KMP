@@ -58,7 +58,6 @@ open fun getRole(role: String)
 
                         for (index in 0 until size)
 
-
         {
     var userRole: BasicUserRole = roleVector!!.get(index) as BasicUserRole
 

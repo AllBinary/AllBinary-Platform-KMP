@@ -103,7 +103,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
                         for (index in 0 until selectedArray_return!!.size)
 
-
         {
     var isSelected: Boolean = selectedArray_return[index]!!
 
@@ -177,7 +176,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
                         for (index in 0 until selectedArray_return!!.size)
 
-
         {
     var isSelected: Boolean = selectedArray_return[index]!!
 
@@ -249,7 +247,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
 
                         for (index in 0 until selectedArray_return!!.size)
-
 
         {
     var isSelected: Boolean = selectedArray_return[index]!!
@@ -347,7 +344,6 @@ logUtil!!.put(StringMaker().
 
                         for (index in 0 until size)
 
-
         {anyType= objectArray[index]!! as Object
 basicArrayList= hashtable.get(anyType as Object) as BasicArrayList
 updateExclusive(gameFeature, basicArrayList)
@@ -385,7 +381,6 @@ open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
 
 
                         for (index in 0 until size)
-
 
         {
     

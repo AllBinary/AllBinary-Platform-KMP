@@ -104,7 +104,6 @@ override fun getLayerManager()
 
                         for (index in 0 until size)
 
-
         {this.process(allBinaryLayerManager, layerManager!!.getLayerAt(index) as AllBinaryLayer, index)
 }
 

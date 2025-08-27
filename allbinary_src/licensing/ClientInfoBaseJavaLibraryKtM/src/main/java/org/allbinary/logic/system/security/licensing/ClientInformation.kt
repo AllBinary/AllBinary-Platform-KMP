@@ -247,7 +247,6 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
                         for (index in size downTo 0)
 
-
         {
     var newServerName: String = list.objectArray[index]!! as String
 
@@ -256,7 +255,6 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
 
                         for (index2 in currentSize downTo 0)
-
 
         {
     var nextOldServerName: String = this.licenseServers!!.objectArray[index]!! as String

@@ -98,7 +98,6 @@ open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-
         {startPathFindingNode= startPathFindingNodeList!!.get(index) as PathFindingNode
 pathList!!.remove(startPathFindingNode!!.geographicMapCellPosition)
 pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)

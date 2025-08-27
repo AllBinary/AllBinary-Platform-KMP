@@ -71,7 +71,6 @@ open fun isNotified(helpSet: HelpSet)
 
                         for (i in 0 until size)
 
-
         {
     var nextURL: URL = urlArray[i]!! as URL
 

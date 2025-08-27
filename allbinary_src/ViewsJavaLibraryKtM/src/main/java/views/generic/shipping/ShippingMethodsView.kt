@@ -106,7 +106,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var shippingMethodNode: Node = document.createElement(ShippingMethodsData.SHIPPINGMETHODORDERSUMMARY)!!
 

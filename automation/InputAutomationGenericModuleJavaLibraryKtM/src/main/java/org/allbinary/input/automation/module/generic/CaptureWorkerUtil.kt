@@ -63,7 +63,6 @@ logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionC
 
                         for (index in 0 until size)
 
-
         {
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = vector.get(index) as ProfileActionScriptConditionInterface
 

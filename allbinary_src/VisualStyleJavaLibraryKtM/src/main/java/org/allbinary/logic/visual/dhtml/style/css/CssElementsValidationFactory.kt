@@ -48,18 +48,22 @@ open fun getInstance(cssElementStyleNodeList: Vector)
     var styles: Vector = Vector()
 
 
+    var size: Int = cssElementStyleNodeList!!.size!!
+
+
+    var cssElementStyleNode: Node
+
+
+    var cssValidationInterface: ValidationInterface
 
 
 
-                        for (index in 0 until cssElementStyleNodeList!!.size!!)
 
 
-        {
-    var cssElementStyleNode: Node = cssElementStyleNodeList!!.get(index) as Node
+                        for (index in 0 until size)
 
-
-    var cssValidationInterface: ValidationInterface = CssElementValidationFactory.getInstance(cssElementStyleNode) as ValidationInterface
-
+        {cssElementStyleNode= cssElementStyleNodeList!!.get(index) as Node
+cssValidationInterface= CssElementValidationFactory.getInstance(cssElementStyleNode) as ValidationInterface
 styles.add(cssValidationInterface)
 }
 

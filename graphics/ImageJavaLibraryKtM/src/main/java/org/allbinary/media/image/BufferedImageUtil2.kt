@@ -96,7 +96,6 @@ rows= (bufferedImageArray!!.size /columns)
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-
         {
     
                         if(index /max != 0 && index % max == 0)

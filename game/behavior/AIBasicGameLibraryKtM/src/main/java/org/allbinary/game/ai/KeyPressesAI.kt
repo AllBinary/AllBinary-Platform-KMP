@@ -68,7 +68,6 @@ this.keys= arrayOfNulls(hashtable.size)
 
                         for (index in 0 until size)
 
-
         {keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 }
 
@@ -91,7 +90,6 @@ this.keys= arrayOfNulls(hashtable.size)
 
 
                         for (index in 0 until keys.size)
-
 
         {super.processAI(keys[index]!!.toInt())
 }

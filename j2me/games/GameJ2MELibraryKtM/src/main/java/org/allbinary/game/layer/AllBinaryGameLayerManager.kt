@@ -168,7 +168,6 @@ open fun setLayerProcessorList(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {layerProcessorInterfaceArray[index]= list.objectArray[index]!! as LayerProcessor
 }
 

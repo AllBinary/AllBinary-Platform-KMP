@@ -92,13 +92,11 @@ open fun createPaintableTable()
 
                         for (index in totalColumns -1 downTo 0)
 
-
         {
 
 
 
                         for (rowIndex in totalRows -1 downTo 0)
-
 
         {paintableTable[index]!![rowIndex]= TouchButton(BasicTouchInputFactory.getInstance()!!.NONE, TouchButtonBlankResource.getInstance(), commonButtons!!.NORMAL_BUTTON, cellPositionFactory!!.getInstance(index, rowIndex), this.touchButtonLocationHelper!!.getColumnsRemainderHalf(), this.touchButtonLocationHelper!!.getRowsRemainderHalf())
 }
@@ -129,13 +127,11 @@ override fun paint(graphics: Graphics)
 
                         for (index in totalColumns -1 downTo 0)
 
-
         {
 
 
 
                         for (rowIndex in totalRows -1 downTo 0)
-
 
         {paintableTable[index]!![rowIndex]!!.paint(graphics)
 }

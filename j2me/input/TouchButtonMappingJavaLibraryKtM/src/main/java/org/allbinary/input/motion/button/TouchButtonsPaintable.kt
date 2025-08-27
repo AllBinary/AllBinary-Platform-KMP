@@ -66,7 +66,6 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.foregroundBasicColor, thi
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-
         {touchButton= list.objectArray[index]!! as TouchButton
 touchButton!!.paint(graphics)
 }
@@ -76,7 +75,6 @@ touchButton!!.paint(graphics)
 
 
                         for (index in list.size()!!  - 1  downTo 0)
-
 
         {touchButton= list.objectArray[index]!! as TouchButton
 touchButton!!.paintHint(graphics)

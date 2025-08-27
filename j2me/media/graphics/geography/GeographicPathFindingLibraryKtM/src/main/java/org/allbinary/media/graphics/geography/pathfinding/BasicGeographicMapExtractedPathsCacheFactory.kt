@@ -59,7 +59,6 @@ open fun init(maxConcurrentPaths: Int, maxPaths: Int)
 
                         for (index in maxConcurrentPaths downTo this.maxConcurrentPaths)
 
-
         {this.list.add(BasicArrayList(maxPaths))
 }
 
@@ -108,7 +107,6 @@ open fun release(list: BasicArrayList)
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {BasicGeographicMapExtractedPathCacheFactory.getInstance()!!.release(list.get(index) as BasicArrayList)
 }

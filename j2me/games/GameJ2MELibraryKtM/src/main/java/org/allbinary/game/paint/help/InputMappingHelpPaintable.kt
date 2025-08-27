@@ -160,7 +160,6 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
 
                         for (index in 0 until size)
 
-
         {gameInputMapping= gameInputMappingArray[index]!!
 gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
@@ -173,7 +172,6 @@ inputBasicColorArray[index]= arrayOfNulls(size2)
 
 
                         for (index2 in 0 until size2)
-
 
         {inputBasicColorArray[index]!![index2]= this.basicColor
 }
@@ -231,11 +229,13 @@ open fun get(keyList: BasicArrayList)
     var key: Input
 
 
+    var size: Int = keyList!!.size()!!
 
 
 
-                        for (index in 0 until keyList!!.size()!!)
 
+
+                        for (index in 0 until size)
 
         {key= keyList!!.objectArray[index]!! as Input
 stringBuffer!!.append(key.getName())
@@ -371,7 +371,6 @@ graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
 
                         for (index in 0 until size)
 
-
         {y= (index +3) *charHeight
 deltaX= 0
 list= this.keyMappingArray[index]!!
@@ -389,7 +388,6 @@ deltaX += font.stringWidth(actionString)
 
 
                         for (index2 in 0 until size2)
-
 
         {input= list.objectArray[index2]!! as Input
 graphics.setColor(this.inputBasicColorArray[index]!![index2]!!.toInt())

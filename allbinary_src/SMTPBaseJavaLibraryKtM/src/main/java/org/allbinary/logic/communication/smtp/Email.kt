@@ -327,7 +327,6 @@ msg.setSubject(subject)
 
                         for (i in 0 until mimeBodyParts!!.size)
 
-
         {mimeMultipart!!.addBodyPart(mimeBodyParts[i]!!)
 }
 
@@ -412,7 +411,6 @@ hashMap!!.put(EmailData.SERVER, properties.get(SMTP_HOST) as String)
 
                         for (index in 0 until addresses.size)
 
-
         {hashMap!!.put(EmailData.FROM, addresses[index]!!.toString())
 }
 
@@ -432,7 +430,6 @@ addresses= msg.getRecipients(Message.RecipientType.TO)
 
 
                         for (index in 0 until addresses.size)
-
 
         {hashMap!!.put(EmailData.TO, addresses[index]!!.toString())
 }
@@ -454,7 +451,6 @@ addresses= msg.getRecipients(Message.RecipientType.CC)
 
                         for (index in 0 until addresses.size)
 
-
         {hashMap!!.put(EmailData.CC, addresses[index]!!.toString())
 }
 
@@ -474,7 +470,6 @@ addresses= msg.getRecipients(Message.RecipientType.BCC)
 
 
                         for (index in 0 until addresses.size)
-
 
         {hashMap!!.put(EmailData.BCC, addresses[index]!!.toString())
 }
@@ -498,7 +493,6 @@ hashMap!!.put(EmailData.SUBJECT, msg.getSubject())
 
 
                         for (index in 0 until mimeMultipart!!.getCount()!!)
-
 
         {
     var content: String = mimeMultipart!!.getBodyPart(index)!!.getContent() as String

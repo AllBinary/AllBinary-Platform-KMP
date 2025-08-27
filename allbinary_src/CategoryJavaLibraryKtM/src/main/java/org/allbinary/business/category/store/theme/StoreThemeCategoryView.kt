@@ -74,7 +74,6 @@ Arrays.sort(themeValidationArray, ThemeComparator())
 
                         for (index in 0 until size)
 
-
         {
     var themeValidation: ThemeValidation = themeValidationArray[index]!! as ThemeValidation
 

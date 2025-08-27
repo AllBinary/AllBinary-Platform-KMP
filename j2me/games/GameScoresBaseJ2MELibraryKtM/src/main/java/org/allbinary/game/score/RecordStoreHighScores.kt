@@ -402,7 +402,6 @@ inputStream= DataInputStream(byteArrayInputStream)
 
                         for (index in 0 until size)
 
-
         {
     var highScore: HighScore = list.objectArray[index]!! as HighScore
 
@@ -539,7 +538,6 @@ override fun isBestScore(newHighScore: HighScore)
 
                         for (index in 0 until size)
 
-
         {
     var highScore: HighScore = list.objectArray[index]!! as HighScore
 
@@ -595,7 +593,6 @@ stringBuffer!!.append(super.toString())
 
 
                         for (index in 0 until size)
-
 
         {
     var highScore: HighScore = list.objectArray[index]!! as HighScore

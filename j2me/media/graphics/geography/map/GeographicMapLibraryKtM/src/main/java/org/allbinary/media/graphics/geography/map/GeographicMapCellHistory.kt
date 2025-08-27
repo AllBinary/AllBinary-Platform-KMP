@@ -117,7 +117,6 @@ this.visitedList!!.ensureCapacity(size)
 
                         for (index in 0 until size)
 
-
         {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 this.track(geographicMapCellPosition)
 }
@@ -215,7 +214,6 @@ open fun getFirstUnvisited()
 
                         for (index in 0 until size)
 
-
         {value= this.visitedList!!.get(index) as Boolean
 
     
@@ -256,7 +254,6 @@ open fun getFirstUnvisitedIndex()
 
 
                         for (index in 0 until size)
-
 
         {value= this.visitedList!!.get(index) as Boolean
 
@@ -304,7 +301,6 @@ open fun getInPathButNotTracked(pathList: BasicArrayList)
 
 
                         for (index in 0 until size)
-
 
         {geographicMapCellPosition= pathList!!.get(index) as GeographicMapCellPosition
 
@@ -538,7 +534,6 @@ open fun reset()
 
                         for (index in size -1 downTo 0)
 
-
         {localVisitedList!!.set(index, localFalseBoolean)
 }
 
@@ -612,7 +607,6 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
 
 
                         for (index in size  - 1  downTo 0)
-
 
         {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean

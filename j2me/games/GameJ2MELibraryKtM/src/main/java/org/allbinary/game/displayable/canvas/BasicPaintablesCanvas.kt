@@ -73,7 +73,6 @@ graphics.setColor(this.foregroundColor)
 
                         for (index in this.paintableArray!!.size -1 downTo 0)
 
-
         {this.paintableArray[index]!!.paint(graphics)
 }
 

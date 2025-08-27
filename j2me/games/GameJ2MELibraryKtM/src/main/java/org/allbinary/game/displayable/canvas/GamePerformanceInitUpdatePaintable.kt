@@ -86,7 +86,6 @@ graphics.setColor(RED)
 
                         for (index in size downTo 0)
 
-
         {charArray= baseRefreshHelperCharArray[index]!!
 charArray2= baseRefreshHelperCharArray[index +1]!!
 size2= charArray!!.size

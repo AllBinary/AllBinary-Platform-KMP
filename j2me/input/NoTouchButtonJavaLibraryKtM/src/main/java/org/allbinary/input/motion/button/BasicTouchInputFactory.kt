@@ -141,7 +141,6 @@ logUtil!!.put(StringMaker().
 
                         for (index in list.size() -1 downTo 0)
 
-
         {
     var touchButtonInput: TouchButtonInput = list.get(index) as TouchButtonInput
 

@@ -69,7 +69,6 @@ public constructor        (artificialIntelligenceInterface: Array<ArtificialInte
 
                         for (index in 0 until size)
 
-
         {this.setIndex(index)
 super.processAI(allBinaryLayerManager)
 }

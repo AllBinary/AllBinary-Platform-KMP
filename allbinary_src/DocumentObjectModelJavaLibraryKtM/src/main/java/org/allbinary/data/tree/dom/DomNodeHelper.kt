@@ -61,7 +61,6 @@ open fun getFirstChildElement(parentNode: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {node= nodeList!!.item(index)
 
     
@@ -159,7 +158,6 @@ open fun getTextNodesValue(node: Node)
 
 
                         for (index in 0 until nodeList!!.getLength()!!)
-
 
         {
     var nodeTextNode: Node = nodeList!!.item(index)!!

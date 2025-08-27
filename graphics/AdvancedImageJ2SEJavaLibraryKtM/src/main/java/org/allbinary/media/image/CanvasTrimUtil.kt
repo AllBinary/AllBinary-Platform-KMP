@@ -101,7 +101,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftRedu
 
                         for (index in 0 until size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 subBufferedImageArray[index]= bufferedImage!!.getSubimage(cutCanvasFromLeftReduction, cutCanvasFromTopReduction, bufferedImage!!.getWidth() -cutCanvasFromLeftReduction -cutCanvasFromRightReduction, bufferedImage!!.getHeight() -cutCanvasFromTopReduction -cutCanvasFromBottomReduction)
 visitor.visit(subBufferedImageArray[index]!!, stringUtil!!.EMPTY_STRING, index)

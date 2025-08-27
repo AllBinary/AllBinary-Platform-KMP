@@ -80,7 +80,6 @@ open fun init()
 
                         for (index in 0 until MAX)
 
-
         {WEAPONLAYER_ARRAY[index]= arrayOfNulls(1)
 TWO_WEAPONLAYER_ARRAY[index]= arrayOfNulls(2)
 THREE_WEAPONLAYER_ARRAY[index]= arrayOfNulls(3)

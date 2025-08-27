@@ -132,7 +132,6 @@ override fun paint(graphics: Graphics)
 
                         for (index in startIndex until size)
 
-
         {countedLayerInterfaceFactory= partInterfaceArray[index]!! as CountedLayerInterfaceFactoryPart
 
     

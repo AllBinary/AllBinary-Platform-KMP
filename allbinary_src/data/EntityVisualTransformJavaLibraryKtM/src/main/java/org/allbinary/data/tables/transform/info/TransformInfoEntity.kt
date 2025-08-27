@@ -251,7 +251,6 @@ open fun getObjectConfigs(storeName: Object)
 
                         for (i in 0 until size)
 
-
         {
     var objectConfigString: String = objectConfigColumnVector!!.get(i) as String
 
@@ -288,7 +287,6 @@ open fun getNames(storeName: String)
 
 
                         for (i in 0 until size)
-
 
         {
     var viewNameString: String = columnVector!!.get(i) as String

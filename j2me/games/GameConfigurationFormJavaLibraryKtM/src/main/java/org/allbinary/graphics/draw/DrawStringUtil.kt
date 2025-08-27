@@ -143,7 +143,6 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
 
                         for (index in size -1 downTo 0)
 
-
         {aChar= string[index]
 
     
@@ -229,7 +228,6 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
 
 
                         for (index in 0 until stringArray!!.size)
-
 
         {
     var string: String = stringArray[index]!!

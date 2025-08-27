@@ -266,7 +266,6 @@ open fun isOfFourDirections(oldGeographicMapCellPosition: GeographicMapCellPosit
 
                         for (index in 0 until 4)
 
-
         {
     
                         if(newGeographicMapCellPosition == this.getCellPositionNoThrow(index, oldGeographicMapCellPosition))
@@ -443,13 +442,11 @@ geographicMapCellPositionList!!.clear()
 
                         for (columnIndex in i_columnMin until i_columnMax)
 
-
         {
 
 
 
                         for (rowIndex in i_rowMin until i_rowMax)
-
 
         {
     
@@ -508,13 +505,11 @@ open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<
 
                         for (index in 0 until size)
 
-
         {
 
 
 
                         for (index2 in 0 until size2)
-
 
         {
     var x: Int = xPortion *index

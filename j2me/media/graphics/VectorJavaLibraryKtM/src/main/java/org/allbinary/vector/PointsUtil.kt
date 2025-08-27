@@ -76,7 +76,6 @@ open fun adjust(points: Array<Array<IntArray?>?>, x: Int, y: Int)
 
                         for (index in 0 until size)
 
-
         {
     var size2: Int = points[index]!!.size
                 
@@ -87,7 +86,6 @@ newPoints[index]= Array(size2) { IntArray(2) }
 
 
                         for (index2 in 0 until size2)
-
 
         {
     
@@ -152,7 +150,6 @@ open fun adjust(points: Array<IntArray?>, x: Int, y: Int)
 
 
                         for (index2 in 0 until points.size)
-
 
         {
     

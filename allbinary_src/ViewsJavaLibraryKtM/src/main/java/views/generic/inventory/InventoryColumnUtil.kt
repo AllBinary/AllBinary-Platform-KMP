@@ -87,7 +87,6 @@ logUtil!!.put("Start Category: " +category, this, "getKeywords")
 
                         for (index in 0 until size)
 
-
         {
     var hashMap: HashMap<Any, Any> = vectorOfHashMaps!!.get(index as Object) as HashMap<Any, Any>
 

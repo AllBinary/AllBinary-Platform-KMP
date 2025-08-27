@@ -87,7 +87,6 @@ this.setPoints(Array(1) { Array(currentPoints!!.size) { IntArray(2) } })
 
                         for (index in 0 until size)
 
-
         {this.currentPoints[0]!![index]!![0]= currentPoints[index]!![0]!!
 this.currentPoints[0]!![index]!![1]= currentPoints[index]!![1]!!
 }

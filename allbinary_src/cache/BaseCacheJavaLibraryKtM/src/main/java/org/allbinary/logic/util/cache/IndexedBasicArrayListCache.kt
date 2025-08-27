@@ -64,7 +64,6 @@ open fun init(size: Int)
 
                         for (index in size -1 downTo this.size)
 
-
         {this.add()
 }
 

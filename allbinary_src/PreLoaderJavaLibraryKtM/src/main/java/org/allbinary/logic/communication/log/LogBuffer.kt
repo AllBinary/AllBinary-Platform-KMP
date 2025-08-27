@@ -61,7 +61,6 @@ open fun logAll()
 
                         for (index in 0 until size)
 
-
         {
     var log: Log = this.logEntryVector!!.get(index) as Log
 

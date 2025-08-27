@@ -94,7 +94,6 @@ override fun clear()
 
                         for (index in this.list.size() -1 downTo 0)
 
-
         {basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
 basicArrayList!!.clear()
 }
@@ -116,7 +115,6 @@ stringBuffer!!.append(this.list.size())
 
 
                         for (index in this.list.size() -1 downTo 0)
-
 
         {stringBuffer!!.append(" s: ")
 basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)

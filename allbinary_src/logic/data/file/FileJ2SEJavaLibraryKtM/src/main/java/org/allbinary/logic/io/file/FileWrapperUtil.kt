@@ -51,7 +51,6 @@ open fun wrapFiles(files: Array<Any?>)
 
                         for (index in files.size -1 downTo 0)
 
-
         {abFileArray[index]= AbFile(files[index]!! as File)
 }
 

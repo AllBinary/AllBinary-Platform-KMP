@@ -76,7 +76,6 @@ private constructor        ()
 
                         for (index in 0 until size)
 
-
         {inputIntegerArray[index]= NO_INPUT
 }
 

@@ -436,7 +436,6 @@ whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.ge
 
                         for (i in 0 until size)
 
-
         {
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
@@ -479,7 +478,6 @@ whereHashMap!!.put(UserData.USERNAME, userName)
 
 
                         for (index in 0 until size)
-
 
         {
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
@@ -530,7 +528,6 @@ whereHashMap!!.put(OrderHistoryData.STATUS, status)
 
                         for (index in 0 until size)
 
-
         {
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
@@ -572,7 +569,6 @@ open fun getOrders(fromDate: String, toDate: String)
 
 
                         for (index in 0 until size)
-
 
         {
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>

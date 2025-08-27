@@ -140,7 +140,6 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent:
 
                         for (index in 0 until size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 
     var newWidth: Int = (bufferedImage!!.getWidth() *percent /100).toInt()
@@ -188,7 +187,6 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent:
 
                         for (index in 0 until size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 
     var newWidth: Int = (bufferedImage!!.getWidth() *percent).toInt()
@@ -235,7 +233,6 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: I
 
 
                         for (index in 0 until size)
-
 
         {scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
 }

@@ -150,7 +150,6 @@ open fun initProfiles(node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var profileNameNode: Node = nodeList!!.item(index)!!
 
@@ -267,7 +266,6 @@ open fun toXmlNode(document: Document)
 
 
                         for (index in 0 until size)
-
 
         {
     var genericProfile: GenericProfile = this.hashMap!!.get(nameArray[index]!! as String) as GenericProfile

@@ -312,7 +312,6 @@ open fun getInstance(instanceId: Int)
 
                         for (index in 0 until size)
 
-
         {scaledImageArray[index]= animationFactoryImageScaleUtil!!.createImage(image, image.getWidth(), image.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)
 }
 

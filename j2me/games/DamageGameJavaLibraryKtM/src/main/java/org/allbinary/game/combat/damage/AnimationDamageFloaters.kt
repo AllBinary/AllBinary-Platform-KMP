@@ -67,7 +67,6 @@ this.animationInterfaceArray= animationInterfaceArray
 
                         for (index in this.animationInterfaceArray!!.size -1 downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.setFrame(this.animationInterfaceArray[index]!!.getSize() -1)
 }
 
@@ -110,7 +109,6 @@ override fun paint(graphics: Graphics)
 
 
                         for (index in 0 until this.animationInterfaceArray!!.size)
-
 
         {
     var animationInterface: IndexedAnimation = animationInterfaceArray[index]!!

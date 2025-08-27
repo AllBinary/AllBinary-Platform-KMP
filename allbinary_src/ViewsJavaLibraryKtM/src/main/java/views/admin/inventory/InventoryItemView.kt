@@ -184,7 +184,6 @@ open fun addDomNodeInterfaces()
 
                         for (index in 0 until size)
 
-
         {downloadableItem= this.downloadableItemVector!!.get(index) as DownloadableItem
 vector.add(DownloadableItemView(downloadableItem))
 }
@@ -253,7 +252,6 @@ open fun processImageFiles()
 
 
                         for (index in 0 until size)
-
 
         {
     var fieldName: String = fieldNameArray[index]!! as String

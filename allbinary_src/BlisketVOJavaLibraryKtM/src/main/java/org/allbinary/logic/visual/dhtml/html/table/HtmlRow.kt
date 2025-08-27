@@ -103,7 +103,6 @@ result += " "
 
                         for (i in 0 until attributeSize)
 
-
         {
     var key: String = attributeKeys[i]!! as String
 
@@ -132,7 +131,6 @@ result += END
 
 
                         for (i in 0 until cellSize)
-
 
         {result += htmlCellsVector!!.get(i)!!.toString()
 result += " "

@@ -131,7 +131,6 @@ open fun get(paymentTypeString: String)
 
                         for (i in 0 until size)
 
-
         {
     var paymentType: PaymentType = this.paymentTypeVector!!.get(i) as PaymentType
 
@@ -204,7 +203,6 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
 
 
                         for (index in 0 until nodeList!!.getLength()!!)
-
 
         {
     var node: Node = nodeList!!.item(index)!!
@@ -307,7 +305,6 @@ open fun difference(a_PaymentTypeVector: Vector)
 
 
                         for (i in 0 until size)
-
 
         {
     var paymentType: PaymentType = this.paymentTypeVector!!.get(i) as PaymentType

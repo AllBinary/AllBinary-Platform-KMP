@@ -288,7 +288,6 @@ graphics.setColor(basicColor!!.toInt())
 
                         for (index in 0 until size)
 
-
         {characterArray[0]= pattern[index]
 _characterWidth[index]= bounds.getMaxX()
 
@@ -356,7 +355,6 @@ open fun getFontWidths(filename: String, fontSize: Int)
 
 
                         for (index in 0 until size)
-
 
         {characterArray[0]= pattern[index]
 

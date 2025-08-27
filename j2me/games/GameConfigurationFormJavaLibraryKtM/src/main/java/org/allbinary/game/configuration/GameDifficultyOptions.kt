@@ -174,7 +174,6 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
 
                         for (index in 0 until size)
 
-
         {
     var anyType: Any = list.objectArray[index]!!
 

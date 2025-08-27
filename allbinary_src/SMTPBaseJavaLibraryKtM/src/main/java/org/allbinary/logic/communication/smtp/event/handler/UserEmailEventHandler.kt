@@ -79,7 +79,6 @@ open fun addListener(vector: Vector)
 
                         for (index in 0 until size)
 
-
         {
     var userEmailEventListenerInterface: UserEmailEventListenerInterface = vector.get(index) as UserEmailEventListenerInterface
 
@@ -125,7 +124,6 @@ open fun fireEmailEvent()
 
 
                         for (index in 0 until size)
-
 
         {
     var emailEventListenerInterface: UserEmailEventListenerInterface = emailVector!!.get(index) as UserEmailEventListenerInterface

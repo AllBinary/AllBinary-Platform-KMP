@@ -105,7 +105,6 @@ logUtil!!.put("Setting Image - " +commonLabels!!.WIDTH_LABEL +newBufferedImage!!
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-
         {
     var x: Int = imageUnifierProperties!!.getImageUnifierCell()!!.getWidth()!!.toInt() *columnIndex++
 

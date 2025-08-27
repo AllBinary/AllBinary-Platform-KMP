@@ -82,13 +82,11 @@ open fun process(bufferedImage: BufferedImage, colorRangeInterface: ColorRangeIn
 
                         for (indexY in 0 until bufferedImage!!.getHeight()!!)
 
-
         {
 
 
 
                         for (indexX in 0 until bufferedImage!!.getWidth()!!)
-
 
         {
     var keyInteger: Integer = Integer(Integer.valueOf(bufferedImage!!.getRGB(indexX, indexY)))!!
@@ -251,7 +249,6 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +colorRangeInterface!!.toString
 
 
                         for (index in 0 until bufferedImageArray!!.size)
-
 
         {imageAnalysisResultsArray[index]= ImageAnalysis.process(bufferedImageArray[index]!!, colorRangeInterface)
 }

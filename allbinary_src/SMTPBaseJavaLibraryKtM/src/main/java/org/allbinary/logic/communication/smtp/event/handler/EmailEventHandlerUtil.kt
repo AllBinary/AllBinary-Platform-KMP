@@ -142,7 +142,6 @@ userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
                         for (index in 0 until size)
 
-
         {
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface
 

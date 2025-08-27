@@ -55,7 +55,6 @@ open fun initDefaultModelList()
 
                         for (index in 0 until size)
 
-
         {
     var moduleName: String = this.vector.get(index) as String
 

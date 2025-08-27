@@ -78,7 +78,6 @@ this.totalMoney= Money()
 
                         for (index in 0 until size)
 
-
         {orderHistoryInterface= orderHistoryInterfaceVector!!.get(index) as OrderHistoryInterface
 numberOfOrders= numberOfOrders +1
 this.subTotalMoney!!.add(orderHistoryInterface!!.getSubTotal())

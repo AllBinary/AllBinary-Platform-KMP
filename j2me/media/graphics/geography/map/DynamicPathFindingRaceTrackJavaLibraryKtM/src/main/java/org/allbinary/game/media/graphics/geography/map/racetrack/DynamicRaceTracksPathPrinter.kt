@@ -68,7 +68,6 @@ open fun printAllPaths(raceTrackGeographicMapInterfaceFactoryInterface: RaceTrac
 
                         for (index in 0 until size)
 
-
         {
     var geographicMapInterface: BasicGeographicMap = raceTrackGeographicMapInterfaceFactoryInterface!!.getTrackInstance(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index))!!
 

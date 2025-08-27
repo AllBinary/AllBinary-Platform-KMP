@@ -58,7 +58,6 @@ open fun getInstance(genericProfile: GenericProfile)
 
                         for (index in 0 until size)
 
-
         {
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 

@@ -126,7 +126,6 @@ rtsLayer!!.setLevel(rtsLayer!!.getLevel() -1)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
 
-
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() +1))
 }
@@ -149,7 +148,6 @@ rtsLayer!!.setLevel(rtsLayer!!.getLevel() +1)
 
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
-
 
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() -1))
@@ -211,7 +209,6 @@ open fun getCost(rtsLayer: RTSLayer)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
 
-
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 total += this.getWeaponPropertiesCost(weaponProperties)
@@ -250,7 +247,6 @@ open fun getDowngradeCost(rtsLayer: RTSLayer)
 
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
-
 
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
@@ -296,7 +292,6 @@ open fun getUpgradeCost(rtsLayer: RTSLayer)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
 
-
         {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 upgradedWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() +1, rtsLayer!!.getLevel()))
@@ -329,7 +324,6 @@ open fun destroyAndClear(list: BasicArrayList)
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {rtsLayer= list.get(index) as RTSLayer
 rtsLayer!!.setDestroyed(true)

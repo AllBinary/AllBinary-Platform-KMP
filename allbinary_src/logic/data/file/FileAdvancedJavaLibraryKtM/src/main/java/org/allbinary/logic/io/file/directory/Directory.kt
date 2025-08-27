@@ -265,7 +265,6 @@ open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean
 
                         for (index in 0 until size)
 
-
         {fileList!!.add(files[index]!!)
 
     
@@ -363,7 +362,6 @@ open fun search(file: AbFile, isRecursiveSearch: Boolean)
 
 
                         for (index in 0 until files.size)
-
 
         {fileList!!.add(files[index]!!)
 
@@ -468,7 +466,6 @@ open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
 
 
                         for (index in 0 until files.size)
-
 
         {
     
@@ -581,7 +578,6 @@ open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
 
 
                         for (index in 0 until files.size)
-
 
         {fileList!!.add(files[index]!!)
 

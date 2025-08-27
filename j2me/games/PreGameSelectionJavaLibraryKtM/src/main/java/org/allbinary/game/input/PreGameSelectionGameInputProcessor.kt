@@ -139,7 +139,6 @@ open fun onInput(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {
     var anyType: Any = list.get(index)!!
 

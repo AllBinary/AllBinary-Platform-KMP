@@ -68,7 +68,6 @@ this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as Us
 
                         for (index in 0 until size)
 
-
         {
     var userEmailConfigurationNode: Node = emailEventConfigurationNodeVector!!.get(index) as Node
 
@@ -139,7 +138,6 @@ open fun toXmlNode(document: Document)
 
 
                         for (index in 0 until size)
-
 
         {
     var eventName: String = eventNameArray[index]!! as String

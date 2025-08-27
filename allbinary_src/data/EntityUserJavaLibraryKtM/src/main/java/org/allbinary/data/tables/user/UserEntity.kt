@@ -148,7 +148,6 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
                         for (i in 0 until size)
 
-
         {
     var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
@@ -206,7 +205,6 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
 
                         for (index in 0 until size)
 
-
         {
     var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
@@ -251,7 +249,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
 
 
                         for (index in 0 until size)
-
 
         {
     var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object) as HashMap<Any, Any>

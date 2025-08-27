@@ -201,7 +201,6 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
 
                         for (index in 0 until MAX_DIRECTIONS)
 
-
         {row= basicGeographicMapUtil!!.getBorderingRow(index, cellPosition)
 column= basicGeographicMapUtil!!.getBorderingColumn(index, cellPosition)
 
@@ -252,13 +251,11 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
 
                         for (column in 0 until totalColumns)
 
-
         {
 
 
 
                         for (row in 0 until totalRows)
-
 
         {this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getInstance(column, row))
 }

@@ -53,7 +53,6 @@ open fun init(inputProcessorArray: Array<GameInputProcessor?>)
 
                         for (index in 0 until total)
 
-
         {
     var inputProcessorCanBeNull: GameInputProcessor? = inputProcessorArray[index]
 

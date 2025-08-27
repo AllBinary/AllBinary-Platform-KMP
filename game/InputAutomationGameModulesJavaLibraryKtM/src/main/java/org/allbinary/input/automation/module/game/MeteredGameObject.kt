@@ -81,7 +81,6 @@ this.setSize(maxX -minX)
 
                         for (index in 0 until bufferedImage!!.size)
 
-
         {
     var nominator: Double = GraphicsAnalysisUtil.getNominator(bufferedImage[index]!!, this.getMinX(), this.getMaxX(), this.getY())!!
 
@@ -178,7 +177,6 @@ stringBuffer!!.append(RATIOS_LABEL)
 
 
                         for (index in 0 until this.getRatios()!!.length)
-
 
         {stringBuffer!!.append(this.getRatios()[index]!!.toString())
 

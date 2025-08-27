@@ -257,7 +257,6 @@ override fun setFrame(frame: Int)
 
                         for (index in 0 until sizeP)
 
-
         {this.animationInterfaceArray[index]!!.setFrame(frame)
 }
 
@@ -284,7 +283,6 @@ override fun previousFrame()
 
 
                         for (index in 0 until sizeP)
-
 
         {this.animationInterfaceArray[index]!!.previousFrame()
 }
@@ -346,7 +344,6 @@ override fun paint(graphics: Graphics, ax: Int, ay: Int)
 
 
                         for (index in 0 until sizeP)
-
 
         {deltaX= this.dxArray[index] +x
 deltaY= this.dyArray[index] +y

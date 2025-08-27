@@ -90,7 +90,6 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
 
                         for (index in 0 until size)
 
-
         {
     var integer: Integer = this.idList!!.objectArray[index]!! as Integer
 

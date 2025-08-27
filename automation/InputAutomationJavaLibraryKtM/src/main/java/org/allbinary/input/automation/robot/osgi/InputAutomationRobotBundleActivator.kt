@@ -149,7 +149,6 @@ open fun addRobots(context: BundleContext)
 
                         for (index in 0 until this.getInputRobotInterface()!!.length)
 
-
         {
     var inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent = InputAutomationRobotUtil.getChangeEvent(this.getInputRobotInterface()[index]!!)!!
 
@@ -189,7 +188,6 @@ open fun removeRobots(context: BundleContext)
 
 
                         for (index in 0 until this.getInputRobotInterface()!!.length)
-
 
         {
     var inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent = InputAutomationRobotUtil.getChangeEvent(this.getInputRobotInterface()[index]!!)!!

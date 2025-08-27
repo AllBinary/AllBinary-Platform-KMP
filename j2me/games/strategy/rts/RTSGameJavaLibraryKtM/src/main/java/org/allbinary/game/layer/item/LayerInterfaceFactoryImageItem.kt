@@ -98,7 +98,6 @@ super.paint(graphics, x, y)
 
                         for (index in this.animationArray!!.size  - 1  downTo 0)
 
-
         {this.animationArray[index]!!.paint(graphics, x, y)
 }
 

@@ -73,7 +73,6 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +keyActionScriptInputInterface!
 
                         for (index in 0 until keyActionScriptInputInterface!!.getKeyArray()!!.length)
 
-
         {
     
                         if(keyActionScriptInputInterface!!.isPress())
@@ -91,7 +90,6 @@ Thread.sleep(keyActionScriptInputInterface!!.getTime())
 
 
                         for (index in keyActionScriptInputInterface!!.getKeyArray()!!.length -1 downTo 0)
-
 
         {
     
@@ -113,7 +111,6 @@ Thread.sleep(keyActionScriptInputInterface!!.getTime())
 
 
                         for (index in 0 until keyActionScriptInputInterface!!.getKeyArray()!!.length)
-
 
         {
     

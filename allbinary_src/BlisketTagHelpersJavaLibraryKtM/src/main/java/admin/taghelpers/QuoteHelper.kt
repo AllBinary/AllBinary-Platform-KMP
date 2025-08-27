@@ -196,11 +196,13 @@ open fun email()
     var id: Int = 0
 
 
+    var size: Int = vector.size!!
 
 
 
-                        for (index in 0 until vector.size!!)
 
+
+                        for (index in 0 until size)
 
         {
     var nextId: Int = get = vector.get(index)get as Integer

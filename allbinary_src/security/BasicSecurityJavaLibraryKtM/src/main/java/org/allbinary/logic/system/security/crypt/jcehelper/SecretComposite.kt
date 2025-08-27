@@ -97,7 +97,6 @@ open fun mutilate(array: ByteArray)
 
                         for (index in 0 until key.size)
 
-
         {
     var value: Byte = key[index]!!
 

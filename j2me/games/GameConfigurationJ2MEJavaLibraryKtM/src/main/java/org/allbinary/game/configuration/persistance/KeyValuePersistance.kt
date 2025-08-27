@@ -133,7 +133,6 @@ hashtable= Hashtable<String, String>()
 
                         for (index in 0 until size)
 
-
         {name= inputStream!!.readUTF()
 inputStream!!.readUTF()
 value= inputStream!!.readUTF()
@@ -218,7 +217,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
 
                         for (index in 0 until size)
-
 
         {outputStream!!.writeUTF(objectArray[index]!! as String)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)

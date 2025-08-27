@@ -100,7 +100,6 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
                         for (index in 0 until size)
 
-
         {
     var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
@@ -196,7 +195,6 @@ open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
 
                         for (index in 0 until size)
 
-
         {featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
     
@@ -252,11 +250,13 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)
 stringBuffer!!.append(size)
 stringBuffer!!.append(FOR_FACTORIES)
 
+    var size2: Int = resourceTypeAvailableList!!.size()!!
 
 
 
-                        for (index in 0 until resourceTypeAvailableList!!.size()!!)
 
+
+                        for (index in 0 until size2)
 
         {stringBuffer!!.append(resourceTypeAvailableList!!.get(index)!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.COMMA_SEP)
@@ -269,7 +269,6 @@ stringBuffer!!.append(resource)
 
 
                         for (index in 0 until size)
-
 
         {stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
@@ -303,7 +302,6 @@ stringBuffer!!.append(RESOURCES_LABEL)
 
 
                         for (index in 0 until size)
-
 
         {featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 stringBuffer!!.append(featureInterface!!.toString())

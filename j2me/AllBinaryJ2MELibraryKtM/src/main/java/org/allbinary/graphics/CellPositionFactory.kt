@@ -94,13 +94,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
                         for (column in 0 until columns)
 
-
         {
 
 
 
                         for (row in 0 until rows)
-
 
         {this.createInstance(column, row)
 }

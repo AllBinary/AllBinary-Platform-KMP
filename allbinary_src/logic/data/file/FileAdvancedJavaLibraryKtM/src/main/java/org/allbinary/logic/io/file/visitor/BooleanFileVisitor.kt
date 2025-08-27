@@ -83,7 +83,6 @@ open fun visit(file: AbFile)
 
                         for (index in 0 until size)
 
-
         {nextFileFilterString= list.get(index) as String
 
     

@@ -67,7 +67,6 @@ open fun main(args: Array<String?>)
 
                         for (index in 0 until 360)
 
-
         {stringMaker!!.append(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
@@ -112,7 +111,6 @@ angleArray[0]= UP
 
                         for (index in 1 until 90)
 
-
         {angleArray[index]= Angle(index.toShort())
 }
 
@@ -123,7 +121,6 @@ angleArray[90]= RIGHT
 
 
                         for (index in 91 until 180)
-
 
         {angleArray[index]= Angle(index.toShort())
 }
@@ -136,7 +133,6 @@ angleArray[180]= DOWN
 
                         for (index in 181 until 270)
 
-
         {angleArray[index]= Angle(index.toShort())
 }
 
@@ -147,7 +143,6 @@ angleArray[270]= LEFT
 
 
                         for (index in 271 until total)
-
 
         {angleArray[index]= Angle(index.toShort())
 }

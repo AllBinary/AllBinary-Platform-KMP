@@ -112,7 +112,6 @@ open fun isValid()
 
                         for (index in 0 until size)
 
-
         {
     var transformInfoInterface: TransformInfo = allViewsToBeModifiedVector!!.get(index) as TransformInfo
 
@@ -274,7 +273,6 @@ open fun validationInfo()
 
 
                         for (index in 0 until size)
-
 
         {
     var transformInfoInterface: TransformInfo = allViewsToBeModifiedVector!!.get(index) as TransformInfo

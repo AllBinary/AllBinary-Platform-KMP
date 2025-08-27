@@ -179,26 +179,32 @@ inputPersistance!!.loadAll(abeClientInformation)
     var totalMappedTo: Int = 0
 
 
+    var size: Int = list.size()!!
+
+
+    var hashtable: Hashtable<Any, Any>
+
+
+    var enumeration: Enumeration<Any?>
+
+
+    var mappedToInput: Input
+
+
+    var gameActionInput: Input
 
 
 
-                        for (index in 0 until list.size()!!)
 
 
-        {
-    var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
+                        for (index in 0 until size)
 
-
-    var enumeration: Enumeration<Any?> = hashtable.keys()!!
-
+        {hashtable= list.objectArray[index]!! as Hashtable<Any, Any>
+enumeration= hashtable.keys()
 
         while(enumeration.hasMoreElements())
-        {
-    var mappedToInput: Input = enumeration.nextElement()!! as Input
-
-
-    var gameActionInput: Input = hashtable.get(mappedToInput as Object) as Input
-
+        {mappedToInput= enumeration.nextElement()!! as Input
+gameActionInput= hashtable.get(mappedToInput as Object) as Input
 totalMappedTo++
 this.getInputMapping()!!.add(gameActionInput, mappedToInput)
 }

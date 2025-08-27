@@ -57,7 +57,6 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until interfaces.size)
 
-
         {stringBuffer!!.append("Interface: ")
 stringBuffer!!.append(interfaces[index]!!.getName())
 stringBuffer!!.append(lineBreak)
@@ -93,7 +92,6 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
 
 
                         for (index in 0 until interfaces.size)
-
 
         {
     
@@ -138,7 +136,6 @@ open fun isImplemented(clazz: KClass<*>, anyType: Any)
 
                         for (index in 0 until classes.size)
 
-
         {
     
                         if(clazz.toString()!!.compareTo(classes[index]!!.getName()) == 0)
@@ -173,7 +170,6 @@ open fun isImplemented(className: String, anyType: Any)
 
 
                         for (index in 0 until classes.size)
-
 
         {
     
@@ -218,7 +214,6 @@ stringBuffer!!.append("isImplementedView: \n")
 
 
                         for (index in 0 until classes.size)
-
 
         {stringBuffer!!.append(clazz.toString()!!)
 stringBuffer!!.append(" should be = ")

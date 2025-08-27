@@ -157,7 +157,6 @@ open fun getTypeList()
 
                         for (index in 0 until size)
 
-
         {
     var logConfigInfo: LogConfig = LoggingInitInfo.logConfigInfoList!!.objectArray[index]!! as LogConfig
 

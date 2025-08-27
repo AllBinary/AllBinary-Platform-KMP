@@ -84,7 +84,6 @@ this.gl= gl
 
                         for (index in list.size() -1 downTo 0)
 
-
         {
     var openGLESImage: OpenGLESImage = (list.objectArray[index]!! as OpenGLESImage)
 

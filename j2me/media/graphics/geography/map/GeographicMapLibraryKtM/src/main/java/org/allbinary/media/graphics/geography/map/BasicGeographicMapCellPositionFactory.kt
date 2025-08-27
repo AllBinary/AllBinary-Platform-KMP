@@ -89,13 +89,11 @@ open fun init()
 
                         for (column in 0 until columns)
 
-
         {
 
 
 
                         for (row in 0 until rows)
-
 
         {this.createInstance(column, row, width, height)
 }
@@ -132,13 +130,11 @@ open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMa
 
                         for (column in 0 until columns)
 
-
         {
 
 
 
                         for (row in 0 until rows)
-
 
         {cellPosition= this.getInstance(column, row)
 geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosition)

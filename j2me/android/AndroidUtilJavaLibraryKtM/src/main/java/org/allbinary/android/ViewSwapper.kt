@@ -85,7 +85,6 @@ open fun setMainView(id: Int)
 
                         for (index in 0 until this.topViewArray!!.size)
 
-
         {viewGroup!!.removeView(this.topViewArray[index]!!)
 }
 
@@ -94,7 +93,6 @@ open fun setMainView(id: Int)
 
 
                         for (index in 0 until this.mainViewArray!!.size)
-
 
         {
     
@@ -113,7 +111,6 @@ open fun setMainView(id: Int)
 
                         for (index in 0 until this.mainViewArray!!.size)
 
-
         {
     
                         if(id == this.mainViewArray[index]!!.getId())
@@ -131,7 +128,6 @@ this.currentMainViewId= id
 
 
                         for (index in 0 until this.topViewArray!!.size)
-
 
         {viewGroup!!.addView(this.topViewArray[index]!!)
 }

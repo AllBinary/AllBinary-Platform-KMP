@@ -93,7 +93,6 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
-
         {
     var anyType: Any = childCategoryVector!!.get(i)!!
 

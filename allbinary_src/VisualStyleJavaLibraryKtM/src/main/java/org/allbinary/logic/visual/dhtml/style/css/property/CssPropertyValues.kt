@@ -84,7 +84,6 @@ this.propertyValueVector= Vector()
 
                         for (index in 0 until size)
 
-
         {
     var cssPropertyValueNode: Node = cssPropertyNodeVector!!.get(index) as Node
 
@@ -113,11 +112,13 @@ indexPropertyValueHashMap!!.put(indexValue, propertyValue)
 }
 
 
+    var size2: Int = indexPropertyValueHashMap!!.keys.size()!!
 
 
 
-                        for (index in 0 until indexPropertyValueHashMap!!.keys.size()!!)
 
+
+                        for (index in 0 until size2)
 
         {
     var indexInt: Integer = Integer(index)
@@ -153,7 +154,6 @@ open fun toHashMap()
 
 
                         for (index in 0 until size)
-
 
         {
     var value: String = propertyValueVector!!.get(index) as String

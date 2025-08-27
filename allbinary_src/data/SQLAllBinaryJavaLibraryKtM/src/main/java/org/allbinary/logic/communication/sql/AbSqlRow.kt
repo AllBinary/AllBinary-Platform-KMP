@@ -145,7 +145,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
                         for (i in 0 until size)
 
-
         {
     var columnName: String = keyArray[i]!!.toString()!!
 
@@ -250,7 +249,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
                         for (i in 0 until size)
 
-
         {
     var columnName: String = keyArray[i]!!.toString()!!
 
@@ -315,7 +313,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
 
                         for (i in 0 until size2)
-
 
         {
     var key: String = keyArray2[i]!! as String
@@ -457,7 +454,6 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
                         for (i in 0 until size)
 
-
         {
     var key: String = keyArray[i]!! as String
 
@@ -525,7 +521,6 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
 
                         for (i in 0 until values.size -1)
-
 
         {
     var value: String = this.getValue(values.get(i) as String)!!
@@ -605,7 +600,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (index in 0 until size)
 
-
         {
     var key: String = keyArray[index]!! as String
 
@@ -656,7 +650,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
                         for (index in 1 until columnCount)
-
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
@@ -765,7 +758,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (index in 0 until size)
 
-
         {
     var key: String = keyArray[index]!! as String
 
@@ -819,7 +811,6 @@ stringBuffer!!.append(more)
 
 
                         for (index in 1 until columnCount)
-
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
@@ -914,7 +905,6 @@ stringBuffer!!.append(this.getTableName())
 
                         for (index in 1 until columnCount)
 
-
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
 
@@ -1008,7 +998,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (index in 0 until size)
 
-
         {key= keyArray[index]!! as String
 value= whereKeyValuePairs!!.get(key) as String
 stringBuffer!!.append(key)
@@ -1070,7 +1059,6 @@ columnCount= resultSetMetaData!!.getColumnCount()
 
 
                         for (index in 1 until columnCount)
-
 
         {columnName= resultSetMetaData!!.getColumnName(index)
 field= rset.getString(columnName)
@@ -1188,7 +1176,6 @@ columnCount= resultSetMetaData!!.getColumnCount()
 
 
                         for (index in 1 until columnCount)
-
 
         {columnName= resultSetMetaData!!.getColumnName(index)
 field= rset.getString(columnName)

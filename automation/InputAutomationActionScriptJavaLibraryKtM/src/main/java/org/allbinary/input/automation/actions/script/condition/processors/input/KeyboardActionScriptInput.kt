@@ -136,7 +136,6 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var childNode: Node = nodeList!!.item(index)!!
 
@@ -457,7 +456,6 @@ open fun toHashMap()
 
 
                         for (index in 0 until this.getKeyArray()!!.length)
-
 
         {hashMap!!.put(KeyboardActionScriptInputData.KEY +index, Integer.toString(this.getKeyArray()[index]!!))
 }

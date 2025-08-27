@@ -132,11 +132,13 @@ super.addCommand(command)
 override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 {
+    var size: Int = commandStack!!.size!!
 
 
 
-                        for (index in 0 until commandStack!!.size!!)
 
+
+                        for (index in 0 until size)
 
         {super.removeCommand(commandStack!!.pop() as Command)
 }

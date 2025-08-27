@@ -140,7 +140,6 @@ open fun addModules(context: BundleContext)
 
                         for (index in 0 until this.getInputAutomationModuleInterface()!!.length)
 
-
         {
     var inputAutomationConfigurationModuleChangeEvent: InputAutomationConfigurationModuleChangeEvent = InputAutomationConfigurationUtil.getChangeEvent(this.getInputAutomationModuleInterface()[index]!!)!!
 
@@ -191,7 +190,6 @@ open fun removeModules(context: BundleContext)
 
 
                         for (index in 0 until this.getInputAutomationModuleInterface()!!.length)
-
 
         {
     var inputAutomationConfigurationModuleChangeEvent: InputAutomationConfigurationModuleChangeEvent = InputAutomationConfigurationUtil.getChangeEvent(this.getInputAutomationModuleInterface()[index]!!)!!

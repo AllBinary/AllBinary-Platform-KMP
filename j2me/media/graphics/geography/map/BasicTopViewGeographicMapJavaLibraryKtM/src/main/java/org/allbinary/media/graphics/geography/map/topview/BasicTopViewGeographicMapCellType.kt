@@ -107,7 +107,6 @@ public constructor        (name: String, types: IntArray, cost: Int)
 
                         for (index in 0 until size)
 
-
         {type= types[index]!!
 
     
@@ -158,7 +157,6 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
 
 
                         for (index in 0 until size)
-
 
         {type= get = types.get(index)get as Integer
 get.
@@ -217,7 +215,6 @@ open fun isType(type: Int)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(types[index] == type)
@@ -264,7 +261,6 @@ override fun toString()
 
 
                         for (index in 0 until size)
-
 
         {stringMaker!!.append(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
 }

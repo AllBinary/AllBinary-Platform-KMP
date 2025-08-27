@@ -64,7 +64,6 @@ override fun setFrame(frameIndex: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
 indexedAnimation!!.setFrame(frameIndex)
 }
@@ -106,7 +105,6 @@ override fun previousFrame()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
 indexedAnimation!!.previousFrame()
 }
@@ -139,7 +137,6 @@ override fun getSequence()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.nextFrame()
 }
 
@@ -165,7 +162,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
 
                         for (index in 0 until size)
-
 
         {this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
@@ -195,7 +191,6 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
 
                         for (index in 0 until size)
-
 
         {this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }

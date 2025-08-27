@@ -578,7 +578,6 @@ stringBuffer!!.append(commonSeps!!.NEW_LINE)
 
                         for (index in 0 until size)
 
-
         {stringBuffer!!.append(groupInterfaceArray[index]!!.toString())
 stringBuffer!!.append(commonSeps!!.COMMA)
 }

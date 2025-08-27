@@ -106,7 +106,6 @@ open fun isValid()
 
                         for (index in 0 until size)
 
-
         {
     var aStreetAddress: StreetAddress = streetAddressList!!.get(index) as StreetAddress
 

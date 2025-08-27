@@ -102,7 +102,6 @@ open fun get(httpServletRequest: HttpServletRequest)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(acceptable.compareTo(acceptableResponseUtil!!.get(index)) == 0)

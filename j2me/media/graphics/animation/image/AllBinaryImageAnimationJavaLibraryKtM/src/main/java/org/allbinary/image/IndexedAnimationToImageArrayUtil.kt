@@ -60,7 +60,6 @@ open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: Inde
 
                         for (index in 0 until size)
 
-
         {sequentialAnimationInterface!!.setFrame(index)
 imageArray[index]= AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, sequentialAnimationInterface)
 }

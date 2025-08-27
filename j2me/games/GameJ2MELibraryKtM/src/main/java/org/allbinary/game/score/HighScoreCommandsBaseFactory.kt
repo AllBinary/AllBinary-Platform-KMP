@@ -70,7 +70,6 @@ open fun isHighScoreCommand(command: Command)
 
                         for (index in HIGH_SCORE_COMMANDS.size -1 downTo 0)
 
-
         {
     
                         if(command == HIGH_SCORE_COMMANDS[index])
@@ -106,7 +105,6 @@ open fun getIndex(command: Command)
 
 
                         for (index in HIGH_SCORE_COMMANDS.size -1 downTo 0)
-
 
         {
     

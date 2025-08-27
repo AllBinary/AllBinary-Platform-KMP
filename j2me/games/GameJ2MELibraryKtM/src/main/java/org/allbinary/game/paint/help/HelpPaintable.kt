@@ -113,7 +113,6 @@ graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
 
                         for (index in 0 until size)
 
-
         {beginWidth= (graphics.getFont()!!.stringWidth(inputInfo[index]!!) shr 1)
 graphics.drawString(inputInfo[index]!!, halfWidth -beginWidth, (index +3) *charHeight, anchor)
 }

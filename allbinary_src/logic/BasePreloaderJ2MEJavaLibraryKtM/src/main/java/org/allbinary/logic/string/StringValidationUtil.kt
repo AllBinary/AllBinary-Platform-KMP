@@ -93,7 +93,6 @@ open fun isNumber(value: String)
 
                         for (index in 0 until value.length!!)
 
-
         {
     var digit: Char = value[index]!!
 

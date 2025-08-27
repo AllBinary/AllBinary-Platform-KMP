@@ -135,7 +135,6 @@ open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.
 
                         for (index in 0 until size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 imageData= bufferedImage!!.getImageData()
 
@@ -187,7 +186,6 @@ open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.
 
                         for (index in 0 until size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 imageData= bufferedImage!!.getImageData()
 
@@ -235,7 +233,6 @@ open fun createBufferedImage(bufferedImageArray: Array<org.eclipse.swt.graphics.
 
 
                         for (index in 0 until size)
-
 
         {scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
 }

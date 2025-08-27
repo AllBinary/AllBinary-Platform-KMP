@@ -57,7 +57,6 @@ open fun removeAll()
 
                         for (index in eventHandlerArray!!.size -1 downTo 0)
 
-
         {eventHandlerArray[index]!!.removeAllListeners()
 }
 

@@ -91,7 +91,6 @@ node.appendChild(basicItemView!!.toXmlNode(document))
 
                         for (index in 0 until size)
 
-
         {
     var name: String = nameArray[index]!! as String
 

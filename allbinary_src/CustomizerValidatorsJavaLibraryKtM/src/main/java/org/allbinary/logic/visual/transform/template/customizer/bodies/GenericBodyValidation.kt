@@ -63,7 +63,6 @@ public constructor        (document: Document){
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var aBodyNode: Node = nodeList!!.item(index)!!
 

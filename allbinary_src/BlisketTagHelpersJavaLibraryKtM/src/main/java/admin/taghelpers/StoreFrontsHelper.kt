@@ -269,7 +269,6 @@ storeSelect!!.addAttribute(CLASS, TEXT)
 
                         for (index in 0 until size)
 
-
         {
     var storeName: String = storeNamesVector!!.get(index) as String
 

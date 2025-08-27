@@ -93,7 +93,6 @@ open fun removeItem(id: String)
 
                         for (index in 0 until size)
 
-
         {
     var item: Item = itemArray[index]!! as Item
 
@@ -132,7 +131,6 @@ open fun adjustItem(id: String, num: String)
 
                         for (index in 0 until size)
 
-
         {
     var item: Item = itemArray[index]!! as Item
 
@@ -167,7 +165,6 @@ open fun getTotalWeight()
 
 
                         for (index in 0 until size)
-
 
         {
     var item: Item = itemArray[index]!! as Item
@@ -213,7 +210,6 @@ open fun getIds()
 
                         for (index in 0 until size)
 
-
         {
     var item: Item = itemArray[index]!! as Item
 
@@ -245,7 +241,6 @@ open fun getNumberOf(id: String)
 
 
                         for (index in 0 until size)
-
 
         {
     var item: Item = itemArray[index]!! as Item
@@ -295,7 +290,6 @@ open fun toXmlNode(document: Document)
 
 
                         for (index in 0 until size)
-
 
         {
     var item: Item = itemArray[index]!! as Item

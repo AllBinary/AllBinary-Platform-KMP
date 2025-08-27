@@ -120,7 +120,6 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 
                         for (index in 0 until size)
 
-
         {pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
 }
 
@@ -129,7 +128,6 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 
 
                         for (index in 0 until totalAngle)
-
 
         {pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.angleFactory!!.getInstance(index)))
 }

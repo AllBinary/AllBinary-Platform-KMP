@@ -157,7 +157,6 @@ highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
 
                         for (index in 0 until size)
 
-
         {highScores= highScoresArray[index]!!
 highScores!!.addHighScore(this.highScore)
 highScoresAsString= highScores!!.toString()

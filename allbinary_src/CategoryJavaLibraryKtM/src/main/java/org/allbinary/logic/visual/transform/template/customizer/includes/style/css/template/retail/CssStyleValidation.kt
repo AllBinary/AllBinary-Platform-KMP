@@ -86,7 +86,6 @@ open fun isValid()
 
                         for (i in 0 until size)
 
-
         {
     var styleValidationInterface: ValidationInterface = cssStyleElementVector!!.get(i) as ValidationInterface
 
@@ -212,7 +211,6 @@ node.appendChild(styleNode)
 
 
                         for (i in 0 until size)
-
 
         {
     var styleDomNodeInterface: DomNodeInterface = cssStyleElementVector!!.get(i) as DomNodeInterface

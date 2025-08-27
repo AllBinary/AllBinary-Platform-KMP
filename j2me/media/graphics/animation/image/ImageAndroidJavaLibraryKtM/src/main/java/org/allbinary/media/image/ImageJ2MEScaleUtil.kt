@@ -72,7 +72,6 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
                         for (index in 0 until images.size)
 
-
         {
     var image: Image = images[index]!!
 

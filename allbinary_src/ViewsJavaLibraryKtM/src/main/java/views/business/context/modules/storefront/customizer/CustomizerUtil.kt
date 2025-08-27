@@ -255,7 +255,6 @@ transformInfoInterface!!.setData(documentString)
 
                         for (index in 0 until size)
 
-
         {
     var transformInfo: TransformInfo = allViewsToBeModified!!.get(index) as TransformInfo
 
@@ -399,7 +398,6 @@ open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
 
 
                         for (index in 0 until size)
-
 
         {
     var nextTransformInfoInterface: TransformInfo = allViewsToBeModified!!.get(index) as TransformInfo

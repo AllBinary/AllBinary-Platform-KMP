@@ -60,7 +60,6 @@ open fun encode(value: ByteArray)
 
                         for (index in 0 until array.size)
 
-
         {stringBuffer!!.append(array[index]!!.
                             toString())
 
@@ -122,7 +121,6 @@ open fun decode(value: String)
 
                         for (index in 0 until size)
 
-
         {byteOfData= vector.objectArray[index]!! as String
 byteVector!!.add(byteOfData.toByte())
 }
@@ -141,7 +139,6 @@ byteVector!!.add(byteOfData.toByte())
 
 
                         for (index in 0 until size)
-
 
         {aByte= byteVector!!.objectArray[index]!! as Byte
 decode[decodeIndex]= aByte!!.toByte()

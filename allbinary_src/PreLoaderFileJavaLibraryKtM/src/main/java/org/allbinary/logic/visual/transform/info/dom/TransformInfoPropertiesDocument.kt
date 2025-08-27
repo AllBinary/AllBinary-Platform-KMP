@@ -47,7 +47,7 @@ open public class TransformInfoPropertiesDocument
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    private var document: Document
+    private val document: Document
 public constructor        (filePath: String)
             : super()
         {
@@ -86,18 +86,22 @@ open fun toTransformInfoPropertiesHashMap()
                                     }
                                 
 
+    var size: Int = transformInfoNodeVector!!.size!!
+
+
+    var node: Node
+
+
+    var transformInfoProperties: TransformInfoProperties
 
 
 
-                        for (index in 0 until transformInfoNodeVector!!.size!!)
 
 
-        {
-    var node: Node = transformInfoNodeVector!!.get(index) as Node
+                        for (index in 0 until size)
 
-
-    var transformInfoProperties: TransformInfoProperties = TransformInfoPropertiesFactory.getInstance()!!.getInstance(node)!!
-
+        {node= transformInfoNodeVector!!.get(index) as Node
+transformInfoProperties= TransformInfoPropertiesFactory.getInstance()!!.getInstance(node)
 transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transformInfoProperties)
 }
 

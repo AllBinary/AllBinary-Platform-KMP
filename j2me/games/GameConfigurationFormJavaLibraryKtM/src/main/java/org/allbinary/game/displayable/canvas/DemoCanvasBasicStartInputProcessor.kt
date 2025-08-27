@@ -69,7 +69,6 @@ public constructor        (gameKeyEventList: BasicArrayList, gameCanvas: Runnabl
 
                         for (index in 0 until size)
 
-
         {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 logUtil!!.put(StringMaker().
                             append("Start GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKeyEvent))!!.toString(), this, GameInputStrings.getInstance()!!.PROCESS_INPUT)

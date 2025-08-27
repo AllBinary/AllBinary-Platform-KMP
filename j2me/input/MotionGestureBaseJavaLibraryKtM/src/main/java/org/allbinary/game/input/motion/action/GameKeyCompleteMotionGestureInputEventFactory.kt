@@ -79,7 +79,6 @@ open fun updateAll()
 
                         for (index in eventList!!.size() -1 downTo 0)
 
-
         {
     var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = eventList!!.objectArray[index]!! as GameKeyCompleteMotionGestureInputEvent
 

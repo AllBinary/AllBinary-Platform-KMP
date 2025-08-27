@@ -142,7 +142,6 @@ open fun processAllUnsent()
 
                         for (index in 0 until size)
 
-
         {
     var emailInterface: EmailInterface = queueVector!!.get(index) as EmailInterface
 

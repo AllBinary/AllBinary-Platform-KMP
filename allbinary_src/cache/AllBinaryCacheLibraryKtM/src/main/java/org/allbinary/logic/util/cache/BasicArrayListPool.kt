@@ -95,7 +95,6 @@ open fun addAll(usedList: BasicArrayList)
 
                         for (index in usedList!!.size()!!  - 1  downTo 0)
 
-
         {
     var anyType: CacheableInterface = usedList!!.objectArray[index]!! as CacheableInterface
 
@@ -118,7 +117,6 @@ open fun releaseUsedBackToPool(usedList: BasicArrayList)
 
 
                         for (index in usedList!!.size()!!  - 1  downTo 0)
-
 
         {
     var list: BasicArrayListCacheable = usedList!!.objectArray[index]!! as BasicArrayListCacheable

@@ -107,7 +107,6 @@ open fun fireEvent(eventObject: AllBinaryEventObject)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -141,7 +140,6 @@ open fun fireRemoveEvent(eventObject: AllBinaryEventObject)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -155,20 +153,25 @@ miniMapLayer!!.onRemoveGeographicMapCellPositionEvent(eventObject as GeographicM
 }
 
 
+    var eventListenerInterface: EventListenerInterface
+
+
+    var geographicMapCellPositionEventListenerInterface: GeographicMapCellPositionEventListenerInterface
+
+
+    var size: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
         try {
-            
-    var eventListenerInterface: EventListenerInterface = list.get(index) as EventListenerInterface
-
-eventListenerInterface = eventListenerInterfaceeventListenerInterface as GeographicMapCellPositionEventListenerInterface
-eventListenerInterface.
-                    onRemoveGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
+            eventListenerInterface= list.get(index) as EventListenerInterface
+geographicMapCellPositionEventListenerInterface= (eventListenerInterface as GeographicMapCellPositionEventListenerInterface)
+geographicMapCellPositionEventListenerInterface!!.onRemoveGeographicMapCellPositionEvent(eventObject as GeographicMapCellPositionEvent)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }

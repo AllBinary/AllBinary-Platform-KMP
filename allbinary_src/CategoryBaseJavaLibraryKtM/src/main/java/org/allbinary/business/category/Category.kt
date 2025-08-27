@@ -275,7 +275,6 @@ open fun removeChild(categoryInterface: CategoryInterface)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(this.CATEGORY == this.typeVector!!.get(index))
@@ -325,7 +324,6 @@ open fun removal(removalVector: Vector)
 
                         for (index in 0 until removalSize)
 
-
         {
     var anyType: Any = removalVector!!.get(index)!!
 
@@ -359,7 +357,6 @@ open fun removeDuplicateChild(categoryInterface: CategoryInterface)
 
 
                         for (index in 0 until size)
-
 
         {
     var anyType: Any = this.childCategoryVector!!.get(index)!!
@@ -533,7 +530,6 @@ open fun isValid()
 
 
                         for (index in 0 until size)
-
 
         {
     var anyType: Any = this.childCategoryVector!!.get(index)!!

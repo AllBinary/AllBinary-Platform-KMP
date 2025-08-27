@@ -221,7 +221,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                         for (i in 0 until size)
 
-
         {
     var workFlowHashMap: HashMap<Any, Any> = hashMapVector!!.get(i as Object) as HashMap<Any, Any>
 

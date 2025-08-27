@@ -79,7 +79,6 @@ open fun updateColor()
 
                         for (index in size  - 1  downTo 0)
 
-
         {colorBufferList!!.set(index, this.basicColor)
 }
 
@@ -130,13 +129,11 @@ open fun updateSize()
 
                         for (row in 0 until segsH)
 
-
         {
 
 
 
                         for (col in 0 until segsW)
-
 
         {number3dBufferList!!.set(index++, col.toFloat() *w -width5, row.toFloat() *h -height5, 0f)
 }

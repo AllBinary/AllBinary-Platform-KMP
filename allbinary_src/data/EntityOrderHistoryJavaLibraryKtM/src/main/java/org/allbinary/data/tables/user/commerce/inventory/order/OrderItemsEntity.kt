@@ -110,7 +110,6 @@ open fun insert(userName: String, order: OrderInterface)
 
                         for (i in 0 until itemsSize)
 
-
         {
     var item: String = itemsArray[i]!! as String
 
@@ -327,7 +326,6 @@ keyValues!!.put(OrderData.ID, orderId)
 
 
                         for (i in 0 until itemsSize)
-
 
         {
     var itemHashMap: HashMap<Any, Any> = itemsArray[i]!! as HashMap<Any, Any>

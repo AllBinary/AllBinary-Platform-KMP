@@ -122,7 +122,6 @@ open fun mutilate(array: ByteArray)
 
                         for (index in 0 until key.size)
 
-
         {value= key[index]!!
 array= byteUtil!!.xor(array, value)
 }

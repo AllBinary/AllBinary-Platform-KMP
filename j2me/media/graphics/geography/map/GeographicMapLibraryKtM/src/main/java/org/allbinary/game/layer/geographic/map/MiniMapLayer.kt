@@ -153,7 +153,6 @@ open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: Geogra
 
                         for (index in 0 until size)
 
-
         {
     var nextColorCompositeInterface: ColorCompositeInterface = list.get(index) as ColorCompositeInterface
 
@@ -225,7 +224,6 @@ open fun paintDots(graphics: Graphics)
 
 
                         for (index in length  - 1  downTo 0)
-
 
         {point= localPositionList!!.get(index) as GPoint
 basicColor= localBasicColorList!!.get(index) as BasicColor

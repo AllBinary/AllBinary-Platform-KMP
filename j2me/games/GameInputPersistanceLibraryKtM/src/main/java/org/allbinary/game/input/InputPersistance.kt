@@ -290,7 +290,6 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
                         for (index in 0 until size)
 
-
         {gameActionInput= inputObjectArray[index]!! as Input
 list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
@@ -298,7 +297,6 @@ list= hashtable.get(inputObjectArray[index]!! as Object) as BasicArrayList
 
 
                         for (index2 in 0 until list.size()!!)
-
 
         {
     var gameActionInputIdAsString: String = smallIntegerSingletonFactory!!.getInstance(gameActionInput!!.getId())!!.toString()!!

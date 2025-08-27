@@ -150,7 +150,6 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
                         for (index in 0 until size -1)
 
-
         {
     
                         if(index == start)

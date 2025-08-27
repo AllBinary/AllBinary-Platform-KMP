@@ -64,7 +64,6 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-
         {point= list.objectArray[index]!! as GPoint
 
     
@@ -123,7 +122,6 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
 
                         for (index in list.size()!!  - 1  downTo 0)
-
 
         {point= list.objectArray[index]!! as GPoint
 

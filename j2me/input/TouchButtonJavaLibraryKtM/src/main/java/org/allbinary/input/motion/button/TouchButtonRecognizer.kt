@@ -82,7 +82,6 @@ open fun release(touchButtonInput: TouchButtonInput, deviceId: Int)
 
                         for (index in currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
 
-
         {
     var nextTouchButtonInput: TouchButtonInput = currentlyPressedTouchButtonSingleton!!.get(index)!!
 
@@ -131,7 +130,6 @@ public constructor        (touchButtonRecognizer: TouchButtonRecognizer)
 
 
                         for (index in currentlyPressedTouchButtonSingleton!!.size() -1 downTo 0)
-
 
         {
     var nextTouchButtonInput: TouchButtonInput = currentlyPressedTouchButtonSingleton!!.get(index)!!
@@ -249,7 +247,6 @@ this.processRelease(touchButtonInput, deviceId)
 
                         for (index in list.size() -1 downTo 0)
 
-
         {touchButton= list.objectArray[index]!! as TouchButton
 rectangle= touchButton!!.getRectangle()
 point= rectangle.getPoint()
@@ -315,7 +312,6 @@ open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {touchButton= list.objectArray[index]!! as TouchButton
 rectangle= touchButton!!.getRectangle()

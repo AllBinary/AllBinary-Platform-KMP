@@ -273,7 +273,6 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
 
                         for (index in 0 until numberOfViews)
 
-
         {
     var viewNode: Node = viewNodeList!!.item(index)!!
 
@@ -427,7 +426,6 @@ open fun getTransformDomNodes(nodeName: String)
 
                         for (index in 0 until size)
 
-
         {
     var viewNode: Node = viewNodeVector!!.get(index) as Node
 
@@ -463,7 +461,6 @@ open fun getTransforms(nodeName: String)
 
 
                         for (index in 0 until size)
-
 
         {
     var viewNode: Node = viewNodeVector!!.get(index) as Node
@@ -524,7 +521,6 @@ open fun getTransformsGroup(group: String)
 
                         for (index in 0 until length)
 
-
         {
     var node: Node = componentsNodeList!!.item(index)!!
 
@@ -574,7 +570,6 @@ break;
 
 
                         for (index in 0 until size)
-
 
         {
     var viewNode: Node = viewNodeVector!!.get(index) as Node

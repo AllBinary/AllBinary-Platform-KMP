@@ -325,7 +325,6 @@ open fun getFieldsNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var key: String = searchValueArray[index]!! as String
 

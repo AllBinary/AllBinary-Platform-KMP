@@ -1248,7 +1248,6 @@ ratio= SCALE *dxl /dy
 
                         for (index in 180 downTo 90)
 
-
         {
     
                         if(ratio <= noDecimalTan[index])
@@ -1299,7 +1298,6 @@ ratio= SCALE *dxl /dy
 
                         for (index in 270 downTo 180)
 
-
         {
     
                         if(ratio < noDecimalTan[index] && ratio >= noDecimalTan[index -1])
@@ -1327,8 +1325,7 @@ ratio= SCALE *dxl /dy
 
 
 
-                        for (index in (noDecimalTan!!.size -1).toShort() downTo 270)
-
+                        for (index in (noDecimalTan!!.size -1) downTo 270)
 
         {
     
@@ -1379,7 +1376,6 @@ ratio= SCALE *dxl /dy
 
 
                         for (index in 90 downTo 0)
-
 
         {
     
@@ -1484,13 +1480,11 @@ dy[3]= (screenY2 -targetY2)
 
                         for (index in 0 until dx.size)
 
-
         {
 
 
 
                         for (index2 in 0 until dy.size)
-
 
         {angleOfTarget= this.antiTan(dx[index]!!, dy[index2]!!)
 angle= angleFactory!!.getInstance(angleOfTarget.toInt())

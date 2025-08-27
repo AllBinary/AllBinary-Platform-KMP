@@ -80,7 +80,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var email: Email = emailInfoVector!!.get(index) as Email
 

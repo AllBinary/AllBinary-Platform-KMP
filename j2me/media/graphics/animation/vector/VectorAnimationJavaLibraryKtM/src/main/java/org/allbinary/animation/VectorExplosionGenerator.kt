@@ -87,7 +87,6 @@ open fun getInstance(list: BasicArrayList, howMuch: Int, type: VectorExplosionTy
 
                         for (index in 0 until size)
 
-
         {
     var point: GPoint = list.objectArray[index]!! as GPoint
 
@@ -259,7 +258,6 @@ sectionBasicArrayList= RandomTranslation.getInstance(sectionBasicArrayList, howM
 
                         for (index2 in 0 until size)
 
-
         {pointBasicArrayList!!.add(sectionBasicArrayList!!.objectArray[index2]!!)
 }
 
@@ -321,7 +319,6 @@ open fun createPointsBasicArrayList(points: Array<IntArray?>)
 
 
                         for (index in 0 until points.size)
-
 
         {firstPointBasicArrayList!!.add(PointFactory.getInstance()!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
 }

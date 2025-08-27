@@ -111,11 +111,13 @@ System.out.println("License ID: " +licenseInitInfo!!.getLicenseId())
     var list: BasicArrayList = licenseInitInfo!!.getServerList()!!
 
 
+    var size: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size)
 
         {System.out.println("Lic Serv: " +list.get(index))
 }

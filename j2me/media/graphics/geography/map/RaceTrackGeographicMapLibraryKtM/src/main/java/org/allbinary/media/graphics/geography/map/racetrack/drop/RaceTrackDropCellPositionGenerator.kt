@@ -131,7 +131,6 @@ this.raceTrackGeographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeo
 
                         for (index in lastIndex downTo 0)
 
-
         {geographicMapCellPosition= trackedList!!.get(index) as GeographicMapCellPosition
 total= 0
 ahead= index
@@ -174,7 +173,6 @@ ahead++
 
 
                         for (index in size -1 downTo 0)
-
 
         {this.drop(allBinaryGameLayerManager, index)
 }

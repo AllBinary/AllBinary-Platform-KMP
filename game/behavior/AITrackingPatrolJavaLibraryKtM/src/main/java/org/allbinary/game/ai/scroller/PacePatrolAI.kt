@@ -165,7 +165,6 @@ open fun setFiringDirectionForTargetIfInRange()
 
                         for (index in 0 until size)
 
-
         {lastTrackingEvent= this.trackingList!!.get(0) as TrackingEvent
 lastTrackingLayerInterface= lastTrackingEvent!!.getLayerInterface()
 

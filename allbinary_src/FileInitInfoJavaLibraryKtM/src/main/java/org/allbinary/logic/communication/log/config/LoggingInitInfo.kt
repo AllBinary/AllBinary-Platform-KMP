@@ -127,7 +127,6 @@ LoggingInitInfo.logConfigInfoList= BasicArrayList()
 
                         for (i in 0 until size)
 
-
         {
     var node: Node = logConfigNodeVector!!.elementAt(i) as Node
 
@@ -229,7 +228,6 @@ open fun getTypeNameList()
 
                         for (index in 0 until size)
 
-
         {
     var logConfigInfo: LogConfig = LoggingInitInfo.logConfigInfoList!!.objectArray[index]!! as LogConfig
 
@@ -271,7 +269,6 @@ open fun getTypeList()
 
 
                         for (index in 0 until size)
-
 
         {
     var logConfigInfo: LogConfig = LoggingInitInfo.logConfigInfoList!!.objectArray[index]!! as LogConfig

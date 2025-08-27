@@ -204,7 +204,6 @@ open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: 
 
                         for (i in 0 until uvs.size)
 
-
         {
     var u: Float = uvs[i]!!
 

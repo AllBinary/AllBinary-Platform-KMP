@@ -80,7 +80,6 @@ open fun clear()
 
                         for (index in size -1 downTo 0)
 
-
         {groupList= this.list.objectArray[index]!! as BasicArrayList
 groupList!!.clear()
 }
@@ -188,7 +187,6 @@ open fun areAllOtherGroupsEmpty(groupInterface: Group)
 
                         for (index in size -1 downTo 0)
 
-
         {
     
                         if(id != index)
@@ -251,7 +249,6 @@ open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
 
                         for (index in size -1 downTo 0)
 
-
         {groupInterfaceArray= excludeGroupList!!.objectArray[index]!! as Array<Group?>
 
     var size2: Int = groupInterfaceArray!!.size
@@ -262,7 +259,6 @@ open fun isIdInList(id: Int, excludeGroupList: BasicArrayList)
 
 
                         for (index2 in 0 until size2)
-
 
         {groupInterface= groupInterfaceArray[index2]!!
 groupId= groupInterface!!.getGroupId().toInt()
@@ -307,7 +303,6 @@ open fun areAllOtherGroupsLessThan(excludeGroupList: BasicArrayList, maxSize: In
 
 
                         for (index in size -1 downTo 0)
-
 
         {
     
@@ -392,7 +387,6 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
                         for (index in 0 until size)
 
-
         {id= groupInterfaceArray[index]!!.getGroupId().toInt()
 groupList= this.list.objectArray[id]!! as BasicArrayList
 
@@ -453,7 +447,6 @@ groupList= this.list.objectArray[id]!! as BasicArrayList
 
                         for (index in 0 until size)
 
-
         {id= groupInterfaceArray[index]!!.getGroupId().toInt()
 groupList= this.list.objectArray[id]!! as BasicArrayList
 groupList!!.remove(layerInterface)
@@ -484,7 +477,6 @@ open fun log()
 
 
                         for (index in size -1 downTo 0)
-
 
         {
     var groupList: BasicArrayList = this.list.objectArray[index]!! as BasicArrayList

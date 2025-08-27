@@ -63,7 +63,6 @@ public constructor        (types: IntArray)
 
                         for (index in 0 until size)
 
-
         {
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
 
@@ -91,7 +90,6 @@ public constructor        (types: BasicArrayList)
 
 
                         for (index in 0 until size)
-
 
         {type= get = types.get(index)get as Integer
 get.
@@ -133,7 +131,6 @@ open fun isType(type: Int)
 
 
                         for (index in 0 until size)
-
 
         {
     

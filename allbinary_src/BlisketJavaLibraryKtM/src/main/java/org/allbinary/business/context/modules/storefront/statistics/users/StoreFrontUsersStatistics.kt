@@ -65,7 +65,6 @@ this.totalNumberOfUsers= userVector!!.size as Long
 
                         for (index in 0 until size)
 
-
         {
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface
 
@@ -158,7 +157,6 @@ hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.
 
 
                         for (index in 0 until size)
-
 
         {nextUserRole= userRoleArray[index]!! as UserRole
 

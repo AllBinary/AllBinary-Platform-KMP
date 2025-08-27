@@ -77,7 +77,6 @@ list= BasicArrayList()
 
                         for (index in 0 until partInterfaceArray!!.size)
 
-
         {list.add(partInterfaceArray[index]!!)
 }
 
@@ -95,7 +94,6 @@ list= BasicArrayList()
 
 
                         for (index in 0 until size)
-
 
         {layerInterfaceFactoryInterface= countedBasicArrayList!!.objectArray[index]!! as CountedPickedUpLayerInterfaceFactory
 list.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
@@ -124,7 +122,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
                         for (index in 0 until newSize)
-
 
         {newPartInterfaceArray[index]= list.get(index) as PartInterface
 }

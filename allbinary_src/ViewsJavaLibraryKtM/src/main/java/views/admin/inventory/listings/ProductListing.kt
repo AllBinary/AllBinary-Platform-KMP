@@ -118,7 +118,6 @@ open fun getHashSet(storeFront: StoreFrontInterface)
 
                         for (index in 0 until size)
 
-
         {
     var subStore: String = subStoreVector!!.get(index) as String
 
@@ -257,7 +256,6 @@ this.searchRequest!!.setFileBaseName(pageName)
 
                         for (index in 0 until productListingPages!!.size)
 
-
         {
     
                         if(productListingPages[index] == 
@@ -344,7 +342,6 @@ open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFil
 
 
                         for (index in 0 until size)
-
 
         {
     var insertVector: Vector = Vector()
@@ -434,7 +431,6 @@ stringBuffer!!.append(" Store Not Found")
 
                         for (index in 0 until size)
 
-
         {
     var keywordData: String = keywordArray[index]!! as String
 
@@ -513,7 +509,6 @@ stringBuffer!!.append("<br />")
 
 
                         for (index in 0 until size)
-
 
         {storeName= storeFrontVector!!.get(index) as String
 this.searchRequest!!.setStoreFront(this.storeFronts!!.getStoreFrontInterface(storeName))

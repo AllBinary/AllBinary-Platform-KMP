@@ -103,7 +103,6 @@ super.removeListener(eventListenerInterface)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -140,15 +139,17 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
+
+    var size: Int = this.list.size()!!
+
 stringBuffer!!.append(super.toString())
 stringBuffer!!.append(TOTAL_LISTENERS)
-stringBuffer!!.append(this.list.size())
+stringBuffer!!.append(size)
 
 
 
 
-                        for (index in 0 until this.list.size()!!)
-
+                        for (index in 0 until size)
 
         {
         try {

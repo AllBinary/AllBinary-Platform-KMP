@@ -90,7 +90,6 @@ open fun getInstance()
 
                         for (index in 0 until size)
 
-
         {
     var layerInterfaceCanBeNull: Any? = list.objectArray[index]
 

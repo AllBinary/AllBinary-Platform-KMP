@@ -99,7 +99,6 @@ super.removeListener(eventListenerInterface)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -134,7 +133,6 @@ open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -157,12 +155,10 @@ layerManagerEventListener!!.onDeleteLayerManagerEvent(eventObject as LayerManage
     var layerManagerEventListenerInterface: LayerManagerEventListenerInterface
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until eventListenerInterfaceList!!.size()!!)
-
-
+        while(index < eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
@@ -172,6 +168,7 @@ layerManagerEventListenerInterface!!.onDeleteLayerManagerEvent(eventObject as La
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
+index++
 }
 
 }

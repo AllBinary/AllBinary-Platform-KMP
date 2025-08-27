@@ -79,7 +79,6 @@ bufferedImageCacheables= arrayOfNulls(2)
 
                         for (index in 0 until bufferedImageCacheables!!.size)
 
-
         {
     var bufferedImageCacheable: BufferedImageCacheable = poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
 
@@ -98,7 +97,6 @@ bufferedImageCacheables[index]!!.getBufferedImage()!!.setRGB(START_X, START_Y, b
 
 
                         for (index in 0 until size)
-
 
         {
     var pixelDelta: PixelDelta = vector.get(index) as PixelDelta

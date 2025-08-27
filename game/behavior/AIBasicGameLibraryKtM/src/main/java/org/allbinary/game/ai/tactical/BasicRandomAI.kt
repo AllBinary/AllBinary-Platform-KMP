@@ -121,7 +121,6 @@ i_random= myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 
                         for (index in 0 until size)
 
-
         {
     var key: Int = keyArray[index]!!
 

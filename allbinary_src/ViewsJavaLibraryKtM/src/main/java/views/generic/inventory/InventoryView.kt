@@ -98,7 +98,6 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchDa
 
                         for (index in 0 until size)
 
-
         {
     var itemInterface: ItemInterface = itemVector!!.get(index) as ItemInterface
 

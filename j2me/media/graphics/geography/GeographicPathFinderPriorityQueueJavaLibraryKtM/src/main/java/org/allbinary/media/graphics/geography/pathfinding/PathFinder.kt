@@ -97,13 +97,11 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
 
                         for (column in 0 until sizeX)
 
-
         {
 
 
 
                         for (row in 0 until sizeY)
-
 
         {
     var geographicMapCellType: GeographicMapCellType = this.geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getInstance(column, row))!!
@@ -334,13 +332,11 @@ this.closedSet!!.clear()
 
                         for (column in 0 until sizeX)
 
-
         {
 
 
 
                         for (row in 0 until sizeY)
-
 
         {discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
@@ -398,13 +394,11 @@ closedSet!!.add(current)
 
                         for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
 
-
         {
 
 
 
                         for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
-
 
         {
     
@@ -512,13 +506,11 @@ this.closedSet!!.clear()
 
                         for (column in 0 until sizeX)
 
-
         {
 
 
 
                         for (row in 0 until sizeY)
-
 
         {discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
@@ -596,13 +588,11 @@ closedSet!!.add(current)
 
                         for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
 
-
         {
 
 
 
                         for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
-
 
         {
     

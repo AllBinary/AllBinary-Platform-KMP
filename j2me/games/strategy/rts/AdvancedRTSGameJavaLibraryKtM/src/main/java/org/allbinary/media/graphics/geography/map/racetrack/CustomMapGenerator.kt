@@ -79,13 +79,11 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
                         for (index in mapArray!!.size -1 downTo 0)
 
-
         {
 
 
 
                         for (index2 in startIndex2 downTo 0)
-
 
         {this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray[index]!![index2]!!)
 }

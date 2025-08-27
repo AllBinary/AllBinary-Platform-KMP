@@ -153,7 +153,6 @@ public constructor        (map: Map)
 
                         for (index in 0 until size)
 
-
         {
     var key: String = keyArray[index]!! as String
 

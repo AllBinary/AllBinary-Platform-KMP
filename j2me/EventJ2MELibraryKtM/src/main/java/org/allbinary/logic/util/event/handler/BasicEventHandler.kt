@@ -73,7 +73,6 @@ override fun addListeners(vector: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {eventListenerInterface= vector.get(index) as EventListenerInterface
 this.addListener(eventListenerInterface)
 }
@@ -97,7 +96,6 @@ open fun removeListeners(vector: BasicArrayList)
 
 
                         for (index in 0 until size)
-
 
         {eventListenerInterface= vector.get(index) as EventListenerInterface
 this.removeListener(eventListenerInterface)
@@ -166,12 +164,10 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
     var eventListenerInterface: EventListenerInterface
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
-
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
@@ -180,6 +176,7 @@ this.process(eventObject, eventListenerInterface)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, eventStrings!!.FIRE_EVENT, e)
 }
 
+index++
 }
 
 }
@@ -219,12 +216,10 @@ stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
     var eventListenerInterface: EventListenerInterface
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
-
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
@@ -234,6 +229,7 @@ stringBuffer!!.append(eventListenerInterface!!.toString())
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 
+index++
 }
 
 

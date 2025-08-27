@@ -189,7 +189,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
                         for (i in 0 until size)
 
-
         {
     var sqlConnection: Connection = connectionVector!!.get(i) as Connection
 

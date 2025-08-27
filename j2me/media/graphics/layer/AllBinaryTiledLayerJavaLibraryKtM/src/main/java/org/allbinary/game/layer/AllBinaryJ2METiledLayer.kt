@@ -126,14 +126,12 @@ graphics.setColor(debugColor)
 
                         for (rowIndex in firstRow until totalRows)
 
-
         {x= x0
 
 
 
 
                         for (columnIndex in firstColumn until totalColumns)
-
 
         {tile= this.tiledLayer!!.getCell(columnIndex, rowIndex)
 

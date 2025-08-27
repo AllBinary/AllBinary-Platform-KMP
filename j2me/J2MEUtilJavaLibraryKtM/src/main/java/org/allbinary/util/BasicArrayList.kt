@@ -187,7 +187,6 @@ open fun remove(anyType: Any)
 
                         for (index in 0 until currentIndex)
 
-
         {
     
                         if(objectArray[index] == 
@@ -224,7 +223,6 @@ objectArray[--currentIndex]=
 
 
                         for (index in 0 until currentIndex)
-
 
         {
     
@@ -279,7 +277,6 @@ open fun removeAll2(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(this.remove(list.get(index)))
@@ -317,7 +314,6 @@ ensureCapacity(currentIndex +list.currentIndex)
 
 
                         for (index in 0 until listSize)
-
 
         {objectArray[currentIndex++]= list.objectArray[index]!!
 }
@@ -425,7 +421,6 @@ open fun indexOf(anyType: Any)
 
                         for (i in 0 until currentIndex)
 
-
         {
     
                         if(objectArray[i] == 
@@ -447,7 +442,6 @@ open fun indexOf(anyType: Any)
 
 
                         for (i in 0 until currentIndex)
-
 
         {
     
@@ -488,7 +482,6 @@ open fun lastIndexOf(anyType: Any)
 
                         for (i in currentIndex -1 downTo 0)
 
-
         {
     
                         if(objectArray[i] == 
@@ -510,7 +503,6 @@ open fun lastIndexOf(anyType: Any)
 
 
                         for (i in currentIndex -1 downTo 0)
-
 
         {
     
@@ -612,7 +604,6 @@ open fun clear()
 
                         for (i in 0 until currentIndex)
 
-
         {objectArray[i]= 
                                         null
                                     
@@ -709,7 +700,6 @@ override fun clone()
 
                         for (index in 0 until size)
 
-
         {anyType= this.objectArray[index]!!
 list.add(anyType)
 }
@@ -734,7 +724,6 @@ override fun toString()
 
 
                         for (index in 0 until currentIndex)
-
 
         {stringBuffer!!.append(objectArray[index]!!.toString())
 stringBuffer!!.append(COMMA_SEP)

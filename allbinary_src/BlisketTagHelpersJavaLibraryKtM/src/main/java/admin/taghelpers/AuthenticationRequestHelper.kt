@@ -431,7 +431,6 @@ open fun isRoleValid(userName: String, password: String, roles: Vector)
 
                         for (index in 0 until size)
 
-
         {
     var nextRole: BasicUserRole = basicUserRoleArray[index]!! as BasicUserRole
 

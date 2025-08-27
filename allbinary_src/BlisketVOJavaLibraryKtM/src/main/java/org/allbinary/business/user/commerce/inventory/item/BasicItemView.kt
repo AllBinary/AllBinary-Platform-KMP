@@ -107,7 +107,6 @@ hashMap!!.put(BasicItemData.IMAGE, EMPTY_STRING)
 
                         for (index in 0 until size2)
 
-
         {
     var name: String = nameArray[index]!! as String
 
@@ -130,7 +129,6 @@ node.appendChild(totalNode)
 
 
                         for (index in 0 until size)
-
 
         {
     var domNodeInterface: DomNodeInterface = this.vector.get(index) as DomNodeInterface

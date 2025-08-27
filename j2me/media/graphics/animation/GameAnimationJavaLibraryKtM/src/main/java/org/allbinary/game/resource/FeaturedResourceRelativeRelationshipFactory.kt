@@ -76,7 +76,6 @@ open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
 
                         for (index in 0 until size)
 
-
         {
     var featureInterface: ResourceRelativeRelationshipFactoryInterface = featureReleaseList!!.objectArray[index]!! as ResourceRelativeRelationshipFactoryInterface
 
@@ -130,11 +129,13 @@ open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
     var newList: BasicArrayList = BasicArrayList()
 
 
+    var size: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
     var relativeRelationship: RelativeRelationship = list.objectArray[index]!! as RelativeRelationship

@@ -94,7 +94,6 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 
                         for (index in 0 until size)
 
-
         {
     var nextTransformInfoInterface: TransformInfo = allCustomizedViews!!.get(index) as TransformInfo
 
@@ -145,7 +144,6 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 
 
                         for (index in 0 until size)
-
 
         {
     var nextTransformInfoInterface: TransformInfo = allViewsToBeModifiedVector!!.get(index) as TransformInfo

@@ -154,7 +154,6 @@ PreLogUtil.put("Image Total: " +size, this, "waitForAll")
 
                         for (index in 0 until size)
 
-
         {this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }
 

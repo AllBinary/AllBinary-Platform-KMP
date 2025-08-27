@@ -253,7 +253,6 @@ open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<Basic
 
                         for (index in size +startIndex  - 1  downTo startIndex)
 
-
         {geographicMapInterface= geographicMapInterfaceArray[index]!!
 tiledLayerArray[count++]= geographicMapInterface!!.getAllBinaryTiledLayer()
 }
@@ -290,7 +289,6 @@ open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, dx: Int, 
 
                         for (index in size  - 1  downTo 0)
 
-
         {geographicMapInterface= geographicMapInterfaceArray[index]!!
 geographicMapInterface!!.getAllBinaryTiledLayer()!!.move(dx, dy)
 }
@@ -321,7 +319,6 @@ open fun setPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, x:
 
 
                         for (index in size  - 1  downTo 0)
-
 
         {geographicMapInterface= geographicMapInterfaceArray[index]!!
 geographicMapInterface!!.getAllBinaryTiledLayer()!!.setPosition(x, y, geographicMapInterface!!.getAllBinaryTiledLayer()!!.getZP())

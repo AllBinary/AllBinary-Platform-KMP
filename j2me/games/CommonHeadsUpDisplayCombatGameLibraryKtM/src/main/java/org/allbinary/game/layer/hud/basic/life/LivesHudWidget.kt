@@ -93,7 +93,6 @@ open fun update()
 
                         for (index in 0 until maxLives)
 
-
         {this.xArray[index]= this.getX() +(index *16)
 }
 
@@ -120,8 +119,7 @@ override fun paint(graphics: Graphics)
 
 
 
-                        for (index in this.getLifeInterface()!!.get()!!  - 1  downTo 0)
-
+                        for (index in this.getLifeInterface()!!.get().toInt()  - 1  downTo 0)
 
         {this.animationInterface!!.paint(graphics, xArray[index]!!, this.getY())
 }

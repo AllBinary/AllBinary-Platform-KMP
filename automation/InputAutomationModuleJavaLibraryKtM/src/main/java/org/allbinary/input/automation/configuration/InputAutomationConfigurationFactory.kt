@@ -99,7 +99,6 @@ logUtil!!.put("isInstalled: " +inputAutomationConfiguration!!.isInstalled(), INP
 
                         for (index in 0 until size)
 
-
         {inputAutomationModuleConfiguration= inputAutomationModuleConfigurationList!!.get(index)
 inputAutomationModuleConfiguration!!.init(abeClientInformation)
 }

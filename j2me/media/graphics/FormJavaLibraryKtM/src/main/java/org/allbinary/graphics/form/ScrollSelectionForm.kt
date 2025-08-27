@@ -193,7 +193,6 @@ open fun getItemIndex(item: CustomItem)
 
                         for (index in 0 until size)
 
-
         {
     var nextItem: CustomItemInterface = this.get(index) as CustomItemInterface
 
@@ -278,7 +277,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
 
                         for (index in start until size)
-
 
         {item= this.get(index) as CustomItemInterface
 width= item.getMinimumWidth()

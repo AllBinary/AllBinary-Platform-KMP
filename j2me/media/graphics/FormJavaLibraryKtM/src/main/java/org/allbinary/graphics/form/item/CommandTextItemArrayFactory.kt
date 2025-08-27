@@ -97,7 +97,6 @@ list.clear()
 
                         for (index in 0 until size)
 
-
         {command= vector.elementAt(index) as Command
 
     
@@ -134,7 +133,6 @@ list.add(textItem)
 
 
                         for (index in 0 until size2)
-
 
         {textItemArray[index]= list.objectArray[index]!! as CustomItem
 }

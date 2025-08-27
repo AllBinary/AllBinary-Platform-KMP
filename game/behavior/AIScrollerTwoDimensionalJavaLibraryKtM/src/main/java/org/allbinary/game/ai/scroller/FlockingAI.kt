@@ -92,7 +92,6 @@ this.allowedDistance= allowedDistance!!.toInt()
 
                         for (index in 0 until size)
 
-
         {
     var allBinaryLayer: AllBinaryLayer = list.get(index) as AllBinaryLayer
 

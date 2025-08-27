@@ -89,7 +89,6 @@ open fun getShippingInterface(name: String)
 
                         for (index in 0 until size)
 
-
         {shipping= shippingVector!!.get(index) as ShippingInterface
 
     

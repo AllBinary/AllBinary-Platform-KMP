@@ -130,7 +130,6 @@ open fun toXmlDoc()
 
                         for (index in 0 until size)
 
-
         {
     var domNodeInterface: DomNodeInterface = domNodeInterfaceVector!!.get(index) as DomNodeInterface
 

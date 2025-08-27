@@ -152,7 +152,6 @@ timeHelper!!.setStartTime()
 
                         for (index in 0 until size)
 
-
         {
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String
 

@@ -55,7 +55,6 @@ open fun valueOf(anyType: Array<Any?>)
 
                         for (index in 0 until anyType!!.size)
 
-
         {
     var imageType: InputImageType = InputImageType.getInstance(anyType[index]!! as String)!!
 
@@ -90,7 +89,6 @@ public constructor        (node: Node)
 
 
                         for (index in 0 until nodeList!!.getLength()!!)
-
 
         {
     var childNode: Node = nodeList!!.item(index)!!
@@ -149,7 +147,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var imageType: InputImageType = vector.get(index) as InputImageType
 
@@ -177,7 +174,6 @@ stringBuffer!!.append("ImageTypes: ")
 
 
                         for (index in 0 until size)
-
 
         {
     var imageType: InputImageType = vector.get(index) as InputImageType

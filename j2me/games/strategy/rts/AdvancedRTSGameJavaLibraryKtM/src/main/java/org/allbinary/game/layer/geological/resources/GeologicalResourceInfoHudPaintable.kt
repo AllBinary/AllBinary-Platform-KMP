@@ -60,7 +60,6 @@ open fun updateSelectionInfo()
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-
         {
     var geographicMapCellPosition: GeologicalGeographicMapCellPosition = list.get(index) as GeologicalGeographicMapCellPosition
 

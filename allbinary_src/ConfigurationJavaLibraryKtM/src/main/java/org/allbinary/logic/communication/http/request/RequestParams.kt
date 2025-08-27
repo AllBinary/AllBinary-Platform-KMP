@@ -123,7 +123,6 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
-
         {
     var key: String = keyArray[i]!! as String
 
@@ -181,7 +180,6 @@ open fun toHashMap()
 
 
                         for (i in 0 until size)
-
 
         {
     var key: String = keyArray[i]!! as String

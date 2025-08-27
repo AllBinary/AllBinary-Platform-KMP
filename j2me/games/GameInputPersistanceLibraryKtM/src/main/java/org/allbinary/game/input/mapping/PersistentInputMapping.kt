@@ -187,7 +187,6 @@ inputPersistance!!.loadAll(abeClientInformation)
 
                         for (index in 0 until size)
 
-
         {
     var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
 

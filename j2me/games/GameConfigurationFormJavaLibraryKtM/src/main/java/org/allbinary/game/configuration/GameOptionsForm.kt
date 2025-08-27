@@ -146,7 +146,6 @@ open fun addTextFields()
 
                         for (index in 0 until size)
 
-
         {
     var gameConfigurationTextInput: GameConfigurationTextInput = hashtable.get(objectArray[index]!! as Object) as GameConfigurationTextInput
 
@@ -181,7 +180,6 @@ open fun addConfiguration()
 
 
                         for (index in 0 until size)
-
 
         {
     var gameConfiguration: GameConfiguration = list.objectArray[index]!! as GameConfiguration
@@ -221,11 +219,13 @@ open fun save(abeClientInformation: AbeClientInformationInterface)
 
                     var abeClientInformation = abeClientInformation
 
+    var size: Int = this.size()!!
 
 
 
-                        for (index in 0 until this.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
     var item: Item = this.get(index)!!
@@ -268,11 +268,13 @@ keyValuePersistance!!.loadAll(abeClientInformation)
 
 keyValuePersistance!!.save(abeClientInformation, hashtable)
 
+    var size2: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size2)
 
         {
     var integer: Integer = list.objectArray[index]!! as Integer

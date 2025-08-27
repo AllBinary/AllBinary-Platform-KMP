@@ -79,7 +79,6 @@ open fun getLevelString(level: Int)
 
                         for (index in 0 until RESOURCE_LOADING_LEVEL_ARRAY.size)
 
-
         {
     
                         if(level == RESOURCE_LOADING_LEVEL_ARRAY[index]!!.getLevel())

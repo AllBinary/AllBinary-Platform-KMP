@@ -116,7 +116,6 @@ this.shippingVector= Vector()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var node: Node = nodeList!!.item(index)!!
 

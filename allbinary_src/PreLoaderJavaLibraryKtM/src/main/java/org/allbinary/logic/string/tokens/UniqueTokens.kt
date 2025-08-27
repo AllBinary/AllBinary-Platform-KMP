@@ -105,7 +105,6 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
 
                         for (forIndex in 0 until keywordVector!!.size()!!)
 
-
         {
     var cleanString: String = keywordVector!!.get(forIndex) as String
 
@@ -132,7 +131,6 @@ hashSet!!.add(cleanString)
 
 
                         for (spaceIndex in 0 until subKeywordVector!!.size()!!)
-
 
         {
     var subCleanString: String = subKeywordVector!!.get(spaceIndex) as String
@@ -205,7 +203,6 @@ open fun isSpecialCharacter(subCleaningString: String)
 
 
                         for (index in 0 until specialCharacters!!.size!!)
-
 
         {
     

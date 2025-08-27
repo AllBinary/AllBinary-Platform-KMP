@@ -660,7 +660,6 @@ scrollSelectionForm!!.deleteAll()
 
                         for (index in 0 until size)
 
-
         {scrollSelectionForm!!.append(items[index]!!)
 }
 
@@ -1411,7 +1410,6 @@ open fun removeAllGameKeyInputListeners2()
 
                         for (index in this.localPlayerGameInputList!!.size() -1 downTo 0)
 
-
         {
     var playerGameInput: PlayerGameInput = this.localPlayerGameInputList!!.get(index) as PlayerGameInput
 
@@ -1629,7 +1627,6 @@ open fun buildGame2()
 
 
                         for (index in this.localPlayerGameInputList!!.size() -1 downTo 0)
-
 
         {playerGameInput= this.localPlayerGameInputList!!.get(index) as PlayerGameInput
 PreLogUtil.put(StringMaker().
@@ -2539,7 +2536,6 @@ open fun clearPlayerGameInputList()
 
 
                         for (index in this.localPlayerGameInputList!!.size() -1 downTo 0)
-
 
         {playerGameInput= this.localPlayerGameInputList!!.get(index) as PlayerGameInput
 this.gameKeyEventHandler!!.removeListener(playerGameInput)

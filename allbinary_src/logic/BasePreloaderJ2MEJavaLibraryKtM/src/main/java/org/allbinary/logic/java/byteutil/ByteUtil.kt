@@ -206,7 +206,6 @@ open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(newByteArray[index] != oldByteArray[index])
@@ -274,7 +273,6 @@ stats[1]= 0
 
 
                         for (index in 0 until size)
-
 
         {
     

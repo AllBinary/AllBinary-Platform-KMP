@@ -108,7 +108,6 @@ tokenizer.getTokens(string, list)
 
                         for (i in 0 until size)
 
-
         {word= list.get(i) as String
 word= if(stringValidationUtil!!.isEmpty(word)) {
                             

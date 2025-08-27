@@ -53,7 +53,6 @@ open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
 
                         for (index in 0 until numberOfNodes)
 
-
         {
     var node: Node = nodeList!!.item(index)!!
 
@@ -198,7 +197,6 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
 
 
                         for (index in 0 until numberOfNodes)
-
 
         {
     var node: Node = nodeList!!.item(index)!!

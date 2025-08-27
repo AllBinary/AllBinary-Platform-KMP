@@ -246,7 +246,6 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
                         for (index in 0 until size)
 
-
         {
     var addressHashMap: HashMap<Any, Any> = addressList!!.get(index) as HashMap<Any, Any>
 

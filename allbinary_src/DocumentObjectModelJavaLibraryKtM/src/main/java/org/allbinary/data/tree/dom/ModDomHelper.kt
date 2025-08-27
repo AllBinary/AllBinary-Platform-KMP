@@ -262,7 +262,6 @@ open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<A
 
                         for (i in 0 until size)
 
-
         {
     var objectKey: Any = keyArray[i]!!
 
@@ -356,7 +355,6 @@ open fun createNameValueNodes(document: Document, rootNodeName: String, duplicat
 
                         for (i in 0 until size)
 
-
         {
     var value: String = stringUtil!!.getInstance(valueVector!!.get(i) as String)!!
 
@@ -401,7 +399,6 @@ open fun createNameValueIndexNodes(document: Document, rootNodeName: String, dup
 
 
                         for (index in 0 until size)
-
 
         {
     var value: String = stringUtil!!.getInstance(valueVector!!.get(index) as String)!!
@@ -472,7 +469,6 @@ open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashM
 
 
                         for (i in 0 until size)
-
 
         {
     var name: String = keyArray[i]!! as String

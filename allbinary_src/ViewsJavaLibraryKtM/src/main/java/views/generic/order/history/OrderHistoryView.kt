@@ -102,7 +102,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var orderHistory: OrderHistory = orderReviewVector!!.get(index) as OrderHistory
 

@@ -74,7 +74,6 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
-
         {
     var themeValidation: ThemeValidation = themeArray[i]!! as ThemeValidation
 

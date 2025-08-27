@@ -310,7 +310,6 @@ override fun update(event: LineEvent)
 
                         for (index in 0 until size)
 
-
         {
     var listener: PlayerListener = this.listenersList!!.get(size) as PlayerListener
 

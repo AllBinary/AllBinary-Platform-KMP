@@ -167,7 +167,6 @@ override fun removeAllCommands()
 
                         for (index in 0 until size)
 
-
         {super.removeCommand(commandStack!!.pop() as Command)
 }
 

@@ -25,16 +25,15 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.File
+import java.io.FileReader
+import java.io.LineNumberReader
 import org.allbinary.logic.string.StringMaker
 import org.allbinary.business.init.LicenseInitInfo
 import org.allbinary.business.init.LicenseInitInfoUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.system.security.licensing.client.XmlRpcAbeLicenseRetrievalClient
 import org.allbinary.globals.PATH_GLOBALS
-import java.io.File
-import java.io.FileReader
-import java.io.LineNumberReader
-import org.allbinary.logic.communication.log.LogFactory
 import org.allbinary.util.BasicArrayList
 
 open public class LicenseClientAndServerTest
@@ -56,7 +55,10 @@ open fun main(args: Array<String?>)
 
 licensingTest!!.test()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
+            {
+    var logUtil: LogUtil = LogUtil.getInstance()!!
+
+logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
 }
 
 }
@@ -78,7 +80,6 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
 
                         for (index in 1 until options.size)
-
 
         {vector.add(options[index]!!)
 }
@@ -152,11 +153,13 @@ open fun test()
     var RESULT: String = "Test Result: "
 
 
+    var size: Int = vector.size()!!
 
 
 
-                        for (index in 0 until vector.size()!!)
 
+
+                        for (index in 0 until size)
 
         {stringBuffer!!.append(TESTING)
 

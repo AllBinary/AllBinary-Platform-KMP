@@ -139,7 +139,6 @@ open fun reverse(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {secondSwapIndex= lastMinusOneIndex -index
 temp= list.remove(index)
 list.add(index, list.remove(secondSwapIndex))
@@ -167,7 +166,6 @@ stringBuffer!!.append(size)
 
 
                         for (index in size -1 downTo 0)
-
 
         {
     var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList

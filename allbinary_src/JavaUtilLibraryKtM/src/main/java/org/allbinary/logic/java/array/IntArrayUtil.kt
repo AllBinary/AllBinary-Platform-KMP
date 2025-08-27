@@ -48,7 +48,6 @@ open fun toString(array: IntArray)
 
                         for (index in 0 until array.size)
 
-
         {stringBuffer!!.append(array[index]!!)
 
     
@@ -83,14 +82,12 @@ open fun toString(array: Array<IntArray?>)
 
                         for (index in 0 until array.size)
 
-
         {stringBuffer!!.append("{")
 
 
 
 
                         for (index2 in 0 until array[index]!!.length)
-
 
         {stringBuffer!!.append(array[index]!![index2]!!)
 
@@ -138,7 +135,6 @@ open fun toString(array: Array<Array<IntArray?>?>)
 
                         for (index in 0 until array.size)
 
-
         {stringBuffer!!.append("{")
 
 
@@ -146,14 +142,12 @@ open fun toString(array: Array<Array<IntArray?>?>)
 
                         for (index2 in 0 until array[index]!!.length)
 
-
         {stringBuffer!!.append("{")
 
 
 
 
                         for (index3 in 0 until array[index]!![index2]!!.length)
-
 
         {stringBuffer!!.append(array[index]!![index2]!![index3]!!)
 

@@ -81,7 +81,6 @@ imageArray[0]= image
 
                         for (index in 1 until totalFrames)
 
-
         {imageArray[index]= imageRotationUtil!!.createRotatedImage(image, index *angleIncrement)
 }
 

@@ -96,7 +96,6 @@ open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
 
                         for (frame in 0 until size)
 
-
         {nextPoints= points[frame]!!
 size2= nextPoints!!.size
 pointBasicArrayList= BasicArrayList(size2)
@@ -105,7 +104,6 @@ pointBasicArrayList= BasicArrayList(size2)
 
 
                         for (index in 0 until size2)
-
 
         {pointBasicArrayList!!.add(pointFactory!!.getInstance(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
 }
@@ -118,7 +116,6 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
 
 
                         for (index in 0 until points.size)
-
 
         {pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))
 }

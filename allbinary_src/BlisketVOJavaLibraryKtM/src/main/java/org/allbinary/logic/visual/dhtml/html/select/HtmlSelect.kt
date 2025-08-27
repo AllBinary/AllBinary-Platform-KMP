@@ -167,7 +167,6 @@ open fun getOptions()
 
                         for (i in 0 until optionsSize)
 
-
         {
     var value: String = optionsArray[i]!! as String
 
@@ -222,7 +221,6 @@ result += "\" "
 
 
                         for (i in 0 until attributeSize)
-
 
         {
     var key: String = attributeKeys[i]!! as String

@@ -81,13 +81,11 @@ open fun init()
 
                         for (index in MAX_SOURCES  - 1  downTo 0)
 
-
         {
 
 
 
                         for (index2 in size  - 1  downTo 0)
-
 
         {ARRAY[index]!![index2]= GameKeyEvent(nullUtil!!.NULL_OBJECT, index, index2)
 }

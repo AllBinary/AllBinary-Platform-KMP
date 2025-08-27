@@ -130,7 +130,6 @@ basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
 
                         for (index in this.stringArray!!.size -1 downTo 0)
 
-
         {
     
                         if(hasChanged)
@@ -164,7 +163,6 @@ this.stringArray[0]= StringMaker().
 
 
                         for (index in this.stringArray!!.size -1 downTo 1)
-
 
         {this.stringArray[index]= this.EMPTY_STRING
 }

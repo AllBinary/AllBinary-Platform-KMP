@@ -131,7 +131,6 @@ styleNode!!.appendChild(ColorsView().
 
                         for (i in 0 until size)
 
-
         {
     var styleDomNodeInterface: DomNodeInterface = cssStyleElementVector!!.get(i) as DomNodeInterface
 

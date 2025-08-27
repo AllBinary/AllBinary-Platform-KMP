@@ -105,7 +105,6 @@ open fun fireEvent(eventObject: Integer)
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
-
         {
         try {
             
@@ -119,22 +118,22 @@ playerGameInput!!.onDownKeyEvent(eventObject)
 }
 
 
+    var index: Int = 0
 
 
+    var eventListenerInterface: EventListenerInterface
 
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
 
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
-            
-    var eventListenerInterface: EventListenerInterface = this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
-
+            eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
+index++
 }
 
 }
@@ -148,11 +147,13 @@ open fun fireEvent(eventObject: GameKeyEvent)
 
                     var eventObject = eventObject
 
+    var size: Int = this.list.size()!!
 
 
 
-                        for (index in this.list.size()!!  - 1  downTo 0)
 
+
+                        for (index in size  - 1  downTo 0)
 
         {
         try {
@@ -167,22 +168,22 @@ playerGameInput!!.onDownKeyEvent(eventObject)
 }
 
 
+    var index: Int = 0
 
 
+    var eventListenerInterface: EventListenerInterface
 
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
 
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
-            
-    var eventListenerInterface: EventListenerInterface = this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
-
+            eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as EventListenerInterface
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
+index++
 }
 
 }
@@ -237,7 +238,6 @@ stringBuffer!!.append(this.list.size())
 
 
                         for (index in 0 until this.list.size()!!)
-
 
         {
         try {

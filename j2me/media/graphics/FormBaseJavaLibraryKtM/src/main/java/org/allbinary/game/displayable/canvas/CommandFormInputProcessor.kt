@@ -217,7 +217,6 @@ logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
 
                         for (index in 0 until size)
 
-
         {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 key= gameKeyEvent!!.getKey()
 

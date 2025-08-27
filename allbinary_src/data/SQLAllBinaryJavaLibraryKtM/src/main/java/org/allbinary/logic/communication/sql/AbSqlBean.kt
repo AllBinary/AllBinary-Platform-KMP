@@ -178,7 +178,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (i in 0 until size)
 
-
         {key= keyArray[i]!! as String
 value= .toCharArray()
 stringBuffer!!.append(key)
@@ -286,7 +285,6 @@ stringBuffer!!.append(key)
 
                         for (i in 0 until size)
 
-
         {stringBuffer!!.append(this.commonSeps!!.SPACE)
 stringBuffer!!.append(keyArray[i]!!.toString())
 }
@@ -324,7 +322,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
                         for (i in 0 until size2)
-
 
         {columnName= keyArray2[i]!!.toString()
 field= rset.getObject(columnName)!!.toString()

@@ -219,7 +219,6 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(this.getValue())
 
                         for (index in 0 until size)
 
-
         {pathStringBuffer!!.append(list.get(index) as String)
 }
 

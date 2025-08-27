@@ -132,7 +132,6 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
 
                         for (index in 0 until size)
 
-
         {
     var subStore: String = subStoreVector!!.get(index) as String
 
@@ -433,7 +432,6 @@ savedPagesInRange++
 
                         for (index in startPage until endPage)
 
-
         {
     
                         if(index <= lastPage)
@@ -451,7 +449,6 @@ inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocume
 
 
                         for (pageIndex in 0 until lastPage)
-
 
         {stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(searchRequest!!.getFileBaseName())

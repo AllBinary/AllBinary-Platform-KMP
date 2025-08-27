@@ -65,7 +65,6 @@ this.totalInventorySaleValueMoney= Money()
 
                         for (index in 0 until size)
 
-
         {
     var itemInterface: ItemInterface = itemVector!!.get(index) as ItemInterface
 

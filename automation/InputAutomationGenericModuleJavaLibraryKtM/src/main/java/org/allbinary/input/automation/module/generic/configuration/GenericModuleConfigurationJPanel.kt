@@ -441,7 +441,6 @@ this.captureMotionAnalysisJCheckBox!!.setSelected(false)
 
                         for (index in 0 until size)
 
-
         {
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
@@ -592,7 +591,6 @@ open fun deleteProfileJButtonActionPerformed(evt: java.awt.event.ActionEvent)
 
 
                         for (index in 0 until anyType!!.size)
-
 
         {
     var nextSelectedValueString: String = anyType[index]!! as String

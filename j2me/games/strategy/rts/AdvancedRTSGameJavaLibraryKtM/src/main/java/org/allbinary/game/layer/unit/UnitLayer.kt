@@ -740,13 +740,11 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 
                         for (index in lastColumn -1 downTo firstColumn)
 
-
         {
 
 
 
                         for (index2 in lastRow -1 downTo firstRow)
-
 
         {
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(index, index2)!!
@@ -856,7 +854,6 @@ this.rtsLogHelper!!.setClosestGeographicMapCellHistory(this, pathsList)
 
 
                         for (index in pathsList!!.size() -1 downTo 0)
-
 
         {
     var geographicMapCellPositionBasicArrayList: BasicArrayList = pathsList!!.get(index) as BasicArrayList
@@ -1206,7 +1203,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
 
                         for (index in 0 until size)
-
 
         {
     var anyType: Any = list.get(index)!!
@@ -1633,7 +1629,6 @@ open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {
     var steeringVisitor: SteeringVisitor = list.get(index) as SteeringVisitor

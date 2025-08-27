@@ -47,7 +47,6 @@ open fun isBlank(string: String)
 
                         for (i in 0 until len)
 
-
         {
     var c: Char = string[i]!!
 

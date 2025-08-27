@@ -106,7 +106,6 @@ open fun fixStart(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>,
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-
         {
     var startPathFindingNode: PathFindingNode = startPathFindingNodeList!!.get(index) as PathFindingNode
 
@@ -160,7 +159,6 @@ open fun fixEnd(graph: SimpleWeightedGraph<CellPosition, DefaultWeightedEdge>, e
 
 
                         for (index in endPathFindingNodeList!!.size() -1 downTo 0)
-
 
         {
     var endPathFindingNode: PathFindingNode = endPathFindingNodeList!!.get(index) as PathFindingNode
@@ -217,7 +215,6 @@ open fun fixOverPassEdges(graph: SimpleWeightedGraph<CellPosition, DefaultWeight
 
                         for (index in CellPositionArray.size -1 downTo 0)
 
-
         {
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!
 
@@ -259,7 +256,6 @@ open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
 
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
-
 
         {
     var endPathFindingNode: PathFindingNode = endPathFindingNodeList!!.get(index) as PathFindingNode
@@ -312,7 +308,6 @@ open fun removeOverPassEdges(pathList: BasicArrayList)
 
 
                         for (index in CellPositionArray.size -1 downTo 0)
-
 
         {
     var overPassGeographicMapCellPosition: CellPosition = CellPositionArray[index]!!

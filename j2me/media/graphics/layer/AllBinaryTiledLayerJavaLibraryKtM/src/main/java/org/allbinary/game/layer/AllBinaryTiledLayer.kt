@@ -119,13 +119,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setCells")
 
                         for (col in 0 until columns)
 
-
         {
 
 
 
                         for (row in 0 until rows)
-
 
         {this.setCell(col, row, mapTwoDArray[row]!![col]!!)
 }
@@ -158,13 +156,11 @@ open fun updateCells(mapTwoDArray: Array<IntArray?>, fromTileId: Int, toTileId: 
 
                         for (col in 0 until columns)
 
-
         {
 
 
 
                         for (row in 0 until rows)
-
 
         {
     

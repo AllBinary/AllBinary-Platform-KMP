@@ -103,7 +103,6 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
 
                         for (index in 0 until size)
 
-
         {
     var gameFeature: Feature = list.objectArray[index]!! as Feature
 
@@ -161,7 +160,6 @@ open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, optio
 
                         for (index in 0 until size)
 
-
         {
     var name: String = objectArray[index]!! as String
 
@@ -181,11 +179,13 @@ open fun setDefault(form: CommandForm)
 
                     var form = form
 
+    var size: Int = form.size()!!
 
 
 
-                        for (index in 0 until form.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
     var item: Item = form.get(index)!!

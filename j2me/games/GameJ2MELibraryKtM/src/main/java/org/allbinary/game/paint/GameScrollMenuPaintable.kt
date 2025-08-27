@@ -98,7 +98,6 @@ scrollSelectionForm!!.setButtonBasicColor(basicColor)
 
                         for (index in scrollSelectionForm!!.size() -1 downTo 0)
 
-
         {
     var item: TextItem = scrollSelectionForm!!.get(index) as TextItem
 

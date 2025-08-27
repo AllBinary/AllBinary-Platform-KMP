@@ -141,7 +141,6 @@ open fun initAll(imageCache: ImageCache, loadingString: String)
 
                         for (onDemandIndex in onDemandResourcesFactory!!.size()!!  - 1  downTo 0)
 
-
         {onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
 
     
@@ -195,7 +194,6 @@ PreLogUtil.put(StringMaker().
 
 
                         for (onDemandIndex in onDemandArray!!.size  - 1  downTo 0)
-
 
         {onDemandResources= onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
 

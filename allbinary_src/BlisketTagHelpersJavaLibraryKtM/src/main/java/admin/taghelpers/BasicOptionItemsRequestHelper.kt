@@ -158,11 +158,13 @@ open fun insert()
 
 values.add(id)
 
+    var size: Int = this.optionValue!!.size!!
 
 
 
-                        for (index in 0 until this.optionValue!!.size!!)
 
+
+                        for (index in 0 until size)
 
         {values.add(this.optionValue!!.get(index))
 values.add(this.optionItem!!.get(index))

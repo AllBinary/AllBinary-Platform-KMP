@@ -812,7 +812,6 @@ open fun processTargetList()
 
                         for (index in this.getPossibleTargetList()!!.size() -1 downTo 0)
 
-
         {
     var layerInterface: AdvancedRTSGameLayer = this.getPossibleTargetList()!!.get(index) as AdvancedRTSGameLayer
 
@@ -1073,7 +1072,6 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {
     var layerInterface: AdvancedRTSGameLayer = list.get(index) as AdvancedRTSGameLayer

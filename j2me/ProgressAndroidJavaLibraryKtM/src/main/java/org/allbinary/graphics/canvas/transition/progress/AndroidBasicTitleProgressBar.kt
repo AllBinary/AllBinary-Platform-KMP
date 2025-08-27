@@ -521,7 +521,6 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(this.IMAGE[index] != 
@@ -560,7 +559,6 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
 
                         for (index in 0 until size)
-
 
         {
     

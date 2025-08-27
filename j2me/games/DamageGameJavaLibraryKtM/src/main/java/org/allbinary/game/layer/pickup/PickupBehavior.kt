@@ -209,7 +209,6 @@ open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: A
 
                         for (index in this.countedIndex until size)
 
-
         {nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
 countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()
 
@@ -217,7 +216,6 @@ countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCoun
 
 
                         for (index2 in pickedUpLayerTypeArray!!.size  - 1  downTo 0)
-
 
         {
     
@@ -280,7 +278,6 @@ open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
 
 
                         for (index in this.countedIndex until size)
-
 
         {nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
 

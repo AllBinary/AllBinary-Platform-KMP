@@ -77,7 +77,6 @@ this.init()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var actionItemNode: Node = nodeList!!.item(index)!!
 
@@ -136,7 +135,6 @@ open fun addProcessorNodes(node: Node)
 
 
                         for (index in 0 until nodeList!!.getLength()!!)
-
 
         {
     var processorActionItemNode: Node = nodeList!!.item(index)!!
@@ -326,7 +324,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = profileActionConditionInterfaceVector!!.get(index) as ProfileActionScriptConditionInterface
 
@@ -344,7 +341,6 @@ node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 
 
                         for (index in 0 until size2)
-
 
         {
     var profileActionProcessorInterface: ProfileActionScriptProcessorInterface = profileActionProcessorInterfaceVector!!.get(index) as ProfileActionScriptProcessorInterface
@@ -523,7 +519,6 @@ open fun shouldProcess(frame: Long)
 
                         for (index in 0 until size)
 
-
         {
     var profileActionScriptConditionInterface: ProfileActionScriptConditionInterface = profileActionConditionInterfaceVector!!.get(index) as ProfileActionScriptConditionInterface
 
@@ -570,7 +565,6 @@ logUtil!!.put(StringMaker().
 
 
                         for (index in 0 until size)
-
 
         {
     var profileActionScriptProcessorInterface: ProfileActionScriptProcessorInterface = profileActionProcessorInterfaceVector!!.get(index) as ProfileActionScriptProcessorInterface

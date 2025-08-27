@@ -121,7 +121,6 @@ open fun count(string: String, aChar: Char)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(string[index] == aChar)

@@ -88,7 +88,6 @@ open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLay
 
                         for (index in list.size() -1 downTo 0)
 
-
         {
     var waypointLayer: RTSLayer = list.get(index) as RTSLayer
 

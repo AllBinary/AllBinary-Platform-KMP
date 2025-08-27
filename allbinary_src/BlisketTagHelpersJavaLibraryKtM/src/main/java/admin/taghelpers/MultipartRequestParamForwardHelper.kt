@@ -145,7 +145,6 @@ open fun getParams()
 
                         for (index in 0 until size)
 
-
         {
     var key: String = this.paramVector!!.get(index) as String
 

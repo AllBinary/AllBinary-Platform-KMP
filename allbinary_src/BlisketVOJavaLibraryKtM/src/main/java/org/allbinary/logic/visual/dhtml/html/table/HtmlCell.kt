@@ -103,7 +103,6 @@ result += " "
 
                         for (i in 0 until attributeSize)
 
-
         {
     var key: String = attributeKeys[i]!! as String
 

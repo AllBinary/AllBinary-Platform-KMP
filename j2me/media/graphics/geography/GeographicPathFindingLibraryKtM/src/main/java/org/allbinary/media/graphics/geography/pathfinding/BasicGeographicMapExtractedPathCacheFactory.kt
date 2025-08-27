@@ -58,7 +58,6 @@ open fun init(maxConcurrentPaths: Int, maxPaths: Int)
 
                         for (index in maxConcurrentPaths downTo this.maxConcurrentPaths)
 
-
         {this.list.add(BasicArrayList(maxPaths))
 }
 

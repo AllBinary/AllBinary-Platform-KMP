@@ -228,7 +228,6 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (i in 0 until size)
 
-
         {
     var key: String = keyArray[i]!! as String
 
@@ -279,7 +278,6 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
                         for (index in 1 until columnCount)
-
 
         {
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
@@ -373,7 +371,6 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
                         for (i in 0 until size)
 
-
         {
     var columnName: String = columnArray[i]!!.toString()!!
 
@@ -465,7 +462,6 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
 
                         for (i in 0 until size -1)
-
 
         {
     var value: String = this.getValue(values.get(i) as String)!!

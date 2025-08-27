@@ -57,7 +57,6 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until method.size)
 
-
         {stringBuffer!!.append(method[index]!!.getReturnType()!!.getName())
 stringBuffer!!.append(" ")
 stringBuffer!!.append(method[index]!!.getName())

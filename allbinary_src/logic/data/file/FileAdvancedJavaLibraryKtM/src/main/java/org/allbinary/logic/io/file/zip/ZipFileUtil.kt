@@ -120,7 +120,6 @@ zipFile!!.createNewFile()
 
                         for (i in 0 until size)
 
-
         {
     var file: AbFile = fileBasicArrayList!!.get(i) as AbFile
 

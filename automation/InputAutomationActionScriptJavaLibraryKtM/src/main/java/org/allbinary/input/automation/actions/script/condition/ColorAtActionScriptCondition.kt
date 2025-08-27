@@ -91,7 +91,6 @@ this.point= Point(0, 0)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var childNode: Node = nodeList!!.item(index)!!
 

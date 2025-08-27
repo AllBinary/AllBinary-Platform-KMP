@@ -59,7 +59,6 @@ open fun getInstance()
 
                         for (index in 0 until size)
 
-
         {defaultComboBoxModel!!.addElement(nameArray[index]!! as String)
 }
 

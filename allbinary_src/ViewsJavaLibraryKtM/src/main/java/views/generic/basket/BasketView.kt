@@ -105,7 +105,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var product: String = .toCharArray()
 

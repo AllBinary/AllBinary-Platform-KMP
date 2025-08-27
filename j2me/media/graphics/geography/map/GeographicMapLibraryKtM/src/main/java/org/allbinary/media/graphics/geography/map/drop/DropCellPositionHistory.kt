@@ -86,7 +86,6 @@ open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
 
                         for (index in list.size() -1 downTo 0)
 
-
         {this.add(list.get(index) as CellPosition, layerInterface)
 }
 
@@ -171,7 +170,6 @@ open fun anyCellPositionWithDrop(list: BasicArrayList)
 
                         for (index in list.size() -1 downTo 0)
 
-
         {
     
                         if(this.isCellPositionWithDrop(list.get(index) as CellPosition))
@@ -205,7 +203,6 @@ open fun getCellPositionWithDrop(list: BasicArrayList)
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {
     var cellPosition: CellPosition = list.get(index) as CellPosition

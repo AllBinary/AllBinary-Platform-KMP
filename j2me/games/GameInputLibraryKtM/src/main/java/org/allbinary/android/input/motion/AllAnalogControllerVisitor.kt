@@ -57,7 +57,6 @@ open public class AllAnalogControllerVisitor : AnalogControllerVisitor {
 
                         for (index in analogLocationInputList!!.size() -1 downTo 0)
 
-
         {analogLocationInput= analogLocationInputList!!.get(index) as AnalogLocationInput
 analogLocationInputProcessor!!.process(allbinaryLayerManager, analogLocationInput)
 }

@@ -179,7 +179,6 @@ open fun upgrade()
 
                         for (index in this.getSelectedBasicArrayList()!!.size() -1 downTo 0)
 
-
         {
     var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
 
@@ -260,7 +259,6 @@ open fun downgrade()
 
 
                         for (index in this.getSelectedBasicArrayList()!!.size()!!  - 1  downTo 0)
-
 
         {
     var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
@@ -358,7 +356,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
 
                         for (index in 0 until size)
-
 
         {
     var gameKeyEvent: GameKeyEvent = list.get(index) as GameKeyEvent
@@ -529,7 +526,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selectAllPreselected")
 
                         for (index in this.preSelectedRTSLayersList!!.size() -1 downTo 0)
 
-
         {
     var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
 
@@ -553,7 +549,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "deselectAllPreselected")
 
                         for (index in this.preSelectedRTSLayersList!!.size() -1 downTo 0)
 
-
         {
     var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
 
@@ -571,7 +566,6 @@ open fun deselectAll()
 
 
                         for (index in this.getSelectedBasicArrayList()!!.size() -1 downTo 0)
-
 
         {
     var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer

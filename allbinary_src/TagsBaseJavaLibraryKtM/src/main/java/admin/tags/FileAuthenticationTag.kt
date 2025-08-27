@@ -575,7 +575,6 @@ open fun isAuthenticationSessionValid()
 
                         for (index in 0 until size)
 
-
         {
     var mustBeOfRole: BasicUserRole = roles.get(index) as BasicUserRole
 

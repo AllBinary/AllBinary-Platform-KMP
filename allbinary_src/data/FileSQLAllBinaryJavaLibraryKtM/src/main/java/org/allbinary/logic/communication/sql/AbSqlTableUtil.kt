@@ -395,7 +395,6 @@ stringBuffer!!.append(QUERY_START)
 
                         for (i in 1 until colNum)
 
-
         {
     var value: String = rset.getString(i)!!
 

@@ -176,11 +176,13 @@ gameConfigurationCentral!!.ATTACK_CHALLENGE_LEVEL.setValue(gameConfiguration!!.g
 gameConfigurationCentral!!.DURABILITY_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
 gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.getValue())
 
+    var size: Int = gameOptionsForm!!.size()!!
 
 
 
-                        for (index in 0 until gameOptionsForm!!.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
     var item: Item = gameOptionsForm!!.get(index)!!

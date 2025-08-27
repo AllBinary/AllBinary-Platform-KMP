@@ -86,7 +86,6 @@ open fun changeDirectionIfCliffReached()
 
                         for (index in 0 until size)
 
-
         {
     var terrainEvent: TerrainEvent = list.remove(index) as TerrainEvent
 

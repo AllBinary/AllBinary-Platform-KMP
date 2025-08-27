@@ -80,7 +80,6 @@ open fun visit(osgiServiceInterface: OSGIServiceInterface)
 
                         for (index in 0 until inputRobotInterfaceArray!!.size)
 
-
         {logUtil!!.put("Adding: " +inputRobotInterfaceArray[index]!!.getName(), this, "visit")
 InputRobotFactory.getInstance()!!.add(inputRobotInterfaceArray[index]!!)
 }

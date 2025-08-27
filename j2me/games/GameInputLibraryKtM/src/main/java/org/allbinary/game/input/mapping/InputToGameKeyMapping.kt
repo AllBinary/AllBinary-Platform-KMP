@@ -67,7 +67,6 @@ open fun clear()
 
                         for (index in platformToGameKeyMapping!!.size -1 downTo 0)
 
-
         {platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 }
 
@@ -89,7 +88,6 @@ override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 
 
                         for (index in inputToGameKeyMapping!!.getMaxMappable() -1 downTo 0)
-
 
         {
     var input: Input = inputToGameKeyMapping!!.getInstance(index)!!
@@ -121,7 +119,6 @@ open fun addAll(input: Input, list: BasicArrayList)
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {
     var mappedToInput: Input = list.objectArray[index]!! as Input
@@ -207,7 +204,6 @@ open fun getReverseInstance(id: Int)
 
 
                         for (index in 0 until platformToGameKeyMapping!!.size)
-
 
         {
     
@@ -308,7 +304,6 @@ open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
 
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
-
         {nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
 
     
@@ -364,7 +359,6 @@ negativePlatformToGameKeyMapping= arrayOfNulls( -smallestKey)
 
                         for (index in negativePlatformToGameKeyMapping!!.size  - 1  downTo 0)
 
-
         {negativePlatformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 }
 
@@ -377,7 +371,6 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
 
 
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
-
 
         {this.init(canvas, mappedGameKeys[index]!!)
 }

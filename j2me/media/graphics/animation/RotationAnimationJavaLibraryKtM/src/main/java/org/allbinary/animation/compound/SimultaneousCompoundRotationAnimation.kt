@@ -64,7 +64,6 @@ override fun setFrame(frameIndex: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
@@ -107,7 +106,6 @@ override fun previousFrame()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.previousFrame()
 }
 
@@ -123,7 +121,6 @@ override fun previousFrame()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.nextFrame()
 }
 
@@ -137,7 +134,6 @@ override fun previousRotation()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.previousRotation()
 }
 
@@ -150,7 +146,6 @@ override fun nextRotation()
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
 
         {this.animationInterfaceArray[index]!!.nextRotation()
 }
@@ -190,7 +185,6 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
 
@@ -216,7 +210,6 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
 
@@ -233,7 +226,6 @@ override fun setFrame(direction: Direction)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.setFrame(direction)
 }
 
@@ -249,7 +241,6 @@ override fun setFrame(angle: Angle)
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
 
         {this.animationInterfaceArray[index]!!.setFrame(angle)
 }
@@ -274,7 +265,6 @@ override fun adjustFrame(angle: Short)
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
 
         {this.animationInterfaceArray[index]!!.adjustFrame(angle)
 }
@@ -321,7 +311,6 @@ this.animationInterfaceArray= animationInterfaceArray
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
 
         {this.animationInterfaceArray[index]!!.set(gl)
 }

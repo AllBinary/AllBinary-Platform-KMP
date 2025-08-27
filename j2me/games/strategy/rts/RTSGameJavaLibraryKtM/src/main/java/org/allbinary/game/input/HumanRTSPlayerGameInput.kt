@@ -335,7 +335,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD)
 
                         for (index in rtsLayerList!!.size() -1 downTo 0)
 
-
         {rtsLayer= rtsLayerList!!.get(index) as RTSLayer
 stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(POSSIBLE)
@@ -393,7 +392,6 @@ open fun processSelectionBoxMotionInput(layerManager: AllBinaryLayerManager)
 
 
                         for (index in this.getMotionGestureInputList()!!.size() -1 downTo 0)
-
 
         {
     var motionGestureEvent: MotionGestureEvent = this.getMotionGestureInputList()!!.get(index) as MotionGestureEvent

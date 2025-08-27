@@ -64,7 +64,6 @@ open fun getCellTypeAt(geographicMapInterfaceArray: Array<BasicGeographicMap?>, 
 
                         for (index in size  - 1  downTo 0)
 
-
         {cellType= geographicMapInterfaceArray[index]!!.getCellTypeAt(geographicMapCellPosition)
 geographicMapCellTypeArray[index]= cellType
 }

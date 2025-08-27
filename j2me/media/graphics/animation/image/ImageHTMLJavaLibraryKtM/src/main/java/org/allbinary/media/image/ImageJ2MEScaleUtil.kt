@@ -74,7 +74,6 @@ open fun scale(images: Array<Image?>, width: Int, height: Int)
 
                         for (index in images.size  - 1  downTo 0)
 
-
         {scaledImages[index]= this.scale(images[index]!!, width, height)
 }
 

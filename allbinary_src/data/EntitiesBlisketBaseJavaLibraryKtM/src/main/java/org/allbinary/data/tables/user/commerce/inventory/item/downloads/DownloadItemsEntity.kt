@@ -150,7 +150,6 @@ keysAndValues!!.put(BasicItemData.ID, id)
 
                         for (index in 0 until size)
 
-
         {
     var hashMap: HashMap<Any, Any> = vector.get(index) as HashMap<Any, Any>
 
@@ -201,7 +200,6 @@ keysAndValues!!.put(DownloadItemData.ID, downloadItemId)
 
 
                         for (index in 0 until size)
-
 
         {
     var hashMap: HashMap<Any, Any> = vector.get(index) as HashMap<Any, Any>

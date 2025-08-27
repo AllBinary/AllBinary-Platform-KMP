@@ -124,7 +124,6 @@ dataOutputStream!!.writeInt(numberOfLicenseServers)
 
                         for (index in 0 until numberOfLicenseServers)
 
-
         {
     var licenseServerCrypted: ByteArray = WeakCrypt(3).
                             encrypt(initData!!.getServer(index))!!.encodeToByteArray()!!
@@ -223,7 +222,6 @@ initInfo!!.setLicenseId(WeakCrypt(1).
 
 
                         for (index in 0 until numberOfLicenseServers)
-
 
         {decodedByteArray= DatabaseEncoder.decode(iData!!.readUTF())
 licenseServerDecoded= decodedByteArray.decodeToString()

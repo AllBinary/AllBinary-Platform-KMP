@@ -142,7 +142,6 @@ result += " "
 
                         for (i in 0 until attributeKeys!!.size)
 
-
         {
     var key: String = attributeKeys[i]!! as String
 
@@ -174,7 +173,6 @@ result += END
 
 
                         for (i in 0 until size)
-
 
         {result += htmlRowsVector!!.get(i)!!.toString()
 result += " "

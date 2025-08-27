@@ -104,7 +104,6 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until classes.size)
 
-
         {stringBuffer!!.append("Class: ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(lineBreak)

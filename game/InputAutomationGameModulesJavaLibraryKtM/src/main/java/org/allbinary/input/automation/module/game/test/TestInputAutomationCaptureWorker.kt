@@ -111,7 +111,6 @@ open fun processDataWorkerResults()
 
                         for (index in 0 until size)
 
-
         {
     var actionNameString: String = actionNameArray[index]!! as String
 

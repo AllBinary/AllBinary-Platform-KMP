@@ -90,7 +90,6 @@ this.setProfileActionConditionInterfaceVector(Vector())
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var actionConditionNode: Node = nodeList!!.item(index)!!
 
@@ -202,7 +201,6 @@ open fun toXmlNode(document: Document)
 
 
                         for (index in 0 until size)
-
 
         {
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = vector.get(index) as ProfileActionScriptConditionInterface

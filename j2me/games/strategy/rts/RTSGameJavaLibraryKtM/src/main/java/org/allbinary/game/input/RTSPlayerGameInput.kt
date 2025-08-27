@@ -227,7 +227,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
                         for (index in 0 until size)
 
-
         {
     var gameKeyEvent: GameKeyEvent = inputList!!.get(index) as GameKeyEvent
 
@@ -390,7 +389,6 @@ graphics.setColor(BasicColorFactory.getInstance()!!.GREEN.toInt())
 
 
                         for (index in list.size() -1 downTo 0)
-
 
         {
     var rtsLayer: RTSLayer = list.get(index) as RTSLayer

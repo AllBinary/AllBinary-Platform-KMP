@@ -124,7 +124,6 @@ open fun stopAllPage()
 
                         for (index in this.pageList!!.size()!!  - 1  downTo 0)
 
-
         {
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.pageList!!.objectArray[index]!! as AdvertisementProcessorInterface
 
@@ -159,7 +158,6 @@ open fun startAll()
 
                         for (index in this.bannerList!!.size()!!  - 1  downTo 0)
 
-
         {
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.bannerList!!.objectArray[index]!! as AdvertisementProcessorInterface
 
@@ -176,7 +174,6 @@ open fun stopAllBanner()
 
 
                         for (index in this.bannerList!!.size()!!  - 1  downTo 0)
-
 
         {
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.bannerList!!.objectArray[index]!! as AdvertisementProcessorInterface

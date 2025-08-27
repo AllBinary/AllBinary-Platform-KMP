@@ -59,22 +59,23 @@ override fun toString()
 : String{
     var stringBuffer: StringMaker = StringMaker()
 
+
+    var LISTENER: String = " Listener: "
+
 stringBuffer!!.append("Total Listeners: ")
 stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
 
     var eventListenerInterface: EventListenerInterface
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
-
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
-stringBuffer!!.append(" Listener: ")
+stringBuffer!!.append(LISTENER)
 stringBuffer!!.append(StringUtil.getInstance()!!.toString(eventListenerInterface))
 } catch(e: Exception)
             {
@@ -83,6 +84,7 @@ stringBuffer!!.append(StringUtil.getInstance()!!.toString(eventListenerInterface
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 
+index++
 }
 
 
@@ -163,17 +165,16 @@ open fun fireEvent(eventObject: AllBinaryEventObject)
 
                     var eventObject = eventObject
 
+    var index: Int = 0
 
 
+    var eventListenerInterface: EventListenerInterface
 
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
 
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
-            
-    var eventListenerInterface: EventListenerInterface = this.eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
-
+            eventListenerInterface= this.eventListenerInterfaceList!!.objectArray[index]!! as EventListenerInterface
 this.process(eventObject, eventListenerInterface)
 } catch(e: Exception)
             {
@@ -182,6 +183,7 @@ this.process(eventObject, eventListenerInterface)
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
+index++
 }
 
 }

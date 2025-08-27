@@ -151,7 +151,6 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
                         for (index in 0 until total)
 
-
         {sine= (next *noDecimalTrigTable!!.sin(angle.toInt())).toLong()
 beamX= (sine /noDecimalTrigTable!!.SCALE).toInt()
 cosine= (next *noDecimalTrigTable!!.cos(angle.toInt())).toLong()

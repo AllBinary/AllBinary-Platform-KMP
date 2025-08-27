@@ -124,7 +124,6 @@ result += END
 
                         for (i in 0 until inputSize)
 
-
         {result += inputArray[i]!!.toString()
 result += " "
 }

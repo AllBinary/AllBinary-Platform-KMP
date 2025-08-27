@@ -104,7 +104,6 @@ open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
 
                         for (index in 0 until size)
 
-
         {
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
 
@@ -146,7 +145,6 @@ open fun isCollisionWithAvoidRectangles(point: GPoint)
 
 
                         for (index in 0 until size)
-
 
         {
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
@@ -262,7 +260,6 @@ open fun log()
 
 
                         for (index in 0 until size)
-
 
         {
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle

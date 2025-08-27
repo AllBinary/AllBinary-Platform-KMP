@@ -51,7 +51,6 @@ OBJECT_ARRAY= arrayOfNulls(total)
 
                         for (localIndex in 0 until total)
 
-
         {OBJECT_ARRAY[localIndex]= allbinaryLayerFactoryInterface!!.getInstance()
 }
 

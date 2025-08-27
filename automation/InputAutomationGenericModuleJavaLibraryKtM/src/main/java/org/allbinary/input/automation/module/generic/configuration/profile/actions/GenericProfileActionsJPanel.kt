@@ -277,7 +277,6 @@ open fun deleteActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
 
                         for (index in 0 until anyType!!.size)
 
-
         {
     var nextSelectedValueString: String = anyType[index]!! as String
 

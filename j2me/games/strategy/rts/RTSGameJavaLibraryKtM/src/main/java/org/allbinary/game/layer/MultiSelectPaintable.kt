@@ -65,7 +65,6 @@ this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
                         for (index in list.size() -1 downTo 0)
 
-
         {rtsLayer= list.get(index) as RTSLayer
 
     
@@ -89,7 +88,6 @@ this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
 
                         for (index in this.rootNameList!!.size() -1 downTo 0)
-
 
         {
     var rootName: String = this.rootNameList!!.get(index) as String

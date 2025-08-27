@@ -116,7 +116,6 @@ state= state.uppercase()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var node: Node = nodeList!!.item(index)!!
 
@@ -220,7 +219,6 @@ this.document= DomDocumentHelper.create(data)
 
 
                         for (index in 0 until nodeList!!.getLength()!!)
-
 
         {
     var node: Node = nodeList!!.item(index)!!

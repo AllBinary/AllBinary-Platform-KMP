@@ -154,13 +154,11 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         for (index in 0 until width)
 
-
         {
 
 
 
                         for (index2 in 0 until height)
-
 
         {index3= (index2 *imageData!!.bytesPerLine) +(index *4)
 rx= (imageData!!.data[index3] and 0xFF) shl 16
@@ -296,13 +294,11 @@ newBufferedImage= swtImage!!.getImage() as org.eclipse.swt.graphics.Image
 
                         for (index in 0 until width)
 
-
         {
 
 
 
                         for (index2 in 0 until height)
-
 
         {index3= (index2 *imageData!!.bytesPerLine) +(index *4)
 rx= (imageData!!.data[index3] and 0xFF) shl 16
@@ -428,7 +424,6 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 
 
                         for (index in 0 until size)
-
 
         {originalImage= originalImageArray[index]!!
 

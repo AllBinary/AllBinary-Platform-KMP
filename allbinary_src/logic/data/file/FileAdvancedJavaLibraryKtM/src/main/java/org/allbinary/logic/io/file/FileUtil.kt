@@ -787,7 +787,6 @@ stringBuffer!!.append(end)
 
                         for (index in start until end)
 
-
         {
     var nextFile: AbFile = fileList!!.get(index) as AbFile
 
@@ -908,7 +907,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
 
 
                         for (index in 0 until size)
-
 
         {
     var file: AbFile = fileArray[index]!!
@@ -1118,7 +1116,6 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
 
                         for (index in 0 until fileArray!!.size)
 
-
         {
     var file: AbFile = fileArray[index]!!
 
@@ -1315,7 +1312,6 @@ open fun shouldSkip(file: AbFile, skipFiles: Array<String?>)
 
 
                         for (index in 0 until size)
-
 
         {skipFile= skipFiles[index]!!
 

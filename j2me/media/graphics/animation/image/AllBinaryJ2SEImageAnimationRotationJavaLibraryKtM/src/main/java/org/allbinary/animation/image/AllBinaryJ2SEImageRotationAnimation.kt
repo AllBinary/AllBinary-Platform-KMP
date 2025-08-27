@@ -306,7 +306,6 @@ open fun close()
 
                         for (index in 0 until size2)
 
-
         {disposalUtil!!.dispose(this.twoImages[index]!!)
 }
 
@@ -319,7 +318,6 @@ open fun close()
 
 
                         for (index in 0 until size)
-
 
         {disposalUtil!!.dispose(this.originalImageArray[index]!!)
 }
@@ -347,7 +345,6 @@ open fun finalize()
 
                         for (index in 0 until size2)
 
-
         {disposalUtil!!.dispose(this.twoImages[index]!!)
 }
 
@@ -360,7 +357,6 @@ open fun finalize()
 
 
                         for (index in 0 until size)
-
 
         {disposalUtil!!.dispose(this.originalImageArray[index]!!)
 }

@@ -74,7 +74,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var userInterface: User = userVector!!.get(index) as User
 

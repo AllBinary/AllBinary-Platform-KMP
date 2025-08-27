@@ -120,7 +120,6 @@ open fun getInstance(document: Document)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var stylesNode: Node = nodeList!!.item(index)!!
 
@@ -141,7 +140,6 @@ open fun getInstance(document: Document)
 
 
                         for (styleNodesIndex in 0 until styleNodeList!!.size!!)
-
 
         {
     var styleNode: Node = styleNodeList!!.get(styleNodesIndex) as Node

@@ -75,13 +75,11 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index in 0 until size)
 
-
         {
 
 
 
                         for (index2 in 0 until size2)
-
 
         {
     
@@ -274,7 +272,6 @@ open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: In
 
                         for (index4 in index2 -1 downTo 0)
 
-
         {index3--
 
     
@@ -305,13 +302,11 @@ open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: In
 
                         for (index5 in index3 +1 until index -1)
 
-
         {
 
 
 
                         for (index6 in index4 +1 until index2 -1)
-
 
         {
     

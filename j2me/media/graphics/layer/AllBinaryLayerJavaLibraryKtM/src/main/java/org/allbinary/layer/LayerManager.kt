@@ -80,7 +80,6 @@ open fun insert(layerInterface: AllBinaryLayer)
 
                         for (index in 0 until size)
 
-
         {nextLayerInterface= this.list.get(index) as AllBinaryLayer
 
     
@@ -219,7 +218,6 @@ open fun paint(g: Graphics, x: Int, y: Int)
 
 
                         for (index in this.list.size()!!  - 1  downTo 0)
-
 
         {comp= list.objectArray[index]!! as Layer
 

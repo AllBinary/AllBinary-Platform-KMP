@@ -83,7 +83,6 @@ open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
                         for (index in 1 until end)
 
-
         {
     
                         if(ratio != (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight()))
@@ -130,7 +129,6 @@ open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
 
                         for (index in 0 until end)
-
 
         {ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight())
 }
@@ -209,7 +207,6 @@ logUtil!!.put("Draw some columns to fill in gap", this, "fudge")
 
                         for (index in 0 until point.x)
 
-
         {g.drawImage(firstColumnBufferedImage, index, 0, 
                             null)
 g.drawImage(lastColumnBufferedImage, newWidth -index, 0, 
@@ -236,7 +233,6 @@ logUtil!!.put("Draw some rows to fill in gap", this, "fudge")
 
 
                         for (index in 0 until point.y)
-
 
         {g.drawImage(firstRowBufferedImage, 0, index, 
                             null)
@@ -285,7 +281,6 @@ open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, rati
 
 
                         for (index in 0 until end)
-
 
         {fudgedBufferedImageArray[index]= fudge(bufferedImageArray[index]!!, ratio)
 }

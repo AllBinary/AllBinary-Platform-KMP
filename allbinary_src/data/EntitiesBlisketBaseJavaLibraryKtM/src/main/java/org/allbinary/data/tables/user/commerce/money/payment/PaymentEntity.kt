@@ -160,7 +160,6 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
                         for (index in 0 until size)
 
-
         {
     var paymentHashMap: HashMap<Any, Any> = paymentList!!.get(index) as HashMap<Any, Any>
 

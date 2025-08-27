@@ -87,7 +87,6 @@ logUtil!!.put("Processing " +vector.size +" Services", this, commonStrings!!.PRO
 
                         for (index in 0 until size)
 
-
         {osgiServiceInterface= vector.get(index) as OSGIServiceInterface
 
     

@@ -115,7 +115,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
 
                         for (index in start until end)
 
-
         {
     var nextFile: AbFile = fileBasicArrayList!!.get(index) as AbFile
 

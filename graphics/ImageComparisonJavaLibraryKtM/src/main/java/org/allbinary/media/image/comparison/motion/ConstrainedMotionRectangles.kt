@@ -87,7 +87,6 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
 
                         for (index in 0 until size)
 
-
         {
     var motionRectangle: MotionRectangle = vector2.get(index) as MotionRectangle
 

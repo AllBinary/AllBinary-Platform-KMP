@@ -98,7 +98,6 @@ open fun update(selectedGameKey: GameKey, selectedInput: Input)
 
                         for (index in 0 until size)
 
-
         {gameInputMapping= gameInputMappingArray[index]!!
 gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
@@ -128,11 +127,13 @@ open fun get(keyList: BasicArrayList)
     var key: Input
 
 
+    var size: Int = keyList!!.size()!!
 
 
 
-                        for (index in 0 until keyList!!.size()!!)
 
+
+                        for (index in 0 until size)
 
         {key= keyList!!.objectArray[index]!! as Input
 stringBuffer!!.append(key.getName())

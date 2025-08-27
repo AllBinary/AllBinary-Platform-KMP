@@ -62,7 +62,6 @@ open fun setFrame(frameIndex: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
@@ -109,7 +108,6 @@ open fun previousFrame()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.previousFrame()
 }
 
@@ -125,7 +123,6 @@ open fun nextFrame()
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
 
         {this.animationInterfaceArray[index]!!.nextFrame()
 }
@@ -168,7 +165,6 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
 
@@ -195,7 +191,6 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-
         {this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
 
@@ -214,7 +209,6 @@ open fun set(gl: GL)
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
-
 
         {this.animationInterfaceArray[index]!!.set(gl)
 }

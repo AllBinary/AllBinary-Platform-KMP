@@ -471,7 +471,6 @@ node.appendChild(this.payment.toXmlNode(document))
 
                         for (i in 0 until size)
 
-
         {
     var name: String = keyArray[i]!! as String
 

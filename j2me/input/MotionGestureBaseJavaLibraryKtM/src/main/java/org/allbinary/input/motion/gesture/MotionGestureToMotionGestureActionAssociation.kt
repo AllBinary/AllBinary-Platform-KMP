@@ -114,7 +114,6 @@ open fun isMotionGestureArrayEquals(aList: BasicArrayList)
 
                         for (i in size -1 downTo 0)
 
-
         {
     
                         if(aList!!.objectArray[i] != this.list.objectArray[i])

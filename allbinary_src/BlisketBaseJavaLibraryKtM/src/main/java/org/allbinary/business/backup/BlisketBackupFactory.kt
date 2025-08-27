@@ -155,7 +155,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
                         for (index in 0 until size)
 
-
         {
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
 
@@ -216,7 +215,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 
                         for (index in 0 until size)
-
 
         {
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String
@@ -281,7 +279,6 @@ stringBuffer!!.append(PATH_GLOBALS.getInstance()!!.BACKUP_PATH)
 
 
                         for (index in 0 until size)
-
 
         {
     var nextStore: String = storeFrontNamesBasicArrayList!!.get(index) as String

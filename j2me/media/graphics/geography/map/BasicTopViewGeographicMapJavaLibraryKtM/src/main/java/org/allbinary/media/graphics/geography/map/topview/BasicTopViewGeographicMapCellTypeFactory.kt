@@ -176,7 +176,6 @@ this.maxTileId= maxTileId
 
                         for (index in 0 until size)
 
-
         {key= keyArray[index]!! as String
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 

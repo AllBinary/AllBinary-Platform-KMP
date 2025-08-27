@@ -72,7 +72,6 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
                         for (index in 0 until size)
 
-
         {animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.getInstance(instanceId)
 }
 
@@ -133,7 +132,6 @@ override fun setInitialScale(scaleProperties: ScaleProperties)
 
 
                         for (index in 0 until size)
-
 
         {this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.setInitialScale(scaleProperties)
 }

@@ -212,7 +212,6 @@ logUtil!!.put("Number Of Profiles Specified: " +nameNodeList!!.getLength(), this
 
                         for (index in 0 until nameNodeList!!.getLength()!!)
 
-
         {
     var node: Node = nameNodeList!!.item(index)!!
 
@@ -257,7 +256,6 @@ open fun initActions(nodeList: NodeList)
 
 
                         for (index in 0 until nodeList!!.getLength()!!)
-
 
         {
     var actionNode: Node = nodeList!!.item(index)!!
@@ -383,7 +381,6 @@ open fun toXmlNode(document: Document)
 
 
                         for (index in 0 until size)
-
 
         {
     var nextActionName: String = actionNameArray[index]!! as String

@@ -162,7 +162,6 @@ open fun getValues()
 
                         for (i in 0 until size)
 
-
         {
     var key: String = keyVector!!.get(i) as String
 

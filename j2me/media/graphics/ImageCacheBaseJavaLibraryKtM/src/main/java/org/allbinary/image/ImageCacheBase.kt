@@ -65,7 +65,6 @@ protected constructor        ()
 
                         for (index in listOfList!!.size -1 downTo 0)
 
-
         {listOfList[index]= BasicArrayList()
 }
 
@@ -74,7 +73,6 @@ protected constructor        ()
 
 
                         for (index in availableListOfList!!.size -1 downTo 0)
-
 
         {availableListOfList[index]= BasicArrayList()
 }
@@ -121,7 +119,6 @@ open fun releaseAll()
 
                         for (index in listOfList!!.size -1 downTo 0)
 
-
         {availableListOfList[index]!!.clear()
 availableListOfList[index]!!.addAll(listOfList[index]!!)
 }
@@ -151,7 +148,6 @@ open fun getIndex(width: Int, height: Int)
 
 
                         for (index in 0 until size)
-
 
         {
     
@@ -326,7 +322,6 @@ override fun toString()
 
 
                         for (index in this.nextIndex -1 downTo 0)
-
 
         {
     var width: Int = widths[index]!!

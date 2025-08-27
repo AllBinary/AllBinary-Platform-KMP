@@ -111,7 +111,6 @@ super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
                         for (index in 0 until size)
 
-
         {this.rtsFormInputArray[index]!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 }
 

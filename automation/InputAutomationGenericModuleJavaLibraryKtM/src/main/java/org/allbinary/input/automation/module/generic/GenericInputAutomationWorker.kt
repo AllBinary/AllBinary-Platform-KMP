@@ -90,7 +90,6 @@ this.setGenericProfile(genericProfile)
 
                         for (index in 0 until size)
 
-
         {
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
@@ -162,7 +161,6 @@ logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORK
 
 
                         for (index in 0 until size)
-
 
         {
     var actionNameString: String = actionNameArray[index]!! as String

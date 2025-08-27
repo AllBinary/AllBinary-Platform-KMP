@@ -69,7 +69,6 @@ this.artificialIntelligenceInterfaceArray= artificialIntelligenceInterface
 
                         for (index in 0 until size)
 
-
         {this.artificialIntelligenceInterfaceArray[index]!!.processAI(allBinaryLayerManager)
 }
 

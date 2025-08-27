@@ -148,13 +148,11 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
                         for (index in 0 until width)
 
-
         {
 
 
 
                         for (index2 in 0 until height)
-
 
         {colorModel= newBufferedImage!!.getColorModel()
 dataElements= newBufferedImage!!.getRaster()!!.getDataElements(index, index2, 
@@ -258,13 +256,11 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
                         for (index in 0 until width)
 
-
         {
 
 
 
                         for (index2 in 0 until height)
-
 
         {colorModel= newBufferedImage!!.getColorModel()
 dataElements= newBufferedImage!!.getRaster()!!.getDataElements(index, index2, 
@@ -339,13 +335,11 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
                         for (index in 0 until width)
 
-
         {
 
 
 
                         for (index2 in 0 until height)
-
 
         {raster.getPixel(index, index2, colorArray)
 colorArray[0]= alpha and colorArray[0]
@@ -379,7 +373,6 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 
 
                         for (index in 0 until size)
-
 
         {originalImage= originalImageArray[index]!!
 

@@ -74,7 +74,6 @@ this.circularIndexUtil!!.setIndex(0)
 
                         for (index in 0 until size)
 
-
         {OBJECT_ARRAY[index]= allBinaryObjectFactoryInterface!!.getInstance()
 }
 

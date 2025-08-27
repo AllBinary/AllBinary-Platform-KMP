@@ -235,7 +235,6 @@ this.alphaArray= BooleanArray(size)
 
                         for (index in 0 until size)
 
-
         {imageArray[index]= originalImageArray[index]!!
 this.handleImage(imageArray, index, originalImageArray[index]!!)
 }
@@ -360,7 +359,6 @@ open fun reset()
 
 
                         for (index in 0 until size)
-
 
         {this.alphaArray[index]= true
 }

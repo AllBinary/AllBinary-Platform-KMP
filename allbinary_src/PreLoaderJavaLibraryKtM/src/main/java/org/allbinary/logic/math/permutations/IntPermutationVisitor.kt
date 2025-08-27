@@ -74,7 +74,6 @@ open fun print(data: IntArray, stringBuilder: StringBuilder)
 
                         for (i in 0 until size)
 
-
         {stringBuilder!!.append(data[i]!!)
 stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
 }

@@ -76,7 +76,6 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
                         for (index in 0 until integerArray!!.size)
 
-
         {
     var integerCanBeNull: Any? = hashtable.get(integerArray[index]!! as Object)
 
@@ -140,7 +139,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
 
                         for (index in 0 until numberOnSameTeam!!.size)
-
 
         {numberOnSameTeam[index]= list.objectArray[index]!! as Integer
 }

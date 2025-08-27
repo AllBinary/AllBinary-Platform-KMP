@@ -136,7 +136,6 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
 
                         for (index in 0 until size)
 
-
         {
     var propertyName: String = propertyKeySetArray[index]!! as String
 
@@ -334,7 +333,6 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
 
                         for (index in 0 until size)
 
-
         {
     var nextPropertyName: String = propertyNameSetArray[index]!! as String
 
@@ -519,7 +517,6 @@ open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any,
 
                         for (index in 0 until size)
 
-
         {
     var existingElementNode: Node = elementNodeVector!!.get(index) as Node
 
@@ -573,7 +570,6 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
 
 
                         for (index in 1 until size)
-
 
         {
     var nextPackageName: String = packageVector!!.get(index) as String
@@ -734,7 +730,6 @@ open fun addNameSpace(key: String, value: String, document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var packageName: String = packageVector!!.get(index) as String
 
@@ -801,7 +796,6 @@ open fun toHashMap()
 
 
                         for (i in 0 until keySize)
-
 
         {
     var key: String = keyArray[i]!! as String

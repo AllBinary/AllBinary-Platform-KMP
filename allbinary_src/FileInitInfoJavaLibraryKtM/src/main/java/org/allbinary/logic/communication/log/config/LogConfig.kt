@@ -250,7 +250,6 @@ open fun getTypeVector()
 
                         for (i in 0 until size)
 
-
         {
     var node: Node = logConfigTypeNodeVector!!.elementAt(i) as Node
 

@@ -97,7 +97,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var streetAddress: StreetAddress = streetAddressList!!.get(index) as StreetAddress
 

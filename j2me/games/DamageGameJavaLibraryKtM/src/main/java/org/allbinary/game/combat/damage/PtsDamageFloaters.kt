@@ -73,7 +73,6 @@ this.layerInterface= layerInterface
 
                         for (index in this.lastDamageString!!.size -1 downTo 0)
 
-
         {this.lastDamageString[index]= CHAR_ARRAY
 }
 
@@ -114,7 +113,6 @@ override fun paint(graphics: Graphics)
 
 
                         for (index in this.lastDamage!!.size -1 downTo 0)
-
 
         {
     

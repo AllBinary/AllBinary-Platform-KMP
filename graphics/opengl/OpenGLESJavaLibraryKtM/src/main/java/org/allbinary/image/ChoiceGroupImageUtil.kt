@@ -87,7 +87,6 @@ open fun init()
 
                         for (index in 0 until size)
 
-
         {imageArray[index]= preResourceImageUtil!!.encapsulate(imageArray[index]!!)
 }
 
@@ -130,7 +129,6 @@ open fun update(gl: GL)
 
                         for (index in 0 until size)
 
-
         {preResourceImageUtil!!.update(gl, imageArray[index]!!)
 }
 
@@ -172,7 +170,6 @@ open fun update(graphics: Graphics)
 
 
                         for (index in 0 until size)
-
 
         {preResourceImageUtil!!.update(graphics, imageArray[index]!!)
 }

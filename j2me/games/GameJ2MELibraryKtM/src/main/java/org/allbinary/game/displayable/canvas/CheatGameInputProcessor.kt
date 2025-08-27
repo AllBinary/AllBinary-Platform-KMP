@@ -82,7 +82,6 @@ override fun update()
 
                         for (index in 0 until size)
 
-
         {
     var anyType: Any = list.objectArray[index]!!
 

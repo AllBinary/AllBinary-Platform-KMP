@@ -90,7 +90,6 @@ soundsFactoryInterface!!.init()
 
                         for (i in 0 until soundInterfaceArray!!.size)
 
-
         {
     var soundInterface: Sound = soundInterfaceArray[i]!!
 
@@ -142,7 +141,6 @@ open fun stopAll()
 
                         for (index in 0 until soundInterfaceArray!!.size)
 
-
         {
     
                         if(soundInterfaceArray[index] != 
@@ -190,7 +188,6 @@ open fun closeAll()
 
 
                         for (index in 0 until soundInterfaceArray!!.size)
-
 
         {
     

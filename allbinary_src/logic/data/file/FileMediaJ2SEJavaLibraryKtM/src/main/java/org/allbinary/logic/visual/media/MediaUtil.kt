@@ -65,7 +65,6 @@ open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
 
                         for (index in 0 until propertyStringArray!!.size)
 
-
         {
     var propertyObject: Any = bufferedImage!!.getProperty(propertyStringArray[index]!!)!!
 

@@ -178,7 +178,6 @@ open fun containsDuplicate(resource: String, value: Integer)
 
                         for (index in objectArray!!.size  - 1  downTo 0)
 
-
         {
     var integer: Integer = this.hashMap!!.get(objectArray[index]!! as Object) as Integer
 

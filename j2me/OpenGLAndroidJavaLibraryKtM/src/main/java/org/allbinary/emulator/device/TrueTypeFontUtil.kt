@@ -185,7 +185,6 @@ paint.setColor(basicColor!!.toInt())
 
                         for (index in 0 until size)
 
-
         {characterArray[0]= pattern[index]
 paint.getTextBounds(characterArray, 0, 1, bounds)
 _characterWidth[index]= bounds.right
@@ -320,7 +319,6 @@ paint.setARGB(255, 255, 255, 255)
 
 
                         for (index in 0 until size)
-
 
         {characterArray[0]= pattern[index]
 paint.getTextBounds(characterArray, 0, 1, bounds)

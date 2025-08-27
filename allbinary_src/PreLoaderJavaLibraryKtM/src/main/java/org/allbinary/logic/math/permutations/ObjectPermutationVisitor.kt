@@ -74,7 +74,6 @@ open fun print(data: Array<Any?>, stringBuilder: StringBuilder)
 
                         for (i in 0 until size)
 
-
         {stringBuilder!!.append(data[i]!!.hashCode())
 stringBuilder!!.append(CommonSeps.getInstance()!!.SPACE)
 }

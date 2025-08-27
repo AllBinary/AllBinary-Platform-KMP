@@ -119,7 +119,6 @@ graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
 
                         for (index in 0 until infoSize)
 
-
         {beginWidth= (font.stringWidth(this.info[index]!!) shr 1)
 graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charHeight, anchor)
 }
@@ -133,7 +132,6 @@ graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charH
 
 
                         for (index in 0 until size)
-
 
         {beginWidth= (font.stringWidth(this.developers[index]!!) shr 1)
 graphics.drawString(this.developers[index]!!, halfWidth -beginWidth, (5 +infoSize +index) *charHeight, anchor)

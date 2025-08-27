@@ -122,7 +122,6 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
 
                         for (index in 0 until taxNameNodeList!!.getLength()!!)
 
-
         {
     var node: Node = taxNameNodeList!!.item(index)!!
 

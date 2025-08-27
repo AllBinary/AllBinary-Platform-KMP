@@ -428,7 +428,6 @@ open fun isAuthenticationSessionValid(roles: Vector)
 
                         for (index in 0 until size)
 
-
         {
     var mustBeOfRole: BasicUserRole = basicUserRoleArray[index]!! as BasicUserRole
 

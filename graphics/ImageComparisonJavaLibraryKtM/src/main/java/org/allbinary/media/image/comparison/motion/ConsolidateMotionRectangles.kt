@@ -60,7 +60,6 @@ public constructor        (motionRectangles: MotionRectangles)
 
                         for (index in 0 until size)
 
-
         {
     var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
 
@@ -89,7 +88,6 @@ logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRect
 
                         for (index in 0 until size)
 
-
         {
     var motionRectangle: MotionRectangle = vector.get(index) as MotionRectangle
 
@@ -98,7 +96,6 @@ logUtil!!.put("Start - Size Before: " +vector.size, this, "consolidateMotionRect
 
 
                         for (i in index +1 until vector.size!!)
-
 
         {
     var motionRectangle2: MotionRectangle = vector.get(i) as MotionRectangle
@@ -154,7 +151,6 @@ open fun remove(removeVector: Vector)
 
 
                         for (index in 0 until size)
-
 
         {vector.remove(removeVector!!.get(index))
 }

@@ -139,7 +139,6 @@ logUtil!!.put(commonString!!.START, THIS, "shutdown")
 
                         for (i in 0 until soundInterfaceArray!!.size)
 
-
         {
     
                         if(soundInterfaceArray[i] != 

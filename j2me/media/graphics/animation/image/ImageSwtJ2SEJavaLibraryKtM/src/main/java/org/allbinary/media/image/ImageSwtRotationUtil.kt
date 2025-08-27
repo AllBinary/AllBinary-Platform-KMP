@@ -212,7 +212,6 @@ open fun getRotatedImages(bufferedImage: org.eclipse.swt.graphics.Image, numberO
 
                         for (index in 0 until size)
 
-
         {angle= (totalAngle /size) *index
 bufferedImageArray[index]= this.getRotatedImage(bufferedImage, angle)
 }
@@ -287,7 +286,6 @@ gc.setInterpolation(SWT.HIGH)
 
 
                         for (index in 0 until size)
-
 
         {
     

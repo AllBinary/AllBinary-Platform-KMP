@@ -860,7 +860,6 @@ open fun getIndex(key: Any)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(resourceStringArray[index] == key)
@@ -910,7 +909,6 @@ open fun createImage(key: Any, inputStream: InputStream)
 
 
                         for (index in 0 until size)
-
 
         {
     
@@ -1006,7 +1004,6 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
 
                         for (index in 0 until size)
 
-
         {lazyImageRotationAnimation2= this.loadAfterList!!.get(index) as LazyImageRotationAnimation
 
     
@@ -1027,7 +1024,6 @@ open fun getAssociated(lazyImageRotationAnimation: LazyImageRotationAnimation)
 
 
                         for (index in 0 until size2)
-
 
         {this.loadAfterList!!.remove(list.get(index))
 }

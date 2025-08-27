@@ -123,13 +123,11 @@ open fun releaseCachedPaths()
 
                         for (columnIndex in paths.size  - 1  downTo 0)
 
-
         {
 
 
 
                         for (rowIndex in paths.size  - 1  downTo 0)
-
 
         {
     var pathsList: BasicArrayList = this.paths[columnIndex]!![rowIndex]!!
@@ -213,7 +211,6 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
 
 
                         for (index in this.endList!!.size() -1 downTo 0)
-
 
         {endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosition
 
@@ -376,13 +373,11 @@ open fun onBuildingEvent(event: RTSLayerEvent)
 
                         for (columnIndex in paths.size  - 1  downTo 0)
 
-
         {
 
 
 
                         for (rowIndex in paths.size  - 1  downTo 0)
-
 
         {this.paths[columnIndex]!![rowIndex]= 
                                         null

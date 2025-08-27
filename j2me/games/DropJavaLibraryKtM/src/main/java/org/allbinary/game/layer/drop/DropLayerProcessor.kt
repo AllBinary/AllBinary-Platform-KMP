@@ -69,7 +69,6 @@ open fun getInstance()
 
                         for (index in 0 until size)
 
-
         {
     var layerInterface: AllBinaryLayer = list.objectArray[index]!! as AllBinaryLayer
 

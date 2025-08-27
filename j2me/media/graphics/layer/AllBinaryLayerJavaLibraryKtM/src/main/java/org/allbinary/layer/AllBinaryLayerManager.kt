@@ -73,7 +73,6 @@ open fun log()
 
                         for (index in 0 until size)
 
-
         {
     var layerProcessorInterface: LayerProcessor = basicLayerProcessorArray[index]!!
 
@@ -141,7 +140,6 @@ layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
 
                         for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
-
         {layerProcessorInterface= basicLayerProcessorArray[index]!!
 
     
@@ -175,7 +173,6 @@ layerManagerEventHandler!!.fireDeleteEvent(this.deleteLayerManagerEvent)
 
                         for (index in this.basicLayerProcessorArray!!.size  - 1  downTo 0)
 
-
         {layerProcessorInterface= basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.getLayerManager()!!.remove(layerInterface)
 }
@@ -201,7 +198,6 @@ open fun process()
 
                         for (index in 0 until size)
 
-
         {layerProcessorInterface= basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.process(this)
 }
@@ -224,7 +220,6 @@ layerProcessorInterface!!.process(this)
 
 
                         for (index in 0 until size)
-
 
         {layerProcessorInterface= basicLayerProcessorArray[index]!!
 layerProcessorInterface!!.getLayerManager()!!.cleanup()

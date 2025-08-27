@@ -76,7 +76,6 @@ open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterfa
 
                         for (index in startIndex +1 until size)
 
-
         {
     var collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface = layerManager!!.getLayerAt(index) as CollidableInterfaceCompositeInterface
 

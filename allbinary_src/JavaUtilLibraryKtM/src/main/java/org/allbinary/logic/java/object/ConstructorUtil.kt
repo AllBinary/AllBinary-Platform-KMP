@@ -58,7 +58,6 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until constructor.size)
 
-
         {stringBuffer!!.append(ConstructorUtil.view(constructor[index]!!, lineBreak))
 }
 
@@ -100,7 +99,6 @@ stringBuffer!!.append(constructor.getName())
 
 
                         for (index in 0 until classes.size)
-
 
         {stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(classes[index]!!.getName())

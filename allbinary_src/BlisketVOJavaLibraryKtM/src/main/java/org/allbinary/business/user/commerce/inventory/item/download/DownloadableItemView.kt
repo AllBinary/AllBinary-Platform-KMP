@@ -148,7 +148,6 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secon
 
                         for (index in 0 until size)
 
-
         {
     var name: String = nameArray[index]!! as String
 

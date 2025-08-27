@@ -179,7 +179,6 @@ logUtil!!.put("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" 
 
                         for (index in 0 until numberOfFramesPerOrientation)
 
-
         {
     var x: Int = index *cellWidth
 
@@ -191,7 +190,6 @@ bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeig
 
 
                         for (index in 0 until numberOfFramesPerOrientation)
-
 
         {bufferedImageArray[index +numberOfFramesPerOrientation]= this.getImage(bufferedImageArray[index]!!, verticle, horizontal)
 }

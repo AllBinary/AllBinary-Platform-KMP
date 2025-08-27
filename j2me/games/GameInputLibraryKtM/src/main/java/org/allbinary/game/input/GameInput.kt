@@ -155,7 +155,6 @@ open fun removeNonAIInputGameKeyEvents()
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-
         {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
     
@@ -189,7 +188,6 @@ open fun update()
 
                         for (index in 0 until size)
 
-
         {
     var anyType: Any = removeList!!.objectArray[index]!!
 
@@ -198,7 +196,6 @@ open fun update()
 
 
                         for (index2 in list.size()!!  - 1  downTo 0)
-
 
         {
     

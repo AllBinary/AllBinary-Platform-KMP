@@ -129,7 +129,6 @@ this.servers= BasicArrayList()
 
                         for (index in 0 until size)
 
-
         {this.servers.add(vector.get(index))
 }
 
@@ -240,7 +239,6 @@ stringBuffer!!.append(BREAK)
 
 
                         for (index in 0 until size)
-
 
         {
     var nextServerString: String = serverVector!!.get(index) as String

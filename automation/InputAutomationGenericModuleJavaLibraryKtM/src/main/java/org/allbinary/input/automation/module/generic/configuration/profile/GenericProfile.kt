@@ -63,7 +63,6 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var profileNode: Node = nodeList!!.item(index)!!
 
@@ -143,7 +142,6 @@ open fun toXmlNode(document: Document)
 
 
                         for (index in 0 until size)
-
 
         {
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType

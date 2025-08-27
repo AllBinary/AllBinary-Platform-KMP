@@ -228,7 +228,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "view")
 
                         for (index in 0 until size)
 
-
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
@@ -265,7 +264,6 @@ node.appendChild(orderHistory!!.toXmlNode(document))
 
 
                         for (index in 0 until size)
-
 
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
@@ -304,7 +302,6 @@ node.appendChild(orderHistory!!.toXmlNode(document))
 
                         for (index in 0 until size)
 
-
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
@@ -342,7 +339,6 @@ node.appendChild(orderHistory!!.toXmlNode(document))
 
                         for (index in 0 until size)
 
-
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory
 
@@ -379,7 +375,6 @@ node.appendChild(orderHistory!!.toXmlNode(document))
 
 
                         for (index in 0 until size)
-
 
         {
     var orderHistory: OrderHistory = orderHistoryVector!!.get(index) as OrderHistory

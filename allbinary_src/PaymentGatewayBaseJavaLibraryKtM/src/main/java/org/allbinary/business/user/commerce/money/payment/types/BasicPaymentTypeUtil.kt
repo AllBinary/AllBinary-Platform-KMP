@@ -81,7 +81,6 @@ open fun get(paymentTypeString: String)
 
                         for (i in 0 until size)
 
-
         {
     var paymentType: BasicPaymentType = paymentTypeVector!!.get(i) as BasicPaymentType
 
@@ -136,7 +135,6 @@ open fun difference(a_PaymentTypeVector: Vector)
 
 
                         for (i in 0 until size)
-
 
         {
     var paymentType: BasicPaymentType = paymentTypeVector!!.get(i) as BasicPaymentType

@@ -60,7 +60,6 @@ open public class KeySingletonFactory
 
                         for (index in 0 until keyArray!!.size)
 
-
         {
     var keyAsString: String = KeyEvent.getKeyText(keyArray[index]!!)!!
 

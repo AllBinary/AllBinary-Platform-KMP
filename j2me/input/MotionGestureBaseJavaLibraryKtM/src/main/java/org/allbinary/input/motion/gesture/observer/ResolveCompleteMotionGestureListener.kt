@@ -73,7 +73,6 @@ CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(GameKeyFromMo
 
                         for (index in size -1 downTo 0)
 
-
         {
     var association: MotionGestureToMotionGestureActionAssociation = commandActionsList!!.objectArray[index]!! as MotionGestureToMotionGestureActionAssociation
 

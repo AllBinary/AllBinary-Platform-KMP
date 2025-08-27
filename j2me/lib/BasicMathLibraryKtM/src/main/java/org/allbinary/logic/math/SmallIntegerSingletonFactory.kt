@@ -77,7 +77,6 @@ open fun init(value: Int, negativeValue: Int)
 
                         for (index in value -1 downTo lastMin)
 
-
         {INTEGER_ARRAY[index +NEGATIVE_MAX]= Integer(index)
 }
 
@@ -86,7 +85,6 @@ open fun init(value: Int, negativeValue: Int)
 
 
                         for (index in negativeValue -1 downTo lastNegativeMin)
-
 
         {INTEGER_ARRAY[index]= Integer( -index)
 }
@@ -126,7 +124,6 @@ open fun init()
 
                         for (index in POSITIVE_MAX -1 downTo lastMin)
 
-
         {INTEGER_ARRAY[index +NEGATIVE_MAX]= Integer(index)
 }
 
@@ -135,7 +132,6 @@ open fun init()
 
 
                         for (index in NEGATIVE_MAX -1 downTo lastNegativeMin)
-
 
         {INTEGER_ARRAY[index]= Integer( -index)
 }

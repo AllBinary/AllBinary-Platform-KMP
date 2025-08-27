@@ -536,7 +536,6 @@ open fun generateMoveOutOfBuildAreaPaths()
 
                         for (index2 in occupyList!!.size() -1 downTo 0)
 
-
         {pathsList= BasicArrayList()
 occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPosition
 
@@ -544,7 +543,6 @@ occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPo
 
 
                         for (index in surroundList!!.size() -1 downTo 0)
-
 
         {surroundGeographicMapCellPosition= surroundList!!.get(index) as GeographicMapCellPosition
 

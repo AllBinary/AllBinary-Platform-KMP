@@ -88,7 +88,6 @@ open fun addListeners(vector: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {eventListenerInterface= vector.get(index) as RawKeyEventListener
 this.addListener(eventListenerInterface)
 }
@@ -165,12 +164,10 @@ open fun fireEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
     var eventListenerInterface: RawKeyEventListener
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
-
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
@@ -182,6 +179,7 @@ this.process(keyCode, deviceId, repeated, eventListenerInterface)
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
+index++
 }
 
 }
@@ -227,12 +225,10 @@ stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
     var eventListenerInterface: RawKeyEventListener
 
 
+    var index: Int = 0
 
 
-
-                        for (index in 0 until this.eventListenerInterfaceList!!.size()!!)
-
-
+        while(index < this.eventListenerInterfaceList!!.size())
         {
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
@@ -245,6 +241,7 @@ stringBuffer!!.append(eventListenerInterface!!.toString())
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 }
 
+index++
 }
 
 

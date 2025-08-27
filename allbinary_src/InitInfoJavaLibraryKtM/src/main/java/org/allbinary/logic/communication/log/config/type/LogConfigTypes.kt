@@ -114,7 +114,6 @@ open fun getInstance(node: Node)
 
                         for (index in 0 until size)
 
-
         {logConfigType= availableLogConfigTypes!!.get(index) as LogConfigType
 
     

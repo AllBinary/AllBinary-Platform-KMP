@@ -155,7 +155,6 @@ open fun getTotalWeight()
 
                         for (index in 0 until size)
 
-
         {product= .toCharArray()
 weightFloat= Float(InventoryEntity().
                             getWeight(product))
@@ -259,7 +258,6 @@ open fun getSubTotal()
 
 
                         for (index in 0 until size)
-
 
         {
     var product: String = .toCharArray()

@@ -201,7 +201,6 @@ open fun getRotatedImages(bufferedImage: Image, numberOfFrames: Int, totalAngle:
 
                         for (index in 0 until size)
 
-
         {
     var radians: Double = (arc /size) *index
 
@@ -275,7 +274,6 @@ rows= (size /columns)
 
 
                         for (index in 0 until size)
-
 
         {
     

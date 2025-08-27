@@ -257,7 +257,6 @@ open fun processRunnables()
 
                         for (index in 0 until size)
 
-
         {runnable= this.runnableList!!.get(index) as Runnable
 runnable.run()
 }
@@ -286,7 +285,6 @@ open fun set(gl: GL10)
 
 
                         for (index2 in 0 until size)
-
 
         {image= this.list.get(index2)
 image = imageimage as OpenGLESImage

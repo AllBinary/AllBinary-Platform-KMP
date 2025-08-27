@@ -99,7 +99,6 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 
                         for (index in 0 until size)
 
-
         {graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
 }
 
@@ -178,7 +177,6 @@ index++
 
 
                         for (index in 0 until size)
-
 
         {textArray[index]= list.get(index) as String
 }

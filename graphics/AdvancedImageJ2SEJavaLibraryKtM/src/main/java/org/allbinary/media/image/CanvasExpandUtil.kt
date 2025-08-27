@@ -97,7 +97,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, increaseX: Int, incre
 
                         for (index in 0 until size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 subBufferedImageArray[index]= imageUtil!!.createBufferedImage(bufferedImage, bufferedImage!!.getWidth() +increaseX, bufferedImage!!.getHeight() +increaseY, false)
 visitor.visit(subBufferedImageArray[index]!!, stringUtil!!.EMPTY_STRING, index)

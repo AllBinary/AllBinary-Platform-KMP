@@ -343,7 +343,6 @@ open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: No
 
                         for (index in 0 until categoryNodeList!!.getLength()!!)
 
-
         {
     var categoryNode: Node = categoryNodeList!!.item(index)!!
 
@@ -414,7 +413,6 @@ open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeL
 
 
                         for (index in 0 until categoryNodeList!!.getLength()!!)
-
 
         {
     var categoryNode: Node = categoryNodeList!!.item(index)!!

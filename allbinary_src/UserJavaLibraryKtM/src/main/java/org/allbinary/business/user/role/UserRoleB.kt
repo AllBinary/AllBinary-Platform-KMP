@@ -62,7 +62,6 @@ UserRoleFactory.getInstance()
 
                         for (index in 0 until size)
 
-
         {
     var userRole: UserRole = roleVector!!.get(index) as UserRole
 

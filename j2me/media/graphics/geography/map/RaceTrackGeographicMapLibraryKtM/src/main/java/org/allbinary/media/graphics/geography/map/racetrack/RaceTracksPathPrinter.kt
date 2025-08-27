@@ -48,11 +48,13 @@ open fun printPath(list: BasicArrayList)
 
                     var list = list
 
+    var size: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
     var anyType: Any = list.get(index)!!
@@ -70,11 +72,13 @@ open fun printPaths(list: BasicArrayList)
 
                     var list = list
 
+    var size: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size)
 
         {System.out.println(StringMaker().
                             append(" Path ")!!.append(index)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.toString())

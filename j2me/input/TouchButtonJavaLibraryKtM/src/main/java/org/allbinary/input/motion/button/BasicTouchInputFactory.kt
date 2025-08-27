@@ -166,7 +166,6 @@ logUtil!!.put(StringMaker().
 
                         for (index in list.size() -1 downTo 0)
 
-
         {touchButtonInput= list.objectArray[index]!! as TouchButtonInput
 touchButtonInput!!.update(inputToGameKeyMapping)
 }

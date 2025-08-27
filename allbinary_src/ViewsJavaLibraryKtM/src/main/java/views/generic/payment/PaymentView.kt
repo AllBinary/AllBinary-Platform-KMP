@@ -78,7 +78,6 @@ document.appendChild(paymentNode)
 
                         for (index in 0 until size)
 
-
         {
     var payment: Payment = paymentVector!!.get(index) as Payment
 

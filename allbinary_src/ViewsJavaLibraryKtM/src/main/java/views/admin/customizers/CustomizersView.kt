@@ -89,7 +89,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var viewName: String = customizersVector!!.get(index) as String
 
@@ -113,7 +112,6 @@ Arrays.sort(objectArray, StringComparator())
 
 
                         for (index in 0 until objectArray!!.size)
-
 
         {
     var viewName: String = objectArray[index]!! as String

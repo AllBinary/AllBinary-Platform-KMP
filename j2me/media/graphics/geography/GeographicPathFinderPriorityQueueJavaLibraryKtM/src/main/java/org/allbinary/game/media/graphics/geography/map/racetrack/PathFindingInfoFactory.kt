@@ -166,13 +166,11 @@ open fun buildPathFindingNodes(geographicMapInterface: BasicGeographicMap, pathF
 
                         for (column in 0 until totalColumns)
 
-
         {
 
 
 
                         for (row in 0 until totalRows)
-
 
         {this.buildPathFindingNodes(geographicMapInterface, pathFindingInfo, mapArray, geographicMapCellPositionFactory!!.getInstance(column, row))
 }

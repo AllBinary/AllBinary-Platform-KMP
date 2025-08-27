@@ -165,7 +165,6 @@ open fun indexOf(basicGameResources: BasicGameResources)
 
                         for (index in this.getResources()!!.length -1 downTo 0)
 
-
         {
     
                         if(this.resources[index] == basicGameResources)

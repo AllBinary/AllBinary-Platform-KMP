@@ -56,7 +56,6 @@ open fun fillIn(end: String)
 
                         for (index in 0 until size)
 
-
         {frameStringBuffer!!.append('0')
 }
 

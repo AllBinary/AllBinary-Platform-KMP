@@ -136,7 +136,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
                         for (index in 0 until size)
 
-
         {
     var transformInfo: TransformInfo = componentVector!!.get(index) as TransformInfo
 

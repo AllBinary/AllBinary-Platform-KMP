@@ -113,7 +113,6 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
-
         {
     var themeDomNodeInterface: DomNodeInterface = themeVector!!.get(i) as DomNodeInterface
 

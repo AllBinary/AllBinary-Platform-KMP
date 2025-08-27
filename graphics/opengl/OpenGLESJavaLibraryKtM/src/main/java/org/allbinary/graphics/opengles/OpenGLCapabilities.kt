@@ -468,11 +468,13 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
     var list: BasicArrayList = tokenizer.getTokens(glExtensions, BasicArrayList())!!
 
 
+    var size: Int = list.size()!!
 
 
 
-                        for (index in 0 until list.size()!!)
 
+
+                        for (index in 0 until size)
 
         {stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(stringUtil!!.toString(list.objectArray[index]!!))

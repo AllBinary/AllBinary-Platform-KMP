@@ -64,7 +64,6 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
                         for (numOfHealth in 0 until max)
 
-
         {image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
 }
 
@@ -74,13 +73,11 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
                         for (numOfHealth in 0 until max)
 
-
         {
 
 
 
                         for (index in 0 until numOfHealth)
-
 
         {this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth *10, 0)
 }

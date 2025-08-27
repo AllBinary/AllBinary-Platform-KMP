@@ -122,7 +122,6 @@ override fun setBasicColorP(basicColor: BasicColor)
 
                         for (index in 0 until this.basicColorArray!!.size)
 
-
         {
     
                         if(basicColor == this.basicColorArray[index])

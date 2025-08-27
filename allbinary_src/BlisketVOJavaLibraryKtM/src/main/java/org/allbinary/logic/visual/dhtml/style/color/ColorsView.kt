@@ -132,7 +132,6 @@ node.appendChild(blackNode)
 
                         for (index in 0 until MAX)
 
-
         {
     var hexColorStringBuffer: StringMaker = StringMaker()
 
@@ -182,20 +181,17 @@ node.appendChild(whiteNode)
 
                         for (blueIndex in MAX /2 until MAX)
 
-
         {
 
 
 
                         for (greenIndex in 0 until MAX /2)
 
-
         {
 
 
 
                         for (redIndex in 0 until MAX /2)
-
 
         {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
@@ -210,20 +206,17 @@ node.appendChild(whiteNode)
 
                         for (redIndex in MAX /2 until MAX)
 
-
         {
 
 
 
                         for (greenIndex in 0 until MAX /2)
 
-
         {
 
 
 
                         for (blueIndex in 0 until MAX /2)
-
 
         {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
@@ -238,20 +231,17 @@ node.appendChild(whiteNode)
 
                         for (greenIndex in MAX /2 until MAX)
 
-
         {
 
 
 
                         for (redIndex in 0 until MAX /2)
 
-
         {
 
 
 
                         for (blueIndex in 0 until MAX /2)
-
 
         {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
@@ -266,20 +256,17 @@ node.appendChild(whiteNode)
 
                         for (greenIndex in 0 until MAX)
 
-
         {
 
 
 
                         for (redIndex in 0 until MAX)
 
-
         {
 
 
 
                         for (blueIndex in 0 until MAX)
-
 
         {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }

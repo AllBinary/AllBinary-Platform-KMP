@@ -163,7 +163,6 @@ logUtil!!.put("Motion Image File Path 2: " +filePathStringBuffer3!!.toString(), 
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-
         {bufferedImageCacheables[index]= poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
 }
 
@@ -187,7 +186,6 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-
         {bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()
 }
 
@@ -203,7 +201,6 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
                         for (index2 in 0 until size)
 
-
         {
     var motionRectangle: MotionRectangle = rectangelList!!.get(index2) as MotionRectangle
 
@@ -215,7 +212,6 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
 
                         for (index in 0 until NUMBER_OF_IMAGES)
-
 
         {bufferedImageGraphicsArray[index]!!.setColor(Color.ORANGE)
 bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height)

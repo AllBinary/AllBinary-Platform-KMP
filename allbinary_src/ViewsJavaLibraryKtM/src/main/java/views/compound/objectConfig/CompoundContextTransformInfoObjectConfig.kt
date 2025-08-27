@@ -156,7 +156,6 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
                         for (index in 0 until size)
 
-
         {
     var objectConfigTransformInfoDomNode: TransformInfoDomNode = viewVector!!.get(index) as TransformInfoDomNode
 

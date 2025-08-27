@@ -289,7 +289,6 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
 
                         for (index in endList!!.size() -1 downTo 0)
 
-
         {endGeographicMapCellPosition= endList!!.get(index) as GeographicMapCellPosition
 
     

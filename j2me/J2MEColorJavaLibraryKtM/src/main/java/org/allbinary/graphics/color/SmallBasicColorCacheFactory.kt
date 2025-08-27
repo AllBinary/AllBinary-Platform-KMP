@@ -85,7 +85,6 @@ open fun getInstance(colorAsInt: Int)
 
                         for (index in 0 until SIZE)
 
-
         {
     
                         if(INDEX_TO_COLOR[index] == colorAsInt)

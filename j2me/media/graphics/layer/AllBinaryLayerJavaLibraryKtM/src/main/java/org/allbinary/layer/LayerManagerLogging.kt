@@ -199,7 +199,6 @@ stringBuilder!!.append(size)!!.append(commonSeps!!.COLON_SEP)
 
                         for (index in 0 until size)
 
-
         {allBinaryLayer= (layerManager!!.getLayerAt(index) as AllBinaryLayer)
 stringBuilder!!.append(allBinaryLayer!!.getName())!!.append(commonSeps!!.COMMA)
 }

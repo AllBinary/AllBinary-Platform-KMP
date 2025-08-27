@@ -52,7 +52,6 @@ open fun getInstance()
 
                         for (index in 0 until keyArray!!.size)
 
-
         {
     var nextKey: Integer = keyArray[index]!!
 

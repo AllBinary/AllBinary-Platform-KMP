@@ -219,7 +219,6 @@ open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicA
 
                         for (index in 0 until size)
 
-
         {gameKeyEvent= (list.objectArray[index]!! as GameKeyEvent)
 key= gameKeyEvent!!.getKey()
 inputProcessorArray[key]!!.process(allbinaryLayerManager, GameKeyEvent.NONE)

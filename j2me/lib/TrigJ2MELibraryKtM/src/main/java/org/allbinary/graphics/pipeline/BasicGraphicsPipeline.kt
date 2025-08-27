@@ -88,7 +88,6 @@ open fun translate(x: Int, y: Int)
 
                         for (index in 0 until size)
 
-
         {secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
@@ -166,7 +165,6 @@ open fun rotate(angle: Int)
 
                         for (index in 0 until size)
 
-
         {secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
@@ -227,7 +225,6 @@ open fun mirror(width: Int)
 
 
                         for (index in 0 until size)
-
 
         {secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
 

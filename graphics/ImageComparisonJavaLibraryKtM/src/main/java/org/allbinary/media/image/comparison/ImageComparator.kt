@@ -206,13 +206,11 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
 
                         for (indexY in 0 until imageComparisonInfo!!.imageHeight)
 
-
         {
 
 
 
                         for (indexX in 0 until imageComparisonInfo!!.imageWidth)
-
 
         {this.process(imageComparisonInfo, PointFactory.getInstance()!!.getInstance(indexX, indexY))
 

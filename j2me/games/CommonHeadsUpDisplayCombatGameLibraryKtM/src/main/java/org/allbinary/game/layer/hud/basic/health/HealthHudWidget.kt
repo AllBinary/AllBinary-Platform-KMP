@@ -95,7 +95,6 @@ open fun update()
 
                         for (index in 0 until this.xArray!!.size)
 
-
         {this.xArray[index]= this.getX() +(index *16)
 }
 
@@ -169,7 +168,6 @@ override fun paint(graphics: Graphics)
 
 
                         for (index in 0 until max)
-
 
         {
     

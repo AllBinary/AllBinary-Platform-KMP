@@ -105,7 +105,6 @@ open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, 
 
                         for (index in 0 until size)
 
-
         {basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.getGeographicMapCellTypeFactory() as BasicTopViewGeographicMapCellTypeFactory
 
     

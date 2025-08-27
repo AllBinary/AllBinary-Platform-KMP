@@ -97,7 +97,6 @@ this.writerFileTypesHashMap= HashMap<Any, Any>()
 
                         for (index in 0 until size)
 
-
         {
     var mediaDataName: String = mediaDataNameArray[index]!! as String
 
@@ -122,7 +121,6 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 
                         for (index in 0 until readerFileTypes!!.size)
 
-
         {this.readerFileTypesHashMap!!.put(readerFileTypes[index]!!, RESIZABLE_MEDIA)
 }
 
@@ -134,7 +132,6 @@ this.readerFileTypesHashMap!!.put(mediaData!!.getName(), mediaData!!.getType())
 
 
                         for (index in 0 until writerFileTypes!!.size)
-
 
         {this.writerFileTypesHashMap!!.put(writerFileTypes[index]!!, RESIZABLE_MEDIA)
 }

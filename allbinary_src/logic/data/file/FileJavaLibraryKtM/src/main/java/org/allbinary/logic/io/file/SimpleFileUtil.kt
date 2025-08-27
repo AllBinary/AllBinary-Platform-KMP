@@ -428,7 +428,6 @@ open fun createStringFromArrayOfStrings(stringArray: Array<String?>)
 
                         for (index in 0 until size)
 
-
         {stringMaker!!.append(stringArray[index]!!)
 }
 

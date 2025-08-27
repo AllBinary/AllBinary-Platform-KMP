@@ -170,7 +170,6 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generateComponentsFromObjectConf
 
                         for (index in 0 until size)
 
-
         {
     var transformInfoObjectConfigComponent: TransformInfoDomNode = transformInfoObjectConfigComponentVector!!.get(index) as TransformInfoDomNode
 

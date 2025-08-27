@@ -66,7 +66,6 @@ open fun main(args: Array<String?>)
 
                         for (i in 0 until TOTAL)
 
-
         {data[i]= ComparableObject()
 }
 
@@ -169,7 +168,6 @@ open fun factorial(dataLength: Int)
 
                         for (i in 1 until dataLength)
 
-
         {temp *= i
 }
 
@@ -202,7 +200,6 @@ System.out.println(iterations)
 
 
                         for (count in 0 until iterations -1)
-
 
         {this.getNext(data)
 visitor.visit(this)

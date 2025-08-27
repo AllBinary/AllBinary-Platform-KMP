@@ -102,7 +102,6 @@ open fun isServiceRunning(name: String)
 
                         for (index in 0 until size)
 
-
         {runningServiceInfo= runningServicesList!!.get(index)
 serviceComponent= runningServiceInfo!!.service
 serviceName= serviceComponent!!.toString()

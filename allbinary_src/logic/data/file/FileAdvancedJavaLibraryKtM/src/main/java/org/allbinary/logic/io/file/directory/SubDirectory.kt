@@ -62,11 +62,13 @@ open fun toString(files: BasicArrayList)
     var NEW_LINE: String = CommonSeps.getInstance()!!.NEW_LINE
 
 
+    var size: Int = files.size()!!
 
 
 
-                        for (index in 0 until files.size()!!)
 
+
+                        for (index in 0 until size)
 
         {
     var file: AbFile = files.get(index) as AbFile

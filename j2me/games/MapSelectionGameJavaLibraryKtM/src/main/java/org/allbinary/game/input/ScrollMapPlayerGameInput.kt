@@ -321,7 +321,6 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
                         for (index in 0 until size)
 
-
         {
     var gameKeyEvent: GameKeyEvent = inputList!!.get(index) as GameKeyEvent
 

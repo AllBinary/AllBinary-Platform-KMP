@@ -71,7 +71,6 @@ private constructor        ()
 
                         for (index in deviceIdToplayerId!!.size -1 downTo 0)
 
-
         {deviceIdToplayerId[index]=  -1
 }
 
@@ -130,7 +129,6 @@ open fun getPlayerForDevice(deviceId: Int)
 
                         for (index in totalDevicesMapped -1 downTo 0)
 
-
         {
     
                         if(this.playerIdToDeviceId[index] == deviceId)
@@ -188,7 +186,6 @@ open fun getTotalDevicesInPlay()
 
 
                         for (index in totalDevicesMapped -1 downTo 0)
-
 
         {
     

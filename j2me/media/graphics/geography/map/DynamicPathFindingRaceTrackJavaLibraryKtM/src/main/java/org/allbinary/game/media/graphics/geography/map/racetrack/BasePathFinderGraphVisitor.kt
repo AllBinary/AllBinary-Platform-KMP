@@ -97,7 +97,6 @@ open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-
         {
     var startPathFindingNode: PathFindingNode = startPathFindingNodeList!!.get(index) as PathFindingNode
 

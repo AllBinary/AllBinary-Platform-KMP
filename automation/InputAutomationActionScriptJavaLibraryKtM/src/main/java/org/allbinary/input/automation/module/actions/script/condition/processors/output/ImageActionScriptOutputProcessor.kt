@@ -71,7 +71,6 @@ logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toSt
 
                         for (index in 0 until size)
 
-
         {
     var imageType: InputImageType = vector.get(index) as InputImageType
 

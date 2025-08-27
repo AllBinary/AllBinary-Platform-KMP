@@ -123,7 +123,6 @@ open fun process(imageProcessorInput: ImageProcessorInput, totalFrames: Int, tot
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-
         {bufferedImage= bufferedImageArray[index]!!
 logUtil!!.put(spriteType, this, commonStrings!!.RUN)
 
@@ -167,14 +166,12 @@ logUtil!!.put("Processing Individual Cells cellHeight: " +cellHeight +" cellWidt
 
                         for (index2 in 0 until rows)
 
-
         {y= cellHeight *index2
 
 
 
 
                         for (index3 in 0 until columns)
-
 
         {x= cellWidth *index3
 generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +widthReduction, y +heightReduction, cellWidth -(widthReduction *2), cellHeight -(heightReduction *2))
@@ -210,7 +207,6 @@ imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 
                         for (index2 in 0 until rows)
 
-
         {y= cellHeight *index2
 
     var tempBufferedImageArray: Array<BufferedImage?> = arrayOfNulls(columns)
@@ -220,7 +216,6 @@ imageUnifierProperties!!.setImageUnifierCell(imageUnifierCell)
 
 
                         for (index3 in 0 until columns)
-
 
         {tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().
@@ -284,14 +279,12 @@ logUtil!!.put("Processing Individual Cells for each Direction", this, commonStri
 
                         for (index2 in 0 until rows)
 
-
         {y= cellHeight *index2
 
 
 
 
                         for (index3 in 0 until columns)
-
 
         {x= cellWidth *index3
 generatedBufferedImageArray[index2]!![index3]= bufferedImage!!.getSubimage(x +widthReduction, y +heightReduction, cellWidth -(widthReduction *2), cellHeight -(heightReduction *2))
@@ -327,7 +320,6 @@ logUtil!!.put("Processing Rows from Cells for each Direction", this, commonStrin
 
                         for (index2 in 0 until rows)
 
-
         {y= cellHeight *index2
 
     var tempBufferedImageArray: Array<BufferedImage?> = arrayOfNulls(columns)
@@ -337,7 +329,6 @@ logUtil!!.put("Processing Rows from Cells for each Direction", this, commonStrin
 
 
                         for (index3 in 0 until columns)
-
 
         {tempBufferedImageArray[index3]= generatedBufferedImageArray[index2]!![index3]!!
 nameEnding= StringMaker().

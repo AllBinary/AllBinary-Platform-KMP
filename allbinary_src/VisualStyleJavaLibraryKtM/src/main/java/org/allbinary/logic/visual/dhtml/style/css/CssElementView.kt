@@ -231,7 +231,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var cssPropertyDomNodeInterface: DomNodeInterface = cssPropertyVector!!.get(index) as DomNodeInterface
 
@@ -246,7 +245,6 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 
 
                         for (index in 0 until size2)
-
 
         {
     var cssElementDomNodeInterface: DomNodeInterface = cssElementVector!!.get(index) as DomNodeInterface

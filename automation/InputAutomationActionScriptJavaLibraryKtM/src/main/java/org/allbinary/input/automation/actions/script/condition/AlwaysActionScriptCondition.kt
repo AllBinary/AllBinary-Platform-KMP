@@ -77,7 +77,6 @@ public constructor        (node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var childNode: Node = nodeList!!.item(index)!!
 

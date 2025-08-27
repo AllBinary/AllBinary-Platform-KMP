@@ -138,7 +138,6 @@ gameCanvas!!.toggleMenu()
 
                         for (index in 0 until size)
 
-
         {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
     

@@ -160,7 +160,6 @@ dy= y
 
                         for (index in 0 until size)
 
-
         {
     var item: CustomItemInterface = this.get(index) as CustomItemInterface
 
@@ -208,7 +207,6 @@ dy= y +(this.rectangle.getHeight() shr 1)
 
 
                         for (index in 0 until size)
-
 
         {
     var item2: CustomItem = this.get(index)!!
@@ -297,7 +295,6 @@ override fun paint(graphics: Graphics)
 
 
                         for (index in 0 until size)
-
 
         {
     var item: CustomItemInterface = this.get(index) as CustomItemInterface

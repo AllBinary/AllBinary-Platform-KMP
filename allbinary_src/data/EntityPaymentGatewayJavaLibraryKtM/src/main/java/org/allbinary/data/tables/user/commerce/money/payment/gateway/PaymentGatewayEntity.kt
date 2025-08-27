@@ -347,7 +347,6 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
 
                         for (i in 0 until size)
 
-
         {
     var paymentTypeString: String = paymentGatewayNameVector!!.get(i) as String
 

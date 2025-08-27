@@ -193,7 +193,6 @@ open fun close()
 
                         for (index in 0 until size2)
 
-
         {disposalUtil!!.dispose(this.imageArray[index]!!)
 }
 
@@ -206,7 +205,6 @@ open fun close()
 
 
                         for (index in 0 until size)
-
 
         {disposalUtil!!.dispose(this.originalImageArray[index]!!)
 }
@@ -231,7 +229,6 @@ disposalUtil!!.dispose(this.currentImage)
 
                         for (index in 0 until size2)
 
-
         {disposalUtil!!.dispose(this.imageArray[index]!!)
 }
 
@@ -244,7 +241,6 @@ disposalUtil!!.dispose(this.currentImage)
 
 
                         for (index in 0 until size)
-
 
         {disposalUtil!!.dispose(this.originalImageArray[index]!!)
 }

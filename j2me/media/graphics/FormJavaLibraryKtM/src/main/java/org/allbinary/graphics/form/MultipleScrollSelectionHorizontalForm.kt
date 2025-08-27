@@ -145,7 +145,6 @@ graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
 
                         for (index in start until size)
 
-
         {item= this.get(index) as CustomItemInterface
 
     

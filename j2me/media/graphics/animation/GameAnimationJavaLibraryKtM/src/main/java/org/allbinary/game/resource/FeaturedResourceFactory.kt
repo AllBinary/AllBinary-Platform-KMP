@@ -85,7 +85,6 @@ open fun init(level: Int)
 
                         for (index in 0 until size)
 
-
         {
     var featureInterface: GameFeatureControlledInterface = this.list.objectArray[index]!! as GameFeatureControlledInterface
 

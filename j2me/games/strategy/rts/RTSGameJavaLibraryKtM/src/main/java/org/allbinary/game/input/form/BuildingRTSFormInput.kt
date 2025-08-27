@@ -415,7 +415,6 @@ logUtil!!.put(StringMaker().
 
                         for (index in occupyList!!.size() -1 downTo 0)
 
-
         {
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = layerManager as GeographicMapCompositeInterface
 

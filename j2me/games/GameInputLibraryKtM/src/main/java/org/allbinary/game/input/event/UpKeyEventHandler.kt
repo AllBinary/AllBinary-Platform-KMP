@@ -90,7 +90,6 @@ override fun removeAllListeners()
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-
         {instanceArray[index]!!.removeAllListeners()
 }
 
@@ -108,7 +107,6 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-
         {instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 }
 
@@ -125,7 +123,6 @@ super.removeListener(eventListenerInterface)
 
 
                         for (index in instanceArray!!.size -1 downTo 0)
-
 
         {instanceArray[index]!!.removeListener(eventListenerInterface)
 }

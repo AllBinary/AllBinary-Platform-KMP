@@ -121,7 +121,6 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
                         for (index in 0 until ivArray!!.size)
 
-
         {result[index]= ivArray[index]!!
 }
 
@@ -130,7 +129,6 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
 
                         for (index in 0 until encrypted.size)
-
 
         {result[index +ivArray!!.size]= encrypted[index]!!
 }
@@ -169,7 +167,6 @@ open fun decrypt(array: ByteArray)
 
                         for (index in 0 until 8)
 
-
         {ivArray[index]= array[index]!!
 }
 
@@ -182,7 +179,6 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
 
                         for (index in ivArray!!.size until array.size)
-
 
         {result[index -ivArray!!.size]= array[index]!!
 }

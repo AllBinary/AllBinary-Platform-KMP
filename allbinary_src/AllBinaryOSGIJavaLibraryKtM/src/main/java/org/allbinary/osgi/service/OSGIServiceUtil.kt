@@ -89,7 +89,6 @@ logUtil!!.put("Service References: " +size, this, "getServicesObjectVector")
 
                         for (index in 0 until size)
 
-
         {
     var serviceReference: ServiceReference = serviceReferences[index]!!
 

@@ -154,7 +154,6 @@ open fun getItems(storeFrontInterface: StoreFrontInterface)
 
                         for (i in 0 until size)
 
-
         {
     var itemHashMap: HashMap<Any, Any> = itemHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 

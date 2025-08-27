@@ -676,7 +676,6 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
                         for (i in 0 until height)
 
-
         {originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
 }
 
@@ -686,13 +685,11 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
                         for (index in halfWidthDelta until width)
 
-
         {
 
 
 
                         for (index2 in halfHeightDelta until height)
-
 
         {newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta) +((index2 -halfHeightDelta) *width)]!!
 }

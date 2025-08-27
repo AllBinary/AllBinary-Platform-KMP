@@ -216,11 +216,13 @@ this.getList()!!.clear()
                         
                                     {
                                     
+    var size: Int = vector.size!!
 
 
 
-                        for (index in 0 until vector.size!!)
 
+
+                        for (index in 0 until size)
 
         {
     var highScoreVector: Vector = vector.elementAt(index) as Vector

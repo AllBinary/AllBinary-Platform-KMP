@@ -213,7 +213,6 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-
         {
     var name: String = nameArray[index]!! as String
 

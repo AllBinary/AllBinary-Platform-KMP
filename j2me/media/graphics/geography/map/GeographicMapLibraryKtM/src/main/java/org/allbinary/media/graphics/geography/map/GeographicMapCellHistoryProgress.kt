@@ -71,7 +71,6 @@ open fun isAnyProgress()
 
                         for (index in 0 until size)
 
-
         {totalVisited= geographicMapCellHistoryArray[index]!!.getTotalVisited()
 currentTotalVisited= this.totalVisitedArray[index]!!
 

@@ -205,7 +205,6 @@ open fun getTokens(stringVector: BasicArrayList)
 
                         for (index in 0 until size)
 
-
         {string= stringVector!!.objectArray[index]!! as String
 end= string.indexOf(sep)
 

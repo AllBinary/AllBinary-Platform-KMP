@@ -165,7 +165,6 @@ open fun addThemes(node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-
         {
     var themeNode: Node = nodeList!!.item(index)!!
 

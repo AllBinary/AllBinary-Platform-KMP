@@ -76,7 +76,6 @@ open fun main(args: Array<String?>)
 
                         for (index in 0 until size)
 
-
         {intArray[index]= index
 intArray2[index]= index
 }
@@ -91,7 +90,6 @@ randomFactory!!.shuffle(intArray, intArray2)
 
                         for (index in 0 until size)
 
-
         {stringBuilder!!.append(intArray[index]!!)!!.append(',')
 }
 
@@ -102,7 +100,6 @@ stringBuilder!!.delete(0, stringBuilder!!.length())
 
 
                         for (index in 0 until size)
-
 
         {stringBuilder!!.append(intArray2[index]!!)!!.append(',')
 }
@@ -117,14 +114,12 @@ System.out.println(stringBuilder!!.toString())
 
                         for (index in 0 until size)
 
-
         {found= false
 
 
 
 
                         for (index2 in 0 until size)
-
 
         {
     
@@ -262,7 +257,6 @@ open fun shuffle(intArray: IntArray, shuffleTotal: Int)
 
                         for (index in 0 until shuffleTotal)
 
-
         {randomIndex= this.getAbsoluteNextIntAllowZero(size)
 randomIndex2= this.getAbsoluteNextIntAllowZero(size)
 value= intArray[randomIndex]!!
@@ -317,7 +311,6 @@ open fun shuffle(intArray: IntArray, intArray2: IntArray, shuffleTotal: Int)
 
 
                         for (index in 0 until shuffleTotal)
-
 
         {randomIndex= this.getAbsoluteNextIntAllowZero(size)
 randomIndex2= this.getAbsoluteNextIntAllowZero(size)

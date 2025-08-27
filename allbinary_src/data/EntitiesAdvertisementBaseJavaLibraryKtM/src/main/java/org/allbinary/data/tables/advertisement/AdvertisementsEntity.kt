@@ -112,7 +112,6 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                         for (index in 0 until size)
 
-
         {
     var hashMap: HashMap<Any, Any> = hashMapVector!!.get(index as Object) as HashMap<Any, Any>
 

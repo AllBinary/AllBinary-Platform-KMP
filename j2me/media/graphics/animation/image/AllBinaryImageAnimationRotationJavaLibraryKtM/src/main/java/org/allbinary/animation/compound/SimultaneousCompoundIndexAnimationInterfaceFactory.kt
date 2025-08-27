@@ -73,7 +73,6 @@ open fun getInstance(instanceId: Int)
 
                         for (index in 0 until size)
 
-
         {animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArray[index]!!.getInstance(instanceId) as IndexedAnimation
 }
 

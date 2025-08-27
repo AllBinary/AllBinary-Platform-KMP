@@ -83,7 +83,6 @@ open fun getNumberFromChar(numberAsChar: Char)
 
                         for (index in 0 until size)
 
-
         {
     
                         if(NUMBER_CHAR_ARRAY[index] == numberAsChar)

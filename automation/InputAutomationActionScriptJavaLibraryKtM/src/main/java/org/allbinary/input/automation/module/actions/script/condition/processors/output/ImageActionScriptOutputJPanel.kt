@@ -70,7 +70,6 @@ open fun set()
 
                         for (index in 0 until size)
 
-
         {
     var imageType: InputImageType = vector.get(index) as InputImageType
 
@@ -159,7 +158,6 @@ open fun setImageTypeJlistModel()
 
 
                         for (index in 0 until size)
-
 
         {
     var imageType: InputImageType = vector.get(index) as InputImageType

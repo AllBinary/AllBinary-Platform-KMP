@@ -103,13 +103,11 @@ reusableList!!.clear()
 
                         for (rowIndex in 0 until rows)
 
-
         {
 
 
 
                         for (columnIndex in 0 until columns)
-
 
         {
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(topRightGeographicMapCellPosition!!.getColumn() +columnIndex, topRightGeographicMapCellPosition!!.getRow() +rowIndex)!!
@@ -149,7 +147,6 @@ reusableList!!.clear()
 
                         for (index in occupyList!!.size() -1 downTo 0)
 
-
         {
     var layerGeographicMapCellPosition: GeographicMapCellPosition = occupyList!!.get(index) as GeographicMapCellPosition
 
@@ -161,7 +158,6 @@ reusableList!!.clear()
 
 
                         for (index2 in surroundingGeographicMapCellPositionList!!.size() -1 downTo 0)
-
 
         {
     var geographicMapCellPosition: GeographicMapCellPosition = surroundingGeographicMapCellPositionList!!.get(index2) as GeographicMapCellPosition
@@ -227,7 +223,6 @@ reusableSurroundingList!!.clear()
 
 
                         for (index in 0 until 8)
-
 
         {column= layerGeographicMapCellPosition!!.getColumn() +surroundArray[index]!![0]
 row= layerGeographicMapCellPosition!!.getRow() +surroundArray[index]!![1]

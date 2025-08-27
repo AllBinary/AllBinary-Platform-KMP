@@ -211,7 +211,6 @@ open fun upTo(replace: String, total: Int)
 
                         for (index2 in 0 until size)
 
-
         {keys= keyArray[index2]!! as Array<String?>
 values= hashMap!!.get(keys as Object) as Array<String?>
 
@@ -361,7 +360,6 @@ open fun line(replace: String)
 
 
                         for (index2 in 0 until size)
-
 
         {key= keyArray[index2]!! as String
 value= hashMap!!.get(key as Object) as String

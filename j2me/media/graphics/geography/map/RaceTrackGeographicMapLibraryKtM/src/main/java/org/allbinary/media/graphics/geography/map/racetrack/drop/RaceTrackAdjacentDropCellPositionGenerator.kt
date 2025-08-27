@@ -107,7 +107,6 @@ surroundingCellPositions[3]= geographicMapCellPositionFactory!!.getInstance(colu
 
                         for (index in surroundingCellPositions!!.size  - 1  downTo 0)
 
-
         {geographicMapCellPosition= surroundingCellPositions[index]!!
 raceTrackGeographicMapCellType= raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
 
@@ -233,7 +232,6 @@ hashtable.put(DirectionFactory.getInstance()!!.NAME, direction)
 
 
                         for (index2 in list.size()!!  - 1  downTo 0)
-
 
         {geographicMapCellType= this.raceTrackGeographicMap!!.getCellTypeAt(list.get(index2) as GeographicMapCellPosition)
 

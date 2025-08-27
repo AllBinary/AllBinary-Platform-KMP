@@ -60,7 +60,6 @@ private constructor        ()
 
                         for (index in cancelInputArray!!.size -1 downTo 0)
 
-
         {cancelInputArray[index]= basicTouchInputFactory!!.NONE
 }
 

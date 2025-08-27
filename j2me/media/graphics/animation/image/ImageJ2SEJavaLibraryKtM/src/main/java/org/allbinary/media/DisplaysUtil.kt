@@ -98,7 +98,6 @@ open fun getScreenSizesAsRectangleArray()
 
                         for (index in 0 until size)
 
-
         {graphicsDevice= graphicsDeviceArray[index]!!
 displayMode= graphicsDevice!!.getDisplayMode()
 rectangle= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, displayMode!!.getWidth(), displayMode!!.getHeight())
