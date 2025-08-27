@@ -88,7 +88,7 @@ AndroidBasicTitleProgressBar.background= background
 
     private var portion: Int = 0
 
-    private var IMAGE: Array<Image?> = arrayOfNulls(4)
+    private val IMAGE: Array<Image?> = arrayOfNulls(4)
 
     private var image: Image = NullCanvas.NULL_IMAGE
 
@@ -110,6 +110,19 @@ AndroidBasicTitleProgressBar.background= background
                     
 this.init()
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
+
+    var size: Int = IMAGE.size
+                
+
+
+
+
+
+                        for (index in 0 until size)
+
+        {IMAGE[index]= NullCanvas.NULL_IMAGE
+}
+
 }
 
 
@@ -463,9 +476,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
                                     {
                                     
     
-                        if(this.IMAGE[index] == 
-                                    null
-                                )
+                        if(this.IMAGE[index] == NullCanvas.NULL_IMAGE)
                         
                                     {
                                     this.IMAGE[index]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -20, image.getHeight().toFloat(), false)
@@ -481,9 +492,7 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
 
 
     
-                        if(this.IMAGE[nextIndex] == 
-                                    null
-                                )
+                        if(this.IMAGE[nextIndex] == NullCanvas.NULL_IMAGE)
                         
                                     {
                                     this.IMAGE[nextIndex]= ImageScaleUtil.getInstance()!!.createImage(ImageCacheFactory.getInstance(), image, lastWidth.toFloat(), image.getWidth().toFloat(), lastHeight.toFloat() -28, image.getHeight().toFloat(), false)
@@ -523,9 +532,7 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
         {
     
-                        if(this.IMAGE[index] != 
-                                    null
-                                )
+                        if(this.IMAGE[index] != NullCanvas.NULL_IMAGE)
                         
                                     {
                                     this.IMAGE[index]= preResourceImageUtil!!.encapsulate(this.IMAGE[index]!!)
@@ -562,9 +569,7 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
         {
     
-                        if(this.IMAGE[index] != 
-                                    null
-                                )
+                        if(this.IMAGE[index] != NullCanvas.NULL_IMAGE)
                         
                                     {
                                     preResourceImageUtil!!.update(graphics, this.IMAGE[index]!!)

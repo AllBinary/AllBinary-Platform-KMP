@@ -30,6 +30,7 @@ import javax.microedition.lcdui.Command
 import javax.microedition.lcdui.CommandListener
 import javax.microedition.lcdui.Display
 import javax.microedition.lcdui.Displayable
+import javax.microedition.lcdui.NullCanvas
 import javax.microedition.midlet.MIDlet
 import javax.microedition.midlet.MIDletStateChangeException
 import org.allbinary.logic.NullUtil
@@ -82,9 +83,7 @@ open fun setDisplay(newDisplay: Displayable)
 
 
     
-                        if(newDisplay != 
-                                    null
-                                )
+                        if(newDisplay != NullCanvas.NULL_CANVAS)
                         
                                     {
                                     title= newDisplay!!.getTitle()

@@ -28,6 +28,7 @@
         import kotlin.reflect.KClass
         
 import javax.microedition.lcdui.Displayable
+import javax.microedition.lcdui.NullCanvas
 import org.allbinary.canvas.Processor
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.string.CommonStrings
@@ -69,7 +70,7 @@ override fun run()
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 this.midlet.destroyApp(false, this.isProgress)
-this.midlet.setDisplay(null as Displayable)
+this.midlet.setDisplay(NullCanvas.NULL_CANVAS)
 this.midlet.notifyDestroyed()
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 processor.process()
