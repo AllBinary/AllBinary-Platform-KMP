@@ -34,6 +34,7 @@ open public class GameStateFactory
         companion object {
             
     private var index: Int = 0
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 

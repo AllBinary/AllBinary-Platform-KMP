@@ -339,6 +339,7 @@ result.put(columnName, field)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
@@ -505,6 +506,7 @@ this.executeSQLStatement(sqlStatement)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getValue(value: String)
         //nullable = true from not(false or (false and false)) = true

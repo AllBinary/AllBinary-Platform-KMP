@@ -89,7 +89,8 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun setFile(filePathName: String, name: String)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -103,7 +104,8 @@ newFile= AbFile(filePathName)
 
 
                 @Throws(IOException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getNext()
         //nullable = true from not(false or (false and true)) = true
 : String{

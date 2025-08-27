@@ -74,6 +74,7 @@ open fun getInstance()
     val PRIVACY_POLICY: String = "privacy_policy"
 
     private var filePath: String = StringUtil.getInstance()!!.EMPTY_STRING
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
@@ -85,7 +86,8 @@ this.filePath= filePath
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -143,7 +145,8 @@ FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun read()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
@@ -155,7 +158,8 @@ open fun read()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
 : LicenseInitInfo{

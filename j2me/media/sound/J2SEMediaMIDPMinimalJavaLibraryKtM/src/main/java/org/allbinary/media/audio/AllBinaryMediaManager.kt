@@ -203,7 +203,8 @@ open fun createPlayer(stream: InputStream, type: String)
 
 
                 @Throws(MediaException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
 {

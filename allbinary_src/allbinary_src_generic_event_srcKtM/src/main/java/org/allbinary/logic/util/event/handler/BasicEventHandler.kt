@@ -92,6 +92,7 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
                         return stringBuffer!!.toString()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
@@ -115,6 +116,7 @@ open fun addListenerSingleThreaded(eventListenerInterface: EventListenerInterfac
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -141,6 +143,7 @@ open fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInter
 this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -152,7 +155,8 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {

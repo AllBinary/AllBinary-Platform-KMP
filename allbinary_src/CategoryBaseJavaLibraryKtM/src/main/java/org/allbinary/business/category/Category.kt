@@ -197,6 +197,7 @@ open fun getPath()
                         return this.categoryPropertiesInterface!!.getPath(this.categoryHierarchyInterface)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addChildProperty(categoryPropertiesInterface: CategoryPropertiesInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -211,6 +212,7 @@ this.typeVector!!.add(this.PROPERTIES)
                         return this.childCategoryVector!!.add(categoryPropertiesInterface)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -251,6 +253,7 @@ open fun getChildNodes()
                         return this.childCategoryVector
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun removeChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -335,6 +338,7 @@ this.childCategoryVector!!.remove(objectIndex)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun removeDuplicateChild(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -504,7 +508,8 @@ this.categoryHierarchyInterface= categoryHierarchyInterface
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{

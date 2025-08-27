@@ -158,7 +158,8 @@ layerManagerEventHandler!!.fireEvent(this.createLayerManagerEvent)
 
 
                 @Throws(Exception::class)
-            override fun remove(layerInterface: AllBinaryLayer)
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 {
 

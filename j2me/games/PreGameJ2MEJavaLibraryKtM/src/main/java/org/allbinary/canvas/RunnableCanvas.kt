@@ -208,6 +208,7 @@ logUtil!!.put(StringMaker().
     private val THREAD: String = "Thread: "
 
     private val NOT_EQUAL: String = " != "
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
@@ -341,7 +342,8 @@ this.repaint()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun waitOnNotify(wait: Long)
         //nullable = true from not(false or (false and false)) = true
 {

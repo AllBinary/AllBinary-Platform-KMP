@@ -58,7 +58,8 @@ private constructor        ()
 
 
                 @Throws(LicensingException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getKey(abeClientInformation: AbeClientInformationInterface, keyName: String)
         //nullable = true from not(false or (false and false)) = true
 : String{

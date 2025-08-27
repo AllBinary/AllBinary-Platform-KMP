@@ -968,7 +968,8 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory", e)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun copy(fromAbPath: AbPath, to: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

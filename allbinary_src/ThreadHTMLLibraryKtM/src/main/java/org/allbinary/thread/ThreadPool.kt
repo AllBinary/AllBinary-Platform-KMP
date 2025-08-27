@@ -151,6 +151,7 @@ taskQueue= BasicArrayList()
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
@@ -228,6 +229,7 @@ this.taskQueue!!.add(index, task)
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
@@ -258,7 +260,8 @@ open fun runTask(task: Runnable)
 
 
                 @Throws(InterruptedException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getTask()
         //nullable = true from not(false or (false and true)) = true
 : Runnable{
@@ -281,12 +284,14 @@ open fun getTask()
                         return taskQueue!!.remove(0) as Runnable
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {taskQueue!!.clear()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true

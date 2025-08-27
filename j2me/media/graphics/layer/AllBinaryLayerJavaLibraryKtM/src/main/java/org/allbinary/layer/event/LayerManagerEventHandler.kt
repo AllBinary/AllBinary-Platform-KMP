@@ -121,7 +121,8 @@ super.fireEvent(eventObject)
     val DELETE: String = "Delete"
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun fireDeleteEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
 {

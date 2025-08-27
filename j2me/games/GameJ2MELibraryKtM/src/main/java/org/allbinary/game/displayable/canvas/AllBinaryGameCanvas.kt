@@ -676,6 +676,7 @@ scrollSelectionForm!!.deleteAll()
 scrollSelectionForm!!.init(rectangle, formType)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun pause()
         //nullable = true from not(false or (false and true)) = true
 {this.gameBehavior!!.pause(this)
@@ -685,6 +686,7 @@ touchButtonFactory!!.toggle(this.isPaused(), BasicArrayListUtil.getInstance()!!.
 System.gc()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, gameStrings!!.UNPAUSE)
@@ -921,7 +923,8 @@ open fun mediaInit()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun initConfigurable(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -1263,6 +1266,7 @@ open fun setLayerManager(layerManager: AllBinaryGameLayerManager)
 this.gameLayerManager= layerManager
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
@@ -1272,6 +1276,7 @@ override fun isGameOver()
                         return this.gameOver
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setGameOver(gameOver: Boolean)
         //nullable = true from not(false or (false and false)) = true

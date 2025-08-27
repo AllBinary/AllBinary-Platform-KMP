@@ -62,6 +62,7 @@ this.gameCanvas= gameCanvas
 
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun update()
         //nullable = true from not(false or (false and true)) = true
 {

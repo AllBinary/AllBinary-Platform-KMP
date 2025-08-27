@@ -65,7 +65,8 @@ this.categoryFactoryInterface= categoryFactoryInterface
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun save(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -101,7 +102,8 @@ cryptFileWriter!!.write(categoryInterface!!.getFilePath(), document)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun delete(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 {

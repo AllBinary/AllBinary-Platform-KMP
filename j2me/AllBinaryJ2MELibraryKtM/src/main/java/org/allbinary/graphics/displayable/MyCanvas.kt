@@ -113,6 +113,7 @@ open fun getCommandStack()
                         return this.commandStack
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
@@ -126,6 +127,7 @@ open fun isCommand(command: Command)
                         return this.commandStack!!.contains(command)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -143,6 +145,7 @@ super.addCommand(command)
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -152,6 +155,7 @@ commandStack!!.removeElement(command)
 super.removeCommand(command)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -190,6 +194,7 @@ open fun getCustomCommandListener()
                         return this.listener
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
@@ -206,6 +211,7 @@ open fun removePauseCommand()
 {this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
@@ -215,6 +221,7 @@ this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.setPaused(true)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun unPause()
         //nullable = true from not(false or (false and true)) = true

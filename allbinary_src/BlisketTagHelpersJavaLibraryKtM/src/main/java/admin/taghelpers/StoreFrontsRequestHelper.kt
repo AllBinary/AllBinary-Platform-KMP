@@ -187,6 +187,7 @@ storeAdminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREC
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STORECREATED, adminEmailInfo)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun install()
         //nullable = true from not(false or (false and true)) = true
@@ -239,6 +240,7 @@ this.modifyingStoreFrontInterface!!.install(this.portion.getCurrent()!!.toInt(),
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true

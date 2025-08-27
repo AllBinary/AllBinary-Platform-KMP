@@ -61,6 +61,7 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun insert(parentCategoryInterface: CategoryInterface, newChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -123,6 +124,7 @@ this.save(newChildCategoryInterface)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun delete(parentCategoryInterface: CategoryInterface, existingChildCategoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true

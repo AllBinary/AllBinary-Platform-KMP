@@ -64,6 +64,7 @@ open fun add(basicDefaultColor: BasicColor)
 hashtable.put(Integer(basicDefaultColor!!.toInt()), basicDefaultColor)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance(integer: Integer)
         //nullable =  from not(true or (false and false)) = 

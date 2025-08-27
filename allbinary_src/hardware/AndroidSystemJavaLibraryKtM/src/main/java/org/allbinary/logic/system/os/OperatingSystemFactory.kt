@@ -59,6 +59,7 @@ private constructor        ()
             : super()
         {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true

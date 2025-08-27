@@ -123,6 +123,7 @@ open fun getInstance()
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getOutputStream(backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
@@ -190,6 +191,7 @@ backupFile!!.createNewFile()
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun backupFile(path: AbPath, backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
@@ -326,6 +328,7 @@ lastIndex= index +1
                         return stringBuffer!!.toString()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
@@ -442,6 +445,7 @@ StreamUtil.getInstance()!!.close(outputStream)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true

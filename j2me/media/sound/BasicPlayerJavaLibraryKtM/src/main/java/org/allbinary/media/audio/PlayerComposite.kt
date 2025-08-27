@@ -70,6 +70,7 @@ this.player= player
 this.timeElapsedHelper!!.delay= repeatTime
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {

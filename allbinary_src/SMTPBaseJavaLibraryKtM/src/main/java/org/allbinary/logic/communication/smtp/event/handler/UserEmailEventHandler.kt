@@ -48,7 +48,8 @@ public constructor        ()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun receiveEmailInfo(userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -62,6 +63,7 @@ this.emailInfo= emailInfo
 this.fireEmailEvent()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addListener(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
@@ -86,6 +88,7 @@ this.addListener(userEmailEventListenerInterface)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addListener(emailEventListenerInterface: UserEmailEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -95,6 +98,7 @@ open fun addListener(emailEventListenerInterface: UserEmailEventListenerInterfac
 this.emailVector!!.add(emailEventListenerInterface)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun removeListener(emailEventListenerInterface: UserEmailEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -106,7 +110,8 @@ this.emailVector!!.remove(emailEventListenerInterface)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun fireEmailEvent()
         //nullable = true from not(false or (false and true)) = true
 {

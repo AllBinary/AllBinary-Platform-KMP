@@ -47,6 +47,7 @@ open public class SaveCapturedImageWorker : BasicEventHandler
     private var capturedImageWorkerResultsEventVector: Vector = Vector()
 public constructor        (){}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
@@ -57,6 +58,7 @@ open fun isRunning()
                         return running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true

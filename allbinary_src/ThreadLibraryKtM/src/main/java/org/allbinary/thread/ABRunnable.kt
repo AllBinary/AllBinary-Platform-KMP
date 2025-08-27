@@ -47,6 +47,7 @@ override fun setThread(thread: Thread)
                     var thread = thread
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
@@ -56,6 +57,7 @@ override fun isRunning()
                         return running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {

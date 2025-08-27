@@ -88,7 +88,8 @@ this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as Cont
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun write()
         //nullable = true from not(false or (false and true)) = true
 {

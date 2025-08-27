@@ -199,7 +199,8 @@ this.currentlyPressedTouchButtonSingleton!!.remove(touchButtonInput)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun releaseTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -281,7 +282,8 @@ this.processRelease(touchButtonInput, deviceId)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun pressTouchButtonInput(x: Int, y: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{

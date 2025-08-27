@@ -93,6 +93,7 @@ override fun close()
         //nullable = true from not(false or (false and true)) = true
 {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -126,6 +127,7 @@ override fun getState()
                         return this.state
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -169,6 +171,7 @@ override fun deallocate()
         //nullable = true from not(false or (false and true)) = true
 {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -189,7 +192,8 @@ open fun getLoopCount()
 
 
                 @Throws(MediaException::class)
-            override fun setMediaTime(now: Long)
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
 
@@ -203,14 +207,16 @@ open fun getLoopCount()
 
 
                 @Throws(MediaException::class)
-            override fun start()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun start()
         //nullable = true from not(false or (false and true)) = true
 {this.setState(Player.STARTED)
 }
 
 
                 @Throws(MediaException::class)
-            override fun stop()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {this.setState(Player.PREFETCHED)
 }

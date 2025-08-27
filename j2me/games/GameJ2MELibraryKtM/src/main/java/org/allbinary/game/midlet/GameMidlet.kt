@@ -424,6 +424,7 @@ notifyDestroyed()
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun commandAction(command: Command, displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 {

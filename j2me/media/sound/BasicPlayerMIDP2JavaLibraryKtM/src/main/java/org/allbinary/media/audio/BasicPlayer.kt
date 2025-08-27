@@ -98,6 +98,7 @@ open fun close()
         //nullable = true from not(false or (false and true)) = true
 {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
@@ -134,6 +135,7 @@ open fun getState()
                         return this.state
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -173,6 +175,7 @@ open fun getTimeBase()
                         return this.timeBase
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
@@ -201,6 +204,7 @@ open fun realize()
         //nullable = true from not(false or (false and true)) = true
 {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
@@ -222,7 +226,8 @@ open fun getLoopCount()
 
 
                 @Throws(MediaException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
 : Long{
@@ -237,7 +242,8 @@ open fun setMediaTime(now: Long)
 
 
                 @Throws(MediaException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun start()
         //nullable = true from not(false or (false and true)) = true
 {this.setState(Player.STARTED)
@@ -245,7 +251,8 @@ open fun start()
 
 
                 @Throws(MediaException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
 {this.setState(Player.PREFETCHED)

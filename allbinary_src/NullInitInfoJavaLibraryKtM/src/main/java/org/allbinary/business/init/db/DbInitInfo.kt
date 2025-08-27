@@ -59,18 +59,21 @@ PreLogUtil.put("Url: " +url, this, "getUrl")
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun write()
         //nullable = true from not(false or (false and true)) = true
 {}
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun load()
         //nullable = true from not(false or (false and true)) = true
 {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true

@@ -680,6 +680,7 @@ UpGameKeyEventHandler.getInstance()!!.fireEvent(gameKeyEvent)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun pause()
         //nullable = true from not(false or (false and true)) = true
 {this.close()
@@ -688,6 +689,7 @@ this.gameRunnable= NullWaitGameRunnable.getInstance()
 this.gameCanvas!!.pause()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {this.open()
@@ -797,6 +799,7 @@ this.paintableInterface!!.paintThreed(graphics)
 this.paintedSpecialAnimationInterface!!.paintThreed(graphics, 0, 0, 0)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put("Not Implemented since not a game", this, "setGameOver")

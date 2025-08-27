@@ -53,6 +53,7 @@ open fun getInstance()
 
 
     var enabled: Boolean = true
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {

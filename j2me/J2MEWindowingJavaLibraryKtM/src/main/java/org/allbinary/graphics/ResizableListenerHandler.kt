@@ -69,7 +69,8 @@ open fun fire(isFullScreen: Boolean)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun fireEvent(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
 {

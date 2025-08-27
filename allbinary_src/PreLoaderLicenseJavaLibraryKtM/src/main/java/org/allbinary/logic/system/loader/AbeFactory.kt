@@ -68,7 +68,8 @@ private constructor        ()
 
 
                 @Throws(LicensingException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable =  from not(true or (false and false)) = 
 : Any{
@@ -120,7 +121,8 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, classN
 
 
                 @Throws(LicensingException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, className: String, classes: Array<KClass<*>?>, params: Array<Any?>)
         //nullable =  from not(true or (false and false)) = 
 : Any{
@@ -228,7 +230,8 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getInstance(className,params)", 
 
 
                 @Throws(LicensingException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun ::class(abeClientInformation: AbeClientInformationInterface, className: String)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{

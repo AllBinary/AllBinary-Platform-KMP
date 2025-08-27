@@ -39,7 +39,8 @@ open public class BasicUserRole
     private val roleVector: Vector<Any> = Vector<Any>()
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getRole(role: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicUserRole{

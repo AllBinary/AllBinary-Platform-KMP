@@ -52,7 +52,8 @@ open public class GenericModuleFactory : AbstractInputAutomationFactory {
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : RunnableInterface{

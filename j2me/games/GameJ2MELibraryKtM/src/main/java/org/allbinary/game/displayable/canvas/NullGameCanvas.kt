@@ -85,6 +85,7 @@ super.setWait(1200)
 private constructor        (){super.setWait(1200)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
@@ -104,6 +105,7 @@ override fun setRunning(running: Boolean)
 this.running= running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
 : Boolean{
@@ -113,11 +115,13 @@ override fun isRunning()
                         return running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun pause()
         //nullable = true from not(false or (false and true)) = true
 {this.setPaused(true)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun unPause()
         //nullable = true from not(false or (false and true)) = true
 {this.setPaused(false)

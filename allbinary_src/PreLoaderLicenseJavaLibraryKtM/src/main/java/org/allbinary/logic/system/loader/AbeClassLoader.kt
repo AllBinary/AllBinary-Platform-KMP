@@ -90,7 +90,8 @@ open fun findLoadedClass1(name: String)
 
 
                 @Throws(ClassNotFoundException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun loadClass(name: String)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
@@ -105,7 +106,8 @@ open fun loadClass(name: String)
 
 
                 @Throws(ClassNotFoundException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun loadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{
@@ -306,7 +308,8 @@ StreamUtil.getInstance()!!.close(in)
 
 
                 @Throws(ClassNotFoundException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun oldLoadClass(name: String, resolve: Boolean)
         //nullable = true from not(false or (false and false)) = true
 : KClass<*>{

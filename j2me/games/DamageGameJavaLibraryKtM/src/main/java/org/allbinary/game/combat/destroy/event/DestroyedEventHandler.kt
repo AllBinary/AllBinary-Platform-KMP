@@ -39,6 +39,7 @@ open public class DestroyedEventHandler : BasicEventHandler {
         companion object {
             
     private val instance: DestroyedEventHandler = DestroyedEventHandler()
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -72,12 +73,14 @@ open fun addListener(collidableDestroyableDamageableLayer: CollidableDestroyable
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
 {this.list.clear()
 super.removeAllListeners()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {

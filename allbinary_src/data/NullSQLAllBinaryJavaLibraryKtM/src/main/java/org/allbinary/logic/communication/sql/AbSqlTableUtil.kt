@@ -66,6 +66,7 @@ open fun getInstance()
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
     val sqlStrings: SqlStrings = SqlStrings.getInstance()!!
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
@@ -82,6 +83,7 @@ open fun backupTable(abSqlTable: AbSqlTable)
                         return TABLE_LABEL +tableName +" Backup Failed"
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true

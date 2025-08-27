@@ -85,6 +85,7 @@ open fun getInstance()
     private var initialized: Boolean = false
 
     private val list: BasicArrayList = BasicArrayList()
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true

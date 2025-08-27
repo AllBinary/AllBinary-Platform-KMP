@@ -118,6 +118,7 @@ super.setLoopCount(count)
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -174,7 +175,8 @@ this.mediaPlayer= NullAndroidCanvas.NULL_MEDIA_PLAYER
 
 
                 @Throws(MediaException::class)
-            override fun start()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun start()
         //nullable = true from not(false or (false and true)) = true
 {
         try {
@@ -198,7 +200,8 @@ super.start()
 
 
                 @Throws(MediaException::class)
-            override fun stop()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {
         try {

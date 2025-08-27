@@ -34,6 +34,7 @@ open public class ProcessingFrameIndexFactory
         companion object {
             
     private var currentFrame: Long = 0L
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun next()
         //nullable = true from not(false or (false and true)) = true

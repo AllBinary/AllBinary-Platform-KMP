@@ -54,6 +54,7 @@ open public class RecordStoreHighScores : HighScores {
         companion object {
             
     private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, highScoreName: String, heading: String, columnTwoHeading: String, recordComparatorInterface: RecordComparator)
         //nullable =  from not(true or (false and false)) = 
@@ -166,6 +167,7 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
                             append(CommonSeps.getInstance()!!.UNDERSCORE)!!.append(this.getName())!!.append(RECORD_ID)!!.toString())
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -502,7 +504,8 @@ open fun isTooManyHighScores()
 
 
                 @Throws(Exception::class)
-            override fun isBestScore(newHighScore: HighScore)
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
 

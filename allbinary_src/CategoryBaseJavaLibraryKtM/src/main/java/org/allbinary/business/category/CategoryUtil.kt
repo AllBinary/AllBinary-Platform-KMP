@@ -41,7 +41,8 @@ open public class CategoryUtil
         
 
         companion object {
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getPathLevel(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Int{
@@ -57,6 +58,7 @@ open fun getPathLevel(categoryPath: AbPath)
                         return count
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getNameFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true

@@ -43,6 +43,7 @@ open public class RemoteHighScores : HighScores {
         companion object {
             
     private val hashTable: Hashtable<Any, Any> = Hashtable<Any, Any>()
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
         //nullable =  from not(true or (false and false)) = 
@@ -71,6 +72,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwa
                         return RemoteHighScores.getInstance(abeClientInformation, softwareInformation, gameInfo, heading, columnTwoHeading, isAscending, true)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
         //nullable =  from not(true or (false and false)) = 

@@ -60,7 +60,8 @@ override fun markSupported()
 
 
                 @Throws(IOException::class)
-            override fun reset()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun reset()
         //nullable = true from not(false or (false and true)) = true
 {this.fileInputStream!!.reset()
 }

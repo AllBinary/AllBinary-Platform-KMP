@@ -140,7 +140,8 @@ open fun postDemoSetup()
 
 
                 @Throws(Exception::class)
-            override fun setDemo()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun setDemo()
         //nullable = true from not(false or (false and true)) = true
 {logUtil!!.put(commonStrings!!.START, this, "setDemo")
 
@@ -152,7 +153,8 @@ PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
 
 
                 @Throws(Exception::class)
-            override fun createGame()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun createGame()
         //nullable = true from not(false or (false and true)) = true
 {
     var CREATE_GAME: String = "createGame"

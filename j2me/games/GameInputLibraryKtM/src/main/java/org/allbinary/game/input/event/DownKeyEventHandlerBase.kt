@@ -81,6 +81,7 @@ this.list.remove(eventListenerInterface)
 super.removeListenerSingleThreaded(eventListenerInterface)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 {

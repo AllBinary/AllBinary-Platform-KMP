@@ -194,7 +194,8 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun processInput(allbinaryLayerManager: AllBinaryLayerManager, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -228,7 +229,8 @@ inputProcessorArray[key]!!.process(allbinaryLayerManager, GameKeyEvent.NONE)
 
 
                 @Throws(Exception::class)
-            override fun processInput(allbinaryLayerManager: AllBinaryLayerManager)
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun processInput(allbinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
 {
 

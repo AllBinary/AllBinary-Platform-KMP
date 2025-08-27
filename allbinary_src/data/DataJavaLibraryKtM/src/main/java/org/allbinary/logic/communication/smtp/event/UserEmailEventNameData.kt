@@ -88,7 +88,8 @@ open public class UserEmailEventNameData
     val NEWPASSWORD: UserEmailEventNameData = UserEmailEventNameData("New Password")
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getInstance(userEmailEventNameString: String)
         //nullable =  from not(true or (false and false)) = 
 : UserEmailEventNameData{
@@ -138,6 +139,7 @@ this.initNextId()
 this.userNameEvenNameHashMap!!.put(this.eventHandlerName, this)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun initNextId()
         //nullable = true from not(false or (false and true)) = true

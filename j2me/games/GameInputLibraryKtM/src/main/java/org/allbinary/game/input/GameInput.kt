@@ -70,6 +70,7 @@ this.removalGameKeyEventList= removalGameKeyEventList
 this.isRemoveDuplicateKeyPresses= Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.REMOVE_DUPLICATE_KEY_PRESSES)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun add(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -107,6 +108,7 @@ open fun add(gameKeyEvent: GameKeyEvent)
                             
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addForRemoval(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -116,6 +118,7 @@ open fun addForRemoval(gameKeyEvent: GameKeyEvent)
 this.removalGameKeyEventList!!.add(gameKeyEvent)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isForRemoval(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -129,12 +132,14 @@ open fun isForRemoval(gameKeyEvent: GameKeyEvent)
                         return this.removalGameKeyEventList!!.contains(gameKeyEvent)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
 {this.gameKeyEventList!!.clear()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun removeNonAIInputGameKeyEvents()
         //nullable = true from not(false or (false and true)) = true
@@ -165,6 +170,7 @@ open fun removeNonAIInputGameKeyEvents()
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true

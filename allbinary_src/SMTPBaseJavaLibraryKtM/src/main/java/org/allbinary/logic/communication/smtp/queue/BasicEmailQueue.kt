@@ -39,6 +39,7 @@ open public class BasicEmailQueue : BasicQueue
     private val instance: BasicEmailQueue = BasicEmailQueue()
 
     private var basicEmailQueue: BasicEmailQueue
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
@@ -68,7 +69,8 @@ private constructor        (){}
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun offer(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean{
@@ -83,6 +85,7 @@ this.post(emailInterface)
                         return true
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun remove(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -92,6 +95,7 @@ open fun remove(emailInterface: EmailInterface)
 this.remove(emailInterface as Object)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun remove()
         //nullable = true from not(false or (false and true)) = true
@@ -104,7 +108,8 @@ open fun remove()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun post(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -124,7 +129,8 @@ processAllUnsent()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun processAllUnsent()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -154,6 +160,7 @@ processAllUnsent()
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun send(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true

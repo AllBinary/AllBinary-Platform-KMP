@@ -394,6 +394,7 @@ open fun adjust(path: String)
                         return path
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
@@ -452,7 +453,8 @@ open fun getNameFromPath(categoryPath: String)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun removeNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
 : AbPath{

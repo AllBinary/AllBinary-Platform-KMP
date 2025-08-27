@@ -60,7 +60,8 @@ basicWeaponPart= basicWeaponPartFactoryInterface!!.getInstance()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getInstance(sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
         //nullable =  from not(true or (false and false)) = 
 : BasicWeaponPart{

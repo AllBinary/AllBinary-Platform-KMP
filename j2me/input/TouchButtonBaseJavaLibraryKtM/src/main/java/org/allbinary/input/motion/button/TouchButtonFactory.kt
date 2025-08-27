@@ -67,6 +67,7 @@ this.toggle(false, LIST)
 
 
     private var saved: Boolean = false
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun toggle(save: Boolean, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true

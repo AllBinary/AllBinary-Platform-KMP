@@ -72,6 +72,7 @@ open fun getTableName()
                         return tableName
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun createTable(data: String)
         //nullable = true from not(false or (false and false)) = true
@@ -114,6 +115,7 @@ open fun createTable(data: String)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true

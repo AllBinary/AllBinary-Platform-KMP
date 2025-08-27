@@ -85,7 +85,8 @@ private constructor        ()
 
 
                 @Throws(SQLException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun get(url: String)
         //nullable = true from not(false or (false and false)) = true
 : Connection{
@@ -254,7 +255,8 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
 
                 @Throws(SQLException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun add(url: String, sqlConnection: Connection)
         //nullable = true from not(false or (false and false)) = true
 {

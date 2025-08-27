@@ -131,7 +131,8 @@ override fun getContentType()
 
 
                 @Throws(MediaException::class)
-            override fun start()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun start()
         //nullable = true from not(false or (false and true)) = true
 {MusicThreadPool.getInstance()!!.runTask(object: Runnable()
                                 {
@@ -183,7 +184,8 @@ clip.open(audioInputStream)
 
 
                 @Throws(MediaException::class)
-            override fun stop()
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+override fun stop()
         //nullable = true from not(false or (false and true)) = true
 {MusicThreadPool.getInstance()!!.runTask(object: Runnable()
                                 {

@@ -104,6 +104,7 @@ DOWN= TouchButtonInput(MAX -39, "Down Button")
 NONE= TouchButtonInput(MAX -40, "No Button")
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true

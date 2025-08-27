@@ -80,6 +80,7 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
                     
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getValue(value: String)
         //nullable = true from not(false or (false and false)) = true
@@ -110,6 +111,7 @@ open fun getValue(value: String)
                             
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
@@ -217,7 +219,8 @@ this.executeSQLStatement(sqlStatement)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun updateWhere(whereKeyValuePairs: HashMap<Any, Any>, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -372,6 +375,7 @@ this.executeSQLStatement(sqlStatement)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
@@ -421,6 +425,7 @@ this.executeSQLStatement(sqlStatement)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun deleteWhere(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true

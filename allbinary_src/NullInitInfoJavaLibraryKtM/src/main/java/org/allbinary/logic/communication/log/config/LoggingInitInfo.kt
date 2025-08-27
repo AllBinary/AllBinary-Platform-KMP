@@ -41,7 +41,8 @@ open public class LoggingInitInfo
     private var hasRead: Boolean = false
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun write()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -58,7 +59,8 @@ open fun write()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun read()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -72,6 +74,7 @@ open fun read()
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -83,7 +86,8 @@ LoggingInitInfo.hasRead= value
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -112,6 +116,7 @@ hasRead= true
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun set(logConfigInfoList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true

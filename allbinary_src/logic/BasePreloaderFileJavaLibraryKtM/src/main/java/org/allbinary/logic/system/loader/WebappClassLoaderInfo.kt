@@ -37,6 +37,7 @@ open public class WebappClassLoaderInfo
         companion object {
             
     private var classLoader: Any = NullUtil.getInstance()!!.NULL_OBJECT
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
@@ -46,6 +47,7 @@ open fun setLoader(classLoader: ClassLoader)
 WebappClassLoaderInfo.classLoader= classLoader
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getLoader()
         //nullable = true from not(false or (false and true)) = true

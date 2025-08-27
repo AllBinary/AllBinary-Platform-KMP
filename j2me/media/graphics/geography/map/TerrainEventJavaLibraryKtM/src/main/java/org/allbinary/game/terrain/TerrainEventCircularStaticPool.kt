@@ -62,7 +62,8 @@ open fun init()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getInstance(basicTerrainInfo: BasicTerrainInfo)
         //nullable =  from not(true or (false and false)) = 
 : TerrainEvent{

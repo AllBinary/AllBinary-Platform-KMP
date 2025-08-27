@@ -60,6 +60,7 @@ override fun getWebappPath()
                         return this.path
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true

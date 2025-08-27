@@ -57,6 +57,7 @@ private constructor        ()
             : super()
         {}
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun showDialog(msg: String)
         //nullable = true from not(false or (false and false)) = true
@@ -106,6 +107,7 @@ error.getContentPane()!!.add(javax.swing.JScrollPane(javax.swing.JLabel(msg)))
 error.show()
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
@@ -126,6 +128,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
                             null)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
@@ -164,6 +167,7 @@ System.out.println(data)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
@@ -184,6 +188,7 @@ open fun put(specialMessage: String, className: String, functionName: String)
                             null)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true

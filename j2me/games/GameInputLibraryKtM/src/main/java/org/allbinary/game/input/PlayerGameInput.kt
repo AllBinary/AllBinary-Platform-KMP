@@ -77,6 +77,7 @@ public constructor        (gameKeyEventList: BasicArrayList, removalGameKeyEvent
 this.playerInputId= playerInputId
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -86,6 +87,7 @@ super.add(gameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -94,6 +96,7 @@ override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
 super.add(gameKeyEvent)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun onDownKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
@@ -104,6 +107,7 @@ super.add(gameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun onDownKeyEvent(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true
@@ -114,6 +118,7 @@ PreLogUtil.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameKeyEvent!!.toString())!!.toString(), this, gameInputStrings!!.ON_DOWN_GAME_KEY)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -122,6 +127,7 @@ override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun onUpKeyEvent(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true

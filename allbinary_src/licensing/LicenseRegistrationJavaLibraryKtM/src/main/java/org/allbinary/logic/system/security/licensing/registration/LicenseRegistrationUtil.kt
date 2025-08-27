@@ -38,7 +38,8 @@ open public class LicenseRegistrationUtil
         
 
         companion object {
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun process(abeClientInformation: AbeClientInformationInterface, registrationId: String)
         //nullable = true from not(false or (false and false)) = true
 {

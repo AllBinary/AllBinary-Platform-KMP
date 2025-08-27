@@ -56,6 +56,7 @@ open fun getInstance()
                     
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -63,6 +64,7 @@ override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
                     var gameKeyEvent = gameKeyEvent
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 {

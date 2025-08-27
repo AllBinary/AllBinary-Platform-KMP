@@ -43,7 +43,8 @@ open public class BaseCircularPool
     var OBJECT_ARRAY: Array<Any?> = NullUtil.getInstance()!!.NULL_OBJECT_ARRAY
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun getNextInstance()
         //nullable = true from not(false or (false and true)) = true
 : Any{

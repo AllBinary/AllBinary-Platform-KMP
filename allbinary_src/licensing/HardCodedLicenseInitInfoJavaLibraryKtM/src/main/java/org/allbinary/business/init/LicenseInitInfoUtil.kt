@@ -54,6 +54,7 @@ open fun getInstance()
     val PRIVACY_POLICY: String = "privacy_policy"
 
     private val OFFICIAL_ALLBINARY_SERVICES_SERVER: String = "https://services.allbinary.com/LicServ/serverssl.php"
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
@@ -68,7 +69,8 @@ private constructor        ()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
 {
@@ -78,7 +80,8 @@ open fun write(initData: LicenseInitInfo)
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun read()
         //nullable = true from not(false or (false and true)) = true
 : LicenseInitInfo{
@@ -90,7 +93,8 @@ open fun read()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
 : LicenseInitInfo{

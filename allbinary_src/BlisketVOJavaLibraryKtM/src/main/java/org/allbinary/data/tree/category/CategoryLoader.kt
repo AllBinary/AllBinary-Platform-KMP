@@ -65,6 +65,7 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
                                 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getDoc(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -164,6 +165,7 @@ logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun get(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -202,6 +204,7 @@ open fun get(categoryInterface: CategoryInterface)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun get(document: Document)
         //nullable = true from not(false or (false and false)) = true
@@ -240,6 +243,7 @@ open fun get(document: Document)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getAll(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
@@ -275,6 +279,7 @@ open fun getAll(categoryInterface: CategoryInterface)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getAll(document: Document)
         //nullable = true from not(false or (false and false)) = true
@@ -313,6 +318,7 @@ open fun getAll(document: Document)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
@@ -384,6 +390,7 @@ parentCategoryInterface!!.addChild(categoryInterface)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true

@@ -78,7 +78,8 @@ private constructor        ()
 
 
                 @Throws(InitException::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun set()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -142,6 +143,7 @@ hasRead= false
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun set(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
@@ -167,6 +169,7 @@ testHtmlPath= AbPath(hashMap!!.get(TESTHTMLPATH as Object) as String)
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
@@ -204,6 +207,7 @@ initInfoEntity!!.get()
 
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -213,6 +217,7 @@ open fun setHasRead(value: Boolean)
 hasRead= value
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true

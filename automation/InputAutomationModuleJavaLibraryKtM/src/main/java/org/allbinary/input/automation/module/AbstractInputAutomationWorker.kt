@@ -76,6 +76,7 @@ open fun setThread(thread: Thread)
                     var thread = thread
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
@@ -86,6 +87,7 @@ open fun isRunning()
                         return running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
@@ -95,6 +97,7 @@ open fun setRunning(running: Boolean)
 this.running= running
 }
 
+@Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isAnyDataWorkerRunning()
         //nullable = true from not(false or (false and true)) = true
@@ -122,7 +125,8 @@ open fun isAnyDataWorkerRunning()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun startDataWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
@@ -140,7 +144,8 @@ captureThread!!.start()
 
 
                 @Throws(Exception::class)
-            
+            @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
+
 open fun waitForDataWorkers()
         //nullable = true from not(false or (false and true)) = true
 {
