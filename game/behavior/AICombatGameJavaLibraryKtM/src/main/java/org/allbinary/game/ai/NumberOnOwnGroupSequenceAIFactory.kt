@@ -78,11 +78,11 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
 
         {
-    var integer: Integer = hashtable.get(integerArray[index]!! as Object) as Integer
+    var integerCanBeNull: Any? = hashtable.get(integerArray[index]!! as Object)
 
 
     
-                        if(integer == 
+                        if(integerCanBeNull == 
                                     null
                                 )
                         
@@ -93,7 +93,7 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
                                     }
                                 
-list.add(integer)
+list.add(integerCanBeNull)
 }
 
 

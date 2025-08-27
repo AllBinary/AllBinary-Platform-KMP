@@ -26,9 +26,11 @@
         import kotlin.reflect.KClass
         
 import java.io.ByteArrayOutputStream
+import java.io.IOException
 import java.io.InputStream
 import java.io.Reader
 import java.io.Writer
+import java.nio.CharBuffer
 import org.allbinary.logic.NullUtil
 import org.allbinary.logic.communication.log.LogUtil
 import org.allbinary.logic.io.StreamUtil
@@ -55,6 +57,201 @@ open fun getInstance()
 }
 
 
+open fun nullWriter()
+        //nullable = true from not(false or (false and true)) = true
+: Writer{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return object: Writer()
+                                {
+                                
+    private var closed: Boolean= false
+
+                @Throws(IOException::class)
+            override fun append(c: Char)
+        //nullable = true from not(false or (false and false)) = true
+: Writer{
+
+                    var c = c
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this
+}
+
+                @Throws(IOException::class)
+            override fun append(csq: CharSequence)
+        //nullable = true from not(false or (false and false)) = true
+: Writer{
+
+                    var csq = csq
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this
+}
+
+                @Throws(IOException::class)
+            override fun append(csq: CharSequence, start: Int, end: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Writer{
+
+                    var csq = csq
+
+
+                    var start = start
+
+
+                    var end = end
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return this
+}
+
+                @Throws(IOException::class)
+            override fun write(c: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var c = c
+}
+
+                @Throws(IOException::class)
+            override fun write(cbuf: CharArray, off: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var cbuf = cbuf
+
+
+                    var off = off
+
+
+                    var len = len
+}
+
+                @Throws(IOException::class)
+            override fun write(str: String)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var str = str
+}
+
+                @Throws(IOException::class)
+            override fun write(str: String, off: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var str = str
+
+
+                    var off = off
+
+
+                    var len = len
+}
+
+                @Throws(IOException::class)
+            override fun flush()
+        //nullable = true from not(false or (false and true)) = true
+{}
+override fun close()
+        //nullable = true from not(false or (false and true)) = true
+{}
+
+                                }
+                            
+}
+
+
+open fun nullReader()
+        //nullable = true from not(false or (false and true)) = true
+: Reader{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return object: Reader()
+                                {
+                                
+                @Throws(IOException::class)
+            override fun read()
+        //nullable = true from not(false or (false and true)) = true
+: Int{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
+}
+
+                @Throws(IOException::class)
+            override fun read(cbuf: CharArray, off: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var cbuf = cbuf
+
+
+                    var off = off
+
+
+                    var len = len
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
+}
+
+                @Throws(IOException::class)
+            override fun read(target: CharBuffer)
+        //nullable = true from not(false or (false and false)) = true
+: Int{
+
+                    var target = target
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return  -1
+}
+
+                @Throws(IOException::class)
+            override fun ready()
+        //nullable = true from not(false or (false and true)) = true
+: Boolean{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return false
+}
+
+                @Throws(IOException::class)
+            override fun skip(n: Long)
+        //nullable = true from not(false or (false and false)) = true
+: Long{
+
+                    var n = n
+
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return 0L
+}
+override fun close()
+        //nullable = true from not(false or (false and true)) = true
+{}
+
+                                }
+                            
+}
+
+
         }
             
             //Auto Generated
@@ -64,9 +261,9 @@ open fun getInstance()
         
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
-    val NULL_WRITER: Writer = Writer.nullWriter()!!
+    val NULL_WRITER: Writer = nullWriter()!!
 
-    val NULL_READER: Reader = Reader.nullReader()!!
+    val NULL_READER: Reader = nullReader()!!
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

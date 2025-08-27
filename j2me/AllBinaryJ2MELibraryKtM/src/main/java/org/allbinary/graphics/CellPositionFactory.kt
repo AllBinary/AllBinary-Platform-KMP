@@ -150,17 +150,17 @@ open fun createInstance(i_column: Int, i_row: Int)
 
                     var i_row = i_row
 
-    var cellPosition: CellPosition = cellPositionArray[i_column]!![i_row]!!
+    var cellPositionCanBeNull: CellPosition? = cellPositionArray[i_column]!![i_row]
 
 
     
-                        if(cellPosition == 
+                        if(cellPositionCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    cellPosition= CellPosition(i_column, i_row, this.columns, this.rows)
-cellPositionArray[i_column]!![i_row]= cellPosition
+                                    cellPositionCanBeNull= CellPosition(i_column, i_row, this.columns, this.rows)
+cellPositionArray[i_column]!![i_row]= cellPositionCanBeNull
 
                                     }
                                 
@@ -168,7 +168,7 @@ cellPositionArray[i_column]!![i_row]= cellPosition
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return cellPosition
+                        return cellPositionCanBeNull
 }
 
 

@@ -25,6 +25,7 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
+import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream
 import org.allbinary.business.init.LicenseInitInfoUtil
@@ -41,6 +42,49 @@ open public class LicenseServerInitFileUtil
          {
         
 
+        companion object {
+            
+open fun nullOutputStream()
+        //nullable = true from not(false or (false and true)) = true
+: OutputStream{
+
+
+                        //if statement needs to be on the same line and ternary does not work the same way.
+                        return object: OutputStream()
+                                {
+                                
+                @Throws(IOException::class)
+            override fun write(b: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var b = b
+}
+
+                @Throws(IOException::class)
+            override fun write(b: ByteArray, off: Int, len: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var b = b
+
+
+                    var off = off
+
+
+                    var len = len
+}
+override fun close()
+        //nullable = true from not(false or (false and true)) = true
+{}
+
+                                }
+                            
+}
+
+
+        }
+            
             //Auto Generated
             public constructor() : super()
             {
@@ -50,7 +94,7 @@ open public class LicenseServerInitFileUtil
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
-    private val NULL_OUTPUT_STREAM: OutputStream = OutputStream.nullOutputStream()!!
+    private val NULL_OUTPUT_STREAM: OutputStream = nullOutputStream()!!
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true

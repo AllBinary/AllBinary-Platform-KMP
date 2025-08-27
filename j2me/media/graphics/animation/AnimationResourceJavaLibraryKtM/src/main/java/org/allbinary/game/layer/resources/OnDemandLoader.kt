@@ -145,9 +145,7 @@ open fun initAll(imageCache: ImageCache, loadingString: String)
         {onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
 
     
-                        if(onDemandResources != 
-                                    null
-                                )
+                        if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)
                         
                                     {
                                     index= onDemandResources!!.init(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index)
@@ -202,9 +200,7 @@ PreLogUtil.put(StringMaker().
         {onDemandResources= onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
 
     
-                        if(onDemandResources != 
-                                    null
-                                )
+                        if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)
                         
                                     {
                                     index= onDemandResources!!.init(imageCache, this.resourceAnimationInterfaceFactoryInterfaceFactory, portion, loadingString, index)

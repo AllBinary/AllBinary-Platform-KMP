@@ -56,16 +56,16 @@ open public class DiveAndDirectionalTrackingAIFactory
 
                     var gameInput = gameInput
 
-    var visitor: Visitor = hashtable.get(BasicAI.AI_VISITOR as Object) as Visitor
+    var visitorCanBeNull: Any? = hashtable.get(BasicAI.AI_VISITOR as Object)
 
 
     
-                        if(visitor == 
+                        if(visitorCanBeNull == 
                                     null
                                 )
                         
                                     {
-                                    visitor= ThrustAIVisitorFactory.getInstance()
+                                    visitorCanBeNull= ThrustAIVisitorFactory.getInstance()
 
                                     }
                                 
@@ -82,7 +82,7 @@ hashtable2.put(BasicAI.AI_VISITOR, LastKeyAIVisitorFactory.getInstance())
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return DiveAndDirectionalTrackingAI(ownerLayerInterface, artificialIntelligenceInterface, gameInput, visitor)
+                        return DiveAndDirectionalTrackingAI(ownerLayerInterface, artificialIntelligenceInterface, gameInput, visitorCanBeNull as Visitor)
 }
 
 
