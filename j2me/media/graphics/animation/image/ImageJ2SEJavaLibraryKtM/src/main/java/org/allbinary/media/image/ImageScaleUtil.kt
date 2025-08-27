@@ -143,7 +143,7 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
                         if(cached)
                         
                                     {
-                                    image= imageCache!!.get(this::class.qualifiedName!!, (width *scaleX).toInt(), (height *scaleY).toInt())
+                                    image= imageCache!!.get(this::class.toString()!!, (width *scaleX).toInt(), (height *scaleY).toInt())
 
                                     }
                                 

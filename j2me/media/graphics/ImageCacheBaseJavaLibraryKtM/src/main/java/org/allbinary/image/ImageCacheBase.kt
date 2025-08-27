@@ -237,7 +237,7 @@ open fun get(anyType: Any, width: Int, height: Int)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this.get(anyType!!::class.qualifiedName!!, width, height)
+                        return this.get(anyType!!::class.toString()!!, width, height)
 }
 
 

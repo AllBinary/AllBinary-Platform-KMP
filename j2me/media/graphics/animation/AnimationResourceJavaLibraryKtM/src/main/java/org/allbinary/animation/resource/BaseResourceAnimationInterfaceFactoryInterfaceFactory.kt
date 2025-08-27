@@ -306,7 +306,7 @@ override fun toString()
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringMaker().
-                            append(this::class.qualifiedName!!)!!.append(CommonSeps.getInstance()!!.SEMICOLON)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.name)!!.toString()
+                            append(this::class.toString()!!)!!.append(CommonSeps.getInstance()!!.SEMICOLON)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.name)!!.toString()
 }
 
 override fun getHashtable()

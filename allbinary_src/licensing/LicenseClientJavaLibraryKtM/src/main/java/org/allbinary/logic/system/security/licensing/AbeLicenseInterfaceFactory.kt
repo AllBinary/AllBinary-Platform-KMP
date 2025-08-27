@@ -145,7 +145,7 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
 
 
 
-                            throw LicensingException("Unknown License Failure: " +this::class.qualifiedName!!)
+                            throw LicensingException("Unknown License Failure: " +this::class.toString()!!)
 }
 
 }

@@ -107,7 +107,7 @@ stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(commonLabels!!.INDEX_LABEL)
 stringBuffer!!.append(indexString)
 stringBuffer!!.append(this.soundStrings!!.SOUND)
-stringBuffer!!.append(soundInterface!!::class.qualifiedName!!)
+stringBuffer!!.append(soundInterface!!::class.toString()!!)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 soundInterface!!.init()
 progressCanvas!!.addPortion(100, StringMaker().

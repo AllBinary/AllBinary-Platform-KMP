@@ -531,7 +531,7 @@ open fun doStartTag()
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("TableTag Helper: ")
-stringBuffer!!.append(this.getTagHelperFactoryInterface()!!.::class.qualifiedName!!)
+stringBuffer!!.append(this.getTagHelperFactoryInterface()!!.::class.toString()!!)
 stringBuffer!!.append(" Request URI: ")
 stringBuffer!!.append(request.getRequestURI())
 logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
@@ -550,7 +550,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag()")
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
                                     {
-                                    logUtil!!.put("TableTag RequestHelper: " +this.getTagRequestHelperFactoryInterface()!!.::class.qualifiedName!!, this, "doStartTag()")
+                                    logUtil!!.put("TableTag RequestHelper: " +this.getTagRequestHelperFactoryInterface()!!.::class.toString()!!, this, "doStartTag()")
 
                                     }
                                 

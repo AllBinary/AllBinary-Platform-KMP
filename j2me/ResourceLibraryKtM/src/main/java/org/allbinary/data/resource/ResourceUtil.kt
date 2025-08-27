@@ -71,7 +71,7 @@ open fun setClassLoader(classLoader: ClassLoader)
 
                     var classLoader = classLoader
 logUtil!!.put(StringMaker().
-                            append("Resource Loader: ")!!.append(classLoader!!::class.qualifiedName!!)!!.toString(), this, "setClassLoader")
+                            append("Resource Loader: ")!!.append(classLoader!!::class.toString()!!)!!.toString(), this, "setClassLoader")
 ResourceUtil.classLoader= classLoader
 }
 

@@ -90,7 +90,7 @@ open fun getInventoryItemView(inventoryTag: HelperTag)
 
 stringBuffer!!.append("Must have ")
 stringBuffer!!.append("InventoryItemView and not: ")
-stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
+stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
 
 
@@ -148,7 +148,7 @@ open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
 
 stringBuffer!!.append("Must have ")
 stringBuffer!!.append("DownloadableInventoryItemView and not: ")
-stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
+stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
 
 
@@ -206,7 +206,7 @@ open fun getRequestMapInterface(inventoryTag: HelperTag)
 
 stringBuffer!!.append("Must have ")
 stringBuffer!!.append("specific TYPE_ID and not: ")
-stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.qualifiedName!!)
+stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
 
 
 
@@ -251,7 +251,7 @@ open fun checkForValidationViewHelper(helperObject: Any)
 stringBuffer!!.append("Must have ")
 stringBuffer!!.append("ValidationViewHelper")
 stringBuffer!!.append("and not: ")
-stringBuffer!!.append(helperObject!!::class.qualifiedName!!)
+stringBuffer!!.append(helperObject!!::class.toString()!!)
 
 
 

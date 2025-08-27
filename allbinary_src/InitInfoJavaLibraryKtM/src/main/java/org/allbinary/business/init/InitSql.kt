@@ -648,7 +648,7 @@ open fun initialize()
     var jdbcDriver: String = this.databaseConnectionInfoInterface!!.getJdbcDriver()!!
 
 PreLogUtil.put(StringBuilder().
-                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.qualifiedName!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
+                            append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.toString()!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
 Class.forName(jdbcDriver)!!.newInstance()
 } catch(e: Exception)
             {

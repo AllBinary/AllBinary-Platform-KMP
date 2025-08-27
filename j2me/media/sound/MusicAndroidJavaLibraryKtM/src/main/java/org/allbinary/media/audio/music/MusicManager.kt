@@ -152,7 +152,7 @@ open fun process()
                                     {
                                     
     
-                        if(androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.qualifiedName!!))
+                        if(androidServicesUtil!!.isServiceRunning(this.musicServiceClass!!.toString()!!))
                         
                                     {
                                     

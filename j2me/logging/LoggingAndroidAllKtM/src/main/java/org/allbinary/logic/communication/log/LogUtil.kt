@@ -114,7 +114,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
     var className: String = LABEL
 
 className= StringMaker().
-                            append(anyType!!::class.qualifiedName!!)!!.append(commonSeps!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
+                            append(anyType!!::class.toString()!!)!!.append(commonSeps!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
                                 
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!

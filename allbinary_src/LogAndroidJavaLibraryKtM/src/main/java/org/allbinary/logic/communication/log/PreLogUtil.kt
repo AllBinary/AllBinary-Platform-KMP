@@ -69,7 +69,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
     var className: String = LABEL
 
 
-    var actualClassName: String = anyType!!::class.qualifiedName!!!!
+    var actualClassName: String = anyType!!::class.toString()!!!!
 
 
     

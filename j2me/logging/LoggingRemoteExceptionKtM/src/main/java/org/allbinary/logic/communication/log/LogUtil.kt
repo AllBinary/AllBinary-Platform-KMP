@@ -143,8 +143,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                     {
                                     
     
-                        if(exception::class.
-                                            qualifiedName!!.compareTo(XmlRpcException::class.qualifiedName!!) == 0)
+                        if(exception::class.toString()!!.compareTo(XmlRpcException::class.toString()!!) == 0)
                         
                                     {
                                     
@@ -157,8 +156,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
                                 
 
     
-                        if(exception::class.
-                                            qualifiedName!!.compareTo(IOException::class.qualifiedName!!) == 0)
+                        if(exception::class.toString()!!.compareTo(IOException::class.toString()!!) == 0)
                         
                                     {
                                     
@@ -182,12 +180,12 @@ this.isFirstException= false
     
                         if(anyType != 
                                     null
-                                 && anyType!!::class.qualifiedName!! != 
+                                 && anyType!!::class.toString()!! != 
                                     null
                                 )
                         
                                     {
-                                    className= anyType!!::class.qualifiedName!!.toCharArray().concatToString()
+                                    className= anyType!!::class.toString()!!.toCharArray().concatToString()
                                 
 
                                     }

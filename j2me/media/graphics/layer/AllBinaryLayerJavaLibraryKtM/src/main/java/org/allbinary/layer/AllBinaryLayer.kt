@@ -102,7 +102,7 @@ public constructor        (name: String, rectangle: Rectangle, viewPosition: Vie
                                 )
                         
                                     {
-                                    localName= this::class.qualifiedName!!
+                                    localName= this::class.toString()!!
 
                                     }
                                 

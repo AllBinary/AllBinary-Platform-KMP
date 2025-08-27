@@ -117,7 +117,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
     var className: String = LABEL
 
-className= anyType!!::class.qualifiedName!!
+className= anyType!!::class.toString()!!
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 

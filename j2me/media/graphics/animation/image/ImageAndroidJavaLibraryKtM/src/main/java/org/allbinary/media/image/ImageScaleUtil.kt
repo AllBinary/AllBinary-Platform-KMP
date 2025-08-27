@@ -278,7 +278,7 @@ open fun getScaledImage(imageCache: ImageCache, originalImage: Image, scaleX: Fl
                         if(cached)
                         
                                     {
-                                    image= imageCache!!.get(this::class.qualifiedName!!, width, height)
+                                    image= imageCache!!.get(this::class.toString()!!, width, height)
 
                                     }
                                 

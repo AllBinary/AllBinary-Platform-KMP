@@ -90,7 +90,7 @@ stringBuffer!!.append("Must have at least a ")
 stringBuffer!!.append("tags.HelperTag")
 stringBuffer!!.append(" as parent")
 stringBuffer!!.append("and not: ")
-stringBuffer!!.append(parentTag!!::class.qualifiedName!!)
+stringBuffer!!.append(parentTag!!::class.toString()!!)
 
 
 

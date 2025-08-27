@@ -96,7 +96,7 @@ public constructor        (inputAutomationModuleInterface: InputAutomationModule
 
                     var inputAutomationModuleInterface = inputAutomationModuleInterface
 this.setInputAutomationModuleInterface(inputAutomationModuleInterface)
-this.setClassName(this.inputAutomationModuleInterface!!.::class.qualifiedName!!)
+this.setClassName(this.inputAutomationModuleInterface!!.::class.toString()!!)
 }
 
 

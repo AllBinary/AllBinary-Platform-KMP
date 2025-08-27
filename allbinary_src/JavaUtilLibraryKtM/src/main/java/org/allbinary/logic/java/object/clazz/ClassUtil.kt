@@ -90,7 +90,7 @@ open fun viewAll(myClass: KClass<*>, lineBreak: String)
 
 stringBuffer!!.append(lineBreak)
 stringBuffer!!.append("Class: ")
-stringBuffer!!.append(myClass!!.qualifiedName!!)
+stringBuffer!!.append(myClass!!.toString()!!)
 stringBuffer!!.append(" uses ")
 stringBuffer!!.append(classes.size)
 stringBuffer!!.append(" other classes")

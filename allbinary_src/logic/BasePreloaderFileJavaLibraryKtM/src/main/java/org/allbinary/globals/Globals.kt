@@ -84,7 +84,7 @@ WebappClassLoaderInfo.setLoader(classLoader)
 stringBuffer!!.append("Setting Up AllBinary System Configuration Args: ")
 stringBuffer!!.append(pathString)
 stringBuffer!!.append(" ClassLoader: ")
-stringBuffer!!.append(classLoader!!::class.qualifiedName!!)
+stringBuffer!!.append(classLoader!!::class.toString()!!)
 logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!

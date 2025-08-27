@@ -141,8 +141,7 @@ open fun isImplemented(clazz: KClass<*>, anyType: Any)
 
         {
     
-                        if(clazz.
-                                            qualifiedName!!.compareTo(classes[index]!!.getName()) == 0)
+                        if(clazz.toString()!!.compareTo(classes[index]!!.getName()) == 0)
                         
 
 
@@ -221,7 +220,7 @@ stringBuffer!!.append("isImplementedView: \n")
                         for (index in 0 until classes.size)
 
 
-        {stringBuffer!!.append(clazz.qualifiedName!!)
+        {stringBuffer!!.append(clazz.toString()!!)
 stringBuffer!!.append(" should be = ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(classes[index]!!.getName())

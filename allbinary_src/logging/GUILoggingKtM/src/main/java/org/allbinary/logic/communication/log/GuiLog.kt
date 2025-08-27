@@ -147,7 +147,7 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
         try {
             
-    var data: String = LogFormatUtil.getInstance()!!.get(specialMessage, anyType!!::class.qualifiedName!!, functionName, exception)!!
+    var data: String = LogFormatUtil.getInstance()!!.get(specialMessage, anyType!!::class.toString()!!, functionName, exception)!!
 
 this.showDialog(data)
 System.out.println(data)

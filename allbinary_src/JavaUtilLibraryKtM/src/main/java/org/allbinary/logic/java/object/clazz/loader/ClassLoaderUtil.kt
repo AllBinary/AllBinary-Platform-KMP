@@ -56,7 +56,7 @@ open fun getName(anyType: Any)
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return "ClassLoader: " +classLoader!!::class.qualifiedName!!
+                        return "ClassLoader: " +classLoader!!::class.toString()!!
 
                                     }
                                 

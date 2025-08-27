@@ -91,7 +91,7 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
 stringBuffer!!.append("Creating WorkFlow: ")
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append("->")
-stringBuffer!!.append(instance::class.qualifiedName!!)
+stringBuffer!!.append(instance::class.toString()!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -129,7 +129,7 @@ params[1]= pageContext as Object
 stringBuffer!!.append("Error Creating WorkFlow: ")
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append("->")
-stringBuffer!!.append(instance::class.qualifiedName!!)
+stringBuffer!!.append(instance::class.toString()!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -157,7 +157,7 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
 stringBuffer!!.append("Error Creating WorkFlow: ")
 stringBuffer!!.append(workFlowClassName)
 stringBuffer!!.append("->")
-stringBuffer!!.append(instance::class.qualifiedName!!)
+stringBuffer!!.append(instance::class.toString()!!)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

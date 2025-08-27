@@ -138,12 +138,12 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
     
-                        if(anyType!!::class.qualifiedName!! != 
+                        if(anyType!!::class.toString()!! != 
                                     null
                                 )
                         
                                     {
-                                    className= anyType!!::class.qualifiedName!!.toCharArray().concatToString()
+                                    className= anyType!!::class.toString()!!.toCharArray().concatToString()
                                 
 
                                     }

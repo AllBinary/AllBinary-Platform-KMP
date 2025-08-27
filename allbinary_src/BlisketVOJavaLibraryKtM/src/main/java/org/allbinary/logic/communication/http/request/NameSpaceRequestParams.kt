@@ -810,7 +810,7 @@ open fun toHashMap()
     var anyType: Any = this.getMap()!!.get(key)!!
 
 
-    var className: String = anyType!!::class.qualifiedName!! as String
+    var className: String = anyType!!::class.toString()!! as String
 
 
     

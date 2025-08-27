@@ -51,7 +51,7 @@ open fun getInstance()
 
         }
             
-    private val logger: Logger = Logger.getLogger(LogUtil::class.qualifiedName!!)!!
+    private val logger: Logger = Logger.getLogger(LogUtil::class.toString()!!)!!
 private constructor        ()
             : super()
         {}
@@ -117,12 +117,12 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
     
-                        if(clazz.qualifiedName!! != 
+                        if(clazz.toString()!! != 
                                     null
                                 )
                         
                                     {
-                                    className= clazz.qualifiedName!!
+                                    className= clazz.toString()!!
 
                                     }
                                 

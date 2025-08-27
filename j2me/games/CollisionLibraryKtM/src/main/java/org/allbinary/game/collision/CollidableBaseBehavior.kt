@@ -69,7 +69,7 @@ override fun getName()
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
-                        return this::class.qualifiedName!!
+                        return this::class.toString()!!
 }
 
 
@@ -101,7 +101,7 @@ override fun isCollidable()
 
 
                             throw Exception(StringMaker().
-                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this::class.qualifiedName!!)!!.toString())
+                            append(commonStrings!!.NOT_IMPLEMENTED)!!.append(CommonLabels.getInstance()!!.COLON_SEP)!!.append(this::class.toString()!!)!!.toString())
 }
 
 

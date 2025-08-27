@@ -227,7 +227,7 @@ open fun setResources(resources: Resources)
 
                     var resources = resources
 logUtil!!.put(StringMaker().
-                            append("Resource Loader: ")!!.append(resources::class.qualifiedName!!)!!.toString(), this, "setResources")
+                            append("Resource Loader: ")!!.append(resources::class.toString()!!)!!.toString(), this, "setResources")
 this.resources= resources
 }
 

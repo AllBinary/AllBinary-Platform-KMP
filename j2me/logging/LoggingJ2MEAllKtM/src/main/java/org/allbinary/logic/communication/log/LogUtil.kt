@@ -97,13 +97,13 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
 
 
     
-                        if(anyType!!::class.qualifiedName!! != 
+                        if(anyType!!::class.toString()!! != 
                                     null
                                 )
                         
                                     {
                                     className= StringMaker().
-                            append(anyType!!::class.qualifiedName!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
+                            append(anyType!!::class.toString()!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
                                 
 
                                     }
@@ -135,13 +135,13 @@ open fun put(specialMessage: String, anyType: Any, functionName: String, excepti
 
 
     
-                        if(anyType!!::class.qualifiedName!! != 
+                        if(anyType!!::class.toString()!! != 
                                     null
                                 )
                         
                                     {
                                     className= StringMaker().
-                            append(anyType!!::class.qualifiedName!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
+                            append(anyType!!::class.toString()!!)!!.append(CommonSeps.getInstance()!!.COLON)!!.append(Integer.toHexString(anyType!!.hashCode()))!!.toString().toCharArray().concatToString()
                                 
 
                                     }

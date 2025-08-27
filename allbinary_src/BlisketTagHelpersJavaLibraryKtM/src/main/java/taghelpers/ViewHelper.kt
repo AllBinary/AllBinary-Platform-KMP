@@ -94,7 +94,7 @@ open fun view()
                         if(this.componentInterface != 
                                     null
                                 )
-                        error += this.componentInterface!!.::class.qualifiedName!!
+                        error += this.componentInterface!!.::class.toString()!!
                              else 
     
                         if()
@@ -136,7 +136,7 @@ open fun toXmlDoc()
                         if(this.componentInterface != 
                                     null
                                 )
-                        error += this.componentInterface!!.::class.qualifiedName!!
+                        error += this.componentInterface!!.::class.toString()!!
                              else 
     
                         if()
