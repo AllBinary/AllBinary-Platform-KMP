@@ -36,24 +36,16 @@ open public class PreGameScrollSelectionForm : ScrollCurrentSelectionForm {
         
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, formPaintableFactory, rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM, 0, false, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, formPaintableFactory, rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM, 0, false, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var formPaintableFactory = formPaintableFactory
-
-
-                    var rectangle = rectangle
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var title = title
+var items = items
+var formPaintableFactory = formPaintableFactory
+var rectangle = rectangle
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,9 +57,11 @@ public constructor        (title: String, items: Array<CustomItem?>, formPaintab
             
 open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rectangle = rectangle
+
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 super.init(rectangle, FormTypeFactory.getInstance()!!.TEMP_HORIZONTAL_FORM)
 }
 

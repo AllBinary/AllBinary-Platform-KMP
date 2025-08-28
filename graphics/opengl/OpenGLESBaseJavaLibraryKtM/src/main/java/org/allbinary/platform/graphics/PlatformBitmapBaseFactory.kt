@@ -45,9 +45,11 @@ open public class PlatformBitmapBaseFactory
         
 open fun createBitmap(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: PlatformBitmapBase{
+: PlatformBitmapBase
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
 

@@ -41,7 +41,11 @@ open public class ShaderUpdater
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderUpdater{
+: ShaderUpdater
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,12 +66,12 @@ open fun getInstance()
 
 open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var eglConfig = eglConfig
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var eglConfig = eglConfig
 }
 
 

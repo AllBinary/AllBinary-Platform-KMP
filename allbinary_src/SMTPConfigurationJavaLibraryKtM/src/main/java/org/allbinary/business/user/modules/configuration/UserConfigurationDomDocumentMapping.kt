@@ -39,9 +39,11 @@ open public class UserConfigurationDomDocumentMapping
     private var userConfigurationInterface: UserConfigurationInterface
 public constructor        (userConfigurationInterface: UserConfigurationInterface)
             : super()
-        {
+        
 
-                    var userConfigurationInterface = userConfigurationInterface
+        Updates for KMP build        
+        {
+var userConfigurationInterface = userConfigurationInterface
 this.userConfigurationInterface= userConfigurationInterface
 }
 
@@ -50,7 +52,11 @@ this.userConfigurationInterface= userConfigurationInterface
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var document: Document = DomDocumentHelper.create()!!
 
 
@@ -70,7 +76,11 @@ document.appendChild(node)
             
 open fun toDomDocumentString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

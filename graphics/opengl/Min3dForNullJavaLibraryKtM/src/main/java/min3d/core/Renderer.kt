@@ -34,13 +34,22 @@ open fun onSurfaceCreated(gl: GL10, config: EGLConfig)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun onSurfaceChanged(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun onDrawFrame(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

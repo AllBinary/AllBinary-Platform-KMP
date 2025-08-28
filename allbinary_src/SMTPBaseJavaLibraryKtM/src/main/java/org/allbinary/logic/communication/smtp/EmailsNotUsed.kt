@@ -46,7 +46,11 @@ open public class EmailsNotUsed
     var emailInfoVector: Vector
 public constructor        ()
             : super()
-        {this.emailInfoVector= Vector()
+        
+
+        Updates for KMP build        
+        {
+this.emailInfoVector= Vector()
 }
 
 
@@ -54,9 +58,11 @@ public constructor        ()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -80,7 +86,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var email: Email = emailInfoVector!!.get(index) as Email
 
 
@@ -114,7 +124,11 @@ open fun toXmlNode(document: Document)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         

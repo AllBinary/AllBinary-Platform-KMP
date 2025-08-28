@@ -56,15 +56,13 @@ open public class MotionGestureEvent : AllBinaryEventObject {
     private var currentPoint: GPoint = PointFactory.getInstance()!!.ZERO_ZERO
 public constructor        (source: Any, id: Int, motionGesture: MotionGestureInput)                        
 
-                            : super(source){
+                            : super(source)
 
-                    var source = source
-
-
-                    var id = id
-
-
-                    var motionGesture = motionGesture
+        Updates for KMP build        
+        {
+var source = source
+var id = id
+var motionGesture = motionGesture
 
 
                             //For kotlin this is before the body of the constructor.
@@ -76,7 +74,11 @@ this.setMotionGesture(motionGesture)
 
 open fun getMotionGesture()
         //nullable = true from not(false or (false and true)) = true
-: MotionGestureInput{
+: MotionGestureInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,16 +88,22 @@ open fun getMotionGesture()
 
 open fun setMotionGesture(motionGesture: MotionGestureInput)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGesture = motionGesture
+
+        Updates for KMP build        
+        {
+var motionGesture = motionGesture
 this.motionGesture= motionGesture
 }
 
 
 open fun getPreviousPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,16 +113,22 @@ open fun getPreviousPoint()
 
 open fun setPreviousPoint(previousPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var previousPoint = previousPoint
+
+        Updates for KMP build        
+        {
+var previousPoint = previousPoint
 this.previousPoint= previousPoint
 }
 
 
 open fun getCurrentPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,15 +138,21 @@ open fun getCurrentPoint()
 
 open fun setCurrentPoint(currentPoint: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var currentPoint = currentPoint
+
+        Updates for KMP build        
+        {
+var currentPoint = currentPoint
 this.currentPoint= currentPoint
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -155,7 +175,11 @@ stringBuffer!!.append(this.hashCode())
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

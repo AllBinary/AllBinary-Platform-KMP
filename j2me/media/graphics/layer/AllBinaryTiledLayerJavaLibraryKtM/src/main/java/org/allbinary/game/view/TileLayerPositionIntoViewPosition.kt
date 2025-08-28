@@ -36,12 +36,20 @@ open public class TileLayerPositionIntoViewPosition : ViewPosition {
     private var tiledLayer: Layer = 
                 null
             
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,7 +59,11 @@ open fun getX()
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,7 +73,11 @@ open fun getY()
 
 open fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,9 +87,11 @@ open fun getZ()
 
 open fun setTiledLayer(tiledLayer: AllBinaryTiledLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var tiledLayer = tiledLayer
+
+        Updates for KMP build        
+        {
+var tiledLayer = tiledLayer
 this.tiledLayer= tiledLayer
 }
 

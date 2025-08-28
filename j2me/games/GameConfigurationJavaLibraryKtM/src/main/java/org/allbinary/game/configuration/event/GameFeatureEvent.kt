@@ -33,12 +33,12 @@ open public class GameFeatureEvent : AllBinaryEventObject {
     private val whatChanged: String
 public constructor        (anyType: Any, whatChanged: String)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var whatChanged = whatChanged
+        Updates for KMP build        
+        {
+var anyType = anyType
+var whatChanged = whatChanged
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,7 +49,11 @@ this.whatChanged= whatChanged
 
 open fun getWhatChanged()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +63,11 @@ open fun getWhatChanged()
 
 open fun getGameOption()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

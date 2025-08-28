@@ -62,13 +62,19 @@ open public class StreetAddress
     private var isDefault: Boolean = false
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var nameNode: Node = DomSearchHelper.getNode(StreetAddressData.NAME, node.getChildNodes())!!
 
@@ -98,9 +104,11 @@ this.log()
 
 public constructor        (streetAddress: StreetAddress)
             : super()
-        {
+        
 
-                    var streetAddress = streetAddress
+        Updates for KMP build        
+        {
+var streetAddress = streetAddress
 this.id= streetAddress!!.getId()
 this.name= streetAddress!!.getName()
 this.street= streetAddress!!.getStreet()
@@ -114,9 +122,11 @@ this.log()
 
 public constructor        (request: HttpServletRequest)
             : super()
-        {
+        
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 this.setId(request.getParameter(StreetAddressData.ID))
 this.setName(request.getParameter(StreetAddressData.NAME))
 this.setStreet(request.getParameter(StreetAddressData.STREET))
@@ -129,24 +139,16 @@ this.log()
 
 public constructor        (name: String, street: String, city: String, state: String, code: String, country: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var street = street
-
-
-                    var city = city
-
-
-                    var state = state
-
-
-                    var code = code
-
-
-                    var country = country
+var name = name
+var street = street
+var city = city
+var state = state
+var code = code
+var country = country
 this.name= name
 this.street= street
 this.city= city
@@ -158,9 +160,11 @@ this.log()
 
 public constructor        (address: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var address = address
+        Updates for KMP build        
+        {
+var address = address
 this.id= address.get(StreetAddressData.ID) as String
 this.name= address.get(StreetAddressData.NAME) as String
 this.street= address.get(StreetAddressData.STREET) as String
@@ -193,7 +197,11 @@ this.log()
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -207,70 +215,88 @@ open fun log()
 
 open fun setId(id: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var id = id
+
+        Updates for KMP build        
+        {
+var id = id
 this.id= id
 }
 
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun setStreet(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.street= value
 }
 
 
 open fun setCity(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.city= value
 }
 
 
 open fun setState(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.state= value
 }
 
 
 open fun setCode(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.code= value
 }
 
 
 open fun setCountry(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.country= value
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -280,7 +306,11 @@ open fun getName()
 
 open fun getStreet()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -290,7 +320,11 @@ open fun getStreet()
 
 open fun getCity()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -300,7 +334,11 @@ open fun getCity()
 
 open fun getState()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -310,7 +348,11 @@ open fun getState()
 
 open fun getCode()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -320,7 +362,11 @@ open fun getCode()
 
 open fun getCountry()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -330,7 +376,11 @@ open fun getCountry()
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -340,7 +390,11 @@ open fun getId()
 
 open fun isDefault()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -350,7 +404,11 @@ open fun isDefault()
 
 open fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
@@ -388,7 +446,11 @@ open fun isEmpty()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
@@ -426,7 +488,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringBuilder = StringBuilder()
 
 stringBuffer!!.append("Address Failed To Validate - All fields must contain data.<br></br>")
@@ -503,7 +569,11 @@ stringBuffer!!.append("<br></br>")
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -513,9 +583,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -528,7 +600,11 @@ node.appendChild(this.toXmlNode(document))
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -552,7 +628,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "toValidationInfoNode", e)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(StreetAddressData.ID, this.id)
@@ -574,9 +654,11 @@ hashMap!!.put(StreetAddressData.COUNTRY, this.country)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -602,7 +684,11 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = keyArray[i]!! as String
 
 

@@ -39,7 +39,11 @@ open public class OrientationToGameKeyEvent
     private val MIN: Int = 15
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     
                         if(Features.getInstance()!!.isFeature(SensorFeatureFactory.getInstance()!!.NO_ORIENTATION))
                         
@@ -61,16 +65,22 @@ public constructor        ()
 
 open fun setAllBinaryGyroSensor(allBinaryGyroSensor: AllBinaryOrientationSensor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGyroSensor = allBinaryGyroSensor
+
+        Updates for KMP build        
+        {
+var allBinaryGyroSensor = allBinaryGyroSensor
 this.allBinaryGyroSensor= allBinaryGyroSensor
 }
 
 
 open fun getAllBinaryGyroSensor()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryOrientationSensor{
+: AllBinaryOrientationSensor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,25 +92,25 @@ open fun getAllBinaryGyroSensor()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun updateGameKeyEvents(orientation: Orientation, yaw: Int, pitch: Int, roll: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var orientation = orientation
 
 
-                    var yaw = yaw
-
-
-                    var pitch = pitch
-
-
-                    var roll = roll
+        Updates for KMP build        
+        {
+var orientation = orientation
+var yaw = yaw
+var pitch = pitch
+var roll = roll
 }
 
 

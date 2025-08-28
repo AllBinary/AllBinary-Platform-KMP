@@ -36,12 +36,12 @@ open public class LogConfigType
     private var description: String
 public constructor        (name: String, description: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var description = description
+var name = name
+var description = description
 this.name= name
 this.description= description
 }
@@ -49,7 +49,11 @@ this.description= description
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +63,11 @@ open fun getName()
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,18 +77,22 @@ open fun getDescription()
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.name= value
 }
 
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.description= value
 }
 

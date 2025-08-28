@@ -46,18 +46,14 @@ open public class VectorToImageArrayRotationAnimationFactory : BaseImageAnimatio
     private var angleIncrement: Int= 0
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int)                        
 
-                            : this(vectorInfo, basicColor, dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(vectorInfo, basicColor, dx, dy, AnimationBehaviorFactory.getInstance())
 
-                    var vectorInfo = vectorInfo
-
-
-                    var basicColor = basicColor
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var vectorInfo = vectorInfo
+    //var basicColor = basicColor
+    //var dx = dx
+    //var dy = dy
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,21 +62,15 @@ public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: I
 
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(vectorInfo, basicColor, animationBehaviorFactory){
+                            : this(vectorInfo, basicColor, animationBehaviorFactory)
 
-                    var vectorInfo = vectorInfo
-
-
-                    var basicColor = basicColor
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var vectorInfo = vectorInfo
+    //var basicColor = basicColor
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,12 +81,12 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor)                        
 
-                            : this(vectorInfo, basicColor, AnimationBehaviorFactory.getInstance()){
+                            : this(vectorInfo, basicColor, AnimationBehaviorFactory.getInstance())
 
-                    var vectorInfo = vectorInfo
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var vectorInfo = vectorInfo
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -105,15 +95,13 @@ public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor)
 
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), 0, 0, animationBehaviorFactory){
+                            : super(AnimationFrameToImageUtil.getInstance()!!.getInstanceTranslate(vectorInfo!!.getWidth(), vectorInfo!!.getHeight(), VectorAnimation(vectorInfo!!.getPoints(), basicColor, animationBehaviorFactory!!.getOrCreateInstance())), 0, 0, animationBehaviorFactory)
 
-                    var vectorInfo = vectorInfo
-
-
-                    var basicColor = basicColor
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var vectorInfo = vectorInfo
+    //var basicColor = basicColor
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -126,7 +114,11 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
 this.angleIncrement= angleFactory!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()
@@ -138,9 +130,11 @@ this.imageArray= ImageToRotationImageArrayUtil.getInstance()!!.generate(this.get
             
 open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     
                         if(this.animationFactoryInitializationVisitor!!.dx != 0 || this.animationFactoryInitializationVisitor!!.dy != 0)
@@ -168,7 +162,11 @@ open fun getInstance(instanceId: Int)
 
 open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,9 +176,11 @@ open fun getAngleIncrement()
 
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

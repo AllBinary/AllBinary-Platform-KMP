@@ -36,11 +36,17 @@ open fun getTaxRate(streetAddress: StreetAddress, storeFrontInterface: StoreFron
         //nullable = true from not(false or (false and false)) = true
 : Float
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun isValid(streetAddress: StreetAddress, storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

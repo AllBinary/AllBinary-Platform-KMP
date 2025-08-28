@@ -43,12 +43,12 @@ open public class ArcedMultiBeamWeaponPart : BasicWeaponPart {
     private val total: Int
 public constructor        (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
 
-                            : super(animationInterface){
+                            : super(animationInterface)
 
-                    var animationInterface = animationInterface
-
-
-                    var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
+    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,27 +59,17 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 public constructor        (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
-                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
+                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship)
 
-                    var animationInterface = animationInterface
-
-
-                    var sourceLayerInterface = sourceLayerInterface
-
-
-                    var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
-
-
-                    var total = total
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
-
-
-                    var relativeRelationship = relativeRelationship
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
+    //var sourceLayerInterface = sourceLayerInterface
+    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+    //var total = total
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
+    //var relativeRelationship = relativeRelationship
 
 
                             //For kotlin this is before the body of the constructor.
@@ -94,21 +84,15 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var angle = angle
+    //var otherAngle = otherAngle
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
 
     var increment: Short = ((this.total -1) /TOTAL_ANGLE).toShort()
 
@@ -127,7 +111,11 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
                         for (index in 0 until total)
 
-        {weaponLayer= weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
+        
+
+        Updates for KMP build        
+        {
+weaponLayer= weaponLayerCircularStaticPool!!.getInstance(this.getOwnerLayerInterface(), this.relativeRelationship!!.getX(), this.relativeRelationship!!.getY(), 0, (minAngle +increment).toInt(), otherAngle.toInt(), weaponProperties, scoreableInterface)
 allbinaryLayerManager!!.append(weaponLayer)
 next += increment
 }

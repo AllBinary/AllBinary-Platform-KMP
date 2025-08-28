@@ -37,7 +37,11 @@ open public class SystemProperties
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SystemProperties{
+: SystemProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,12 +52,20 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +75,11 @@ open fun getName()
 
 open fun getArch()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +89,11 @@ open fun getArch()
 
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

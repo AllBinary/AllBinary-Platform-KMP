@@ -42,7 +42,11 @@ open public class AbSqlTableUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbSqlTableUtil{
+: AbSqlTableUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +74,11 @@ open fun getInstance()
 
 open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abSqlTable = abSqlTable
+        Updates for KMP build        
+        {
+var abSqlTable = abSqlTable
 
     var tableName: String = abSqlTable!!.getTableName()!!
 
@@ -87,12 +93,12 @@ open fun backupTable(abSqlTable: AbSqlTable)
 
 open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abSqlTable = abSqlTable
-
-
-                    var portion = portion
+        Updates for KMP build        
+        {
+var abSqlTable = abSqlTable
+var portion = portion
 
     var tableName: String = abSqlTable!!.getTableName()!!
 

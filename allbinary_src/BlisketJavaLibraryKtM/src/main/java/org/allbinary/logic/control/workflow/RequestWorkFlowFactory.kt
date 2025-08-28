@@ -48,18 +48,14 @@ open public class RequestWorkFlowFactory
             
 open fun getInstance(request: ServletRequest, response: ServletResponse, servletConfig: ServletConfig, servletContext: ServletContext)
         //nullable =  from not(true or (false and false)) = 
-: WorkFlowInterface{
+: WorkFlowInterface
 
-                    var request = request
-
-
-                    var response = response
-
-
-                    var servletConfig = servletConfig
-
-
-                    var servletContext = servletContext
+        Updates for KMP build        
+        {
+var request = request
+var response = response
+var servletConfig = servletConfig
+var servletContext = servletContext
 
     var httpRequest: HttpServletRequest = request as HttpServletRequest
 
@@ -87,12 +83,12 @@ open fun getInstance(request: ServletRequest, response: ServletResponse, servlet
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: WorkFlowInterface{
+: WorkFlowInterface
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
     var workFlowName: String = pageContext!!.getRequest()!!.getParameter(WorkFlowData.getInstance()!!.NAME) as String
 
@@ -113,7 +109,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

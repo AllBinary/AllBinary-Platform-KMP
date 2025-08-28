@@ -38,9 +38,11 @@ open public class DemoSetup
         
 open fun init(gameMidlet: GameMidlet)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameMidlet = gameMidlet
+
+        Updates for KMP build        
+        {
+var gameMidlet = gameMidlet
 }
 
 

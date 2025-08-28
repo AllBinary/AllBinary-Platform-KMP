@@ -39,7 +39,11 @@ open public class ImageJ2MEScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageJ2MEScaleUtil{
+: ImageJ2MEScaleUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,29 +54,35 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun scale(images: Array<Image?>, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>{
+: Array<Image?>
 
-                    var images = images
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var images = images
+var width = width
+var height = height
 
 
 
 
                         for (index in 0 until images.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var image: Image = images[index]!!
 
 images[index]= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFactory.getInstance(), image, width.toFloat() /2, image.getWidth().toFloat(), height.toFloat(), image.getHeight().toFloat(), false)
@@ -90,15 +100,13 @@ images[index]= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheF
             
 open fun scale(image: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var image = image
+var width = width
+var height = height
 
 
 

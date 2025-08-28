@@ -39,52 +39,40 @@ open public class OpenGLVUtilBase
         
 open fun glTexEnvix(gl: GL10, target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var target = target
-
-
-                    var pname = pname
-
-
-                    var param = param
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var target = target
+    //var pname = pname
+    //var param = param
 }
 
 
 open fun glTexParameterix(gl: GL10, target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var target = target
-
-
-                    var pname = pname
-
-
-                    var param = param
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var target = target
+    //var pname = pname
+    //var param = param
 }
 
 
 open fun glGenerateMipmap(gl: GL10, textureId: Int, target: Int, generateMipMap: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var textureId = textureId
-
-
-                    var target = target
-
-
-                    var generateMipMap = generateMipMap
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var textureId = textureId
+    //var target = target
+    //var generateMipMap = generateMipMap
 }
 
 

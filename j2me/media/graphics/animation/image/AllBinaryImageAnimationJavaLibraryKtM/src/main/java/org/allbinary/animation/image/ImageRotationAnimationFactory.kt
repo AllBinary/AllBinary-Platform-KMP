@@ -38,15 +38,13 @@ open public class ImageRotationAnimationFactory : BaseImageAnimationFactory {
     val angleIncrement: Short
 public constructor        (image: Image, dx: Int, dy: Int)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var image = image
+    //var dx = dx
+    //var dy = dy
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,21 +53,15 @@ public constructor        (image: Image, dx: Int, dy: Int)
 
 public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var unused = unused
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var unused = unused
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -78,21 +70,15 @@ public constructor        (image: Image, dx: Int, dy: Int, unused: Any, animatio
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var unused = unused
+        Updates for KMP build        
+        {
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
+    //var unused = unused
 
 
                             //For kotlin this is before the body of the constructor.
@@ -101,24 +87,16 @@ public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short
 
 public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short, unused: Any, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), dx, dy, angleIncrement, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var unused = unused
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
+    //var unused = unused
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -127,24 +105,16 @@ public constructor        (image: Image, dx: Int, dy: Int, angleIncrement: Short
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)                        
 
-                            : this(image, width, height, dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance()){
+                            : this(image, width, height, dx, dy, angleIncrement, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var angleIncrement = angleIncrement
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
 
 
                             //For kotlin this is before the body of the constructor.
@@ -153,27 +123,17 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, angleIncrement, animationBehaviorFactory){
+                            : this(image, width, height, angleIncrement, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -184,21 +144,15 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int)                        
 
-                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(image, width, height, dx, dy, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
 
 
                             //For kotlin this is before the body of the constructor.
@@ -207,24 +161,16 @@ public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: I
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, animationBehaviorFactory){
+                            : this(image, width, height, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -235,9 +181,11 @@ this.animationFactoryInitializationVisitor!!.dy= dy
 
 public constructor        (image: Image)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), AnimationBehaviorFactory.getInstance()){
+                            : this(image, image.getWidth(), image.getHeight(), AnimationBehaviorFactory.getInstance())
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
                             //For kotlin this is before the body of the constructor.
@@ -246,12 +194,12 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
+                            : this(image, image.getWidth(), image.getHeight(), animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -260,18 +208,14 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
 
 public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory){
+                            : super(image, width, height, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -281,21 +225,15 @@ this.angleIncrement= (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfiguratio
 
 public constructor        (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory){
+                            : super(image, width, height, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var angleIncrement = angleIncrement
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -307,9 +245,11 @@ this.angleIncrement= angleIncrement
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     
                         if(this.animationFactoryInitializationVisitor!!.dx != 0 || this.animationFactoryInitializationVisitor!!.dy != 0)
@@ -338,7 +278,11 @@ this.angleIncrement= angleIncrement
 
 open fun getAngleIncrementP()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

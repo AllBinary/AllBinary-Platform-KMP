@@ -70,12 +70,12 @@ open public class StaticPagesRequestHelper : AbContext
     private var xslFile: String
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext){
+                            : super(propertiesHashMap, pageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -88,7 +88,11 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.storeName= request.getParameter(StoreFrontData.getInstance()!!.NAME)
+
+
+        Updates for KMP build        
+        {
+this.storeName= request.getParameter(StoreFrontData.getInstance()!!.NAME)
 this.searchParams= SearchParams(this.request)
 }
 
@@ -97,7 +101,11 @@ this.searchParams= SearchParams(this.request)
             
 open fun email()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -138,7 +146,11 @@ open fun email()
 storeAdminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERATINGSTATICPAGES, storeAdminEmailInfo)
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERATINGSTATICPAGES, adminEmailInfo)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
@@ -154,7 +166,11 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.STOREGENERA
 
 open fun generateStaticPages()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var contentType: String = AcceptableResponseGenerator.getInstance()!!.get(this.request)!!
@@ -182,7 +198,11 @@ this.email()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to generate staticpages table"
 
 
@@ -206,7 +226,11 @@ this.email()
 
 open fun makePublic()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.storeName)!!
@@ -236,7 +260,11 @@ FileUtil.getInstance()!!.copy(fromAbPath, toAbPath)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to makePublic"
 
 

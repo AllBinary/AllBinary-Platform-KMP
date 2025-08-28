@@ -36,9 +36,11 @@ open public class AbFileNativeUtil
             
 open fun get(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: File{
+: File
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
 

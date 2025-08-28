@@ -38,7 +38,11 @@ open public class EchoResponseTypeOneData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

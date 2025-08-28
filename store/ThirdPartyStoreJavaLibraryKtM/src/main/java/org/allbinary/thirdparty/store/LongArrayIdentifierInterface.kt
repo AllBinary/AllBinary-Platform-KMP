@@ -32,6 +32,9 @@ open fun getLongArrayIdentifier()
         //nullable = true from not(false or (false and true)) = true
 : LongArray
 
+        Updates for KMP build        
+        
+
 }
                 
             

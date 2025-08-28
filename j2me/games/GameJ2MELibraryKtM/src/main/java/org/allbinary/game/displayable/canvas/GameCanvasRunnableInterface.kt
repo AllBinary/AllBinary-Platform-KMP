@@ -38,25 +38,43 @@ open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun unPause()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun isHighScoreSubmitted()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -64,19 +82,31 @@ open fun setHighScoreSubmitted(highScoreSubmitted: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun setGameOver()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -84,11 +114,17 @@ open fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun getLoadStateHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -96,9 +132,15 @@ open fun setLoadStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
 : Int
+
+        Updates for KMP build        
+        
 
 }
                 

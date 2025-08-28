@@ -39,9 +39,11 @@ open public class SelectNewView : PaymentGatewayViewAbstract {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -53,7 +55,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var paymentGatewayEntityInterface: PaymentGatewayEntityInterface = PaymentGatewayEntityFactory.getInstance()!!
@@ -71,7 +77,11 @@ open fun view()
                         return PaymentGatewaysView(this.getTransformInfoInterface(), allGatewaysLessExisting).
                             view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         

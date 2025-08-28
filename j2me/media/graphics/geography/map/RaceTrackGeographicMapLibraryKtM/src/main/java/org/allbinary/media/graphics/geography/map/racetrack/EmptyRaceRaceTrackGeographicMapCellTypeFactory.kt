@@ -37,7 +37,11 @@ open public class EmptyRaceRaceTrackGeographicMapCellTypeFactory : RaceTrackGeog
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EmptyRaceRaceTrackGeographicMapCellTypeFactory{
+: EmptyRaceRaceTrackGeographicMapCellTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 this.EMPTY_CELL_TYPE= RaceTrackGeographicMapCellType(commonStrings!!.EMPTY, 0, PathFindingNodeCostInfoData.getInstance()!!.MAX_NODE_COST)

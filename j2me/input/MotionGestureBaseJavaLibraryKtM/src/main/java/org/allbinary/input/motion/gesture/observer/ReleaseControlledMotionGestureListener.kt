@@ -54,90 +54,112 @@ open public class ReleaseControlledMotionGestureListener
     private var signed: CompleteMotionGestureListenerInterface
 public constructor        (signed: CompleteMotionGestureListenerInterface)
             : super()
-        {
+        
 
-                    var signed = signed
+        Updates for KMP build        
+        {
+var signed = signed
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.signed= signed
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 }
 
 override fun onUpMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDownMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalDownRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalDownLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalUpRightMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onDiagonalUpLeftMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 onMotionGestureEvent(ev)
 }
 
 override fun onPressedMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 isMouseGestureOccurring= true
 currentMotionGesture= TouchMotionGestureFactory.getInstance()!!.NO_MOTION
 this.onMotionGestureEvent(ev)
@@ -145,9 +167,11 @@ this.onMotionGestureEvent(ev)
 
 override fun released(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 
         try {
             
@@ -162,7 +186,11 @@ isMouseGestureOccurring= false
 signed.onMotionGestureCompleted(motionGestureCollection)
 motionGestureCollection!!.clear()
 } catch(e: Exception)
-            {logUtil!!.put(StringMaker().
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(StringMaker().
                             append(commonStrings!!.EXCEPTION_LABEL)!!.append(StringUtil.getInstance()!!.toString(ev.getMotionGesture()))!!.toString(), this, "release", e)
 }
 
@@ -170,9 +198,11 @@ motionGestureCollection!!.clear()
 
 override fun onMotionGestureEvent(ev: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ev = ev
+
+        Updates for KMP build        
+        {
+var ev = ev
 
     
                         if(isMouseGestureOccurring == false)

@@ -41,13 +41,21 @@ open public class GeologicalResourceInfoHudPaintable : WaypointInfoHudPaintable 
         }
             
     private val keyvalueDrawString: KeyValueDrawCharArray
-protected constructor        (){keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+keyvalueDrawString= KeyValueDrawCharArray(RESOURCES, this.textX)
 }
 
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-{super.updateSelectionInfo()
+
+
+        Updates for KMP build        
+        {
+super.updateSelectionInfo()
 
     var list: BasicArrayList = this.getRtsLayer()!!.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
 
@@ -60,7 +68,11 @@ open fun updateSelectionInfo()
 
                         for (index in list.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var geographicMapCellPosition: GeologicalGeographicMapCellPosition = list.get(index) as GeologicalGeographicMapCellPosition
 
 total += geographicMapCellPosition!!.getGeologicalResource()!!.getTotal()
@@ -72,9 +84,11 @@ this.keyvalueDrawString!!.update(this.getPrimitiveLongUtil()!!.getCharArray(tota
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 this.keyvalueDrawString!!.paint(graphics, (y +(2 *MyFont.getInstance()!!.DEFAULT_CHAR_HEIGHT)))
 }

@@ -40,9 +40,11 @@ open public class BufferedImageCacheable
     private var bufferedImage: BufferedImage
 public constructor        (key: BufferedImageInfo)
             : super()
-        {
+        
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 this.key= key
 this.setBufferedImage(BufferedImage(key.getWidth(), key.getHeight(), key.getType()))
 }
@@ -50,7 +52,11 @@ this.setBufferedImage(BufferedImage(key.getWidth(), key.getHeight(), key.getType
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +66,11 @@ open fun getKey()
 
 open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
-: BufferedImage{
+: BufferedImage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,15 +80,21 @@ open fun getBufferedImage()
 
 open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var bufferedImage = bufferedImage
+
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
 this.bufferedImage= bufferedImage
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.toString()!!)

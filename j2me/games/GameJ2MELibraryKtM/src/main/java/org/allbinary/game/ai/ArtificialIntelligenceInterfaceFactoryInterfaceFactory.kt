@@ -42,7 +42,11 @@ open public class ArtificialIntelligenceInterfaceFactoryInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ArtificialIntelligenceInterfaceFactoryInterfaceFactory{
+: ArtificialIntelligenceInterfaceFactoryInterfaceFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,15 +65,21 @@ open fun getInstance()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{list= BasicArrayList()
+
+
+        Updates for KMP build        
+        {
+list= BasicArrayList()
 }
 
 
 open fun getInstance(hashtable: Hashtable<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterfaceFactoryInterface{
+: ArtificialIntelligenceInterfaceFactoryInterface
 
-                    var hashtable = hashtable
+        Updates for KMP build        
+        {
+var hashtable = hashtable
 
     var typeInteger: Integer = hashtable.get(BasicAI.ID as Object) as Integer
 
@@ -89,9 +99,11 @@ open fun getInstance(hashtable: Hashtable<Any, Any>)
 
 open fun add(artificialIntelligenceInterfaceFactoryInterface: ArtificialIntelligenceInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+var artificialIntelligenceInterfaceFactoryInterface = artificialIntelligenceInterfaceFactoryInterface
 list.add(artificialIntelligenceInterfaceFactoryInterface)
 }
 

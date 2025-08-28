@@ -52,7 +52,11 @@ open public class XmlDocumentHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: XmlDocumentHelper{
+: XmlDocumentHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,18 +73,22 @@ open fun getInstance()
     private var transformer: Transformer
 private constructor        ()
             : super()
-        {this.init(4, true)
+        
+
+        Updates for KMP build        
+        {
+this.init(4, true)
 }
 
 
 open fun init(indent: Int, ignoreDeclaration: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var indent = indent
 
 
-                    var ignoreDeclaration = ignoreDeclaration
+        Updates for KMP build        
+        {
+    //var indent = indent
+    //var ignoreDeclaration = ignoreDeclaration
 
         try {
             
@@ -102,7 +110,11 @@ transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, if(ignoreDeclarat
     )
 transformer.setOutputProperty(OutputKeys.INDENT, booleanFactory!!.YES)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
@@ -115,9 +127,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
             
 open fun format(xmlString: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var xmlString = xmlString
+        Updates for KMP build        
+        {
+    //var xmlString = xmlString
 
     var src: InputSource = InputSource(StringReader(xmlString))
 

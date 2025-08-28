@@ -35,19 +35,29 @@ open public class IndexedAnimation : Animation
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     val animationBehaviorP: AnimationBehavior
-private constructor        (){this.animationBehaviorP= AnimationBehavior.getInstance()
+private constructor        ()
+
+        Updates for KMP build        
+        {
+this.animationBehaviorP= AnimationBehavior.getInstance()
 }
 
-protected constructor        (animationBehavior: AnimationBehavior){
+protected constructor        (animationBehavior: AnimationBehavior)
 
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationBehavior = animationBehavior
 this.animationBehaviorP= animationBehavior
 }
 
 
 open fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
-: AnimationBehavior{
+: AnimationBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,20 +66,30 @@ open fun getAnimationBehavior()
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.animationBehaviorP!!.reset()
+
+
+        Updates for KMP build        
+        {
+this.animationBehaviorP!!.reset()
 this.setFrame(0)
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +101,11 @@ override fun getFrame()
             
 open fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -89,7 +113,11 @@ open fun getAnimationSize()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,12 +126,20 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getFrame() == this.getSize() -1)
                         
@@ -129,14 +165,20 @@ open fun isLastFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -146,9 +188,11 @@ override fun getSequence()
 
 open fun setState(indexedAnimation: IndexedAnimation)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var indexedAnimation = indexedAnimation
+
+        Updates for KMP build        
+        {
+    //var indexedAnimation = indexedAnimation
 this.setFrame(indexedAnimation!!.getFrame())
 this.setDx(indexedAnimation!!.getDx())
 this.setDy(indexedAnimation!!.getDy())
@@ -157,7 +201,11 @@ this.setDy(indexedAnimation!!.getDy())
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

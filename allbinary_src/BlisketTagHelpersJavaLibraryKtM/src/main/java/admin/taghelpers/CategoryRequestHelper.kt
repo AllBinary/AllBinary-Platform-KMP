@@ -75,12 +75,12 @@ open public class CategoryRequestHelper : ModifyTable {
     private var childCategoryInterface: CategoryInterface
 
     private var transformInfoInterface: TransformInfoInterface
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
         try {
             this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -88,7 +88,11 @@ this.pageContext= pageContext
 this.hashMap= hashMap
 this.getXmlData()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
@@ -104,7 +108,11 @@ this.getXmlData()
 
 open fun getXmlData()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var map: Map = this.request.getParameterMap()!!
@@ -135,7 +143,11 @@ open fun getXmlData()
 
 
         while(index < size && !xmlRequest!!.startsWith(categoryRequest))
-        {xmlRequest= keyArray[index]!! as String
+        
+
+        Updates for KMP build        
+        {
+xmlRequest= keyArray[index]!! as String
 
     
                         if(xmlRequest!!.startsWith(categoryRequest))
@@ -231,7 +243,11 @@ logUtil!!.put("Loaded Child Category", this, "getXmlData()")
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         
@@ -249,9 +265,11 @@ logUtil!!.put("Loaded Child Category", this, "getXmlData()")
             
 open fun setCategoryLoader(requestNode: Node)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var requestNode = requestNode
+
+        Updates for KMP build        
+        {
+var requestNode = requestNode
 
     var storeNameNode: Node = DomSearchHelper.getNode(StoreFrontData.getInstance()!!.NAME, requestNode!!.getChildNodes())!!
 
@@ -313,7 +331,11 @@ this.categoryLoaderInterface= CategoryLoaderFactory.getInstance(storeCategoryFac
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully Added the following to the Category table"
@@ -343,7 +365,11 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to add item to Category"
 
 
@@ -367,7 +393,11 @@ this.categoryLoaderInterface!!.insert(this.categoryInterface, this.childCategory
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully Removed " +CategoryData.getInstance()!!.NAME +"=" +this.childCategoryInterface!!.getPath()
@@ -397,7 +427,11 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
         try {
             
     var error: String = "Failed to remove category: " +this.childCategoryInterface!!.getPath()
@@ -417,7 +451,11 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return error
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to remove category and show the path of the failed category"
 
 
@@ -443,7 +481,11 @@ this.categoryLoaderInterface!!.delete(this.categoryInterface, this.childCategory
 
 open fun viewCategory()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var document: Document = CategoryComponent(this.childCategoryInterface).
@@ -467,7 +509,11 @@ open fun viewCategory()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return xmlString
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to get Category"
 
 
@@ -491,7 +537,11 @@ open fun viewCategory()
 
 open fun viewCategories()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = StringUtil.getInstance()!!.EMPTY_STRING
@@ -511,7 +561,11 @@ open fun viewCategories()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to view Categories table"
 
 
@@ -535,7 +589,11 @@ open fun viewCategories()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "New Item Successfully added"
@@ -555,7 +613,11 @@ open fun update()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to add Item"
 
 

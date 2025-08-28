@@ -37,12 +37,12 @@ open public class GameInputProcessorComposite : PlayerGameInput {
     private val gameInputProcessorInterface: GameInputProcessorInterface
 public constructor        (name: String, gameInputProcessorInterface: GameInputProcessorInterface)                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayList(),  -1)
 
-                    var name = name
-
-
-                    var gameInputProcessorInterface = gameInputProcessorInterface
+        Updates for KMP build        
+        {
+var name = name
+var gameInputProcessorInterface = gameInputProcessorInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -54,14 +54,22 @@ this.gameInputProcessorInterface= gameInputProcessorInterface
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var list: BasicArrayList = this.getGameKeyEventList()!!
 
 this.gameInputProcessorInterface!!.onInput(list)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }
@@ -70,7 +78,11 @@ this.gameInputProcessorInterface!!.onInput(list)
     private val NAME_LABEL: String = " GameInputProcessorInterface: "
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

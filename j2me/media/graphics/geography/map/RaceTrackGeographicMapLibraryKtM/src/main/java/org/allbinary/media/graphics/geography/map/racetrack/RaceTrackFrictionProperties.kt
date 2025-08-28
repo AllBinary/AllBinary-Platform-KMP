@@ -37,12 +37,12 @@ open public class RaceTrackFrictionProperties
     private val GROUND_FRICTION_NOMINATOR: Int
 public constructor        (roadFriction: Int, groundFriction: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var roadFriction = roadFriction
-
-
-                    var groundFriction = groundFriction
+var roadFriction = roadFriction
+var groundFriction = groundFriction
 ROAD_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -roadFriction
 GROUND_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -groundFriction
 }
@@ -50,7 +50,11 @@ GROUND_FRICTION_NOMINATOR= FrictionData.getFrictionDenominator() -groundFriction
 
 open fun getRoadFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +64,11 @@ open fun getRoadFrictionNominator()
 
 open fun getGroundFrictionNominator()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

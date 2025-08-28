@@ -37,7 +37,11 @@ open public class OpenGLESGraphicsCompositeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLESGraphicsCompositeFactory{
+: OpenGLESGraphicsCompositeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,16 +60,22 @@ open fun getInstance()
 
 open fun set(openGLESGraphicsFactory: OpenGLESGraphicsFactory)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var openGLESGraphicsFactory = openGLESGraphicsFactory
+
+        Updates for KMP build        
+        {
+var openGLESGraphicsFactory = openGLESGraphicsFactory
 this.openGLESGraphicsFactory= openGLESGraphicsFactory
 }
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLESGraphicsFactory{
+: OpenGLESGraphicsFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

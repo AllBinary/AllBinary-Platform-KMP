@@ -43,7 +43,11 @@ open public class ImageArrayRotationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageArrayRotationUtil{
+: ImageArrayRotationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,15 +72,13 @@ open fun getInstance()
             
 open fun process(imageProcessorInput: ImageProcessorInput, input: String, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageProcessorInput = imageProcessorInput
 
 
-                    var input = input
-
-
-                    var visitor = visitor
+        Updates for KMP build        
+        {
+    //var imageProcessorInput = imageProcessorInput
+    //var input = input
+    //var visitor = visitor
 
     var totalAngle: Integer
 
@@ -115,7 +117,11 @@ open fun process(imageProcessorInput: ImageProcessorInput, input: String, visito
 
                         for (index in 0 until bufferedImageArray!!.size)
 
-        {logUtil!!.put(TOTAL_ANGLE +totalAngle, this, commonStrings!!.RUN)
+        
+
+        Updates for KMP build        
+        {
+logUtil!!.put(TOTAL_ANGLE +totalAngle, this, commonStrings!!.RUN)
 generatedBufferedImage= ImageJ2SERotationUtil.getInstance()!!.getRotatedImage(bufferedImageArray[index]!!, totalAngle!!.toInt())
 visitor.visit(generatedBufferedImage, input, index)
 }

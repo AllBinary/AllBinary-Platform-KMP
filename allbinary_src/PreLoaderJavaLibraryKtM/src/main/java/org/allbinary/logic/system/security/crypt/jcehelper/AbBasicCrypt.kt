@@ -50,19 +50,23 @@ open public class AbBasicCrypt
     private var key: ByteArray
 public constructor        (algorithm: String, key: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var algorithm = algorithm
-
-
-                    var key = key
+var algorithm = algorithm
+var key = key
 
         try {
             this.algorithm= algorithm
 this.key= key.encodeToByteArray()
 this.init()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
@@ -73,7 +77,11 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var sunJce: Provider = com.sun.crypto.provider.SunJCE()
@@ -88,7 +96,11 @@ Security.addProvider(sunJce)
 this.secretKey= keyFactory!!.generateSecret(keySpec)
 this.cipher= Cipher.getInstance(algorithm)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
@@ -99,9 +111,11 @@ PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 
 open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
         try {
             cipher.init(Cipher.ENCRYPT_MODE, secretKey)
@@ -121,7 +135,11 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
                         for (index in 0 until ivArray!!.size)
 
-        {result[index]= ivArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+result[index]= ivArray[index]!!
 }
 
 
@@ -130,7 +148,11 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
                         for (index in 0 until encrypted.size)
 
-        {result[index +ivArray!!.size]= encrypted[index]!!
+        
+
+        Updates for KMP build        
+        {
+result[index +ivArray!!.size]= encrypted[index]!!
 }
 
 
@@ -139,7 +161,11 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -152,9 +178,11 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
 open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
         try {
             cipher.init(Cipher.DECRYPT_MODE, secretKey)
@@ -167,7 +195,11 @@ open fun decrypt(array: ByteArray)
 
                         for (index in 0 until 8)
 
-        {ivArray[index]= array[index]!!
+        
+
+        Updates for KMP build        
+        {
+ivArray[index]= array[index]!!
 }
 
 PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
@@ -180,7 +212,11 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
 
                         for (index in ivArray!!.size until array.size)
 
-        {result[index -ivArray!!.size]= array[index]!!
+        
+
+        Updates for KMP build        
+        {
+result[index -ivArray!!.size]= array[index]!!
 }
 
 
@@ -192,7 +228,11 @@ PreLogUtil.put("ivArray Length: " +ivArray!!.size, this, "encrypt")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 

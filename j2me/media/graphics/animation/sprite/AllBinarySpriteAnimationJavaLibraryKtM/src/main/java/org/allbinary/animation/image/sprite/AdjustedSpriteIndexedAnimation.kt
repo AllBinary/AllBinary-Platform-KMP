@@ -40,21 +40,15 @@ open public class AdjustedSpriteIndexedAnimation : SpriteIndexedAnimation {
     private var dy: Int
 public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, dx, dy, animationBehavior){
+                            : this(sprite, image, BasicColorUtil.getInstance()!!.ZERO_ARRAY, dx, dy, animationBehavior)
 
-                    var sprite = sprite
-
-
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var sprite = sprite
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,24 +57,16 @@ public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, anima
 
 public constructor        (sprite: Sprite, image: Image, basicColorArray: Array<BasicColor?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(sprite, image, basicColorArray, animationBehavior){
+                            : super(sprite, image, basicColorArray, animationBehavior)
 
-                    var sprite = sprite
-
-
-                    var image = image
-
-
-                    var basicColorArray = basicColorArray
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var sprite = sprite
+    //var image = image
+    //var basicColorArray = basicColorArray
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,18 +77,14 @@ this.dy= dy
 
 override fun paint(graphics: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var frame = frame
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var frame = frame
+    //var x = x
+    //var y = y
 this.setFrame(frame)
 this.sprite.setPosition(x +this.dx, y +this.dy)
 super.paint(graphics)
@@ -110,24 +92,24 @@ super.paint(graphics)
 
 override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var g = g
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var g = g
+    //var x = x
+    //var y = y
 this.sprite.setPosition(x +this.dx, y +this.dy)
 super.paint(g)
 }
 
 override fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var g = g
+
+        Updates for KMP build        
+        {
+    //var g = g
 this.sprite.setPosition(this.dx, this.dy)
 super.paint(g)
 }

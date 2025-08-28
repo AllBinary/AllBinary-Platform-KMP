@@ -40,12 +40,12 @@ open public class Line
     private var deltaY: Double= 0.0
 public constructor        (p1: GPoint, p2: GPoint)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var p1 = p1
-
-
-                    var p2 = p2
+var p1 = p1
+var p2 = p2
 this.p1= PointFactory.getInstance()!!.ZERO_ZERO
 this.p2= this.p1
 this.setP1(p1)
@@ -55,7 +55,11 @@ this.setP2(p2)
 
 open fun getGradient()
         //nullable = true from not(false or (false and true)) = true
-: Double{
+: Double
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,14 +69,22 @@ open fun getGradient()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{deltaX= getP1()!!.getX().toDouble() -getP2()!!.getX()
+
+
+        Updates for KMP build        
+        {
+deltaX= getP1()!!.getX().toDouble() -getP2()!!.getX()
 deltaY= getP1()!!.getY().toDouble() -getP2()!!.getY()
 }
 
 
 open fun getDeltaX()
         //nullable = true from not(false or (false and true)) = true
-: Double{
+: Double
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +94,11 @@ open fun getDeltaX()
 
 open fun getDeltaY()
         //nullable = true from not(false or (false and true)) = true
-: Double{
+: Double
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +108,11 @@ open fun getDeltaY()
 
 open fun getP1()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,7 +122,11 @@ open fun getP1()
 
 open fun getP2()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,9 +136,11 @@ open fun getP2()
 
 open fun setP1(p1: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var p1 = p1
+
+        Updates for KMP build        
+        {
+var p1 = p1
 this.p1= p1
 this.update()
 }
@@ -122,9 +148,11 @@ this.update()
 
 open fun setP2(p2: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var p2 = p2
+
+        Updates for KMP build        
+        {
+var p2 = p2
 this.p2= p2
 this.update()
 }

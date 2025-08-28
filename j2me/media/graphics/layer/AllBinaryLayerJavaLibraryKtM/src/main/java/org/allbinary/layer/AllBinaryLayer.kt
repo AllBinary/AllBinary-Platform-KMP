@@ -65,12 +65,12 @@ open public class AllBinaryLayer : Layer
     private var viewPosition: ViewPosition = ViewPosition.NULL_VIEW_POSITION
 public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : this(StringUtil.getInstance()!!.EMPTY_STRING, rectangle, viewPosition){
+                            : this(StringUtil.getInstance()!!.EMPTY_STRING, rectangle, viewPosition)
 
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -79,15 +79,13 @@ public constructor        (rectangle: Rectangle, viewPosition: ViewPosition)
 
 public constructor        (name: String, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(rectangle.getWidth(), rectangle.getHeight()){
+                            : super(rectangle.getWidth(), rectangle.getHeight())
 
-                    var name = name
-
-
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -128,21 +126,29 @@ this.viewPosition!!.setAllbinaryLayer(this)
             
 open fun onChangeEvent(layerManagerEvent: ViewPositionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManagerEvent = layerManagerEvent
+
+        Updates for KMP build        
+        {
+    //var layerManagerEvent = layerManagerEvent
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 }
 
 override fun getX2()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -151,7 +157,11 @@ override fun getX2()
 
 override fun getY2()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,7 +170,11 @@ override fun getY2()
 
 override fun getZ2()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -169,7 +183,11 @@ override fun getZ2()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -179,15 +197,21 @@ override fun getName()
 
 open fun setHalfWidth(halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var halfWidth = halfWidth
+
+        Updates for KMP build        
+        {
+    //var halfWidth = halfWidth
 this.halfWidth= halfWidth
 }
 
 override fun getHalfWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -197,15 +221,21 @@ override fun getHalfWidth()
 
 open fun setHalfHeight(halfHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var halfHeight = halfHeight
+
+        Updates for KMP build        
+        {
+    //var halfHeight = halfHeight
 this.halfHeight= halfHeight
 }
 
 override fun getHalfHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,7 +245,11 @@ override fun getHalfHeight()
 
 open fun getHalfDepth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -225,7 +259,11 @@ open fun getHalfDepth()
 
 open fun getViewPosition()
         //nullable = true from not(false or (false and true)) = true
-: ViewPosition{
+: ViewPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -235,15 +273,21 @@ open fun getViewPosition()
 
 open fun setViewPosition(viewPosition: ViewPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var viewPosition = viewPosition
+
+        Updates for KMP build        
+        {
+    //var viewPosition = viewPosition
 this.viewPosition= viewPosition
 }
 
 override fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<Group?>{
+: Array<Group?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -252,7 +296,11 @@ override fun getGroupInterface()
 
 override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -261,7 +309,11 @@ override fun implmentsTickableInterface()
 
 override fun implmentsGameInputInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -270,7 +322,11 @@ override fun implmentsGameInputInterface()
 
 override fun implmentsArtificialIntelligenceCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -279,7 +335,11 @@ override fun implmentsArtificialIntelligenceCompositeInterface()
 
 override fun implmentsCollidableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -289,7 +349,11 @@ override fun implmentsCollidableInterface()
 
 open fun implementsThreedInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -298,7 +362,11 @@ open fun implementsThreedInterface()
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -308,7 +376,11 @@ override fun getType()
 
 open fun getMultiPlayerType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -317,9 +389,11 @@ open fun getMultiPlayerType()
 
 override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-{
 
-                    var stringBuffer = stringBuffer
+
+        Updates for KMP build        
+        {
+    //var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
@@ -352,7 +426,11 @@ stringBuffer!!.append(this.getHeight())
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 this.toString(stringBuffer)

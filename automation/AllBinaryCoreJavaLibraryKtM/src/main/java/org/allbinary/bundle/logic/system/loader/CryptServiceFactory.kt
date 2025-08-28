@@ -44,17 +44,21 @@ open public class CryptServiceFactory
     private var cryptService: CryptService = CryptService()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getService(bundle: Bundle, registration: ServiceRegistration)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var bundle = bundle
-
-
-                    var registration = registration
+        Updates for KMP build        
+        {
+    //var bundle = bundle
+    //var registration = registration
 logUtil!!.put(this.commonStrings!!.START, this, "getService")
 
 
@@ -66,15 +70,13 @@ logUtil!!.put(this.commonStrings!!.START, this, "getService")
 
 open fun ungetService(bundle: Bundle, registration: ServiceRegistration, service: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var bundle = bundle
 
 
-                    var registration = registration
-
-
-                    var service = service
+        Updates for KMP build        
+        {
+var bundle = bundle
+var registration = registration
+var service = service
 }
 
 

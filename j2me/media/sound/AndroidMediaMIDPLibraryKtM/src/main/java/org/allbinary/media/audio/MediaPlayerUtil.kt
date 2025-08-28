@@ -41,7 +41,11 @@ open public class MediaPlayerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaPlayerUtil{
+: MediaPlayerUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,9 +66,11 @@ open fun getInstance()
             
 open fun wait(mediaPlayer: MediaPlayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mediaPlayer = mediaPlayer
+
+        Updates for KMP build        
+        {
+var mediaPlayer = mediaPlayer
 
     var MESSAGE: String = "Not Stopped Waiting"
 
@@ -76,7 +82,11 @@ open fun wait(mediaPlayer: MediaPlayer)
 
 
         while(mediaPlayer!!.isPlaying() && index < 50)
-        {logUtil!!.put(MESSAGE, this, METHOD_NAME)
+        
+
+        Updates for KMP build        
+        {
+logUtil!!.put(MESSAGE, this, METHOD_NAME)
 Thread.sleep(100)
 index++
 }

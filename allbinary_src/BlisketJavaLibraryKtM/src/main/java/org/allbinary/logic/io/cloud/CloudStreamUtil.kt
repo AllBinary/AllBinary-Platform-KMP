@@ -40,7 +40,11 @@ open public class CloudStreamUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CloudStreamUtil{
+: CloudStreamUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
             
 open fun getFile(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     var inputStream: InputStream = AbFileInputStream(file)
 
@@ -99,9 +105,11 @@ open fun getFile(file: AbFile)
             
 open fun getFileAnyWhere(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     var inputStream: InputStream = AbFileLocalInputStream(file)
 
@@ -160,9 +168,11 @@ available= inputStream!!.available()
             
 open fun getFileLocal(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     var inputStream: InputStream = AbFileLocalInputStream(file)
 

@@ -76,9 +76,11 @@ open public class OrderHistory : Order
     private var total: Money
 public constructor        (basketInterface: BasketInterface)                        
 
-                            : super(basketInterface){
+                            : super(basketInterface)
 
-                    var basketInterface = basketInterface
+        Updates for KMP build        
+        {
+var basketInterface = basketInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -87,12 +89,12 @@ public constructor        (basketInterface: BasketInterface)
 
 public constructor        (basketInterface: BasketInterface, orderHistory: OrderHistory)                        
 
-                            : super(orderHistory!!.getStoreName(), basketInterface, orderHistory!!.getId(), orderHistory!!.getShippingMethod(), orderHistory!!.getSpecial(), orderHistory!!.getPaymentMethod()){
+                            : super(orderHistory!!.getStoreName(), basketInterface, orderHistory!!.getId(), orderHistory!!.getShippingMethod(), orderHistory!!.getSpecial(), orderHistory!!.getPaymentMethod())
 
-                    var basketInterface = basketInterface
-
-
-                    var orderHistory = orderHistory
+        Updates for KMP build        
+        {
+var basketInterface = basketInterface
+var orderHistory = orderHistory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -118,12 +120,12 @@ super.setStoreCancelComments(orderHistory!!.getStoreCancelComments() as String)
 
 public constructor        (basketInterface: BasketInterface, orderHistoryHashMap: HashMap<Any, Any>)                        
 
-                            : super(orderHistoryHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String, basketInterface, orderHistoryHashMap!!.get(OrderData.ID) as String, orderHistoryHashMap!!.get(ShippingMethodData.NAME) as String, orderHistoryHashMap!!.get(EntryData.getInstance()!!.SPECIAL) as String, orderHistoryHashMap!!.get(PaymentData.METHOD) as String){
+                            : super(orderHistoryHashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String, basketInterface, orderHistoryHashMap!!.get(OrderData.ID) as String, orderHistoryHashMap!!.get(ShippingMethodData.NAME) as String, orderHistoryHashMap!!.get(EntryData.getInstance()!!.SPECIAL) as String, orderHistoryHashMap!!.get(PaymentData.METHOD) as String)
 
-                    var basketInterface = basketInterface
-
-
-                    var orderHistoryHashMap = orderHistoryHashMap
+        Updates for KMP build        
+        {
+var basketInterface = basketInterface
+var orderHistoryHashMap = orderHistoryHashMap
 
 
                             //For kotlin this is before the body of the constructor.
@@ -150,124 +152,154 @@ super.setStoreCancelComments(orderHistoryHashMap!!.get(OrderData.STORECANCELCOMM
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.userName= value
 }
 
 
 open fun setDefaultShippingAddress(shippingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var shippingAddress = shippingAddress
+
+        Updates for KMP build        
+        {
+var shippingAddress = shippingAddress
 this.shippingAddress= shippingAddress
 }
 
 
 open fun setBillingAddress(billingAddress: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var billingAddress = billingAddress
+
+        Updates for KMP build        
+        {
+var billingAddress = billingAddress
 this.billingAddress= billingAddress
 }
 
 
 open fun setPaymentInfo(payment: Payment)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var payment = payment
+
+        Updates for KMP build        
+        {
+var payment = payment
 this.payment= payment
 }
 
 
 open fun setShipDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.shipDate= value
 }
 
 
 open fun setOrderDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.orderDate= value
 }
 
 
 open fun setTransDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.transDate= value
 }
 
 
 open fun setCancelDate(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.cancelDate= value
 }
 
 
 open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.status= value
 }
 
 
 open fun setSubTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.subTotal= value
 }
 
 
 open fun setShippingCost(value: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.shippingCost= value
 }
 
 
 open fun setTaxes(value: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.taxes= value
 }
 
 
 open fun setTotal(value: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.total= value
 }
 
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -277,7 +309,11 @@ open fun getUserName()
 
 open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress{
+: StreetAddress
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -287,7 +323,11 @@ open fun getShippingAddress()
 
 open fun getBillingAddress()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress{
+: StreetAddress
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -297,7 +337,11 @@ open fun getBillingAddress()
 
 open fun getPaymentInfo()
         //nullable = true from not(false or (false and true)) = true
-: Payment{
+: Payment
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -307,7 +351,11 @@ open fun getPaymentInfo()
 
 open fun getShipDate()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -317,7 +365,11 @@ open fun getShipDate()
 
 open fun getOrderDate()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -327,7 +379,11 @@ open fun getOrderDate()
 
 open fun getTransDate()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -337,7 +393,11 @@ open fun getTransDate()
 
 open fun getCancelDate()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -347,7 +407,11 @@ open fun getCancelDate()
 
 open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -357,7 +421,11 @@ open fun getStatus()
 
 open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -367,7 +435,11 @@ open fun getSubTotal()
 
 open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -377,7 +449,11 @@ open fun getShippingCost()
 
 open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -387,7 +463,11 @@ open fun getTaxes()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -397,7 +477,11 @@ open fun getTotal()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(UserData.USERNAME, this.userName)
@@ -434,9 +518,11 @@ hashMap!!.put(OrderHistoryData.TAX, this.taxes.toString())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
 
@@ -471,7 +557,11 @@ node.appendChild(this.payment.toXmlNode(document))
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = keyArray[i]!! as String
 
 

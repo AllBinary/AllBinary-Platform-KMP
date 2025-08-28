@@ -57,21 +57,15 @@ open public class WeaponProperties : SimpleWeaponProperties {
     private val MAX: Long = 10240L
 
     private val ZERO: Short = 0
-public constructor        (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short){
+public constructor        (reloadTime: Long, targetingTime: Long, speed: Long, damage: Int, dissipation: Short)
 
-                    var reloadTime = reloadTime
-
-
-                    var targetingTime = targetingTime
-
-
-                    var speed = speed
-
-
-                    var damage = damage
-
-
-                    var dissipation = dissipation
+        Updates for KMP build        
+        {
+var reloadTime = reloadTime
+var targetingTime = targetingTime
+var speed = speed
+var damage = damage
+var dissipation = dissipation
 
     
                         if(speed < MAX && speed != 0L && !messageSent)
@@ -116,15 +110,13 @@ this.setRange((value *9).toInt() /10)
 
 public constructor        (speed: Long, damage: Int, dissipation: Short)                        
 
-                            : this( -1L,  -1L, speed, damage, dissipation){
+                            : this( -1L,  -1L, speed, damage, dissipation)
 
-                    var speed = speed
-
-
-                    var damage = damage
-
-
-                    var dissipation = dissipation
+        Updates for KMP build        
+        {
+var speed = speed
+var damage = damage
+var dissipation = dissipation
 
 
                             //For kotlin this is before the body of the constructor.
@@ -134,16 +126,22 @@ public constructor        (speed: Long, damage: Int, dissipation: Short)
 
 open fun setReloadTime(reloadTime: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var reloadTime = reloadTime
+
+        Updates for KMP build        
+        {
+var reloadTime = reloadTime
 this.reloadTime= reloadTime
 }
 
 
 open fun getReloadTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -153,16 +151,22 @@ open fun getReloadTime()
 
 open fun setTargetingTime(targetingTime: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var targetingTime = targetingTime
+
+        Updates for KMP build        
+        {
+var targetingTime = targetingTime
 this.targetingTime= targetingTime
 }
 
 
 open fun getTargetingTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -172,7 +176,11 @@ open fun getTargetingTime()
 
 open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+: BasicDecimal
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -182,18 +190,22 @@ open fun getSpeed()
 
 open fun setSpeed(speed: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var speed = speed
+
+        Updates for KMP build        
+        {
+var speed = speed
 this.speed= speed
 }
 
 
 open fun getDamage(range: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var range = range
+        Updates for KMP build        
+        {
+var range = range
 
 
 
@@ -204,7 +216,11 @@ open fun getDamage(range: Int)
 
 open fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+: Array<String?>
+
+        Updates for KMP build        
+        {
+
     var index: Int = 0
 
 
@@ -227,7 +243,11 @@ stringArray[index++]= stringBuffer!!.append(RELOAD)!!.append(this.getReloadTime(
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(DAMAGE)!!.append(this.getDamage())

@@ -36,9 +36,11 @@ open public class LongUtil
             
 open fun fillIn(end: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var end = end
+        Updates for KMP build        
+        {
+var end = end
 
     var frameStringBuffer: StringMaker = StringMaker()
 
@@ -56,7 +58,11 @@ open fun fillIn(end: String)
 
                         for (index in 0 until size)
 
-        {frameStringBuffer!!.append('0')
+        
+
+        Updates for KMP build        
+        {
+frameStringBuffer!!.append('0')
 }
 
 
@@ -74,7 +80,11 @@ frameStringBuffer!!.append(end)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

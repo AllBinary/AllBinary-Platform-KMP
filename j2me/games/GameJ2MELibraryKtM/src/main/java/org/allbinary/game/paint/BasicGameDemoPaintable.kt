@@ -40,15 +40,13 @@ open public class BasicGameDemoPaintable : StatePaintable {
     private val helpPaintableInterface: Paintable
 
     private var currentStatePaintable: Paintable = NullPaintable.getInstance()!!
-public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable){
+public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable)
 
-                    var mainDemoStatePaintable = mainDemoStatePaintable
-
-
-                    var ownershipPaintable = ownershipPaintable
-
-
-                    var helpPaintableInterface = helpPaintableInterface
+        Updates for KMP build        
+        {
+var mainDemoStatePaintable = mainDemoStatePaintable
+var ownershipPaintable = ownershipPaintable
+var helpPaintableInterface = helpPaintableInterface
 this.mainDemoStatePaintable= mainDemoStatePaintable
 this.setCurrentStatePaintable(NullPaintable.getInstance())
 this.ownershipPaintable= ownershipPaintable
@@ -57,9 +55,11 @@ this.helpPaintableInterface= helpPaintableInterface
 
 override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var state = state
+
+        Updates for KMP build        
+        {
+var state = state
 
     
                         if(state == 0)
@@ -87,16 +87,22 @@ override fun setState(state: Int)
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.getCurrentStatePaintable()!!.paint(graphics)
 }
 
 
 open fun getHelpPaintableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Paintable{
+: Paintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -106,16 +112,22 @@ open fun getHelpPaintableInterface()
 
 open fun setCurrentStatePaintable(currentStatePaintable: Paintable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var currentStatePaintable = currentStatePaintable
+
+        Updates for KMP build        
+        {
+var currentStatePaintable = currentStatePaintable
 this.currentStatePaintable= currentStatePaintable
 }
 
 
 open fun getCurrentStatePaintable()
         //nullable = true from not(false or (false and true)) = true
-: Paintable{
+: Paintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -125,7 +137,11 @@ open fun getCurrentStatePaintable()
 
 open fun getMainDemoStatePaintable()
         //nullable = true from not(false or (false and true)) = true
-: Paintable{
+: Paintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

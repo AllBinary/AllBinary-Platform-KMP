@@ -33,21 +33,36 @@ open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
 : Point
+
+        Updates for KMP build        
+        
 
 open fun getButtonClicks()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun setButtonClicks(buttons: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

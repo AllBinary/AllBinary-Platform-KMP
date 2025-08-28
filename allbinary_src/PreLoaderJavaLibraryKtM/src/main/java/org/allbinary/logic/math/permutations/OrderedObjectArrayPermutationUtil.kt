@@ -41,7 +41,11 @@ open public class OrderedObjectArrayPermutationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OrderedObjectArrayPermutationUtil{
+: OrderedObjectArrayPermutationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,9 +55,11 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
     var TOTAL: Int = 7
 
@@ -66,7 +72,11 @@ open fun main(args: Array<String?>)
 
                         for (i in 0 until TOTAL)
 
-        {data[i]= ComparableObject()
+        
+
+        Updates for KMP build        
+        {
+data[i]= ComparableObject()
 }
 
 Arrays.sort(data)
@@ -89,14 +99,20 @@ OrderedObjectArrayPermutationUtil.getInstance()!!.generate(data, permutationVisi
     private val FINISHED: String = "\nFINISHED"
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getNext(data: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var data = data
+
+        Updates for KMP build        
+        {
+var data = data
 
     var length: Int = data.size
                 
@@ -106,7 +122,11 @@ open fun getNext(data: Array<Any?>)
 
 
         while(data[i -1]!!.hashCode() >= data[i]!!.hashCode())
-        {i= i -1
+        
+
+        Updates for KMP build        
+        {
+i= i -1
 }
 
 
@@ -114,7 +134,11 @@ open fun getNext(data: Array<Any?>)
 
 
         while(data[j -1]!!.hashCode() <= data[i -1]!!.hashCode())
-        {j= j -1
+        
+
+        Updates for KMP build        
+        {
+j= j -1
 }
 
 this.swap(data, i -1, j -1)
@@ -122,7 +146,11 @@ i++
 j= length
 
         while(i < j)
-        {this.swap(data, i -1, j -1)
+        
+
+        Updates for KMP build        
+        {
+this.swap(data, i -1, j -1)
 i++
 j--
 }
@@ -132,15 +160,13 @@ j--
 
 open fun swap(data: Array<Any?>, a: Int, b: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var data = data
 
 
-                    var a = a
-
-
-                    var b = b
+        Updates for KMP build        
+        {
+var data = data
+var a = a
+var b = b
 
     var temp: Any = data[a]!!
 
@@ -151,9 +177,11 @@ data[b]= temp
 
 open fun factorial(dataLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var dataLength = dataLength
+        Updates for KMP build        
+        {
+var dataLength = dataLength
 
     var temp: Long = 1
 
@@ -168,7 +196,11 @@ open fun factorial(dataLength: Int)
 
                         for (i in 1 until dataLength)
 
-        {temp *= i
+        
+
+        Updates for KMP build        
+        {
+temp *= i
 }
 
 
@@ -184,12 +216,12 @@ open fun factorial(dataLength: Int)
 
 open fun generate(data: Array<Any?>, visitor: Visitor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var data = data
 
 
-                    var visitor = visitor
+        Updates for KMP build        
+        {
+var data = data
+var visitor = visitor
 
     var iterations: Long = this.factorial(data.size)!!
 
@@ -201,7 +233,11 @@ System.out.println(iterations)
 
                         for (count in 0 until iterations -1)
 
-        {this.getNext(data)
+        
+
+        Updates for KMP build        
+        {
+this.getNext(data)
 visitor.visit(this)
 }
 

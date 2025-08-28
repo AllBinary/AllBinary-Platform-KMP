@@ -34,13 +34,22 @@ open fun getPriority()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun isDone()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

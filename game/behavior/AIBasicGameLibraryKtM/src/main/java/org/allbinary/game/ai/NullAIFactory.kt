@@ -42,7 +42,11 @@ open public class NullAIFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ArtificialIntelligenceInterface{
+: ArtificialIntelligenceInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,15 +62,13 @@ open fun getInstance()
             }            
         override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterface{
+: ArtificialIntelligenceInterface
 
-                    var hashtable = hashtable
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
 

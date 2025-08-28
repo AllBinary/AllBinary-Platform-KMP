@@ -38,9 +38,11 @@ open public class BasicPlatormGeographicMapCellType
     private val types: IntArray
 public constructor        (type: Int)
             : super()
-        {
+        
 
-                    var type = type
+        Updates for KMP build        
+        {
+    //var type = type
 
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
 
@@ -50,9 +52,11 @@ this.types[0]= type
 
 public constructor        (types: IntArray)
             : super()
-        {
+        
 
-                    var types = types
+        Updates for KMP build        
+        {
+    //var types = types
 
     var size: Int = types.size
                 
@@ -63,7 +67,11 @@ public constructor        (types: IntArray)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
 
 }
@@ -73,9 +81,11 @@ this.types= types
 
 public constructor        (types: BasicArrayList)
             : super()
-        {
+        
 
-                    var types = types
+        Updates for KMP build        
+        {
+    //var types = types
 
     var size: Int = types.size()!!
 
@@ -91,7 +101,11 @@ public constructor        (types: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {type= get = types.get(index)get as Integer
+        
+
+        Updates for KMP build        
+        {
+type= get = types.get(index)get as Integer
 get.
                     toInt()
 
@@ -106,9 +120,11 @@ this.types= typeArray
 
 open fun isType(type: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var type = type
+        Updates for KMP build        
+        {
+    //var type = type
 
 
 
@@ -119,9 +135,11 @@ open fun isType(type: GeographicMapCellType)
 
 open fun isType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var type = type
+        Updates for KMP build        
+        {
+    //var type = type
 
     var size: Int = types.size
                 
@@ -132,7 +150,11 @@ open fun isType(type: Int)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(types[index] == type)
                         

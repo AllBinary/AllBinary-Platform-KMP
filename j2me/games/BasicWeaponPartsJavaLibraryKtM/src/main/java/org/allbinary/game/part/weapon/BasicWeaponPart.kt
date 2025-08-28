@@ -62,29 +62,25 @@ open public class BasicWeaponPart
     var relativeRelationship: RelativeRelationship = RelativeRelationship.NULL_RELATIVE_RELATIONSHIP
 public constructor        (animationInterface: Animation)
             : super()
-        {
+        
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
 this.setAnimationInterface(animationInterface)
 }
 
 public constructor        (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var animationInterface = animationInterface
-
-
-                    var sourceLayerInterface = sourceLayerInterface
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
-
-
-                    var relativeRelationship = relativeRelationship
+    //var animationInterface = animationInterface
+    //var sourceLayerInterface = sourceLayerInterface
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
+    //var relativeRelationship = relativeRelationship
 this.init(sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship)
 this.setAnimationInterface(animationInterface)
 }
@@ -92,18 +88,14 @@ this.setAnimationInterface(animationInterface)
 
 open fun init(sourceLayerInterface: AllBinaryLayer, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var sourceLayerInterface = sourceLayerInterface
 
 
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
-
-
-                    var relativeRelationship = relativeRelationship
+        Updates for KMP build        
+        {
+    //var sourceLayerInterface = sourceLayerInterface
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
+    //var relativeRelationship = relativeRelationship
 this.setOwnerLayerInterface(sourceLayerInterface)
 this.setWeaponProperties(weaponProperties)
 this.scoreableInterface= scoreableInterface
@@ -114,15 +106,13 @@ this.relativeRelationship= relativeRelationship
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var angle = angle
+    //var otherAngle = otherAngle
 this.process(allbinaryLayerManager, angle, otherAngle, this.getWeaponProperties(), this.scoreableInterface)
 }
 
@@ -130,21 +120,15 @@ this.process(allbinaryLayerManager, angle, otherAngle, this.getWeaponProperties(
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var angle = angle
+    //var otherAngle = otherAngle
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
 
 
 
@@ -154,7 +138,11 @@ this.process(allbinaryLayerManager, angle, otherAngle, this.getWeaponProperties(
 
 open fun getOwnerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,15 +152,21 @@ open fun getOwnerLayerInterface()
 
 open fun setOwnerLayerInterface(ownerLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ownerLayerInterface = ownerLayerInterface
+
+        Updates for KMP build        
+        {
+    //var ownerLayerInterface = ownerLayerInterface
 this.ownerLayerInterface= ownerLayerInterface
 }
 
 override fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -182,17 +176,21 @@ override fun getAnimationInterface()
 
 open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var animationInterface = animationInterface
+
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
     var viewPosition: ViewPosition = this.getOwnerLayerInterface()!!.getViewPosition()!!
 
@@ -207,15 +205,21 @@ this.animationInterface!!.paint(graphics, viewX, viewY)
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 }
 
 
 open fun getWeaponProperties()
         //nullable = true from not(false or (false and true)) = true
-: WeaponProperties{
+: WeaponProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -225,9 +229,11 @@ open fun getWeaponProperties()
 
 open fun setWeaponProperties(weaponProperties: WeaponProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weaponProperties = weaponProperties
+
+        Updates for KMP build        
+        {
+    //var weaponProperties = weaponProperties
 this.weaponProperties= weaponProperties
 }
 

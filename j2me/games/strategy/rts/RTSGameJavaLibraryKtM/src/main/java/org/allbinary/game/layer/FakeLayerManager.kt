@@ -39,9 +39,11 @@ open public class FakeLayerManager : AllBinaryGameLayerManager
     private var geographicMapCellTypeArray: Array<GeographicMapCellType?>
 public constructor        (gameInfo: GameInfo)                        
 
-                            : super(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, gameInfo){
+                            : super(BasicColorFactory.getInstance()!!.BLACK, BasicColorFactory.getInstance()!!.WHITE, gameInfo)
 
-                    var gameInfo = gameInfo
+        Updates for KMP build        
+        {
+var gameInfo = gameInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,7 +53,11 @@ public constructor        (gameInfo: GameInfo)
 
 open fun getGeographicMapInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicGeographicMap?>{
+: Array<BasicGeographicMap?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +67,11 @@ open fun getGeographicMapInterface()
 
 open fun setGeographicMapInterface(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
+
+        Updates for KMP build        
+        {
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
 this.geographicMapInterfaceArray= geographicMapInterfaceArray
 this.geographicMapCellTypeArray= arrayOfNulls(this.geographicMapInterfaceArray!!.size)
 }
@@ -71,7 +79,11 @@ this.geographicMapCellTypeArray= arrayOfNulls(this.geographicMapInterfaceArray!!
 
 open fun geographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<GeographicMapCellType?>{
+: Array<GeographicMapCellType?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -38,7 +38,11 @@ open public class NotificationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NotificationUtil{
+: NotificationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,15 +59,13 @@ open fun getInstance()
         
 open fun notify(command: Command, resource: String, message: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var command = command
 
 
-                    var resource = resource
-
-
-                    var message = message
+        Updates for KMP build        
+        {
+var command = command
+var resource = resource
+var message = message
 }
 
 

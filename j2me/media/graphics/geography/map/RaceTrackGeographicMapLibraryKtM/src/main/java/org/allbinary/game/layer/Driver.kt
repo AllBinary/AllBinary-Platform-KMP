@@ -40,15 +40,13 @@ open public class Driver
     private var aggression: Aggression
 public constructor        (turnSpeed: Integer, trackPathSelectionSkill: Integer, aggression: Aggression)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var turnSpeed = turnSpeed
-
-
-                    var trackPathSelectionSkill = trackPathSelectionSkill
-
-
-                    var aggression = aggression
+var turnSpeed = turnSpeed
+var trackPathSelectionSkill = trackPathSelectionSkill
+var aggression = aggression
 this.setTurnSpeed(turnSpeed)
 this.setTrackPathSelectionSkill(trackPathSelectionSkill)
 this.setAggression(aggression)
@@ -57,7 +55,11 @@ this.setAggression(aggression)
 
 open fun getTurnSpeed()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,16 +69,22 @@ open fun getTurnSpeed()
 
 open fun setTurnSpeed(turnSpeed: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var turnSpeed = turnSpeed
+
+        Updates for KMP build        
+        {
+var turnSpeed = turnSpeed
 this.turnSpeed= turnSpeed
 }
 
 
 open fun getTrackPathSelectionSkill()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,16 +94,22 @@ open fun getTrackPathSelectionSkill()
 
 open fun setTrackPathSelectionSkill(trackPathSelectionSkill: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var trackPathSelectionSkill = trackPathSelectionSkill
+
+        Updates for KMP build        
+        {
+var trackPathSelectionSkill = trackPathSelectionSkill
 this.trackPathSelectionSkill= trackPathSelectionSkill
 }
 
 
 open fun getAggression()
         //nullable = true from not(false or (false and true)) = true
-: Aggression{
+: Aggression
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,9 +119,11 @@ open fun getAggression()
 
 open fun setAggression(aggression: Aggression)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aggression = aggression
+
+        Updates for KMP build        
+        {
+var aggression = aggression
 this.aggression= aggression
 }
 

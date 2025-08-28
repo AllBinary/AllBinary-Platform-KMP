@@ -29,7 +29,11 @@ open public class OpenGLLogUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLLogUtil{
+: OpenGLLogUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,9 +52,11 @@ open fun getInstance()
 
 open fun logError(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
     var error: Int = gl.glGetError()!!
 
@@ -104,12 +110,12 @@ stringBuffer!!.append(maxTextureSize[0]!!)
 
 open fun logError(gl: GL10, image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var image = image
 
     var error: Int = gl.glGetError()!!
 

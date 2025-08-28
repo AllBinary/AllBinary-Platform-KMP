@@ -35,7 +35,11 @@ open public class AppRendererShaderUpdaterFactory : ShaderUpdater {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AppRendererShaderUpdaterFactory{
+: AppRendererShaderUpdaterFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,7 +62,11 @@ open fun getInstance()
 
 open fun getTestShaders()
         //nullable = true from not(false or (false and true)) = true
-: Array<ShaderOpenGLProcessor?>{
+: Array<ShaderOpenGLProcessor?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

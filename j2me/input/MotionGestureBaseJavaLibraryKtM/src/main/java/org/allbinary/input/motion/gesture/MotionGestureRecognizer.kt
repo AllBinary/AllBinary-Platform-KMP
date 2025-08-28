@@ -65,9 +65,11 @@ open public class MotionGestureRecognizer
     private val motionEventCircularPool: MotionEventCircularPool
 public constructor        (id: Int)
             : super()
-        {
+        
 
-                    var id = id
+        Updates for KMP build        
+        {
+    //var id = id
 this.motionEventCircularPool= MotionEventCircularPool.getInstance(id)
 
     var motionGesturesHandler: BasicEventHandler = BasicEventHandler()
@@ -80,7 +82,11 @@ this.motionEventCircularPool= MotionEventCircularPool.getInstance(id)
             motionGesturesHandler= BasicMotionGesturesHandler.getInstance()
 movedMotionGesturesHandler= MovedMotionGesturesHandler.getInstance()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
@@ -95,15 +101,13 @@ this.movedMotionGesturesHandler= movedMotionGesturesHandler
             
 open fun processPressedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var current = current
-
-
-                    var deviceId = deviceId
-
-
-                    var button = button
+        Updates for KMP build        
+        {
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
 intermediate= origin
 previous= origin
 
@@ -124,15 +128,13 @@ motionGesturesHandler!!.fireEvent(event)
             
 open fun processReleasedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var current = current
-
-
-                    var deviceId = deviceId
-
-
-                    var button = button
+        Updates for KMP build        
+        {
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.RELEASED)!!
 
@@ -151,15 +153,13 @@ motionGesturesHandler!!.fireEvent(event)
             
 open fun processDraggedMotionEvent(current: GPoint, deviceId: Int, buttonMask: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var current = current
 
 
-                    var deviceId = deviceId
-
-
-                    var buttonMask = buttonMask
+        Updates for KMP build        
+        {
+    //var current = current
+    //var deviceId = deviceId
+    //var buttonMask = buttonMask
 
     
                         if(previous == origin || intermediate == origin)
@@ -337,15 +337,13 @@ motionGesturesHandler!!.fireEvent(event)
             
 open fun processMovedMotionEvent(current: GPoint, deviceId: Int, button: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var current = current
-
-
-                    var deviceId = deviceId
-
-
-                    var button = button
+        Updates for KMP build        
+        {
+    //var current = current
+    //var deviceId = deviceId
+    //var button = button
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(TouchMotionGestureFactory.getInstance()!!.NO_MOTION)!!
 
@@ -362,7 +360,11 @@ movedMotionGesturesHandler!!.fireEvent(event)
 
 open fun getMotionGesturesHandler()
         //nullable = true from not(false or (false and true)) = true
-: BasicMotionGesturesHandler{
+: BasicMotionGesturesHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

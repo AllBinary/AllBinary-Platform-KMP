@@ -36,9 +36,11 @@ open public class EndGameProcessor : Processor {
     private var gameCanvas: AllBinaryGameCanvas
 
     private val WAIT: Long = 5000
-public constructor        (gameCanvas: AllBinaryGameCanvas){
+public constructor        (gameCanvas: AllBinaryGameCanvas)
 
-                    var gameCanvas = gameCanvas
+        Updates for KMP build        
+        {
+var gameCanvas = gameCanvas
 this.gameCanvas= gameCanvas
 }
 
@@ -46,7 +48,11 @@ this.gameCanvas= gameCanvas
                 @Throws(Exception::class)
             override fun process()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.gameCanvas!!.isHighScoreSubmitted())
                         

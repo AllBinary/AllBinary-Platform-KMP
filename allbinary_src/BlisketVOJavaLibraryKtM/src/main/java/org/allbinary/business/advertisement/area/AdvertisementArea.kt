@@ -48,9 +48,11 @@ open public class AdvertisementArea
     private var campaign: String
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.name= hashMap!!.get(AdvertisementAreaData.getInstance()!!.NAME) as String
 this.storeName= hashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String
 this.description= hashMap!!.get(AdvertisementAreaData.getInstance()!!.DESCRIPTION) as String
@@ -67,7 +69,11 @@ this.campaign= hashMap!!.get(AdvertisementCampaignData.getInstance()!!.NAME) as 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,7 +83,11 @@ open fun getName()
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +97,11 @@ open fun getStoreName()
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,7 +111,11 @@ open fun getDescription()
 
 open fun getConstraints()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementAreaConstraintsInterface{
+: AdvertisementAreaConstraintsInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -107,7 +125,11 @@ open fun getConstraints()
 
 open fun getCampaign()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,45 +139,55 @@ open fun getCampaign()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun setStoreName(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeName = storeName
+
+        Updates for KMP build        
+        {
+var storeName = storeName
 this.storeName= storeName
 }
 
 
 open fun setDescription(description: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var description = description
+
+        Updates for KMP build        
+        {
+var description = description
 this.description= description
 }
 
 
 open fun setConstraints(advertisementConstraintsInterface: AdvertisementAreaConstraintsInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var advertisementConstraintsInterface = advertisementConstraintsInterface
+
+        Updates for KMP build        
+        {
+var advertisementConstraintsInterface = advertisementConstraintsInterface
 this.advertisementAreaConstraintsInterface= advertisementAreaConstraintsInterface
 }
 
 
 open fun setCampaign(campaign: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var campaign = campaign
+
+        Updates for KMP build        
+        {
+var campaign = campaign
 this.campaign= campaign
 }
 

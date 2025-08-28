@@ -42,7 +42,11 @@ open public class AllBinarySensorManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinarySensorManager{
+: AllBinarySensorManager
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,12 +65,20 @@ open fun getInstance()
     val ORIENTATION_TYPE: String = "Orientation Type"
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             GyroSensorFactory.init()
 AccelerometerSensorFactory.init()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -74,14 +86,22 @@ AccelerometerSensorFactory.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
     private val list: BasicArrayList = BasicArrayList()
 
 open fun getSensorNamesList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +111,11 @@ open fun getSensorNamesList()
 
 open fun shutdown()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

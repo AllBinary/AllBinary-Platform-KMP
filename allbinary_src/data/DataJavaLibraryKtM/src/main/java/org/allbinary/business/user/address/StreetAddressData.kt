@@ -64,7 +64,11 @@ open public class StreetAddressData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

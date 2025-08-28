@@ -42,7 +42,11 @@ open public class DemoGameBehavior
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DemoGameBehavior{
+: DemoGameBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,22 +67,30 @@ open fun getInstance()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun pause(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
 open fun unPause(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -86,9 +98,11 @@ open fun unPause(allBinaryGameCanvas: AllBinaryGameCanvas)
             
 open fun updateTouch(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -96,9 +110,11 @@ open fun updateTouch(allBinaryGameCanvas: AllBinaryGameCanvas)
             
 open fun updateScreenButtonPaintable(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.setTouchPaintableP(NullPaintable.getInstance())
 }
 
@@ -107,17 +123,21 @@ allBinaryGameCanvas!!.setTouchPaintableP(NullPaintable.getInstance())
             
 open fun setGameState(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
 open fun removeAllGameKeyInputListeners(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -125,9 +145,11 @@ open fun removeAllGameKeyInputListeners(allBinaryGameCanvas: AllBinaryGameCanvas
             
 open fun updateEndGameProcessor(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -135,9 +157,11 @@ open fun updateEndGameProcessor(allBinaryGameCanvas: AllBinaryGameCanvas)
             
 open fun buildGame(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -145,9 +169,11 @@ open fun buildGame(allBinaryGameCanvas: AllBinaryGameCanvas)
             
 open fun run(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -159,24 +185,16 @@ logUtil!!.put(GameTypeFactory.getInstance()!!.BOT.toString(), this, commonString
             
 open fun setHighScore(abeClientInformation: AbeClientInformationInterface, allBinaryGameCanvas: AllBinaryGameCanvas, name: String, score: Long, autoSubmit: Boolean, isLast: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
-
-
-                    var name = name
-
-
-                    var score = score
-
-
-                    var autoSubmit = autoSubmit
-
-
-                    var isLast = isLast
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var allBinaryGameCanvas = allBinaryGameCanvas
+    //var name = name
+    //var score = score
+    //var autoSubmit = autoSubmit
+    //var isLast = isLast
 }
 
 

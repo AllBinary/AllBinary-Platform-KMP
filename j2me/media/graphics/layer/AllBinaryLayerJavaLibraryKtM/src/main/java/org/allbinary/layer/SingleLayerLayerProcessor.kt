@@ -30,7 +30,11 @@ open public class SingleLayerLayerProcessor : LayerProcessor {
         
 public constructor        ()                        
 
-                            : super(SingleLayerLayerManager()){
+                            : super(SingleLayerLayerManager())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -40,9 +44,11 @@ public constructor        ()
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var layerManager: LayerManager = this.getLayerManager()!!
 

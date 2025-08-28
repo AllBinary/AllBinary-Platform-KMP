@@ -37,15 +37,13 @@ open public class LeftToRightImageAnimation : ImageSegmentAnimation {
     private var currentWidth: Int
 public constructor        (image: Image, sequenceArray: IntArray, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, sequenceArray, animationBehavior){
+                            : super(image, sequenceArray, animationBehavior)
 
-                    var image = image
-
-
-                    var sequenceArray = sequenceArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var image = image
+    //var sequenceArray = sequenceArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +62,11 @@ this.currentWidth= 0
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getSequence()[0] ==  -1)
                         
@@ -83,7 +85,11 @@ this.update()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getSequence()[0] ==  -1)
                         
@@ -102,9 +108,11 @@ this.update()
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+var index = index
 super.setFrame(index)
 this.update()
 }
@@ -112,22 +120,24 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.currentWidth= this.getDrawWidth() *this.getFrame() /this.getSize()
+
+
+        Updates for KMP build        
+        {
+this.currentWidth= this.getDrawWidth() *this.getFrame() /this.getSize()
 }
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 graphics.drawRegion(this.getImage(), this.getStartX(), this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x, y, anchor)
 }
 

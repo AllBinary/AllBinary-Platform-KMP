@@ -51,7 +51,11 @@ open public class RTSLayerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSLayerUtil{
+: RTSLayerUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,15 +74,13 @@ open fun getInstance()
 
 open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel: Int, lastLevel: Int)
         //nullable = true from not(false or (false and false)) = true
-: WeaponProperties{
+: WeaponProperties
 
-                    var weaponProperties = weaponProperties
-
-
-                    var currentLevel = currentLevel
-
-
-                    var lastLevel = lastLevel
+        Updates for KMP build        
+        {
+    //var weaponProperties = weaponProperties
+    //var currentLevel = currentLevel
+    //var lastLevel = lastLevel
 
     var reloadTime: Long = weaponProperties!!.getReloadTime()!!
 
@@ -113,9 +115,11 @@ open fun createWeaponProperties(weaponProperties: WeaponProperties, currentLevel
 
 open fun downgrade(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+    //var rtsLayer = rtsLayer
 rtsLayer!!.setLevel(rtsLayer!!.getLevel() -1)
 
     var partInterface: BasicWeaponPart
@@ -126,7 +130,11 @@ rtsLayer!!.setLevel(rtsLayer!!.getLevel() -1)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
 
-        {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+        
+
+        Updates for KMP build        
+        {
+partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() +1))
 }
 
@@ -136,9 +144,11 @@ rtsLayer!!.select()
 
 open fun upgrade(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+    //var rtsLayer = rtsLayer
 rtsLayer!!.setLevel(rtsLayer!!.getLevel() +1)
 
     var partInterface: BasicWeaponPart
@@ -149,7 +159,11 @@ rtsLayer!!.setLevel(rtsLayer!!.getLevel() +1)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length  - 1  downTo 0)
 
-        {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+        
+
+        Updates for KMP build        
+        {
+partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 partInterface!!.setWeaponProperties(this.createWeaponProperties(partInterface!!.getWeaponProperties(), rtsLayer!!.getLevel(), rtsLayer!!.getLevel() -1))
 }
 
@@ -161,9 +175,11 @@ rtsLayer!!.select()
 
 open fun getCostExponential(cost: Long)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var cost = cost
+        Updates for KMP build        
+        {
+    //var cost = cost
 
 
 
@@ -174,9 +190,11 @@ open fun getCostExponential(cost: Long)
 
 open fun getWeaponPropertiesCost(weaponProperties: WeaponProperties)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var weaponProperties = weaponProperties
+        Updates for KMP build        
+        {
+    //var weaponProperties = weaponProperties
 
     var cost: Int = (weaponProperties!!.getDamage() +weaponProperties!!.getRange() +((MAX_RELOAD_TIME /weaponProperties!!.getReloadTime()) shr 1)).toInt()
 
@@ -191,9 +209,11 @@ cost= this.getCostExponential(cost)
 
 open fun getCost(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 
     var total: Int = 0
 
@@ -209,7 +229,11 @@ open fun getCost(rtsLayer: RTSLayer)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
 
-        {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+        
+
+        Updates for KMP build        
+        {
+partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 total += this.getWeaponPropertiesCost(weaponProperties)
 }
@@ -224,9 +248,11 @@ total += this.getWeaponPropertiesCost(weaponProperties)
 
 open fun getDowngradeCost(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+    //var rtsLayer = rtsLayer
 
     var downgradeCost: Int = 0
 
@@ -248,7 +274,11 @@ open fun getDowngradeCost(rtsLayer: RTSLayer)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
 
-        {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+        
+
+        Updates for KMP build        
+        {
+partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 downgradeWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() -1, rtsLayer!!.getLevel()))
 currentWeaponCost= this.getWeaponPropertiesCost(weaponProperties)
@@ -268,9 +298,11 @@ logUtil!!.put(StringMaker().
 
 open fun getUpgradeCost(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+    //var rtsLayer = rtsLayer
 
     var upgradeCost: Int = 0
 
@@ -292,7 +324,11 @@ open fun getUpgradeCost(rtsLayer: RTSLayer)
 
                         for (index in rtsLayer!!.getPartInterfaceArray()!!.length -1 downTo 0)
 
-        {partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
+        
+
+        Updates for KMP build        
+        {
+partInterface= rtsLayer!!.getPartInterfaceArray()[index]!! as BasicWeaponPart
 weaponProperties= partInterface!!.getWeaponProperties()
 upgradedWeaponCost= this.getWeaponPropertiesCost(this.createWeaponProperties(weaponProperties, rtsLayer!!.getLevel() +1, rtsLayer!!.getLevel()))
 currentWeaponCost= this.getWeaponPropertiesCost(weaponProperties)
@@ -313,9 +349,11 @@ logUtil!!.put(StringMaker().
             
 open fun destroyAndClear(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 
     var rtsLayer: RTSLayer
 
@@ -325,7 +363,11 @@ open fun destroyAndClear(list: BasicArrayList)
 
                         for (index in list.size() -1 downTo 0)
 
-        {rtsLayer= list.get(index) as RTSLayer
+        
+
+        Updates for KMP build        
+        {
+rtsLayer= list.get(index) as RTSLayer
 rtsLayer!!.setDestroyed(true)
 }
 
@@ -335,9 +377,11 @@ list.clear()
 
 open fun createFakeRTSLayerHashtable(baseRaceTrackGeographicMap: BaseRaceTrackGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
 
-                    var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap
+        Updates for KMP build        
+        {
+    //var baseRaceTrackGeographicMap = baseRaceTrackGeographicMap
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 

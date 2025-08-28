@@ -42,7 +42,11 @@ open public class CommandUriAction
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommandUriAction{
+: CommandUriAction
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,25 +67,31 @@ open fun getInstance()
 
 open fun add(command: Command, url: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var command = command
 
 
-                    var url = url
+        Updates for KMP build        
+        {
+var command = command
+var url = url
 hashtable.put(command, url)
 }
 
 
 open fun process(command: Command)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 
         try {
             } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }
@@ -89,9 +99,11 @@ open fun process(command: Command)
 
 open fun getIntent(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Intent{
+: Intent
 
-                    var command = command
+        Updates for KMP build        
+        {
+var command = command
 
     var url: String = hashtable.get(command as Object) as String
 

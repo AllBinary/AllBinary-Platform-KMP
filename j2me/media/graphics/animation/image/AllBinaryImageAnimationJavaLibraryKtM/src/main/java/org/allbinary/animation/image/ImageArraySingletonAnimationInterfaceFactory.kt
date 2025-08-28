@@ -36,9 +36,11 @@ open public class ImageArraySingletonAnimationInterfaceFactory : SingletonAnimat
         
 public constructor        (animationInterface: Animation)                        
 
-                            : super(animationInterface){
+                            : super(animationInterface)
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,15 +49,13 @@ public constructor        (animationInterface: Animation)
 
 public constructor        (animationInterface: IndexedAnimation, width: Int, height: Int)                        
 
-                            : this(ImageArrayAnimation(IndexedAnimationToImageArrayUtil.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
+                            : this(ImageArrayAnimation(IndexedAnimationToImageArrayUtil.getInstance(width, height, animationInterface), AnimationBehavior.getInstance()))
 
-                    var animationInterface = animationInterface
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
+    //var width = width
+    //var height = height
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,9 +64,11 @@ public constructor        (animationInterface: IndexedAnimation, width: Int, hei
 
 public constructor        (imageArray: Array<Image?>)                        
 
-                            : this(ImageArrayAnimation(imageArray, AnimationBehavior.getInstance())){
+                            : this(ImageArrayAnimation(imageArray, AnimationBehavior.getInstance()))
 
-                    var imageArray = imageArray
+        Updates for KMP build        
+        {
+var imageArray = imageArray
 
 
                             //For kotlin this is before the body of the constructor.

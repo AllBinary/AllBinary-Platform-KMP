@@ -21,16 +21,22 @@ open public class OpenGLBitmap : PlatformBitmapBase {
         
 
     val image: Image
-public constructor        (bitmap: Any){
+public constructor        (bitmap: Any)
 
-                    var bitmap = bitmap
+        Updates for KMP build        
+        {
+    //var bitmap = bitmap
 this.image= bitmap as Image
 }
 
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image{
+: Image
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,7 +46,11 @@ open fun getImage()
 
 open fun getDepth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     
                         if(this.image.isMutable())
                         
@@ -73,27 +83,17 @@ open fun getDepth()
 
 open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pixels = pixels
 
 
-                    var offset = offset
-
-
-                    var stride = stride
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var pixels = pixels
+var offset = offset
+var stride = stride
+var x = x
+var y = y
+var width = width
+var height = height
 
     
                         if(this.image.isMutable())
@@ -119,34 +119,28 @@ immutableImage!!.getRGB(pixels, offset, stride, x, y, width, height)
 
 open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pixels = pixels
 
 
-                    var offset = offset
-
-
-                    var stride = stride
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var pixels = pixels
+var offset = offset
+var stride = stride
+var x = x
+var y = y
+var width = width
+var height = height
 this.image.setRGB2(pixels, offset, height, x, y, width, height)
 }
 
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -156,7 +150,11 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -166,7 +164,11 @@ open fun getHeight()
 
 open fun recycle()
         //nullable = true from not(false or (false and true)) = true
-{DisposalUtil.getInstance()!!.dispose(image)
+
+
+        Updates for KMP build        
+        {
+DisposalUtil.getInstance()!!.dispose(image)
 }
 
 

@@ -27,7 +27,11 @@ open public class OpenGLGLUUtils
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLGLUUtils{
+: OpenGLGLUUtils
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,12 +48,12 @@ open fun getInstance()
         
 open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: ByteBuffer{
+: ByteBuffer
 
-                    var bmp = bmp
-
-
-                    var flip = flip
+        Updates for KMP build        
+        {
+    //var bmp = bmp
+    //var flip = flip
 
 
 
@@ -59,30 +63,18 @@ open fun makeByteBuffer(bmp: OpenGLBitmap, flip: Boolean)
 
 open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, openGLESImage: OpenGLESImage, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var glVersion = glVersion
-
-
-                    var target = target
-
-
-                    var level = level
-
-
-                    var generateMipMap = generateMipMap
-
-
-                    var openGLESImage = openGLESImage
-
-
-                    var border = border
-
-
-                    var flip = flip
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var glVersion = glVersion
+    //var target = target
+    //var level = level
+    //var generateMipMap = generateMipMap
+    //var openGLESImage = openGLESImage
+    //var border = border
+    //var flip = flip
 
 
 
@@ -92,30 +84,18 @@ open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, genera
 
 open fun texImage2D(gl: GL10, glVersion: String, target: Int, level: Int, generateMipMap: Boolean, bitmap: OpenGLBitmap, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var glVersion = glVersion
-
-
-                    var target = target
-
-
-                    var level = level
-
-
-                    var generateMipMap = generateMipMap
-
-
-                    var bitmap = bitmap
-
-
-                    var border = border
-
-
-                    var flip = flip
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var glVersion = glVersion
+    //var target = target
+    //var level = level
+    //var generateMipMap = generateMipMap
+    //var bitmap = bitmap
+    //var border = border
+    //var flip = flip
 
 
 

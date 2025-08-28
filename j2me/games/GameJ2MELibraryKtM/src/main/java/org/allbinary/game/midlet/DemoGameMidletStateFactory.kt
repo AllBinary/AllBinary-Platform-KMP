@@ -37,7 +37,11 @@ open public class DemoGameMidletStateFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DemoGameMidletStateFactory{
+: DemoGameMidletStateFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,7 +60,11 @@ open fun getInstance()
     val START_INPUT_MAPPING: DemoGameMidletState = DemoGameMidletState()
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

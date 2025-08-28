@@ -40,20 +40,30 @@ open public class AllBinaryOrientationSensor : AllBinarySensor {
 
 open fun setCompleteMotionGestureInputEventListener(completeMotionGestureInputEventListenerInterface: CompleteMotionGestureInputEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var completeMotionGestureInputEventListenerInterface = completeMotionGestureInputEventListenerInterface
+
+        Updates for KMP build        
+        {
+var completeMotionGestureInputEventListenerInterface = completeMotionGestureInputEventListenerInterface
 this.listener= completeMotionGestureInputEventListenerInterface
 }
 
-protected constructor        (){}
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
-: Orientation{
+: Orientation
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)

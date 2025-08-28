@@ -45,9 +45,11 @@ open public class Advertisements
 
 open fun addPage(advertisementProcessorInterface: AdvertisementProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var advertisementProcessorInterface = advertisementProcessorInterface
+
+        Updates for KMP build        
+        {
+var advertisementProcessorInterface = advertisementProcessorInterface
 
     
                         if(!this.pageList!!.contains(advertisementProcessorInterface))
@@ -62,7 +64,11 @@ open fun addPage(advertisementProcessorInterface: AdvertisementProcessorInterfac
 
 open fun startRandomPage()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var size: Int = this.pageList!!.size()!!
 
 
@@ -87,7 +93,11 @@ advertisementProcessorInterface!!.start()
 
 open fun processRandomPage()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(LockedUtil.getInstance()!!.isLockedFeature())
                         
@@ -118,13 +128,21 @@ advertisementProcessorInterface!!.process()
 
 open fun stopAllPage()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.pageList!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.pageList!!.objectArray[index]!! as AdvertisementProcessorInterface
 
 advertisementProcessorInterface!!.stop()
@@ -135,9 +153,11 @@ advertisementProcessorInterface!!.stop()
 
 open fun addBanner(advertisementProcessorInterface: AdvertisementProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var advertisementProcessorInterface = advertisementProcessorInterface
+
+        Updates for KMP build        
+        {
+var advertisementProcessorInterface = advertisementProcessorInterface
 
     
                         if(!this.bannerList!!.contains(advertisementProcessorInterface))
@@ -152,13 +172,21 @@ open fun addBanner(advertisementProcessorInterface: AdvertisementProcessorInterf
 
 open fun startAll()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.bannerList!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.bannerList!!.objectArray[index]!! as AdvertisementProcessorInterface
 
 advertisementProcessorInterface!!.start()
@@ -169,13 +197,21 @@ advertisementProcessorInterface!!.start()
 
 open fun stopAllBanner()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.bannerList!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.bannerList!!.objectArray[index]!! as AdvertisementProcessorInterface
 
 advertisementProcessorInterface!!.stop()
@@ -186,9 +222,11 @@ advertisementProcessorInterface!!.stop()
 
 open fun getBanner(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementProcessorInterface{
+: AdvertisementProcessorInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     var advertisementProcessorInterface: AdvertisementProcessorInterface = this.bannerList!!.objectArray[index]!! as AdvertisementProcessorInterface
 
@@ -202,7 +240,11 @@ open fun getBanner(index: Int)
 
 open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
-{this.stopAllBanner()
+
+
+        Updates for KMP build        
+        {
+this.stopAllBanner()
 this.stopAllPage()
 }
 

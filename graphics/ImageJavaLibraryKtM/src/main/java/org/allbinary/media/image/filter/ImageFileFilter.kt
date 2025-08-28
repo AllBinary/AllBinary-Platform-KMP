@@ -38,9 +38,11 @@ open public class ImageFileFilter : FileFilter {
         
 open fun accept(f: File)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var f = f
+        Updates for KMP build        
+        {
+var f = f
 
     
                         if(f.isDirectory())
@@ -89,7 +91,11 @@ open fun accept(f: File)
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

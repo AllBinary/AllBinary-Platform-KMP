@@ -64,7 +64,11 @@ open public class SelectionHudPaintable : InitUpdatePaintable {
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 
     private var animationInterface: Animation
-protected constructor        (){this.update()
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+this.update()
 this.setAnimationInterface(NullAnimationFactory.getFactoryInstance()!!.getInstance(0))
 this.primitiveLongUtil= PrimitiveLongUtil(10000)
 }
@@ -72,7 +76,11 @@ this.primitiveLongUtil= PrimitiveLongUtil(10000)
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var touchButtonLocationHelper: TouchButtonLocationHelper = TouchButtonLocationHelper()
 
 
@@ -88,21 +96,31 @@ this.setHeight(CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE +myFont!!.DEFA
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.GREY.toInt()!!
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 graphics.setColor(backgroundColor)
 graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
 graphics.setColor(this.getColor())
@@ -112,7 +130,11 @@ graphics.drawString(getName(), this.textX, y, 0)
 
 open fun getPrimitiveLongUtil()
         //nullable = true from not(false or (false and true)) = true
-: PrimitiveLongUtil{
+: PrimitiveLongUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,16 +144,22 @@ open fun getPrimitiveLongUtil()
 
 open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var animationInterface = animationInterface
+
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
 
 
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -141,16 +169,22 @@ open fun getAnimationInterface()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,9 +194,11 @@ open fun getName()
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 this.setColor(basicColor!!.toInt())
 }
@@ -170,7 +206,11 @@ this.setColor(basicColor!!.toInt())
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,16 +220,22 @@ open fun getBasicColorP()
 
 open fun setColor(color: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var color = color
+
+        Updates for KMP build        
+        {
+var color = color
 this.color= color
 }
 
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -199,7 +245,11 @@ open fun getColor()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -209,16 +259,22 @@ open fun getWidth()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 this.height= height
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -228,7 +284,11 @@ open fun getHeight()
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

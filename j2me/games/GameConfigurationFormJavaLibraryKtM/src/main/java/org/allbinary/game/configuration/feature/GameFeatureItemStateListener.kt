@@ -49,9 +49,11 @@ open public class GameFeatureItemStateListener
 
 open fun add(gameFeature: GameFeature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
 
     
                         if(!GameFeatureItemStateListener.toggleList!!.contains(gameFeature))
@@ -71,9 +73,11 @@ open fun add(gameFeature: GameFeature)
     private var gameOptionsForm: GameOptionsForm
 public constructor        (gameOptionsForm: GameOptionsForm)
             : super()
-        {
+        
 
-                    var gameOptionsForm = gameOptionsForm
+        Updates for KMP build        
+        {
+var gameOptionsForm = gameOptionsForm
 this.gameOptionsForm= gameOptionsForm
 
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
@@ -90,9 +94,11 @@ GameFeatureItemStateListener.add(gameFeatureFactory!!.TICKABLE_LAYER_PROCESSOR)
 
 override fun itemStateChanged(item: Item)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var item = item
+
+        Updates for KMP build        
+        {
+var item = item
 
         try {
             
@@ -135,7 +141,11 @@ logUtil!!.put(StringMaker().
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "itemStateChanged", e)

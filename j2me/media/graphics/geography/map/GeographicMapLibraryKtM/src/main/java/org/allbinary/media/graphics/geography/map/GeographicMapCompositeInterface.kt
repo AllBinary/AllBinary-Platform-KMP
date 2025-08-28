@@ -32,13 +32,22 @@ open fun geographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
 : Array<GeographicMapCellType?>
 
+        Updates for KMP build        
+        
+
 open fun getGeographicMapInterface()
         //nullable = true from not(false or (false and true)) = true
 : Array<BasicGeographicMap?>
 
+        Updates for KMP build        
+        
+
 open fun setGeographicMapInterface(geographicMapInterface: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

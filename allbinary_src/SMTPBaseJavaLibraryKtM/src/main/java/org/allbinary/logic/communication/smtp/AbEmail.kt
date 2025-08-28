@@ -39,27 +39,17 @@ open public class AbEmail
     private var email: Email
 public constructor        (server: String, from: String, to: String, subject: String, textBody: String, htmlAttachment: String, contentBase: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var server = server
-
-
-                    var from = from
-
-
-                    var to = to
-
-
-                    var subject = subject
-
-
-                    var textBody = textBody
-
-
-                    var htmlAttachment = htmlAttachment
-
-
-                    var contentBase = contentBase
+var server = server
+var from = from
+var to = to
+var subject = subject
+var textBody = textBody
+var htmlAttachment = htmlAttachment
+var contentBase = contentBase
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
@@ -79,7 +69,11 @@ public constructor        (server: String, from: String, to: String, subject: St
 
 open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
-: MimeMessage{
+: MimeMessage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,7 +83,11 @@ open fun getMimeMessage()
 
 open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +99,11 @@ open fun getDebugInfo()
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,7 +115,11 @@ open fun log()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -125,9 +131,11 @@ open fun toHashMap()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -138,7 +146,11 @@ open fun toXmlNode(document: Document)
 
 open fun getEmail()
         //nullable = true from not(false or (false and true)) = true
-: Email{
+: Email
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -150,7 +162,11 @@ open fun getEmail()
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

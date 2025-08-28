@@ -35,7 +35,11 @@ open public class NoScoreable : Scoreable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoScoreable{
+: NoScoreable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(0){
+                            : super(0)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -54,16 +62,20 @@ open fun getInstance()
 
 override fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 }
 
 override fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 }
 
 

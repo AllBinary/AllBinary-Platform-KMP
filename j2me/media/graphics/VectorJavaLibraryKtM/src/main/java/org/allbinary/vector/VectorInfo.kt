@@ -40,18 +40,14 @@ open public class VectorInfo
     private var totalFrames: Int
 public constructor        (width: Int, height: Int, points: Array<IntArray?>, totalFrames: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var points = points
-
-
-                    var totalFrames = totalFrames
+var width = width
+var height = height
+var points = points
+var totalFrames = totalFrames
 this.width= width
 this.height= height
 this.points= points
@@ -61,7 +57,11 @@ this.totalFrames= totalFrames
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,16 +71,22 @@ open fun getWidth()
 
 open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var width = width
+
+        Updates for KMP build        
+        {
+var width = width
 this.width= width
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,16 +96,22 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 this.height= height
 }
 
 
 open fun getPoints()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>{
+: Array<IntArray?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,16 +121,22 @@ open fun getPoints()
 
 open fun setPoints(points: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 this.points= points
 }
 
 
 open fun getTotalFrames()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -128,9 +146,11 @@ open fun getTotalFrames()
 
 open fun setTotalFrames(totalFrames: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var totalFrames = totalFrames
+
+        Updates for KMP build        
+        {
+var totalFrames = totalFrames
 this.totalFrames= totalFrames
 }
 

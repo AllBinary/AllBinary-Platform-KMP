@@ -36,12 +36,12 @@ open public class GeographicMapCellPositionEvent : AllBinaryEventObject {
     private var geographicMapCellPosition: GeographicMapCellPosition
 public constructor        (anyType: Any, geographicMapCellPosition: GeographicMapCellPosition)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+var anyType = anyType
+var geographicMapCellPosition = geographicMapCellPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,12 +51,12 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
 
 public constructor        (anyType: Any, key: Int)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var key = key
+        Updates for KMP build        
+        {
+var anyType = anyType
+var key = key
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,25 +66,33 @@ public constructor        (anyType: Any, key: Int)
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.setSource(anyType)
 }
 
 
 open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var geographicMapCellPosition = geographicMapCellPosition
 this.geographicMapCellPosition= geographicMapCellPosition
 }
 
 
 open fun getGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +101,11 @@ open fun getGeographicMapCellPosition()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("CellPositionEvent: ")

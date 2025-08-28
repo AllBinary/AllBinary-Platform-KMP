@@ -35,15 +35,13 @@ open public class MotionRectanglesResultsEvent : AllBinaryEventObject {
     private var motionRectangles: MotionRectangles
 public constructor        (anyType: Any, frame: Long, motionRectangles: MotionRectangles)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var frame = frame
-
-
-                    var motionRectangles = motionRectangles
+        Updates for KMP build        
+        {
+var anyType = anyType
+var frame = frame
+var motionRectangles = motionRectangles
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,7 +53,11 @@ this.setMotionRectangles(motionRectangles)
 
 open fun getMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
-: MotionRectangles{
+: MotionRectangles
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,16 +67,22 @@ open fun getMotionRectangles()
 
 open fun setMotionRectangles(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionRectangles = motionRectangles
+
+        Updates for KMP build        
+        {
+var motionRectangles = motionRectangles
 this.motionRectangles= motionRectangles
 }
 
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

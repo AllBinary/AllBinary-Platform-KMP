@@ -28,9 +28,11 @@ open public class OpenGLProcessor
 
 open fun process(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 }
 
 

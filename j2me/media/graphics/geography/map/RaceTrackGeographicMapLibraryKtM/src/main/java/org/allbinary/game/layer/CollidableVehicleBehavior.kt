@@ -40,12 +40,12 @@ open public class CollidableVehicleBehavior : CollidableDestroyableDamageableBeh
     var totalImpactVelocity: Long = 0
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
+                            : super(ownerLayer, collidable)
 
-                    var ownerLayer = ownerLayer
-
-
-                    var collidable = collidable
+        Updates for KMP build        
+        {
+var ownerLayer = ownerLayer
+var collidable = collidable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,9 +57,11 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
             
 open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     var collisionTypeFactory: CollisionTypeFactory = CollisionTypeFactory.getInstance()!!
 
@@ -96,9 +98,11 @@ ownerLayer.
 
 open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 }
 
@@ -109,9 +113,11 @@ ForcedLogUtil.log("Don't Use Interface Version It Is Slower", this)
 
 open fun collide(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
+
+        Updates for KMP build        
+        {
+var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var ownerVehicleLayerInterface: VehiclePropertiesCompositeInterface = (this.ownerLayer as VehiclePropertiesCompositeInterface)
 
@@ -165,9 +171,11 @@ totalImpactVelocity= impactVelocityX +impactVelocityY
 
 open fun collideFriction(vehiclePropertiesCompositeInterface: VehiclePropertiesCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
+
+        Updates for KMP build        
+        {
+var vehiclePropertiesCompositeInterface = vehiclePropertiesCompositeInterface
 
     var vehicleFrictionProperties: VehicleFrictionProperties = vehiclePropertiesCompositeInterface!!.getVehicleProperties()!!.getVehicleFrictionProperties()!!
 

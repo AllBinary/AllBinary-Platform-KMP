@@ -48,19 +48,23 @@ open public class CommandRunnable
     private val command: Command
 public constructor        (commandFormInputProcessor: CommandFormInputProcessor, command: Command)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var commandFormInputProcessor = commandFormInputProcessor
-
-
-                    var command = command
+var commandFormInputProcessor = commandFormInputProcessor
+var command = command
 this.commandFormInputProcessor= commandFormInputProcessor
 this.command= command
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 
@@ -72,7 +76,11 @@ override fun run()
 commandListener!!.commandAction(command, canvas)
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }

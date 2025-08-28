@@ -51,7 +51,11 @@ open public class AllBinaryMediaManager
 
 open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,15 +65,21 @@ open fun isMuted()
 
 open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aMuted = aMuted
+
+        Updates for KMP build        
+        {
+var aMuted = aMuted
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,9 +91,11 @@ open fun update()
             
 open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var soundsFactoryInterface = soundsFactoryInterface
+
+        Updates for KMP build        
+        {
+    //var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -104,9 +116,11 @@ logUtil!!.put(commonString!!.END, THIS, commonString!!.INIT)
             
 open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var soundsFactoryInterface = soundsFactoryInterface
+
+        Updates for KMP build        
+        {
+    //var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -139,7 +153,11 @@ logUtil!!.put(commonString!!.START, THIS, "shutdown")
 
                         for (i in 0 until soundInterfaceArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(soundInterfaceArray[i] != 
                                     null
@@ -198,9 +216,11 @@ logUtil!!.put(commonString!!.START, THIS, "shutdown")
             
 open fun createPlayer(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Player{
+: Player
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 mostUsedTotal++
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
@@ -218,7 +238,11 @@ mostUsedTotal++
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AndroidMediaPlayerWrapper(resource)
 } catch(e: Exception)
-            {logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +mostUsedTotal, THIS, "createPlayer", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Could not create AndroidMediaPlayerWrapper using NoPlayer at " +CommonLabels.getInstance()!!.TOTAL_LABEL +mostUsedTotal, THIS, "createPlayer", e)
 
 
 
@@ -245,12 +269,12 @@ mostUsedTotal++
             
 open fun createPlayer(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
-: Player{
+: Player
 
-                    var stream = stream
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+var stream = stream
+var type = type
 
 
 
@@ -263,15 +287,13 @@ open fun createPlayer(stream: InputStream, type: String)
 
 open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var frequency = frequency
 
 
-                    var time = time
-
-
-                    var volume = volume
+        Updates for KMP build        
+        {
+var frequency = frequency
+var time = time
+var volume = volume
 
 
 
@@ -281,7 +303,11 @@ open fun playTone(frequency: Int, time: Int, volume: Int)
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -292,7 +318,11 @@ open fun isInitialized()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

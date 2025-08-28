@@ -38,7 +38,11 @@ open public class OnDemandResourcesFactory
         
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,9 +52,11 @@ open fun size()
 
 open fun remove(layerId: Int)
         //nullable = true from not(false or (false and false)) = true
-: OnDemandResources{
+: OnDemandResources
 
-                    var layerId = layerId
+        Updates for KMP build        
+        {
+var layerId = layerId
 
 
 

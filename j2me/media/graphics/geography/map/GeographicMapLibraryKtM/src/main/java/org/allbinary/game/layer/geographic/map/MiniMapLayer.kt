@@ -64,12 +64,12 @@ open public class MiniMapLayer : AllBinaryLayer
     private var animationInterface: CircleFilledAnimation
 public constructor        (geographicMapInterface: BasicGeographicMap, viewPosition: ViewPosition)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.getInstance(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition){
+                            : super(Rectangle(PointFactory.getInstance()!!.getInstance(0, viewPosition!!.getY()), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getWidth(), geographicMapInterface!!.getAllBinaryTiledLayer()!!.getHeight()), viewPosition)
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+var geographicMapInterface = geographicMapInterface
+var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -89,15 +89,21 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
+
+
+        Updates for KMP build        
+        {
+allBinaryTiledLayer!!.setPosition(this.x, this.y, this.z)
 }
 
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -107,9 +113,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 
 open fun onRemoveGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCellPositionEvent = geographicMapCellPositionEvent
+
+        Updates for KMP build        
+        {
+var geographicMapCellPositionEvent = geographicMapCellPositionEvent
 
     var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
@@ -135,9 +143,11 @@ this.positionList!!.remove(index)
 
 open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: GeographicMapCellPositionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCellPositionEvent = geographicMapCellPositionEvent
+
+        Updates for KMP build        
+        {
+var geographicMapCellPositionEvent = geographicMapCellPositionEvent
 
     var colorCompositeInterface: ColorCompositeInterface = geographicMapCellPositionEvent!!.getSource() as ColorCompositeInterface
 
@@ -153,7 +163,11 @@ open fun onGeographicMapCellPositionEvent(geographicMapCellPositionEvent: Geogra
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextColorCompositeInterface: ColorCompositeInterface = list.get(index) as ColorCompositeInterface
 
 
@@ -201,9 +215,11 @@ layerIndex= this.basicColorList!!.size() -1
 
 open fun paintDots(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var localPositionList: BasicArrayList = this.positionList
 
@@ -225,7 +241,11 @@ open fun paintDots(graphics: Graphics)
 
                         for (index in length  - 1  downTo 0)
 
-        {point= localPositionList!!.get(index) as GPoint
+        
+
+        Updates for KMP build        
+        {
+point= localPositionList!!.get(index) as GPoint
 basicColor= localBasicColorList!!.get(index) as BasicColor
 graphics.setColor(basicColor!!.toInt())
 this.animationInterface!!.setBasicColorP(basicColor)
@@ -237,9 +257,11 @@ this.animationInterface!!.paint(graphics, point.getX() +this.x, point.getY() +th
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 allBinaryTiledLayer!!.paint(graphics)
 this.paintDots(graphics)
 }

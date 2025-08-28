@@ -34,21 +34,15 @@ open public class CommandTextItem : TextItem {
     private val command: Command
 public constructor        (command: Command, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor){
+                            : super(command.getLabel(), layout, altText, backgroundBasicColor, foregroundBasicColor)
 
-                    var command = command
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var command = command
+var layout = layout
+var altText = altText
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,7 +52,11 @@ this.command= command
 
 override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,7 +66,11 @@ override fun isFocusable()
 
 open fun getCommand()
         //nullable = true from not(false or (false and true)) = true
-: Command{
+: Command
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

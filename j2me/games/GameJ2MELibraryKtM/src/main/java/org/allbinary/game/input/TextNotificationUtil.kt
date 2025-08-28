@@ -47,7 +47,11 @@ open public class TextNotificationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TextNotificationUtil{
+: TextNotificationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,9 +70,11 @@ open fun getInstance()
             
 open fun fireError(message: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var message = message
+
+        Updates for KMP build        
+        {
+var message = message
 PrimaryPlayerQueueFactory.getInstance()!!.add(ErrorSound.getInstance())
 this.fire(message)
 }
@@ -78,9 +84,11 @@ this.fire(message)
             
 open fun fireNew(message: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var message = message
+
+        Updates for KMP build        
+        {
+var message = message
 PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
 this.fire(message)
 }
@@ -90,9 +98,11 @@ this.fire(message)
             
 open fun fireSuccess(message: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var message = message
+
+        Updates for KMP build        
+        {
+var message = message
 PrimaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
 this.fire(message)
 }
@@ -108,9 +118,11 @@ this.fire(message)
             
 open fun fire(message: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var message = message
+
+        Updates for KMP build        
+        {
+var message = message
 
     var gameNotificationEvent: GameNotificationEvent = GameNotificationEvent(this, message, TWO, BasicColorFactory.getInstance()!!.RED, FALSE)
 

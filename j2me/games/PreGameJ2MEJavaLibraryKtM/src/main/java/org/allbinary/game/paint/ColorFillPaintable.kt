@@ -35,9 +35,11 @@ open public class ColorFillPaintable : ColorFillBasePaintable {
     val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 public constructor        (basicColor: BasicColor)                        
 
-                            : super(basicColor){
+                            : super(basicColor)
 
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,9 +48,11 @@ public constructor        (basicColor: BasicColor)
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 graphics.setColor(this.colorP)
 graphics.fillRect(0, 0, this.displayInfoSingleton!!.getLastWidth(), this.displayInfoSingleton!!.getLastHeight())
 }

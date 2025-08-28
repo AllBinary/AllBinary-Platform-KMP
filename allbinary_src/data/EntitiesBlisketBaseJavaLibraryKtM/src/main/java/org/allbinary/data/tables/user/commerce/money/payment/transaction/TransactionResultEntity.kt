@@ -48,7 +48,11 @@ open public class TransactionResultEntity : AbSqlBean
     private val tableName: String = "vresults"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -58,12 +62,12 @@ this.setTableName(tableName)
 
 open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var orderNumber = orderNumber
+        Updates for KMP build        
+        {
+var userName = userName
+var orderNumber = orderNumber
 
         try {
             
@@ -82,7 +86,11 @@ super.deleteWhere(whereHashMap)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -98,15 +106,13 @@ super.deleteWhere(whereHashMap)
 
 open fun add(userName: String, orderNumber: String, transactionResultInterface: TransactionResultInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var orderNumber = orderNumber
-
-
-                    var transactionResultInterface = transactionResultInterface
+        Updates for KMP build        
+        {
+var userName = userName
+var orderNumber = orderNumber
+var transactionResultInterface = transactionResultInterface
 
         try {
             
@@ -135,7 +141,11 @@ super.insert(values)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -151,9 +161,11 @@ super.insert(values)
 
 open fun getTransactionResultInterface(orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
-: TransactionResultInterface{
+: TransactionResultInterface
 
-                    var orderNumber = orderNumber
+        Updates for KMP build        
+        {
+var orderNumber = orderNumber
 
         try {
             
@@ -201,7 +213,11 @@ resultHashMap= super.getRow(updateKeyAndValue)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -222,7 +238,11 @@ resultHashMap= super.getRow(updateKeyAndValue)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var paymentTransactionKeysFactory: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory.getInstance()!!
 
 
@@ -248,7 +268,11 @@ stringBuffer!!.append(this.sqlTypeStrings!!.FOUR_INT_NOT_NULL)!!.append(paymentT
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -258,7 +282,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

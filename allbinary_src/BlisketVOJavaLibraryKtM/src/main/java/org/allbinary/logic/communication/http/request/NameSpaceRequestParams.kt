@@ -48,7 +48,11 @@ open public class NameSpaceRequestParams : RequestParams {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -65,9 +69,11 @@ public constructor        ()
 
 public constructor        (httpServletRequest: HttpServletRequest)                        
 
-                            : super(httpServletRequest){
+                            : super(httpServletRequest)
 
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
 
 
                             //For kotlin this is before the body of the constructor.
@@ -85,9 +91,11 @@ public constructor        (httpServletRequest: HttpServletRequest)
 
 public constructor        (pageContext: PageContext)                        
 
-                            : super(pageContext){
+                            : super(pageContext)
 
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -108,15 +116,13 @@ public constructor        (pageContext: PageContext)
             
 open fun createPackageNode(document: Document, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var packageName = packageName
-
-
-                    var packagePropertiesHashMap = packagePropertiesHashMap
+        Updates for KMP build        
+        {
+var document = document
+var packageName = packageName
+var packagePropertiesHashMap = packagePropertiesHashMap
 
     var node: Node = document.createElement(packageName)!!
 
@@ -136,7 +142,11 @@ open fun createPackageNode(document: Document, packageName: String, packagePrope
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var propertyName: String = propertyKeySetArray[index]!! as String
 
 
@@ -160,18 +170,14 @@ node.appendChild(propertyNode)
             
 open fun createPackageMultiNode(document: Document, nameSpaceRequestParam: NameSpaceRequestParam, packageName: String, packagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var nameSpaceRequestParam = nameSpaceRequestParam
-
-
-                    var packageName = packageName
-
-
-                    var packagePropertiesHashMap = packagePropertiesHashMap
+        Updates for KMP build        
+        {
+var document = document
+var nameSpaceRequestParam = nameSpaceRequestParam
+var packageName = packageName
+var packagePropertiesHashMap = packagePropertiesHashMap
 
     var beginIndex: Int = packageName!!.indexOf('[')!!
 
@@ -224,15 +230,13 @@ nextNode!!.appendChild(indexNode)
             
 open fun getRootNode(rootElementPackage: String, packagePropertiesHashMap: HashMap<Any, Any>, document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var rootElementPackage = rootElementPackage
-
-
-                    var packagePropertiesHashMap = packagePropertiesHashMap
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+var rootElementPackage = rootElementPackage
+var packagePropertiesHashMap = packagePropertiesHashMap
+var document = document
 
     var rootNode: Node = DomSearchHelper.getNodeNoThrow(rootElementPackage, document.getChildNodes())!!
 
@@ -298,15 +302,13 @@ document.appendChild(node)
             
 open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var node = node
-
-
-                    var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
+        Updates for KMP build        
+        {
+var document = document
+var node = node
+var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -333,7 +335,11 @@ open fun addNewProperties(document: Document, node: Node, nextPackagePropertiesH
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextPropertyName: String = propertyNameSetArray[index]!! as String
 
 
@@ -416,12 +422,12 @@ node.appendChild(newPropertyNode)
             
 open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, Any>, node: Node)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
+var node = node
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -493,12 +499,12 @@ open fun isElementValueTextNodeEqual(nextPackagePropertiesHashMap: HashMap<Any, 
             
 open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any, Any>, elementNodeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
-
-
-                    var elementNodeVector = elementNodeVector
+        Updates for KMP build        
+        {
+var nextPackagePropertiesHashMap = nextPackagePropertiesHashMap
+var elementNodeVector = elementNodeVector
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -517,7 +523,11 @@ open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any,
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var existingElementNode: Node = elementNodeVector!!.get(index) as Node
 
 
@@ -547,15 +557,13 @@ open fun isElementValueTextNodeUnique(nextPackagePropertiesHashMap: HashMap<Any,
             
 open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: NameSpaceRequestParam)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var document = document
-
-
-                    var rootNode = rootNode
-
-
-                    var nameSpaceRequestParam = nameSpaceRequestParam
+        Updates for KMP build        
+        {
+var document = document
+var rootNode = rootNode
+var nameSpaceRequestParam = nameSpaceRequestParam
 
     var node: Node = rootNode
 
@@ -571,7 +579,11 @@ open fun addChildren(document: Document, rootNode: Node, nameSpaceRequestParam: 
 
                         for (index in 1 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextPackageName: String = packageVector!!.get(index) as String
 
 
@@ -696,15 +708,13 @@ node= this.addNewProperties(document, nodeNameDuplicateNode, nextPackageProperti
             
 open fun addNameSpace(key: String, value: String, document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var key = key
-
-
-                    var value = value
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+var key = key
+var value = value
+var document = document
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
@@ -730,7 +740,11 @@ open fun addNameSpace(key: String, value: String, document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var packageName: String = packageVector!!.get(index) as String
 
 
@@ -766,7 +780,11 @@ open fun addNameSpace(key: String, value: String, document: Document)
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var document: Document = DomDocumentHelper.create()!!
 
 
@@ -797,7 +815,11 @@ open fun toHashMap()
 
                         for (i in 0 until keySize)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyArray[i]!! as String
 
 

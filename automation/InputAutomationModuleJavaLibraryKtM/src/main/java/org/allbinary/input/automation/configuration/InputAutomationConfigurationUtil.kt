@@ -39,9 +39,11 @@ open public class InputAutomationConfigurationUtil
             
 open fun getChangeEvent(inputAutomationModuleInterface: InputAutomationModuleFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: InputAutomationConfigurationModuleChangeEvent{
+: InputAutomationConfigurationModuleChangeEvent
 
-                    var inputAutomationModuleInterface = inputAutomationModuleInterface
+        Updates for KMP build        
+        {
+var inputAutomationModuleInterface = inputAutomationModuleInterface
 
     var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration = InputAutomationModuleConfiguration(inputAutomationModuleInterface)
 
@@ -59,7 +61,11 @@ open fun getChangeEvent(inputAutomationModuleInterface: InputAutomationModuleFac
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

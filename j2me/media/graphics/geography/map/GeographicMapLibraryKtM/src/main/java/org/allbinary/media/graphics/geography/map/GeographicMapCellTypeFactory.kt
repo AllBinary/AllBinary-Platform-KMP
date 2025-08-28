@@ -40,7 +40,11 @@ open public class GeographicMapCellTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GeographicMapCellTypeFactory{
+: GeographicMapCellTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
 
 open fun getInstance(type: Int)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellType{
+: GeographicMapCellType
 
-                    var type = type
+        Updates for KMP build        
+        {
+var type = type
 
 
 
@@ -74,7 +80,11 @@ open fun getInstance(type: Int)
 
 open fun getGeographicMapCellTypeArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<GeographicMapCellType?>{
+: Array<GeographicMapCellType?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,7 +94,11 @@ open fun getGeographicMapCellTypeArray()
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -93,7 +107,11 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -102,7 +120,11 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -111,9 +133,11 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cellType = cellType
+        Updates for KMP build        
+        {
+var cellType = cellType
 
 
 

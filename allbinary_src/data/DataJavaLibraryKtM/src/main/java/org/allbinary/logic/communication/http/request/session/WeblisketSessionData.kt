@@ -52,7 +52,11 @@ open public class WeblisketSessionData
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

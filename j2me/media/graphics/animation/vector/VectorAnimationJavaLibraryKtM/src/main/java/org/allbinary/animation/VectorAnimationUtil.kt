@@ -39,7 +39,11 @@ open public class VectorAnimationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VectorAnimationUtil{
+: VectorAnimationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,17 +54,21 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList, pointsPerFrame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Array<IntArray?>?>{
+: Array<Array<IntArray?>?>
 
-                    var vector = vector
-
-
-                    var pointsPerFrame = pointsPerFrame
+        Updates for KMP build        
+        {
+var vector = vector
+var pointsPerFrame = pointsPerFrame
 
     var size: Int = vector.size()!!
 
@@ -73,7 +81,11 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextBasicArrayList: BasicArrayList = vector.objectArray[index]!! as BasicArrayList
 
 
@@ -85,7 +97,11 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
                         for (pointIndex in 0 until frame.size)
 
-        {points[index]!![pointIndex]!![0]= frame[pointIndex]!![0]!!
+        
+
+        Updates for KMP build        
+        {
+points[index]!![pointIndex]!![0]= frame[pointIndex]!![0]!!
 points[index]!![pointIndex]!![1]= frame[pointIndex]!![1]!!
 }
 
@@ -101,9 +117,11 @@ points[index]!![pointIndex]!![1]= frame[pointIndex]!![1]!!
 
 open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Array<Array<IntArray?>?>{
+: Array<Array<IntArray?>?>
 
-                    var vector = vector
+        Updates for KMP build        
+        {
+var vector = vector
 
     var size: Int = vector.size()!!
 
@@ -116,7 +134,11 @@ open fun toAnimationArrayFromBasicArrayListOfPointBasicArrayList(vector: BasicAr
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextBasicArrayList: BasicArrayList = vector.objectArray[index]!! as BasicArrayList
 
 
@@ -129,7 +151,11 @@ points[index]= Array(framePoints!!.size) { IntArray(2) }
 
                         for (pointIndex in 0 until framePoints!!.size)
 
-        {points[index]!![pointIndex]!![0]= framePoints[pointIndex]!![0]!!
+        
+
+        Updates for KMP build        
+        {
+points[index]!![pointIndex]!![0]= framePoints[pointIndex]!![0]!!
 points[index]!![pointIndex]!![1]= framePoints[pointIndex]!![1]!!
 }
 
@@ -145,9 +171,11 @@ points[index]!![pointIndex]!![1]= framePoints[pointIndex]!![1]!!
 
 open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Array<IntArray?>{
+: Array<IntArray?>
 
-                    var list = list
+        Updates for KMP build        
+        {
+var list = list
 
     var points: Array<IntArray?> = Array(list.size()) { IntArray(2) }
 
@@ -160,7 +188,11 @@ open fun toFrameArrayFromPointBasicArrayList(list: BasicArrayList)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextPoint: GPoint = list.objectArray[index]!! as GPoint
 
 points[index]!![0]= nextPoint!!.getX()

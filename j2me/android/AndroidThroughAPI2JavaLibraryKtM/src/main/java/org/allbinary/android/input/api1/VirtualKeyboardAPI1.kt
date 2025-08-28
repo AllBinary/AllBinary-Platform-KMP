@@ -40,9 +40,11 @@ open public class VirtualKeyboardAPI1 : VirtualKeyboard
     var MAX_API: Int = 2
 
         }
-            public constructor        (activity: Activity){
+            public constructor        (activity: Activity)
 
-                    var activity = activity
+        Updates for KMP build        
+        {
+var activity = activity
 }
 
 

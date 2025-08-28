@@ -37,7 +37,11 @@ open public class StringUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StringUtil{
+: StringUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,14 +60,20 @@ open fun getInstance()
     private val stringArray: Array<String?> = arrayOfNulls(0)
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(string: String)
         //nullable =  from not(true or (false and false)) = 
-: String{
+: String
 
-                    var string = string
+        Updates for KMP build        
+        {
+var string = string
 
     
                         if(string == 
@@ -93,7 +103,11 @@ open fun getInstance(string: String)
 
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+: Array<String?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,12 +117,12 @@ open fun getArrayInstance()
 
 open fun count(string: String, aChar: Char)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var string = string
-
-
-                    var aChar = aChar
+        Updates for KMP build        
+        {
+    //var string = string
+    //var aChar = aChar
 
     var count: Int = 0
 
@@ -121,7 +135,11 @@ open fun count(string: String, aChar: Char)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(string[index] == aChar)
                         
@@ -142,9 +160,11 @@ open fun count(string: String, aChar: Char)
 
 open fun toString(anyType: Any)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 
     
                         if(anyType != 

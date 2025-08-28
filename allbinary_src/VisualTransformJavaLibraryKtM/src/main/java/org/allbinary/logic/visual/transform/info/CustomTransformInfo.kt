@@ -29,30 +29,18 @@
 open public class CustomTransformInfo : TransformInfo
                 , TransformInfoInterface {
         
-public constructor        (outputTypeName: String, inputOutputTypeName: String, inputOutputTypeFile: String, name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String){
+public constructor        (outputTypeName: String, inputOutputTypeName: String, inputOutputTypeFile: String, name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String)
 
-                    var outputTypeName = outputTypeName
-
-
-                    var inputOutputTypeName = inputOutputTypeName
-
-
-                    var inputOutputTypeFile = inputOutputTypeFile
-
-
-                    var name = name
-
-
-                    var objectFileName = objectFileName
-
-
-                    var objectConfigFileName = objectConfigFileName
-
-
-                    var templateFileName = templateFileName
-
-
-                    var dataFileName = dataFileName
+        Updates for KMP build        
+        {
+var outputTypeName = outputTypeName
+var inputOutputTypeName = inputOutputTypeName
+var inputOutputTypeFile = inputOutputTypeFile
+var name = name
+var objectFileName = objectFileName
+var objectConfigFileName = objectConfigFileName
+var templateFileName = templateFileName
+var dataFileName = dataFileName
 }
 
 

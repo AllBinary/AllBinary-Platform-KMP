@@ -35,18 +35,14 @@ open public class MultiPlayerGameLayer : CollidableDestroyableDamageableLayer
         
 public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(groupInterface, layerInfo, viewPosition){
+                            : super(groupInterface, layerInfo, viewPosition)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var groupInterface = groupInterface
-
-
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var groupInterface = groupInterface
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,21 +51,15 @@ public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>
 
 public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(groupInterface, name, layerInfo, viewPosition){
+                            : super(groupInterface, name, layerInfo, viewPosition)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var groupInterface = groupInterface
-
-
-                    var name = name
-
-
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var groupInterface = groupInterface
+    //var name = name
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -78,7 +68,11 @@ public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>
 
 override fun getMultiplayerBehavior()
         //nullable = true from not(false or (false and true)) = true
-: MultiplayerBehavior{
+: MultiplayerBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,23 +82,31 @@ override fun getMultiplayerBehavior()
 
 open fun setPingInfo(show: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var show = show
+
+        Updates for KMP build        
+        {
+var show = show
 }
 
 
 open fun setFiring(firing: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var firing = firing
+
+        Updates for KMP build        
+        {
+var firing = firing
 }
 
 
 open fun getFiring()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

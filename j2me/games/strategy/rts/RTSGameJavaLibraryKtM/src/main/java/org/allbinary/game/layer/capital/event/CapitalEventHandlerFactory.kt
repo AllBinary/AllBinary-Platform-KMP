@@ -36,23 +36,33 @@ open public class CapitalEventHandlerFactory
             
     private val capitalEventHandlerArray: Array<CapitalEventHandler?>
 
-                init{capitalEventHandlerArray= arrayOfNulls(10)
+                init
+
+        Updates for KMP build        
+        {
+capitalEventHandlerArray= arrayOfNulls(10)
 
 
 
 
                         for (index in capitalEventHandlerArray!!.size -1 downTo 0)
 
-        {capitalEventHandlerArray[index]= CapitalEventHandler()
+        
+
+        Updates for KMP build        
+        {
+capitalEventHandlerArray[index]= CapitalEventHandler()
 }
 
 }
 
 open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
-: CapitalEventHandler{
+: CapitalEventHandler
 
-                    var groupInterface = groupInterface
+        Updates for KMP build        
+        {
+var groupInterface = groupInterface
 
 
 
@@ -63,13 +73,21 @@ open fun getInstance(groupInterface: Group)
 
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in capitalEventHandlerArray!!.size -1 downTo 0)
 
-        {capitalEventHandlerArray[index]!!.removeAllListeners()
+        
+
+        Updates for KMP build        
+        {
+capitalEventHandlerArray[index]!!.removeAllListeners()
 }
 
 }

@@ -37,12 +37,12 @@ open public class ViewSwapper
     private var topViewArray: Array<View?> = NULL_VIEW_ARRAY
 public constructor        (activity: Activity, rootViewId: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var activity = activity
-
-
-                    var rootViewId = rootViewId
+var activity = activity
+var rootViewId = rootViewId
 this.activity= activity
 this.rootViewId= rootViewId
 }
@@ -50,27 +50,33 @@ this.rootViewId= rootViewId
 
 open fun setMainViews(viewArray: Array<View?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var viewArray = viewArray
+
+        Updates for KMP build        
+        {
+var viewArray = viewArray
 this.mainViewArray= viewArray
 }
 
 
 open fun setTopViewArray(topViewArray: Array<View?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var topViewArray = topViewArray
+
+        Updates for KMP build        
+        {
+var topViewArray = topViewArray
 this.topViewArray= topViewArray
 }
 
 
 open fun setMainView(id: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var id = id
+
+        Updates for KMP build        
+        {
+var id = id
 
     var viewGroup: ViewGroup = this.activity.findViewById(rootViewId) as ViewGroup
 
@@ -85,7 +91,11 @@ open fun setMainView(id: Int)
 
                         for (index in 0 until this.topViewArray!!.size)
 
-        {viewGroup!!.removeView(this.topViewArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+viewGroup!!.removeView(this.topViewArray[index]!!)
 }
 
 
@@ -94,7 +104,11 @@ open fun setMainView(id: Int)
 
                         for (index in 0 until this.mainViewArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(id != this.mainViewArray[index]!!.getId())
                         
@@ -111,7 +125,11 @@ open fun setMainView(id: Int)
 
                         for (index in 0 until this.mainViewArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(id == this.mainViewArray[index]!!.getId())
                         
@@ -129,7 +147,11 @@ this.currentMainViewId= id
 
                         for (index in 0 until this.topViewArray!!.size)
 
-        {viewGroup!!.addView(this.topViewArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+viewGroup!!.addView(this.topViewArray[index]!!)
 }
 
 

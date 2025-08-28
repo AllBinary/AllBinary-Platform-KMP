@@ -41,9 +41,11 @@ open public class AbstractArrayListPool
     var cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface
 public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)
             : super()
-        {
+        
 
-                    var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
 }
 
@@ -52,7 +54,11 @@ this.cacheableInterfaceFactoryInterface= cacheableInterfaceFactoryInterface
             
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -63,9 +69,11 @@ open fun clear()
             
 open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: CacheableInterface{
+: CacheableInterface
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
 
 
@@ -77,9 +85,11 @@ open fun remove(key: Any)
             
 open fun add(cacheableInterface: CacheableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cacheableInterface = cacheableInterface
+
+        Updates for KMP build        
+        {
+var cacheableInterface = cacheableInterface
 buffers.add(cacheableInterface)
 }
 
@@ -88,16 +98,22 @@ buffers.add(cacheableInterface)
             
 open fun add(cacheableInterfaces: Array<CacheableInterface?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cacheableInterfaces = cacheableInterfaces
+
+        Updates for KMP build        
+        {
+var cacheableInterfaces = cacheableInterfaces
 
 
 
 
                         for (index in 0 until cacheableInterfaces!!.size)
 
-        {buffers.add(cacheableInterfaces[index]!!)
+        
+
+        Updates for KMP build        
+        {
+buffers.add(cacheableInterfaces[index]!!)
 }
 
 }

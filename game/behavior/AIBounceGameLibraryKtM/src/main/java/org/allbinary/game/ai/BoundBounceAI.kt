@@ -43,18 +43,14 @@ open public class BoundBounceAI : BasicAI {
     private var boundsVisitorInterface: BoundsVisitorInterface
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput, layerBounds: LayerBounds, boundsVisitorInterface: BoundsVisitorInterface)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
-
-
-                    var layerBounds = layerBounds
-
-
-                    var boundsVisitorInterface = boundsVisitorInterface
+        Updates for KMP build        
+        {
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
+var layerBounds = layerBounds
+var boundsVisitorInterface = boundsVisitorInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,9 +62,11 @@ this.boundsVisitorInterface= boundsVisitorInterface
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var rectange: Rectangle = this.layerBounds!!.getRectangleP()!!
 
@@ -79,9 +77,11 @@ graphics.drawRect(rectange.getPoint()!!.getX(), rectange.getPoint()!!.getY(), re
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 this.layerBounds!!.visit(this.boundsVisitorInterface)
 }
 

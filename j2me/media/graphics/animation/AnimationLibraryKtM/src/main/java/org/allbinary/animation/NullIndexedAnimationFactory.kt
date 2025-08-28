@@ -41,7 +41,11 @@ open public class NullIndexedAnimationFactory
 
 open fun getFactoryInstance()
         //nullable = true from not(false or (false and true)) = true
-: NullIndexedAnimationFactory{
+: NullIndexedAnimationFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,30 +59,34 @@ open fun getFactoryInstance()
                                 {
                                 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 }
 
                                 }
                             
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 
@@ -90,9 +98,11 @@ private constructor        ()
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
 
 
 
@@ -102,9 +112,11 @@ private constructor        ()
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

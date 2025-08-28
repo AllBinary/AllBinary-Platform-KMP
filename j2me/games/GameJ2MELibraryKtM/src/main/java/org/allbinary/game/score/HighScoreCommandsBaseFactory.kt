@@ -39,9 +39,11 @@ open public class HighScoreCommandsBaseFactory
     val HIGH_SCORE_COMMANDS: Array<Command?>
 protected constructor        (HIGH_SCORE_COMMANDS: Array<Command?>)
             : super()
-        {
+        
 
-                    var HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
+        Updates for KMP build        
+        {
+var HIGH_SCORE_COMMANDS = HIGH_SCORE_COMMANDS
 
     
                         if(J2MEUtil.isJ2ME())
@@ -61,16 +63,22 @@ protected constructor        (HIGH_SCORE_COMMANDS: Array<Command?>)
 
 open fun isHighScoreCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var command = command
+        Updates for KMP build        
+        {
+var command = command
 
 
 
 
                         for (index in HIGH_SCORE_COMMANDS.size -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(command == HIGH_SCORE_COMMANDS[index])
                         
@@ -97,16 +105,22 @@ open fun isHighScoreCommand(command: Command)
             
 open fun getIndex(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var command = command
+        Updates for KMP build        
+        {
+var command = command
 
 
 
 
                         for (index in HIGH_SCORE_COMMANDS.size -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(command == HIGH_SCORE_COMMANDS[index])
                         

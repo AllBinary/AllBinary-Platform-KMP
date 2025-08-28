@@ -44,9 +44,11 @@ open public class UserEmailEventListenerModule
     private var userInterface: UserInterface
 public constructor        (userInterface: UserInterface)
             : super()
-        {
+        
 
-                    var userInterface = userInterface
+        Updates for KMP build        
+        {
+var userInterface = userInterface
 this.userInterface= userInterface
 }
 
@@ -55,9 +57,11 @@ this.userInterface= userInterface
             
 open fun onEmailSendFailure(emailEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var emailEvent = emailEvent
+
+        Updates for KMP build        
+        {
+var emailEvent = emailEvent
 
     var to: String = this.userInterface!!.getSecondaryEmail()!!
 
@@ -72,9 +76,11 @@ EmailQueueFactory.getInstance()!!.offer(email.getEmail() as EmailInterface)
             
 open fun onEmailSendRequest(emailEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var emailEvent = emailEvent
+
+        Updates for KMP build        
+        {
+var emailEvent = emailEvent
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))

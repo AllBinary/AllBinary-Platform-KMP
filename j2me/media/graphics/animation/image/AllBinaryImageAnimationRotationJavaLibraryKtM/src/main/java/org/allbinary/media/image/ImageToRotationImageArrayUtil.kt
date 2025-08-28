@@ -38,7 +38,11 @@ open public class ImageToRotationImageArrayUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageToRotationImageArrayUtil{
+: ImageToRotationImageArrayUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,22 +53,24 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun generate(image: Image, angleIncrement: Int, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>{
+: Array<Image?>
 
-                    var image = image
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var totalAngle = totalAngle
+        Updates for KMP build        
+        {
+var image = image
+var angleIncrement = angleIncrement
+var totalAngle = totalAngle
 
     var imageRotationUtil: ImageRotationUtil = ImageRotationUtil.getInstance()!!
 
@@ -81,7 +87,11 @@ imageArray[0]= image
 
                         for (index in 1 until totalFrames)
 
-        {imageArray[index]= imageRotationUtil!!.createRotatedImage(image, index *angleIncrement)
+        
+
+        Updates for KMP build        
+        {
+imageArray[index]= imageRotationUtil!!.createRotatedImage(image, index *angleIncrement)
 }
 
 

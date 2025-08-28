@@ -36,15 +36,13 @@ open public class LogFactory
             
 open fun getInstance(specialMessage: String, anyType: Any, exception: Any)
         //nullable =  from not(true or (false and false)) = 
-: Log{
+: Log
 
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var anyType = anyType
+var exception = exception
 
 
 
@@ -55,18 +53,14 @@ open fun getInstance(specialMessage: String, anyType: Any, exception: Any)
 
 open fun getInstance(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable =  from not(true or (false and false)) = 
-: Log{
+: Log
 
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var anyType = anyType
+var functionName = functionName
+var exception = exception
 
 
 
@@ -77,15 +71,13 @@ open fun getInstance(specialMessage: String, anyType: Any, functionName: String,
 
 open fun getInstance(specialMessage: String, anyType: Any, functionName: String)
         //nullable =  from not(true or (false and false)) = 
-: Log{
+: Log
 
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var anyType = anyType
+var functionName = functionName
 
 
 

@@ -38,9 +38,11 @@ open public class InterfaceCastProxy
             
 open fun newInstance(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
 
@@ -54,9 +56,11 @@ open fun newInstance(anyType: Any)
     private var anyType: Any
 private constructor        (anyType: Any)
             : super()
-        {
+        
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.anyType= anyType
 }
 
@@ -65,15 +69,13 @@ this.anyType= anyType
             
 open fun invoke(proxyObject: Any, proxyMethod: Method, proxyArgs: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var proxyObject = proxyObject
-
-
-                    var proxyMethod = proxyMethod
-
-
-                    var proxyArgs = proxyArgs
+        Updates for KMP build        
+        {
+var proxyObject = proxyObject
+var proxyMethod = proxyMethod
+var proxyArgs = proxyArgs
 
     var methodName: String = proxyMethod!!.getName()!!
 

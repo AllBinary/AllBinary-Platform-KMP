@@ -33,9 +33,11 @@ open public class ColorChangeEvent : AllBinaryEventObject {
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 public constructor        (anyType: Any)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
                             //For kotlin this is before the body of the constructor.
@@ -45,16 +47,22 @@ public constructor        (anyType: Any)
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 }
 
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

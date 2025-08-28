@@ -42,18 +42,22 @@ open public class GameState
     private var name: String
 public constructor        (name: String, state: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var state = state
+var name = name
+var state = state
 this.name= name
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

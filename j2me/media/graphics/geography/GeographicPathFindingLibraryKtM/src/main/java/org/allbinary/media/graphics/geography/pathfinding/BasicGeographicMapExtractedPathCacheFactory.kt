@@ -23,7 +23,11 @@ open public class BasicGeographicMapExtractedPathCacheFactory : BaseBasicArrayLi
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGeographicMapExtractedPathCacheFactory{
+: BasicGeographicMapExtractedPathCacheFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -36,17 +40,21 @@ open fun getInstance()
     private var maxConcurrentPaths: Int= 0
 
     private var maxPaths: Int= 0
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun init(maxConcurrentPaths: Int, maxPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var maxConcurrentPaths = maxConcurrentPaths
 
 
-                    var maxPaths = maxPaths
+        Updates for KMP build        
+        {
+var maxConcurrentPaths = maxConcurrentPaths
+var maxPaths = maxPaths
 
     
                         if(maxConcurrentPaths != this.maxConcurrentPaths)
@@ -58,7 +66,11 @@ open fun init(maxConcurrentPaths: Int, maxPaths: Int)
 
                         for (index in maxConcurrentPaths downTo this.maxConcurrentPaths)
 
-        {this.list.add(BasicArrayList(maxPaths))
+        
+
+        Updates for KMP build        
+        {
+this.list.add(BasicArrayList(maxPaths))
 }
 
 this.maxConcurrentPaths= maxConcurrentPaths
@@ -71,7 +83,11 @@ this.maxPaths= maxPaths
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
     
                         if(this.list.size() > 0)
                         
@@ -98,9 +114,11 @@ open fun getPath()
 
 open fun release(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 list.clear()
 this.list.add(list)
 }

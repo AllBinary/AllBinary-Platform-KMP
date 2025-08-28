@@ -37,7 +37,11 @@ open public class LockedUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LockedUtil{
+: LockedUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +58,11 @@ open fun getInstance()
         
 open fun isLockedFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,9 +72,11 @@ open fun isLockedFeature()
 
 open fun isLockedFeature(lockableFeatrue: LockableFeature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var lockableFeatrue = lockableFeatrue
+        Updates for KMP build        
+        {
+var lockableFeatrue = lockableFeatrue
 
 
 

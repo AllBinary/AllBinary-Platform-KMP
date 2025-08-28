@@ -38,13 +38,21 @@ open public class ImageColorRangeResults
     private var totalPixelsChecked: Long= 0
 public constructor        ()
             : super()
-        {this.setColorRangeInterface(ColorRange() as ColorRangeInterface)
+        
+
+        Updates for KMP build        
+        {
+this.setColorRangeInterface(ColorRange() as ColorRangeInterface)
 }
 
 
 open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
-: ColorRangeInterface{
+: ColorRangeInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,16 +62,22 @@ open fun getColorRangeInterface()
 
 open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorRangeInterface = colorRangeInterface
+
+        Updates for KMP build        
+        {
+var colorRangeInterface = colorRangeInterface
 this.colorRangeInterface= colorRangeInterface
 }
 
 
 open fun getMatchingPixelsChecked()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,22 +87,32 @@ open fun getMatchingPixelsChecked()
 
 open fun setMatchingPixelsChecked(matchingPixelsChecked: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var matchingPixelsChecked = matchingPixelsChecked
+
+        Updates for KMP build        
+        {
+var matchingPixelsChecked = matchingPixelsChecked
 this.matchingPixelsChecked= matchingPixelsChecked
 }
 
 
 open fun addMatchingPixelsChecked()
         //nullable = true from not(false or (false and true)) = true
-{this.matchingPixelsChecked++
+
+
+        Updates for KMP build        
+        {
+this.matchingPixelsChecked++
 }
 
 
 open fun getTotalPixelsChecked()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,22 +122,32 @@ open fun getTotalPixelsChecked()
 
 open fun addTotalPixelsChecked()
         //nullable = true from not(false or (false and true)) = true
-{totalPixelsChecked++
+
+
+        Updates for KMP build        
+        {
+totalPixelsChecked++
 }
 
 
 open fun setTotalPixelsChecked(totalPixelsChecked: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var totalPixelsChecked = totalPixelsChecked
+
+        Updates for KMP build        
+        {
+var totalPixelsChecked = totalPixelsChecked
 this.totalPixelsChecked= totalPixelsChecked
 }
 
 
 open fun getPercent()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -39,7 +39,11 @@ open public class BasicStoreFrontsEntity : InitSql {
     val tableName: String = "storefronts"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -51,9 +55,11 @@ this.setTable(tableName)
             
 open fun getStoreFrontInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicStoreFrontInterface{
+: BasicStoreFrontInterface
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 

@@ -38,9 +38,11 @@ open public class GameStateFactory
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
-: GameState{
+: GameState
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
 
@@ -52,7 +54,11 @@ open fun getInstance(name: String)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

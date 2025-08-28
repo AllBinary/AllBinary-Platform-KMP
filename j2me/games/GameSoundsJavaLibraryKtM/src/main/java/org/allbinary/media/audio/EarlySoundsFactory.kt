@@ -35,7 +35,11 @@ open public class EarlySoundsFactory : BaseSoundsFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EarlySoundsFactory{
+: EarlySoundsFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,7 +57,11 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun getSoundInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Sound?>{
+: Array<Sound?>
+
+        Updates for KMP build        
+        {
+
     var soundInterfaceArray: Array<Sound?> = arrayOfNulls(2)
 
 

@@ -40,12 +40,12 @@ open public class BufferedImageFrameCacheable
     private var bufferedImage: BufferedImage
 public constructor        (bufferedImage: BufferedImage, frame: Long)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var bufferedImage = bufferedImage
-
-
-                    var frame = frame
+var bufferedImage = bufferedImage
+var frame = frame
 this.frame= frame
 this.setBufferedImage(bufferedImage)
 }
@@ -53,7 +53,11 @@ this.setBufferedImage(bufferedImage)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +67,11 @@ open fun getKey()
 
 open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
-: BufferedImage{
+: BufferedImage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,16 +81,22 @@ open fun getBufferedImage()
 
 open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var bufferedImage = bufferedImage
+
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
 this.bufferedImage= bufferedImage
 }
 
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,15 +106,21 @@ open fun getFrame()
 
 open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 this.frame= frame
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.toString()!!)

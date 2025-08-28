@@ -40,9 +40,11 @@ open public class CategoryPropertiesView
     var categoryPropertiesInterface: CategoryPropertiesInterface
 public constructor        (categoryPropertiesInterface: CategoryPropertiesInterface)
             : super()
-        {
+        
 
-                    var categoryPropertiesInterface = categoryPropertiesInterface
+        Updates for KMP build        
+        {
+var categoryPropertiesInterface = categoryPropertiesInterface
 this.categoryPropertiesInterface= categoryPropertiesInterface
 }
 
@@ -51,9 +53,11 @@ this.categoryPropertiesInterface= categoryPropertiesInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var categoryNode: Node = document.createElement(CategoryData.getInstance()!!.NAME)!!
 

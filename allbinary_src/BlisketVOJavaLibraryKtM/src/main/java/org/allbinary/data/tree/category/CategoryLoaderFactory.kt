@@ -38,9 +38,11 @@ open public class CategoryLoaderFactory
             
 open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
-: CategoryLoaderInterface{
+: CategoryLoaderInterface
 
-                    var categoryFactoryInterface = categoryFactoryInterface
+        Updates for KMP build        
+        {
+var categoryFactoryInterface = categoryFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -52,7 +54,11 @@ open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return CategoryLoader(categoryFactoryInterface)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -77,7 +83,11 @@ open fun getInstance(categoryFactoryInterface: CategoryFactoryInterface)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

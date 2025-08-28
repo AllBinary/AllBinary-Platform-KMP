@@ -31,15 +31,21 @@ open public class RunnableCanvasRefreshHelper : Processor {
         
 
     private val runnableCanvas: MyCanvas
-public constructor        (runnableCanvas: MyCanvas){
+public constructor        (runnableCanvas: MyCanvas)
 
-                    var runnableCanvas = runnableCanvas
+        Updates for KMP build        
+        {
+var runnableCanvas = runnableCanvas
 this.runnableCanvas= runnableCanvas
 }
 
 override fun process()
         //nullable = true from not(false or (false and true)) = true
-{this.runnableCanvas!!.repaint()
+
+
+        Updates for KMP build        
+        {
+this.runnableCanvas!!.repaint()
 }
 
 

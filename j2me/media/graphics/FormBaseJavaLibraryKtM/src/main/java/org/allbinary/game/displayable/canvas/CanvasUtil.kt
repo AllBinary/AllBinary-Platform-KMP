@@ -37,9 +37,11 @@ open public class CanvasUtil
             
 open fun getKeyName(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
@@ -119,7 +121,11 @@ open fun getKeyName(key: Int)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

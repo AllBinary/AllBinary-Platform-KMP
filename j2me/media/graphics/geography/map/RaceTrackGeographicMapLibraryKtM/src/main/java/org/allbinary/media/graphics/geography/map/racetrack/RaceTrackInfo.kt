@@ -51,30 +51,18 @@ open public class RaceTrackInfo
     private var totalLaps: Int= 0
 public constructor        (id: Integer, name: String, raceTrackFrictionProperties: RaceTrackFrictionProperties, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, qualifyTime: Int, worstContinuePosition: Int, totalLaps: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var id = id
-
-
-                    var name = name
-
-
-                    var raceTrackFrictionProperties = raceTrackFrictionProperties
-
-
-                    var foregroundBasicColor = foregroundBasicColor
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var qualifyTime = qualifyTime
-
-
-                    var worstContinuePosition = worstContinuePosition
-
-
-                    var totalLaps = totalLaps
+var id = id
+var name = name
+var raceTrackFrictionProperties = raceTrackFrictionProperties
+var foregroundBasicColor = foregroundBasicColor
+var backgroundBasicColor = backgroundBasicColor
+var qualifyTime = qualifyTime
+var worstContinuePosition = worstContinuePosition
+var totalLaps = totalLaps
 this.setId(id)
 this.setName(name)
 this.setRaceTrackFrictionProperties(raceTrackFrictionProperties)
@@ -88,7 +76,11 @@ this.setTotalLaps(totalLaps)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,16 +90,22 @@ open fun getId()
 
 open fun setId(id: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var id = id
+
+        Updates for KMP build        
+        {
+var id = id
 this.id= id
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,16 +115,22 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun getQualifyTime()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,16 +140,22 @@ open fun getQualifyTime()
 
 open fun setQualifyTime(qualifyTime: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var qualifyTime = qualifyTime
+
+        Updates for KMP build        
+        {
+var qualifyTime = qualifyTime
 this.qualifyTime= qualifyTime
 }
 
 
 open fun getWorstContinuePosition()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -155,16 +165,22 @@ open fun getWorstContinuePosition()
 
 open fun setWorstContinuePosition(worstContinuePosition: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var worstContinuePosition = worstContinuePosition
+
+        Updates for KMP build        
+        {
+var worstContinuePosition = worstContinuePosition
 this.worstContinuePosition= worstContinuePosition
 }
 
 
 open fun getTotalLaps()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -174,16 +190,22 @@ open fun getTotalLaps()
 
 open fun setTotalLaps(totalLaps: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var totalLaps = totalLaps
+
+        Updates for KMP build        
+        {
+var totalLaps = totalLaps
 this.totalLaps= totalLaps
 }
 
 
 open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -193,16 +215,22 @@ open fun getForegroundBasicColor()
 
 open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var foregroundBasicColor = foregroundBasicColor
+
+        Updates for KMP build        
+        {
+var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 }
 
 
 open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -212,16 +240,22 @@ open fun getBackgroundBasicColor()
 
 open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var backgroundBasicColor = backgroundBasicColor
+
+        Updates for KMP build        
+        {
+var backgroundBasicColor = backgroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
 }
 
 
 open fun getRaceTrackFrictionProperties()
         //nullable = true from not(false or (false and true)) = true
-: RaceTrackFrictionProperties{
+: RaceTrackFrictionProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -231,9 +265,11 @@ open fun getRaceTrackFrictionProperties()
 
 open fun setRaceTrackFrictionProperties(raceTrackFrictionProperties: RaceTrackFrictionProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var raceTrackFrictionProperties = raceTrackFrictionProperties
+
+        Updates for KMP build        
+        {
+var raceTrackFrictionProperties = raceTrackFrictionProperties
 this.raceTrackFrictionProperties= raceTrackFrictionProperties
 }
 

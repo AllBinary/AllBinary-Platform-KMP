@@ -41,16 +41,22 @@ open public class AllBinaryEventObject
     private var source: Any
 public constructor        (anyType: Any)
             : super()
-        {
+        
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.source= anyType
 }
 
 
 open fun getSource()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,9 +66,11 @@ open fun getSource()
 
 open fun setSource(source: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var source = source
+
+        Updates for KMP build        
+        {
+var source = source
 this.source= source
 }
 

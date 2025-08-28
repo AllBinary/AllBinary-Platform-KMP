@@ -38,7 +38,11 @@ open public class GravityUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GravityUtil{
+: GravityUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,21 +63,23 @@ open fun getInstance()
 
 open fun process(velocityProperties: BasicVelocityProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var velocityProperties = velocityProperties
+
+        Updates for KMP build        
+        {
+var velocityProperties = velocityProperties
 velocityProperties!!.getVelocityYBasicDecimalP()!!.add(this.GAME_GRAVITY_VELOCITY)
 }
 
 
 open fun process(velocityProperties: BasicVelocityProperties, customGravity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var velocityProperties = velocityProperties
 
 
-                    var customGravity = customGravity
+        Updates for KMP build        
+        {
+var velocityProperties = velocityProperties
+var customGravity = customGravity
 velocityProperties!!.getVelocityYBasicDecimalP()!!.add(customGravity)
 }
 

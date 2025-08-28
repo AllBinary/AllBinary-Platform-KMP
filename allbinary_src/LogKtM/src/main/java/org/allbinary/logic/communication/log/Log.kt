@@ -47,7 +47,11 @@ open public class Log
     private val exception: Any
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 this.specialMessage= stringUtil!!.EMPTY_STRING
@@ -58,18 +62,14 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 public constructor        (specialMessage: String, anyType: Any, functionName: String, exception: Any)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
 this.specialMessage= specialMessage
 this.anyType= anyType
 this.functionName= functionName
@@ -78,15 +78,13 @@ this.exception= exception
 
 public constructor        (specialMessage: String, anyType: Any, functionName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var functionName = functionName
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
 this.specialMessage= specialMessage
 this.anyType= anyType
 this.functionName= functionName
@@ -96,7 +94,11 @@ this.exception= nullUtil!!.NULL_OBJECT
 
 open fun getSpecialMessage()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -106,7 +108,11 @@ open fun getSpecialMessage()
 
 open fun getObject()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -116,7 +122,11 @@ open fun getObject()
 
 open fun getFunctionName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -126,7 +136,11 @@ open fun getFunctionName()
 
 open fun getThrowable()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -135,7 +149,11 @@ open fun getThrowable()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var className: String = CommonStrings.getInstance()!!.EMPTY
 
 

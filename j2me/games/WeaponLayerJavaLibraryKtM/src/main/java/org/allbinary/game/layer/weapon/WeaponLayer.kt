@@ -57,7 +57,11 @@ open public class WeaponLayer : MultiPlayerGameLayer
             
 open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,21 +94,15 @@ open fun getStaticType()
     private val multiPlayerType: Int
 protected constructor        (name: String, movement: Movement, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : this(name, movement, animationInterface, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getProcedural(ExplosionResources.getInstance()!!.THIRD_EXPLOSION_RESOURCE)!!.getInstance(NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0)), rectangle, viewPosition){
+                            : this(name, movement, animationInterface, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.getProcedural(ExplosionResources.getInstance()!!.THIRD_EXPLOSION_RESOURCE)!!.getInstance(NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0)), rectangle, viewPosition)
 
-                    var name = name
-
-
-                    var movement = movement
-
-
-                    var animationInterface = animationInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var movement = movement
+    //var animationInterface = animationInterface
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -113,24 +111,16 @@ protected constructor        (name: String, movement: Movement, animationInterfa
 
 protected constructor        (name: String, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : this(name, RemoteInfo.REMOTE_INFO,  -1, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition){
+                            : this(name, RemoteInfo.REMOTE_INFO,  -1, movement, animationInterface, destroyedAnimationInterface, rectangle, viewPosition)
 
-                    var name = name
-
-
-                    var movement = movement
-
-
-                    var animationInterface = animationInterface
-
-
-                    var destroyedAnimationInterface = destroyedAnimationInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var movement = movement
+    //var animationInterface = animationInterface
+    //var destroyedAnimationInterface = destroyedAnimationInterface
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -139,30 +129,18 @@ protected constructor        (name: String, movement: Movement, animationInterfa
 
 protected constructor        (name: String, remoteInfo: RemoteInfo, multiPlayerType: Int, movement: Movement, animationInterface: Animation, destroyedAnimationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
+                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition)
 
-                    var name = name
-
-
-                    var remoteInfo = remoteInfo
-
-
-                    var multiPlayerType = multiPlayerType
-
-
-                    var movement = movement
-
-
-                    var animationInterface = animationInterface
-
-
-                    var destroyedAnimationInterface = destroyedAnimationInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var remoteInfo = remoteInfo
+    //var multiPlayerType = multiPlayerType
+    //var movement = movement
+    //var animationInterface = animationInterface
+    //var destroyedAnimationInterface = destroyedAnimationInterface
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -178,9 +156,11 @@ this.multiPlayerType= multiPlayerType
     private var collidableWeaponBehavior: CollidableWeaponBehavior = CollidableWeaponBehavior.NULL_COLLIDABLE_WEAPON_BEHAVIOR
 override fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInferface = collidableInferface
+
+        Updates for KMP build        
+        {
+var collidableInferface = collidableInferface
 super.setCollidableInferface(collidableInferface)
 this.collidableWeaponBehavior= this.getCollidableInferface() as CollidableWeaponBehavior
 }
@@ -190,15 +170,13 @@ this.collidableWeaponBehavior= this.getCollidableInferface() as CollidableWeapon
             
 open fun init(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 this.x= x
 this.y= y
 this.z= z
@@ -209,21 +187,15 @@ this.z= z
             
 open fun init(sourceLayerInterface: AllBinaryLayer, angle: Int, otherAngle: Int, weaponProperties: WeaponProperties, scoreable: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var sourceLayerInterface = sourceLayerInterface
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreable = scoreable
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
+var angle = angle
+var otherAngle = otherAngle
+var weaponProperties = weaponProperties
+var scoreable = scoreable
 this.setWeaponPropertiesP(weaponProperties)
 this.setReadyForExplosion(false)
 this.setAnimationInterface(this.getInitAnimationInterfaceP())
@@ -250,7 +222,11 @@ this.movement.init(weaponProperties!!.getSpeed(), angle, otherAngle)
 
 open fun setGroupInterface()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var basicGroupFactory: BasicGroupFactory = BasicGroupFactory.getInstance()!!
 
 
@@ -273,9 +249,11 @@ open fun setGroupInterface()
                 @Throws(Exception::class)
             override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(this.isExhausted() && !this.isDestroyed())
@@ -341,7 +319,11 @@ this.totalDamage += this.weaponProperties!!.getDissipation()
 
 override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -350,28 +332,34 @@ override fun isDestroyed()
 
 override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var damage = damage
 
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damage = damage
+var damageType = damageType
 this.totalDamage += damage *damage
 }
 
 
 open fun givePoints(total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var total = total
+
+        Updates for KMP build        
+        {
+var total = total
 scoreableInterface!!.addPoints(GameConfigurationUtil.getInstance()!!.getCompetitionValue() *total)
 }
 
 
 open fun isExhausted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.totalDamage > this.getInitDamage() || this.totalDamage < 0)
                         
@@ -397,9 +385,11 @@ open fun isExhausted()
 
 override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damageType = damageType
 
     
                         if(!this.isExhausted())
@@ -427,9 +417,11 @@ this.givePoints(total)
 
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 this.destroyed= destroyed
 
     
@@ -446,7 +438,11 @@ DestroyedLayerProcessor.getInstance()!!.add(this)
 
 open fun getInitDamage()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -456,16 +452,22 @@ open fun getInitDamage()
 
 open fun setAnimationInterface(animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var animationInterface = animationInterface
+
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
 this.animationInterface= animationInterface
 }
 
 
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -475,7 +477,11 @@ open fun getAnimationInterface()
 
 open fun getInitAnimationInterfaceP()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -485,16 +491,22 @@ open fun getInitAnimationInterfaceP()
 
 open fun setInitAnimationInterfaceP(initAnimationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var initAnimationInterface = initAnimationInterface
+
+        Updates for KMP build        
+        {
+var initAnimationInterface = initAnimationInterface
 this.initAnimationInterface= initAnimationInterface
 }
 
 
 open fun getDestroyedAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -504,7 +516,11 @@ open fun getDestroyedAnimationInterface()
 
 open fun getOwnerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -514,17 +530,21 @@ open fun getOwnerLayerInterface()
 
 open fun setOwnerLayerInterface(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sourceLayerInterface = sourceLayerInterface
+
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
 this.sourceLayerInterface= sourceLayerInterface
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
 
@@ -533,9 +553,11 @@ this.animationInterface!!.paint(graphics, viewPosition!!.getX() -this.getHalfWid
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
 
@@ -545,7 +567,11 @@ this.animationInterface!!.paintThreed(graphics, viewPosition!!.getX() -this.getH
 
 open fun getMovement()
         //nullable = true from not(false or (false and true)) = true
-: Movement{
+: Movement
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -555,15 +581,21 @@ open fun getMovement()
 
 open fun setMovement(movement: Movement)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var movement = movement
+
+        Updates for KMP build        
+        {
+var movement = movement
 this.movement= movement
 }
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -572,7 +604,11 @@ override fun getType()
 
 override fun getMultiPlayerType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -582,16 +618,22 @@ override fun getMultiPlayerType()
 
 open fun setWeaponPropertiesP(weaponProperties: WeaponProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weaponProperties = weaponProperties
+
+        Updates for KMP build        
+        {
+var weaponProperties = weaponProperties
 this.weaponProperties= weaponProperties
 }
 
 
 open fun getWeaponPropertiesP()
         //nullable = true from not(false or (false and true)) = true
-: WeaponProperties{
+: WeaponProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -600,7 +642,11 @@ open fun getWeaponPropertiesP()
 
 override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -611,9 +657,11 @@ override fun implmentsTickableInterface()
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 this.initAnimationInterface!!.set(gl)
 }
 

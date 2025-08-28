@@ -39,7 +39,11 @@ open public class LogConfigTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogConfigTypeFactory{
+: LogConfigTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -188,7 +192,11 @@ open fun getInstance()
     val STATICPAGEGENERATIONLOGGINGERROR: LogConfigType = LogConfigType("Static Page Generation Logging Error", NO_DESCRIPTION)
 private constructor        ()
             : super()
-        {PreLogUtil.put("FreeBlisket", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
+        
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("FreeBlisket", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
 }
 
 

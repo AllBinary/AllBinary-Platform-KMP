@@ -40,7 +40,11 @@ open public class PathUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathUtil{
+: PathUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,14 +59,20 @@ open fun getInstance()
     private val filePathData: FilePathData = FilePathData.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getExtensionIndex(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = filePath!!.lastIndexOf(abPathData!!.EXTENSION_SEP)!!
 
@@ -105,9 +115,11 @@ open fun getExtensionIndex(filePath: String)
 
 open fun getExtension(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abFilePath = abFilePath
+        Updates for KMP build        
+        {
+var abFilePath = abFilePath
 
 
 
@@ -118,9 +130,11 @@ open fun getExtension(abFilePath: AbFilePath)
 
 open fun getExtension(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abPath = abPath
+        Updates for KMP build        
+        {
+var abPath = abPath
 
 
 
@@ -131,9 +145,11 @@ open fun getExtension(abPath: AbPath)
 
 open fun getExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
 
@@ -161,9 +177,11 @@ open fun getExtension(filePath: String)
             
 open fun getWithoutExtension(abFilePath: AbFilePath)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abFilePath = abFilePath
+        Updates for KMP build        
+        {
+var abFilePath = abFilePath
 
 
 
@@ -176,9 +194,11 @@ open fun getWithoutExtension(abFilePath: AbFilePath)
             
 open fun getWithoutExtension(abPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abPath = abPath
+        Updates for KMP build        
+        {
+var abPath = abPath
 
 
 
@@ -191,9 +211,11 @@ open fun getWithoutExtension(abPath: AbPath)
             
 open fun getWithoutExtension(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var filePath = filePath
 
     var indexOfFileExtensionDelmiter: Int = this.getExtensionIndex(filePath)!!
 
@@ -219,9 +241,11 @@ open fun getWithoutExtension(filePath: String)
 
 open fun isValid(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     
                         if(this.isValidStart(path))
@@ -253,9 +277,11 @@ open fun isValid(path: String)
 
 open fun isValidStart(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     
                         if(path[0] == abPathData!!.SEPARATORCHAR || path[0] == '.')
@@ -283,9 +309,11 @@ open fun isValidStart(path: String)
 
 open fun isValidEnd(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -329,9 +357,11 @@ open fun isValidEnd(path: String)
 
 open fun adjustStart(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     
                         if(!this.isValidStart(path))
@@ -351,9 +381,11 @@ open fun adjustStart(path: String)
 
 open fun adjustEnd(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     
                         if(!this.isValidEnd(path))
@@ -373,9 +405,11 @@ open fun adjustEnd(path: String)
 
 open fun adjust(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -412,9 +446,11 @@ open fun adjust(path: String)
 
 open fun getNameFromPath(categoryPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var categoryPath = categoryPath
+        Updates for KMP build        
+        {
+var categoryPath = categoryPath
 
     var endIndex: Int = categoryPath!!.lastIndexOf(abPathData!!.SEPARATOR)!!
 
@@ -471,9 +507,11 @@ open fun getNameFromPath(categoryPath: String)
 
 open fun removeNameFromPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     var endIndex: Int = path.lastIndexOf(abPathData!!.SEPARATOR)!!
 

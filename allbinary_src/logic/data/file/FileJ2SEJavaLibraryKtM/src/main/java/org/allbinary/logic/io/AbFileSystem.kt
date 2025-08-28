@@ -37,7 +37,11 @@ open public class AbFileSystem
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbFileSystem{
+: AbFileSystem
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,7 +60,11 @@ open fun getInstance()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,9 +74,11 @@ open fun getType()
 
 open fun isType(type: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var type = type
+        Updates for KMP build        
+        {
+var type = type
 
     
                         if(this.type.compareTo(type) == 0)

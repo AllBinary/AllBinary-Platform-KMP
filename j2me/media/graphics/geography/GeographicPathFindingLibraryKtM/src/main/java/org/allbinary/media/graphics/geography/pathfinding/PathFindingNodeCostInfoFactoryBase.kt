@@ -43,21 +43,15 @@ open public class PathFindingNodeCostInfoFactoryBase
             
 open fun create(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapInterface = geographicMapInterface
 
 
-                    var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var costFromStart = costFromStart
-
-
-                    var costToEnd = costToEnd
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var costFromStart = costFromStart
+    //var costToEnd = costToEnd
 }
 
 
@@ -65,15 +59,13 @@ open fun create(geographicMapInterface: BasicGeographicMap, comingFromGeographic
             
 open fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 

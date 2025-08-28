@@ -35,9 +35,11 @@ open public class BasicArrayList
     private var currentIndex: Int = 0
 public constructor        (size: Int)                        
 
-                            : super(){
+                            : super()
 
-                    var size = size
+        Updates for KMP build        
+        {
+    //var size = size
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,15 +62,21 @@ objectArray= arrayOfNulls(size)
 
 public constructor        (objectArray: Array<Any?>)
             : super()
-        {
+        
 
-                    var objectArray = objectArray
+        Updates for KMP build        
+        {
+    //var objectArray = objectArray
 this.objectArray= objectArray
 }
 
 public constructor        ()                        
 
-                            : this(7){
+                            : this(7)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -77,12 +85,12 @@ public constructor        ()
 
 open fun add(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var index = index
 
 
-                    var element = element
+        Updates for KMP build        
+        {
+    //var index = index
+    //var element = element
 
     
                         if(index > currentIndex || index < 0)
@@ -111,9 +119,11 @@ currentIndex++
 
 open fun add(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 ensureCapacity(currentIndex +1)
 objectArray[currentIndex++]= anyType
 
@@ -126,9 +136,11 @@ objectArray[currentIndex++]= anyType
 
 open fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var index = index
+        Updates for KMP build        
+        {
+    //var index = index
 
     
                         if(index >= currentIndex)
@@ -171,9 +183,11 @@ objectArray[--currentIndex]=
 
 open fun remove(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 
     
                         if(anyType == 
@@ -187,7 +201,11 @@ open fun remove(anyType: Any)
 
                         for (index in 0 until currentIndex)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(objectArray[index] == 
                                     null
@@ -224,7 +242,11 @@ objectArray[--currentIndex]=
 
                         for (index in 0 until currentIndex)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(anyType!!.equals(objectArray[index]!!))
                         
@@ -262,9 +284,11 @@ objectArray[--currentIndex]=
 
 open fun removeAll2(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var list = list
+        Updates for KMP build        
+        {
+    //var list = list
 
     var result: Boolean = true
 
@@ -277,7 +301,11 @@ open fun removeAll2(list: BasicArrayList)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.remove(list.get(index)))
                         
@@ -302,9 +330,11 @@ open fun removeAll2(list: BasicArrayList)
 
 open fun addAll2(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var list = list
+        Updates for KMP build        
+        {
+    //var list = list
 ensureCapacity(currentIndex +list.currentIndex)
 
     var listSize: Int = list.currentIndex
@@ -315,7 +345,11 @@ ensureCapacity(currentIndex +list.currentIndex)
 
                         for (index in 0 until listSize)
 
-        {objectArray[currentIndex++]= list.objectArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+objectArray[currentIndex++]= list.objectArray[index]!!
 }
 
 
@@ -328,9 +362,11 @@ ensureCapacity(currentIndex +list.currentIndex)
 
 open fun addAll(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var list = list
+        Updates for KMP build        
+        {
+    //var list = list
 
     var newObjectArray: Array<Any?> = list.toArray()!!
 
@@ -344,9 +380,11 @@ open fun addAll(list: BasicArrayList)
 
 open fun addAll(newObjectArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newObjectArray = newObjectArray
+        Updates for KMP build        
+        {
+    //var newObjectArray = newObjectArray
 
     var numSize: Int = newObjectArray!!.size
                 
@@ -364,9 +402,11 @@ currentIndex += numSize
 
 open fun ensureCapacity(minSize: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minSize = minSize
+
+        Updates for KMP build        
+        {
+    //var minSize = minSize
 
     var oldCapacity: Int = objectArray!!.size
                 
@@ -392,7 +432,11 @@ objectArray= arrayUtil!!.copyOf(objectArray, newCapacity)
 
 open fun trimToSize()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var oldCapacity: Int = objectArray!!.size
                 
 
@@ -405,9 +449,11 @@ open fun trimToSize()
 
 open fun indexOf(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 
     
                         if(anyType == 
@@ -421,7 +467,11 @@ open fun indexOf(anyType: Any)
 
                         for (i in 0 until currentIndex)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(objectArray[i] == 
                                     null
@@ -443,7 +493,11 @@ open fun indexOf(anyType: Any)
 
                         for (i in 0 until currentIndex)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(anyType!!.equals(objectArray[i]!!))
                         
@@ -466,9 +520,11 @@ open fun indexOf(anyType: Any)
 
 open fun lastIndexOf(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 
     
                         if(anyType == 
@@ -482,7 +538,11 @@ open fun lastIndexOf(anyType: Any)
 
                         for (i in currentIndex -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(objectArray[i] == 
                                     null
@@ -504,7 +564,11 @@ open fun lastIndexOf(anyType: Any)
 
                         for (i in currentIndex -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(anyType!!.equals(objectArray[i]!!))
                         
@@ -527,9 +591,11 @@ open fun lastIndexOf(anyType: Any)
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var index = index
+        Updates for KMP build        
+        {
+    //var index = index
 
     
                         if(index >= currentIndex)
@@ -559,12 +625,12 @@ stringBuffer!!.append(currentIndex)
 
 open fun set(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var index = index
-
-
-                    var element = element
+        Updates for KMP build        
+        {
+    //var index = index
+    //var element = element
 
     
                         if(index >= currentIndex)
@@ -598,13 +664,21 @@ objectArray[index]= element
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (i in 0 until currentIndex)
 
-        {objectArray[i]= 
+        
+
+        Updates for KMP build        
+        {
+objectArray[i]= 
                                         null
                                     
 }
@@ -615,7 +689,11 @@ currentIndex= 0
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -625,7 +703,11 @@ open fun size()
 
 open fun isEmpty()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -635,9 +717,11 @@ open fun isEmpty()
 
 open fun contains(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 
 
 
@@ -648,7 +732,11 @@ open fun contains(anyType: Any)
 
 open fun toArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Any?>{
+: Array<Any?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -658,9 +746,11 @@ open fun toArray()
 
 open fun toArray(objectArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
+: Array<Any?>
 
-                    var objectArray = objectArray
+        Updates for KMP build        
+        {
+    //var objectArray = objectArray
 
     
                         if(objectArray!!.size < currentIndex)
@@ -685,7 +775,11 @@ System.arraycopy(this.objectArray, 0, objectArray, 0, currentIndex)
 
 override fun clone()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
     var list: BasicArrayList = BasicArrayList()
 
 
@@ -700,7 +794,11 @@ override fun clone()
 
                         for (index in 0 until size)
 
-        {anyType= this.objectArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+anyType= this.objectArray[index]!!
 list.add(anyType)
 }
 
@@ -713,7 +811,11 @@ list.add(anyType)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var COMMA_SEP: String = CommonSeps.getInstance()!!.COMMA_SEP
 
 
@@ -725,7 +827,11 @@ override fun toString()
 
                         for (index in 0 until currentIndex)
 
-        {stringBuffer!!.append(objectArray[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(objectArray[index]!!.toString())
 stringBuffer!!.append(COMMA_SEP)
 }
 

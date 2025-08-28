@@ -41,18 +41,14 @@ open public class HackRotationSpriteIndexedAnimation : RotationAnimation {
     private val image: Image
 public constructor        (sprite: Sprite, image: Image, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, animationBehavior){
+                            : super(angleInfo, animationBehavior)
 
-                    var sprite = sprite
-
-
-                    var image = image
-
-
-                    var angleInfo = angleInfo
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var sprite = sprite
+    //var image = image
+    //var angleInfo = angleInfo
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,7 +61,11 @@ this.image= image
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,33 +75,27 @@ this.image= image
 
 open fun paint(g: Graphics, frame: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var g = g
 
 
-                    var frame = frame
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var g = g
+    //var frame = frame
+    //var x = x
+    //var y = y
 this.setFrame(frame)
 this.paint(g, x, y)
 }
 
 override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var g = g
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var g = g
+    //var x = x
+    //var y = y
 this.sprite.setPosition(x, y)
 this.paint(g)
 }
@@ -109,25 +103,39 @@ this.paint(g)
 
 open fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var g = g
+
+        Updates for KMP build        
+        {
+    //var g = g
 this.sprite.paint(g)
 }
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite.nextFrame()
+
+
+        Updates for KMP build        
+        {
+this.sprite.nextFrame()
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.sprite.prevFrame()
+
+
+        Updates for KMP build        
+        {
+this.sprite.prevFrame()
 }
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,15 +144,21 @@ override fun getSize()
 
 override fun setFrame(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+    //var frame = frame
 this.sprite.setFrame(frame)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -153,14 +167,20 @@ override fun getFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

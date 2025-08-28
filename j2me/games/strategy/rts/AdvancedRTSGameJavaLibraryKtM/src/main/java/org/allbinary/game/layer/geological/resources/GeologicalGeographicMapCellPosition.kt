@@ -33,27 +33,17 @@ open public class GeologicalGeographicMapCellPosition : GeographicMapCellPositio
     private val geologicalResource: GeologicalResource
 public constructor        (column: Int, row: Int, columns: Int, rows: Int, width: Int, height: Int, geologicalResource: GeologicalResource)                        
 
-                            : super(column, row, columns, rows, width, height){
+                            : super(column, row, columns, rows, width, height)
 
-                    var column = column
-
-
-                    var row = row
-
-
-                    var columns = columns
-
-
-                    var rows = rows
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var geologicalResource = geologicalResource
+        Updates for KMP build        
+        {
+    //var column = column
+    //var row = row
+    //var columns = columns
+    //var rows = rows
+    //var width = width
+    //var height = height
+    //var geologicalResource = geologicalResource
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +54,11 @@ this.geologicalResource= geologicalResource
 
 open fun getGeologicalResource()
         //nullable = true from not(false or (false and true)) = true
-: GeologicalResource{
+: GeologicalResource
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -35,7 +35,11 @@ open public class OptimizedAllBinaryCollisionLayerProcessorForCollidableLayer : 
         
 public constructor        ()                        
 
-                            : super(OptimizedAllBinaryCollisionLayerManager()){
+                            : super(OptimizedAllBinaryCollisionLayerManager())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -45,15 +49,13 @@ public constructor        ()
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryLayerManager = allBinaryLayerManager
 
 
-                    var layerInterface = layerInterface
-
-
-                    var startIndex = startIndex
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
+var layerInterface = layerInterface
+var startIndex = startIndex
 
     var collidableInterfaceCompositeInterface: CollidableCompositeLayer = layerInterface as CollidableCompositeLayer
 
@@ -83,7 +85,11 @@ public constructor        ()
 
                         for (index in startIndex +1 until size)
 
-        {collidableInterfaceCompositeInterface2= layerManager!!.getLayerAt(index) as CollidableCompositeLayer
+        
+
+        Updates for KMP build        
+        {
+collidableInterfaceCompositeInterface2= layerManager!!.getLayerAt(index) as CollidableCompositeLayer
 collidableBase2= collidableInterfaceCompositeInterface2!!.getCollidableInferface()
 
     
@@ -104,9 +110,11 @@ collidableBase2!!.collide(collidableInterfaceCompositeInterface)
 
 override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     
                         if(layerInterface!!.implmentsCollidableInterface())

@@ -24,7 +24,11 @@ open public class ScreenRelationalUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScreenRelationalUtil{
+: ScreenRelationalUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -41,9 +45,11 @@ open fun getInstance()
         
 open fun getScale(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Float{
+: Float
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
 
@@ -54,12 +60,12 @@ open fun getScale(image: Image)
 
 open fun getScale(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Float{
+: Float
 
-                    var aWidth = aWidth
-
-
-                    var aHeight = aHeight
+        Updates for KMP build        
+        {
+    //var aWidth = aWidth
+    //var aHeight = aHeight
 
 
 
@@ -70,15 +76,13 @@ open fun getScale(aWidth: Int, aHeight: Int)
 
 open fun getScale(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
-: Float{
+: Float
 
-                    var aWidth = aWidth
-
-
-                    var aHeight = aHeight
-
-
-                    var add = add
+        Updates for KMP build        
+        {
+    //var aWidth = aWidth
+    //var aHeight = aHeight
+    //var add = add
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -116,12 +120,12 @@ open fun getScale(aWidth: Int, aHeight: Int, add: Int)
 
 open fun getScaledHeight(aWidth: Int, aHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var aWidth = aWidth
-
-
-                    var aHeight = aHeight
+        Updates for KMP build        
+        {
+    //var aWidth = aWidth
+    //var aHeight = aHeight
 
 
 
@@ -132,15 +136,13 @@ open fun getScaledHeight(aWidth: Int, aHeight: Int)
 
 open fun getScaledHeight(aWidth: Int, aHeight: Int, add: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var aWidth = aWidth
-
-
-                    var aHeight = aHeight
-
-
-                    var add = add
+        Updates for KMP build        
+        {
+    //var aWidth = aWidth
+    //var aHeight = aHeight
+    //var add = add
 
 
 

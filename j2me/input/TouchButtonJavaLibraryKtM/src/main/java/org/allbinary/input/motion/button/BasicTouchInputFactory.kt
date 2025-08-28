@@ -43,7 +43,11 @@ open public class BasicTouchInputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicTouchInputFactory{
+: BasicTouchInputFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,7 +90,11 @@ open fun getInstance()
     private val list: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
 SPECIAL_BUTTON_SEVEN_TESTING_ONLY= TouchButtonInput(MAX -41, "Button 7 - Testing Only May Cross Over Key Values")
@@ -108,9 +116,11 @@ NONE= TouchButtonInput(MAX -40, "No Button")
 
 open fun init(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+var inputToGameKeyMapping = inputToGameKeyMapping
 
     
                         if(!initialized)
@@ -140,21 +150,23 @@ CancelTouchButtonInputFactory.getInstance()
 
 open fun updateAll(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+var inputToGameKeyMapping = inputToGameKeyMapping
 this.updateAll(this.list, inputToGameKeyMapping)
 }
 
 
 open fun updateAll(list: BasicArrayList, inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var list = list
 
 
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+        Updates for KMP build        
+        {
+var list = list
+var inputToGameKeyMapping = inputToGameKeyMapping
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(list.size())!!.toString(), this, "updateAll")
 
@@ -166,7 +178,11 @@ logUtil!!.put(StringMaker().
 
                         for (index in list.size() -1 downTo 0)
 
-        {touchButtonInput= list.objectArray[index]!! as TouchButtonInput
+        
+
+        Updates for KMP build        
+        {
+touchButtonInput= list.objectArray[index]!! as TouchButtonInput
 touchButtonInput!!.update(inputToGameKeyMapping)
 }
 
@@ -175,7 +191,11 @@ touchButtonInput!!.update(inputToGameKeyMapping)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

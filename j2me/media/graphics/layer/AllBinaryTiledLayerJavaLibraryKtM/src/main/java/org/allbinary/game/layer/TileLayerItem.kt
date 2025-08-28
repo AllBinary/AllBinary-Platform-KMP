@@ -38,24 +38,16 @@ open public class TileLayerItem : CustomItem
     private val tiledLayer: AllBinaryTiledLayer
 public constructor        (label: String, tiledLayer: AllBinaryTiledLayer, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, backgroundBasicColor, foregroundBasicColor){
+                            : super(label, backgroundBasicColor, foregroundBasicColor)
 
-                    var label = label
-
-
-                    var tiledLayer = tiledLayer
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var label = label
+var tiledLayer = tiledLayer
+var layout = layout
+var altText = altText
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,15 +58,21 @@ this.tiledLayer= tiledLayer
 
 open fun setOwner(owner: Screen)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var owner = owner
+
+        Updates for KMP build        
+        {
+var owner = owner
 }
 
 
 open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,7 +82,11 @@ open fun getMinimumWidth()
 
 open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,7 +96,11 @@ open fun getMinimumHeight()
 
 open fun getMinContentHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,7 +110,11 @@ open fun getMinContentHeight()
 
 open fun getMinContentWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,9 +124,11 @@ open fun getMinContentWidth()
 
 open fun getPrefContentHeight(width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var width = width
+        Updates for KMP build        
+        {
+var width = width
 
 
 
@@ -127,9 +139,11 @@ open fun getPrefContentHeight(width: Int)
 
 open fun getPrefContentWidth(height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var height = height
+        Updates for KMP build        
+        {
+var height = height
 
 
 
@@ -140,15 +154,13 @@ open fun getPrefContentWidth(height: Int)
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 this.tiledLayer!!.setPosition(x, y, this.tiledLayer!!.getZP())
 this.tiledLayer!!.paint(graphics)
 }
@@ -156,15 +168,13 @@ this.tiledLayer!!.paint(graphics)
 
 open fun paintUnselected(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 }
 
 

@@ -38,7 +38,11 @@ open public class CurrentlyPressedTouchButtonSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CurrentlyPressedTouchButtonSingleton{
+: CurrentlyPressedTouchButtonSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,12 +55,20 @@ open fun getInstance()
     val list: BasicArrayList = BasicArrayList()
 protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,9 +78,11 @@ open fun size()
 
 open fun remove(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput{
+: TouchButtonInput
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -79,9 +93,11 @@ open fun remove(index: Int)
 
 open fun remove(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var touchButtonInput = touchButtonInput
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
 
 
 
@@ -92,9 +108,11 @@ open fun remove(touchButtonInput: TouchButtonInput)
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: TouchButtonInput{
+: TouchButtonInput
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -105,9 +123,11 @@ open fun get(index: Int)
 
 open fun contains(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var touchButtonInput = touchButtonInput
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
 
 
 
@@ -118,9 +138,11 @@ open fun contains(touchButtonInput: TouchButtonInput)
 
 open fun add(touchButtonInput: TouchButtonInput)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var touchButtonInput = touchButtonInput
+
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
 this.list.add(touchButtonInput)
 }
 

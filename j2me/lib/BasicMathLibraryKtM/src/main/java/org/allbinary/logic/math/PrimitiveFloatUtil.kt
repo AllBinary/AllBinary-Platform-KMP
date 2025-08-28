@@ -35,7 +35,11 @@ open public class PrimitiveFloatUtil
             
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: FloatArray{
+: FloatArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getArrayInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

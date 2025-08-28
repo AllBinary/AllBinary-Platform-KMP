@@ -37,7 +37,11 @@ open public class GameDifficultyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameDifficultyFactory{
+: GameDifficultyFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,16 +60,22 @@ open fun getInstance()
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 this.level= level
 }
 
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

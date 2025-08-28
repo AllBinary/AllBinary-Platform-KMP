@@ -32,7 +32,11 @@ open public class DemoGameMidletState
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

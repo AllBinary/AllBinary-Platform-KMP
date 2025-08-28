@@ -37,11 +37,17 @@ open fun getResourceRelativeRelationshipList(resource: String)
         //nullable = true from not(false or (false and false)) = true
 : BasicArrayList
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun addResourceRelativeRelationship(resource: String, relativeRelationship: RelativeRelationship)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

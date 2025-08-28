@@ -37,7 +37,11 @@ open public class AlphaProcessor : ModifierBaseProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AlphaProcessor{
+: AlphaProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,21 +57,15 @@ open fun getInstance()
             }            
         override fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageModifierUtil = imageModifierUtil
 
 
-                    var originalImage = originalImage
-
-
-                    var imageToShow = imageToShow
-
-
-                    var index = index
-
-
-                    var alpha = alpha
+        Updates for KMP build        
+        {
+    //var imageModifierUtil = imageModifierUtil
+    //var originalImage = originalImage
+    //var imageToShow = imageToShow
+    //var index = index
+    //var alpha = alpha
 imageModifierUtil!!.setAlpha(originalImage, imageToShow, index, alpha)
 }
 

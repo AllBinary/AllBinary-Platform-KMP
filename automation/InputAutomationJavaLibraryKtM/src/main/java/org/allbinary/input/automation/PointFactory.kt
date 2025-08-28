@@ -39,12 +39,12 @@ open public class PointFactory
 
 open fun getInstance(x: Int, y: Int)
         //nullable =  from not(true or (false and false)) = 
-: Point{
+: Point
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
     var point: Point = pointArray[x]!![y]!!
 
@@ -70,7 +70,11 @@ open fun getInstance(x: Int, y: Int)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

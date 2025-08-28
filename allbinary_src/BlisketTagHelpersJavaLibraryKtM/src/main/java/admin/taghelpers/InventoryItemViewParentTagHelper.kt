@@ -44,7 +44,11 @@ open public class InventoryItemViewParentTagHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InventoryItemViewParentTagHelper{
+: InventoryItemViewParentTagHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,9 +67,11 @@ open fun getInstance()
             
 open fun getInventoryItemView(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
-: InventoryItemView{
+: InventoryItemView
 
-                    var inventoryTag = inventoryTag
+        Updates for KMP build        
+        {
+var inventoryTag = inventoryTag
 
     
                         if(inventoryTag != 
@@ -121,9 +127,11 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
             
 open fun getDownloadableInventoryItemView(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
-: DownloadableInventoryItemView{
+: DownloadableInventoryItemView
 
-                    var inventoryTag = inventoryTag
+        Updates for KMP build        
+        {
+var inventoryTag = inventoryTag
 
     
                         if(inventoryTag != 
@@ -179,9 +187,11 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
             
 open fun getRequestMapInterface(inventoryTag: HelperTag)
         //nullable = true from not(false or (false and false)) = true
-: RequestMapInterface{
+: RequestMapInterface
 
-                    var inventoryTag = inventoryTag
+        Updates for KMP build        
+        {
+var inventoryTag = inventoryTag
 
     
                         if(inventoryTag != 
@@ -237,9 +247,11 @@ stringBuffer!!.append(inventoryTag!!.getHelper()!!.::class.toString()!!)
             
 open fun checkForValidationViewHelper(helperObject: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var helperObject = helperObject
+
+        Updates for KMP build        
+        {
+var helperObject = helperObject
 
     
                         if(!(helperObject is ValidationViewHelper))

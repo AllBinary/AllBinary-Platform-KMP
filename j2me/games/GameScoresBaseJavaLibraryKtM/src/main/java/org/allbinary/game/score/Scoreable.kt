@@ -46,40 +46,52 @@ open public class Scoreable
     private var points: Int
 public constructor        (points: Int)
             : super()
-        {
+        
 
-                    var points = points
+        Updates for KMP build        
+        {
+var points = points
 this.points= points
 }
 
 override fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 this.points += points
 }
 
 override fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 this.points -= points
 }
 
 
 open fun setPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 this.points= points
 }
 
 override fun getPoints()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

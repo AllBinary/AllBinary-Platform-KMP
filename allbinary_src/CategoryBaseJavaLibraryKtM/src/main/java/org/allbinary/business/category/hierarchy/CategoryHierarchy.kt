@@ -45,12 +45,12 @@ open public class CategoryHierarchy
     private var level: Int
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var rootCategoryInterface = rootCategoryInterface
-
-
-                    var parentCategoryInterface = parentCategoryInterface
+var rootCategoryInterface = rootCategoryInterface
+var parentCategoryInterface = parentCategoryInterface
 this.level= 0
 this.setRoot(rootCategoryInterface)
 this.setParent(parentCategoryInterface)
@@ -58,15 +58,13 @@ this.setParent(parentCategoryInterface)
 
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, level: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var rootCategoryInterface = rootCategoryInterface
-
-
-                    var parentCategoryInterface = parentCategoryInterface
-
-
-                    var level = level
+var rootCategoryInterface = rootCategoryInterface
+var parentCategoryInterface = parentCategoryInterface
+var level = level
 this.level= level
 this.setRoot(rootCategoryInterface)
 this.setParent(parentCategoryInterface)
@@ -74,15 +72,13 @@ this.setParent(parentCategoryInterface)
 
 public constructor        (rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var rootCategoryInterface = rootCategoryInterface
-
-
-                    var parentCategoryInterface = parentCategoryInterface
-
-
-                    var categoryPropertiesHashMap = categoryPropertiesHashMap
+var rootCategoryInterface = rootCategoryInterface
+var parentCategoryInterface = parentCategoryInterface
+var categoryPropertiesHashMap = categoryPropertiesHashMap
 
     var levelString: String = StringUtil.getInstance()!!.getInstance(categoryPropertiesHashMap!!.get(CategoryData.getInstance()!!.LEVEL) as String)!!
 
@@ -94,7 +90,11 @@ this.setParent(parentCategoryInterface)
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,7 +104,11 @@ open fun getLevel()
 
 open fun getLevelString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,34 +118,44 @@ open fun getLevelString()
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 this.level= level
 }
 
 
 open fun setParent(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var categoryInterface = categoryInterface
+
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 this.parentCategoryInterface= categoryInterface
 }
 
 
 open fun setRoot(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var categoryInterface = categoryInterface
+
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 this.rootCategoryInterface= categoryInterface
 }
 
 
 open fun getRoot()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface{
+: CategoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -151,7 +165,11 @@ open fun getRoot()
 
 open fun getParent()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface{
+: CategoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

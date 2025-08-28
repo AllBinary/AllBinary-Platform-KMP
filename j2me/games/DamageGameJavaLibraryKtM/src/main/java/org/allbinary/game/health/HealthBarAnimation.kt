@@ -42,12 +42,12 @@ open public class HealthBarAnimation : Animation {
     private var location: Int
 
     var allbinaryLayer: AllBinaryLayer
-public constructor        (layerInterface: AllBinaryLayer, location: Int){
+public constructor        (layerInterface: AllBinaryLayer, location: Int)
 
-                    var layerInterface = layerInterface
-
-
-                    var location = location
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var location = location
 this.allbinaryLayer= layerInterface
 this.location= location
 
@@ -93,9 +93,11 @@ this.location= location
 
 open fun onHealthChange(newX2: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newX2 = newX2
+
+        Updates for KMP build        
+        {
+    //var newX2 = newX2
 x2= newX2
 
     var quarter: Int = (this.allbinaryLayer!!.getWidth() shr 2)
@@ -141,7 +143,11 @@ this.colorP= this.basicColor!!.toInt()
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var basicHudFactory: BasicHudFactory = BasicHudFactory.getInstance()!!
 
 

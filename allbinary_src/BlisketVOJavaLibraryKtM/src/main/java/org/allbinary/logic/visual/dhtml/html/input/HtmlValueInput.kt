@@ -35,21 +35,15 @@ open public class HtmlValueInput : HtmlInput {
     private val VALUE: String = "VALUE"
 public constructor        (before: String, type: String, name: String, value: String, after: String)                        
 
-                            : super(before, type, name, after){
+                            : super(before, type, name, after)
 
-                    var before = before
-
-
-                    var type = type
-
-
-                    var name = name
-
-
-                    var value = value
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var type = type
+var name = name
+var value = value
+var after = after
 
 
                             //For kotlin this is before the body of the constructor.

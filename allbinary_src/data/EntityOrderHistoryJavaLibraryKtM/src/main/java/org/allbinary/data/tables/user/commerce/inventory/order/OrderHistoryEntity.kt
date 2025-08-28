@@ -75,7 +75,11 @@ open public class OrderHistoryEntity : AbSqlBean
     val tableName: String = "orderhistory"
 public constructor        ()                        
 
-                            : super(HistoryDbInitInfo()){
+                            : super(HistoryDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -85,12 +89,12 @@ this.setTableName(tableName)
 
 open fun insert(userName: String, order: Order)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var order = order
+        Updates for KMP build        
+        {
+var userName = userName
+var order = order
 
     var vector: Vector = Vector()
 
@@ -269,7 +273,11 @@ this.insert(vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -285,9 +293,11 @@ this.insert(vector)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
         try {
             super.insert(values)
@@ -301,7 +311,11 @@ open fun insert(values: Vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -317,12 +331,12 @@ open fun insert(values: Vector)
 
 open fun setStatus(orderId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var orderId = orderId
 
 
-                    var status = status
+        Updates for KMP build        
+        {
+var orderId = orderId
+var status = status
 
         try {
             
@@ -357,7 +371,11 @@ updateHashMap!!.put(OrderHistoryData.STATUS, status)
                                 
 super.updateWhere(OrderData.ID, orderId, updateHashMap)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -373,12 +391,12 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
 
 open fun setPaymentMethod(orderId: String, paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var orderId = orderId
 
 
-                    var paymentMethod = paymentMethod
+        Updates for KMP build        
+        {
+var orderId = orderId
+var paymentMethod = paymentMethod
 
         try {
             
@@ -396,7 +414,11 @@ updateHashMap!!.put(PaymentData.METHOD, paymentMethod)
 updateHashMap!!.put(OrderHistoryData.TRANSDATE, time)
 super.updateWhere(OrderData.ID, orderId, updateHashMap)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -414,9 +436,11 @@ super.updateWhere(OrderData.ID, orderId, updateHashMap)
             
 open fun getStoreOrders(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 
     var orderReviewVector: Vector = Vector()
 
@@ -436,7 +460,11 @@ whereHashMap!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.ge
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
 
@@ -457,9 +485,11 @@ orderReviewVector!!.add(orderReview)
             
 open fun getOrders(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
     var orderReviewVector: Vector = Vector()
 
@@ -479,7 +509,11 @@ whereHashMap!!.put(UserData.USERNAME, userName)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
@@ -500,15 +534,13 @@ orderReviewVector!!.add(orderReview)
             
 open fun getOrders(status: String, fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var status = status
-
-
-                    var fromDate = fromDate
-
-
-                    var toDate = toDate
+        Updates for KMP build        
+        {
+var status = status
+var fromDate = fromDate
+var toDate = toDate
 
     var orderReviewVector: Vector = Vector()
 
@@ -528,7 +560,11 @@ whereHashMap!!.put(OrderHistoryData.STATUS, status)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
@@ -549,12 +585,12 @@ orderReviewVector!!.add(orderReview)
             
 open fun getOrders(fromDate: String, toDate: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var fromDate = fromDate
-
-
-                    var toDate = toDate
+        Updates for KMP build        
+        {
+var fromDate = fromDate
+var toDate = toDate
 
     var orderReviewVector: Vector = Vector()
 
@@ -570,7 +606,11 @@ open fun getOrders(fromDate: String, toDate: String)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var orderReviewHashMap: HashMap<Any, Any> = orderHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
@@ -591,9 +631,11 @@ orderReviewVector!!.add(orderReview)
             
 open fun getOrder(id: String)
         //nullable = true from not(false or (false and false)) = true
-: OrderHistory{
+: OrderHistory
 
-                    var id = id
+        Updates for KMP build        
+        {
+var id = id
 
     var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -633,7 +675,11 @@ whereHashMap!!.put(OrderData.ID, id)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var entryData: EntryData = EntryData.getInstance()!!
 
 
@@ -729,7 +775,11 @@ stringBuffer!!.append(") )")
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -739,7 +789,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -751,17 +805,21 @@ open fun dropTable()
             
 open fun update(whereHashMap: HashMap<Any, Any>, orderHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var whereHashMap = whereHashMap
 
 
-                    var orderHashMap = orderHashMap
+        Updates for KMP build        
+        {
+var whereHashMap = whereHashMap
+var orderHashMap = orderHashMap
 
         try {
             updateWhere(whereHashMap, orderHashMap)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e

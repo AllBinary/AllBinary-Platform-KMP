@@ -54,9 +54,11 @@ open public class Item : BasicItem
     private var special: String
 public constructor        (itemHashMap: HashMap<Any, Any>)                        
 
-                            : super(itemHashMap){
+                            : super(itemHashMap)
 
-                    var itemHashMap = itemHashMap
+        Updates for KMP build        
+        {
+var itemHashMap = itemHashMap
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +66,11 @@ public constructor        (itemHashMap: HashMap<Any, Any>)
 this.setData(itemHashMap)
 }
 
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var EMPTY: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 group= EMPTY
@@ -77,9 +83,11 @@ shippingAddress= StreetAddress()
 
 open fun setData(itemHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var itemHashMap = itemHashMap
+
+        Updates for KMP build        
+        {
+var itemHashMap = itemHashMap
 this.group= itemHashMap!!.get(ShippingMethodData.GROUP) as String
 this.tax= itemHashMap!!.get(OrderHistoryData.TAX) as String
 this.shippingType= itemHashMap!!.get(ShippingMethodData.NAME) as String
@@ -97,61 +105,77 @@ this.shippingAddress= StreetAddress(itemHashMap)
 
 open fun setGroup(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.group= value
 }
 
 
 open fun setTax(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.tax= value
 }
 
 
 open fun setShippingType(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.shippingType= value
 }
 
 
 open fun setShippingCost(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.shippingCost= value
 }
 
 
 open fun setShippingAddress(value: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.shippingAddress= value
 }
 
 
 open fun setSpecial(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.special= value
 }
 
 
 open fun getGroup()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -161,7 +185,11 @@ open fun getGroup()
 
 open fun getTax()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,7 +199,11 @@ open fun getTax()
 
 open fun getShippingType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -181,7 +213,11 @@ open fun getShippingType()
 
 open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -191,7 +227,11 @@ open fun getShippingCost()
 
 open fun getShippingAddress()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress{
+: StreetAddress
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -201,7 +241,11 @@ open fun getShippingAddress()
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -211,7 +255,11 @@ open fun getSpecial()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = super.toHashMap()!!
 
 hashMap!!.put(ShippingMethodData.GROUP, this.group)

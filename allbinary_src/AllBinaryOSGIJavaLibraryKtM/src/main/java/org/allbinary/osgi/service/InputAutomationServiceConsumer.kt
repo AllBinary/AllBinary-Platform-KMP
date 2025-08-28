@@ -51,15 +51,13 @@ open public class InputAutomationServiceConsumer
     private var osgiServiceVisitorInterface: OSGIServiceVisitorInterface
 public constructor        (registryName: String, bundleContext: BundleContext, osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var registryName = registryName
-
-
-                    var bundleContext = bundleContext
-
-
-                    var osgiServiceVisitorInterface = osgiServiceVisitorInterface
+    //var registryName = registryName
+    //var bundleContext = bundleContext
+    //var osgiServiceVisitorInterface = osgiServiceVisitorInterface
 this.setRegistryName(registryName)
 this.setBundleContext(bundleContext)
 this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
@@ -70,7 +68,11 @@ this.setOsgiServiceVisitorInterface(osgiServiceVisitorInterface)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
     var vector: Vector = osgiServiceUtil!!.getServicesObjectVector(this.getBundleContext(), this.getServiceReferences())!!
 
@@ -87,7 +89,11 @@ logUtil!!.put("Processing " +vector.size +" Services", this, commonStrings!!.PRO
 
                         for (index in 0 until size)
 
-        {osgiServiceInterface= vector.get(index) as OSGIServiceInterface
+        
+
+        Updates for KMP build        
+        {
+osgiServiceInterface= vector.get(index) as OSGIServiceInterface
 
     
                         if(!getOsgiServiceVisitorInterface()!!.visit(osgiServiceInterface))
@@ -109,7 +115,11 @@ logUtil!!.put("Processing " +vector.size +" Services", this, commonStrings!!.PRO
             
 open fun getServiceReferences()
         //nullable = true from not(false or (false and true)) = true
-: Array<ServiceReference?>{
+: Array<ServiceReference?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,7 +130,11 @@ open fun getServiceReferences()
 
 open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
-: BundleContext{
+: BundleContext
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,16 +144,22 @@ open fun getBundleContext()
 
 open fun setBundleContext(aBundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aBundleContext = aBundleContext
+
+        Updates for KMP build        
+        {
+var aBundleContext = aBundleContext
 bundleContext= aBundleContext
 }
 
 
 open fun getRegistryName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -149,16 +169,22 @@ open fun getRegistryName()
 
 open fun setRegistryName(registryName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var registryName = registryName
+
+        Updates for KMP build        
+        {
+var registryName = registryName
 this.registryName= registryName
 }
 
 
 open fun getOsgiServiceVisitorInterface()
         //nullable = true from not(false or (false and true)) = true
-: OSGIServiceVisitorInterface{
+: OSGIServiceVisitorInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -168,9 +194,11 @@ open fun getOsgiServiceVisitorInterface()
 
 open fun setOsgiServiceVisitorInterface(osgiServiceVisitorInterface: OSGIServiceVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var osgiServiceVisitorInterface = osgiServiceVisitorInterface
+
+        Updates for KMP build        
+        {
+var osgiServiceVisitorInterface = osgiServiceVisitorInterface
 this.osgiServiceVisitorInterface= osgiServiceVisitorInterface
 }
 

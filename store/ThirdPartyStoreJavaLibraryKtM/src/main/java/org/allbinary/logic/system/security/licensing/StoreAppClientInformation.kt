@@ -34,21 +34,15 @@ open public class StoreAppClientInformation : AbeClientInformation
     private val longArrayIdentifier: LongArray
 public constructor        (name: String, version: String, specialName: String, shortName: String, longArrayIdentifier: LongArray)                        
 
-                            : super(name, version, specialName, shortName){
+                            : super(name, version, specialName, shortName)
 
-                    var name = name
-
-
-                    var version = version
-
-
-                    var specialName = specialName
-
-
-                    var shortName = shortName
-
-
-                    var longArrayIdentifier = longArrayIdentifier
+        Updates for KMP build        
+        {
+    //var name = name
+    //var version = version
+    //var specialName = specialName
+    //var shortName = shortName
+var longArrayIdentifier = longArrayIdentifier
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,7 +52,11 @@ this.longArrayIdentifier= longArrayIdentifier
 
 override fun getLongArrayIdentifier()
         //nullable = true from not(false or (false and true)) = true
-: LongArray{
+: LongArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

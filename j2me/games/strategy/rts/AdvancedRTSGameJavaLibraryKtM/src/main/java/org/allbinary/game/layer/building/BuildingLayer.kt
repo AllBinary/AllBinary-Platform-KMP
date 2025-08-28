@@ -81,7 +81,11 @@ open public class BuildingLayer : AdvancedRTSGameLayer
             
 open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,51 +117,25 @@ open fun getStaticType()
 public constructor        (remoteInfo: RemoteInfo, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
                             : super(remoteInfo, 
-                            null, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
+                            null, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var healthInterface = healthInterface
-
-
-                    var rtsFormInput = rtsFormInput
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var healthInterface = healthInterface
+    //var rtsFormInput = rtsFormInput
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var x = x
+    //var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -205,7 +183,11 @@ this.trackingEvent= TrackingEvent(this)
 
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -233,9 +215,11 @@ this.pathsHashtable=
 
 open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 
     var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface = rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
 
@@ -262,9 +246,11 @@ super.initVisibility(rtsPlayerLayerInterface)
             
 open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 super.construct(rtsPlayerLayerInterface)
 TrackingEventHandler.getInstance()!!.addListener(this)
 }
@@ -272,9 +258,11 @@ TrackingEventHandler.getInstance()!!.addListener(this)
 
 open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var trackingEvent = trackingEvent
+
+        Updates for KMP build        
+        {
+    //var trackingEvent = trackingEvent
 
         try {
             
@@ -290,7 +278,11 @@ open fun onMovement(trackingEvent: TrackingEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 }
 
 }
@@ -302,9 +294,11 @@ open fun onMovement(trackingEvent: TrackingEvent)
             
 open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(this.getHealthInterface()!!.isDamaged())
@@ -379,7 +373,11 @@ this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 
 open fun calculateEfficiency()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -389,7 +387,11 @@ open fun calculateEfficiency()
 
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var total: Int = RTSLayerUtil.getInstance()!!.getCostExponential(this.getLevel() *this.getBuildingLevelCost())!!
 
 
@@ -402,7 +404,11 @@ open fun getCost()
 
 open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var downgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() -1) *getBuildingLevelCost())!!
 
 logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
@@ -416,7 +422,11 @@ logUtil!!.put("Cost: " +downgradeCost, this, "getDowngradeCost")
 
 open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var upgradeCost: Int = RTSLayerUtil.getInstance()!!.getCostExponential((this.getLevel() +1) *getBuildingLevelCost())!!
 
 
@@ -429,7 +439,11 @@ open fun getUpgradeCost()
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
-{super.downgrade()
+
+
+        Updates for KMP build        
+        {
+super.downgrade()
 this.setProductivity(this.getProductivity() -1)
 this.setEfficiency(this.getEfficiency() -this.calculateEfficiency())
 this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealth() -((this.getLevel() +1) *100))
@@ -438,7 +452,11 @@ this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealt
 
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
-{super.upgrade()
+
+
+        Updates for KMP build        
+        {
+super.upgrade()
 this.setProductivity(this.getProductivity() +1)
 this.setEfficiency(this.getEfficiency() +this.calculateEfficiency())
 this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealth() +(this.getLevel() *100))
@@ -447,7 +465,11 @@ this.getHealthInterface()!!.setMaxHealth(this.getHealthInterface()!!.getMaxHealt
 
 open fun getBuildingLevelCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -457,16 +479,22 @@ open fun getBuildingLevelCost()
 
 open fun setBuildingLevelCost(buildingLevelCost: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var buildingLevelCost = buildingLevelCost
+
+        Updates for KMP build        
+        {
+var buildingLevelCost = buildingLevelCost
 this.buildingLevelCost= buildingLevelCost
 }
 
 
 open fun getProductivity()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -476,16 +504,22 @@ open fun getProductivity()
 
 open fun setProductivity(productivity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var productivity = productivity
+
+        Updates for KMP build        
+        {
+var productivity = productivity
 this.productivity= productivity
 }
 
 
 open fun getEfficiency()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -495,9 +529,11 @@ open fun getEfficiency()
 
 open fun setEfficiency(efficiency: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var efficiency = efficiency
+
+        Updates for KMP build        
+        {
+var efficiency = efficiency
 this.efficiency= efficiency
 }
 
@@ -506,7 +542,11 @@ this.efficiency= efficiency
             
 open fun generateMoveOutOfBuildAreaPaths()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var occupyList: BasicArrayList = this.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
 
 
@@ -536,7 +576,11 @@ open fun generateMoveOutOfBuildAreaPaths()
 
                         for (index2 in occupyList!!.size() -1 downTo 0)
 
-        {pathsList= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+pathsList= BasicArrayList()
 occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPosition
 
 
@@ -544,7 +588,11 @@ occupyGeographicMapCellPosition= occupyList!!.get(index2) as GeographicMapCellPo
 
                         for (index in surroundList!!.size() -1 downTo 0)
 
-        {surroundGeographicMapCellPosition= surroundList!!.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+surroundGeographicMapCellPosition= surroundList!!.get(index) as GeographicMapCellPosition
 
     
                         if(geographicMapDirectionUtil!!.getEightDirectionFromCellPositionToAdjacentCellPosition(surroundGeographicMapCellPosition, occupyGeographicMapCellPosition) != NO_DIRECTION)
@@ -566,9 +614,11 @@ this.pathsHashtable!!.put(occupyGeographicMapCellPosition, pathsList)
 
 open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var pathsList: BasicArrayList = this.pathsHashtable!!.get(geographicMapCellPosition as Object) as BasicArrayList
 
@@ -582,7 +632,11 @@ open fun getMoveOutOfBuildAreaPath(geographicMapCellPosition: GeographicMapCellP
 
 open fun getEndGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -592,7 +646,11 @@ open fun getEndGeographicMapCellPositionList()
 
 open fun shouldHandleStartSameAsEnd()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -602,9 +660,11 @@ open fun shouldHandleStartSameAsEnd()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
     
                         if(this.isVisible())
@@ -623,12 +683,12 @@ this.healthBar!!.paint(graphics)
             
 open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var damage = damage
 
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+    //var damage = damage
+    //var damageType = damageType
 super.damage(damage, damageType)
 this.damageFloaters!!.add(damage)
 
@@ -642,9 +702,11 @@ this.damageFloaters!!.add(damage)
             
 open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damageType = damageType
 
 
 
@@ -655,7 +717,11 @@ open fun getDamage(damageType: Int)
 
 open fun addVisibility()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var geographicMapCellPositionArea: GeographicMapCellPositionArea = this.geographicMapCellPositionArea
 
 
@@ -671,7 +737,11 @@ VisibleCellPositionsSingleton.getInstance()!!.addStationaryCellPositions(surroun
 
 open fun removeVisibility()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var occupyList: BasicArrayList = this.geographicMapCellPositionArea!!.getOccupyingGeographicMapCellPositionList()!!
 
 VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(occupyList)
@@ -686,9 +756,11 @@ VisibleCellPositionsSingleton.getInstance()!!.removeStationaryCellPositions(surr
             
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 super.setDestroyed(destroyed)
 
     
@@ -764,7 +836,11 @@ vibration.vibrate(duration *4, 0, 0)
 
 open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+: SelectionHudPaintable
+
+        Updates for KMP build        
+        {
+
     var buildingInfoHudPaintable: BuildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance()!!
 
 buildingInfoHudPaintable!!.setBasicColorP(this.allBinaryGameLayerManagerP!!.getForegroundBasicColor())
@@ -779,7 +855,11 @@ buildingInfoHudPaintable!!.setRtsLayer(this)
 
 open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+: SelectionHudPaintable
+
+        Updates for KMP build        
+        {
+
     var buildingInfoHudPaintable: BuildingInfoHudPaintable = BuildingInfoHudPaintable.getInstance()!!
 
 
@@ -792,7 +872,11 @@ open fun getHudPaintable()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

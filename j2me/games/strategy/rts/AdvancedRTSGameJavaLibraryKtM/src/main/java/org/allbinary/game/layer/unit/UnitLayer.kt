@@ -154,7 +154,11 @@ open public class UnitLayer : AdvancedRTSGameLayer
 
 open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,7 +168,11 @@ open fun getStaticType()
 
 open fun getPartialpositionlist()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -229,72 +237,32 @@ open fun getPartialpositionlist()
     private var steeringInsideGeographicMapCellPosition: GeographicMapCellPosition
 protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
 
-                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition()){
+                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition())
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var vehicleProperties = vehicleProperties
-
-
-                    var healthInterface = healthInterface
-
-
-                    var maxLoad = maxLoad
-
-
-                    var moveSoundInterface = moveSoundInterface
-
-
-                    var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var vehicleProperties = vehicleProperties
+    //var healthInterface = healthInterface
+    //var maxLoad = maxLoad
+    //var moveSoundInterface = moveSoundInterface
+    //var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var z = z
 
 
                             //For kotlin this is before the body of the constructor.
@@ -303,75 +271,33 @@ protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGa
 
 protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int, viewPosition: ViewPosition)                        
 
-                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, NullRotationAnimationFactory.getFactoryInstance(), proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, viewPosition){
+                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, NullRotationAnimationFactory.getFactoryInstance(), proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, viewPosition)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var vehicleProperties = vehicleProperties
-
-
-                    var healthInterface = healthInterface
-
-
-                    var maxLoad = maxLoad
-
-
-                    var moveSoundInterface = moveSoundInterface
-
-
-                    var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var vehicleProperties = vehicleProperties
+    //var healthInterface = healthInterface
+    //var maxLoad = maxLoad
+    //var moveSoundInterface = moveSoundInterface
+    //var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var z = z
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -380,75 +306,33 @@ protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGa
 
 protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int)                        
 
-                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition()){
+                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, vehicleProperties, healthInterface, maxLoad, moveSoundInterface, waypointLayerInterfaceFactoryInterface, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, direction, x, y, z, TileLayerPositionIntoViewPosition())
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var vehicleProperties = vehicleProperties
-
-
-                    var healthInterface = healthInterface
-
-
-                    var maxLoad = maxLoad
-
-
-                    var moveSoundInterface = moveSoundInterface
-
-
-                    var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
-
-
-                    var resourceAnimationInterfaceFactoryInterface = resourceAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var vehicleProperties = vehicleProperties
+    //var healthInterface = healthInterface
+    //var maxLoad = maxLoad
+    //var moveSoundInterface = moveSoundInterface
+    //var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
+    //var resourceAnimationInterfaceFactoryInterface = resourceAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var z = z
 
 
                             //For kotlin this is before the body of the constructor.
@@ -457,78 +341,34 @@ protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGa
 
 protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, vehicleProperties: VehicleProperties, healthInterface: Health, maxResourceLoad: Integer, moveSoundInterface: Sound, waypointLayerInterfaceFactoryInterface: LayerInterfaceFactoryInterface, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, decalAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, resourceAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, direction: Direction, x: Int, y: Int, z: Int, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, WaypointRTSFormInput(groupInterface, true), animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition){
+                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, WaypointRTSFormInput(groupInterface, true), animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var vehicleProperties = vehicleProperties
-
-
-                    var healthInterface = healthInterface
-
-
-                    var maxResourceLoad = maxResourceLoad
-
-
-                    var moveSoundInterface = moveSoundInterface
-
-
-                    var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
-
-
-                    var resourceAnimationInterfaceFactoryInterface = resourceAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var vehicleProperties = vehicleProperties
+    //var healthInterface = healthInterface
+    //var maxResourceLoad = maxResourceLoad
+    //var moveSoundInterface = moveSoundInterface
+    //var waypointLayerInterfaceFactoryInterface = waypointLayerInterfaceFactoryInterface
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var decalAnimationInterfaceFactoryInterface = decalAnimationInterfaceFactoryInterface
+    //var resourceAnimationInterfaceFactoryInterface = resourceAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var z = z
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -583,9 +423,11 @@ this.initPathAnimation= PathAnimation(this, LinePathRelativeAnimation.getInstanc
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 }
@@ -595,9 +437,11 @@ this.initPathAnimation!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
             
 open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapInterface = geographicMapInterface
+
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -633,9 +477,11 @@ this.initRangeHack()
             
 open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 super.construct(rtsPlayerLayerInterface)
 TrackingEventHandler.getInstance()!!.addListener(this)
 WaypointEventHandlerFactory.getInstance(this.getGroupInterface()[0]!!)!!.addListener(this.getUnitWaypointBehavior())
@@ -652,7 +498,11 @@ this.getUnitWaypointBehavior()!!.setLastPathGeographicMapCellPosition(this.getUn
             
 open fun updateSensorGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(VisibleCellPositionsSingleton.getInstance()!!.shouldProcess())
                         
@@ -740,13 +590,21 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 
                         for (index in lastColumn -1 downTo firstColumn)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in lastRow -1 downTo firstRow)
 
+        
+
+        Updates for KMP build        
         {
+
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(index, index2)!!
 
 
@@ -770,7 +628,11 @@ this.sensorGeographicMapCellPositionList!!.add(currentGeographicMapCellPosition)
 
 open fun getSensorGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -780,22 +642,32 @@ open fun getSensorGeographicMapCellPositionList()
 
 open fun select()
         //nullable = true from not(false or (false and true)) = true
-{this.pathAnimation= this.initPathAnimation
+
+
+        Updates for KMP build        
+        {
+this.pathAnimation= this.initPathAnimation
 super.select()
 }
 
 
 open fun deselect()
         //nullable = true from not(false or (false and true)) = true
-{this.pathAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
+
+
+        Updates for KMP build        
+        {
+this.pathAnimation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 super.deselect()
 }
 
 override fun setSelected(selected: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selected = selected
+
+        Updates for KMP build        
+        {
+var selected = selected
 super.setSelected(selected)
 
     
@@ -836,9 +708,11 @@ this.rtsLayer2LogHelper= RTSLayer2LogHelper.getInstance()
             
 open fun setClosestGeographicMapCellHistory(pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathsList = pathsList
+
+        Updates for KMP build        
+        {
+    //var pathsList = pathsList
 this.rtsLogHelper!!.setClosestGeographicMapCellHistory(this, pathsList)
 
     var closestIndex: Int =  -1
@@ -855,7 +729,11 @@ this.rtsLogHelper!!.setClosestGeographicMapCellHistory(this, pathsList)
 
                         for (index in pathsList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var geographicMapCellPositionBasicArrayList: BasicArrayList = pathsList!!.get(index) as BasicArrayList
 
 
@@ -896,21 +774,23 @@ this.teleportTo(geographicMapCellPosition)
             
 open fun init(geographicMapCellHistory: GeographicMapCellHistory, geographicMapCellPositionBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapCellHistory = geographicMapCellHistory
 
 
-                    var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
+        Updates for KMP build        
+        {
+    //var geographicMapCellHistory = geographicMapCellHistory
+    //var geographicMapCellPositionBasicArrayList = geographicMapCellPositionBasicArrayList
 geographicMapCellHistory!!.track(geographicMapCellPositionBasicArrayList)
 }
 
 
 open fun onMovement(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var trackingEvent = trackingEvent
+
+        Updates for KMP build        
+        {
+    //var trackingEvent = trackingEvent
 
         try {
             
@@ -927,7 +807,11 @@ layerInterface!!.onMovementFound(this.getTrackingEvent())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMovement", e)
 }
 
 }
@@ -937,9 +821,11 @@ layerInterface!!.onMovementFound(this.getTrackingEvent())
             
 open fun onMovementFound(trackingEvent: TrackingEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var trackingEvent = trackingEvent
+
+        Updates for KMP build        
+        {
+    //var trackingEvent = trackingEvent
 
     var layerInterface: AdvancedRTSGameLayer = trackingEvent!!.getLayerInterface() as AdvancedRTSGameLayer
 
@@ -957,7 +843,11 @@ open fun onMovementFound(trackingEvent: TrackingEvent)
 
 open fun initRangeHack()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var basicWeaponPart: BasicWeaponPart = this.getPartInterfaceArray()[0]!! as BasicWeaponPart
 
 
@@ -978,9 +868,11 @@ this.fireTimeHelper!!.delay= (weaponProperties!!.getReloadTime().toInt())
             
 open fun processBuiltTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(!this.getHealthInterface()!!.isAlive())
@@ -1046,9 +938,11 @@ this.getUnitWaypointBehavior()!!.processTick(allBinaryLayerManager)
 
 open fun teleportTo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var point: GPoint = geographicMapCellPosition!!.getMidPoint()!!
 
@@ -1060,7 +954,11 @@ this.setPosition(point.getX() -this.getHalfWidth(), point.getY() -this.getHalfHe
             
 open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
 
@@ -1096,12 +994,12 @@ open fun getCurrentGeographicMapCellPosition()
             
 open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 
     
                         if(this.fireTimeHelper!!.isTime())
@@ -1123,7 +1021,11 @@ open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
             
 open fun left()
         //nullable = true from not(false or (false and true)) = true
-{this.initResourceAnimation!!.previousRotation()
+
+
+        Updates for KMP build        
+        {
+this.initResourceAnimation!!.previousRotation()
 this.decalAnimation!!.previousRotation()
 this.rotationAnimationInterface!!.previousRotation()
 }
@@ -1133,7 +1035,11 @@ this.rotationAnimationInterface!!.previousRotation()
             
 open fun right()
         //nullable = true from not(false or (false and true)) = true
-{this.initResourceAnimation!!.nextRotation()
+
+
+        Updates for KMP build        
+        {
+this.initResourceAnimation!!.nextRotation()
 this.decalAnimation!!.nextRotation()
 this.rotationAnimationInterface!!.nextRotation()
 }
@@ -1141,7 +1047,11 @@ this.rotationAnimationInterface!!.nextRotation()
 
 open fun down()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
 
 
@@ -1158,7 +1068,11 @@ open fun down()
 
 open fun up()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
 
 
@@ -1175,7 +1089,11 @@ open fun up()
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-{this.inputProcessorArray[Canvas.RIGHT]= SpecialRightGameInputProcessor(this)
+
+
+        Updates for KMP build        
+        {
+this.inputProcessorArray[Canvas.RIGHT]= SpecialRightGameInputProcessor(this)
 this.inputProcessorArray[Canvas.LEFT]= SpecialLeftGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_NUM0]= SpecialFireGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_POUND]= this.inputProcessorArray[Canvas.KEY_NUM0]!!
@@ -1189,9 +1107,11 @@ super.initInputProcessors()
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+var layerManager = layerManager
 
     var list: BasicArrayList = this.getGameKeyEventList()!!
 
@@ -1204,7 +1124,11 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: Any = list.get(index)!!
 
 
@@ -1221,9 +1145,11 @@ this.move()
 
 open fun accelerate(accelerate: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var accelerate = accelerate
+
+        Updates for KMP build        
+        {
+    //var accelerate = accelerate
 this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.getUnscaled(), this.rotationAnimationInterface!!.getAngleInfoP()!!.getAngle(), 90.toShort())
 }
 
@@ -1232,9 +1158,11 @@ this.getVehicleProperties()!!.getVelocityProperties()!!.addVelocity(accelerate.g
             
 open fun fireAll(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
 
     var angleInfo: AngleInfo = this.rotationAnimationInterface!!.getAngleInfoP()!!
 
@@ -1250,7 +1178,11 @@ hashtable.put(SmallIntegerSingletonFactory.getInstance()!!.getInstance(1), Small
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(getLevel() > 1)
                         
@@ -1264,14 +1196,22 @@ open fun downgrade()
 
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
-{super.upgrade()
+
+
+        Updates for KMP build        
+        {
+super.upgrade()
 this.initRangeHack()
 }
 
 
 open fun groundFriction()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var vehicleFrictionProperties: VehicleFrictionProperties = this.getVehicleProperties()!!.getVehicleFrictionProperties()!!
 
 this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.getVehicleProperties()!!.getVelocityProperties(), vehicleFrictionProperties!!.getTireFrictionNominator())
@@ -1281,9 +1221,11 @@ this.getVehicleProperties()!!.getVehicleFrictionProperties()!!.friction(this.get
                 @Throws(Exception::class)
             override fun trackTo(reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var reason = reason
+
+        Updates for KMP build        
+        {
+    //var reason = reason
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
@@ -1304,12 +1246,12 @@ this.trackTo(dx, dy)
                 @Throws(Exception::class)
             override fun trackTo(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 
     var angleOfTarget: Int = 0
 
@@ -1321,15 +1263,13 @@ this.trackTo(dx, dy, angleOfTarget)
             
 open fun turnTo(dx: Int, dy: Int, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var targetAngle = targetAngle
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
+var targetAngle = targetAngle
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
@@ -1543,12 +1483,12 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
 
 open fun handleDeltalX(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
@@ -1574,12 +1514,12 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
 
 open fun handleDeltalY(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 
     var nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition = this.waypointBehaviorBase!!.getNextUnvisitedPathGeographicMapCellPosition()!!
 
@@ -1607,15 +1547,13 @@ this.rtsLogHelper!!.handle(this, this.movementAngle)
             
 open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
-
-
-                    var targetAngle = targetAngle
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
+    //var targetAngle = targetAngle
 
     var list: BasicArrayList = this.getUnitWaypointBehavior()!!.getSteeringVisitorList()!!
 
@@ -1630,7 +1568,11 @@ open fun trackTo(dx: Int, dy: Int, targetAngle: Int)
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var steeringVisitor: SteeringVisitor = list.get(index) as SteeringVisitor
 
 
@@ -1670,7 +1612,11 @@ this.fireOrMove()
             
 open fun fireOrMove()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
 
 
@@ -1706,7 +1652,11 @@ TrackingEventHandler.getInstance()!!.fireEvent(this.getTrackingEvent())
 
 open fun move()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
@@ -1795,7 +1745,11 @@ this.getUnitWaypointBehavior()!!.addBuildingChase(allbinaryLayer, cellPosition)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "move", e)
 }
 
 }
@@ -1803,7 +1757,11 @@ this.getUnitWaypointBehavior()!!.addBuildingChase(allbinaryLayer, cellPosition)
 
 open fun allStop()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var velocityProperties: VelocityProperties = this.getVehicleProperties()!!.getVelocityProperties()!!
 
 velocityProperties!!.getVelocityXBasicDecimalP()!!.set(0)
@@ -1813,9 +1771,11 @@ velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     
                         if(this.isVisible())
@@ -1849,9 +1809,11 @@ this.resourceAnimation!!.paint(graphics, viewX, viewY)
             
 open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var event = event
+
+        Updates for KMP build        
+        {
+var event = event
 
     var buildingLayer: BuildingLayer = event.getRtsLayer() as BuildingLayer
 
@@ -1861,7 +1823,11 @@ this.getUnitWaypointBehavior()!!.moveAwayFromBuilding(buildingLayer)
 
 open fun getVehicleProperties()
         //nullable = true from not(false or (false and true)) = true
-: VehicleProperties{
+: VehicleProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1873,12 +1839,12 @@ open fun getVehicleProperties()
             
 open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var damage = damage
 
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+    //var damage = damage
+    //var damageType = damageType
 super.damage(damage, damageType)
 this.damageFloaters!!.add(damage)
 
@@ -1897,9 +1863,11 @@ this.damageFloaters!!.add(damage)
             
 open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+    //var damageType = damageType
 
 
 
@@ -1912,9 +1880,11 @@ open fun getDamage(damageType: Int)
             
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+    //var destroyed = destroyed
 logUtil!!.put(commonStrings!!.START, this, "setDestroyed")
 super.setDestroyed(destroyed)
 
@@ -1983,7 +1953,11 @@ vibration.vibrate(duration *4, 0, 0)
 
 open fun getLoad()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1995,7 +1969,11 @@ open fun getLoad()
             
 open fun clearResourceAnimation()
         //nullable = true from not(false or (false and true)) = true
-{this.resourceAnimation= NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
+
+
+        Updates for KMP build        
+        {
+this.resourceAnimation= NullIndexedAnimationFactory.getFactoryInstance()!!.getInstance(0) as IndexedAnimation
 }
 
 
@@ -2003,9 +1981,11 @@ open fun clearResourceAnimation()
             
 open fun setLoad(resource: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var resource = resource
+
+        Updates for KMP build        
+        {
+var resource = resource
 
     
                         if(resource > 0)
@@ -2026,9 +2006,11 @@ this.resourceLoad= resource
 
 open fun addLoad(resource: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var resource = resource
+
+        Updates for KMP build        
+        {
+var resource = resource
 this.resourceLoad += resource
 }
 
@@ -2039,9 +2021,11 @@ this.resourceLoad += resource
             
 open fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ownerLayer = ownerLayer
+
+        Updates for KMP build        
+        {
+var ownerLayer = ownerLayer
 
     
                         if(this.getLoad() > 0)
@@ -2058,7 +2042,11 @@ this.setLoad(0.toShort())
 
 open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+: SelectionHudPaintable
+
+        Updates for KMP build        
+        {
+
     var rtsLayerHudPaintable: RTSLayerHudPaintable = RTSLayerHudPaintable.getInstance()!!
 
 rtsLayerHudPaintable!!.setBasicColorP(this.allBinaryGameLayerManagerP!!.getForegroundBasicColor())
@@ -2073,7 +2061,11 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 
 open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+: SelectionHudPaintable
+
+        Updates for KMP build        
+        {
+
     var rtsLayerHudPaintable: RTSLayerHudPaintable = RTSLayerHudPaintable.getInstance()!!
 
 
@@ -2086,7 +2078,11 @@ open fun getHudPaintable()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2096,7 +2092,11 @@ open fun getType()
 
 open fun getUnitWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
-: UnitWaypointBehavior{
+: UnitWaypointBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2106,7 +2106,11 @@ open fun getUnitWaypointBehavior()
 
 open fun getTrackingEvent()
         //nullable = true from not(false or (false and true)) = true
-: TrackingEvent{
+: TrackingEvent
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2116,7 +2120,11 @@ open fun getTrackingEvent()
 
 open fun getCaptionAnimationHelper()
         //nullable = true from not(false or (false and true)) = true
-: CaptionAnimationHelperBase{
+: CaptionAnimationHelperBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2126,7 +2134,11 @@ open fun getCaptionAnimationHelper()
 
 open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2136,7 +2148,11 @@ open fun isSelfUpgradeable()
 
 open fun getMaxResourceLoad()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

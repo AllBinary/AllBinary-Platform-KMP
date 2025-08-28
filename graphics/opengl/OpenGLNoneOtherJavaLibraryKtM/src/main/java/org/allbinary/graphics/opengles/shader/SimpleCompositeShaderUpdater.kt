@@ -30,15 +30,13 @@ open public class SimpleCompositeShaderUpdater : CompositeShaderUpdater {
         
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
-                            : super(uniformBlockArray, uniformArray, attributeArray){
+                            : super(uniformBlockArray, uniformArray, attributeArray)
 
-                    var uniformBlockArray = uniformBlockArray
-
-
-                    var uniformArray = uniformArray
-
-
-                    var attributeArray = attributeArray
+        Updates for KMP build        
+        {
+    //var uniformBlockArray = uniformBlockArray
+    //var uniformArray = uniformArray
+    //var attributeArray = attributeArray
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,18 +45,14 @@ public constructor        (uniformBlockArray: Array<String?>, uniformArray: Arra
 
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)                        
 
-                            : super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray){
+                            : super(uniformBlockArray, uniformArray, attributeArray, attributeHandleArray)
 
-                    var uniformBlockArray = uniformBlockArray
-
-
-                    var uniformArray = uniformArray
-
-
-                    var attributeArray = attributeArray
-
-
-                    var attributeHandleArray = attributeHandleArray
+        Updates for KMP build        
+        {
+    //var uniformBlockArray = uniformBlockArray
+    //var uniformArray = uniformArray
+    //var attributeArray = attributeArray
+    //var attributeHandleArray = attributeHandleArray
 
 
                             //For kotlin this is before the body of the constructor.

@@ -37,7 +37,11 @@ open public class MotionGestureReceiveInterfaceFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CompleteMotionGestureListenerInterface{
+: CompleteMotionGestureListenerInterface
+
+        Updates for KMP build        
+        {
+
     var configuration: MotionGestureConfiguration = MotionGestureConfigurationFactory.getInstance()!!
 
 

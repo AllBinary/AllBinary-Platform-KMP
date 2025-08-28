@@ -39,7 +39,11 @@ open public class TouchButtonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchButtonFactory{
+: TouchButtonFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,12 +60,20 @@ open fun getInstance()
     private var savedList: BasicArrayList = LIST
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun defaultList()
         //nullable = true from not(false or (false and true)) = true
-{this.list= LIST
+
+
+        Updates for KMP build        
+        {
+this.list= LIST
 this.toggle(false, LIST)
 }
 
@@ -71,12 +83,12 @@ this.toggle(false, LIST)
 
 open fun toggle(save: Boolean, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var save = save
 
 
-                    var list = list
+        Updates for KMP build        
+        {
+var save = save
+var list = list
 
     
                         if(list != BasicArrayListUtil.getInstance()!!.getImmutableInstance())
@@ -135,9 +147,11 @@ this.saved= false
             
 open fun setList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 
     
                         if(list == 
@@ -158,7 +172,11 @@ this.list= list
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

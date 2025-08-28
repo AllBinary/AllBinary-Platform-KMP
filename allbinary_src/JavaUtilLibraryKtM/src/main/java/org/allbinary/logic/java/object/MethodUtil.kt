@@ -37,12 +37,12 @@ open public class MethodUtil
             
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var myClass = myClass
-
-
-                    var lineBreak = lineBreak
+        Updates for KMP build        
+        {
+var myClass = myClass
+var lineBreak = lineBreak
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -57,7 +57,11 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until method.size)
 
-        {stringBuffer!!.append(method[index]!!.getReturnType()!!.getName())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(method[index]!!.getReturnType()!!.getName())
 stringBuffer!!.append(" ")
 stringBuffer!!.append(method[index]!!.getName())
 stringBuffer!!.append("(")
@@ -77,7 +81,11 @@ stringBuffer!!.append(lineBreak)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

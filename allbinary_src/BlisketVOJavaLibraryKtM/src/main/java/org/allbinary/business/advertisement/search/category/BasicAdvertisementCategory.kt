@@ -35,15 +35,21 @@ open public class BasicAdvertisementCategory
     private var categoryId: String
 public constructor        (categoryId: String)
             : super()
-        {
+        
 
-                    var categoryId = categoryId
+        Updates for KMP build        
+        {
+var categoryId = categoryId
 this.categoryId= categoryId
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

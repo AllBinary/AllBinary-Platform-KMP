@@ -28,29 +28,39 @@ open public class NullCanvas : Canvas {
     val NULL_SCREEN: Form = Form(StringUtil.getInstance()!!.EMPTY_STRING)
 
         }
-            public constructor        (){}
+            public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mode = mode
+
+        Updates for KMP build        
+        {
+var mode = mode
 }
 
 override fun sizeChanged(w: Int, h: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var w = w
 
 
-                    var h = h
+        Updates for KMP build        
+        {
+var w = w
+var h = h
 }
 
 
 open fun getCommandStack()
         //nullable = true from not(false or (false and true)) = true
-: Stack<Any>{
+: Stack<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -59,9 +69,11 @@ open fun getCommandStack()
 
 open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var command = command
+        Updates for KMP build        
+        {
+var command = command
 
 
 
@@ -70,34 +82,48 @@ open fun isCommand(command: Command)
 
 override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 }
 
 override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 }
 
 
 open fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var l = l
+
+        Updates for KMP build        
+        {
+var l = l
 }
 
 
 open fun getCustomCommandListener()
         //nullable = true from not(false or (false and true)) = true
-: CommandListener{
+: CommandListener
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -106,7 +132,11 @@ open fun getCustomCommandListener()
 
 open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -115,43 +145,67 @@ open fun isPaused()
 
 open fun removePauseCommand()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun unPause()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setPaused(isPaused: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isPaused = isPaused
+
+        Updates for KMP build        
+        {
+var isPaused = isPaused
 
 
 
@@ -160,32 +214,32 @@ open fun setPaused(isPaused: Boolean)
 
 override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 }
 
 override fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 }
 
 override fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 }
 
 

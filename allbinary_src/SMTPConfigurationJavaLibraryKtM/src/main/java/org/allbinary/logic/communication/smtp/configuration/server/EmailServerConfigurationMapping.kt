@@ -38,16 +38,22 @@ open public class EmailServerConfigurationMapping
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor        (emailServerConfigurationInterface: EmailServerConfigurationInterface)
             : super()
-        {
+        
 
-                    var emailServerConfigurationInterface = emailServerConfigurationInterface
+        Updates for KMP build        
+        {
+var emailServerConfigurationInterface = emailServerConfigurationInterface
 this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(EmailServerConfigurationData.SERVER, this.emailServerConfigurationInterface!!.getSmtpServer())
@@ -65,7 +71,11 @@ hashMap!!.put(EmailServerConfigurationData.PASSWORD, this.emailServerConfigurati
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,7 +87,11 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 vector.add(this.emailServerConfigurationInterface!!.getSmtpServer())

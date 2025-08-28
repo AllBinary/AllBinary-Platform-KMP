@@ -30,7 +30,11 @@ import admin.taghelpers.CustomItemsRequestHelperFactory
 
 open public class CustomItemsTag : TableTag {
         
-public constructor        (){this.setTagHelperFactory(CustomItemsHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(CustomItemsHelperFactory())
 this.setTagRequestHelperFactory(CustomItemsRequestHelperFactory())
 }
 

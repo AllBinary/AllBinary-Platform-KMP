@@ -59,18 +59,14 @@ open public class ClientInformation
     private var licenseServers: BasicArrayList = BasicArrayListUtil.getInstance()!!.getImmutableInstance()!!
 public constructor        (name: String, version: String, specialName: String, shortName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var version = version
-
-
-                    var specialName = specialName
-
-
-                    var shortName = shortName
+    //var name = name
+    //var version = version
+    //var specialName = specialName
+    //var shortName = shortName
 this.name= name
 this.version= version
 this.specialName= specialName
@@ -81,11 +77,19 @@ this.init()
 
 override fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun getOperatingSystemInterface()
         //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem{
+: GenericOperatingSystem
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,7 +98,11 @@ override fun getOperatingSystemInterface()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +111,11 @@ override fun getName()
 
 override fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,7 +124,11 @@ override fun getSpecialName()
 
 override fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,7 +137,11 @@ override fun getVersion()
 
 override fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,7 +150,11 @@ override fun getLicenseId()
 
 override fun getLicenseServers()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -139,9 +163,11 @@ override fun getLicenseServers()
 
 override fun getLicenseServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -151,7 +177,11 @@ override fun getLicenseServer(index: Int)
 
 override fun getNumberOfLicenseServers()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,7 +190,11 @@ override fun getNumberOfLicenseServers()
 
 override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
 
 
@@ -190,9 +224,11 @@ clientInfoHashtable!!.put(abeClientInformationData!!.HARDWARE, hardwareString)
 
 override fun isSameId(alicenseId: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var alicenseId = alicenseId
+        Updates for KMP build        
+        {
+var alicenseId = alicenseId
 
     
                         if(this.getLicenseId()!!.compareTo(alicenseId) == 0)
@@ -219,9 +255,11 @@ override fun isSameId(alicenseId: String)
 
 override fun isLargerOrDifferentServerList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var list = list
+        Updates for KMP build        
+        {
+var list = list
 
     var size: Int = list.size() -1
 
@@ -247,7 +285,11 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
                         for (index in size downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var newServerName: String = list.objectArray[index]!! as String
 
 
@@ -256,7 +298,11 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
                         for (index2 in currentSize downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextOldServerName: String = this.licenseServers!!.objectArray[index]!! as String
 
 
@@ -286,15 +332,21 @@ override fun isLargerOrDifferentServerList(list: BasicArrayList)
 
 open fun setHardSale(hardSale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hardSale = hardSale
+
+        Updates for KMP build        
+        {
+var hardSale = hardSale
 this.hardSale= hardSale
 }
 
 override fun isHardSale()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -304,33 +356,43 @@ override fun isHardSale()
 
 open fun setOperatingSystemInterface(operatingSystemInterface: GenericOperatingSystem)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var operatingSystemInterface = operatingSystemInterface
+
+        Updates for KMP build        
+        {
+var operatingSystemInterface = operatingSystemInterface
 this.operatingSystemInterface= operatingSystemInterface
 }
 
 
 open fun setLicenseId(licenseId: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var licenseId = licenseId
+
+        Updates for KMP build        
+        {
+var licenseId = licenseId
 this.licenseId= licenseId
 }
 
 
 open fun setLicenseServers(licenseServers: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var licenseServers = licenseServers
+
+        Updates for KMP build        
+        {
+var licenseServers = licenseServers
 this.licenseServers= licenseServers
 }
 
 override fun toShortString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

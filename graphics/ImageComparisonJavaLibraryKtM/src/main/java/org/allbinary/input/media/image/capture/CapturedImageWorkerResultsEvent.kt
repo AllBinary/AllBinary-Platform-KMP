@@ -36,15 +36,13 @@ open public class CapturedImageWorkerResultsEvent : AllBinaryEventObject {
     private var bufferedImage: BufferedImage
 public constructor        (anyType: Any, frame: Long, bufferedImage: BufferedImage)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var frame = frame
-
-
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+var anyType = anyType
+var frame = frame
+var bufferedImage = bufferedImage
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,7 +54,11 @@ setBufferedImage(bufferedImage)
 
 open fun getBufferedImage()
         //nullable = true from not(false or (false and true)) = true
-: BufferedImage{
+: BufferedImage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,16 +68,22 @@ open fun getBufferedImage()
 
 open fun setBufferedImage(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var bufferedImage = bufferedImage
+
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
 this.bufferedImage= bufferedImage
 }
 
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

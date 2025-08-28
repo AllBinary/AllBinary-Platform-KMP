@@ -39,7 +39,11 @@ open public class FREEBLISKET_PATH_GLOBALS
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FREEBLISKET_PATH_GLOBALS{
+: FREEBLISKET_PATH_GLOBALS
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,7 +78,11 @@ open fun getInstance()
     val ERRORPAGE: String = "Error.jsp"
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("install")

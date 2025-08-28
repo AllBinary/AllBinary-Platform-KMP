@@ -44,12 +44,12 @@ open public class ConstrainedMotionRectangles : MotionRectangles {
     private var motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface
 public constructor        (motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, motionRectangles: MotionRectangles)                        
 
-                            : super(NAME, motionRectangles!!.getImageComparisonResult()){
+                            : super(NAME, motionRectangles!!.getImageComparisonResult())
 
-                    var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
-
-
-                    var motionRectangles = motionRectangles
+        Updates for KMP build        
+        {
+    //var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
+    //var motionRectangles = motionRectangles
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,9 +62,11 @@ this.setMotionRectangleConstraintsInterface(motionRectangleConstraintsInterface)
             
 open fun applyMotionRectangleConstraints(motionRectangles: MotionRectangles)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionRectangles = motionRectangles
+
+        Updates for KMP build        
+        {
+    //var motionRectangles = motionRectangles
 logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), this, "applyMotionRectangleConstraints")
 
     var bufferedImageArray: Array<BufferedImage?> = motionRectangles!!.getImageComparisonResult()!!.getBufferedImages()!!
@@ -87,7 +89,11 @@ logUtil!!.put("Start - Size Before: " +motionRectangles!!.getVector()!!.size(), 
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var motionRectangle: MotionRectangle = vector2.get(index) as MotionRectangle
 
 
@@ -165,7 +171,11 @@ this.setVector(vector)
 
 open fun getMotionRectangleConstraintsInterface()
         //nullable = true from not(false or (false and true)) = true
-: MotionRectangleConstraintsInterface{
+: MotionRectangleConstraintsInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -175,9 +185,11 @@ open fun getMotionRectangleConstraintsInterface()
 
 open fun setMotionRectangleConstraintsInterface(motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
+
+        Updates for KMP build        
+        {
+var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
 this.motionRectangleConstraintsInterface= motionRectangleConstraintsInterface
 }
 

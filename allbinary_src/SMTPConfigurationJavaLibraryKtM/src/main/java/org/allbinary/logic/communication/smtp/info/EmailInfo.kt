@@ -42,9 +42,11 @@ open public class EmailInfo
     private var contentBase: String
 public constructor        (basicEmailInfo: BasicEmailInfo)
             : super()
-        {
+        
 
-                    var basicEmailInfo = basicEmailInfo
+        Updates for KMP build        
+        {
+var basicEmailInfo = basicEmailInfo
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -64,15 +66,13 @@ this.init(basicEmailInfo,
 
 public constructor        (basicEmailInfo: BasicEmailInfo, htmlAttachment: String, contentBase: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var basicEmailInfo = basicEmailInfo
-
-
-                    var htmlAttachment = htmlAttachment
-
-
-                    var contentBase = contentBase
+var basicEmailInfo = basicEmailInfo
+var htmlAttachment = htmlAttachment
+var contentBase = contentBase
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -93,15 +93,13 @@ this.init(basicEmailInfo,
 
 open fun init(basicEmailInfo: BasicEmailInfo, htmlAttachment: String, contentBase: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var basicEmailInfo = basicEmailInfo
 
 
-                    var htmlAttachment = htmlAttachment
-
-
-                    var contentBase = contentBase
+        Updates for KMP build        
+        {
+var basicEmailInfo = basicEmailInfo
+var htmlAttachment = htmlAttachment
+var contentBase = contentBase
 this.basicEmailInfo= basicEmailInfo
 this.htmlAttachment= htmlAttachment
 this.contentBase= contentBase
@@ -110,7 +108,11 @@ this.contentBase= contentBase
 
 open fun getBasicEmailInfo()
         //nullable = true from not(false or (false and true)) = true
-: BasicEmailInfo{
+: BasicEmailInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,7 +122,11 @@ open fun getBasicEmailInfo()
 
 open fun getHtmlAttachment()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,7 +136,11 @@ open fun getHtmlAttachment()
 
 open fun getContentBase()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -139,7 +149,11 @@ open fun getContentBase()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

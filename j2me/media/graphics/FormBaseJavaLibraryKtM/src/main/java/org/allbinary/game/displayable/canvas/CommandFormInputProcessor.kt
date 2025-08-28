@@ -70,18 +70,14 @@ open public class CommandFormInputProcessor : BasicMenuInputProcessor {
     private var hasPressed: Boolean = false
 public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm)                        
 
-                            : super(gameKeyEventList, playerInputId, gameCanvas){
+                            : super(gameKeyEventList, playerInputId, gameCanvas)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var playerInputId = playerInputId
-
-
-                    var gameCanvas = gameCanvas
-
-
-                    var form = form
+        Updates for KMP build        
+        {
+    //var gameKeyEventList = gameKeyEventList
+    //var playerInputId = playerInputId
+    //var gameCanvas = gameCanvas
+    //var form = form
 
 
                             //For kotlin this is before the body of the constructor.
@@ -94,9 +90,11 @@ this.form= form
             
 open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var key = key
+        Updates for KMP build        
+        {
+    //var key = key
 
     
                         if(key == Canvas.LEFT || key == Canvas.RIGHT || key == Canvas.UP || key == Canvas.DOWN)
@@ -138,7 +136,11 @@ this.form.processInput(key)
 
 open fun processCommand()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var commandCurrentSelectionForm: CommandCurrentSelectionForm = this.form as CommandCurrentSelectionForm
 
 
@@ -194,7 +196,11 @@ logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
                 @Throws(Exception::class)
             override fun processInput()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     var motionInputsIndex: Int = this.processMotionInputs()!!
@@ -217,7 +223,11 @@ logUtil!!.put(command.toString(), this, PROCESS_COMMAND)
 
                         for (index in 0 until size)
 
-        {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
+        
+
+        Updates for KMP build        
+        {
+gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 key= gameKeyEvent!!.getKey()
 
     
@@ -264,7 +274,11 @@ this.clear()
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.PROCESS_INPUT, e)
 
 
 
@@ -279,7 +293,11 @@ this.clear()
             
 open fun processMotionInputs()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var lastIndex: Int = this.motionGestureEventList!!.size() -1
 
 
@@ -307,9 +325,11 @@ motionGestureEventList!!.clear()
             
 open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+    //var motionGestureEvent = motionGestureEvent
 
     var touchMotionGestureFactory: TouchMotionGestureFactory = TouchMotionGestureFactory.getInstance()!!
 
@@ -410,7 +430,11 @@ this.hasPressed= true
     private val NAME_LABEL: String = " ScrollSelectionForm: "
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

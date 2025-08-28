@@ -32,9 +32,15 @@ open fun getInstance(level: Int)
         //nullable =  from not(true or (false and false)) = 
 : LayerPlacementInterfaceBasicArrayListFactoryInterface
 
+        Updates for KMP build        
+        
+
 open fun size()
         //nullable = true from not(false or (false and true)) = true
 : Int
+
+        Updates for KMP build        
+        
 
 }
                 

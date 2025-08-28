@@ -38,7 +38,11 @@ open public class CollidableHelperFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CollisionHelper{
+: CollisionHelper
+
+        Updates for KMP build        
+        {
+
     
                         if(Features.getInstance()!!.isFeature(GameFeatureFactory.getInstance()!!.COLLISIONS_WITH_SOURCE))
                         

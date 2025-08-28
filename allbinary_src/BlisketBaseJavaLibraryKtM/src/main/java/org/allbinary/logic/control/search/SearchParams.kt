@@ -53,9 +53,11 @@ open public class SearchParams
     private var endPage: String
 public constructor        (request: HttpServletRequest)
             : super()
-        {
+        
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 this.columnsAndSearchValues= HashMap<Any, Any>()
 this.setLength(request.getParameter(SearchData.LENGTH))
 this.setOrder(request.getParameter(SearchData.ORDER))
@@ -78,7 +80,11 @@ this.setSortBy(request.getParameter(SearchData.SORTBY))
         while(columnName != 
                                     null
                                 )
-        {this.add(columnName, columnValue)
+        
+
+        Updates for KMP build        
+        {
+this.add(columnName, columnValue)
 index++
 columnName= request.getParameter(SearchData.COLUMNNAME +"[" +index +"]")
 columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
@@ -89,64 +95,78 @@ columnValue= request.getParameter(SearchData.COLUMNVALUE +"[" +index +"]")
 
 open fun add(column: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var column = column
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+var column = column
+var value = value
 this.columnsAndSearchValues!!.put(column, value)
 }
 
 
 open fun setOrder(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.order= value
 }
 
 
 open fun setSortBy(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.sortBy= value
 }
 
 
 open fun setLength(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.listLength= value
 }
 
 
 open fun setStartPage(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.startPage= value
 }
 
 
 open fun setEndPage(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.endPage= value
 }
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -156,7 +176,11 @@ open fun get()
 
 open fun getOrder()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -166,7 +190,11 @@ open fun getOrder()
 
 open fun getSortBy()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -176,7 +204,11 @@ open fun getSortBy()
 
 open fun getLength()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -186,7 +218,11 @@ open fun getLength()
 
 open fun getLengthInt()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
     
                         if(this.listLength != 
                                     null
@@ -210,7 +246,11 @@ open fun getLengthInt()
 
 open fun getStartPage()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -220,7 +260,11 @@ open fun getStartPage()
 
 open fun getEndPage()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -230,7 +274,11 @@ open fun getEndPage()
 
 open fun getStartPageInt()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
     
                         if(this.startPage != 
                                     null
@@ -254,7 +302,11 @@ open fun getStartPageInt()
 
 open fun getEndPageInt()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
     
                         if(this.endPage != 
                                     null
@@ -280,9 +332,11 @@ open fun getEndPageInt()
             
 open fun getParamsNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var paramsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.PARAMS, SearchData.PARAMS)!!
 
@@ -302,9 +356,11 @@ paramsNode!!.appendChild(this.getLengthNode(document))
             
 open fun getFieldsNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var fieldsNode: Node = ModDomHelper.createNameValueNodes(document, SearchData.FIELDS, Integer(columnsAndSearchValues!!.size()).
                             toString())!!
@@ -325,7 +381,11 @@ open fun getFieldsNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = searchValueArray[index]!! as String
 
 
@@ -346,9 +406,11 @@ fieldsNode!!.appendChild(ModDomHelper.createNameValueNodes(document, SearchData.
             
 open fun getOrderNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -361,9 +423,11 @@ open fun getOrderNode(document: Document)
             
 open fun getSortByNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -376,9 +440,11 @@ open fun getSortByNode(document: Document)
             
 open fun getLengthNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 

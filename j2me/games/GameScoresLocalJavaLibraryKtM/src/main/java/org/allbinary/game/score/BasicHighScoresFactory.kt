@@ -23,9 +23,11 @@ open public class BasicHighScoresFactory : HighScoresBase {
             
 open fun loaded(index2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var index2 = index2
+        Updates for KMP build        
+        {
+    //var index2 = index2
 
     
                         if(index2 >= 0)
@@ -52,12 +54,12 @@ open fun loaded(index2: Int)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val abeClientInformation: AbeClientInformationInterface
-public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation){
+public constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var softwareInformation = softwareInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var softwareInformation = softwareInformation
 this.abeClientInformation= abeClientInformation
 }
 
@@ -73,40 +75,46 @@ this.abeClientInformation= abeClientInformation
     private val FETCH: String = "fetchHighScores"
 override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameInfo = gameInfo
 
 
-                    var highScoresResultsListener = highScoresResultsListener
+        Updates for KMP build        
+        {
+    //var gameInfo = gameInfo
+    //var highScoresResultsListener = highScoresResultsListener
 logUtil!!.put("Getting Local HighScores", this, FETCH)
 this.fetchHighScores(gameInfo, highScoresResultsListener, true)
 }
 
 override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameInfo = gameInfo
 
 
-                    var highScoresResultsListener = highScoresResultsListener
-
-
-                    var preload = preload
+        Updates for KMP build        
+        {
+    //var gameInfo = gameInfo
+    //var highScoresResultsListener = highScoresResultsListener
+    //var preload = preload
 
         try {
             highScoresArray[0]= RecordStoreHighScores.getInstance(abeClientInformation, gameInfo, TOP, PERSONAL_HIGH_SCORES, SCORES, ScoreComparator(true))
 highScoresResultsListener!!.setHighScoresArray(highScoresArray)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, FETCH, e)
 }
 
 }
 
 override fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresHelperBase{
+: HighScoresHelperBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

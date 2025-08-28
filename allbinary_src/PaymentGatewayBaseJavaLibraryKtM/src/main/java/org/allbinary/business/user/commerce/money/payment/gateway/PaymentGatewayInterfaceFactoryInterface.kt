@@ -35,6 +35,9 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : PaymentGatewayInterface
 
+        Updates for KMP build        
+        
+
 }
                 
             

@@ -52,14 +52,20 @@ open public class OpenGLImageCache : ImageCache {
     private val list: BasicArrayList = BasicArrayList()
 
     private var renderer: AllBinaryRendererBase3 = AllBinaryRendererBase3()
-protected constructor        (){}
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var renderer = renderer
+
+        Updates for KMP build        
+        {
+var renderer = renderer
 this.renderer= renderer as AllBinaryRendererBase3
 }
 
@@ -68,9 +74,11 @@ this.renderer= renderer as AllBinaryRendererBase3
             
 open fun update(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 this.gl= gl
 
         
@@ -78,13 +86,21 @@ this.gl= gl
         synchronized(lock) 
 
         //mutex.withLock
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var openGLESImage: OpenGLESImage = (list.objectArray[index]!! as OpenGLESImage)
 
 
@@ -108,15 +124,13 @@ this.gl= gl
                 @Throws(Exception::class)
             override fun createImage(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var caller = caller
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var caller = caller
+var width = width
+var height = height
 
     var textureSize: Int = width
 
@@ -131,7 +145,11 @@ this.gl= gl
                                 
 
         while((textureSize % 4) != 0)
-        {textureSize++
+        
+
+        Updates for KMP build        
+        {
+textureSize++
 }
 
 width= textureSize
@@ -148,7 +166,11 @@ height= textureSize
         synchronized(lock) 
 
         //mutex.withLock
+        
+
+        Updates for KMP build        
         {
+
     
                         if(image != 
                                     null
@@ -167,12 +189,12 @@ height= textureSize
                 @Throws(Exception::class)
             override fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var key = key
-
-
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+    //var key = key
+    //var inputStream = inputStream
 
     var cachedImage: Image = this.imageCache!!.get(key)!!
 
@@ -185,7 +207,11 @@ height= textureSize
         synchronized(lock) 
 
         //mutex.withLock
+        
+
+        Updates for KMP build        
         {
+
     
                         if(image != 
                                     null
@@ -203,7 +229,11 @@ height= textureSize
 
 open fun getGlP()
         //nullable = true from not(false or (false and true)) = true
-: GL10{
+: GL10
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -213,9 +243,11 @@ open fun getGlP()
 
 open fun init(image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var image = image
+
+        Updates for KMP build        
+        {
+    //var image = image
 
         try {
             
@@ -224,7 +256,11 @@ open fun init(image: Image)
         synchronized(lock) 
 
         //mutex.withLock
+        
+
+        Updates for KMP build        
         {
+
     
                         if(list.contains(image))
                         
@@ -241,7 +277,11 @@ list.add(image)
 
 this.renderer.add(image)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }

@@ -36,7 +36,11 @@ open public class MineWeaponResources : BasicGameResources {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MineWeaponResources{
+: MineWeaponResources
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,7 +55,11 @@ open fun getInstance()
     val DROP_RESOURCE: String = "/mine_drop_20_by_20.png"
 
     val DROP_ICON_RESOURCE: String = "/mine_drop_icon_20_by_20.png"
-protected constructor        (){
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+
     var ROOT: String = "/mine"
 
 

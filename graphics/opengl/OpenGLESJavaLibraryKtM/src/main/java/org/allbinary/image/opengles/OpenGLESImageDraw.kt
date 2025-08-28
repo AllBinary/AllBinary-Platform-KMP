@@ -38,7 +38,11 @@ open public class OpenGLESImageDraw
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLESImageDraw{
+: OpenGLESImageDraw
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,50 +59,32 @@ open fun getInstance()
         
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var viewHeight = viewHeight
-
-
-                    var x_src = x_src
-
-
-                    var y_src = y_src
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var viewHeight = viewHeight
+    //var x_src = x_src
+    //var y_src = y_src
+    //var width = width
+    //var height = height
+    //var x = x
+    //var y = y
+    //var z = z
 }
 
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var x = x
+    //var y = y
+    //var z = z
 }
 
 

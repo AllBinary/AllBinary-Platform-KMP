@@ -38,7 +38,11 @@ open public class ScrollMapEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScrollMapEventHandler{
+: ScrollMapEventHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,18 +51,22 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var eventObject = eventObject
 
 
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+var eventObject = eventObject
+var eventListenerInterface = eventListenerInterface
 
     var scrollMapEventListenerInterface: ScrollMapEventListenerInterface = (eventListenerInterface as ScrollMapEventListenerInterface)
 

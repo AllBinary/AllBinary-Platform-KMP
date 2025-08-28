@@ -44,15 +44,13 @@ open public class VectorAnimation : IndexedAnimation
     private var circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0)!!
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,15 +61,13 @@ this.setBasicColorP(basicColor)
 
 public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -87,7 +83,11 @@ this.setPoints(Array(1) { Array(currentPoints!!.size) { IntArray(2) } })
 
                         for (index in 0 until size)
 
-        {this.currentPoints[0]!![index]!![0]= currentPoints[index]!![0]!!
+        
+
+        Updates for KMP build        
+        {
+this.currentPoints[0]!![index]!![0]= currentPoints[index]!![0]!!
 this.currentPoints[0]!![index]!![1]= currentPoints[index]!![1]!!
 }
 
@@ -98,7 +98,11 @@ this.setBasicColorP(basicColor)
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -107,7 +111,11 @@ this.setBasicColorP(basicColor)
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -116,14 +124,20 @@ override fun getSize()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,26 +146,32 @@ override fun getSequence()
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.circularIndexUtil!!.next()
+
+
+        Updates for KMP build        
+        {
+this.circularIndexUtil!!.next()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.circularIndexUtil!!.previous()
+
+
+        Updates for KMP build        
+        {
+this.circularIndexUtil!!.previous()
 }
 
 
 open fun paintVectors(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
         try {
             
@@ -178,7 +198,11 @@ open fun paintVectors(graphics: Graphics, x: Int, y: Int)
 
 
         while(--index >= 0)
-        {nextPoint= currentPointsFrame[index]!!
+        
+
+        Updates for KMP build        
+        {
+nextPoint= currentPointsFrame[index]!!
 point= currentPointsFrame[index +1]!!
 nextPointX= nextPoint[0]!!
 nextPointY= nextPoint[1]!!
@@ -199,29 +223,35 @@ nextPointY= nextPoint[1]!!
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintVectors", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintVectors", e)
 }
 
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 this.basicSetColorUtil!!.setBasicColorP(graphics, basicColor)
 this.paintVectors(graphics, x, y)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -230,17 +260,21 @@ override fun getFrame()
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+var index = index
 this.circularIndexUtil!!.setIndex(index)
 }
 
 override fun getPoints(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<IntArray?>{
+: Array<IntArray?>
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
 
 
@@ -251,9 +285,11 @@ override fun getPoints(frame: Int)
 
 open fun setPoints(currentPoints: Array<Array<IntArray?>?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var currentPoints = currentPoints
+
+        Updates for KMP build        
+        {
+var currentPoints = currentPoints
 this.currentPoints= currentPoints
 this.circularIndexUtil= CircularIndexUtil.getInstance(currentPoints!!.size)
 }

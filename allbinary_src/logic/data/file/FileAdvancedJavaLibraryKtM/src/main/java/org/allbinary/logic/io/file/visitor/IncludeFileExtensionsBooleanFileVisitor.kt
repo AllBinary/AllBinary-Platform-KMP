@@ -32,9 +32,11 @@ open public class IncludeFileExtensionsBooleanFileVisitor : BooleanFileVisitor {
         
 public constructor        (filterStringBasicArrayList: BasicArrayList)                        
 
-                            : super(filterStringBasicArrayList){
+                            : super(filterStringBasicArrayList)
 
-                    var filterStringBasicArrayList = filterStringBasicArrayList
+        Updates for KMP build        
+        {
+var filterStringBasicArrayList = filterStringBasicArrayList
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,9 +46,11 @@ public constructor        (filterStringBasicArrayList: BasicArrayList)
 
 open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     
                         if(this.getFilterStringBasicArrayList()!!.size() == 0)
@@ -70,12 +74,12 @@ open fun visit(file: AbFile)
 
 open fun visit(file: AbFile, fileNameString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var file = file
-
-
-                    var fileNameString = fileNameString
+        Updates for KMP build        
+        {
+var file = file
+var fileNameString = fileNameString
 
     var fileNameAndExtension: String = file.getPath()!!
 

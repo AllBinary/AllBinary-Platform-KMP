@@ -44,12 +44,12 @@ open public class LogoImageFileUtil
     private val imageFileAbPath: AbPath
 public constructor        (imageAbPath: AbPath, imageFile: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var imageAbPath = imageAbPath
-
-
-                    var imageFile = imageFile
+    //var imageAbPath = imageAbPath
+    //var imageFile = imageFile
 this.fileName= imageFile
 this.imageFileAbPath= imageAbPath
 }
@@ -59,9 +59,11 @@ this.imageFileAbPath= imageAbPath
             
 open fun saveFiles(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fileItem = fileItem
+
+        Updates for KMP build        
+        {
+    //var fileItem = fileItem
 
     
                         if(fileName == 

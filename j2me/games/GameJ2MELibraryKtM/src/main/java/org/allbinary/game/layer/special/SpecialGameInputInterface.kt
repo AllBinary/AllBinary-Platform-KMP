@@ -37,11 +37,17 @@ open fun up()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun down()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -49,11 +55,17 @@ open fun right()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun left()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -61,11 +73,17 @@ open fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -73,11 +91,17 @@ open fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -85,11 +109,17 @@ open fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEven
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -97,11 +127,17 @@ open fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEven
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

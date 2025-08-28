@@ -42,15 +42,13 @@ open public class BasicMenuInputProcessor : PlayerGameInput
     private var canvas: Canvas = NullCanvas.NULL_CANVAS
 protected constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: Canvas)                        
 
-                            : super(gameKeyEventList, playerInputId){
+                            : super(gameKeyEventList, playerInputId)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var playerInputId = playerInputId
-
-
-                    var gameCanvas = gameCanvas
+        Updates for KMP build        
+        {
+var gameKeyEventList = gameKeyEventList
+var playerInputId = playerInputId
+var gameCanvas = gameCanvas
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,25 +58,33 @@ this.canvas= gameCanvas
 
 override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+var motionGestureEvent = motionGestureEvent
 motionGestureEventList!!.add(motionGestureEvent)
 }
 
 
 open fun setCanvas(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var canvas = canvas
+
+        Updates for KMP build        
+        {
+var canvas = canvas
 this.canvas= canvas
 }
 
 
 open fun getCanvas()
         //nullable = true from not(false or (false and true)) = true
-: MyCanvas{
+: MyCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,7 +96,11 @@ open fun getCanvas()
             
 open fun processInput()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

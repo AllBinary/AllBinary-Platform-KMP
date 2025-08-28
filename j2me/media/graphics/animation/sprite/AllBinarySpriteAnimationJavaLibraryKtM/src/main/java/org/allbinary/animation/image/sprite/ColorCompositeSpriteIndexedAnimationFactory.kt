@@ -43,18 +43,14 @@ open public class ColorCompositeSpriteIndexedAnimationFactory : BaseImageAnimati
     private val basicColorArray: Array<BasicColor?>
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int)                        
 
-                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance()){
+                            : this(image, basicColorArray, width, height, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var basicColorArray = basicColorArray
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var image = image
+    //var basicColorArray = basicColorArray
+    //var width = width
+    //var height = height
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,21 +59,15 @@ public constructor        (image: Image, basicColorArray: Array<BasicColor?>, wi
 
 public constructor        (image: Image, basicColorArray: Array<BasicColor?>, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, width, height, animationBehaviorFactory){
+                            : super(image, width, height, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var basicColorArray = basicColorArray
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var basicColorArray = basicColorArray
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -89,9 +79,11 @@ this.basicColorArray= basicColorArray
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var sprite: Sprite = animationFactorySpriteScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 
@@ -106,9 +98,11 @@ this.basicColorArray= basicColorArray
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
 
 
 

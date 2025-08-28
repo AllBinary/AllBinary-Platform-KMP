@@ -65,24 +65,24 @@ open public class AuthenticationHelper : TagHelper {
     private var attemptsInteger: Integer
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : this(hashMap, pageContext!!.getRequest() as HttpServletRequest){
+                            : this(hashMap, pageContext!!.getRequest() as HttpServletRequest)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest){
+public constructor        (hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
 
-                    var hashMap = hashMap
-
-
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var httpServletRequest = httpServletRequest
 this.weblisketSession= WeblisketSession(hashMap, httpServletRequest)
 this.getFormData()
 
@@ -101,7 +101,11 @@ this.getFormData()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.authenticated= this.weblisketSession!!.getAuthentication()
+
+
+        Updates for KMP build        
+        {
+this.authenticated= this.weblisketSession!!.getAuthentication()
 this.sessionUserName= this.weblisketSession!!.getUserName()
 this.role= this.weblisketSession!!.getRole()
 this.attemptsInteger= this.weblisketSession!!.getAttempts()
@@ -113,7 +117,11 @@ this.timeout= this.weblisketSession!!.getTimeout()
             
 open fun invalidateSession()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
         try {
             this.weblisketSession!!.clear()
 
@@ -122,7 +130,11 @@ open fun invalidateSession()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Integer(TagSupport.EVAL_BODY_INCLUDE)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
@@ -143,7 +155,11 @@ open fun invalidateSession()
 
 open fun isSessionOld()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.role != 
                                     null
@@ -219,7 +235,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isSessionOld()")
 
 open fun isRarelyUsedSession()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.role != 
                                     null
@@ -285,7 +305,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "isRarelyUsedSession()")
 
 open fun validRole()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -297,7 +321,11 @@ stringBuffer!!.append("Trying New login<p/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to set valid role"
 
 
@@ -321,7 +349,11 @@ stringBuffer!!.append("Trying New login<p/>")
 
 open fun invalidRole()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.weblisketSession!!.setAuthenticated(false)
 
@@ -335,7 +367,11 @@ stringBuffer!!.append("Trying New login<p/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to set role invalid"
 
 
@@ -361,7 +397,11 @@ stringBuffer!!.append("Trying New login<p/>")
             
 open fun isAuthenticated()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(BooleanUtil.getInstance()!!.getFromString(authenticated))
                         
@@ -388,9 +428,11 @@ open fun isAuthenticated()
 
 open fun isAuthenticationSessionValid(roles: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var roles = roles
+        Updates for KMP build        
+        {
+var roles = roles
 
         try {
             
@@ -428,7 +470,11 @@ open fun isAuthenticationSessionValid(roles: Vector)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var mustBeOfRole: BasicUserRole = basicUserRoleArray[index]!! as BasicUserRole
 
 
@@ -506,7 +552,11 @@ open fun isAuthenticationSessionValid(roles: Vector)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
@@ -527,7 +577,11 @@ open fun isAuthenticationSessionValid(roles: Vector)
 
 open fun nextAttempt()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(attemptsInteger != 
                                     null
@@ -548,12 +602,12 @@ open fun nextAttempt()
 
 open fun processIfNewLogin(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var userName = userName
-
-
-                    var password = password
+        Updates for KMP build        
+        {
+var userName = userName
+var password = password
 
         try {
             
@@ -622,7 +676,11 @@ this.nextAttempt()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.FALSE
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
@@ -643,7 +701,11 @@ this.nextAttempt()
 
 open fun processInvalidation()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -672,7 +734,11 @@ open fun processInvalidation()
                             }
                     
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.AUTHENTICATIONERROR))
                         
@@ -693,7 +759,11 @@ open fun processInvalidation()
 
 open fun outputSessionInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
@@ -745,7 +815,11 @@ stringBuffer!!.append("<br/>\n")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -757,7 +831,11 @@ stringBuffer!!.append("<br/>\n")
 
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: UserRole{
+: UserRole
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

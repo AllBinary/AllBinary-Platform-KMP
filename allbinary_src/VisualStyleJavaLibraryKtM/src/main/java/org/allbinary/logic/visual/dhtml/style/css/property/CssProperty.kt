@@ -48,18 +48,22 @@ open public class CssProperty
     private var cssPropertyValues: CssPropertyValues
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.propertyName= name
 this.cssPropertyValues= CssPropertyValues()
 }
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var propertyNode: Node = DomSearchHelper.getNode(DomData.VALUE, node.getChildNodes())!!
 
@@ -82,7 +86,11 @@ this.cssPropertyValues= CssPropertyValues(propertyValuesNode)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +100,11 @@ open fun getName()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(CssPropertyData.getInstance()!!.NAME, this.propertyName)
@@ -108,9 +120,11 @@ hashMap!!.put(CssPropertyData.getInstance()!!.NAME, this.propertyName)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
 

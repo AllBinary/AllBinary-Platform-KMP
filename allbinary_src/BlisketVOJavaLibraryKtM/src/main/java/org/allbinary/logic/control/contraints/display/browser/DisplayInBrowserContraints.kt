@@ -42,15 +42,21 @@ open public class DisplayInBrowserContraints
     private var mountedLink: String
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 }
 
 
 open fun isMountable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,16 +66,22 @@ open fun isMountable()
 
 open fun setMountable(mountable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mountable = mountable
+
+        Updates for KMP build        
+        {
+var mountable = mountable
 this.mountable= mountable
 }
 
 
 open fun isFrameable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,16 +91,22 @@ open fun isFrameable()
 
 open fun setFrameable(frameable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frameable = frameable
+
+        Updates for KMP build        
+        {
+var frameable = frameable
 this.frameable= frameable
 }
 
 
 open fun isQuickFrameable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,16 +116,22 @@ open fun isQuickFrameable()
 
 open fun setQuickFrameable(quickFrameable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var quickFrameable = quickFrameable
+
+        Updates for KMP build        
+        {
+var quickFrameable = quickFrameable
 this.quickFrameable= quickFrameable
 }
 
 
 open fun getMountedLink()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,9 +141,11 @@ open fun getMountedLink()
 
 open fun setMountedLink(mountedLink: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mountedLink = mountedLink
+
+        Updates for KMP build        
+        {
+var mountedLink = mountedLink
 this.mountedLink= mountedLink
 }
 

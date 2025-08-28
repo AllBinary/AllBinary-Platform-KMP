@@ -62,20 +62,22 @@ open public class FormInputProcessor : InputProcessor {
     private val platformKeyFactory: PlatformKeyFactory = PlatformKeyFactory.getInstance()!!
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
+public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas)
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+        Updates for KMP build        
+        {
+var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 }
 
 override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 
         try {
             PreLogUtil.put(StringMaker().
@@ -88,22 +90,24 @@ override fun keyPressed(keyCode: Int, deviceId: Int)
 
 downKeyEventHandler!!.fireEvent(gameKeyEvent)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
 
 override fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var canvas = canvas
 
 
-                    var keyCode = keyCode
-
-
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var canvas = canvas
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 
         try {
             
@@ -128,7 +132,11 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }

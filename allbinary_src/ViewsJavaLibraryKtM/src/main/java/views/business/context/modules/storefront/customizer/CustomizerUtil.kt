@@ -49,7 +49,11 @@ open public class CustomizerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CustomizerUtil{
+: CustomizerUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,19 +66,23 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: TransformInfoInterface, transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
 
-                    var customizerTransformInfoInterface = customizerTransformInfoInterface
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var customizerTransformInfoInterface = customizerTransformInfoInterface
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -108,12 +116,12 @@ open fun getTransformInfoInterfaceToCustomize(customizerTransformInfoInterface: 
             
 open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransformInfoInterface: Object, transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var customizerTransformInfoInterface = customizerTransformInfoInterface
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var customizerTransformInfoInterface = customizerTransformInfoInterface
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -147,9 +155,11 @@ open fun getTransformInfoObjectConfigComponentNodesToCustomize(customizerTransfo
             
 open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -174,9 +184,11 @@ open fun getTransformInfoObjectConfigComponentNodes(transformInfoInterface: Obje
             
 open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -201,12 +213,12 @@ open fun getTransformInfoObjectConfigGroupComponentNodes(transformInfoInterface:
             
 open fun insert(transformInfoInterface: TransformInfoInterface, domNodeInterface: DomNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var transformInfoInterface = transformInfoInterface
 
 
-                    var domNodeInterface = domNodeInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var domNodeInterface = domNodeInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -255,7 +267,11 @@ transformInfoInterface!!.setData(documentString)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var transformInfo: TransformInfo = allViewsToBeModified!!.get(index) as TransformInfo
 
 
@@ -342,12 +358,12 @@ this.write(specifiedTransformInfoInterface, documentString)
             
 open fun write(specifiedTransformInfoInterface: TransformInfoInterface, documentString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specifiedTransformInfoInterface = specifiedTransformInfoInterface
 
 
-                    var documentString = documentString
+        Updates for KMP build        
+        {
+var specifiedTransformInfoInterface = specifiedTransformInfoInterface
+var documentString = documentString
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -369,9 +385,11 @@ transformInfoEntityInterface!!.update(specifiedTransformInfoInterface!!.toHashMa
             
 open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -399,7 +417,11 @@ open fun getViewDataForComponentsInObjectConfig(transformInfoInterface: Object)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextTransformInfoInterface: TransformInfo = allViewsToBeModified!!.get(index) as TransformInfo
 
 

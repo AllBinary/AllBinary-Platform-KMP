@@ -35,7 +35,11 @@ open public class SelectSound : CompositeSound {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Sound{
+: Sound
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("resource:/wav/select.wav"){
+                            : super("resource:/wav/select.wav")
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     

@@ -34,24 +34,32 @@ open public class Time
     private var timeLong: Long
 public constructor        (time: String)
             : super()
-        {
+        
 
-                    var time = time
+        Updates for KMP build        
+        {
+var time = time
 this.timeLong= time as Long
 }
 
 public constructor        (time: Long)
             : super()
-        {
+        
 
-                    var time = time
+        Updates for KMP build        
+        {
+var time = time
 this.timeLong= time as Long
 }
 
 
 open fun getLong()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,7 +69,11 @@ open fun getLong()
 
 open fun getlong()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,7 +82,11 @@ open fun getlong()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

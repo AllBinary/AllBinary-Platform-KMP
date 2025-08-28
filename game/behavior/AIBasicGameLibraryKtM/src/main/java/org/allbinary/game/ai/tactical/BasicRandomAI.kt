@@ -49,18 +49,14 @@ open public class BasicRandomAI : BasicAI {
     private val keyArray: IntArray = intArrayOf(Canvas.UP,Canvas.DOWN,Canvas.LEFT,Canvas.RIGHT,Canvas.KEY_NUM1,Canvas.KEY_NUM7,Canvas.KEY_NUM9)
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput, inputProbability: InputProbability, visitor: Visitor)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
-
-
-                    var inputProbability = inputProbability
-
-
-                    var visitor = visitor
+        Updates for KMP build        
+        {
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
+var inputProbability = inputProbability
+var visitor = visitor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,9 +71,11 @@ this.visitor= visitor
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(this.inputProbability!!.getTimeDelayHelper()!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
@@ -121,7 +119,11 @@ i_random= myRandomFactory!!.getAbsoluteNextInt(this.inputProbability!!.getMax())
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: Int = keyArray[index]!!
 
 likelyhoodIntegerKeyArray= likelyhoodIntegerArray[key]!!

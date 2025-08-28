@@ -54,14 +54,20 @@ open public class MotionGestureConfiguration
     private var activeCommands: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getMotionGestureAction(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: CompleteMotionGestureInputEvent{
+: CompleteMotionGestureInputEvent
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     
                         if(index >= activeCommands!!.size())
@@ -85,25 +91,33 @@ open fun getMotionGestureAction(index: Int)
 
 open fun addMotionGestureAction(list: BasicArrayList, commandAction: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var list = list
 
 
-                    var commandAction = commandAction
+        Updates for KMP build        
+        {
+var list = list
+var commandAction = commandAction
 activeCommands!!.add(MotionGestureToMotionGestureActionAssociation(list, commandAction))
 }
 
 
 open fun clearMotionGestureAction()
         //nullable = true from not(false or (false and true)) = true
-{activeCommands!!.clear()
+
+
+        Updates for KMP build        
+        {
+activeCommands!!.clear()
 }
 
 
 open fun getAssociateCommandActionsList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,7 +127,11 @@ open fun getAssociateCommandActionsList()
 
 open fun isDiagonalMotionGestureAllowed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,7 +141,11 @@ open fun isDiagonalMotionGestureAllowed()
 
 open fun isExecutingActionsAllowed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -133,25 +155,33 @@ open fun isExecutingActionsAllowed()
 
 open fun setExecutingActionsAllowed(executingActionAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var executingActionAllowed = executingActionAllowed
+
+        Updates for KMP build        
+        {
+var executingActionAllowed = executingActionAllowed
 this.executingActions= executingActionAllowed
 }
 
 
 open fun setDiagonalMotionGestureAllowed(diagonalMotionGestureAllowed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var diagonalMotionGestureAllowed = diagonalMotionGestureAllowed
+
+        Updates for KMP build        
+        {
+var diagonalMotionGestureAllowed = diagonalMotionGestureAllowed
 this.diagonalMotionGestureAllowed= diagonalMotionGestureAllowed
 }
 
 
 open fun getDiagonalTolerance()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -161,16 +191,22 @@ open fun getDiagonalTolerance()
 
 open fun setDiagonalTolerance(diagonalTolerance: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var diagonalTolerance = diagonalTolerance
+
+        Updates for KMP build        
+        {
+var diagonalTolerance = diagonalTolerance
 this.diagonalTolerance= diagonalTolerance
 }
 
 
 open fun getMinimumMotionGesture()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,16 +216,22 @@ open fun getMinimumMotionGesture()
 
 open fun setMinimumMotionGesture(minimumMotionGesture: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minimumMotionGesture = minimumMotionGesture
+
+        Updates for KMP build        
+        {
+var minimumMotionGesture = minimumMotionGesture
 this.minimumMotionGesture= minimumMotionGesture
 }
 
 
 open fun getButton()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -199,16 +241,22 @@ open fun getButton()
 
 open fun setButton(button: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var button = button
+
+        Updates for KMP build        
+        {
+var button = button
 this.button= button
 }
 
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -218,16 +266,22 @@ open fun getColor()
 
 open fun setColor(color: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var color = color
+
+        Updates for KMP build        
+        {
+var color = color
 this.color= color
 }
 
 
 open fun getMouseButtonMask()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -237,9 +291,11 @@ open fun getMouseButtonMask()
 
 open fun setMouseButtonMask(mouseButtonMask: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mouseButtonMask = mouseButtonMask
+
+        Updates for KMP build        
+        {
+var mouseButtonMask = mouseButtonMask
 this.mouseButtonMask= mouseButtonMask
 }
 

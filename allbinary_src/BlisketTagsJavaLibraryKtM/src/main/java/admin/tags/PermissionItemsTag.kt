@@ -30,7 +30,11 @@ import admin.taghelpers.PermissionItemsRequestHelperFactory
 
 open public class PermissionItemsTag : TableTag {
         
-public constructor        (){this.setTagHelperFactory(PermissionItemsHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(PermissionItemsHelperFactory())
 this.setTagRequestHelperFactory(PermissionItemsRequestHelperFactory())
 }
 

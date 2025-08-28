@@ -38,7 +38,11 @@ open public class ModelViewProjection
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ModelViewProjection{
+: ModelViewProjection
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,7 +59,11 @@ open fun getInstance()
         
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: FloatArray{
+: FloatArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

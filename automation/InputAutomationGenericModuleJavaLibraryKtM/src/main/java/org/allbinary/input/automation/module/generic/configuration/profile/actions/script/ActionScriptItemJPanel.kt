@@ -28,13 +28,21 @@
 
 open public class ActionScriptItemJPanel : javax.swing.JPanel {
         
-public constructor        (){initComponents()
+public constructor        ()
+
+        Updates for KMP build        
+        {
+initComponents()
 }
 
 
 open fun getNewActionScriptInputJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel{
+: javax.swing.JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,16 +52,22 @@ open fun getNewActionScriptInputJPanel()
 
 open fun setNewActionScriptInputJPanel(newActionScriptInputJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newActionScriptInputJPanel = newActionScriptInputJPanel
+
+        Updates for KMP build        
+        {
+var newActionScriptInputJPanel = newActionScriptInputJPanel
 this.newActionScriptInputJPanel= newActionScriptInputJPanel
 }
 
 
 open fun getRemoveJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel{
+: javax.swing.JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,16 +77,22 @@ open fun getRemoveJPanel()
 
 open fun setRemoveJPanel(removeJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var removeJPanel = removeJPanel
+
+        Updates for KMP build        
+        {
+var removeJPanel = removeJPanel
 this.removeJPanel= removeJPanel
 }
 
 
 open fun getScriptItemJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel{
+: javax.swing.JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,16 +102,22 @@ open fun getScriptItemJPanel()
 
 open fun setScriptItemJPanel(scriptItemJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scriptItemJPanel = scriptItemJPanel
+
+        Updates for KMP build        
+        {
+var scriptItemJPanel = scriptItemJPanel
 this.scriptItemJPanel= scriptItemJPanel
 }
 
 
 open fun getNewActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel{
+: javax.swing.JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,16 +127,22 @@ open fun getNewActionScriptConditionJPanel()
 
 open fun setNewActionScriptConditionJPanel(newActionScriptConditionJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newActionScriptConditionJPanel = newActionScriptConditionJPanel
+
+        Updates for KMP build        
+        {
+var newActionScriptConditionJPanel = newActionScriptConditionJPanel
 this.newActionScriptConditionJPanel= newActionScriptConditionJPanel
 }
 
 
 open fun getChildActionScriptConditionJPanel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JPanel{
+: javax.swing.JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,16 +152,22 @@ open fun getChildActionScriptConditionJPanel()
 
 open fun setChildActionScriptConditionJPanel(childActionScriptConditionJPanel: javax.swing.JPanel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var childActionScriptConditionJPanel = childActionScriptConditionJPanel
+
+        Updates for KMP build        
+        {
+var childActionScriptConditionJPanel = childActionScriptConditionJPanel
 this.childActionScriptConditionJPanel= childActionScriptConditionJPanel
 }
 
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{newActionScriptInputJPanel= javax.swing.JPanel()
+
+
+        Updates for KMP build        
+        {
+newActionScriptInputJPanel= javax.swing.JPanel()
 childActionScriptConditionJPanel= javax.swing.JPanel()
 newActionScriptConditionJPanel= javax.swing.JPanel()
 scriptItemJPanel= javax.swing.JPanel()

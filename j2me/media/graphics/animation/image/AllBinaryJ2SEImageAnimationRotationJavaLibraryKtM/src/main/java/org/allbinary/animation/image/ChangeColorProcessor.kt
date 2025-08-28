@@ -38,7 +38,11 @@ open public class ChangeColorProcessor : ModifierBaseProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ChangeColorProcessor{
+: ChangeColorProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,21 +58,15 @@ open fun getInstance()
             }            
         override fun update(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, index: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageModifierUtil = imageModifierUtil
 
 
-                    var originalImage = originalImage
-
-
-                    var imageToShow = imageToShow
-
-
-                    var index = index
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var imageModifierUtil = imageModifierUtil
+    //var originalImage = originalImage
+    //var imageToShow = imageToShow
+    //var index = index
+    //var basicColor = basicColor
 imageModifierUtil!!.changeColor(originalImage, imageToShow, index, basicColor)
 }
 

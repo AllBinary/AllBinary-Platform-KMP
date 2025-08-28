@@ -40,7 +40,11 @@ open public class RaceTrackAdjacentDropLayerFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RaceTrackAdjacentDropLayerFactory{
+: RaceTrackAdjacentDropLayerFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,18 +57,30 @@ open fun getInstance()
     private var list: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{list.clear()
+
+
+        Updates for KMP build        
+        {
+list.clear()
 }
 
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,7 +92,11 @@ open fun getSize()
 
 open fun getRandomInstance()
         //nullable = true from not(false or (false and true)) = true
-: LayerInterfaceFactoryInterface{
+: LayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,9 +106,11 @@ open fun getRandomInstance()
 
 open fun add(layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 list.add(layerInterfaceFactoryInterface)
 }
 

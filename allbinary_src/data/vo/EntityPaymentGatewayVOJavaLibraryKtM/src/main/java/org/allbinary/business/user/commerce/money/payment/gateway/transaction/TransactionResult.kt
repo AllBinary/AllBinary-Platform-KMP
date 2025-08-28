@@ -50,9 +50,11 @@ open public class TransactionResult
     private var result: String
 public constructor        (result: String)
             : super()
-        {
+        
 
-                    var result = result
+        Updates for KMP build        
+        {
+var result = result
 
         try {
             this.result= result
@@ -70,7 +72,11 @@ public constructor        (result: String)
 
 keyValuePairs!!.putAll(hashtable)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var exceptionMessage: String = "TransactionResult Constructor Failed"
 
 logUtil!!.put(exceptionMessage, this, this.commonStrings!!.CONSTRUCTOR)
@@ -80,16 +86,22 @@ logUtil!!.put(exceptionMessage, this, this.commonStrings!!.CONSTRUCTOR)
 
 public constructor        (keyValuePairs: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var keyValuePairs = keyValuePairs
+        Updates for KMP build        
+        {
+var keyValuePairs = keyValuePairs
 keyValuePairs= keyValuePairs
 this.result= "Needs to have the hashmap converted to string for other constructor"
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,7 +111,11 @@ override fun toString()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,7 +125,11 @@ open fun toHashMap()
 
 open fun getAllPossibleKeys()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var paymentTransactionKeysFactory: PaymentTransactionKeysFactory = PaymentTransactionKeysFactory.getInstance()!!
 
 
@@ -147,7 +167,11 @@ verisignResponseKeys!!.add(paymentTransactionKeysFactory!!.EXCEPTION7.toString()
 
 open fun getValues()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var keyVector: Vector = this.getAllPossibleKeys()!!
 
 
@@ -162,7 +186,11 @@ open fun getValues()
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyVector!!.get(i) as String
 
 
@@ -194,7 +222,11 @@ valueVector!!.add(stringUtil!!.EMPTY_STRING)
 
 open fun getPnRef()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -204,7 +236,11 @@ open fun getPnRef()
 
 open fun getRespMsg()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -214,7 +250,11 @@ open fun getRespMsg()
 
 open fun getResult()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -224,7 +264,11 @@ open fun getResult()
 
 open fun getScore()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -234,7 +278,11 @@ open fun getScore()
 
 open fun getStatus()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -244,7 +292,11 @@ open fun getStatus()
 
 open fun getFraudCode()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -254,7 +306,11 @@ open fun getFraudCode()
 
 open fun getFraudMsg()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -264,7 +320,11 @@ open fun getFraudMsg()
 
 open fun getOrigResult()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -274,7 +334,11 @@ open fun getOrigResult()
 
 open fun getAvsAddr()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -284,7 +348,11 @@ open fun getAvsAddr()
 
 open fun getAvsZip()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -294,7 +362,11 @@ open fun getAvsZip()
 
 open fun getErrCode()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -304,7 +376,11 @@ open fun getErrCode()
 
 open fun getException1()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -314,7 +390,11 @@ open fun getException1()
 
 open fun getException2()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -324,7 +404,11 @@ open fun getException2()
 
 open fun getException3()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -334,7 +418,11 @@ open fun getException3()
 
 open fun getException4()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -344,7 +432,11 @@ open fun getException4()
 
 open fun getException5()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -354,7 +446,11 @@ open fun getException5()
 
 open fun getException6()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -364,7 +460,11 @@ open fun getException6()
 
 open fun getException7()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -374,7 +474,11 @@ open fun getException7()
 
 open fun getReason1()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -384,7 +488,11 @@ open fun getReason1()
 
 open fun getReason2()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -394,7 +502,11 @@ open fun getReason2()
 
 open fun getReason3()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

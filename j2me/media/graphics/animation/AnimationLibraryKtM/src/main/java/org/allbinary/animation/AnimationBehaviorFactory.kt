@@ -37,7 +37,11 @@ open public class AnimationBehaviorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnimationBehaviorFactory{
+: AnimationBehaviorFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +58,11 @@ open fun getInstance()
         
 open fun getOrCreateInstance()
         //nullable = true from not(false or (false and true)) = true
-: AnimationBehavior{
+: AnimationBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

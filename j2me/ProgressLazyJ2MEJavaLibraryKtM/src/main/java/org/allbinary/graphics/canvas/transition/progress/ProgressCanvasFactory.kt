@@ -40,7 +40,11 @@ open public class ProgressCanvasFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ProgressCanvas{
+: ProgressCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,7 +54,11 @@ open fun getInstance()
 
 open fun getLazyInstance()
         //nullable = true from not(false or (false and true)) = true
-: PaintableInterface{
+: PaintableInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

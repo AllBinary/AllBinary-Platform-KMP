@@ -36,21 +36,15 @@ open public class AdjustCustomTextAnimation : CustomTextAnimation {
     private var dy: Int
 public constructor        (text: String, fontSize: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(text, fontSize, animationBehavior){
+                            : super(text, fontSize, animationBehavior)
 
-                    var text = text
-
-
-                    var fontSize = fontSize
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var text = text
+    //var fontSize = fontSize
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,7 +55,11 @@ this.dy= dy
 
 override fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,15 +68,21 @@ override fun getDx()
 
 override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dx = dx
+
+        Updates for KMP build        
+        {
+var dx = dx
 this.dx= dx
 }
 
 override fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,23 +91,23 @@ override fun getDy()
 
 override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dy = dy
+
+        Updates for KMP build        
+        {
+var dy = dy
 this.dy= dy
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 super.paint(graphics, x +this.dx, y +this.dy)
 }
 

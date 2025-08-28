@@ -43,9 +43,11 @@ open public class PCGameInputMapping : PersistentInputMapping {
                 @Throws(Exception::class)
             override fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
 PCKeyFactory.getInstance()
 TouchMotionGestureFactory.getInstance()
@@ -66,9 +68,11 @@ this.save(abeClientInformation)
 
 override fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == PCKeyFactory.getInstance()!!.DEL)
@@ -95,9 +99,11 @@ override fun isDelete(input: Input)
 
 override fun isSystemInput(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 

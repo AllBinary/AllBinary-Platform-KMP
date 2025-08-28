@@ -40,15 +40,13 @@ open public class GPoint
 
 open fun toStringStatic(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -81,9 +79,11 @@ stringBuffer!!.append(z)
     private val z: Int
 public constructor        (point: GPoint)
             : super()
-        {
+        
 
-                    var point = point
+        Updates for KMP build        
+        {
+var point = point
 this.x= point.getX()
 this.y= point.getY()
 this.z= point.getZ()
@@ -91,12 +91,12 @@ this.z= point.getZ()
 
 public constructor        (x: Int, y: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var x = x
-
-
-                    var y = y
+var x = x
+var y = y
 this.x= x
 this.y= y
 this.z= 3
@@ -104,15 +104,13 @@ this.z= 3
 
 public constructor        (x: Int, y: Int, z: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+var x = x
+var y = y
+var z = z
 this.x= x
 this.y= y
 this.z= z
@@ -121,7 +119,11 @@ this.z= z
 
 open fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,7 +133,11 @@ open fun getX()
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -141,7 +147,11 @@ open fun getY()
 
 open fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -151,7 +161,11 @@ open fun getZ()
 
 open fun getRawX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -161,7 +175,11 @@ open fun getRawX()
 
 open fun getRawY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,7 +189,11 @@ open fun getRawY()
 
 open fun getRawZ()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,7 +202,11 @@ open fun getRawZ()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

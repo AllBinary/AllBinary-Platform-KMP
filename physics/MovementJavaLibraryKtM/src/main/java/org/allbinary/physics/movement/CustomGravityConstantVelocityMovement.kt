@@ -36,12 +36,12 @@ open public class CustomGravityConstantVelocityMovement : BasicConstantVelocityM
     private var customGravity: Int
 public constructor        (speedBasicDecimal: BasicDecimal, customGravity: Int)                        
 
-                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
+                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt()))
 
-                    var speedBasicDecimal = speedBasicDecimal
-
-
-                    var customGravity = customGravity
+        Updates for KMP build        
+        {
+var speedBasicDecimal = speedBasicDecimal
+var customGravity = customGravity
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,9 +55,11 @@ this.customGravity= customGravity
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layer = layer
+
+        Updates for KMP build        
+        {
+var layer = layer
 super.process(layer)
 gravityUtil!!.process(this.getVelocityProperties(), this.customGravity)
 

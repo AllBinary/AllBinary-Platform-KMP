@@ -40,15 +40,13 @@ open public class Orientation
 
 open fun getInstance(yaw: Int, pitch: Int, roll: Int)
         //nullable =  from not(true or (false and false)) = 
-: Orientation{
+: Orientation
 
-                    var yaw = yaw
-
-
-                    var pitch = pitch
-
-
-                    var roll = roll
+        Updates for KMP build        
+        {
+var yaw = yaw
+var pitch = pitch
+var roll = roll
 SINGLETON.yaw.set(yaw)
 SINGLETON.pitch.set(pitch)
 SINGLETON.roll.set(roll)
@@ -69,15 +67,13 @@ SINGLETON.roll.set(roll)
     var roll: BasicDecimal = BasicDecimal()
 private constructor        (yaw: Int, pitch: Int, roll: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var yaw = yaw
-
-
-                    var pitch = pitch
-
-
-                    var roll = roll
+var yaw = yaw
+var pitch = pitch
+var roll = roll
 this.yaw.set(yaw)
 this.pitch.set(pitch)
 this.roll.set(roll)
@@ -85,7 +81,11 @@ this.roll.set(roll)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Y: ")

@@ -36,24 +36,16 @@ open public class FullTouchButton : TouchButton {
         
 public constructor        (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
-                            : super(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder){
+                            : super(touchButtonInput, touchButtonResource, rawRectangle, cellPosition, xBorder, yBorder)
 
-                    var touchButtonInput = touchButtonInput
-
-
-                    var touchButtonResource = touchButtonResource
-
-
-                    var rawRectangle = rawRectangle
-
-
-                    var cellPosition = cellPosition
-
-
-                    var xBorder = xBorder
-
-
-                    var yBorder = yBorder
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
+var touchButtonResource = touchButtonResource
+var rawRectangle = rawRectangle
+var cellPosition = cellPosition
+var xBorder = xBorder
+var yBorder = yBorder
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,27 +54,17 @@ public constructor        (touchButtonInput: TouchButtonInput, touchButtonResour
 
 public constructor        (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
-                            : super(touchButtonInput, animationInterface, hintAnimationInterface, rawRectangle, cellPosition, xBorder, yBorder){
+                            : super(touchButtonInput, animationInterface, hintAnimationInterface, rawRectangle, cellPosition, xBorder, yBorder)
 
-                    var touchButtonInput = touchButtonInput
-
-
-                    var animationInterface = animationInterface
-
-
-                    var hintAnimationInterface = hintAnimationInterface
-
-
-                    var rawRectangle = rawRectangle
-
-
-                    var cellPosition = cellPosition
-
-
-                    var xBorder = xBorder
-
-
-                    var yBorder = yBorder
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
+var animationInterface = animationInterface
+var hintAnimationInterface = hintAnimationInterface
+var rawRectangle = rawRectangle
+var cellPosition = cellPosition
+var xBorder = xBorder
+var yBorder = yBorder
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,7 +73,11 @@ public constructor        (touchButtonInput: TouchButtonInput, animationInterfac
 
 override fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var x: Int = this.rawRectangle!!.getWidth() *cellPositionP!!.getColumn()
@@ -107,7 +93,11 @@ this.animationX= point.getX() +xBorder
 this.animationY= point.getY() +yBorder
 this.hintAnimationY= animationY -this.rectangleP!!.getHeight() shr 1
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }

@@ -36,9 +36,11 @@ open public class CategoryComponent : CategoryView
         
 public constructor        (categoryInterface: CategoryInterface)                        
 
-                            : super(categoryInterface){
+                            : super(categoryInterface)
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,7 +52,11 @@ public constructor        (categoryInterface: CategoryInterface)
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +66,11 @@ open fun getTypeId()
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,7 +82,11 @@ open fun getTransformDocumentInterface()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,9 +96,11 @@ open fun getTransformInfoInterface()
 
 open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var viewDocumentInterface = viewDocumentInterface
+
+        Updates for KMP build        
+        {
+var viewDocumentInterface = viewDocumentInterface
 }
 
 
@@ -92,7 +108,11 @@ open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentI
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var document: Document = DomDocumentHelper.create()!!
 
 document.appendChild(CategoryView(this.getCategoryInterface()).
@@ -109,7 +129,11 @@ document.appendChild(CategoryView(this.getCategoryInterface()).
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

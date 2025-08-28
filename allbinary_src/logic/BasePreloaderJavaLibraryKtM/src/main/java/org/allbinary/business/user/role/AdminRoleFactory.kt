@@ -38,7 +38,11 @@ open public class AdminRoleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AdminRoleFactory{
+: AdminRoleFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,7 +75,11 @@ open fun getInstance()
     private val webManagementRoles: Vector<Any> = Vector<Any>()
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
 
 adminRoles!!.add(basicUserRoleFactory!!.ADMINISTRATOR)
@@ -114,7 +122,11 @@ webManagementRoles!!.add(basicUserRoleFactory!!.VIEWEDITOR)
 
 open fun getProductManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,7 +136,11 @@ open fun getProductManagementRoles()
 
 open fun getAdminRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -134,7 +150,11 @@ open fun getAdminRoles()
 
 open fun getStoreAdminRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -144,7 +164,11 @@ open fun getStoreAdminRoles()
 
 open fun getStoreManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -154,7 +178,11 @@ open fun getStoreManagementRoles()
 
 open fun getReviewManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,7 +192,11 @@ open fun getReviewManagementRoles()
 
 open fun getCustomerManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -174,7 +206,11 @@ open fun getCustomerManagementRoles()
 
 open fun getWorkflowManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -184,7 +220,11 @@ open fun getWorkflowManagementRoles()
 
 open fun getWebManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -194,7 +234,11 @@ open fun getWebManagementRoles()
 
 open fun getShippingManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -204,7 +248,11 @@ open fun getShippingManagementRoles()
 
 open fun getAdjusterManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -214,7 +262,11 @@ open fun getAdjusterManagementRoles()
 
 open fun getOrderManagementRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -47,7 +47,11 @@ open public class ImageModifierUtil
 
 open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
-: ImageModifierUtil{
+: ImageModifierUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,9 +68,11 @@ open fun getInstanceOrCreate()
         
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
 }
 
 
@@ -74,18 +80,14 @@ open fun setBasicColorP(basicColor: BasicColor)
 
 open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unusedOriginalImage = unusedOriginalImage
 
 
-                    var image = image
-
-
-                    var imageIndex = imageIndex
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var unusedOriginalImage = unusedOriginalImage
+    //var image = image
+    //var imageIndex = imageIndex
+    //var basicColor = basicColor
 
     var newBufferedImage: BufferedImage
 
@@ -148,13 +150,21 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
                         for (index in 0 until width)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in 0 until height)
 
-        {colorModel= newBufferedImage!!.getColorModel()
+        
+
+        Updates for KMP build        
+        {
+colorModel= newBufferedImage!!.getColorModel()
 dataElements= newBufferedImage!!.getRaster()!!.getDataElements(index, index2, 
                             null)
 ax= colorModel!!.getAlpha(dataElements)
@@ -179,18 +189,14 @@ bx= colorModel!!.getBlue(dataElements)
 
 open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unusedOriginalImage = unusedOriginalImage
 
 
-                    var image = image
-
-
-                    var imageIndex = imageIndex
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var unusedOriginalImage = unusedOriginalImage
+    //var image = image
+    //var imageIndex = imageIndex
+    //var basicColor = basicColor
 
     var newBufferedImage: BufferedImage
 
@@ -256,13 +262,21 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
                         for (index in 0 until width)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in 0 until height)
 
-        {colorModel= newBufferedImage!!.getColorModel()
+        
+
+        Updates for KMP build        
+        {
+colorModel= newBufferedImage!!.getColorModel()
 dataElements= newBufferedImage!!.getRaster()!!.getDataElements(index, index2, 
                             null)
 ax= colorModel!!.getAlpha(dataElements)
@@ -282,18 +296,14 @@ newBufferedImage!!.setRGB(index, index2, (ax shl 24) or (rx shl 16) or (gx shl 8
 
 open fun setAlpha(unusedOriginalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unusedOriginalImage = unusedOriginalImage
 
 
-                    var image = image
-
-
-                    var imageIndex = imageIndex
-
-
-                    var alphaInt = alphaInt
+        Updates for KMP build        
+        {
+    //var unusedOriginalImage = unusedOriginalImage
+    //var image = image
+    //var imageIndex = imageIndex
+    //var alphaInt = alphaInt
 
     var alpha: Byte = alphaInt as Byte
 
@@ -335,13 +345,21 @@ newBufferedImage= j2seImage!!.getImage() as BufferedImage
 
                         for (index in 0 until width)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in 0 until height)
 
-        {raster.getPixel(index, index2, colorArray)
+        
+
+        Updates for KMP build        
+        {
+raster.getPixel(index, index2, colorArray)
 colorArray[0]= alpha and colorArray[0]
 raster.setPixel(index, index2, colorArray)
 }
@@ -353,9 +371,11 @@ raster.setPixel(index, index2, colorArray)
 
 open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>{
+: Array<Image?>
 
-                    var originalImageArray = originalImageArray
+        Updates for KMP build        
+        {
+    //var originalImageArray = originalImageArray
 
         try {
             
@@ -374,7 +394,11 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 
                         for (index in 0 until size)
 
-        {originalImage= originalImageArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+originalImage= originalImageArray[index]!!
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
@@ -388,7 +412,11 @@ newImageArray[index]= image
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newImageArray
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
@@ -404,21 +432,23 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "getImageArray", e)
 
 open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageArray = imageArray
 
 
-                    var index = index
-
-
-                    var image = image
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var index = index
+    //var image = image
 }
 
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

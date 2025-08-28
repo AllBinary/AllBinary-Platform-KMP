@@ -58,85 +58,148 @@ open fun glTexParameterfv(target: Int, pname: Int, param: FloatArray, offset: In
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glCurrentPaletteMatrixOES(matrixpaletteindex: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glDrawTexfOES(x: Float, y: Float, z: Float, width: Float, height: Float)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glDrawTexfvOES(coords: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glDrawTexfvOES(coords: FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glDrawTexiOES(x: Int, y: Int, z: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glDrawTexivOES(coords: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glDrawTexivOES(coords: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glDrawTexsOES(x: Short, y: Short, z: Short, width: Short, height: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glDrawTexsvOES(coords: ShortArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glDrawTexsvOES(coords: ShortBuffer)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glDrawTexxOES(x: Int, y: Int, z: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glDrawTexxvOES(coords: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glDrawTexxvOES(coords: IntBuffer)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glEnable(cap: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glEnableClientState(array: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glLoadPaletteFromModelViewMatrixOES()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun glMatrixIndexPointerOES(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glWeightPointerOES(size: Int, type: Int, stride: Int, pointer: Buffer)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun glWeightPointerOES(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -46,12 +46,12 @@ open public class BasicPlatormGeographicMapCellTypeFactory : GeographicMapCellTy
     val LADDER_CELL_TYPE: BasicPlatormGeographicMapCellType
 
     private val maxTileId: Int
-public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
+public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int)
 
-                    var tileTypeToTileIdsMap = tileTypeToTileIdsMap
-
-
-                    var maxTileId = maxTileId
+        Updates for KMP build        
+        {
+    //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
+    //var maxTileId = maxTileId
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -92,7 +92,11 @@ this.maxTileId= maxTileId
 
 
         while(enumeration.hasMoreElements())
-        {key= enumeration.nextElement()!! as String
+        
+
+        Updates for KMP build        
+        {
+key= enumeration.nextElement()!! as String
 logUtil!!.put(key, this, commonStrings!!.INIT)
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 basicPlatormGeographicMapCellType= BasicPlatormGeographicMapCellType(idsWithTypeList)
@@ -139,7 +143,11 @@ this.LADDER_CELL_TYPE= LADDER_CELL_TYPE
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -149,7 +157,11 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -159,7 +171,11 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -169,9 +185,11 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cellType = cellType
+        Updates for KMP build        
+        {
+    //var cellType = cellType
 
     
                         if(cellType!!.getType() == 0)

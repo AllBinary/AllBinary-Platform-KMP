@@ -47,13 +47,21 @@ open public class Points30kPickedUpLayerInterfaceFactory : PickedUpLayerInterfac
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{pickedUpLayerInterfaceFactoryInterface= Points30kPickedUpLayerInterfaceFactory()
+
+
+        Updates for KMP build        
+        {
+pickedUpLayerInterfaceFactoryInterface= Points30kPickedUpLayerInterfaceFactory()
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerInterfaceFactoryInterface{
+: PickedUpLayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +74,11 @@ open fun getInstance()
     private var pool: PointsLayerCircularStaticPool = PointsLayerCircularStaticPool(PointsLayerFactory(GameConfigurationUtil.getInstance()!!.getCompetitionValue() *30000), 1)
 private constructor        ()                        
 
-                            : super(PickedUpLayerTypeFactory.getInstance()!!.POINTS, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(PointsResources.getInstance()!!.RESOURCE_3)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(PointsResources.getInstance()!!.RESOURCE_3)!!.getInstance(0)){
+                            : super(PickedUpLayerTypeFactory.getInstance()!!.POINTS, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(PointsResources.getInstance()!!.RESOURCE_3)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(PointsResources.getInstance()!!.RESOURCE_3)!!.getInstance(0))
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -75,7 +87,11 @@ private constructor        ()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,9 +102,11 @@ open fun getTotal()
                 @Throws(Exception::class)
             override fun process(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sourceLayerInterface = sourceLayerInterface
+
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
 pool.visit(sourceLayerInterface)
 }
 

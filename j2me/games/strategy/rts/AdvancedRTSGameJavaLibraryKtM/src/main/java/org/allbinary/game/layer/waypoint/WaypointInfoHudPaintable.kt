@@ -36,13 +36,21 @@ open public class WaypointInfoHudPaintable : SelectionHudPaintable {
     private val keyvalueDrawString: KeyValueDrawString
 
     private var rtsLayer: RTSLayer
-protected constructor        (){keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+keyvalueDrawString= KeyValueDrawString("Owner: ", this.textX)
 }
 
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-{this.setName(this.getRtsLayer()!!.getName())
+
+
+        Updates for KMP build        
+        {
+this.setName(this.getRtsLayer()!!.getName())
 this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
 this.keyvalueDrawString!!.update(getRtsLayer = this.getRtsLayer()getRtsLayer as WaypointLayer
 getRtsLayer.
@@ -52,9 +60,11 @@ getRtsLayer.
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 
     var textLine2Y: Int = (y +myFont!!.DEFAULT_CHAR_HEIGHT)
@@ -66,16 +76,22 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 
 open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
 
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: RTSLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

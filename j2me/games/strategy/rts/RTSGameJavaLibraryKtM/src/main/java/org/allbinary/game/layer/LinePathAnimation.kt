@@ -40,7 +40,11 @@ open public class LinePathAnimation
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LinePathAnimation{
+: LinePathAnimation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,18 +61,14 @@ open fun getInstance()
         
 open fun paint(graphics: Graphics, point: GPoint, nextPoint: GPoint, tiledLayer: Layer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var point = point
-
-
-                    var nextPoint = nextPoint
-
-
-                    var tiledLayer = tiledLayer
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var point = point
+    //var nextPoint = nextPoint
+    //var tiledLayer = tiledLayer
 graphics.drawLine(nextPoint!!.getX(), nextPoint!!.getY(), point.getX(), point.getY())
 }
 

@@ -50,18 +50,14 @@ open public class HtmlCell : HtmlTag {
     private var body: String
 
     private var after: String
-public constructor        (before: String, width: String, height: String, after: String){
+public constructor        (before: String, width: String, height: String, after: String)
 
-                    var before = before
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var width = width
+var height = height
+var after = after
 this.before= before.toCharArray().concatToString()
 this.after= after.toCharArray().concatToString()
 this.height= height.toCharArray().concatToString()
@@ -73,15 +69,21 @@ addAttribute(WIDTH, this.width)
 
 open fun addText(body: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var body = body
+
+        Updates for KMP build        
+        {
+var body = body
 this.body= body
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
@@ -103,7 +105,11 @@ result += " "
 
                         for (i in 0 until attributeSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = attributeKeys[i]!! as String
 
 

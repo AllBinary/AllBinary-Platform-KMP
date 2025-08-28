@@ -42,9 +42,11 @@ open public class BooleanFileVisitor
     private var filterStringBasicArrayList: BasicArrayList
 public constructor        (filterStringBasicArrayList: BasicArrayList)
             : super()
-        {
+        
 
-                    var filterStringBasicArrayList = filterStringBasicArrayList
+        Updates for KMP build        
+        {
+var filterStringBasicArrayList = filterStringBasicArrayList
 this.setFilterStringBasicArrayList(filterStringBasicArrayList)
 PreLogUtil.put("Filter BasicArrayList: " +this.getFilterStringBasicArrayList()!!.toString(), this, this.commonStrings!!.CONSTRUCTOR)
 }
@@ -52,9 +54,11 @@ PreLogUtil.put("Filter BasicArrayList: " +this.getFilterStringBasicArrayList()!!
 
 open fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
 
@@ -65,9 +69,11 @@ open fun visit(anyType: Any)
 
 open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     var list: BasicArrayList = this.getFilterStringBasicArrayList()!!
 
@@ -83,7 +89,11 @@ open fun visit(file: AbFile)
 
                         for (index in 0 until size)
 
-        {nextFileFilterString= list.get(index) as String
+        
+
+        Updates for KMP build        
+        {
+nextFileFilterString= list.get(index) as String
 
     
                         if(this.visit(file, nextFileFilterString))
@@ -109,7 +119,11 @@ open fun visit(file: AbFile)
 
 open fun getFilterStringBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -119,21 +133,23 @@ open fun getFilterStringBasicArrayList()
 
 open fun setFilterStringBasicArrayList(filterStringBasicArrayList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var filterStringBasicArrayList = filterStringBasicArrayList
+
+        Updates for KMP build        
+        {
+var filterStringBasicArrayList = filterStringBasicArrayList
 this.filterStringBasicArrayList= filterStringBasicArrayList
 }
 
 
 open fun visit(file: AbFile, fileNameString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var file = file
-
-
-                    var fileNameString = fileNameString
+        Updates for KMP build        
+        {
+var file = file
+var fileNameString = fileNameString
 
 
 

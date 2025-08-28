@@ -39,21 +39,23 @@ open public class PathFinderGraphHackVisitorFactory : PathFinderGraphVisitorFact
     private val maxPathWeight: Int
 public constructor        ()                        
 
-                            : this(10, 8, 100000){
+                            : this(10, 8, 100000)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
+public constructor        (edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)
 
-                    var edgeMinimum = edgeMinimum
-
-
-                    var minPathWeight = minPathWeight
-
-
-                    var maxPathWeight = maxPathWeight
+        Updates for KMP build        
+        {
+var edgeMinimum = edgeMinimum
+var minPathWeight = minPathWeight
+var maxPathWeight = maxPathWeight
 this.edgeMinimum= edgeMinimum
 this.minPathWeight= minPathWeight
 this.maxPathWeight= maxPathWeight
@@ -62,9 +64,11 @@ this.maxPathWeight= maxPathWeight
 
 open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
-: PathFinderGraphVisitorBase{
+: PathFinderGraphVisitorBase
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 
 
 

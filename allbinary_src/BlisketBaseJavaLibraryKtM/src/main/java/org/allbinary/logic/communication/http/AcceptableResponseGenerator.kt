@@ -40,7 +40,11 @@ open public class AcceptableResponseGenerator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AcceptableResponseGenerator{
+: AcceptableResponseGenerator
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,16 +57,22 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun get(httpServletRequest: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -102,7 +112,11 @@ open fun get(httpServletRequest: HttpServletRequest)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(acceptable.compareTo(acceptableResponseUtil!!.get(index)) == 0)
                         
@@ -131,7 +145,11 @@ open fun get(httpServletRequest: HttpServletRequest)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         

@@ -39,7 +39,11 @@ open public class OrientationMotionGestureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OrientationMotionGestureFactory{
+: OrientationMotionGestureFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +66,11 @@ open fun getInstance()
     val ROLL_RIGHT: MotionGestureInput
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
 LEFT= MotionGestureInput(MAX -20, "Left Orient")

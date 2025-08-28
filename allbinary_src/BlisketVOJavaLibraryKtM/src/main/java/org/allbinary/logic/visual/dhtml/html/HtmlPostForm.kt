@@ -30,9 +30,11 @@ open public class HtmlPostForm : HtmlForm {
         
 public constructor        (action: String)                        
 
-                            : super(action){
+                            : super(action)
 
-                    var action = action
+        Updates for KMP build        
+        {
+var action = action
 
 
                             //For kotlin this is before the body of the constructor.

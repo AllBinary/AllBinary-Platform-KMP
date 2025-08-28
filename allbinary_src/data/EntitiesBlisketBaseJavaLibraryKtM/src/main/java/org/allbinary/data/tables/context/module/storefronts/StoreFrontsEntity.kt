@@ -44,7 +44,11 @@ open public class StoreFrontsEntity : AbSqlBean
     val tableName: String = "storefronts"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -54,9 +58,11 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
         try {
             super.insert(values)
@@ -70,7 +76,11 @@ open fun insert(values: Vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -86,9 +96,11 @@ open fun insert(values: Vector)
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             super.deleteWhere(StoreFrontData.getInstance()!!.NAME, value)
@@ -102,7 +114,11 @@ open fun delete(value: String)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -120,9 +136,11 @@ open fun delete(value: String)
             
 open fun getStoreFrontInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
-: StoreFront{
+: StoreFront
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -159,7 +177,11 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, name)
 
 open fun getStoreFrontNames()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var storeFrontNames: Vector = super.getColumn(StoreFrontData.getInstance()!!.NAME)!!
 
 
@@ -172,16 +194,22 @@ open fun getStoreFrontNames()
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var updatedValues = updatedValues
+
+        Updates for KMP build        
+        {
+var updatedValues = updatedValues
 super.updateWhere(StoreFrontData.getInstance()!!.NAME, updatedValues!!.get(StoreFrontData.getInstance()!!.NAME) as String, updatedValues)
 }
 
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
 
 
@@ -257,7 +285,11 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -267,7 +299,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -42,7 +42,11 @@ open public class BaseBasicArrayListCache
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("S: ")

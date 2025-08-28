@@ -23,7 +23,11 @@ open public class PlatformKeyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlatformKeyFactory{
+: PlatformKeyFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,9 +46,11 @@ open fun getInstance()
 
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var keyCode = keyCode
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 
 
 
@@ -55,9 +61,11 @@ open fun getString(keyCode: Int)
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -68,9 +76,11 @@ open fun isSubmission(input: Input)
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -81,9 +91,11 @@ open fun isDelete(input: Input)
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -94,9 +106,11 @@ open fun isBackSpace(input: Input)
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -107,9 +121,11 @@ open fun isLeft(input: Input)
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -120,9 +136,11 @@ open fun isRight(input: Input)
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -133,9 +151,11 @@ open fun isUp(input: Input)
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -146,9 +166,11 @@ open fun isDown(input: Input)
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 

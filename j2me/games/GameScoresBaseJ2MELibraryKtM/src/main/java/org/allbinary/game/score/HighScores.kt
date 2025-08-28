@@ -47,15 +47,13 @@ open public class HighScores
     private val columnTwoHeading: String
 public constructor        (name: String, heading: String, columnTwoHeading: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var heading = heading
-
-
-                    var columnTwoHeading = columnTwoHeading
+var name = name
+var heading = heading
+var columnTwoHeading = columnTwoHeading
 this.name= name
 this.heading= heading
 this.columnTwoHeading= columnTwoHeading
@@ -64,15 +62,21 @@ this.columnTwoHeading= columnTwoHeading
 
 open fun setList(orderedHighScoresList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var orderedHighScoresList = orderedHighScoresList
+
+        Updates for KMP build        
+        {
+var orderedHighScoresList = orderedHighScoresList
 this.orderedHighScoresList= orderedHighScoresList
 }
 
 override fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +86,11 @@ override fun getList()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +99,11 @@ open fun getName()
 
 override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -100,16 +112,22 @@ override fun getTotal()
 
 override fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newHighScore = newHighScore
+
+        Updates for KMP build        
+        {
+var newHighScore = newHighScore
 this.orderedHighScoresList!!.add(newHighScore)
 }
 
 
 open fun getHeading()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -119,7 +137,11 @@ open fun getHeading()
 
 open fun getColumnOneHeading()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -129,7 +151,11 @@ open fun getColumnOneHeading()
 
 open fun getColumnTwoHeading()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -140,9 +166,11 @@ open fun getColumnTwoHeading()
                 @Throws(Exception::class)
             override fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newHighScore = newHighScore
+        Updates for KMP build        
+        {
+var newHighScore = newHighScore
 
 
 
@@ -152,7 +180,11 @@ open fun getColumnTwoHeading()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("HighScores: ")

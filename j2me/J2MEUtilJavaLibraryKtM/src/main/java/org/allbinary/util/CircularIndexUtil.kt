@@ -39,9 +39,11 @@ open public class CircularIndexUtil
 
 open fun getInstance(max: Int)
         //nullable =  from not(true or (false and false)) = 
-: CircularIndexUtil{
+: CircularIndexUtil
 
-                    var max = max
+        Updates for KMP build        
+        {
+var max = max
 
 
 
@@ -52,12 +54,12 @@ open fun getInstance(max: Int)
 
 open fun getInstance(index: Int, max: Int)
         //nullable =  from not(true or (false and false)) = 
-: CircularIndexUtil{
+: CircularIndexUtil
 
-                    var index = index
-
-
-                    var max = max
+        Updates for KMP build        
+        {
+var index = index
+var max = max
 
 
 
@@ -75,28 +77,34 @@ open fun getInstance(index: Int, max: Int)
     private var size: Int = 0
 private constructor        (index: Int, size: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var index = index
-
-
-                    var size = size
+var index = index
+var size = size
 this.setSize(size)
 this.setIndex(index)
 }
 
 private constructor        (size: Int)
             : super()
-        {
+        
 
-                    var size = size
+        Updates for KMP build        
+        {
+var size = size
 this.setSize(size)
 }
 
 
 open fun next()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     
                         if(this.index >= this.lastIndex)
                         
@@ -120,7 +128,11 @@ open fun next()
 
 open fun previous()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     
                         if(this.index < 1)
                         
@@ -144,9 +156,11 @@ open fun previous()
 
 open fun setIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+var index = index
 
     
                         if(index > this.lastIndex)
@@ -166,7 +180,11 @@ this.index= index
 
 open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -176,9 +194,11 @@ open fun getIndex()
 
 open fun setSize(size: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var size = size
+
+        Updates for KMP build        
+        {
+var size = size
 this.size= size
 this.lastIndex= size -1
 this.index= 0
@@ -187,7 +207,11 @@ this.index= 0
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -196,7 +220,11 @@ open fun getSize()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

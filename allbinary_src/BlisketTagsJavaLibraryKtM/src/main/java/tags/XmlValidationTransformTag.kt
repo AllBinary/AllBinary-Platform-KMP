@@ -35,14 +35,22 @@ open public class XmlValidationTransformTag : TransformTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
@@ -61,7 +69,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -83,7 +95,11 @@ open fun isValid()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             this.setHelper()
 
@@ -111,7 +127,11 @@ open fun doStartTag()
                         }
                             
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -119,7 +139,11 @@ open fun doStartTag()
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

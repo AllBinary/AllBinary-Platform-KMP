@@ -59,15 +59,13 @@ open public class GameNotification
 
 open fun add(string: String, seconds: Integer, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var string = string
 
 
-                    var seconds = seconds
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var string = string
+var seconds = seconds
+var basicColor = basicColor
 
     
                         if(!this.stringList!!.contains(string))
@@ -84,7 +82,11 @@ this.colorList!!.add(basicColor)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.stringList!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.stringList!!.clear()
 this.timeList!!.clear()
 this.colorList!!.clear()
 }
@@ -92,7 +94,11 @@ this.colorList!!.clear()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

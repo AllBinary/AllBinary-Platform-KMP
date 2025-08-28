@@ -56,9 +56,11 @@ open public class BasicPersitance
     val idList: BasicArrayList = BasicArrayList()
 protected constructor        (recordId: String)
             : super()
-        {
+        
 
-                    var recordId = recordId
+        Updates for KMP build        
+        {
+    //var recordId = recordId
 this.recordId= recordId
 }
 
@@ -67,9 +69,11 @@ this.recordId= recordId
             
 open fun deleteRecoreStore(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 RecordStore.deleteRecordStore(this.getRecordId(abeClientInformation))
 }
 
@@ -78,9 +82,11 @@ RecordStore.deleteRecordStore(this.getRecordId(abeClientInformation))
             
 open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
     var size: Int = idList!!.size()!!
 
@@ -90,7 +96,11 @@ open fun deleteAll(abeClientInformation: AbeClientInformationInterface)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var integer: Integer = this.idList!!.objectArray[index]!! as Integer
 
 this.delete(abeClientInformation, integer.toInt())
@@ -104,12 +114,12 @@ this.clear()
             
 open fun delete(abeClientInformation: AbeClientInformationInterface, deleteId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var deleteId = deleteId
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var deleteId = deleteId
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
@@ -120,7 +130,11 @@ open fun delete(abeClientInformation: AbeClientInformationInterface, deleteId: I
 recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)
 recordStore!!.deleteRecord(deleteId)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -147,9 +161,11 @@ recordStore!!.closeRecordStore()
 
 open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
 
 
@@ -160,7 +176,11 @@ open fun getRecordId(abeClientInformation: AbeClientInformationInterface)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -170,7 +190,11 @@ open fun getList()
 
 open fun getIds()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,7 +204,11 @@ open fun getIds()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.valueList!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.valueList!!.clear()
 this.idList!!.clear()
 }
 

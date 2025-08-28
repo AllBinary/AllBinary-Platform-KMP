@@ -45,81 +45,59 @@ open public class PooledImageArrayRotationAnimationFactory
     private val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var image = image
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, image.getWidth(), image.getHeight(),  -(image.getWidth() shr 2),  -(image.getHeight() shr 2))
 }
 
 public constructor        (image: Image, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, image.getWidth(), image.getHeight(), dx, dy)
 }
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, width, height, dx, dy)
 }
 
 public constructor        (image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.animationBehaviorFactory= animationBehaviorFactory
 this.init(image, width, height, dx, dy, angleIncrement)
 }
@@ -129,21 +107,15 @@ this.init(image, width, height, dx, dy, angleIncrement)
             
 open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
 
     var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE
 
@@ -158,24 +130,16 @@ this.init(image, width, height, dx, dy, angleIncrement)
             
 open fun init(image: Image, width: Int, height: Int, dx: Int, dy: Int, angleIncrement: Short)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var angleIncrement = angleIncrement
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var dx = dx
+    //var dy = dy
+    //var angleIncrement = angleIncrement
 
     var totalAngle: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE
 
@@ -190,9 +154,11 @@ allBinaryImageRotationAnimationInfo= ImageArrayRotationAnimationInfo(imageArray,
             
 open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 
@@ -203,9 +169,11 @@ open fun getInstance(instanceId: Int)
 
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

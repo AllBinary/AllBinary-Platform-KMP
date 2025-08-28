@@ -33,7 +33,11 @@ open public class TouchButtonResourceOpenGLESAnimationInterfaceFactoryInterfaceF
         
 public constructor        ()                        
 
-                            : super("OpenGL TouchButton Animations"){
+                            : super("OpenGL TouchButton Animations")
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -43,15 +47,21 @@ public constructor        ()
                 @Throws(Exception::class)
             override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 super.init(OpenGLImageCacheFactory.getInstance(), level)
 }
 
 override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(Features.getInstance()!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         

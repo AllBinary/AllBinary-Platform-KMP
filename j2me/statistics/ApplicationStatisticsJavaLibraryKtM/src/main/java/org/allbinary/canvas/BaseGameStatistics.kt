@@ -52,12 +52,20 @@ open public class BaseGameStatistics
     val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.timeDelayHelper!!.setStartTime()
+
+
+        Updates for KMP build        
+        {
+this.timeDelayHelper!!.setStartTime()
 this.totalRefreshes= 0
 this.totalFrames= 0
 }
@@ -65,26 +73,40 @@ this.totalFrames= 0
 
 open fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var string = string
+
+        Updates for KMP build        
+        {
+var string = string
 }
 
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.totalFrames++
+
+
+        Updates for KMP build        
+        {
+this.totalFrames++
 }
 
 
 open fun nextRefresh()
         //nullable = true from not(false or (false and true)) = true
-{this.totalRefreshes++
+
+
+        Updates for KMP build        
+        {
+this.totalRefreshes++
 }
 
 
@@ -92,7 +114,11 @@ open fun nextRefresh()
 
 open fun getRefreshRate()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
     var elapsed: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 
@@ -125,7 +151,11 @@ open fun getRefreshRate()
 
 open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper{
+: TimeDelayHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,7 +187,11 @@ open fun getTimeDelayHelper()
 
 open fun toCharArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<CharArray?>{
+: Array<CharArray?>
+
+        Updates for KMP build        
+        {
+
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 totalTime= (totalTime shr DEFAULT_SCALE_FACTOR)
@@ -249,7 +283,11 @@ CHAR_ARRAY[3]!![1]= PLUS_CHAR
 
 open fun toStringArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+: Array<String?>
+
+        Updates for KMP build        
+        {
+
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 totalTime= (totalTime /10000)
@@ -288,9 +326,11 @@ STRING_ARRAY[9]= string
 
 open fun toString(totalTime: Long)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var totalTime = totalTime
+        Updates for KMP build        
+        {
+var totalTime = totalTime
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -322,7 +362,11 @@ stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var totalTime: Long = this.timeDelayHelper!!.getElapsed(this.gameTickTimeDelayHelper!!.startTime)!!
 
 totalTime= (totalTime /1000)

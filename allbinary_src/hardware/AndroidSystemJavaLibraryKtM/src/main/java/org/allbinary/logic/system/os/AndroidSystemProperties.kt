@@ -42,7 +42,11 @@ open public class AndroidSystemProperties
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidSystemProperties{
+: AndroidSystemProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,15 +59,21 @@ open fun getInstance()
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        (context: Context)
             : super()
-        {
+        
 
-                    var context = context
+        Updates for KMP build        
+        {
+var context = context
 }
 
 
 open fun getDeviceId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +83,11 @@ open fun getDeviceId()
 
 open fun getDeviceSoftwareVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,7 +97,11 @@ open fun getDeviceSoftwareVersion()
 
 open fun getLine1Number()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +111,11 @@ open fun getLine1Number()
 
 open fun getNetworkCountryIso()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +125,11 @@ open fun getNetworkCountryIso()
 
 open fun getNetworkOperator()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,7 +139,11 @@ open fun getNetworkOperator()
 
 open fun getNetworkOperatorName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,7 +153,11 @@ open fun getNetworkOperatorName()
 
 open fun getSimCountryIso()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -133,7 +167,11 @@ open fun getSimCountryIso()
 
 open fun getSimOperator()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -143,7 +181,11 @@ open fun getSimOperator()
 
 open fun getSimOperatorName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -153,7 +195,11 @@ open fun getSimOperatorName()
 
 open fun getSimSerialNumber()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -163,7 +209,11 @@ open fun getSimSerialNumber()
 
 open fun getSubscriberId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,7 +223,11 @@ open fun getSubscriberId()
 
 open fun getVoiceMailAlphaTag()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -183,7 +237,11 @@ open fun getVoiceMailAlphaTag()
 
 open fun getVoiceMailNumber()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -193,7 +251,11 @@ open fun getVoiceMailNumber()
 
 open fun getNetworkType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -203,7 +265,11 @@ open fun getNetworkType()
 
 open fun getPhoneType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -213,7 +279,11 @@ open fun getPhoneType()
 
 open fun getBoard()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -223,7 +293,11 @@ open fun getBoard()
 
 open fun getBrand()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -233,7 +307,11 @@ open fun getBrand()
 
 open fun getDevice()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -243,7 +321,11 @@ open fun getDevice()
 
 open fun getFingerprint()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -253,7 +335,11 @@ open fun getFingerprint()
 
 open fun getHost()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -263,7 +349,11 @@ open fun getHost()
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -273,7 +363,11 @@ open fun getId()
 
 open fun getModel()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -283,7 +377,11 @@ open fun getModel()
 
 open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -293,7 +391,11 @@ open fun getProduct()
 
 open fun getTags()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -303,7 +405,11 @@ open fun getTags()
 
 open fun getTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -313,7 +419,11 @@ open fun getTime()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -323,7 +433,11 @@ open fun getType()
 
 open fun getUser()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

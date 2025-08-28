@@ -42,9 +42,11 @@ open public class BasicCrypt
     private val key: ByteArray
 public constructor        (keyAsString: String)
             : super()
-        {
+        
 
-                    var keyAsString = keyAsString
+        Updates for KMP build        
+        {
+var keyAsString = keyAsString
 
     var key: ByteArray = NullUtil.getInstance()!!.NULL_BYTE_ARRAY
 
@@ -52,7 +54,11 @@ public constructor        (keyAsString: String)
         try {
             key= keyAsString!!.encodeToByteArray()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "AbCrypt(alg,key)", e)
@@ -63,9 +69,11 @@ this.key= key
 
 override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
         try {
             
@@ -74,7 +82,11 @@ override fun encrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mutilate(array)
 } catch(e: Exception)
-            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -86,9 +98,11 @@ override fun encrypt(array: ByteArray)
 
 override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
         try {
             
@@ -97,7 +111,11 @@ override fun decrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.mutilate(array)
 } catch(e: Exception)
-            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 
@@ -110,9 +128,11 @@ override fun decrypt(array: ByteArray)
 
 open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
     var value: Byte
 
@@ -122,7 +142,11 @@ open fun mutilate(array: ByteArray)
 
                         for (index in 0 until key.size)
 
-        {value= key[index]!!
+        
+
+        Updates for KMP build        
+        {
+value= key[index]!!
 array= byteUtil!!.xor(array, value)
 }
 

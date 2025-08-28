@@ -47,12 +47,12 @@ open public class TagHelperFactory
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+    //var hashMap = hashMap
+    //var pageContext = pageContext
 
 
 

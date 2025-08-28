@@ -52,12 +52,12 @@ open public class XmlOptionItemsRequestHelper : ModifyTable {
     private var timeEntered: String
 
     private var lastModified: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
 this.getFormData()
 }
@@ -65,7 +65,11 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request.getParameter(BasicItemData.ID)
+
+
+        Updates for KMP build        
+        {
+this.id= request.getParameter(BasicItemData.ID)
 this.xmlFileStatus= request.getParameter(XmlOptionItemData.XML_FILE_STATUS)
 this.optionXmlFile= request.getParameter(XmlOptionItemData.OPTION_XML_FILE)
 this.timeEntered= request.getParameter(EntryData.getInstance()!!.TIMECREATED)
@@ -75,7 +79,11 @@ this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
 values.put(BasicItemData.ID, this.id)
@@ -100,7 +108,11 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
@@ -137,7 +149,11 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to insert " +id +" into items table"
 
 
@@ -161,7 +177,11 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.delete(id)
 
@@ -182,7 +202,11 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to delete"
 
 
@@ -206,7 +230,11 @@ open fun delete()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Update Successful"
@@ -230,7 +258,11 @@ XmlOptionItemsEntityFactory.getInstance()!!.getXmlOptionItemsEntityInstance()!!.
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to update: " +id
 
 

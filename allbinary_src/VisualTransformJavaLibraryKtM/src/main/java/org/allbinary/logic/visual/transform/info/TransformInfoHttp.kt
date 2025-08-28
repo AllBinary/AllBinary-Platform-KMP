@@ -49,15 +49,13 @@ open public class TransformInfoHttp : TransformInfo
     private val abContext: AbContext
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext, crud: Boolean)                        
 
-                            : super(){
+                            : super()
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
-
-
-                    var crud = crud
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
+var crud = crud
 
 
                             //For kotlin this is before the body of the constructor.
@@ -77,15 +75,13 @@ this.override(propertiesHashMap)
 
 public constructor        (request: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(){
+                            : super()
 
-                    var request = request
-
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var request = request
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -107,15 +103,13 @@ this.override(propertiesHashMap)
 
 public constructor        (databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(){
+                            : super()
 
-                    var databaseHashMap = databaseHashMap
-
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var databaseHashMap = databaseHashMap
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -135,12 +129,12 @@ this.set(databaseHashMap)
 
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(){
+                            : super()
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -160,9 +154,11 @@ this.set(propertiesHashMap)
 
 public constructor        (parentViewOfThisTransformInfoInterface: TransformInfoHttp)                        
 
-                            : super(){
+                            : super()
 
-                    var parentViewOfThisTransformInfoInterface = parentViewOfThisTransformInfoInterface
+        Updates for KMP build        
+        {
+var parentViewOfThisTransformInfoInterface = parentViewOfThisTransformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -175,9 +171,11 @@ this.abContext= AbContext(parentViewOfThisTransformInfoInterface!!.getProperties
             
 open fun set(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashMap = hashMap
+
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -242,7 +240,11 @@ this.setData(hashMap!!.get(transformInfoData!!.DATA) as String)
 
 open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
-: WeblisketSessionInterface{
+: WeblisketSessionInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -252,7 +254,11 @@ open fun getWeblisketSession()
 
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
-: PageContext{
+: PageContext
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -262,7 +268,11 @@ open fun getPageContext()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -274,7 +284,11 @@ open fun getPropertiesHashMap()
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -286,7 +300,11 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -298,7 +316,11 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

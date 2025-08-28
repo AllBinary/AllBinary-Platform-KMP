@@ -39,12 +39,12 @@ open public class VectorAnimationFactory
             }            
         override fun getInstance(points: Array<Array<IntArray?>?>, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: VectorAnimation{
+: VectorAnimation
 
-                    var points = points
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var points = points
+    //var basicColor = basicColor
 
 
 

@@ -32,18 +32,14 @@ open public class PathFinderGraphHackVisitor : BasePathFinderGraphVisitor {
         
 public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)                        
 
-                            : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight){
+                            : super(geographicMapInterface, edgeMinimum, minPathWeight, maxPathWeight)
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var edgeMinimum = edgeMinimum
-
-
-                    var minPathWeight = minPathWeight
-
-
-                    var maxPathWeight = maxPathWeight
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+var edgeMinimum = edgeMinimum
+var minPathWeight = minPathWeight
+var maxPathWeight = maxPathWeight
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,15 +51,13 @@ public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinim
             
 open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graph = graph
 
 
-                    var startPathFindingNodeList = startPathFindingNodeList
-
-
-                    var endPathFindingNodeList = endPathFindingNodeList
+        Updates for KMP build        
+        {
+var graph = graph
+var startPathFindingNodeList = startPathFindingNodeList
+var endPathFindingNodeList = endPathFindingNodeList
 this.fixStart(graph, startPathFindingNodeList)
 this.fixEnd(graph, endPathFindingNodeList)
 this.fixOverPassEdges(graph)
@@ -74,12 +68,12 @@ this.fixOverPassEdges(graph)
             
 open fun fixStart(graph: Any, startPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graph = graph
 
 
-                    var startPathFindingNodeList = startPathFindingNodeList
+        Updates for KMP build        
+        {
+var graph = graph
+var startPathFindingNodeList = startPathFindingNodeList
 }
 
 
@@ -87,12 +81,12 @@ open fun fixStart(graph: Any, startPathFindingNodeList: BasicArrayList)
             
 open fun fixEnd(graph: Any, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graph = graph
 
 
-                    var endPathFindingNodeList = endPathFindingNodeList
+        Updates for KMP build        
+        {
+var graph = graph
+var endPathFindingNodeList = endPathFindingNodeList
 }
 
 
@@ -100,9 +94,11 @@ open fun fixEnd(graph: Any, endPathFindingNodeList: BasicArrayList)
             
 open fun fixOverPassEdges(graph: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graph = graph
+
+        Updates for KMP build        
+        {
+var graph = graph
 }
 
 
@@ -110,15 +106,13 @@ open fun fixOverPassEdges(graph: Any)
             
 open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var startPathFindingNodeList = startPathFindingNodeList
 
 
-                    var endPathFindingNodeList = endPathFindingNodeList
-
-
-                    var pathList = pathList
+        Updates for KMP build        
+        {
+var startPathFindingNodeList = startPathFindingNodeList
+var endPathFindingNodeList = endPathFindingNodeList
+var pathList = pathList
 }
 
 
@@ -126,17 +120,21 @@ open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
             
 open fun removeOverPassEdges(pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathList = pathList
+
+        Updates for KMP build        
+        {
+var pathList = pathList
 }
 
 
 open fun isValid(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var graphPath = graphPath
+        Updates for KMP build        
+        {
+var graphPath = graphPath
 
 
 

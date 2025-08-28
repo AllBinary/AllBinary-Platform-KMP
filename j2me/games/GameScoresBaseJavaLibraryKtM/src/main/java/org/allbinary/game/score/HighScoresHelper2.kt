@@ -40,15 +40,21 @@ open public class HighScoresHelper2 : HighScoresHelperBase {
     private var selectedHighScores: HighScores = NullHighScoresSingletonFactory.getInstance()!!
 override fun setSelectedHighScores(selectedHighScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedHighScores = selectedHighScores
+
+        Updates for KMP build        
+        {
+    //var selectedHighScores = selectedHighScores
 this.selectedHighScores= selectedHighScores
 }
 
 override fun getSelectedHighScores()
         //nullable = true from not(false or (false and true)) = true
-: HighScores{
+: HighScores
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,9 +63,11 @@ override fun getSelectedHighScores()
 
 override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var highScoresArrayP = highScoresArrayP
+
+        Updates for KMP build        
+        {
+    //var highScoresArrayP = highScoresArrayP
 super.setHighScoresArray(highScoresArrayP)
 this.circularIndexUtil!!.setSize(this.highScoresArrayP!!.size)
 this.selectHighScores()
@@ -67,7 +75,11 @@ this.selectHighScores()
 
 override fun selectHighScores()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.highScoresArrayP!!.size == 0)
                         
@@ -90,7 +102,11 @@ this.circularIndexUtil!!.next()
 
 
         while(highScores!!.getTotal() < 1 && index < this.highScoresArrayP!!.size)
-        {highScores= this.highScoresArrayP[this.circularIndexUtil!!.next()]!!
+        
+
+        Updates for KMP build        
+        {
+highScores= this.highScoresArrayP[this.circularIndexUtil!!.next()]!!
 index++
 }
 

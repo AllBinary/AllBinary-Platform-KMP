@@ -38,12 +38,12 @@ open public class AdminConfigurationRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var request: HttpServletRequest
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGS))
@@ -59,7 +59,11 @@ this.request= pageContext!!.getRequest() as HttpServletRequest
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -92,7 +96,11 @@ adminConfigurationInterface!!.write()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to created AdminConfiguration"
 
 
@@ -116,7 +124,11 @@ adminConfigurationInterface!!.write()
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully deleted AdminConfiguration"
@@ -136,7 +148,11 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to delete"
 
 
@@ -160,7 +176,11 @@ open fun delete()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Updated AdminConfiguration Successful"
@@ -183,7 +203,11 @@ open fun update()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to update"
 
 

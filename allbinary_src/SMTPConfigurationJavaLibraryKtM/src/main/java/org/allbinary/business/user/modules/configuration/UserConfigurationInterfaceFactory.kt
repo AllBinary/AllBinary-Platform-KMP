@@ -49,9 +49,11 @@ open public class UserConfigurationInterfaceFactory
             
 open fun getInstance(document: Document)
         //nullable =  from not(true or (false and false)) = 
-: UserConfigurationInterface{
+: UserConfigurationInterface
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var configurationNode: Node = DomSearchHelper.getNode(UserConfigurationData.NAME, document.getChildNodes())!!
 
@@ -68,9 +70,11 @@ open fun getInstance(document: Document)
             
 open fun getInstance(userRole: UserRole)
         //nullable =  from not(true or (false and false)) = 
-: UserConfigurationInterface{
+: UserConfigurationInterface
 
-                    var userRole = userRole
+        Updates for KMP build        
+        {
+var userRole = userRole
 
     var abPath: AbPath = AbPath(URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.USERCONFIGURATIONPATH, configurationName +userRole!!.toString() +AbPathData.getInstance()!!.EXTENSION_SEP +UserConfigurationData.UNCRYPTED_EXTENSION)
 
@@ -93,7 +97,11 @@ open fun getInstance(userRole: UserRole)
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UserConfigurationInterface{
+: UserConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,7 +112,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

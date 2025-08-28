@@ -72,27 +72,17 @@ open public class HighScoreUtil
     private var firstTime: Boolean = true
 public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var highScoresFactoryInterface = highScoresFactoryInterface
-
-
-                    var highScoresHelper = highScoresHelper
-
-
-                    var abeClientInformation = abeClientInformation
-
-
-                    var gameInfo = gameInfo
-
-
-                    var cmdListener = cmdListener
-
-
-                    var name = name
-
-
-                    var highScore = highScore
+    //var highScoresFactoryInterface = highScoresFactoryInterface
+    //var highScoresHelper = highScoresHelper
+    //var abeClientInformation = abeClientInformation
+    //var gameInfo = gameInfo
+    //var cmdListener = cmdListener
+    //var name = name
+    //var highScore = highScore
 this.highScoresFactoryInterface= highScoresFactoryInterface
 this.highScoresHelper= highScoresHelper
 this.highScoresArray= this.highScoresHelper!!.getHighScoresArray()
@@ -103,9 +93,11 @@ this.gameInfo= gameInfo
 
 override fun setHighScoresArray(highScoresArray: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var highScoresArray = highScoresArray
+
+        Updates for KMP build        
+        {
+    //var highScoresArray = highScoresArray
 this.highScoresArray= highScoresArray
 firstTime= false
 this.saveHighScore()
@@ -114,9 +106,11 @@ this.saveHighScore()
 
 open fun update(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+    //var name = name
 HighScoreNamePersistanceSingleton.getInstance()!!.save(abeClientInformation, gameInfo, name)
 this.highScore!!.setName(name)
 }
@@ -124,7 +118,11 @@ this.highScore!!.setName(name)
 
 open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(StringMaker().
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(StringMaker().
                             append(commonStrings!!.START)!!.append(StringUtil.getInstance()!!.toString(this.highScore))!!.toString(), this, "saveHighScore")
 
     var size: Int = this.highScoresArray!!.size
@@ -157,7 +155,11 @@ highScoresFactoryInterface!!.fetchHighScores(gameInfo, this)
 
                         for (index in 0 until size)
 
-        {highScores= highScoresArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+highScores= highScoresArray[index]!!
 highScores!!.addHighScore(this.highScore)
 highScoresAsString= highScores!!.toString()
 logUtil!!.put(StringMaker().
@@ -170,9 +172,11 @@ this.highScoresHelper!!.setHighScoresArray(highScoresArray)
 
 open fun submit(myCanvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var myCanvas = myCanvas
+
+        Updates for KMP build        
+        {
+    //var myCanvas = myCanvas
 
     var commandListener: CommandListener = myCanvas!!.getCustomCommandListener()!!
 

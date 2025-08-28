@@ -40,12 +40,12 @@ open public class CombatBaseBehavior
     private var readyForExplosion: Boolean= false
 public constructor        (damageableBaseBehavior: DamageableBaseBehavior, destroyableBaseBehavior: DestroyableBaseBehavior)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var damageableBaseBehavior = damageableBaseBehavior
-
-
-                    var destroyableBaseBehavior = destroyableBaseBehavior
+var damageableBaseBehavior = damageableBaseBehavior
+var destroyableBaseBehavior = destroyableBaseBehavior
 this.damageableBaseBehavior= damageableBaseBehavior
 this.destroyableBaseBehavior= destroyableBaseBehavior
 }
@@ -53,7 +53,11 @@ this.destroyableBaseBehavior= destroyableBaseBehavior
 
 open fun getDamageableBaseBehavior()
         //nullable = true from not(false or (false and true)) = true
-: DamageableBaseBehavior{
+: DamageableBaseBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +67,11 @@ open fun getDamageableBaseBehavior()
 
 open fun getDestroyableBaseBehavior()
         //nullable = true from not(false or (false and true)) = true
-: DestroyableBaseBehavior{
+: DestroyableBaseBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +81,11 @@ open fun getDestroyableBaseBehavior()
 
 open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,9 +95,11 @@ open fun isReadyForExplosion()
 
 open fun setReadyForExplosion(readyForExplosion: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var readyForExplosion = readyForExplosion
+
+        Updates for KMP build        
+        {
+var readyForExplosion = readyForExplosion
 this.readyForExplosion= readyForExplosion
 }
 

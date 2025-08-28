@@ -40,7 +40,11 @@ open public class LayerDistanceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerDistanceUtil{
+: LayerDistanceUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,12 +63,12 @@ open fun getInstance()
 
 open fun getDistance(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var layerInterface = layerInterface
-
-
-                    var layerInterface2 = layerInterface2
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var layerInterface2 = layerInterface2
 
     var dx: Int = (layerInterface!!.getXP() +layerInterface!!.getHalfWidth()) -(layerInterface2!!.getXP() +layerInterface2!!.getHalfWidth())
 
@@ -81,12 +85,12 @@ open fun getDistance(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryL
 
 open fun getDistance3D(layerInterface: AllBinaryLayer, layerInterface2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var layerInterface = layerInterface
-
-
-                    var layerInterface2 = layerInterface2
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var layerInterface2 = layerInterface2
 
     var dx: Int = (layerInterface!!.getXP() +layerInterface!!.getHalfWidth()) -(layerInterface2!!.getXP() +layerInterface2!!.getHalfWidth())
 
@@ -106,12 +110,12 @@ open fun getDistance3D(layerInterface: AllBinaryLayer, layerInterface2: AllBinar
 
 open fun getDistance(layerInterface: AllBinaryLayer, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var layerInterface = layerInterface
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var point = point
 
     var dx: Int = layerInterface!!.getXP() -point.getX()
 

@@ -34,7 +34,11 @@ open public class JvmStatisticsMapping : JvmStatistics
         
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -43,7 +47,11 @@ public constructor        ()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(JvmStatisticsData.FREE_MEMORY_BYTES, this.getFreeMemoryBytesString())
@@ -68,7 +76,11 @@ hashMap!!.put(JvmStatisticsData.TOTAL_MEMORY_MEGABYTES, this.getTotalMemoryMegab
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,7 +92,11 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 vector.add(this.getFreeMemoryBytesString())

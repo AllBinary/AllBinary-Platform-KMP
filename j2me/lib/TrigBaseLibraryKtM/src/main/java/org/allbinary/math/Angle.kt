@@ -34,16 +34,22 @@ open public class Angle
     private var value: Short
 public constructor        (angle: Short)
             : super()
-        {
+        
 
-                    var angle = angle
+        Updates for KMP build        
+        {
+    //var angle = angle
 this.value= angle
 }
 
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -43,7 +43,11 @@ open public class PartnerIdentifierFileUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PartnerIdentifierFileUtil{
+: PartnerIdentifierFileUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,7 +68,11 @@ open fun getInstance()
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
@@ -105,7 +113,11 @@ inputStreamReader!!.close()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return partnerString
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)

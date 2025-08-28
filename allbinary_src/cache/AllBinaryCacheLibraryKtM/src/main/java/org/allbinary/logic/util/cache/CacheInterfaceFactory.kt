@@ -37,12 +37,12 @@ open public class CacheInterfaceFactory
             
 open fun getInstance(cacheType: CacheType, cachePolicy: CachePolicy)
         //nullable =  from not(true or (false and false)) = 
-: CacheInterface{
+: CacheInterface
 
-                    var cacheType = cacheType
-
-
-                    var cachePolicy = cachePolicy
+        Updates for KMP build        
+        {
+var cacheType = cacheType
+var cachePolicy = cachePolicy
 
 
 
@@ -53,7 +53,11 @@ open fun getInstance(cacheType: CacheType, cachePolicy: CachePolicy)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

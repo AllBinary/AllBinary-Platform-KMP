@@ -35,7 +35,11 @@ open public class MotionLaptopDefaultGameInputMapping : PersistentInputMapping {
         
 public constructor        ()                        
 
-                            : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID){
+                            : super(GamePersistanceStrings.getInstance()!!.DEFAULT_INPUT_MAPPING_RECORD_ID)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     

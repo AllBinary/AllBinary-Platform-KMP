@@ -55,14 +55,20 @@ open public class UniqueIdGenerator
     private var id: Long = 0
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun initialize(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             newFile!!.createNewFile()
@@ -71,7 +77,11 @@ open fun initialize(value: Int)
 
 idData!!.writeLong(value)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
@@ -93,12 +103,12 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "initialize", e)
 
 open fun setFile(filePathName: String, name: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var filePathName = filePathName
 
 
-                    var name = name
+        Updates for KMP build        
+        {
+var filePathName = filePathName
+var name = name
 newFile= AbFile(filePathName)
 }
 
@@ -108,7 +118,11 @@ newFile= AbFile(filePathName)
 
 open fun getNext()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var idData: AbDataInputStream = 
                 null
             
@@ -139,7 +153,11 @@ idOutData!!.writeLong(id +1)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return idLong!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         

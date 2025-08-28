@@ -34,17 +34,26 @@ open fun insert()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 }
                 

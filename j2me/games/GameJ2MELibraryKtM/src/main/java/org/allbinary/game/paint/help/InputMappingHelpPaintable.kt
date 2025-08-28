@@ -81,15 +81,13 @@ open public class InputMappingHelpPaintable : HelpPaintable {
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 protected constructor        (gameInputMappingArray: Array<GameInputMapping?>, backgroundBasicColor: BasicColor, basicColor: BasicColor)                        
 
-                            : super("Input Mapping", backgroundBasicColor, basicColor){
+                            : super("Input Mapping", backgroundBasicColor, basicColor)
 
-                    var gameInputMappingArray = gameInputMappingArray
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var gameInputMappingArray = gameInputMappingArray
+    //var backgroundBasicColor = backgroundBasicColor
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -115,12 +113,12 @@ this.update(NONE, NONE)
 
 open fun update(selectedGameKey: GameKey, selectedInput: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var selectedGameKey = selectedGameKey
 
 
-                    var selectedInput = selectedInput
+        Updates for KMP build        
+        {
+    //var selectedGameKey = selectedGameKey
+    //var selectedInput = selectedInput
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -160,7 +158,11 @@ logUtil!!.put(stringMaker!!.append(CommonLabels.getInstance()!!.START_LABEL)!!.a
 
                         for (index in 0 until size)
 
-        {gameInputMapping= gameInputMappingArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+gameInputMapping= gameInputMappingArray[index]!!
 gameKey= gameInputMapping!!.getGameKey()
 list= gameKeyMapping!!.getInputMapping()!!.getMappedInput(gameKey)
 
@@ -173,7 +175,11 @@ inputBasicColorArray[index]= arrayOfNulls(size2)
 
                         for (index2 in 0 until size2)
 
-        {inputBasicColorArray[index]!![index2]= this.basicColor
+        
+
+        Updates for KMP build        
+        {
+inputBasicColorArray[index]!![index2]= this.basicColor
 }
 
 
@@ -219,9 +225,11 @@ super.setInputInfoP(keyInfo)
 
 open fun get(keyList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var keyList = keyList
+        Updates for KMP build        
+        {
+var keyList = keyList
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -237,7 +245,11 @@ open fun get(keyList: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {key= keyList!!.objectArray[index]!! as Input
+        
+
+        Updates for KMP build        
+        {
+key= keyList!!.objectArray[index]!! as Input
 stringBuffer!!.append(key.getName())
 
     
@@ -285,7 +297,11 @@ stringBuffer!!.append(key.getName())
 
 override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var myFont: MyFont = MyFont.getInstance()!!
 
 
@@ -305,9 +321,11 @@ override fun getHeight()
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
     var font: Font = graphics.getFont()!!
 
@@ -371,7 +389,11 @@ graphics.drawString(this.TITLE, halfWidth -beginWidth, charHeight, anchor)
 
                         for (index in 0 until size)
 
-        {y= (index +3) *charHeight
+        
+
+        Updates for KMP build        
+        {
+y= (index +3) *charHeight
 deltaX= 0
 list= this.keyMappingArray[index]!!
 size2= list.size()
@@ -389,7 +411,11 @@ deltaX += font.stringWidth(actionString)
 
                         for (index2 in 0 until size2)
 
-        {input= list.objectArray[index2]!! as Input
+        
+
+        Updates for KMP build        
+        {
+input= list.objectArray[index2]!! as Input
 graphics.setColor(this.inputBasicColorArray[index]!![index2]!!.toInt())
 graphics.drawString(input.getName(), halfWidth -beginWidth +deltaX, y, anchor)
 deltaX += font.stringWidth(input.getName())

@@ -33,9 +33,11 @@ open public class RTSLayerEvent : AllBinaryEventObject {
     private var rtsLayer: PathFindingLayerInterface
 public constructor        (rtsLayer: PathFindingLayerInterface)                        
 
-                            : super(rtsLayer){
+                            : super(rtsLayer)
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,7 +46,11 @@ public constructor        (rtsLayer: PathFindingLayerInterface)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("RTSLayerEvent: \n")
@@ -60,7 +66,11 @@ stringBuffer!!.append(this.getRtsLayer()!!.toString())
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingLayerInterface{
+: PathFindingLayerInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +80,11 @@ open fun getRtsLayer()
 
 open fun setRtsLayer(rtsLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
 

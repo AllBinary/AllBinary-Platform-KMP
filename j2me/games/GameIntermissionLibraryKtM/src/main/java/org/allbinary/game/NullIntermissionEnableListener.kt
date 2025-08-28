@@ -38,7 +38,11 @@ open public class NullIntermissionEnableListener
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: IntermissionEnableListenerInterface{
+: IntermissionEnableListenerInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,13 +53,19 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 override fun notifyIntermission(enable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var enable = enable
+
+        Updates for KMP build        
+        {
+var enable = enable
 }
 
 

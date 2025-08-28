@@ -24,7 +24,11 @@ open public class OpenGLTextureFactory : PlatformTextureBaseFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLTextureFactory{
+: OpenGLTextureFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -35,28 +39,24 @@ open fun getInstance()
         }
             
     private val gluUtils: OpenGLGLUUtils = OpenGLGLUUtils.getInstance()!!
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun load(gl: GL10, target: Int, level: Int, image: Image, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var target = target
-
-
-                    var level = level
-
-
-                    var image = image
-
-
-                    var border = border
-
-
-                    var flip = flip
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var target = target
+    //var level = level
+    //var image = image
+    //var border = border
+    //var flip = flip
 
 
 

@@ -57,18 +57,14 @@ open public class VelocityWidget : BasicHud {
     private var offset2: Int= 0
 public constructor        (powerOfTenVelocity: Int, location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 14, MyFont.getInstance()!!.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(powerOfTenVelocity) +1), 2, basicColor){
+                            : super(location, direction, 14, MyFont.getInstance()!!.getSize() *(5 +MathUtil.getInstance()!!.getTotalDigits(powerOfTenVelocity) +1), 2, basicColor)
 
-                    var powerOfTenVelocity = powerOfTenVelocity
-
-
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var powerOfTenVelocity = powerOfTenVelocity
+var location = location
+var direction = direction
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -85,7 +81,11 @@ this.offset= myFont!!.stringWidth(this.primitiveLongUtil!!.getMaxDigits()) +myFo
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,18 +95,22 @@ open fun get()
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.set(this.velocity +value)
 }
 
 
 open fun set(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
     var lastVelocity: Int = this.velocity
 
@@ -152,18 +156,22 @@ this.offset2= this.offset -myFont!!.stringWidth(this.totalDigits) -myFont!!.stri
 
 open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.set(this.velocity -value)
 }
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics, string, 0, this.totalDigits, KILOMETERS_PER_HOUR_STR, 0, this.totalChars, offset2, offset)
 }
 

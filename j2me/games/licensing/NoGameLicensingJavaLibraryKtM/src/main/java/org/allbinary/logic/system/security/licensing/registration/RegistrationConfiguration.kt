@@ -38,7 +38,11 @@ open public class RegistrationConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RegistrationConfiguration{
+: RegistrationConfiguration
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,25 +57,41 @@ open fun getInstance()
     val NAME: String = "registrationid"
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,16 +102,22 @@ override fun toString()
 
 open fun setRegistrationCode(registrationCode: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var registrationCode = registrationCode
+
+        Updates for KMP build        
+        {
+var registrationCode = registrationCode
 this.registrationCode= registrationCode
 }
 
 
 open fun getRegistrationCode()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

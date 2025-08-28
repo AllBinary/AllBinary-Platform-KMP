@@ -42,24 +42,16 @@ open public class CaptionAnimation : Animation {
     private val dx: Int
 
     private val dy: Int
-public constructor        (animationInterface: Animation, overlayAnimationInterface: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int){
+public constructor        (animationInterface: Animation, overlayAnimationInterface: Animation, captionDx: Int, captionDy: Int, dx: Int, dy: Int)
 
-                    var animationInterface = animationInterface
-
-
-                    var overlayAnimationInterface = overlayAnimationInterface
-
-
-                    var captionDx = captionDx
-
-
-                    var captionDy = captionDy
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
+    //var overlayAnimationInterface = overlayAnimationInterface
+    //var captionDx = captionDx
+    //var captionDy = captionDy
+    //var dx = dx
+    //var dy = dy
 this.animationInterface= animationInterface
 this.overlayAnimationInterface= overlayAnimationInterface
 this.captionDx= captionDx
@@ -72,37 +64,35 @@ this.dy= dy
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 this.animationInterface!!.paint(graphics, x +this.captionDx, y +this.captionDy)
 this.overlayAnimationInterface!!.paint(graphics, x +this.captionDx +dx, y +this.captionDy +dy)
 }
 
 override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 this.animationInterface!!.paintThreed(graphics, x +this.captionDx, y +this.captionDy, z)
 this.overlayAnimationInterface!!.paintThreed(graphics, x +this.captionDx +dx, y +this.captionDy +dy, z)
 }

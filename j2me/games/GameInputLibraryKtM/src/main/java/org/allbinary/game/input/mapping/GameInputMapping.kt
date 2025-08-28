@@ -38,12 +38,12 @@ open public class GameInputMapping
     private var gameKey: GameKey = GameKey.NULL_GAME_KEY
 public constructor        (name: String, gameKey: GameKey)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var gameKey = gameKey
+var name = name
+var gameKey = gameKey
 this.setName(name)
 this.setGameKey(gameKey)
 }
@@ -51,16 +51,22 @@ this.setGameKey(gameKey)
 
 open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKey = gameKey
+
+        Updates for KMP build        
+        {
+var gameKey = gameKey
 this.gameKey= gameKey
 }
 
 
 open fun getGameKey()
         //nullable = true from not(false or (false and true)) = true
-: GameKey{
+: GameKey
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,16 +76,22 @@ open fun getGameKey()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

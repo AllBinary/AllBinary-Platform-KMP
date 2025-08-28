@@ -67,15 +67,13 @@ open public class BasicPopupMenuPaintable : Paintable {
     private var offset: Int= 0
 
     private var animationInterface: Animation
-public constructor        (rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+public constructor        (rectangle: Rectangle, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
 
-                    var rectangle = rectangle
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var rectangle = rectangle
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 label= NAME
 this.rectangle= rectangle
@@ -137,9 +135,11 @@ this.init(rectangle)
             
 open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rectangle = rectangle
+
+        Updates for KMP build        
+        {
+    //var rectangle = rectangle
 this.rectangle= rectangle
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -200,9 +200,11 @@ rectangleFilledAnimation!!.setHeight(height)
     private val drawStringUtil: DrawStringUtil = DrawStringUtil.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
     var point: GPoint = this.rectangle.getPoint()!!
 

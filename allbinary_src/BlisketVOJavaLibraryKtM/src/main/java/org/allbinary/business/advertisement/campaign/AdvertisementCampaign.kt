@@ -39,16 +39,22 @@ open public class AdvertisementCampaign
     private var hashMap: HashMap<Any, Any>
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.hashMap= hashMap
 }
 
 
 open fun getComponent()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,7 +64,11 @@ open fun getComponent()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,27 +78,33 @@ open fun getName()
 
 open fun setComponentName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.hashMap!!.put(DynamicObjectData.NAME, name)
 }
 
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.hashMap!!.put(AdvertisementCampaignData.getInstance()!!.NAME, name)
 }
 
 
 open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementsInterface{
+: AdvertisementsInterface
 
-                    var advertisementSearchInterface = advertisementSearchInterface
+        Updates for KMP build        
+        {
+var advertisementSearchInterface = advertisementSearchInterface
 
 
 

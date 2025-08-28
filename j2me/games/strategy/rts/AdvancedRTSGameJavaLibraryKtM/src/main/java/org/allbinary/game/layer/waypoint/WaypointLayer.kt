@@ -48,7 +48,11 @@ open public class WaypointLayer : AdvancedRTSGameLayer {
             
 open fun getStaticType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,36 +65,20 @@ open fun getStaticType()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 protected constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
+                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, Health(1000), NullRTSFormInputFactory.getInstance(), animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var x = x
+    //var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -103,9 +91,11 @@ this.setAnimationInterface(this.indexedButShouldBeRotationAnimationInterface)
 
 open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 this.percentComplete= 100
 this.initVisibility(rtsPlayerLayerInterface)
 }
@@ -113,9 +103,11 @@ this.initVisibility(rtsPlayerLayerInterface)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     
                         if(this.isVisible())
@@ -130,14 +122,20 @@ open fun paint(graphics: Graphics)
 
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
         try {
             this.indexedButShouldBeRotationAnimationInterface!!.nextFrame()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "processTick", e)
 }
 
 }
@@ -145,12 +143,12 @@ open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
 
 open fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var damage = damage
 
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damage = damage
+var damageType = damageType
 }
 
 
@@ -158,9 +156,11 @@ open fun damage(damage: Int, damageType: Int)
             
 open fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damageType = damageType
 
 
 
@@ -173,9 +173,11 @@ open fun getDamage(damageType: Int)
             
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 super.setDestroyed(destroyed)
 
     
@@ -191,7 +193,11 @@ super.setDestroyed(destroyed)
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -201,7 +207,11 @@ open fun getType()
 
 open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

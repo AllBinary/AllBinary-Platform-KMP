@@ -25,7 +25,11 @@ open public class BouncyCastleProvider : Provider {
         }
             public constructor        ()                        
 
-                            : super(BouncyCastleProvider.PROVIDER_NAME, 1.41, BouncyCastleProvider.info){
+                            : super(BouncyCastleProvider.PROVIDER_NAME, 1.41, BouncyCastleProvider.info)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -34,12 +38,12 @@ open public class BouncyCastleProvider : Provider {
 
 open fun setParameter(parameterName: String, parameter: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var parameterName = parameterName
 
 
-                    var parameter = parameter
+        Updates for KMP build        
+        {
+var parameterName = parameterName
+var parameter = parameter
 }
 
 

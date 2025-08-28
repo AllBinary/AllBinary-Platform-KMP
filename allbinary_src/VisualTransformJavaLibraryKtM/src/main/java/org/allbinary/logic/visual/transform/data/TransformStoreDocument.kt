@@ -39,12 +39,12 @@ open public class TransformStoreDocument : TransformHttpRequestDocument {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (pageContext: PageContext, weblisketSession: WeblisketSession)                        
 
-                            : super(pageContext, weblisketSession){
+                            : super(pageContext, weblisketSession)
 
-                    var pageContext = pageContext
-
-
-                    var weblisketSession = weblisketSession
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var weblisketSession = weblisketSession
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,7 +67,11 @@ this.getBaseNode()!!.appendChild(StoreFrontViewFactory.getInstance(storeName)!!.
 this.getBaseNode()!!.appendChild(RequestParams(pageContext!!.getRequest() as HttpServletRequest).
                             toXmlNode(this.getDoc()))
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -86,9 +90,11 @@ this.getBaseNode()!!.appendChild(RequestParams(pageContext!!.getRequest() as Htt
 
 public constructor        (searchRequest: SearchRequest)                        
 
-                            : super(searchRequest){
+                            : super(searchRequest)
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 
 
                             //For kotlin this is before the body of the constructor.
@@ -98,7 +104,11 @@ public constructor        (searchRequest: SearchRequest)
             this.getBaseNode()!!.appendChild(StoreFrontViewFactory.getInstance(searchRequest!!.getStoreFront()!!.getName())!!.toXmlNode(this.getDoc()))
 this.getBaseNode()!!.appendChild(searchRequest!!.getParams()!!.getParamsNode(this.getDoc()))
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         

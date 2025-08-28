@@ -59,13 +59,21 @@ open public class ImageCacheBase
     var nextIndex: Int = 0
 protected constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index in listOfList!!.size -1 downTo 0)
 
-        {listOfList[index]= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+listOfList[index]= BasicArrayList()
 }
 
 
@@ -74,7 +82,11 @@ protected constructor        ()
 
                         for (index in availableListOfList!!.size -1 downTo 0)
 
-        {availableListOfList[index]= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+availableListOfList[index]= BasicArrayList()
 }
 
 }
@@ -82,9 +94,11 @@ protected constructor        ()
 
 open fun getImage(resourceId: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var resourceId = resourceId
+        Updates for KMP build        
+        {
+    //var resourceId = resourceId
 
     var imageCanBeNull: Any? = this.hashtable.get(resourceId as Object)
 
@@ -113,13 +127,21 @@ open fun getImage(resourceId: Any)
 
 open fun releaseAll()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in listOfList!!.size -1 downTo 0)
 
-        {availableListOfList[index]!!.clear()
+        
+
+        Updates for KMP build        
+        {
+availableListOfList[index]!!.clear()
 availableListOfList[index]!!.addAll(listOfList[index]!!)
 }
 
@@ -130,12 +152,12 @@ logUtil!!.put(StringMaker().
 
 open fun getIndex(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var width = width
+    //var height = height
 
     var foundIndex: Int =  -1
 
@@ -149,7 +171,11 @@ open fun getIndex(width: Int, height: Int)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(widths[index] == width && heights[index] == height)
                         
@@ -175,15 +201,13 @@ open fun getIndex(width: Int, height: Int)
 
 open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var foundIndex = foundIndex
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var foundIndex = foundIndex
+    //var width = width
+    //var height = height
 
     
                         if(foundIndex !=  -1)
@@ -220,15 +244,13 @@ open fun getFromAvailable(foundIndex: Int, width: Int, height: Int)
             
 open fun get(anyType: Any, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var anyType = anyType
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var anyType = anyType
+    //var width = width
+    //var height = height
 
 
 
@@ -241,15 +263,13 @@ open fun get(anyType: Any, width: Int, height: Int)
             
 open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var caller = caller
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var caller = caller
+    //var width = width
+    //var height = height
 
 
 
@@ -261,9 +281,11 @@ open fun get(caller: String, width: Int, height: Int)
             
 open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var key = key
+        Updates for KMP build        
+        {
+    //var key = key
 
 
 
@@ -275,15 +297,13 @@ open fun get(key: Any)
             
 open fun createImage(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var caller = caller
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var caller = caller
+    //var width = width
+    //var height = height
 
 
 
@@ -296,12 +316,12 @@ open fun createImage(caller: String, width: Int, height: Int)
             
 open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var key = key
-
-
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+    //var key = key
+    //var inputStream = inputStream
 
     var image: Image = Image.createImage(inputStream)!!
 
@@ -314,7 +334,11 @@ open fun createImage(key: Any, inputStream: InputStream)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -323,7 +347,11 @@ override fun toString()
 
                         for (index in this.nextIndex -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var width: Int = widths[index]!!
 
 
@@ -356,7 +384,11 @@ stringBuffer!!.append(totalAvailable)
 
 open fun getHashtableP()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -366,15 +398,21 @@ open fun getHashtableP()
 
 open fun init(image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var image = image
+
+        Updates for KMP build        
+        {
+var image = image
 }
 
 
 open fun initProgress()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

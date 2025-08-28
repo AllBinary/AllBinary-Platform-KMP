@@ -96,13 +96,19 @@ open public class BasicStoreFront
     private var lastModified: String
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (storeHashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var storeHashMap = storeHashMap
+        Updates for KMP build        
+        {
+var storeHashMap = storeHashMap
 
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
 
@@ -139,7 +145,11 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -149,7 +159,11 @@ open fun getTestHtmlPath()
 
 open fun getCurrentHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = 
                 null
             
@@ -178,7 +192,11 @@ open fun getCurrentHostName()
 
 open fun getCurrentHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = 
                 null
             
@@ -207,7 +225,11 @@ open fun getCurrentHostNamePath()
 
 open fun getCurrentHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = 
                 null
             
@@ -236,7 +258,11 @@ open fun getCurrentHomeHostName()
 
 open fun getCurrentHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = 
                 null
             
@@ -265,7 +291,11 @@ open fun getCurrentHomeHostNamePath()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -275,7 +305,11 @@ open fun getName()
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -285,7 +319,11 @@ open fun getUserName()
 
 open fun getBasketName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -295,7 +333,11 @@ open fun getBasketName()
 
 open fun getHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -305,7 +347,11 @@ open fun getHomeHostName()
 
 open fun getHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -315,7 +361,11 @@ open fun getHomeHostNamePath()
 
 open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -325,7 +375,11 @@ open fun getHostName()
 
 open fun getHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -335,7 +389,11 @@ open fun getHostNamePath()
 
 open fun getTestHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -345,7 +403,11 @@ open fun getTestHomeHostName()
 
 open fun getTestHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -355,7 +417,11 @@ open fun getTestHomeHostNamePath()
 
 open fun getTestHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -365,7 +431,11 @@ open fun getTestHostName()
 
 open fun getTestHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -375,7 +445,11 @@ open fun getTestHostNamePath()
 
 open fun getStaticPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -385,7 +459,11 @@ open fun getStaticPath()
 
 open fun getCategoryPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -395,7 +473,11 @@ open fun getCategoryPath()
 
 open fun getInventoryControl()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -407,7 +489,11 @@ open fun getInventoryControl()
             
 open fun getSubStores()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
         try {
             
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
@@ -421,7 +507,11 @@ open fun getSubStores()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subStoreVector
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -432,7 +522,11 @@ open fun getSubStores()
 
 open fun getTagLocation()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -442,7 +536,11 @@ open fun getTagLocation()
 
 open fun getPackageLocation()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -452,7 +550,11 @@ open fun getPackageLocation()
 
 open fun getFtp()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -462,7 +564,11 @@ open fun getFtp()
 
 open fun getFtpUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -472,7 +578,11 @@ open fun getFtpUserName()
 
 open fun getFtpPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -482,7 +592,11 @@ open fun getFtpPassword()
 
 open fun getTestFtp()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -492,7 +606,11 @@ open fun getTestFtp()
 
 open fun getTestFtpUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -502,7 +620,11 @@ open fun getTestFtpUserName()
 
 open fun getTestFtpPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -512,7 +634,11 @@ open fun getTestFtpPassword()
 
 open fun getFtpPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -522,7 +648,11 @@ open fun getFtpPath()
 
 open fun getTestFtpPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -532,7 +662,11 @@ open fun getTestFtpPath()
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -542,7 +676,11 @@ open fun getTimeCreated()
 
 open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -37,23 +37,35 @@ open public class ThemesValidation : Validation
         
 
     private var themeVector: Vector
-public constructor        (){this.themeVector= Vector()
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.themeVector= Vector()
 }
 
-public constructor        (node: Node){
+public constructor        (node: Node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor        (hashMap: HashMap<Any, Any>)
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +75,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +89,11 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,9 +103,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -98,9 +120,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(ThemesData.getInstance()!!.NAME)!!
 
@@ -113,7 +137,11 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var themeDomNodeInterface: DomNodeInterface = themeVector!!.get(i) as DomNodeInterface
 
 node.appendChild(themeDomNodeInterface!!.toXmlNode(document))

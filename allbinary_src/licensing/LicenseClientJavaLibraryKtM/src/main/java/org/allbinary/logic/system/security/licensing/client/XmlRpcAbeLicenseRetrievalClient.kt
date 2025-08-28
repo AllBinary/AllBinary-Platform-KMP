@@ -46,9 +46,11 @@ open public class XmlRpcAbeLicenseRetrievalClient : XmlRpcAbeClient {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, "LicServ.getLicense"){
+                            : super(clientInfo, "LicServ.getLicense")
 
-                    var clientInfo = clientInfo
+        Updates for KMP build        
+        {
+var clientInfo = clientInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,12 +62,12 @@ public constructor        (clientInfo: AbeClientInformationInterface)
             
 open fun get(anyType: Any, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
-
-
-                    var cryptInterface = cryptInterface
+        Updates for KMP build        
+        {
+    //var anyType = anyType
+    //var cryptInterface = cryptInterface
 
         try {
             
@@ -126,7 +128,11 @@ isOnline= true
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abeLicenseInterface
 } catch(e: IOException)
-            {logUtil!!.put(EXCEPTION_IN_CLIENT, this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(EXCEPTION_IN_CLIENT, this, commonStrings!!.GET, e)
 logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
 
     
@@ -152,7 +158,11 @@ logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(
                             
 }
  catch(e: XmlRpcException)
-            {logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
 
 
 
@@ -160,7 +170,11 @@ logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
-            {logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
 
 
 

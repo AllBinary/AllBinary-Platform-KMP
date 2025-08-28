@@ -58,15 +58,21 @@ open public class Cpu
     private var cpuHashMap: HashMap<Any, Any>
 public constructor        (filePath: String)
             : super()
-        {
+        
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var filePath = filePath
 this.init(filePath)
 }
 
 public constructor        ()
             : super()
-        {this.init(CPUFILE)
+        
+
+        Updates for KMP build        
+        {
+this.init(CPUFILE)
 }
 
 
@@ -74,9 +80,11 @@ public constructor        ()
             
 open fun init(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var filePath = filePath
+
+        Updates for KMP build        
+        {
+var filePath = filePath
 
     var lineNumberReader: LineNumberReader = 
                 null
@@ -86,7 +94,11 @@ open fun init(filePath: String)
         try {
             init(lineNumberReader, filePath)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
@@ -109,12 +121,12 @@ open fun init(filePath: String)
             
 open fun init(lineNumberReader: LineNumberReader, filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var lineNumberReader = lineNumberReader
 
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var lineNumberReader = lineNumberReader
+var filePath = filePath
 
         try {
             
@@ -173,7 +185,11 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                  && nextLine != 
                                     null
                                 )
+        
+
+        Updates for KMP build        
         {
+
     var index: Int = nextLine!!.indexOf(':')!!
 
 
@@ -247,7 +263,11 @@ nextLine= lineNumberReader!!.readLine()
 
 open fun getProcessor()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -257,7 +277,11 @@ open fun getProcessor()
 
 open fun getVendorId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -267,7 +291,11 @@ open fun getVendorId()
 
 open fun getCpuFamily()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -277,7 +305,11 @@ open fun getCpuFamily()
 
 open fun getModel()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -287,7 +319,11 @@ open fun getModel()
 
 open fun getModelName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -297,7 +333,11 @@ open fun getModelName()
 
 open fun getStepping()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -307,7 +347,11 @@ open fun getStepping()
 
 open fun getCpuSpeed()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -317,7 +361,11 @@ open fun getCpuSpeed()
 
 open fun getCacheSize()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -327,9 +375,11 @@ open fun getCacheSize()
 
 open fun compareTo(cpuInterface: CpuInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cpuInterface = cpuInterface
+        Updates for KMP build        
+        {
+var cpuInterface = cpuInterface
 
 
 
@@ -340,9 +390,11 @@ open fun compareTo(cpuInterface: CpuInterface)
 
 open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var componentInterface = componentInterface
+        Updates for KMP build        
+        {
+var componentInterface = componentInterface
 
 
 
@@ -352,7 +404,11 @@ open fun compareTo(componentInterface: HardwareComponentInterface)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
 

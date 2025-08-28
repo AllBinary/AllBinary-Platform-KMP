@@ -28,30 +28,18 @@ open public class MultipleScrollSelectionHorizontalForm : ScrollSelectionForm {
     private val backgroundColor: Int = BasicColorFactory.getInstance()!!.TRANSPARENT_GREY.toInt()!!
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, formPaintableFactory, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var formPaintableFactory = formPaintableFactory
-
-
-                    var rectangle = rectangle
-
-
-                    var formType = formType
-
-
-                    var border = border
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var title = title
+    //var items = items
+    //var formPaintableFactory = formPaintableFactory
+    //var rectangle = rectangle
+    //var formType = formType
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,27 +48,17 @@ public constructor        (title: String, items: Array<CustomItem?>, formPaintab
 
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var rectangle = rectangle
-
-
-                    var formType = formType
-
-
-                    var border = border
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var title = title
+    //var items = items
+    //var rectangle = rectangle
+    //var formType = formType
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -89,7 +67,11 @@ public constructor        (title: String, items: Array<CustomItem?>, rectangle: 
 
 override fun getStartIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,9 +80,11 @@ override fun getStartIndex()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
         try {
             
@@ -145,7 +129,11 @@ graphics.drawString(this.getTitle(), x, y -myFont!!.DEFAULT_CHAR_HEIGHT, 0)
 
                         for (index in start until size)
 
-        {item= this.get(index) as CustomItemInterface
+        
+
+        Updates for KMP build        
+        {
+item= this.get(index) as CustomItemInterface
 
     
                         if(dx >= this.rectangle.getMaxX())
@@ -190,7 +178,11 @@ this.paintable.paint(graphics, index, dx, dy)
 }
 
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT)
 }
 
 }

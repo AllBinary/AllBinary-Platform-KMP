@@ -34,18 +34,22 @@ open public class TenderType
     private var name: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun isEqual(tenderType: TenderType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var tenderType = tenderType
+        Updates for KMP build        
+        {
+var tenderType = tenderType
 
     
                         if(this.toString()!!.compareTo(tenderType!!.toString()) == 0)
@@ -72,7 +76,11 @@ open fun isEqual(tenderType: TenderType)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

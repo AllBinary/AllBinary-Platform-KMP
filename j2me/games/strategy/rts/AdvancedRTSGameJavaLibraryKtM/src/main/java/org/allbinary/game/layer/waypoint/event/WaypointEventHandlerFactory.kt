@@ -38,9 +38,11 @@ open public class WaypointEventHandlerFactory
 
 open fun getInstance(groupInterface: Group)
         //nullable =  from not(true or (false and false)) = 
-: WaypointEventHandler{
+: WaypointEventHandler
 
-                    var groupInterface = groupInterface
+        Updates for KMP build        
+        {
+var groupInterface = groupInterface
 
 
 
@@ -51,13 +53,21 @@ open fun getInstance(groupInterface: Group)
 
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in eventHandlerArray!!.size -1 downTo 0)
 
-        {eventHandlerArray[index]!!.removeAllListeners()
+        
+
+        Updates for KMP build        
+        {
+eventHandlerArray[index]!!.removeAllListeners()
 }
 
 }

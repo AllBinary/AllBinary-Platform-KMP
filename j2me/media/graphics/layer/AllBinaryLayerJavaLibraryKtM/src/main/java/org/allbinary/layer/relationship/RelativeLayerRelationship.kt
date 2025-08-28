@@ -38,15 +38,13 @@ open public class RelativeLayerRelationship : RelativeRelationship {
     private var layer: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 public constructor        (layer: AllBinaryLayer, x: Int, y: Int)                        
 
-                            : this(layer, PointFactory.getInstance()!!.getInstance(x, y), BasicArrayListUtil.getInstance()!!.getImmutableInstance()){
+                            : this(layer, PointFactory.getInstance()!!.getInstance(x, y), BasicArrayListUtil.getInstance()!!.getImmutableInstance())
 
-                    var layer = layer
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var layer = layer
+var x = x
+var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,15 +53,13 @@ public constructor        (layer: AllBinaryLayer, x: Int, y: Int)
 
 public constructor        (layer: AllBinaryLayer, point: GPoint, typesAllowedList: BasicArrayList)                        
 
-                            : super(point, typesAllowedList){
+                            : super(point, typesAllowedList)
 
-                    var layer = layer
-
-
-                    var point = point
-
-
-                    var typesAllowedList = typesAllowedList
+        Updates for KMP build        
+        {
+var layer = layer
+var point = point
+var typesAllowedList = typesAllowedList
 
 
                             //For kotlin this is before the body of the constructor.
@@ -73,7 +69,11 @@ this.layer= layer
 
 override fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +82,11 @@ override fun getX()
 
 override fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +95,11 @@ override fun getY()
 
 override fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

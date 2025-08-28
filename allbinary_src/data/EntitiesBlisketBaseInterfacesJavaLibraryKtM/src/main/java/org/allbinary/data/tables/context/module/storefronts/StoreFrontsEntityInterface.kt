@@ -38,21 +38,36 @@ open fun getStoreFrontInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : StoreFrontInterface
 
+        Updates for KMP build        
+        
+
 open fun getStoreFrontNames()
         //nullable = true from not(false or (false and true)) = true
 : Vector
+
+        Updates for KMP build        
+        
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

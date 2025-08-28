@@ -40,7 +40,11 @@ open public class RTSLayerHudPaintable : SelectionHudPaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RTSLayerHudPaintable{
+: RTSLayerHudPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,12 +63,20 @@ open fun getInstance()
     var costY: Int= 0
 
     var costY1: Int= 0
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var charHeight: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
 
 this.setName(this.getRtsLayer()!!.getName())
@@ -92,9 +104,11 @@ this.costY1= (y +((weaponProperties!!.size +1) *charHeight))
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 
     var charHeight: Int = this.myFont!!.DEFAULT_CHAR_HEIGHT
@@ -109,7 +123,11 @@ super.paint(graphics)
 
                         for (index in 0 until size)
 
-        {graphics.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charHeight), 0)
+        
+
+        Updates for KMP build        
+        {
+graphics.drawString(weaponProperties[index]!!, this.textX, y +((index +1) *charHeight), 0)
 }
 
 }
@@ -117,16 +135,22 @@ super.paint(graphics)
 
 open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
 
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: RTSLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

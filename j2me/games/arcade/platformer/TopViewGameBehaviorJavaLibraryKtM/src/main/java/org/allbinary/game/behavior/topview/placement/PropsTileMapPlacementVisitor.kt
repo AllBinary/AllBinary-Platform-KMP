@@ -46,12 +46,12 @@ open public class PropsTileMapPlacementVisitor : TileMapPlacementVisitor {
 
 open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var lastMap = lastMap
 
 
-                    var mapData = mapData
+        Updates for KMP build        
+        {
+    //var lastMap = lastMap
+    //var mapData = mapData
 
     var layerIndex: Int = 0
 
@@ -75,13 +75,21 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in 0 until size2)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(mapArray[index]!![index2] == 14)
                         
@@ -242,18 +250,14 @@ open fun visit(lastMap: TiledMap, mapData: Array<IntArray?>)
 
 open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: Int, index2: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var mapArray = mapArray
 
 
-                    var mapData = mapData
-
-
-                    var index = index
-
-
-                    var index2 = index2
+        Updates for KMP build        
+        {
+    //var mapArray = mapArray
+    //var mapData = mapData
+    //var index = index
+    //var index2 = index2
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -272,7 +276,11 @@ open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: In
 
                         for (index4 in index2 -1 downTo 0)
 
-        {index3--
+        
+
+        Updates for KMP build        
+        {
+index3--
 
     
                         if(index3 < 0 || index4 < 0)
@@ -302,13 +310,21 @@ open fun visit2(mapArray: Array<IntArray?>, mapData: Array<IntArray?>, index: In
 
                         for (index5 in index3 +1 until index -1)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index6 in index4 +1 until index2 -1)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(mapArray[index5]!![index6] != 14 || mapData[index5]!![index6] != 0)
                         

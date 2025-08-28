@@ -32,21 +32,15 @@ open public class SelectableTextItem : TextItem {
         
 public constructor        (label: String, layout: Int, altText: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor){
+                            : super(label, layout, altText, backgroundBasicColor, foregroundBasicColor)
 
-                    var label = label
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var label = label
+var layout = layout
+var altText = altText
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,7 +49,11 @@ public constructor        (label: String, layout: Int, altText: String, backgrou
 
 override fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,15 +62,13 @@ override fun isFocusable()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 
     var stringComponent: StringComponent = this.getLabelStringComponent()!!
 

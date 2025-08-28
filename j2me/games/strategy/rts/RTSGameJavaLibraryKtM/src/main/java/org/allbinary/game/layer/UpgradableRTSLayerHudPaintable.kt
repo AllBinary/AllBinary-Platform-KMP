@@ -41,7 +41,11 @@ open public class UpgradableRTSLayerHudPaintable : SelectionHudPaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UpgradableRTSLayerHudPaintable{
+: UpgradableRTSLayerHudPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,12 +66,20 @@ open fun getInstance()
     private var percentCompleteX2: Int= 0
 
     private var rtsLayerCompositePaintable: RTSLayerCompositePaintable
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{super.update()
+
+
+        Updates for KMP build        
+        {
+super.update()
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -99,7 +111,11 @@ this.percentCompleteX2= this.imageX +CommonButtons.getInstance()!!.STANDARD_BUTT
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-{this.rtsLayerCompositePaintable!!.update(this.getRtsLayer())
+
+
+        Updates for KMP build        
+        {
+this.rtsLayerCompositePaintable!!.update(this.getRtsLayer())
 this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
 this.setName(this.getRtsLayer()!!.getName())
 }
@@ -115,7 +131,11 @@ this.setName(this.getRtsLayer()!!.getName())
 
 open fun updateInfo()
         //nullable = true from not(false or (false and true)) = true
-{this.percentComplete= this.getRtsLayer()!!.getPercentComplete()
+
+
+        Updates for KMP build        
+        {
+this.percentComplete= this.getRtsLayer()!!.getPercentComplete()
 
     
                         if(percentComplete < 10)
@@ -146,9 +166,11 @@ this.currentTotalDigits= this.getPrimitiveLongUtil()!!.getCurrentTotalDigits()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 this.rtsLayerCompositePaintable!!.paint(graphics)
 graphics.drawChars(percentCompleteArray, 0, this.currentTotalDigits, this.imageX +this.percentCompleteX, costY, 0)
@@ -159,16 +181,22 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 
 open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
 
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: RTSLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

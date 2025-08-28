@@ -38,9 +38,11 @@ open public class AllBinaryScreenRelationalImageAnimationInterfaceFactory : Base
     private var lastImage: Image
 public constructor        (image: Image)                        
 
-                            : this(image, AnimationBehaviorFactory.getInstance()){
+                            : this(image, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,12 +51,12 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, 0, 0, animationBehaviorFactory){
+                            : super(image, 0, 0, animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -80,9 +82,11 @@ lastImage= ImageScaleUtil.getInstance()!!.createImage(GameFeatureImageCacheFacto
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 

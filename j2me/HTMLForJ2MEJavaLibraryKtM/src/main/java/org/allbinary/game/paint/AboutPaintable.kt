@@ -40,12 +40,12 @@ open public class AboutPaintable : Paintable {
             
 open fun getInstance(info: Array<String?>, developers: Array<String?>)
         //nullable =  from not(true or (false and false)) = 
-: AboutPaintable{
+: AboutPaintable
 
-                    var info = info
-
-
-                    var developers = developers
+        Updates for KMP build        
+        {
+var info = info
+var developers = developers
 
 
 
@@ -65,12 +65,12 @@ open fun getInstance(info: Array<String?>, developers: Array<String?>)
     private val paintableArray: Array<Paintable?> = arrayOf(
                                 //Otherwise - values - ThisExpr
 )
-private constructor        (info: Array<String?>, developers: Array<String?>){
+private constructor        (info: Array<String?>, developers: Array<String?>)
 
-                    var info = info
-
-
-                    var developers = developers
+        Updates for KMP build        
+        {
+var info = info
+var developers = developers
 this.info= info
 this.developers= developers
 }
@@ -78,7 +78,11 @@ this.developers= developers
 
 open fun getPaintableArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: Array<Paintable?>{
+: Array<Paintable?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,9 +94,11 @@ open fun getPaintableArrayInstance()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -119,7 +125,11 @@ graphics.drawString(this.ABOUT, halfWidth -beginWidth, 2 *charHeight, anchor)
 
                         for (index in 0 until infoSize)
 
-        {beginWidth= (font.stringWidth(this.info[index]!!) shr 1)
+        
+
+        Updates for KMP build        
+        {
+beginWidth= (font.stringWidth(this.info[index]!!) shr 1)
 graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charHeight, anchor)
 }
 
@@ -133,7 +143,11 @@ graphics.drawString(this.info[index]!!, halfWidth -beginWidth, (4 +index) *charH
 
                         for (index in 0 until size)
 
-        {beginWidth= (font.stringWidth(this.developers[index]!!) shr 1)
+        
+
+        Updates for KMP build        
+        {
+beginWidth= (font.stringWidth(this.developers[index]!!) shr 1)
 graphics.drawString(this.developers[index]!!, halfWidth -beginWidth, (5 +infoSize +index) *charHeight, anchor)
 }
 

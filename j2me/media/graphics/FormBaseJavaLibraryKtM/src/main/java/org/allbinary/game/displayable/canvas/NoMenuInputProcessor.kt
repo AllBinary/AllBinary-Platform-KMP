@@ -39,7 +39,11 @@ open public class NoMenuInputProcessor : BasicMenuInputProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoMenuInputProcessor{
+: NoMenuInputProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,7 +54,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(BasicArrayListUtil.getInstance()!!.getImmutableInstance(),  -1, NullCanvas.NULL_CANVAS){
+                            : super(BasicArrayListUtil.getInstance()!!.getImmutableInstance(),  -1, NullCanvas.NULL_CANVAS)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -59,24 +67,30 @@ open fun getInstance()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 }
 
 override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+var motionGestureEvent = motionGestureEvent
 }
 
 

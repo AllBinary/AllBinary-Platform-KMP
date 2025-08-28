@@ -38,7 +38,11 @@ open public class AcceptableResponseUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AcceptableResponseUtil{
+: AcceptableResponseUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getInstance()
 }
 
 
-                init{AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
+                init
+
+        Updates for KMP build        
+        {
+AcceptableResponseFactory.getInstance()!!.HTML.hashCode()
 }
 
         }
@@ -62,9 +70,11 @@ open fun getInstance()
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -75,9 +85,11 @@ open fun get(index: Int)
 
 open fun getTagName(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -88,7 +100,11 @@ open fun getTagName(index: Int)
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

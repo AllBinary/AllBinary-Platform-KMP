@@ -69,7 +69,11 @@ open public class UserEntity : AbSqlBean
     private val END_QUOTES: String = "\""
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -79,9 +83,11 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
         try {
             super.insert(values)
@@ -95,7 +101,11 @@ open fun insert(values: Vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -113,7 +123,11 @@ open fun insert(values: Vector)
             
 open fun getAdministrators()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -125,9 +139,11 @@ open fun getAdministrators()
             
 open fun getStoreManagers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -148,7 +164,11 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(i as Object) as HashMap<Any, Any>
 
 
@@ -171,7 +191,11 @@ keysAndValues!!.put(UserData.PERMISSIONS, storeFrontInterface!!.getName())
             
 open fun getCustomers()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -183,9 +207,11 @@ open fun getCustomers()
             
 open fun getUsersWithRole(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var userRole = userRole
+        Updates for KMP build        
+        {
+var userRole = userRole
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -205,7 +231,11 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
@@ -228,9 +258,11 @@ keysAndValues!!.put(UserRoleData.NAME.toString(), userRole!!.toString())
             
 open fun getUsers(storeFrontInterface: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -250,7 +282,11 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userHashMap: HashMap<Any, Any> = usersHashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
@@ -273,9 +309,11 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeFrontInterface!!.g
             
 open fun getUser(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: UserInterface{
+: UserInterface
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
     var row: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -312,12 +350,12 @@ row.put(UserData.USERNAME, userName)
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var key = key
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+var key = key
+var value = value
 
         try {
             super.deleteWhere(key, value)
@@ -331,7 +369,11 @@ open fun deleteWhere(key: String, value: String)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -347,12 +389,12 @@ open fun deleteWhere(key: String, value: String)
 
 open fun login(userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var userName = userName
-
-
-                    var password = password
+        Updates for KMP build        
+        {
+var userName = userName
+var password = password
 
         try {
             
@@ -452,7 +494,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "login")
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -473,19 +519,23 @@ logUtil!!.put(stringBuffer!!.toString(), this, "login")
 
 open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var updatedValues = updatedValues
+        Updates for KMP build        
+        {
+var userName = userName
+var updatedValues = updatedValues
 super.updateWhere(UserData.USERNAME, userName, updatedValues)
 }
 
 
 open fun dropTables()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -495,7 +545,11 @@ open fun dropTables()
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var entryData: EntryData = EntryData.getInstance()!!
 
 
@@ -512,7 +566,11 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

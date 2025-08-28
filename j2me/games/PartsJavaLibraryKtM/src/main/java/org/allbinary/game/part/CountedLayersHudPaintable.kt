@@ -59,21 +59,15 @@ open public class CountedLayersHudPaintable
     private val dropSize: Int
 public constructor        (partInterfaceArray: Array<PartInterface?>, dropSize: Int, startIndex: Int, countedTotalStringColor: Int, countedPartsBorder: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var partInterfaceArray = partInterfaceArray
-
-
-                    var dropSize = dropSize
-
-
-                    var startIndex = startIndex
-
-
-                    var countedTotalStringColor = countedTotalStringColor
-
-
-                    var countedPartsBorder = countedPartsBorder
+var partInterfaceArray = partInterfaceArray
+var dropSize = dropSize
+var startIndex = startIndex
+var countedTotalStringColor = countedTotalStringColor
+var countedPartsBorder = countedPartsBorder
 this.partInterfaceArray= partInterfaceArray
 this.startIndex= startIndex
 this.countedTotalStringColor= countedTotalStringColor
@@ -83,9 +77,11 @@ this.dropSize= dropSize
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var height: Int = myFont!!.DEFAULT_CHAR_HEIGHT
 
@@ -132,7 +128,11 @@ override fun paint(graphics: Graphics)
 
                         for (index in startIndex until size)
 
-        {countedLayerInterfaceFactory= partInterfaceArray[index]!! as CountedLayerInterfaceFactoryPart
+        
+
+        Updates for KMP build        
+        {
+countedLayerInterfaceFactory= partInterfaceArray[index]!! as CountedLayerInterfaceFactoryPart
 
     
                         if(countedLayerInterfaceFactory!!.getTotal() > 0)
@@ -166,9 +166,11 @@ graphics.drawRect(lastWidth -(XXStringWidth +this.dropSize), 40, XXStringWidth +
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 

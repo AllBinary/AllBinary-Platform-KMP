@@ -38,16 +38,22 @@ open public class LogUserEmailEventListenerModule
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun onEmailSendRequest(userEmailInfoEvent: EmailEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userEmailInfoEvent = userEmailInfoEvent
+
+        Updates for KMP build        
+        {
+var userEmailInfoEvent = userEmailInfoEvent
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))

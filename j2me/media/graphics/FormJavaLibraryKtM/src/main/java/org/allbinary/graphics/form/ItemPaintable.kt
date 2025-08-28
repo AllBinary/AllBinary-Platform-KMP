@@ -39,18 +39,14 @@ open public class ItemPaintable
         
 open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var currentIndex = currentIndex
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var currentIndex = currentIndex
+var x = x
+var y = y
 }
 
 

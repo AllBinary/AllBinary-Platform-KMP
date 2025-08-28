@@ -40,12 +40,12 @@ open public class PreGameLockablePaintable : LockablePaintable {
     private val paintableForm: ScrollCurrentSelectionForm
 public constructor        (paintableForm: ScrollCurrentSelectionForm, lockedIndex: Int)                        
 
-                            : super(lockedIndex){
+                            : super(lockedIndex)
 
-                    var paintableForm = paintableForm
-
-
-                    var lockedIndex = lockedIndex
+        Updates for KMP build        
+        {
+var paintableForm = paintableForm
+var lockedIndex = lockedIndex
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,18 +57,14 @@ this.halfWidth= GameFeatureImageCacheFactory.getInstance()!!.get(LockedResources
 
 open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var currentIndex = currentIndex
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var currentIndex = currentIndex
+var x = x
+var y = y
 
     
                         if(LockedUtil.getInstance()!!.isLockedFeature() && this.getPaintableForm()!!.getSelectedIndex() >= this.getLockedIndex())
@@ -83,7 +79,11 @@ open fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
 
 open fun getPaintableForm()
         //nullable = true from not(false or (false and true)) = true
-: ScrollCurrentSelectionForm{
+: ScrollCurrentSelectionForm
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

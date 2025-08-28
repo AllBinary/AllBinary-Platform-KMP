@@ -37,12 +37,12 @@ open public class SimultaneousCompoundIndexedAnimation : IndexedAnimation {
     private var animationInterfaceArray: Array<Animation?>
 public constructor        (animationInterfaceArray: Array<Animation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationInterfaceArray = animationInterfaceArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,9 +52,11 @@ this.animationInterfaceArray= animationInterfaceArray
 
 override fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frameIndex = frameIndex
+
+        Updates for KMP build        
+        {
+    //var frameIndex = frameIndex
 
     var indexedAnimation: IndexedAnimation
 
@@ -64,7 +66,11 @@ override fun setFrame(frameIndex: Int)
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
+        
+
+        Updates for KMP build        
+        {
+indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
 indexedAnimation!!.setFrame(frameIndex)
 }
 
@@ -72,7 +78,11 @@ indexedAnimation!!.setFrame(frameIndex)
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[0]!! as IndexedAnimation
 
 
@@ -84,7 +94,11 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var indexedAnimation: IndexedAnimation = this.animationInterfaceArray[0]!! as IndexedAnimation
 
 
@@ -96,7 +110,11 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var indexedAnimation: IndexedAnimation
 
 
@@ -105,7 +123,11 @@ override fun previousFrame()
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
+        
+
+        Updates for KMP build        
+        {
+indexedAnimation= this.animationInterfaceArray[index]!! as IndexedAnimation
 indexedAnimation!!.previousFrame()
 }
 
@@ -113,14 +135,20 @@ indexedAnimation!!.previousFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,28 +159,34 @@ override fun getSequence()
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.nextFrame()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.nextFrame()
 }
 
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
     var size: Int = this.animationInterfaceArray!!.size
                 
@@ -163,25 +197,25 @@ override fun paint(graphics: Graphics, x: Int, y: Int)
 
                         for (index in 0 until size)
 
-        {this.animationInterfaceArray[index]!!.paint(graphics, x, y)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
 
 }
 
 override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
     var size: Int = this.animationInterfaceArray!!.size
                 
@@ -192,7 +226,11 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
                         for (index in 0 until size)
 
-        {this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
 
 }
@@ -200,7 +238,11 @@ override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Animation?>{
+: Array<Animation?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -210,9 +252,11 @@ open fun getAnimationInterfaceArray()
 
 open fun setAnimationInterfaceArray(animationInterfaceArray: Array<Animation?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var animationInterfaceArray = animationInterfaceArray
+
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
 this.animationInterfaceArray= animationInterfaceArray
 }
 

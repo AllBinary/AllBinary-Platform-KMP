@@ -39,9 +39,11 @@ open public class ImageActionScriptOutputJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface
-public constructor        (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface){
+public constructor        (capturedImageActionScriptOutputInterface: ImageActionScriptOutputInterface)
 
-                    var capturedImageActionScriptOutputInterface = capturedImageActionScriptOutputInterface
+        Updates for KMP build        
+        {
+var capturedImageActionScriptOutputInterface = capturedImageActionScriptOutputInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.capturedImageActionScriptOutputInterface= capturedImageActionScriptOutputInterface
@@ -51,7 +53,11 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{this.setImageTypeJlistModel()
+
+
+        Updates for KMP build        
+        {
+this.setImageTypeJlistModel()
 
     var imageTypes: ImageTypes = this.capturedImageActionScriptOutputInterface!!.getImageTypes()!!
 
@@ -70,7 +76,11 @@ open fun set()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var imageType: InputImageType = vector.get(index) as InputImageType
 
 selectedArray[index++]= imageType!!.getIndex()
@@ -101,7 +111,11 @@ this.capturedImageActionScriptOutputInterface!!.log()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var anyType: Array<Any?> = this.itemTypesJList!!.getSelectedValues()!!
 
 
@@ -144,7 +158,11 @@ this.capturedImageActionScriptOutputInterface!!.log()
 
 open fun setImageTypeJlistModel()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var defaultListModel: DefaultListModel = DefaultListModel()
 
 
@@ -159,7 +177,11 @@ open fun setImageTypeJlistModel()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var imageType: InputImageType = vector.get(index) as InputImageType
 
 defaultListModel!!.addElement(imageType!!.getName())
@@ -171,7 +193,11 @@ this.itemTypesJList!!.setModel(defaultListModel)
 
 open fun getCapturedImageActionJDialog()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JDialog{
+: javax.swing.JDialog
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -181,16 +207,22 @@ open fun getCapturedImageActionJDialog()
 
 open fun setCapturedImageActionJDialog(capturedImageActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var capturedImageActionJDialog = capturedImageActionJDialog
+
+        Updates for KMP build        
+        {
+var capturedImageActionJDialog = capturedImageActionJDialog
 this.capturedImageActionJDialog= capturedImageActionJDialog
 }
 
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{capturedImageActionJDialog= javax.swing.JDialog()
+
+
+        Updates for KMP build        
+        {
+capturedImageActionJDialog= javax.swing.JDialog()
 titleJLabel= javax.swing.JLabel()
 okJButton= javax.swing.JButton()
 saveJCheckBox= javax.swing.JCheckBox()
@@ -207,9 +239,11 @@ okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 okJButtonActionPerformed(evt)
 }
 
@@ -226,9 +260,11 @@ displayJCheckBox!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 displayJCheckBoxActionPerformed(evt)
 }
 
@@ -241,7 +277,11 @@ itemTypesJList!!.setModel(object: javax.swing.AbstractListModel()
 
 open override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -250,9 +290,11 @@ open override fun getSize()
 
 open override fun getElementAt(i: Int)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var i = i
+        Updates for KMP build        
+        {
+var i = i
 
 
 
@@ -276,9 +318,11 @@ capturedImageActionJButton!!.addActionListener(object: java.awt.event.ActionList
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 capturedImageActionJButtonActionPerformed(evt)
 }
 
@@ -296,17 +340,21 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun displayJCheckBoxActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 }
 
 
 open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.update()
 this.getCapturedImageActionJDialog()!!.setVisible(false)
 }
@@ -314,9 +362,11 @@ this.getCapturedImageActionJDialog()!!.setVisible(false)
 
 open fun capturedImageActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.getCapturedImageActionJDialog()!!.setVisible(true)
 }
 

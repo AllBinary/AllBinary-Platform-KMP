@@ -53,15 +53,13 @@ open public class NewPasswordEmail
     private var newPassword: String
 public constructor        (abeClientInformation: AbeClientInformationInterface, userInterface: UserInterface, newPassword: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var abeClientInformation = abeClientInformation
-
-
-                    var userInterface = userInterface
-
-
-                    var newPassword = newPassword
+    //var abeClientInformation = abeClientInformation
+    //var userInterface = userInterface
+var newPassword = newPassword
 this.abeClientInformation= abeClientInformation
 this.userInterface= userInterface
 this.newPassword= newPassword
@@ -72,7 +70,11 @@ this.newPassword= newPassword
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{this.notifyStoreAdmin()
+
+
+        Updates for KMP build        
+        {
+this.notifyStoreAdmin()
 this.notifyUser()
 }
 
@@ -81,7 +83,11 @@ this.notifyUser()
             
 open fun notifyStoreAdmin()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -109,7 +115,11 @@ open fun notifyStoreAdmin()
 
 adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, emailInfo)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
@@ -127,7 +137,11 @@ adminUserEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD
             
 open fun notifyUser()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -155,7 +169,11 @@ open fun notifyUser()
 
 userEmailEventHandler!!.receiveEmailInfo(UserEmailEventNameData.NEWPASSWORD, emailInfo)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         

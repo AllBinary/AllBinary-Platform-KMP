@@ -31,9 +31,11 @@ open public class TopULayerBounds : LayerBounds {
         
 public constructor        (rectangle: Rectangle)                        
 
-                            : super(rectangle){
+                            : super(rectangle)
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
 
                             //For kotlin this is before the body of the constructor.
@@ -42,9 +44,11 @@ public constructor        (rectangle: Rectangle)
 
 override fun visit(boundsVisitorInterface: BoundsVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var boundsVisitorInterface = boundsVisitorInterface
+
+        Updates for KMP build        
+        {
+var boundsVisitorInterface = boundsVisitorInterface
 
     
                         if(boundsVisitorInterface!!.getX() > this.rectangle.getMaxX())

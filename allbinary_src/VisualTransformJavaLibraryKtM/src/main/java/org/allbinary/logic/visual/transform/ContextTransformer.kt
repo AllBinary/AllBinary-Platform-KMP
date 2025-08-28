@@ -35,12 +35,12 @@ open public class ContextTransformer : BasicTransformer {
         
 public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(abeClientInformation, transformInfoInterface){
+                            : super(abeClientInformation, transformInfoInterface)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.

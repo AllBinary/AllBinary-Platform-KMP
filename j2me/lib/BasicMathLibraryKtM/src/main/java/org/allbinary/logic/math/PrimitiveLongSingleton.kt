@@ -38,7 +38,11 @@ open public class PrimitiveLongSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PrimitiveLongSingleton{
+: PrimitiveLongSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +74,11 @@ open fun getInstance()
             
 open fun getNumberFromChar(numberAsChar: Char)
         //nullable = true from not(false or (false and false)) = true
-: Byte{
+: Byte
 
-                    var numberAsChar = numberAsChar
+        Updates for KMP build        
+        {
+var numberAsChar = numberAsChar
 
     var size: Int = NUMBER_CHAR_ARRAY.size
                 
@@ -83,7 +89,11 @@ open fun getNumberFromChar(numberAsChar: Char)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(NUMBER_CHAR_ARRAY[index] == numberAsChar)
                         

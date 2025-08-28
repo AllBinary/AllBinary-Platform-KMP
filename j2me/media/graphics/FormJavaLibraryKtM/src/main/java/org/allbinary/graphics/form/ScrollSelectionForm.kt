@@ -66,30 +66,18 @@ open public class ScrollSelectionForm : PaintableForm {
     var paintable: ItemPaintable = ItemPaintableFactory.getInstance()!!
 public constructor        (title: String, items: Array<CustomItem?>, formPaintableFactory: ItemPaintableFactory, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : this(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor){
+                            : this(title, items, rectangle, formType, border, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var formPaintableFactory = formPaintableFactory
-
-
-                    var rectangle = rectangle
-
-
-                    var formType = formType
-
-
-                    var border = border
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var title = title
+    //var items = items
+    //var formPaintableFactory = formPaintableFactory
+    //var rectangle = rectangle
+    //var formType = formType
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -99,27 +87,17 @@ this.paintable= formPaintableFactory!!.getInstance(this)
 
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, border: Int, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, rectangle, formType, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var rectangle = rectangle
-
-
-                    var formType = formType
-
-
-                    var border = border
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var title = title
+    //var items = items
+    //var rectangle = rectangle
+    //var formType = formType
+    //var border = border
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -131,9 +109,11 @@ this.halfBorder= (border shr 1)
 
 override fun append(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var item = item
+        Updates for KMP build        
+        {
+    //var item = item
 
 
 
@@ -146,9 +126,11 @@ override fun append(item: CustomItem)
             
 open fun getSelectedItem(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: CustomItem
 
-                    var point = point
+        Updates for KMP build        
+        {
+    //var point = point
 
     var index: Int = this.getSelectedIndex(point)!!
 
@@ -181,9 +163,11 @@ open fun getSelectedItem(point: GPoint)
             
 open fun getItemIndex(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var item = item
+        Updates for KMP build        
+        {
+    //var item = item
 
     var size: Int = this.size()!!
 
@@ -193,7 +177,11 @@ open fun getItemIndex(item: CustomItem)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextItem: CustomItemInterface = this.get(index) as CustomItemInterface
 
 
@@ -221,7 +209,11 @@ open fun getItemIndex(item: CustomItem)
 
 open fun getStartIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -233,9 +225,11 @@ open fun getStartIndex()
             
 open fun getSelectedIndex(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var point = point
+        Updates for KMP build        
+        {
+    //var point = point
 
     var start: Int = this.getStartIndex()!!
 
@@ -278,7 +272,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
 
                         for (index in start until size)
 
-        {item= this.get(index) as CustomItemInterface
+        
+
+        Updates for KMP build        
+        {
+item= this.get(index) as CustomItemInterface
 width= item.getMinimumWidth()
 height= item.getMinimumHeight()
 
@@ -392,9 +390,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, GET_SELECTED_INDEX)
             
 open fun processInput(gameKeyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var gameKeyCode = gameKeyCode
+        Updates for KMP build        
+        {
+    //var gameKeyCode = gameKeyCode
 
     var formTypeFactory: FormTypeFactory = FormTypeFactory.getInstance()!!
 
@@ -510,9 +510,11 @@ open fun processInput(gameKeyCode: Int)
 
 open fun isInForm(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var point = point
+        Updates for KMP build        
+        {
+    //var point = point
 
     
                         if(rectangleCollisionUtil!!.isInside(x, y -halfBorder, this.rectangle.getMaxX() +border, this.rectangle.getMaxY() +border, point.getX(), point.getY()))
@@ -540,21 +542,15 @@ open fun isInForm(point: GPoint)
             
 open fun paintItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var graphics = graphics
-
-
-                    var index = index
-
-
-                    var item = item
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+    //var x = x
+    //var y = y
 
     var width: Int = item.getMinimumWidth()!!
 
@@ -624,21 +620,15 @@ graphics.drawRect(x -halfBorder -adjustedBorder, y -halfBorder -adjustedBorder, 
             
 open fun paintUnselectedItem(graphics: Graphics, index: Int, item: CustomItemInterface, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var graphics = graphics
-
-
-                    var index = index
-
-
-                    var item = item
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var index = index
+    //var item = item
+    //var x = x
+    //var y = y
 
     var width: Int = item.getMinimumWidth()!!
 
@@ -702,9 +692,11 @@ item.paintUnselected(graphics, x, y)
 
 open fun getDiffX(item: CustomItemInterface)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var item = item
+        Updates for KMP build        
+        {
+    //var item = item
 
 
 
@@ -715,7 +707,11 @@ open fun getDiffX(item: CustomItemInterface)
 
 open fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -725,7 +721,11 @@ open fun getDx()
 
 open fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -735,16 +735,22 @@ open fun getDy()
 
 open fun setButtonBasicColor(buttonBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var buttonBasicColor = buttonBasicColor
+
+        Updates for KMP build        
+        {
+    //var buttonBasicColor = buttonBasicColor
 this.buttonBasicColor= buttonBasicColor
 }
 
 
 open fun getButtonBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

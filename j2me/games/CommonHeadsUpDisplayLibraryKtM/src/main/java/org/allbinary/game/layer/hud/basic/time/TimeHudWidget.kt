@@ -48,27 +48,17 @@ open public class TimeHudWidget : BasicHud {
     private val timer: Timer
 public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
+                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor)
 
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxHeight = maxHeight
-
-
-                    var maxWidth = maxWidth
-
-
-                    var bufferZone = bufferZone
-
-
-                    var basicColor = basicColor
-
-
-                    var timer = timer
+        Updates for KMP build        
+        {
+var location = location
+var direction = direction
+var maxHeight = maxHeight
+var maxWidth = maxWidth
+var bufferZone = bufferZone
+var basicColor = basicColor
+var timer = timer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -95,21 +85,15 @@ this.offset= myFont!!.stringWidth(this.TIME_STRING) +myFont!!.stringWidth(3)
 
 public constructor        (location: Int, direction: Int, maxWidth: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : this(location, direction, 14, maxWidth, 2, basicColor, timer){
+                            : this(location, direction, 14, maxWidth, 2, basicColor, timer)
 
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxWidth = maxWidth
-
-
-                    var basicColor = basicColor
-
-
-                    var timer = timer
+        Updates for KMP build        
+        {
+var location = location
+var direction = direction
+var maxWidth = maxWidth
+var basicColor = basicColor
+var timer = timer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -118,18 +102,14 @@ public constructor        (location: Int, direction: Int, maxWidth: Int, basicCo
 
 public constructor        (location: Int, direction: Int, basicColor: BasicColor, timer: Timer)                        
 
-                            : this(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer){
+                            : this(location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, basicColor, timer)
 
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var basicColor = basicColor
-
-
-                    var timer = timer
+        Updates for KMP build        
+        {
+var location = location
+var direction = direction
+var basicColor = basicColor
+var timer = timer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -139,30 +119,44 @@ public constructor        (location: Int, direction: Int, basicColor: BasicColor
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.timer.update()
+
+
+        Updates for KMP build        
+        {
+this.timer.update()
 this.set()
 }
 
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{this.string= timer.getTimeChars()
+
+
+        Updates for KMP build        
+        {
+this.string= timer.getTimeChars()
 totalDigits= timer.getCurrentTotalDigits()
 }
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics, TIME_CHAR_ARRAY, 0, TIME_CHAR_ARRAY.size, string, 0, totalDigits, offset)
 }
 
 
 open fun getTimer()
         //nullable = true from not(false or (false and true)) = true
-: Timer{
+: Timer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

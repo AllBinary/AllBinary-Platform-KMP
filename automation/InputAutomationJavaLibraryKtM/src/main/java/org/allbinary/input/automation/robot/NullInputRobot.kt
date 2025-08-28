@@ -50,7 +50,11 @@ open public class NullInputRobot : AbstractInputRobot
 public constructor        ()                        
 
                             : super(
-                            null){
+                            null)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -59,7 +63,11 @@ public constructor        ()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,7 +77,11 @@ open fun getName()
 
 open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,7 +91,11 @@ open fun getHelpSet()
 
 open fun getMousePoint()
         //nullable = true from not(false or (false and true)) = true
-: Point{
+: Point
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,57 +105,67 @@ open fun getMousePoint()
 
 open fun keyPress(keycode: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keycode = keycode
+
+        Updates for KMP build        
+        {
+var keycode = keycode
 logUtil!!.put("KeyCode: " +keycode, this, "keyPress")
 }
 
 
 open fun keyRelease(keycode: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keycode = keycode
+
+        Updates for KMP build        
+        {
+var keycode = keycode
 logUtil!!.put("KeyCode: " +keycode, this, "keyRelease")
 }
 
 
 open fun mouseMove(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 logUtil!!.put("X: " +x +" Y: " +y, this, "mouseMove")
 }
 
 
 open fun mousePress(buttons: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var buttons = buttons
+
+        Updates for KMP build        
+        {
+var buttons = buttons
 logUtil!!.put("Buttons: " +buttons, this, "mousePress")
 }
 
 
 open fun mouseRelease(buttons: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var buttons = buttons
+
+        Updates for KMP build        
+        {
+var buttons = buttons
 logUtil!!.put("Buttons: " +buttons, this, "mouseRelease")
 }
 
 
 open fun createScreenCapture(screenRect: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var screenRect = screenRect
+        Updates for KMP build        
+        {
+var screenRect = screenRect
 
 
 
@@ -150,15 +176,21 @@ open fun createScreenCapture(screenRect: Rectangle)
 
 open fun delay(ms: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ms = ms
+
+        Updates for KMP build        
+        {
+var ms = ms
 }
 
 
 open fun getAutoDelay()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -168,12 +200,12 @@ open fun getAutoDelay()
 
 open fun getPixelColor(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Color{
+: Color
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
 
 
@@ -184,7 +216,11 @@ open fun getPixelColor(x: Integer, y: Integer)
 
 open fun isAutoWaitForIdle()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -194,30 +230,40 @@ open fun isAutoWaitForIdle()
 
 open fun mouseWheel(wheelAmt: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var wheelAmt = wheelAmt
+
+        Updates for KMP build        
+        {
+var wheelAmt = wheelAmt
 }
 
 
 open fun setAutoDelay(ms: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ms = ms
+
+        Updates for KMP build        
+        {
+var ms = ms
 }
 
 
 open fun setAutoWaitForIdle(isOn: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isOn = isOn
+
+        Updates for KMP build        
+        {
+var isOn = isOn
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -227,7 +273,11 @@ override fun toString()
 
 open fun waitForIdle()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

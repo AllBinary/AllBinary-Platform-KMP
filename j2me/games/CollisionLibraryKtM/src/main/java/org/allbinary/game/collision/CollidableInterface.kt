@@ -37,11 +37,17 @@ open fun isCollidable()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun isCollision(collidableInterfaceCompositeInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -49,9 +55,15 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableCompositeLayer
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : CollisionType
+
+        Updates for KMP build        
+        
 
 }
                 

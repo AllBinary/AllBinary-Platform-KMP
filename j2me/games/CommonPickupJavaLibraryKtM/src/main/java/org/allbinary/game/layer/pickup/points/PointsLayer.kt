@@ -38,9 +38,11 @@ open public class PointsLayer : AllBinaryLayer {
     private val points: Int
 public constructor        (points: Int)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
+                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition())
 
-                    var points = points
+        Updates for KMP build        
+        {
+var points = points
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,17 +52,21 @@ this.points= points
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun visit(scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scoreableInterface = scoreableInterface
+
+        Updates for KMP build        
+        {
+var scoreableInterface = scoreableInterface
 scoreableInterface!!.addPoints(this.points)
 }
 

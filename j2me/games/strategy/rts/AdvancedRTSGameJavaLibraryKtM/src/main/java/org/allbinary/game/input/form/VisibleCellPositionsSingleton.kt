@@ -52,7 +52,11 @@ open public class VisibleCellPositionsSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VisibleCellPositionsSingleton{
+: VisibleCellPositionsSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,16 +81,22 @@ open fun getInstance()
     private var currentIndex: Int= 0
 private constructor        ()
             : super()
-        {LocalPlayerBuildingEventHandler.getInstance()!!.addListener(this)
+        
+
+        Updates for KMP build        
+        {
+LocalPlayerBuildingEventHandler.getInstance()!!.addListener(this)
 ScrollMapEventHandler.getInstance()!!.addListener(this)
 }
 
 
 open fun init(simpleTiledLayer: SimpleTiledLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var simpleTiledLayer = simpleTiledLayer
+
+        Updates for KMP build        
+        {
+var simpleTiledLayer = simpleTiledLayer
 this.paintSimpleTiledLayer= ALL_VISIBLE_TILEDLAYER
 this.currentIndex= 0
 
@@ -104,9 +114,11 @@ this.setSimpleTiledLayer(simpleTiledLayer)
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -115,9 +127,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var event = event
+
+        Updates for KMP build        
+        {
+var event = event
 this.paintSimpleTiledLayer= this.simpleTiledLayer
 }
 
@@ -126,25 +140,33 @@ this.paintSimpleTiledLayer= this.simpleTiledLayer
             
 open fun onMoveEvent(scrollMapEvent: ScrollMapEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scrollMapEvent = scrollMapEvent
+
+        Updates for KMP build        
+        {
+var scrollMapEvent = scrollMapEvent
 this.move(scrollMapEvent!!.getDx(), scrollMapEvent!!.getDy())
 }
 
 
 open fun addStationaryCellPositions(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 
 
 
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var cellPosition: CellPosition = list.get(index) as CellPosition
 
 this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]++
@@ -155,16 +177,22 @@ this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.ge
 
 open fun removeStationaryCellPositions(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 
 
 
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var cellPosition: CellPosition = list.get(index) as CellPosition
 
 this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]--
@@ -175,7 +203,11 @@ this.stationaryVisibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.ge
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.currentIndex == 0)
                         
@@ -191,13 +223,21 @@ this.visibleCellPositions= temp
 
                         for (index in this.visibleCellPositions!!.size -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in this.visibleCellPositions[0]!!.length -1 downTo 0)
 
-        {this.visibleCellPositions[index]!![index2]= this.stationaryVisibleCellPositions[index]!![index2]!!
+        
+
+        Updates for KMP build        
+        {
+this.visibleCellPositions[index]!![index2]= this.stationaryVisibleCellPositions[index]!![index2]!!
 }
 
 }
@@ -220,7 +260,11 @@ this.currentIndex++
 
 open fun shouldProcess()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.currentIndex == 0)
                         
@@ -247,16 +291,22 @@ open fun shouldProcess()
 
 open fun addCellPositions(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 
 
 
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var cellPosition: CellPosition = list.get(index) as CellPosition
 
 this.visibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]++
@@ -267,9 +317,11 @@ this.visibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()]
 
 open fun isVisible(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cellPosition = cellPosition
+        Updates for KMP build        
+        {
+var cellPosition = cellPosition
 
     
                         if(this.visibleCellPositions[cellPosition!!.getRow()]!![cellPosition!!.getColumn()] > 0)
@@ -297,37 +349,45 @@ open fun isVisible(cellPosition: CellPosition)
 
 open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+var dx = dx
+var dy = dy
 this.getSimpleTiledLayer()!!.move(dx, dy)
 }
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.paintSimpleTiledLayer!!.paint(graphics, this.currentlyVisibleCellPositions)
 }
 
 
 open fun setSimpleTiledLayer(simpleTiledLayer: SimpleTiledLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var simpleTiledLayer = simpleTiledLayer
+
+        Updates for KMP build        
+        {
+var simpleTiledLayer = simpleTiledLayer
 this.simpleTiledLayer= simpleTiledLayer
 }
 
 
 open fun getSimpleTiledLayer()
         //nullable = true from not(false or (false and true)) = true
-: SimpleTiledLayer{
+: SimpleTiledLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

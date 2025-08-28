@@ -35,19 +35,23 @@ open public class AuthenticationHelperFactory : TagHelperFactory {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(LicensingException::class)
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
         try {
             
@@ -56,7 +60,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AuthenticationHelper(hashMap, pageContext)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -79,12 +87,12 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
             
 open fun getInstance(hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var hashMap = hashMap
-
-
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var httpServletRequest = httpServletRequest
 
         try {
             
@@ -93,7 +101,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>, httpServletRequest: HttpServlet
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AuthenticationHelper(hashMap, httpServletRequest)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         

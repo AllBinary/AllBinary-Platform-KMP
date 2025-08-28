@@ -30,15 +30,13 @@ open public class StaticViewPosition : ViewPosition {
         
 public constructor        (x: Int, y: Int, z: Int)                        
 
-                            : super(x, y, z){
+                            : super(x, y, z)
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,7 +45,11 @@ public constructor        (x: Int, y: Int, z: Int)
 
 override fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,7 +58,11 @@ override fun getX()
 
 override fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,7 +71,11 @@ override fun getY()
 
 override fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

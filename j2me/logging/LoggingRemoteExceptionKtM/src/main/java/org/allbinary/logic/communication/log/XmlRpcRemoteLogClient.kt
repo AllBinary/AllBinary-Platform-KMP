@@ -42,9 +42,11 @@ open public class XmlRpcRemoteLogClient : XmlRpcAbeClient {
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, "SSLLogServ.logUtil"){
+                            : super(clientInfo, "SSLLogServ.logUtil")
 
-                    var clientInfo = clientInfo
+        Updates for KMP build        
+        {
+    //var clientInfo = clientInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,9 +58,11 @@ public constructor        (clientInfo: AbeClientInformationInterface)
             
 open fun get(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var anyType = anyType
 
         try {
             
@@ -92,7 +96,11 @@ System.out.println("Result: \n" +result.toString())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
-            {System.out.println("IOException Trying Other Servers")
+            
+
+        Updates for KMP build        
+        {
+System.out.println("IOException Trying Other Servers")
 
     
                         if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
@@ -116,14 +124,22 @@ System.out.println("Result: \n" +result.toString())
                             
 }
  catch(e: XmlRpcException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -30,15 +30,21 @@ import org.allbinary.layer.AllBinaryLayerManager
 
 open public class NullAI : ArtificialIntelligence {
         
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 }
 
 

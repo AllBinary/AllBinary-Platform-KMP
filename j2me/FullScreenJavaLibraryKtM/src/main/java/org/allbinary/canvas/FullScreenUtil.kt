@@ -41,7 +41,11 @@ open public class FullScreenUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FullScreenUtil{
+: FullScreenUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,12 +64,12 @@ open fun getInstance()
             
 open fun init(fullScreenInterface: Canvas, commandListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fullScreenInterface = fullScreenInterface
 
 
-                    var commandListener = commandListener
+        Updates for KMP build        
+        {
+    //var fullScreenInterface = fullScreenInterface
+    //var commandListener = commandListener
 fullScreenInterface = fullScreenInterfacefullScreenInterface as RunnableCanvas
 fullScreenInterface.
                     waitOnNotify(0)
@@ -85,9 +89,11 @@ fullScreenInterface.
 
 open fun init(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fullScreenInterface = fullScreenInterface
+
+        Updates for KMP build        
+        {
+    //var fullScreenInterface = fullScreenInterface
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
@@ -113,9 +119,11 @@ open fun init(fullScreenInterface: Canvas)
 
 open fun isScreenChange(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var isFullScreen = isFullScreen
+        Updates for KMP build        
+        {
+var isFullScreen = isFullScreen
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
@@ -145,9 +153,11 @@ open fun isScreenChange(isFullScreen: Boolean)
 
 open fun isScreenChange(fullScreenInterface: Canvas)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var fullScreenInterface = fullScreenInterface
+        Updates for KMP build        
+        {
+    //var fullScreenInterface = fullScreenInterface
 
 
 

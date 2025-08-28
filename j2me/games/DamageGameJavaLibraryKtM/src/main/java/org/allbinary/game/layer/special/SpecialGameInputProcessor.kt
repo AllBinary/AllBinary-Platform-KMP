@@ -31,9 +31,11 @@ open public class SpecialGameInputProcessor : GameInputProcessor {
         
 
     val collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer
-public constructor        (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer){
+public constructor        (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
 
-                    var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        Updates for KMP build        
+        {
+var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 this.collidableDestroyableDamageableLayer= collidableDestroyableDamageableLayer
 }
 

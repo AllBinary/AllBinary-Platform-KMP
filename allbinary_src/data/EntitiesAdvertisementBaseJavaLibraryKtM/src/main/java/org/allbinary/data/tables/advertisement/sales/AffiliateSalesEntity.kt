@@ -44,7 +44,11 @@ open public class AffiliateSalesEntity : AbSqlBean
     val tableName: String = "affiliate"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -54,9 +58,11 @@ this.setTableName(tableName)
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             super.deleteWhere(StoreFrontData.getInstance()!!.NAME, value)
@@ -70,7 +76,11 @@ open fun delete(value: String)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -86,7 +96,11 @@ open fun delete(value: String)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var entryData: EntryData = EntryData.getInstance()!!
 
 
@@ -106,7 +120,11 @@ stringBuffer!!.append(entryData!!.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var returnStr: String = super.createTable(this.createTableStatement())!!
 
 
@@ -119,16 +137,22 @@ open fun createTable()
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var updatedValues = updatedValues
+
+        Updates for KMP build        
+        {
+var updatedValues = updatedValues
 super.updateWhere(EntryData.getInstance()!!.ID, updatedValues!!.get(EntryData.getInstance()!!.ID) as String, updatedValues)
 }
 
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

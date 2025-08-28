@@ -48,18 +48,14 @@ open public class HtmlInput : HtmlTag {
     private var name: String
 
     private var after: String
-public constructor        (before: String, type: String, name: String, after: String){
+public constructor        (before: String, type: String, name: String, after: String)
 
-                    var before = before
-
-
-                    var type = type
-
-
-                    var name = name
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var type = type
+var name = name
+var after = after
 this.before= before
 this.type= type
 this.name= name
@@ -68,7 +64,11 @@ this.after= after
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
@@ -95,7 +95,11 @@ result += "\" "
 
                         for (i in 0 until attributeSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = attributeKeys[i]!! as String
 
 

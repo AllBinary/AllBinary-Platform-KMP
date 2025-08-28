@@ -37,7 +37,11 @@ open public class PointFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PointFactory{
+: PointFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,21 +55,29 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(x: Int, y: Int)
         //nullable =  from not(true or (false and false)) = 
-: GPoint{
+: GPoint
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
 
 
@@ -76,15 +88,13 @@ open fun getInstance(x: Int, y: Int)
 
 open fun getInstance(x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: GPoint{
+: GPoint
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 
 
 

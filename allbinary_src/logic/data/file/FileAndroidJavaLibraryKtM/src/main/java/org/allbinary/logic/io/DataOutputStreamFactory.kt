@@ -38,7 +38,11 @@ open public class DataOutputStreamFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DataOutputStreamFactory{
+: DataOutputStreamFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,9 +61,11 @@ open fun getInstance()
             
 open fun getInstance(file: AbFile)
         //nullable =  from not(true or (false and false)) = 
-: AbDataOutputStream{
+: AbDataOutputStream
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     var idFileOutputStream: AbFileOutputStream = AbFileOutputStream(file)
 
@@ -78,12 +84,12 @@ open fun getInstance(file: AbFile)
             
 open fun getInstance(filePath: String, fileName: String)
         //nullable =  from not(true or (false and false)) = 
-: AbDataOutputStream{
+: AbDataOutputStream
 
-                    var filePath = filePath
-
-
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+var filePath = filePath
+var fileName = fileName
 
     var fileStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 

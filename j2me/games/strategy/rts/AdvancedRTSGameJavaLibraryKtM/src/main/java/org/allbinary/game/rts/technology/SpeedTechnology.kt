@@ -38,16 +38,22 @@ open public class SpeedTechnology
     private var maxLevel: Int
 public constructor        (maxLevel: Int)
             : super()
-        {
+        
 
-                    var maxLevel = maxLevel
+        Updates for KMP build        
+        {
+var maxLevel = maxLevel
 this.maxLevel= maxLevel
 }
 
 
 open fun isCompleted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +63,11 @@ open fun isCompleted()
 
 open fun getPercentComplete()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +77,11 @@ open fun getPercentComplete()
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,7 +91,11 @@ open fun getLevel()
 
 open fun getMaxLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +105,11 @@ open fun getMaxLevel()
 
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,12 +119,20 @@ open fun getCost()
 
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getDowngradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,7 +142,11 @@ open fun getDowngradeCost()
 
 open fun isDowngradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,7 +156,11 @@ open fun isDowngradeable()
 
 open fun getUpgradeCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,7 +170,11 @@ open fun getUpgradeCost()
 
 open fun isUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getLevel() < this.getMaxLevel())
                         
@@ -159,7 +201,11 @@ open fun isUpgradeable()
 
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
-{this.level++
+
+
+        Updates for KMP build        
+        {
+this.level++
 
     var unitTechnologySingletonFactory: UnitTechnologySingletonFactory = UnitTechnologySingletonFactory.getInstance()!!
 
@@ -169,7 +215,11 @@ unitTechnologySingletonFactory!!.setSpeed(unitTechnologySingletonFactory!!.getSp
 
 open fun isSelfUpgradeable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

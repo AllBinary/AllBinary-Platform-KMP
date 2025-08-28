@@ -45,18 +45,14 @@ open public class NumberTextFieldItemValidator : ValidatorBase {
     private val max: Int
 
     private val maxChars: Int
-public constructor        (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int){
+public constructor        (textFieldItem: TextFieldItem, maxChars: Int, min: Int, max: Int)
 
-                    var textFieldItem = textFieldItem
-
-
-                    var maxChars = maxChars
-
-
-                    var min = min
-
-
-                    var max = max
+        Updates for KMP build        
+        {
+var textFieldItem = textFieldItem
+var maxChars = maxChars
+var min = min
+var max = max
 this.textFieldItem= textFieldItem
 this.min= min
 this.max= max
@@ -66,9 +62,11 @@ this.maxChars= maxChars
 
 open fun isNumberValid(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -79,9 +77,11 @@ open fun isNumberValid(value: Integer)
 
 open fun toNumberVector(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Vector<Any>{
+: Vector<Any>
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -91,7 +91,11 @@ open fun toNumberVector(value: Integer)
 
 override fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var result: Boolean = BooleanFactory.getInstance()!!.TRUE
 
 
@@ -109,7 +113,11 @@ override fun isValid()
         try {
             Integer.parseInt(this.textFieldItem!!.getString())
 } catch(e: NumberFormatException)
-            {result= BooleanFactory.getInstance()!!.FALSE
+            
+
+        Updates for KMP build        
+        {
+result= BooleanFactory.getInstance()!!.FALSE
 }
 
 
@@ -146,7 +154,11 @@ override fun isValid()
 
 override fun toList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
     var list: BasicArrayList = BasicArrayList()
 
 
@@ -198,7 +210,11 @@ list.add(stringMaker!!.append(name)!!.append(" is to large")!!.toString())
                                     }
                                 
 } catch(e: NumberFormatException)
-            {stringMaker!!.delete(0, stringMaker!!.length())
+            
+
+        Updates for KMP build        
+        {
+stringMaker!!.delete(0, stringMaker!!.length())
 list.add(stringMaker!!.append(name)!!.append(" is not a number")!!.toString())
 }
 

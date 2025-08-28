@@ -45,9 +45,11 @@ open public class InputPersistance : BasicPersitance {
     private val hashtableUtil: HashtableUtil = HashtableUtil.getInstance()!!
 public constructor        (name: String)                        
 
-                            : super(name){
+                            : super(name)
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,9 +61,11 @@ public constructor        (name: String)
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
     var recordStore: RecordStore = RecordStore.openRecordStore(this.getRecordId(abeClientInformation), true)!!
 
@@ -82,7 +86,11 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface)
 
 
         while(recordEnum!!.hasNextElement())
-        {id= recordEnum!!.nextRecordId()
+        
+
+        Updates for KMP build        
+        {
+id= recordEnum!!.nextRecordId()
 stringBuffer!!.delete(0, stringBuffer!!.length())
 logUtil!!.put(stringBuffer!!.append(this.persistanceStrings!!.LOADING_ID)!!.append(id)!!.toString(), this, this.persistanceStrings!!.LOAD_ALL)
 hashtable= Hashtable<Any, Any>()
@@ -98,12 +106,12 @@ recordStore!!.closeRecordStore()
             
 open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var hashtable = hashtable
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var hashtable = hashtable
 PreLogUtil.put(StringMaker().
                             append(this.persistanceStrings!!.NOT_SAVING)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, this.commonStrings!!.SAVE)
 
@@ -131,7 +139,11 @@ PreLogUtil.put(StringMaker().
 
                         for (index in 0 until size)
 
-        {gameActionInput= inputObjectArray[index]!! as Input
+        
+
+        Updates for KMP build        
+        {
+gameActionInput= inputObjectArray[index]!! as Input
 list= hashtable.get(inputObjectArray[index]!!) as BasicArrayList
 
 
@@ -139,7 +151,11 @@ list= hashtable.get(inputObjectArray[index]!!) as BasicArrayList
 
                         for (index2 in 0 until list.size()!!)
 
-        {input= list.get(index2) as Input
+        
+
+        Updates for KMP build        
+        {
+input= list.get(index2) as Input
 }
 
 }

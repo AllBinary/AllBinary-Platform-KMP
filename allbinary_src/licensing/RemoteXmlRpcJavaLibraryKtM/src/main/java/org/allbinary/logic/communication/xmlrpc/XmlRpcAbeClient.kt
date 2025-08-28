@@ -93,12 +93,12 @@ open public class XmlRpcAbeClient
     private val myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 public constructor        (clientInfo: AbeClientInformationInterface, remoteMethod: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var clientInfo = clientInfo
-
-
-                    var remoteMethod = remoteMethod
+var clientInfo = clientInfo
+var remoteMethod = remoteMethod
 this.remoteMethod= remoteMethod
 this.clientInfo= clientInfo
 
@@ -138,9 +138,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.CONSTRUCTOR)
             
 open fun get(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
 
@@ -154,9 +156,11 @@ ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
             
 open fun tryAnother(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
     
                         if(getServer() < getMaxServers())
@@ -198,7 +202,11 @@ open fun tryAnother(anyType: Any)
 
 open fun getClientInfo()
         //nullable = true from not(false or (false and true)) = true
-: AbeClientInformationInterface{
+: AbeClientInformationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -208,7 +216,11 @@ open fun getClientInfo()
 
 open fun getClient()
         //nullable = true from not(false or (false and true)) = true
-: XmlRpcHandler{
+: XmlRpcHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -218,16 +230,22 @@ open fun getClient()
 
 open fun setClient(client: XmlRpcClient)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var client = client
+
+        Updates for KMP build        
+        {
+var client = client
 this.client= client
 }
 
 
 open fun getServer()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -237,16 +255,22 @@ open fun getServer()
 
 open fun setServer(server: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var server = server
+
+        Updates for KMP build        
+        {
+var server = server
 this.server= server
 }
 
 
 open fun getStart()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -256,16 +280,22 @@ open fun getStart()
 
 open fun setStart(start: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var start = start
+
+        Updates for KMP build        
+        {
+var start = start
 this.start= start
 }
 
 
 open fun getMaxServers()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -275,16 +305,22 @@ open fun getMaxServers()
 
 open fun setMaxServers(maxServers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxServers = maxServers
+
+        Updates for KMP build        
+        {
+var maxServers = maxServers
 this.maxServers= maxServers
 }
 
 
 open fun isIsDone()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -294,16 +330,22 @@ open fun isIsDone()
 
 open fun setIsDone(isDone: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isDone = isDone
+
+        Updates for KMP build        
+        {
+var isDone = isDone
 this.isDone= isDone
 }
 
 
 open fun getRemoteMethod()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -43,9 +43,11 @@ open public class BasicUserRole
 
 open fun getRole(role: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicUserRole{
+: BasicUserRole
 
-                    var role = role
+        Updates for KMP build        
+        {
+var role = role
 
     var roleVector: Vector<Any> = BasicUserRole.getAll()!!
 
@@ -58,7 +60,11 @@ open fun getRole(role: String)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userRole: BasicUserRole = roleVector!!.get(index) as BasicUserRole
 
 
@@ -85,7 +91,11 @@ open fun getRole(role: String)
 
 open fun getAll()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -106,18 +116,14 @@ open fun getAll()
     private val sessionInactivityTimeout: Long
  constructor        (aRole: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)                        
 
-                            : this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout){
+                            : this(aRole, aRole, a_int_RoleId, aSessionTimeout, aSessionInactivityTimeout)
 
-                    var aRole = aRole
-
-
-                    var a_int_RoleId = a_int_RoleId
-
-
-                    var aSessionTimeout = aSessionTimeout
-
-
-                    var aSessionInactivityTimeout = aSessionInactivityTimeout
+        Updates for KMP build        
+        {
+var aRole = aRole
+var a_int_RoleId = a_int_RoleId
+var aSessionTimeout = aSessionTimeout
+var aSessionInactivityTimeout = aSessionInactivityTimeout
 
 
                             //For kotlin this is before the body of the constructor.
@@ -126,21 +132,15 @@ open fun getAll()
 
  constructor        (aRole: String, aDisplayValue: String, a_int_RoleId: Int, aSessionTimeout: Long, aSessionInactivityTimeout: Long)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var aRole = aRole
-
-
-                    var aDisplayValue = aDisplayValue
-
-
-                    var a_int_RoleId = a_int_RoleId
-
-
-                    var aSessionTimeout = aSessionTimeout
-
-
-                    var aSessionInactivityTimeout = aSessionInactivityTimeout
+var aRole = aRole
+var aDisplayValue = aDisplayValue
+var a_int_RoleId = a_int_RoleId
+var aSessionTimeout = aSessionTimeout
+var aSessionInactivityTimeout = aSessionInactivityTimeout
 this.m_int_RoleId= a_int_RoleId
 this.role= aRole
 this.displayValue= aDisplayValue
@@ -152,7 +152,11 @@ roleVector!!.add(this)
 
 open fun getRoleId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -162,7 +166,11 @@ open fun getRoleId()
 
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -172,7 +180,11 @@ open fun getRole()
 
 open fun getSessionTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -182,7 +194,11 @@ open fun getSessionTimeout()
 
 open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -192,9 +208,11 @@ open fun getSessionInactivityTimeout()
 
 open fun equals(basicUserRole: BasicUserRole?)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var basicUserRole = basicUserRole
+        Updates for KMP build        
+        {
+var basicUserRole = basicUserRole
 
     
                         if(this.getRoleId() == basicUserRole!!.getRoleId())
@@ -217,7 +235,11 @@ open fun equals(basicUserRole: BasicUserRole?)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -39,7 +39,11 @@ open public class WorkFlowEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WorkFlowEntityFactory{
+: WorkFlowEntityFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,12 +56,20 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun create2()
         //nullable = true from not(false or (false and true)) = true
-: WorkFlowEntity{
+: WorkFlowEntity
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -65,7 +77,11 @@ open fun create2()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.workflow.WorkFlowEntity()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 

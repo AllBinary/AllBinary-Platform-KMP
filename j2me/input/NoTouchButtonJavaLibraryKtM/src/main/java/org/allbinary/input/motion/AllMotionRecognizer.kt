@@ -40,7 +40,11 @@ open public class AllMotionRecognizer
     private val id: Int
 public constructor        ()
             : super()
-        {this.id= index++
+        
+
+        Updates for KMP build        
+        {
+this.id= index++
 }
 
 
@@ -48,18 +52,14 @@ public constructor        ()
             
 open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 
@@ -67,18 +67,14 @@ open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
             
 open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 
@@ -86,18 +82,14 @@ open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
             
 open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 
@@ -105,24 +97,24 @@ open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int
             
 open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

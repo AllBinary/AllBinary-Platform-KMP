@@ -41,9 +41,11 @@ open public class FileTableMapping
     private var file: AbFile
 public constructor        (file: AbFile)
             : super()
-        {
+        
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 this.file= file
 }
 
@@ -52,7 +54,11 @@ this.file= file
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,7 +70,11 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var filePropertyVector: Vector = Vector()
 
 filePropertyVector!!.add(file.getAbsolutePath())
@@ -84,7 +94,11 @@ filePropertyVector!!.add(file.getPath())
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var filePropertyHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 

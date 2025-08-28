@@ -42,9 +42,11 @@ open public class CreateUserFactory
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: UserInterface{
+: UserInterface
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     
                         if(hashMap != 
@@ -96,7 +98,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

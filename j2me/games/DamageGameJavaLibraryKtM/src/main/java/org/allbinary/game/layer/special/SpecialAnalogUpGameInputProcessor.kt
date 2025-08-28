@@ -32,9 +32,11 @@ open public class SpecialAnalogUpGameInputProcessor : SpecialGameInputProcessor 
         
 public constructor        (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)                        
 
-                            : super(collidableDestroyableDamageableLayer){
+                            : super(collidableDestroyableDamageableLayer)
 
-                    var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        Updates for KMP build        
+        {
+var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -45,15 +47,13 @@ public constructor        (collidableDestroyableDamageableLayer: CollidableDestr
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
-
-
-                    var yAnalogValue = yAnalogValue
+        Updates for KMP build        
+        {
+var allbinaryLayerManager = allbinaryLayerManager
+var gameKeyEvent = gameKeyEvent
+var yAnalogValue = yAnalogValue
 this.collidableDestroyableDamageableLayer!!.up(yAnalogValue)
 }
 

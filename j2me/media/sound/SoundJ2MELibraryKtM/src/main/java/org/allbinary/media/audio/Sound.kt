@@ -43,15 +43,21 @@ open public class Sound
     var player: Player = NoPlayer.NO_PLAYER
 protected constructor        (resource: String)
             : super()
-        {
+        
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 this.resource= resource
 }
 
 override fun getResource()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +66,11 @@ override fun getResource()
 
 override fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
-: Player{
+: Player
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +80,11 @@ override fun getPlayerP()
 
 open fun setPlayerP(player: Player)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var player = player
+
+        Updates for KMP build        
+        {
+    //var player = player
 this.player= player
 }
 
@@ -80,12 +92,20 @@ this.player= player
                 @Throws(Exception::class)
             override fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,11 +114,19 @@ open fun getDuration()
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.start()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN)

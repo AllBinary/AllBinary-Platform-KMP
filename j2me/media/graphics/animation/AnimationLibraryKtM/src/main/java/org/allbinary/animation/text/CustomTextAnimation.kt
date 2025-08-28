@@ -45,15 +45,13 @@ open public class CustomTextAnimation : TextAnimation {
     var hasChanged: Boolean = true
 public constructor        (text: String, fontSize: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(text, animationBehavior){
+                            : super(text, animationBehavior)
 
-                    var text = text
-
-
-                    var fontSize = fontSize
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var text = text
+    //var fontSize = fontSize
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,15 +62,13 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, fontSize)
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
     var existingFont: Font = graphics.getFont()!!
 
@@ -83,12 +79,12 @@ fontDebugFactory!!.setFont(existingFont, graphics)
 
 override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var scaleX = scaleX
 
 
-                    var scaleY = scaleY
+        Updates for KMP build        
+        {
+    //var scaleX = scaleX
+    //var scaleY = scaleY
 
     
                         if(scaleX != scaleY)
@@ -107,9 +103,11 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, (fontSize *scaleX).t
 
 override fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var text = text
+
+        Updates for KMP build        
+        {
+    //var text = text
 
     
                         if(this.lastText != text)
@@ -127,7 +125,11 @@ super.setText(text)
     private var textWidth: Int= 0
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     
                         if(this.hasChanged)
                         
@@ -146,7 +148,11 @@ this.hasChanged= false
 
 override fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

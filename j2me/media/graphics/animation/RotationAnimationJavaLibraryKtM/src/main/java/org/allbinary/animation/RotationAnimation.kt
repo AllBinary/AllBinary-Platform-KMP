@@ -47,12 +47,12 @@ open public class RotationAnimation : IndexedAnimation
     var circularIndexUtil: CircularIndexUtil
 protected constructor        (angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var angleInfo = angleInfo
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var angleInfo = angleInfo
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,15 +63,13 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(360 /angleInfo!!.getAngleI
 
 protected constructor        (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,9 +80,11 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(totalAngle /angleInfo!!.ge
 
 protected constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -95,29 +95,47 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(4)
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.next())
+
+
+        Updates for KMP build        
+        {
+this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.next())
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.previous())
+
+
+        Updates for KMP build        
+        {
+this.angleInfo!!.adjustAngle(this.circularIndexUtil!!.previous())
 }
 
 
 open fun nextRotationZ()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun previousRotationZ()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 this.circularIndexUtil!!.setIndex(index)
 
     var newFrame: Int = this.circularIndexUtil!!.getIndex()!!
@@ -127,9 +145,11 @@ this.angleInfo!!.adjustAngle(newFrame)
 
 override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var direction = direction
+
+        Updates for KMP build        
+        {
+    //var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
 
@@ -138,31 +158,41 @@ this.adjustFrame(angle)
 
 override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+    //var angle = angle
 this.adjustFrame(angle)
 }
 
 override fun adjustFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+    //var angle = angle
 this.adjustFrame(angle.getValue())
 }
 
 override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+    //var angle = angle
 this.setFrame(this.frameUtil!!.getFrameForAngle(angle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,7 +201,11 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,7 +214,11 @@ override fun getSize()
 
 override fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo{
+: AngleInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -189,7 +227,11 @@ override fun getAngleInfoP()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

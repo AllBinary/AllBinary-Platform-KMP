@@ -36,7 +36,11 @@ open public class ModifierOpenGLESImageProcessor : OpenGLESImageProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ModifierOpenGLESImageProcessor{
+: ModifierOpenGLESImageProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,21 +56,15 @@ open fun getInstance()
             }            
         override fun colorMask(gl: GL10, red: Float, green: Float, blue: Float, alpha: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var red = red
-
-
-                    var green = green
-
-
-                    var blue = blue
-
-
-                    var alpha = alpha
+        Updates for KMP build        
+        {
+var gl = gl
+var red = red
+var green = green
+var blue = blue
+var alpha = alpha
 gl.glColor4f(red, green, blue, alpha)
 }
 

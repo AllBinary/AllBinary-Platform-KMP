@@ -43,12 +43,12 @@ open public class SimpleTransform
     private val dataFilePath: AbPath
 public constructor        (xsltFilePath: AbPath, dataFilePath: AbPath)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var xsltFilePath = xsltFilePath
-
-
-                    var dataFilePath = dataFilePath
+var xsltFilePath = xsltFilePath
+var dataFilePath = dataFilePath
 this.xsltFilePath= xsltFilePath
 this.dataFilePath= dataFilePath
 }
@@ -58,7 +58,11 @@ this.dataFilePath= dataFilePath
             
 open fun transform()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var inputStream: AbFileLocalInputStream = AbFileLocalInputStream(AbFile(xsltFilePath))
 
 

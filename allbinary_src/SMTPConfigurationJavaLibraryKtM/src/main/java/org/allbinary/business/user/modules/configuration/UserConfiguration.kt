@@ -45,16 +45,22 @@ open public class UserConfiguration
     private var timeLastModified: TimeLastModified
 public constructor        ()
             : super()
-        {this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfigurationInterface
+        
+
+        Updates for KMP build        
+        {
+this.userEmailConfigurationInterface= UserEmailConfiguration() as UserEmailConfigurationInterface
 this.timeCreated= TimeCreated(0)
 this.timeLastModified= TimeLastModified(0)
 }
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.userEmailConfigurationInterface= UserEmailConfiguration(hashMap) as UserEmailConfigurationInterface
 this.timeCreated= TimeCreated(hashMap!!.get(EntryData.getInstance()!!.TIMECREATED) as String)
 this.timeLastModified= TimeLastModified(hashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as String)
@@ -63,7 +69,11 @@ this.timeLastModified= TimeLastModified(hashMap!!.get(EntryData.getInstance()!!.
 
 open fun getUserEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailConfigurationInterface{
+: UserEmailConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,16 +83,22 @@ open fun getUserEmailConfigurationInterface()
 
 open fun setUserEmailConfigurationInterface(userEmailConfigurationInterface: UserEmailConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userEmailConfigurationInterface = userEmailConfigurationInterface
+
+        Updates for KMP build        
+        {
+var userEmailConfigurationInterface = userEmailConfigurationInterface
 this.userEmailConfigurationInterface= userEmailConfigurationInterface
 }
 
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
-: TimeCreated{
+: TimeCreated
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +108,11 @@ open fun getTimeCreated()
 
 open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
-: TimeLastModified{
+: TimeLastModified
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,18 +122,22 @@ open fun getTimeLastModified()
 
 open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeCreated = timeCreated
+
+        Updates for KMP build        
+        {
+var timeCreated = timeCreated
 this.timeCreated= timeCreated
 }
 
 
 open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeLastModified = timeLastModified
+
+        Updates for KMP build        
+        {
+var timeLastModified = timeLastModified
 this.timeLastModified= timeLastModified
 }
 

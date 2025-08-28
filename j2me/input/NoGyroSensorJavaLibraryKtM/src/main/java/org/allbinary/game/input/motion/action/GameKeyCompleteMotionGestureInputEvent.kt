@@ -41,15 +41,13 @@ open public class GameKeyCompleteMotionGestureInputEvent : CompleteMotionGesture
     private var gameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 public constructor        (name: String, motionGestureInput: MotionGestureInput, inputToGameKeyMapping: InputToGameKeyMapping)                        
 
-                            : super(name, motionGestureInput){
+                            : super(name, motionGestureInput)
 
-                    var name = name
-
-
-                    var motionGestureInput = motionGestureInput
-
-
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+        Updates for KMP build        
+        {
+var name = name
+var motionGestureInput = motionGestureInput
+var inputToGameKeyMapping = inputToGameKeyMapping
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,7 +56,11 @@ public constructor        (name: String, motionGestureInput: MotionGestureInput,
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,21 +70,31 @@ override fun getSourceId()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 this.gameKeyEvent= gameKeyEvent
 }
 
 
 open fun getGameKeyEvent()
         //nullable = true from not(false or (false and true)) = true
-: GameKeyEvent{
+: GameKeyEvent
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,16 +104,22 @@ open fun getGameKeyEvent()
 
 open fun setGameKey(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKey = gameKey
+
+        Updates for KMP build        
+        {
+var gameKey = gameKey
 this.gameKey= gameKey
 }
 
 
 open fun getGameKey()
         //nullable = true from not(false or (false and true)) = true
-: GameKey{
+: GameKey
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

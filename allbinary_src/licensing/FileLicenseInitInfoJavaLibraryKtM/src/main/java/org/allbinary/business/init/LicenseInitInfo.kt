@@ -40,12 +40,20 @@ open public class LicenseInitInfo
     private var serverVector: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,9 +63,11 @@ open fun getLicenseId()
 
 open fun getServer(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -68,7 +78,11 @@ open fun getServer(index: Int)
 
 open fun getNumberOfServers()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,43 +92,55 @@ open fun getNumberOfServers()
 
 open fun setLicenseId(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.id= value
 }
 
 
 open fun clearServers()
         //nullable = true from not(false or (false and true)) = true
-{this.serverVector= BasicArrayList()
+
+
+        Updates for KMP build        
+        {
+this.serverVector= BasicArrayList()
 }
 
 
 open fun setServer(value: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+var value = value
+var index = index
 this.serverVector!!.add(index, value)
 }
 
 
 open fun addServer(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.serverVector!!.add(value)
 }
 
 
 open fun getServerList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,9 +150,11 @@ open fun getServerList()
 
 open fun setServerList(servers: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var servers = servers
+
+        Updates for KMP build        
+        {
+var servers = servers
 
     
                         if(DebugFactory.getInstance() == NoDebug.getInstance())

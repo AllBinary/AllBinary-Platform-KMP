@@ -49,24 +49,16 @@ open public class GameNotificationHud : BasicHud
         }
             public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
+                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor)
 
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxHeight = maxHeight
-
-
-                    var maxWidth = maxWidth
-
-
-                    var bufferZone = bufferZone
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var location = location
+var direction = direction
+var maxHeight = maxHeight
+var maxWidth = maxWidth
+var bufferZone = bufferZone
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,9 +67,11 @@ open public class GameNotificationHud : BasicHud
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -89,9 +83,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                 @Throws(Exception::class)
             override fun onGameNotificationEvent(gameNotificationEvent: GameNotificationEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameNotificationEvent = gameNotificationEvent
+
+        Updates for KMP build        
+        {
+    //var gameNotificationEvent = gameNotificationEvent
 
     
                         if(lastGameNotificationEvent != gameNotificationEvent)
@@ -108,18 +104,14 @@ this.add(gameNotificationEvent!!.getString(), gameNotificationEvent!!.getSeconds
 
 open fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var string = string
 
 
-                    var seconds = seconds
-
-
-                    var basicColor = basicColor
-
-
-                    var permanent = permanent
+        Updates for KMP build        
+        {
+var string = string
+var seconds = seconds
+var basicColor = basicColor
+var permanent = permanent
 }
 
 
@@ -127,20 +119,30 @@ open fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent
             
 open fun processTick()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

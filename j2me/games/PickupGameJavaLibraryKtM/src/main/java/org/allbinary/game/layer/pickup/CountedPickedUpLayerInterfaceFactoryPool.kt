@@ -38,7 +38,11 @@ open public class CountedPickedUpLayerInterfaceFactoryPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CountedPickedUpLayerInterfaceFactoryPool{
+: CountedPickedUpLayerInterfaceFactoryPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
+
+
+        Updates for KMP build        
+        {
+SINGLETON= CountedPickedUpLayerInterfaceFactoryPool()
 }
 
 
@@ -57,13 +65,21 @@ open fun init()
     private var list: BasicArrayList
 private constructor        ()
             : super()
-        {list= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+list= BasicArrayList()
 }
 
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

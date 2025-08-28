@@ -51,15 +51,13 @@ open public class BasicTopViewGeographicMapCellType
     private val types: IntArray
 public constructor        (name: String, type: Int, cost: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var type = type
-
-
-                    var cost = cost
+    //var name = name
+    //var type = type
+    //var cost = cost
 
     
                         if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 
@@ -85,15 +83,13 @@ this.types[0]= type
 
 public constructor        (name: String, types: IntArray, cost: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var types = types
-
-
-                    var cost = cost
+    //var name = name
+    //var types = types
+    //var cost = cost
 
     var size: Int = types.size
                 
@@ -107,7 +103,11 @@ public constructor        (name: String, types: IntArray, cost: Int)
 
                         for (index in 0 until size)
 
-        {type= types[index]!!
+        
+
+        Updates for KMP build        
+        {
+type= types[index]!!
 
     
                         if(GeographicMapCellTypeFactory.getInstance()!!.getGeographicMapCellTypeArray()[type] == 
@@ -134,15 +134,13 @@ this.cost= cost
 
 public constructor        (name: String, types: BasicArrayList, cost: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var types = types
-
-
-                    var cost = cost
+    //var name = name
+    //var types = types
+    //var cost = cost
 
     var size: Int = types.size()!!
 
@@ -158,7 +156,11 @@ public constructor        (name: String, types: BasicArrayList, cost: Int)
 
                         for (index in 0 until size)
 
-        {type= get = types.get(index)get as Integer
+        
+
+        Updates for KMP build        
+        {
+type= get = types.get(index)get as Integer
 get.
                     toInt()
 
@@ -189,9 +191,11 @@ this.types= typeArray
 
 open fun isType(type: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var type = type
+        Updates for KMP build        
+        {
+    //var type = type
 
 
 
@@ -202,9 +206,11 @@ open fun isType(type: GeographicMapCellType)
 
 open fun isType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var type = type
+        Updates for KMP build        
+        {
+    //var type = type
 
     var size: Int = types.size
                 
@@ -215,7 +221,11 @@ open fun isType(type: Int)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(types[index] == type)
                         
@@ -240,7 +250,11 @@ open fun isType(type: Int)
 
 open fun getTypes()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -249,7 +263,11 @@ open fun getTypes()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringMaker: StringMaker = StringMaker()
 
 
@@ -262,7 +280,11 @@ override fun toString()
 
                         for (index in 0 until size)
 
-        {stringMaker!!.append(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
+        
+
+        Updates for KMP build        
+        {
+stringMaker!!.append(types[index]!!)!!.append(CommonSeps.getInstance()!!.COMMA)
 }
 
 

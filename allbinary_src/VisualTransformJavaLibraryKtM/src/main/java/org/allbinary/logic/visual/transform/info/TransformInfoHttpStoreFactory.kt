@@ -40,7 +40,11 @@ open public class TransformInfoHttpStoreFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoHttpStoreFactory{
+: TransformInfoHttpStoreFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,22 +55,24 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoInterface{
+: TransformInfoInterface
 
-                    var databaseHashMap = databaseHashMap
-
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var databaseHashMap = databaseHashMap
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
 

@@ -38,9 +38,11 @@ open public class Direction
 
 open fun getInstance(direction: Int)
         //nullable =  from not(true or (false and false)) = 
-: Direction{
+: Direction
 
-                    var direction = direction
+        Updates for KMP build        
+        {
+var direction = direction
 
 
 
@@ -60,18 +62,14 @@ open fun getInstance(direction: Int)
     private var frameFactor: Int
  constructor        (name: String, otherName: String, value: Int, frameFactor: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var otherName = otherName
-
-
-                    var value = value
-
-
-                    var frameFactor = frameFactor
+var name = name
+var otherName = otherName
+var value = value
+var frameFactor = frameFactor
 this.name= name
 this.otherName= otherName
 this.value= value
@@ -81,15 +79,13 @@ directionArray[value]= this
 
  constructor        (name: String, otherName: String, value: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var otherName = otherName
-
-
-                    var value = value
+var name = name
+var otherName = otherName
+var value = value
 this.name= name
 this.otherName= otherName
 this.value= value
@@ -100,7 +96,11 @@ directionArray[value]= this
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -110,7 +110,11 @@ open fun getValue()
 
 open fun getFrameFactor()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,7 +124,11 @@ open fun getFrameFactor()
 
 open fun getOtherName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,7 +138,11 @@ open fun getOtherName()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -139,7 +151,11 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Direction: ")

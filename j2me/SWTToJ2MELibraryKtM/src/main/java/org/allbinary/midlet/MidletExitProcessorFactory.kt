@@ -42,7 +42,11 @@ open public class MidletExitProcessorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MidletExitProcessorFactory{
+: MidletExitProcessorFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,9 +63,11 @@ open fun getInstance()
         
 open fun getInstance(midlet: MIDlet)
         //nullable =  from not(true or (false and false)) = 
-: Processor{
+: Processor
 
-                    var midlet = midlet
+        Updates for KMP build        
+        {
+var midlet = midlet
 
     
                         if(AppletUtil.isAppletLoader(midlet) || J2MEUtil.isJ2ME())

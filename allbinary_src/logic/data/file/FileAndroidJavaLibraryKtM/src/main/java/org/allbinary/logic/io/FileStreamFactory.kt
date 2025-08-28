@@ -40,7 +40,11 @@ open public class FileStreamFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileStreamFactory{
+: FileStreamFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +57,11 @@ open fun getInstance()
     private var context: Any
 private constructor        (context: Context)
             : super()
-        {
+        
 
-                    var context = context
+        Updates for KMP build        
+        {
+    //var context = context
 this.context= context
 }
 
@@ -64,12 +70,12 @@ this.context= context
             
 open fun getFileInputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFileInputStream{
+: AbFileInputStream
 
-                    var path = path
-
-
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+    //var path = path
+    //var fileName = fileName
 
 
 
@@ -82,12 +88,12 @@ open fun getFileInputStreamInstance(path: String, fileName: String)
             
 open fun getFileOutputStreamInstance(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: AbFileOutputStream{
+: AbFileOutputStream
 
-                    var path = path
-
-
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+    //var path = path
+    //var fileName = fileName
 
     var context: Context = this.getContext()!!
 
@@ -104,19 +110,23 @@ context.deleteFile(fileName)
             
 open fun delete(path: String, fileName: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var path = path
 
 
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+    //var path = path
+    //var fileName = fileName
 this.getContext()!!.deleteFile(fileName)
 }
 
 
 open fun getContext()
         //nullable = true from not(false or (false and true)) = true
-: Context{
+: Context
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

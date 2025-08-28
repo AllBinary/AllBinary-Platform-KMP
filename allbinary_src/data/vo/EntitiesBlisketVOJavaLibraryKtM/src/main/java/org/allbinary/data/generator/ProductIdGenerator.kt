@@ -33,7 +33,11 @@ open public class ProductIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "productId"
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())

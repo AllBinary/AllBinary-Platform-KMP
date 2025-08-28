@@ -35,9 +35,11 @@ open public class DirectoryOrIncludeFileExtensionBooleanFileVisitor : IncludeFil
     private val includesString: String
 public constructor        (filterStringBasicArrayList: BasicArrayList)                        
 
-                            : super(filterStringBasicArrayList){
+                            : super(filterStringBasicArrayList)
 
-                    var filterStringBasicArrayList = filterStringBasicArrayList
+        Updates for KMP build        
+        {
+    //var filterStringBasicArrayList = filterStringBasicArrayList
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,12 +51,12 @@ this.includesString=
 
 public constructor        (filterStringBasicArrayList: BasicArrayList, includesString: String)                        
 
-                            : super(filterStringBasicArrayList){
+                            : super(filterStringBasicArrayList)
 
-                    var filterStringBasicArrayList = filterStringBasicArrayList
-
-
-                    var includesString = includesString
+        Updates for KMP build        
+        {
+    //var filterStringBasicArrayList = filterStringBasicArrayList
+    //var includesString = includesString
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,9 +67,11 @@ this.includesString= includesString
 
 open fun visit(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
     
                         if(file.isDirectory())

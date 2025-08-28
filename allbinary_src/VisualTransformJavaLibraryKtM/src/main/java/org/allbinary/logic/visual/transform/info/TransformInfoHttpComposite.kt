@@ -43,9 +43,11 @@ open public class TransformInfoHttpComposite
     private var transformInfoInterface: TransformInfoHttpInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        {
+        
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -63,7 +65,11 @@ this.transformInfoInterface= transformInfoInterface as TransformInfoHttpInterfac
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +79,11 @@ open fun getTransformInfoInterface()
 
 open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
-: WeblisketSession{
+: WeblisketSession
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,7 +93,11 @@ open fun getWeblisketSession()
 
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
-: PageContext{
+: PageContext
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +107,11 @@ open fun getPageContext()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -54,9 +54,11 @@ open public class Timer
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        (maxTime: Int)
             : super()
-        {
+        
 
-                    var maxTime = maxTime
+        Updates for KMP build        
+        {
+var maxTime = maxTime
 this.primitiveLongUtil= PrimitiveLongUtil(maxTime)
 this.maxTime= maxTime.toLong()
 }
@@ -64,14 +66,22 @@ this.maxTime= maxTime.toLong()
 
 open fun start()
         //nullable = true from not(false or (false and true)) = true
-{this.hundredthTime= 0
+
+
+        Updates for KMP build        
+        {
+this.hundredthTime= 0
 this.startTime= this.gameTickTimeDelayHelper!!.startTime
 }
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +91,11 @@ open fun get()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var lastLowerTime: Long = this.hundredthTime
 
 
@@ -129,25 +143,33 @@ this.totalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 
 open fun reduce(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.modifier -= value
 }
 
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.modifier += value
 }
 
 
 open fun getTimeChars()
         //nullable = true from not(false or (false and true)) = true
-: CharArray{
+: CharArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,7 +179,11 @@ open fun getTimeChars()
 
 open fun getCurrentTotalDigits()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

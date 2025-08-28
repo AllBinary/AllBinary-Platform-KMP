@@ -49,14 +49,20 @@ open public class WindowsHardware
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getMultimedia(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: MediaInterface{
+: MediaInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -66,9 +72,11 @@ open fun getMultimedia(index: Int)
 
 open fun getBridge(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: BridgeInterface{
+: BridgeInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -78,9 +86,11 @@ open fun getBridge(index: Int)
 
 open fun getCpu(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: CpuInterface{
+: CpuInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -90,9 +100,11 @@ open fun getCpu(index: Int)
 
 open fun getEthernet(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: EthernetInterface{
+: EthernetInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -102,9 +114,11 @@ open fun getEthernet(index: Int)
 
 open fun getFireWire(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: FireWireInterface{
+: FireWireInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -114,9 +128,11 @@ open fun getFireWire(index: Int)
 
 open fun getHardDriveController(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardDriveControllerInterface{
+: HardDriveControllerInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -126,9 +142,11 @@ open fun getHardDriveController(index: Int)
 
 open fun getHardDrive(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardDriveInterface{
+: HardDriveInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -138,9 +156,11 @@ open fun getHardDrive(index: Int)
 
 open fun getMachineAccessControlAddress(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: MachineAccessControlAddressInterface{
+: MachineAccessControlAddressInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -150,9 +170,11 @@ open fun getMachineAccessControlAddress(index: Int)
 
 open fun getMonitor(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: MonitorInterface{
+: MonitorInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -162,9 +184,11 @@ open fun getMonitor(index: Int)
 
 open fun getUsb(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: UsbInterface{
+: UsbInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -174,9 +198,11 @@ open fun getUsb(index: Int)
 
 open fun getVideo(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: VideoInterface{
+: VideoInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -185,9 +211,11 @@ open fun getVideo(index: Int)
 
 override fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardwareComponentInterface{
+: HardwareComponentInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -196,7 +224,11 @@ override fun getComponent(index: Int)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -205,9 +237,11 @@ override fun toString()
 
 override fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var hardwareInterface = hardwareInterface
+        Updates for KMP build        
+        {
+var hardwareInterface = hardwareInterface
 
 
 
@@ -217,9 +251,11 @@ override fun compareTo(hardwareInterface: HardwareInterface)
 
 override fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
 
-                    var hardwareInterface = hardwareInterface
+        Updates for KMP build        
+        {
+var hardwareInterface = hardwareInterface
 
 
 

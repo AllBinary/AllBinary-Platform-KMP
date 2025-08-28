@@ -46,7 +46,11 @@ open public class ConcurrentImageLoadingProcessor : BaseImageLoadingProcessor {
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.setRunning(true)
 imageCache!!.waitForLoadNow()
@@ -66,7 +70,11 @@ this.setRunning(false)
                                     }
                                 
 } catch(e: Exception)
-            {this.setRunning(false)
+            
+
+        Updates for KMP build        
+        {
+this.setRunning(false)
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
@@ -74,16 +82,22 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
                                 }
                             
-public constructor        (imageCache: ImageCache){
+public constructor        (imageCache: ImageCache)
 
-                    var imageCache = imageCache
+        Updates for KMP build        
+        {
+    //var imageCache = imageCache
 this.imageCache= imageCache
 }
 
 
 open fun runTask()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(!this.runnable.isRunning())
                         

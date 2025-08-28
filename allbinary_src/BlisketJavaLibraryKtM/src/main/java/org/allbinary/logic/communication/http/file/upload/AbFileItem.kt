@@ -57,15 +57,13 @@ open public class AbFileItem
     private val byteArray: ByteArray
 public constructor        (name: String, fieldName: String, byteArray: ByteArray)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var fieldName = fieldName
-
-
-                    var byteArray = byteArray
+var name = name
+var fieldName = fieldName
+var byteArray = byteArray
 this.name= name
 this.fieldName= fieldName
 this.byteArray= byteArray
@@ -76,7 +74,11 @@ this.byteArray= byteArray
             
 open fun getInputStream()
         //nullable = true from not(false or (false and true)) = true
-: InputStream{
+: InputStream
+
+        Updates for KMP build        
+        {
+
 
 
                             throw IOException(commonStrings!!.NOT_IMPLEMENTED)
@@ -85,7 +87,11 @@ open fun getInputStream()
 
 open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,7 +101,11 @@ open fun getContentType()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,7 +115,11 @@ open fun getName()
 
 open fun isInMemory()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -115,7 +129,11 @@ open fun isInMemory()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -125,7 +143,11 @@ open fun getSize()
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: ByteArray{
+: ByteArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,9 +159,11 @@ open fun get()
             
 open fun getString(encoding: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var encoding = encoding
+        Updates for KMP build        
+        {
+var encoding = encoding
 
 
 
@@ -150,7 +174,11 @@ open fun getString(encoding: String)
 
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -158,7 +186,11 @@ open fun getString()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return FileItemUtil.getInstance()!!.getString(byteArray)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
@@ -181,9 +213,11 @@ open fun getString()
             
 open fun write(file: File)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var file = file
+
+        Updates for KMP build        
+        {
+var file = file
 
 
 
@@ -195,9 +229,11 @@ open fun write(file: File)
             
 open fun write(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var file = file
+
+        Updates for KMP build        
+        {
+var file = file
 
 
 
@@ -207,13 +243,21 @@ open fun write(file: AbFile)
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-{ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, "delete()")
+
+
+        Updates for KMP build        
+        {
+ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, "delete()")
 }
 
 
 open fun getFieldName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -223,16 +267,22 @@ open fun getFieldName()
 
 open fun setFieldName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.fieldName= name
 }
 
 
 open fun isFormField()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(this.fieldName))
                         
@@ -259,9 +309,11 @@ open fun isFormField()
 
 open fun setFormField(state: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var state = state
+
+        Updates for KMP build        
+        {
+var state = state
 }
 
 
@@ -269,7 +321,11 @@ open fun setFormField(state: Boolean)
             
 open fun getOutputStream()
         //nullable = true from not(false or (false and true)) = true
-: OutputStream{
+: OutputStream
+
+        Updates for KMP build        
+        {
+
 
 
                             throw IOException(commonStrings!!.NOT_IMPLEMENTED)
@@ -278,7 +334,11 @@ open fun getOutputStream()
 
 open fun getHeaders()
         //nullable = true from not(false or (false and true)) = true
-: FileItemHeaders{
+: FileItemHeaders
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException(commonStrings!!.NOT_IMPLEMENTED)
@@ -287,9 +347,11 @@ open fun getHeaders()
 
 open fun setHeaders(fih: FileItemHeaders)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fih = fih
+
+        Updates for KMP build        
+        {
+var fih = fih
 
 
 

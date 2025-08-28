@@ -31,9 +31,11 @@ open public class NullJ2SEControl : Control {
         
  constructor        (type: Type)                        
 
-                            : super(type){
+                            : super(type)
 
-                    var type = type
+        Updates for KMP build        
+        {
+var type = type
 
 
                             //For kotlin this is before the body of the constructor.

@@ -43,12 +43,12 @@ open public class VectorRotationAnimationInterfaceFactory
     val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor)                        
 
-                            : this(currentPoints, basicColor, AnimationBehaviorFactory.getInstance()){
+                            : this(currentPoints, basicColor, AnimationBehaviorFactory.getInstance())
 
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,15 +57,13 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: 
 
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.currentPoints= currentPoints
 this.setBasicColorP(basicColor)
 this.animationBehaviorFactory= animationBehaviorFactory
@@ -75,9 +73,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 
@@ -88,16 +88,22 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 }
 
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -106,9 +112,11 @@ open fun getBasicColorP()
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

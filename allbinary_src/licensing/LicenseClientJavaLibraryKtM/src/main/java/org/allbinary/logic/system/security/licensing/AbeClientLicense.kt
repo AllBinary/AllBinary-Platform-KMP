@@ -42,9 +42,11 @@ open public class AbeClientLicense
             
 open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var resultHashtable = resultHashtable
+        Updates for KMP build        
+        {
+var resultHashtable = resultHashtable
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
 
@@ -86,9 +88,11 @@ open fun hasRequiredKeys(resultHashtable: Hashtable<Any, Any>)
     private var licenseType: LicenseType
 public constructor        (hashtable: Hashtable<Any, Any>)
             : super()
-        {
+        
 
-                    var hashtable = hashtable
+        Updates for KMP build        
+        {
+var hashtable = hashtable
 this.hashtable= Hashtable<Any, Any>()
 
     var abeClientInformationData: AbeClientInformationData = AbeClientInformationData.getInstance()!!
@@ -129,7 +133,11 @@ this.servers= BasicArrayList()
 
                         for (index in 0 until size)
 
-        {this.servers.add(vector.get(index))
+        
+
+        Updates for KMP build        
+        {
+this.servers.add(vector.get(index))
 }
 
 
@@ -145,7 +153,11 @@ this.licenseType= LicenseTypeFactory.getInstance()!!.getInstance(licenseTypeStri
 
 open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -155,9 +167,11 @@ open fun hasKey()
 
 open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var keyName = keyName
+        Updates for KMP build        
+        {
+var keyName = keyName
 
 
 
@@ -168,7 +182,11 @@ open fun getKey(keyName: String)
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,7 +196,11 @@ open fun getLicenseId()
 
 open fun getServers()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -188,7 +210,11 @@ open fun getServers()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
 
@@ -213,7 +239,11 @@ open fun isValid()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -240,7 +270,11 @@ stringBuffer!!.append(BREAK)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextServerString: String = serverVector!!.get(index) as String
 
 stringBuffer!!.append("Server: ")
@@ -258,16 +292,22 @@ stringBuffer!!.append(BREAK)
 
 open fun setSpecial(special: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var special = special
+
+        Updates for KMP build        
+        {
+var special = special
 this.special= special
 }
 
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -277,7 +317,11 @@ open fun getSpecial()
 
 open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
-: LicenseType{
+: LicenseType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

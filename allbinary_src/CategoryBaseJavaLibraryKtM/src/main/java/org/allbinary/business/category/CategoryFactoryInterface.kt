@@ -35,25 +35,43 @@ open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
 : CategoryInterface
 
+        Updates for KMP build        
+        
+
 open fun getRootInstance(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
+
+        Updates for KMP build        
+        
 
 open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
 
+        Updates for KMP build        
+        
+
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, name: String)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface
+
+        Updates for KMP build        
+        
 
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, node: Node)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface
 
+        Updates for KMP build        
+        
+
 open fun getInstance(rootCategoryInterface: CategoryInterface, parentCategoryInterface: CategoryInterface, categoryPropertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
 : CategoryInterface
+
+        Updates for KMP build        
+        
 
 }
                 

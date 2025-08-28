@@ -40,27 +40,17 @@ open public class LayerInterfaceFactoryImageItem : CustomImageItem {
     private val layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface
 public constructor        (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, animationArray: Array<Animation?>, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)                        
 
-                            : super(label, img, layout, altText, basicColor){
+                            : super(label, img, layout, altText, basicColor)
 
-                    var label = label
-
-
-                    var img = img
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var basicColor = basicColor
-
-
-                    var animationArray = animationArray
-
-
-                    var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+var label = label
+var img = img
+var layout = layout
+var altText = altText
+var basicColor = basicColor
+var animationArray = animationArray
+var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -72,7 +62,11 @@ this.layerInterfaceFactoryInterface= layerInterfaceFactoryInterface
 
 open fun getLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: LayerInterfaceFactoryInterface{
+: LayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,15 +76,13 @@ open fun getLayerInterfaceFactoryInterface()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 super.paint(graphics, x, y)
 
 
@@ -98,7 +90,11 @@ super.paint(graphics, x, y)
 
                         for (index in this.animationArray!!.size  - 1  downTo 0)
 
-        {this.animationArray[index]!!.paint(graphics, x, y)
+        
+
+        Updates for KMP build        
+        {
+this.animationArray[index]!!.paint(graphics, x, y)
 }
 
 }

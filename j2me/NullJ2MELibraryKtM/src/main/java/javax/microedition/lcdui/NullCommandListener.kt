@@ -30,12 +30,12 @@ open public class NullCommandListener
             }            
         override fun commandAction(c: Command, d: Displayable)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var c = c
 
 
-                    var d = d
+        Updates for KMP build        
+        {
+var c = c
+var d = d
 }
 
 

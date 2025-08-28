@@ -45,9 +45,11 @@ open public class HighScoresCanvasLevelChangeInputProcessor : HighScoresCanvasIn
     private var anchor: Int = Anchor.TOP_LEFT
 public constructor        (highScoresCanvas: HighScoresCanvas)                        
 
-                            : super(highScoresCanvas){
+                            : super(highScoresCanvas)
 
-                    var highScoresCanvas = highScoresCanvas
+        Updates for KMP build        
+        {
+var highScoresCanvas = highScoresCanvas
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,18 +58,30 @@ public constructor        (highScoresCanvas: HighScoresCanvas)
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{GameKeyEventHandler.getInstance()!!.addListener(this)
+
+
+        Updates for KMP build        
+        {
+GameKeyEventHandler.getInstance()!!.addListener(this)
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{GameKeyEventHandler.getInstance()!!.removeListener(this)
+
+
+        Updates for KMP build        
+        {
+GameKeyEventHandler.getInstance()!!.removeListener(this)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var list: BasicArrayList = this.getGameKeyEventList()!!
 
 
@@ -79,7 +93,11 @@ override fun update()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: Any = list.objectArray[index]!!
 
 
@@ -111,9 +129,11 @@ list.clear()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
 

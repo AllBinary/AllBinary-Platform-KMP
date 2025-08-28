@@ -56,15 +56,13 @@ open public class AllBinaryGameLayerManager : AllBinaryLayerManager {
     private var gameInfo: GameInfo
 
     private var playerGameInputCompositeInterface: PlayerGameInputCompositeInterface = NullPlayerGameInputComposite.NULL_PLAYER_GAME_INPUT_COMPOSITE
-public constructor        (backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor, gameInfo: GameInfo){
+public constructor        (backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor, gameInfo: GameInfo)
 
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
-
-
-                    var gameInfo = gameInfo
+        Updates for KMP build        
+        {
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
+    //var gameInfo = gameInfo
 this.backgroundBasicColor= backgroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 
@@ -78,7 +76,11 @@ this.gameInfo= gameInfo
 
 open fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayerManager{
+: AllBinaryLayerManager
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,12 +90,20 @@ open fun getLayerManager()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,9 +113,11 @@ open fun getBackgroundBasicColor()
 
 open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var backgroundBasicColor = backgroundBasicColor
+
+        Updates for KMP build        
+        {
+    //var backgroundBasicColor = backgroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
 ItemColorFactory.getInstance()!!.INVERT_PAINT= this.backgroundBasicColor!!.toInt()
 }
@@ -113,7 +125,11 @@ ItemColorFactory.getInstance()!!.INVERT_PAINT= this.backgroundBasicColor!!.toInt
 
 open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,9 +139,11 @@ open fun getForegroundBasicColor()
 
 open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var foregroundBasicColor = foregroundBasicColor
+
+        Updates for KMP build        
+        {
+    //var foregroundBasicColor = foregroundBasicColor
 this.foregroundBasicColor= foregroundBasicColor
 ItemColorFactory.getInstance()!!.PAINT= this.foregroundBasicColor!!.toInt()
 }
@@ -133,7 +151,11 @@ ItemColorFactory.getInstance()!!.PAINT= this.foregroundBasicColor!!.toInt()
 
 open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
-: GameInfo{
+: GameInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -143,18 +165,22 @@ open fun getGameInfo()
 
 open fun setGameInfo(gameInfo: GameInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameInfo = gameInfo
+
+        Updates for KMP build        
+        {
+    //var gameInfo = gameInfo
 this.gameInfo= gameInfo
 }
 
 
 open fun setLayerProcessorList(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+    //var list = list
 
     var layerProcessorInterfaceArray: Array<LayerProcessor?> = arrayOfNulls(list.size())
 
@@ -168,7 +194,11 @@ open fun setLayerProcessorList(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {layerProcessorInterfaceArray[index]= list.objectArray[index]!! as LayerProcessor
+        
+
+        Updates for KMP build        
+        {
+layerProcessorInterfaceArray[index]= list.objectArray[index]!! as LayerProcessor
 }
 
 this.setLayerProcessorArray(layerProcessorInterfaceArray)
@@ -177,16 +207,22 @@ this.setLayerProcessorArray(layerProcessorInterfaceArray)
 
 open fun setPlayerGameInputCompositeInterface(playerGameInputCompositeInterface: PlayerGameInputCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerGameInputCompositeInterface = playerGameInputCompositeInterface
+
+        Updates for KMP build        
+        {
+    //var playerGameInputCompositeInterface = playerGameInputCompositeInterface
 this.playerGameInputCompositeInterface= playerGameInputCompositeInterface
 }
 
 
 open fun getPlayerGameInputCompositeInterface()
         //nullable = true from not(false or (false and true)) = true
-: PlayerGameInputCompositeInterface{
+: PlayerGameInputCompositeInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

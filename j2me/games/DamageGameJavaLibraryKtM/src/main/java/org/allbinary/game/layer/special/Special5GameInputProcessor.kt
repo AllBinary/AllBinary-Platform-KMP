@@ -32,9 +32,11 @@ open public class Special5GameInputProcessor : SpecialGameInputProcessor {
         
 public constructor        (collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)                        
 
-                            : super(collidableDestroyableDamageableLayer){
+                            : super(collidableDestroyableDamageableLayer)
 
-                    var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        Updates for KMP build        
+        {
+var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -45,12 +47,12 @@ public constructor        (collidableDestroyableDamageableLayer: CollidableDestr
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+var allbinaryLayerManager = allbinaryLayerManager
+var gameKeyEvent = gameKeyEvent
 this.collidableDestroyableDamageableLayer!!.special5(allbinaryLayerManager, gameKeyEvent)
 }
 

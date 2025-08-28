@@ -49,28 +49,40 @@ open public class InitDb
     private val METHOD_CALL_MAIN_PATH: String = "useNormalMainPath"
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (dbConnectionInfo: DbConnectionInfo)
             : super()
-        {
+        
 
-                    var dbConnectionInfo = dbConnectionInfo
+        Updates for KMP build        
+        {
+var dbConnectionInfo = dbConnectionInfo
 }
 
 
 open fun setHelper(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.anyType= anyType
 }
 
 
 open fun getHelper()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,7 +92,11 @@ open fun getHelper()
 
 open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
@@ -99,7 +115,11 @@ open fun getHostName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -111,7 +131,11 @@ open fun getHostName()
 
 open fun addUsers()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
@@ -130,7 +154,11 @@ open fun addUsers()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -142,7 +170,11 @@ open fun addUsers()
 
 open fun addDatabases()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
@@ -161,7 +193,11 @@ open fun addDatabases()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,7 +209,11 @@ open fun addDatabases()
 
 open fun addTables()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
@@ -192,7 +232,11 @@ open fun addTables()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -204,7 +248,11 @@ open fun addTables()
 
 open fun useTemporaryMainPath()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
@@ -223,7 +271,11 @@ open fun useTemporaryMainPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -235,7 +287,11 @@ open fun useTemporaryMainPath()
 
 open fun useNormalMainPath()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dynamicClass: KClass<*> = anyType!!::class!!
@@ -254,7 +310,11 @@ open fun useNormalMainPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

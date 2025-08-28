@@ -42,16 +42,22 @@ open public class GeographicMapCellPositionTracking
     private var currentCellType: GeographicMapCellType
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellType{
+: GeographicMapCellType
 
-                    var geographicMap = geographicMap
+        Updates for KMP build        
+        {
+    //var geographicMap = geographicMap
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.currentGeographicMapCellPosition
 
@@ -76,12 +82,12 @@ open fun getCurrentOverCellType(geographicMap: BasicGeographicMap)
             
 open fun updateStart(gameCanvasInterface: AllBinaryGameCanvas, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var gameCanvasInterface = gameCanvasInterface
-
-
-                    var layer = layer
+        Updates for KMP build        
+        {
+    //var gameCanvasInterface = gameCanvasInterface
+    //var layer = layer
 
     
                         if(gameCanvasInterface != 
@@ -123,7 +129,11 @@ this.newGeographicMapCellPosition= geographicMapInterface!!.getCellPositionAt(la
 
 open fun updateEnd()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.currentGeographicMapCellPosition != this.previousGeographicMapCellPosition)
                         
@@ -147,7 +157,11 @@ open fun updateEnd()
 
 open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,7 +171,11 @@ open fun getPreviousGeographicMapCellPosition()
 
 open fun getCurrentGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

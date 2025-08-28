@@ -38,7 +38,11 @@ open public class FilePathData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FilePathData{
+: FilePathData
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,7 +57,11 @@ open fun getInstance()
     var SEPARATOR: String = File.separator
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     
                         if(File.separatorChar == '\\')
                         

@@ -47,7 +47,11 @@ open public class AdvertisementAreasEntity : AbSqlBean
     val tableName: String = "advertisements"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -57,9 +61,11 @@ this.setTableName(tableName)
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             super.deleteWhere(EntryData.getInstance()!!.ID, value)
@@ -73,7 +79,11 @@ open fun delete(value: String)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -91,9 +101,11 @@ open fun delete(value: String)
             
 open fun get(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var storeName = storeName
+        Updates for KMP build        
+        {
+var storeName = storeName
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -113,7 +125,11 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var hashMap: HashMap<Any, Any> = hashMapVector!!.get(index as Object) as HashMap<Any, Any>
 
 
@@ -141,12 +157,12 @@ keysAndValues!!.put(StoreFrontData.getInstance()!!.NAME, storeName)
             
 open fun get(storeName: String, advertisementAreaName: String)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementAreaInterface{
+: AdvertisementAreaInterface
 
-                    var storeName = storeName
-
-
-                    var advertisementAreaName = advertisementAreaName
+        Updates for KMP build        
+        {
+var storeName = storeName
+var advertisementAreaName = advertisementAreaName
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -184,7 +200,11 @@ keysAndValues!!.put(AdvertisementAreaData.getInstance()!!.NAME, advertisementAre
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var advertisementAreaData: AdvertisementAreaData = AdvertisementAreaData.getInstance()!!
 
 
@@ -204,7 +224,11 @@ stringBuffer!!.append(advertisementAreaData!!.NAME)!!.append(this.sqlTypeStrings
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var returnStr: String = super.createTable(this.createTableStatement())!!
 
 
@@ -217,16 +241,22 @@ open fun createTable()
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var updatedValues = updatedValues
+
+        Updates for KMP build        
+        {
+var updatedValues = updatedValues
 super.updateWhere(AdvertisementAreaData.getInstance()!!.NAME, updatedValues!!.get(AdvertisementAreaData.getInstance()!!.NAME) as String, updatedValues)
 }
 
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -36,9 +36,11 @@ open public class AnimationInterfaceFactoryInterfaceComposite
     private val animationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)
             : super()
-        {
+        
 
-                    var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
+        Updates for KMP build        
+        {
+    //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
 this.animationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInterfaceArray
 }
 
@@ -46,9 +48,11 @@ this.animationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInte
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 
@@ -59,7 +63,11 @@ this.animationInterfaceFactoryInterfaceArray= basicAnimationInterfaceFactoryInte
 
 open fun getAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<AnimationInterfaceFactoryInterface?>{
+: Array<AnimationInterfaceFactoryInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,9 +76,11 @@ open fun getAnimationInterfaceFactoryInterfaceArray()
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

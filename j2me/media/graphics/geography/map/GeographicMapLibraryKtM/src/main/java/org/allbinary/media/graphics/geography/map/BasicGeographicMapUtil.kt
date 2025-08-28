@@ -42,7 +42,11 @@ open public class BasicGeographicMapUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGeographicMapUtil{
+: BasicGeographicMapUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,12 +67,12 @@ open fun getInstance()
             
 open fun getBorderingRow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var direction = direction
-
-
-                    var oldGeographicMapCellPosition = oldGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var direction = direction
+    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
 
     var LOCATION_CHANGE: Int = 1
 
@@ -115,12 +119,12 @@ else -> {
             
 open fun getBorderingColumn(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var direction = direction
-
-
-                    var oldGeographicMapCellPosition = oldGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var direction = direction
+    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
 
     var LOCATION_CHANGE: Int = 1
 
@@ -167,12 +171,12 @@ else -> {
             
 open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosition, toGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var fromGeographicMapCellPosition = fromGeographicMapCellPosition
-
-
-                    var toGeographicMapCellPosition = toGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var fromGeographicMapCellPosition = fromGeographicMapCellPosition
+    //var toGeographicMapCellPosition = toGeographicMapCellPosition
 
     var fromColumn: Int = fromGeographicMapCellPosition!!.getColumn()!!
 
@@ -212,9 +216,11 @@ open fun isSameCellPosition(fromGeographicMapCellPosition: GeographicMapCellPosi
 
 open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Layer?>{
+: Array<Layer?>
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
+        Updates for KMP build        
+        {
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
 
     var tiledLayerArray: Array<Layer?> = arrayOfNulls(geographicMapInterfaceArray!!.size)
 
@@ -228,15 +234,13 @@ open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<Basic
 
 open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<BasicGeographicMap?>, tiledLayerArray: Array<Layer?>, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Layer?>{
+: Array<Layer?>
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var tiledLayerArray = tiledLayerArray
-
-
-                    var startIndex = startIndex
+        Updates for KMP build        
+        {
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var tiledLayerArray = tiledLayerArray
+    //var startIndex = startIndex
 
     var geographicMapInterface: BasicGeographicMap
 
@@ -253,7 +257,11 @@ open fun createAllBinaryTiledLayerArray(geographicMapInterfaceArray: Array<Basic
 
                         for (index in size +startIndex  - 1  downTo startIndex)
 
-        {geographicMapInterface= geographicMapInterfaceArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+geographicMapInterface= geographicMapInterfaceArray[index]!!
 tiledLayerArray[count++]= geographicMapInterface!!.getAllBinaryTiledLayer()
 }
 
@@ -267,15 +275,13 @@ tiledLayerArray[count++]= geographicMapInterface!!.getAllBinaryTiledLayer()
 
 open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
 
 
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var dx = dx
+    //var dy = dy
 
     var geographicMapInterface: BasicGeographicMap
 
@@ -289,7 +295,11 @@ open fun move(geographicMapInterfaceArray: Array<BasicGeographicMap?>, dx: Int, 
 
                         for (index in size  - 1  downTo 0)
 
-        {geographicMapInterface= geographicMapInterfaceArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+geographicMapInterface= geographicMapInterfaceArray[index]!!
 geographicMapInterface!!.getAllBinaryTiledLayer()!!.move(dx, dy)
 }
 
@@ -298,15 +308,13 @@ geographicMapInterface!!.getAllBinaryTiledLayer()!!.move(dx, dy)
 
 open fun setPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var x = x
+    //var y = y
 
     var geographicMapInterface: BasicGeographicMap
 
@@ -320,7 +328,11 @@ open fun setPosition(geographicMapInterfaceArray: Array<BasicGeographicMap?>, x:
 
                         for (index in size  - 1  downTo 0)
 
-        {geographicMapInterface= geographicMapInterfaceArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+geographicMapInterface= geographicMapInterfaceArray[index]!!
 geographicMapInterface!!.getAllBinaryTiledLayer()!!.setPosition(x, y, geographicMapInterface!!.getAllBinaryTiledLayer()!!.getZP())
 }
 

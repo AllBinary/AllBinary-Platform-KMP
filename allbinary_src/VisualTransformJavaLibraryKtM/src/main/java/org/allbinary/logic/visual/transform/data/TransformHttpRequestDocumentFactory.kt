@@ -39,12 +39,12 @@ open public class TransformHttpRequestDocumentFactory
             
 open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSession)
         //nullable =  from not(true or (false and false)) = 
-: TransformDocumentInterface{
+: TransformDocumentInterface
 
-                    var pageContext = pageContext
-
-
-                    var weblisketSession = weblisketSession
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var weblisketSession = weblisketSession
 
 
 
@@ -56,7 +56,11 @@ open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSessio
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

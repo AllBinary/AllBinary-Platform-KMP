@@ -32,7 +32,11 @@ open public class StringComponent
         
 open fun getBackgroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,15 +46,21 @@ open fun getBackgroundBasicColor()
 
 open fun setBackgroundBasicColor(backgroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var backgroundBasicColor = backgroundBasicColor
+
+        Updates for KMP build        
+        {
+var backgroundBasicColor = backgroundBasicColor
 }
 
 
 open fun getForegroundBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,9 +70,11 @@ open fun getForegroundBasicColor()
 
 open fun setForegroundBasicColor(foregroundBasicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var foregroundBasicColor = foregroundBasicColor
+
+        Updates for KMP build        
+        {
+var foregroundBasicColor = foregroundBasicColor
 }
 
 

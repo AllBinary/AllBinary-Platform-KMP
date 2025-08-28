@@ -41,22 +41,30 @@ open public class Money
     private val DEFAULT_CURRENCY: String = "USD"
 public constructor        (money: Money)
             : super()
-        {
+        
 
-                    var money = money
+        Updates for KMP build        
+        {
+var money = money
 this.units= money.getUnits() as Long
 }
 
 public constructor        ()
             : super()
-        {this.units= 0 as Long
+        
+
+        Updates for KMP build        
+        {
+this.units= 0 as Long
 }
 
 public constructor        (usDollarStr: String)
             : super()
-        {
+        
 
-                    var usDollarStr = usDollarStr
+        Updates for KMP build        
+        {
+var usDollarStr = usDollarStr
 
     
                         if(usDollarStr != 
@@ -72,16 +80,22 @@ public constructor        (usDollarStr: String)
 
 public constructor        (units: Long)
             : super()
-        {
+        
 
-                    var units = units
+        Updates for KMP build        
+        {
+var units = units
 this.units= units as Long
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.units != 
                                     null
@@ -110,36 +124,44 @@ open fun isValid()
 
 open fun add(moreMoney: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var moreMoney = moreMoney
+
+        Updates for KMP build        
+        {
+var moreMoney = moreMoney
 this.add(moreMoney!!.toString())
 }
 
 
 open fun add(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var usDollarStr = usDollarStr
+
+        Updates for KMP build        
+        {
+var usDollarStr = usDollarStr
 this.units= this.units.longValue() +convertUsdToUnits(usDollarStr) as Long
 }
 
 
 open fun subtract(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var usDollarStr = usDollarStr
+
+        Updates for KMP build        
+        {
+var usDollarStr = usDollarStr
 this.units= this.units.longValue() -convertUsdToUnits(usDollarStr) as Long
 }
 
 
 open fun multiply(multiplier: Float)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var multiplier = multiplier
+
+        Updates for KMP build        
+        {
+var multiplier = multiplier
 this.units= Float(this.units.longValue() *multiplier.toFloat()).
                             longValue() as Long
 }
@@ -147,18 +169,22 @@ this.units= Float(this.units.longValue() *multiplier.toFloat()).
 
 open fun multiply(multiplier: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var multiplier = multiplier
+
+        Updates for KMP build        
+        {
+var multiplier = multiplier
 this.units= this.units.longValue() *multiplier as Long
 }
 
 
 open fun convertUnitsTo(currency: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var currency = currency
+        Updates for KMP build        
+        {
+var currency = currency
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -200,9 +226,11 @@ stringBuffer!!.append(cents as Long.
 
 open fun convertUsdToUnits(usDollarStr: String)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var usDollarStr = usDollarStr
+        Updates for KMP build        
+        {
+var usDollarStr = usDollarStr
 
     var localUnit: Long = 0
 
@@ -249,7 +277,11 @@ localUnit += centsStr as Long.
 
 open fun getUnits()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -259,7 +291,11 @@ open fun getUnits()
 
 open fun getUnitsLong()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -268,7 +304,11 @@ open fun getUnitsLong()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

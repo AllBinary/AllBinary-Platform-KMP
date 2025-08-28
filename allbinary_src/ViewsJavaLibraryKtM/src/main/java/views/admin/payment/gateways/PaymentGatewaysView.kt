@@ -49,12 +49,12 @@ open public class PaymentGatewaysView : HttpStoreComponentView
     private var paymentGatewayVector: Vector
 public constructor        (transformInfoInterface: TransformInfoInterface, gatewayVector: Vector)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var gatewayVector = gatewayVector
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var gatewayVector = gatewayVector
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,9 +67,11 @@ this.paymentGatewayVector= gatewayVector
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -87,7 +89,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var paymentType: BasicPaymentType = this.paymentGatewayVector!!.get(index) as BasicPaymentType
 
 
@@ -106,7 +112,11 @@ paymentGatewaysNode!!.appendChild(paymentGatewayNode)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewaysNode
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
@@ -126,13 +136,21 @@ paymentGatewaysNode!!.appendChild(paymentGatewayNode)
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-{this.addDomNodeInterface(this as DomNodeInterface)
+
+
+        Updates for KMP build        
+        {
+this.addDomNodeInterface(this as DomNodeInterface)
 }
 
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.addDomNodeInterfaces()
 
@@ -141,7 +159,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to view payment gateways"
 
 

@@ -47,18 +47,14 @@ open public class MobileClientInformation : AbeClientInformation {
             public constructor        (name: String, version: String, specialName: String, shortName: String)                        
 
                             : super(name, version, StringMaker().
-                            append(specialName)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(PartnerIdentifierFileUtil.getInstance()!!.get())!!.toString(), shortName){
+                            append(specialName)!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(PartnerIdentifierFileUtil.getInstance()!!.get())!!.toString(), shortName)
 
-                    var name = name
-
-
-                    var version = version
-
-
-                    var specialName = specialName
-
-
-                    var shortName = shortName
+        Updates for KMP build        
+        {
+    //var name = name
+    //var version = version
+    //var specialName = specialName
+    //var shortName = shortName
 
 
                             //For kotlin this is before the body of the constructor.
@@ -101,7 +97,11 @@ open public class MobileClientInformation : AbeClientInformation {
 
 override fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashtable: Hashtable<Any, Any> = super.toHashtable()!!
 
 

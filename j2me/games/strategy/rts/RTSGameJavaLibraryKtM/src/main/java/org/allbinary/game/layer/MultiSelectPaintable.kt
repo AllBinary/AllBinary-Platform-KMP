@@ -41,14 +41,20 @@ open public class MultiSelectPaintable : SelectionHudPaintable {
     private val rootNameList: BasicArrayList = BasicArrayList()
 
     private var rootNamesString: String = StringUtil.getInstance()!!.EMPTY_STRING
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun update(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 this.clear()
 
     var size: Int = list.size()!!
@@ -65,7 +71,11 @@ this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
                         for (index in list.size() -1 downTo 0)
 
-        {rtsLayer= list.get(index) as RTSLayer
+        
+
+        Updates for KMP build        
+        {
+rtsLayer= list.get(index) as RTSLayer
 
     
                         if(!this.rootNameList!!.contains(rtsLayer!!.getRootName()))
@@ -89,7 +99,11 @@ this.totalCharArray= this.getPrimitiveLongUtil()!!.getCharArray(size)
 
                         for (index in this.rootNameList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rootName: String = this.rootNameList!!.get(index) as String
 
 stringBuffer!!.append(rootName)
@@ -110,7 +124,11 @@ this.rootNamesString= stringBuffer!!.toString()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.rootNameList!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.rootNameList!!.clear()
 }
 
 
@@ -122,9 +140,11 @@ open fun clear()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 graphics.setColor(backgroundColor)
 graphics.drawRect(this.getX(), y, this.getWidth(), this.getHeight())
 graphics.setColor(this.getColor())

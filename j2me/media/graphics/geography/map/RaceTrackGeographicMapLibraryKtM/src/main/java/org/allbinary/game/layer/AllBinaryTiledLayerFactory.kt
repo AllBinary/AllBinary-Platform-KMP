@@ -48,12 +48,12 @@ open public class AllBinaryTiledLayerFactory
             
 open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryTiledLayer{
+: AllBinaryTiledLayer
 
-                    var raceTrackInfo = raceTrackInfo
-
-
-                    var raceTrackData = raceTrackData
+        Updates for KMP build        
+        {
+    //var raceTrackInfo = raceTrackInfo
+    //var raceTrackData = raceTrackData
 
     var allbinaryTiledLayer: AllBinaryTiledLayer
 
@@ -75,9 +75,11 @@ allbinaryTiledLayer!!.setCells(raceTrackData!!.getMapArray())
             
 open fun getMiniInstance(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
-: AllBinaryTiledLayer{
+: AllBinaryTiledLayer
 
-                    var raceTrackData = raceTrackData
+        Updates for KMP build        
+        {
+var raceTrackData = raceTrackData
 
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 

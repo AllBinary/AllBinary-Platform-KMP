@@ -44,7 +44,11 @@ open public class SqlConnectionPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SqlConnectionPool{
+: SqlConnectionPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +85,11 @@ open fun getInstance()
     private val METHOD_ADD: String = "add()"
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(SQLException::class)
@@ -89,9 +97,11 @@ private constructor        ()
 
 open fun get(url: String)
         //nullable = true from not(false or (false and false)) = true
-: Connection{
+: Connection
 
-                    var url = url
+        Updates for KMP build        
+        {
+var url = url
 
     
                         if(this.connectionHashMap == 
@@ -189,7 +199,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var sqlConnection: Connection = connectionVector!!.get(i) as Connection
 
 
@@ -258,12 +272,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET)
 
 open fun add(url: String, sqlConnection: Connection)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var url = url
 
 
-                    var sqlConnection = sqlConnection
+        Updates for KMP build        
+        {
+var url = url
+var sqlConnection = sqlConnection
 
     
                         if(!sqlConnection!!.isClosed())

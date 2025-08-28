@@ -49,9 +49,11 @@ open public class AbSqlColumn : AbSqlTable {
     private val INVALID_RESULT: String = "-1"
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
-                            : super(databaseConnectionInfoInterface){
+                            : super(databaseConnectionInfoInterface)
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+    //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,15 +63,13 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 
 open fun getLargestIntegerInColumnWhere(columnName: String, key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var columnName = columnName
-
-
-                    var key = key
-
-
-                    var value = value
+        Updates for KMP build        
+        {
+    //var columnName = columnName
+    //var key = key
+    //var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -95,7 +95,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
+        
+
+        Updates for KMP build        
         {
+
     var intValue: Int = rset.getInt(columnName)!!
 
 
@@ -133,7 +137,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COL
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return largestAsString
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -154,9 +162,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_LARGETS_INTEGER_IN_COL
 
 open fun getColumn(columnName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var columnName = columnName
+        Updates for KMP build        
+        {
+    //var columnName = columnName
 
     var column: Vector = Vector()
 
@@ -177,7 +187,11 @@ stringBuffer!!.append(this.getTableName())
 
 
         while(rset.next())
+        
+
+        Updates for KMP build        
         {
+
     var field: String = rset.getObject(columnName)!!.toString()!!
 
 column.add(field)
@@ -203,7 +217,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -224,15 +242,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN)
 
 open fun getColumnWhere(columnName: String, key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var columnName = columnName
-
-
-                    var key = key
-
-
-                    var value = value
+        Updates for KMP build        
+        {
+var columnName = columnName
+var key = key
+var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -262,7 +278,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
             rset= executeSQLStatement(sqlStatement)
 
         while(rset.next())
-        {field= rset.getObject(columnName)!!.toString()
+        
+
+        Updates for KMP build        
+        {
+field= rset.getObject(columnName)!!.toString()
 column.add(field)
 }
 
@@ -286,7 +306,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_GET_COLUMN_WHERE)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return column
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         

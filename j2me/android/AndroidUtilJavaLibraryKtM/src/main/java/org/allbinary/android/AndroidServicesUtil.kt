@@ -44,7 +44,11 @@ open public class AndroidServicesUtil
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidServicesUtil{
+: AndroidServicesUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,9 +79,11 @@ open fun getInstance()
 
 open fun isServiceRunning(name: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
     var activityManager: ActivityManager = resourceUtil!!.getContext()!!.getSystemService(Context.ACTIVITY_SERVICE) as ActivityManager
 
@@ -102,7 +108,11 @@ open fun isServiceRunning(name: String)
 
                         for (index in 0 until size)
 
-        {runningServiceInfo= runningServicesList!!.get(index)
+        
+
+        Updates for KMP build        
+        {
+runningServiceInfo= runningServicesList!!.get(index)
 serviceComponent= runningServiceInfo!!.service
 serviceName= serviceComponent!!.toString()
 

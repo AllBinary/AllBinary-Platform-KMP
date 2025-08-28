@@ -39,7 +39,11 @@ open public class NullTickable
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullTickable{
+: NullTickable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,16 +61,22 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 }
 
 
     private val NAME: String = "NulLTickable"
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

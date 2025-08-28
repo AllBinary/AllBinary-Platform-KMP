@@ -37,9 +37,11 @@ open public class FilePathUtil
             
 open fun adjust(path: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     var abPathData: AbPathData = AbPathData.getInstance()!!
 
@@ -74,7 +76,11 @@ path= path.replace(abPathData!!.SEPARATORCHAR, filePathData!!.SEPARATORCHAR)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

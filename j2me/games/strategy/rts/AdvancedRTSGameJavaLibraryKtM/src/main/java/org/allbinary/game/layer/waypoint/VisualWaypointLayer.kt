@@ -36,36 +36,20 @@ open public class VisualWaypointLayer : WaypointLayer {
         
 public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y){
+                            : super(remoteInfo, parentLayer, groupInterface, rootName, name, animationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var x = x
+    //var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,7 +59,11 @@ public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameL
 
 open fun createHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+: SelectionHudPaintable
+
+        Updates for KMP build        
+        {
+
     var rtsLayerHudPaintable: WaypointInfoHudPaintable = WaypointInfoHudPaintableSingleton.getInstance()!!
 
 rtsLayerHudPaintable!!.setBasicColorP(this.allBinaryGameLayerManagerP!!.getForegroundBasicColor())
@@ -90,7 +78,11 @@ rtsLayerHudPaintable!!.setRtsLayer(this)
 
 open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
-: SelectionHudPaintable{
+: SelectionHudPaintable
+
+        Updates for KMP build        
+        {
+
     var rtsLayerHudPaintable: WaypointInfoHudPaintable = WaypointInfoHudPaintableSingleton.getInstance()!!
 
 

@@ -38,18 +38,14 @@ open public class HealthBar : Paintable
     private val healthInterface: HealthInterface
 
     val allbinaryLayer: AllBinaryLayer
-public constructor        (layerInterface: AllBinaryLayer, healthInterface: Health, animationInterface: HealthBarAnimation, direction: Int){
+public constructor        (layerInterface: AllBinaryLayer, healthInterface: Health, animationInterface: HealthBarAnimation, direction: Int)
 
-                    var layerInterface = layerInterface
-
-
-                    var healthInterface = healthInterface
-
-
-                    var animationInterface = animationInterface
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
+var healthInterface = healthInterface
+var animationInterface = animationInterface
+var direction = direction
 this.allbinaryLayer= layerInterface
 this.animationInterface= animationInterface
 this.healthInterface= healthInterface
@@ -59,18 +55,14 @@ this.onHealthChange()
 
 public constructor        (layerInterface: AllBinaryLayer, healthInterface: Health, location: Int, direction: Int)                        
 
-                            : this(layerInterface, healthInterface, HealthBarTwodAnimation(layerInterface, location), direction){
+                            : this(layerInterface, healthInterface, HealthBarTwodAnimation(layerInterface, location), direction)
 
-                    var layerInterface = layerInterface
-
-
-                    var healthInterface = healthInterface
-
-
-                    var location = location
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
+var healthInterface = healthInterface
+var location = location
+var direction = direction
 
 
                             //For kotlin this is before the body of the constructor.
@@ -79,22 +71,30 @@ public constructor        (layerInterface: AllBinaryLayer, healthInterface: Heal
 
 override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
-{this.animationInterface!!.onHealthChange(this.healthInterface!!.getHealth() *this.allbinaryLayer!!.getWidth() /this.healthInterface!!.getMaxHealth())
+
+
+        Updates for KMP build        
+        {
+this.animationInterface!!.onHealthChange(this.healthInterface!!.getHealth() *this.allbinaryLayer!!.getWidth() /this.healthInterface!!.getMaxHealth())
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.animationInterface!!.paint(graphics, 0, 0)
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.animationInterface!!.paintThreed(graphics, 0, 0, 0)
 }
 

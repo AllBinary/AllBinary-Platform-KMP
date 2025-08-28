@@ -34,12 +34,12 @@ open public class BasicProfileActionScriptOutput : BasicProfileActionScriptProce
         
 public constructor        (label: String, node: Node)                        
 
-                            : super(label, node){
+                            : super(label, node)
 
-                    var label = label
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+var label = label
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,9 +48,11 @@ public constructor        (label: String, node: Node)
 
 public constructor        (label: String)                        
 
-                            : super(label){
+                            : super(label)
 
-                    var label = label
+        Updates for KMP build        
+        {
+var label = label
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,9 +64,11 @@ public constructor        (label: String)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(GenericProfileActionScriptOutputData.NAME)!!
 

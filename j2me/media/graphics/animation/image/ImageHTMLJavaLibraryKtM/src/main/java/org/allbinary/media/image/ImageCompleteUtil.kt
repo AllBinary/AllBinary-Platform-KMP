@@ -45,7 +45,11 @@ open public class ImageCompleteUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCompleteUtil{
+: ImageCompleteUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,12 +72,12 @@ open fun getInstance()
             
 open fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var name = name
+        Updates for KMP build        
+        {
+var image = image
+var name = name
 this.timeDelayHelper!!.setStartTime()
 this.waitFor(image, name, this.timeDelayHelper)
 }
@@ -83,15 +87,13 @@ this.waitFor(image, name, this.timeDelayHelper)
             
 open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var image = image
-
-
-                    var name = name
-
-
-                    var timeDelayHelper = timeDelayHelper
+        Updates for KMP build        
+        {
+var image = image
+var name = name
+var timeDelayHelper = timeDelayHelper
 
     var playnImage: PlaynImage = image as PlaynImage
 
@@ -132,21 +134,23 @@ open fun isReady(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
             
 open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var name = name
-
-
-                    var timeDelayHelper = timeDelayHelper
+        Updates for KMP build        
+        {
+var image = image
+var name = name
+var timeDelayHelper = timeDelayHelper
 
     var playnImage: PlaynImage = image as PlaynImage
 
 
         while(!playnImage!!.getImage()!!.isReady() && playnImage!!.getImage()!!.width() +playnImage!!.getImage()!!.height() == 0)
+        
+
+        Updates for KMP build        
         {
+
     
                         if(timeDelayHelper!!.isTime())
                         
@@ -167,7 +171,11 @@ open fun waitFor(image: Image, name: String, timeDelayHelper: TimeDelayHelper)
             
 open fun waitForAll()
         //nullable = true from not(false or (false and true)) = true
-{this.allTimeDelayHelper!!.setStartTime()
+
+
+        Updates for KMP build        
+        {
+this.allTimeDelayHelper!!.setStartTime()
 
     var hashtable: Hashtable<Any, Any> = GameFeatureImageCacheFactory.getInstance()!!.getHashtable()!!
 
@@ -185,7 +193,11 @@ PreLogUtil.put("Total: " +size, this, "waitForAll")
 
                         for (index in 0 until size)
 
-        {this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
+        
+
+        Updates for KMP build        
+        {
+this.waitFor(hashtable.get(objectArray[index]!!) as Image, objectArray[index]!! as String, this.allTimeDelayHelper)
 }
 
 }

@@ -42,7 +42,11 @@ open public class ImageThreadPool : ThreadPool {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadPool{
+: ThreadPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,12 +59,12 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (poolName: String, numThreads: Int)                        
 
-                            : super(poolName, numThreads){
+                            : super(poolName, numThreads)
 
-                    var poolName = poolName
-
-
-                    var numThreads = numThreads
+        Updates for KMP build        
+        {
+    //var poolName = poolName
+    //var numThreads = numThreads
 
 
                             //For kotlin this is before the body of the constructor.
@@ -71,26 +75,32 @@ public constructor        (poolName: String, numThreads: Int)
 
 open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+var task = task
 super.runTask(task)
 }
 
 
 open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+var task = task
 }
 
 
 open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+var task = task
 }
 
 

@@ -42,9 +42,11 @@ open public class FtpConfigurationView
     private var ftpConfigurationInterface: FtpConfigurationInterface
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.setFtpConfigurationInterface(FtpConfiguration() as FtpConfigurationInterface)
 
     var chileNodeList: NodeList = node.getChildNodes()!!
@@ -69,9 +71,11 @@ this.getFtpConfigurationInterface()!!.setPath(path)
 
 public constructor        (ftpConfigurationInterface: FtpConfigurationInterface)
             : super()
-        {
+        
 
-                    var ftpConfigurationInterface = ftpConfigurationInterface
+        Updates for KMP build        
+        {
+var ftpConfigurationInterface = ftpConfigurationInterface
 this.setFtpConfigurationInterface(ftpConfigurationInterface)
 }
 
@@ -80,9 +84,11 @@ this.setFtpConfigurationInterface(ftpConfigurationInterface)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var ftpConfigurationMapping: FtpConfigurationMapping = FtpConfigurationMapping(this.getFtpConfigurationInterface())
 
@@ -102,7 +108,11 @@ open fun toXmlNode(document: Document)
 
 open fun getFtpConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: FtpConfigurationInterface{
+: FtpConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,9 +122,11 @@ open fun getFtpConfigurationInterface()
 
 open fun setFtpConfigurationInterface(ftpConfigurationInterface: FtpConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ftpConfigurationInterface = ftpConfigurationInterface
+
+        Updates for KMP build        
+        {
+var ftpConfigurationInterface = ftpConfigurationInterface
 this.ftpConfigurationInterface= ftpConfigurationInterface
 }
 

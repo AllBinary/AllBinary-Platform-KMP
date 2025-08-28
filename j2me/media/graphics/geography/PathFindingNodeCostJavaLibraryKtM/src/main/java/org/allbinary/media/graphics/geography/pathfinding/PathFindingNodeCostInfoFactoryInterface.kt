@@ -35,13 +35,22 @@ open fun getInstance(comingFromGeographicMapCellPosition: GeographicMapCellPosit
         //nullable =  from not(true or (false and false)) = 
 : PathFindingNodeCostInfo
 
+        Updates for KMP build        
+        
+
 open fun getInstance(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
 : PathFindingNodeCostInfo
 
+        Updates for KMP build        
+        
+
 open fun getTotalCost(comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : Long
+
+        Updates for KMP build        
+        
 
 }
                 

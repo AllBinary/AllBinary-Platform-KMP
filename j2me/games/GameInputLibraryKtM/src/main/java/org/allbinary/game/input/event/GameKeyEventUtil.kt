@@ -35,9 +35,11 @@ open public class GameKeyEventUtil
             
 open fun getKey(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
     var gameKeyEvent: GameKeyEvent = anyType as GameKeyEvent
 
@@ -52,7 +54,11 @@ open fun getKey(anyType: Any)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

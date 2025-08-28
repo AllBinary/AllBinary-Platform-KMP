@@ -39,7 +39,11 @@ open public class PlayerStateUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlayerStateUtil{
+: PlayerStateUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,9 +72,11 @@ open fun getInstance()
 
 open fun convert(state: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var state = state
+        Updates for KMP build        
+        {
+    //var state = state
 
     
                         if(state == Player.UNREALIZED)

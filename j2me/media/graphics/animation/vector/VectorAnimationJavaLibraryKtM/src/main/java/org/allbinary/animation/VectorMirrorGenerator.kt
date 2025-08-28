@@ -43,7 +43,11 @@ open public class VectorMirrorGenerator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VectorMirrorGenerator{
+: VectorMirrorGenerator
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,17 +62,21 @@ open fun getInstance()
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
         //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>{
+: Array<Array<IntArray?>?>
 
-                    var points = points
-
-
-                    var width = width
+        Updates for KMP build        
+        {
+var points = points
+var width = width
 
         try {
             
@@ -96,7 +104,11 @@ open fun getInstance(points: Array<Array<IntArray?>?>, width: Int)
 
                         for (frame in 0 until size)
 
-        {nextPoints= points[frame]!!
+        
+
+        Updates for KMP build        
+        {
+nextPoints= points[frame]!!
 size2= nextPoints!!.size
 pointBasicArrayList= BasicArrayList(size2)
 
@@ -105,7 +117,11 @@ pointBasicArrayList= BasicArrayList(size2)
 
                         for (index in 0 until size2)
 
-        {pointBasicArrayList!!.add(pointFactory!!.getInstance(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
+        
+
+        Updates for KMP build        
+        {
+pointBasicArrayList!!.add(pointFactory!!.getInstance(nextPoints[index]!![0]!!, nextPoints[index]!![1]!!))
 }
 
 pointsBasicArrayList!!.add(pointBasicArrayList)
@@ -117,7 +133,11 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
 
                         for (index in 0 until points.size)
 
-        {pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))
+        
+
+        Updates for KMP build        
+        {
+pointsBasicArrayList!!.add(getInstance(pointsBasicArrayList!!.objectArray[index]!! as BasicArrayList, width))
 }
 
 
@@ -129,7 +149,11 @@ pointsBasicArrayList!!.add(pointBasicArrayList)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newPoints
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
@@ -147,12 +171,12 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
             
 open fun getInstance(pointBasicArrayList: BasicArrayList, width: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
+: BasicArrayList
 
-                    var pointBasicArrayList = pointBasicArrayList
-
-
-                    var width = width
+        Updates for KMP build        
+        {
+var pointBasicArrayList = pointBasicArrayList
+var width = width
 
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(pointBasicArrayList)
 

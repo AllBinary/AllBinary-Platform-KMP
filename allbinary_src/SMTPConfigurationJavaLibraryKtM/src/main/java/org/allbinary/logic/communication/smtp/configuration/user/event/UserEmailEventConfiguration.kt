@@ -42,7 +42,11 @@ open public class UserEmailEventConfiguration
     private var eventListenerClassPath: String
 public constructor        ()
             : super()
-        {this.setName(StringUtil.getInstance()!!.EMPTY_STRING)
+        
+
+        Updates for KMP build        
+        {
+this.setName(StringUtil.getInstance()!!.EMPTY_STRING)
 this.setEventListenerClassPath(StringUtil.getInstance()!!.EMPTY_STRING)
 
     
@@ -57,9 +61,11 @@ this.setEventListenerClassPath(StringUtil.getInstance()!!.EMPTY_STRING)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.setName(hashMap!!.get(UserEmailEventConfigurationData.NAME) as String)
 this.setEventListenerClassPath(hashMap!!.get(UserEmailEventConfigurationData.LISTENER_CLASSPATH) as String)
 
@@ -76,7 +82,11 @@ this.setEventListenerClassPath(hashMap!!.get(UserEmailEventConfigurationData.LIS
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,16 +96,22 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun getEventListenerClassPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,16 +121,22 @@ open fun getEventListenerClassPath()
 
 open fun setEventListenerClassPath(eventListenerClassPath: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerClassPath = eventListenerClassPath
+
+        Updates for KMP build        
+        {
+var eventListenerClassPath = eventListenerClassPath
 this.eventListenerClassPath= eventListenerClassPath
 }
 
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -41,9 +41,11 @@ open public class MotionRectangle
     private var pixelDeltaVector: Vector
 public constructor        (rectangle: Rectangle)
             : super()
-        {
+        
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 this.setRectangle(rectangle)
 this.setPixelDeltaVector(Vector())
 }
@@ -51,7 +53,11 @@ this.setPixelDeltaVector(Vector())
 
 open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle{
+: Rectangle
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,16 +67,22 @@ open fun getRectangle()
 
 open fun setRectangle(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rectangle = rectangle
+
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 this.rectangle= rectangle
 }
 
 
 open fun getPixelDeltaVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,15 +92,21 @@ open fun getPixelDeltaVector()
 
 open fun setPixelDeltaVector(pixelDeltaVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pixelDeltaVector = pixelDeltaVector
+
+        Updates for KMP build        
+        {
+var pixelDeltaVector = pixelDeltaVector
 this.pixelDeltaVector= pixelDeltaVector
 }
 
 override fun clone()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
     var motionRectangle: MotionRectangle = MotionRectangle(this.getRectangle()!!.clone() as Rectangle)
 
 motionRectangle!!.setPixelDeltaVector(this.getPixelDeltaVector()!!.clone() as Vector)

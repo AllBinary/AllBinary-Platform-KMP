@@ -41,18 +41,14 @@ open public class BasePathFinderGraphVisitor : PathFinderGraphVisitorBase {
     val minPathWeight: Int
 
     val maxPathWeight: Int
-public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int){
+public constructor        (geographicMapInterface: BasicGeographicMap, edgeMinimum: Int, minPathWeight: Int, maxPathWeight: Int)
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var edgeMinimum = edgeMinimum
-
-
-                    var minPathWeight = minPathWeight
-
-
-                    var maxPathWeight = maxPathWeight
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var edgeMinimum = edgeMinimum
+    //var minPathWeight = minPathWeight
+    //var maxPathWeight = maxPathWeight
 this.geographicMapInterface= geographicMapInterface
 this.edgeMinimum= edgeMinimum
 this.minPathWeight= minPathWeight
@@ -64,15 +60,13 @@ this.maxPathWeight= maxPathWeight
             
 open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graph = graph
 
 
-                    var startPathFindingNodeList = startPathFindingNodeList
-
-
-                    var endPathFindingNodeList = endPathFindingNodeList
+        Updates for KMP build        
+        {
+    //var graph = graph
+    //var startPathFindingNodeList = startPathFindingNodeList
+    //var endPathFindingNodeList = endPathFindingNodeList
 }
 
 
@@ -80,15 +74,13 @@ open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFind
             
 open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var startPathFindingNodeList = startPathFindingNodeList
 
 
-                    var endPathFindingNodeList = endPathFindingNodeList
-
-
-                    var pathList = pathList
+        Updates for KMP build        
+        {
+    //var startPathFindingNodeList = startPathFindingNodeList
+    //var endPathFindingNodeList = endPathFindingNodeList
+    //var pathList = pathList
 
     var startPathFindingNode: PathFindingNode
 
@@ -98,7 +90,11 @@ open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
 
                         for (index in startPathFindingNodeList!!.size() -1 downTo 0)
 
-        {startPathFindingNode= startPathFindingNodeList!!.get(index) as PathFindingNode
+        
+
+        Updates for KMP build        
+        {
+startPathFindingNode= startPathFindingNodeList!!.get(index) as PathFindingNode
 pathList!!.remove(startPathFindingNode!!.geographicMapCellPosition)
 pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
 }
@@ -108,9 +104,11 @@ pathList!!.add(0, startPathFindingNode!!.geographicMapCellPosition)
 
 open fun isValid(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var graphPath = graphPath
+        Updates for KMP build        
+        {
+    //var graphPath = graphPath
 
 
 
@@ -121,9 +119,11 @@ open fun isValid(graphPath: Any)
 
 open fun getInvalidReason(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var graphPath = graphPath
+        Updates for KMP build        
+        {
+    //var graphPath = graphPath
 
 
 

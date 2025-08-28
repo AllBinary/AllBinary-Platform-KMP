@@ -32,9 +32,15 @@ open fun getPickupBehavior()
         //nullable = true from not(false or (false and true)) = true
 : PickupBehavior
 
+        Updates for KMP build        
+        
+
 open fun setPickupBehavior(pickupBehavior: PickupBehavior)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

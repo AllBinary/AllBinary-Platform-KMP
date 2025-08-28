@@ -32,9 +32,11 @@ open public class BoundsChangeEvent : AllBinaryEventObject {
         
 public constructor        (rectangle: Rectangle)                        
 
-                            : super(rectangle){
+                            : super(rectangle)
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,7 +46,11 @@ public constructor        (rectangle: Rectangle)
 
 open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle{
+: Rectangle
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

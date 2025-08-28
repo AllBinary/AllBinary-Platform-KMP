@@ -30,9 +30,11 @@ open public class LockableFormPaintableFactory : ItemPaintableFactory {
         
 
     private val lockedIndex: Int
-public constructor        (lockedIndex: Int){
+public constructor        (lockedIndex: Int)
 
-                    var lockedIndex = lockedIndex
+        Updates for KMP build        
+        {
+var lockedIndex = lockedIndex
 this.lockedIndex= lockedIndex
 }
 
@@ -40,9 +42,11 @@ this.lockedIndex= lockedIndex
                 @Throws(Exception::class)
             override fun getInstance(paintableForm: PaintableForm)
         //nullable =  from not(true or (false and false)) = 
-: ItemPaintable{
+: ItemPaintable
 
-                    var paintableForm = paintableForm
+        Updates for KMP build        
+        {
+var paintableForm = paintableForm
 
 
 

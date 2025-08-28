@@ -36,9 +36,11 @@ open public class ParamsUtil
             
 open fun viewParams(params: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var params = params
+        Updates for KMP build        
+        {
+var params = params
 
     
                         if(params != 
@@ -55,7 +57,11 @@ open fun viewParams(params: Array<KClass<*>?>)
 
                         for (index in 0 until params.size)
 
-        {stringBuffer!!.append(" ")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(" ")
 stringBuffer!!.append(params[index]!!.getName())
 }
 
@@ -77,7 +83,11 @@ stringBuffer!!.append(params[index]!!.getName())
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

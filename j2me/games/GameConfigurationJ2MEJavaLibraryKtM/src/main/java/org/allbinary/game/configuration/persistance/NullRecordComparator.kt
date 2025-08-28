@@ -45,12 +45,12 @@ open public class NullRecordComparator
             }            
         override fun compare(rec1: ByteArray, rec2: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var rec1 = rec1
-
-
-                    var rec2 = rec2
+        Updates for KMP build        
+        {
+var rec1 = rec1
+var rec2 = rec2
 
 
 

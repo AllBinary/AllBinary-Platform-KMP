@@ -45,15 +45,13 @@ open public class CountedPickedUpLayerInterfaceFactory : PickedUpLayerInterfaceF
     private val id: Int
 public constructor        (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)                        
 
-                            : super(pickeUpLayerType, iconLayer, animationInterface){
+                            : super(pickeUpLayerType, iconLayer, animationInterface)
 
-                    var pickeUpLayerType = pickeUpLayerType
-
-
-                    var iconLayer = iconLayer
-
-
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var pickeUpLayerType = pickeUpLayerType
+var iconLayer = iconLayer
+var animationInterface = animationInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,18 +67,14 @@ list.add(this)
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer{
+: AllBinaryLayer
 
-                    var hashtable = hashtable
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var x = x
+var y = y
+var z = z
 
 
 
@@ -89,7 +83,11 @@ list.add(this)
 
 override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,7 +96,11 @@ override fun getTotal()
 
 override fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

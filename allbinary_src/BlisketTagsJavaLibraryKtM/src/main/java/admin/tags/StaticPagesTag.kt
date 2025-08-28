@@ -41,16 +41,22 @@ open public class StaticPagesTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var xslFile: String
-public constructor        (){this.setTagHelperFactory(StaticPagesHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(StaticPagesHelperFactory())
 this.setTagRequestHelperFactory(StaticPagesRequestHelperFactory())
 }
 
 
 open fun setXsl(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.xslFile= value
 }
 
@@ -59,7 +65,11 @@ this.xslFile= value
             
 open fun generateStaticPages()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = StaticPagesRequestHelperFactory().
@@ -82,13 +92,21 @@ open fun generateStaticPages()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to generate staticpages table"
 
 
@@ -114,7 +132,11 @@ open fun generateStaticPages()
             
 open fun makePublic()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = StaticPagesRequestHelperFactory().
@@ -137,13 +159,21 @@ open fun makePublic()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to makePublic"
 
 
@@ -169,7 +199,11 @@ open fun makePublic()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -245,7 +279,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -253,7 +291,11 @@ open fun doStartTag()
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

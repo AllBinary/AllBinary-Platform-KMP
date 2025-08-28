@@ -38,9 +38,11 @@ open public class DemoGameMidlet : GameMidlet {
         
 public constructor        (clientInformationFactory: ClientInformationFactory)                        
 
-                            : super(clientInformationFactory){
+                            : super(clientInformationFactory)
 
-                    var clientInformationFactory = clientInformationFactory
+        Updates for KMP build        
+        {
+    //var clientInformationFactory = clientInformationFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,7 +54,11 @@ public constructor        (clientInformationFactory: ClientInformationFactory)
             
 open fun isContinue()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var hashtable: Hashtable<Any, Any> = this.getStartStateHashtable()!!
 
 
@@ -84,7 +90,11 @@ open fun isContinue()
 
 open fun getHighestLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,7 +106,11 @@ open fun getHighestLevel()
             
 open fun createDemoGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface{
+: GameCanvasRunnableInterface
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -107,9 +121,11 @@ open fun createDemoGameCanvasRunnableInterface()
             
 open fun createGameCanvasRunnableInterface(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-: GameCanvasRunnableInterface{
+: GameCanvasRunnableInterface
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+        Updates for KMP build        
+        {
+var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
 
@@ -121,7 +137,11 @@ open fun createGameCanvasRunnableInterface(allBinaryGameLayerManager: AllBinaryG
             
 open fun createGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface{
+: GameCanvasRunnableInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,19 +151,31 @@ open fun createGameCanvasRunnableInterface()
 
 open fun demoSetup()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun postDemoSetup()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setDemo()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, "setDemo")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, "setDemo")
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -156,7 +188,11 @@ PrimaryThreadPool.getInstance()!!.runTask(DemoRunnable(this))
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun createGame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var CREATE_GAME: String = "createGame"
 
 logUtil!!.put(commonStrings!!.START, this, CREATE_GAME)
@@ -175,7 +211,11 @@ logUtil!!.put(commonStrings!!.END, this, CREATE_GAME)
 
 open fun isReady()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

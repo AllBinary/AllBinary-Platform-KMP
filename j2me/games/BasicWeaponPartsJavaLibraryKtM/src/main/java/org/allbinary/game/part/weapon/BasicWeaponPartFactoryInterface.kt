@@ -34,6 +34,9 @@ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicWeaponPart
 
+        Updates for KMP build        
+        
+
 }
                 
             

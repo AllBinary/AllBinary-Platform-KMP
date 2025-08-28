@@ -39,7 +39,11 @@ open public class BaseMenuBehavior
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BaseMenuBehavior{
+: BaseMenuBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,20 +62,22 @@ open fun getInstance()
             
 open fun onDisplayChangeEvent(allBinaryGameCanvas: AllBinaryGameCanvas, displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryGameCanvas = allBinaryGameCanvas
 
 
-                    var displayChangeEvent = displayChangeEvent
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
+    //var displayChangeEvent = displayChangeEvent
 }
 
 
 open fun initSpecialPaint(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 allBinaryGameCanvas!!.setNonBotPaintableP(NullPaintable.getInstance())
 }
 
@@ -80,9 +86,11 @@ allBinaryGameCanvas!!.setNonBotPaintableP(NullPaintable.getInstance())
             
 open fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -90,9 +98,11 @@ open fun initMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
             
 open fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
@@ -100,17 +110,21 @@ open fun updateMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
             
 open fun popupMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 
 open fun closeMenu(allBinaryGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameCanvas = allBinaryGameCanvas
 }
 
 

@@ -38,7 +38,11 @@ open public class RaceTrackGeographicMapCellTypes
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RaceTrackGeographicMapCellTypes{
+: RaceTrackGeographicMapCellTypes
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,7 +69,11 @@ open fun getInstance()
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 public constructor        ()
             : super()
-        {BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Left Turn", 1, 1)
+        
+
+        Updates for KMP build        
+        {
+BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Left Turn", 1, 1)
 BOTTOM_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Bottom Right Turn", 2, 1)
 TOP_LEFT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Top Left Turn", 3, 1)
 TOP_RIGHT_TURN_ROAD_CELL_TYPE= RaceTrackGeographicMapCellType("Top Right Turne", 4, 1)

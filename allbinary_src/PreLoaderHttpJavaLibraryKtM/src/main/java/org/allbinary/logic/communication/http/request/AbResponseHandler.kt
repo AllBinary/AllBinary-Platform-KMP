@@ -47,12 +47,12 @@ open public class AbResponseHandler
             
 open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pageContext = pageContext
 
 
-                    var e = e
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -69,7 +69,11 @@ open fun sendJspTagRedirect(pageContext: PageContext, e: Exception)
                                 
 AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance()!!.ERRORPAGE)
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
@@ -91,12 +95,12 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
             
 open fun sendServletRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pageContext = pageContext
 
 
-                    var e = e
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -113,7 +117,11 @@ open fun sendServletRedirect(pageContext: PageContext, e: Exception)
                                 
 AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance()!!.ERRORPAGE)
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
@@ -135,12 +143,12 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
             
 open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pageContext = pageContext
 
 
-                    var e = e
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -157,7 +165,11 @@ open fun sendJspTagLicensingRedirect(pageContext: PageContext, e: Exception)
                                 
 AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance()!!.LICENSEERRORPAGE)
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
@@ -179,12 +191,12 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
             
 open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pageContext = pageContext
 
 
-                    var e = e
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var e = e
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -201,7 +213,11 @@ open fun sendServletLicensingRedirect(pageContext: PageContext, e: Exception)
                                 
 AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance()!!.LICENSEERRORPAGE)
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
@@ -223,12 +239,12 @@ AbResponseHandler.sendRedirect(pageContext, FREEBLISKET_PATH_GLOBALS.getInstance
             
 open fun sendRedirect(pageContext: PageContext, page: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pageContext = pageContext
 
 
-                    var page = page
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var page = page
 
     var request: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
 
@@ -252,7 +268,11 @@ open fun sendRedirect(pageContext: PageContext, page: String)
         try {
             requestDispatcher!!.forward(request, response)
 } catch(e: Exception)
-            {pageContext!!.getOut()!!.print("Error: " +page)
+            
+
+        Updates for KMP build        
+        {
+pageContext!!.getOut()!!.print("Error: " +page)
 }
 
 
@@ -266,7 +286,11 @@ open fun sendRedirect(pageContext: PageContext, page: String)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -61,7 +61,11 @@ open public class OrderItemsEntity : AbSqlBean
     val tableName: String = "orderitems"
 public constructor        ()                        
 
-                            : super(HistoryDbInitInfo()){
+                            : super(HistoryDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -71,12 +75,12 @@ this.setTableName(tableName)
 
 open fun insert(userName: String, order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var order = order
+        Updates for KMP build        
+        {
+var userName = userName
+var order = order
 
     var vector: Vector = Vector()
 
@@ -110,7 +114,11 @@ open fun insert(userName: String, order: OrderInterface)
 
                         for (i in 0 until itemsSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var item: String = itemsArray[i]!! as String
 
 
@@ -174,7 +182,11 @@ this.insert(vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -190,15 +202,13 @@ this.insert(vector)
 
 open fun setStatus(orderId: String, groupId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var orderId = orderId
 
 
-                    var groupId = groupId
-
-
-                    var status = status
+        Updates for KMP build        
+        {
+var orderId = orderId
+var groupId = groupId
+var status = status
 
         try {
             
@@ -212,7 +222,11 @@ whereHashMap!!.put(ShippingMethodData.GROUP, groupId)
 updateHashMap!!.put(OrderHistoryData.STATUS, status)
 super.updateWhere(whereHashMap, updateHashMap)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -228,9 +242,11 @@ super.updateWhere(whereHashMap, updateHashMap)
 
 open fun isEverythingShipped(orderId: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var orderId = orderId
+        Updates for KMP build        
+        {
+var orderId = orderId
 
         try {
             
@@ -241,7 +257,11 @@ open fun isEverythingShipped(orderId: String)
 
 
         while(itemStatusIter!!.hasNext())
+        
+
+        Updates for KMP build        
         {
+
     var status: String = itemStatusIter!!.next() as String
 
 
@@ -265,7 +285,11 @@ open fun isEverythingShipped(orderId: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -286,9 +310,11 @@ open fun isEverythingShipped(orderId: String)
 
 open fun getBasketReview(orderId: String)
         //nullable = true from not(false or (false and false)) = true
-: BasketReview{
+: BasketReview
 
-                    var orderId = orderId
+        Updates for KMP build        
+        {
+var orderId = orderId
 
         try {
             
@@ -327,7 +353,11 @@ keyValues!!.put(OrderData.ID, orderId)
 
                         for (i in 0 until itemsSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var itemHashMap: HashMap<Any, Any> = itemsArray[i]!! as HashMap<Any, Any>
 
 itemHashMap!!.put(BasicItemData.INBASKETS, EMPTY_STRING)
@@ -362,7 +392,11 @@ basketReview!!.addItem(item)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -383,7 +417,11 @@ basketReview!!.addItem(item)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var entryData: EntryData = EntryData.getInstance()!!
 
 
@@ -491,7 +529,11 @@ stringBuffer!!.append(") )")
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -501,7 +543,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

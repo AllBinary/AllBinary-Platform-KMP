@@ -43,9 +43,11 @@ open public class TimeDelayHelper
     var delay: Int
 public constructor        (delay: Int)
             : super()
-        {
+        
 
-                    var delay = delay
+        Updates for KMP build        
+        {
+    //var delay = delay
 this.delay= delay
 this.setStartTime()
 }
@@ -53,7 +55,11 @@ this.setStartTime()
 
 open fun isTime()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var currentTime: Long = System.currentTimeMillis()!!
 
 
@@ -80,9 +86,11 @@ open fun isTime()
 
 open fun isTimeSince(delay: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var delay = delay
+        Updates for KMP build        
+        {
+var delay = delay
 
     var currentTime: Long = System.currentTimeMillis()!!
 
@@ -110,9 +118,11 @@ open fun isTimeSince(delay: Int)
 
 open fun isTime(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var currentTime = currentTime
 
     
                         if(currentTime -this.startTime > this.delay)
@@ -137,9 +147,11 @@ open fun isTime(currentTime: Long)
 
 open fun isTimeWithoutReset(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var currentTime = currentTime
 
     
                         if(currentTime -this.startTime > this.delay)
@@ -163,12 +175,12 @@ open fun isTimeWithoutReset(currentTime: Long)
 
 open fun isTimeSince(delay: Int, currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var delay = delay
-
-
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var delay = delay
+var currentTime = currentTime
 
     
                         if(currentTime -this.startTime > this.delay)
@@ -193,7 +205,11 @@ open fun isTimeSince(delay: Int, currentTime: Long)
 
 open fun getElapsed()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -203,9 +219,11 @@ open fun getElapsed()
 
 open fun getElapsed(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var currentTime = currentTime
 
 
 
@@ -216,12 +234,12 @@ open fun getElapsed(currentTime: Long)
 
 open fun isElapsed(currentTime: Long, time: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var currentTime = currentTime
-
-
-                    var time = time
+        Updates for KMP build        
+        {
+var currentTime = currentTime
+var time = time
 
     
                         if(this.getElapsed(currentTime) > time)
@@ -249,9 +267,11 @@ open fun isElapsed(currentTime: Long, time: Long)
 
 open fun isElapsed(time: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var time = time
+        Updates for KMP build        
+        {
+var time = time
 
     
                         if(this.getElapsed() > time)
@@ -279,16 +299,22 @@ open fun isElapsed(time: Long)
 
 open fun setStartTime(startTime: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var startTime = startTime
+
+        Updates for KMP build        
+        {
+var startTime = startTime
 this.startTime= startTime
 }
 
 
 open fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -298,20 +324,32 @@ open fun getStartTime()
 
 open fun setStartTime()
         //nullable = true from not(false or (false and true)) = true
-{this.startTime= System.currentTimeMillis()
+
+
+        Updates for KMP build        
+        {
+this.startTime= System.currentTimeMillis()
 }
 
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
-{this.elapsedTimeAtPause= this.getElapsed()
+
+
+        Updates for KMP build        
+        {
+this.elapsedTimeAtPause= this.getElapsed()
 this.startTime= Long.MAX_VALUE
 }
 
 
 open fun resume()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.elapsedTimeAtPause != Long.MIN_VALUE)
                         
@@ -337,9 +375,11 @@ this.setStartTime()
 
 open fun toString(currentTime: Long)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var currentTime = currentTime
 
     var elapsed: Long = this.getElapsed(currentTime)!!
 
@@ -376,7 +416,11 @@ open fun toString(currentTime: Long)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var currentTime: Long = System.currentTimeMillis()!!
 
 

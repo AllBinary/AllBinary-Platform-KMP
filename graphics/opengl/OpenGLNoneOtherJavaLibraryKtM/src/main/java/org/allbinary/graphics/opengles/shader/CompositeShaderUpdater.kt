@@ -39,7 +39,11 @@ open public class CompositeShaderUpdater : ShaderUpdater {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CompositeShaderUpdater{
+: CompositeShaderUpdater
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,55 +56,49 @@ open fun getInstance()
     val commonSeps: CommonSeps = CommonSeps.getInstance()!!
 public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>)                        
 
-                            : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size)){
+                            : this(uniformBlockArray, uniformArray, attributeArray, IntArray(attributeArray!!.size))
 
-                    var uniformBlockArray = uniformBlockArray
-
-
-                    var uniformArray = uniformArray
-
-
-                    var attributeArray = attributeArray
+        Updates for KMP build        
+        {
+    //var uniformBlockArray = uniformBlockArray
+    //var uniformArray = uniformArray
+    //var attributeArray = attributeArray
 
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray){
+public constructor        (uniformBlockArray: Array<String?>, uniformArray: Array<String?>, attributeArray: Array<String?>, attributeHandleArray: IntArray)
 
-                    var uniformBlockArray = uniformBlockArray
-
-
-                    var uniformArray = uniformArray
-
-
-                    var attributeArray = attributeArray
-
-
-                    var attributeHandleArray = attributeHandleArray
+        Updates for KMP build        
+        {
+    //var uniformBlockArray = uniformBlockArray
+    //var uniformArray = uniformArray
+    //var attributeArray = attributeArray
+    //var attributeHandleArray = attributeHandleArray
 }
 
 
 open fun onSurfaceCreated(gl: GL10, eglConfig: EGLConfig, programHandle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var eglConfig = eglConfig
-
-
-                    var programHandle = programHandle
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var eglConfig = eglConfig
+    //var programHandle = programHandle
 }
 
 
 open fun onSurfaceDestroyed(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 }
 
 

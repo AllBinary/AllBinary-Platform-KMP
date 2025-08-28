@@ -54,11 +54,19 @@ open public class PaymentTypeUtil
             
     private val instance: PaymentTypeUtil = PaymentTypeUtil()
 
-                init{}
+                init
+
+        Updates for KMP build        
+        {
+}
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PaymentTypeUtil{
+: PaymentTypeUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,7 +91,11 @@ open fun getInstance()
     private var paymentTypeVector: Vector = Vector()
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -108,9 +120,11 @@ PAYMENTGATEWAYFILEPATHSTRING= stringBuffer!!.toString()
 
 open fun add(paymentType: PaymentType)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var paymentType = paymentType
+
+        Updates for KMP build        
+        {
+var paymentType = paymentType
 this.paymentTypeVector!!.add(paymentType)
 }
 
@@ -119,9 +133,11 @@ this.paymentTypeVector!!.add(paymentType)
             
 open fun get(paymentTypeString: String)
         //nullable = true from not(false or (false and false)) = true
-: PaymentType{
+: PaymentType
 
-                    var paymentTypeString = paymentTypeString
+        Updates for KMP build        
+        {
+var paymentTypeString = paymentTypeString
 
     var size: Int = this.paymentTypeVector!!.size!!
 
@@ -131,7 +147,11 @@ open fun get(paymentTypeString: String)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var paymentType: PaymentType = this.paymentTypeVector!!.get(i) as PaymentType
 
 
@@ -160,9 +180,11 @@ open fun get(paymentTypeString: String)
             
 open fun initDefault(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeName = storeName
+
+        Updates for KMP build        
+        {
+var storeName = storeName
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
@@ -204,7 +226,11 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = nodeList!!.item(index)!!
 
 
@@ -243,9 +269,11 @@ stringBuffer!!.append(PAYMENTGATEWAYFILEPATHSTRING)
             
 open fun getDefault(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: PaymentType{
+: PaymentType
 
-                    var storeName = storeName
+        Updates for KMP build        
+        {
+var storeName = storeName
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENT))
@@ -278,9 +306,11 @@ this.initDefault(storeName)
 
 open fun isContain(paymentType: PaymentType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var paymentType = paymentType
+        Updates for KMP build        
+        {
+var paymentType = paymentType
 
 
 
@@ -291,9 +321,11 @@ open fun isContain(paymentType: PaymentType)
 
 open fun difference(a_PaymentTypeVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var a_PaymentTypeVector = a_PaymentTypeVector
+        Updates for KMP build        
+        {
+var a_PaymentTypeVector = a_PaymentTypeVector
 
     var diff: Vector = Vector()
 
@@ -306,7 +338,11 @@ open fun difference(a_PaymentTypeVector: Vector)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var paymentType: PaymentType = this.paymentTypeVector!!.get(i) as PaymentType
 
 

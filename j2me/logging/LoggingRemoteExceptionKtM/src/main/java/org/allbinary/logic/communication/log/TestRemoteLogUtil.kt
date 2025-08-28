@@ -41,9 +41,11 @@ open public class TestRemoteLogUtil
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
                         //Otherwise - ExpressionStmt - expression - ObjectCreationExpr
 
@@ -53,7 +55,11 @@ open fun main(args: Array<String?>)
         }
             public constructor        ()
             : super()
-        {Globals.getInstance()!!.init(this::class.java.classLoader, PATH)
+        
+
+        Updates for KMP build        
+        {
+Globals.getInstance()!!.init(this::class.java.classLoader, PATH)
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 

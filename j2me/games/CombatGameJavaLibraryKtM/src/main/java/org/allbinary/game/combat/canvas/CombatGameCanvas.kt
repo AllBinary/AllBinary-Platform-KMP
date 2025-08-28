@@ -51,21 +51,15 @@ open public class CombatGameCanvas : AllBinaryGameCanvas {
         }
             public constructor        (cmdListener: CommandListener, gameLayerManager: AllBinaryGameLayerManager, highScoresFactoryInterface: HighScoresFactoryInterface, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory, buffered: Boolean)                        
 
-                            : super(cmdListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered){
+                            : super(cmdListener, gameLayerManager, highScoresFactoryInterface, gameInitializationInterfaceFactoryInterface, buffered)
 
-                    var cmdListener = cmdListener
-
-
-                    var gameLayerManager = gameLayerManager
-
-
-                    var highScoresFactoryInterface = highScoresFactoryInterface
-
-
-                    var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
-
-
-                    var buffered = buffered
+        Updates for KMP build        
+        {
+    //var cmdListener = cmdListener
+    //var gameLayerManager = gameLayerManager
+    //var highScoresFactoryInterface = highScoresFactoryInterface
+    //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
+    //var buffered = buffered
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,7 +69,11 @@ open public class CombatGameCanvas : AllBinaryGameCanvas {
 
 open fun CombatGameCanvas_init()
         //nullable = true from not(false or (false and true)) = true
-{DestroyEventCircularStaticPool.getInstance()!!.init(this)
+
+
+        Updates for KMP build        
+        {
+DestroyEventCircularStaticPool.getInstance()!!.init(this)
 ProgressCanvasFactory.getInstance()!!.addPortion(50, "Destroy Events")
 }
 
@@ -83,9 +81,11 @@ ProgressCanvasFactory.getInstance()!!.addPortion(50, "Destroy Events")
                 @Throws(Exception::class)
             override fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 this.CombatGameCanvas_init()
 super.init(abeClientInformation)
 }
@@ -93,9 +93,11 @@ super.init(abeClientInformation)
 
 open fun initConfigurable(portion: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var portion = portion
+
+        Updates for KMP build        
+        {
+    //var portion = portion
 DestroyedLayerProcessor.init()
 ProgressCanvasFactory.getInstance()!!.addPortion(portion, "Basic Processors")
 
@@ -127,14 +129,22 @@ basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
                 @Throws(Exception::class)
             override fun processPlayingGame()
         //nullable = true from not(false or (false and true)) = true
-{super.processPlayingGame()
+
+
+        Updates for KMP build        
+        {
+super.processPlayingGame()
 
 
 
 
                         for (index in basicLayerProcessor!!.size  - 1  downTo 0)
 
-        {basicLayerProcessor[index]!!.process(this.gameLayerManager)
+        
+
+        Updates for KMP build        
+        {
+basicLayerProcessor[index]!!.process(this.gameLayerManager)
 }
 
 }
@@ -143,14 +153,22 @@ basicLayerProcessor[0]= DestroyedLayerProcessor.getInstance()
                 @Throws(Exception::class)
             override fun cleanupGame()
         //nullable = true from not(false or (false and true)) = true
-{super.cleanupGame()
+
+
+        Updates for KMP build        
+        {
+super.cleanupGame()
 
 
 
 
                         for (index in basicLayerProcessor!!.size  - 1  downTo 0)
 
-        {basicLayerProcessor[index]!!.getList()!!.clear()
+        
+
+        Updates for KMP build        
+        {
+basicLayerProcessor[index]!!.getList()!!.clear()
 }
 
 GroupLayerManagerListener.getInstance()!!.clear()
@@ -164,7 +182,11 @@ this.cleanupManager()
             
 open fun cleanupManager()
         //nullable = true from not(false or (false and true)) = true
-{this.gameLayerManager!!.cleanup()
+
+
+        Updates for KMP build        
+        {
+this.gameLayerManager!!.cleanup()
 }
 
 

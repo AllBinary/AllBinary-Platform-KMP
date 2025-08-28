@@ -40,9 +40,11 @@ open public class StoreFrontAdvertisementsStatisticsView
     private var storeFrontAdvertisementsStatisticsInterface: StoreFrontAdvertisementsStatisticsInterface
 public constructor        (storeFrontAdvertisementsStatisticsInterface: StoreFrontAdvertisementsStatisticsInterface)
             : super()
-        {
+        
 
-                    var storeFrontAdvertisementsStatisticsInterface = storeFrontAdvertisementsStatisticsInterface
+        Updates for KMP build        
+        {
+var storeFrontAdvertisementsStatisticsInterface = storeFrontAdvertisementsStatisticsInterface
 this.storeFrontAdvertisementsStatisticsInterface= storeFrontAdvertisementsStatisticsInterface
 }
 
@@ -51,9 +53,11 @@ this.storeFrontAdvertisementsStatisticsInterface= storeFrontAdvertisementsStatis
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.storeFrontAdvertisementsStatisticsInterface!!.toHashMap()!!
 

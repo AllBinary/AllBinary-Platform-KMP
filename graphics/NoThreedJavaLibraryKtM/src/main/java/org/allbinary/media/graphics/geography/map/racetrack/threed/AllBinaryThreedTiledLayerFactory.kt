@@ -40,7 +40,11 @@ open public class AllBinaryThreedTiledLayerFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryThreedTiledLayerFactory{
+: AllBinaryThreedTiledLayerFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,12 +63,12 @@ open fun getInstance()
             
 open fun getInstance(raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryTiledLayer{
+: AllBinaryTiledLayer
 
-                    var raceTrackInfo = raceTrackInfo
-
-
-                    var raceTrackData = raceTrackData
+        Updates for KMP build        
+        {
+var raceTrackInfo = raceTrackInfo
+var raceTrackData = raceTrackData
 
 
 

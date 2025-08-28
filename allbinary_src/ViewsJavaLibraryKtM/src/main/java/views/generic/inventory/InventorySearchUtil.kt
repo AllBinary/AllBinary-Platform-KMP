@@ -71,7 +71,11 @@ open public class InventorySearchUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InventorySearchUtil{
+: InventorySearchUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,9 +100,11 @@ open fun getInstance()
             
 open fun getBasicItemIdColumn(searchRequest: SearchRequest)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 
     var inventoryEntityInterface: InventoryEntity = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
 
@@ -132,7 +138,11 @@ open fun getBasicItemIdColumn(searchRequest: SearchRequest)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var subStore: String = subStoreVector!!.get(index) as String
 
 
@@ -162,12 +172,12 @@ column.addAll(substoreIdColumn)
             
 open fun getNoResults(viewDocumentInterface: TransformDocumentInterface, inventoryNode: Node)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var viewDocumentInterface = viewDocumentInterface
-
-
-                    var inventoryNode = inventoryNode
+        Updates for KMP build        
+        {
+var viewDocumentInterface = viewDocumentInterface
+var inventoryNode = inventoryNode
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_PAGES, commonPhoneStrings!!.ZERO))
 inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterface!!.getDoc(), SearchData.TOTAL_NUMBER_ITEMS, commonPhoneStrings!!.ZERO))
 
@@ -192,15 +202,13 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
 open fun search(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, column: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Array<String?>{
+: Array<String?>
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var searchRequest = searchRequest
-
-
-                    var column = column
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var searchRequest = searchRequest
+var column = column
 
         try {
             
@@ -308,7 +316,11 @@ inventoryNode!!.appendChild(ModDomHelper.createNameValueNodes(viewDocumentInterf
 
 
         while(iter.hasNext())
+        
+
+        Updates for KMP build        
         {
+
     var product: String = .toCharArray()
 
 
@@ -432,7 +444,11 @@ savedPagesInRange++
 
                         for (index in startPage until endPage)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(index <= lastPage)
                         
@@ -450,7 +466,11 @@ inventoryNodes[index]!!.appendChild(ModDomHelper.createNameValueNodes(tempDocume
 
                         for (pageIndex in 0 until lastPage)
 
-        {stringBuffer!!.delete(0, stringBuffer!!.length())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(searchRequest!!.getFileBaseName())
 
     
@@ -518,7 +538,11 @@ productListingPages[0]= StoreTransformer(abeClientInformation, TransformInfoHttp
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         

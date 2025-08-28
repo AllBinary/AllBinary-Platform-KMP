@@ -38,12 +38,12 @@ open public class DomSearchHelper
             
 open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeName = nodeName
+var nodeList = nodeList
 
     var numberOfNodes: Int = nodeList!!.getLength()!!
 
@@ -53,7 +53,11 @@ open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
 
                         for (index in 0 until numberOfNodes)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = nodeList!!.item(index)!!
 
 
@@ -83,12 +87,12 @@ open fun getNodeNoThrow(nodeName: String, nodeList: NodeList)
             
 open fun getNode(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeName = nodeName
+var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNodeNoThrow(nodeName, nodeList)!!
 
@@ -122,12 +126,12 @@ open fun getNode(nodeName: String, nodeList: NodeList)
             
 open fun getChildNodeList(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: NodeList{
+: NodeList
 
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeName = nodeName
+var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNode(nodeName, nodeList)!!
 
@@ -143,12 +147,12 @@ open fun getChildNodeList(nodeName: String, nodeList: NodeList)
             
 open fun getAllNodes(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeName = nodeName
+var nodeList = nodeList
 
     var vector: Vector = DomSearchHelper.getAllNodesNoThrow(nodeName, nodeList)!!
 
@@ -180,12 +184,12 @@ open fun getAllNodes(nodeName: String, nodeList: NodeList)
 
 open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeName = nodeName
+var nodeList = nodeList
 
     var nodeVector: Vector = Vector()
 
@@ -198,7 +202,11 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
 
                         for (index in 0 until numberOfNodes)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = nodeList!!.item(index)!!
 
 
@@ -223,7 +231,11 @@ open fun getAllNodesNoThrow(nodeName: String, nodeList: NodeList)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

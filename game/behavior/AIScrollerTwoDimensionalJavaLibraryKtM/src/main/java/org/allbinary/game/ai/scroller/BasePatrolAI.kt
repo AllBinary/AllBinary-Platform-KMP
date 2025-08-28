@@ -63,15 +63,13 @@ open public class BasePatrolAI : BasicAI {
     var keyDirection: Int = Canvas.RIGHT
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var hashtable = hashtable
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -83,14 +81,22 @@ this.currentDistance= maxDistance!!.toInt()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.updateTotalDistance()
+
+
+        Updates for KMP build        
+        {
+this.updateTotalDistance()
 this.changeDirectionIfReachedPacingAreaMax()
 }
 
 
 open fun updateTotalDistance()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var velocityInterfaceCompositeInterface: VelocityInterfaceCompositeInterface = this.getOwnerLayerInterface() as VelocityInterfaceCompositeInterface
 
 
@@ -102,7 +108,11 @@ xTotalDistance += velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled()
 
 open fun changeDirectionIfReachedPacingAreaMax()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var mathUtil: MathUtil = MathUtil.getInstance()!!
 
 
@@ -122,7 +132,11 @@ open fun changeDirectionIfReachedPacingAreaMax()
 
 open fun nextDirection()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.lastKeyDirection == Canvas.LEFT)
                         
@@ -149,7 +163,11 @@ xTotalDistance= 0
 
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

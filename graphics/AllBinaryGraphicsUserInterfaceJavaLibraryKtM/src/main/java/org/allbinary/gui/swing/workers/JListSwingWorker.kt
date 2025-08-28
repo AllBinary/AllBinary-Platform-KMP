@@ -33,12 +33,12 @@ open public class JListSwingWorker : SwingWorker {
     private var jList: JList
 
     private var listModel: ListModel
-public constructor        (jList: JList, listModel: ListModel){
+public constructor        (jList: JList, listModel: ListModel)
 
-                    var jList = jList
-
-
-                    var listModel = listModel
+        Updates for KMP build        
+        {
+var jList = jList
+var listModel = listModel
 this.setJList(jList)
 this.setListModel(listModel)
 }
@@ -46,7 +46,11 @@ this.setListModel(listModel)
 
 open fun doInBackground()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,13 +60,21 @@ open fun doInBackground()
 
 open fun done()
         //nullable = true from not(false or (false and true)) = true
-{this.getJList()!!.setModel(this.getListModel())
+
+
+        Updates for KMP build        
+        {
+this.getJList()!!.setModel(this.getListModel())
 }
 
 
 open fun getJList()
         //nullable = true from not(false or (false and true)) = true
-: JList{
+: JList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,16 +84,22 @@ open fun getJList()
 
 open fun setJList(jList: JList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var jList = jList
+
+        Updates for KMP build        
+        {
+var jList = jList
 this.jList= jList
 }
 
 
 open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
-: ListModel{
+: ListModel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,9 +109,11 @@ open fun getListModel()
 
 open fun setListModel(listModel: ListModel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var listModel = listModel
+
+        Updates for KMP build        
+        {
+var listModel = listModel
 this.listModel= listModel
 }
 

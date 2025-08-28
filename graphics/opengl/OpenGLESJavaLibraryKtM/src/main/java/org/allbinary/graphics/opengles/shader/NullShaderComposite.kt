@@ -42,9 +42,11 @@ open public class NullShaderComposite : ShaderComposite {
                                 
 open override fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 }
 
                                 }
@@ -52,7 +54,11 @@ open override fun init(gl: GL10)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderComposite{
+: ShaderComposite
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,30 +69,18 @@ open fun getInstance()
         }
             public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)                        
 
-                            : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor){
+                            : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, disableProgramShaderOpenGLProcessor)
 
-                    var requiresOpenGLVersion = requiresOpenGLVersion
-
-
-                    var shaderArray = shaderArray
-
-
-                    var compositeShaderUpdater = compositeShaderUpdater
-
-
-                    var shaderInitializer = shaderInitializer
-
-
-                    var modelViewProjection = modelViewProjection
-
-
-                    var colorOpenGLProcessor = colorOpenGLProcessor
-
-
-                    var vertexOpenGLProcessor = vertexOpenGLProcessor
-
-
-                    var disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
+        Updates for KMP build        
+        {
+    //var requiresOpenGLVersion = requiresOpenGLVersion
+    //var shaderArray = shaderArray
+    //var compositeShaderUpdater = compositeShaderUpdater
+    //var shaderInitializer = shaderInitializer
+    //var modelViewProjection = modelViewProjection
+    //var colorOpenGLProcessor = colorOpenGLProcessor
+    //var vertexOpenGLProcessor = vertexOpenGLProcessor
+    //var disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
 
 
                             //For kotlin this is before the body of the constructor.

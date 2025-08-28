@@ -33,9 +33,15 @@ open fun getSelectedGenericProfile()
         //nullable = true from not(false or (false and true)) = true
 : GenericProfile
 
+        Updates for KMP build        
+        
+
 open fun setSelectedGenericProfile(selectedGenericProfile: GenericProfile)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

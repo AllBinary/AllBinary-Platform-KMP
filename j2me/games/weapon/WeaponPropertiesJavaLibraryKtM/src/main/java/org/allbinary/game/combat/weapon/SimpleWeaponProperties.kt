@@ -44,9 +44,11 @@ open public class SimpleWeaponProperties
 
 open fun set(simpleWeaponProperties: SimpleWeaponProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var simpleWeaponProperties = simpleWeaponProperties
+
+        Updates for KMP build        
+        {
+var simpleWeaponProperties = simpleWeaponProperties
 this.setDamage(simpleWeaponProperties!!.getDamage())
 this.setDissipation(simpleWeaponProperties!!.getDissipation())
 this.setRange(simpleWeaponProperties!!.getRange())
@@ -55,16 +57,22 @@ this.setRange(simpleWeaponProperties!!.getRange())
 
 open fun setDamage(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var damage = damage
+
+        Updates for KMP build        
+        {
+var damage = damage
 this.damage= damage
 }
 
 
 open fun getDamage()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,16 +82,22 @@ open fun getDamage()
 
 open fun setDissipation(dissipation: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dissipation = dissipation
+
+        Updates for KMP build        
+        {
+var dissipation = dissipation
 this.dissipation= dissipation
 }
 
 
 open fun getDissipation()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +107,11 @@ open fun getDissipation()
 
 open fun getRange()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,9 +121,11 @@ open fun getRange()
 
 open fun setRange(range: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var range = range
+
+        Updates for KMP build        
+        {
+var range = range
 this.range= range
 }
 

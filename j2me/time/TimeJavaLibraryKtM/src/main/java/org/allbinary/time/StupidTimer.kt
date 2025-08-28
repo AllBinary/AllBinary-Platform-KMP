@@ -40,9 +40,11 @@ open public class StupidTimer
 
 open fun visitBool(visitorInterface: Visitor)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var visitorInterface = visitorInterface
+        Updates for KMP build        
+        {
+    //var visitorInterface = visitorInterface
 
     var result: Boolean = visitorInterface!!.visit(nullUtil!!.NULL_OBJECT) as Boolean
 
@@ -61,12 +63,12 @@ open fun visitBool(visitorInterface: Visitor)
             
 open fun visit(visitorInterface: Visitor, timeDelayHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var visitorInterface = visitorInterface
 
 
-                    var timeDelayHelper = timeDelayHelper
+        Updates for KMP build        
+        {
+    //var visitorInterface = visitorInterface
+    //var timeDelayHelper = timeDelayHelper
 
     var tookTooLong: Boolean = false
 
@@ -80,7 +82,11 @@ PreLogUtil.put(StringMaker().
 
 
         while(this.visitBool(visitorInterface))
+        
+
+        Updates for KMP build        
         {
+
     
                         if(index % 10 == 0)
                         
@@ -97,7 +103,11 @@ index++
         synchronized(this) 
 
         //mutex.withLock
-        {this.threadObjectUtil!!.waitObject(this, 1800)
+        
+
+        Updates for KMP build        
+        {
+this.threadObjectUtil!!.waitObject(this, 1800)
 }
 
 
@@ -136,13 +146,21 @@ break;
             
 open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        {this.threadObjectUtil!!.notifyObject(this)
+        
+
+        Updates for KMP build        
+        {
+this.threadObjectUtil!!.notifyObject(this)
 }
 
 }

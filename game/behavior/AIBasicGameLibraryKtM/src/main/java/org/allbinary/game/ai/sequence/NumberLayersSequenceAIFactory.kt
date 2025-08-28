@@ -41,18 +41,14 @@ open public class NumberLayersSequenceAIFactory
         
 open fun getInstance(numberOfEnemiesLeft: Int, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterface{
+: ArtificialIntelligenceInterface
 
-                    var numberOfEnemiesLeft = numberOfEnemiesLeft
-
-
-                    var artificialIntelligenceInterface = artificialIntelligenceInterface
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var numberOfEnemiesLeft = numberOfEnemiesLeft
+var artificialIntelligenceInterface = artificialIntelligenceInterface
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
 

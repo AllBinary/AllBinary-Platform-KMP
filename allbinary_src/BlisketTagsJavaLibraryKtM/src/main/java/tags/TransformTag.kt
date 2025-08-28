@@ -40,7 +40,11 @@ open public class TransformTag : TransformInfoTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()                        
 
-                            : super(ViewHelperFactory()){
+                            : super(ViewHelperFactory())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -57,9 +61,11 @@ public constructor        ()
 
 public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)                        
 
-                            : super(tagHelperFactoryInterface){
+                            : super(tagHelperFactoryInterface)
 
-                    var tagHelperFactoryInterface = tagHelperFactoryInterface
+        Updates for KMP build        
+        {
+var tagHelperFactoryInterface = tagHelperFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -80,7 +86,11 @@ public constructor        (tagHelperFactoryInterface: TagHelperFactoryInterface)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var result: String = this.getHelper()!!.::class.getMethod("view", 
@@ -93,7 +103,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAGERROR))
                         
@@ -115,7 +129,11 @@ open fun view()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -159,7 +177,11 @@ pageContext!!.getOut()!!.print(this.view())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -167,7 +189,11 @@ pageContext!!.getOut()!!.print(this.view())
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

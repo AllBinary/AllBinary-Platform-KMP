@@ -54,7 +54,11 @@ open public class PaymentGatewayEntity : AbSqlBean
     private val tableName: String = "paymentgateways"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -73,9 +77,11 @@ this.setTableName(tableName)
 
 open fun add(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var paymentGatewayInterface = paymentGatewayInterface
+
+        Updates for KMP build        
+        {
+var paymentGatewayInterface = paymentGatewayInterface
 
         try {
             
@@ -115,7 +121,11 @@ super.insert(vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -131,9 +141,11 @@ super.insert(vector)
 
 open fun update(paymentGatewayInterface: PaymentGatewayInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var paymentGatewayInterface = paymentGatewayInterface
+
+        Updates for KMP build        
+        {
+var paymentGatewayInterface = paymentGatewayInterface
 
         try {
             
@@ -179,7 +191,11 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -195,12 +211,12 @@ super.updateWhere(whereKeyValuePairs, updateHashMap)
 
 open fun getPaymentGatewayInterface(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-: PaymentGatewayInterface{
+: PaymentGatewayInterface
 
-                    var storeName = storeName
-
-
-                    var paymentType = paymentType
+        Updates for KMP build        
+        {
+var storeName = storeName
+var paymentType = paymentType
 
         try {
             
@@ -298,7 +314,11 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -319,9 +339,11 @@ paymentGatewayHashMap!!.put(PaymentGatewayData.SPECIAL9.toString(), superCrypt!!
 
 open fun findPaymentTypeVectorByStore(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var storeName = storeName
+        Updates for KMP build        
+        {
+var storeName = storeName
 
         try {
             
@@ -347,7 +369,11 @@ paymentGatewayNameVector= super.getColumnWhere(PaymentGatewayData.NAME.toString(
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var paymentTypeString: String = paymentGatewayNameVector!!.get(i) as String
 
 
@@ -383,7 +409,11 @@ paymentGatewayVector!!.add(paymentType)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -404,12 +434,12 @@ paymentGatewayVector!!.add(paymentType)
 
 open fun remove(storeName: String, paymentType: BasicPaymentType)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var storeName = storeName
 
 
-                    var paymentType = paymentType
+        Updates for KMP build        
+        {
+var storeName = storeName
+var paymentType = paymentType
 
         try {
             
@@ -428,7 +458,11 @@ super.deleteWhere(whereHashMap)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -444,7 +478,11 @@ super.deleteWhere(whereHashMap)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)
@@ -533,7 +571,11 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -543,7 +585,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

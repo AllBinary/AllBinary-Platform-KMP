@@ -39,25 +39,39 @@ open public class MultiplayerBehavior
         }
             protected constructor        (username: String)
             : super()
-        {
+        
 
-                    var username = username
+        Updates for KMP build        
+        {
+var username = username
 }
 
 
 open fun startTick()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun endTick()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getApproximateElapsed()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

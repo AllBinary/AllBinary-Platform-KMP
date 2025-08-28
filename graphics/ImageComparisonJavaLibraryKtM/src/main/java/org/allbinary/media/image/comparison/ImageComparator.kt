@@ -47,9 +47,11 @@ open public class ImageComparator
     private val imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface
 public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)
             : super()
-        {
+        
 
-                    var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
+        Updates for KMP build        
+        {
+    //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
 this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
 }
 
@@ -58,12 +60,12 @@ this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
             
 open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageComparisonInfo = imageComparisonInfo
 
 
-                    var point = point
+        Updates for KMP build        
+        {
+    //var imageComparisonInfo = imageComparisonInfo
+    //var point = point
 
     var isCollsionWithAvoidRectangles: Boolean = this.imageComparatorConstraintsInterface!!.isCollisionWithAvoidRectangles(point)!!
 
@@ -136,21 +138,15 @@ open fun process(imageComparisonInfo: ImageComparisonResult, point: GPoint)
             
 open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
         //nullable = true from not(false or (false and false)) = true
-: ImageComparisonResult{
+: ImageComparisonResult
 
-                    var bufferedImage1 = bufferedImage1
-
-
-                    var bufferedImage2 = bufferedImage2
-
-
-                    var frameOne = frameOne
-
-
-                    var frameTwo = frameTwo
-
-
-                    var tolerance = tolerance
+        Updates for KMP build        
+        {
+    //var bufferedImage1 = bufferedImage1
+    //var bufferedImage2 = bufferedImage2
+    //var frameOne = frameOne
+    //var frameTwo = frameTwo
+    //var tolerance = tolerance
 
 
 
@@ -163,24 +159,16 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
             
 open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int, name: String)
         //nullable = true from not(false or (false and false)) = true
-: ImageComparisonResult{
+: ImageComparisonResult
 
-                    var bufferedImage1 = bufferedImage1
-
-
-                    var bufferedImage2 = bufferedImage2
-
-
-                    var frameOne = frameOne
-
-
-                    var frameTwo = frameTwo
-
-
-                    var tolerance = tolerance
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+    //var bufferedImage1 = bufferedImage1
+    //var bufferedImage2 = bufferedImage2
+    //var frameOne = frameOne
+    //var frameTwo = frameTwo
+    //var tolerance = tolerance
+    //var name = name
 
     
                         if(bufferedImage1 == 
@@ -206,13 +194,21 @@ open fun compare(bufferedImage1: BufferedImage, bufferedImage2: BufferedImage, f
 
                         for (indexY in 0 until imageComparisonInfo!!.imageHeight)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (indexX in 0 until imageComparisonInfo!!.imageWidth)
 
-        {this.process(imageComparisonInfo, PointFactory.getInstance()!!.getInstance(indexX, indexY))
+        
+
+        Updates for KMP build        
+        {
+this.process(imageComparisonInfo, PointFactory.getInstance()!!.getInstance(indexX, indexY))
 
     
                         if(imageComparisonInfo!!.getNonMatchingPixelVector()!!.size() > this.imageComparatorConstraintsInterface!!.getMaxNonMatchingPixelDeltas())

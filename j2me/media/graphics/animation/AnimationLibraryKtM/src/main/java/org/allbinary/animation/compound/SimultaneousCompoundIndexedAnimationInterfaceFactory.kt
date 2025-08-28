@@ -34,9 +34,11 @@ open public class SimultaneousCompoundIndexedAnimationInterfaceFactory : Compoun
         
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>)                        
 
-                            : this(basicAnimationInterfaceFactoryInterfaceArray, AnimationBehaviorFactory.getInstance()){
+                            : this(basicAnimationInterfaceFactoryInterfaceArray, AnimationBehaviorFactory.getInstance())
 
-                    var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
+        Updates for KMP build        
+        {
+    //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
 
 
                             //For kotlin this is before the body of the constructor.
@@ -45,12 +47,12 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
 
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory){
+                            : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory)
 
-                    var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,9 +61,11 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
 
 override fun createArray(size: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Animation?>{
+: Array<Animation?>
 
-                    var size = size
+        Updates for KMP build        
+        {
+    //var size = size
 
 
 
@@ -71,9 +75,11 @@ override fun createArray(size: Int)
 
 override fun getInstance(animationArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationArray = animationArray
+        Updates for KMP build        
+        {
+    //var animationArray = animationArray
 
 
 

@@ -82,57 +82,35 @@ open public class Email
     private var isDebug: Boolean
 public constructor        (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var from = from
-
-
-                    var to = to
-
-
-                    var subject = subject
-
-
-                    var server = server
-
-
-                    var textBody = textBody
-
-
-                    var htmlAttachment = htmlAttachment
-
-
-                    var contentBase = contentBase
+var from = from
+var to = to
+var subject = subject
+var server = server
+var textBody = textBody
+var htmlAttachment = htmlAttachment
+var contentBase = contentBase
 this.isDebug= false
 init(from, to, subject, server, textBody, htmlAttachment, contentBase)
 }
 
 public constructor        (from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String, isDebug: Boolean)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var from = from
-
-
-                    var to = to
-
-
-                    var subject = subject
-
-
-                    var server = server
-
-
-                    var textBody = textBody
-
-
-                    var htmlAttachment = htmlAttachment
-
-
-                    var contentBase = contentBase
-
-
-                    var isDebug = isDebug
+var from = from
+var to = to
+var subject = subject
+var server = server
+var textBody = textBody
+var htmlAttachment = htmlAttachment
+var contentBase = contentBase
+var isDebug = isDebug
 this.isDebug= isDebug
 init(from, to, subject, server, textBody, htmlAttachment, contentBase)
 }
@@ -142,27 +120,17 @@ init(from, to, subject, server, textBody, htmlAttachment, contentBase)
             
 open fun init(from: String, to: String, subject: String, server: String, textBody: String, htmlAttachment: String, contentBase: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var from = from
 
 
-                    var to = to
-
-
-                    var subject = subject
-
-
-                    var server = server
-
-
-                    var textBody = textBody
-
-
-                    var htmlAttachment = htmlAttachment
-
-
-                    var contentBase = contentBase
+        Updates for KMP build        
+        {
+var from = from
+var to = to
+var subject = subject
+var server = server
+var textBody = textBody
+var htmlAttachment = htmlAttachment
+var contentBase = contentBase
 
         try {
             
@@ -199,7 +167,11 @@ mimeBodyParts[1]= MimeBodyPart(internetHeaders, htmlAttachment!!.encodeToByteArr
                                 
 init(server, null as Authenticator, arrayOf(InternetAddress(from)), arrayOf(InternetAddress(to)), null as Array<InternetAddress?>, null as Array<InternetAddress?>, subject, mimeBodyParts)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
@@ -224,30 +196,18 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "emailConstructor", e)
             
 open fun init(server: String, authenticator: Authenticator, addresses_from: Array<InternetAddress?>, addresses_to: Array<InternetAddress?>, addresses_cc: Array<InternetAddress?>, addresses_bcc: Array<InternetAddress?>, subject: String, mimeBodyParts: Array<MimeBodyPart?>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var server = server
 
 
-                    var authenticator = authenticator
-
-
-                    var addresses_from = addresses_from
-
-
-                    var addresses_to = addresses_to
-
-
-                    var addresses_cc = addresses_cc
-
-
-                    var addresses_bcc = addresses_bcc
-
-
-                    var subject = subject
-
-
-                    var mimeBodyParts = mimeBodyParts
+        Updates for KMP build        
+        {
+var server = server
+var authenticator = authenticator
+var addresses_from = addresses_from
+var addresses_to = addresses_to
+var addresses_cc = addresses_cc
+var addresses_bcc = addresses_bcc
+var subject = subject
+var mimeBodyParts = mimeBodyParts
 this.properties= Properties()
 this.properties.put(SMTP_HOST, server)
 
@@ -274,7 +234,11 @@ this.properties.put(SMTP_LOCAL_HOST, "FakeHostName")
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
@@ -327,7 +291,11 @@ msg.setSubject(subject)
 
                         for (i in 0 until mimeBodyParts!!.size)
 
-        {mimeMultipart!!.addBodyPart(mimeBodyParts[i]!!)
+        
+
+        Updates for KMP build        
+        {
+mimeMultipart!!.addBodyPart(mimeBodyParts[i]!!)
 }
 
 msg.setContent(mimeMultipart)
@@ -336,7 +304,11 @@ msg.setContent(mimeMultipart)
 
 open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
-: MimeMessage{
+: MimeMessage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -346,7 +318,11 @@ open fun getMimeMessage()
 
 open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     
                         if(isDebug)
                         
@@ -377,7 +353,11 @@ open fun getDebugInfo()
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -389,7 +369,11 @@ open fun log()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
         try {
             
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -411,7 +395,11 @@ hashMap!!.put(EmailData.SERVER, properties.get(SMTP_HOST) as String)
 
                         for (index in 0 until addresses.size)
 
-        {hashMap!!.put(EmailData.FROM, addresses[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+hashMap!!.put(EmailData.FROM, addresses[index]!!.toString())
 }
 
 
@@ -431,7 +419,11 @@ addresses= msg.getRecipients(Message.RecipientType.TO)
 
                         for (index in 0 until addresses.size)
 
-        {hashMap!!.put(EmailData.TO, addresses[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+hashMap!!.put(EmailData.TO, addresses[index]!!.toString())
 }
 
 
@@ -451,7 +443,11 @@ addresses= msg.getRecipients(Message.RecipientType.CC)
 
                         for (index in 0 until addresses.size)
 
-        {hashMap!!.put(EmailData.CC, addresses[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+hashMap!!.put(EmailData.CC, addresses[index]!!.toString())
 }
 
 
@@ -471,7 +467,11 @@ addresses= msg.getRecipients(Message.RecipientType.BCC)
 
                         for (index in 0 until addresses.size)
 
-        {hashMap!!.put(EmailData.BCC, addresses[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+hashMap!!.put(EmailData.BCC, addresses[index]!!.toString())
 }
 
 
@@ -494,7 +494,11 @@ hashMap!!.put(EmailData.SUBJECT, msg.getSubject())
 
                         for (index in 0 until mimeMultipart!!.getCount()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var content: String = mimeMultipart!!.getBodyPart(index)!!.getContent() as String
 
 hashMap!!.put(EmailData.CONTENT, content)
@@ -509,7 +513,11 @@ hashMap!!.put(EmailData.CONTENT, content)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashMap
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGINGERROR))
                         
@@ -531,9 +539,11 @@ hashMap!!.put(EmailData.CONTENT, content)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, EmailData.NAME, this.toHashMap())!!
 
@@ -549,7 +559,11 @@ open fun toXmlNode(document: Document)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(CommonStrings.getInstance()!!.NOT_IMPLEMENTED)

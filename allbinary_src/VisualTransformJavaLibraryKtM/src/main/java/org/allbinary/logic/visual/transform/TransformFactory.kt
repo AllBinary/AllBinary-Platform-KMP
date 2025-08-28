@@ -50,7 +50,11 @@ open public class TransformFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformFactory{
+: TransformFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +67,11 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -72,15 +80,13 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, viewName: String, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInterface{
+: TransformInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var viewName = viewName
-
-
-                    var ownerTransformInfoInterface = ownerTransformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var viewName = viewName
+    //var ownerTransformInfoInterface = ownerTransformInfoInterface
 
         try {
             
@@ -134,7 +140,11 @@ transformInfoInterface!!.setChild()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType as TransformInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -156,15 +166,13 @@ transformInfoInterface!!.setChild()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: TransformInterface{
+: TransformInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var propertiesHashMap = propertiesHashMap
+    //var pageContext = pageContext
 
         try {
             
@@ -219,7 +227,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, proper
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType as TransformInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -247,12 +259,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInterface{
+: TransformInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
 
         try {
             
@@ -282,7 +294,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType as TransformInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         

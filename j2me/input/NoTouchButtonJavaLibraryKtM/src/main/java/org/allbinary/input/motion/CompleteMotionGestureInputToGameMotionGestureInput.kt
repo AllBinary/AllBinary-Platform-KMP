@@ -39,7 +39,11 @@ open public class CompleteMotionGestureInputToGameMotionGestureInput
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CompleteMotionGestureInputToGameMotionGestureInput{
+: CompleteMotionGestureInputToGameMotionGestureInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,7 +62,11 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{PreLogUtil.put("No Touch Button = No Compound Motion Gestures", this, this.commonStrings!!.INIT)
+
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("No Touch Button = No Compound Motion Gestures", this, this.commonStrings!!.INIT)
 }
 
 

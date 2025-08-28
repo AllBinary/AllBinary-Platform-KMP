@@ -54,42 +54,64 @@ open public class InputToGameKeyMapping : InputMapping {
     var negativePlatformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(0)
 
     private val platformToGameKeyMapping: Array<GameKey?> = arrayOfNulls(InputFactory.getInstance()!!.MAX)
-public constructor        (){logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+public constructor        ()
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.clear()
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in platformToGameKeyMapping!!.size -1 downTo 0)
 
-        {platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
+        
+
+        Updates for KMP build        
+        {
+platformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 }
 
 }
 
 override fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-{super.removeAll()
+
+
+        Updates for KMP build        
+        {
+super.removeAll()
 this.clear()
 }
 
 override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+    //var inputToGameKeyMapping = inputToGameKeyMapping
 
 
 
 
                         for (index in inputToGameKeyMapping!!.getMaxMappable() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var input: Input = inputToGameKeyMapping!!.getInstance(index)!!
 
 
@@ -108,19 +130,23 @@ override fun add(inputToGameKeyMapping: InputToGameKeyMapping)
 
 open fun addAll(input: Input, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var input = input
 
 
-                    var list = list
+        Updates for KMP build        
+        {
+var input = input
+var list = list
 
 
 
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var mappedToInput: Input = list.objectArray[index]!! as Input
 
 this.add(input, mappedToInput)
@@ -130,24 +156,24 @@ this.add(input, mappedToInput)
 
 override fun add(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var input = input
 
 
-                    var mappedToInput = mappedToInput
+        Updates for KMP build        
+        {
+var input = input
+var mappedToInput = mappedToInput
 super.add(input, mappedToInput)
 this.set(input, mappedToInput)
 }
 
 override fun remove(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var input = input
 
 
-                    var mappedToInput = mappedToInput
+        Updates for KMP build        
+        {
+var input = input
+var mappedToInput = mappedToInput
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(input))!!.append(" == ")!!.append(StringUtil.getInstance()!!.toString(mappedToInput))!!.toString(), this, "InputToGameKeyMapping::remove")
 super.remove(input, mappedToInput)
@@ -157,12 +183,12 @@ this.set(input, gameKeyFactory!!.NONE)
 
 open fun set(input: Input, mappedToInput: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var input = input
 
 
-                    var mappedToInput = mappedToInput
+        Updates for KMP build        
+        {
+var input = input
+var mappedToInput = mappedToInput
 
     var id: Int = mappedToInput!!.getId()!!
 
@@ -180,7 +206,11 @@ open fun set(input: Input, mappedToInput: Input)
 
 open fun getMaxMappable()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -190,9 +220,11 @@ open fun getMaxMappable()
 
 open fun getReverseInstance(id: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var id = id
+        Updates for KMP build        
+        {
+var id = id
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -205,7 +237,11 @@ open fun getReverseInstance(id: Int)
 
                         for (index in 0 until platformToGameKeyMapping!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(platformToGameKeyMapping[index]!!.getId() == id)
                         
@@ -241,12 +277,12 @@ open fun getReverseInstance(id: Int)
             
 open fun init(canvas: Canvas, gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var canvas = canvas
 
 
-                    var gameKey = gameKey
+        Updates for KMP build        
+        {
+var canvas = canvas
+var gameKey = gameKey
 
     var key: Int = canvas.getKeyCode(gameKey!!.getId())!!
 
@@ -289,9 +325,11 @@ open fun init(canvas: Canvas, gameKey: GameKey)
             
 open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var canvas = canvas
+        Updates for KMP build        
+        {
+var canvas = canvas
 
     var nextKey: Int = 0
 
@@ -304,7 +342,11 @@ open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
 
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
-        {nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
+        
+
+        Updates for KMP build        
+        {
+nextKey= canvas.getKeyCode(mappedGameKeys[index]!!.getId())
 
     
                         if(nextKey < smallestKey)
@@ -326,9 +368,11 @@ open fun getSmallestCanvasGameKeyCode(canvas: Canvas)
 
 open fun init(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var canvas = canvas
+
+        Updates for KMP build        
+        {
+var canvas = canvas
 
         try {
             
@@ -359,7 +403,11 @@ negativePlatformToGameKeyMapping= arrayOfNulls( -smallestKey)
 
                         for (index in negativePlatformToGameKeyMapping!!.size  - 1  downTo 0)
 
-        {negativePlatformToGameKeyMapping[index]= gameKeyFactory!!.NONE
+        
+
+        Updates for KMP build        
+        {
+negativePlatformToGameKeyMapping[index]= gameKeyFactory!!.NONE
 }
 
 this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
@@ -372,11 +420,19 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
 
                         for (index in mappedGameKeys!!.size  - 1  downTo 0)
 
-        {this.init(canvas, mappedGameKeys[index]!!)
+        
+
+        Updates for KMP build        
+        {
+this.init(canvas, mappedGameKeys[index]!!)
 }
 
 } catch(t: Throwable)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, t)
 }
 
 }
@@ -384,12 +440,12 @@ this.negativePlatformToGameKeyMapping= negativePlatformToGameKeyMapping
 
 open fun getInstance(canvas: Canvas, id: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameKey{
+: GameKey
 
-                    var canvas = canvas
-
-
-                    var id = id
+        Updates for KMP build        
+        {
+var canvas = canvas
+var id = id
 
     
                         if(id >= 0 && id < platformToGameKeyMapping!!.size)
@@ -430,9 +486,11 @@ open fun getInstance(canvas: Canvas, id: Int)
 
 open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameKey{
+: GameKey
 
-                    var id = id
+        Updates for KMP build        
+        {
+var id = id
 
     
                         if(id >= 0 && id < platformToGameKeyMapping!!.size)

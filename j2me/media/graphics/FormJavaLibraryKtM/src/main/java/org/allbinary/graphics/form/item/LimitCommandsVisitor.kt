@@ -36,7 +36,11 @@ open public class LimitCommandsVisitor : Visitor {
         
 
     private val isNotSmallDisplay: Boolean
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
 isNotSmallDisplay= (displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() > ScreenInfo.getInstance()!!.SMALL_WIDTH) || (!displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() > ScreenInfo.getInstance()!!.SMALL_HEIGHT)
@@ -44,9 +48,11 @@ isNotSmallDisplay= (displayInfo!!.isPortrait() && displayInfo!!.getLastHeight() 
 
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
     var command: Command = anyType as Command
 

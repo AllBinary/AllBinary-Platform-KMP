@@ -31,9 +31,11 @@ open public class EndLevelIntermissionProcessor : Processor {
         
 
     private var gameCanvas: AllBinaryGameCanvas
-public constructor        (gameCanvas: AllBinaryGameCanvas){
+public constructor        (gameCanvas: AllBinaryGameCanvas)
 
-                    var gameCanvas = gameCanvas
+        Updates for KMP build        
+        {
+var gameCanvas = gameCanvas
 this.gameCanvas= gameCanvas
 }
 
@@ -41,7 +43,11 @@ this.gameCanvas= gameCanvas
                 @Throws(Exception::class)
             override fun process()
         //nullable = true from not(false or (false and true)) = true
-{this.gameCanvas!!.processEndLevelIntermissionGameState()
+
+
+        Updates for KMP build        
+        {
+this.gameCanvas!!.processEndLevelIntermissionGameState()
 }
 
 

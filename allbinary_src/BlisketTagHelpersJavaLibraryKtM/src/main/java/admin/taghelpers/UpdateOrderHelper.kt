@@ -120,12 +120,12 @@ open public class UpdateOrderHelper : TagHelper {
     private var storeComment: String
 
     private var storeCancelComment: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
 this.getFormData()
 }
@@ -133,7 +133,11 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.entryId= request.getParameter(EntryData.getInstance()!!.ID)
+
+
+        Updates for KMP build        
+        {
+this.entryId= request.getParameter(EntryData.getInstance()!!.ID)
 this.orderId= request.getParameter(OrderData.ID)
 this.userName= request.getParameter(UserData.USERNAME)
 this.storeName= request.getParameter(StoreFrontData.getInstance()!!.NAME)
@@ -175,7 +179,11 @@ this.storeCancelComment= request.getParameter(OrderData.STORECANCELCOMMENT)
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successful update"
@@ -238,7 +246,11 @@ OrderHistoryEntityFactory.getInstance()!!.update(whereHashMap, orderHashMap)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to update order table"
 
 

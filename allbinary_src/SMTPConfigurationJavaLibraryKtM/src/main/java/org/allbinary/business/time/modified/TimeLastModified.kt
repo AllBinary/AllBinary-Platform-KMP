@@ -31,9 +31,11 @@ open public class TimeLastModified : Time {
         
 public constructor        (time: String)                        
 
-                            : super(time){
+                            : super(time)
 
-                    var time = time
+        Updates for KMP build        
+        {
+var time = time
 
 
                             //For kotlin this is before the body of the constructor.
@@ -42,9 +44,11 @@ public constructor        (time: String)
 
 public constructor        (time: Long)                        
 
-                            : super(time){
+                            : super(time)
 
-                    var time = time
+        Updates for KMP build        
+        {
+var time = time
 
 
                             //For kotlin this is before the body of the constructor.

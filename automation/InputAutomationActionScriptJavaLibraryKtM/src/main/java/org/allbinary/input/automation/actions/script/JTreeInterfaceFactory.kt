@@ -29,7 +29,11 @@ open public class JTreeInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: JTreeInterfaceFactory{
+: JTreeInterfaceFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,16 +52,22 @@ open fun getInstance()
 
 open fun set(jTreeInterface: JTreeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var jTreeInterface = jTreeInterface
+
+        Updates for KMP build        
+        {
+var jTreeInterface = jTreeInterface
 this.jTreeInterface= jTreeInterface
 }
 
 
 open fun getJTreeInterface()
         //nullable = true from not(false or (false and true)) = true
-: JTreeInterface{
+: JTreeInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

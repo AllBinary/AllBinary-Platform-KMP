@@ -42,7 +42,11 @@ open public class ImageRotationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageRotationUtil{
+: ImageRotationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,20 +59,22 @@ open fun getInstance()
     private val imageJ2SERotationUtil: ImageJ2SERotationUtil = ImageJ2SERotationUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun rotateImage(originalImage: Image, image: Image, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImage = originalImage
 
 
-                    var image = image
-
-
-                    var totalAngle = totalAngle
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var image = image
+    //var totalAngle = totalAngle
 
     
                         if(image.isMutable())
@@ -121,12 +127,12 @@ imageJ2SERotationUtil!!.rotateImage(originalAwtImage, newBufferedImage, totalAng
             
 open fun createRotatedImage(originalImage: Image, rotationInDegrees: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
-
-
-                    var rotationInDegrees = rotationInDegrees
+        Updates for KMP build        
+        {
+var originalImage = originalImage
+var rotationInDegrees = rotationInDegrees
 
     var image: Image = ImageCreationUtil.getInstance()!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 

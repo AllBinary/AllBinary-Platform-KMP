@@ -45,12 +45,12 @@ open public class HtmlRow : HtmlTag {
     private var after: String
 
     private var htmlCellsVector: Vector
-public constructor        (before: String, after: String){
+public constructor        (before: String, after: String)
 
-                    var before = before
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var after = after
 this.before= before.toCharArray().concatToString()
 this.after= after.toCharArray().concatToString()
 this.htmlCellsVector= Vector()
@@ -59,9 +59,11 @@ this.htmlCellsVector= Vector()
 
 open fun addCell(htmlCell: HtmlCell)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var htmlCell = htmlCell
+
+        Updates for KMP build        
+        {
+var htmlCell = htmlCell
 this.htmlCellsVector!!.add(htmlCell)
 this.numberOfColumns++
 }
@@ -69,7 +71,11 @@ this.numberOfColumns++
 
 open fun getNumberOfColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,7 +84,11 @@ open fun getNumberOfColumns()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
@@ -103,7 +113,11 @@ result += " "
 
                         for (i in 0 until attributeSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = attributeKeys[i]!! as String
 
 
@@ -132,7 +146,11 @@ result += END
 
                         for (i in 0 until cellSize)
 
-        {result += htmlCellsVector!!.get(i)!!.toString()
+        
+
+        Updates for KMP build        
+        {
+result += htmlCellsVector!!.get(i)!!.toString()
 result += " "
 }
 

@@ -37,7 +37,11 @@ open public class NoPlayerGameInput : PlayerGameInput {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoPlayerGameInput{
+: NoPlayerGameInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayList(),  -1)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -57,17 +65,21 @@ open fun getInstance()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 }
 
 

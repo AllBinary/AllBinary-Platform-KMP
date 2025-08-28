@@ -45,9 +45,11 @@ open public class LicenseClientAndServerTest
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
         try {
             
@@ -55,7 +57,11 @@ open fun main(args: Array<String?>)
 
 licensingTest!!.test()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
@@ -71,9 +77,11 @@ logUtil!!.put(this.commonStrings!!.EXCEPTION, "main()", "main()", e)
     private var vector: BasicArrayList = BasicArrayList()
 public constructor        (options: Array<String?>)
             : super()
-        {
+        
 
-                    var options = options
+        Updates for KMP build        
+        {
+var options = options
 LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_GLOBALS.getInstance()!!.INIT_PATH)
 
 
@@ -81,7 +89,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
                         for (index in 1 until options.size)
 
-        {vector.add(options[index]!!)
+        
+
+        Updates for KMP build        
+        {
+vector.add(options[index]!!)
 }
 
 
@@ -100,7 +112,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
 
         while(true)
+        
+
+        Updates for KMP build        
         {
+
     var line: String = lineNumberReader!!.readLine()!!
 
 
@@ -132,7 +148,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
 open fun test()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -161,7 +181,11 @@ open fun test()
 
                         for (index in 0 until size)
 
-        {stringBuffer!!.append(TESTING)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(TESTING)
 
     var serverName: String = vector.get(index) as String
 
@@ -198,7 +222,11 @@ stringBuffer!!.append(END)
 logUtil!!.put(RESULT +stringBuffer!!.toString(), this, "test")
 stringBuffer!!.delete(0, stringBuffer!!.length())
 } catch(e: Exception)
-            {list.add(serverName)
+            
+
+        Updates for KMP build        
+        {
+list.add(serverName)
 logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 }
 
@@ -206,7 +234,11 @@ logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 
 logUtil!!.put("Total Servers Failed: " +list.size() +" Failed Servers: " +list.toString(), this, "test")
 } catch(e: Exception)
-            {logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Test Error: " +stringBuffer!!.toString(), this, "test", e)
 }
 
 }

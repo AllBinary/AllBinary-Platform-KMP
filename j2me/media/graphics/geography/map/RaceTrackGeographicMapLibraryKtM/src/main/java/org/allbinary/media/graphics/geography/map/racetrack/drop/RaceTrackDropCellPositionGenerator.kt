@@ -53,13 +53,21 @@ open public class RaceTrackDropCellPositionGenerator : BaseDropCellPositionGener
     var raceTrackGeographicMap: BaseRaceTrackGeographicMap
 
     var raceTrackGeographicMapCellTypeFactory: RaceTrackGeographicMapCellTypeFactory
-protected constructor        (){timeDelayHelper= TimeDelayHelper(10000)
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+timeDelayHelper= TimeDelayHelper(10000)
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 }
 
 
@@ -67,9 +75,11 @@ open fun init()
             
 open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var raceTrackGeographicMapCellType: RaceTrackGeographicMapCellType = raceTrackGeographicMap!!.getCellTypeAt(geographicMapCellPosition) as RaceTrackGeographicMapCellType
 
@@ -98,12 +108,12 @@ open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+    //var geographicMapInterface = geographicMapInterface
 this.init()
 this.raceTrackGeographicMap= geographicMapInterface as BaseRaceTrackGeographicMap
 this.raceTrackGeographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory() as RaceTrackGeographicMapCellTypeFactory
@@ -131,12 +141,20 @@ this.raceTrackGeographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeo
 
                         for (index in lastIndex downTo 0)
 
-        {geographicMapCellPosition= trackedList!!.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+geographicMapCellPosition= trackedList!!.get(index) as GeographicMapCellPosition
 total= 0
 ahead= index
 
         while(this.isDropAllowedAt(trackedList!!.get(ahead) as GeographicMapCellPosition))
-        {total++
+        
+
+        Updates for KMP build        
+        {
+total++
 
     
                         if(total > STRAIGHTAWAY)
@@ -174,7 +192,11 @@ ahead++
 
                         for (index in size -1 downTo 0)
 
-        {this.drop(allBinaryGameLayerManager, index)
+        
+
+        Updates for KMP build        
+        {
+this.drop(allBinaryGameLayerManager, index)
 }
 
 }
@@ -186,9 +208,11 @@ ahead++
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))
@@ -208,12 +232,12 @@ this.drop(allBinaryLayerManager, index)
             
 open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryLayerManager = allBinaryLayerManager
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
+var index = index
 
 
 

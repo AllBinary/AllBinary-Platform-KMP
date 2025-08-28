@@ -39,7 +39,11 @@ open public class FullScreenPaintable : Paintable {
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FullScreenPaintable{
+: FullScreenPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,16 +54,22 @@ open fun getInstance()
         }
             
     private val FULLSCREEN_TEXT: String = "F11 - Toggle Fullscreen"
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 

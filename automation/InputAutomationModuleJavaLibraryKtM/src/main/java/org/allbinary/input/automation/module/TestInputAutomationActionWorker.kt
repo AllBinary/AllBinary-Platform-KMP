@@ -43,18 +43,14 @@ open public class TestInputAutomationActionWorker : AbstractInputAutomationWorke
     private var sleep: Int
 public constructor        (sleep: Int, inputAutomationActionInterface: InputAutomationActionInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface)                        
 
-                            : super(inputAutomationActionInterface){
+                            : super(inputAutomationActionInterface)
 
-                    var sleep = sleep
-
-
-                    var inputAutomationActionInterface = inputAutomationActionInterface
-
-
-                    var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
-
-
-                    var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
+        Updates for KMP build        
+        {
+var sleep = sleep
+var inputAutomationActionInterface = inputAutomationActionInterface
+var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
+var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -68,7 +64,11 @@ this.sleep= sleep
             
 open fun processBetweenWorkers()
         //nullable = true from not(false or (false and true)) = true
-{Thread.sleep(2000)
+
+
+        Updates for KMP build        
+        {
+Thread.sleep(2000)
 }
 
 
@@ -76,7 +76,11 @@ open fun processBetweenWorkers()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.PROCESS)
 
     var hashtable: Hashtable<Any, Any> = InputRobotFactory.getInstance()!!.get()!!
 
@@ -96,7 +100,11 @@ open fun process()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var inputTypeNameString: String = inputTypeNameArray[index]!! as String
 
 

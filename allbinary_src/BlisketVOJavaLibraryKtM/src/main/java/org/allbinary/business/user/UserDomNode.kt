@@ -43,9 +43,11 @@ open public class UserDomNode
     private var dataMappingInterface: TableMappingInterface
 public constructor        (dataMappingInterface: TableMappingInterface)
             : super()
-        {
+        
 
-                    var dataMappingInterface = dataMappingInterface
+        Updates for KMP build        
+        {
+var dataMappingInterface = dataMappingInterface
 this.dataMappingInterface= dataMappingInterface
 }
 
@@ -54,9 +56,11 @@ this.dataMappingInterface= dataMappingInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -78,7 +82,11 @@ hashMap!!.put(UserData.PASSWORD, EMPTY_STRING)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,7 +98,11 @@ open fun toXmlDoc()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -168,9 +168,11 @@ open public class GameMidlet : ProgressMidlet
     private var resized: Boolean= false
 public constructor        (clientInformationFactory: ClientInformationFactory)                        
 
-                            : super(clientInformationFactory){
+                            : super(clientInformationFactory)
 
-                    var clientInformationFactory = clientInformationFactory
+        Updates for KMP build        
+        {
+    //var clientInformationFactory = clientInformationFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -189,14 +191,22 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun setDemo()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -207,7 +217,11 @@ open fun setDemo()
             
 open fun createGame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -218,7 +232,11 @@ open fun createGame()
             
 open fun mediaShutdown()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -227,11 +245,19 @@ open fun mediaShutdown()
 
 open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun pauseApp()
         //nullable = true from not(false or (false and true)) = true
-{this.pauseAppBackground(true)
+
+
+        Updates for KMP build        
+        {
+this.pauseAppBackground(true)
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
 
@@ -241,9 +267,11 @@ gameAdState!!.getAdvertisements()!!.stopAll()
 
 open fun pauseAppBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var background = background
+
+        Updates for KMP build        
+        {
+    //var background = background
 logUtil!!.put(commonStrings!!.START, this, PAUSE_APP_BACKGROUND)
 
     
@@ -265,7 +293,11 @@ AllBinarySensorManager.getInstance()!!.shutdown()
 
 open fun unPauseApp()
         //nullable = true from not(false or (false and true)) = true
-{this.unPauseAppBackground(true)
+
+
+        Updates for KMP build        
+        {
+this.unPauseAppBackground(true)
 
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
 
@@ -275,9 +307,11 @@ gameAdState!!.getAdvertisements()!!.startAll()
 
 open fun unPauseAppBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var background = background
+
+        Updates for KMP build        
+        {
+var background = background
 logUtil!!.put(commonStrings!!.START, this, UN_PAUSE_APP_BACKGROUND)
 AllBinarySensorManager.getInstance()!!.init()
 
@@ -301,12 +335,12 @@ AllBinarySensorManager.getInstance()!!.init()
 
 override fun destroyApp(unconditional: Boolean, isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unconditional = unconditional
 
 
-                    var isProgress = isProgress
+        Updates for KMP build        
+        {
+var unconditional = unconditional
+var isProgress = isProgress
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 
@@ -334,9 +368,11 @@ this.destroyApp(unconditional)
 
 override fun destroyApp(unconditional: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unconditional = unconditional
+
+        Updates for KMP build        
+        {
+var unconditional = unconditional
 
     var METHOD_NAME: String = "GameMidlet::destroyApp"
 
@@ -366,7 +402,11 @@ this.mediaShutdown()
 super.destroyApp(true)
 PreLogUtil.put(commonStrings!!.END, this, METHOD_NAME)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 logUtil!!.put(commonStrings!!.END, this, METHOD_NAME)
@@ -374,7 +414,11 @@ logUtil!!.put(commonStrings!!.END, this, METHOD_NAME)
 
 override fun startApp()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var gameAdState: GameAdState = gameAdStateFactory!!.getCurrentInstance()!!
@@ -417,7 +461,11 @@ this.setDemo()
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "startApp", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "startApp", e)
 destroyApp(false)
 notifyDestroyed()
 }
@@ -427,12 +475,12 @@ notifyDestroyed()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun commandAction(command: Command, displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var command = command
 
 
-                    var displayable = displayable
+        Updates for KMP build        
+        {
+    //var command = command
+    //var displayable = displayable
 
         try {
             
@@ -854,9 +902,12 @@ progressCanvas!!.addPortion(50, "In Game Options")
 
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
 
-InGameOptionsFormFactory.getInstance()!!.init(this, InGameFeatures(), "Options In Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
 
-    var inGameOptionsForm: InGameOptionsForm = InGameOptionsFormFactory.getInstance()!!.get() as InGameOptionsForm
+    var inGameOptionsFormFactory: InGameOptionsFormFactory = InGameOptionsFormFactory.getInstance()!!
+
+inGameOptionsFormFactory!!.init(this, InGameFeatures(), "Options In Game", layerManager!!.getBackgroundBasicColor(), layerManager!!.getForegroundBasicColor())
+
+    var inGameOptionsForm: CommandForm = inGameOptionsFormFactory!!.get()!!
 
 inGameOptionsForm!!.setItemStateListener(this.allbinaryGameCanvasRunnableInterface)
 this.commandAction(gameCommandsFactory!!.SET_MENU_DISPLAYABLE, inGameOptionsForm)
@@ -1106,7 +1157,11 @@ this.updateFullScreen()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, midletStrings!!.COMMAND_ACTION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, midletStrings!!.COMMAND_ACTION, e)
 
     
                         if(command != GameCommandsFactory.getInstance()!!.EXIT_COMMAND)
@@ -1123,7 +1178,11 @@ this.updateFullScreen()
 
 open fun updateFullScreen()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
 
@@ -1149,9 +1208,11 @@ canvas.setFullScreenMode(isFullScreen)
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -1160,7 +1221,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun getInputMappingInstructionsCanvas()
         //nullable = true from not(false or (false and true)) = true
-: MyCanvas{
+: MyCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1172,7 +1237,11 @@ open fun getInputMappingInstructionsCanvas()
             
 open fun getInputMappingCanvas()
         //nullable = true from not(false or (false and true)) = true
-: MyCanvas{
+: MyCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1184,7 +1253,11 @@ open fun getInputMappingCanvas()
             
 open fun getAboutCanvas()
         //nullable = true from not(false or (false and true)) = true
-: MyCanvas{
+: MyCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1196,7 +1269,11 @@ open fun getAboutCanvas()
             
 open fun getHelpPaintable()
         //nullable = true from not(false or (false and true)) = true
-: HelpPaintable{
+: HelpPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -1207,7 +1284,11 @@ open fun getHelpPaintable()
             
 open fun createHighScoresCanvas()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresCanvas{
+: HighScoresCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -1218,7 +1299,11 @@ open fun createHighScoresCanvas()
             
 open fun startGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var threadFactoryUtil: ThreadFactoryUtil = ThreadFactoryUtil.getInstance()!!
 
 thread= threadFactoryUtil!!.getInstance(this.allbinaryGameCanvasRunnableInterface)
@@ -1233,7 +1318,11 @@ threadFactoryUtil!!.start(thread)
             
 open fun stopGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE_INTERFACE)
 GameNotificationEventHandler.getInstance()!!.removeAllListeners()
 ColorChangeEventHandler.getInstance()!!.removeAllListeners()
 GameEventHandlerUtil.removeAllListeners()
@@ -1279,7 +1368,11 @@ logUtil!!.put(commonStrings!!.END, this, gameStrings!!.STOP_GAME_CANVAS_RUNNABLE
 
 open fun getGameCanvasRunnableInterface()
         //nullable = true from not(false or (false and true)) = true
-: GameCanvasRunnableInterface{
+: GameCanvasRunnableInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1289,16 +1382,22 @@ open fun getGameCanvasRunnableInterface()
 
 open fun setGameCanvasRunnableInterface(gameCanvasRunnableInterface: GameCanvasRunnableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameCanvasRunnableInterface = gameCanvasRunnableInterface
+
+        Updates for KMP build        
+        {
+    //var gameCanvasRunnableInterface = gameCanvasRunnableInterface
 this.allbinaryGameCanvasRunnableInterface= gameCanvasRunnableInterface
 }
 
 
 open fun createGameLayerManager()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryGameLayerManager{
+: AllBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+
     var gameInfo: GameInfo = GameInfo(GameTypeFactory.getInstance()!!.SINGLE_PLAYER, GameMode.SERVER, 1, 1)
 
 
@@ -1311,7 +1410,11 @@ open fun createGameLayerManager()
 
 open fun getGameOptionsForm()
         //nullable = true from not(false or (false and true)) = true
-: CommandForm{
+: CommandForm
+
+        Updates for KMP build        
+        {
+
     var layerManager: AllBinaryGameLayerManager = this.createGameLayerManager()!!
 
 
@@ -1326,7 +1429,11 @@ open fun getGameOptionsForm()
             
 open fun save()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStrings!!.SAVE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.SAVE)
 
     var hashtable: Hashtable<Any, Any> = this.getCurrentStateHashtable()!!
 
@@ -1337,7 +1444,11 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
                 @Throws(Exception::class)
             override fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(commonStrings!!.START, this, "getCurrentStateHashtable")
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, "getCurrentStateHashtable")
 
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -1357,7 +1468,11 @@ GamePersistanceSingleton.getInstance()!!.save(abeClientInformation, hashtable)
 
 
         while(enumeration.hasMoreElements())
-        {key= enumeration.nextElement()!!
+        
+
+        Updates for KMP build        
+        {
+key= enumeration.nextElement()!!
 hashtable.put(key, currentHashtable!!.get(key as Object))
 }
 
@@ -1374,16 +1489,22 @@ hashtable.put(key, currentHashtable!!.get(key as Object))
 
 open fun setLoadGameForm(loadGameForm: LoadGameForm)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var loadGameForm = loadGameForm
+
+        Updates for KMP build        
+        {
+    //var loadGameForm = loadGameForm
 this.loadGameForm= loadGameForm
 }
 
 
 open fun getLoadGameForm()
         //nullable = true from not(false or (false and true)) = true
-: LoadGameForm{
+: LoadGameForm
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1393,16 +1514,22 @@ open fun getLoadGameForm()
 
 open fun setResized(resized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var resized = resized
+
+        Updates for KMP build        
+        {
+    //var resized = resized
 this.resized= resized
 }
 
 
 open fun isResized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1414,7 +1541,11 @@ open fun isResized()
 
 open fun isDemoLoading()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(startedBefore)
                         

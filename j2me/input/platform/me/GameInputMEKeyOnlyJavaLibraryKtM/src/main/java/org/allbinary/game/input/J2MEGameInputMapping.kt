@@ -40,9 +40,11 @@ open public class J2MEGameInputMapping : PersistentInputMapping {
                 @Throws(Exception::class)
             override fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 J2MEKeyFactory.getInstance()!!.init()
 super.init(abeClientInformation)
@@ -60,9 +62,11 @@ this.save(abeClientInformation)
 
 override fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == GameKeyFactory.getInstance()!!.GAME_D)
@@ -89,9 +93,11 @@ override fun isDelete(input: Input)
 
 override fun isSystemInput(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 

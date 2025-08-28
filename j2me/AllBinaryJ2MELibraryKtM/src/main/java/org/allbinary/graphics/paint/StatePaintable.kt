@@ -30,13 +30,19 @@ import org.allbinary.graphics.displayable.StateControlledInterface
 open public class StatePaintable : Paintable
                 , StateControlledInterface {
         
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var state = state
+
+        Updates for KMP build        
+        {
+var state = state
 }
 
 

@@ -53,9 +53,11 @@ open public class InputAutomationModuleFactoryFactory
     private var helpSetListenerInterface: HelpSetListener
 public constructor        (helpSetListenerInterface: HelpSetListener)
             : super()
-        {
+        
 
-                    var helpSetListenerInterface = helpSetListenerInterface
+        Updates for KMP build        
+        {
+    //var helpSetListenerInterface = helpSetListenerInterface
 this.helpSetListenerInterface= helpSetListenerInterface
 this.defaultListModelHelper= DefaultListModelHelper()
 this.hashMap= HashMap<Any, Any>()
@@ -73,7 +75,11 @@ this.hashMap= HashMap<Any, Any>()
 
 
         while(iterator.hasNext())
-        {inputAutomationModuleConfiguration= iterator.next() as InputAutomationModuleConfiguration
+        
+
+        Updates for KMP build        
+        {
+inputAutomationModuleConfiguration= iterator.next() as InputAutomationModuleConfiguration
 this.add(inputAutomationModuleConfiguration)
 }
 
@@ -84,9 +90,11 @@ logUtil!!.put("Loaded " +this.hashMap!!.size +"/" +this.defaultListModelHelper!!
 
 open fun add(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
+
+        Updates for KMP build        
+        {
+    //var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 
     var inputAutomationModuleInterface: InputAutomationModuleFactoryInterface = inputAutomationModuleConfiguration!!.getInputAutomationModuleInterface()!!
 
@@ -112,7 +120,11 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
 
 open fun getListModel()
         //nullable = true from not(false or (false and true)) = true
-: ListModel{
+: ListModel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,9 +134,11 @@ open fun getListModel()
 
 open fun getInstance(moduleName: String)
         //nullable =  from not(true or (false and false)) = 
-: InputAutomationModuleFactoryInterface{
+: InputAutomationModuleFactoryInterface
 
-                    var moduleName = moduleName
+        Updates for KMP build        
+        {
+    //var moduleName = moduleName
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

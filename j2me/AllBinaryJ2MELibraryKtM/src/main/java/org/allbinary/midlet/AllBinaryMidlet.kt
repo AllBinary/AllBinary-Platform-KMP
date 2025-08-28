@@ -69,15 +69,21 @@ open public class AllBinaryMidlet : MIDlet
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
     private var destroyed: Boolean= false
-public constructor        (){logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
+public constructor        ()
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, "AllBinaryMidlet::AllBinaryMidlet")
 }
 
 
 open fun setDisplay(newDisplay: Displayable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newDisplay = newDisplay
+
+        Updates for KMP build        
+        {
+    //var newDisplay = newDisplay
 
     var title: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -117,7 +123,11 @@ display.setCurrent(newDisplay)
 
 open fun getDisplay()
         //nullable = true from not(false or (false and true)) = true
-: Display{
+: Display
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,7 +137,11 @@ open fun getDisplay()
 
 open fun getCurrentDisplayable()
         //nullable = true from not(false or (false and true)) = true
-: Displayable{
+: Displayable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,16 +151,22 @@ open fun getCurrentDisplayable()
 
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 this.destroyed= destroyed
 }
 
 
 open fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,30 +177,40 @@ open fun isDestroyed()
                 @Throws(MIDletStateChangeException::class)
             override fun startApp()
         //nullable = true from not(false or (false and true)) = true
-{ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+
+
+        Updates for KMP build        
+        {
+ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun pauseApp()
         //nullable = true from not(false or (false and true)) = true
-{ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
+
+
+        Updates for KMP build        
+        {
+ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
 open fun destroyApp(unconditional: Boolean, isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unconditional = unconditional
 
 
-                    var isProgress = isProgress
+        Updates for KMP build        
+        {
+var unconditional = unconditional
+var isProgress = isProgress
 }
 
 override fun destroyApp(unconditional: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unconditional = unconditional
+
+        Updates for KMP build        
+        {
+var unconditional = unconditional
 
     var METHOD_NAME: String = "AllBinaryMidlet::destroyApp"
 
@@ -190,7 +220,11 @@ override fun destroyApp(unconditional: Boolean)
 PreLogUtil.put(Memory.getInfo(), this, METHOD_NAME)
 this.setDestroyed(true)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 }
@@ -200,9 +234,11 @@ this.setDestroyed(true)
             
 open fun setStartStateHashtable(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashtable = hashtable
+
+        Updates for KMP build        
+        {
+var hashtable = hashtable
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "setStartStateHashtable")
 this.hashtable= hashtable
@@ -213,7 +249,11 @@ this.hashtable= hashtable
             
 open fun getStartStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(StringMaker().
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(hashtable))!!.toString(), this, "getStartStateHashtable")
 
 
@@ -227,7 +267,11 @@ open fun getStartStateHashtable()
             
 open fun getCurrentStateHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{logUtil!!.put(commonStrings!!.START, this, "getStateHashtable")
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, "getStateHashtable")
 
 
 
@@ -237,12 +281,12 @@ open fun getCurrentStateHashtable()
 
 override fun commandAction(command: Command, displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var command = command
 
 
-                    var displayable = displayable
+        Updates for KMP build        
+        {
+var command = command
+var displayable = displayable
 }
 
 

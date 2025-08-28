@@ -32,9 +32,11 @@ open public class PathFindingNodeCostInfoFactory : PathFindingNodeCostInfoFactor
         
 
     private val pathFindingNodeCostInfoAdjacencyList: Array<Array<PathFindingNodeCostInfo?>?>
-public constructor        (max: Int){
+public constructor        (max: Int)
 
-                    var max = max
+        Updates for KMP build        
+        {
+var max = max
 this.pathFindingNodeCostInfoAdjacencyList= Array(max) { arrayOfNulls<PathFindingNodeCostInfo?>(max) }
                                                             
 }
@@ -44,21 +46,15 @@ this.pathFindingNodeCostInfoAdjacencyList= Array(max) { arrayOfNulls<PathFinding
             
 open fun create(geographicMapInterface: BasicGeographicMap, goingToGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapInterface = geographicMapInterface
 
 
-                    var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var costFromStart = costFromStart
-
-
-                    var costToEnd = costToEnd
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var costFromStart = costFromStart
+    //var costToEnd = costToEnd
 this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition, costFromStart, costToEnd)
 }
 
@@ -67,18 +63,14 @@ this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition, co
             
 open fun getInstance(goingToGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable =  from not(true or (false and false)) = 
-: PathFindingNodeCostInfo{
+: PathFindingNodeCostInfo
 
-                    var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var costFromStart = costFromStart
-
-
-                    var costToEnd = costToEnd
+        Updates for KMP build        
+        {
+    //var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var costFromStart = costFromStart
+    //var costToEnd = costToEnd
 
     var pathFindingNodeCostInfo: PathFindingNodeCostInfo = this.getInstance(goingToGeographicMapCellPosition, geographicMapCellPosition)!!
 
@@ -112,12 +104,12 @@ pathFindingNodeCostInfo!!.setTotalCost()
 
 open fun getInstance(goingToFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
-: PathFindingNodeCostInfo{
+: PathFindingNodeCostInfo
 
-                    var goingToFromGeographicMapCellPosition = goingToFromGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var goingToFromGeographicMapCellPosition = goingToFromGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 
@@ -128,15 +120,13 @@ open fun getInstance(goingToFromGeographicMapCellPosition: GeographicMapCellPosi
 
 open fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 

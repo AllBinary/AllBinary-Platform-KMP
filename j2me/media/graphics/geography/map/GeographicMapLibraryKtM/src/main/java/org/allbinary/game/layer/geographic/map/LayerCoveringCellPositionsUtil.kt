@@ -43,7 +43,11 @@ open public class LayerCoveringCellPositionsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerCoveringCellPositionsUtil{
+: LayerCoveringCellPositionsUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,21 +68,15 @@ open fun getInstance()
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllBinaryLayer, x: Int, y: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var layerInterface = layerInterface
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var reusableList = reusableList
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var layerInterface = layerInterface
+    //var x = x
+    //var y = y
+    //var reusableList = reusableList
 
     var topLeftGeographicMapCellPosition: GeographicMapCellPosition = geographicMapInterface!!.getCellPositionAt(x, y)!!
 
@@ -94,18 +92,14 @@ open fun getAll(geographicMapInterface: BasicGeographicMap, layerInterface: AllB
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, topLeftGeographicMapCellPosition: GeographicMapCellPosition, layerInterface: AllBinaryLayer, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var topLeftGeographicMapCellPosition = topLeftGeographicMapCellPosition
-
-
-                    var layerInterface = layerInterface
-
-
-                    var reusableList = reusableList
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var topLeftGeographicMapCellPosition = topLeftGeographicMapCellPosition
+    //var layerInterface = layerInterface
+    //var reusableList = reusableList
 reusableList!!.clear()
 
     var columns: Int = layerInterface!!.getWidth() /geographicMapInterface!!.getAllBinaryTiledLayer()!!.getCellWidth()

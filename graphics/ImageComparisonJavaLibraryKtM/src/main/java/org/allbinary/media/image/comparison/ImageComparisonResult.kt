@@ -69,24 +69,16 @@ open public class ImageComparisonResult
     private var matchingPercent: Float =  -1
 public constructor        (name: String, bufferedImage: BufferedImage, bufferedImage2: BufferedImage, frameOne: Long, frameTwo: Long, tolerance: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var bufferedImage = bufferedImage
-
-
-                    var bufferedImage2 = bufferedImage2
-
-
-                    var frameOne = frameOne
-
-
-                    var frameTwo = frameTwo
-
-
-                    var tolerance = tolerance
+    //var name = name
+    //var bufferedImage = bufferedImage
+    //var bufferedImage2 = bufferedImage2
+    //var frameOne = frameOne
+    //var frameTwo = frameTwo
+    //var tolerance = tolerance
 this.name= name
 this.nonMatchingPixelVector= Vector()
 this.bufferedImages[0]= bufferedImage
@@ -167,7 +159,11 @@ logUtil!!.put("2: " +imageUtil!!.toString(bufferedImage2), this, this.commonStri
 
 open fun getMatchingPercent()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
     
                         if(this.matchingPercent ==  -1)
                         
@@ -186,16 +182,22 @@ open fun getMatchingPercent()
 
 open fun add(pixel: PixelDelta)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pixel = pixel
+
+        Updates for KMP build        
+        {
+var pixel = pixel
 this.nonMatchingPixelVector!!.add(pixel)
 }
 
 
 open fun getNonMatchingPixelVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -204,7 +206,11 @@ open fun getNonMatchingPixelVector()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,7 +221,11 @@ override fun toString()
 
 open fun getBufferedImages()
         //nullable = true from not(false or (false and true)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -225,7 +235,11 @@ open fun getBufferedImages()
 
 open fun getTolerance()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -235,16 +249,22 @@ open fun getTolerance()
 
 open fun setTolerance(tolerance: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var tolerance = tolerance
+
+        Updates for KMP build        
+        {
+var tolerance = tolerance
 this.tolerance= tolerance
 }
 
 
 open fun getFrameOne()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -254,7 +274,11 @@ open fun getFrameOne()
 
 open fun getFrameTwo()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

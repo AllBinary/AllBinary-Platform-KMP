@@ -41,9 +41,11 @@ open public class VirtualKeyboardFactory
 
 open fun init(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
 
@@ -66,7 +68,11 @@ open fun init(activity: Activity)
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VirtualKeyboard{
+: VirtualKeyboard
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

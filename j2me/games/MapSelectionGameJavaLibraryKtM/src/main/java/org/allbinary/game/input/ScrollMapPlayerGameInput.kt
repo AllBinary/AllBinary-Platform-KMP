@@ -61,15 +61,13 @@ open public class ScrollMapPlayerGameInput : PlayerGameInput {
     private var maxRight: Int= 0
 public constructor        (geographicMapInterface: BasicGeographicMap, list: BasicArrayList, playerInputId: Int)                        
 
-                            : super(list, playerInputId){
+                            : super(list, playerInputId)
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var list = list
-
-
-                    var playerInputId = playerInputId
+        Updates for KMP build        
+        {
+var geographicMapInterface = geographicMapInterface
+var list = list
+var playerInputId = playerInputId
 
 
                             //For kotlin this is before the body of the constructor.
@@ -87,12 +85,12 @@ this.init()
             
 open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+var dx = dx
+var dy = dy
 
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
@@ -104,7 +102,11 @@ ScrollMapEventHandler.getInstance()!!.fireEvent(scrollMapEvent)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.maxBottom= this.getSpecialHeight()
+
+
+        Updates for KMP build        
+        {
+this.maxBottom= this.getSpecialHeight()
 this.maxRight= this.getSpecialWidth()
 }
 
@@ -113,7 +115,11 @@ this.maxRight= this.getSpecialWidth()
             
 open fun scrollMiddleX()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
@@ -147,9 +153,11 @@ this.move(diffX, 0)
             
 open fun scrollY(anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anchor = anchor
+
+        Updates for KMP build        
+        {
+var anchor = anchor
 
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
@@ -206,7 +214,11 @@ this.move(0, diffY)
             
 open fun up()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() -10
 
 
@@ -225,7 +237,11 @@ open fun up()
             
 open fun down()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var y: Int =  -geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() +10
 
 
@@ -244,7 +260,11 @@ open fun down()
             
 open fun right()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() +10
 
 
@@ -263,7 +283,11 @@ open fun right()
             
 open fun left()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var x: Int =  -geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP() -10
 
 
@@ -280,7 +304,11 @@ open fun left()
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-{this.inputProcessorArray[Canvas.UP]= ScrollMapUpGameInputProcessor(this)
+
+
+        Updates for KMP build        
+        {
+this.inputProcessorArray[Canvas.UP]= ScrollMapUpGameInputProcessor(this)
 this.inputProcessorArray[Canvas.DOWN]= ScrollMapDownGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_NUM9]= ScrollMapRightGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_NUM7]= ScrollMapLeftGameInputProcessor(this)
@@ -292,9 +320,11 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
             
 open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var key = key
+
+        Updates for KMP build        
+        {
+var key = key
 inputProcessorArray[key]!!.process(
                             null, null as GameKeyEvent)
 }
@@ -304,9 +334,11 @@ inputProcessorArray[key]!!.process(
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+var layerManager = layerManager
 
         try {
             
@@ -321,7 +353,11 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var gameKeyEvent: GameKeyEvent = inputList!!.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
@@ -343,7 +379,11 @@ this.processInput(key)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
 }
 
 }
@@ -351,7 +391,11 @@ this.processInput(key)
 
 open fun getSpecialHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
@@ -384,7 +428,11 @@ open fun getSpecialHeight()
 
 open fun getSpecialWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var terrainTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 
 
@@ -417,9 +465,11 @@ open fun getSpecialWidth()
 
 open fun keepOnMapMaxY(newY: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newY = newY
+        Updates for KMP build        
+        {
+var newY = newY
 
     var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
 
@@ -450,9 +500,11 @@ open fun keepOnMapMaxY(newY: Int)
 
 open fun keepOnMapMinY(newY: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newY = newY
+        Updates for KMP build        
+        {
+var newY = newY
 
     var y: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getYP()!!
 
@@ -483,9 +535,11 @@ open fun keepOnMapMinY(newY: Int)
 
 open fun keepOnMapMaxX(newX: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newX = newX
+        Updates for KMP build        
+        {
+var newX = newX
 
     var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
 
@@ -516,9 +570,11 @@ open fun keepOnMapMaxX(newX: Int)
 
 open fun keepOnMapMinX(newX: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newX = newX
+        Updates for KMP build        
+        {
+var newX = newX
 
     var x: Int = geographicMapInterface!!.getAllBinaryTiledLayer()!!.getXP()!!
 

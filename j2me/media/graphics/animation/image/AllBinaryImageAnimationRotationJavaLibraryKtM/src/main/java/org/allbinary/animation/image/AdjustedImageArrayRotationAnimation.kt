@@ -39,12 +39,12 @@ open public class AdjustedImageArrayRotationAnimation : ImageArrayRotationAnimat
     private var dy: Int= 0
 protected constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
 
-                            : super(anyType, animationBehavior){
+                            : super(anyType, animationBehavior)
 
-                    var anyType = anyType
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var anyType = anyType
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,12 +57,12 @@ this.init(allBinaryImageRotationAnimationInfo!!.getDx(), allBinaryImageRotationA
 
 public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, 0, 0, animationBehavior){
+                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, 0, 0, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -71,18 +71,14 @@ public constructor        (imageArray: Array<Image?>, animationBehavior: Animati
 
 public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior){
+                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,21 +87,15 @@ public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animatio
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior){
+                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, dx, dy, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var angleInfo = angleInfo
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var angleInfo = angleInfo
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -114,24 +104,16 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, dx: 
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(imageArray, angleInfo, totalAngle, animationBehavior){
+                            : super(imageArray, angleInfo, totalAngle, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -141,18 +123,14 @@ this.init(dx, dy)
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(imageArray, angleInfo, totalAngle, animationBehavior){
+                            : super(imageArray, angleInfo, totalAngle, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -165,12 +143,12 @@ this.init( -(imageArray[0]!!.getWidth() shr 2),  -(imageArray[0]!!.getHeight() s
             
 open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 this.setDx(dx)
 this.setDy(dy)
 }
@@ -178,31 +156,35 @@ this.setDy(dy)
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 super.paint(graphics, x +this.dx, y +this.dy)
 }
 
 
 open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dx = dx
+
+        Updates for KMP build        
+        {
+    //var dx = dx
 this.dx= dx
 }
 
 
 open fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -212,16 +194,22 @@ open fun getDx()
 
 open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dy = dy
+
+        Updates for KMP build        
+        {
+    //var dy = dy
 this.dy= dy
 }
 
 
 open fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

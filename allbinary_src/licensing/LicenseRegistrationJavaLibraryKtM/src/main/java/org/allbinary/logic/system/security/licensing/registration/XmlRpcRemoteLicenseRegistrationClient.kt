@@ -48,9 +48,11 @@ open public class XmlRpcRemoteLicenseRegistrationClient : XmlRpcAbeClient {
     private val PAGE: String = "licenseregistrationserverssl.php"
 public constructor        (clientInfo: AbeClientInformationInterface)                        
 
-                            : super(clientInfo, "LicenseRegistrationServer.process"){
+                            : super(clientInfo, "LicenseRegistrationServer.process")
 
-                    var clientInfo = clientInfo
+        Updates for KMP build        
+        {
+var clientInfo = clientInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,12 +65,12 @@ this.setServer(0)
             
 open fun get(anyType: Any, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
-
-
-                    var cryptInterface = cryptInterface
+        Updates for KMP build        
+        {
+    //var anyType = anyType
+    //var cryptInterface = cryptInterface
 
         try {
             
@@ -115,7 +117,11 @@ isOnline= true
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: IOException)
-            {logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(TRYING_OTHER_SERVERS +ExceptionUtil.getInstance()!!.getStackTrace(e), this, commonStrings!!.GET)
 
     
                         if(!e.getMessage()!!.startsWith(HOST_NOT_RESOLVED))
@@ -139,7 +145,11 @@ isOnline= true
                             
 }
  catch(e: XmlRpcException)
-            {logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(SERVER_REPORTED_ERROR, this, commonStrings!!.GET, e)
 
 
 
@@ -147,7 +157,11 @@ isOnline= true
                         return this.tryAnother(anyType)
 }
  catch(e: Exception)
-            {logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(UNKNOWN_ERROR, this, commonStrings!!.GET, e)
 
 
 

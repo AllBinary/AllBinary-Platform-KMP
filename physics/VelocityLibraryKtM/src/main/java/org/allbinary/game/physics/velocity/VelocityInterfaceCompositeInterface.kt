@@ -32,6 +32,9 @@ open fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
 : BasicVelocityProperties
 
+        Updates for KMP build        
+        
+
 }
                 
             

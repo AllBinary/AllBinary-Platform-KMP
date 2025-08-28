@@ -32,33 +32,57 @@ open fun getServer()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

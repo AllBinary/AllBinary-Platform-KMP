@@ -51,21 +51,23 @@ open public class PlayerComposite
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
 public constructor        (player: Player)
             : super()
-        {
+        
 
-                    var player = player
+        Updates for KMP build        
+        {
+    //var player = player
 this.player= player
 this.timeElapsedHelper!!.delay= 570
 }
 
 public constructor        (player: Player, repeatTime: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var player = player
-
-
-                    var repeatTime = repeatTime
+    //var player = player
+    //var repeatTime = repeatTime
 this.player= player
 this.timeElapsedHelper!!.delay= repeatTime
 }
@@ -73,33 +75,49 @@ this.timeElapsedHelper!!.delay= repeatTime
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerListener = playerListener
+
+        Updates for KMP build        
+        {
+var playerListener = playerListener
 this.player.addPlayerListener(playerListener)
 }
 
 override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerListener = playerListener
+
+        Updates for KMP build        
+        {
+var playerListener = playerListener
 this.player.removePlayerListener(playerListener)
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.player.close()
+
+
+        Updates for KMP build        
+        {
+this.player.close()
 }
 
 override fun deallocate()
         //nullable = true from not(false or (false and true)) = true
-{this.player.deallocate()
+
+
+        Updates for KMP build        
+        {
+this.player.deallocate()
 }
 
 override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -108,7 +126,11 @@ override fun getContentType()
 
 override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,7 +139,11 @@ override fun getDuration()
 
 override fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -126,29 +152,49 @@ override fun getMediaTime()
 
 override fun prefetch()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.prefetch()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
 }
 
 }
 
 override fun realize()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.realize()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
 }
 
 }
 
 override fun getState()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,17 +203,21 @@ override fun getState()
 
 override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var count = count
+
+        Updates for KMP build        
+        {
+var count = count
 this.player.setLoopCount(count)
 }
 
 override fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var now = now
+        Updates for KMP build        
+        {
+var now = now
 
         try {
             
@@ -176,7 +226,11 @@ override fun setMediaTime(now: Long)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.setMediaTime(now)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
 
 
@@ -190,7 +244,11 @@ override fun setMediaTime(now: Long)
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -202,27 +260,41 @@ override fun start()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.stop()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }
 
 override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
-: Control{
+: Control
 
-                    var controlType = controlType
+        Updates for KMP build        
+        {
+var controlType = controlType
 
 
 
@@ -232,7 +304,11 @@ override fun getControl(controlType: String)
 
 override fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>{
+: Array<Control?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -242,12 +318,12 @@ override fun getControls()
 
 open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var leftVolume = leftVolume
 
 
-                    var rightVolume = rightVolume
+        Updates for KMP build        
+        {
+    //var leftVolume = leftVolume
+    //var rightVolume = rightVolume
 
     var controllable2: Controllable2 = (this.player as Controllable2)
 
@@ -257,7 +333,11 @@ controllable2.setVolume(leftVolume, rightVolume)
 
 open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
-: Player{
+: Player
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

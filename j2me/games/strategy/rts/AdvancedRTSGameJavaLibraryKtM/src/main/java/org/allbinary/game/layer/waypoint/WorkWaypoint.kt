@@ -47,9 +47,11 @@ open public class WorkWaypoint : Waypoint {
         }
             public constructor        (ownerLayer: PathFindingLayerInterface)                        
 
-                            : super(ownerLayer, WorkSound.getInstance()){
+                            : super(ownerLayer, WorkSound.getInstance())
 
-                    var ownerLayer = ownerLayer
+        Updates for KMP build        
+        {
+    //var ownerLayer = ownerLayer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,9 +63,11 @@ open public class WorkWaypoint : Waypoint {
             
 open fun visit(unitLayer: UnitLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unitLayer = unitLayer
+
+        Updates for KMP build        
+        {
+    //var unitLayer = unitLayer
 
     
                         if(unitLayer!!.getGroupInterface()[0] != this.ownerLayer!!.getGroupInterface()[0])
@@ -103,7 +107,11 @@ open fun visit(unitLayer: UnitLayer)
 
                         for (index in occupyList!!.size()!!  - 1  downTo 0)
 
-        {geologicalGeographicMapCellPosition= occupyList!!.get(index) as GeologicalGeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+geologicalGeographicMapCellPosition= occupyList!!.get(index) as GeologicalGeographicMapCellPosition
 geologicalResource= geologicalGeographicMapCellPosition!!.getGeologicalResource()
 
     
@@ -143,7 +151,11 @@ unitLayer!!.setLoad(unitLayer!!.getMaxResourceLoad())
 
 
         while(this.getConnectedWaypointList()!!.size() > 0)
-        {rtsLayer= this.getConnectedWaypointList()!!.get(0) as RTSLayer
+        
+
+        Updates for KMP build        
+        {
+rtsLayer= this.getConnectedWaypointList()!!.get(0) as RTSLayer
 
     
                         if(rtsLayer!!.isDestroyed())
@@ -174,7 +186,11 @@ break;
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

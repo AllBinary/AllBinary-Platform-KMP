@@ -35,21 +35,15 @@ open public class PopupCommandFormInputProcessor : CommandFormInputProcessor {
         
 public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, form: ScrollSelectionForm, popupMenuInputProcessor: PopupMenuInputProcessor)                        
 
-                            : super(gameKeyEventList, playerInputId, gameCanvas, form){
+                            : super(gameKeyEventList, playerInputId, gameCanvas, form)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var playerInputId = playerInputId
-
-
-                    var gameCanvas = gameCanvas
-
-
-                    var form = form
-
-
-                    var popupMenuInputProcessor = popupMenuInputProcessor
+        Updates for KMP build        
+        {
+var gameKeyEventList = gameKeyEventList
+var playerInputId = playerInputId
+var gameCanvas = gameCanvas
+var form = form
+var popupMenuInputProcessor = popupMenuInputProcessor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,9 +54,11 @@ public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int,
                 @Throws(Exception::class)
             override fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
 
 
@@ -74,9 +70,11 @@ public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int,
                 @Throws(Exception::class)
             override fun processMotionInput(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+var motionGestureEvent = motionGestureEvent
 super.processMotionInput(motionGestureEvent)
 }
 

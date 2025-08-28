@@ -37,12 +37,12 @@ open public class DelayedConstantVelocityMovement : BasicConstantVelocityMovemen
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(60)
 public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties)                        
 
-                            : super(basicDecimal, velocityProperties){
+                            : super(basicDecimal, velocityProperties)
 
-                    var basicDecimal = basicDecimal
-
-
-                    var velocityProperties = velocityProperties
+        Updates for KMP build        
+        {
+var basicDecimal = basicDecimal
+var velocityProperties = velocityProperties
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,24 +51,24 @@ public constructor        (basicDecimal: BasicDecimal, velocityProperties: Basic
 
 override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var speedBasicDecimal = speedBasicDecimal
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+var speedBasicDecimal = speedBasicDecimal
+var angle = angle
+var otherAngle = otherAngle
 }
 
 
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layer = layer
+
+        Updates for KMP build        
+        {
+var layer = layer
 
     
                         if(timeDelayHelper!!.isTime(GameTickTimeDelayHelperFactory.getInstance()!!.startTime))

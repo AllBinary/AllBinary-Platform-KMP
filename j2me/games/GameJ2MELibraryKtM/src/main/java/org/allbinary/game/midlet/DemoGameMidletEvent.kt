@@ -33,12 +33,12 @@ open public class DemoGameMidletEvent : AllBinaryEventObject {
     private var demoGameMidletState: DemoGameMidletState
 public constructor        (anyType: Any, demoGameMidletState: DemoGameMidletState)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var demoGameMidletState = demoGameMidletState
+        Updates for KMP build        
+        {
+var anyType = anyType
+var demoGameMidletState = demoGameMidletState
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,25 +49,33 @@ this.demoGameMidletState= demoGameMidletState
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.setSource(anyType)
 }
 
 
 open fun setDemoGameMidletState(demoGameMidletState: DemoGameMidletState)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var demoGameMidletState = demoGameMidletState
+
+        Updates for KMP build        
+        {
+var demoGameMidletState = demoGameMidletState
 this.demoGameMidletState= demoGameMidletState
 }
 
 
 open fun getDemoGameMidletState()
         //nullable = true from not(false or (false and true)) = true
-: DemoGameMidletState{
+: DemoGameMidletState
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

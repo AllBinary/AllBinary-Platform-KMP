@@ -38,7 +38,11 @@ open public class MultipartRequestParamsData
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

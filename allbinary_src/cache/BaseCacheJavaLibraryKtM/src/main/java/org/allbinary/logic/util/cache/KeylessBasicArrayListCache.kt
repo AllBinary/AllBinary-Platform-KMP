@@ -36,13 +36,19 @@ open public class KeylessBasicArrayListCache : IndexedBasicArrayListCache {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val basicArrayListUtil: BasicArrayListUtil = BasicArrayListUtil.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (size: Int)                        
 
-                            : super(size){
+                            : super(size)
 
-                    var size = size
+        Updates for KMP build        
+        {
+var size = size
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,7 +58,11 @@ public constructor        (size: Int)
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -72,7 +82,11 @@ open fun get()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET, e)
 
 
 
@@ -84,7 +98,11 @@ open fun get()
 
 override fun clear()
         //nullable = true from not(false or (false and true)) = true
-{super.clear()
+
+
+        Updates for KMP build        
+        {
+super.clear()
 
     var basicArrayList: BasicArrayList
 
@@ -94,7 +112,11 @@ override fun clear()
 
                         for (index in this.list.size() -1 downTo 0)
 
-        {basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
+        
+
+        Updates for KMP build        
+        {
+basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
 basicArrayList!!.clear()
 }
 
@@ -102,7 +124,11 @@ basicArrayList!!.clear()
 
 override fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("S: ")
@@ -116,7 +142,11 @@ stringBuffer!!.append(this.list.size())
 
                         for (index in this.list.size() -1 downTo 0)
 
-        {stringBuffer!!.append(" s: ")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(" s: ")
 basicArrayList= (this.list.objectArray[index]!! as BasicArrayList)
 stringBuffer!!.append(basicArrayList!!.size())
 }

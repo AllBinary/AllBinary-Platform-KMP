@@ -39,16 +39,22 @@ open public class BillingAddressTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var value: String
-public constructor        (){this.setTagHelperFactory(BillingAddressHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(BillingAddressHelperFactory())
 this.setTagRequestHelperFactory(BillingAddressHelperFactory())
 }
 
 
 open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.value= value
 }
 
@@ -57,7 +63,11 @@ this.value= value
             
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = BillingAddressHelperFactory().
@@ -80,13 +90,21 @@ open fun set()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to set billing Address"
 
 
@@ -112,7 +130,11 @@ open fun set()
             
 open fun setToShippingAddress()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = BillingAddressHelperFactory().
@@ -135,13 +157,21 @@ open fun setToShippingAddress()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to Set Billing address to Shipping Address"
 
 
@@ -167,7 +197,11 @@ open fun setToShippingAddress()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -225,7 +259,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -233,7 +271,11 @@ open fun doStartTag()
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

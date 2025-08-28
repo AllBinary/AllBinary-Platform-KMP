@@ -54,9 +54,11 @@ open public class BaseMusicService : Service {
     private var rightVolume: Int =  -1
 override fun onBind(intent: Intent)
         //nullable = true from not(false or (false and false)) = true
-: IBinder?{
+: IBinder?
 
-                    var intent = intent
+        Updates for KMP build        
+        {
+    //var intent = intent
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.BIND)
 
 
@@ -67,12 +69,20 @@ logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.BIND)
 
 override fun onCreate()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.CREATE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.CREATE)
 }
 
 override fun onDestroy()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.DESTROY)
 
     
                         if(player != 
@@ -90,27 +100,25 @@ player.release()
 
 override fun onStart(intent: Intent, startid: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var intent = intent
 
 
-                    var startid = startid
+        Updates for KMP build        
+        {
+    //var intent = intent
+    //var startid = startid
 onStartCommand(intent)
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.START)
 }
 
 override fun onStartCommand(intent: Intent, flags: Int, startId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var intent = intent
-
-
-                    var flags = flags
-
-
-                    var startId = startId
+        Updates for KMP build        
+        {
+    //var intent = intent
+    //var flags = flags
+    //var startId = startId
 onStartCommand(intent)
 
 
@@ -122,9 +130,11 @@ onStartCommand(intent)
 
 open fun onStartCommand(intent: Intent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var intent = intent
+
+        Updates for KMP build        
+        {
+    //var intent = intent
 logUtil!!.put(commonStrings!!.START, this, commonStateStrings!!.ON_START_COMMAND)
 
     var musicStrings: MusicStrings = MusicStrings.getInstance()!!
@@ -172,17 +182,29 @@ logUtil!!.put(ALREADY_PLAYING, this, commonStateStrings!!.ON_START_COMMAND)
                                 {
                                 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
         while(player.isPlaying())
-        {logUtil!!.put(WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
+        
+
+        Updates for KMP build        
+        {
+logUtil!!.put(WAITING_FOR_MUSIC_TO_END, this, commonStateStrings!!.ON_START_COMMAND)
 Thread.sleep(1200)
 }
 
 onStartCommand(intent)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.ON_START_COMMAND, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStateStrings!!.ON_START_COMMAND, e)
 }
 
 }

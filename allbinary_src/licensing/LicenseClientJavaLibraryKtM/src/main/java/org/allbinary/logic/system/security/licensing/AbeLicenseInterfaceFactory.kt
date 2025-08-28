@@ -42,7 +42,11 @@ open public class AbeLicenseInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeLicenseInterfaceFactory{
+: AbeLicenseInterfaceFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,16 +71,22 @@ open fun getInstance()
             
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(LicensingException::class)
             
 open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbeLicenseInterface{
+: AbeLicenseInterface
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
     
                         if(isTimeToGetKey())
@@ -106,9 +116,11 @@ open fun getLicenseInstance(abeClientInformation: AbeClientInformationInterface)
             
 open fun get(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbeLicenseInterface{
+: AbeLicenseInterface
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
         try {
             logUtil!!.put("Getting Keys", this, commonStrings!!.GET)
@@ -134,14 +146,22 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abeLicenseInterface
 } catch(e: IOException)
-            {logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Licensing IO Error", this, commonStrings!!.GET, e)
 
 
 
                             throw LicensingException("License Server Connection Error")
 }
  catch(e: Exception)
-            {logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Licensing Failure", this, commonStrings!!.GET, e)
 
 
 
@@ -153,7 +173,11 @@ abeLicenseInterface= licenseClient!!.get(abeClientInformation)
 
 open fun isTimeToGetKey()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var calendar: Calendar = Calendar.getInstance()!!
 
 
@@ -187,16 +211,22 @@ time= currentTime
 
 open fun setCheck(check: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var check = check
+
+        Updates for KMP build        
+        {
+var check = check
 this.check= check
 }
 
 
 open fun isCheck()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

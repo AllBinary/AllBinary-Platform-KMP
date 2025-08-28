@@ -35,9 +35,11 @@ open public class ImageAnimationSingletonInterfaceFactory : SingletonAnimationIn
         
 private constructor        (animationInterface: Animation)                        
 
-                            : super(animationInterface){
+                            : super(animationInterface)
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,9 +48,11 @@ private constructor        (animationInterface: Animation)
 
 public constructor        (image: Image)                        
 
-                            : super(ImageAnimation(image, AnimationBehavior.getInstance())){
+                            : super(ImageAnimation(image, AnimationBehavior.getInstance()))
 
-                    var image = image
+        Updates for KMP build        
+        {
+var image = image
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,15 +61,13 @@ public constructor        (image: Image)
 
 public constructor        (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : this(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance())){
+                            : this(ImageAnimation(AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, animationInterface), AnimationBehavior.getInstance()))
 
-                    var animationInterface = animationInterface
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
+var width = width
+var height = height
 
 
                             //For kotlin this is before the body of the constructor.

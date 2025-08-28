@@ -46,15 +46,13 @@ open public class DiveAndDirectionalTrackingAIFactory
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterface{
+: ArtificialIntelligenceInterface
 
-                    var hashtable = hashtable
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+    //var hashtable = hashtable
+    //var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
     var visitorCanBeNull: Any? = hashtable.get(BasicAI.AI_VISITOR as Object)
 

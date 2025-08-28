@@ -39,7 +39,11 @@ open public class ScaleProcessor : ScaleBaseProcessor {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScaleBaseProcessor{
+: ScaleBaseProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,35 +65,27 @@ open fun getInstance()
     private val imageScaleUtil: ImageScaleUtil = ImageScaleUtil.getInstance()!!
 override fun update(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImage = originalImage
 
 
-                    var originalImageArray = originalImageArray
-
-
-                    var ximageToShowArray = ximageToShowArray
-
-
-                    var unused = unused
-
-
-                    var scaleX = scaleX
-
-
-                    var scaleY = scaleY
-
-
-                    var maxScaleX = maxScaleX
-
-
-                    var maxScaleY = maxScaleY
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var originalImageArray = originalImageArray
+    //var ximageToShowArray = ximageToShowArray
+    //var unused = unused
+    //var scaleX = scaleX
+    //var scaleY = scaleY
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
 
         try {
             imageScaleUtil!!.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX, scaleY, maxScaleX, maxScaleY)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.UPDATE)
 }
 
 }

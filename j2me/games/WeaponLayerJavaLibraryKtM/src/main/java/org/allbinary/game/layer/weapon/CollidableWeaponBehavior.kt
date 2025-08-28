@@ -51,12 +51,12 @@ open public class CollidableWeaponBehavior : CollidableDestroyableDamageableBeha
     var collisionHelper: CollisionHelper
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
+                            : super(ownerLayer, collidable)
 
-                    var ownerLayer = ownerLayer
-
-
-                    var collidable = collidable
+        Updates for KMP build        
+        {
+var ownerLayer = ownerLayer
+var collidable = collidable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,18 +69,22 @@ this.collisionHelper= CollidableHelperFactory.getInstance()
 
 open fun init(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sourceLayerInterface = sourceLayerInterface
+
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
 this.setCollided(false)
 this.collisionHelper!!.setOwnerLayerInterface(sourceLayerInterface)
 }
 
 override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collisionLayer = collisionLayer
+        Updates for KMP build        
+        {
+var collisionLayer = collisionLayer
 
     
                         if(this.collisionHelper!!.isCollidable(collisionLayer))
@@ -113,9 +117,11 @@ override fun isCollision(collisionLayer: CollidableCompositeLayer)
                 @Throws(Exception::class)
             override fun collide(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collisionLayer = collisionLayer
+
+        Updates for KMP build        
+        {
+var collisionLayer = collisionLayer
 super.collide(collisionLayer)
 this.collided= true
 }
@@ -124,9 +130,11 @@ this.collided= true
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
     
                         if(this.collisionHelper!!.isCollidable(collidableInterfaceCompositeInterface as CollidableCompositeLayer))
@@ -170,18 +178,22 @@ override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterf
                 @Throws(Exception::class)
             override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 damageUtil!!.process(this.ownerLayer as DamageableInterface, collidableInterfaceCompositeInterface as DamageableInterface)
 this.collided= true
 }
 
 override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: CollisionType{
+: CollisionType
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
 
 
@@ -192,7 +204,11 @@ override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
 
 open fun isCollided()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -202,9 +218,11 @@ open fun isCollided()
 
 open fun setCollided(collided: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collided = collided
+
+        Updates for KMP build        
+        {
+var collided = collided
 this.collided= collided
 }
 

@@ -45,7 +45,11 @@ open public class CaptionAnimationHelperBase : Animation {
         
 open fun isShowing()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,30 +59,32 @@ open fun isShowing()
 
 open fun tick()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun update(message: String, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var message = message
 
 
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var message = message
+var basicColor = basicColor
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 }
 
 

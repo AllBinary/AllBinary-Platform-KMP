@@ -36,7 +36,11 @@ open public class NoTimeDelayHelper : TimeDelayHelper {
         }
             public constructor        ()                        
 
-                            : super(0){
+                            : super(0)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -44,7 +48,11 @@ open public class NoTimeDelayHelper : TimeDelayHelper {
 
 override fun isTime()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +61,11 @@ override fun isTime()
 
 override fun isTimeSince(delay: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var delay = delay
+        Updates for KMP build        
+        {
+var delay = delay
 
 
 
@@ -65,9 +75,11 @@ override fun isTimeSince(delay: Int)
 
 override fun isTime(currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var currentTime = currentTime
 
 
 
@@ -77,12 +89,12 @@ override fun isTime(currentTime: Long)
 
 override fun isTimeSince(delay: Int, currentTime: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var delay = delay
-
-
-                    var currentTime = currentTime
+        Updates for KMP build        
+        {
+var delay = delay
+var currentTime = currentTime
 
 
 

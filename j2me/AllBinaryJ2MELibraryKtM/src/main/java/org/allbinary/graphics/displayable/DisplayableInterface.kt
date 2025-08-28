@@ -34,21 +34,36 @@ open fun addCommand(cmd: Command)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
 : Int
+
+        Updates for KMP build        
+        
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun removeCommand(cmd: Command)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -38,7 +38,11 @@ open public class GenericProfileActionScriptConditionData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

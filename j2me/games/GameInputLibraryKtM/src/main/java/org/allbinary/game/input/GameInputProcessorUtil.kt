@@ -35,9 +35,11 @@ open public class GameInputProcessorUtil
             
 open fun init(inputProcessorArray: Array<GameInputProcessor?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputProcessorArray = inputProcessorArray
+
+        Updates for KMP build        
+        {
+    //var inputProcessorArray = inputProcessorArray
 
                     //Otherwise - statement - EmptyStmt
 
@@ -53,7 +55,11 @@ open fun init(inputProcessorArray: Array<GameInputProcessor?>)
 
                         for (index in 0 until total)
 
+        
+
+        Updates for KMP build        
         {
+
     var inputProcessorCanBeNull: GameInputProcessor? = inputProcessorArray[index]
 
 

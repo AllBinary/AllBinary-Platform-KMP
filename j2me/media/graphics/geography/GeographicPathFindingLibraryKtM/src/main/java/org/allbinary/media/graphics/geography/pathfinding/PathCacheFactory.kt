@@ -41,7 +41,11 @@ open public class PathCacheFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PathCacheFactory{
+: PathCacheFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,12 +58,20 @@ open fun getInstance()
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,21 +81,23 @@ open fun getSize()
 
 open fun add(pathId: Integer, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pathId = pathId
 
 
-                    var list = list
+        Updates for KMP build        
+        {
+var pathId = pathId
+var list = list
 this.hashtable.put(pathId, list)
 }
 
 
 open fun remove(pathId: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathId = pathId
+
+        Updates for KMP build        
+        {
+var pathId = pathId
 this.hashtable.remove(pathId)
 }
 
@@ -92,7 +106,11 @@ this.hashtable.remove(pathId)
             
 open fun removeAll()
         //nullable = true from not(false or (false and true)) = true
-{this.hashtable.clear()
+
+
+        Updates for KMP build        
+        {
+this.hashtable.clear()
 
     
                         if(this.hashtable.size > 0)
@@ -112,9 +130,11 @@ open fun removeAll()
             
 open fun getInstance(pathIdInteger: Integer)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
+: BasicArrayList
 
-                    var pathIdInteger = pathIdInteger
+        Updates for KMP build        
+        {
+var pathIdInteger = pathIdInteger
 
 
 

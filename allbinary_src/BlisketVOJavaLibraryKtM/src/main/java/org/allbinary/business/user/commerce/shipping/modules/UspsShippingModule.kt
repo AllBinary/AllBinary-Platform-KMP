@@ -39,14 +39,20 @@ open public class UspsShippingModule
     private val description: String = "Snail Mail"
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getCost(order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
-: Money{
+: Money
 
-                    var order = order
+        Updates for KMP build        
+        {
+var order = order
 
 
 
@@ -57,7 +63,11 @@ open fun getCost(order: OrderInterface)
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +77,11 @@ open fun getDescription()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

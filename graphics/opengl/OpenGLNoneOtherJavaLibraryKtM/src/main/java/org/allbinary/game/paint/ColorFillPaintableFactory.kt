@@ -40,7 +40,11 @@ open public class ColorFillPaintableFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorFillPaintableFactory{
+: ColorFillPaintableFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,12 +61,12 @@ open fun getInstance()
         
 open fun getInstance(basicColor: BasicColor, forThreedCanvas: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: ColorFillBasePaintable{
+: ColorFillBasePaintable
 
-                    var basicColor = basicColor
-
-
-                    var forThreedCanvas = forThreedCanvas
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
+    //var forThreedCanvas = forThreedCanvas
 
     var operatingSystem: GenericOperatingSystem = OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance()!!
 

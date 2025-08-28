@@ -47,7 +47,11 @@ open public class DrawStringUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DrawStringUtil{
+: DrawStringUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,21 +68,15 @@ open fun getInstance()
         
 open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var string = string
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var anchor = anchor
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var string = string
+    //var x = x
+    //var y = y
+    //var anchor = anchor
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -143,7 +141,11 @@ open fun paintVerticle(graphics: Graphics, string: String, x: Int, y: Int, ancho
 
                         for (index in size -1 downTo 0)
 
-        {aChar= string[index]
+        
+
+        Updates for KMP build        
+        {
+aChar= string[index]
 
     
                         if(openGLFeatureUtil!!.isAnyThreed())
@@ -163,24 +165,16 @@ graphics.drawChar(aChar, x +offsetX, y +(charHeight *index) +offsetY, anchor)
 
 open fun drawCenterString(graphics: Graphics, string: String, offset: Int, length: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var string = string
-
-
-                    var offset = offset
-
-
-                    var length = length
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var string = string
+    //var offset = offset
+var length = length
+var x = x
+var y = y
 
     var width: Int = (graphics.getFont()!!.substringWidth(string, offset, length) shr 1)
 
@@ -188,7 +182,11 @@ open fun drawCenterString(graphics: Graphics, string: String, offset: Int, lengt
         try {
             graphics.drawSubstring(string, offset, length, x -width, y, anchor)
 } catch(e: Exception)
-            {PreLogUtil.put(StringMaker().
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(StringMaker().
                             append("Exception: stringLength: ")!!.append(string.length)!!.append(" offset: ")!!.append(offset)!!.append(" currentLength: ")!!.append(length)!!.toString(), this, "drawCenterString")
 }
 
@@ -199,21 +197,15 @@ open fun drawCenterString(graphics: Graphics, string: String, offset: Int, lengt
 
 open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxWidth: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var stringArray = stringArray
-
-
-                    var maxWidth = maxWidth
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var stringArray = stringArray
+    //var maxWidth = maxWidth
+    //var x = x
+    //var y = y
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -229,7 +221,11 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
 
                         for (index in 0 until stringArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var string: String = stringArray[index]!!
 
 
@@ -266,7 +262,11 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
 
 
         while(offset < size)
+        
+
+        Updates for KMP build        
         {
+
     
                         if(offset +currentLength > size)
                         
@@ -282,7 +282,11 @@ open fun drawCenterStrings(graphics: Graphics, stringArray: Array<String?>, maxW
                                     {
                                     
         while(currentLength > 0 && stringArray[index]!![offset +currentLength] != ' ')
-        {currentLength--
+        
+
+        Updates for KMP build        
+        {
+currentLength--
 }
 
 

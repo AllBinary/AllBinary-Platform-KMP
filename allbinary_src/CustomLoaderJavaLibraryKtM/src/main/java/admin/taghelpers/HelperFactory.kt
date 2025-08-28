@@ -45,21 +45,15 @@ open public class HelperFactory
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var factoryName = factoryName
-
-
-                    var className = className
-
-
-                    var hashMap = hashMap
-
-
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var factoryName = factoryName
+    //var className = className
+    //var hashMap = hashMap
+    //var httpServletRequest = httpServletRequest
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -87,7 +81,11 @@ params[1]= httpServletRequest as Object
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed To Get Instance Args: HashMap=" +hashMap!!.toString() +" HttpServletRequest=" +httpServletRequest
 
 
@@ -105,7 +103,11 @@ params[1]= httpServletRequest as Object
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed To Get Instance"
 
 
@@ -131,21 +133,15 @@ params[1]= httpServletRequest as Object
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var factoryName = factoryName
-
-
-                    var className = className
-
-
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var factoryName = factoryName
+    //var className = className
+    //var hashMap = hashMap
+    //var pageContext = pageContext
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -173,7 +169,11 @@ params[1]= pageContext as Object
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -191,7 +191,11 @@ logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -217,24 +221,16 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String, hashMap: HashMap<Any, Any>, specialhashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var factoryName = factoryName
-
-
-                    var className = className
-
-
-                    var hashMap = hashMap
-
-
-                    var specialhashMap = specialhashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var factoryName = factoryName
+    //var className = className
+    //var hashMap = hashMap
+    //var specialhashMap = specialhashMap
+    //var pageContext = pageContext
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -264,7 +260,11 @@ params[2]= pageContext as Object
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -282,7 +282,11 @@ logUtil!!.put(error, factoryName +"->HelperFactory", "getInstance(String, String
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -308,15 +312,13 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, factoryName: String, className: String)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var factoryName = factoryName
-
-
-                    var className = className
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var factoryName = factoryName
+    //var className = className
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -331,7 +333,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, factor
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return anyType
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -349,7 +355,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -376,7 +386,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, factoryName +"->HelperFactory", "getIns
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

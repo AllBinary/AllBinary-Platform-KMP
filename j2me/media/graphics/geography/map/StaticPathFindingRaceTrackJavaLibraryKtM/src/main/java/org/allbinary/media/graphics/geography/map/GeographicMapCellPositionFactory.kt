@@ -41,7 +41,11 @@ open public class GeographicMapCellPositionFactory : GeographicMapCellPositionBa
 
 open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,9 +66,11 @@ open fun getHashtable()
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
-: BasicGeographicMapCellPositionFactory{
+: BasicGeographicMapCellPositionFactory
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
 

@@ -49,7 +49,11 @@ open public class GameConfigurationCentral
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationCentral{
+: GameConfigurationCentral
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,7 +98,11 @@ open fun getInstance()
     private var gameControlFidelity: Int = 36
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
 SCALE= GameConfiguration("Scale", smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(2), smallIntegerSingletonFactory!!.getInstance(3))
@@ -117,9 +125,11 @@ MAX_LAYERS= GameConfiguration("Max Layers", smallIntegerSingletonFactory!!.getIn
 
 open fun load(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -160,7 +170,11 @@ this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(v
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.LOAD, e)
 }
 
 }
@@ -168,16 +182,22 @@ this.SCALE.setValue(smallIntegerSingletonFactory!!.getInstance(Integer.valueOf(v
 
 open fun setGameControlFidelity(gameControlFidelity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameControlFidelity = gameControlFidelity
+
+        Updates for KMP build        
+        {
+    //var gameControlFidelity = gameControlFidelity
 this.gameControlFidelity= gameControlFidelity
 }
 
 
 open fun getGameControlFidelity()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -186,7 +206,11 @@ open fun getGameControlFidelity()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

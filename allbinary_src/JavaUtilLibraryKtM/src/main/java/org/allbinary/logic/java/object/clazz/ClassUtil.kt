@@ -39,12 +39,12 @@ open public class ClassUtil
             
 open fun viewAll(anyType: Any, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var anyType = anyType
-
-
-                    var lineBreak = lineBreak
+        Updates for KMP build        
+        {
+var anyType = anyType
+var lineBreak = lineBreak
 
     
                         if(anyType != 
@@ -69,12 +69,12 @@ open fun viewAll(anyType: Any, lineBreak: String)
 
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var myClass = myClass
-
-
-                    var lineBreak = lineBreak
+        Updates for KMP build        
+        {
+var myClass = myClass
+var lineBreak = lineBreak
 
     
                         if(myClass != 
@@ -104,7 +104,11 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until classes.size)
 
-        {stringBuffer!!.append("Class: ")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append("Class: ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(lineBreak)
 }
@@ -132,7 +136,11 @@ stringBuffer!!.append(MethodUtil.viewAll(myClass::class.java, lineBreak))
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

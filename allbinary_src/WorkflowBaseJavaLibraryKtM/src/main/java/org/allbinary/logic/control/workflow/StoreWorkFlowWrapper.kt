@@ -35,9 +35,11 @@ open public class StoreWorkFlowWrapper : WorkFlowWrapper {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (anyType: Any)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,7 +51,11 @@ public constructor        (anyType: Any)
             
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var helperClass: KClass<*> = this.getWorkFlowObject()!!.::class!!
@@ -68,7 +74,11 @@ open fun getStoreName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Reflection Exception"
 
 

@@ -38,9 +38,11 @@ open public class GeologicalResource
     private var initTotal: Int
 public constructor        (initTotal: Int)
             : super()
-        {
+        
 
-                    var initTotal = initTotal
+        Updates for KMP build        
+        {
+var initTotal = initTotal
 this.initTotal= initTotal
 this.init()
 }
@@ -48,15 +50,21 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.setTotal(this.initTotal)
+
+
+        Updates for KMP build        
+        {
+this.setTotal(this.initTotal)
 }
 
 
 open fun add(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
     
                         if(this.getTotal() +value > Integer.MAX_VALUE)
@@ -76,9 +84,11 @@ open fun add(value: Int)
 
 open fun remove(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
     
                         if(this.getTotal() -value < 0)
@@ -98,7 +108,11 @@ open fun remove(value: Int)
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -108,9 +122,11 @@ open fun getTotal()
 
 open fun setTotal(total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var total = total
+
+        Updates for KMP build        
+        {
+var total = total
 this.total= total
 }
 

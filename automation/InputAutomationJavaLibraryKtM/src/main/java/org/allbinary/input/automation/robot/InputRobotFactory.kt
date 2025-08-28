@@ -52,7 +52,11 @@ open public class InputRobotFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputRobotFactory{
+: InputRobotFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,9 +68,11 @@ open fun getInstance()
             
 open fun loadLibraries(collection: Collection)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collection = collection
+
+        Updates for KMP build        
+        {
+var collection = collection
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -76,7 +82,11 @@ logUtil!!.put("Loading Libraries", "InputRobotFactory", "loadLibraries")
 
 
         while(iterator.hasNext())
-        {loadLibrary(iterator.next() as InputRobotInterface)
+        
+
+        Updates for KMP build        
+        {
+loadLibrary(iterator.next() as InputRobotInterface)
 }
 
 }
@@ -86,9 +96,11 @@ logUtil!!.put("Loading Libraries", "InputRobotFactory", "loadLibraries")
             
 open fun loadLibrary(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputRobotInterface = inputRobotInterface
+
+        Updates for KMP build        
+        {
+    //var inputRobotInterface = inputRobotInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -119,7 +131,11 @@ securedNativeLibraryInterface!!.load()
     private var helpSetListenerInterface: HelpSetListener
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             
     var graphenv: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
@@ -136,14 +152,22 @@ private constructor        ()
 
                         for (i in 0 until screens.size)
 
-        {inputRobotInterface= InputRobot(screens[i]!!) as InputRobotInterface
+        
+
+        Updates for KMP build        
+        {
+inputRobotInterface= InputRobot(screens[i]!!) as InputRobotInterface
 logUtil!!.put("Adding Robot: " +inputRobotInterface!!.getName(), this, "getRobots")
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
 }
 
 logUtil!!.put("Number Of Robots: " +this.hashtable.size, this, "getRobots")
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 }
@@ -151,9 +175,11 @@ logUtil!!.put("Number Of Robots: " +this.hashtable.size, this, "getRobots")
 
 open fun addListener(helpSetListenerInterface: HelpSetListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var helpSetListenerInterface = helpSetListenerInterface
+
+        Updates for KMP build        
+        {
+    //var helpSetListenerInterface = helpSetListenerInterface
 this.helpSetListenerInterface= helpSetListenerInterface
 }
 
@@ -162,9 +188,11 @@ this.helpSetListenerInterface= helpSetListenerInterface
             
 open fun add(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputRobotInterface = inputRobotInterface
+
+        Updates for KMP build        
+        {
+    //var inputRobotInterface = inputRobotInterface
 logUtil!!.put("Adding InputRobotInterface: " +inputRobotInterface!!.getName(), this, "add")
 this.get()!!.put(inputRobotInterface!!.getName(), inputRobotInterface)
 
@@ -219,7 +247,11 @@ this.helpSetListenerInterface!!.helpSetAdded(helpSetEvent)
             
 open fun loadLibraries()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var set: Set = this.get()!!.keySet()!!
 
 logUtil!!.put("Loading Libraries", this, "loadLibraries")
@@ -236,7 +268,11 @@ logUtil!!.put("Loading Libraries", this, "loadLibraries")
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var inputRobotInterface: InputRobotInterface = InputRobotFactory.getInstance()!!.get(nameArray[index]!! as String)!!
 
 loadLibrary(inputRobotInterface)
@@ -249,7 +285,11 @@ loadLibrary(inputRobotInterface)
             
 open fun unloadLibraries()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put("Unloading Libraries", this, "unloadLibraries")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Unloading Libraries", this, "unloadLibraries")
 
     var set: Set = this.get()!!.keySet()!!
 
@@ -269,7 +309,11 @@ open fun unloadLibraries()
 
                         for (index in 0 until size)
 
-        {inputRobotInterface= this.get(inputRobotArray[index]!! as String)
+        
+
+        Updates for KMP build        
+        {
+inputRobotInterface= this.get(inputRobotArray[index]!! as String)
 
     
                         if(InterfaceUtil.isImplemented(SecuredNativeLibraryInterface::class, inputRobotInterface))
@@ -292,7 +336,11 @@ securedNativeLibraryInterface!!.unload()
             
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -302,9 +350,11 @@ open fun get()
 
 open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
-: InputRobotInterface{
+: InputRobotInterface
 
-                    var name = name
+        Updates for KMP build        
+        {
+    //var name = name
 logUtil!!.put("Getting Robot: " +name, this, "getRobots")
 
 

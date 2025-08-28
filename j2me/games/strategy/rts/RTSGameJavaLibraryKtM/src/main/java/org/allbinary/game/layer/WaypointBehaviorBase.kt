@@ -46,13 +46,21 @@ open public class WaypointBehaviorBase
     private var waypoint: WaypointBase
 public constructor        ()
             : super()
-        {this.ownedWaypointList= BasicArrayList(1)
+        
+
+        Updates for KMP build        
+        {
+this.ownedWaypointList= BasicArrayList(1)
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +70,11 @@ open fun getName()
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,15 +86,21 @@ open fun isRunning()
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryLayerManager = allBinaryLayerManager
 }
 
 
 open fun getOwnedWaypointList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +110,11 @@ open fun getOwnedWaypointList()
 
 open fun getWaypoint()
         //nullable = true from not(false or (false and true)) = true
-: WaypointBase{
+: WaypointBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,16 +124,22 @@ open fun getWaypoint()
 
 open fun setWaypoint(waypoint: WaypointBase)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var waypoint = waypoint
+
+        Updates for KMP build        
+        {
+    //var waypoint = waypoint
 this.waypoint= waypoint
 }
 
 
 open fun getSteeringVisitorList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,7 +149,11 @@ open fun getSteeringVisitorList()
 
 open fun getMovementLogicAsString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -130,7 +162,11 @@ open fun getMovementLogicAsString()
 
 open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -139,12 +175,12 @@ open fun isWaypointListEmptyOrOnlyTargets()
 
 open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, targetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layerInterface = layerInterface
-
-
-                    var targetDistance = targetDistance
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var targetDistance = targetDistance
 
 
 
@@ -154,7 +190,11 @@ open fun isInSensorRange(layerInterface: CollidableDestroyableDamageableLayer, t
 
 open fun getCurrentTargetLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: CollidableDestroyableDamageableLayer{
+: CollidableDestroyableDamageableLayer
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -163,7 +203,11 @@ open fun getCurrentTargetLayerInterface()
 
 open fun getCurrentTargetingStateString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -172,7 +216,11 @@ open fun getCurrentTargetingStateString()
 
 open fun isTrackingWaypoint()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -181,7 +229,11 @@ open fun isTrackingWaypoint()
 
 open fun getCurrentPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -190,7 +242,11 @@ open fun getCurrentPathGeographicMapCellPosition()
 
 open fun getCurrentGeographicMapCellHistory()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellHistory{
+: GeographicMapCellHistory
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -199,7 +255,11 @@ open fun getCurrentGeographicMapCellHistory()
 
 open fun isWaypointOverridesAttacking()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -209,7 +269,11 @@ open fun isWaypointOverridesAttacking()
 
 open fun getNextUnvisitedPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -218,7 +282,11 @@ open fun getNextUnvisitedPathGeographicMapCellPosition()
 
 open fun needToMove()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -227,9 +295,11 @@ open fun needToMove()
 
 open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var waypointPathsList = waypointPathsList
+
+        Updates for KMP build        
+        {
+    //var waypointPathsList = waypointPathsList
 
 
 
@@ -239,7 +309,11 @@ open fun setWaypointPathsList(waypointPathsList: BasicArrayList)
 
 open fun getWaypointPathsList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -250,9 +324,11 @@ open fun getWaypointPathsList()
             
 open fun setTarget(layerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
 
 
 
@@ -264,12 +340,12 @@ open fun setTarget(layerInterface: PathFindingLayerInterface)
             
 open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerInterface = layerInterface
 
 
-                    var anotherTargetDistance = anotherTargetDistance
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var anotherTargetDistance = anotherTargetDistance
 
 
 
@@ -281,7 +357,11 @@ open fun setTarget(layerInterface: PathFindingLayerInterface, anotherTargetDista
             
 open fun clearTarget()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -292,9 +372,11 @@ open fun clearTarget()
             
 open fun updatePathOnTargetMove(reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var reason = reason
+
+        Updates for KMP build        
+        {
+    //var reason = reason
 }
 
 

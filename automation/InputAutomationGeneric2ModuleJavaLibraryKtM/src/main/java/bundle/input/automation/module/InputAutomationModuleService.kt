@@ -36,16 +36,22 @@ open public class InputAutomationModuleService
     private var inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>
 public constructor        (inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
             : super()
-        {
+        
 
-                    var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
+        Updates for KMP build        
+        {
+var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
 this.setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray)
 }
 
 
 open fun getInputAutomationModuleInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputAutomationModuleFactoryInterface?>{
+: Array<InputAutomationModuleFactoryInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,9 +61,11 @@ open fun getInputAutomationModuleInterfaceArray()
 
 open fun setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
+
+        Updates for KMP build        
+        {
+var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
 this.inputAutomationModuleInterfaceArray= inputAutomationModuleInterfaceArray
 }
 

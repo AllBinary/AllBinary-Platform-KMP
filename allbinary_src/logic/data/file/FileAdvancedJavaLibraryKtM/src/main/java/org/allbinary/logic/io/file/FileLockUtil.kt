@@ -43,7 +43,11 @@ open public class FileLockUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileLockUtil{
+: FileLockUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,19 +60,23 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var vector = vector
-
-
-                    var isReturnOnFailure = isReturnOnFailure
+        Updates for KMP build        
+        {
+var vector = vector
+var isReturnOnFailure = isReturnOnFailure
 
     var fileLockVector: Vector = Vector()
 
@@ -81,7 +89,11 @@ open fun getAll(vector: Vector, isReturnOnFailure: Boolean)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var file: AbFile = vector.get(index) as AbFile
 
 
@@ -128,9 +140,11 @@ logUtil!!.put("Total Locks Obtained: " +fileLockVector!!.size, this, "getAll")
             
 open fun getAllPossible(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var vector = vector
+        Updates for KMP build        
+        {
+var vector = vector
 
 
 
@@ -143,9 +157,11 @@ open fun getAllPossible(vector: Vector)
             
 open fun getAllOrNone(vector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var vector = vector
+        Updates for KMP build        
+        {
+var vector = vector
 
     var fileLockVector: Vector = getAll(vector, true)!!
 
@@ -178,9 +194,11 @@ open fun getAllOrNone(vector: Vector)
             
 open fun getLock(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: FileLock{
+: FileLock
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
         try {
             
@@ -189,7 +207,11 @@ open fun getLock(file: AbFile)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return getLock(AbFileOutputStream(file, true))
 } catch(e: Exception)
-            {logUtil!!.put("Exception returns null", this, "getLock", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -208,9 +230,11 @@ open fun getLock(file: AbFile)
             
 open fun getLock(fileOutputStream: AbFileOutputStream)
         //nullable = true from not(false or (false and false)) = true
-: FileLock{
+: FileLock
 
-                    var fileOutputStream = fileOutputStream
+        Updates for KMP build        
+        {
+var fileOutputStream = fileOutputStream
 
         try {
             
@@ -222,7 +246,11 @@ open fun getLock(fileOutputStream: AbFileOutputStream)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLock
 } catch(e: Exception)
-            {logUtil!!.put("Exception returns null", this, "getLock", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 
@@ -243,9 +271,11 @@ StreamUtil.getInstance()!!.close(fileOutputStream)
             
 open fun getLock(fileChannel: FileChannel)
         //nullable = true from not(false or (false and false)) = true
-: FileLock{
+: FileLock
 
-                    var fileChannel = fileChannel
+        Updates for KMP build        
+        {
+var fileChannel = fileChannel
 
         try {
             
@@ -257,7 +287,11 @@ open fun getLock(fileChannel: FileChannel)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return fileLock
 } catch(e: Exception)
-            {logUtil!!.put("Exception returns null", this, "getLock", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Exception returns null", this, "getLock", e)
 
 
 

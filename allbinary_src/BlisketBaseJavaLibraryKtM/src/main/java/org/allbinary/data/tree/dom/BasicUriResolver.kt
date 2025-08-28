@@ -65,16 +65,22 @@ open public class BasicUriResolver
     private var extension: String
 public constructor        (extension: String)
             : super()
-        {
+        
 
-                    var extension = extension
+        Updates for KMP build        
+        {
+var extension = extension
 this.extension= extension
 }
 
 
 open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,12 +92,12 @@ open fun getExtension()
             
 open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
-: Source{
+: Source
 
-                    var href = href
-
-
-                    var base = base
+        Updates for KMP build        
+        {
+var href = href
+var base = base
 
         try {
             
@@ -131,13 +137,21 @@ logUtil!!.put(stringBuffer!!.toString(), this, RESOLVE)
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(abPath))
 } catch(e: TransformerException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw TransformerException(e)
@@ -147,7 +161,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, RESOLVE)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -161,7 +179,11 @@ stringBuffer!!.append(IMPORT_URL)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

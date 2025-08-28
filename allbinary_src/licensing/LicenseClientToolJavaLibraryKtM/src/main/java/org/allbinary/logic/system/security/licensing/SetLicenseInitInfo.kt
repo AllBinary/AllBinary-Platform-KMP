@@ -51,9 +51,11 @@ open public class SetLicenseInitInfo
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
     var initInfo: SetLicenseInitInfo = SetLicenseInitInfo(args)
 
@@ -66,9 +68,11 @@ initInfo!!.createNewLicenseInitInfo(BasicArrayList())
     private var vector: BasicArrayList = BasicArrayList()
 public constructor        (options: Array<String?>)
             : super()
-        {
+        
 
-                    var options = options
+        Updates for KMP build        
+        {
+var options = options
 LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_GLOBALS.getInstance()!!.INIT_PATH)
 
 
@@ -76,7 +80,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
 
                         for (index in 1 until options.size)
 
-        {vector.add(options[index]!!)
+        
+
+        Updates for KMP build        
+        {
+vector.add(options[index]!!)
 }
 
 }
@@ -86,7 +94,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(PrintLicenseInitInfo.PATH +PATH_
             
 open fun getLicenseInitInfo()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo{
+: LicenseInitInfo
+
+        Updates for KMP build        
+        {
+
     var licenseInitInfoUtil: LicenseInitInfoUtil = LicenseInitInfoUtil.getInstance()!!
 
 
@@ -116,9 +128,11 @@ open fun getLicenseInitInfo()
 
 open fun createNewLicenseInitInfo(licenceServerVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var licenceServerVector = licenceServerVector
+
+        Updates for KMP build        
+        {
+var licenceServerVector = licenceServerVector
 
         try {
             
@@ -151,7 +165,11 @@ licenseInitInfo!!.clearServers()
 
 
         while(true)
+        
+
+        Updates for KMP build        
         {
+
     var line: String = lineNumberReader!!.readLine()!!
 
 
@@ -177,7 +195,11 @@ licenseInitInfo!!.clearServers()
 LicenseInitInfoUtil.getInstance()!!.write(licenseInitInfo)
 LicenseInitInfoUtil.getInstance()!!.read()
 } catch(e: Exception)
-            {System.out.print("Error: " +e)
+            
+
+        Updates for KMP build        
+        {
+System.out.print("Error: " +e)
 e.printStackTrace()
 }
 

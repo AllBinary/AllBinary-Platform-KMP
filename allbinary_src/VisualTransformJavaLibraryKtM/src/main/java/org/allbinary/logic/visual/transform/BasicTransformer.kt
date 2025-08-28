@@ -54,12 +54,12 @@ open public class BasicTransformer : AbTransformer {
     private val abeClientInformation: AbeClientInformationInterface
 public constructor        (abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -73,9 +73,11 @@ this.setTemplateAsInputStream()
             
 open fun setEncryptedTemplateFileAsInputStream(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var file = file
+
+        Updates for KMP build        
+        {
+    //var file = file
 
     var outputStream: ByteArrayOutputStream = 
                 null
@@ -111,7 +113,11 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
 this.setInputStream(ByteArrayInputStream(decrypted) as InputStream)
 this.setURIResolver(BasicUriResolver(TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION) as URIResolver)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -146,7 +152,11 @@ this.streamUtil!!.close(inputStream)
             
 open fun setEncryptedTemplateAsInputStream()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var outputStream: ByteArrayOutputStream = 
                 null
             
@@ -179,7 +189,11 @@ outputStream= this.streamUtil!!.get(inputStream, outputStream, ByteArray(16384))
 this.setInputStream(ByteArrayInputStream(decrypted) as InputStream)
 this.setURIResolver(BasicUriResolver(TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION) as URIResolver)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -207,7 +221,11 @@ this.streamUtil!!.close(inputStream)
             
 open fun setTemplateAsInputStream()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var inputStream: AbFileInputStream = 
                 null
             
@@ -405,7 +423,11 @@ stringBuffer!!.append(transformInfoTemplateData!!.ENCRYPTED_EXTENSION)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         

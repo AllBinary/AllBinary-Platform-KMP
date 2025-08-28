@@ -40,15 +40,13 @@ open public class Aggression
     private var drops: Integer
 public constructor        (ram: Integer, projectile: Integer, drops: Integer)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var ram = ram
-
-
-                    var projectile = projectile
-
-
-                    var drops = drops
+var ram = ram
+var projectile = projectile
+var drops = drops
 this.setRam(ram)
 this.setProjectile(projectile)
 this.setDrops(drops)
@@ -57,7 +55,11 @@ this.setDrops(drops)
 
 open fun getRam()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,16 +69,22 @@ open fun getRam()
 
 open fun setRam(ram: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ram = ram
+
+        Updates for KMP build        
+        {
+var ram = ram
 this.ram= ram
 }
 
 
 open fun getProjectile()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,16 +94,22 @@ open fun getProjectile()
 
 open fun setProjectile(projectile: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var projectile = projectile
+
+        Updates for KMP build        
+        {
+var projectile = projectile
 this.projectile= projectile
 }
 
 
 open fun getDrops()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,9 +119,11 @@ open fun getDrops()
 
 open fun setDrops(drops: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var drops = drops
+
+        Updates for KMP build        
+        {
+var drops = drops
 this.drops= drops
 }
 

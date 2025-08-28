@@ -38,7 +38,11 @@ open public class KeyValueFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: KeyValueFactory{
+: KeyValueFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,9 +61,11 @@ open fun getInstance()
 
 open fun get(key: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
     var value: String = MAP.get(key as Object) as String
 

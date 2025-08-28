@@ -47,15 +47,13 @@ open public class ImageArrayAnimationFactory
     private val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int)                        
 
-                            : this(imageArray, dx, dy, AnimationBehaviorFactory.getInstance()){
+                            : this(imageArray, dx, dy, AnimationBehaviorFactory.getInstance())
 
-                    var imageArray = imageArray
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var dx = dx
+    //var dy = dy
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,18 +62,14 @@ public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int)
 
 public constructor        (imageArray: Array<Image?>, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(imageArray, animationBehaviorFactory){
+                            : this(imageArray, animationBehaviorFactory)
 
-                    var imageArray = imageArray
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -86,9 +80,11 @@ this.dy= dy
 
 public constructor        (imageArray: Array<Image?>)                        
 
-                            : this(imageArray, AnimationBehaviorFactory.getInstance()){
+                            : this(imageArray, AnimationBehaviorFactory.getInstance())
 
-                    var imageArray = imageArray
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
 
 
                             //For kotlin this is before the body of the constructor.
@@ -97,12 +93,12 @@ public constructor        (imageArray: Array<Image?>)
 
 public constructor        (imageArray: Array<Image?>, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var imageArray = imageArray
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var imageArray = imageArray
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.imageArray= imageArray
 this.animationBehaviorFactory= animationBehaviorFactory
 }
@@ -111,9 +107,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     
                         if(dx != 0 || dy != 0)
@@ -140,9 +138,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

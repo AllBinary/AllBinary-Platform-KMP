@@ -42,12 +42,12 @@ open public class DownloadItemsRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val downloadableItem: DownloadableItem
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
     var inventoryTag: HelperTag = hashMap!!.get(AbTagData.PARENT) as HelperTag
 
@@ -63,7 +63,11 @@ this.downloadableItem= downloadableInventoryItemView!!.getDownloadableItem()
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var vector: Vector = this.downloadableItem!!.toVector()!!
@@ -87,7 +91,11 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.in
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to insert " +this.downloadableItem!!.getId() +" into downloaditems table"
 
 
@@ -111,7 +119,11 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.in
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.delete(this.downloadableItem!!.getId())
 
@@ -132,7 +144,11 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to delete"
 
 
@@ -156,7 +172,11 @@ open fun delete()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Update Successful"
@@ -180,7 +200,11 @@ DownloadItemsEntityFactory.getInstance()!!.getDownloadItemsEntityInstance()!!.up
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to update: " +this.downloadableItem!!.getId()
 
 

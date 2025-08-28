@@ -38,9 +38,11 @@ open public class BasicFileFilterUtil
             
 open fun getInstance(extension: String)
         //nullable =  from not(true or (false and false)) = 
-: FileFilter{
+: FileFilter
 
-                    var extension = extension
+        Updates for KMP build        
+        {
+    //var extension = extension
 
     var vector: BasicArrayList = BasicArrayList()
 
@@ -59,7 +61,11 @@ vector.add(extension)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

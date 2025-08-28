@@ -49,15 +49,13 @@ open public class AndroidTitleProgressBar : ProgressCanvas {
     private var portion: Int = 0
 protected constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var title = title
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,24 +65,32 @@ protected constructor        (title: String, backgroundBasicColor: BasicColor, f
 
 open fun init(activity: SimpleProgressActivityInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 }
 
 
 open fun init(activity: ProgressActivityInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 this.progressActivity= activity
 }
 
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.progressActivity != NullProgressActivity.NULL_PROGRESS_ACTIVITY)
                         
@@ -110,82 +116,110 @@ open fun isInitialized()
 
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
 this.progressActivity!!.runOnUiThread(showTitleProgressBarRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
 
 override fun end()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.progressActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
 }
 
 }
 
 override fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var value = value
+var text = text
+var index = index
 
         try {
             super.addPortion(value, text, index)
 this.portion= value
 this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
 override fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
+        Updates for KMP build        
+        {
+var value = value
+var text = text
 
         try {
             super.addPortion(value, text)
 this.portion= value
 this.progressActivity!!.runOnUiThread(progressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
 override fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             super.setValue(value)
 this.progressActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }
@@ -193,13 +227,19 @@ this.progressActivity!!.runOnUiThread(progressDialogSetProgressRunnable)
 
 open fun waitUntilDisplayed()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
@@ -215,14 +255,22 @@ open public inner class TitleProgressBarSetProgressRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var value: Int = this@AndroidTitleProgressBar.getValue().toInt()
 
 this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
@@ -243,14 +291,22 @@ open public inner class TitleProgressBarPortionSetProgressRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var value: Int = (this@AndroidTitleProgressBar.getValue() +this@AndroidTitleProgressBar.getMaxValue() /portion).toInt()
 
 this@AndroidTitleProgressBar.progressActivity!!.onTitleProgressBarSetProgress(value)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
@@ -271,14 +327,22 @@ open public inner class ShowTitleProgressBarRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var maxValue: Int = this@AndroidTitleProgressBar.getMaxValue().toInt()
 
 this@AndroidTitleProgressBar.progressActivity!!.onShowTitleProgressBar(maxValue, false)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
@@ -299,11 +363,19 @@ open public inner class DismissTitleProgressBarRunnable
             }            
         override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this@AndroidTitleProgressBar.progressActivity!!.onDismissTitleProgressBar()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }

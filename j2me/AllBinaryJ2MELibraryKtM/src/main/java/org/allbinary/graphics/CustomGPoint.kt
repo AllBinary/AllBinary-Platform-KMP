@@ -42,9 +42,11 @@ open public class CustomGPoint : GPoint {
     private var z: Int= 0
 private constructor        (point: GPoint)                        
 
-                            : super(point){
+                            : super(point)
 
-                    var point = point
+        Updates for KMP build        
+        {
+var point = point
 
 
                             //For kotlin this is before the body of the constructor.
@@ -53,12 +55,12 @@ private constructor        (point: GPoint)
 
 public constructor        (x: Int, y: Int)                        
 
-                            : super(x, y){
+                            : super(x, y)
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,15 +69,13 @@ public constructor        (x: Int, y: Int)
 
 public constructor        (x: Int, y: Int, z: Int)                        
 
-                            : super(x, y, z){
+                            : super(x, y, z)
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 
 
                             //For kotlin this is before the body of the constructor.
@@ -85,15 +85,21 @@ public constructor        (x: Int, y: Int, z: Int)
 
 open fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var x = x
+
+        Updates for KMP build        
+        {
+var x = x
 this.x= x
 }
 
 override fun getX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,15 +109,21 @@ override fun getX()
 
 open fun setY(y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var y = y
+
+        Updates for KMP build        
+        {
+var y = y
 this.y= y
 }
 
 override fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,15 +133,21 @@ override fun getY()
 
 open fun setZ(z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var z = z
+
+        Updates for KMP build        
+        {
+var z = z
 this.z= z
 }
 
 override fun getZ()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -53,7 +53,11 @@ open public class ResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResourceUtil{
+: ResourceUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,12 +76,20 @@ open fun getInstance()
     private var hashMap: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getContext()
         //nullable = true from not(false or (false and true)) = true
-: Context{
+: Context
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,27 +99,33 @@ open fun getContext()
 
 open fun setContext(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 this.context= activity
 }
 
 
 open fun setContext(aContext: Context)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aContext = aContext
+
+        Updates for KMP build        
+        {
+var aContext = aContext
 this.context= aContext
 }
 
 
 open fun getResourceId(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Integer{
+: Integer
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 
     var value: Integer = this.hashMap!!.get(resource as Object) as Integer
 
@@ -131,12 +149,12 @@ open fun getResourceId(resource: String)
 
 open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var resource = resource
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+var resource = resource
+var value = value
 
     
                         if(DebugFactory.getInstance() != NoDebug.getInstance())
@@ -163,12 +181,12 @@ this.hashMap!!.put(resource, value)
 
 open fun containsDuplicate(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var resource = resource
-
-
-                    var value = value
+        Updates for KMP build        
+        {
+var resource = resource
+var value = value
 
     var objectArray: Array<Any?> = HashtableUtil.getInstance()!!.getKeysAsArray(hashMap)!!
 
@@ -178,7 +196,11 @@ open fun containsDuplicate(resource: String, value: Integer)
 
                         for (index in objectArray!!.size  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var integer: Integer = this.hashMap!!.get(objectArray[index]!! as Object) as Integer
 
 
@@ -222,9 +244,11 @@ open fun containsDuplicate(resource: String, value: Integer)
 
 open fun setResources(resources: Resources)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var resources = resources
+
+        Updates for KMP build        
+        {
+    //var resources = resources
 logUtil!!.put(StringMaker().
                             append("Resource Loader: ")!!.append(resources::class.toString()!!)!!.toString(), this, "setResources")
 this.resources= resources
@@ -235,9 +259,11 @@ this.resources= resources
             
 open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+    //var resource = resource
 
     var integer: Integer = this.hashMap!!.get(resource as Object) as Integer
 

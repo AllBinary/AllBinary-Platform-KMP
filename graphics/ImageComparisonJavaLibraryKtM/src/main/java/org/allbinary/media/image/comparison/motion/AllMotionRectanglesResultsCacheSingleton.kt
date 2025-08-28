@@ -43,7 +43,11 @@ open public class AllMotionRectanglesResultsCacheSingleton
                 null
             
 
-                init{
+                init
+
+        Updates for KMP build        
+        {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
@@ -61,14 +65,22 @@ open public class AllMotionRectanglesResultsCacheSingleton
 cacheInterface= CacheInterfaceFactory.getInstance(CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.ONE_MINUTE_FIVE_MAX)
 logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 }
 
 }
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CacheInterface{
+: CacheInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +93,11 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

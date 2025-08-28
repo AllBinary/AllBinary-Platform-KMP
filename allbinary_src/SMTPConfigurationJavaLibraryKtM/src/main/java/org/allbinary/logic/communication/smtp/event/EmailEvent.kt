@@ -39,18 +39,14 @@ open public class EmailEvent : EventObject {
     private var attempts: Int= 0
 public constructor        (emailEventHandler: Any, userEmailEventNameData: UserEmailEventNameData, emailInfo: EmailInfo, attempts: Int)                        
 
-                            : super(emailEventHandler){
+                            : super(emailEventHandler)
 
-                    var emailEventHandler = emailEventHandler
-
-
-                    var userEmailEventNameData = userEmailEventNameData
-
-
-                    var emailInfo = emailInfo
-
-
-                    var attempts = attempts
+        Updates for KMP build        
+        {
+var emailEventHandler = emailEventHandler
+var userEmailEventNameData = userEmailEventNameData
+var emailInfo = emailInfo
+var attempts = attempts
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,7 +58,11 @@ this.emailInfo= emailInfo
 
 open fun getEmailInfo()
         //nullable = true from not(false or (false and true)) = true
-: EmailInfo{
+: EmailInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,7 +72,11 @@ open fun getEmailInfo()
 
 open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,15 +86,21 @@ open fun getAttempts()
 
 open fun setAttempts(attempts: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var attempts = attempts
+
+        Updates for KMP build        
+        {
+var attempts = attempts
 this.attempts= attempts
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("EmailEvent Log: \n")

@@ -45,7 +45,11 @@ open public class ImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageUtil{
+: ImageUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,11 +70,19 @@ open fun getInstance()
     private val CREATE_BUFFERED_IMAGE: String = "createBufferedImage"
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -78,7 +90,11 @@ private constructor        ()
 
 open fun getDefaultConfiguration()
         //nullable = true from not(false or (false and true)) = true
-: GraphicsConfiguration{
+: GraphicsConfiguration
+
+        Updates for KMP build        
+        {
+
     var ge: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
 
 
@@ -94,12 +110,12 @@ open fun getDefaultConfiguration()
 
 open fun create(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var width = width
+    //var height = height
 
     var graphicsConfiguration: GraphicsConfiguration = this.getDefaultConfiguration()!!
 
@@ -115,15 +131,13 @@ open fun create(width: Int, height: Int)
             
 open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
 
-                    var bufferedImageArray = bufferedImageArray
-
-
-                    var percent = percent
-
-
-                    var scale = scale
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
+    //var percent = percent
+    //var scale = scale
 
     var size: Int = bufferedImageArray!!.size
                 
@@ -140,7 +154,11 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent:
 
                         for (index in 0 until size)
 
-        {bufferedImage= bufferedImageArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+bufferedImage= bufferedImageArray[index]!!
 
     var newWidth: Int = (bufferedImage!!.getWidth() *percent /100).toInt()
 
@@ -162,15 +180,13 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
             
 open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent: Float, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
 
-                    var bufferedImageArray = bufferedImageArray
-
-
-                    var percent = percent
-
-
-                    var scale = scale
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
+    //var percent = percent
+    //var scale = scale
 
     var size: Int = bufferedImageArray!!.size
                 
@@ -187,7 +203,11 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, percent:
 
                         for (index in 0 until size)
 
-        {bufferedImage= bufferedImageArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+bufferedImage= bufferedImageArray[index]!!
 
     var newWidth: Int = (bufferedImage!!.getWidth() *percent).toInt()
 
@@ -209,18 +229,14 @@ scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImage, newWidt
             
 open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: Int, height: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
 
-                    var bufferedImageArray = bufferedImageArray
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var scale = scale
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
+    //var width = width
+    //var height = height
+    //var scale = scale
 
     var size: Int = bufferedImageArray!!.size
                 
@@ -234,7 +250,11 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: I
 
                         for (index in 0 until size)
 
-        {scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
+        
+
+        Updates for KMP build        
+        {
+scaledBufferedImageArray[index]= this.createBufferedImage(bufferedImageArray[index]!!, width, height, scale)
 }
 
 
@@ -249,15 +269,13 @@ open fun createBufferedImage(bufferedImageArray: Array<BufferedImage?>, width: I
             
 open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var bufferedImage = bufferedImage
-
-
-                    var newWidth = newWidth
-
-
-                    var newHeight = newHeight
+        Updates for KMP build        
+        {
+    //var bufferedImage = bufferedImage
+    //var newWidth = newWidth
+var newHeight = newHeight
 
 
 
@@ -270,18 +288,14 @@ open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHei
             
 open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var bufferedImage = bufferedImage
-
-
-                    var newWidth = newWidth
-
-
-                    var newHeight = newHeight
-
-
-                    var scale = scale
+        Updates for KMP build        
+        {
+    //var bufferedImage = bufferedImage
+    //var newWidth = newWidth
+var newHeight = newHeight
+    //var scale = scale
 
 
 
@@ -294,21 +308,15 @@ open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHei
             
 open fun createBufferedImage(bufferedImage: BufferedImage, newWidth: Int, newHeight: Int, scale: Boolean, allowTranslate: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var bufferedImage = bufferedImage
-
-
-                    var newWidth = newWidth
-
-
-                    var newHeight = newHeight
-
-
-                    var scale = scale
-
-
-                    var allowTranslate = allowTranslate
+        Updates for KMP build        
+        {
+    //var bufferedImage = bufferedImage
+    //var newWidth = newWidth
+var newHeight = newHeight
+    //var scale = scale
+    //var allowTranslate = allowTranslate
 
     var width: Double = bufferedImage!!.getWidth()!!
 
@@ -382,9 +390,11 @@ graphics.drawRenderedImage(bufferedImage, affineTransform)
 
 open fun toString(bufferedImage: BufferedImage)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 

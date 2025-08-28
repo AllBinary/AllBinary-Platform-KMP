@@ -43,18 +43,14 @@ open public class HealthBarFactory
             
 open fun getInstance(layerInterface: AllBinaryLayer, healthInterface: Health, location: Int, direction: Int)
         //nullable =  from not(true or (false and false)) = 
-: HealthBar{
+: HealthBar
 
-                    var layerInterface = layerInterface
-
-
-                    var healthInterface = healthInterface
-
-
-                    var location = location
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
+var healthInterface = healthInterface
+var location = location
+var direction = direction
 
     
                         if(OpenGLFeatureUtil.getInstance()!!.isAnyThreed())

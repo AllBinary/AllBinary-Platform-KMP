@@ -40,18 +40,14 @@ open public class NumberOnOwnGroupSequenceAI : SequenceAI {
     private var numberOnSameTeam: Array<Integer?>
 public constructor        (numberOnSameTeam: Array<Integer?>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
+                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput)
 
-                    var numberOnSameTeam = numberOnSameTeam
-
-
-                    var artificialIntelligenceInterface = artificialIntelligenceInterface
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var numberOnSameTeam = numberOnSameTeam
+var artificialIntelligenceInterface = artificialIntelligenceInterface
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,9 +59,11 @@ this.numberOnSameTeam= numberOnSameTeam
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var layerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 

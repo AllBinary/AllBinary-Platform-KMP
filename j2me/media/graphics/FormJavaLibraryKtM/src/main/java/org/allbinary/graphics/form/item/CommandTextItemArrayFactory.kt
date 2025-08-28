@@ -45,24 +45,24 @@ open public class CommandTextItemArrayFactory
     private val visitorInterface: Visitor
 public constructor        (visitorInterface: Visitor)
             : super()
-        {
+        
 
-                    var visitorInterface = visitorInterface
+        Updates for KMP build        
+        {
+    //var visitorInterface = visitorInterface
 this.visitorInterface= visitorInterface
 }
 
 
 open fun getInstance(vector: Vector<Any>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: Array<CustomItem?>{
+: Array<CustomItem?>
 
-                    var vector = vector
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var vector = vector
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
     var size: Int = vector.size!!
 
@@ -97,7 +97,11 @@ list.clear()
 
                         for (index in 0 until size)
 
-        {command= vector.elementAt(index) as Command
+        
+
+        Updates for KMP build        
+        {
+command= vector.elementAt(index) as Command
 
     
                         if(command.getPriority() < priorityLimit)
@@ -134,7 +138,11 @@ list.add(textItem)
 
                         for (index in 0 until size2)
 
-        {textItemArray[index]= list.objectArray[index]!! as CustomItem
+        
+
+        Updates for KMP build        
+        {
+textItemArray[index]= list.objectArray[index]!! as CustomItem
 }
 
 

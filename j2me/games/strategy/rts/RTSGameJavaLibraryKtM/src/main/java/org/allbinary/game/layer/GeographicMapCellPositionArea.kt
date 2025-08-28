@@ -59,9 +59,11 @@ open public class GeographicMapCellPositionArea
     private var surroundingGeographicMapCellPositionList: BasicArrayList = LIST
 public constructor        (layerInterface: AllBinaryLayer)
             : super()
-        {
+        
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
@@ -70,9 +72,11 @@ this.layerInterface= layerInterface
             
 open fun update(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapInterface = geographicMapInterface
+
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 this.occupyingGeographicMapCellPositionList= layerCoveringCellPositionsUtil!!.getAll(geographicMapInterface, layerInterface, layerInterface!!.getXP(), layerInterface!!.getYP(), reusableOccupyingGeographicMapCellPositionList)
 this.surroundingGeographicMapCellPositionList= cellPositionsUtil!!.getAllSurrounding(geographicMapInterface, occupyingGeographicMapCellPositionList, reusableSurroundingGeographicMapCellPositionList)
 this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPositionList!!.size())
@@ -81,7 +85,11 @@ this.surroundingCircularIndexUtil!!.setSize(this.surroundingGeographicMapCellPos
 
 open fun getOccupyingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +99,11 @@ open fun getOccupyingGeographicMapCellPositionList()
 
 open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +113,11 @@ open fun getSurroundingGeographicMapCellPositionList()
 
 open fun getNextSurroundingGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
     var geographicMapCellPosition: GeographicMapCellPosition = this.surroundingGeographicMapCellPositionList!!.get(this.surroundingCircularIndexUtil!!.getIndex()) as GeographicMapCellPosition
 
 this.surroundingCircularIndexUtil!!.next()

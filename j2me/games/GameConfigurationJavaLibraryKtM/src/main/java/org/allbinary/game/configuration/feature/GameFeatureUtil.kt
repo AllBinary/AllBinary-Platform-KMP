@@ -45,7 +45,11 @@ open public class GameFeatureUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameFeatureUtil{
+: GameFeatureUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +74,11 @@ open fun getInstance()
             
 open fun setDefault(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var choiceGroup = choiceGroup
+
+        Updates for KMP build        
+        {
+var choiceGroup = choiceGroup
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -103,7 +109,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
                         for (index in 0 until selectedArray_return!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var isSelected: Boolean = selectedArray_return[index]!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -143,9 +153,11 @@ choiceGroup!!.setSelectedIndex(index, false)
             
 open fun updateMultiple(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var choiceGroup = choiceGroup
+
+        Updates for KMP build        
+        {
+var choiceGroup = choiceGroup
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -176,7 +188,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
                         for (index in 0 until selectedArray_return!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var isSelected: Boolean = selectedArray_return[index]!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -218,9 +234,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
             
 open fun updateExclusive(choiceGroup: ChoiceGroup)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var choiceGroup = choiceGroup
+
+        Updates for KMP build        
+        {
+var choiceGroup = choiceGroup
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -248,7 +266,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, METHOD_NAME)
 
                         for (index in 0 until selectedArray_return!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var isSelected: Boolean = selectedArray_return[index]!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -276,15 +298,21 @@ updateExclusive(selectedChoiceLabel)
 
 open fun isExclusive(itemLabel: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var itemLabel = itemLabel
+        Updates for KMP build        
+        {
+var itemLabel = itemLabel
 
     var enumeration: Enumeration<Any?> = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.keys()!!
 
 
         while(enumeration.hasMoreElements())
+        
+
+        Updates for KMP build        
         {
+
     var name: String = enumeration.nextElement()!! as String
 
 
@@ -314,9 +342,11 @@ open fun isExclusive(itemLabel: String)
             
 open fun updateExclusive(selectedChoiceLabel: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedChoiceLabel = selectedChoiceLabel
+
+        Updates for KMP build        
+        {
+    //var selectedChoiceLabel = selectedChoiceLabel
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.ITEM_LABEL)!!.append(selectedChoiceLabel)!!.toString(), this, "updateExclusive")
 
@@ -344,7 +374,11 @@ logUtil!!.put(StringMaker().
 
                         for (index in 0 until size)
 
-        {anyType= objectArray[index]!! as Object
+        
+
+        Updates for KMP build        
+        {
+anyType= objectArray[index]!! as Object
 basicArrayList= hashtable.get(anyType as Object) as BasicArrayList
 updateExclusive(gameFeature, basicArrayList)
 }
@@ -356,12 +390,12 @@ updateExclusive(gameFeature, basicArrayList)
             
 open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameFeature = gameFeature
 
 
-                    var list = list
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
+var list = list
 
     
                         if(list.contains(gameFeature))
@@ -382,7 +416,11 @@ open fun updateExclusive(gameFeature: Feature, list: BasicArrayList)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(addIndex != index)
                         

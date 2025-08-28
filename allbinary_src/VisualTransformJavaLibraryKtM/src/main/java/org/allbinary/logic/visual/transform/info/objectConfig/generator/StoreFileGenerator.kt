@@ -59,9 +59,11 @@ open public class StoreFileGenerator : TransformInfoObjectConfigGenerator {
     private val fileAbPath: AbPath
 
     private val file: AbFile
-public constructor        (transformInfoInterface: TransformInfoInterface){
+public constructor        (transformInfoInterface: TransformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = transformInfoInterface as TransformInfoHttpInterface
 
@@ -165,9 +167,11 @@ this.file= AbFile(this.fileAbPath)
             
 open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

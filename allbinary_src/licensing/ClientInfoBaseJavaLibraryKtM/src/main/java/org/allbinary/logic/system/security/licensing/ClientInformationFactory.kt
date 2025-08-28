@@ -38,7 +38,11 @@ open public class ClientInformationFactory
         
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ClientInformation{
+: ClientInformation
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

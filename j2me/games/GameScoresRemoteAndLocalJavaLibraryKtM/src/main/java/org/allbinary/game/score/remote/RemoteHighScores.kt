@@ -47,24 +47,16 @@ open public class RemoteHighScores : HighScores {
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: HighScores{
+: HighScores
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var softwareInformation = softwareInformation
-
-
-                    var gameInfo = gameInfo
-
-
-                    var heading = heading
-
-
-                    var columnTwoHeading = columnTwoHeading
-
-
-                    var isAscending = isAscending
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var softwareInformation = softwareInformation
+    //var gameInfo = gameInfo
+    //var heading = heading
+    //var columnTwoHeading = columnTwoHeading
+    //var isAscending = isAscending
 
 
 
@@ -76,27 +68,17 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwa
 
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, isAscending: Boolean, preload: Boolean)
         //nullable =  from not(true or (false and false)) = 
-: HighScores{
+: HighScores
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var softwareInformation = softwareInformation
-
-
-                    var gameInfo = gameInfo
-
-
-                    var heading = heading
-
-
-                    var columnTwoHeading = columnTwoHeading
-
-
-                    var isAscending = isAscending
-
-
-                    var preload = preload
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var softwareInformation = softwareInformation
+    //var gameInfo = gameInfo
+    //var heading = heading
+    //var columnTwoHeading = columnTwoHeading
+    //var isAscending = isAscending
+    //var preload = preload
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -123,7 +105,11 @@ hashTable!!.put(gameInfo, highScores)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return highScores
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.getInstance(), commonStrings!!.GET_INSTANCE, e)
@@ -150,27 +136,17 @@ logUtil!!.put(commonStrings!!.EXCEPTION, RemoteErrorHighScoresSingletonFactory.g
     val ASCENDING: String = "ASCENDING"
 private constructor        (abeClientInformation: AbeClientInformationInterface, softwareInformation: SoftwareInformation, gameInfo: GameInfo, heading: String, columnTwoHeading: String, ascending: Boolean, preload: Boolean)                        
 
-                            : super(gameInfo!!.toString(), heading, columnTwoHeading){
+                            : super(gameInfo!!.toString(), heading, columnTwoHeading)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var softwareInformation = softwareInformation
-
-
-                    var gameInfo = gameInfo
-
-
-                    var heading = heading
-
-
-                    var columnTwoHeading = columnTwoHeading
-
-
-                    var ascending = ascending
-
-
-                    var preload = preload
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var softwareInformation = softwareInformation
+    //var gameInfo = gameInfo
+    //var heading = heading
+    //var columnTwoHeading = columnTwoHeading
+    //var ascending = ascending
+    //var preload = preload
 
 
                             //For kotlin this is before the body of the constructor.
@@ -192,18 +168,22 @@ this.setAscending(ascending)
 
 open fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newHighScore = newHighScore
+
+        Updates for KMP build        
+        {
+    //var newHighScore = newHighScore
 RemoteHighScoresSubmissionProcessorFactory.getInstance()!!.process(this, this.abeClientInformation, newHighScore)
 }
 
 
 open fun update(hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashtable = hashtable
+
+        Updates for KMP build        
+        {
+    //var hashtable = hashtable
 this.getList()!!.clear()
 
     var vector: Vector = hashtable.get(RemoteHighScoresData.getInstance()!!.HIGH_SCORES as Object) as Vector
@@ -224,7 +204,11 @@ this.getList()!!.clear()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var highScoreVector: Vector = vector.elementAt(index) as Vector
 
 
@@ -258,7 +242,11 @@ this.getList()!!.add(highScore)
 
 
         while(enumeration.hasMoreElements())
-        {nextElement= enumeration.nextElement()!!
+        
+
+        Updates for KMP build        
+        {
+nextElement= enumeration.nextElement()!!
 logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
 }
 
@@ -270,16 +258,22 @@ logUtil!!.put("NextElement: " +nextElement, this, commonStrings!!.PROCESS)
 
 open fun setAscending(ascending: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ascending = ascending
+
+        Updates for KMP build        
+        {
+    //var ascending = ascending
 this.ascending= ascending
 }
 
 
 open fun getAscending()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -289,7 +283,11 @@ open fun getAscending()
 
 open fun getSoftwareInformation()
         //nullable = true from not(false or (false and true)) = true
-: SoftwareInformation{
+: SoftwareInformation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

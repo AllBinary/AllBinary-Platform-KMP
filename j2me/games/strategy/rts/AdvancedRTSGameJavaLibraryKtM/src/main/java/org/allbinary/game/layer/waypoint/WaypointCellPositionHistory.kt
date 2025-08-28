@@ -40,7 +40,11 @@ open public class WaypointCellPositionHistory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WaypointCellPositionHistory{
+: WaypointCellPositionHistory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,12 +65,12 @@ open fun getInstance()
 
 open fun add(cellPosition: CellPosition, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var cellPosition = cellPosition
 
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var cellPosition = cellPosition
+var layerInterface = layerInterface
 this.positionList!!.add(cellPosition)
 this.layerList!!.add(layerInterface)
 }
@@ -74,19 +78,23 @@ this.layerList!!.add(layerInterface)
 
 open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var list = list
 
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var list = list
+var layerInterface = layerInterface
 
 
 
 
                         for (index in list.size() -1 downTo 0)
 
-        {this.add(list.get(index) as CellPosition, layerInterface)
+        
+
+        Updates for KMP build        
+        {
+this.add(list.get(index) as CellPosition, layerInterface)
 }
 
 }
@@ -94,9 +102,11 @@ open fun add(list: BasicArrayList, layerInterface: AllBinaryLayer)
 
 open fun remove(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cellPosition = cellPosition
+
+        Updates for KMP build        
+        {
+var cellPosition = cellPosition
 
     var index: Int = this.positionList!!.indexOf(cellPosition)!!
 
@@ -115,15 +125,21 @@ this.layerList!!.remove(index)
 
 open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     var index: Int = 0
 
 
         while(index !=  -1)
-        {index= this.layerList!!.indexOf(layerInterface)
+        
+
+        Updates for KMP build        
+        {
+index= this.layerList!!.indexOf(layerInterface)
 
     
                         if(index >= 0)
@@ -141,16 +157,22 @@ this.layerList!!.remove(index)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.positionList!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.positionList!!.clear()
 this.layerList!!.clear()
 }
 
 
 open fun isCellPositionWithDrop(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cellPosition = cellPosition
+        Updates for KMP build        
+        {
+var cellPosition = cellPosition
 
 
 
@@ -161,16 +183,22 @@ open fun isCellPositionWithDrop(cellPosition: CellPosition)
 
 open fun anyCellPositionWithDrop(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var list = list
+        Updates for KMP build        
+        {
+var list = list
 
 
 
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.isCellPositionWithDrop(list.get(index) as CellPosition))
                         
@@ -195,9 +223,11 @@ open fun anyCellPositionWithDrop(list: BasicArrayList)
 
 open fun getLayerInterface(cellPosition: CellPosition)
         //nullable = true from not(false or (false and false)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
 
-                    var cellPosition = cellPosition
+        Updates for KMP build        
+        {
+var cellPosition = cellPosition
 
     var index: Int = this.positionList!!.indexOf(cellPosition)!!
 

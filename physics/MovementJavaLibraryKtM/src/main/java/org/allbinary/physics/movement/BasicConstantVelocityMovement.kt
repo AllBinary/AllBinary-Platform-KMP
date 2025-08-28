@@ -42,31 +42,33 @@ open public class BasicConstantVelocityMovement : Movement
     private var speedBasicDecimal: BasicDecimal = BasicDecimal.ZERO_BIGDECIMAL
 
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
-public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties){
+public constructor        (basicDecimal: BasicDecimal, velocityProperties: BasicVelocityProperties)
 
-                    var basicDecimal = basicDecimal
-
-
-                    var velocityProperties = velocityProperties
+        Updates for KMP build        
+        {
+var basicDecimal = basicDecimal
+var velocityProperties = velocityProperties
 this.setSpeedBasicDecimal(basicDecimal)
 this.velocityProperties= velocityProperties
 }
 
-public constructor        (){this.setSpeedBasicDecimal(BasicDecimal.ZERO_BIGDECIMAL)
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setSpeedBasicDecimal(BasicDecimal.ZERO_BIGDECIMAL)
 this.velocityProperties= BasicVelocityProperties()
 }
 
 override fun init(speedBasicDecimal: BasicDecimal, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var speedBasicDecimal = speedBasicDecimal
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+var speedBasicDecimal = speedBasicDecimal
+var angle = angle
+var otherAngle = otherAngle
 this.speedBasicDecimal= speedBasicDecimal
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
@@ -77,18 +79,14 @@ this.velocityProperties!!.setVelocity(speedBasicDecimal, angleFactory!!.getInsta
 
 open fun moveOutsideRadius(layer: AllBinaryLayer, radius: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var radius = radius
-
-
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+var layer = layer
+var radius = radius
+var angle = angle
+var otherAngle = otherAngle
 
     var scaleFactorValue: Int = this.speedBasicDecimal!!.getScaledFactorValue()!!
 
@@ -108,15 +106,21 @@ layer.move(xVector, yVector, zVector)
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layer = layer
+
+        Updates for KMP build        
+        {
+var layer = layer
 layer.move(this.velocityProperties!!.getVelocityXBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityYBasicDecimalP()!!.getScaled(), this.velocityProperties!!.getVelocityZBasicDecimalP()!!.getScaled())
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -125,12 +129,20 @@ override fun toString()
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-{this.velocityProperties!!.zero()
+
+
+        Updates for KMP build        
+        {
+this.velocityProperties!!.zero()
 }
 
 override fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
-: BasicVelocityProperties{
+: BasicVelocityProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -140,25 +152,33 @@ override fun getVelocityProperties()
 
 open fun setVelocityProperties(velocityProperties: BasicVelocityProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var velocityProperties = velocityProperties
+
+        Updates for KMP build        
+        {
+var velocityProperties = velocityProperties
 this.velocityProperties= velocityProperties
 }
 
 
 open fun setSpeedBasicDecimal(speedBasicDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var speedBasicDecimal = speedBasicDecimal
+
+        Updates for KMP build        
+        {
+var speedBasicDecimal = speedBasicDecimal
 this.speedBasicDecimal= speedBasicDecimal
 }
 
 
 open fun getSpeedBasicDecimal()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+: BasicDecimal
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

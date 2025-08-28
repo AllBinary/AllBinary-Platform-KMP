@@ -36,12 +36,12 @@ open public class TitleProgressBarSetProgressRunnable : ProgressRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)                        
 
-                            : super(midletActivity, progressCanvas){
+                            : super(midletActivity, progressCanvas)
 
-                    var midletActivity = midletActivity
-
-
-                    var progressCanvas = progressCanvas
+        Updates for KMP build        
+        {
+var midletActivity = midletActivity
+var progressCanvas = progressCanvas
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,11 +50,19 @@ public constructor        (midletActivity: Activity, progressCanvas: ProgressCan
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.midletActivity!!.onSetProgress(this.progressCanvas!!.getValue().toInt(), this.progressCanvas!!.getText())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)

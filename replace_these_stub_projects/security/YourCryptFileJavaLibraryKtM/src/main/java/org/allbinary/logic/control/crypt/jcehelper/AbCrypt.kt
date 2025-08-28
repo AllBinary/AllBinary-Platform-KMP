@@ -32,20 +32,22 @@ open public class AbCrypt
         
 public constructor        (algorithm: String, key: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var algorithm = algorithm
-
-
-                    var key = key
+var algorithm = algorithm
+var key = key
 }
 
 
 open fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
 
 
@@ -56,9 +58,11 @@ open fun encrypt(array: ByteArray)
 
 open fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
 
 
@@ -69,9 +73,11 @@ open fun decrypt(array: ByteArray)
 
 open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
 
 

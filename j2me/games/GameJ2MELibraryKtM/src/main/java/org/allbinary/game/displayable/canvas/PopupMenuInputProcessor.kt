@@ -51,18 +51,14 @@ open public class PopupMenuInputProcessor : BasicMenuInputProcessor {
     private var rectangle: Rectangle
 public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCanvas: MyCanvas, rectangle: Rectangle)                        
 
-                            : super(gameKeyEventList, playerInputId, gameCanvas){
+                            : super(gameKeyEventList, playerInputId, gameCanvas)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var playerInputId = playerInputId
-
-
-                    var gameCanvas = gameCanvas
-
-
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+    //var gameKeyEventList = gameKeyEventList
+    //var playerInputId = playerInputId
+    //var gameCanvas = gameCanvas
+    //var rectangle = rectangle
 
 
                             //For kotlin this is before the body of the constructor.
@@ -73,9 +69,11 @@ this.rectangle= rectangle
 
 open fun init(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rectangle = rectangle
+
+        Updates for KMP build        
+        {
+    //var rectangle = rectangle
 this.rectangle= rectangle
 }
 
@@ -84,9 +82,11 @@ this.rectangle= rectangle
             
 open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var key = key
+        Updates for KMP build        
+        {
+    //var key = key
 
     
                         if(key == Canvas.KEY_STAR)
@@ -115,7 +115,11 @@ gameCanvas!!.toggleMenu()
                 @Throws(Exception::class)
             override fun processInput()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     var motionInputsIndex: Int = this.processMotionInputs()!!
@@ -138,7 +142,11 @@ gameCanvas!!.toggleMenu()
 
                         for (index in 0 until size)
 
-        {gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
+        
+
+        Updates for KMP build        
+        {
+gameKeyEvent= list.objectArray[index]!! as GameKeyEvent
 
     
                         if(gameKeyEvent != 
@@ -187,7 +195,11 @@ this.clear()
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, GameInputStrings.getInstance()!!.PROCESS_INPUT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, GameInputStrings.getInstance()!!.PROCESS_INPUT, e)
 
 
 
@@ -202,7 +214,11 @@ this.clear()
             
 open fun processMotionInputs()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var lastIndex: Int = this.motionGestureEventList!!.size() -1
 
 
@@ -230,9 +246,11 @@ motionGestureEventList!!.clear()
             
 open fun processMotionInput(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+    //var motionGestureEvent = motionGestureEvent
 
     
                         if(motionGestureEvent == 

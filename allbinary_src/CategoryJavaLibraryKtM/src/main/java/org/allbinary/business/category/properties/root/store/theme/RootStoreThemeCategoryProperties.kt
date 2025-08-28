@@ -43,9 +43,11 @@ open public class RootStoreThemeCategoryProperties : RootStoreCategoryProperties
         
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -54,12 +56,12 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 public constructor        (transformInfoInterface: TransformInfoInterface, abPath: AbPath)                        
 
-                            : super(transformInfoInterface, abPath){
+                            : super(transformInfoInterface, abPath)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var abPath = abPath
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var abPath = abPath
 
 
                             //For kotlin this is before the body of the constructor.
@@ -68,12 +70,12 @@ public constructor        (transformInfoInterface: TransformInfoInterface, abPat
 
 public constructor        (transformInfoInterface: TransformInfoInterface, node: Node)                        
 
-                            : super(transformInfoInterface, node){
+                            : super(transformInfoInterface, node)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,12 +84,12 @@ public constructor        (transformInfoInterface: TransformInfoInterface, node:
 
 public constructor        (transformInfoInterface: TransformInfoInterface, categoryPropertiesHashMap: HashMap<Any, Any>)                        
 
-                            : super(transformInfoInterface, categoryPropertiesHashMap){
+                            : super(transformInfoInterface, categoryPropertiesHashMap)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var categoryPropertiesHashMap = categoryPropertiesHashMap
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var categoryPropertiesHashMap = categoryPropertiesHashMap
 
 
                             //For kotlin this is before the body of the constructor.
@@ -99,7 +101,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface, categ
             
 open fun initPath()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var transformInfoHttpStoreInterface: TransformInfoHttpStoreInterface = this.transformInfoInterface as TransformInfoHttpStoreInterface
 
 

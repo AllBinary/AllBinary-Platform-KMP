@@ -50,9 +50,11 @@ open public class Sounds
     private val soundsFactoryInterface: SoundsFactoryInterface
 public constructor        (soundsFactoryInterface: SoundsFactoryInterface)
             : super()
-        {
+        
 
-                    var soundsFactoryInterface = soundsFactoryInterface
+        Updates for KMP build        
+        {
+var soundsFactoryInterface = soundsFactoryInterface
 this.soundsFactoryInterface= soundsFactoryInterface
 }
 
@@ -61,7 +63,11 @@ this.soundsFactoryInterface= soundsFactoryInterface
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
@@ -90,7 +96,11 @@ soundsFactoryInterface!!.init()
 
                         for (i in 0 until soundInterfaceArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var soundInterface: Sound = soundInterfaceArray[i]!!
 
 
@@ -125,7 +135,11 @@ logUtil!!.put(commonStrings!!.END, this, commonStrings!!.INIT)
             
 open fun stopAll()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.STOP_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
 
@@ -141,7 +155,11 @@ open fun stopAll()
 
                         for (index in 0 until soundInterfaceArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(soundInterfaceArray[index] != 
                                     null
@@ -173,7 +191,11 @@ progressCanvas!!.addPortion(100, this.soundStrings!!.STOPPING_SOUND, index)
             
 open fun closeAll()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, this.soundStrings!!.CLOSE_ALL)
 
     var soundInterfaceArray: Array<Sound?> = soundsFactoryInterface!!.getSoundInterfaceArray()!!
 
@@ -189,7 +211,11 @@ open fun closeAll()
 
                         for (index in 0 until soundInterfaceArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(soundInterfaceArray[index] != 
                                     null

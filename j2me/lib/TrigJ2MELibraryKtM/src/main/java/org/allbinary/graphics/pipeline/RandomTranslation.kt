@@ -39,12 +39,12 @@ open public class RandomTranslation
             
 open fun getInstance(vector: BasicArrayList, howMuch: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
+: BasicArrayList
 
-                    var vector = vector
-
-
-                    var howMuch = howMuch
+        Updates for KMP build        
+        {
+var vector = vector
+var howMuch = howMuch
 
     var myRandomFactory: MyRandomFactory = MyRandomFactory.getInstance()!!
 

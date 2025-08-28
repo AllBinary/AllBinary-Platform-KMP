@@ -37,7 +37,11 @@ open public class LicenseInterfaceSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeLicenseInterface{
+: AbeLicenseInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,9 +51,11 @@ open fun getInstance()
 
 open fun init(licenseInterface: AbeLicenseInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var licenseInterface = licenseInterface
+
+        Updates for KMP build        
+        {
+var licenseInterface = licenseInterface
 
     
                         if(licenseInterface != 

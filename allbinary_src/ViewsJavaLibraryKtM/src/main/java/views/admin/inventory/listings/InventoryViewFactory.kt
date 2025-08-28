@@ -42,9 +42,11 @@ open public class InventoryViewFactory
             
 open fun getInstance(searchRequest: SearchRequest)
         //nullable =  from not(true or (false and false)) = 
-: InventoryViewSearchInterface{
+: InventoryViewSearchInterface
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -56,7 +58,11 @@ open fun getInstance(searchRequest: SearchRequest)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return InventorySearch(searchRequest)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -81,7 +87,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, "InventoryViewFactory", "getInstance(Se
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

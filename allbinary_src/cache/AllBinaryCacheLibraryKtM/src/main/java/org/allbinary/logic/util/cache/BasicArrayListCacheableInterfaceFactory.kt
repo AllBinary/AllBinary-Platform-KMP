@@ -41,9 +41,11 @@ open public class BasicArrayListCacheableInterfaceFactory
             
 open fun getInstance(key: Any)
         //nullable =  from not(true or (false and false)) = 
-: CacheableInterface{
+: CacheableInterface
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
 
 

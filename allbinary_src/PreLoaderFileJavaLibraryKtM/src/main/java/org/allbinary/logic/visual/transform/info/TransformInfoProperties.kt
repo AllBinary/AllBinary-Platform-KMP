@@ -44,24 +44,16 @@ open public class TransformInfoProperties
     private var templateFileName: String
 public constructor        (name: String, label: String, description: String, objectFileName: String, objectConfigFileName: String, templateFileName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var label = label
-
-
-                    var description = description
-
-
-                    var objectFileName = objectFileName
-
-
-                    var objectConfigFileName = objectConfigFileName
-
-
-                    var templateFileName = templateFileName
+var name = name
+var label = label
+var description = description
+var objectFileName = objectFileName
+var objectConfigFileName = objectConfigFileName
+var templateFileName = templateFileName
 this.name= name
 this.label= label
 this.description= description
@@ -73,52 +65,66 @@ this.objectConfigFileName= objectConfigFileName
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.name= value
 }
 
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.description= value
 }
 
 
 open fun setViewFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.objectFileName= value
 }
 
 
 open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.templateFileName= value
 }
 
 
 open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.objectConfigFileName= value
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -128,7 +134,11 @@ open fun getName()
 
 open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -138,7 +148,11 @@ open fun getLabel()
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -148,7 +162,11 @@ open fun getDescription()
 
 open fun getViewFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -158,7 +176,11 @@ open fun getViewFile()
 
 open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -168,7 +190,11 @@ open fun getTemplateFile()
 
 open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

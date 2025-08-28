@@ -46,7 +46,11 @@ open public class TouchButtonLocationHelper
     private var rowsRemainderHalf: Int
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var buttonSize: Int = CommonButtons.getInstance()!!.STANDARD_BUTTON_SIZE
 
 
@@ -63,7 +67,11 @@ this.rowsRemainderHalf= (this.rowsRemainder shr 1)
 
 open fun getTotalColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +81,11 @@ open fun getTotalColumns()
 
 open fun getTotalRows()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,7 +95,11 @@ open fun getTotalRows()
 
 open fun getColumnsRemainder()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +109,11 @@ open fun getColumnsRemainder()
 
 open fun getRowsRemainder()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +123,11 @@ open fun getRowsRemainder()
 
 open fun getColumnsRemainderHalf()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,7 +137,11 @@ open fun getColumnsRemainderHalf()
 
 open fun getRowsRemainderHalf()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,7 +150,11 @@ open fun getRowsRemainderHalf()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("totalColumns: ")

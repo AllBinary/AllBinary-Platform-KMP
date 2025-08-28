@@ -32,9 +32,11 @@ open public class Special2GameInputInterfaceProcessor : SpecialGameInputInterfac
         
 public constructor        (collidableDestroyableDamageableLayer: SpecialGameInputInterface)                        
 
-                            : super(collidableDestroyableDamageableLayer){
+                            : super(collidableDestroyableDamageableLayer)
 
-                    var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        Updates for KMP build        
+        {
+var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -45,12 +47,12 @@ public constructor        (collidableDestroyableDamageableLayer: SpecialGameInpu
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+var allbinaryLayerManager = allbinaryLayerManager
+var gameKeyEvent = gameKeyEvent
 this.specialGameInputInterface!!.special2(allbinaryLayerManager, gameKeyEvent)
 }
 

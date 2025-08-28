@@ -35,7 +35,11 @@ open public class TerrainEvent : AllBinaryEventObject {
     private var basicTerrainInfo: BasicTerrainInfo = BasicTerrainInfo.NULL_BASIC_TERRAIN_INFO
 public constructor        ()                        
 
-                            : super(NullUtil.getInstance()!!.NULL_OBJECT){
+                            : super(NullUtil.getInstance()!!.NULL_OBJECT)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -43,9 +47,11 @@ public constructor        ()
 
 public constructor        (basicTerrainInfo: BasicTerrainInfo)                        
 
-                            : super(basicTerrainInfo){
+                            : super(basicTerrainInfo)
 
-                    var basicTerrainInfo = basicTerrainInfo
+        Updates for KMP build        
+        {
+    //var basicTerrainInfo = basicTerrainInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,7 +61,11 @@ this.setBasicTerrainInfo(basicTerrainInfo)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("TerrainEvent: \n")
@@ -71,7 +81,11 @@ stringBuffer!!.append(this.basicTerrainInfo!!.toString())
 
 open fun getBasicTerrainInfo()
         //nullable = true from not(false or (false and true)) = true
-: BasicTerrainInfo{
+: BasicTerrainInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,18 +95,22 @@ open fun getBasicTerrainInfo()
 
 open fun setBasicTerrainInfo(basicTerrainInfo: BasicTerrainInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicTerrainInfo = basicTerrainInfo
+
+        Updates for KMP build        
+        {
+var basicTerrainInfo = basicTerrainInfo
 this.basicTerrainInfo= basicTerrainInfo
 }
 
 
 open fun setBasicTerrainInfoForCircularStaticPool(basicTerrainInfo: BasicTerrainInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicTerrainInfo = basicTerrainInfo
+
+        Updates for KMP build        
+        {
+var basicTerrainInfo = basicTerrainInfo
 this.basicTerrainInfo= basicTerrainInfo
 }
 

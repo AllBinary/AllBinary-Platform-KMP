@@ -47,7 +47,11 @@ open public class PixelDeltaFactory
                 null
             
 
-                init{
+                init
+
+        Updates for KMP build        
+        {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
@@ -65,7 +69,11 @@ open public class PixelDeltaFactory
 cacheInterface= CacheInterfaceFactory.getInstance(CacheTypeFactory.getInstance()!!.CACHE, CachePolicyFactory.getInstance()!!.THIRTY_MINUTES_TEN_THOUSAND_MAX) as AutomaticCacheInterface
 logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, instance, STATIC_BLOCK, e)
 }
 
 }
@@ -74,18 +82,14 @@ logUtil!!.put(commonStrings!!.END, instance, STATIC_BLOCK)
             
 open fun getInstance(x: Int, y: Int, rgb1: Int, rgb2: Int)
         //nullable =  from not(true or (false and false)) = 
-: PixelDelta{
+: PixelDelta
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var rgb1 = rgb1
-
-
-                    var rgb2 = rgb2
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var rgb1 = rgb1
+var rgb2 = rgb2
 
     var point: GPoint = PointFactory.getInstance()!!.getInstance(x, y)!!
 
@@ -119,7 +123,11 @@ open fun getInstance(x: Int, y: Int, rgb1: Int, rgb2: Int)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

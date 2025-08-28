@@ -46,17 +46,21 @@ open public class Basket
     private var items: HashMap<Any, Any> = HashMap<Any, Any>()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun addItem(id: String, num: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var id = id
 
 
-                    var num = num
+        Updates for KMP build        
+        {
+var id = id
+var num = num
 
     
                         if(items.containsKey(id))
@@ -88,21 +92,23 @@ items.put(id, newNumInt!!.toString())
 
 open fun removeItem(id: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var id = id
+
+        Updates for KMP build        
+        {
+var id = id
 items.remove(id)
 }
 
 
 open fun adjustItem(id: String, num: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var id = id
 
 
-                    var num = num
+        Updates for KMP build        
+        {
+var id = id
+var num = num
 
     
                         if(Integer.valueOf(num)!!.toInt() > 0)
@@ -122,7 +128,11 @@ open fun adjustItem(id: String, num: String)
 
 open fun getTotalWeight()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var itemsAndNumberInBasket: HashMap<Any, Any> = getItems()!!
 
 
@@ -155,7 +165,11 @@ open fun getTotalWeight()
 
                         for (index in 0 until size)
 
-        {product= .toCharArray()
+        
+
+        Updates for KMP build        
+        {
+product= .toCharArray()
 weightFloat= Float(InventoryEntity().
                             getWeight(product))
 weightFloat= Float(getNumberOf(product)!!.toFloat() *weightFloat!!.toFloat())
@@ -175,7 +189,11 @@ totalWeight!!.add(weightFloat!!.toString())
 
 open fun getNumberOfItems()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -185,7 +203,11 @@ open fun getNumberOfItems()
 
 open fun getIds()
         //nullable = true from not(false or (false and true)) = true
-: Set{
+: Set
+
+        Updates for KMP build        
+        {
+
     var set: Set = items.keySet()!!
 
 
@@ -198,7 +220,11 @@ open fun getIds()
 
 open fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -208,9 +234,11 @@ open fun getItems()
 
 open fun getNumberOf(product: String)
         //nullable = true from not(false or (false and false)) = true
-: Integer{
+: Integer
 
-                    var product = product
+        Updates for KMP build        
+        {
+var product = product
 
     var numStr: String = items.get(product) as String
 
@@ -226,7 +254,11 @@ open fun getNumberOf(product: String)
             
 open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
     var itemsAndNumberInBasket: HashMap<Any, Any> = getItems()!!
 
 
@@ -259,7 +291,11 @@ open fun getSubTotal()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var product: String = .toCharArray()
 
 

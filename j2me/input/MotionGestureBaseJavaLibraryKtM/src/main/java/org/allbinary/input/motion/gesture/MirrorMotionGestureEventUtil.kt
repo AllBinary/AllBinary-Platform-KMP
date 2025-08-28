@@ -43,7 +43,11 @@ open public class MirrorMotionGestureEventUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MirrorMotionGestureEventUtil{
+: MirrorMotionGestureEventUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,7 +60,11 @@ open fun getInstance()
     private val motionEventCircularPool: MotionEventCircularPool
 private constructor        ()
             : super()
-        {this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VALUE)
+        
+
+        Updates for KMP build        
+        {
+this.motionEventCircularPool= MotionEventCircularPool.getInstance(Integer.MAX_VALUE)
 }
 
 
@@ -64,12 +72,12 @@ private constructor        ()
             
 open fun mirrorVerticle(motionGestureEvent: MotionGestureEvent, halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-: MotionGestureEvent{
+: MotionGestureEvent
 
-                    var motionGestureEvent = motionGestureEvent
-
-
-                    var halfWidth = halfWidth
+        Updates for KMP build        
+        {
+var motionGestureEvent = motionGestureEvent
+var halfWidth = halfWidth
 
     var event: MotionGestureEvent = this.motionEventCircularPool!!.getInstance(motionGestureEvent!!.getMotionGesture())!!
 
@@ -100,12 +108,12 @@ event.setCurrentPoint(mirroredCurrentPoint)
 
 open fun getNewX(x: Int, halfWidth: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var x = x
-
-
-                    var halfWidth = halfWidth
+        Updates for KMP build        
+        {
+var x = x
+var halfWidth = halfWidth
 
     var newX: Int= 0
 

@@ -46,19 +46,23 @@ open public class CustomLoaderHelperFactory
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(LicensingException::class)
             
 open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+    //var hashMap = hashMap
+    //var pageContext = pageContext
 
     var abeClientInformation: AbeClientInformationInterface = ServiceClientInformationInterfaceFactory.getInstance()!!
 
@@ -74,9 +78,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>, pageContext: PageContext)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
 
 

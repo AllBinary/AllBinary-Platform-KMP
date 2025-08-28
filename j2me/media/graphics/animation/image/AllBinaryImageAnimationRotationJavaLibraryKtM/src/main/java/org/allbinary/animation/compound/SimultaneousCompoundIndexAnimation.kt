@@ -37,12 +37,12 @@ open public class SimultaneousCompoundIndexAnimation : IndexedAnimation {
     private var animationInterfaceArray: Array<IndexedAnimation?>
 public constructor        (animationInterfaceArray: Array<IndexedAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationInterfaceArray = animationInterfaceArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -53,16 +53,22 @@ this.animationInterfaceArray= animationInterfaceArray
 
 open fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frameIndex = frameIndex
+
+        Updates for KMP build        
+        {
+    //var frameIndex = frameIndex
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.setFrame(frameIndex)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
 }
@@ -70,7 +76,11 @@ open fun setFrame(frameIndex: Int)
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +92,11 @@ open fun getFrame()
             
 open fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +106,11 @@ open fun getAnimationSize()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,13 +120,21 @@ open fun getSize()
 
 open fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.previousFrame()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.previousFrame()
 }
 
 }
@@ -118,13 +144,21 @@ open fun previousFrame()
             
 open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.nextFrame()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.nextFrame()
 }
 
 }
@@ -132,15 +166,21 @@ open fun nextFrame()
 
 open fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 }
 
 
 open fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -150,22 +190,24 @@ open fun getSequence()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.paint(graphics, x, y)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
 
 }
@@ -173,25 +215,25 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
 
 }
@@ -201,16 +243,22 @@ open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
             
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.set(gl)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.set(gl)
 }
 
 }
@@ -218,7 +266,11 @@ open fun set(gl: GL)
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IndexedAnimation?>{
+: Array<IndexedAnimation?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -228,9 +280,11 @@ open fun getAnimationInterfaceArray()
 
 open fun setAnimationInterfaceArray(animationInterfaceArray: Array<IndexedAnimation?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var animationInterfaceArray = animationInterfaceArray
+
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
 this.animationInterfaceArray= animationInterfaceArray
 }
 

@@ -38,9 +38,11 @@ open public class GameLayerUtil
             
 open fun isOnScreen(layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layer = layer
+        Updates for KMP build        
+        {
+var layer = layer
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -57,30 +59,18 @@ open fun isOnScreen(layer: AllBinaryLayer)
 
 open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectX1 = rectX1
-
-
-                    var rectY1 = rectY1
-
-
-                    var rectX2 = rectX2
-
-
-                    var rectY2 = rectY2
-
-
-                    var rect2X1 = rect2X1
-
-
-                    var rect2Y1 = rect2Y1
-
-
-                    var rect2X2 = rect2X2
-
-
-                    var rect2Y2 = rect2Y2
+        Updates for KMP build        
+        {
+var rectX1 = rectX1
+var rectY1 = rectY1
+var rectX2 = rectX2
+var rectY2 = rectY2
+var rect2X1 = rect2X1
+var rect2Y1 = rect2Y1
+var rect2X2 = rect2X2
+var rect2Y2 = rect2Y2
 
     
                         if(rectX1 > rect2X1 && rectX2 < rect2X2 && rectY1 > rect2Y1 && rectY2 < rect2Y2)
@@ -109,7 +99,11 @@ open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: I
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

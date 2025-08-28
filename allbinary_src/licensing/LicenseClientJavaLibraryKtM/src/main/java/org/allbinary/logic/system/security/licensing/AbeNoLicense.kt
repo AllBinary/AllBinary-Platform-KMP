@@ -40,7 +40,11 @@ open public class AbeNoLicense
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbeNoLicense{
+: AbeNoLicense
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,12 +57,20 @@ open fun getInstance()
     var serverVector: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun hasKey()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,9 +80,11 @@ open fun hasKey()
 
 open fun getKey(keyName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var keyName = keyName
+        Updates for KMP build        
+        {
+var keyName = keyName
 
 
 
@@ -81,7 +95,11 @@ open fun getKey(keyName: String)
 
 open fun getLicenseId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +109,11 @@ open fun getLicenseId()
 
 open fun getSpecial()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +123,11 @@ open fun getSpecial()
 
 open fun getServers()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -111,7 +137,11 @@ open fun getServers()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,7 +151,11 @@ open fun isValid()
 
 open fun getLicenseType()
         //nullable = true from not(false or (false and true)) = true
-: LicenseType{
+: LicenseType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

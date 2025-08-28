@@ -35,19 +35,23 @@ open public class ProgressRunnable : NullRunnable {
     val midletActivity: SimpleProgressActivityInterface
 
     val progressCanvas: ProgressCanvas
-public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas){
+public constructor        (midletActivity: Activity, progressCanvas: ProgressCanvas)
 
-                    var midletActivity = midletActivity
-
-
-                    var progressCanvas = progressCanvas
+        Updates for KMP build        
+        {
+    //var midletActivity = midletActivity
+    //var progressCanvas = progressCanvas
 this.midletActivity= midletActivity as SimpleProgressActivityInterface
 this.progressCanvas= progressCanvas
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

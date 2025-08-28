@@ -40,21 +40,15 @@ open public class HtmlLengthInput : HtmlValueInput {
     private var size: String
 public constructor        (before: String, type: String, name: String, value: String, after: String)                        
 
-                            : super(before, type, name, value, after){
+                            : super(before, type, name, value, after)
 
-                    var before = before
-
-
-                    var type = type
-
-
-                    var name = name
-
-
-                    var value = value
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var type = type
+var name = name
+var value = value
+var after = after
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,9 +58,11 @@ public constructor        (before: String, type: String, name: String, value: St
 
 open fun setMaxLength(length: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var length = length
+
+        Updates for KMP build        
+        {
+var length = length
 this.length= length.toString().toCharArray().concatToString()
                                 
 addAttribute(MAXLENGTH, this.length)
@@ -75,9 +71,11 @@ addAttribute(MAXLENGTH, this.length)
 
 open fun setSize(size: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var size = size
+
+        Updates for KMP build        
+        {
+var size = size
 this.size= size.toString().toCharArray().concatToString()
                                 
 addAttribute(MAXLENGTH, this.size)

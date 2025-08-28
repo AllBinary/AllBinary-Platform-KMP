@@ -43,13 +43,21 @@ open public class LogConfigTypes
 
     var LOGGING: BasicArrayList = BasicArrayList()
 
-                init{LogConfigTypes.init()
+                init
+
+        Updates for KMP build        
+        {
+LogConfigTypes.init()
 }
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             PreLogUtil.put("Initialize LogconfigTypes", "LogConfigTypes", "init()")
 LogConfigTypeFactory.getInstance()
@@ -64,7 +72,11 @@ PreLogUtil.put("Number Of Log Config Type Names: " +logConfigTypeVector!!.size()
 LogConfigTypes.LOGGING.addAll(logConfigTypeVector)
 LogConfigTypes.LOGGING.add(LogConfigTypeFactory.getInstance()!!.NETBEANS_MODULE)
 } catch(e: Exception)
-            {PreLogUtil.put("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Unable to initialize LogConfigTypes", "LogConfigTypes", "init()", e)
 }
 
 }
@@ -74,9 +86,11 @@ LogConfigTypes.LOGGING.add(LogConfigTypeFactory.getInstance()!!.NETBEANS_MODULE)
             
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: LogConfigType{
+: LogConfigType
 
-                    var node = node
+        Updates for KMP build        
+        {
+    //var node = node
 
     var nameValueNode: Node = DomSearchHelper.getNode(LogConfigTypeData.getInstance()!!.NAME, node.getChildNodes())!!
 
@@ -114,7 +128,11 @@ open fun getInstance(node: Node)
 
                         for (index in 0 until size)
 
-        {logConfigType= availableLogConfigTypes!!.get(index) as LogConfigType
+        
+
+        Updates for KMP build        
+        {
+logConfigType= availableLogConfigTypes!!.get(index) as LogConfigType
 
     
                         if(logConfigType!!.getName()!!.compareTo(name) == 0)
@@ -140,7 +158,11 @@ open fun getInstance(node: Node)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

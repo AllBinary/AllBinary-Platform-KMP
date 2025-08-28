@@ -51,12 +51,12 @@ open public class BuildingAdvancedRTSFormInput : BuildingRTSFormInput {
     val atLeastOneHouseGameNotificationEvent: GameNotificationEvent
 public constructor        (groupInterface: Array<Group?>, isUnitProducer: Boolean)                        
 
-                            : super(groupInterface, isUnitProducer){
+                            : super(groupInterface, isUnitProducer)
 
-                    var groupInterface = groupInterface
-
-
-                    var isUnitProducer = isUnitProducer
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
+    //var isUnitProducer = isUnitProducer
 
 
                             //For kotlin this is before the body of the constructor.
@@ -72,9 +72,11 @@ this.atLeastOneHouseGameNotificationEvent= GameNotificationEvent(this, "Build At
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
@@ -88,7 +90,11 @@ this.atLeastOneHouseGameNotificationEvent!!.setBasicColorP(geographicMapInterfac
 
 open fun isPositionBlocked()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(DropCellPositionHistory.getInstance()!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition()) || WaypointCellPositionHistory.getInstance()!!.isCellPositionWithDrop(this.getSelectedGeographicCellPosition()))
                         
@@ -117,12 +123,12 @@ open fun isPositionBlocked()
             
 open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+var layerInterface = layerInterface
 
     var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface = rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
 
@@ -170,15 +176,13 @@ open fun isBuildAttemptValid(rtsPlayerLayerInterface: RTSPlayerLayerInterface, l
             
 open fun add(rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 
 
-                    var layerManager = layerManager
-
-
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+var layerManager = layerManager
+var layerInterface = layerInterface
 BUILD_BUILDING_RTS_LAYER_EVENT.setRtsLayer(layerInterface)
 BuildingEventHandler.getInstance()!!.fireEvent(BUILD_BUILDING_RTS_LAYER_EVENT)
 

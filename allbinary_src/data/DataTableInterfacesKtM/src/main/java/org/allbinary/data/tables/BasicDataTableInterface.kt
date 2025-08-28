@@ -32,9 +32,15 @@ open fun createTable()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 }
                 

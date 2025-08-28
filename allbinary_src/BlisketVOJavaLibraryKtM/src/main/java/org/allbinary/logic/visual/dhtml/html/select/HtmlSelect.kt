@@ -64,18 +64,14 @@ open public class HtmlSelect : HtmlTag {
     private var multiple: String = "multiple"
 
     private var isMultipleSelect: Boolean = false
-public constructor        (before: String, size: String, name: String, after: String){
+public constructor        (before: String, size: String, name: String, after: String)
 
-                    var before = before
-
-
-                    var size = size
-
-
-                    var name = name
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var size = size
+var name = name
+var after = after
 this.before= before
 this.size= size
 this.name= name
@@ -86,18 +82,22 @@ this.options= Vector()
 
 open fun addOption(key: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var key = key
+
+        Updates for KMP build        
+        {
+var key = key
 this.options.add(key)
 }
 
 
 open fun addOptions(fileName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fileName = fileName
+
+        Updates for KMP build        
+        {
+var fileName = fileName
 
         try {
             
@@ -105,14 +105,22 @@ open fun addOptions(fileName: String)
 
 
         while(lineReader!!.hasNext())
+        
+
+        Updates for KMP build        
         {
+
     var option: String = lineReader!!.next()!!
 
 this.addOption(option)
 }
 
 } catch(e: Exception)
-            {this.addOption("Error")
+            
+
+        Updates for KMP build        
+        {
+this.addOption("Error")
 }
 
 }
@@ -120,16 +128,22 @@ this.addOption(option)
 
 open fun setSelected(selected: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selected = selected
+
+        Updates for KMP build        
+        {
+var selected = selected
 this.selected= selected
 }
 
 
 open fun isMultiple()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -139,16 +153,22 @@ open fun isMultiple()
 
 open fun setMultiple(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.isMultipleSelect= value
 }
 
 
 open fun getOptions()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
@@ -167,7 +187,11 @@ open fun getOptions()
 
                         for (i in 0 until optionsSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: String = optionsArray[i]!! as String
 
 
@@ -195,7 +219,11 @@ result += ENDOPTION
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
 
@@ -222,7 +250,11 @@ result += "\" "
 
                         for (i in 0 until attributeSize)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = attributeKeys[i]!! as String
 
 

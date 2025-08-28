@@ -43,7 +43,11 @@ open public class BaseDropCellPositionGenerator
         
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,12 +59,12 @@ open fun getName()
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+var allBinaryGameLayerManager = allBinaryGameLayerManager
+var geographicMapInterface = geographicMapInterface
 }
 
 
@@ -68,9 +72,11 @@ open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographic
             
 open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+var geographicMapCellPosition = geographicMapCellPosition
 
 
 
@@ -83,9 +89,11 @@ open fun isDropAllowedAt(geographicMapCellPosition: GeographicMapCellPosition)
             
 open fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 }
 
 

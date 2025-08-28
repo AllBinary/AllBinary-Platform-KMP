@@ -38,7 +38,11 @@ open public class OpenGLImageCacheFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCache{
+: ImageCache
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
         }

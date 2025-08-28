@@ -53,21 +53,33 @@ open public class BasicVelocityProperties
     private val axisMathVectorUtil: AxisMathVectorUtil = AxisMathVectorUtil.getInstance()!!
 public constructor        ()
             : super()
-        {this.velocityXBasicDecimal= BasicDecimal()
+        
+
+        Updates for KMP build        
+        {
+this.velocityXBasicDecimal= BasicDecimal()
 this.velocityYBasicDecimal= BasicDecimal()
 this.velocityZBasicDecimal= BasicDecimal()
 }
 
 override fun zero()
         //nullable = true from not(false or (false and true)) = true
-{this.velocityXBasicDecimal!!.set(0)
+
+
+        Updates for KMP build        
+        {
+this.velocityXBasicDecimal!!.set(0)
 this.velocityYBasicDecimal!!.set(0)
 this.velocityZBasicDecimal!!.set(0)
 }
 
 override fun getVelocityXBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+: BasicDecimal
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,7 +88,11 @@ override fun getVelocityXBasicDecimalP()
 
 override fun getVelocityYBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+: BasicDecimal
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,7 +102,11 @@ override fun getVelocityYBasicDecimalP()
 
 open fun getVelocityZBasicDecimalP()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+: BasicDecimal
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,15 +117,13 @@ open fun getVelocityZBasicDecimalP()
     val directionUtil: DirectionUtil = DirectionUtil.getInstance()!!
 override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitudeBasicDecimal = magnitudeBasicDecimal
 
 
-                    var direction = direction
-
-
-                    var otherDirection = otherDirection
+        Updates for KMP build        
+        {
+    //var magnitudeBasicDecimal = magnitudeBasicDecimal
+    //var direction = direction
+    //var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
 
@@ -117,15 +135,13 @@ this.setVelocity(magnitudeBasicDecimal, angle, otherAngle)
 
 override fun setVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var direction = direction
-
-
-                    var otherDirection = otherDirection
+        Updates for KMP build        
+        {
+    //var magnitude = magnitude
+    //var direction = direction
+    //var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
 
@@ -137,15 +153,13 @@ this.setVelocity(magnitude, angle, otherAngle)
 
 override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitudeBasicDecimal = magnitudeBasicDecimal
 
 
-                    var direction = direction
-
-
-                    var otherDirection = otherDirection
+        Updates for KMP build        
+        {
+    //var magnitudeBasicDecimal = magnitudeBasicDecimal
+    //var direction = direction
+    //var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
 
@@ -157,15 +171,13 @@ this.addVelocity(magnitudeBasicDecimal, angle, otherAngle)
 
 override fun addVelocity(magnitude: Long, direction: Direction, otherDirection: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var direction = direction
-
-
-                    var otherDirection = otherDirection
+        Updates for KMP build        
+        {
+    //var magnitude = magnitude
+    //var direction = direction
+    //var otherDirection = otherDirection
 
     var angle: Angle = directionUtil!!.getAngle(direction)!!
 
@@ -177,15 +189,13 @@ this.addVelocity(magnitude, angle, otherAngle)
 
 override fun setVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitudeBasicDecimal = magnitudeBasicDecimal
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var magnitudeBasicDecimal = magnitudeBasicDecimal
+    //var angle = angle
+    //var otherAngle = otherAngle
 
     var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
 
@@ -194,15 +204,13 @@ this.setVelocity(magnitude, angle, otherAngle)
 
 override fun addVelocity(magnitudeBasicDecimal: BasicDecimal, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitudeBasicDecimal = magnitudeBasicDecimal
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var magnitudeBasicDecimal = magnitudeBasicDecimal
+    //var angle = angle
+    //var otherAngle = otherAngle
 
     var magnitude: Long = magnitudeBasicDecimal!!.getUnscaled()!!
 
@@ -211,44 +219,38 @@ this.addVelocity(magnitude, angle, otherAngle)
 
 override fun setVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var magnitude = magnitude
+    //var angle = angle
+    //var otherAngle = otherAngle
 this.setVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
 }
 
 override fun addVelocity(magnitude: Long, angle: Angle, otherAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var magnitude = magnitude
+    //var angle = angle
+    //var otherAngle = otherAngle
 this.addVelocity(magnitude, angle.getValue().toInt(), otherAngle!!.getValue().toInt())
 }
 
 
 open fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var magnitude = magnitude
+    //var angle = angle
+    //var otherAngle = otherAngle
 
     var xVector: Long = (axisMathVectorUtil!!.calculateX(magnitude, angle) /velocityXBasicDecimal!!.getScaledFactorValue())
 
@@ -265,15 +267,13 @@ velocityZBasicDecimal!!.set(zVector)
 
 override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+    //var magnitude = magnitude
+    //var angle = angle
+    //var otherAngle = otherAngle
 
     var xVector: Long = (axisMathVectorUtil!!.calculateX(magnitude, angle) /velocityXBasicDecimal!!.getScaledFactorValue())
 
@@ -290,7 +290,11 @@ velocityZBasicDecimal!!.add(zVector)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 

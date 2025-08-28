@@ -40,7 +40,11 @@ open public class ThreadUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadUtil{
+: ThreadUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
 
 open fun isRunning(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var thread = thread
+        Updates for KMP build        
+        {
+var thread = thread
 
     
                         if(thread != 
@@ -95,9 +101,11 @@ open fun isRunning(thread: Thread)
             
 open fun join(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var thread = thread
+
+        Updates for KMP build        
+        {
+var thread = thread
 
     
                         if(ThreadUtil.getInstance()!!.isRunning(thread))

@@ -64,9 +64,11 @@ open public class ColorAtActionScriptCondition : BasicProfileActionScriptConditi
     private var colorRangeInterface: ColorRangeInterface = ColorRange() as ColorRangeInterface
 public constructor        (node: Node)                        
 
-                            : super(ColorAtActionScriptCondition.NAME, node){
+                            : super(ColorAtActionScriptCondition.NAME, node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,7 +93,11 @@ this.point= Point(0, 0)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var childNode: Node = nodeList!!.item(index)!!
 
 
@@ -208,7 +214,11 @@ this.init()
 
 public constructor        ()                        
 
-                            : super(ColorAtActionScriptCondition.NAME){
+                            : super(ColorAtActionScriptCondition.NAME)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -219,13 +229,21 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.colorAtActionScriptConditionJPanel= ColorAtActionScriptConditionJPanel(this)
+
+
+        Updates for KMP build        
+        {
+this.colorAtActionScriptConditionJPanel= ColorAtActionScriptConditionJPanel(this)
 }
 
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: Point{
+: Point
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -235,22 +253,32 @@ open fun getPoint()
 
 open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var point = point
+
+        Updates for KMP build        
+        {
+var point = point
 this.point= point
 }
 
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-{this.colorAtActionScriptConditionJPanel!!.getColorAtActionJDialog()!!.setVisible(true)
+
+
+        Updates for KMP build        
+        {
+this.colorAtActionScriptConditionJPanel!!.getColorAtActionJDialog()!!.setVisible(true)
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(ColorAtActionScriptConditionData.LOCATION_X, Integer.toString(this.getPoint()!!.x))
@@ -274,9 +302,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = super.toXmlNode(document)!!
 
@@ -293,9 +323,11 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, ColorAtActionSc
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
     var capturedBufferedImageCacheable: BufferedImageFrameCacheable = 
                                     (getInstance as AutomaticCacheInterface).get(frame.concatToString()
@@ -340,7 +372,11 @@ open fun shouldProcess(frame: Long)
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var message: String = "getPoint(): " +this.getPoint() +"\n" +this.getColorRangeInterface()!!.toString()
 
 logUtil!!.put(message, this, "log")
@@ -349,7 +385,11 @@ logUtil!!.put(message, this, "log")
 
 open fun getColorRangeInterface()
         //nullable = true from not(false or (false and true)) = true
-: ColorRangeInterface{
+: ColorRangeInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -359,9 +399,11 @@ open fun getColorRangeInterface()
 
 open fun setColorRangeInterface(colorRangeInterface: ColorRangeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorRangeInterface = colorRangeInterface
+
+        Updates for KMP build        
+        {
+var colorRangeInterface = colorRangeInterface
 this.colorRangeInterface= colorRangeInterface
 }
 

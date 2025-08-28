@@ -39,37 +39,45 @@ open public class BasicGraphicsPipeline
     var pointBasicArrayList: BasicArrayList
 public constructor        (points: BasicArrayList)
             : super()
-        {
+        
 
-                    var points = points
+        Updates for KMP build        
+        {
+var points = points
 pointBasicArrayList= points
 }
 
 
 open fun setInitMatrix(points: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 pointBasicArrayList= points
 }
 
 
 open fun createMatrix()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun translate(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
     var newBasicArrayList: BasicArrayList = BasicArrayList()
 
@@ -88,7 +96,11 @@ open fun translate(x: Int, y: Int)
 
                         for (index in 0 until size)
 
-        {secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
+        
+
+        Updates for KMP build        
+        {
+secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
                         if(secondPoint!!.getX() != 1000)
@@ -113,9 +125,11 @@ this.pointBasicArrayList= newBasicArrayList
             
 open fun rotate(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+var angle = angle
 this.rotate(angle.getValue().toInt())
 }
 
@@ -126,9 +140,11 @@ this.rotate(angle.getValue().toInt())
             
 open fun rotate(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+var angle = angle
 
     var newBasicArrayList: BasicArrayList = BasicArrayList()
 
@@ -165,7 +181,11 @@ open fun rotate(angle: Int)
 
                         for (index in 0 until size)
 
-        {secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
+        
+
+        Updates for KMP build        
+        {
+secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
                         if(secondPoint!!.getX() != 1000)
@@ -196,9 +216,11 @@ this.pointBasicArrayList= newBasicArrayList
             
 open fun mirror(width: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var width = width
+
+        Updates for KMP build        
+        {
+var width = width
 
     var pointFactory: PointFactory = PointFactory.getInstance()!!
 
@@ -226,7 +248,11 @@ open fun mirror(width: Int)
 
                         for (index in 0 until size)
 
-        {secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
+        
+
+        Updates for KMP build        
+        {
+secondPoint= pointBasicArrayList!!.objectArray[index]!! as GPoint
 
     
                         if(secondPoint!!.getX() != 1000)
@@ -265,7 +291,11 @@ this.pointBasicArrayList= newBasicArrayList
 
 open fun getMatrix()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

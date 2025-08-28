@@ -42,9 +42,11 @@ open public class PathFindingInfo
     private val pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase
 public constructor        (pathFindingNodeCostInfoFactoryInterface: PathFindingNodeCostInfoFactoryBase)
             : super()
-        {
+        
 
-                    var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
+        Updates for KMP build        
+        {
+    //var pathFindingNodeCostInfoFactoryInterface = pathFindingNodeCostInfoFactoryInterface
 this.pathFindingNodeCostInfoFactoryInterface= pathFindingNodeCostInfoFactoryInterface
 this.startPathFindingNodeList= BasicArrayList(1)
 this.endPathFindingNodeList= BasicArrayList(1)
@@ -53,7 +55,11 @@ this.endPathFindingNodeList= BasicArrayList(1)
 
 open fun getStartPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +69,11 @@ open fun getStartPathFindingNodeList()
 
 open fun getEndPathFindingNodeList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +83,11 @@ open fun getEndPathFindingNodeList()
 
 open fun getPathFinder()
         //nullable = true from not(false or (false and true)) = true
-: GeographicPathFinderBase{
+: GeographicPathFinderBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,34 +97,44 @@ open fun getPathFinder()
 
 open fun addStartPathFindingNode(startPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var startPathFindingNode = startPathFindingNode
+
+        Updates for KMP build        
+        {
+var startPathFindingNode = startPathFindingNode
 this.startPathFindingNodeList!!.add(startPathFindingNode)
 }
 
 
 open fun addEndPathFindingNode(endPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var endPathFindingNode = endPathFindingNode
+
+        Updates for KMP build        
+        {
+var endPathFindingNode = endPathFindingNode
 this.endPathFindingNodeList!!.add(endPathFindingNode)
 }
 
 
 open fun setPathFinder(pathFinder: GeographicPathFinderBase)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathFinder = pathFinder
+
+        Updates for KMP build        
+        {
+var pathFinder = pathFinder
 this.pathFinder= pathFinder
 }
 
 
 open fun getPathFindingNodeCostInfoFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingNodeCostInfoFactoryBase{
+: PathFindingNodeCostInfoFactoryBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

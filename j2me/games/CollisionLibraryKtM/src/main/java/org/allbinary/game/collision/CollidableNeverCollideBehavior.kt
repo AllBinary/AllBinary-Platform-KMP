@@ -32,9 +32,11 @@ open public class CollidableNeverCollideBehavior : CollidableBaseBehavior {
         
  constructor        (isCollidable: Boolean)                        
 
-                            : super(CollidableCompositeLayer(RectangleFactory.SINGLETON), isCollidable){
+                            : super(CollidableCompositeLayer(RectangleFactory.SINGLETON), isCollidable)
 
-                    var isCollidable = isCollidable
+        Updates for KMP build        
+        {
+var isCollidable = isCollidable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -43,9 +45,11 @@ open public class CollidableNeverCollideBehavior : CollidableBaseBehavior {
 
 override fun isCollision(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var allbinaryCollidableLayer = allbinaryCollidableLayer
+        Updates for KMP build        
+        {
+var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
 
@@ -57,23 +61,29 @@ override fun isCollision(allbinaryCollidableLayer: CollidableCompositeLayer)
                 @Throws(Exception::class)
             override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allbinaryCollidableLayer = allbinaryCollidableLayer
+
+        Updates for KMP build        
+        {
+var allbinaryCollidableLayer = allbinaryCollidableLayer
 }
 
 override fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 }
 
 override fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
 

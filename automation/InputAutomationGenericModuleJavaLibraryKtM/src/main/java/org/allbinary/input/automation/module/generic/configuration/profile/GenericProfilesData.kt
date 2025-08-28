@@ -38,7 +38,11 @@ open public class GenericProfilesData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

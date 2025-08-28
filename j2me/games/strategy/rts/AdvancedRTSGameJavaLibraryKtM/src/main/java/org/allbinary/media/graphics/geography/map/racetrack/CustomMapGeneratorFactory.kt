@@ -38,9 +38,11 @@ open public class CustomMapGeneratorFactory : CustomMapGeneratorBaseFactory {
             
 open fun getInstance(raceTrackGeographicMap: RaceTrackGeographicMap)
         //nullable =  from not(true or (false and false)) = 
-: CustomMapGeneratorBase{
+: CustomMapGeneratorBase
 
-                    var raceTrackGeographicMap = raceTrackGeographicMap
+        Updates for KMP build        
+        {
+    //var raceTrackGeographicMap = raceTrackGeographicMap
 
 
 

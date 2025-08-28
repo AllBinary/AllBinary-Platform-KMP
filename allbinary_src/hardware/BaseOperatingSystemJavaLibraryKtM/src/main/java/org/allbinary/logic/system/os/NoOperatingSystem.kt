@@ -34,7 +34,11 @@ open public class NoOperatingSystem : GenericOperatingSystem {
     val NO_OPERATING_SYSTEM: GenericOperatingSystem = GenericOperatingSystem()
 
         }
-            public constructor        (){}
+            public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 }

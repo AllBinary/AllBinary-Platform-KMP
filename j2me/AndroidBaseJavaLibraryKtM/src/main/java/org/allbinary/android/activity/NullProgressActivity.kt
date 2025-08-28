@@ -46,30 +46,38 @@ open public class NullProgressActivity
             }            
         override fun runOnUiThread(action: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var action = action
+
+        Updates for KMP build        
+        {
+var action = action
 }
 
 override fun onDismissTitleProgressBar()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun onShowTitleProgressBar(value: Int, indeterminate: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var indeterminate = indeterminate
+        Updates for KMP build        
+        {
+var value = value
+var indeterminate = indeterminate
 }
 
 override fun onTitleProgressBarSetProgress(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 }
 
 

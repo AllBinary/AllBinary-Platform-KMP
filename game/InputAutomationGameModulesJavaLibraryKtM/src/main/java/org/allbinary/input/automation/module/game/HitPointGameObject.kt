@@ -46,18 +46,14 @@ open public class HitPointGameObject : MeteredGameObject
     private val IS_CLOSE_DEATH_LABEL: String = "isCloseDeath: "
 public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
-                            : super(bufferedImage, minX, maxX, y){
+                            : super(bufferedImage, minX, maxX, y)
 
-                    var bufferedImage = bufferedImage
-
-
-                    var minX = minX
-
-
-                    var maxX = maxX
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
+var minX = minX
+var maxX = maxX
+var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -95,9 +91,11 @@ public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, m
 
 open fun isMoreThan(aFloat: Float)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var aFloat = aFloat
+        Updates for KMP build        
+        {
+var aFloat = aFloat
 
     
                         if(this.getRatios()[this.getRatios()!!.length -1]!!.doubleValue() > aFloat)
@@ -125,7 +123,11 @@ open fun isMoreThan(aFloat: Float)
 
 open fun isCloseDeath()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -135,16 +137,22 @@ open fun isCloseDeath()
 
 open fun setCloseDeath(closeDeath: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var closeDeath = closeDeath
+
+        Updates for KMP build        
+        {
+var closeDeath = closeDeath
 this.closeDeath= closeDeath
 }
 
 
 open fun isDamaged()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -154,15 +162,21 @@ open fun isDamaged()
 
 open fun setDamaged(damaged: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var damaged = damaged
+
+        Updates for KMP build        
+        {
+var damaged = damaged
 this.damaged= damaged
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(HP_LABEL)

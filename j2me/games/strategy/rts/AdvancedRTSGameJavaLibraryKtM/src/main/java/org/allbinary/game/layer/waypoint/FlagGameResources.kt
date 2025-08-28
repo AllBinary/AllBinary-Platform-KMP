@@ -50,7 +50,11 @@ open public class FlagGameResources : BasicGameResources {
     var RESOURCE_ICON_BUILD: String
 
     var RESOURCE_ICON: String
-protected constructor        (){}
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
     private val ICON_SIZE: String = "_64_by_64.png"
@@ -59,12 +63,12 @@ protected constructor        (){}
             
 open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var ROOT = ROOT
 
 
-                    var sizeString = sizeString
+        Updates for KMP build        
+        {
+var ROOT = ROOT
+var sizeString = sizeString
 super.init(ROOT, sizeString)
 
     var string: String = GameGraphicsResourceUtil.getInstance()!!.getName()!!

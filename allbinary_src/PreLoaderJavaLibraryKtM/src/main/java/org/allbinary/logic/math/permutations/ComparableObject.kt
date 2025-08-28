@@ -39,9 +39,11 @@ open public class ComparableObject
         
 open fun compareTo(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
     
                         if(this.hashCode() < anyType!!.hashCode())

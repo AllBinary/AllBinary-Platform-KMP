@@ -45,7 +45,11 @@ open public class EmailServerConfiguration
     private var smtpServer: String
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
@@ -62,9 +66,11 @@ this.setSmtpServer(StringUtil.getInstance()!!.EMPTY_STRING)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -85,15 +91,13 @@ this.log()
 
 public constructor        (account: String, password: String, server: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var account = account
-
-
-                    var password = password
-
-
-                    var server = server
+var account = account
+var password = password
+var server = server
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -115,16 +119,22 @@ this.log()
 
 open fun setSmtpServer(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.smtpServer= value
 }
 
 
 open fun getSmtpServer()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -134,7 +144,11 @@ open fun getSmtpServer()
 
 open fun getAccountName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -144,16 +158,22 @@ open fun getAccountName()
 
 open fun setAccountName(accountName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var accountName = accountName
+
+        Updates for KMP build        
+        {
+var accountName = accountName
 this.accountName= accountName
 }
 
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -163,16 +183,22 @@ open fun getPassword()
 
 open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var password = password
+
+        Updates for KMP build        
+        {
+var password = password
 this.password= password
 }
 
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
@@ -185,7 +211,11 @@ open fun log()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

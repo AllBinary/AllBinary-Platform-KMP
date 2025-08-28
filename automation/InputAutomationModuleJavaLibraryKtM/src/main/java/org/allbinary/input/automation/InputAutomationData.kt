@@ -40,7 +40,11 @@ open public class InputAutomationData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

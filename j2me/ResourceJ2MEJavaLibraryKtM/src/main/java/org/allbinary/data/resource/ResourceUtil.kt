@@ -43,7 +43,11 @@ open public class ResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResourceUtil{
+: ResourceUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,16 +60,22 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getResourceAsStream(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 
     var inputStream: InputStream = resource::class.getResourceAsStream(resource)!!
 
@@ -236,12 +246,12 @@ inputStream= resource::class.getResourceAsStream(resourcePath)
             
 open fun getResourceAsStream(resource: String, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var resource = resource
-
-
-                    var startIndex = startIndex
+        Updates for KMP build        
+        {
+var resource = resource
+var startIndex = startIndex
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -279,12 +289,12 @@ open fun getResourceAsStream(resource: String, startIndex: Int)
 
 open fun addResource(resource: String, value: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var resource = resource
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var resource = resource
+    //var value = value
 }
 
 

@@ -50,9 +50,11 @@ open public class PrimitiveLongUtil
     private val primitiveLongSingleton: PrimitiveLongSingleton = PrimitiveLongSingleton.getInstance()!!
 public constructor        (powerOfTen: Int)                        
 
-                            : this(powerOfTen, false){
+                            : this(powerOfTen, false)
 
-                    var powerOfTen = powerOfTen
+        Updates for KMP build        
+        {
+var powerOfTen = powerOfTen
 
 
                             //For kotlin this is before the body of the constructor.
@@ -70,12 +72,12 @@ public constructor        (powerOfTen: Int)
 
 public constructor        (powerOfTen: Int, throwException: Boolean)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var powerOfTen = powerOfTen
-
-
-                    var throwException = throwException
+var powerOfTen = powerOfTen
+var throwException = throwException
 this.maxDigits= MathUtil.getInstance()!!.getTotalDigits(powerOfTen)
 this.powerOfTen= powerOfTen
 this.maxValue= (powerOfTen *10) -1
@@ -85,9 +87,11 @@ this.charArray= CharArray(this.maxDigits)
 
 open fun getCharArray(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: CharArray{
+: CharArray
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
     
                         if(value < 10)
@@ -127,7 +131,11 @@ open fun getCharArray(value: Int)
 
 
         while(div >= 1)
+        
+
+        Updates for KMP build        
         {
+
     var digit: Int = (value -lastValue) /div
 
 
@@ -166,16 +174,22 @@ this.setCurrentTotalDigits(index)
 
 open fun setCurrentTotalDigits(currentTotalDigits: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var currentTotalDigits = currentTotalDigits
+
+        Updates for KMP build        
+        {
+var currentTotalDigits = currentTotalDigits
 this.currentTotalDigits= currentTotalDigits
 }
 
 
 open fun getCurrentTotalDigits()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -185,7 +199,11 @@ open fun getCurrentTotalDigits()
 
 open fun getMaxDigits()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

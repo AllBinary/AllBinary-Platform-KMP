@@ -33,16 +33,22 @@ open public class NoCacheableFactory
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(key: Any)
         //nullable =  from not(true or (false and false)) = 
-: CacheableInterface{
+: CacheableInterface
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
 
 

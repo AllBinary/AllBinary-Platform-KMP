@@ -39,9 +39,11 @@ open public class Feature
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
-: Feature{
+: Feature
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
 
@@ -52,12 +54,12 @@ open fun getInstance(name: String)
 
 open fun add(name: String, gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var name = name
 
 
-                    var gameFeature = gameFeature
+        Updates for KMP build        
+        {
+var name = name
+var gameFeature = gameFeature
 hashtable.put(name, gameFeature)
 }
 
@@ -67,9 +69,11 @@ hashtable.put(name, gameFeature)
     private val name: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 add(name, this)
 ChangedGameFeatureListener.getInstance()!!.add(this)
@@ -77,7 +81,11 @@ ChangedGameFeatureListener.getInstance()!!.add(this)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +95,11 @@ override fun toString()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

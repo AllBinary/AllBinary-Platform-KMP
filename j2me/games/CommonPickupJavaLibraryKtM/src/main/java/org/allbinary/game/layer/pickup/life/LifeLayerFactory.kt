@@ -42,7 +42,11 @@ open public class LifeLayerFactory
                 @Throws(Exception::class)
             override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

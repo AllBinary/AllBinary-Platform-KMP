@@ -29,7 +29,11 @@ import admin.taghelpers.PaymentTransactionHelperFactory
 
 open public class PaymentTransactionTag : TableTag {
         
-public constructor        (){this.setTagHelperFactory(PaymentTransactionHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(PaymentTransactionHelperFactory())
 this.setTagRequestHelperFactory(PaymentTransactionHelperFactory())
 }
 

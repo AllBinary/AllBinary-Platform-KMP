@@ -51,12 +51,12 @@ open public class CompoundContextTransformInfoObjectConfig : GenericStoreTransfo
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface){
+                            : super(abeClientInformation, transformInfoInterface)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,15 +65,13 @@ public constructor        (abeClientInformation: Object, transformInfoInterface:
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface, document){
+                            : super(abeClientInformation, transformInfoInterface, document)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var transformInfoInterface = transformInfoInterface
+var document = document
 
 
                             //For kotlin this is before the body of the constructor.
@@ -83,18 +81,14 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface, name, type){
+                            : super(abeClientInformation, transformInfoInterface, name, type)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var name = name
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var transformInfoInterface = transformInfoInterface
+var name = name
+var type = type
 
 
                             //For kotlin this is before the body of the constructor.
@@ -107,7 +101,11 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var storeName: String = this.getTransformInfoInterface()!!.getStoreName()!!
 
 
@@ -156,7 +154,11 @@ stringBuffer!!.append(RootTransformInfoData.NAME)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var objectConfigTransformInfoDomNode: TransformInfoDomNode = viewVector!!.get(index) as TransformInfoDomNode
 
 
@@ -217,7 +219,11 @@ rootView= replace.all(rootView)
             
 open fun createInputStream()
         //nullable = true from not(false or (false and true)) = true
-: InputStream{
+: InputStream
+
+        Updates for KMP build        
+        {
+
     var completeTemplateViewBytes: ByteArray = this.get()!!.encodeToByteArray()!!
 
 

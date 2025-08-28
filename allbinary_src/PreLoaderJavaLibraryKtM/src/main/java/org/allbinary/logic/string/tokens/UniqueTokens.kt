@@ -43,7 +43,11 @@ open public class UniqueTokens
     private val specialCharacters: Vector = Vector()
 public constructor        ()
             : super()
-        {specialCharacters!!.add("!")
+        
+
+        Updates for KMP build        
+        {
+specialCharacters!!.add("!")
 specialCharacters!!.add("@")
 specialCharacters!!.add(CommonPhoneStrings.getInstance()!!.POUND)
 specialCharacters!!.add("$")
@@ -74,9 +78,11 @@ specialCharacters!!.add("`")
             
 open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: HashSet{
+: HashSet
 
-                    var stringVector = stringVector
+        Updates for KMP build        
+        {
+var stringVector = stringVector
 
         try {
             
@@ -90,7 +96,11 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
 
 
         while(index < stringVector!!.size)
+        
+
+        Updates for KMP build        
         {
+
     var keywords: String = stringVector!!.elementAt(index) as String
 
 
@@ -105,7 +115,11 @@ open fun getWhithoutDashesAndSkipNumberOnlyTokens(stringVector: Vector)
 
                         for (forIndex in 0 until keywordVector!!.size()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var cleanString: String = keywordVector!!.get(forIndex) as String
 
 cleanString= cleanString!!.trim()
@@ -132,7 +146,11 @@ hashSet!!.add(cleanString)
 
                         for (spaceIndex in 0 until subKeywordVector!!.size()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var subCleanString: String = subKeywordVector!!.get(spaceIndex) as String
 
 
@@ -160,7 +178,11 @@ index++
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return hashSet
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -171,9 +193,11 @@ index++
 
 open fun numberOnly(subCleaningString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var subCleaningString = subCleaningString
+        Updates for KMP build        
+        {
+    //var subCleaningString = subCleaningString
 
         try {
             Integer.parseInt(subCleaningString)
@@ -183,7 +207,11 @@ open fun numberOnly(subCleaningString: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: NumberFormatException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -195,16 +223,22 @@ open fun numberOnly(subCleaningString: String)
 
 open fun isSpecialCharacter(subCleaningString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var subCleaningString = subCleaningString
+        Updates for KMP build        
+        {
+var subCleaningString = subCleaningString
 
 
 
 
                         for (index in 0 until specialCharacters!!.size!!)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(subCleaningString!!.compareTo(specialCharacters!!.elementAt(index) as String) == 0)
                         

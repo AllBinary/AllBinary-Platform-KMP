@@ -39,9 +39,11 @@ open public class Portion
     private val total: Integer
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.current= hashMap!!.get("current") as Integer
 this.total= hashMap!!.get("total") as Integer
 }
@@ -49,7 +51,11 @@ this.total= hashMap!!.get("total") as Integer
 
 open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +65,11 @@ open fun getCurrent()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

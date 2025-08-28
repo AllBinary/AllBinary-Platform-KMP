@@ -38,7 +38,11 @@ open public class UrlGlobalsViewFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DomNodeInterface{
+: DomNodeInterface
+
+        Updates for KMP build        
+        {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 
@@ -49,7 +53,11 @@ open fun getInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return UrlGlobalsView() as DomNodeInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -74,7 +82,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

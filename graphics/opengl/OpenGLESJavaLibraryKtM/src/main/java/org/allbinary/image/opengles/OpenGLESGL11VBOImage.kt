@@ -45,15 +45,13 @@ open public class OpenGLESGL11VBOImage : OpenGLESImage {
     private var textureVertexFloatBuffer: FloatBuffer = ByteBuffer.allocateDirect(4 *4 *2)!!.order(ByteOrder.nativeOrder())!!.asFloatBuffer()!!
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image, bitmapFactory, textureFactory){
+                            : super(image, bitmapFactory, textureFactory)
 
-                    var image = image
-
-
-                    var bitmapFactory = bitmapFactory
-
-
-                    var textureFactory = textureFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var bitmapFactory = bitmapFactory
+    //var textureFactory = textureFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,7 +64,11 @@ this.regionTextureVertexFloatBuffer!!.put(FloatBuffer.wrap(regionTextureRectangl
 
 open fun initVertices()
         //nullable = true from not(false or (false and true)) = true
-{textureVertexFloatBuffer!!.put(0)
+
+
+        Updates for KMP build        
+        {
+textureVertexFloatBuffer!!.put(0)
 textureVertexFloatBuffer!!.put(1)
 textureVertexFloatBuffer!!.put(1)
 textureVertexFloatBuffer!!.put(1)
@@ -80,9 +82,11 @@ textureVertexFloatBuffer!!.rewind()
 
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
     var gl10: GL10 = gl as GL10
 
@@ -110,33 +114,19 @@ OpenGLLogUtil.getInstance()!!.logError(gl10, this)
 
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var viewHeight = viewHeight
-
-
-                    var x_src = x_src
-
-
-                    var y_src = y_src
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var viewHeight = viewHeight
+    //var x_src = x_src
+    //var y_src = y_src
+    //var width = width
+    //var height = height
+    //var x = x
+    //var y = y
+    //var z = z
 this.regionRectangleFloatArray[0]= x
 this.regionRectangleFloatArray[7]= viewHeight -y
 this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -height
@@ -170,18 +160,14 @@ gl.glDisable(GL10.GL_TEXTURE_2D)
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var x = x
+    //var y = y
+    //var z = z
 this.regionRectangleFloatArray[0]= x
 this.regionRectangleFloatArray[7]= DisplayInfoSingleton.getInstance()!!.getLastHeight() -y
 this.regionRectangleFloatArray[1]= this.regionRectangleFloatArray[7] -this.getHeight()

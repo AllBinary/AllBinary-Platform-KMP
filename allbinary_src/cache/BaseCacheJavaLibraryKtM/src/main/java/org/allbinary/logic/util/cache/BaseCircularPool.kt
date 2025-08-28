@@ -47,7 +47,11 @@ open public class BaseCircularPool
 
 open fun getNextInstance()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
     var anyType: Any = OBJECT_ARRAY[this.circularIndexUtil!!.getIndex()]!!
 
 this.circularIndexUtil!!.next()
@@ -61,9 +65,11 @@ this.circularIndexUtil!!.next()
 
 open fun init(allBinaryObjectFactoryInterface: AllBinaryObjectFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryObjectFactoryInterface = allBinaryObjectFactoryInterface
+
+        Updates for KMP build        
+        {
+var allBinaryObjectFactoryInterface = allBinaryObjectFactoryInterface
 this.circularIndexUtil!!.setIndex(0)
 
     var size: Int = this.circularIndexUtil!!.getSize()!!
@@ -74,7 +80,11 @@ this.circularIndexUtil!!.setIndex(0)
 
                         for (index in 0 until size)
 
-        {OBJECT_ARRAY[index]= allBinaryObjectFactoryInterface!!.getInstance()
+        
+
+        Updates for KMP build        
+        {
+OBJECT_ARRAY[index]= allBinaryObjectFactoryInterface!!.getInstance()
 }
 
 }
@@ -84,9 +94,11 @@ this.circularIndexUtil!!.setIndex(0)
             
 open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 

@@ -40,12 +40,12 @@ open public class HorizontalManeuverAI : BasicAI {
     private var currentSpeed: Int
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,9 +57,11 @@ currentSpeed= 5
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
@@ -129,7 +131,11 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
 
 open fun reverse()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(currentRelativeAngle == 180)
                         
@@ -152,7 +158,11 @@ open fun reverse()
 
 open fun accelerate()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(currentSpeed < 20)
                         
@@ -166,7 +176,11 @@ open fun accelerate()
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
 

@@ -41,18 +41,14 @@ open public class AllBinaryJ2METiledLayer : AllBinaryTiledLayer {
     val debugColor: Int
 public constructor        (dataId: Integer, tiledLayer: TiledLayer, mapTwoDArray: Array<IntArray?>, debugColor: Int)                        
 
-                            : super(dataId, tiledLayer!!.getWidth(), tiledLayer!!.getHeight(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight()){
+                            : super(dataId, tiledLayer!!.getWidth(), tiledLayer!!.getHeight(), tiledLayer!!.getCellWidth(), tiledLayer!!.getCellHeight())
 
-                    var dataId = dataId
-
-
-                    var tiledLayer = tiledLayer
-
-
-                    var mapTwoDArray = mapTwoDArray
-
-
-                    var debugColor = debugColor
+        Updates for KMP build        
+        {
+    //var dataId = dataId
+    //var tiledLayer = tiledLayer
+    //var mapTwoDArray = mapTwoDArray
+    //var debugColor = debugColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,9 +61,11 @@ this.setCells(mapTwoDArray)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 this.tiledLayer!!.paint(graphics)
 }
 
@@ -76,9 +74,11 @@ this.tiledLayer!!.paint(graphics)
 
 open fun paintDebug(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
     var font: Font = graphics.getFont()!!
 
@@ -126,14 +126,22 @@ graphics.setColor(debugColor)
 
                         for (rowIndex in firstRow until totalRows)
 
-        {x= x0
+        
+
+        Updates for KMP build        
+        {
+x= x0
 
 
 
 
                         for (columnIndex in firstColumn until totalColumns)
 
-        {tile= this.tiledLayer!!.getCell(columnIndex, rowIndex)
+        
+
+        Updates for KMP build        
+        {
+tile= this.tiledLayer!!.getCell(columnIndex, rowIndex)
 
     
                         if(tile < 0)
@@ -168,12 +176,12 @@ graphics.setFont(font)
 
 open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 this.tiledLayer!!.move(dx, dy)
 super.move( -dx,  -dy)
 }
@@ -181,15 +189,13 @@ super.move( -dx,  -dy)
 
 open fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var z = z
 this.tiledLayer!!.setPosition(x, y)
 super.setPosition( -x,  -y, z)
 }
@@ -197,7 +203,11 @@ super.setPosition( -x,  -y, z)
 
 open fun getTiledLayer()
         //nullable = true from not(false or (false and true)) = true
-: TiledLayer{
+: TiledLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -207,7 +217,11 @@ open fun getTiledLayer()
 
 open fun getCellWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -217,7 +231,11 @@ open fun getCellWidth()
 
 open fun getCellHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -227,12 +245,12 @@ open fun getCellHeight()
 
 open fun getCell(col: Int, row: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var col = col
-
-
-                    var row = row
+        Updates for KMP build        
+        {
+    //var col = col
+    //var row = row
 
 
 
@@ -243,7 +261,11 @@ open fun getCell(col: Int, row: Int)
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -253,7 +275,11 @@ open fun getColumns()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -263,24 +289,24 @@ open fun getRows()
 
 open fun setCell(col: Int, row: Int, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var col = col
 
 
-                    var row = row
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+    //var col = col
+    //var row = row
+    //var index = index
 this.tiledLayer!!.setCell(col, row, index)
 }
 
 
 open fun getAnimatedTile(animationTileIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var animationTileIndex = animationTileIndex
+        Updates for KMP build        
+        {
+    //var animationTileIndex = animationTileIndex
 
 
 

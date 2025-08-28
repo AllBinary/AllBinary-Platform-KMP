@@ -43,7 +43,11 @@ open public class AlwaysRepaintBehavior : RepaintBehavior {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AlwaysRepaintBehavior{
+: AlwaysRepaintBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
     private val NAME: String = "AlwaysRepaintBehavior"
 override fun repaint(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var canvas = canvas
+
+        Updates for KMP build        
+        {
+    //var canvas = canvas
 
     var features: Features = Features.getInstance()!!
 
@@ -85,12 +91,20 @@ override fun repaint(canvas: Canvas)
                                 {
                                 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             canvas.repaint()
 DisplayInfoSingleton.getInstance()!!.process()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
@@ -109,9 +123,11 @@ thread.start()
 
 override fun onChangeRepaint(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var canvas = canvas
+
+        Updates for KMP build        
+        {
+    //var canvas = canvas
 }
 
 

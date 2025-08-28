@@ -48,67 +48,77 @@ open public class AbFile
     private val file: File
  constructor        (filePath: String, unknown: Boolean)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var filePath = filePath
-
-
-                    var unknown = unknown
+    //var filePath = filePath
+    //var unknown = unknown
 this.file= File(filePath)
 }
 
  constructor        (file: File)
             : super()
-        {
+        
 
-                    var file = file
+        Updates for KMP build        
+        {
+    //var file = file
 this.file= file
 }
 
 public constructor        (file: AbFile, childPathName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var file = file
-
-
-                    var childPathName = childPathName
+    //var file = file
+    //var childPathName = childPathName
 this.file= File(file.getFile(), childPathName)
 }
 
 public constructor        (filePath: String)
             : super()
-        {
+        
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+    //var filePath = filePath
 this.file= File(AbPath(filePath).
                             toFileSystemString())
 }
 
 public constructor        (filePath: String, fileName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var filePath = filePath
-
-
-                    var fileName = fileName
+    //var filePath = filePath
+    //var fileName = fileName
 this.file= File(AbPath(filePath).
                             toFileSystemString(), fileName)
 }
 
 public constructor        (abPath: AbPath)
             : super()
-        {
+        
 
-                    var abPath = abPath
+        Updates for KMP build        
+        {
+    //var abPath = abPath
 this.file= File(abPath!!.toFileSystemString())
 }
 
 
 open fun getFile()
         //nullable = true from not(false or (false and true)) = true
-: File{
+: File
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -118,7 +128,11 @@ open fun getFile()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,7 +141,11 @@ open fun getName()
 
 override fun getParent()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,7 +155,11 @@ override fun getParent()
 
 open fun getParentFile()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -146,7 +168,11 @@ open fun getParentFile()
 
 override fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -155,7 +181,11 @@ override fun getPath()
 
 override fun isAbsolute()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,7 +194,11 @@ override fun isAbsolute()
 
 override fun getAbsolutePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -174,7 +208,11 @@ override fun getAbsolutePath()
 
 open fun getAbsoluteFile()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -185,7 +223,11 @@ open fun getAbsoluteFile()
                 @Throws(IOException::class)
             override fun getCanonicalPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -197,7 +239,11 @@ open fun getAbsoluteFile()
             
 open fun getCanonicalFile()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -206,7 +252,11 @@ open fun getCanonicalFile()
 
 override fun toURI()
         //nullable = true from not(false or (false and true)) = true
-: URI{
+: URI
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,7 +265,11 @@ override fun toURI()
 
 override fun canRead()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -224,7 +278,11 @@ override fun canRead()
 
 override fun canWrite()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -233,7 +291,11 @@ override fun canWrite()
 
 override fun exists()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -242,7 +304,11 @@ override fun exists()
 
 override fun isDirectory()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -251,7 +317,11 @@ override fun isDirectory()
 
 override fun isFile()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -260,7 +330,11 @@ override fun isFile()
 
 override fun isHidden()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -269,7 +343,11 @@ override fun isHidden()
 
 override fun lastModified()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -278,7 +356,11 @@ override fun lastModified()
 
 override fun length()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -289,7 +371,11 @@ override fun length()
                 @Throws(IOException::class)
             override fun createNewFile()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -300,7 +386,11 @@ override fun length()
                 @Throws(IOException::class)
             override fun delete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -309,12 +399,20 @@ override fun length()
 
 override fun deleteOnExit()
         //nullable = true from not(false or (false and true)) = true
-{this.file.deleteOnExit()
+
+
+        Updates for KMP build        
+        {
+this.file.deleteOnExit()
 }
 
 override fun list()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+: Array<String?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -323,9 +421,11 @@ override fun list()
 
 override fun list(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<String?>{
+: Array<String?>
 
-                    var filter = filter
+        Updates for KMP build        
+        {
+    //var filter = filter
 
 
 
@@ -336,7 +436,11 @@ override fun list(filter: FilenameFilter)
 
 open fun listFiles()
         //nullable = true from not(false or (false and true)) = true
-: Array<Any?>{
+: Array<Any?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -346,9 +450,11 @@ open fun listFiles()
 
 open fun listFiles(filter: FilenameFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
+: Array<Any?>
 
-                    var filter = filter
+        Updates for KMP build        
+        {
+    //var filter = filter
 
 
 
@@ -359,9 +465,11 @@ open fun listFiles(filter: FilenameFilter)
 
 open fun listFiles(filter: FileFilter)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
+: Array<Any?>
 
-                    var filter = filter
+        Updates for KMP build        
+        {
+    //var filter = filter
 
 
 
@@ -371,7 +479,11 @@ open fun listFiles(filter: FileFilter)
 
 override fun mkdir()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -380,7 +492,11 @@ override fun mkdir()
 
 override fun mkdirs()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -390,9 +506,11 @@ override fun mkdirs()
 
 open fun renameTo(dest: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var dest = dest
+        Updates for KMP build        
+        {
+    //var dest = dest
 
 
 
@@ -402,9 +520,11 @@ open fun renameTo(dest: AbFile)
 
 override fun setLastModified(time: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var time = time
+        Updates for KMP build        
+        {
+    //var time = time
 
 
 
@@ -414,7 +534,11 @@ override fun setLastModified(time: Long)
 
 override fun setReadOnly()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -424,12 +548,12 @@ override fun setReadOnly()
 
 open fun setWritable(writable: Boolean, ownerOnly: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var writable = writable
-
-
-                    var ownerOnly = ownerOnly
+        Updates for KMP build        
+        {
+    //var writable = writable
+    //var ownerOnly = ownerOnly
 
 
 
@@ -440,9 +564,11 @@ open fun setWritable(writable: Boolean, ownerOnly: Boolean)
 
 open fun setWritable(writable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var writable = writable
+        Updates for KMP build        
+        {
+    //var writable = writable
 
 
 
@@ -453,12 +579,12 @@ open fun setWritable(writable: Boolean)
 
 open fun setReadable(readable: Boolean, ownerOnly: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var readable = readable
-
-
-                    var ownerOnly = ownerOnly
+        Updates for KMP build        
+        {
+    //var readable = readable
+    //var ownerOnly = ownerOnly
 
 
 
@@ -469,9 +595,11 @@ open fun setReadable(readable: Boolean, ownerOnly: Boolean)
 
 open fun setReadable(readable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var readable = readable
+        Updates for KMP build        
+        {
+    //var readable = readable
 
 
 
@@ -482,12 +610,12 @@ open fun setReadable(readable: Boolean)
 
 open fun setExecutable(executable: Boolean, ownerOnly: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var executable = executable
-
-
-                    var ownerOnly = ownerOnly
+        Updates for KMP build        
+        {
+    //var executable = executable
+    //var ownerOnly = ownerOnly
 
 
 
@@ -498,9 +626,11 @@ open fun setExecutable(executable: Boolean, ownerOnly: Boolean)
 
 open fun setExecutable(executable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var executable = executable
+        Updates for KMP build        
+        {
+    //var executable = executable
 
 
 
@@ -511,7 +641,11 @@ open fun setExecutable(executable: Boolean)
 
 open fun canExecute()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -521,7 +655,11 @@ open fun canExecute()
 
 open fun getTotalSpace()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -531,7 +669,11 @@ open fun getTotalSpace()
 
 open fun getFreeSpace()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -541,7 +683,11 @@ open fun getFreeSpace()
 
 open fun getUsableSpace()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -551,9 +697,11 @@ open fun getUsableSpace()
 
 open fun compareTo(pathname: File)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var pathname = pathname
+        Updates for KMP build        
+        {
+var pathname = pathname
 
 
 
@@ -563,9 +711,11 @@ open fun compareTo(pathname: File)
 
 override fun equals(obj: Any?)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var obj = obj
+        Updates for KMP build        
+        {
+var obj = obj
 
 
 
@@ -575,7 +725,11 @@ override fun equals(obj: Any?)
 
 override fun hashCode()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -584,7 +738,11 @@ override fun hashCode()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

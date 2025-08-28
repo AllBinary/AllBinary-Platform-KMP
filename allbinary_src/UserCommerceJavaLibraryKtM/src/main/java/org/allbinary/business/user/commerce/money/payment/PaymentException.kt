@@ -30,9 +30,11 @@ open public class PaymentException : Exception {
         
 public constructor        (error: String)                        
 
-                            : super(error){
+                            : super(error)
 
-                    var error = error
+        Updates for KMP build        
+        {
+var error = error
 
 
                             //For kotlin this is before the body of the constructor.

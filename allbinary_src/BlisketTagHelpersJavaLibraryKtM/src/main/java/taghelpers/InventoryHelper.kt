@@ -61,12 +61,12 @@ open public class InventoryHelper : TagHelper {
     private var id: String
 
     private var searchRequest: SearchRequest
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 this.response= pageContext!!.getResponse() as HttpServletResponse
 this.request= pageContext!!.getRequest() as HttpServletRequest
 
@@ -101,13 +101,21 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= this.request.getParameter(BasicItemData.ID)
+
+
+        Updates for KMP build        
+        {
+this.id= this.request.getParameter(BasicItemData.ID)
 }
 
 
 open fun viewSummary()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var inventoryViewSearchInterface: InventoryViewSearchInterface = InventoryViewFactory.getInstance(searchRequest)!!
@@ -130,7 +138,11 @@ open fun viewSummary()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to View Summary"
 
 
@@ -154,7 +166,11 @@ open fun viewSummary()
 
 open fun search()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringUtil: StringUtil = StringUtil.getInstance()!!
@@ -198,7 +214,11 @@ open fun search()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to search Inventory by keyword"
 
 

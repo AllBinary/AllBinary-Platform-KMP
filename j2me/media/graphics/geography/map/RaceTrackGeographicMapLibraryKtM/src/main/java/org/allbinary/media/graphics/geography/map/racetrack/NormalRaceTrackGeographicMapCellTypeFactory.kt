@@ -38,7 +38,11 @@ open public class NormalRaceTrackGeographicMapCellTypeFactory : RaceTrackGeograp
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NormalRaceTrackGeographicMapCellTypeFactory{
+: NormalRaceTrackGeographicMapCellTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,7 +51,11 @@ open fun getInstance()
 
 
         }
-            private constructor        (){this.EMPTY_CELL_TYPE= EmptyRaceRaceTrackGeographicMapCellTypeFactory.getInstance()!!.EMPTY_CELL_TYPE
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+this.EMPTY_CELL_TYPE= EmptyRaceRaceTrackGeographicMapCellTypeFactory.getInstance()!!.EMPTY_CELL_TYPE
 this.EASY_CELL_TYPE= this.EMPTY_CELL_TYPE
 this.FINISH_LINE_ROAD_CELL_TYPE= this.DEFAULT_FINISH_LINE_ROAD_CELL_TYPE
 }

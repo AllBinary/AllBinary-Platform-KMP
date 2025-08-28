@@ -44,7 +44,11 @@ open public class OwnershipPaintable : Paintable {
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OwnershipPaintable{
+: OwnershipPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,16 +65,22 @@ open fun getInstance()
     private var basicColor: BasicColor = BasicColorFactory.getInstance()!!.WHITE
 
     private var color: Int = basicColor!!.toInt()!!
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
     private var anchor: Int = Anchor.TOP_LEFT
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 graphics.setColor(color)
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -98,9 +108,11 @@ graphics.drawString(COPYRIGHT, halfWidth -beginWidth, height -COPYRIGHT_Y, ancho
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 color= basicColor!!.toInt()
 }
@@ -108,7 +120,11 @@ color= basicColor!!.toInt()
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

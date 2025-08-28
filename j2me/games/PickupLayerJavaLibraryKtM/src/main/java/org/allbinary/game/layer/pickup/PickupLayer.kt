@@ -51,15 +51,13 @@ open public class PickupLayer : MultiPlayerGameLayer
     private var animationInterface: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
 public constructor        (name: String, remoteInfo: RemoteInfo, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition){
+                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), viewPosition)
 
-                    var name = name
-
-
-                    var remoteInfo = remoteInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var remoteInfo = remoteInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -71,27 +69,17 @@ this.setLayerHeight(10)
 
 public constructor        (name: String, remoteInfo: RemoteInfo, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition){
+                            : super(remoteInfo, BasicGroupFactory.getInstance()!!.NONE_ARRAY, name, rectangle, viewPosition)
 
-                    var name = name
-
-
-                    var remoteInfo = remoteInfo
-
-
-                    var total = total
-
-
-                    var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-
-
-                    var animationInterface = animationInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var remoteInfo = remoteInfo
+    //var total = total
+    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+    //var animationInterface = animationInterface
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -104,12 +92,12 @@ this.init(pickedUpLayerInterfaceFactoryInterface, animationInterface)
 
 public constructor        (name: String, viewPosition: ViewPosition)                        
 
-                            : this(name, RemoteInfo.REMOTE_INFO, viewPosition){
+                            : this(name, RemoteInfo.REMOTE_INFO, viewPosition)
 
-                    var name = name
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -118,24 +106,16 @@ public constructor        (name: String, viewPosition: ViewPosition)
 
 public constructor        (name: String, total: Int, pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation, rectangle: Rectangle, viewPosition: ViewPosition)                        
 
-                            : this(name, RemoteInfo.REMOTE_INFO, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition){
+                            : this(name, RemoteInfo.REMOTE_INFO, total, pickedUpLayerInterfaceFactoryInterface, animationInterface, rectangle, viewPosition)
 
-                    var name = name
-
-
-                    var total = total
-
-
-                    var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
-
-
-                    var animationInterface = animationInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var total = total
+    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+    //var animationInterface = animationInterface
+    //var rectangle = rectangle
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -145,12 +125,12 @@ public constructor        (name: String, total: Int, pickedUpLayerInterfaceFacto
 
 open fun init(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface, animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
 
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+    //var animationInterface = animationInterface
 this.pickedUpLayerInterfaceFactoryInterface= pickedUpLayerInterfaceFactoryInterface
 this.animationInterface= animationInterface
 this.setDestroyed(false)
@@ -159,23 +139,23 @@ this.setDestroyed(false)
 
 open fun init(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 this.setPosition(x, y, z)
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
 
@@ -190,9 +170,11 @@ this.animationInterface!!.paint(graphics, viewX, viewY)
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var viewPosition: ViewPosition = this.getViewPosition()!!
 
@@ -207,7 +189,11 @@ this.animationInterface!!.paintThreed(graphics, viewX, viewY, 3)
 
 override fun getPickedUpLayerInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PickedUpLayerInterfaceFactoryInterface{
+: PickedUpLayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -216,12 +202,20 @@ override fun getPickedUpLayerInterfaceFactoryInterface()
 
 override fun setPickedUp()
         //nullable = true from not(false or (false and true)) = true
-{this.setDestroyed(true)
+
+
+        Updates for KMP build        
+        {
+this.setDestroyed(true)
 }
 
 override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -231,9 +225,11 @@ override fun isDestroyed()
 
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 this.destroyed= destroyed
 
     
@@ -248,19 +244,21 @@ this.destroyed= destroyed
 
 override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var damage = damage
 
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damage = damage
+var damageType = damageType
 }
 
 override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+var damageType = damageType
 
 
 
@@ -272,9 +270,11 @@ override fun getDamage(damageType: Int)
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 
     var openGLSurfaceChangedInterface: OpenGLSurfaceChangedInterface = this.animationInterface as OpenGLSurfaceChangedInterface
 

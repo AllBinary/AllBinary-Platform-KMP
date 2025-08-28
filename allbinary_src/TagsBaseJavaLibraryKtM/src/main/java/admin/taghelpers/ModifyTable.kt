@@ -44,7 +44,11 @@ open public class ModifyTable
             
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -55,7 +59,11 @@ open fun insert()
             
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -66,7 +74,11 @@ open fun delete()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

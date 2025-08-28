@@ -42,12 +42,12 @@ open public class CompoundAnimationInterfaceFactory
     val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.basicAnimationInterfaceFactoryInterfaceArrayP= basicAnimationInterfaceFactoryInterfaceArray
 this.animationBehaviorFactory= animationBehaviorFactory
 }
@@ -56,9 +56,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var size: Int = this.basicAnimationInterfaceFactoryInterfaceArrayP!!.size
                 
@@ -72,7 +74,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
                         for (index in 0 until size)
 
-        {animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.getInstance(instanceId)
+        
+
+        Updates for KMP build        
+        {
+animationInterfaceArray[index]= this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.getInstance(instanceId)
 }
 
 
@@ -85,9 +91,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 open fun createArray(size: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Animation?>{
+: Array<Animation?>
 
-                    var size = size
+        Updates for KMP build        
+        {
+    //var size = size
 
 
 
@@ -98,9 +106,11 @@ open fun createArray(size: Int)
 
 open fun getInstance(animationInterfaceArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterfaceArray = animationInterfaceArray
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
 
 
 
@@ -111,7 +121,11 @@ open fun getInstance(animationInterfaceArray: Array<Animation?>)
 
 open fun getBasicAnimationInterfaceFactoryInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<AnimationInterfaceFactoryInterface?>{
+: Array<AnimationInterfaceFactoryInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,9 +134,11 @@ open fun getBasicAnimationInterfaceFactoryInterfaceArray()
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 
     var size: Int = this.basicAnimationInterfaceFactoryInterfaceArrayP!!.size
                 
@@ -133,7 +149,11 @@ override fun setInitialScale(scaleProperties: ScaleProperties)
 
                         for (index in 0 until size)
 
-        {this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.setInitialScale(scaleProperties)
+        
+
+        Updates for KMP build        
+        {
+this.basicAnimationInterfaceFactoryInterfaceArrayP[index]!!.setInitialScale(scaleProperties)
 }
 
 }

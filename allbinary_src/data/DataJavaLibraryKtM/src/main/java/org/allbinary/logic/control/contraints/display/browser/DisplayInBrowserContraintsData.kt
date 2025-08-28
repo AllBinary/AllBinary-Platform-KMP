@@ -46,7 +46,11 @@ open public class DisplayInBrowserContraintsData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

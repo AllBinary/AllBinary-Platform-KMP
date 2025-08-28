@@ -32,22 +32,22 @@ open public class RemoteInfo
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (username: String, actorSessionId: Int, playerInputId: Int, id: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var username = username
-
-
-                    var actorSessionId = actorSessionId
-
-
-                    var playerInputId = playerInputId
-
-
-                    var id = id
+var username = username
+var actorSessionId = actorSessionId
+var playerInputId = playerInputId
+var id = id
 }
 
 

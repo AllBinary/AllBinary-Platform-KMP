@@ -35,12 +35,12 @@ open public class GameInfoCopyFactory
             
 open fun getInstance(gameInfo: GameInfo, maxLevel: Int)
         //nullable =  from not(true or (false and false)) = 
-: GameInfo{
+: GameInfo
 
-                    var gameInfo = gameInfo
-
-
-                    var maxLevel = maxLevel
+        Updates for KMP build        
+        {
+var gameInfo = gameInfo
+var maxLevel = maxLevel
 
 
 
@@ -51,9 +51,11 @@ open fun getInstance(gameInfo: GameInfo, maxLevel: Int)
 
 open fun getInstance(gameInfo: GameInfo)
         //nullable =  from not(true or (false and false)) = 
-: GameInfo{
+: GameInfo
 
-                    var gameInfo = gameInfo
+        Updates for KMP build        
+        {
+var gameInfo = gameInfo
 
 
 

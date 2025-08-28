@@ -39,12 +39,12 @@ open public class AdvancedRTSLayerFormFactory : RTSLayerFormFactory {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var scrollSelectionForm: ScrollSelectionForm
-protected constructor        (label: String, itemArrayFactoryInterface: ItemArraySingletonFactoryInterface){
+protected constructor        (label: String, itemArrayFactoryInterface: ItemArraySingletonFactoryInterface)
 
-                    var label = label
-
-
-                    var itemArrayFactoryInterface = itemArrayFactoryInterface
+        Updates for KMP build        
+        {
+var label = label
+var itemArrayFactoryInterface = itemArrayFactoryInterface
 
         try {
             
@@ -52,7 +52,11 @@ protected constructor        (label: String, itemArrayFactoryInterface: ItemArra
 
 this.scrollSelectionForm= RTSScrollSelectionFormFactory.getInstance(label, items)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
@@ -63,9 +67,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 open fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
-: ScrollSelectionForm{
+: ScrollSelectionForm
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 
 
 

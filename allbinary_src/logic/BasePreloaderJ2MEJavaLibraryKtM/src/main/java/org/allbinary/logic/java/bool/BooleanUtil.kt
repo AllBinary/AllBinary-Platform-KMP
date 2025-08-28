@@ -38,7 +38,11 @@ open public class BooleanUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BooleanUtil{
+: BooleanUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,16 +53,22 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getFromString(booleanString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var booleanString = booleanString
+        Updates for KMP build        
+        {
+    //var booleanString = booleanString
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -122,9 +132,11 @@ open fun getFromString(booleanString: String)
             
 open fun isStringBoolean(booleanString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var booleanString = booleanString
+        Updates for KMP build        
+        {
+    //var booleanString = booleanString
 
     var booleanFactory: BooleanFactory = BooleanFactory.getInstance()!!
 

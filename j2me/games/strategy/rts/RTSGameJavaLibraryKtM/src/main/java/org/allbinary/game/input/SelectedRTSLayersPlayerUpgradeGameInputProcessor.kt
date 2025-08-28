@@ -32,9 +32,11 @@ open public class SelectedRTSLayersPlayerUpgradeGameInputProcessor : SelectedRTS
         
 public constructor        (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)                        
 
-                            : super(selectedRTSLayersPlayerGameInput){
+                            : super(selectedRTSLayersPlayerGameInput)
 
-                    var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
+        Updates for KMP build        
+        {
+var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,12 +48,12 @@ public constructor        (selectedRTSLayersPlayerGameInput: SelectedRTSLayersPl
             
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+var allbinaryLayerManager = allbinaryLayerManager
+var gameKeyEvent = gameKeyEvent
 selectedRTSLayersPlayerGameInput!!.upgrade()
 }
 

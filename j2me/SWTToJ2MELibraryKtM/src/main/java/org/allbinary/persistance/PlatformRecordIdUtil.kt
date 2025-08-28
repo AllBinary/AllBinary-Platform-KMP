@@ -40,7 +40,11 @@ open public class PlatformRecordIdUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlatformRecordIdUtil{
+: PlatformRecordIdUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,12 +63,12 @@ open fun getInstance()
 
 open fun getRecordId(abeClientInformation: AbeClientInformationInterface, baseRecordId: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var baseRecordId = baseRecordId
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var baseRecordId = baseRecordId
 
 
 

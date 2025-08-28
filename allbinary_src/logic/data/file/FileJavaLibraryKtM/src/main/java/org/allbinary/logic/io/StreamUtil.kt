@@ -43,7 +43,11 @@ open public class StreamUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StreamUtil{
+: StreamUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,28 +60,34 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun get(inputStream: InputStream, outputStream: OutputStream, buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: OutputStream{
+: OutputStream
 
-                    var inputStream = inputStream
-
-
-                    var outputStream = outputStream
-
-
-                    var buffer = buffer
+        Updates for KMP build        
+        {
+    //var inputStream = inputStream
+    //var outputStream = outputStream
+var buffer = buffer
 
     var len: Int = 0
 
 
         while(true)
-        {len= inputStream!!.read(buffer, 0, buffer.size)
+        
+
+        Updates for KMP build        
+        {
+len= inputStream!!.read(buffer, 0, buffer.size)
 
     
                         if(len !=  -1)
@@ -108,15 +118,13 @@ outputStream!!.write(buffer, 0, len)
             
 open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputStream, byteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var inputStream = inputStream
-
-
-                    var outputStream2 = outputStream2
-
-
-                    var byteArray = byteArray
+        Updates for KMP build        
+        {
+    //var inputStream = inputStream
+    //var outputStream2 = outputStream2
+    //var byteArray = byteArray
 
     var outputStream: ByteArrayOutputStream = outputStream2
 
@@ -129,7 +137,11 @@ open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputSt
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return outputStream!!.toByteArray()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -145,9 +157,11 @@ open fun getByteArray(inputStream: InputStream, outputStream2: ByteArrayOutputSt
 
 open fun close(closeable: Closeable)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var closeable = closeable
+        Updates for KMP build        
+        {
+var closeable = closeable
 
         try {
             
@@ -167,7 +181,11 @@ open fun close(closeable: Closeable)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)

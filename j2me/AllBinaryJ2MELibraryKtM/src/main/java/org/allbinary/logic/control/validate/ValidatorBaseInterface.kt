@@ -34,17 +34,29 @@ open fun isValid()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
 : Hashtable<Any, Any>
 
+        Updates for KMP build        
+        
+
 open fun toList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
+
+        Updates for KMP build        
+        
 
 }
                 

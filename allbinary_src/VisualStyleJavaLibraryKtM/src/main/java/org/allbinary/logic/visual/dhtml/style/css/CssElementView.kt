@@ -66,7 +66,11 @@ open public class CssElementView
     var cssPropertyVector: Vector
 public constructor        ()
             : super()
-        {this.cssPropertyVector= Vector()
+        
+
+        Updates for KMP build        
+        {
+this.cssPropertyVector= Vector()
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -77,9 +81,11 @@ this.value= stringUtil!!.EMPTY_STRING
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
         try {
             
@@ -155,7 +161,11 @@ this.cssElementVector= CssElementsValidationFactory.getInstance(cssElementStyleN
 
 this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -176,7 +186,11 @@ this.cssPropertyVector= CssPropertiesValidationFactory.getInstance(nodeList)
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -186,7 +200,11 @@ open fun getValue()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(DomData.VALUE, this.value)
@@ -204,9 +222,11 @@ hashMap!!.put(this.DESCRIPTION, this.description)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
 
@@ -231,7 +251,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var cssPropertyDomNodeInterface: DomNodeInterface = cssPropertyVector!!.get(index) as DomNodeInterface
 
 node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
@@ -246,7 +270,11 @@ node.appendChild(cssPropertyDomNodeInterface!!.toXmlNode(document))
 
                         for (index in 0 until size2)
 
+        
+
+        Updates for KMP build        
         {
+
     var cssElementDomNodeInterface: DomNodeInterface = cssElementVector!!.get(index) as DomNodeInterface
 
 node.appendChild(cssElementDomNodeInterface!!.toXmlNode(document))

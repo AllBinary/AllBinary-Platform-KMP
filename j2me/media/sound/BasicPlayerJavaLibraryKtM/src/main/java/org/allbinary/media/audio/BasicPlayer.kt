@@ -55,13 +55,21 @@ open public class BasicPlayer
     val listenersList: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        {this.setLoopCount(0)
+        
+
+        Updates for KMP build        
+        {
+this.setLoopCount(0)
 this.setState(Player.UNREALIZED)
 }
 
 override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +78,11 @@ override fun getContentType()
 
 override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
-: Control{
+: Control
 
-                    var controlType = controlType
+        Updates for KMP build        
+        {
+var controlType = controlType
 
 
 
@@ -82,7 +92,11 @@ override fun getControl(controlType: String)
 
 override fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>{
+: Array<Control?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,14 +105,20 @@ override fun getControls()
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerListener = playerListener
+
+        Updates for KMP build        
+        {
+var playerListener = playerListener
 
     
                         if(!this.listenersList!!.contains(playerListener))
@@ -112,15 +132,21 @@ override fun addPlayerListener(playerListener: PlayerListener)
 
 override fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerListener = playerListener
+
+        Updates for KMP build        
+        {
+var playerListener = playerListener
 this.listenersList!!.remove(playerListener)
 }
 
 override fun getState()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,15 +157,21 @@ override fun getState()
 
 open fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var state = state
+
+        Updates for KMP build        
+        {
+var state = state
 this.state= state
 }
 
 override fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -148,7 +180,11 @@ override fun getDuration()
 
 override fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,33 +193,51 @@ override fun getMediaTime()
 
 override fun deallocate()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(MediaException::class)
             override fun prefetch()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(MediaException::class)
             override fun realize()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var count = count
+
+        Updates for KMP build        
+        {
+var count = count
 this.loopCount= count
 }
 
 
 open fun getLoopCount()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -195,9 +249,11 @@ open fun getLoopCount()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var now = now
+        Updates for KMP build        
+        {
+var now = now
 
 
 
@@ -210,7 +266,11 @@ override fun setMediaTime(now: Long)
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-{this.setState(Player.STARTED)
+
+
+        Updates for KMP build        
+        {
+this.setState(Player.STARTED)
 }
 
 
@@ -218,17 +278,21 @@ override fun start()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-{this.setState(Player.PREFETCHED)
+
+
+        Updates for KMP build        
+        {
+this.setState(Player.PREFETCHED)
 }
 
 override fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var leftVolume = leftVolume
 
 
-                    var rightVolume = rightVolume
+        Updates for KMP build        
+        {
+    //var leftVolume = leftVolume
+    //var rightVolume = rightVolume
 }
 
 

@@ -53,7 +53,11 @@ open public class PaymentEntity : AbSqlBean
     private val tableName: String = "payment"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -63,9 +67,11 @@ this.setTableName(tableName)
 
 open fun getLastId(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
 
 
@@ -76,12 +82,12 @@ open fun getLastId(userName: String)
 
 open fun setDefault(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+var userName = userName
+var index = index
 
         try {
             
@@ -120,7 +126,11 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -136,9 +146,11 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
 open fun get(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
         try {
             
@@ -160,7 +172,11 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var paymentHashMap: HashMap<Any, Any> = paymentList!!.get(index) as HashMap<Any, Any>
 
 
@@ -185,7 +201,11 @@ keyAndValue!!.put(UserData.USERNAME, userName)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentVector
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -206,9 +226,11 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
 open fun getDefault(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: PaymentInterface{
+: PaymentInterface
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
         try {
             
@@ -257,7 +279,11 @@ paymentHashMap= super.getRow(updateKeyAndValue)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -278,12 +304,12 @@ paymentHashMap= super.getRow(updateKeyAndValue)
 
 open fun remove(userName: String, index: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+var userName = userName
+var index = index
 
         try {
             
@@ -302,7 +328,11 @@ super.deleteWhere(whereHashMap)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -318,12 +348,12 @@ super.deleteWhere(whereHashMap)
 
 open fun add(userName: String, paymentInterface: PaymentInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var paymentInterface = paymentInterface
+        Updates for KMP build        
+        {
+var userName = userName
+var paymentInterface = paymentInterface
 
         try {
             
@@ -364,7 +394,11 @@ super.insert(vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -380,7 +414,11 @@ super.insert(vector)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var entryData: EntryData = EntryData.getInstance()!!
 
 
@@ -397,7 +435,11 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(tableName)!!.appe
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -407,7 +449,11 @@ open fun createTable()
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

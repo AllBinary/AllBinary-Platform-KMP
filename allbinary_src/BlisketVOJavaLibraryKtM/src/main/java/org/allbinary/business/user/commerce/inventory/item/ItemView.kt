@@ -44,12 +44,12 @@ open public class ItemView
     private val vector: Vector
 public constructor        (itemInterface: OrderItemInterface, vector: Vector)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var itemInterface = itemInterface
-
-
-                    var vector = vector
+var itemInterface = itemInterface
+var vector = vector
 this.itemInterface= itemInterface
 this.vector= vector
 }
@@ -59,9 +59,11 @@ this.vector= vector
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.itemInterface!!.toHashMap()!!
 
@@ -91,7 +93,11 @@ node.appendChild(basicItemView!!.toXmlNode(document))
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = nameArray[index]!! as String
 
 

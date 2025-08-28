@@ -38,12 +38,20 @@ open public class BasicWeightShippingModuleView : BasicWeightShippingModule
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,7 +61,11 @@ open fun isValid()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document{
+: org.w3c.dom.Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,9 +75,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node{
+: org.w3c.dom.Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -76,7 +90,11 @@ open fun toValidationInfoNode(document: org.w3c.dom.Document)
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,9 +104,11 @@ open fun validationInfo()
 
 open fun toXmlNode(document: org.w3c.dom.Document)
         //nullable = true from not(false or (false and false)) = true
-: org.w3c.dom.Node{
+: org.w3c.dom.Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -102,7 +122,11 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return shippingMethodNode
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -123,7 +147,11 @@ shippingMethodNode!!.appendChild(ModDomHelper.createNameValueNodes(document, Shi
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: org.w3c.dom.Document{
+: org.w3c.dom.Document
+
+        Updates for KMP build        
+        {
+
         try {
             
     var document: Document = DomDocumentHelper.create()!!
@@ -134,7 +162,11 @@ open fun toXmlDoc()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -155,7 +187,11 @@ open fun toXmlDoc()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -163,7 +199,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return commonStrings!!.NOT_IMPLEMENTED
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         

@@ -45,7 +45,11 @@ open public class FeaturedAnimationInterfaceFactoryInterfaceFactory : FeaturedRe
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FeaturedAnimationInterfaceFactoryInterfaceFactory{
+: FeaturedAnimationInterfaceFactoryInterfaceFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,16 +58,22 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getRectangle(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: Rectangle{
+: Rectangle
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 
 
 
@@ -76,15 +86,13 @@ open fun getRectangle(resource: String)
             
 open fun getRectangle(resource: String, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Rectangle{
+: Rectangle
 
-                    var resource = resource
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var resource = resource
+    //var x = x
+    //var y = y
 
     var list: BasicArrayList = this.getList()!!
 
@@ -100,7 +108,11 @@ open fun getRectangle(resource: String, x: Int, y: Int)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var featureInterface: FeatureResourceAnimationInterfaceFactoryInterface = list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
 
@@ -141,9 +153,11 @@ open fun getRectangle(resource: String, x: Int, y: Int)
             
 open fun getProcedural(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: ProceduralAnimationInterfaceFactoryInterface{
+: ProceduralAnimationInterfaceFactoryInterface
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 
 
 
@@ -156,9 +170,11 @@ open fun getProcedural(resource: String)
             
 open fun get(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: AnimationInterfaceFactoryInterface{
+: AnimationInterfaceFactoryInterface
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 
 
 
@@ -171,9 +187,11 @@ open fun get(resource: String)
             
 open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicAnimationInterfaceFactoryInterface{
+: BasicAnimationInterfaceFactoryInterface
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+    //var resource = resource
 
     var list: BasicArrayList = this.getList()!!
 
@@ -195,7 +213,11 @@ open fun getBasicAnimationInterfaceFactoryInstance(resource: String)
 
                         for (index in 0 until size)
 
-        {featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
+        
+
+        Updates for KMP build        
+        {
+featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
     
                         if(featureInterface!!.isFeature())
@@ -258,7 +280,11 @@ stringBuffer!!.append(FOR_FACTORIES)
 
                         for (index in 0 until size2)
 
-        {stringBuffer!!.append(resourceTypeAvailableList!!.get(index)!!.toString())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(resourceTypeAvailableList!!.get(index)!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.COMMA_SEP)
 }
 
@@ -270,7 +296,11 @@ stringBuffer!!.append(resource)
 
                         for (index in 0 until size)
 
-        {stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 
     
@@ -303,7 +333,11 @@ stringBuffer!!.append(RESOURCES_LABEL)
 
                         for (index in 0 until size)
 
-        {featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
+        
+
+        Updates for KMP build        
+        {
+featureInterface= list.objectArray[index]!! as FeatureResourceAnimationInterfaceFactoryInterface
 stringBuffer!!.append(featureInterface!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 }

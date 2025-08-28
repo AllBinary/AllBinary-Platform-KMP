@@ -45,7 +45,11 @@ open public class WebCommandProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WebCommandProcessor{
+: WebCommandProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,20 +72,22 @@ open fun getInstance()
 
 open fun process(midletCommandListener: CommandListener, command: Command, canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var midletCommandListener = midletCommandListener
 
 
-                    var command = command
-
-
-                    var canvas = canvas
+        Updates for KMP build        
+        {
+    //var midletCommandListener = midletCommandListener
+    //var command = command
+    //var canvas = canvas
 
         try {
             PlayN.openURL(list.remove(0) as String)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)

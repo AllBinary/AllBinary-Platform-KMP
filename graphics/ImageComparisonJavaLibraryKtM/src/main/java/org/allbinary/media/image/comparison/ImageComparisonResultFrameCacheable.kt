@@ -39,12 +39,12 @@ open public class ImageComparisonResultFrameCacheable
     private var imageComparisonResult: ImageComparisonResult
 public constructor        (imageComparisonResult: ImageComparisonResult, frame: Long)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var imageComparisonResult = imageComparisonResult
-
-
-                    var frame = frame
+var imageComparisonResult = imageComparisonResult
+var frame = frame
 this.setImageComparisonResult(imageComparisonResult)
 this.frame= frame
 }
@@ -52,7 +52,11 @@ this.frame= frame
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +66,11 @@ open fun getKey()
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,16 +80,22 @@ open fun getFrame()
 
 open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 this.frame= frame
 }
 
 
 open fun getImageComparisonResult()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonResult{
+: ImageComparisonResult
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,15 +105,21 @@ open fun getImageComparisonResult()
 
 open fun setImageComparisonResult(imageComparisonResult: ImageComparisonResult)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageComparisonResult = imageComparisonResult
+
+        Updates for KMP build        
+        {
+var imageComparisonResult = imageComparisonResult
 this.imageComparisonResult= imageComparisonResult
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.toString()!!)

@@ -73,12 +73,12 @@ open public class ProfileActionScriptItem : DefaultMutableTreeNode
     private var jPopupMenu: JPopupMenu
 public constructor        (label: String, node: Node)                        
 
-                            : super(label){
+                            : super(label)
 
-                    var label = label
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+var label = label
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -89,9 +89,11 @@ logUtil!!.put("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
 
 public constructor        (label: String)                        
 
-                            : super(label){
+                            : super(label)
 
-                    var label = label
+        Updates for KMP build        
+        {
+var label = label
 
 
                             //For kotlin this is before the body of the constructor.
@@ -103,7 +105,11 @@ logUtil!!.put("Label: " +label, this, this.commonStrings!!.CONSTRUCTOR)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{setJPopupMenu(JPopupMenu())
+
+
+        Updates for KMP build        
+        {
+setJPopupMenu(JPopupMenu())
 
     var jMenuItemEdit: JMenuItem = JMenuItem(EDIT)
 
@@ -121,9 +127,11 @@ getJPopupMenu()!!.add(jMenuItemDelete)
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 
 
 
@@ -133,7 +141,11 @@ open fun process(frame: Long)
 
 open fun getJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
-: JPopupMenu{
+: JPopupMenu
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -143,7 +155,11 @@ open fun getJPopupMenu()
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -152,9 +168,11 @@ open fun showDialog()
 
 open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var actionEvent = actionEvent
+
+        Updates for KMP build        
+        {
+var actionEvent = actionEvent
 
     
                         if(actionEvent!!.getActionCommand()!!.compareTo(EDIT) == 0)
@@ -169,9 +187,11 @@ open fun actionPerformed(actionEvent: ActionEvent)
 
 open fun setJPopupMenu(jPopupMenu: JPopupMenu)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var jPopupMenu = jPopupMenu
+
+        Updates for KMP build        
+        {
+var jPopupMenu = jPopupMenu
 this.jPopupMenu= jPopupMenu
 }
 

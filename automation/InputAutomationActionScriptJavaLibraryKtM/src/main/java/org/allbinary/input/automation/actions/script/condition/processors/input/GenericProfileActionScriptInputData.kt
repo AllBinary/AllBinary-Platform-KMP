@@ -42,7 +42,11 @@ open public class GenericProfileActionScriptInputData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

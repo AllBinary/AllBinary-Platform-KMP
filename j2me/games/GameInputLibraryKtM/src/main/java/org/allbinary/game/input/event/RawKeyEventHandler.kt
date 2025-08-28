@@ -42,7 +42,11 @@ open public class RawKeyEventHandler
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RawKeyEventHandler{
+: RawKeyEventHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,21 +65,31 @@ open fun getInstance()
     var eventListenerInterfaceList: BasicArrayList
 public constructor        ()
             : super()
-        {this.eventListenerInterfaceList= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+this.eventListenerInterfaceList= BasicArrayList()
 }
 
 
 open fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.eventListenerInterfaceList= BasicArrayList()
+
+
+        Updates for KMP build        
+        {
+this.eventListenerInterfaceList= BasicArrayList()
 }
 
 
 open fun addListeners(vector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var vector = vector
+
+        Updates for KMP build        
+        {
+    //var vector = vector
 
     var eventListenerInterface: RawKeyEventListener
 
@@ -88,7 +102,11 @@ open fun addListeners(vector: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {eventListenerInterface= vector.get(index) as RawKeyEventListener
+        
+
+        Updates for KMP build        
+        {
+eventListenerInterface= vector.get(index) as RawKeyEventListener
 this.addListener(eventListenerInterface)
 }
 
@@ -97,9 +115,11 @@ this.addListener(eventListenerInterface)
 
 open fun addListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+    //var eventListenerInterface = eventListenerInterface
 
     
                         if(!this.eventListenerInterfaceList!!.contains(eventListenerInterface))
@@ -114,9 +134,11 @@ open fun addListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
 
 open fun addListener(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+    //var eventListenerInterface = eventListenerInterface
 
     
                         if(!this.eventListenerInterfaceList!!.contains(eventListenerInterface))
@@ -131,18 +153,22 @@ open fun addListener(eventListenerInterface: RawKeyEventListener)
 
 open fun removeListenerSingleThreaded(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+    //var eventListenerInterface = eventListenerInterface
 this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
 
 
 open fun removeListener(eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+    //var eventListenerInterface = eventListenerInterface
 this.eventListenerInterfaceList!!.remove(eventListenerInterface)
 }
 
@@ -151,15 +177,13 @@ this.eventListenerInterfaceList!!.remove(eventListenerInterface)
             
 open fun fireEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
-
-
-                    var repeated = repeated
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
+    //var repeated = repeated
 
     var eventListenerInterface: RawKeyEventListener
 
@@ -168,12 +192,20 @@ open fun fireEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
 
 
         while(index < this.eventListenerInterfaceList!!.size())
+        
+
+        Updates for KMP build        
         {
+
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
 this.process(keyCode, deviceId, repeated, eventListenerInterface)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
@@ -189,25 +221,25 @@ index++
             
 open fun process(keyCode: Int, deviceId: Int, repeated: Boolean, eventListenerInterface: RawKeyEventListener)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
-
-
-                    var repeated = repeated
-
-
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
+    //var repeated = repeated
+    //var eventListenerInterface = eventListenerInterface
 eventListenerInterface!!.onEvent(keyCode, deviceId, repeated)
 }
 
 
 open fun getEventListenerInterfaceListP()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -216,7 +248,11 @@ open fun getEventListenerInterfaceListP()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(TOTAL_LISTENERS)
@@ -229,13 +265,21 @@ stringBuffer!!.append(this.eventListenerInterfaceList!!.size())
 
 
         while(index < this.eventListenerInterfaceList!!.size())
+        
+
+        Updates for KMP build        
         {
+
         try {
             eventListenerInterface= this.eventListenerInterfaceList!!.get(index) as RawKeyEventListener
 stringBuffer!!.append(LISTENER_LABEL)
 stringBuffer!!.append(eventListenerInterface!!.toString())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)

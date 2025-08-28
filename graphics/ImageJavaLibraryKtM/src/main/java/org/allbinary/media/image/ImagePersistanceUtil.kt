@@ -44,7 +44,11 @@ open public class ImagePersistanceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImagePersistanceUtil{
+: ImagePersistanceUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,12 +71,12 @@ open fun getInstance()
             
 open fun saveWithBatik(file: AbFile, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+var file = file
+var bufferedImage = bufferedImage
 
     var batikPNGImageWriter: PNGImageWriter = PNGImageWriter()
 
@@ -95,24 +99,24 @@ logUtil!!.put("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAV
 
 open fun saveWithImageIO(filePath: String, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var filePath = filePath
 
 
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+var filePath = filePath
+var bufferedImage = bufferedImage
 saveWithImageIO(File(filePath), bufferedImage)
 }
 
 
 open fun saveWithImageIO(file: File, bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+var file = file
+var bufferedImage = bufferedImage
 
     var writer: ImageWriter = 
                 null
@@ -156,7 +160,11 @@ writer.write(
                             null), iwp)
 logUtil!!.put("Wrote Image: " +file.getAbsolutePath(), this, commonStrings!!.SAVE)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e)
 }
 
          finally {
@@ -185,7 +193,11 @@ ios.close()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, ios, commonStrings!!.CLOSE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, ios, commonStrings!!.CLOSE, e)
 }
 
 
@@ -203,7 +215,11 @@ ios.close()
                                     }
                                 
 } catch(e2: IOException)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e2)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, commonStrings!!.SAVE, e2)
 }
 
 

@@ -39,7 +39,11 @@ open public class ApplicationConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ApplicationConfiguration{
+: ApplicationConfiguration
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +64,11 @@ open fun getInstance()
     private val FILE: String = "ReloadConfiguration.dat"
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             
     
@@ -77,7 +85,11 @@ private constructor        ()
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
@@ -90,7 +102,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var fileInputStreamFactory: FileStreamFactory = FileStreamFactory.getInstance()!!
 
 
@@ -194,7 +210,11 @@ logUtil!!.put("Read Configuration: " +this.toString(), this, "read")
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
 
 
@@ -254,7 +274,11 @@ closeable= dataOutputStream
                             
 dataOutputStream!!.flush()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -272,9 +296,11 @@ dataOutputStream!!.flush()
             
 open fun update(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
 
     
                         if(gameFeature == MainFeatureFactory.getInstance()!!.FULL_SCREEN)
@@ -323,16 +349,22 @@ this.write()
 
 open fun setFullscreen(fullscreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fullscreen = fullscreen
+
+        Updates for KMP build        
+        {
+var fullscreen = fullscreen
 this.fullscreen= fullscreen
 }
 
 
 open fun isFullscreen()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -342,16 +374,22 @@ open fun isFullscreen()
 
 open fun setShowTitleBar(showTitleBar: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var showTitleBar = showTitleBar
+
+        Updates for KMP build        
+        {
+var showTitleBar = showTitleBar
 this.showTitleBar= showTitleBar
 }
 
 
 open fun isShowTitleBar()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -361,16 +399,22 @@ open fun isShowTitleBar()
 
 open fun setProgressBarView(progressBarView: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var progressBarView = progressBarView
+
+        Updates for KMP build        
+        {
+var progressBarView = progressBarView
 this.progressBarView= progressBarView
 }
 
 
 open fun isProgressBarView()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -379,7 +423,11 @@ open fun isProgressBarView()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("isFullscreen: ")

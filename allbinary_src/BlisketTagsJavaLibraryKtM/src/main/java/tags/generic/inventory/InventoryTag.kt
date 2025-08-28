@@ -39,7 +39,11 @@ open public class InventoryTag : StoreValidationTransformTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -50,7 +54,11 @@ public constructor        ()
             
 open fun search()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = InventoryHelperFactory().
@@ -69,13 +77,21 @@ open fun search()
 
 pageContext!!.getOut()!!.print(result)
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to search Inventory by keyword"
 
 
@@ -92,7 +108,11 @@ pageContext!!.getOut()!!.print(result)
             pageContext!!.getOut()!!.print(error +"<br>")
 pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
@@ -112,7 +132,11 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
             
 open fun viewSummary()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = InventoryHelperFactory().
@@ -131,13 +155,21 @@ open fun viewSummary()
 
 pageContext!!.getOut()!!.print(result)
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to View Summary"
 
 
@@ -154,7 +186,11 @@ pageContext!!.getOut()!!.print(result)
             pageContext!!.getOut()!!.print(error +"<br>")
 pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
 } catch(e2: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.LICENSINGERROR))
                         
@@ -174,7 +210,11 @@ pageContext!!.getOut()!!.print("Exception: " +e +"<br>")
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -246,7 +286,11 @@ this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
 
                             throw Exception("Command Null")
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -254,7 +298,11 @@ this.setObjectFile("views.generic.inventory.AutoValidationInventoryView")
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

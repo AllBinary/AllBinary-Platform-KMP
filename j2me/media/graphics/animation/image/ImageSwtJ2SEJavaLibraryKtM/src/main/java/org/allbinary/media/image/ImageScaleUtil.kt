@@ -49,7 +49,11 @@ open public class ImageScaleUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageScaleUtil{
+: ImageScaleUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,34 +76,28 @@ open fun getInstance()
     private val NO_COPY: String = "SWT should not copy images after initial loading as the alpha is not honored"
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var imageCache = imageCache
-
-
-                    var originalImage = originalImage
-
-
-                    var scaleNominatorX = scaleNominatorX
-
-
-                    var scaleDenominatorX = scaleDenominatorX
-
-
-                    var scaleNominatorY = scaleNominatorY
-
-
-                    var scaleDenominatorY = scaleDenominatorY
-
-
-                    var cached = cached
+        Updates for KMP build        
+        {
+    //var imageCache = imageCache
+    //var originalImage = originalImage
+    //var scaleNominatorX = scaleNominatorX
+    //var scaleDenominatorX = scaleDenominatorX
+    //var scaleNominatorY = scaleNominatorY
+    //var scaleDenominatorY = scaleDenominatorY
+    //var cached = cached
 
 
 
@@ -112,30 +110,18 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
             
 open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominatorX: Float, scaleDenominatorX: Float, scaleNominatorY: Float, scaleDenominatorY: Float, cached: Boolean, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var imageCache = imageCache
-
-
-                    var originalImage = originalImage
-
-
-                    var scaleNominatorX = scaleNominatorX
-
-
-                    var scaleDenominatorX = scaleDenominatorX
-
-
-                    var scaleNominatorY = scaleNominatorY
-
-
-                    var scaleDenominatorY = scaleDenominatorY
-
-
-                    var cached = cached
-
-
-                    var mutable = mutable
+        Updates for KMP build        
+        {
+    //var imageCache = imageCache
+    //var originalImage = originalImage
+    //var scaleNominatorX = scaleNominatorX
+    //var scaleDenominatorX = scaleDenominatorX
+    //var scaleNominatorY = scaleNominatorY
+    //var scaleDenominatorY = scaleDenominatorY
+    //var cached = cached
+    //var mutable = mutable
 
     
                         if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
@@ -177,30 +163,18 @@ open fun createImage(imageCache: ImageCache, originalImage: Image, scaleNominato
             
 open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImage = originalImage
 
 
-                    var originalImageArray = originalImageArray
-
-
-                    var ximageToShowArray = ximageToShowArray
-
-
-                    var unused = unused
-
-
-                    var scaleX = scaleX
-
-
-                    var scaleY = scaleY
-
-
-                    var maxScaleX = maxScaleX
-
-
-                    var maxScaleY = maxScaleY
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var originalImageArray = originalImageArray
+    //var ximageToShowArray = ximageToShowArray
+    //var unused = unused
+    //var scaleX = scaleX
+    //var scaleY = scaleY
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
 this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX, scaleY, maxScaleX, maxScaleY, true)
 }
 
@@ -209,33 +183,19 @@ this.scale(originalImage, originalImageArray, ximageToShowArray, unused, scaleX,
             
 open fun scale(originalImage: Image, originalImageArray: Array<Image?>, ximageToShowArray: Array<Image?>, unused: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImage = originalImage
 
 
-                    var originalImageArray = originalImageArray
-
-
-                    var ximageToShowArray = ximageToShowArray
-
-
-                    var unused = unused
-
-
-                    var scaleX = scaleX
-
-
-                    var scaleY = scaleY
-
-
-                    var maxScaleX = maxScaleX
-
-
-                    var maxScaleY = maxScaleY
-
-
-                    var mutable = mutable
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var originalImageArray = originalImageArray
+    //var ximageToShowArray = ximageToShowArray
+    //var unused = unused
+    //var scaleX = scaleX
+    //var scaleY = scaleY
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
+    //var mutable = mutable
 
     var width: Int = originalImage!!.getWidth()!!
 

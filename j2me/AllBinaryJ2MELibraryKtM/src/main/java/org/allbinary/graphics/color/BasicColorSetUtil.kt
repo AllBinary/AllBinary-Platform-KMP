@@ -38,7 +38,11 @@ open public class BasicColorSetUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicColorSetUtil{
+: BasicColorSetUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,32 +53,34 @@ open fun getInstance()
         }
             protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var graphics = graphics
+var basicColor = basicColor
 graphics.setColor(basicColor!!.toInt())
 }
 
 
 open fun setBasicColorP(graphics: Graphics, basicColor: BasicColor, value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var basicColor = basicColor
-
-
-                    var value = value
+        Updates for KMP build        
+        {
+var graphics = graphics
+var basicColor = basicColor
+var value = value
 graphics.setColor(value)
 }
 

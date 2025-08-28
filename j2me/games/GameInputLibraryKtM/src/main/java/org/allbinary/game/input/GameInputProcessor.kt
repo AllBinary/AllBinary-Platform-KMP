@@ -41,7 +41,11 @@ open public class GameInputProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameInputProcessor{
+: GameInputProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,19 +56,23 @@ open fun getInstance()
         }
             protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
@@ -72,12 +80,12 @@ open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: Gam
             
 open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
@@ -85,15 +93,13 @@ open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEv
             
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, analogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
-
-
-                    var analogValue = analogValue
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var gameKeyEvent = gameKeyEvent
+    //var analogValue = analogValue
 }
 
 
@@ -101,12 +107,12 @@ open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: Gam
             
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var keyAsInteger = keyAsInteger
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var keyAsInteger = keyAsInteger
 }
 
 
@@ -114,12 +120,12 @@ open fun process(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Int
             
 open fun processReleased(allbinaryLayerManager: AllBinaryLayerManager, keyAsInteger: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var keyAsInteger = keyAsInteger
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var keyAsInteger = keyAsInteger
 }
 
 

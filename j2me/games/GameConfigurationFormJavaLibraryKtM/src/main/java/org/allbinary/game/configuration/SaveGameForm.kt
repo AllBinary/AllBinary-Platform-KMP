@@ -45,18 +45,14 @@ open public class SaveGameForm : CommandForm {
             
 open fun getInstance(commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: CommandForm{
+: CommandForm
 
-                    var commandListener = commandListener
-
-
-                    var title = title
-
-
-                    var backgrounBasicColor = backgrounBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var commandListener = commandListener
+var title = title
+var backgrounBasicColor = backgrounBasicColor
+var foregroundBasicColor = foregroundBasicColor
 FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 
 
@@ -68,7 +64,11 @@ FORM= SaveGameForm(commandListener, title, backgrounBasicColor, foregroundBasicC
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CommandForm{
+: CommandForm
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,18 +79,14 @@ open fun getInstance()
         }
             private constructor        (commandListener: CommandListener, title: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
+                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 
-                    var commandListener = commandListener
-
-
-                    var title = title
-
-
-                    var backgrounBasicColor = backgrounBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var commandListener = commandListener
+var title = title
+var backgrounBasicColor = backgrounBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -105,9 +101,11 @@ this.initCommands(commandListener)
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 

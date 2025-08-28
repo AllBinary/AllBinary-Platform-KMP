@@ -40,7 +40,11 @@ open public class JavaHelpSetNotifier
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,9 +54,11 @@ open fun get()
 
 open fun isNotified(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var helpSet = helpSet
+        Updates for KMP build        
+        {
+var helpSet = helpSet
 
     var isNotified: Boolean = false
 
@@ -71,7 +77,11 @@ open fun isNotified(helpSet: HelpSet)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextURL: URL = urlArray[i]!! as URL
 
 
@@ -97,7 +107,11 @@ vector.add(url)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

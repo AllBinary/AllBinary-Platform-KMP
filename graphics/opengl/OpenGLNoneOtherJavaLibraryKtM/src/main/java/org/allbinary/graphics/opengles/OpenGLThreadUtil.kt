@@ -23,7 +23,11 @@ open public class OpenGLThreadUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLThreadUtil{
+: OpenGLThreadUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,20 +44,30 @@ open fun getInstance()
         
 open fun set(glSurfaceView: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var glSurfaceView = glSurfaceView
+
+        Updates for KMP build        
+        {
+var glSurfaceView = glSurfaceView
 }
 
 
 open fun onPause()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onResume()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

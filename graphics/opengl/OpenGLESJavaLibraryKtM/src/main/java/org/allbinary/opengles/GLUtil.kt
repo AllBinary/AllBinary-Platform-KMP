@@ -44,7 +44,11 @@ open public class GLUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GLUtil{
+: GLUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,15 +67,13 @@ open fun getInstance()
 
 open fun makeFloatBuffer3(p_a: Float, p_b: Float, p_c: Float)
         //nullable = true from not(false or (false and false)) = true
-: FloatBuffer{
+: FloatBuffer
 
-                    var p_a = p_a
-
-
-                    var p_b = p_b
-
-
-                    var p_c = p_c
+        Updates for KMP build        
+        {
+var p_a = p_a
+var p_b = p_b
+var p_c = p_c
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(3 *BYTES_PER_FLOAT)!!
 
@@ -93,18 +95,14 @@ this.position(buffer, 0)
 
 open fun makeFloatBuffer4(p_a: Float, p_b: Float, p_c: Float, p_d: Float)
         //nullable = true from not(false or (false and false)) = true
-: FloatBuffer{
+: FloatBuffer
 
-                    var p_a = p_a
-
-
-                    var p_b = p_b
-
-
-                    var p_c = p_c
-
-
-                    var p_d = p_d
+        Updates for KMP build        
+        {
+var p_a = p_a
+var p_b = p_b
+var p_c = p_c
+var p_d = p_d
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(4 *BYTES_PER_FLOAT)!!
 
@@ -127,9 +125,11 @@ this.position(buffer, 0)
 
 open fun makeFloatBuffer(byteBuffer: ByteBuffer)
         //nullable = true from not(false or (false and false)) = true
-: FloatBuffer{
+: FloatBuffer
 
-                    var byteBuffer = byteBuffer
+        Updates for KMP build        
+        {
+    //var byteBuffer = byteBuffer
 
     var b: ByteBuffer = ByteBuffer.allocateDirect(byteBuffer!!.limit() *BYTES_PER_FLOAT)!!
 
@@ -145,7 +145,11 @@ b.order(ByteOrder.nativeOrder())
 
 
         while(byteBuffer!!.hasRemaining())
-        {unsigned= byteBuffer!!.get() and 0xFF
+        
+
+        Updates for KMP build        
+        {
+unsigned= byteBuffer!!.get() and 0xFF
 v= (unsigned.toFloat()) /255f
 buffer.put(v)
 }
@@ -161,12 +165,12 @@ this.position(buffer, 0)
 
 open fun position(buffer: Buffer, newPosition: Int)
         //nullable = true from not(false or (false and false)) = true
-: Buffer{
+: Buffer
 
-                    var buffer = buffer
-
-
-                    var newPosition = newPosition
+        Updates for KMP build        
+        {
+    //var buffer = buffer
+    //var newPosition = newPosition
 
 
 
@@ -177,18 +181,14 @@ open fun position(buffer: Buffer, newPosition: Int)
 
 open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var uvs = uvs
 
 
-                    var angleDegrees = angleDegrees
-
-
-                    var pivotU = pivotU
-
-
-                    var pivotV = pivotV
+        Updates for KMP build        
+        {
+    //var uvs = uvs
+    //var angleDegrees = angleDegrees
+    //var pivotU = pivotU
+    //var pivotV = pivotV
 
     var angleRad: Double = Math.toRadians(angleDegrees)!!
 
@@ -204,7 +204,11 @@ open fun rotateUVs(uvs: FloatArray, angleDegrees: Float, pivotU: Float, pivotV: 
 
                         for (i in 0 until uvs.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var u: Float = uvs[i]!!
 
 

@@ -47,7 +47,11 @@ open public class Features
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Features{
+: Features
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +70,11 @@ open fun getInstance()
     private val defaultList: BasicArrayList
 private constructor        ()
             : super()
-        {list= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+list= BasicArrayList()
 defaultList= BasicArrayList()
 this.init()
 }
@@ -76,9 +84,11 @@ this.init()
             
 open fun addDefault(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+    //var gameFeature = gameFeature
 this.add(gameFeature)
 
     
@@ -96,9 +106,11 @@ this.add(gameFeature)
             
 open fun add(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+    //var gameFeature = gameFeature
 
     
                         if(!list.contains(gameFeature))
@@ -118,9 +130,11 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, 
             
 open fun removeDefault(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+    //var gameFeature = gameFeature
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameFeature!!.toString())!!.toString(), this, "removeDefault")
 this.remove(gameFeature)
@@ -132,9 +146,11 @@ defaultList!!.remove(gameFeature)
             
 open fun remove(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+    //var gameFeature = gameFeature
 
     
                         if(list.contains(gameFeature))
@@ -151,7 +167,11 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(gameFeature, 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var gameFeatureFactory: GameFeatureFactory = GameFeatureFactory.getInstance()!!
@@ -196,7 +216,11 @@ this.addDefault(touchFeatureFactory!!.TOUCH_ENABLED)
 this.addDefault(MainFeatureFactory.getInstance()!!.FULL_SCREEN)
 this.addDefault(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND)
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }
@@ -204,9 +228,11 @@ this.addDefault(MainFeatureFactory.getInstance()!!.LOAD_ONDEMAND)
 
 open fun isDefault(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var gameFeature = gameFeature
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
 
 
 
@@ -217,9 +243,11 @@ open fun isDefault(gameFeature: Feature)
 
 open fun isFeature(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var gameFeature = gameFeature
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
 
 
 
@@ -232,9 +260,11 @@ open fun isFeature(gameFeature: Feature)
             
 open fun toggle(gameFeature: Feature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameFeature = gameFeature
+
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
 
     
                         if(this.isFeature(gameFeature))

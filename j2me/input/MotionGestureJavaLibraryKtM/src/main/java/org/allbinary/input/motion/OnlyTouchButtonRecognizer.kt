@@ -33,25 +33,25 @@ open public class OnlyTouchButtonRecognizer : MotionRecognizer {
     private val touchButtonRecognizer: TouchButtonRecognizer
 
     private var touchButtonProcessing: Boolean = false
-public constructor        (){this.touchButtonRecognizer= TouchButtonRecognizer()
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.touchButtonRecognizer= TouchButtonRecognizer()
 }
 
 
                 @Throws(Exception::class)
             override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 
     
                         if(this.touchButtonRecognizer!!.pressTouchButtonInput(x, y, deviceId))
@@ -67,18 +67,14 @@ public constructor        (){this.touchButtonRecognizer= TouchButtonRecognizer()
                 @Throws(Exception::class)
             override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 
     
                         if(touchButtonProcessing)
@@ -107,18 +103,14 @@ public constructor        (){this.touchButtonRecognizer= TouchButtonRecognizer()
                 @Throws(Exception::class)
             override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 
     
                         if(touchButtonProcessing)

@@ -48,7 +48,11 @@ open public class GenericOperatingSystem
     var scalable: Boolean = false
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var systemProperties: SystemProperties = SystemProperties.getInstance()!!
 
 
@@ -103,7 +107,11 @@ public constructor        ()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,7 +120,11 @@ override fun getName()
 
 override fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,7 +133,11 @@ override fun getVersion()
 
 override fun getArch()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,7 +146,11 @@ override fun getArch()
 
 override fun getCharacterSet()
         //nullable = true from not(false or (false and true)) = true
-: CharacterSet{
+: CharacterSet
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -139,7 +159,11 @@ override fun getCharacterSet()
 
 override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -148,7 +172,11 @@ override fun isOverScan()
 
 override fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,7 +185,11 @@ override fun getOverScanXPercent()
 
 override fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -166,7 +198,11 @@ override fun getOverScanYPercent()
 
 override fun isScalable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -175,7 +211,11 @@ override fun isScalable()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var NEW_LINE: String = CommonSeps.getInstance()!!.NEW_LINE
 
 

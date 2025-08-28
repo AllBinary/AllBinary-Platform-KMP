@@ -44,7 +44,11 @@ open public class TransformsGeneratorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformsGeneratorUtil{
+: TransformsGeneratorUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,22 +61,24 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var group = group
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+var group = group
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -109,18 +115,14 @@ open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transf
             
 open fun generateComponentsFromObjectConfig(abeClientInformation: Object, transformInfoObjectConfigInterface: Object, transformInfoInterface: Object, group: Object)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var group = group
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoObjectConfigInterface = transformInfoObjectConfigInterface
+    //var transformInfoInterface = transformInfoInterface
+var group = group
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -170,7 +172,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generateComponentsFromObjectConf
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var transformInfoObjectConfigComponent: TransformInfoDomNode = transformInfoObjectConfigComponentVector!!.get(index) as TransformInfoDomNode
 
 TransformGeneratorUtil.getInstance()!!.generate(abeClientInformation, transformInfoObjectConfigComponent, transformInfoInterface)

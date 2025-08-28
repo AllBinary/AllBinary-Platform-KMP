@@ -38,7 +38,11 @@ open public class OpenGLCapabilities
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLCapabilities{
+: OpenGLCapabilities
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,20 +75,30 @@ open fun getInstance()
     var maxTextureSize: Int = 64
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun initCapabilities(gl: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 }
 
 
 open fun isGlExtensionDrawTexture()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,7 +108,11 @@ open fun isGlExtensionDrawTexture()
 
 open fun getGlVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,7 +122,11 @@ open fun getGlVersion()
 
 open fun isVertexBufferObjectSupport()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,9 +136,11 @@ open fun isVertexBufferObjectSupport()
 
 open fun isTextureSizeValid(widthAndHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var widthAndHeight = widthAndHeight
+        Updates for KMP build        
+        {
+    //var widthAndHeight = widthAndHeight
 
 
 

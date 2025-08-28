@@ -62,9 +62,11 @@ open public class UnitItemArrayFactory
     private val resources: Array<BasicGameResources?>
 protected constructor        (resources: Array<BasicGameResources?>)
             : super()
-        {
+        
 
-                    var resources = resources
+        Updates for KMP build        
+        {
+var resources = resources
 this.resources= resources
 }
 
@@ -73,12 +75,12 @@ this.resources= resources
             
 open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: CustomItem
 
-                    var flagResources = flagResources
-
-
-                    var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+var flagResources = flagResources
+var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
     var name: String = flagResources!!.NAME
 
@@ -106,15 +108,13 @@ open fun createFlagItem(flagResources: FlagGameResources, layerInterfaceFactoryI
             
 open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInterfaceFactoryInterface: LayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: CustomItem
 
-                    var flagResources = flagResources
-
-
-                    var name = name
-
-
-                    var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+var flagResources = flagResources
+var name = name
+var layerInterfaceFactoryInterface = layerInterfaceFactoryInterface
 
     var IMAGE_CACHE: ImageCache = GameFeatureImageCacheFactory.getInstance()!!
 
@@ -136,7 +136,11 @@ open fun createFlagItem(flagResources: FlagGameResources, name: String, layerInt
             
 open fun getItems()
         //nullable = true from not(false or (false and true)) = true
-: Array<CustomItem?>{
+: Array<CustomItem?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -146,7 +150,11 @@ open fun getItems()
 
 open fun getResources()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicGameResources?>{
+: Array<BasicGameResources?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -156,16 +164,22 @@ open fun getResources()
 
 open fun indexOf(basicGameResources: BasicGameResources)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var basicGameResources = basicGameResources
+        Updates for KMP build        
+        {
+var basicGameResources = basicGameResources
 
 
 
 
                         for (index in this.getResources()!!.length -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.resources[index] == basicGameResources)
                         

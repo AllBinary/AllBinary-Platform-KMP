@@ -49,15 +49,13 @@ open public class OpenGLESGL11ExtImage : OpenGLESImage {
     private val rectangle: IntArray
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image, bitmapFactory, textureFactory){
+                            : super(image, bitmapFactory, textureFactory)
 
-                    var image = image
-
-
-                    var bitmapFactory = bitmapFactory
-
-
-                    var textureFactory = textureFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var bitmapFactory = bitmapFactory
+    //var textureFactory = textureFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -70,15 +68,21 @@ rectangle= intArrayOf(0,this.getHeight(), this.getWidth(),  -this.getHeight())
 
 open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var displayChangeEvent = displayChangeEvent
+
+        Updates for KMP build        
+        {
+    //var displayChangeEvent = displayChangeEvent
 
         try {
             logUtil!!.put(commonStrings!!.START, this, "onResize")
 this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }
@@ -86,9 +90,11 @@ this.a= DisplayInfoSingleton.getInstance()!!.getLastHeight() -this.getHeight()
 
 open fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 this.onDisplayChangeEvent(
                             null)
 
@@ -111,18 +117,14 @@ OpenGLLogUtil.getInstance()!!.logError(gl11, this)
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var x = x
+    //var y = y
+    //var z = z
 gl.glEnable(GL10.GL_TEXTURE_2D)
 gl.glBindTexture(GL10.GL_TEXTURE_2D, openGLESImageProperties!!.textureID)
 gl = glgl as GL11Ext

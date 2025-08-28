@@ -37,9 +37,11 @@ open public class LapInfo
     private var totalLaps: Int
 public constructor        (totalLaps: Int)
             : super()
-        {
+        
 
-                    var totalLaps = totalLaps
+        Updates for KMP build        
+        {
+var totalLaps = totalLaps
 this.totalLaps= totalLaps
 this.numberOfLaps= 1
 }
@@ -47,13 +49,21 @@ this.numberOfLaps= 1
 
 open fun add()
         //nullable = true from not(false or (false and true)) = true
-{this.numberOfLaps++
+
+
+        Updates for KMP build        
+        {
+this.numberOfLaps++
 }
 
 
 open fun getCurrentLap()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +73,11 @@ open fun getCurrentLap()
 
 open fun getTotalLaps()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +87,11 @@ open fun getTotalLaps()
 
 open fun isDone()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.numberOfLaps >= this.totalLaps)
                         
@@ -95,7 +113,11 @@ open fun isDone()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("isDone: ")

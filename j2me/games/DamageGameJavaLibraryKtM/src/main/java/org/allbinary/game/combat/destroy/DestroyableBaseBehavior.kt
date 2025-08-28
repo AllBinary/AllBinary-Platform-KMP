@@ -39,7 +39,11 @@ open public class DestroyableBaseBehavior
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DestroyableBaseBehavior{
+: DestroyableBaseBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,7 +59,11 @@ open fun getInstance()
             }            
         override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +74,11 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(CommonStrings.getInstance()!!.NOT_IMPLEMENTED)
@@ -75,9 +87,11 @@ open fun getInstance()
 
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 }
 
 

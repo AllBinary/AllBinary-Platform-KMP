@@ -39,9 +39,11 @@ open public class DomNodeHelper
             
 open fun getFirstChildElement(parentNode: Node)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var parentNode = parentNode
+        Updates for KMP build        
+        {
+var parentNode = parentNode
 
     var node: Node = parentNode!!.getFirstChild()!!
 
@@ -61,7 +63,11 @@ open fun getFirstChildElement(parentNode: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
-        {node= nodeList!!.item(index)
+        
+
+        Updates for KMP build        
+        {
+node= nodeList!!.item(index)
 
     
                         if(node.getNodeType() == 1)
@@ -88,9 +94,11 @@ open fun getFirstChildElement(parentNode: Node)
 
 open fun getTextNodeValue(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var nodeTextNode: Node = node.getFirstChild()!!
 
@@ -125,12 +133,12 @@ open fun getTextNodeValue(node: Node)
             
 open fun getTextNodeValue(nodeName: String, nodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var nodeName = nodeName
-
-
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeName = nodeName
+var nodeList = nodeList
 
     var node: Node = DomSearchHelper.getNode(nodeName, nodeList)!!
 
@@ -144,9 +152,11 @@ open fun getTextNodeValue(nodeName: String, nodeList: NodeList)
 
 open fun getTextNodesValue(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -159,7 +169,11 @@ open fun getTextNodesValue(node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var nodeTextNode: Node = nodeList!!.item(index)!!
 
 
@@ -194,7 +208,11 @@ open fun getTextNodesValue(node: Node)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

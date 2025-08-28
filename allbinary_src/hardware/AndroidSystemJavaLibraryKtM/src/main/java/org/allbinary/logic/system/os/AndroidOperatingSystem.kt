@@ -39,7 +39,11 @@ open public class AndroidOperatingSystem : GenericOperatingSystem {
     private val DEVICE_SOFTWARE_VERSION: String = "DeviceSoftwareVersion"
 
     private val LINE_1_NUMBER: String = "Line1Number"
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
 
 
@@ -123,7 +127,11 @@ stringBuffer!!.append(commonStrings!!.SPACE)
     private val OUYA: String = "ouya"
 override fun isOverScan()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var properties: AndroidSystemProperties = AndroidSystemProperties.getInstance()!!
 
 
@@ -148,7 +156,11 @@ override fun isOverScan()
 
 override fun getOverScanXPercent()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,7 +169,11 @@ override fun getOverScanXPercent()
 
 override fun getOverScanYPercent()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -166,7 +182,11 @@ override fun getOverScanYPercent()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var osBuffer: StringMaker = StringMaker()
 
 osBuffer!!.append(super.toString())

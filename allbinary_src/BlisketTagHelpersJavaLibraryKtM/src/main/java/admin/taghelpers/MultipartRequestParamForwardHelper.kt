@@ -55,21 +55,15 @@ open public class MultipartRequestParamForwardHelper
     private val paramVector: Vector
 public constructor        (parentHelperTag: HelperTag, page: String, command: String, paramVector: Vector, pageContext: PageContext)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var parentHelperTag = parentHelperTag
-
-
-                    var page = page
-
-
-                    var command = command
-
-
-                    var paramVector = paramVector
-
-
-                    var pageContext = pageContext
+var parentHelperTag = parentHelperTag
+var page = page
+var command = command
+var paramVector = paramVector
+var pageContext = pageContext
 this.pageContext= pageContext
 this.page= page
 this.command= command
@@ -82,7 +76,11 @@ this.requestMapInterface= InventoryItemViewParentTagHelper.getInstance()!!.getRe
             
 open fun forward()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -102,7 +100,11 @@ this.pageContext!!.forward(stringBuffer!!.toString())
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -121,7 +123,11 @@ this.pageContext!!.forward(stringBuffer!!.toString())
 
 open fun getParams()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var AMP: String = CommonSeps.getInstance()!!.AMP
 
 
@@ -145,7 +151,11 @@ open fun getParams()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = this.paramVector!!.get(index) as String
 
 
@@ -180,7 +190,11 @@ stringBuffer!!.append(value)
 
 open fun shouldForward()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = this.requestMapInterface!!.getRequestHashMap()!!
 
 

@@ -27,17 +27,21 @@ open public class XmlRpcClient
     private val url: URL
 public constructor        (url: URL)
             : super()
-        {
+        
 
-                    var url = url
+        Updates for KMP build        
+        {
+var url = url
 this.url= url
 }
 
 public constructor        (url: String)                        
 
-                            : this(URL(url)){
+                            : this(URL(url))
 
-                    var url = url
+        Updates for KMP build        
+        {
+var url = url
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,12 +50,12 @@ public constructor        (url: String)
 
 public constructor        (hostname: String, port: Int)                        
 
-                            : this(URL("http://" +hostname +':' +port +"/RPC2")){
+                            : this(URL("http://" +hostname +':' +port +"/RPC2"))
 
-                    var hostname = hostname
-
-
-                    var port = port
+        Updates for KMP build        
+        {
+var hostname = hostname
+var port = port
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,7 +65,11 @@ public constructor        (hostname: String, port: Int)
 
 open fun getURL()
         //nullable = true from not(false or (false and true)) = true
-: URL{
+: URL
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,24 +79,24 @@ open fun getURL()
 
 open fun setBasicAuthentication(user: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var user = user
 
 
-                    var password = password
+        Updates for KMP build        
+        {
+var user = user
+var password = password
 }
 
 
                 @Throws(XmlRpcException::class, IOException::class)
             override fun execute(method: String, params: Vector<Any>)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var method = method
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var method = method
+var params = params
 
 
 
@@ -101,15 +109,13 @@ open fun setBasicAuthentication(user: String, password: String)
             
 open fun execute(method: String, params: Vector<Any>, cryptInterface: CryptInterface)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var method = method
-
-
-                    var params = params
-
-
-                    var cryptInterface = cryptInterface
+        Updates for KMP build        
+        {
+var method = method
+var params = params
+var cryptInterface = cryptInterface
 
 
 

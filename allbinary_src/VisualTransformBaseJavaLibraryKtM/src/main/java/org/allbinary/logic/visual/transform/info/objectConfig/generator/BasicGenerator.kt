@@ -31,14 +31,20 @@ open public class BasicGenerator : TransformInfoObjectConfigGenerator {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun process(input: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

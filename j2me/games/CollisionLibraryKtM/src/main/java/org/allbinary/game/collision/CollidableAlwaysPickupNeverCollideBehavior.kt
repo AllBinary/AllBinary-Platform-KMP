@@ -31,7 +31,11 @@ open public class CollidableAlwaysPickupNeverCollideBehavior : CollidableNeverCo
         
  constructor        ()                        
 
-                            : super(true){
+                            : super(true)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -39,9 +43,11 @@ open public class CollidableAlwaysPickupNeverCollideBehavior : CollidableNeverCo
 
 override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: CollisionType{
+: CollisionType
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
 
 

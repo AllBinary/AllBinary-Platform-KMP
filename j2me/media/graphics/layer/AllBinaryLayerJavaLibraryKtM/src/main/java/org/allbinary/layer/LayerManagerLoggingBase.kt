@@ -40,48 +40,54 @@ open public class LayerManagerLoggingBase
             
 open fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
 }
 
 
 open fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerInterface = layerInterface
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var index = index
 }
 
 
 open fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
 }
 
 
 open fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var layerInterface = layerInterface
-
-
-                    var result = result
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var layerInterface = layerInterface
+    //var result = result
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

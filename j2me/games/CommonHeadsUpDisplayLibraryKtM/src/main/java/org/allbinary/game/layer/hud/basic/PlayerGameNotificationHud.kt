@@ -71,24 +71,16 @@ open public class PlayerGameNotificationHud : GameNotificationHud {
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        (location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor){
+                            : super(location, direction, maxHeight, maxWidth, bufferZone, basicColor)
 
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxHeight = maxHeight
-
-
-                    var maxWidth = maxWidth
-
-
-                    var bufferZone = bufferZone
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var location = location
+var direction = direction
+var maxHeight = maxHeight
+var maxWidth = maxWidth
+var bufferZone = bufferZone
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -103,12 +95,12 @@ gameNotificationEventHandler!!.addListener(this)
 
 override fun getPoint(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GPoint{
+: GPoint
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 point= CustomGPoint(0, 0)
 this.point.setX(x)
 this.point.setY(y)
@@ -125,18 +117,14 @@ this.point.setY(y)
     private var lastString: String = StringUtil.getInstance()!!.EMPTY_STRING
 override fun add(string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var string = string
 
 
-                    var seconds = seconds
-
-
-                    var basicColor = basicColor
-
-
-                    var permanent = permanent
+        Updates for KMP build        
+        {
+    //var string = string
+    //var seconds = seconds
+    //var basicColor = basicColor
+    //var permanent = permanent
 
     
                         if(permanent)
@@ -169,7 +157,11 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
                 @Throws(Exception::class)
             override fun processTick()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.timeDelayHelper!!.isTime(gameTickTimeDelayHelper!!.startTime))
                         
@@ -224,7 +216,11 @@ this.circularIndexUtil!!.setSize(this.permanentGameNotification!!.getSize())
             
 open fun setAndRemove()
         //nullable = true from not(false or (false and true)) = true
-{this.string= this.gameNotification!!.stringList!!.remove(0) as String
+
+
+        Updates for KMP build        
+        {
+this.string= this.gameNotification!!.stringList!!.remove(0) as String
 
     var width: Int = MyFont.getInstance()!!.stringWidth2(this.string)!!
 
@@ -255,7 +251,11 @@ this.setBasicColorP(this.gameNotification!!.colorList!!.remove(0) as BasicColor)
             
 open fun setNextUnremoveable()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var index: Int = this.circularIndexUtil!!.getIndex()!!
 
 this.string= this.permanentGameNotification!!.stringList!!.objectArray[index]!! as String
@@ -275,15 +275,21 @@ this.circularIndexUtil!!.next()
 
 override fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.gameNotification!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.gameNotification!!.clear()
 this.permanentGameNotification!!.clear()
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics, this.string)
 }
 

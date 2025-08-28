@@ -35,9 +35,11 @@ open public class AbFileInputStream : FileInputStream {
         
 public constructor        (name: String)                        
 
-                            : super(name){
+                            : super(name)
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,9 +48,11 @@ public constructor        (name: String)
 
 public constructor        (file: AbFile)                        
 
-                            : super(AbFileNativeUtil.get(file)){
+                            : super(AbFileNativeUtil.get(file))
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
                             //For kotlin this is before the body of the constructor.
@@ -57,9 +61,11 @@ public constructor        (file: AbFile)
 
 protected constructor        (file: File)                        
 
-                            : super(file){
+                            : super(file)
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
                             //For kotlin this is before the body of the constructor.

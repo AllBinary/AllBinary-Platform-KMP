@@ -46,7 +46,11 @@ open public class AuthenticationHelperUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AuthenticationHelperUtil{
+: AuthenticationHelperUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,12 +71,12 @@ open fun getInstance()
             
 open fun isAuthorized(authenticationHelper: AuthenticationHelper, filePath: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var authenticationHelper = authenticationHelper
-
-
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var authenticationHelper = authenticationHelper
+var filePath = filePath
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))

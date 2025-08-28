@@ -40,7 +40,11 @@ open public class DestroyEventCircularStaticPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DestroyEventCircularStaticPool{
+: DestroyEventCircularStaticPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,14 +57,20 @@ open fun getInstance()
     private var EVENT_POOL: AllBinaryEventCircularPool = AllBinaryEventCircularPool(20)
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun init(combatGameCanvas: AllBinaryGameCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var combatGameCanvas = combatGameCanvas
+
+        Updates for KMP build        
+        {
+var combatGameCanvas = combatGameCanvas
 EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
 }
 
@@ -69,9 +79,11 @@ EVENT_POOL.init(DestroyEventFactory(combatGameCanvas))
             
 open fun getInstance(layerInterface: AllBinaryLayer)
         //nullable =  from not(true or (false and false)) = 
-: DestroyedEvent{
+: DestroyedEvent
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     var destroyedEvent: DestroyedEvent = EVENT_POOL.getNextInstance() as DestroyedEvent
 

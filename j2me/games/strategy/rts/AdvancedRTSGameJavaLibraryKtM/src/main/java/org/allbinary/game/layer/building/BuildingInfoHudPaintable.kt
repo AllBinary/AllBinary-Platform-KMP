@@ -46,7 +46,11 @@ open public class BuildingInfoHudPaintable : SelectionHudPaintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BuildingInfoHudPaintable{
+: BuildingInfoHudPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,7 +75,11 @@ open fun getInstance()
     private val HEALTH: String = "Health:"
 
     private var rtsLayer: RTSLayer
-private constructor        (){
+private constructor        ()
+
+        Updates for KMP build        
+        {
+
         try {
             
     var index: Int = 0
@@ -92,7 +100,11 @@ index++
 this.healthHud= NumberStringHud(HEALTH, 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX, y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 this.maxHealthHud= NumberStringHud("/ ", 99999, basicHudFactory!!.ABSOLUTE, basicHudFactory!!.HORIZONTAL, this.textX +(totalLength *DEFAULT_CHAR_HEIGHT), y +((index +1) *DEFAULT_CHAR_HEIGHT), 0, this.getBasicColorP())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
@@ -103,9 +115,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 super.setBasicColorP(basicColor)
 this.productivityHud!!.setBasicColorP(basicColor)
 this.efficiencyHud!!.setBasicColorP(basicColor)
@@ -116,9 +130,11 @@ this.maxHealthHud!!.setBasicColorP(basicColor)
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 this.productivityHud!!.paint(graphics)
 this.efficiencyHud!!.paint(graphics)
@@ -130,7 +146,11 @@ this.getAnimationInterface()!!.paint(graphics, this.imageX, y)
 
 open fun updateSelectionInfo()
         //nullable = true from not(false or (false and true)) = true
-{this.setName(this.getRtsLayer()!!.getName())
+
+
+        Updates for KMP build        
+        {
+this.setName(this.getRtsLayer()!!.getName())
 this.setAnimationInterface(this.getRtsLayer()!!.getVerticleBuildAnimationInterface())
 
     var buildingLayer: BuildingLayer = this.getRtsLayer() as BuildingLayer
@@ -151,16 +171,22 @@ this.maxHealthHud!!.set(buildingLayer!!.getHealthInterface()!!.getMaxHealth())
 
 open fun setRtsLayer(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 this.rtsLayer= rtsLayer
 }
 
 
 open fun getRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: RTSLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -38,14 +38,22 @@ open public class ImageAnalysisResults
     private var averageAmbientLevel: Float= 0.0f
 public constructor        ()
             : super()
-        {this.imageColorRangeResults= ImageColorRangeResults()
+        
+
+        Updates for KMP build        
+        {
+this.imageColorRangeResults= ImageColorRangeResults()
 this.imageColorResults= ImageColorResults()
 }
 
 
 open fun getImageColorRangeResults()
         //nullable = true from not(false or (false and true)) = true
-: ImageColorRangeResults{
+: ImageColorRangeResults
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,16 +63,22 @@ open fun getImageColorRangeResults()
 
 open fun setImageColorRangeResults(imageColorRangeResults: ImageColorRangeResults)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageColorRangeResults = imageColorRangeResults
+
+        Updates for KMP build        
+        {
+var imageColorRangeResults = imageColorRangeResults
 this.imageColorRangeResults= imageColorRangeResults
 }
 
 
 open fun getAverageAmbientLevel()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,16 +88,22 @@ open fun getAverageAmbientLevel()
 
 open fun setAverageAmbientLevel(averageAmbientLevel: Float)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var averageAmbientLevel = averageAmbientLevel
+
+        Updates for KMP build        
+        {
+var averageAmbientLevel = averageAmbientLevel
 this.averageAmbientLevel= averageAmbientLevel
 }
 
 
 open fun getImageColorResults()
         //nullable = true from not(false or (false and true)) = true
-: ImageColorResults{
+: ImageColorResults
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,9 +113,11 @@ open fun getImageColorResults()
 
 open fun setImageColorResults(imageColorResults: ImageColorResults)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageColorResults = imageColorResults
+
+        Updates for KMP build        
+        {
+var imageColorResults = imageColorResults
 this.imageColorResults= imageColorResults
 }
 

@@ -34,9 +34,11 @@ open public class InputMappingEvent : AllBinaryEventObject {
     private var inputToGameKeyMapping: InputToGameKeyMapping = InputToGameKeyMapping.NULL_INPUT_TO_GAME_KEY_MAPPING
 public constructor        (anyType: Any)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,16 +48,22 @@ public constructor        (anyType: Any)
 
 open fun setInputToGameKeyMapping(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+var inputToGameKeyMapping = inputToGameKeyMapping
 this.inputToGameKeyMapping= inputToGameKeyMapping
 }
 
 
 open fun getInputToGameKeyMapping()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping{
+: InputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -52,7 +52,11 @@ open public class AuthorizeNetAimData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

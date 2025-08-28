@@ -40,16 +40,22 @@ open public class OrderItemsTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var status: String
-public constructor        (){this.setTagHelperFactory(OrderItemsHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(OrderItemsHelperFactory())
 this.setTagRequestHelperFactory(OrderItemsRequestHelperFactory())
 }
 
 
 open fun setStatus(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.status= value
 }
 
@@ -58,7 +64,11 @@ this.status= value
             
 open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = OrderItemsRequestHelperFactory().
@@ -115,13 +125,21 @@ open fun setOrderStatus()
                         }
                             
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to set Order status to: " +this.status
 
 
@@ -147,7 +165,11 @@ open fun setOrderStatus()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -192,7 +214,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -200,7 +226,11 @@ open fun doStartTag()
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

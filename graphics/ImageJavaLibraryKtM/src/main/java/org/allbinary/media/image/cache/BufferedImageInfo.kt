@@ -40,15 +40,13 @@ open public class BufferedImageInfo
     private var type: Int
 public constructor        (width: Int, height: Int, type: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var type = type
+var width = width
+var height = height
+var type = type
 this.width= width
 this.height= height
 this.type= type
@@ -57,7 +55,11 @@ this.type= type
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,16 +69,22 @@ open fun getWidth()
 
 open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var width = width
+
+        Updates for KMP build        
+        {
+var width = width
 this.width= width
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,16 +94,22 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 this.height= height
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,15 +119,21 @@ open fun getType()
 
 open fun setType(type: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var type = type
+
+        Updates for KMP build        
+        {
+var type = type
 this.type= type
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var commonLabels: CommonLabels = CommonLabels.getInstance()!!
 
 

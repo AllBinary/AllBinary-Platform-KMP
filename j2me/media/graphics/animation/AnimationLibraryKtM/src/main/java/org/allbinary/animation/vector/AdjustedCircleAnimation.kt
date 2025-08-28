@@ -38,21 +38,15 @@ open public class AdjustedCircleAnimation : CircleAnimation {
     private var yAdjustment: Int
 public constructor        (width: Int, height: Int, xAdjustment: Int, yAdjustment: Int, basicColor: BasicColor)                        
 
-                            : super(width, height, basicColor){
+                            : super(width, height, basicColor)
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var xAdjustment = xAdjustment
-
-
-                    var yAdjustment = yAdjustment
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var xAdjustment = xAdjustment
+var yAdjustment = yAdjustment
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,18 +57,14 @@ this.yAdjustment= yAdjustment
 
 public constructor        (width: Int, height: Int, innerWidth: Int, basicColor: BasicColor)                        
 
-                            : super(width, height, basicColor){
+                            : super(width, height, basicColor)
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var innerWidth = innerWidth
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var innerWidth = innerWidth
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -102,15 +92,13 @@ this.yAdjustment= this.xAdjustment
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
 graphics.drawArc(x +this.xAdjustment, y +this.yAdjustment, width, height, 0, TOTAL_ANGLE)
 }

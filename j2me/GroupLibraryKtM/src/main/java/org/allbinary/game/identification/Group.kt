@@ -54,19 +54,23 @@ open public class Group
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (teamName: String, teamId: Short)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var teamName = teamName
-
-
-                    var teamId = teamId
+var teamName = teamName
+var teamId = teamId
 this.setName(teamName)
 this.teamId= teamId
 }
 
 override fun getGroupName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,9 +80,11 @@ override fun getGroupName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+    //var name = name
 this.name= name
 
     var stringBuffer: StringMaker = StringMaker()
@@ -92,7 +98,11 @@ this.string= stringBuffer!!.toString()
 
 override fun getGroupId()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +111,11 @@ override fun getGroupId()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

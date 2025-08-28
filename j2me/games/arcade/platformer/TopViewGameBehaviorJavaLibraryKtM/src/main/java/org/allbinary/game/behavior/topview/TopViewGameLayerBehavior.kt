@@ -42,16 +42,22 @@ open public class TopViewGameLayerBehavior : GameLayerBehavior {
     var isFallingWithoutJumpAttempt: Boolean = false
 
     var gravityActionIndex: Int = 0
-public constructor        (maxGravityActionIndex: Int){
+public constructor        (maxGravityActionIndex: Int)
 
-                    var maxGravityActionIndex = maxGravityActionIndex
+        Updates for KMP build        
+        {
+    //var maxGravityActionIndex = maxGravityActionIndex
 this.maxGravityActionIndex= maxGravityActionIndex
 }
 
 
 open fun gravity()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.gravityActionIndex == 0)
                         
@@ -66,9 +72,11 @@ this.isFallingWithoutJumpAttempt= true
 
 open fun land(velocityProperties: VelocityProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var velocityProperties = velocityProperties
+
+        Updates for KMP build        
+        {
+    //var velocityProperties = velocityProperties
 velocityProperties!!.getVelocityYBasicDecimalP()!!.set(0)
 this.land()
 }
@@ -76,7 +84,11 @@ this.land()
 
 open fun land()
         //nullable = true from not(false or (false and true)) = true
-{this.gravityActionIndex= 0
+
+
+        Updates for KMP build        
+        {
+this.gravityActionIndex= 0
 this.isFallingWithoutJumpAttempt= false
 this.isJumpAction= true
 this.isJumpOver= false
@@ -85,18 +97,14 @@ this.isJumpOver= false
 
 open fun up(velocityProperties: VelocityProperties, acceleration: BasicAccelerationProperties, jumpBehavior: InitialJumpBehavior, accelerationMultiplier: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var velocityProperties = velocityProperties
 
 
-                    var acceleration = acceleration
-
-
-                    var jumpBehavior = jumpBehavior
-
-
-                    var accelerationMultiplier = accelerationMultiplier
+        Updates for KMP build        
+        {
+    //var velocityProperties = velocityProperties
+    //var acceleration = acceleration
+    //var jumpBehavior = jumpBehavior
+    //var accelerationMultiplier = accelerationMultiplier
 
     
                         if(!isJumpOver)
@@ -142,9 +150,11 @@ isJumpAction= false
 
 open fun inputFrames(velocityProperties: VelocityProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var velocityProperties = velocityProperties
+
+        Updates for KMP build        
+        {
+    //var velocityProperties = velocityProperties
 
     
                         if(this.gravityActionIndex > 0 && velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled() > 0)

@@ -45,7 +45,11 @@ open public class ImageCopyUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCopyUtil{
+: ImageCopyUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +64,11 @@ open fun getInstance()
     private val imageCreationUtil: ImageCreationUtil = ImageCreationUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private var anchor: Int = Anchor.TOP_LEFT
@@ -69,9 +77,11 @@ private constructor        ()
             
 open fun createImageForRotation(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
 
 
 
@@ -84,9 +94,11 @@ open fun createImageForRotation(originalImage: Image)
             
 open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
 
     var image: Image = imageCreationUtil!!.getInstance(originalImage!!.getWidth(), originalImage!!.getHeight())!!
 
@@ -119,15 +131,13 @@ open fun createImage(originalImage: Image)
             
 open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
-
-
-                    var canvasScale = canvasScale
-
-
-                    var resize = resize
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var canvasScale = canvasScale
+    //var resize = resize
 
     var newWidth: Int = (originalImage!!.getWidth() *canvasScale).toInt()
 

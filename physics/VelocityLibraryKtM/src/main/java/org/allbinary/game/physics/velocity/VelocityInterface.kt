@@ -32,33 +32,57 @@ open fun getMaxForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun getMaxReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 : Int
+
+        Updates for KMP build        
+        
 
 open fun limitMaxXYForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun limitMaxXYReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun limitXYToForwardAndReverseMaxVelocity()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun limitMaxXYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setMaxForwardVelocity(maxForwardVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setMaxReverseVelocity(maxReverseVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

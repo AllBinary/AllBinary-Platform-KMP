@@ -48,28 +48,34 @@ open public class RequestHandler : HttpServlet {
             
 open fun init(config: ServletConfig)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var config = config
+
+        Updates for KMP build        
+        {
+var config = config
 super.init(config)
 }
 
 
 open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(ServletException::class, IOException::class)
             
 open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 
         try {
             response.setContentType("text/html")
@@ -93,7 +99,11 @@ open fun processRequest(request: HttpServletRequest, response: HttpServletRespon
 out.flush()
 out.close()
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
@@ -105,7 +115,11 @@ out.close()
 response.sendRedirect(abcs.globals.URLGLOBALS.LICENSEERRORPAGE)
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SERVLETERROR))
                         
@@ -124,12 +138,12 @@ response.sendRedirect(abcs.globals.URLGLOBALS.ERRORPAGE)
             
 open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 processRequest(request, response)
 }
 
@@ -138,19 +152,23 @@ processRequest(request, response)
             
 open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 processRequest(request, response)
 }
 
 
 open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

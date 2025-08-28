@@ -37,7 +37,11 @@ open public class TouchScreenFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchScreenFactory{
+: TouchScreenFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,12 +58,20 @@ open fun getInstance()
     private var touchScreenType: TouchScreenType = TouchScreenTypesFactory.getInstance()!!.NOTOUCH
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isMultiTouch()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,15 +81,21 @@ open fun isMultiTouch()
 
 open fun setTouch(touch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var touch = touch
+
+        Updates for KMP build        
+        {
+var touch = touch
 }
 
 
 open fun isTouch()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +105,11 @@ open fun isTouch()
 
 open fun getTouchScreenType()
         //nullable = true from not(false or (false and true)) = true
-: TouchScreenType{
+: TouchScreenType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -33,13 +33,22 @@ open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getUrl()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface
+
+        Updates for KMP build        
+        
 
 }
                 

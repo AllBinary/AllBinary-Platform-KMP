@@ -52,18 +52,14 @@ open public class NumberOnOwnGroupSequenceAIFactory
             
 open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
         //nullable =  from not(true or (false and false)) = 
-: ArtificialIntelligenceInterface{
+: ArtificialIntelligenceInterface
 
-                    var hashtable = hashtable
-
-
-                    var artificialIntelligenceInterface = artificialIntelligenceInterface
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+    //var hashtable = hashtable
+    //var artificialIntelligenceInterface = artificialIntelligenceInterface
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
     var integerArray: Array<Integer?> = NumberInSameGroupSequence.getInstance()!!.NUMBER_ON_SAME_TEAM_SEQUENCE
 
@@ -76,7 +72,11 @@ open fun getInstance(hashtable: Hashtable<Any, Any>, artificialIntelligenceInter
 
                         for (index in 0 until integerArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var integerCanBeNull: Any? = hashtable.get(integerArray[index]!! as Object)
 
 
@@ -140,7 +140,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
                         for (index in 0 until numberOnSameTeam!!.size)
 
-        {numberOnSameTeam[index]= list.objectArray[index]!! as Integer
+        
+
+        Updates for KMP build        
+        {
+numberOnSameTeam[index]= list.objectArray[index]!! as Integer
 }
 
 

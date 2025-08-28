@@ -44,7 +44,11 @@ open public class NoDecimalTrigTable
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NoDecimalTrigTable{
+: NoDecimalTrigTable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +67,11 @@ open fun getInstance()
     private val noDecimalTan: LongArray
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var TOTAL_ANGLE: Int = AngleFactory.getInstance()!!.TOTAL_ANGLE.toInt()
 
 
@@ -1158,9 +1166,11 @@ noDecimalTan[0]=  -174
 
 open fun sin(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var angle = angle
+        Updates for KMP build        
+        {
+var angle = angle
 
 
 
@@ -1171,9 +1181,11 @@ open fun sin(angle: Int)
 
 open fun cos(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var angle = angle
+        Updates for KMP build        
+        {
+var angle = angle
 
 
 
@@ -1184,9 +1196,11 @@ open fun cos(angle: Int)
 
 open fun tan(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var angle = angle
+        Updates for KMP build        
+        {
+var angle = angle
 
 
 
@@ -1201,12 +1215,12 @@ open fun tan(angle: Int)
             
 open fun antiTan(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-: Short{
+: Short
 
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+var dx = dx
+var dy = dy
 
     var MAX_VALUE: Long = (Integer.MAX_VALUE.toLong())
 
@@ -1248,7 +1262,11 @@ ratio= SCALE *dxl /dy
 
                         for (index in 180 downTo 90)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(ratio <= noDecimalTan[index])
                         
@@ -1298,7 +1316,11 @@ ratio= SCALE *dxl /dy
 
                         for (index in 270 downTo 180)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(ratio < noDecimalTan[index] && ratio >= noDecimalTan[index -1])
                         
@@ -1327,7 +1349,11 @@ ratio= SCALE *dxl /dy
 
                         for (index in (noDecimalTan!!.size -1) downTo 270)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(ratio < noDecimalTan[index])
                         
@@ -1377,7 +1403,11 @@ ratio= SCALE *dxl /dy
 
                         for (index in 90 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(ratio < noDecimalTan[index] && ratio >= noDecimalTan[index -1])
                         
@@ -1417,18 +1447,14 @@ stringBuffer!!.append(dy)
             
 open fun antiTanDebug(screenX: Int, screenY: Int, targetX: Int, targetY: Int)
         //nullable = true from not(false or (false and false)) = true
-: Short{
+: Short
 
-                    var screenX = screenX
-
-
-                    var screenY = screenY
-
-
-                    var targetX = targetX
-
-
-                    var targetY = targetY
+        Updates for KMP build        
+        {
+var screenX = screenX
+var screenY = screenY
+var targetX = targetX
+var targetY = targetY
 
     var METHOD_NAME: String = "antiTanDebug"
 
@@ -1480,13 +1506,21 @@ dy[3]= (screenY2 -targetY2)
 
                         for (index in 0 until dx.size)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in 0 until dy.size)
 
-        {angleOfTarget= this.antiTan(dx[index]!!, dy[index2]!!)
+        
+
+        Updates for KMP build        
+        {
+angleOfTarget= this.antiTan(dx[index]!!, dy[index2]!!)
 angle= angleFactory!!.getInstance(angleOfTarget.toInt())
 stringMaker!!.delete(0, stringMaker!!.length())
 PreLogUtil.put(stringMaker!!.append(CommonLabels.getInstance()!!.INDEX_LABEL)!!.append(index)!!.append(" index2: ")!!.append(index2)!!.append(PositionStrings.getInstance()!!.DX_LABEL)!!.append(dx[index]!!)!!.append(PositionStrings.getInstance()!!.DY_LABEL)!!.append(dy[index2]!!)!!.append(TARGET_ANGLE)!!.append(angleOfTarget)!!.append(CommonSeps.getInstance()!!.EQUALS)!!.append(angle.getValue())!!.toString(), this, METHOD_NAME)

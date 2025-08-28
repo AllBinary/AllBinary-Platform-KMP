@@ -42,15 +42,21 @@ open public class TerrainEventHandler : BasicEventHandler {
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{TerrainEventHandler.hashtable= Hashtable<Any, Any>()
+
+
+        Updates for KMP build        
+        {
+TerrainEventHandler.hashtable= Hashtable<Any, Any>()
 }
 
 
 open fun getInstance(anyType: Any)
         //nullable =  from not(true or (false and false)) = 
-: TerrainEventHandler{
+: TerrainEventHandler
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
     var eventHandler: TerrainEventHandler = TerrainEventHandler.hashtable.get(anyType as Object) as TerrainEventHandler
 
@@ -77,14 +83,20 @@ TerrainEventHandler.hashtable.put(anyType, eventHandler)
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun addListener(terrainEventListener: TerrainEventListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var terrainEventListener = terrainEventListener
+
+        Updates for KMP build        
+        {
+var terrainEventListener = terrainEventListener
 
     
                         if(!list.contains(terrainEventListener))
@@ -98,15 +110,21 @@ open fun addListener(terrainEventListener: TerrainEventListener)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 super.removeAllListeners()
 }
 
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
@@ -115,23 +133,33 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 
 
 
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
         try {
             
     var terrainEventListener: TerrainEventListener = this.list.get(index) as TerrainEventListener
 
 terrainEventListener!!.onTerrainEvent(eventObject as TerrainEvent)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }
@@ -143,12 +171,12 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var eventObject = eventObject
 
 
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+var eventObject = eventObject
+var eventListenerInterface = eventListenerInterface
 
     var terrainEventListenerInterface: TerrainEventListenerInterface = eventListenerInterface as TerrainEventListenerInterface
 

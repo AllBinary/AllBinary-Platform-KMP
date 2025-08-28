@@ -45,7 +45,11 @@ open public class DomDocumentHelper
             
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
         try {
             
     var factory: DocumentBuilderFactory = DocumentBuilderFactory.newInstance()!!
@@ -62,7 +66,11 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,9 +84,11 @@ open fun create()
             
 open fun create(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+var inputStream = inputStream
 
         try {
             
@@ -96,7 +106,11 @@ open fun create(inputStream: InputStream)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -109,9 +123,11 @@ open fun create(inputStream: InputStream)
             
 open fun create(xmlString: String)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var xmlString = xmlString
+        Updates for KMP build        
+        {
+var xmlString = xmlString
 
         try {
             
@@ -129,7 +145,11 @@ open fun create(xmlString: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return document
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -142,9 +162,11 @@ open fun create(xmlString: String)
             
 open fun toString(document: Document)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -169,7 +191,11 @@ copyTransformer!!.transform(domSource, streamResult)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return byteArrayOutputStream!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -181,7 +207,11 @@ copyTransformer!!.transform(domSource, streamResult)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

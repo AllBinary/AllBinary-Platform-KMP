@@ -45,7 +45,11 @@ open public class StaticPagesEntity : AbSqlBean
     private val TABLENAME: String = "staticpages"
 public constructor        ()                        
 
-                            : super(StaticPagesDbInitInfo()){
+                            : super(StaticPagesDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -55,9 +59,11 @@ this.setTableName(TABLENAME)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
         try {
             super.insert(values)
@@ -71,7 +77,11 @@ open fun insert(values: Vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -87,12 +97,12 @@ open fun insert(values: Vector)
 
 open fun getFile(store: String, keywords: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var store = store
-
-
-                    var keywords = keywords
+        Updates for KMP build        
+        {
+var store = store
+var keywords = keywords
 
     var whereHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -111,16 +121,22 @@ whereHashMap!!.put(BasicItemData.KEYWORDS, keywords)
 
 open fun delete(keywords: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keywords = keywords
+
+        Updates for KMP build        
+        {
+var keywords = keywords
 super.deleteWhere(BasicItemData.KEYWORDS, keywords)
 }
 
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var returnStr: String = super.dropTable()!!
 
 
@@ -133,16 +149,22 @@ open fun dropTable()
 
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var updatedValues = updatedValues
+
+        Updates for KMP build        
+        {
+var updatedValues = updatedValues
 super.updateWhere(BasicItemData.KEYWORDS, updatedValues!!.get(BasicItemData.KEYWORDS) as String, updatedValues)
 }
 
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.append(this.sqlStrings!!.START)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(this.sqlTypeStrings!!.SIXTY_CHAR_COLUMN_NOT_NULL)!!.append(BasicItemData.KEYWORDS)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(SearchData.PAGE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(StoreFrontData.getInstance()!!.NAME)!!.append(CommonSeps.getInstance()!!.COMMA_SEP)!!.append(BasicItemData.KEYWORDS)!!.append(this.sqlStrings!!.END)
@@ -156,7 +178,11 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(TABLENAME)!!.appe
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

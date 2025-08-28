@@ -38,7 +38,11 @@ open public class TransformTemplateCustomizerData
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

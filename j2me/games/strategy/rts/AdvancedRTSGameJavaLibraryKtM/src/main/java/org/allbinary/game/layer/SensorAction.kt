@@ -34,9 +34,11 @@ open public class SensorAction
     val name: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 

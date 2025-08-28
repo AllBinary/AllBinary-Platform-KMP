@@ -72,9 +72,11 @@ open public class TrueTypeFontUtilBase
     val actualCellsPerRow: Int
 public constructor        (scale: Int)
             : super()
-        {
+        
 
-                    var scale = scale
+        Updates for KMP build        
+        {
+    //var scale = scale
 
     var shortPattern: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -115,9 +117,11 @@ this.actualCellsPerRow= textureSize /cellSize
 
 open fun getAsTextureSize(textureSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var textureSize = textureSize
+        Updates for KMP build        
+        {
+var textureSize = textureSize
 
     
                         if(textureSize <= 64)
@@ -173,9 +177,11 @@ open fun getAsTextureSize(textureSize: Int)
 
 open fun getCellSize(cellSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var cellSize = cellSize
+        Updates for KMP build        
+        {
+var cellSize = cellSize
 
     
                         if(cellSize <= 16)
@@ -231,7 +237,11 @@ open fun getCellSize(cellSize: Int)
 
 open fun getYOffset()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

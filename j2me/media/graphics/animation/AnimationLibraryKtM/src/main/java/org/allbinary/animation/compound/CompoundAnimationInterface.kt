@@ -34,17 +34,29 @@ open fun nextAnimation()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun previousAnimation()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setAnimation(index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getCurrentAnimation()
         //nullable = true from not(false or (false and true)) = true
 : IndexedAnimation
+
+        Updates for KMP build        
+        
 
 }
                 

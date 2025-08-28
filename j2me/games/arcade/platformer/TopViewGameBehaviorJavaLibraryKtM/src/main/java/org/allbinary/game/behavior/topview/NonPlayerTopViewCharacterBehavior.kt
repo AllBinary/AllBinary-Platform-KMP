@@ -55,27 +55,17 @@ open public class NonPlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
             
 open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var geographicMapCellTypeArray = geographicMapCellTypeArray
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var geographicMapCellTypeArray = geographicMapCellTypeArray
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var maxColumns: Int = geographicMapInterfaceArray[0]!!.getAllBinaryTiledLayer()!!.getColumns()!!
 
@@ -134,18 +124,14 @@ TerrainEventHandler.getInstance(layer)!!.fireEvent(terrainEvent)
 
 open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var x = x
+    //var y = y
 layer.move(x, y)
 }
 

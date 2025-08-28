@@ -55,7 +55,11 @@ open public class OpenGLCapabilities
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLCapabilities{
+: OpenGLCapabilities
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,14 +124,20 @@ open fun getInstance()
     private var vertexBufferObjectSupport: Boolean= false
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun initCapabilities(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 
     var METHOD_NAME: String = "initGLCapabilities"
 
@@ -187,7 +197,11 @@ shaderVersion= Integer.parseInt(glShaderVersionString!!.replace(CommonSeps.getIn
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
@@ -391,7 +405,11 @@ openGLImageSpecificFactory!!.setImageFactory(OpenGLESGL10ImageFactory())
 gl.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSizeArray, 0)
 this.maxTextureSize= maxTextureSizeArray[0]!!
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
@@ -402,9 +420,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 
 open fun isExtension(gameFeature: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var gameFeature = gameFeature
+        Updates for KMP build        
+        {
+var gameFeature = gameFeature
 
     var index: Int = glExtensions!!.indexOf(gameFeature!!.getName())!!
 
@@ -434,7 +454,11 @@ open fun isExtension(gameFeature: OpenGLFeature)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 
@@ -476,12 +500,20 @@ stringBuffer!!.append(" GL_EXTENSIONS: ")
 
                         for (index in 0 until size)
 
-        {stringBuffer!!.append(commonSeps!!.NEW_LINE)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(commonSeps!!.NEW_LINE)
 stringBuffer!!.append(stringUtil!!.toString(list.objectArray[index]!!))
 }
 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
@@ -497,7 +529,11 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.TOSTRING, e)
 
 open fun isGlExtensionDrawTexture()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -507,7 +543,11 @@ open fun isGlExtensionDrawTexture()
 
 open fun isGlExtensionGPUShader4()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -517,7 +557,11 @@ open fun isGlExtensionGPUShader4()
 
 open fun getGlVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -527,7 +571,11 @@ open fun getGlVersion()
 
 open fun getGlVersionString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -537,7 +585,11 @@ open fun getGlVersionString()
 
 open fun getGlShaderVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -547,7 +599,11 @@ open fun getGlShaderVersion()
 
 open fun isGlThreedDrawTexture()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -557,7 +613,11 @@ open fun isGlThreedDrawTexture()
 
 open fun getGlRenderer()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -567,7 +627,11 @@ open fun getGlRenderer()
 
 open fun isVertexBufferObjectSupport()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -577,9 +641,11 @@ open fun isVertexBufferObjectSupport()
 
 open fun isTextureSizeValid(widthAndHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var widthAndHeight = widthAndHeight
+        Updates for KMP build        
+        {
+    //var widthAndHeight = widthAndHeight
 
     
                         if(this.maxTextureSize >= widthAndHeight)

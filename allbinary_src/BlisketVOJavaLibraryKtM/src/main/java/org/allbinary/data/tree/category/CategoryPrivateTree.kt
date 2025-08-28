@@ -45,9 +45,11 @@ open public class CategoryPrivateTree
     var categoryFactoryInterface: CategoryFactoryInterface
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
             : super()
-        {
+        
 
-                    var categoryFactoryInterface = categoryFactoryInterface
+        Updates for KMP build        
+        {
+var categoryFactoryInterface = categoryFactoryInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
@@ -69,9 +71,11 @@ this.categoryFactoryInterface= categoryFactoryInterface
 
 open fun save(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var categoryInterface = categoryInterface
+
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
@@ -106,9 +110,11 @@ cryptFileWriter!!.write(categoryInterface!!.getFilePath(), document)
 
 open fun delete(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var categoryInterface = categoryInterface
+
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
     
                         if(categoryInterface!!.isLeaf())

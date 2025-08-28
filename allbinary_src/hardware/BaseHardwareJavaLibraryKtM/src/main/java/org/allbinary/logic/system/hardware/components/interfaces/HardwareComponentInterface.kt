@@ -31,9 +31,15 @@ interface HardwareComponentInterface {
 open fun compareTo(componentInterface: HardwareComponentInterface)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -46,52 +46,40 @@ open public class TopViewCharacterBehavior
             
 open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var geographicMapCellPosition = geographicMapCellPosition
 }
 
 
 open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var x = x
+    //var y = y
 }
 
 
 open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellTypeArray: Array<GeographicMapCellType?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var geographicMapCellTypeArray = geographicMapCellTypeArray
+        Updates for KMP build        
+        {
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var geographicMapCellTypeArray = geographicMapCellTypeArray
 
     var size: Int = geographicMapInterfaceArray!!.size
                 
@@ -105,7 +93,11 @@ open fun hasSolidBlock(geographicMapInterfaceArray: Array<BasicGeographicMap?>, 
 
                         for (index in 0 until size)
 
-        {basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.getGeographicMapCellTypeFactory() as BasicTopViewGeographicMapCellTypeFactory
+        
+
+        Updates for KMP build        
+        {
+basicTopViewGeographicMapCellTypeFactory= geographicMapInterfaceArray[index]!!.getGeographicMapCellTypeFactory() as BasicTopViewGeographicMapCellTypeFactory
 
     
                         if(basicTopViewGeographicMapCellTypeFactory!!.BLOCK_CELL_TYPE.isType(geographicMapCellTypeArray[index]!!))

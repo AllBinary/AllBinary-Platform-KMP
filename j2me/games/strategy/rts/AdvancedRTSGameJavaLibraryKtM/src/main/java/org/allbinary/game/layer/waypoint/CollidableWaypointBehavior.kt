@@ -33,12 +33,12 @@ open public class CollidableWaypointBehavior : CollidableRTSBehavior {
         
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)                        
 
-                            : super(ownerLayer, collidable){
+                            : super(ownerLayer, collidable)
 
-                    var ownerLayer = ownerLayer
-
-
-                    var collidable = collidable
+        Updates for KMP build        
+        {
+var ownerLayer = ownerLayer
+var collidable = collidable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,9 +48,11 @@ public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boo
 
 open fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collisionLayer = collisionLayer
+        Updates for KMP build        
+        {
+var collisionLayer = collisionLayer
 
 
 
@@ -63,17 +65,21 @@ open fun isCollision(collisionLayer: CollidableCompositeLayer)
             
 open fun collide(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collisionLayer = collisionLayer
+
+        Updates for KMP build        
+        {
+var collisionLayer = collisionLayer
 }
 
 
 open fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collidableInterface = collidableInterface
+        Updates for KMP build        
+        {
+var collidableInterface = collidableInterface
 
 
 
@@ -86,9 +92,11 @@ open fun isCollision(collidableInterface: CollidableInterfaceCompositeInterface)
             
 open fun collide(collidableInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInterface = collidableInterface
+
+        Updates for KMP build        
+        {
+var collidableInterface = collidableInterface
 }
 
 

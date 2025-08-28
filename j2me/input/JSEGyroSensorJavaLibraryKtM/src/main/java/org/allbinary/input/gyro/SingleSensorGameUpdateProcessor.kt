@@ -43,9 +43,11 @@ open public class SingleSensorGameUpdateProcessor : SensorGameUpdateProcessor {
             
 open fun process(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.setNoSensors()
 }
 
@@ -54,9 +56,11 @@ this.setNoSensors()
             
 open fun sendNotifications(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 }
 
 

@@ -55,7 +55,11 @@ open public class OpenGLConfiguration
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLConfiguration{
+: OpenGLConfiguration
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +86,11 @@ open fun getInstance()
     private var versionSelector: OpenGLFeature = OpenGLFeatureFactory.getInstance()!!.OPENGL_AUTO_SELECT
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             
     
@@ -99,7 +107,11 @@ private constructor        ()
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -109,7 +121,11 @@ private constructor        ()
             
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var openGLFeatureFactory: OpenGLFeatureFactory = OpenGLFeatureFactory.getInstance()!!
 
 
@@ -292,7 +308,11 @@ PreLogUtil.put("Read Configuration: " +this.toString(), this, "read")
             
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var closeable: Closeable = NullCloseable.NULL_CLOSEABLE
 
 
@@ -328,7 +348,11 @@ dataOutputStream!!.writeUTF(this.getImageColor()!!.getName())
 dataOutputStream!!.writeUTF(this.getColor()!!.getName())
 dataOutputStream!!.flush()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -346,7 +370,11 @@ dataOutputStream!!.flush()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var features: Features = Features.getInstance()!!
 
 
@@ -409,12 +437,12 @@ PreLogUtil.put(this.toString(), this, this.commonStrings!!.INIT)
             
 open fun update(gameFeature: Feature, colorLocked: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameFeature = gameFeature
 
 
-                    var colorLocked = colorLocked
+        Updates for KMP build        
+        {
+    //var gameFeature = gameFeature
+    //var colorLocked = colorLocked
 
     var features: Features = Features.getInstance()!!
 
@@ -609,16 +637,22 @@ modified= true
 
 open fun setOpenGL(opengl: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var opengl = opengl
+
+        Updates for KMP build        
+        {
+    //var opengl = opengl
 this.opengl= opengl
 }
 
 
 open fun isOpenGL()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -628,16 +662,22 @@ open fun isOpenGL()
 
 open fun setImageColor(imageColor: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageColor = imageColor
+
+        Updates for KMP build        
+        {
+    //var imageColor = imageColor
 this.imageColor= imageColor
 }
 
 
 open fun getImageColor()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature{
+: OpenGLFeature
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -647,16 +687,22 @@ open fun getImageColor()
 
 open fun setColor(color: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var color = color
+
+        Updates for KMP build        
+        {
+    //var color = color
 this.color= color
 }
 
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature{
+: OpenGLFeature
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -666,16 +712,22 @@ open fun getColor()
 
 open fun setVersionSelector(versionSelector: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var versionSelector = versionSelector
+
+        Updates for KMP build        
+        {
+    //var versionSelector = versionSelector
 this.versionSelector= versionSelector
 }
 
 
 open fun getVersionSelector()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature{
+: OpenGLFeature
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -685,16 +737,22 @@ open fun getVersionSelector()
 
 open fun setType(type: OpenGLFeature)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var type = type
+
+        Updates for KMP build        
+        {
+    //var type = type
 this.type= type
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLFeature{
+: OpenGLFeature
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -703,7 +761,11 @@ open fun getType()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

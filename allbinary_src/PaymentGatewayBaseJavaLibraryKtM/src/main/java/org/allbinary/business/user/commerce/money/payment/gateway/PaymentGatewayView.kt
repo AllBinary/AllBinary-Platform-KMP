@@ -46,16 +46,22 @@ open public class PaymentGatewayView
     private var paymentGatewayInterface: PaymentGatewayInterface
 public constructor        (paymentGatewayInterface: PaymentGatewayInterface)
             : super()
-        {
+        
 
-                    var paymentGatewayInterface = paymentGatewayInterface
+        Updates for KMP build        
+        {
+    //var paymentGatewayInterface = paymentGatewayInterface
 this.paymentGatewayInterface= paymentGatewayInterface
 }
 
 
 open fun getPaymentGatewayInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentGatewayInterface{
+: PaymentGatewayInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +73,11 @@ open fun getPaymentGatewayInterface()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
@@ -82,9 +92,11 @@ open fun toHashMap()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+    //var document = document
 
         try {
             
@@ -110,7 +122,11 @@ hashMap!!.putAll(this.toHashMap())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayNode
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         

@@ -34,6 +34,9 @@ open fun getLayerInterface(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
 : AllBinaryLayer
 
+        Updates for KMP build        
+        
+
 }
                 
             

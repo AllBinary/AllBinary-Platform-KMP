@@ -54,7 +54,11 @@ open public class InputAutomationConfiguration
 
 open fun getFile()
         //nullable = true from not(false or (false and true)) = true
-: File{
+: File
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,12 +75,20 @@ open fun getFile()
     private var inputAutomationModuleConfigurationList: List<InputAutomationModuleConfiguration>
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isInstalled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,9 +98,11 @@ open fun isInstalled()
 
 open fun setInstalled(installed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var installed = installed
+
+        Updates for KMP build        
+        {
+var installed = installed
 this.installed= installed
 logUtil!!.put("Installed: " +installed, this, "setIntalled")
 }
@@ -96,7 +110,11 @@ logUtil!!.put("Installed: " +installed, this, "setIntalled")
 
 open fun getInputAutomationModuleConfigurationList()
         //nullable = true from not(false or (false and true)) = true
-: List<InputAutomationModuleConfiguration>{
+: List<InputAutomationModuleConfiguration>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -108,7 +126,11 @@ open fun getInputAutomationModuleConfigurationList()
             
 open fun save()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var document: Document = DomDocumentHelper.create()!!
 
 

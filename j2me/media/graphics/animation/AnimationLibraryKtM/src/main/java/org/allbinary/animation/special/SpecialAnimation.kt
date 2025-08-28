@@ -39,7 +39,11 @@ open public class SpecialAnimation : IndexedAnimation
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SpecialAnimation{
+: SpecialAnimation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,9 +54,11 @@ open fun getInstance()
         }
             public constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,7 +67,11 @@ open fun getInstance()
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var indexedAnimationBehavior: IndexedAnimationBehavior = (this.animationBehaviorP as IndexedAnimationBehavior)
 
 indexedAnimationBehavior!!.loopIndex++
@@ -69,11 +79,19 @@ indexedAnimationBehavior!!.loopIndex++
 
 override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,17 +101,29 @@ override fun isComplete()
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

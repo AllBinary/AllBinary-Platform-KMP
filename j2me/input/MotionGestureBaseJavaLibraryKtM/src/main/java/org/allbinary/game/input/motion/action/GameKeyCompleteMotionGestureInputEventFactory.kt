@@ -41,7 +41,11 @@ open public class GameKeyCompleteMotionGestureInputEventFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyCompleteMotionGestureInputEventFactory{
+: GameKeyCompleteMotionGestureInputEventFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,16 +66,22 @@ open fun getInstance()
 
 open fun add(gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyCompleteMotionGestureInputEvent = gameKeyCompleteMotionGestureInputEvent
+
+        Updates for KMP build        
+        {
+var gameKeyCompleteMotionGestureInputEvent = gameKeyCompleteMotionGestureInputEvent
 eventList!!.add(gameKeyCompleteMotionGestureInputEvent)
 }
 
 
 open fun updateAll()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(StringMaker().
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(eventList!!.size())!!.toString(), this, "updateAll")
 
 
@@ -79,7 +89,11 @@ open fun updateAll()
 
                         for (index in eventList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var gameKeyCompleteMotionGestureInputEvent: GameKeyCompleteMotionGestureInputEvent = eventList!!.objectArray[index]!! as GameKeyCompleteMotionGestureInputEvent
 
 gameKeyCompleteMotionGestureInputEvent!!.update()

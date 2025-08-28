@@ -32,9 +32,15 @@ open fun getStartIntermissionInterface()
         //nullable = true from not(false or (false and true)) = true
 : IntermissionInterface
 
+        Updates for KMP build        
+        
+
 open fun getEndLevelIntermissionInterface()
         //nullable = true from not(false or (false and true)) = true
 : IntermissionInterface
+
+        Updates for KMP build        
+        
 
 }
                 

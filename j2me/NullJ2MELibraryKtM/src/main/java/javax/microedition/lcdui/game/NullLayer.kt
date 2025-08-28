@@ -37,21 +37,15 @@ open public class NullLayer : Layer {
         }
              constructor        (x: Int, y: Int, width: Int, height: Int, visible: Boolean)                        
 
-                            : super(x, y, width, height, visible){
+                            : super(x, y, width, height, visible)
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var visible = visible
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var width = width
+var height = height
+var visible = visible
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,9 +54,11 @@ open public class NullLayer : Layer {
 
 override fun paint(g: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var g = g
+
+        Updates for KMP build        
+        {
+var g = g
 }
 
 

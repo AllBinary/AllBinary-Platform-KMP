@@ -43,7 +43,11 @@ open public class VirtualKeyboardEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VirtualKeyboardEventHandler{
+: VirtualKeyboardEventHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,7 +56,11 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
     val SHOW_EVENT: VirtualKeyboardEvent = VirtualKeyboardEvent(BooleanFactory.getInstance()!!.TRUE)
@@ -62,12 +70,12 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var eventObject = eventObject
 
 
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
+    //var eventListenerInterface = eventListenerInterface
 
     var virtualKeyboardEventListenerInterface: VirtualKeyboardEventListenerInterface = eventListenerInterface as VirtualKeyboardEventListenerInterface
 
@@ -77,12 +85,20 @@ virtualKeyboardEventListenerInterface!!.onVirtualKeyboardEvent(eventObject as Vi
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             Thread.sleep(120)
 this.fireEvent(this.SHOW_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 }
@@ -90,12 +106,20 @@ this.fireEvent(this.SHOW_EVENT)
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             Thread.sleep(120)
 this.fireEvent(this.HIDE_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CLOSE, e)
 }
 
 }

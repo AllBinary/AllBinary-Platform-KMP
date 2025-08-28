@@ -36,18 +36,14 @@ open public class NumberLayersSequenceAI : SequenceAI {
     private var numberOfLayersLeft: Int
 public constructor        (numberOfEnemiesLeft: Int, artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
+                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput)
 
-                    var numberOfEnemiesLeft = numberOfEnemiesLeft
-
-
-                    var artificialIntelligenceInterface = artificialIntelligenceInterface
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var numberOfEnemiesLeft = numberOfEnemiesLeft
+var artificialIntelligenceInterface = artificialIntelligenceInterface
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,9 +55,11 @@ this.numberOfLayersLeft= numberOfEnemiesLeft
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(this.getIndex() == 0)

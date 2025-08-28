@@ -42,12 +42,12 @@ open public class LicenseRegistrationUtil
 
 open fun process(abeClientInformation: AbeClientInformationInterface, registrationId: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var registrationId = registrationId
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var registrationId = registrationId
 
         try {
             
@@ -64,7 +64,11 @@ hashtable.put("message", SpecialMessageUtil.getInstance()!!.get())
 XmlRpcRemoteLicenseRegistrationClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Exception)
-            {PreLogUtil.put("License Registration Exception", "LicenseRegistrationUtil", "License Registration", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("License Registration Exception", "LicenseRegistrationUtil", "License Registration", e)
 }
 
 }
@@ -73,7 +77,11 @@ XmlRpcRemoteLicenseRegistrationClient(abeClientInformation).
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

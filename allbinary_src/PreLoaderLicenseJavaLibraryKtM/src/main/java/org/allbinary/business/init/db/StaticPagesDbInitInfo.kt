@@ -36,7 +36,11 @@ open public class StaticPagesDbInitInfo : DbInitInfo {
         }
             public constructor        ()                        
 
-                            : super(INITFILE, true){
+                            : super(INITFILE, true)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -44,9 +48,11 @@ open public class StaticPagesDbInitInfo : DbInitInfo {
 
 public constructor        (read: Boolean)                        
 
-                            : super(INITFILE, read){
+                            : super(INITFILE, read)
 
-                    var read = read
+        Updates for KMP build        
+        {
+var read = read
 
 
                             //For kotlin this is before the body of the constructor.

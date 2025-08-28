@@ -76,30 +76,18 @@ open public class ShaderComposite
     var programHandle: Int= 0
 public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor, disableProgramShaderOpenGLProcessor: OpenGLProcessor)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var requiresOpenGLVersion = requiresOpenGLVersion
-
-
-                    var shaderArray = shaderArray
-
-
-                    var compositeShaderUpdater = compositeShaderUpdater
-
-
-                    var shaderInitializer = shaderInitializer
-
-
-                    var modelViewProjection = modelViewProjection
-
-
-                    var colorOpenGLProcessor = colorOpenGLProcessor
-
-
-                    var vertexOpenGLProcessor = vertexOpenGLProcessor
-
-
-                    var disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
+    //var requiresOpenGLVersion = requiresOpenGLVersion
+    //var shaderArray = shaderArray
+    //var compositeShaderUpdater = compositeShaderUpdater
+    //var shaderInitializer = shaderInitializer
+    //var modelViewProjection = modelViewProjection
+    //var colorOpenGLProcessor = colorOpenGLProcessor
+    //var vertexOpenGLProcessor = vertexOpenGLProcessor
+    //var disableProgramShaderOpenGLProcessor = disableProgramShaderOpenGLProcessor
 this.requiresOpenGLVersion= requiresOpenGLVersion
 this.shaderArray= shaderArray
 this.shaderInitializer= shaderInitializer
@@ -113,9 +101,11 @@ this.disableProgramShaderOpenGLProcessor= disableProgramShaderOpenGLProcessor
 
 open fun init(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 this.programHandle= this.shaderInitializer!!.init(gl, this.shaderArray, StringUtil.getInstance()!!.getArrayInstance())
 }
 

@@ -42,16 +42,22 @@ open public class PaymentGatewayInterfaceFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(httpServletRequest: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
-: PaymentGatewayInterface{
+: PaymentGatewayInterface
 
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -73,7 +79,11 @@ open fun getInstance(httpServletRequest: HttpServletRequest)
                         return this.getInstance(RequestParams(httpServletRequest).
                             toHashMap())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
@@ -95,9 +105,11 @@ open fun getInstance(httpServletRequest: HttpServletRequest)
             
 open fun getInstance(paymentType: BasicPaymentType)
         //nullable =  from not(true or (false and false)) = 
-: PaymentGatewayInterface{
+: PaymentGatewayInterface
 
-                    var paymentType = paymentType
+        Updates for KMP build        
+        {
+var paymentType = paymentType
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -114,9 +126,11 @@ hashMap!!.put(PaymentGatewayData.NAME.toString(), paymentType!!.getName())
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: PaymentGatewayInterface{
+: PaymentGatewayInterface
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -146,7 +160,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayInterfaceFactoryInterface!!.getInstance(hashMap)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         

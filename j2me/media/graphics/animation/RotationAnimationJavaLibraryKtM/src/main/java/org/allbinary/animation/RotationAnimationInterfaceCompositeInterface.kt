@@ -32,9 +32,15 @@ open fun getRotationAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
 : RotationAnimation
 
+        Updates for KMP build        
+        
+
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

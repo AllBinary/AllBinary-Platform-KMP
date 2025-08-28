@@ -44,16 +44,22 @@ open public class SensorGameUpdateProcessor
 
 open fun setInputSensor(inputSensor: AllBinarySensor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputSensor = inputSensor
+
+        Updates for KMP build        
+        {
+var inputSensor = inputSensor
 this.inputSensor= inputSensor
 }
 
 
 open fun getInputSensor()
         //nullable = true from not(false or (false and true)) = true
-: AllBinarySensor{
+: AllBinarySensor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,9 +71,11 @@ open fun getInputSensor()
             
 open fun process(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 }
 
 
@@ -75,15 +83,21 @@ open fun process(anyType: Any)
             
 open fun sendNotifications(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 }
 
 
 open fun isAnySensor()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.inputSensor == NoAllBinarySensor.getInstance())
                         
@@ -110,7 +124,11 @@ open fun isAnySensor()
 
 open fun setNoSensors()
         //nullable = true from not(false or (false and true)) = true
-{GyroSensorFactory.getInstance()!!.setCompleteMotionGestureInputEventListener(NoCompleteMotionGestureInputEventListener.getInstance())
+
+
+        Updates for KMP build        
+        {
+GyroSensorFactory.getInstance()!!.setCompleteMotionGestureInputEventListener(NoCompleteMotionGestureInputEventListener.getInstance())
 AccelerometerSensorFactory.getInstance()!!.setCompleteMotionGestureInputEventListener(NoCompleteMotionGestureInputEventListener.getInstance())
 this.setInputSensor(NoAllBinarySensor.getInstance())
 }

@@ -51,27 +51,33 @@ open public class MultipartRequestParamForwardTag : CustomTagSupport {
 
 open fun setPage(page: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var page = page
+
+        Updates for KMP build        
+        {
+var page = page
 this.page= page
 }
 
 
 open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 this.command= command
 }
 
 
 open fun setParamVector(paramVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var paramVector = paramVector
+
+        Updates for KMP build        
+        {
+var paramVector = paramVector
 this.paramVector= paramVector
 }
 
@@ -80,7 +86,11 @@ this.paramVector= paramVector
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     var parentTag: HelperTag = this.getParent() as HelperTag
@@ -100,7 +110,11 @@ multipartRequestParamForwardHelper!!.forward()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Tag.SKIP_BODY
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -108,7 +122,11 @@ multipartRequestParamForwardHelper!!.forward()
                         return Tag.SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

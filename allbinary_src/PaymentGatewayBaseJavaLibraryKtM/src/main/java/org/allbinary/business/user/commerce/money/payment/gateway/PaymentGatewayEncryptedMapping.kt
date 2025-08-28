@@ -38,9 +38,11 @@ open public class PaymentGatewayEncryptedMapping
     private var paymentGatewayInterface: PaymentGatewayInterface
 public constructor        (paymentGatewayInterface: PaymentGatewayInterface)
             : super()
-        {
+        
 
-                    var paymentGatewayInterface = paymentGatewayInterface
+        Updates for KMP build        
+        {
+var paymentGatewayInterface = paymentGatewayInterface
 this.paymentGatewayInterface= paymentGatewayInterface
 }
 
@@ -49,7 +51,11 @@ this.paymentGatewayInterface= paymentGatewayInterface
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +65,11 @@ open fun toHashMap()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,7 +81,11 @@ open fun toVector()
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

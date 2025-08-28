@@ -41,7 +41,11 @@ open public class PlatformFormInputMappingFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PlatformFormInputMappingFactory{
+: PlatformFormInputMappingFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +66,11 @@ open fun getInstance()
 
 open fun getOrCreate()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping{
+: InputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -95,7 +103,11 @@ SINGLETON= inputToGameKeyMapping
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)

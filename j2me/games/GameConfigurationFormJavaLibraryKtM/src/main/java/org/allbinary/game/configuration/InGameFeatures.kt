@@ -43,7 +43,11 @@ open public class InGameFeatures : Init {
             }            
         override fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var LABEL: String = "Screen Buttons"
 
 
@@ -53,6 +57,9 @@ open public class InGameFeatures : Init {
     var exclusiveOrientationSensorVector: BasicArrayList = GameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.get(orientationData!!.ORIENTATION_SENSOR_INPUT as Object) as BasicArrayList
 
 
+    var inGameFeatureChoiceGroups: InGameFeatureChoiceGroups = InGameFeatureChoiceGroups.getExclusiveInstance()!!
+
+
     
                         if(exclusiveOrientationSensorVector != 
                                     null
@@ -60,22 +67,35 @@ open public class InGameFeatures : Init {
                         
                                     {
                                     
-    var inGameExclusiveOrientationSensorVector: BasicArrayList = InGameFeatureChoiceGroups.getExclusiveInstance()!!.get()!!.get(orientationData!!.ORIENTATION_SENSOR_INPUT as Object) as BasicArrayList
+    var inGameExclusiveOrientationSensorVectorCanBeNull: Any? = inGameFeatureChoiceGroups!!.get()!!.get(orientationData!!.ORIENTATION_SENSOR_INPUT as Object)
 
 
     
-                        if(inGameExclusiveOrientationSensorVector == 
+                        if(inGameExclusiveOrientationSensorVectorCanBeNull == 
                                     null
-                                 || inGameExclusiveOrientationSensorVector!!.size() == 0)
+                                )
                         
                                     {
-                                    inGameExclusiveOrientationSensorVector= BasicArrayList()
-inGameExclusiveOrientationSensorVector!!.add(SensorFeatureFactory.getInstance()!!.ORIENTATION_SENSORS)
-inGameExclusiveOrientationSensorVector!!.add(SensorFeatureFactory.getInstance()!!.NO_ORIENTATION)
-InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTATION_SENSOR_INPUT, inGameExclusiveOrientationSensorVector)
+                                    this.addToInGameMenu()
 
                                     }
                                 
+                        else {
+                            
+    var inGameExclusiveOrientationSensorVector: BasicArrayList = inGameExclusiveOrientationSensorVectorCanBeNull as BasicArrayList
+
+
+    
+                        if(inGameExclusiveOrientationSensorVector!!.size() == 0)
+                        
+                                    {
+                                    this.addToInGameMenu()
+
+                                    }
+                                
+
+                        }
+                            
 
                                     }
                                 
@@ -96,16 +116,38 @@ InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTA
 exclusiveScreenButtonsVector!!.add(touchFeatureFactory!!.AUTO_HIDE_SHOW_SCREEN_BUTTONS)
 exclusiveScreenButtonsVector!!.add(touchFeatureFactory!!.SHOW_SCREEN_BUTTONS)
 exclusiveScreenButtonsVector!!.add(touchFeatureFactory!!.HIDE_SCREEN_BUTTONS)
-InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(LABEL, exclusiveScreenButtonsVector)
+inGameFeatureChoiceGroups!!.add(LABEL, exclusiveScreenButtonsVector)
 
                                     }
                                 
 }
 
 
+open fun addToInGameMenu()
+        //nullable = true from not(false or (false and true)) = true
+
+
+        Updates for KMP build        
+        {
+
+    var orientationData: OrientationData = OrientationData.getInstance()!!
+
+
+    var inGameExclusiveOrientationSensorVector: BasicArrayList = BasicArrayList()
+
+inGameExclusiveOrientationSensorVector!!.add(SensorFeatureFactory.getInstance()!!.ORIENTATION_SENSORS)
+inGameExclusiveOrientationSensorVector!!.add(SensorFeatureFactory.getInstance()!!.NO_ORIENTATION)
+InGameFeatureChoiceGroups.getExclusiveInstance()!!.add(orientationData!!.ORIENTATION_SENSOR_INPUT, inGameExclusiveOrientationSensorVector)
+}
+
+
 open fun isAny()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var features: Features = Features.getInstance()!!
 
 

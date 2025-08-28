@@ -37,9 +37,11 @@ open public class ValidationView : ShippingAddressesView
         
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,7 +51,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var billingAddressesEntity: ShippingAddressesEntity = ShippingAddressesEntity(this.getWeblisketSession()!!.getUserName())
 
 this.streetAddressList= billingAddressesEntity!!.get()
@@ -77,7 +83,11 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var streetAddress: StreetAddress = streetAddressList!!.get(index) as StreetAddress
 
 
@@ -114,7 +124,11 @@ this.streetAddressList= billingAddressesEntity!!.get()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,7 +138,11 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -134,9 +152,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 

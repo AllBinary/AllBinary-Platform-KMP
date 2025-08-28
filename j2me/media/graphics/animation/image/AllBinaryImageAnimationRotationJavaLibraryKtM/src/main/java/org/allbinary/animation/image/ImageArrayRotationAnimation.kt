@@ -38,12 +38,12 @@ protected constructor        (anyType: Any, animationBehavior: AnimationBehavior
 
                             : super(
                                     (anyType as ImageArrayRotationAnimationInfo).getImageArray(), 
-                                    (anyType as ImageArrayRotationAnimationInfo).getAngleInfoP(), animationBehavior){
+                                    (anyType as ImageArrayRotationAnimationInfo).getAngleInfoP(), animationBehavior)
 
-                    var anyType = anyType
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var anyType = anyType
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,18 +56,14 @@ this.init(allBinaryImageRotationAnimationInfo!!.getImageArray(), allBinaryImageR
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(imageArray, angleInfo, animationBehavior){
+                            : super(imageArray, angleInfo, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -77,12 +73,12 @@ this.init(imageArray, angleInfo, totalAngle)
 
 public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior){
+                            : this(imageArray, AngleInfo.getInstance(10.toShort()), AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,15 +87,13 @@ public constructor        (imageArray: Array<Image?>, animationBehavior: Animati
 
 public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, animationBehavior: AnimationBehavior)                        
 
-                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior){
+                            : this(imageArray, angleInfo, AngleFactory.getInstance()!!.TOTAL_ANGLE, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var angleInfo = angleInfo
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var angleInfo = angleInfo
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -111,15 +105,13 @@ public constructor        (imageArray: Array<Image?>, angleInfo: AngleInfo, anim
             
 open fun init(imageArray: Array<Image?>, angleInfo: AngleInfo, totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageArray = imageArray
 
 
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
 this.expectedTotalFrames= totalAngle /this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement()
 this.angleInfo!!.adjustAngle(0)
 
@@ -139,9 +131,11 @@ this.angleInfo!!.adjustAngle(0)
 
 open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageArray = imageArray
+
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
 super.setImageArray(imageArray)
 this.angleInfo!!.adjustAngle(0)
 }

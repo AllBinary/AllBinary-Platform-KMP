@@ -33,9 +33,15 @@ open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
 : BasicArrayList
 
+        Updates for KMP build        
+        
+
 open fun getOnDemandResources()
         //nullable = true from not(false or (false and true)) = true
 : IntArray
+
+        Updates for KMP build        
+        
 
 }
                 

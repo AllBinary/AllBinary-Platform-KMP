@@ -49,17 +49,21 @@ open public class GameKeyFromMotionGestureEventListener : CompleteMotionGestureI
     private var previousGameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var completeMotionGestureInputEvent = completeMotionGestureInputEvent
+
+        Updates for KMP build        
+        {
+var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 
         try {
             
@@ -98,7 +102,11 @@ previousGameKeyEvent= gameKeyEvent
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "onCompleteMotionGestureInputEvent", e)

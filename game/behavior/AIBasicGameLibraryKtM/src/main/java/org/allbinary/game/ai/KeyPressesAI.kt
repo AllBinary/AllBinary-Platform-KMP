@@ -41,15 +41,13 @@ open public class KeyPressesAI : BasicAI {
     var keys: Array<Integer?>
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var hashtable = hashtable
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -68,7 +66,11 @@ this.keys= arrayOfNulls(hashtable.size)
 
                         for (index in 0 until size)
 
-        {keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
+        
+
+        Updates for KMP build        
+        {
+keys[index]= hashtable.get(objectArray[index]!! as Object) as Integer
 }
 
 }
@@ -77,9 +79,11 @@ this.keys= arrayOfNulls(hashtable.size)
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(on)
@@ -91,7 +95,11 @@ this.keys= arrayOfNulls(hashtable.size)
 
                         for (index in 0 until keys.size)
 
-        {super.processAI(keys[index]!!.toInt())
+        
+
+        Updates for KMP build        
+        {
+super.processAI(keys[index]!!.toInt())
 }
 
 
@@ -104,7 +112,11 @@ this.keys= arrayOfNulls(hashtable.size)
             
 open fun toggle()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(isOn())
                         
@@ -125,7 +137,11 @@ open fun toggle()
             
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-{setOn(false)
+
+
+        Updates for KMP build        
+        {
+setOn(false)
 }
 
 
@@ -133,22 +149,32 @@ open fun disable()
             
 open fun enable()
         //nullable = true from not(false or (false and true)) = true
-{setOn(true)
+
+
+        Updates for KMP build        
+        {
+setOn(true)
 }
 
 
 open fun setOn(on: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var on = on
+
+        Updates for KMP build        
+        {
+var on = on
 this.on= on
 }
 
 
 open fun isOn()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

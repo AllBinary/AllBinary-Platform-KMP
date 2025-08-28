@@ -34,15 +34,13 @@ open public class ComboSequenceAI : SequenceAI {
         
 public constructor        (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput){
+                            : super(artificialIntelligenceInterface, ownerLayerInterface, gameInput)
 
-                    var artificialIntelligenceInterface = artificialIntelligenceInterface
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var artificialIntelligenceInterface = artificialIntelligenceInterface
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -53,9 +51,11 @@ public constructor        (artificialIntelligenceInterface: Array<ArtificialInte
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?> = this.getArtificialIntelligenceInterface()!!
 
@@ -69,7 +69,11 @@ public constructor        (artificialIntelligenceInterface: Array<ArtificialInte
 
                         for (index in 0 until size)
 
-        {this.setIndex(index)
+        
+
+        Updates for KMP build        
+        {
+this.setIndex(index)
 super.processAI(allBinaryLayerManager)
 }
 

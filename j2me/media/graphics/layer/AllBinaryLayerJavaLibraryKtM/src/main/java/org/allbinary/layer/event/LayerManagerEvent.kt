@@ -38,12 +38,12 @@ open public class LayerManagerEvent : AllBinaryEventObject {
     private val crud: String
 public constructor        (layerManager: LayerManager, crud: String)                        
 
-                            : super(layerManager){
+                            : super(layerManager)
 
-                    var layerManager = layerManager
-
-
-                    var crud = crud
+        Updates for KMP build        
+        {
+var layerManager = layerManager
+var crud = crud
 
 
                             //For kotlin this is before the body of the constructor.
@@ -54,7 +54,11 @@ this.crud= crud
 
 open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,15 +68,21 @@ open fun getLayerInterface()
 
 open fun setLayerInterface(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("LayerManagerEvent: \n")

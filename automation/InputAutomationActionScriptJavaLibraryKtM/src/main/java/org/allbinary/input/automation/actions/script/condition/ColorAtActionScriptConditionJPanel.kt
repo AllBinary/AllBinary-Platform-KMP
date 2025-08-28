@@ -40,9 +40,11 @@ open public class ColorAtActionScriptConditionJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface
-public constructor        (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface){
+public constructor        (colorAtActionScriptConditionInterface: ColorAtActionScriptConditionInterface)
 
-                    var colorAtActionScriptConditionInterface = colorAtActionScriptConditionInterface
+        Updates for KMP build        
+        {
+var colorAtActionScriptConditionInterface = colorAtActionScriptConditionInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.colorAtActionScriptConditionInterface= colorAtActionScriptConditionInterface
@@ -52,7 +54,11 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var colorRangeInterface: ColorRangeInterface = this.colorAtActionScriptConditionInterface!!.getColorRangeInterface()!!
 
 this.getMinRedJTextField()!!.setText(colorRangeInterface!!.getMinRed().toString())
@@ -69,7 +75,11 @@ this.colorAtActionScriptConditionInterface!!.log()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var colorRangeInterface: ColorRangeInterface = this.colorAtActionScriptConditionInterface!!.getColorRangeInterface()!!
 
 colorRangeInterface!!.setMinRed(Integer.valueOf(this.getMinRedJTextField()!!.getText())!!.toInt())
@@ -108,7 +118,11 @@ this.colorAtActionScriptConditionInterface!!.log()
 
 open fun getColorAtXJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -118,16 +132,22 @@ open fun getColorAtXJTextField()
 
 open fun setColorAtXJTextField(colorAtXJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorAtXJTextField = colorAtXJTextField
+
+        Updates for KMP build        
+        {
+var colorAtXJTextField = colorAtXJTextField
 this.colorAtXJTextField= colorAtXJTextField
 }
 
 
 open fun getColorAtYJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,16 +157,22 @@ open fun getColorAtYJTextField()
 
 open fun setColorAtYJTextField(colorAtYJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorAtYJTextField = colorAtYJTextField
+
+        Updates for KMP build        
+        {
+var colorAtYJTextField = colorAtYJTextField
 this.colorAtYJTextField= colorAtYJTextField
 }
 
 
 open fun getMaxBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -156,16 +182,22 @@ open fun getMaxBlueJTextField()
 
 open fun setMaxBlueJTextField(maxBlueJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxBlueJTextField = maxBlueJTextField
+
+        Updates for KMP build        
+        {
+var maxBlueJTextField = maxBlueJTextField
 this.maxBlueJTextField= maxBlueJTextField
 }
 
 
 open fun getMaxGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -175,16 +207,22 @@ open fun getMaxGreenJTextField()
 
 open fun setMaxGreenJTextField(maxGreenJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxGreenJTextField = maxGreenJTextField
+
+        Updates for KMP build        
+        {
+var maxGreenJTextField = maxGreenJTextField
 this.maxGreenJTextField= maxGreenJTextField
 }
 
 
 open fun getMaxRedJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -194,16 +232,22 @@ open fun getMaxRedJTextField()
 
 open fun setMaxRedJTextField(maxRedJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxRedJTextField = maxRedJTextField
+
+        Updates for KMP build        
+        {
+var maxRedJTextField = maxRedJTextField
 this.maxRedJTextField= maxRedJTextField
 }
 
 
 open fun getMinBlueJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -213,16 +257,22 @@ open fun getMinBlueJTextField()
 
 open fun setMinBlueJTextField(minBlueJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minBlueJTextField = minBlueJTextField
+
+        Updates for KMP build        
+        {
+var minBlueJTextField = minBlueJTextField
 this.minBlueJTextField= minBlueJTextField
 }
 
 
 open fun getMinGreenJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -232,16 +282,22 @@ open fun getMinGreenJTextField()
 
 open fun setMinGreenJTextField(minGreenJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minGreenJTextField = minGreenJTextField
+
+        Updates for KMP build        
+        {
+var minGreenJTextField = minGreenJTextField
 this.minGreenJTextField= minGreenJTextField
 }
 
 
 open fun getMinRedJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -251,16 +307,22 @@ open fun getMinRedJTextField()
 
 open fun setMinRedJTextField(minRedJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minRedJTextField = minRedJTextField
+
+        Updates for KMP build        
+        {
+var minRedJTextField = minRedJTextField
 this.minRedJTextField= minRedJTextField
 }
 
 
 open fun getYJLabel()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JLabel{
+: javax.swing.JLabel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -270,16 +332,22 @@ open fun getYJLabel()
 
 open fun setYJLabel(yJLabel: javax.swing.JLabel)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var yJLabel = yJLabel
+
+        Updates for KMP build        
+        {
+var yJLabel = yJLabel
 this.yJLabel= yJLabel
 }
 
 
 open fun getColorAtActionJDialog()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JDialog{
+: javax.swing.JDialog
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -289,16 +357,22 @@ open fun getColorAtActionJDialog()
 
 open fun setColorAtActionJDialog(colorAtActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorAtActionJDialog = colorAtActionJDialog
+
+        Updates for KMP build        
+        {
+var colorAtActionJDialog = colorAtActionJDialog
 this.colorAtActionJDialog= colorAtActionJDialog
 }
 
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{colorAtActionJDialog= javax.swing.JDialog()
+
+
+        Updates for KMP build        
+        {
+colorAtActionJDialog= javax.swing.JDialog()
 titleJLabel= javax.swing.JLabel()
 locationJLabel= javax.swing.JLabel()
 colorAtXJTextField= javax.swing.JTextField()
@@ -337,9 +411,11 @@ okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 okJButtonActionPerformed(evt)
 }
 
@@ -358,9 +434,11 @@ colorAtActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 colorAtActionJButtonActionPerformed(evt)
 }
 
@@ -378,9 +456,11 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.update()
 this.getColorAtActionJDialog()!!.setVisible(false)
 }
@@ -388,9 +468,11 @@ this.getColorAtActionJDialog()!!.setVisible(false)
 
 open fun colorAtActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.getColorAtActionJDialog()!!.setVisible(true)
 }
 

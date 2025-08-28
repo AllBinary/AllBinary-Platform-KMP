@@ -40,7 +40,11 @@ open public class FeatureResourceInitializationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FeatureResourceInitializationUtil{
+: FeatureResourceInitializationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
             
 open fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

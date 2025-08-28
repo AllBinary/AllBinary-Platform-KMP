@@ -45,9 +45,11 @@ open public class StoreFrontView
     private var storeFrontInterface: StoreFrontInterface
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        {
+        
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -68,9 +70,11 @@ this.storeFrontInterface= storeFrontInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.storeFrontInterface!!.toHashMap()!!
 

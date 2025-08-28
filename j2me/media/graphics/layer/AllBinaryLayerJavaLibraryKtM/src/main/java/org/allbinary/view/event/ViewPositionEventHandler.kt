@@ -42,7 +42,11 @@ open public class ViewPositionEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ViewPositionEventHandler{
+: ViewPositionEventHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,14 +57,20 @@ open fun getInstance()
         }
             
     private val list: BasicArrayList = BasicArrayList()
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun addListener(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     
                         if(!list.contains(layerInterface))
@@ -74,15 +84,21 @@ open fun addListener(layerInterface: AllBinaryLayer)
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 super.removeAllListeners()
 }
 
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+var eventListenerInterface = eventListenerInterface
 this.list.remove(eventListenerInterface)
 super.removeListener(eventListenerInterface)
 }
@@ -91,23 +107,33 @@ super.removeListener(eventListenerInterface)
                 @Throws(Exception::class)
             override fun fireEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 
 
 
 
                         for (index in this.list.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
         try {
             
     var layerInterface: AllBinaryLayer = this.list.objectArray[index]!! as AllBinaryLayer
 
 layerInterface!!.onChangeEvent(eventObject as ViewPositionEvent)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, EventStrings.getInstance()!!.FIRE_EVENT, e)
 }
 
 }
@@ -119,12 +145,12 @@ super.fireEvent(eventObject)
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var eventObject = eventObject
 
 
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+var eventObject = eventObject
+var eventListenerInterface = eventListenerInterface
 
     var viewPositionEventListenerInterface: ViewPositionEventListenerInterface = (eventListenerInterface as ViewPositionEventListenerInterface)
 

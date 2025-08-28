@@ -31,12 +31,12 @@ open public class YAxisMathVector : MathVector {
         
 public constructor        (magnitudeBasicDecimal: BasicDecimal, direction: Int)                        
 
-                            : super(magnitudeBasicDecimal, direction){
+                            : super(magnitudeBasicDecimal, direction)
 
-                    var magnitudeBasicDecimal = magnitudeBasicDecimal
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var magnitudeBasicDecimal = magnitudeBasicDecimal
+var direction = direction
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,7 +47,11 @@ this.calculate()
 
 open fun getResult()
         //nullable = true from not(false or (false and true)) = true
-: BasicDecimal{
+: BasicDecimal
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +61,11 @@ open fun getResult()
 
 open fun calculate()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var result: Long = YAxisMathVectorUtil.calculate(this.getMagnitude()!!.getUnscaled(), this.getDirection())!!
 
 this.resultBasicDecimal= BasicDecimal(result)

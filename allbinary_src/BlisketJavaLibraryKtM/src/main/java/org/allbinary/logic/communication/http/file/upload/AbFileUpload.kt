@@ -37,9 +37,11 @@ open public class AbFileUpload : FileUpload {
         
 public constructor        (fileItemFactory: FileItemFactory)                        
 
-                            : super(fileItemFactory){
+                            : super(fileItemFactory)
 
-                    var fileItemFactory = fileItemFactory
+        Updates for KMP build        
+        {
+var fileItemFactory = fileItemFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,9 +53,11 @@ public constructor        (fileItemFactory: FileItemFactory)
             
 open fun getItemIterator(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-: FileItemIterator{
+: FileItemIterator
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 
 
 

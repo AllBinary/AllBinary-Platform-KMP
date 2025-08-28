@@ -40,16 +40,22 @@ open public class QuoteRequestTag : TableTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var storeName: String
-public constructor        (){this.setTagHelperFactory(QuoteHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(QuoteHelperFactory())
 this.setTagRequestHelperFactory(QuoteRequestHelperFactory())
 }
 
 
 open fun setStoreName(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeName = storeName
+
+        Updates for KMP build        
+        {
+var storeName = storeName
 this.storeName= storeName
 }
 
@@ -58,7 +64,11 @@ this.storeName= storeName
             
 open fun email()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = QuoteHelperFactory().
@@ -81,13 +91,21 @@ open fun email()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to send QuoteRequest emails"
 
 
@@ -113,7 +131,11 @@ open fun email()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -155,7 +177,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -163,7 +189,11 @@ open fun doStartTag()
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

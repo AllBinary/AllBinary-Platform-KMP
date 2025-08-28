@@ -68,9 +68,11 @@ open public class GenericProfiles
     private val fileName: String
 public constructor        (fileName: String)
             : super()
-        {
+        
 
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+var fileName = fileName
 this.fileName= fileName
 this.profilesDefaultListModelHelper= DefaultListModelHelper()
 this.hashMap= HashMap<Any, Any>()
@@ -138,9 +140,11 @@ this.getDefaultListModelHelper()!!.initDefaultModelList()
             
 open fun initProfiles(node: Node)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var node = node
+
+        Updates for KMP build        
+        {
+var node = node
 
     var nodeList: NodeList = node.getChildNodes()!!
 
@@ -150,7 +154,11 @@ open fun initProfiles(node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileNameNode: Node = nodeList!!.item(index)!!
 
 
@@ -173,7 +181,11 @@ this.getDefaultListModelHelper()!!.add(genericProfile!!.getName())
 
 open fun getDefaultListModelHelper()
         //nullable = true from not(false or (false and true)) = true
-: DefaultListModelHelper{
+: DefaultListModelHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -185,9 +197,11 @@ open fun getDefaultListModelHelper()
             
 open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
-: GenericProfile{
+: GenericProfile
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
     var genericProfile: GenericProfile = this.hashMap!!.get(name as Object) as GenericProfile
 
@@ -217,9 +231,11 @@ logUtil!!.put("No Generic Profile Named: " +name +" availability was: " +this.ha
             
 open fun add(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.hashMap!!.put(name, GenericProfile(name))
 this.getDefaultListModelHelper()!!.add(name)
 this.getDefaultListModelHelper()!!.initDefaultModelList()
@@ -231,9 +247,11 @@ this.save()
             
 open fun remove(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.hashMap!!.remove(name)
 this.getDefaultListModelHelper()!!.remove(name)
 this.getDefaultListModelHelper()!!.initDefaultModelList()
@@ -245,9 +263,11 @@ this.save()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(GenericProfilesData.NAME)!!
 
@@ -267,7 +287,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var genericProfile: GenericProfile = this.hashMap!!.get(nameArray[index]!! as String) as GenericProfile
 
 node.appendChild(genericProfile!!.toXmlNode(document))
@@ -285,7 +309,11 @@ node.appendChild(genericProfile!!.toXmlNode(document))
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var document: Document = DomDocumentHelper.create()!!
 
 
@@ -304,7 +332,11 @@ document.appendChild(node)
             
 open fun save()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var idFile: FileOutputStream = FileOutputStream(this.fileName)
 
 

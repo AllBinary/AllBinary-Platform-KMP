@@ -47,7 +47,11 @@ open public class UserEmailEventHandlerSingletons
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UserEmailEventHandlerSingletons{
+: UserEmailEventHandlerSingletons
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,7 +68,11 @@ open fun getInstance()
     private val userEmailEventHandlerHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
@@ -80,15 +88,13 @@ private constructor        ()
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable =  from not(true or (false and false)) = 
-: UserEmailEventHandler{
+: UserEmailEventHandler
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var userEmailEventNameData = userEmailEventNameData
-
-
-                    var userInterface = userInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var userEmailEventNameData = userEmailEventNameData
+var userInterface = userInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))

@@ -37,7 +37,11 @@ open public class Processor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Processor{
+: Processor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,16 +60,22 @@ open fun getInstance()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun process(timeDelta: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeDelta = timeDelta
+
+        Updates for KMP build        
+        {
+    //var timeDelta = timeDelta
 }
 
 

@@ -44,21 +44,15 @@ open public class GameDifficultyOptions : CommandForm {
     private val list: BasicArrayList
 public constructor        (commandListener: CommandListener, title: String, list: BasicArrayList, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor){
+                            : super(commandListener, title, backgrounBasicColor, foregroundBasicColor)
 
-                    var commandListener = commandListener
-
-
-                    var title = title
-
-
-                    var list = list
-
-
-                    var backgrounBasicColor = backgrounBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var commandListener = commandListener
+var title = title
+var list = list
+var backgrounBasicColor = backgrounBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,12 +69,20 @@ this.setSelectedId(gameDifficultyFactory!!.getLevel())
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{super.open()
+
+
+        Updates for KMP build        
+        {
+super.open()
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{super.close()
+
+
+        Updates for KMP build        
+        {
+super.close()
 this.save()
 }
 
@@ -89,7 +91,11 @@ this.save()
             
 open fun save()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var gameDifficultyFactory: GameDifficultyFactory = GameDifficultyFactory.getInstance()!!
 
 gameDifficultyFactory!!.setLevel(this.getSelectedId())
@@ -97,9 +103,11 @@ gameDifficultyFactory!!.setLevel(this.getSelectedId())
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 
@@ -112,7 +120,11 @@ this.setCommandListener(cmdListener)
                 @Throws(Exception::class)
             override fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.deleteAll()
+
+
+        Updates for KMP build        
+        {
+this.deleteAll()
 this.add(list, "Difficulty", Choice.EXCLUSIVE)
 super.update()
 }
@@ -120,15 +132,13 @@ super.update()
 
 open fun add(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var list = list
 
 
-                    var name = name
-
-
-                    var option = option
+        Updates for KMP build        
+        {
+var list = list
+var name = name
+var option = option
 
     var choiceGroup: ChoiceGroup = this.getChoiceGroup(list, name, option)!!
 
@@ -147,15 +157,13 @@ this.append(choiceGroup)
 
 open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
-: ChoiceGroup{
+: ChoiceGroup
 
-                    var list = list
-
-
-                    var name = name
-
-
-                    var option = option
+        Updates for KMP build        
+        {
+var list = list
+var name = name
+var option = option
 
     var METHOD_NAME: String = "addChoiceGroup"
 
@@ -174,7 +182,11 @@ open fun getChoiceGroup(list: BasicArrayList, name: String, option: Int)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: Any = list.objectArray[index]!!
 
 logUtil!!.put(StringMaker().
@@ -192,9 +204,11 @@ choiceGroup!!.append(anyType!!.toString(), NullCanvas.NULL_IMAGE)
 
 open fun setSelectedId(id: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var id = id
+
+        Updates for KMP build        
+        {
+var id = id
 
     var choiceGroup: ChoiceGroup = this.get(0) as ChoiceGroup
 
@@ -204,7 +218,11 @@ choiceGroup!!.setSelectedIndex(id, true)
 
 open fun getSelectedId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var choiceGroup: ChoiceGroup = this.get(0) as ChoiceGroup
 
 
@@ -217,7 +235,11 @@ open fun getSelectedId()
 
 open fun getSelectedText()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var choiceGroup: ChoiceGroup = this.get(0) as ChoiceGroup
 
 

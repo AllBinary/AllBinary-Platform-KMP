@@ -55,9 +55,11 @@ open public class CapturedImageInputOutput
             
 open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -72,12 +74,12 @@ save(capturedBufferedImageCacheable!!.getBufferedImage(), frame)
 
 open fun save(bufferedImage: BufferedImage, frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var bufferedImage = bufferedImage
 
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
+var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

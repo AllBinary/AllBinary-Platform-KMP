@@ -60,15 +60,13 @@ open public class OpenGLESImage : Image
     var openGLESImageTranslate: OpenGLESImageTranslate = OpenGLESImageTranslate.getInstance()!!
 
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
-public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory){
+public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)
 
-                    var image = image
-
-
-                    var bitmapFactory = bitmapFactory
-
-
-                    var textureFactory = textureFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var bitmapFactory = bitmapFactory
+    //var textureFactory = textureFactory
 this.openGLBitmap= bitmapFactory!!.createBitmap(image)
 this.textureFactory= textureFactory
 }
@@ -77,9 +75,11 @@ this.textureFactory= textureFactory
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 
 
 
@@ -89,9 +89,11 @@ this.textureFactory= textureFactory
 
 open fun initTexture(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var gl = gl
+        Updates for KMP build        
+        {
+var gl = gl
 
 
 
@@ -102,56 +104,42 @@ open fun initTexture(gl: GL10)
 
 open fun drawRegion(gl: GL10, viewHeight: Int, x_src: Float, y_src: Float, width: Float, height: Float, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var viewHeight = viewHeight
-
-
-                    var x_src = x_src
-
-
-                    var y_src = y_src
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var gl = gl
+var viewHeight = viewHeight
+var x_src = x_src
+var y_src = y_src
+var width = width
+var height = height
+var x = x
+var y = y
+var z = z
 }
 
 
 open fun draw(gl: GL10, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var gl = gl
+var x = x
+var y = y
+var z = z
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

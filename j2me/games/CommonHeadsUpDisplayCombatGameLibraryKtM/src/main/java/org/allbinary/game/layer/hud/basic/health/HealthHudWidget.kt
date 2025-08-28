@@ -54,18 +54,14 @@ open public class HealthHudWidget : BasicHud
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        (animationInterface: Animation, healthInterface: Health, location: Int, direction: Int)                        
 
-                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2){
+                            : super(location, direction, 16, healthInterface!!.getMaxHealth() *16, 2)
 
-                    var animationInterface = animationInterface
-
-
-                    var healthInterface = healthInterface
-
-
-                    var location = location
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
+var healthInterface = healthInterface
+var location = location
+var direction = direction
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,7 +78,11 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.xArray != 
                                     null
@@ -95,7 +95,11 @@ open fun update()
 
                         for (index in 0 until this.xArray!!.size)
 
-        {this.xArray[index]= this.getX() +(index *16)
+        
+
+        Updates for KMP build        
+        {
+this.xArray[index]= this.getX() +(index *16)
 }
 
 
@@ -105,9 +109,11 @@ open fun update()
 
 override fun setX(x: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var x = x
+
+        Updates for KMP build        
+        {
+var x = x
 super.setX(x)
 this.update()
 }
@@ -122,7 +128,11 @@ this.update()
     private val fastBeatTimeDelayHelper: TimeDelayHelper = TimeDelayHelper(320)
 override fun onHealthChange()
         //nullable = true from not(false or (false and true)) = true
-{max= (this.healthInterface!!.getHealth() /this.healthScale)
+
+
+        Updates for KMP build        
+        {
+max= (this.healthInterface!!.getHealth() /this.healthScale)
 timeDelayHelper= NoTimeDelayHelper.SINGLETON
 
     
@@ -160,16 +170,22 @@ timeDelayHelper= NoTimeDelayHelper.SINGLETON
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
 
 
 
                         for (index in 0 until max)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.timeDelayHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
@@ -184,9 +200,11 @@ override fun paint(graphics: Graphics)
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 

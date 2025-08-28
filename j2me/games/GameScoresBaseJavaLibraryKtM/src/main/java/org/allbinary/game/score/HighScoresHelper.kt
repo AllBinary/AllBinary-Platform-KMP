@@ -38,9 +38,11 @@ open public class HighScoresHelper : HighScoresHelperBase {
     private val circularIndexUtil: CircularIndexUtil = CircularIndexUtil.getInstance(0, 0)!!
 override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var highScoresArrayP = highScoresArrayP
+
+        Updates for KMP build        
+        {
+    //var highScoresArrayP = highScoresArrayP
 super.setHighScoresArray(highScoresArrayP)
 this.circularIndexUtil!!.setSize(this.highScoresArrayP!!.size)
 }
@@ -49,7 +51,11 @@ this.circularIndexUtil!!.setSize(this.highScoresArrayP!!.size)
     var lastIndex: Int =  -1
 override fun getNextHighScores()
         //nullable = true from not(false or (false and true)) = true
-: HighScores{
+: HighScores
+
+        Updates for KMP build        
+        {
+
     var highScores: HighScores = this.highScoresArrayP[this.circularIndexUtil!!.getIndex()]!!
 
 
@@ -57,7 +63,11 @@ override fun getNextHighScores()
 
 
         while((highScores!!.getTotal() < 1 || lastIndex == this.circularIndexUtil!!.getIndex()) && index < this.highScoresArrayP!!.size)
-        {this.circularIndexUtil!!.next()
+        
+
+        Updates for KMP build        
+        {
+this.circularIndexUtil!!.next()
 highScores= this.highScoresArrayP[this.circularIndexUtil!!.getIndex()]!!
 index++
 }
@@ -72,7 +82,11 @@ lastIndex= this.circularIndexUtil!!.getIndex()
 
 override fun isAnyHighScores()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(highScoresArrayP!!.size < 1)
                         
@@ -97,7 +111,11 @@ override fun isAnyHighScores()
 
                         for (index in highScoresArrayP!!.size -1 downTo 0)
 
-        {highScores= highScoresArrayP[index]!!
+        
+
+        Updates for KMP build        
+        {
+highScores= highScoresArrayP[index]!!
 
     
                         if(highScores!!.getTotal() > 0)

@@ -41,12 +41,12 @@ open public class CaptureWorkerUtil
             
 open fun processProfileActionConditions(vector: Vector, frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var vector = vector
 
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var vector = vector
+var frame = frame
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -63,7 +63,11 @@ logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionC
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = vector.get(index) as ProfileActionScriptConditionInterface
 
 
@@ -89,7 +93,11 @@ logUtil!!.put(commonStrings!!.START, "CaptureWorkerUtil", "processProfileActionC
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -38,7 +38,11 @@ open public class GameKeyUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyUtil{
+: GameKeyUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,9 +59,11 @@ open fun getInstance()
         
 open fun isDirectionKey(key: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
     
                         if(key == Canvas.UP || key == Canvas.DOWN || key == Canvas.LEFT || key == Canvas.RIGHT)

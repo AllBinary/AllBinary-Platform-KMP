@@ -38,12 +38,12 @@ open public class GameKey : Input {
         }
              constructor        (key: Int, name: String)                        
 
-                            : super(key, name){
+                            : super(key, name)
 
-                    var key = key
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+    //var key = key
+    //var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,7 +52,11 @@ open public class GameKey : Input {
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

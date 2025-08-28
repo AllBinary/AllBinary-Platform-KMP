@@ -44,21 +44,15 @@ open public class ImageArrayRotationAnimationInfo
     private var dy: Int
 public constructor        (imageArray: Array<Image?>, angleIncrement: Int, totalAngle: Int, dx: Int, dy: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var imageArray = imageArray
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var totalAngle = totalAngle
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+var imageArray = imageArray
+var angleIncrement = angleIncrement
+var totalAngle = totalAngle
+var dx = dx
+var dy = dy
 this.imageArray= imageArray
 this.angleIncrement= angleIncrement
 this.totalAngle= totalAngle
@@ -69,16 +63,22 @@ this.dy= dy
 
 open fun setImageArray(imageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageArray = imageArray
+
+        Updates for KMP build        
+        {
+var imageArray = imageArray
 this.imageArray= imageArray
 }
 
 
 open fun getImageArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Image?>{
+: Array<Image?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,7 +88,11 @@ open fun getImageArray()
 
 open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo{
+: AngleInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,16 +102,22 @@ open fun getAngleInfoP()
 
 open fun setTotalAngle(totalAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var totalAngle = totalAngle
+
+        Updates for KMP build        
+        {
+var totalAngle = totalAngle
 this.totalAngle= totalAngle
 }
 
 
 open fun getTotalAngle()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,16 +127,22 @@ open fun getTotalAngle()
 
 open fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dx = dx
+
+        Updates for KMP build        
+        {
+var dx = dx
 this.dx= dx
 }
 
 
 open fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,16 +152,22 @@ open fun getDx()
 
 open fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dy = dy
+
+        Updates for KMP build        
+        {
+var dy = dy
 this.dy= dy
 }
 
 
 open fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

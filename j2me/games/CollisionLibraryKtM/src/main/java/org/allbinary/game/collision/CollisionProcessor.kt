@@ -25,12 +25,12 @@ open public class CollisionProcessor
         
 open fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var myLayer = myLayer
-
-
-                    var myLayer2 = myLayer2
+        Updates for KMP build        
+        {
+var myLayer = myLayer
+var myLayer2 = myLayer2
 
 
 

@@ -41,9 +41,11 @@ open public class FallingPickupLayer : PickupLayer
         }
             public constructor        (remoteInfo: RemoteInfo)                        
 
-                            : super(NAME, remoteInfo, ViewPosition()){
+                            : super(NAME, remoteInfo, ViewPosition())
 
-                    var remoteInfo = remoteInfo
+        Updates for KMP build        
+        {
+var remoteInfo = remoteInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,7 +54,11 @@ open public class FallingPickupLayer : PickupLayer
 
 public constructor        ()                        
 
-                            : super(NAME, ViewPosition()){
+                            : super(NAME, ViewPosition())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -60,15 +66,21 @@ public constructor        ()
 
 override fun processTick(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 this.setPosition(this.x, this.y +1, this.z)
 }
 
 override fun implmentsTickableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

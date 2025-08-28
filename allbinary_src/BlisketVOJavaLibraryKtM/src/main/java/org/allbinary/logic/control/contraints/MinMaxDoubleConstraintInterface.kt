@@ -32,17 +32,29 @@ open fun getMax()
         //nullable = true from not(false or (false and true)) = true
 : Double
 
+        Updates for KMP build        
+        
+
 open fun getMin()
         //nullable = true from not(false or (false and true)) = true
 : Double
+
+        Updates for KMP build        
+        
 
 open fun setMax(max: Double)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setMin(min: Double)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

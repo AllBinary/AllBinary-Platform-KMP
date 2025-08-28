@@ -60,15 +60,13 @@ open public class LicenseRegistrationTextBox : CustomTextBox {
     private var paintable: Paintable = NullPaintable.getInstance()!!
 public constructor        (cmdListener: CommandListener, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
+                            : super(cmdListener, "Enter Registration Code:", StringUtil.getInstance()!!.EMPTY_STRING, 60, TextField.ANY, backgrounBasicColor, foregroundBasicColor)
 
-                    var cmdListener = cmdListener
-
-
-                    var backgrounBasicColor = backgrounBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
+var backgrounBasicColor = backgrounBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -78,9 +76,11 @@ public constructor        (cmdListener: CommandListener, backgrounBasicColor: Ba
 
 open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
 this.removeAllCommands()
 this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
 this.addCommand(GameCommandsFactory.getInstance()!!.TOGGLE_KEYBOARD)
@@ -91,14 +91,22 @@ this.setCommandListener(cmdListener)
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var virtualKeyboardEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance()!!
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.SHOW_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 super.open()
@@ -109,14 +117,22 @@ this.repaint()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var virtualKeyboardEventHandler: VirtualKeyboardEventHandler = VirtualKeyboardEventHandler.getInstance()!!
 
 virtualKeyboardEventHandler!!.fireEvent(virtualKeyboardEventHandler!!.HIDE_EVENT)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "open", e)
 }
 
 this.paintable= this.pleaseWaitPaintable
@@ -127,9 +143,11 @@ super.close()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 this.paintable.paint(graphics)
 }
@@ -137,7 +155,11 @@ this.paintable.paint(graphics)
 
 open fun submit()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var commandListener: CommandListener = this.getCustomCommandListener()!!
 
 commandListener!!.commandAction(SUBMIT_COMMAND, this)

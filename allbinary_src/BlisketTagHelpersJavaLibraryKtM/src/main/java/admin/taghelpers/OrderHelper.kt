@@ -59,12 +59,12 @@ open public class OrderHelper : TagHelper {
     private var pageContext: PageContext
 
     private var request: HttpServletRequest
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
 this.pageContext= pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -86,7 +86,11 @@ this.weblisketSession= WeblisketSession(this.propertiesHashMap, this.pageContext
 
 open fun setPaymentGateway()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var paymentGatewayBoolean: Boolean = Boolean.FALSE
@@ -156,7 +160,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentGatewayBoolean
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -184,7 +192,11 @@ stringBuffer!!.append(orderInterface!!.getPaymentMethod())
                                     }
                                 
 } catch(ex: Exception)
-            {stringBuffer!!.append(" Exception Getting")
+            
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(" Exception Getting")
 }
 
 logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
@@ -203,7 +215,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "setPaymentGateway()", e)
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var order: OrderInterface = this.weblisketSession!!.getOrder()!!
@@ -227,7 +243,11 @@ order.setStoreName(this.storeFrontInterface!!.getName())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Failed to Process Order: ")
@@ -235,7 +255,11 @@ stringBuffer!!.append("Failed to Process Order: ")
         try {
             stringBuffer!!.append(this.weblisketSession!!.getOrder()!!.getId())
 } catch(ex: Exception)
-            {stringBuffer!!.append(" Exception Getting Id")
+            
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(" Exception Getting Id")
 }
 
 

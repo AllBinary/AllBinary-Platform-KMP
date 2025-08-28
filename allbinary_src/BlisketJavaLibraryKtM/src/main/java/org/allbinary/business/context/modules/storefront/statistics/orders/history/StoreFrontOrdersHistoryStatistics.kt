@@ -50,9 +50,11 @@ open public class StoreFrontOrdersHistoryStatistics
     private var totalMoney: Money
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        {
+        
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 this.subTotalMoney= Money()
 this.shippingCostMoney= Money()
 this.taxesMoney= Money()
@@ -78,7 +80,11 @@ this.totalMoney= Money()
 
                         for (index in 0 until size)
 
-        {orderHistoryInterface= orderHistoryInterfaceVector!!.get(index) as OrderHistoryInterface
+        
+
+        Updates for KMP build        
+        {
+orderHistoryInterface= orderHistoryInterfaceVector!!.get(index) as OrderHistoryInterface
 numberOfOrders= numberOfOrders +1
 this.subTotalMoney!!.add(orderHistoryInterface!!.getSubTotal())
 this.shippingCostMoney!!.add(orderHistoryInterface!!.getShippingCost())
@@ -92,7 +98,11 @@ this.numberOfOrdersLong= numberOfOrders as Long
 
 open fun getNumberOfOrders()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,7 +112,11 @@ open fun getNumberOfOrders()
 
 open fun getSubTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,7 +126,11 @@ open fun getSubTotal()
 
 open fun getShippingCost()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,7 +140,11 @@ open fun getShippingCost()
 
 open fun getTaxes()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,7 +154,11 @@ open fun getTaxes()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -142,7 +168,11 @@ open fun getTotal()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
@@ -163,7 +193,11 @@ hashMap!!.put(storeFrontOrdersHistoryStatisticsData!!.TOTAL, this.getTotal()!!.t
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,7 +207,11 @@ open fun toVector()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -38,7 +38,11 @@ open public class DisplaysUtil
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DisplaysUtil{
+: DisplaysUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +61,11 @@ open fun getInstance()
         
 open fun getPrimaryScreenSize()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle{
+: Rectangle
+
+        Updates for KMP build        
+        {
+
     var dimension: Dimension = Toolkit.getDefaultToolkit()!!.getScreenSize()!!
 
 
@@ -70,7 +78,11 @@ open fun getPrimaryScreenSize()
 
 open fun getScreenSizesAsRectangleArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Rectangle?>{
+: Array<Rectangle?>
+
+        Updates for KMP build        
+        {
+
     var graphicsEnvironment: GraphicsEnvironment = GraphicsEnvironment.getLocalGraphicsEnvironment()!!
 
 
@@ -98,7 +110,11 @@ open fun getScreenSizesAsRectangleArray()
 
                         for (index in 0 until size)
 
-        {graphicsDevice= graphicsDeviceArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+graphicsDevice= graphicsDeviceArray[index]!!
 displayMode= graphicsDevice!!.getDisplayMode()
 rectangle= Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, displayMode!!.getWidth(), displayMode!!.getHeight())
 rectangleArray[index]= rectangle

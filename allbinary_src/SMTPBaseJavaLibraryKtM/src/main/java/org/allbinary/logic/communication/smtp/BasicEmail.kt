@@ -41,12 +41,12 @@ open public class BasicEmail
     private var email: AbEmail
 public constructor        (emailInfo: EmailInfo, to: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var emailInfo = emailInfo
-
-
-                    var to = to
+var emailInfo = emailInfo
+var to = to
 
     var basicEmailInfo: BasicEmailInfo = emailInfo!!.getBasicEmailInfo()!!
 
@@ -56,7 +56,11 @@ this.email= AbEmail(basicEmailInfo!!.getEmailServerConfigurationInterface()!!.ge
 
 open fun getEmail()
         //nullable = true from not(false or (false and true)) = true
-: Email{
+: Email
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +70,11 @@ open fun getEmail()
 
 open fun getMimeMessage()
         //nullable = true from not(false or (false and true)) = true
-: MimeMessage{
+: MimeMessage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,7 +84,11 @@ open fun getMimeMessage()
 
 open fun getDebugInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,7 +100,11 @@ open fun getDebugInfo()
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -100,7 +116,11 @@ open fun log()
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,9 +132,11 @@ open fun toHashMap()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -127,7 +149,11 @@ open fun toXmlNode(document: Document)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

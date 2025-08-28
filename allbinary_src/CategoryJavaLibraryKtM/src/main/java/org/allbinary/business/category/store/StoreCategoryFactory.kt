@@ -44,9 +44,11 @@ open public class StoreCategoryFactory : CategoryAbstractFactory
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var transformInfoInterface: TransformInfoInterface
-public constructor        (transformInfoInterface: TransformInfoInterface){
+public constructor        (transformInfoInterface: TransformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.CATEGORY))
@@ -62,7 +64,11 @@ this.transformInfoInterface= transformInfoInterface
 
 open fun getRootInstance()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface{
+: CategoryInterface
+
+        Updates for KMP build        
+        {
+
         try {
             
     var categoryPropertiesFactoryInterface: CategoryPropertiesFactoryInterface = RootStoreCategoryPropertiesFactory(this.transformInfoInterface) as CategoryPropertiesFactoryInterface
@@ -73,7 +79,11 @@ open fun getRootInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface) as CategoryInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
@@ -94,9 +104,11 @@ open fun getRootInstance()
 
 open fun getRootInstance(categoryPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var categoryPath = categoryPath
+        Updates for KMP build        
+        {
+var categoryPath = categoryPath
 
         try {
             
@@ -111,7 +123,11 @@ open fun getRootInstance(categoryPath: AbPath)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         
@@ -132,9 +148,11 @@ open fun getRootInstance(categoryPath: AbPath)
 
 open fun getRootInstanceFromNode(node: Node)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
         try {
             
@@ -152,7 +170,11 @@ open fun getRootInstanceFromNode(node: Node)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Category(categoryPropertiesFactoryInterface, level) as CategoryInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.ENTITYFACTORYERROR))
                         

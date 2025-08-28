@@ -37,9 +37,11 @@ open public class PointsLayerFactory
     private val points: Int
 public constructor        (points: Int)
             : super()
-        {
+        
 
-                    var points = points
+        Updates for KMP build        
+        {
+var points = points
 this.points= points
 }
 
@@ -47,7 +49,11 @@ this.points= points
                 @Throws(Exception::class)
             override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -37,7 +37,11 @@ open public class ColorTemperatureUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorTemperatureUtil{
+: ColorTemperatureUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,9 +60,11 @@ open fun getInstance()
 
 open fun getBasicColor(thirdTemp: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicColor{
+: BasicColor
 
-                    var thirdTemp = thirdTemp
+        Updates for KMP build        
+        {
+var thirdTemp = thirdTemp
 
     var basicColor: BasicColor = basicColorFactory!!.RED
 

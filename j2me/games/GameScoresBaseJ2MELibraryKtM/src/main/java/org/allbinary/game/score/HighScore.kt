@@ -46,18 +46,14 @@ open public class HighScore
     private val scoreString: String
 public constructor        (id: Int, name: String, gameInfo: GameInfo, score: Long)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var id = id
-
-
-                    var name = name
-
-
-                    var gameInfo = gameInfo
-
-
-                    var score = score
+var id = id
+var name = name
+var gameInfo = gameInfo
+var score = score
 this.id= id
 this.name= name
 this.gameInfo= gameInfo
@@ -68,7 +64,11 @@ this.scoreString= (this.score).toString()
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,7 +78,11 @@ open fun getId()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,7 +92,11 @@ open fun getName()
 
 open fun getScore()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -100,7 +108,11 @@ open fun getScore()
             
 open fun getAsBytes()
         //nullable = true from not(false or (false and true)) = true
-: ByteArray{
+: ByteArray
+
+        Updates for KMP build        
+        {
+
     var byteArrayOutputStream: ByteArrayOutputStream = ByteArrayOutputStream()
 
 
@@ -118,7 +130,11 @@ outputStream!!.writeLong(this.getScore())
 
 open fun getGameInfo()
         //nullable = true from not(false or (false and true)) = true
-: GameInfo{
+: GameInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -128,7 +144,11 @@ open fun getGameInfo()
 
 open fun getScoreString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -138,15 +158,21 @@ open fun getScoreString()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

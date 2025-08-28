@@ -38,18 +38,14 @@ open public class MagicGameObject : MeteredGameObject
     private val MP_LABEL: String = "MP:"
 public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)                        
 
-                            : super(bufferedImage, minX, maxX, y){
+                            : super(bufferedImage, minX, maxX, y)
 
-                    var bufferedImage = bufferedImage
-
-
-                    var minX = minX
-
-
-                    var maxX = maxX
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
+var minX = minX
+var maxX = maxX
+var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,7 +54,11 @@ public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, m
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)

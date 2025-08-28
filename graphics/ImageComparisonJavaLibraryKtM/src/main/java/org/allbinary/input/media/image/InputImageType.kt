@@ -47,9 +47,11 @@ open public class InputImageType
 
 open fun getInstance(imageTypeString: String)
         //nullable =  from not(true or (false and false)) = 
-: InputImageType{
+: InputImageType
 
-                    var imageTypeString = imageTypeString
+        Updates for KMP build        
+        {
+var imageTypeString = imageTypeString
 
 
 
@@ -60,7 +62,11 @@ open fun getInstance(imageTypeString: String)
 
 open fun getAllAsVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,12 +81,12 @@ open fun getAllAsVector()
     private val index: Int
 private constructor        (name: String, index: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var index = index
+var name = name
+var index = index
 this.name= name
 this.index= index
 TYPE_VECTOR.add(this)
@@ -89,7 +95,11 @@ this.hashMap!!.put(this.getName(), this)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,7 +109,11 @@ override fun toString()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,7 +123,11 @@ open fun getName()
 
 open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -35,12 +35,12 @@ open public class BasicStoreWorkFlow : BasicWorkFlow
         
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext){
+                            : super(propertiesHashMap, pageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,7 +52,11 @@ public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
             
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

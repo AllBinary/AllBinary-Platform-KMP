@@ -39,9 +39,11 @@ open public class Tokenizer
     private var endSep: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (sep: String)
             : super()
-        {
+        
 
-                    var sep = sep
+        Updates for KMP build        
+        {
+var sep = sep
 
     
                         if(sep == 
@@ -62,27 +64,33 @@ this.sep= sep
 
 open fun setSep(sep: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sep = sep
+
+        Updates for KMP build        
+        {
+var sep = sep
 this.sep= sep
 }
 
 
 open fun setEndSep(endSep: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var endSep = endSep
+
+        Updates for KMP build        
+        {
+var endSep = endSep
 this.endSep= endSep
 }
 
 
 open fun getInsideSep(string: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var string = string
+        Updates for KMP build        
+        {
+var string = string
 
     var tokenList: BasicArrayList = BasicArrayList()
 
@@ -94,7 +102,11 @@ open fun getInsideSep(string: String)
 
 
         while(index < size)
-        {index= string.indexOf(sep, index)
+        
+
+        Updates for KMP build        
+        {
+index= string.indexOf(sep, index)
 
     
                         if(index !=  -1)
@@ -139,12 +151,12 @@ index= end +endSep!!.length
 
 open fun getTokens(string: String, tokenVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var string = string
-
-
-                    var tokenVector = tokenVector
+        Updates for KMP build        
+        {
+var string = string
+var tokenVector = tokenVector
 
     var index: Int = 0
 
@@ -153,7 +165,11 @@ open fun getTokens(string: String, tokenVector: BasicArrayList)
 
 
         while(index < string.length)
-        {end= string.indexOf(sep, index)
+        
+
+        Updates for KMP build        
+        {
+end= string.indexOf(sep, index)
 
     
                         if(end !=  -1)
@@ -184,9 +200,11 @@ break;
 
 open fun getTokens(stringVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
 
-                    var stringVector = stringVector
+        Updates for KMP build        
+        {
+var stringVector = stringVector
 
     var tokenHashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
@@ -205,7 +223,11 @@ open fun getTokens(stringVector: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {string= stringVector!!.objectArray[index]!! as String
+        
+
+        Updates for KMP build        
+        {
+string= stringVector!!.objectArray[index]!! as String
 end= string.indexOf(sep)
 
     

@@ -37,23 +37,37 @@ open public class RunAtEndAnimationListener
     var runnable: Runnable
 protected constructor        (runnable: Runnable)
             : super()
-        {
+        
 
-                    var runnable = runnable
+        Updates for KMP build        
+        {
+var runnable = runnable
 this.runnable= runnable
 }
 
 override fun onAnimationStart()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun onAnimationEnd()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun onAnimationRepeat()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

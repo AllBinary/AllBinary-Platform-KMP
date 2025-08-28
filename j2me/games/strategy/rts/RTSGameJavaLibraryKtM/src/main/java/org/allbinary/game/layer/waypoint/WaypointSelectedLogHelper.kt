@@ -46,7 +46,11 @@ open public class WaypointSelectedLogHelper : WaypointLogHelper {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WaypointSelectedLogHelper{
+: WaypointSelectedLogHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,12 +73,12 @@ open fun getInstance()
 
 open fun onWaypointEvent(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var advancedRTSGameLayer = advancedRTSGameLayer
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var advancedRTSGameLayer = advancedRTSGameLayer
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -99,12 +103,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "onWaypointEvent")
 
 open fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var advancedRTSGameLayer = advancedRTSGameLayer
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var advancedRTSGameLayer = advancedRTSGameLayer
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -129,15 +133,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 
 open fun addWaypointFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var advancedRTSGameLayer = advancedRTSGameLayer
-
-
-                    var list = list
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var advancedRTSGameLayer = advancedRTSGameLayer
+    //var list = list
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -150,18 +152,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 
 open fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var index = index
-
-
-                    var rtsLayer = rtsLayer
-
-
-                    var waypointName = waypointName
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var index = index
+var rtsLayer = rtsLayer
+    //var waypointName = waypointName
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -177,21 +175,15 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: insertWaypoint")
 
 open fun insertWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, index: Int, rtsLayer: CollidableDestroyableDamageableLayer, waypointName: String, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var index = index
-
-
-                    var rtsLayer = rtsLayer
-
-
-                    var waypointName = waypointName
-
-
-                    var list = list
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var index = index
+    //var rtsLayer = rtsLayer
+    //var waypointName = waypointName
+    //var list = list
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -208,12 +200,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: insertWaypoint")
 
 open fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, pathsList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var pathsList = pathsList
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var pathsList = pathsList
 
     var size: Int = pathsList!!.size()!!
 
@@ -232,9 +224,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setRandomGeographicMap
 
 open fun moveAwayFromBuilding(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Trying to move away from building")!!.toString(), this, "selected: moveAwayFromBuilding")
 }
@@ -242,12 +236,12 @@ logUtil!!.put(StringMaker().
 
 open fun needToMove(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var unitWaypointBehavior = unitWaypointBehavior
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var unitWaypointBehavior = unitWaypointBehavior
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(unitWaypointBehavior!!.getMovementLogicAsString())!!.toString(), this, "needToMove")
 }
@@ -255,9 +249,11 @@ logUtil!!.put(StringMaker().
 
 open fun setRandomGeographicMapCellHistory(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" pathsList is null")!!.toString(), this, "setRandomGeographicMapCellHistory")
 }
@@ -265,15 +261,13 @@ logUtil!!.put(StringMaker().
 
 open fun setCurrentPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, existingCurrentPathGeographicMapCellPosition: GeographicMapCellPosition, currentPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var existingCurrentPathGeographicMapCellPosition = existingCurrentPathGeographicMapCellPosition
-
-
-                    var currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var existingCurrentPathGeographicMapCellPosition = existingCurrentPathGeographicMapCellPosition
+    //var currentPathGeographicMapCellPosition = currentPathGeographicMapCellPosition
 
     
                         if(existingCurrentPathGeographicMapCellPosition == 
@@ -286,15 +280,13 @@ open fun setCurrentPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer:
 
 open fun setNextUnvisitedPathGeographicMapCellPosition(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, existingNextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition, nextUnvisitedPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var existingNextUnvisitedPathGeographicMapCellPosition = existingNextUnvisitedPathGeographicMapCellPosition
-
-
-                    var nextUnvisitedPathGeographicMapCellPosition = nextUnvisitedPathGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var existingNextUnvisitedPathGeographicMapCellPosition = existingNextUnvisitedPathGeographicMapCellPosition
+    //var nextUnvisitedPathGeographicMapCellPosition = nextUnvisitedPathGeographicMapCellPosition
 
     
                         if(existingNextUnvisitedPathGeographicMapCellPosition != nextUnvisitedPathGeographicMapCellPosition)

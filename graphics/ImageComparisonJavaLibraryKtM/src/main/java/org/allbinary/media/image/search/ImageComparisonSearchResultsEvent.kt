@@ -33,12 +33,12 @@ open public class ImageComparisonSearchResultsEvent : AllBinaryEventObject {
     private var imageComparisonSearch: ImageComparisonSearch
 public constructor        (anyType: Any, imageComparisonSearch: ImageComparisonSearch)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var imageComparisonSearch = imageComparisonSearch
+        Updates for KMP build        
+        {
+var anyType = anyType
+var imageComparisonSearch = imageComparisonSearch
 
 
                             //For kotlin this is before the body of the constructor.
@@ -49,7 +49,11 @@ this.setImageComparisonSearch(imageComparisonSearch)
 
 open fun getImageComparisonSearch()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonSearch{
+: ImageComparisonSearch
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,9 +63,11 @@ open fun getImageComparisonSearch()
 
 open fun setImageComparisonSearch(imageComparisonSearch: ImageComparisonSearch)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageComparisonSearch = imageComparisonSearch
+
+        Updates for KMP build        
+        {
+var imageComparisonSearch = imageComparisonSearch
 this.imageComparisonSearch= imageComparisonSearch
 }
 

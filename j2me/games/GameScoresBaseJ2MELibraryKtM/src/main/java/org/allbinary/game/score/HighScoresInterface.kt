@@ -33,19 +33,31 @@ open fun getList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
+        Updates for KMP build        
+        
+
 open fun addHighScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
 : Int
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
 open fun isBestScore(newHighScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

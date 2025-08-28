@@ -45,25 +45,33 @@ open public class GameMode
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 private constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.setName(name)
 }
 
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,7 +80,11 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

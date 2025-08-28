@@ -37,7 +37,11 @@ open public class ExplosionResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ExplosionResources{
+: ExplosionResources
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     val EXPLOSION_90_RESOURCE: String = "/explosion_sprite_90_by_90.png"

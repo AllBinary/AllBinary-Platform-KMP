@@ -38,9 +38,11 @@ open public class AngleInfo
             
 open fun getInstance(angleIncrement: Short)
         //nullable =  from not(true or (false and false)) = 
-: AngleInfo{
+: AngleInfo
 
-                    var angleIncrement = angleIncrement
+        Updates for KMP build        
+        {
+var angleIncrement = angleIncrement
 
 
 
@@ -58,9 +60,11 @@ open fun getInstance(angleIncrement: Short)
     private var angle: Short = 0
 private constructor        (angleIncrementInfo: AngleIncrementInfo)
             : super()
-        {
+        
 
-                    var angleIncrementInfo = angleIncrementInfo
+        Updates for KMP build        
+        {
+var angleIncrementInfo = angleIncrementInfo
 this.angleIncrementInfo= angleIncrementInfo
 }
 
@@ -69,9 +73,11 @@ this.angleIncrementInfo= angleIncrementInfo
 
 open fun adjustAngle(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 
     var newAngle: Int = this.angleIncrementInfo!!.getAngleIncrement() *frame -90
 
@@ -81,7 +87,11 @@ this.setAngle(frameUtil!!.adjustAngleToFrameAngle(newAngle).toShort())
 
 open fun getAngle()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,16 +101,22 @@ open fun getAngle()
 
 open fun setAngle(angle: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+var angle = angle
 this.angle= angle
 }
 
 
 open fun getAngleIncrementInfo()
         //nullable = true from not(false or (false and true)) = true
-: AngleIncrementInfo{
+: AngleIncrementInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,7 +125,11 @@ open fun getAngleIncrementInfo()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(ANGLE)

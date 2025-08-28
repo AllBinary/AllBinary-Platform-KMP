@@ -39,7 +39,11 @@ open public class AllBinaryRenderer
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryRenderer{
+: AllBinaryRenderer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,15 +60,21 @@ open fun getInstance()
         
 open fun setRunnable(runnable: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var runnable = runnable
+
+        Updates for KMP build        
+        {
+var runnable = runnable
 }
 
 
 open fun clearRunnable()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

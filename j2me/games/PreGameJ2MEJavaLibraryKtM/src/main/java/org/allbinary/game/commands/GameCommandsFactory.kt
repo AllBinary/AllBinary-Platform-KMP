@@ -40,7 +40,11 @@ open public class GameCommandsFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameCommandsFactory{
+: GameCommandsFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,7 +109,11 @@ open fun getInstance()
     val BUY_COMMAND: Command = Command("BUY", Command.SCREEN, 1)
 protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

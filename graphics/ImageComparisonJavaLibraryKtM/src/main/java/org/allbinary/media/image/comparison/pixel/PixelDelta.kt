@@ -41,12 +41,12 @@ open public class PixelDelta
             
 open fun getKey(point: GPoint, colorDelta: ColorDelta)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var point = point
-
-
-                    var colorDelta = colorDelta
+        Updates for KMP build        
+        {
+var point = point
+var colorDelta = colorDelta
 
 
 
@@ -65,12 +65,12 @@ open fun getKey(point: GPoint, colorDelta: ColorDelta)
     private var key: Any
 public constructor        (point: GPoint, colorDelta: ColorDelta)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var point = point
-
-
-                    var colorDelta = colorDelta
+var point = point
+var colorDelta = colorDelta
 this.setPoint(point)
 this.setColorDelta(colorDelta)
 this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
@@ -79,7 +79,11 @@ this.key= PixelDelta.getKey(this.getPoint(), this.getColorDelta())
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,7 +93,11 @@ open fun getKey()
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,16 +107,22 @@ open fun getPoint()
 
 open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var point = point
+
+        Updates for KMP build        
+        {
+var point = point
 this.point= point
 }
 
 
 open fun getColorDelta()
         //nullable = true from not(false or (false and true)) = true
-: ColorDelta{
+: ColorDelta
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -118,15 +132,21 @@ open fun getColorDelta()
 
 open fun setColorDelta(colorDelta: ColorDelta)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorDelta = colorDelta
+
+        Updates for KMP build        
+        {
+var colorDelta = colorDelta
 this.colorDelta= colorDelta
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

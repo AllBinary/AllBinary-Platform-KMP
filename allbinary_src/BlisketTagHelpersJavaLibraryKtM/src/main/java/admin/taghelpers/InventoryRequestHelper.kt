@@ -44,12 +44,12 @@ open public class InventoryRequestHelper : ModifyTable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val itemInterface: ItemInterface
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
     var inventoryTag: HelperTag = propertiesHashMap!!.get(AbTagData.PARENT) as HelperTag
 
@@ -64,7 +64,11 @@ this.itemInterface= itemView!!.getItemInterface()
             
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dataMappingInterface: TableMappingInterface = this.getItemInterface() as TableMappingInterface
@@ -91,7 +95,11 @@ InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(val
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to add item to Inventory"
 
 
@@ -115,7 +123,11 @@ InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!.insert(val
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var dataMappingInterface: TableMappingInterface = this.getItemInterface() as TableMappingInterface
@@ -150,7 +162,11 @@ stringBuffer!!.append(" from to the Inventory table")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to remove item with from Inventory"
 
 
@@ -174,7 +190,11 @@ stringBuffer!!.append(" from to the Inventory table")
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.delete()
 this.insert()
@@ -196,7 +216,11 @@ this.insert()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed To Update Item"
 
 
@@ -220,7 +244,11 @@ this.insert()
 
 open fun getItemInterface()
         //nullable = true from not(false or (false and true)) = true
-: ItemInterface{
+: ItemInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

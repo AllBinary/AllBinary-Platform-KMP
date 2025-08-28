@@ -36,12 +36,12 @@ open public class RaceTrackGeographicMapCellType : GeographicMapCellType {
     private val travelCost: Int
 public constructor        (type: Int, travelCost: Int)                        
 
-                            : super(type){
+                            : super(type)
 
-                    var type = type
-
-
-                    var travelCost = travelCost
+        Updates for KMP build        
+        {
+    //var type = type
+    //var travelCost = travelCost
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,15 +55,13 @@ this.name= commonStrings!!.UNKNOWN
 
 public constructor        (name: String, type: Int, travelCost: Int)                        
 
-                            : super(type){
+                            : super(type)
 
-                    var name = name
-
-
-                    var type = type
-
-
-                    var travelCost = travelCost
+        Updates for KMP build        
+        {
+    //var name = name
+    //var type = type
+    //var travelCost = travelCost
 
 
                             //For kotlin this is before the body of the constructor.
@@ -75,7 +73,11 @@ this.travelCost= travelCost
 
 open fun getTravelCost()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -51,21 +51,15 @@ open public class NotificationBuilder
         
 open fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
         //nullable = true from not(false or (false and false)) = true
-: Parcelable{
+: Parcelable
 
-                    var context = context
-
-
-                    var command = command
-
-
-                    var message = message
-
-
-                    var integer = integer
-
-
-                    var pendingIntent = pendingIntent
+        Updates for KMP build        
+        {
+var context = context
+var command = command
+var message = message
+var integer = integer
+var pendingIntent = pendingIntent
 
 
 

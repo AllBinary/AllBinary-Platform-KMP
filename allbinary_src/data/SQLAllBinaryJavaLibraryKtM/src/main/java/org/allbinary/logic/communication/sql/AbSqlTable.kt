@@ -44,9 +44,11 @@ open public class AbSqlTable : AbSqlBasic {
     private val DROPPED_SUCCESS: String = " Dropped Successfully"
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
-                            : super(databaseConnectionInfoInterface){
+                            : super(databaseConnectionInfoInterface)
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,16 +58,22 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 
 open fun setTableName(tableName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var tableName = tableName
+
+        Updates for KMP build        
+        {
+var tableName = tableName
 this.tableName= tableName
 }
 
 
 open fun getTableName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,9 +84,11 @@ open fun getTableName()
 
 open fun createTable(data: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var data = data
+        Updates for KMP build        
+        {
+var data = data
 
         try {
             this.executeSQLStatement(data)
@@ -97,7 +107,11 @@ open fun createTable(data: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return tableName +sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -119,7 +133,11 @@ open fun createTable(data: String)
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var sqlStatement: String = sqlStrings!!.DROP_TABLE +tableName
 
 
@@ -140,7 +158,11 @@ open fun dropTable()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return tableName +DROPPED_SUCCESS
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         

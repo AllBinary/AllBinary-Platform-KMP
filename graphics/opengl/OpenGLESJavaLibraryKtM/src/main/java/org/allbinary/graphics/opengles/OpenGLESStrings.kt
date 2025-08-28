@@ -42,9 +42,11 @@ open public class OpenGLESStrings
             
 open fun set(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
 
 
@@ -54,15 +56,13 @@ open fun set(gl: GL10)
 
 open fun initFont(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var width = width
+    //var height = height
 
 
 
@@ -74,15 +74,13 @@ open fun initFont(gl: GL10, width: Int, height: Int)
             
 open fun update(gl: GL10, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var width = width
+    //var height = height
 
 
 
@@ -92,24 +90,16 @@ open fun update(gl: GL10, width: Int, height: Int)
 
 open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var graphics = graphics
-
-
-                    var character = character
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var anchor = anchor
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var graphics = graphics
+    //var character = character
+    //var x = x
+    //var y = y
+    //var anchor = anchor
 
 
 
@@ -119,30 +109,18 @@ open fun drawChar(gl: GL10, graphics: Graphics, character: Char, x: Int, y: Int,
 
 open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, length: Int, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var graphics = graphics
-
-
-                    var data = data
-
-
-                    var offset = offset
-
-
-                    var length = length
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var anchor = anchor
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var graphics = graphics
+    //var data = data
+    //var offset = offset
+    //var length = length
+    //var x = x
+    //var y = y
+    //var anchor = anchor
 
 
 
@@ -152,24 +130,16 @@ open fun drawChars(gl: GL10, graphics: Graphics, data: CharArray, offset: Int, l
 
 open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var graphics = graphics
-
-
-                    var string = string
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var anchor = anchor
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var graphics = graphics
+    //var string = string
+    //var x = x
+    //var y = y
+    //var anchor = anchor
 
 
 
@@ -179,30 +149,18 @@ open fun drawString(gl: GL10, graphics: Graphics, string: String, x: Int, y: Int
 
 open fun drawSubstring(gl: GL10, graphics: Graphics, string: String, offset: Int, len: Int, x: Int, y: Int, anchor: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var graphics = graphics
-
-
-                    var string = string
-
-
-                    var offset = offset
-
-
-                    var len = len
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var anchor = anchor
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var graphics = graphics
+    //var string = string
+    //var offset = offset
+    //var len = len
+    //var x = x
+    //var y = y
+    //var anchor = anchor
 
 
 

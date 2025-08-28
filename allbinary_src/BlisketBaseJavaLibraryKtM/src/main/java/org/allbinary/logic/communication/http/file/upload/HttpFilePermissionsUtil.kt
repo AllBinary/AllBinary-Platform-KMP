@@ -39,7 +39,11 @@ open public class HttpFilePermissionsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HttpFilePermissionsUtil{
+: HttpFilePermissionsUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,9 +62,11 @@ open fun getInstance()
             
 open fun create(path: AbPath)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var path = path
+
+        Updates for KMP build        
+        {
+var path = path
 
     var file: AbFile = AbFile(path)
 

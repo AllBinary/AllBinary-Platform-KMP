@@ -41,15 +41,21 @@ open public class DemoGameStartupRunnable : ABRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val demoCanvas: DemoCanvas
-public constructor        (demoCanvas: DemoCanvas){
+public constructor        (demoCanvas: DemoCanvas)
 
-                    var demoCanvas = demoCanvas
+        Updates for KMP build        
+        {
+var demoCanvas = demoCanvas
 this.demoCanvas= demoCanvas
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.setRunning(true)
 this.demoCanvas!!.stopGameDemo()
@@ -57,7 +63,11 @@ this.demoCanvas!!.create()
 this.demoCanvas!!.start()
 this.setRunning(false)
 } catch(e: Exception)
-            {this.setRunning(false)
+            
+
+        Updates for KMP build        
+        {
+this.setRunning(false)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -68,7 +78,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

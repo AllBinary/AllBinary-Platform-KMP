@@ -32,9 +32,11 @@ open public class ScrollMapDownGameInputProcessor : ScrollMapGameInputProcessor 
         
 public constructor        (scrollMapPlayerGameInput: ScrollMapPlayerGameInput)                        
 
-                            : super(scrollMapPlayerGameInput){
+                            : super(scrollMapPlayerGameInput)
 
-                    var scrollMapPlayerGameInput = scrollMapPlayerGameInput
+        Updates for KMP build        
+        {
+var scrollMapPlayerGameInput = scrollMapPlayerGameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,12 +48,12 @@ public constructor        (scrollMapPlayerGameInput: ScrollMapPlayerGameInput)
             
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+var allbinaryLayerManager = allbinaryLayerManager
+var gameKeyEvent = gameKeyEvent
 this.scrollMapPlayerGameInput!!.down()
 }
 

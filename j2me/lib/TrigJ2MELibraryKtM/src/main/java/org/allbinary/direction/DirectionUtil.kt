@@ -39,7 +39,11 @@ open public class DirectionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DirectionUtil{
+: DirectionUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +58,11 @@ open fun getInstance()
     private var directionArray2: Array<Angle?> = arrayOfNulls(10)
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
 
@@ -73,9 +81,11 @@ directionArray2[directionFactory!!.DOWN.getValue()]= angleFactory!!.DOWN
 
 open fun getAngle(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-: Angle{
+: Angle
 
-                    var direction = direction
+        Updates for KMP build        
+        {
+var direction = direction
 
 
 
@@ -86,9 +96,11 @@ open fun getAngle(direction: Direction)
 
 open fun getFrameAngle(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-: Angle{
+: Angle
 
-                    var direction = direction
+        Updates for KMP build        
+        {
+var direction = direction
 
 
 

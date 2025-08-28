@@ -41,9 +41,11 @@ open public class WebappClassLoaderInfo
 
 open fun setLoader(classLoader: ClassLoader)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var classLoader = classLoader
+
+        Updates for KMP build        
+        {
+var classLoader = classLoader
 WebappClassLoaderInfo.classLoader= classLoader
 }
 
@@ -51,7 +53,11 @@ WebappClassLoaderInfo.classLoader= classLoader
 
 open fun getLoader()
         //nullable = true from not(false or (false and true)) = true
-: ClassLoader{
+: ClassLoader
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +68,11 @@ open fun getLoader()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

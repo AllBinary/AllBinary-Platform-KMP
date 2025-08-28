@@ -48,18 +48,14 @@ open public class AnimationDamageFloaters : DamageFloaters {
     private var dx: Int
 
     private var dy: Int
-public constructor        (layerInterface: AllBinaryLayer, animationInterfaceArray: Array<IndexedAnimation?>, dx: Int, dy: Int){
+public constructor        (layerInterface: AllBinaryLayer, animationInterfaceArray: Array<IndexedAnimation?>, dx: Int, dy: Int)
 
-                    var layerInterface = layerInterface
-
-
-                    var animationInterfaceArray = animationInterfaceArray
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
+var animationInterfaceArray = animationInterfaceArray
+var dx = dx
+var dy = dy
 this.animationInterfaceArray= animationInterfaceArray
 
 
@@ -67,7 +63,11 @@ this.animationInterfaceArray= animationInterfaceArray
 
                         for (index in this.animationInterfaceArray!!.size -1 downTo 0)
 
-        {this.animationInterfaceArray[index]!!.setFrame(this.animationInterfaceArray[index]!!.getSize() -1)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.setFrame(this.animationInterfaceArray[index]!!.getSize() -1)
 }
 
 this.layerInterface= layerInterface
@@ -78,9 +78,11 @@ this.dy= dy
 
 override fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var damage = damage
+
+        Updates for KMP build        
+        {
+var damage = damage
 
     var i: Int = this.circularIndexUtil!!.getIndex()!!
 
@@ -90,9 +92,11 @@ this.circularIndexUtil!!.next()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
         try {
             
@@ -110,7 +114,11 @@ override fun paint(graphics: Graphics)
 
                         for (index in 0 until this.animationInterfaceArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var animationInterface: IndexedAnimation = animationInterfaceArray[index]!!
 
 
@@ -129,7 +137,11 @@ animationInterface!!.nextFrame()
 }
 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 

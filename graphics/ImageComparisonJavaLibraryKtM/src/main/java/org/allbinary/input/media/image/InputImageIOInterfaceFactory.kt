@@ -41,9 +41,11 @@ open public class InputImageIOInterfaceFactory
             
 open fun getInstance(imageType: InputImageType)
         //nullable =  from not(true or (false and false)) = 
-: ImageIOInterface{
+: ImageIOInterface
 
-                    var imageType = imageType
+        Updates for KMP build        
+        {
+var imageType = imageType
 
     
                         if(imageType == InputImageType.CAPTURE)
@@ -97,7 +99,11 @@ open fun getInstance(imageType: InputImageType)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

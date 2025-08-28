@@ -49,18 +49,22 @@ open public class PlayerQueue
     private var max: Int
  constructor        (max: Int)
             : super()
-        {
+        
 
-                    var max = max
+        Updates for KMP build        
+        {
+var max = max
 this.max= max
 }
 
 
 open fun add(sound: Sound)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sound = sound
+
+        Updates for KMP build        
+        {
+var sound = sound
 
         try {
             
@@ -73,7 +77,11 @@ open fun add(sound: Sound)
                                     }
                                 
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.ADD)
 }
 
 }
@@ -81,7 +89,11 @@ open fun add(sound: Sound)
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var sound: Sound = NoSound.getInstance()!!
 
 
@@ -108,7 +120,11 @@ open fun process()
                                 
 
         while(list.size() > max)
-        {list.remove(0)
+        
+
+        Updates for KMP build        
+        {
+list.remove(0)
 }
 
 played= true
@@ -121,7 +137,11 @@ played= true
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return played
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
@@ -149,12 +169,20 @@ PreLogUtil.put(StringMaker().
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

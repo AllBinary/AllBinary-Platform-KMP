@@ -44,16 +44,22 @@ open public class WorkFlowWrapper
     private var anyType: Any
 public constructor        (anyType: Any)
             : super()
-        {
+        
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.anyType= anyType
 }
 
 
 open fun getWorkFlowObject()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,7 +71,11 @@ open fun getWorkFlowObject()
             
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var helperClass: KClass<*> = anyType!!::class!!
@@ -84,7 +94,11 @@ open fun getName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Reflection Exception"
 
 
@@ -109,7 +123,11 @@ open fun getName()
             
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var helperClass: KClass<*> = anyType!!::class!!
@@ -128,7 +146,11 @@ open fun getStoreName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Reflection Exception"
 
 
@@ -153,7 +175,11 @@ open fun getStoreName()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
         try {
             
     var helperClass: KClass<*> = anyType!!::class!!
@@ -172,7 +198,11 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Reflection Exception"
 
 

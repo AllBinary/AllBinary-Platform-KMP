@@ -40,18 +40,14 @@ open public class MotionRecognizer
             
 open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 
@@ -59,18 +55,14 @@ open fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
             
 open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 
@@ -78,18 +70,14 @@ open fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
             
 open fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var deviceId = deviceId
+var modifiers = modifiers
 }
 
 

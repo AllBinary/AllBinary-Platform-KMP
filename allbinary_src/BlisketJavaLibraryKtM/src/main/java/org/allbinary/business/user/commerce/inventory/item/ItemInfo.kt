@@ -42,7 +42,11 @@ open public class ItemInfo
     var lastModified: Array<String?>
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

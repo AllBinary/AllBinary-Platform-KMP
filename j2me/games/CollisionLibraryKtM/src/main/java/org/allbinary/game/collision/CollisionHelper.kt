@@ -36,18 +36,22 @@ open public class CollisionHelper
     var sourceLayerInterface: AllBinaryLayer
 public constructor        (sourceLayerInterface: AllBinaryLayer)
             : super()
-        {
+        
 
-                    var sourceLayerInterface = sourceLayerInterface
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
 this.sourceLayerInterface= sourceLayerInterface
 }
 
 
 open fun isCollidable(layerInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
 
 
@@ -58,7 +62,11 @@ open fun isCollidable(layerInterface: CollidableCompositeLayer)
 
 open fun getOwnerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,9 +76,11 @@ open fun getOwnerLayerInterface()
 
 open fun setOwnerLayerInterface(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sourceLayerInterface = sourceLayerInterface
+
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
 this.sourceLayerInterface= sourceLayerInterface
 }
 

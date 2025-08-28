@@ -31,7 +31,11 @@ open public class UserDbInitInfo : DbInitInfo {
 public constructor        ()                        
 
                             : super(
-                            null, false){
+                            null, false)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -40,9 +44,11 @@ public constructor        ()
 public constructor        (read: Boolean)                        
 
                             : super(
-                            null, false){
+                            null, false)
 
-                    var read = read
+        Updates for KMP build        
+        {
+var read = read
 
 
                             //For kotlin this is before the body of the constructor.

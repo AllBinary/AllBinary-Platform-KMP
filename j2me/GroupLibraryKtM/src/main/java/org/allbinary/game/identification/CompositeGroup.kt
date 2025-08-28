@@ -51,24 +51,32 @@ open public class CompositeGroup
     private val list: BasicArrayList = BasicArrayList()
 public constructor        (groupInterface: Group)
             : super()
-        {
+        
 
-                    var groupInterface = groupInterface
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
 this.groupInterface= groupInterface
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 }
 
 
 open fun add(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var groupInterface = groupInterface
+
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -86,9 +94,11 @@ this.list.add(groupInterface)
 
 open fun isInGroup(groupInterface: Group)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var groupInterface = groupInterface
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
 
     
                         if(list.contains(groupInterface))
@@ -116,7 +126,11 @@ open fun isInGroup(groupInterface: Group)
 
 open fun getGroup()
         //nullable = true from not(false or (false and true)) = true
-: Group{
+: Group
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

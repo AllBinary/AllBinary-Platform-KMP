@@ -41,9 +41,11 @@ open public class ColorCacheable
     private var color: Color
 public constructor        (key: Any)
             : super()
-        {
+        
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 this.key= key
 this.color= Color(key = keykey as Integer
 key.
@@ -53,7 +55,11 @@ key.
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +69,11 @@ open fun getKey()
 
 open fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Color{
+: Color
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,9 +83,11 @@ open fun getColor()
 
 open fun setColor(color: Color)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var color = color
+
+        Updates for KMP build        
+        {
+var color = color
 this.color= color
 }
 

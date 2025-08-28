@@ -49,24 +49,16 @@ open public class GameKeyEvent : AllBinaryEventObject {
     private var originalKey: Int= 0
 public constructor        (anyType: Any, sourceId: Int, originalKey: Int, gameActionKey: Int, key: Int, repeated: Boolean)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var sourceId = sourceId
-
-
-                    var originalKey = originalKey
-
-
-                    var gameActionKey = gameActionKey
-
-
-                    var key = key
-
-
-                    var repeated = repeated
+        Updates for KMP build        
+        {
+var anyType = anyType
+var sourceId = sourceId
+var originalKey = originalKey
+var gameActionKey = gameActionKey
+var key = key
+var repeated = repeated
 
 
                             //For kotlin this is before the body of the constructor.
@@ -80,15 +72,13 @@ this.setRepeatEvents(repeated)
 
 public constructor        (anyType: Any, sourceId: Int, key: Int)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var sourceId = sourceId
-
-
-                    var key = key
+        Updates for KMP build        
+        {
+var anyType = anyType
+var sourceId = sourceId
+var key = key
 
 
                             //For kotlin this is before the body of the constructor.
@@ -101,25 +91,33 @@ this.setRepeatEvents(false)
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.setSource(anyType)
 }
 
 
 open fun setRepeatEvents(repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var repeated = repeated
+
+        Updates for KMP build        
+        {
+var repeated = repeated
 this.repeated= repeated
 }
 
 
 open fun hasRepeatEvents()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -129,7 +127,11 @@ open fun hasRepeatEvents()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -138,7 +140,11 @@ open fun getKey()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("\nKey: ")
@@ -153,7 +159,11 @@ stringBuffer!!.append(this.getKey())
 
 open fun getOriginalKey()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -163,16 +173,22 @@ open fun getOriginalKey()
 
 open fun setOriginalKey(originalKey: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var originalKey = originalKey
+
+        Updates for KMP build        
+        {
+var originalKey = originalKey
 this.originalKey= originalKey
 }
 
 
 open fun getGameActionKey()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -182,16 +198,22 @@ open fun getGameActionKey()
 
 open fun setGameActionKey(gameActionKey: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameActionKey = gameActionKey
+
+        Updates for KMP build        
+        {
+var gameActionKey = gameActionKey
 this.gameActionKey= gameActionKey
 }
 
 
 open fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

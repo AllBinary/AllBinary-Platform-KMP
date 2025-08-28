@@ -34,6 +34,9 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, i_column: Int, 
         //nullable =  from not(true or (false and false)) = 
 : GeographicMapCellPosition
 
+        Updates for KMP build        
+        
+
 }
                 
             

@@ -40,9 +40,11 @@ open public class CustomGameMenuUtil
             
 open fun add(canvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var canvas = canvas
+
+        Updates for KMP build        
+        {
+    //var canvas = canvas
 
     var gameCommandsFactory: GameCommandsFactory = GameCommandsFactory.getInstance()!!
 

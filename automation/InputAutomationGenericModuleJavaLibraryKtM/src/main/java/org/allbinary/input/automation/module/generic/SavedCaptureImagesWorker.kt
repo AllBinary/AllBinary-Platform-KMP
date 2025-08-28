@@ -65,9 +65,11 @@ open public class SavedCaptureImagesWorker : BasicEventHandler
     private var screenScavangerRobot: ScreenScavangerRobot
 
     private var savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType
-public constructor        (savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType){
+public constructor        (savedCaptureGenericProfileDataWorkerType: SavedCaptureGenericProfileDataWorkerType)
 
-                    var savedCaptureGenericProfileDataWorkerType = savedCaptureGenericProfileDataWorkerType
+        Updates for KMP build        
+        {
+var savedCaptureGenericProfileDataWorkerType = savedCaptureGenericProfileDataWorkerType
 this.savedCaptureGenericProfileDataWorkerType= savedCaptureGenericProfileDataWorkerType
 this.screenScavangerRobot= ScreenScavangerRobot()
 index= ProcessingFrameIndexFactory.next()
@@ -78,16 +80,22 @@ index= ProcessingFrameIndexFactory.next()
             
 open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var thread = thread
+
+        Updates for KMP build        
+        {
+var thread = thread
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,16 +106,22 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 this.running= running
 }
 
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
@@ -116,7 +130,11 @@ this.setRunning(true)
 
 
         while(this.isRunning())
-        {timeHelper!!.setStartTime()
+        
+
+        Updates for KMP build        
+        {
+timeHelper!!.setStartTime()
 
     var frame: Long = index as Long
 
@@ -161,7 +179,11 @@ this.setRunning(false)
 
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

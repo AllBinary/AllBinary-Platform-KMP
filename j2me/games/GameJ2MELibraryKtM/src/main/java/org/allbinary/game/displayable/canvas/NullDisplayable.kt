@@ -25,7 +25,11 @@ open public class NullDisplayable : Canvas {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullDisplayable{
+: NullDisplayable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -34,15 +38,21 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
     private val baseGameStatistics: BaseGameStatistics = GameStatisticsFactory.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 baseGameStatistics!!.nextRefresh()
 }
 

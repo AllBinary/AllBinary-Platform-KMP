@@ -42,12 +42,12 @@ open public class InitDbHelperFactory
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
     var params: Array<Any?> = arrayOfNulls(1)
 
@@ -73,9 +73,11 @@ params[0]= databaseConnectionInfoInterface as Object
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface)
         //nullable =  from not(true or (false and false)) = 
-: Any{
+: Any
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
     var anyType: Any = AbeFactory.getInstance()!!.getInstance(abeClientInformation, CLASSNAME, 
                             null, 
@@ -92,7 +94,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

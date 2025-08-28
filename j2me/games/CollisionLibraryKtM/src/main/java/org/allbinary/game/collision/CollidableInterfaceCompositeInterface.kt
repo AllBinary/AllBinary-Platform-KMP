@@ -32,6 +32,9 @@ open fun getCollidableInferface()
         //nullable = true from not(false or (false and true)) = true
 : CollidableBaseBehavior
 
+        Updates for KMP build        
+        
+
 }
                 
             

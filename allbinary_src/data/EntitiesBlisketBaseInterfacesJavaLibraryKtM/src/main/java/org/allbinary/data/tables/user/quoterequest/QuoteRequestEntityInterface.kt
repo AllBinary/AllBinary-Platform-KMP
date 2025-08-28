@@ -38,21 +38,36 @@ open fun get(userName: String, id: Int)
         //nullable = true from not(false or (false and false)) = true
 : QuoteRequest
 
+        Updates for KMP build        
+        
+
 open fun getIds(userName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
+
+        Updates for KMP build        
+        
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

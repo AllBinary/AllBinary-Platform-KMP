@@ -37,7 +37,11 @@ open public class AcceptableResponseFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AcceptableResponseFactory{
+: AcceptableResponseFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -22,7 +22,11 @@ open public class ActivityFractureControllerUtilFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidKeyFactory{
+: AndroidKeyFactory
+
+        Updates for KMP build        
+        {
+
     var SDK_VERSION: Int = AndroidInfoFactory.getInstance()!!.getVersion()!!
 
 

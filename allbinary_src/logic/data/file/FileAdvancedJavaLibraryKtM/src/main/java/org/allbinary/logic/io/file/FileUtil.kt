@@ -59,7 +59,11 @@ open public class FileUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileUtil{
+: FileUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,9 +73,11 @@ open fun getInstance()
 
 open fun getNewDirectory(fromFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var fromFile = fromFile
+        Updates for KMP build        
+        {
+var fromFile = fromFile
 
     var newDirectory: String = fromFile!!.getPath()!!
 
@@ -121,19 +127,23 @@ lastIndex= newDirectory!!.lastIndexOf(separatorChar)
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun write(inputStream: InputStream, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var inputStream = inputStream
 
 
-                    var file = file
+        Updates for KMP build        
+        {
+var inputStream = inputStream
+var file = file
 
     var dataOutputStream: AbDataOutputStream = DataOutputStreamFactory.getInstance()!!.getInstance(file)!!
 
@@ -145,12 +155,12 @@ this.write(inputStream, dataOutputStream)
             
 open fun write(inputStream: InputStream, dataOutputStream: AbDataOutputStream)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var inputStream = inputStream
 
 
-                    var dataOutputStream = dataOutputStream
+        Updates for KMP build        
+        {
+var inputStream = inputStream
+var dataOutputStream = dataOutputStream
 
         try {
             dataOutputStream= StreamUtil.getInstance()!!.get(inputStream, dataOutputStream, ByteArray(16384)) as AbDataOutputStream
@@ -168,15 +178,13 @@ dataOutputStream!!.flush()
             
 open fun write(inputStream: InputStream, dataOutputStream: AbDataOutputStream, buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var inputStream = inputStream
 
 
-                    var dataOutputStream = dataOutputStream
-
-
-                    var buffer = buffer
+        Updates for KMP build        
+        {
+var inputStream = inputStream
+var dataOutputStream = dataOutputStream
+var buffer = buffer
 
         try {
             dataOutputStream= StreamUtil.getInstance()!!.get(inputStream, dataOutputStream, buffer) as AbDataOutputStream
@@ -194,12 +202,12 @@ dataOutputStream!!.flush()
             
 open fun copy(dataInputStream: AbFileInputStream, dataOutputStream: AbDataOutputStream)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dataInputStream = dataInputStream
 
 
-                    var dataOutputStream = dataOutputStream
+        Updates for KMP build        
+        {
+var dataInputStream = dataInputStream
+var dataOutputStream = dataOutputStream
 
         try {
             dataOutputStream= StreamUtil.getInstance()!!.get(dataInputStream, dataOutputStream, ByteArray(16384)) as AbDataOutputStream
@@ -218,18 +226,14 @@ StreamUtil.getInstance()!!.close(dataInputStream)
             
 open fun fixPath(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath
 
-                    var file = file
-
-
-                    var path = path
-
-
-                    var realPath = realPath
-
-
-                    var cloud = cloud
+        Updates for KMP build        
+        {
+var file = file
+var path = path
+var realPath = realPath
+var cloud = cloud
 
     var beginIndex: Int = file.getPath()!!.indexOf(cloud) +cloud.length
 
@@ -270,18 +274,14 @@ this.directory.create(fixedPath)
             
 open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var path = path
-
-
-                    var realPath = realPath
-
-
-                    var cloud = cloud
+        Updates for KMP build        
+        {
+var file = file
+var path = path
+var realPath = realPath
+var cloud = cloud
 this.copyToCloud(file, path, realPath, cloud, false, false)
 }
 
@@ -290,24 +290,16 @@ this.copyToCloud(file, path, realPath, cloud, false, false)
             
 open fun copyToCloud(file: AbFile, path: AbPath, realPath: AbPath, cloud: String, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var path = path
-
-
-                    var realPath = realPath
-
-
-                    var cloud = cloud
-
-
-                    var overwriteNewer = overwriteNewer
-
-
-                    var overwriteAll = overwriteAll
+        Updates for KMP build        
+        {
+var file = file
+var path = path
+var realPath = realPath
+var cloud = cloud
+var overwriteNewer = overwriteNewer
+var overwriteAll = overwriteAll
 
         try {
             
@@ -358,7 +350,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud")
 
 this.copy(fileInputStream, dataOutputStream)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILEERROR))
                         
@@ -386,12 +382,12 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud", e)
             
 open fun copyToCloud(file: AbFile, outFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var outFile = outFile
+        Updates for KMP build        
+        {
+var file = file
+var outFile = outFile
 this.copyToCloud(file, outFile, false, false)
 }
 
@@ -400,18 +396,14 @@ this.copyToCloud(file, outFile, false, false)
             
 open fun copyToCloud(file: AbFile, outFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var outFile = outFile
-
-
-                    var overwriteNewer = overwriteNewer
-
-
-                    var overwriteAll = overwriteAll
+        Updates for KMP build        
+        {
+var file = file
+var outFile = outFile
+var overwriteNewer = overwriteNewer
+var overwriteAll = overwriteAll
 
         try {
             
@@ -457,7 +449,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud")
 
 this.copy(fileInputStream, dataOutputStream)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILEERROR))
                         
@@ -485,18 +481,14 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyToCloud", e)
             
 open fun copyPrepare(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var fromFile = fromFile
-
-
-                    var toFile = toFile
-
-
-                    var overwriteNewer = overwriteNewer
-
-
-                    var overwriteAll = overwriteAll
+        Updates for KMP build        
+        {
+var fromFile = fromFile
+var toFile = toFile
+var overwriteNewer = overwriteNewer
+var overwriteAll = overwriteAll
 
     
                         if(toFile!!.exists())
@@ -608,12 +600,12 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
             
 open fun copyFile(fromFile: AbFile, toFile: AbFile)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromFile = fromFile
 
 
-                    var toFile = toFile
+        Updates for KMP build        
+        {
+var fromFile = fromFile
+var toFile = toFile
 this.copyFile(fromFile, toFile, false, false)
 }
 
@@ -622,18 +614,14 @@ this.copyFile(fromFile, toFile, false, false)
             
 open fun copyFile(fromFile: AbFile, toFile: AbFile, overwriteNewer: Boolean, overwriteAll: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromFile = fromFile
 
 
-                    var toFile = toFile
-
-
-                    var overwriteNewer = overwriteNewer
-
-
-                    var overwriteAll = overwriteAll
+        Updates for KMP build        
+        {
+var fromFile = fromFile
+var toFile = toFile
+var overwriteNewer = overwriteNewer
+var overwriteAll = overwriteAll
 
         try {
             
@@ -675,7 +663,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile")
 
 this.copy(fileInputStream, dataOutputStream)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILEERROR))
                         
@@ -704,24 +696,16 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyFile", e)
             
 open fun copyDirectoryPortion(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, overwriteNewer: Boolean, overwriteAll: Boolean, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromDirectoryAbPath = fromDirectoryAbPath
 
 
-                    var toDirectoryAbPath = toDirectoryAbPath
-
-
-                    var overwriteNewer = overwriteNewer
-
-
-                    var overwriteAll = overwriteAll
-
-
-                    var current = current
-
-
-                    var total = total
+        Updates for KMP build        
+        {
+var fromDirectoryAbPath = fromDirectoryAbPath
+var toDirectoryAbPath = toDirectoryAbPath
+var overwriteNewer = overwriteNewer
+var overwriteAll = overwriteAll
+var current = current
+var total = total
 
     var file: AbFile = AbFile(fromDirectoryAbPath)
 
@@ -787,7 +771,11 @@ stringBuffer!!.append(end)
 
                         for (index in start until end)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextFile: AbFile = fileList!!.get(index) as AbFile
 
 
@@ -835,12 +823,12 @@ this.copyFile(nextFile, toFile, overwriteNewer, overwriteAll)
             
 open fun copyDirectory(fromFile: AbFile, to: AbFile)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromFile = fromFile
 
 
-                    var to = to
+        Updates for KMP build        
+        {
+    //var fromFile = fromFile
+    //var to = to
 
         try {
             
@@ -908,7 +896,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var file: AbFile = fileArray[index]!!
 
 
@@ -940,7 +932,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory")
 }
 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILEERROR))
                         
@@ -970,12 +966,12 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copyDirectory", e)
 
 open fun copy(fromAbPath: AbPath, to: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var fromAbPath = fromAbPath
-
-
-                    var to = to
+        Updates for KMP build        
+        {
+var fromAbPath = fromAbPath
+var to = to
 
         try {
             
@@ -1116,7 +1112,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy")
 
                         for (index in 0 until fileArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var file: AbFile = fileArray[index]!!
 
 
@@ -1194,7 +1194,11 @@ copyDirectory(fromLocationFile, toLocationFile)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.FILEERROR))
                         
@@ -1221,9 +1225,11 @@ logUtil!!.put(stringBuffer!!.toString(), getInstance(), "copy", e)
 
 open fun readAsString(fileName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+    //var fileName = fileName
 
     var bytes: ByteArray = ByteArray(1000000)
 
@@ -1237,12 +1243,12 @@ open fun readAsString(fileName: String)
 
 open fun readAsString(fileName: String, bytes: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var fileName = fileName
-
-
-                    var bytes = bytes
+        Updates for KMP build        
+        {
+    //var fileName = fileName
+    //var bytes = bytes
 
     var idFile: FileInputStream = 
                 null
@@ -1268,7 +1274,11 @@ open fun readAsString(fileName: String, bytes: ByteArray)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(logConfigTypeFactory!!.IDLOGGING))
                         
@@ -1294,12 +1304,12 @@ open fun readAsString(fileName: String, bytes: ByteArray)
 
 open fun shouldSkip(file: AbFile, skipFiles: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var file = file
-
-
-                    var skipFiles = skipFiles
+        Updates for KMP build        
+        {
+    //var file = file
+    //var skipFiles = skipFiles
 
     var size: Int = skipFiles!!.size
                 
@@ -1313,7 +1323,11 @@ open fun shouldSkip(file: AbFile, skipFiles: Array<String?>)
 
                         for (index in 0 until size)
 
-        {skipFile= skipFiles[index]!!
+        
+
+        Updates for KMP build        
+        {
+skipFile= skipFiles[index]!!
 
     
                         if(file.getPath()!!.compareTo(skipFile) == 0)
@@ -1347,12 +1361,12 @@ open fun shouldSkip(file: AbFile, skipFiles: Array<String?>)
             
 open fun write(filePath: String, string: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var filePath = filePath
 
 
-                    var string = string
+        Updates for KMP build        
+        {
+var filePath = filePath
+var string = string
 
     var dataOutputStream: AbDataOutputStream = 
                 null
@@ -1382,15 +1396,13 @@ dataOutputStream!!.flush()
 
 open fun loadFileAsList(file: AbFile, max: Int, byteArray1: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var file = file
-
-
-                    var max = max
-
-
-                    var byteArray1 = byteArray1
+        Updates for KMP build        
+        {
+    //var file = file
+    //var max = max
+    //var byteArray1 = byteArray1
 
 
 

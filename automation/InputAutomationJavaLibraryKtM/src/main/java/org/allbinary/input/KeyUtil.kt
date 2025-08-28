@@ -36,9 +36,11 @@ open public class KeyUtil
             
 open fun isNormallyDisplayed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var keyCode = keyCode
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 
 
         when (keyCode) {
@@ -64,7 +66,11 @@ else -> {
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

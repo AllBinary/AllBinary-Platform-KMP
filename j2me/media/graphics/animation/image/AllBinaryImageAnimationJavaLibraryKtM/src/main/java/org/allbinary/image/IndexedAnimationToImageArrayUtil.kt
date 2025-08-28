@@ -39,15 +39,13 @@ open public class IndexedAnimationToImageArrayUtil
             
 open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: IndexedAnimation)
         //nullable =  from not(true or (false and false)) = 
-: Array<Image?>{
+: Array<Image?>
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var sequentialAnimationInterface = sequentialAnimationInterface
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var sequentialAnimationInterface = sequentialAnimationInterface
 
     var size: Int = sequentialAnimationInterface!!.getAnimationSize()!!
 
@@ -60,7 +58,11 @@ open fun getInstance(width: Int, height: Int, sequentialAnimationInterface: Inde
 
                         for (index in 0 until size)
 
-        {sequentialAnimationInterface!!.setFrame(index)
+        
+
+        Updates for KMP build        
+        {
+sequentialAnimationInterface!!.setFrame(index)
 imageArray[index]= AnimationFrameToImageUtil.getInstance()!!.getInstance(width, height, sequentialAnimationInterface)
 }
 

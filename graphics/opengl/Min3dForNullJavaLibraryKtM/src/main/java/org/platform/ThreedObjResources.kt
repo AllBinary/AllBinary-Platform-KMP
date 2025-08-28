@@ -38,7 +38,11 @@ open public class ThreedObjResources
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreedObjResources{
+: ThreedObjResources
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,9 +61,11 @@ open fun getInstance()
 
 open fun get(resourceName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var resourceName = resourceName
+        Updates for KMP build        
+        {
+    //var resourceName = resourceName
 
     var resourceName2: String = this.hashtable.get(resourceName as Object) as String
 

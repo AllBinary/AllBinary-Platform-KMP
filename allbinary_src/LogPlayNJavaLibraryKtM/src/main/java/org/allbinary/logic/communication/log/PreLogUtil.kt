@@ -40,15 +40,13 @@ open public class PreLogUtil
             
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
 
 
-                    var anyType = anyType
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
 
     var className: String = PreLogUtil.getClassName(anyType)!!
 
@@ -76,18 +74,14 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
 
 
-                    var anyType = anyType
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
 
     var className: String = PreLogUtil.getClassName(anyType)!!
 
@@ -113,15 +107,13 @@ PlayN.log()!!.error(LOG_SUCCESS +message, exception as Throwable)
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
 
 
-                    var className = className
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage)!!
 
@@ -131,18 +123,14 @@ PlayN.log()!!.debug(LOG_SUCCESS +message)
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
 
 
-                    var className = className
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+    //var specialMessage = specialMessage
+    //var className = className
+    //var functionName = functionName
+    //var exception = exception
 
     var message: String = LogFormatUtil.getInstance()!!.get(className, functionName, specialMessage, exception)!!
 
@@ -163,10 +151,17 @@ open fun getClassName(anyType: Any)
                 //native - END
                 
 
+        Updates for KMP build        
+        
+
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -28,7 +28,11 @@ open public class OpenGLImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLImageUtil{
+: OpenGLImageUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,9 +44,11 @@ open fun getInstance()
             
 open fun createImage(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
+: OpenGLBitmap
 
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+    //var inputStream = inputStream
 
 
 
@@ -59,15 +65,13 @@ open fun createImage(inputStream: InputStream)
         
 open fun paint(alphaBitmap: OpenGLBitmap, originalBitmap: OpenGLBitmap, index: Int)
         //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
+: OpenGLBitmap
 
-                    var alphaBitmap = alphaBitmap
-
-
-                    var originalBitmap = originalBitmap
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+    //var alphaBitmap = alphaBitmap
+    //var originalBitmap = originalBitmap
+    //var index = index
 
 
 
@@ -79,9 +83,11 @@ open fun paint(alphaBitmap: OpenGLBitmap, originalBitmap: OpenGLBitmap, index: I
             
 open fun createImage(name: String)
         //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
+: OpenGLBitmap
 
-                    var name = name
+        Updates for KMP build        
+        {
+    //var name = name
 
 
 

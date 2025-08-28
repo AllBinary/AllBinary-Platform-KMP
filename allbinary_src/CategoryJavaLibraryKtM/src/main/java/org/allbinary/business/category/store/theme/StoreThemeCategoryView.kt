@@ -37,9 +37,11 @@ open public class StoreThemeCategoryView : CategoryView
         
 public constructor        (categoryInterface: StoreThemeCategoryInterface)                        
 
-                            : super(categoryInterface as StoreThemeCategoryInterface){
+                            : super(categoryInterface as StoreThemeCategoryInterface)
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+    //var categoryInterface = categoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,9 +53,11 @@ public constructor        (categoryInterface: StoreThemeCategoryInterface)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+    //var document = document
 
     var node: Node = super.toXmlNode(document)!!
 
@@ -74,7 +78,11 @@ Arrays.sort(themeValidationArray, ThemeComparator())
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var themeValidation: ThemeValidation = themeValidationArray[index]!! as ThemeValidation
 
 node.appendChild(themeValidation!!.toXmlNode(document))

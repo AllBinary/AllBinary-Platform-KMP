@@ -41,7 +41,11 @@ open public class SWTJOGLProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SWTJOGLProcessor{
+: SWTJOGLProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,9 +64,11 @@ open fun getInstance()
                                 {
                                 override fun run(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var renderer = renderer
+
+        Updates for KMP build        
+        {
+var renderer = renderer
 }
 
                                 }
@@ -70,26 +76,32 @@ open fun getInstance()
 
 open fun init(display: Any, comp: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var display = display
 
 
-                    var comp = comp
+        Updates for KMP build        
+        {
+    //var display = display
+    //var comp = comp
 }
 
 
 open fun setRenderer(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var renderer = renderer
+
+        Updates for KMP build        
+        {
+    //var renderer = renderer
 }
 
 
 open fun isJOGL()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,58 +111,86 @@ open fun isJOGL()
 
 open fun createSurface()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onSurfaceCreated()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onSurfaceChanged(event: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var event = event
+
+        Updates for KMP build        
+        {
+    //var event = event
 }
 
 
 open fun onSurfaceChanged()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onSurfaceChanged(width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var width = width
 
 
-                    var height = height
+        Updates for KMP build        
+        {
+    //var width = width
+    //var height = height
 }
 
 
 open fun addListener()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun addListeners(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var midlet = midlet
+
+        Updates for KMP build        
+        {
+    //var midlet = midlet
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

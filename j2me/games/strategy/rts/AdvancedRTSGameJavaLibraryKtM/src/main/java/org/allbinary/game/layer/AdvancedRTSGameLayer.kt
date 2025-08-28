@@ -85,54 +85,26 @@ open public class AdvancedRTSGameLayer : RTSLayer
     var waypointBehaviorBase: WaypointBehaviorBase
 public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int)                        
 
-                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition()){
+                            : this(remoteInfo, parentLayer, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, TileLayerPositionIntoViewPosition())
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var healthInterface = healthInterface
-
-
-                    var rtsFormInput = rtsFormInput
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var healthInterface = healthInterface
+    //var rtsFormInput = rtsFormInput
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var x = x
+    //var y = y
 
 
                             //For kotlin this is before the body of the constructor.
@@ -141,57 +113,27 @@ public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameL
 
 public constructor        (remoteInfo: RemoteInfo, parentLayer: AdvancedRTSGameLayer, groupInterface: Array<Group?>, rootName: String, name: String, healthInterface: Health, rtsFormInput: RTSFormInput, animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface: ProceduralAnimationInterfaceFactoryInterface, rectangle: Rectangle, x: Int, y: Int, viewPosition: ViewPosition)                        
 
-                            : super(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition){
+                            : super(remoteInfo, groupInterface, rootName, name, healthInterface, rtsFormInput, animationInterfaceFactoryInterface, emptyAnimationInterfaceFactoryInterface, baseAnimationInterfaceFactoryInterface, buildAnimationInterfaceFactoryInterface, verticleBuildAnimationInterfaceFactoryInterface, proceduralAnimationInterfaceFactoryInterface, rectangle, x, y, viewPosition)
 
-                    var remoteInfo = remoteInfo
-
-
-                    var parentLayer = parentLayer
-
-
-                    var groupInterface = groupInterface
-
-
-                    var rootName = rootName
-
-
-                    var name = name
-
-
-                    var healthInterface = healthInterface
-
-
-                    var rtsFormInput = rtsFormInput
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
-
-
-                    var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
-
-
-                    var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
-
-
-                    var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
-
-
-                    var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
-
-
-                    var rectangle = rectangle
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var remoteInfo = remoteInfo
+    //var parentLayer = parentLayer
+    //var groupInterface = groupInterface
+    //var rootName = rootName
+    //var name = name
+    //var healthInterface = healthInterface
+    //var rtsFormInput = rtsFormInput
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var emptyAnimationInterfaceFactoryInterface = emptyAnimationInterfaceFactoryInterface
+    //var baseAnimationInterfaceFactoryInterface = baseAnimationInterfaceFactoryInterface
+    //var buildAnimationInterfaceFactoryInterface = buildAnimationInterfaceFactoryInterface
+    //var verticleBuildAnimationInterfaceFactoryInterface = verticleBuildAnimationInterfaceFactoryInterface
+    //var proceduralAnimationInterfaceFactoryInterface = proceduralAnimationInterfaceFactoryInterface
+    //var rectangle = rectangle
+    //var x = x
+    //var y = y
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -206,7 +148,11 @@ this.setParentLayer(parentLayer)
 
 public constructor        ()                        
 
-                            : super(RemoteInfo.REMOTE_INFO){
+                            : super(RemoteInfo.REMOTE_INFO)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -227,9 +173,11 @@ this.setParentLayer(
             
 open fun updateWaypointBehavior(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapInterface = geographicMapInterface
+
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 super.updateWaypointBehavior(geographicMapInterface)
 this.getWaypointBehavior()!!.getWaypoint()!!.setAllBinaryGameLayerManager(this.allBinaryGameLayerManagerP)
 }
@@ -237,9 +185,11 @@ this.getWaypointBehavior()!!.getWaypoint()!!.setAllBinaryGameLayerManager(this.a
 
 open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 
     var advancedRTSPlayerLayerInterface: AdvancedRTSPlayerLayerInterface = rtsPlayerLayerInterface as AdvancedRTSPlayerLayerInterface
 
@@ -264,9 +214,11 @@ open fun initVisibility(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
             
 open fun construct(rtsPlayerLayerInterface: RTSPlayerLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
 super.construct(rtsPlayerLayerInterface)
 this.initVisibility(rtsPlayerLayerInterface)
 BuildingEventHandler.getInstance()!!.addListener(this.getWaypointBehavior()!!.getWaypoint())
@@ -277,9 +229,11 @@ BuildingEventHandler.getInstance()!!.addListener(this.getWaypointBehavior()!!.ge
             
 open fun setDestroyed(destroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyed = destroyed
+
+        Updates for KMP build        
+        {
+var destroyed = destroyed
 super.setDestroyed(destroyed)
 
     
@@ -298,7 +252,11 @@ RTSLayerUtil.getInstance()!!.destroyAndClear(this.getWaypointBehavior()!!.getOwn
 
 open fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: RTSLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -308,16 +266,22 @@ open fun getParentLayer()
 
 open fun setParentLayer(parentLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var parentLayer = parentLayer
+
+        Updates for KMP build        
+        {
+var parentLayer = parentLayer
 this.parentLayer= parentLayer
 }
 
 
 open fun getWaypointBehavior()
         //nullable = true from not(false or (false and true)) = true
-: WaypointBehaviorBase{
+: WaypointBehaviorBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -327,16 +291,22 @@ open fun getWaypointBehavior()
 
 open fun setWaypointBehavior(unitWaypointHelper: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unitWaypointHelper = unitWaypointHelper
+
+        Updates for KMP build        
+        {
+var unitWaypointHelper = unitWaypointHelper
 this.waypointBehaviorBase= unitWaypointHelper
 }
 
 
 open fun getWaypointLogHelper()
         //nullable = true from not(false or (false and true)) = true
-: WaypointLogHelper{
+: WaypointLogHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -346,7 +316,11 @@ open fun getWaypointLogHelper()
 
 open fun getWaypoint2LogHelper()
         //nullable = true from not(false or (false and true)) = true
-: Waypoint2LogHelper{
+: Waypoint2LogHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -356,7 +330,11 @@ open fun getWaypoint2LogHelper()
 
 open fun getWaypointRunnableLogHelper()
         //nullable = true from not(false or (false and true)) = true
-: WaypointRunnableLogHelper{
+: WaypointRunnableLogHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -366,7 +344,11 @@ open fun getWaypointRunnableLogHelper()
 
 open fun shouldAddWaypointFromBuilding()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.parentLayer != 
                                     null
@@ -391,7 +373,11 @@ open fun shouldAddWaypointFromBuilding()
 
 open fun isWaypointListEmptyOrOnlyTargets()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getType() != UnitLayer.getStaticType())
                         
@@ -416,12 +402,12 @@ open fun isWaypointListEmptyOrOnlyTargets()
             
 open fun buildingChase(allbinaryLayer: AllBinaryLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var allbinaryLayer = allbinaryLayer
-
-
-                    var cellPosition = cellPosition
+        Updates for KMP build        
+        {
+    //var allbinaryLayer = allbinaryLayer
+    //var cellPosition = cellPosition
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getCurrentGeographicMapCellPosition()!!
 
@@ -662,7 +648,11 @@ this.getGameKeyEventList()!!.add(gameKeyEventFactory!!.getInstance(this, Canvas.
             
 open fun getSurroundingGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = this.allBinaryGameLayerManagerP as GeographicMapCompositeInterface
 
 
@@ -678,9 +668,11 @@ geographicMapCellPositionArea!!.update(geographicMapInterface)
 
 override fun setSelected(selected: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selected = selected
+
+        Updates for KMP build        
+        {
+var selected = selected
 super.setSelected(selected)
 
     
@@ -713,9 +705,11 @@ this.waypointRunnableLogHelper= WaypointRunnableLogHelper.getInstance()
 
 open fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyedEvent = destroyedEvent
+
+        Updates for KMP build        
+        {
+var destroyedEvent = destroyedEvent
 
         try {
             
@@ -735,7 +729,11 @@ waypoint.reset()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDestroyed", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDestroyed", e)
 }
 
 }

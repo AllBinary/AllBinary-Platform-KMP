@@ -40,9 +40,11 @@ open public class PathFinderGraphVisitorFactoryBase
         
 open fun getInstance(geographicMapInterface: BasicGeographicMap)
         //nullable =  from not(true or (false and false)) = 
-: PathFinderGraphVisitorBase{
+: PathFinderGraphVisitorBase
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+var geographicMapInterface = geographicMapInterface
 
 
 

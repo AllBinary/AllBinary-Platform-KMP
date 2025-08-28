@@ -51,9 +51,11 @@ open public class UserEmailConfigurationView
     private var userEmailConfigurationInterface: UserEmailConfigurationInterface
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -78,16 +80,22 @@ this.userEmailConfigurationInterface!!.setUserEmailEventsConfigurationInterface(
 
 public constructor        (userEmailConfigurationInterface: UserEmailConfigurationInterface)
             : super()
-        {
+        
 
-                    var userEmailConfigurationInterface = userEmailConfigurationInterface
+        Updates for KMP build        
+        {
+var userEmailConfigurationInterface = userEmailConfigurationInterface
 this.userEmailConfigurationInterface= userEmailConfigurationInterface
 }
 
 
 open fun getEmailConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailConfigurationInterface{
+: UserEmailConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,9 +107,11 @@ open fun getEmailConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var emailConfigurationMapping: UserEmailConfigurationMapping = UserEmailConfigurationMapping(this.userEmailConfigurationInterface)
 

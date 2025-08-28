@@ -46,7 +46,11 @@ open public class MouseActionScriptInputData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

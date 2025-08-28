@@ -42,15 +42,13 @@ open public class DragVelocityBehavior : VelocityBehaviorBase {
             }            
         override fun reduce(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var velocityProperties = velocityProperties
 
 
-                    var nominator = nominator
-
-
-                    var denominator = denominator
+        Updates for KMP build        
+        {
+    //var velocityProperties = velocityProperties
+    //var nominator = nominator
+    //var denominator = denominator
 
     
                         if(velocityProperties!!.getVelocityXBasicDecimalP()!!.getUnscaled() != 0L)
@@ -81,15 +79,13 @@ basicDecimal!!.divide(denominator)
 
 override fun reduceX(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var velocityProperties = velocityProperties
 
 
-                    var nominator = nominator
-
-
-                    var denominator = denominator
+        Updates for KMP build        
+        {
+    //var velocityProperties = velocityProperties
+    //var nominator = nominator
+    //var denominator = denominator
 
     var basicDecimal: BasicDecimal = velocityProperties!!.getVelocityXBasicDecimalP()!!
 
@@ -107,15 +103,13 @@ basicDecimal!!.divide(denominator)
 
 override fun reduceY(velocityProperties: BasicVelocityProperties, nominator: Int, denominator: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var velocityProperties = velocityProperties
 
 
-                    var nominator = nominator
-
-
-                    var denominator = denominator
+        Updates for KMP build        
+        {
+    //var velocityProperties = velocityProperties
+    //var nominator = nominator
+    //var denominator = denominator
 
     
                         if(velocityProperties!!.getVelocityYBasicDecimalP()!!.getUnscaled() != 0L)

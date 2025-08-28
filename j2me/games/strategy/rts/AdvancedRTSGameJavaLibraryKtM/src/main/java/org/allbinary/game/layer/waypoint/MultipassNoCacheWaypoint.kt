@@ -61,12 +61,12 @@ open public class MultipassNoCacheWaypoint : WaypointBase
     val ownerLayer: PathFindingLayerInterface
 public constructor        (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
-                            : super(sound){
+                            : super(sound)
 
-                    var ownerLayer = ownerLayer
-
-
-                    var sound = sound
+        Updates for KMP build        
+        {
+    //var ownerLayer = ownerLayer
+    //var sound = sound
 
 
                             //For kotlin this is before the body of the constructor.
@@ -79,24 +79,32 @@ this.ownerLayer= ownerLayer
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 }
 
 
 open fun releaseCachedPaths()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: PathFindingInfo{
+: PathFindingInfo
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var startGeographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPosition
 
@@ -182,15 +190,13 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
                 @Throws(Exception::class)
             override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, pathFindingInfo: PathFindingInfo, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var pathFindingInfo = pathFindingInfo
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var pathFindingInfo = pathFindingInfo
+    //var multipassState = multipassState
 
         try {
             
@@ -251,7 +257,11 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
@@ -269,9 +279,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "getPathsList", e)
             
 open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var startGeographicMapCellPosition = startGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var startGeographicMapCellPosition = startGeographicMapCellPosition
 
     var endList: BasicArrayList = this.ownerLayer!!.getEndGeographicMapCellPositionList()!!
 
@@ -289,7 +301,11 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
 
                         for (index in endList!!.size() -1 downTo 0)
 
-        {endGeographicMapCellPosition= endList!!.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+endGeographicMapCellPosition= endList!!.get(index) as GeographicMapCellPosition
 
     
                         if(startGeographicMapCellPosition != endGeographicMapCellPosition)
@@ -316,9 +332,11 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -327,15 +345,21 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var event = event
+
+        Updates for KMP build        
+        {
+    //var event = event
 }
 
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.getConnectedWaypointList()!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.getConnectedWaypointList()!!.clear()
 }
 
 
@@ -343,9 +367,11 @@ open fun reset()
             
 open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unitLayer = unitLayer
+
+        Updates for KMP build        
+        {
+    //var unitLayer = unitLayer
 
     
                         if(unitLayer!!.getGroupInterface()[0] != this.ownerLayer!!.getGroupInterface()[0])
@@ -372,7 +398,11 @@ open fun visit(unitLayer: PathFindingLayerInterface)
 
 
         while(this.getConnectedWaypointList()!!.size() > 0)
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: CollidableDestroyableDamageableLayer = this.getConnectedWaypointList()!!.get(0) as CollidableDestroyableDamageableLayer
 
 

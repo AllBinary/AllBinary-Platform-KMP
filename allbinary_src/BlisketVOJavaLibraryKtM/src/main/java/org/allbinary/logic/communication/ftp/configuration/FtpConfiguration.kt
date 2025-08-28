@@ -42,13 +42,19 @@ open public class FtpConfiguration
     private var ftpPassword: String
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.ftpServer= hashMap!!.get(FtpConfigurationData.SERVER) as String
 this.ftpPath= hashMap!!.get(FtpConfigurationData.PATH) as String
 this.ftpUserName= hashMap!!.get(FtpConfigurationData.USERNAME) as String
@@ -58,7 +64,11 @@ this.ftpPassword= hashMap!!.get(FtpConfigurationData.PASSWORD) as String
 
 open fun getServer()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,7 +78,11 @@ open fun getServer()
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,7 +92,11 @@ open fun getPath()
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,7 +106,11 @@ open fun getUserName()
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,36 +120,44 @@ open fun getPassword()
 
 open fun setServer(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftpServer= value
 }
 
 
 open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftpPath= value
 }
 
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftpUserName= value
 }
 
 
 open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftpPassword= value
 }
 

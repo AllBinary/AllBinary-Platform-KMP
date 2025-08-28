@@ -67,9 +67,11 @@ open public class AndroidBasicTitleProgressBar : ProgressCanvas
 
 open fun setBackground(background: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var background = background
+
+        Updates for KMP build        
+        {
+var background = background
 AndroidBasicTitleProgressBar.background= background
 }
 
@@ -95,15 +97,13 @@ AndroidBasicTitleProgressBar.background= background
     private var animation: Animation = NullAnimationFactory.getFactoryInstance()!!.getInstance(0)!!
  constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var title = title
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -120,7 +120,11 @@ DisplayChangeEventHandler.getInstance()!!.addListener(this)
 
                         for (index in 0 until size)
 
-        {IMAGE[index]= NullCanvas.NULL_IMAGE
+        
+
+        Updates for KMP build        
+        {
+IMAGE[index]= NullCanvas.NULL_IMAGE
 }
 
 }
@@ -128,7 +132,11 @@ DisplayChangeEventHandler.getInstance()!!.addListener(this)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -142,7 +150,11 @@ this.image= ImageCacheFactory.getInstance()!!.get(RESOURCE)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }
@@ -150,9 +162,11 @@ this.image= ImageCacheFactory.getInstance()!!.get(RESOURCE)
 
 open fun init(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 
         try {
             
@@ -171,7 +185,11 @@ this.loadProgressImages()
                                 
 this.updateCurrent()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }
@@ -179,7 +197,11 @@ this.updateCurrent()
 
 open fun updateCurrent()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -235,30 +257,42 @@ open fun updateCurrent()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var displayChangeEvent = displayChangeEvent
+
+        Updates for KMP build        
+        {
+var displayChangeEvent = displayChangeEvent
 
         try {
             this.loadProgressImages()
 this.updateCurrent()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, this.canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
@@ -267,7 +301,11 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 
 open fun loadProgressImages()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
@@ -293,11 +331,19 @@ open fun loadProgressImages()
                         }
                             
 } catch(e: IllegalArgumentException)
-            {logUtil!!.put("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("IllegalArgumentException " +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
  catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION_LABEL +ExceptionUtil.getInstance()!!.getStackTrace(e), this, "loadProgressImages")
 this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 }
 
@@ -306,7 +352,11 @@ this.animation= NullAnimationFactory.getFactoryInstance()!!.getInstance(0)
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.midletActivity != AndroidBasicTitleProgressBar.NULL_ACTIVITY)
                         
@@ -332,41 +382,55 @@ open fun isInitialized()
 
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 super.start()
 this.midletActivity!!.runOnUiThread(showTitleProgressBarRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
 
 override fun end()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.midletActivity!!.runOnUiThread(dismissTitleProgressBarRunnable)
 super.end()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.END_METHOD_NAME, e)
 }
 
 }
 
 override fun addEarlyPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var value = value
+var text = text
+var index = index
 
         try {
             this.portion= value
@@ -381,63 +445,79 @@ super.addEarlyPortion(value, text, index)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
 override fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var value = value
+var text = text
+var index = index
 
         try {
             this.portion= value
 super.addPortion(value, text, index)
 this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
 override fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
+        Updates for KMP build        
+        {
+var value = value
+var text = text
 
         try {
             this.portion= value
 super.addPortion(value, text)
 this.midletActivity!!.runOnUiThread(titleProgressDialogPortionSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, ADD_PORTION, e)
 }
 
 }
 
 override fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             super.setValue(value)
 this.midletActivity!!.runOnUiThread(titleProgressDialogSetProgressRunnable)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "setValue", e)
 }
 
 }
@@ -445,22 +525,24 @@ this.midletActivity!!.runOnUiThread(titleProgressDialogSetProgressRunnable)
 
 open fun waitUntilDisplayed()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var index = index
 
 
-                    var lastWidth = lastWidth
-
-
-                    var lastHeight = lastHeight
+        Updates for KMP build        
+        {
+var index = index
+var lastWidth = lastWidth
+var lastHeight = lastHeight
 
     var image: Image = this.image
 
@@ -512,9 +594,11 @@ open fun setImages(index: Int, lastWidth: Int, lastHeight: Int)
             
 open fun initOpenGL(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
@@ -530,7 +614,11 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.IMAGE[index] != NullCanvas.NULL_IMAGE)
                         
@@ -548,9 +636,11 @@ this.updateCurrent()
                 @Throws(Exception::class)
             override fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.UPDATE)
 this.initOpenGL(graphics)
 this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
@@ -567,7 +657,11 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.IMAGE[index] != NullCanvas.NULL_IMAGE)
                         
@@ -585,9 +679,11 @@ this.image= GameFeatureImageCacheFactory.getInstance()!!.get(RESOURCE)
             
 open fun getImage(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     var image: Image = NullCanvas.NULL_IMAGE
 
@@ -614,24 +710,32 @@ open fun getImage(index: Int)
 
 override fun paint2(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
         try {
             animation.paint(graphics, 0, 20)
 super.paint2(graphics)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, canvasStrings!!.PAINT, e)
 }
 
 }
 
 override fun setBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var background = background
+
+        Updates for KMP build        
+        {
+var background = background
 super.setBackground(background)
 this.updateCurrent()
 }
@@ -639,16 +743,22 @@ this.updateCurrent()
 
 open fun setPortion(portion: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var portion = portion
+
+        Updates for KMP build        
+        {
+var portion = portion
 this.portion= portion
 }
 
 
 open fun getPortion()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

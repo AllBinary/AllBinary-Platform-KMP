@@ -42,7 +42,11 @@ open public class AngleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AngleFactory{
+: AngleFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,9 +56,11 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -67,7 +73,11 @@ open fun main(args: Array<String?>)
 
                         for (index in 0 until 360)
 
-        {stringMaker!!.append(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
+        
+
+        Updates for KMP build        
+        {
+stringMaker!!.append(index)!!.append(CommonSeps.getInstance()!!.FORWARD_SLASH)!!.append(angleFactory!!.getClosestDirection(index)!!.getValue())!!.append(CommonSeps.getInstance()!!.NEW_LINE)
 }
 
 LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
@@ -97,7 +107,11 @@ LogUtil.getInstance()!!.put(stringMaker!!.toString(), "main", "main")
     val RIGHT: NamedAngle
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
 
@@ -111,7 +125,11 @@ angleArray[0]= UP
 
                         for (index in 1 until 90)
 
-        {angleArray[index]= Angle(index.toShort())
+        
+
+        Updates for KMP build        
+        {
+angleArray[index]= Angle(index.toShort())
 }
 
 RIGHT= NamedAngle(90.toShort(), commonPhoneStrings!!.RIGHT)
@@ -122,7 +140,11 @@ angleArray[90]= RIGHT
 
                         for (index in 91 until 180)
 
-        {angleArray[index]= Angle(index.toShort())
+        
+
+        Updates for KMP build        
+        {
+angleArray[index]= Angle(index.toShort())
 }
 
 DOWN= NamedAngle(180.toShort(), commonPhoneStrings!!.DOWN)
@@ -133,7 +155,11 @@ angleArray[180]= DOWN
 
                         for (index in 181 until 270)
 
-        {angleArray[index]= Angle(index.toShort())
+        
+
+        Updates for KMP build        
+        {
+angleArray[index]= Angle(index.toShort())
 }
 
 LEFT= NamedAngle(270.toShort(), commonPhoneStrings!!.LEFT)
@@ -144,7 +170,11 @@ angleArray[270]= LEFT
 
                         for (index in 271 until total)
 
-        {angleArray[index]= Angle(index.toShort())
+        
+
+        Updates for KMP build        
+        {
+angleArray[index]= Angle(index.toShort())
 }
 
 }
@@ -154,9 +184,11 @@ angleArray[270]= LEFT
 
 open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
-: Angle{
+: Angle
 
-                    var index = index
+        Updates for KMP build        
+        {
+    //var index = index
 
     var adjustedIndex: Int = frameUtil!!.adjustAngleToFrameAngle(index).toInt()
 
@@ -170,9 +202,11 @@ open fun getInstance(index: Int)
 
 open fun getClosestDirection(angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Angle{
+: Angle
 
-                    var angle = angle
+        Updates for KMP build        
+        {
+var angle = angle
 
     
                         if((angle >= 315 && angle < 360) || (angle >= 0 && angle < 45))
@@ -234,7 +268,11 @@ open fun getClosestDirection(angle: Int)
 
 open fun getGeneralDirection()
         //nullable = true from not(false or (false and true)) = true
-: Angle{
+: Angle
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

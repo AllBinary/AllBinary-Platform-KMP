@@ -38,7 +38,11 @@ open public class DynamicObjectData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

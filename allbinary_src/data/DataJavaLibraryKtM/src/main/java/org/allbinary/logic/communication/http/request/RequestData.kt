@@ -44,7 +44,11 @@ open public class RequestData
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

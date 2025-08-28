@@ -37,7 +37,11 @@ open public class ActivityFractureUtilAPI1 : ActivityFractureUtil {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ActivityFractureUtilAPI1{
+: ActivityFractureUtilAPI1
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,9 +59,11 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 }
 
 

@@ -42,13 +42,21 @@ open public class DestroyedLayerProcessor : BasicLayerProcessor {
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{DESTROYED_LAYER_PROCESSOR= DestroyedLayerProcessor()
+
+
+        Updates for KMP build        
+        {
+DESTROYED_LAYER_PROCESSOR= DestroyedLayerProcessor()
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicLayerProcessor{
+: BasicLayerProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,15 +65,21 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var list: BasicArrayList = this.getList()!!
 
@@ -90,7 +104,11 @@ open fun getInstance()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var layerInterfaceCanBeNull: Any? = list.objectArray[index]
 
 

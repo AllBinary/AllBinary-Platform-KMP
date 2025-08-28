@@ -46,33 +46,19 @@ open public class BasicGeographicMap : SimpleGeographicMap
     private val geographicMapCellTypeFactory: GeographicMapCellTypeFactory
 public constructor        (id: Integer, name: String, cellTypeIdToGeographicMapCellType: IntArray, tiledLayer: AllBinaryTiledLayer, foregroundBasicColor: BasicColor, backgroundBasicColor: BasicColor, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
 
-                            : super(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor){
+                            : super(id, name, cellTypeIdToGeographicMapCellType, tiledLayer, foregroundBasicColor, backgroundBasicColor)
 
-                    var id = id
-
-
-                    var name = name
-
-
-                    var cellTypeIdToGeographicMapCellType = cellTypeIdToGeographicMapCellType
-
-
-                    var tiledLayer = tiledLayer
-
-
-                    var foregroundBasicColor = foregroundBasicColor
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var geographicMapCellPositionFactoryInterface = geographicMapCellPositionFactoryInterface
-
-
-                    var geographicMapCellPositionBaseFactory = geographicMapCellPositionBaseFactory
-
-
-                    var geographicMapCellTypeFactory = geographicMapCellTypeFactory
+        Updates for KMP build        
+        {
+    //var id = id
+    //var name = name
+    //var cellTypeIdToGeographicMapCellType = cellTypeIdToGeographicMapCellType
+    //var tiledLayer = tiledLayer
+    //var foregroundBasicColor = foregroundBasicColor
+    //var backgroundBasicColor = backgroundBasicColor
+    //var geographicMapCellPositionFactoryInterface = geographicMapCellPositionFactoryInterface
+    //var geographicMapCellPositionBaseFactory = geographicMapCellPositionBaseFactory
+    //var geographicMapCellTypeFactory = geographicMapCellTypeFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -87,12 +73,12 @@ this.geographicMapCellTypeFactory= geographicMapCellTypeFactory
             
 open fun getCellPosition(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var direction = direction
-
-
-                    var oldGeographicMapCellPosition = oldGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var direction = direction
+    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
 
 
         when (direction) {
@@ -136,12 +122,12 @@ else -> {
             
 open fun getCellPositionNoThrow(direction: Int, oldGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var direction = direction
-
-
-                    var oldGeographicMapCellPosition = oldGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var direction = direction
+    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
 
 
         when (direction) {
@@ -254,19 +240,23 @@ else -> {
             
 open fun isOfFourDirections(oldGeographicMapCellPosition: GeographicMapCellPosition, newGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var oldGeographicMapCellPosition = oldGeographicMapCellPosition
-
-
-                    var newGeographicMapCellPosition = newGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var oldGeographicMapCellPosition = oldGeographicMapCellPosition
+    //var newGeographicMapCellPosition = newGeographicMapCellPosition
 
 
 
 
                         for (index in 0 until 4)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(newGeographicMapCellPosition == this.getCellPositionNoThrow(index, oldGeographicMapCellPosition))
                         
@@ -293,12 +283,12 @@ open fun isOfFourDirections(oldGeographicMapCellPosition: GeographicMapCellPosit
             
 open fun getCellPositionAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
@@ -320,12 +310,12 @@ open fun getCellPositionAt(x: Int, y: Int)
             
 open fun getCellPositionAtNoThrow(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
@@ -364,9 +354,11 @@ open fun getCellPositionAtNoThrow(x: Int, y: Int)
             
 open fun isOnMap(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
 
@@ -405,21 +397,15 @@ open fun isOnMap(geographicMapCellPosition: GeographicMapCellPosition)
             
 open fun getCellPositionAtNoThrow(x: Int, y: Int, x2: Int, y2: Int, geographicMapCellPositionList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var x2 = x2
-
-
-                    var y2 = y2
-
-
-                    var geographicMapCellPositionList = geographicMapCellPositionList
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var x2 = x2
+    //var y2 = y2
+    //var geographicMapCellPositionList = geographicMapCellPositionList
 geographicMapCellPositionList!!.clear()
 
     var allBinaryTiledLayer: AllBinaryTiledLayer = this.getAllBinaryTiledLayer()!!
@@ -442,13 +428,21 @@ geographicMapCellPositionList!!.clear()
 
                         for (columnIndex in i_columnMin until i_columnMax)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (rowIndex in i_rowMin until i_rowMax)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(allBinaryTiledLayer!!.getColumns() > columnIndex && allBinaryTiledLayer!!.getRows() > rowIndex)
                         
@@ -473,15 +467,13 @@ geographicMapCellPositionList!!.clear()
             
 open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<GeographicMapCellPosition?>?>, cellPositionArray: Array<Array<GeographicMapCellPosition?>?>)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layer = layer
-
-
-                    var currentCellPositionArray = currentCellPositionArray
-
-
-                    var cellPositionArray = cellPositionArray
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var currentCellPositionArray = currentCellPositionArray
+    //var cellPositionArray = cellPositionArray
 
     var hasChanged: Boolean = false
 
@@ -505,13 +497,21 @@ open fun getCellPositionsAt(layer: Layer, currentCellPositionArray: Array<Array<
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in 0 until size2)
 
+        
+
+        Updates for KMP build        
         {
+
     var x: Int = xPortion *index
 
 
@@ -543,12 +543,12 @@ cellPositionArray[index]!![index2]= this.getCellPositionAt(x, y)
             
 open fun getCellTypeAt(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellType{
+: GeographicMapCellType
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
     var cellPosition: GeographicMapCellPosition = this.getCellPositionAt(x, y)!!
 
@@ -562,7 +562,11 @@ open fun getCellTypeAt(x: Int, y: Int)
 
 open fun getGeographicMapCellPositionFactory()
         //nullable = true from not(false or (false and true)) = true
-: BasicGeographicMapCellPositionFactory{
+: BasicGeographicMapCellPositionFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -572,7 +576,11 @@ open fun getGeographicMapCellPositionFactory()
 
 open fun getGeographicMapCellPositionFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPositionFactoryInterface{
+: GeographicMapCellPositionFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -582,7 +590,11 @@ open fun getGeographicMapCellPositionFactoryInterface()
 
 open fun getGeographicMapCellTypeFactory()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellTypeFactory{
+: GeographicMapCellTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

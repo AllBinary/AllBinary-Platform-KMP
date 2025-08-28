@@ -38,9 +38,11 @@ open public class LayerProcessor
     private val layerManager: LayerManager
 public constructor        (layerManager: LayerManager)
             : super()
-        {
+        
 
-                    var layerManager = layerManager
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
 this.layerManager= layerManager
 }
 
@@ -48,15 +50,13 @@ this.layerManager= layerManager
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryLayerManager = allBinaryLayerManager
 
 
-                    var layerInterface = layerInterface
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
+var layerInterface = layerInterface
+var index = index
 
 
 
@@ -67,9 +67,11 @@ this.layerManager= layerManager
                 @Throws(Exception::class)
             override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
 
 
@@ -78,7 +80,11 @@ this.layerManager= layerManager
 
 override fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
-: LayerManager{
+: LayerManager
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,9 +95,11 @@ override fun getLayerManager()
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var layerManager: LayerManager = this.getLayerManager()!!
 
@@ -104,7 +112,11 @@ override fun getLayerManager()
 
                         for (index in 0 until size)
 
-        {this.process(allBinaryLayerManager, layerManager!!.getLayerAt(index) as AllBinaryLayer, index)
+        
+
+        Updates for KMP build        
+        {
+this.process(allBinaryLayerManager, layerManager!!.getLayerAt(index) as AllBinaryLayer, index)
 }
 
 }

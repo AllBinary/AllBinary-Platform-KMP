@@ -30,17 +30,21 @@ open public class TerrainEventListener
     private val list: BasicArrayList = BasicArrayList()
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onTerrainEvent(terrainEvent: TerrainEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var terrainEvent = terrainEvent
+
+        Updates for KMP build        
+        {
+var terrainEvent = terrainEvent
 this.list.clear()
 this.list.add(terrainEvent)
 }
@@ -48,7 +52,11 @@ this.list.add(terrainEvent)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

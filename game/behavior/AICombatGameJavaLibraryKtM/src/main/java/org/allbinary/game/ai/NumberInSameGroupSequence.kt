@@ -38,7 +38,11 @@ open public class NumberInSameGroupSequence
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NumberInSameGroupSequence{
+: NumberInSameGroupSequence
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,7 +75,11 @@ open fun getInstance()
     var NUMBER_ON_SAME_TEAM_SEQUENCE: Array<Integer?>
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var smallIntegerSingletonFactory: SmallIntegerSingletonFactory = SmallIntegerSingletonFactory.getInstance()!!
 
 NUMBER_ON_SAME_TEAM_SEQUENCE_ZERO= smallIntegerSingletonFactory!!.getInstance(100)

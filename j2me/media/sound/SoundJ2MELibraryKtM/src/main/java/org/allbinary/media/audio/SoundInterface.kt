@@ -33,15 +33,24 @@ open fun getResource()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
 : Player
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

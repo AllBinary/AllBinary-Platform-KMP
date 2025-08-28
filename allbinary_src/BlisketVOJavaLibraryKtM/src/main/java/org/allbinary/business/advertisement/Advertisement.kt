@@ -64,7 +64,11 @@ open public class Advertisement
     private val displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface
 public constructor        ()
             : super()
-        {this.displayInBrowserContraintsInterface= 
+        
+
+        Updates for KMP build        
+        {
+this.displayInBrowserContraintsInterface= 
                                         null
                                     
 }
@@ -72,7 +76,11 @@ public constructor        ()
 
 open fun getArtist()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,16 +90,22 @@ open fun getArtist()
 
 open fun setArtist(artist: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var artist = artist
+
+        Updates for KMP build        
+        {
+var artist = artist
 this.artist= artist
 }
 
 
 open fun getArtistLink()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,16 +115,22 @@ open fun getArtistLink()
 
 open fun setArtistLink(artistLink: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var artistLink = artistLink
+
+        Updates for KMP build        
+        {
+var artistLink = artistLink
 this.artistLink= artistLink
 }
 
 
 open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -120,16 +140,22 @@ open fun getTitle()
 
 open fun setTitle(title: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var title = title
+
+        Updates for KMP build        
+        {
+var title = title
 this.title= title
 }
 
 
 open fun getDateAdded()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -139,16 +165,22 @@ open fun getDateAdded()
 
 open fun setDateAdded(dateAdded: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dateAdded = dateAdded
+
+        Updates for KMP build        
+        {
+var dateAdded = dateAdded
 this.dateAdded= dateAdded
 }
 
 
 open fun getDirectory()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -158,16 +190,22 @@ open fun getDirectory()
 
 open fun setDirectory(directory: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var directory = directory
+
+        Updates for KMP build        
+        {
+var directory = directory
 this.directory= directory
 }
 
 
 open fun getFramedLink()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -177,16 +215,22 @@ open fun getFramedLink()
 
 open fun setFramedLink(framedLink: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var framedLink = framedLink
+
+        Updates for KMP build        
+        {
+var framedLink = framedLink
 this.framedLink= framedLink
 }
 
 
 open fun getListPrice()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -196,16 +240,22 @@ open fun getListPrice()
 
 open fun setListPrice(listPrice: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var listPrice = listPrice
+
+        Updates for KMP build        
+        {
+var listPrice = listPrice
 this.listPrice= listPrice
 }
 
 
 open fun getOurPrice()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,16 +265,22 @@ open fun getOurPrice()
 
 open fun setOurPrice(ourPrice: Money)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ourPrice = ourPrice
+
+        Updates for KMP build        
+        {
+var ourPrice = ourPrice
 this.ourPrice= ourPrice
 }
 
 
 open fun getRank()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -234,16 +290,22 @@ open fun getRank()
 
 open fun setRank(rank: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rank = rank
+
+        Updates for KMP build        
+        {
+var rank = rank
 this.rank= rank
 }
 
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementImageInterface{
+: AdvertisementImageInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -253,16 +315,22 @@ open fun getImage()
 
 open fun setImage(image: AdvertisementImageInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var image = image
+
+        Updates for KMP build        
+        {
+var image = image
 this.image= image
 }
 
 
 open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementProductInterface{
+: AdvertisementProductInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -272,16 +340,22 @@ open fun getProduct()
 
 open fun setProduct(product: AdvertisementProductInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var product = product
+
+        Updates for KMP build        
+        {
+var product = product
 this.product= product
 }
 
 
 open fun getThumbnail()
         //nullable = true from not(false or (false and true)) = true
-: AdvertisementThumbnailInterface{
+: AdvertisementThumbnailInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -291,16 +365,22 @@ open fun getThumbnail()
 
 open fun setThumbnail(thumbnail: AdvertisementThumbnailInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var thumbnail = thumbnail
+
+        Updates for KMP build        
+        {
+var thumbnail = thumbnail
 this.thumbnail= thumbnail
 }
 
 
 open fun getDisplayInBrowserContraintsInterface()
         //nullable = true from not(false or (false and true)) = true
-: DisplayInBrowserContraintsInterface{
+: DisplayInBrowserContraintsInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

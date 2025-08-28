@@ -36,21 +36,36 @@ open fun setStatus(orderId: String, groupId: String, status: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun isEverythingShipped(orderId: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 open fun getBasketReview(orderId: String)
         //nullable = true from not(false or (false and false)) = true
 : BasketReview
 
+        Updates for KMP build        
+        
+
 open fun insert(userName: String, order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -22,12 +22,12 @@ open public class CollisionThreedProcessor : CollisionProcessor {
             }            
         override fun isCollision(myLayer: AllBinaryLayer, myLayer2: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var myLayer = myLayer
-
-
-                    var myLayer2 = myLayer2
+        Updates for KMP build        
+        {
+    //var myLayer = myLayer
+    //var myLayer2 = myLayer2
 
     
                         if(myLayer2!!.getXP() >= myLayer!!.getX2() || myLayer2!!.getYP() >= myLayer!!.getY2() || myLayer2!!.getX2() <= myLayer!!.getXP() || myLayer2!!.getY2() <= myLayer!!.getYP() || myLayer2!!.getZP() < myLayer!!.getZ2() || myLayer2!!.getZ2() > myLayer!!.getZP())

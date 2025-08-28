@@ -39,9 +39,11 @@ open public class VectorExplosionAnimationFactory
     val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (basicColor: BasicColor)                        
 
-                            : this(basicColor, AnimationBehaviorFactory.getInstance()){
+                            : this(basicColor, AnimationBehaviorFactory.getInstance())
 
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,12 +52,12 @@ public constructor        (basicColor: BasicColor)
 
 public constructor        (basicColor: BasicColor, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var basicColor = basicColor
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var basicColor = basicColor
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.animationBehaviorFactory= animationBehaviorFactory
 this.setBasicColorP(basicColor)
 }
@@ -66,9 +68,11 @@ this.setBasicColorP(basicColor)
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
 
     var vectorRotationAnimationInterface: VectorAnimationInterface = animationInterface as VectorAnimationInterface
 
@@ -91,16 +95,22 @@ this.setBasicColorP(basicColor)
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 }
 
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

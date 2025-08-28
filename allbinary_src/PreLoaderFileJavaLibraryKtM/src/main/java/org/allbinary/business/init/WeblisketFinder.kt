@@ -47,7 +47,11 @@ open public class WeblisketFinder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WeblisketFinder{
+: WeblisketFinder
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
             
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -83,14 +89,20 @@ System.out.println(vector.size())
     private val subDirectory: SubDirectory = SubDirectory.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun findAll(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "findAll")
@@ -100,7 +112,11 @@ open fun findAll(path: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subDirectory!!.search(KEY, AbFile(path))
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "findAll", e)
 
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
@@ -122,9 +138,11 @@ open fun findAll(path: String)
 
 open fun getInstallationPath(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
         try {
             
@@ -152,7 +170,11 @@ open fun getInstallationPath(file: AbFile)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return filePath!!.substring(0, end)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRELOADERERROR))
                         

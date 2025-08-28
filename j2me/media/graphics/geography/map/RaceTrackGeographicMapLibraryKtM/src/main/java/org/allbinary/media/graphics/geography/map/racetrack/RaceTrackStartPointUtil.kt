@@ -44,15 +44,13 @@ open public class RaceTrackStartPointUtil
             
 open fun get(geographicMapInterface: BasicGeographicMap, pathFindingInfo: PathFindingInfo, index: Int)
         //nullable = true from not(false or (false and false)) = true
-: GPoint{
+: GPoint
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var pathFindingInfo = pathFindingInfo
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var pathFindingInfo = pathFindingInfo
+    //var index = index
 
     var list: BasicArrayList = pathFindingInfo!!.getStartPathFindingNodeList()!!
 

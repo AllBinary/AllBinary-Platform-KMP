@@ -48,7 +48,11 @@ open public class AllBinaryPreloaderActivator
 
 open fun getBundleContext()
         //nullable = true from not(false or (false and true)) = true
-: BundleContext{
+: BundleContext
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,7 +65,11 @@ open fun getBundleContext()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -70,16 +78,22 @@ public constructor        ()
             
 open fun start(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var context = context
+
+        Updates for KMP build        
+        {
+var context = context
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "start")
 AllBinaryPreloaderActivator.context= context
 this.registerAsService()
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "start", e)
 
 
 
@@ -93,7 +107,11 @@ this.registerAsService()
             
 open fun registerAsService()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var properties: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 
@@ -117,9 +135,11 @@ serviceReference= context.getServiceReference(CRYPT_REGISTRY_NAME)
             
 open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var context = context
+
+        Updates for KMP build        
+        {
+var context = context
 logUtil!!.put(this.commonStrings!!.START, this, "stop")
 }
 

@@ -37,12 +37,12 @@ open public class CacheType
     private var type: String
 public constructor        (vendor: String, type: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var vendor = vendor
-
-
-                    var type = type
+var vendor = vendor
+var type = type
 this.setVendor(vendor)
 this.setType(type)
 }
@@ -50,7 +50,11 @@ this.setType(type)
 
 open fun getVendor()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,16 +64,22 @@ open fun getVendor()
 
 open fun setVendor(vendor: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var vendor = vendor
+
+        Updates for KMP build        
+        {
+var vendor = vendor
 this.vendor= vendor
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,15 +89,21 @@ open fun getType()
 
 open fun setType(type: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var type = type
+
+        Updates for KMP build        
+        {
+var type = type
 this.type= type
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("CacheType: Vendor: ")

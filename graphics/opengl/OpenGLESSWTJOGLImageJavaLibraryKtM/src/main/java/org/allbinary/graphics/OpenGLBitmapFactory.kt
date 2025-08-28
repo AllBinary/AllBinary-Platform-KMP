@@ -26,7 +26,11 @@ open public class OpenGLBitmapFactory : PlatformBitmapBaseFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLBitmapFactory{
+: OpenGLBitmapFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,9 +59,11 @@ open public inner class Config
     val bitmapConfig: Any
 private constructor        (bitmapConfig: Any)
             : super()
-        {
+        
 
-                    var bitmapConfig = bitmapConfig
+        Updates for KMP build        
+        {
+    //var bitmapConfig = bitmapConfig
 this.bitmapConfig= bitmapConfig
 }
 
@@ -70,15 +76,13 @@ this.bitmapConfig= bitmapConfig
 
 open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Config)
         //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
+: OpenGLBitmap
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var config = config
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var config = config
 
 
 
@@ -91,9 +95,11 @@ open fun createBitmap(width: Int, height: Int, config: OpenGLBitmapFactory.Confi
             
 open fun decodeStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: OpenGLBitmap{
+: OpenGLBitmap
 
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+var inputStream = inputStream
 
 
 
@@ -104,9 +110,11 @@ open fun decodeStream(inputStream: InputStream)
 
 open fun createBitmap(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: PlatformBitmapBase{
+: PlatformBitmapBase
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
 

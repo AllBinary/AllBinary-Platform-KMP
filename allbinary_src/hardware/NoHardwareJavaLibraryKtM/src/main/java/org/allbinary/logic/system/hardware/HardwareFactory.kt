@@ -38,7 +38,11 @@ open public class HardwareFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HardwareFactory{
+: HardwareFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,16 +55,22 @@ open fun getInstance()
     private val SINGLETON: HardwareInterface = NoHardware.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(os: OperatingSystemInterface)
         //nullable =  from not(true or (false and false)) = 
-: HardwareInterface{
+: HardwareInterface
 
-                    var os = os
+        Updates for KMP build        
+        {
+var os = os
 
         try {
             
@@ -69,7 +79,11 @@ open fun getInstance(os: OperatingSystemInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SINGLETON
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e

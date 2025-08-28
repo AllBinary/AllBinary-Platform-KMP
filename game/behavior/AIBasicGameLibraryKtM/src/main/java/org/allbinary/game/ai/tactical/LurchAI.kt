@@ -40,12 +40,12 @@ open public class LurchAI : BasicAI {
     private var currentSpeed: Int= 0
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,9 +56,11 @@ public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameI
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     
                         if(currentSpeed ==  -1)
@@ -142,7 +144,11 @@ ownerLayerInterface!!.setPosition(x, ownerLayerInterface!!.getYP(), ownerLayerIn
 
 open fun reverse()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(currentRelativeAngle == 180)
                         
@@ -165,7 +171,11 @@ open fun reverse()
 
 open fun accelerate()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(currentSpeed < 20)
                         
@@ -179,7 +189,11 @@ open fun accelerate()
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var ownerLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
 

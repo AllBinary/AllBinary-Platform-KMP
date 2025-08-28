@@ -39,9 +39,11 @@ open public class StoreFrontFactory
             
 open fun getInstance(storeName: String)
         //nullable =  from not(true or (false and false)) = 
-: StoreFront{
+: StoreFront
 
-                    var storeName = storeName
+        Updates for KMP build        
+        {
+    //var storeName = storeName
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -56,7 +58,11 @@ open fun getInstance(storeName: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return storeFronts!!.getStoreFrontInterface(storeName)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -81,7 +87,11 @@ open fun getInstance(storeName: String)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

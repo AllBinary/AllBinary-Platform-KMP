@@ -33,12 +33,12 @@ open public class TopToBottomImageAnimationFactory : BaseImageAnimationFactory {
         
 public constructor        (image: Image, sequenceArray: IntArray)                        
 
-                            : this(image, sequenceArray, AnimationBehaviorFactory.getInstance()){
+                            : this(image, sequenceArray, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var sequenceArray = sequenceArray
+        Updates for KMP build        
+        {
+    //var image = image
+    //var sequenceArray = sequenceArray
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,15 +47,13 @@ public constructor        (image: Image, sequenceArray: IntArray)
 
 public constructor        (image: Image, sequenceArray: IntArray, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, sequenceArray, image.getWidth(), image.getHeight(), animationBehaviorFactory){
+                            : super(image, sequenceArray, image.getWidth(), image.getHeight(), animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var sequenceArray = sequenceArray
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var sequenceArray = sequenceArray
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,9 +64,11 @@ public constructor        (image: Image, sequenceArray: IntArray, animationBehav
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 

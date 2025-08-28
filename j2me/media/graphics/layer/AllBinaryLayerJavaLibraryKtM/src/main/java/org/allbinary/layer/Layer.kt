@@ -60,12 +60,12 @@ open public class Layer
     private var visible: Boolean = true
 public constructor        (width: Int, height: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var width = width
-
-
-                    var height = height
+var width = width
+var height = height
 setLayerWidth(width)
 setLayerHeight(height)
 }
@@ -73,15 +73,13 @@ setLayerHeight(height)
 
 open fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 this.x= x
 this.y= y
 this.z= z
@@ -90,12 +88,12 @@ this.z= z
 
 open fun move(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 this.x += dx
 this.y += dy
 }
@@ -103,15 +101,13 @@ this.y += dy
 
 open fun move(dx: Int, dy: Int, dz: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
-
-
-                    var dz = dz
+        Updates for KMP build        
+        {
+var dx = dx
+var dy = dy
+var dz = dz
 this.x += dx
 this.y += dy
 this.z += dz
@@ -120,7 +116,11 @@ this.z += dz
 
 open fun getXP()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,7 +130,11 @@ open fun getXP()
 
 open fun getYP()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -140,7 +144,11 @@ open fun getYP()
 
 open fun getZP()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -150,7 +158,11 @@ open fun getZP()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,7 +172,11 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -170,7 +186,11 @@ open fun getHeight()
 
 open fun getDepth()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,16 +200,22 @@ open fun getDepth()
 
 open fun setVisible(visible: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var visible = visible
+
+        Updates for KMP build        
+        {
+var visible = visible
 this.visible= visible
 }
 
 
 open fun isVisible()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -199,9 +225,11 @@ open fun isVisible()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -214,9 +242,11 @@ logUtil!!.put(commonStrings!!.NOT_IMPLEMENTED, this, canvasStrings!!.PAINT)
 
 open fun setLayerWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var width = width
+
+        Updates for KMP build        
+        {
+var width = width
 
     
                         if(width < 0)
@@ -235,9 +265,11 @@ this.width= width
 
 open fun setLayerHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 
     
                         if(height < 0)
@@ -256,9 +288,11 @@ this.height= height
 
 open fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-{
 
-                    var stringBuffer = stringBuffer
+
+        Updates for KMP build        
+        {
+    //var stringBuffer = stringBuffer
 }
 
 

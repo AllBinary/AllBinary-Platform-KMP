@@ -45,9 +45,11 @@ open public class HighScoresHelperBase
     var highScoresArrayP: Array<HighScores?> = LastFetchHighScoresFactory.getInstance()!!.highScoresArray
 override fun setHighScoresArray(highScoresArrayP: Array<HighScores?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var highScoresArrayP = highScoresArrayP
+
+        Updates for KMP build        
+        {
+    //var highScoresArrayP = highScoresArrayP
 
     
                         if(highScoresArrayP != 
@@ -77,7 +79,11 @@ this.highScoresArrayP= highScoresArrayP
 
 open fun getNextHighScores()
         //nullable = true from not(false or (false and true)) = true
-: HighScores{
+: HighScores
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +93,11 @@ open fun getNextHighScores()
 
 open fun isAnyHighScores()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -96,15 +106,21 @@ open fun isAnyHighScores()
 
 open fun setSelectedHighScores(selectedHighScores: HighScores)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedHighScores = selectedHighScores
+
+        Updates for KMP build        
+        {
+    //var selectedHighScores = selectedHighScores
 }
 
 
 open fun getSelectedHighScores()
         //nullable = true from not(false or (false and true)) = true
-: HighScores{
+: HighScores
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,7 +130,11 @@ open fun getSelectedHighScores()
 
 open fun getHighScoresArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<HighScores?>{
+: Array<HighScores?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,7 +144,11 @@ open fun getHighScoresArray()
 
 open fun selectHighScores()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

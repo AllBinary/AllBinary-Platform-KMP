@@ -44,16 +44,22 @@ open public class ScoreComparator
     private val isHighestBest: Boolean
 public constructor        (isHighestBest: Boolean)
             : super()
-        {
+        
 
-                    var isHighestBest = isHighestBest
+        Updates for KMP build        
+        {
+    //var isHighestBest = isHighestBest
 this.isHighestBest= isHighestBest
 }
 
 
 open fun getBestScore()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,12 +75,12 @@ open fun getBestScore()
 
 override fun compare(recordOne: ByteArray, recordTwo: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var recordOne = recordOne
-
-
-                    var recordTwo = recordTwo
+        Updates for KMP build        
+        {
+    //var recordOne = recordOne
+    //var recordTwo = recordTwo
 
     var byteArrayInputStreamOne: ByteArrayInputStream = ByteArrayInputStream(recordOne)
 
@@ -100,19 +106,31 @@ inputStreamTwo!!.readUTF()
 scoreOne= inputStreamOne!!.readLong()
 scoreTwo= inputStreamTwo!!.readLong()
 } catch(e: EOFException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: IOException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
@@ -145,12 +163,12 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "compare", e)
 
 open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var scoreOne = scoreOne
-
-
-                    var scoreTwo = scoreTwo
+        Updates for KMP build        
+        {
+    //var scoreOne = scoreOne
+    //var scoreTwo = scoreTwo
 
     
                         if(scoreOne > scoreTwo)
@@ -191,12 +209,12 @@ open fun getHighTooLow(scoreOne: Long, scoreTwo: Long)
 
 open fun getLowTooHigh(scoreOne: Long, scoreTwo: Long)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var scoreOne = scoreOne
-
-
-                    var scoreTwo = scoreTwo
+        Updates for KMP build        
+        {
+    //var scoreOne = scoreOne
+    //var scoreTwo = scoreTwo
 
     
                         if(scoreOne < scoreTwo)

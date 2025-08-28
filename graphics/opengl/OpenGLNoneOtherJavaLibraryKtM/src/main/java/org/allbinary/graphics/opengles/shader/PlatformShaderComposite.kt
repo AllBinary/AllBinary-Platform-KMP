@@ -32,27 +32,17 @@ open public class PlatformShaderComposite : ShaderComposite {
         
 public constructor        (requiresOpenGLVersion: String, shaderArray: Array<Shader?>, compositeShaderUpdater: CompositeShaderUpdater, shaderInitializer: ShaderInitializer, modelViewProjection: ModelViewProjection, colorOpenGLProcessor: OpenGLProcessor, vertexOpenGLProcessor: OpenGLProcessor)                        
 
-                            : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, NullOpenGLProcessorFactory.getInstance()){
+                            : super(requiresOpenGLVersion, shaderArray, compositeShaderUpdater, shaderInitializer, modelViewProjection, colorOpenGLProcessor, vertexOpenGLProcessor, NullOpenGLProcessorFactory.getInstance())
 
-                    var requiresOpenGLVersion = requiresOpenGLVersion
-
-
-                    var shaderArray = shaderArray
-
-
-                    var compositeShaderUpdater = compositeShaderUpdater
-
-
-                    var shaderInitializer = shaderInitializer
-
-
-                    var modelViewProjection = modelViewProjection
-
-
-                    var colorOpenGLProcessor = colorOpenGLProcessor
-
-
-                    var vertexOpenGLProcessor = vertexOpenGLProcessor
+        Updates for KMP build        
+        {
+    //var requiresOpenGLVersion = requiresOpenGLVersion
+    //var shaderArray = shaderArray
+    //var compositeShaderUpdater = compositeShaderUpdater
+    //var shaderInitializer = shaderInitializer
+    //var modelViewProjection = modelViewProjection
+    //var colorOpenGLProcessor = colorOpenGLProcessor
+    //var vertexOpenGLProcessor = vertexOpenGLProcessor
 
 
                             //For kotlin this is before the body of the constructor.

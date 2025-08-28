@@ -38,7 +38,11 @@ open public class LifeLayer : AllBinaryLayer
         
 public constructor        ()                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
+                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -46,16 +50,20 @@ public constructor        ()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 override fun visit(lifeInterface: Life)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var lifeInterface = lifeInterface
+
+        Updates for KMP build        
+        {
+var lifeInterface = lifeInterface
 lifeInterface!!.add(1.toShort())
 }
 

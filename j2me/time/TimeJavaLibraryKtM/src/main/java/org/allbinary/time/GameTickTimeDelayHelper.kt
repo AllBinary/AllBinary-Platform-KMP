@@ -40,15 +40,21 @@ open public class GameTickTimeDelayHelper
     var lastStartTime: Long
 public constructor        ()
             : super()
-        {this.startTime= System.currentTimeMillis()
+        
+
+        Updates for KMP build        
+        {
+this.startTime= System.currentTimeMillis()
 this.lastStartTime= startTime
 }
 
 public constructor        (startTime: Long)
             : super()
-        {
+        
 
-                    var startTime = startTime
+        Updates for KMP build        
+        {
+    //var startTime = startTime
 this.startTime= startTime
 this.lastStartTime= 0
 }
@@ -56,7 +62,11 @@ this.lastStartTime= 0
 
 open fun setStartTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{this.startTime= System.currentTimeMillis()
+: Long
+
+        Updates for KMP build        
+        {
+this.startTime= System.currentTimeMillis()
 
 
 
@@ -67,7 +77,11 @@ open fun setStartTime()
 
 open fun loop()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.lastStartTime == Long.MIN_VALUE)
                         
@@ -86,7 +100,11 @@ open fun loop()
 
 open fun getTimeFromStart()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

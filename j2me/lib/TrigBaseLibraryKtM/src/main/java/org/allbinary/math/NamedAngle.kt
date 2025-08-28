@@ -32,12 +32,12 @@ open public class NamedAngle : Angle {
     val name: String
 public constructor        (angle: Short, name: String)                        
 
-                            : super(angle){
+                            : super(angle)
 
-                    var angle = angle
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+    //var angle = angle
+    //var name = name
 
 
                             //For kotlin this is before the body of the constructor.

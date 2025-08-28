@@ -44,12 +44,20 @@ open public class MotionRectangleConstraints
     private var minArea: Int= 0
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getMinDimension()
         //nullable = true from not(false or (false and true)) = true
-: Dimension{
+: Dimension
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +67,11 @@ open fun getMinDimension()
 
 open fun getMaxDimension()
         //nullable = true from not(false or (false and true)) = true
-: Dimension{
+: Dimension
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,9 +81,11 @@ open fun getMaxDimension()
 
 open fun isTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
     
                         if(rectangle.width < this.getMinDimension()!!.width || rectangle.height < this.getMinDimension()!!.height)
@@ -99,9 +113,11 @@ open fun isTooSmall(rectangle: Rectangle)
 
 open fun isAreaTooSmall(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
     
                         if(rectangle.width *rectangle.height < this.getMinArea())
@@ -129,9 +145,11 @@ open fun isAreaTooSmall(rectangle: Rectangle)
 
 open fun isTooBig(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
     
                         if(rectangle.width > this.getMaxDimension()!!.width || rectangle.height > this.getMaxDimension()!!.height)
@@ -161,15 +179,13 @@ open fun isTooBig(rectangle: Rectangle)
             
 open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var frame = frame
-
-
-                    var bufferedImage = bufferedImage
-
-
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var frame = frame
+var bufferedImage = bufferedImage
+var rectangle = rectangle
 
 
 
@@ -179,25 +195,33 @@ open fun isValid(frame: Long, bufferedImage: BufferedImage, rectangle: Rectangle
 
 open fun setMinDimension(minDimension: Dimension)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minDimension = minDimension
+
+        Updates for KMP build        
+        {
+var minDimension = minDimension
 this.minDimension= minDimension
 }
 
 
 open fun setMaxDimension(maxDimension: Dimension)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxDimension = maxDimension
+
+        Updates for KMP build        
+        {
+var maxDimension = maxDimension
 this.maxDimension= maxDimension
 }
 
 
 open fun getMaxMotionRectangles()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -207,16 +231,22 @@ open fun getMaxMotionRectangles()
 
 open fun setMaxMotionRectangles(maxMotionRectangles: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxMotionRectangles = maxMotionRectangles
+
+        Updates for KMP build        
+        {
+var maxMotionRectangles = maxMotionRectangles
 this.maxMotionRectangles= maxMotionRectangles
 }
 
 
 open fun getMinArea()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -226,9 +256,11 @@ open fun getMinArea()
 
 open fun setMinArea(minArea: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minArea = minArea
+
+        Updates for KMP build        
+        {
+var minArea = minArea
 this.minArea= minArea
 }
 

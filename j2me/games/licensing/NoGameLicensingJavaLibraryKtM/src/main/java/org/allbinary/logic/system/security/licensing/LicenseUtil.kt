@@ -38,7 +38,11 @@ open public class LicenseUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseUtil{
+: LicenseUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,13 +59,21 @@ open fun getInstance()
         
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,17 +84,21 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 }
 
 
 open fun shouldWait(commandListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var commandListener = commandListener
+        Updates for KMP build        
+        {
+var commandListener = commandListener
 
 
 

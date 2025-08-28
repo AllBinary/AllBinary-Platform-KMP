@@ -30,21 +30,31 @@ open public class CommandTag : CustomTagSupport {
         
 
     private var command: String
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setCommand(command: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 this.command= command
 }
 
 
 open fun getCommand()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

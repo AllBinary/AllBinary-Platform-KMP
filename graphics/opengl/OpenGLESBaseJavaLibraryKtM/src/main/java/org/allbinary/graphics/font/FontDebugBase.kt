@@ -30,7 +30,11 @@ open public class FontDebugBase
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FontDebugBase{
+: FontDebugBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,46 +53,38 @@ open fun getInstance()
 
 open fun debugMetrics(currentFont: Font, convertedTextSize: Float, displayMetrics: Any, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var currentFont = currentFont
 
 
-                    var convertedTextSize = convertedTextSize
-
-
-                    var displayMetrics = displayMetrics
-
-
-                    var stringBuffer = stringBuffer
+        Updates for KMP build        
+        {
+    //var currentFont = currentFont
+    //var convertedTextSize = convertedTextSize
+    //var displayMetrics = displayMetrics
+    //var stringBuffer = stringBuffer
 }
 
 
 open fun debugDpi(densityDpi: Int, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var densityDpi = densityDpi
 
 
-                    var stringBuffer = stringBuffer
+        Updates for KMP build        
+        {
+    //var densityDpi = densityDpi
+    //var stringBuffer = stringBuffer
 }
 
 
 open fun debugDimension(currentFont: Font, convertedTextSize: Float, longestDimensionTotalPixels: Int, stringBuffer: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var currentFont = currentFont
 
 
-                    var convertedTextSize = convertedTextSize
-
-
-                    var longestDimensionTotalPixels = longestDimensionTotalPixels
-
-
-                    var stringBuffer = stringBuffer
+        Updates for KMP build        
+        {
+    //var currentFont = currentFont
+    //var convertedTextSize = convertedTextSize
+    //var longestDimensionTotalPixels = longestDimensionTotalPixels
+    //var stringBuffer = stringBuffer
 }
 
 

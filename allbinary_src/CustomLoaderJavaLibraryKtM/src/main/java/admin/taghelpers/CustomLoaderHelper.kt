@@ -42,24 +42,32 @@ open public class CustomLoaderHelper
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+var hashMap = hashMap
+var pageContext = pageContext
 }
 
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -67,7 +75,11 @@ open fun getWebappPath()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.globals.URLGLOBALS.getWebappPath()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,9 +93,11 @@ open fun getWebappPath()
             
 open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var path = path
+
+        Updates for KMP build        
+        {
+var path = path
 
         try {
             
@@ -92,7 +106,11 @@ open fun setWebappPath(path: String)
 urlGlobals!!.setWebappPath(path)
 URLGLOBALS.init(urlGlobals)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         

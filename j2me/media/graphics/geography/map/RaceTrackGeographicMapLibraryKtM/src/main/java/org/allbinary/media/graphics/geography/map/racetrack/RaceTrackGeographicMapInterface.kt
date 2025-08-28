@@ -33,17 +33,29 @@ open fun getRaceTrackInfo()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackInfo
 
+        Updates for KMP build        
+        
+
 open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun getRaceTrackData()
         //nullable = true from not(false or (false and true)) = true
 : RaceTrackData
 
+        Updates for KMP build        
+        
+
 open fun setRaceTrackData(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

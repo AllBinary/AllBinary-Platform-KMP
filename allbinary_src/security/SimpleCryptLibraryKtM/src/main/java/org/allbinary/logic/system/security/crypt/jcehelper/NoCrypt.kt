@@ -39,9 +39,11 @@ open public class NoCrypt
             }            
         override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
 
 
@@ -51,9 +53,11 @@ open public class NoCrypt
 
 override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
 
 

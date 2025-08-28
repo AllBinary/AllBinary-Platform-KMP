@@ -69,12 +69,12 @@ open public class UploadFileServlet : HttpServlet {
             
 open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 
     var isError: Boolean = false
 
@@ -147,7 +147,11 @@ response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Please Login")
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -188,9 +192,11 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
             
 open fun saveFile(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var filePath = filePath
+
+        Updates for KMP build        
+        {
+var filePath = filePath
 
     var fileOutputStream: AbFileOutputStream = 
                 null
@@ -279,12 +285,12 @@ fileOutputStream!!.write(byteArray)
             
 open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 processRequest(request, response)
 }
 
@@ -293,19 +299,23 @@ processRequest(request, response)
             
 open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 processRequest(request, response)
 }
 
 
 open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

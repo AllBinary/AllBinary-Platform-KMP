@@ -35,9 +35,11 @@ open public class JOGL11 : JOGL10
     private val gl11: GL2
 public constructor        (gl: GL)                        
 
-                            : super(gl){
+                            : super(gl)
 
-                    var gl = gl
+        Updates for KMP build        
+        {
+var gl = gl
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,444 +50,380 @@ this.gl11= getJOGLGL()
 
 open fun glBindBuffer(target: Int, buffer: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var buffer = buffer
+        Updates for KMP build        
+        {
+var target = target
+var buffer = buffer
 this.gl11.glBindBuffer(target, buffer)
 }
 
 
 open fun glBufferData(target: Int, size: Int, data: java.nio.Buffer, usage: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var size = size
-
-
-                    var data = data
-
-
-                    var usage = usage
+        Updates for KMP build        
+        {
+var target = target
+var size = size
+var data = data
+var usage = usage
 this.gl11.glBufferData(target, size, data, usage)
 }
 
 
 open fun glBufferSubData(target: Int, offset: Int, size: Int, data: java.nio.Buffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var offset = offset
-
-
-                    var size = size
-
-
-                    var data = data
+        Updates for KMP build        
+        {
+var target = target
+var offset = offset
+var size = size
+var data = data
 this.gl11.glBufferSubData(target, offset, size, data)
 }
 
 
 open fun glClipPlanef(plane: Int, equation: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var plane = plane
 
 
-                    var equation = equation
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var plane = plane
+var equation = equation
+var offset = offset
 this.gl11.glClipPlanef(plane, equation, offset)
 }
 
 
 open fun glClipPlanef(plane: Int, equation: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var plane = plane
 
 
-                    var equation = equation
+        Updates for KMP build        
+        {
+var plane = plane
+var equation = equation
 this.gl11.glClipPlanef(plane, equation)
 }
 
 
 open fun glColor4ub(red: Byte, green: Byte, blue: Byte, alpha: Byte)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var red = red
 
 
-                    var green = green
-
-
-                    var blue = blue
-
-
-                    var alpha = alpha
+        Updates for KMP build        
+        {
+var red = red
+var green = green
+var blue = blue
+var alpha = alpha
 this.gl11.glColor4ub(red, green, blue, alpha)
 }
 
 
 open fun glColorPointer(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var size = size
 
 
-                    var type = type
-
-
-                    var stride = stride
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var size = size
+var type = type
+var stride = stride
+var offset = offset
 this.gl11.glColorPointer(size, type, stride, offset)
 }
 
 
 open fun glDeleteBuffers(n: Int, buffers: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var n = n
 
 
-                    var buffers = buffers
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var n = n
+var buffers = buffers
+var offset = offset
 this.gl11.glDeleteBuffers(n, buffers, offset)
 }
 
 
 open fun glDeleteBuffers(n: Int, buffers: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var n = n
 
 
-                    var buffers = buffers
+        Updates for KMP build        
+        {
+var n = n
+var buffers = buffers
 this.gl11.glDeleteBuffers(n, buffers)
 }
 
 
 open fun glDrawElements(mode: Int, count: Int, type: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var mode = mode
 
 
-                    var count = count
-
-
-                    var type = type
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var mode = mode
+var count = count
+var type = type
+var offset = offset
 this.gl11.glDrawElements(mode, count, type, offset)
 }
 
 
 open fun glGenBuffers(n: Int, buffers: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var n = n
 
 
-                    var buffers = buffers
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var n = n
+var buffers = buffers
+var offset = offset
 this.gl11.glGenBuffers(n, buffers, offset)
 }
 
 
 open fun glGenBuffers(n: Int, buffers: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var n = n
 
 
-                    var buffers = buffers
+        Updates for KMP build        
+        {
+var n = n
+var buffers = buffers
 this.gl11.glGenBuffers(n, buffers)
 }
 
 
 open fun glGetBufferParameteriv(target: Int, pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetBufferParameteriv(target, pname, params, offset)
 }
 
 
 open fun glGetBufferParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
 this.gl11.glGetBufferParameteriv(target, pname, params)
 }
 
 
 open fun glGetClipPlanef(pname: Int, eqn: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var eqn = eqn
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var pname = pname
+var eqn = eqn
+var offset = offset
 this.gl11.glGetClipPlanef(pname, eqn, offset)
 }
 
 
 open fun glGetClipPlanef(pname: Int, eqn: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var eqn = eqn
+        Updates for KMP build        
+        {
+var pname = pname
+var eqn = eqn
 this.gl11.glGetClipPlanef(pname, eqn)
 }
 
 
 open fun glGetFloatv(pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetFloatv(pname, params, offset)
 }
 
 
 open fun glGetFloatv(pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var params = params
+        Updates for KMP build        
+        {
+var pname = pname
+var params = params
 this.gl11.glGetFloatv(pname, params)
 }
 
 
 open fun glGetLightfv(light: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var light = light
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var light = light
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetLightfv(light, pname, params, offset)
 }
 
 
 open fun glGetLightfv(light: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var light = light
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var light = light
+var pname = pname
+var params = params
 this.gl11.glGetLightfv(light, pname, params)
 }
 
 
 open fun glGetMaterialfv(face: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var face = face
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var face = face
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetMaterialfv(face, pname, params, offset)
 }
 
 
 open fun glGetMaterialfv(face: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var face = face
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var face = face
+var pname = pname
+var params = params
 this.gl11.glGetMaterialfv(face, pname, params)
 }
 
 
 open fun glGetTexEnviv(env: Int, pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var env = env
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var env = env
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetTexEnviv(env, pname, params, offset)
 }
 
 
 open fun glGetTexEnviv(env: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var env = env
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var env = env
+var pname = pname
+var params = params
 this.gl11.glGetTexEnviv(env, pname, params)
 }
 
 
 open fun glGetTexParameterfv(target: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetTexParameterfv(target, pname, params, offset)
 }
 
 
 open fun glGetTexParameterfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
 this.gl11.glGetTexParameterfv(target, pname, params)
 }
 
 
 open fun glGetTexParameteriv(target: Int, pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glGetTexParameteriv(target, pname, params, offset)
 }
 
 
 open fun glGetTexParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
 this.gl11.glGetTexParameteriv(target, pname, params)
 }
 
 
 open fun glIsBuffer(buffer: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var buffer = buffer
+        Updates for KMP build        
+        {
+var buffer = buffer
 
 
 
@@ -496,9 +434,11 @@ open fun glIsBuffer(buffer: Int)
 
 open fun glIsEnabled(cap: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cap = cap
+        Updates for KMP build        
+        {
+var cap = cap
 
 
 
@@ -509,9 +449,11 @@ open fun glIsEnabled(cap: Int)
 
 open fun glIsTexture(texture: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var texture = texture
+        Updates for KMP build        
+        {
+var texture = texture
 
 
 
@@ -522,237 +464,199 @@ open fun glIsTexture(texture: Int)
 
 open fun glNormalPointer(type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var type = type
 
 
-                    var stride = stride
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var type = type
+var stride = stride
+var offset = offset
 this.gl11.glNormalPointer(type, stride, offset)
 }
 
 
 open fun glPointParameterf(pname: Int, param: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var param = param
+        Updates for KMP build        
+        {
+var pname = pname
+var param = param
 this.gl11.glPointParameterf(pname, param)
 }
 
 
 open fun glPointParameterfv(pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glPointParameterfv(pname, params, offset)
 }
 
 
 open fun glPointParameterfv(pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pname = pname
 
 
-                    var params = params
+        Updates for KMP build        
+        {
+var pname = pname
+var params = params
 this.gl11.glPointParameterfv(pname, params)
 }
 
 
 open fun glTexCoordPointer(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var size = size
 
 
-                    var type = type
-
-
-                    var stride = stride
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var size = size
+var type = type
+var stride = stride
+var offset = offset
 this.gl11.glTexCoordPointer(size, type, stride, offset)
 }
 
 
 open fun glTexEnvi(target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var param = param
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var param = param
 this.gl11.glTexEnvi(target, pname, param)
 }
 
 
 open fun glTexEnviv(target: Int, pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glTexEnviv(target, pname, params, offset)
 }
 
 
 open fun glTexEnviv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
 this.gl11.glTexEnviv(target, pname, params)
 }
 
 
 open fun glTexParameterfv(target: Int, pname: Int, params: FloatArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glTexParameterfv(target, pname, params, offset)
 }
 
 
 open fun glTexParameterfv(target: Int, pname: Int, params: java.nio.FloatBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
 this.gl11.glTexParameterfv(target, pname, params)
 }
 
 
 open fun glTexParameteri(target: Int, pname: Int, param: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var param = param
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var param = param
 this.gl11.glTexParameteri(target, pname, param)
 }
 
 
 open fun glTexParameteriv(target: Int, pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glTexParameteriv(target, pname, params, offset)
 }
 
 
 open fun glTexParameteriv(target: Int, pname: Int, params: java.nio.IntBuffer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
 this.gl11.glTexParameteriv(target, pname, params)
 }
 
 
 open fun glTexParameterxv(target: Int, pname: Int, params: IntArray, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var target = target
 
 
-                    var pname = pname
-
-
-                    var params = params
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var target = target
+var pname = pname
+var params = params
+var offset = offset
 this.gl11.glTexParameteriv(target, pname, params, offset)
 }
 
 
 open fun glVertexPointer(size: Int, type: Int, stride: Int, offset: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var size = size
 
 
-                    var type = type
-
-
-                    var stride = stride
-
-
-                    var offset = offset
+        Updates for KMP build        
+        {
+var size = size
+var type = type
+var stride = stride
+var offset = offset
 this.gl11.glVertexPointer(size, type, stride, offset)
 }
 

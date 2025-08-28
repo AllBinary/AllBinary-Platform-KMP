@@ -51,9 +51,11 @@ open public class DownloadableItemView
     private var downloadableItem: DownloadableItem
 public constructor        (downloadableItem: DownloadableItem)
             : super()
-        {
+        
 
-                    var downloadableItem = downloadableItem
+        Updates for KMP build        
+        {
+var downloadableItem = downloadableItem
 this.downloadableItem= downloadableItem
 }
 
@@ -62,9 +64,11 @@ this.downloadableItem= downloadableItem
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGING))
@@ -148,7 +152,11 @@ hashMap!!.put(DownloadItemData.VALID_TIME_SECONDS, Integer(Integer.valueOf(secon
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = nameArray[index]!! as String
 
 
@@ -168,7 +176,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,7 +190,11 @@ open fun toXmlDoc()
 
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -68,9 +68,11 @@ open public class AbDatabaseManagement : AbSqlBean {
     val ADD_TABLES_RESULTS_LABEL: String = "Add Table Results: "
 public constructor        (databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)                        
 
-                            : super(databaseConnectionInfoInterface as DbConnectionInfo){
+                            : super(databaseConnectionInfoInterface as DbConnectionInfo)
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -79,9 +81,11 @@ public constructor        (databaseConnectionInfoInterface: DatabaseConnectionIn
 
 public constructor        (connectionInfo: DbConnectionInfo)                        
 
-                            : super(connectionInfo){
+                            : super(connectionInfo)
 
-                    var connectionInfo = connectionInfo
+        Updates for KMP build        
+        {
+var connectionInfo = connectionInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,7 +95,11 @@ public constructor        (connectionInfo: DbConnectionInfo)
 
 open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var addr: InetAddress = InetAddress.getLocalHost()!!
@@ -102,7 +110,11 @@ open fun getHostName()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return addr.getHostName()
 } catch(e: Exception)
-            {logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.FAILED, this, GET_HOST_NAME, e)
 
 
 
@@ -117,18 +129,14 @@ open fun getHostName()
             
 open fun addDbUser(hostName: String, db: String, userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var hostName = hostName
-
-
-                    var db = db
-
-
-                    var userName = userName
-
-
-                    var password = password
+        Updates for KMP build        
+        {
+var hostName = hostName
+var db = db
+var userName = userName
+var password = password
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -157,15 +165,13 @@ super.executeSQLStatement(sqlStatement)
 
 open fun addDbUser(db: String, userName: String, password: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var db = db
-
-
-                    var userName = userName
-
-
-                    var password = password
+        Updates for KMP build        
+        {
+var db = db
+var userName = userName
+var password = password
 
         try {
             this.addDbUser(this.AT_LOCALHOST, db, userName, password)
@@ -189,7 +195,11 @@ open fun addDbUser(db: String, userName: String, password: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.UNABLE_TO_CREATE_USER +userName, this, this.METHOD_ADD_USER, e)
 
 
 
@@ -202,9 +212,11 @@ open fun addDbUser(db: String, userName: String, password: String)
 
 open fun addDb(db: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var db = db
+        Updates for KMP build        
+        {
+var db = db
 
         try {
             
@@ -219,7 +231,11 @@ super.executeSQLStatement(sqlStatement)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {logUtil!!.put(UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(UNABLE_TO_CREATE_DATABASE +db, this, this.METHOD_ADD_DB, e)
 
 
 

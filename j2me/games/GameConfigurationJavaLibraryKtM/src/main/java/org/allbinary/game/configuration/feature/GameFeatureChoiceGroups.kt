@@ -41,7 +41,11 @@ open public class GameFeatureChoiceGroups
 
 open fun getExclusiveInstance()
         //nullable = true from not(false or (false and true)) = true
-: GameFeatureChoiceGroups{
+: GameFeatureChoiceGroups
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,7 +55,11 @@ open fun getExclusiveInstance()
 
 open fun getMultipleInstance()
         //nullable = true from not(false or (false and true)) = true
-: GameFeatureChoiceGroups{
+: GameFeatureChoiceGroups
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,12 +72,20 @@ open fun getMultipleInstance()
     private var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,12 +95,12 @@ open fun get()
 
 open fun add(name: String, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var name = name
 
 
-                    var list = list
+        Updates for KMP build        
+        {
+var name = name
+var list = list
 hashtable.put(name, list)
 }
 

@@ -40,18 +40,14 @@ open public class BasicPaintablesCanvas : GameCommandCanvas {
     private val colorFillPaintable: ColorFillBasePaintable
 public constructor        (cmdListener: CommandListener, name: String, allBinaryGameLayerManager: AllBinaryGameLayerManager, paintableArray: Array<Paintable?>)                        
 
-                            : super(cmdListener, name, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
+                            : super(cmdListener, name, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor())
 
-                    var cmdListener = cmdListener
-
-
-                    var name = name
-
-
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
-
-
-                    var paintableArray = paintableArray
+        Updates for KMP build        
+        {
+    //var cmdListener = cmdListener
+    //var name = name
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+    //var paintableArray = paintableArray
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,9 +58,11 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
 graphics.setColor(this.foregroundColor)
 
@@ -73,7 +71,11 @@ graphics.setColor(this.foregroundColor)
 
                         for (index in this.paintableArray!!.size -1 downTo 0)
 
-        {this.paintableArray[index]!!.paint(graphics)
+        
+
+        Updates for KMP build        
+        {
+this.paintableArray[index]!!.paint(graphics)
 }
 
 super.paint(graphics)

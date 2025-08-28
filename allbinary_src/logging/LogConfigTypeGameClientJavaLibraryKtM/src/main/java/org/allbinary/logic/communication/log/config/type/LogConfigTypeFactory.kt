@@ -37,7 +37,11 @@ open public class LogConfigTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogConfigTypeFactory{
+: LogConfigTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +58,11 @@ open fun getInstance()
     val FACTORYERROR: LogConfigType = LogConfigType("Factory Error", NO_DESCRIPTION)
 private constructor        ()
             : super()
-        {LogConfigTypes.LOGGING.add(OS)
+        
+
+        Updates for KMP build        
+        {
+LogConfigTypes.LOGGING.add(OS)
 LogConfigTypes.LOGGING.add(FACTORYERROR)
 }
 

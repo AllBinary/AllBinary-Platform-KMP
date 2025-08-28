@@ -46,15 +46,13 @@ open public class SequenceAI : ArrayAI {
     private var index: Int= 0
 public constructor        (artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(artificialIntelligenceInterfaceArray, ownerLayerInterface, gameInput){
+                            : super(artificialIntelligenceInterfaceArray, ownerLayerInterface, gameInput)
 
-                    var artificialIntelligenceInterfaceArray = artificialIntelligenceInterfaceArray
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var artificialIntelligenceInterfaceArray = artificialIntelligenceInterfaceArray
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,16 +63,22 @@ public constructor        (artificialIntelligenceInterfaceArray: Array<Artificia
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 this.getArtificialIntelligenceInterface()[index]!!.processAI(allBinaryLayerManager)
 }
 
 
 open fun next()
         //nullable = true from not(false or (false and true)) = true
-{this.index++
+
+
+        Updates for KMP build        
+        {
+this.index++
 
     var artificialIntelligenceInterface: ArtificialIntelligenceInterface = this.getSelectedArtificialIntelligenceInterface()!!
 
@@ -95,7 +99,11 @@ artificialIntelligenceTransitionInterface!!.transition()
 
 open fun getIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,16 +113,22 @@ open fun getIndex()
 
 open fun setIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+var index = index
 this.index= index
 }
 
 
 open fun getSelectedArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
-: ArtificialIntelligenceInterface{
+: ArtificialIntelligenceInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,7 +137,11 @@ open fun getSelectedArtificialIntelligenceInterface()
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,7 +150,11 @@ override fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())

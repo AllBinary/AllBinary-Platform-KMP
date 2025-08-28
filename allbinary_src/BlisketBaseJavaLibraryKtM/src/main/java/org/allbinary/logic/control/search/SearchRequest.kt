@@ -47,24 +47,16 @@ open public class SearchRequest : AbContext {
     private var storeFront: StoreFrontInterface
 public constructor        (storeFront: StoreFrontInterface, searchParams: SearchParams, xslFile: String, contentType: String, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(propertiesHashMap, pageContext){
+                            : super(propertiesHashMap, pageContext)
 
-                    var storeFront = storeFront
-
-
-                    var searchParams = searchParams
-
-
-                    var xslFile = xslFile
-
-
-                    var contentType = contentType
-
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var storeFront = storeFront
+var searchParams = searchParams
+var xslFile = xslFile
+var contentType = contentType
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -79,52 +71,66 @@ this.contentType= contentType
 
 open fun setStoreFront(storeFront: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeFront = storeFront
+
+        Updates for KMP build        
+        {
+var storeFront = storeFront
 this.storeFront= storeFront
 }
 
 
 open fun setParams(searchParams: SearchParams)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var searchParams = searchParams
+
+        Updates for KMP build        
+        {
+var searchParams = searchParams
 this.searchParams= searchParams
 }
 
 
 open fun setXslFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.xslFile= value
 }
 
 
 open fun setFileBaseName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.pageName= value
 }
 
 
 open fun setContentType(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.contentType= value
 }
 
 
 open fun getStoreFront()
         //nullable = true from not(false or (false and true)) = true
-: StoreFrontInterface{
+: StoreFrontInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -134,7 +140,11 @@ open fun getStoreFront()
 
 open fun getParams()
         //nullable = true from not(false or (false and true)) = true
-: SearchParams{
+: SearchParams
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -144,7 +154,11 @@ open fun getParams()
 
 open fun getXslFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -154,7 +168,11 @@ open fun getXslFile()
 
 open fun getFileBaseName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,7 +182,11 @@ open fun getFileBaseName()
 
 open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -176,9 +198,11 @@ open fun getContentType()
             
 open fun getFileBaseNameNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 

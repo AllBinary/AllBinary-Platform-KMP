@@ -35,7 +35,11 @@ open public class GamePersistanceSingleton : KeyValuePersistance {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GamePersistanceSingleton{
+: GamePersistanceSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(GamePersistanceStrings.getInstance()!!.SAVED_GAME_RECORD_ID){
+                            : super(GamePersistanceStrings.getInstance()!!.SAVED_GAME_RECORD_ID)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     

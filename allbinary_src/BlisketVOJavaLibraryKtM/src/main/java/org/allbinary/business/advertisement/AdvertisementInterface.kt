@@ -37,93 +37,162 @@ open fun getArtist()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getArtistLink()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getDateAdded()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getDirectory()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getFramedLink()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getListPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money
 
+        Updates for KMP build        
+        
+
 open fun getOurPrice()
         //nullable = true from not(false or (false and true)) = true
 : Money
+
+        Updates for KMP build        
+        
 
 open fun getRank()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementImageInterface
+
+        Updates for KMP build        
+        
 
 open fun getProduct()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementProductInterface
 
+        Updates for KMP build        
+        
+
 open fun getThumbnail()
         //nullable = true from not(false or (false and true)) = true
 : AdvertisementThumbnailInterface
+
+        Updates for KMP build        
+        
 
 open fun getDisplayInBrowserContraintsInterface()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface
 
+        Updates for KMP build        
+        
+
 open fun setArtist(artist: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setArtistLink(artistLink: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setTitle(title: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setDateAdded(dateAdded: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setDirectory(directory: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setFramedLink(framedLink: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setRank(rank: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun setImage(AdvertisementImageInterface: AdvertisementImageInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setProduct(AdvertisementProductInterface: AdvertisementProductInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setThumbnail(AdvertisementThumbnailInterface: AdvertisementThumbnailInterface)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

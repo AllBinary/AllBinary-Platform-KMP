@@ -60,7 +60,11 @@ open public class JvmStatisticsData
         }
             private constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     

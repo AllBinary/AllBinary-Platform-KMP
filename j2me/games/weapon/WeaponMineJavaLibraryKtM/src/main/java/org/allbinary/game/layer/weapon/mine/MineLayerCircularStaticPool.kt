@@ -41,9 +41,11 @@ open public class MineLayerCircularStaticPool
             
 open fun init(viewPositionFactoryInterface: ViewPositionFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var viewPositionFactoryInterface = viewPositionFactoryInterface
+
+        Updates for KMP build        
+        {
+var viewPositionFactoryInterface = viewPositionFactoryInterface
 MineCountedPickedUpLayerInterfaceFactory.init()
 WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInterface), 20)
 }
@@ -51,7 +53,11 @@ WEAPON_LAYER_CIRCULAR_STATIC_POOL.init(MineLayerFactory(viewPositionFactoryInter
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WeaponLayerCircularPool{
+: WeaponLayerCircularPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

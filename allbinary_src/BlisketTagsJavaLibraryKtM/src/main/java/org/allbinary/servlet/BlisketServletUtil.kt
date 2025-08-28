@@ -42,7 +42,11 @@ open public class BlisketServletUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BlisketServletUtil{
+: BlisketServletUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,9 +63,11 @@ open fun getInstance()
         
 open fun init(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var request = request
+
+        Updates for KMP build        
+        {
+var request = request
 
     var urlGlobals: AppUrlGlobals = AppUrlGlobals()
 

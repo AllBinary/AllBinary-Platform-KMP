@@ -24,35 +24,33 @@ open public class CustomForm : CustomScreen {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+public constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
 
-                    var title = title
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var title = title
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 }
 
-public constructor        (title: String, items: Array<CustomItem?>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+public constructor        (title: String, items: Array<CustomItem?>, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var title = title
+var items = items
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 }
 
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,15 +60,21 @@ open fun size()
 
 open fun setSelectedIndex(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+var index = index
 }
 
 
 open fun getSelectedIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,22 +84,30 @@ open fun getSelectedIndex()
 
 open fun deleteAll()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun delete(itemNum: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var itemNum = itemNum
+
+        Updates for KMP build        
+        {
+var itemNum = itemNum
 }
 
 
 open fun append(item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var item = item
+        Updates for KMP build        
+        {
+var item = item
 
 
 
@@ -106,31 +118,33 @@ open fun append(item: CustomItem)
 
 open fun insert(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var itemNum = itemNum
 
 
-                    var item = item
+        Updates for KMP build        
+        {
+var itemNum = itemNum
+var item = item
 }
 
 
 open fun set(itemNum: Int, item: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var itemNum = itemNum
 
 
-                    var item = item
+        Updates for KMP build        
+        {
+var itemNum = itemNum
+var item = item
 }
 
 
 open fun get(itemNum: Int)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: CustomItem
 
-                    var itemNum = itemNum
+        Updates for KMP build        
+        {
+var itemNum = itemNum
 
 
 
@@ -141,7 +155,11 @@ open fun get(itemNum: Int)
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -150,15 +168,21 @@ open fun getWidth()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -36,7 +36,11 @@ open public class PrimitiveIntUtil
             
 open fun getArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getArrayInstance()
 
 open fun getTwoDimensionalArrayInstance()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>{
+: Array<IntArray?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +65,11 @@ open fun getTwoDimensionalArrayInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

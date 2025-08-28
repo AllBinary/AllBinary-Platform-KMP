@@ -58,12 +58,12 @@ open public class BasicWorkFlow
     private var pageContext: PageContext
 public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
@@ -83,7 +83,11 @@ this.validationDomNodeInterface= TransformFactory.getInstance()!!.getInstance(ab
             
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +97,11 @@ open fun getName()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +111,11 @@ open fun getPropertiesHashMap()
 
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
-: PageContext{
+: PageContext
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -115,7 +127,11 @@ open fun getPageContext()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.WORKFLOW))
                         

@@ -33,9 +33,11 @@ open public class ScoreableAddOnlyForHud : Scoreable {
     private val scoreHudWidget: ScoreHudWidget
 public constructor        (scoreVectorGraphic: ScoreHudWidget)                        
 
-                            : super(0){
+                            : super(0)
 
-                    var scoreVectorGraphic = scoreVectorGraphic
+        Updates for KMP build        
+        {
+var scoreVectorGraphic = scoreVectorGraphic
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,16 +48,20 @@ this.getScoreHudWidget()!!.set(0)
 
 override fun removePoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 }
 
 override fun addPoints(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 super.addPoints(points)
 this.getScoreHudWidget()!!.add(points)
 }
@@ -63,7 +69,11 @@ this.getScoreHudWidget()!!.add(points)
 
 open fun getScoreHudWidget()
         //nullable = true from not(false or (false and true)) = true
-: ScoreHudWidget{
+: ScoreHudWidget
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -32,33 +32,57 @@ open fun isAlive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun damage(ahealth: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun heal(ahealth: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun heal()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun getMaxHealth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun setMaxHealth(maxHealth: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun getHealth()
         //nullable = true from not(false or (false and true)) = true
 : Int
 
+        Updates for KMP build        
+        
+
 open fun addListener(healthListenerInterface: HealthListenerInterface)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

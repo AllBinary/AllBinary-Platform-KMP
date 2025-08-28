@@ -40,7 +40,11 @@ open public class AllBinaryAndroidGameInitializationUtil
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
 

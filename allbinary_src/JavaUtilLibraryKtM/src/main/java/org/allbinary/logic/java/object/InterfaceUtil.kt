@@ -36,12 +36,12 @@ open public class InterfaceUtil
             
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var myClass = myClass
-
-
-                    var lineBreak = lineBreak
+        Updates for KMP build        
+        {
+    //var myClass = myClass
+    //var lineBreak = lineBreak
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -57,7 +57,11 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until interfaces.size)
 
-        {stringBuffer!!.append("Interface: ")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append("Interface: ")
 stringBuffer!!.append(interfaces[index]!!.getName())
 stringBuffer!!.append(lineBreak)
 }
@@ -72,12 +76,12 @@ stringBuffer!!.append(lineBreak)
 
 open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
         //nullable = true from not(false or (false and false)) = true
-: KClass<*>{
+: KClass<*>
 
-                    var interfaceName = interfaceName
-
-
-                    var interfaces = interfaces
+        Updates for KMP build        
+        {
+    //var interfaceName = interfaceName
+    //var interfaces = interfaces
 
     
                         if(interfaceName != 
@@ -93,7 +97,11 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
 
                         for (index in 0 until interfaces.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(interfaces[index]!!.getName()!!.indexOf(interfaceName) >= 0)
                         
@@ -121,12 +129,12 @@ open fun ::class(interfaceName: String, interfaces: Array<KClass<*>?>)
 
 open fun isImplemented(clazz: KClass<*>, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var clazz = clazz
-
-
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var clazz = clazz
+var anyType = anyType
 
     var classes: Array<KClass<*>?> = anyType!!::class.getInterfaces()!!
 
@@ -136,7 +144,11 @@ open fun isImplemented(clazz: KClass<*>, anyType: Any)
 
                         for (index in 0 until classes.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(clazz.toString()!!.compareTo(classes[index]!!.getName()) == 0)
                         
@@ -156,12 +168,12 @@ open fun isImplemented(clazz: KClass<*>, anyType: Any)
 
 open fun isImplemented(className: String, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var className = className
-
-
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var className = className
+var anyType = anyType
 
     var classes: Array<KClass<*>?> = anyType!!::class.getInterfaces()!!
 
@@ -171,7 +183,11 @@ open fun isImplemented(className: String, anyType: Any)
 
                         for (index in 0 until classes.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(classes[index]!!.getName()!!.indexOf(className) == 0)
                         
@@ -196,12 +212,12 @@ open fun isImplemented(className: String, anyType: Any)
 
 open fun isImplementedView(clazz: KClass<*>, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var clazz = clazz
-
-
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var clazz = clazz
+var anyType = anyType
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -215,7 +231,11 @@ stringBuffer!!.append("isImplementedView: \n")
 
                         for (index in 0 until classes.size)
 
-        {stringBuffer!!.append(clazz.toString()!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(clazz.toString()!!)
 stringBuffer!!.append(" should be = ")
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(classes[index]!!.getName())
@@ -233,7 +253,11 @@ stringBuffer!!.append("\n")
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

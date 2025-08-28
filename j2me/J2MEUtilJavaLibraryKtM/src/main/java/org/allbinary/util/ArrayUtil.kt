@@ -29,7 +29,11 @@ open public class ArrayUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ArrayUtil{
+: ArrayUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,12 +52,12 @@ open fun getInstance()
 
 open fun copyOf(original: Array<Any?>, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
+: Array<Any?>
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
 
 
@@ -64,15 +68,13 @@ open fun copyOf(original: Array<Any?>, newLength: Int)
 
 open fun copyOf(original: Array<Any?>, newLength: Int, newType: KClass<*>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Any?>{
+: Array<Any?>
 
-                    var original = original
-
-
-                    var newLength = newLength
-
-
-                    var newType = newType
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
+    //var newType = newType
 
     var copy: Array<Any?> = arrayOfNulls(newLength)
 
@@ -87,12 +89,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: ByteArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: ByteArray = ByteArray(newLength)
 
@@ -107,12 +109,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: ShortArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: ShortArray{
+: ShortArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+var original = original
+var newLength = newLength
 
     var copy: ShortArray = ShortArray(newLength)
 
@@ -127,12 +129,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: IntArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: IntArray{
+: IntArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: IntArray = IntArray(newLength)
 
@@ -147,12 +149,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: LongArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: LongArray{
+: LongArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: LongArray = LongArray(newLength)
 
@@ -167,12 +169,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: CharArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: CharArray{
+: CharArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: CharArray = 
                                                         
@@ -190,12 +192,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: FloatArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: FloatArray{
+: FloatArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: FloatArray = FloatArray(newLength)
 
@@ -210,12 +212,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: DoubleArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: DoubleArray{
+: DoubleArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: DoubleArray = DoubleArray(newLength)
 
@@ -230,12 +232,12 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun copyOf(original: BooleanArray, newLength: Int)
         //nullable = true from not(false or (false and false)) = true
-: BooleanArray{
+: BooleanArray
 
-                    var original = original
-
-
-                    var newLength = newLength
+        Updates for KMP build        
+        {
+    //var original = original
+    //var newLength = newLength
 
     var copy: BooleanArray = BooleanArray(newLength)
 
@@ -250,9 +252,11 @@ System.arraycopy(original, 0, copy, 0, mathUtil!!.min(original.size, newLength))
 
 open fun reverse(intArray: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var intArray = intArray
+
+        Updates for KMP build        
+        {
+    //var intArray = intArray
 
     var length: Int = intArray!!.size -1
 
@@ -268,7 +272,11 @@ open fun reverse(intArray: IntArray)
 
                         for (index in 0 until size)
 
-        {temp= intArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+temp= intArray[index]!!
 intArray[index]= intArray[length -index]!!
 intArray[length -index]= temp
 }
@@ -278,15 +286,13 @@ intArray[length -index]= temp
 
 open fun flip(intArray: IntArray, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var intArray = intArray
 
 
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var intArray = intArray
+    //var width = width
+    //var height = height
 
     var length: Int = height -1
 
@@ -305,13 +311,21 @@ open fun flip(intArray: IntArray, width: Int, height: Int)
 
                         for (y in 0 until length /2)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (x in 0 until width)
 
-        {rowIndex= ((length -y) *width)
+        
+
+        Updates for KMP build        
+        {
+rowIndex= ((length -y) *width)
 index= x +(y *width)
 temp= intArray[index]!!
 intArray[index]= intArray[rowIndex +x]!!
@@ -325,9 +339,11 @@ intArray[rowIndex +x]= temp
 
 open fun toString(twoDimensionalIntArray: Array<IntArray?>)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var twoDimensionalIntArray = twoDimensionalIntArray
+        Updates for KMP build        
+        {
+    //var twoDimensionalIntArray = twoDimensionalIntArray
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -348,14 +364,22 @@ open fun toString(twoDimensionalIntArray: Array<IntArray?>)
 
                         for (index in 0 until endIndex)
 
-        {stringBuffer!!.append(commonSeps!!.BRACE_OPEN)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(commonSeps!!.BRACE_OPEN)
 
 
 
 
                         for (index2 in 0 until endIndex2)
 
-        {stringBuffer!!.append(twoDimensionalIntArray[index]!![index2]!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(twoDimensionalIntArray[index]!![index2]!!)
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
 
@@ -373,9 +397,11 @@ stringBuffer!!.append(commonSeps!!.NEW_LINE)
 
 open fun toString(objectArray: Array<Any?>)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var objectArray = objectArray
+        Updates for KMP build        
+        {
+    //var objectArray = objectArray
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -388,7 +414,11 @@ open fun toString(objectArray: Array<Any?>)
 
                         for (index in 0 until objectArray!!.size)
 
-        {stringBuffer!!.append(StringUtil.getInstance()!!.toString(objectArray[index]!!))
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(StringUtil.getInstance()!!.toString(objectArray[index]!!))
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
 
@@ -402,9 +432,11 @@ stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 
 open fun toString(byteArray: ByteArray)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var byteArray = byteArray
+        Updates for KMP build        
+        {
+    //var byteArray = byteArray
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -417,7 +449,11 @@ open fun toString(byteArray: ByteArray)
 
                         for (index in 0 until byteArray!!.size)
 
-        {stringBuffer!!.append(byteArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(byteArray[index]!!)
 stringBuffer!!.append(commonSeps!!.COMMA_SEP)
 }
 

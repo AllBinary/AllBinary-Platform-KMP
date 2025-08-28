@@ -37,7 +37,11 @@ open public class LicenseLevelUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseLevelUtil{
+: LicenseLevelUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,12 +58,12 @@ open fun getInstance()
         
 open fun getMaxLevel(maxLevel: Int, demoLevel: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var maxLevel = maxLevel
-
-
-                    var demoLevel = demoLevel
+        Updates for KMP build        
+        {
+var maxLevel = maxLevel
+var demoLevel = demoLevel
 
 
 

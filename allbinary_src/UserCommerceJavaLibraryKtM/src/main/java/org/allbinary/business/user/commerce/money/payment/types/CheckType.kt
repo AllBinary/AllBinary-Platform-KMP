@@ -34,7 +34,11 @@ open public class CheckType
     private val types: Array<String?> = arrayOf("Check","Money Order","Cashiers Check")
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

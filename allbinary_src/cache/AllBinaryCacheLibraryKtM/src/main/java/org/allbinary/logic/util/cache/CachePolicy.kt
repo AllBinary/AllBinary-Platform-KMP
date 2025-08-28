@@ -38,15 +38,13 @@ open public class CachePolicy
     private var maxSize: Long= 0
 public constructor        (name: String, maxTime: Long, maxSize: Long)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var maxTime = maxTime
-
-
-                    var maxSize = maxSize
+var name = name
+var maxTime = maxTime
+var maxSize = maxSize
 this.name= name
 this.setMaxTime(maxTime)
 this.setMaxSize(maxSize)
@@ -55,7 +53,11 @@ this.setMaxSize(maxSize)
 
 open fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,16 +67,22 @@ open fun getMaxTime()
 
 open fun setMaxTime(maxTime: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxTime = maxTime
+
+        Updates for KMP build        
+        {
+var maxTime = maxTime
 this.maxTime= maxTime
 }
 
 
 open fun getMaxSize()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,16 +92,22 @@ open fun getMaxSize()
 
 open fun setMaxSize(maxSize: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxSize = maxSize
+
+        Updates for KMP build        
+        {
+var maxSize = maxSize
 this.maxSize= maxSize
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -45,7 +45,11 @@ open public class NullParcelable
             }            
         override fun describeContents()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -53,12 +57,12 @@ open public class NullParcelable
 
 override fun writeToParcel(dest: android.os.Parcel, flags: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dest = dest
 
 
-                    var flags = flags
+        Updates for KMP build        
+        {
+var dest = dest
+var flags = flags
 }
 
 

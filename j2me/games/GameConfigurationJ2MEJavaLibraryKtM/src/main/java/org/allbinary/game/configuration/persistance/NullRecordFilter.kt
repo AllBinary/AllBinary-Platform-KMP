@@ -45,9 +45,11 @@ open public class NullRecordFilter
             }            
         override fun matches(candidate: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var candidate = candidate
+        Updates for KMP build        
+        {
+var candidate = candidate
 
 
 

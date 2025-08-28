@@ -38,7 +38,11 @@ open public class WeaponLayerArrayLayerCircularStaticPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WeaponLayerArrayLayerCircularStaticPool{
+: WeaponLayerArrayLayerCircularStaticPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,7 +66,11 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var WEAPONLAYER_ARRAY: Array<Array<Any?>?> = arrayOfNulls<Array<Any?>>(MAX *2)
                                                             
 
@@ -80,7 +88,11 @@ open fun init()
 
                         for (index in 0 until MAX)
 
-        {WEAPONLAYER_ARRAY[index]= arrayOfNulls(1)
+        
+
+        Updates for KMP build        
+        {
+WEAPONLAYER_ARRAY[index]= arrayOfNulls(1)
 TWO_WEAPONLAYER_ARRAY[index]= arrayOfNulls(2)
 THREE_WEAPONLAYER_ARRAY[index]= arrayOfNulls(3)
 }
@@ -96,9 +108,11 @@ ALL_WEAPONLAYER_ARRAY[3]= THREE_WEAPONLAYER_ARRAY
 
 open fun getInstance(size: Int)
         //nullable =  from not(true or (false and false)) = 
-: Array<WeaponLayer?>{
+: Array<WeaponLayer?>
 
-                    var size = size
+        Updates for KMP build        
+        {
+var size = size
 
     var weaponLayerArray: Array<WeaponLayer?> = ALL_WEAPONLAYER_ARRAY[size]!![circularIndexUtil!!.getIndex()]!! as Array<WeaponLayer?>
 

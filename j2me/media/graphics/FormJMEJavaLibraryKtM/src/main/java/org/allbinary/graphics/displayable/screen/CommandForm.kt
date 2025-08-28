@@ -59,18 +59,14 @@ open public class CommandForm : Form
     private var commandStack: Stack<Any>
 public constructor        (commandListener: CommandListener, formTitle: String, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(formTitle){
+                            : super(formTitle)
 
-                    var commandListener = commandListener
-
-
-                    var formTitle = formTitle
-
-
-                    var backgrounBasicColor = backgrounBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+var commandListener = commandListener
+var formTitle = formTitle
+var backgrounBasicColor = backgrounBasicColor
+var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -80,7 +76,11 @@ this.commandStack= Stack<Any>()
         try {
             repaintProcessor!!.process()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -88,19 +88,29 @@ this.commandStack= Stack<Any>()
 
 open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+    //var cmdListener = cmdListener
 }
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, "open")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, "open")
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.CLOSE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, commonStrings!!.CLOSE)
 }
 
 
@@ -108,12 +118,20 @@ override fun close()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.repaintProcessor!!.process()
+
+
+        Updates for KMP build        
+        {
+this.repaintProcessor!!.process()
 }
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,16 +140,22 @@ override fun getSourceId()
 
 override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 commandStack!!.push(command)
 super.addCommand(command)
 }
 
 override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var size: Int = commandStack!!.size!!
 
 
@@ -140,7 +164,11 @@ override fun removeAllCommands()
 
                         for (index in 0 until size)
 
-        {super.removeCommand(commandStack!!.pop() as Command)
+        
+
+        Updates for KMP build        
+        {
+super.removeCommand(commandStack!!.pop() as Command)
 }
 
 }

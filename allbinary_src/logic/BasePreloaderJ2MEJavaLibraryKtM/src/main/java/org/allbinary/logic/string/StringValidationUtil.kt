@@ -37,7 +37,11 @@ open public class StringValidationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StringValidationUtil{
+: StringValidationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,14 +54,20 @@ open fun getInstance()
     private val stringUtil: StringUtil = StringUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun containsSpaces(value: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
     
                         if(value.indexOf(' ') >= 0)
@@ -81,9 +91,11 @@ open fun containsSpaces(value: String)
 
 open fun isNumber(value: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
     var numberOfDecimalPoints: Int = 0
 
@@ -93,7 +105,11 @@ open fun isNumber(value: String)
 
                         for (index in 0 until value.length!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var digit: Char = value[index]!!
 
 
@@ -143,9 +159,11 @@ open fun isNumber(value: String)
 
 open fun isNumber(digit: Char)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var digit = digit
+        Updates for KMP build        
+        {
+var digit = digit
 
     
                         if(digit != '0' && digit != '1' && digit != '2' && digit != '3' && digit != '4' && digit != '5' && digit != '6' && digit != '7' && digit != '8' && digit != '9')
@@ -169,15 +187,13 @@ open fun isNumber(digit: Char)
 
 open fun isValidRequired(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
-
-
-                    var min = min
-
-
-                    var max = max
+        Updates for KMP build        
+        {
+var value = value
+var min = min
+var max = max
 
     
                         if(value == 
@@ -203,15 +219,13 @@ open fun isValidRequired(value: String, min: Int, max: Int)
 
 open fun isValidRequiredNumber(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
-
-
-                    var min = min
-
-
-                    var max = max
+        Updates for KMP build        
+        {
+var value = value
+var min = min
+var max = max
 
     
                         if(this.isEmpty(value) || value.length < min || value.length > max)
@@ -248,15 +262,13 @@ open fun isValidRequiredNumber(value: String, min: Int, max: Int)
 
 open fun isValidNotRequired(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
-
-
-                    var min = min
-
-
-                    var max = max
+        Updates for KMP build        
+        {
+var value = value
+var min = min
+var max = max
 
     
                         if(value != 
@@ -290,15 +302,13 @@ open fun isValidNotRequired(value: String, min: Int, max: Int)
 
 open fun isValidNotRequiredNumber(value: String, min: Int, max: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var value = value
-
-
-                    var min = min
-
-
-                    var max = max
+        Updates for KMP build        
+        {
+var value = value
+var min = min
+var max = max
 
     
                         if(value != 
@@ -345,9 +355,11 @@ open fun isValidNotRequiredNumber(value: String, min: Int, max: Int)
 
 open fun isEmpty(string: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var string = string
+        Updates for KMP build        
+        {
+var string = string
 
     
                         if(string != 

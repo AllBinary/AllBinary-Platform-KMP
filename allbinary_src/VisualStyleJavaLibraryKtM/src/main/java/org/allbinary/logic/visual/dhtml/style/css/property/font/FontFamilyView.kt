@@ -32,7 +32,11 @@ open public class FontFamilyView : CssPropertyView {
         
 public constructor        ()                        
 
-                            : super(FontFamilyData.getInstance()!!.VALUE){
+                            : super(FontFamilyData.getInstance()!!.VALUE)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -40,9 +44,11 @@ public constructor        ()
 
 public constructor        (node: Node)                        
 
-                            : super(node){
+                            : super(node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.

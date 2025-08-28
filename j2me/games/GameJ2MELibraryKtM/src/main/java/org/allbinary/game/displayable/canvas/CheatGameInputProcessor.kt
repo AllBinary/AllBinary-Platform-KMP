@@ -50,9 +50,11 @@ open public class CheatGameInputProcessor : PlayerGameInput {
     private val gameCanvas: AllBinaryGameCanvas
 public constructor        (gameCanvas: AllBinaryGameCanvas)                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayList(),  -1)
 
-                    var gameCanvas = gameCanvas
+        Updates for KMP build        
+        {
+var gameCanvas = gameCanvas
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,7 +67,11 @@ this.gameCanvas= gameCanvas
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var gameLayerManager: AllBinaryGameLayerManager = this.gameCanvas!!.getLayerManager()!!
@@ -82,7 +88,11 @@ override fun update()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: Any = list.objectArray[index]!!
 
 
@@ -196,7 +206,11 @@ break;
 
 list.clear()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 }
 
 }

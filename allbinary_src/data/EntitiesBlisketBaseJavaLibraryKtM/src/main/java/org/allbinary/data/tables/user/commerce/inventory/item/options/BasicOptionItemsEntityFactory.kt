@@ -39,7 +39,11 @@ open public class BasicOptionItemsEntityFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicOptionItemsEntityFactory{
+: BasicOptionItemsEntityFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,12 +56,20 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getBasicOptionItemsEntityInstance()
         //nullable = true from not(false or (false and true)) = true
-: BasicOptionItemsEntity{
+: BasicOptionItemsEntity
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -65,7 +77,11 @@ open fun getBasicOptionItemsEntityInstance()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.data.tables.user.commerce.inventory.item.options.BasicOptionItemsEntity()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 

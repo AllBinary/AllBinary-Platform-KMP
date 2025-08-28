@@ -33,12 +33,12 @@ open public class OverrideStoreTransformInfoObjectConfig : GenericStoreTransform
         
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface){
+                            : super(abeClientInformation, transformInfoInterface)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,15 +47,13 @@ public constructor        (abeClientInformation: Object, transformInfoInterface:
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface, document){
+                            : super(abeClientInformation, transformInfoInterface, document)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+var document = document
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,18 +63,14 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(abeClientInformation, transformInfoInterface, name, type){
+                            : super(abeClientInformation, transformInfoInterface, name, type)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var name = name
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+var name = name
+var type = type
 
 
                             //For kotlin this is before the body of the constructor.
@@ -89,9 +83,11 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun generate(objectConfigDocument: Document)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var objectConfigDocument = objectConfigDocument
+        Updates for KMP build        
+        {
+var objectConfigDocument = objectConfigDocument
 
     var newObjectConfigDocument: Document = super.generate(objectConfigDocument)!!
 

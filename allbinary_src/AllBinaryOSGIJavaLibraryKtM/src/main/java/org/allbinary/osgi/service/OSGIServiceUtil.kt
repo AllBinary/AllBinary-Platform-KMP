@@ -42,7 +42,11 @@ open public class OSGIServiceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OSGIServiceUtil{
+: OSGIServiceUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,19 +59,23 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getServicesObjectVector(bundleContext: Object, serviceReferences: Array<ServiceReference?>)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var bundleContext = bundleContext
-
-
-                    var serviceReferences = serviceReferences
+        Updates for KMP build        
+        {
+    //var bundleContext = bundleContext
+    //var serviceReferences = serviceReferences
 
     var vector: Vector = Vector()
 
@@ -89,7 +97,11 @@ logUtil!!.put("Service References: " +size, this, "getServicesObjectVector")
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var serviceReference: ServiceReference = serviceReferences[index]!!
 
 

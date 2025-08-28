@@ -36,25 +36,43 @@ open fun remove(index: Integer)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun add(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun update(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getLastId()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : StreetAddress
 
+        Updates for KMP build        
+        
+
 open fun setDefault(value: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

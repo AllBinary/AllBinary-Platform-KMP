@@ -30,9 +30,11 @@ open public class AbFilePath : AbPath {
         
 public constructor        (aPath: String)                        
 
-                            : super(){
+                            : super()
 
-                    var aPath = aPath
+        Updates for KMP build        
+        {
+var aPath = aPath
 
 
                             //For kotlin this is before the body of the constructor.

@@ -36,9 +36,11 @@ open public class UpgradableWideRTSLayerPaintable : RTSLayerCompositePaintable {
     private var cost: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (upgradableRTSLayerHudPaintable: UpgradableRTSLayerHudPaintable)                        
 
-                            : super(upgradableRTSLayerHudPaintable){
+                            : super(upgradableRTSLayerHudPaintable)
 
-                    var upgradableRTSLayerHudPaintable = upgradableRTSLayerHudPaintable
+        Updates for KMP build        
+        {
+var upgradableRTSLayerHudPaintable = upgradableRTSLayerHudPaintable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,9 +50,11 @@ public constructor        (upgradableRTSLayerHudPaintable: UpgradableRTSLayerHud
 
 open fun update(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rtsLayer = rtsLayer
+
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 super.update(rtsLayer)
 this.setCost(StringMaker().
                             append(this.getUpgradeCost())!!.append(CommonSeps.getInstance()!!.SPACE)!!.append(this.getDownGradeCost())!!.toString())
@@ -59,25 +63,33 @@ this.setCost(StringMaker().
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 graphics.drawString(this.getCost(), this.upgradableRTSLayerHudPaintable!!.textX, this.upgradableRTSLayerHudPaintable!!.costY, 0)
 }
 
 
 open fun setCost(cost: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cost = cost
+
+        Updates for KMP build        
+        {
+var cost = cost
 this.cost= cost
 }
 
 
 open fun getCost()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

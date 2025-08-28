@@ -39,21 +39,23 @@ open public class DemoCanvasProgressUtil
             
 open fun showProgress(demoCanvas: DemoCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var demoCanvas = demoCanvas
+
+        Updates for KMP build        
+        {
+var demoCanvas = demoCanvas
 DemoCanvasProgressUtil.showProgress(demoCanvas, false)
 }
 
 
 open fun showProgress(demoCanvas: DemoCanvas, background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var demoCanvas = demoCanvas
 
 
-                    var background = background
+        Updates for KMP build        
+        {
+var demoCanvas = demoCanvas
+var background = background
 
     var progressCanvas: ProgressCanvas = ProgressCanvasFactory.getInstance()!!
 

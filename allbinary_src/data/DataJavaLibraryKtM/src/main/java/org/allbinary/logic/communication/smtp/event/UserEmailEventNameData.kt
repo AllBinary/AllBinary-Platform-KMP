@@ -92,9 +92,11 @@ open public class UserEmailEventNameData
 
 open fun getInstance(userEmailEventNameString: String)
         //nullable =  from not(true or (false and false)) = 
-: UserEmailEventNameData{
+: UserEmailEventNameData
 
-                    var userEmailEventNameString = userEmailEventNameString
+        Updates for KMP build        
+        {
+var userEmailEventNameString = userEmailEventNameString
 
     var userEmailEventNameData: UserEmailEventNameData = UserEmailEventNameData.userNameEvenNameHashMap!!.get(userEmailEventNameString as Object) as UserEmailEventNameData
 
@@ -131,9 +133,11 @@ open fun getInstance(userEmailEventNameString: String)
     private var eventHandlerName: String
 public constructor        (eventHandlerName: String)
             : super()
-        {
+        
 
-                    var eventHandlerName = eventHandlerName
+        Updates for KMP build        
+        {
+var eventHandlerName = eventHandlerName
 this.eventHandlerName= eventHandlerName
 this.initNextId()
 this.userNameEvenNameHashMap!!.put(this.eventHandlerName, this)
@@ -143,16 +147,22 @@ this.userNameEvenNameHashMap!!.put(this.eventHandlerName, this)
 
 open fun initNextId()
         //nullable = true from not(false or (false and true)) = true
-{this.eventNameId= UserEmailEventNameData.nextId
+
+
+        Updates for KMP build        
+        {
+this.eventNameId= UserEmailEventNameData.nextId
 UserEmailEventNameData.nextId++
 }
 
 
 open fun isEvent(userEmailEventNameString: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var userEmailEventNameString = userEmailEventNameString
+        Updates for KMP build        
+        {
+var userEmailEventNameString = userEmailEventNameString
 
 
 
@@ -162,7 +172,11 @@ open fun isEvent(userEmailEventNameString: String)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

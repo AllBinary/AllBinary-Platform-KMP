@@ -35,7 +35,11 @@ open public class GameFeatureImageCacheFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCache{
+: ImageCache
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -45,13 +49,21 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{ImageCacheFactory.init()
+
+
+        Updates for KMP build        
+        {
+ImageCacheFactory.init()
 }
 
 
 open fun releaseAll()
         //nullable = true from not(false or (false and true)) = true
-{ImageCacheFactory.getInstance()!!.releaseAll()
+
+
+        Updates for KMP build        
+        {
+ImageCacheFactory.getInstance()!!.releaseAll()
 }
 
 

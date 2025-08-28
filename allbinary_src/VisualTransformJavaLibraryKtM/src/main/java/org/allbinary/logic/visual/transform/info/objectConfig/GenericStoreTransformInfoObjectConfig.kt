@@ -51,12 +51,12 @@ open public class GenericStoreTransformInfoObjectConfig : TransformInfoObjectCon
     val abeClientInformation: AbeClientInformationInterface
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,15 +66,13 @@ this.abeClientInformation= abeClientInformation
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, document: Object)                        
 
-                            : super(transformInfoInterface, document){
+                            : super(transformInfoInterface, document)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+    //var document = document
 
 
                             //For kotlin this is before the body of the constructor.
@@ -85,18 +83,14 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (abeClientInformation: Object, transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(transformInfoInterface, name, type){
+                            : super(transformInfoInterface, name, type)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var name = name
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+    //var name = name
+    //var type = type
 
 
                             //For kotlin this is before the body of the constructor.
@@ -110,9 +104,11 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun generate(objectConfigDocument: Document)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var objectConfigDocument = objectConfigDocument
+        Updates for KMP build        
+        {
+    //var objectConfigDocument = objectConfigDocument
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -163,12 +159,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "generate()")
             
 open fun createReplaceHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
-
-
-                    var objectConfigDocumentString = objectConfigDocumentString
+        Updates for KMP build        
+        {
+    //var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
+    //var objectConfigDocumentString = objectConfigDocumentString
 
     var storeName: String = transformInfoHttpStoreInterface!!.getStoreName()!!
 
@@ -195,12 +191,12 @@ hashMap!!.put(transformInfoObjectConfigData!!.VARKEY +TransformInfoData.getInsta
             
 open fun createHashMap(transformInfoHttpStoreInterface: TransformInfoHttp, objectConfigDocumentString: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
-
-
-                    var objectConfigDocumentString = objectConfigDocumentString
+        Updates for KMP build        
+        {
+    //var transformInfoHttpStoreInterface = transformInfoHttpStoreInterface
+    //var objectConfigDocumentString = objectConfigDocumentString
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -259,12 +255,12 @@ hashMap!!.put(templateNameKey, selectedTemplate)
             
 open fun generate(objectConfigDocumentString: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var objectConfigDocumentString = objectConfigDocumentString
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var objectConfigDocumentString = objectConfigDocumentString
+var hashMap = hashMap
 
     var replace: Replace = Replace(hashMap)
 

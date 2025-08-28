@@ -41,15 +41,13 @@ open public class XYOscillateVelocityMovement : BasicConstantVelocityMovement {
     private var oscillatePositive: Boolean= false
 public constructor        (speedBasicDecimal: BasicDecimal, oscillateMin: Int, oscillateMax: Int)                        
 
-                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt())){
+                            : super(speedBasicDecimal, VelocityProperties(speedBasicDecimal!!.getUnscaled().toInt(), speedBasicDecimal!!.getUnscaled().toInt()))
 
-                    var speedBasicDecimal = speedBasicDecimal
-
-
-                    var oscillateMin = oscillateMin
-
-
-                    var oscillateMax = oscillateMax
+        Updates for KMP build        
+        {
+var speedBasicDecimal = speedBasicDecimal
+var oscillateMin = oscillateMin
+var oscillateMax = oscillateMax
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,9 +60,11 @@ this.oscillateMax= oscillateMax
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layer = layer
+
+        Updates for KMP build        
+        {
+var layer = layer
 super.process(layer)
 
     

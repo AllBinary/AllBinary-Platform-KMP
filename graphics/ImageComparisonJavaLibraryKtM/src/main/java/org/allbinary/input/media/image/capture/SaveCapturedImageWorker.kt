@@ -45,13 +45,21 @@ open public class SaveCapturedImageWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var capturedImageWorkerResultsEventVector: Vector = Vector()
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,18 +70,22 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 this.running= running
 }
 
 
 open fun onCaptureEvent(capturedImageEvent: CapturedImageWorkerResultsEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var capturedImageEvent = capturedImageEvent
+
+        Updates for KMP build        
+        {
+var capturedImageEvent = capturedImageEvent
 capturedImageWorkerResultsEventVector!!.add(capturedImageEvent)
 run()
 }
@@ -81,16 +93,22 @@ run()
 
 open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryEventObject = allBinaryEventObject
+
+        Updates for KMP build        
+        {
+var allBinaryEventObject = allBinaryEventObject
 onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 }
 
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 setRunning(true)
@@ -111,7 +129,11 @@ logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed(), t
 setRunning(false)
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

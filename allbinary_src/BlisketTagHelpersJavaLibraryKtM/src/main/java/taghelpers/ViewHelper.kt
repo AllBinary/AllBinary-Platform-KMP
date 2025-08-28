@@ -52,12 +52,12 @@ open public class ViewHelper
     private var componentInterface: TransformInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+var hashMap = hashMap
+var pageContext = pageContext
 this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeClientInformation, hashMap, pageContext)
 }
 
@@ -66,7 +66,11 @@ this.componentInterface= TransformFactory.getInstance()!!.getInstance(this.abeCl
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,7 +82,11 @@ open fun getTypeId()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -86,7 +94,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return componentInterface!!.view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to View: "
 
 
@@ -121,14 +133,22 @@ open fun view()
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
         try {
             
 
 
                             throw Exception("Hmm: " +componentInterface!!.getTransformDocumentInterface()!!.getDoc())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to View: "
 
 
@@ -161,7 +181,11 @@ open fun toXmlDoc()
 
 open fun getViewObject()
         //nullable = true from not(false or (false and true)) = true
-: TransformInterface{
+: TransformInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,7 +197,11 @@ open fun getViewObject()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -183,7 +211,11 @@ open fun getTransformInfoInterface()
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -193,9 +225,11 @@ open fun getTransformDocumentInterface()
 
 open fun setTransformDocumentInterface(viewDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var viewDocumentInterface = viewDocumentInterface
+
+        Updates for KMP build        
+        {
+var viewDocumentInterface = viewDocumentInterface
 
 
 

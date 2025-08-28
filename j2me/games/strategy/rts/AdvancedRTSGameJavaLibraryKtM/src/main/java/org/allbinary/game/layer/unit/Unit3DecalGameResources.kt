@@ -39,7 +39,11 @@ open public class Unit3DecalGameResources : BasicGameResources {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGameResources{
+: BasicGameResources
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
 
 
         }
-            private constructor        (){
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+
     var ROOT: String = "/unit_decal"
 
 
@@ -77,12 +85,12 @@ super.init(ROOT, SIZE)
             
 open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var ROOT = ROOT
 
 
-                    var sizeString = sizeString
+        Updates for KMP build        
+        {
+var ROOT = ROOT
+var sizeString = sizeString
 super.init(ROOT, sizeString)
 }
 
@@ -91,7 +99,11 @@ super.init(ROOT, sizeString)
             
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     
                         if(AndroidUtil.isAndroid())
                         

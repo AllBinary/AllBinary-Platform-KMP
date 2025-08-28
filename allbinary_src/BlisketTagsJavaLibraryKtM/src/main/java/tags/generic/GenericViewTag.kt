@@ -37,7 +37,11 @@ open public class GenericViewTag : TransformTag {
     private var output: String
 
     private var file: String
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
@@ -51,9 +55,11 @@ public constructor        (){
 
 open fun setOutput(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.output= value
 this.getPropertiesHashMap()!!.put(InputOutputTypeData.getInstance()!!.NAME, this.output)
 }
@@ -61,9 +67,11 @@ this.getPropertiesHashMap()!!.put(InputOutputTypeData.getInstance()!!.NAME, this
 
 open fun setFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.file= value
 this.getPropertiesHashMap()!!.put(InputOutputTypeData.getInstance()!!.FILE, this.file)
 }

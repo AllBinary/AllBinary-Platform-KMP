@@ -30,9 +30,11 @@ open public class CachingGeographicMapCellPositionFactory : BasicGeographicMapCe
         
 protected constructor        (geographicMapInterface: BasicGeographicMap)                        
 
-                            : super(geographicMapInterface){
+                            : super(geographicMapInterface)
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+var geographicMapInterface = geographicMapInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,18 +46,14 @@ protected constructor        (geographicMapInterface: BasicGeographicMap)
             
 open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var i_column = i_column
-
-
-                    var i_row = i_row
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var i_column = i_column
+var i_row = i_row
+var width = width
+var height = height
 
     var cellPositionKey: String = GeographicMapCellPosition.toString(i_column, i_row)!!
 

@@ -46,7 +46,11 @@ open public class RaceTrackRandomDropCellPositionGenerator : RaceTrackDropCellPo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RaceTrackRandomDropCellPositionGenerator{
+: RaceTrackRandomDropCellPositionGenerator
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,19 +73,23 @@ open fun getInstance()
     private var cellWidth: Int= 0
 
     private var cellHeight: Int= 0
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun update(allBinaryGameLayerManager: AllBinaryGameLayerManager, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
 
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+var allBinaryGameLayerManager = allBinaryGameLayerManager
+var geographicMapInterface = geographicMapInterface
 super.update(allBinaryGameLayerManager, geographicMapInterface)
 
     var tiledLayer: AllBinaryTiledLayer = geographicMapInterface!!.getAllBinaryTiledLayer()!!
@@ -95,12 +103,12 @@ this.cellHeight= tiledLayer!!.getCellHeight() /this.cellsPerRowOrColumn
             
 open fun drop(allBinaryLayerManager: AllBinaryLayerManager, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryLayerManager = allBinaryLayerManager
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
+var index = index
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.list.get(index) as GeographicMapCellPosition
 

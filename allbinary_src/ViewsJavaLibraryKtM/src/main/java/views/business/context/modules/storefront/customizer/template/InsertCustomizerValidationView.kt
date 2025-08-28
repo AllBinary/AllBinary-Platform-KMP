@@ -56,9 +56,11 @@ open public class InsertCustomizerValidationView : HttpStoreComponentView
     private var viewName: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,7 +84,11 @@ this.viewName= requestHashMap!!.get(TransformInfoData.getInstance()!!.NAME) as S
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -136,7 +142,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var transformInfo: TransformInfo = componentVector!!.get(index) as TransformInfo
 
 
@@ -263,7 +273,11 @@ TransformInfoEntityBuilder.getInstance()!!.update(updatedTransformInfoHashMap)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -284,7 +298,11 @@ TransformInfoEntityBuilder.getInstance()!!.update(updatedTransformInfoHashMap)
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -296,7 +314,11 @@ stringBuffer!!.append("Error: Template Name Is Empty.")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -317,7 +339,11 @@ stringBuffer!!.append("Error: Template Name Is Empty.")
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -327,9 +353,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -342,7 +370,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

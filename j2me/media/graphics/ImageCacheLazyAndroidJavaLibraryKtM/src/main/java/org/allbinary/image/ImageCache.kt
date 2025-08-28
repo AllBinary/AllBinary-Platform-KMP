@@ -52,22 +52,24 @@ open public class ImageCache : ImageCacheBase {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var caller = caller
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var caller = caller
+    //var width = width
+    //var height = height
 
     var foundIndex: Int = this.getIndex(width, height)!!
 
@@ -119,9 +121,11 @@ listOfList[foundIndex]!!.add(image)
             
 open fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var key = key
+        Updates for KMP build        
+        {
+    //var key = key
 
     var resourceUtil: ResourceUtil = ResourceUtil.getInstance()!!
 
@@ -146,7 +150,11 @@ open fun get(key: Any)
             logUtil!!.put(Memory.getInfo(), this, commonStrings!!.GET)
 image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            {logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
                             append("InputStream: ")!!.append(inputStream!!.toString())!!.toString(), this, commonStrings!!.GET)
 System.gc()
@@ -172,12 +180,12 @@ this.hashtable.put(resourceId, image)
             
 open fun createImage(key: Any, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var key = key
-
-
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+    //var key = key
+    //var inputStream = inputStream
 
 
 
@@ -188,7 +196,11 @@ open fun createImage(key: Any, inputStream: InputStream)
 
 open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

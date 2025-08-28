@@ -43,7 +43,11 @@ open public class DecalAnimationInterfaceFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DecalAnimationInterfaceFactory{
+: DecalAnimationInterfaceFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,12 +66,12 @@ open fun getInstance()
             
 open fun getInstance(basicGameResources: BasicGameResources, basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: AnimationInterfaceFactoryInterface{
+: AnimationInterfaceFactoryInterface
 
-                    var basicGameResources = basicGameResources
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var basicGameResources = basicGameResources
+var basicColor = basicColor
 
     var animationInterfaceFactoryInterface: AnimationInterfaceFactoryInterface
 

@@ -48,12 +48,12 @@ open public class TouchButtonInput : Input
     private var gameKeyEvent: GameKeyEvent = GameKeyEvent.NONE
 public constructor        (id: Int, name: String)                        
 
-                            : super(id, name){
+                            : super(id, name)
 
-                    var id = id
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+var id = id
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,9 +67,11 @@ inputFactory!!.add(this.getId(), this)
 
 open fun update(inputToGameKeyMapping: InputToGameKeyMapping)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputToGameKeyMapping = inputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+var inputToGameKeyMapping = inputToGameKeyMapping
 
         try {
             
@@ -77,7 +79,11 @@ open fun update(inputToGameKeyMapping: InputToGameKeyMapping)
 
 this.gameKeyEvent= this.gameKeyEventFactory!!.getInstance(this, gameKey)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
@@ -87,7 +93,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.UPDATE, e)
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,7 +107,11 @@ override fun getSourceId()
 
 open fun getGameKeyEvent()
         //nullable = true from not(false or (false and true)) = true
-: GameKeyEvent{
+: GameKeyEvent
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -53,22 +53,24 @@ open public class CryptService
     private val abCryptUtil: AbCryptUtil = AbCryptUtil.getInstance()!!
 public constructor        ()
             : super()
-        {Globals.getInstance()!!.init(this::class.java.classLoader, "./")
+        
+
+        Updates for KMP build        
+        {
+Globals.getInstance()!!.init(this::class.java.classLoader, "./")
 logUtil!!.put("Set Globals: " +URLGLOBALS.getWebappPath(), this, this.commonStrings!!.CONSTRUCTOR)
 }
 
 
 open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInterface, name: String, inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var name = name
-
-
-                    var inputStream = inputStream
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var name = name
+    //var inputStream = inputStream
 
         try {
             
@@ -83,10 +85,18 @@ open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInter
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return ByteArrayInputStream(decrypted)
 } catch(e: LicensingException)
-            {this.showLicenseDialog(abeClientInformation, e)
+            
+
+        Updates for KMP build        
+        {
+this.showLicenseDialog(abeClientInformation, e)
 }
  catch(e: Exception)
-            {this.showLicenseDialog(abeClientInformation, e)
+            
+
+        Updates for KMP build        
+        {
+this.showLicenseDialog(abeClientInformation, e)
 }
 
 
@@ -99,12 +109,12 @@ open fun getDecryptedInputStream(abeClientInformation: AbeClientInformationInter
 
 open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, e: Exception)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var e = e
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var e = e
 
         try {
             logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e)
@@ -134,13 +144,21 @@ open fun showLicenseDialog(abeClientInformation: AbeClientInformationInterface, 
                                     }
                                 
 } catch(e2: LicensingException)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e2)
 }
 
 basicTextJDialog!!.addCloseListener(ExitCloseListener())
 basicTextJDialog!!.setVisible(true)
 } catch(e3: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.INIT, e3)
 }
 
 }

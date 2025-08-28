@@ -39,7 +39,11 @@ open public class TimeStampUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TimeStampUtil{
+: TimeStampUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,12 +54,20 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getAsString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var calendar: Calendar = Calendar.getInstance()!!
 
 

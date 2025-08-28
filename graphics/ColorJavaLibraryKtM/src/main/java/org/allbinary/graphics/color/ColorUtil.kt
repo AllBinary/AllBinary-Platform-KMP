@@ -40,7 +40,11 @@ open public class ColorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ColorUtil{
+: ColorUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,9 +61,11 @@ open fun getInstance()
         
 open fun isGreyishOrWhiteLike(color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var color = color
+        Updates for KMP build        
+        {
+    //var color = color
 
     
                         if(Math.abs(color.getRed() -color.getGreen()) > 20 || Math.abs(color.getRed() -color.getBlue()) > 20 || Math.abs(color.getGreen() -color.getBlue()) > 20)
@@ -83,9 +89,11 @@ open fun isGreyishOrWhiteLike(color: Color)
 
 open fun isDark(color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var color = color
+        Updates for KMP build        
+        {
+    //var color = color
 
     
                         if(color.getRed() < 0x77 && color.getRed() < 0x77 && color.getRed() < 0x77)

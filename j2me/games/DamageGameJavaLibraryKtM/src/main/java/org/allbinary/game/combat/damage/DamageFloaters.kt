@@ -36,7 +36,11 @@ open public class DamageFloaters : Paintable {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DamageFloaters{
+: DamageFloaters
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +57,11 @@ open fun getInstance()
         
 open fun add(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var damage = damage
+
+        Updates for KMP build        
+        {
+var damage = damage
 }
 
 

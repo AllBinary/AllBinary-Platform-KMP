@@ -46,21 +46,31 @@ open public class UserEmailEventsConfiguration
     private var emailEventHashMap: HashMap<Any, Any>
 public constructor        ()
             : super()
-        {this.init()
+        
+
+        Updates for KMP build        
+        {
+this.init()
 }
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.init()
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.emailEventHashMap= HashMap<Any, Any>()
+
+
+        Updates for KMP build        
+        {
+this.emailEventHashMap= HashMap<Any, Any>()
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -75,7 +85,11 @@ open fun init()
 
 open fun getEventConfigurationHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -85,9 +99,11 @@ open fun getEventConfigurationHashMap()
 
 open fun addUserEmailEventConfiguration(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
+
+        Updates for KMP build        
+        {
+var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -105,15 +121,13 @@ this.emailEventHashMap!!.put(userEmailEventConfigurationInterface!!.getName(), u
             
 open fun getEventListener(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
-: UserEmailEventListenerInterface{
+: UserEmailEventListenerInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var userEmailEventNameData = userEmailEventNameData
-
-
-                    var userInterface = userInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var userEmailEventNameData = userEmailEventNameData
+    //var userInterface = userInterface
 
     var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface = this.emailEventHashMap!!.get(userEmailEventNameData!!.toString()) as UserEmailEventConfigurationInterface
 

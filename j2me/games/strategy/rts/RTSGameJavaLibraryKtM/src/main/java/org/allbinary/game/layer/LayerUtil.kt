@@ -42,18 +42,14 @@ open public class LayerUtil
 
 open fun toString(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var hashtable = hashtable
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var x = x
+var y = y
+var z = z
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 

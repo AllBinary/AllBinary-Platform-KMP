@@ -37,17 +37,29 @@ open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
 : Long
 
+        Updates for KMP build        
+        
+
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

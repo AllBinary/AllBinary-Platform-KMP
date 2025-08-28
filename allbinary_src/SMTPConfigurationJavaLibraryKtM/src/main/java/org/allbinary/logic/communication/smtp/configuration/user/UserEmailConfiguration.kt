@@ -44,7 +44,11 @@ open public class UserEmailConfiguration
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         
@@ -58,9 +62,11 @@ this.setUserEmailEventsConfigurationInterface(UserEmailEventsConfiguration())
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -76,7 +82,11 @@ this.setUserEmailEventsConfigurationInterface(UserEmailEventsConfiguration(hashM
 
 open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailEventsConfigurationInterface{
+: UserEmailEventsConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,9 +96,11 @@ open fun getUserEmailEventsConfigurationInterface()
 
 open fun setUserEmailEventsConfigurationInterface(userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
+
+        Updates for KMP build        
+        {
+var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
 this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterface
 }
 

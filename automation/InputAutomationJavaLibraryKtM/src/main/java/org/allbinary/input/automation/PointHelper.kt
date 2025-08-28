@@ -38,9 +38,11 @@ open public class PointHelper
 
 open fun getCenterPoint(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Point{
+: Point
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
     var x: Double = rectangle.getX() +rectangle.getWidth() /two
 
@@ -58,7 +60,11 @@ open fun getCenterPoint(rectangle: Rectangle)
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

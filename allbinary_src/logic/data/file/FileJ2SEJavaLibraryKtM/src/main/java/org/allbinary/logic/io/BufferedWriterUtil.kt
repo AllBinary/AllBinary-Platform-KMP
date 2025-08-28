@@ -41,7 +41,11 @@ open public class BufferedWriterUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BufferedWriterUtil{
+: BufferedWriterUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,12 +64,12 @@ open fun getInstance()
             
 open fun overwrite(path: String, data: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var path = path
 
 
-                    var data = data
+        Updates for KMP build        
+        {
+    //var path = path
+    //var data = data
 
     var abFile: AbFile = AbFile(path)
 
@@ -86,12 +90,12 @@ this.write(abFile, data)
             
 open fun overwrite(abFile: AbFile, data: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abFile = abFile
 
 
-                    var data = data
+        Updates for KMP build        
+        {
+    //var abFile = abFile
+    //var data = data
 
     
                         if(abFile!!.exists())
@@ -109,12 +113,12 @@ this.write(abFile, data)
             
 open fun write(abFile: AbFile, data: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abFile = abFile
 
 
-                    var data = data
+        Updates for KMP build        
+        {
+    //var abFile = abFile
+    //var data = data
 
     var fileOut: BufferedWriter = BufferedWriter(FileWriter(AbFileNativeUtil.get(abFile)))
 

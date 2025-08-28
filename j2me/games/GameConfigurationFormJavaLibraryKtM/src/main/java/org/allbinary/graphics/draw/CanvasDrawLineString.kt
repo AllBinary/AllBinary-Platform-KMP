@@ -38,12 +38,12 @@ open public class CanvasDrawLineString
     private var y: Int
 public constructor        (x: Int, y: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var x = x
-
-
-                    var y = y
+var x = x
+var y = y
 this.x= x
 this.y= y
 }
@@ -53,15 +53,13 @@ this.y= y
 
 open fun paint(graphics: Graphics, string: String, line: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var string = string
-
-
-                    var line = line
+        Updates for KMP build        
+        {
+var graphics = graphics
+var string = string
+var line = line
 
     var myFont: MyFont = MyFont.getInstance()!!
 

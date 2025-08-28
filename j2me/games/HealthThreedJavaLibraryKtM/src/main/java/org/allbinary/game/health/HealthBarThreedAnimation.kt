@@ -46,12 +46,12 @@ open public class HealthBarThreedAnimation : HealthBarAnimation {
     private val basicColorFactory: BasicColorFactory = BasicColorFactory.getInstance()!!
 public constructor        (layerInterface: AllBinaryLayer, location: Int)                        
 
-                            : super(layerInterface, location){
+                            : super(layerInterface, location)
 
-                    var layerInterface = layerInterface
-
-
-                    var location = location
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
+var location = location
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,7 +67,11 @@ rectangle.setTexturesEnabled(false)
 
 open fun updateColor()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var colorBufferList: ColorBufferList = rectangle.getVertices()!!.getColor4BufferList()!!
 
 
@@ -79,7 +83,11 @@ open fun updateColor()
 
                         for (index in size  - 1  downTo 0)
 
-        {colorBufferList!!.set(index, this.basicColor)
+        
+
+        Updates for KMP build        
+        {
+colorBufferList!!.set(index, this.basicColor)
 }
 
 }
@@ -87,7 +95,11 @@ open fun updateColor()
 
 open fun updateSize()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var number3dBufferList: Number3dBufferList = rectangle.getVertices()!!.getPointsOnFacesNumber3dBufferList()!!
 
 
@@ -129,13 +141,21 @@ open fun updateSize()
 
                         for (row in 0 until segsH)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (col in 0 until segsW)
 
-        {number3dBufferList!!.set(index++, col.toFloat() *w -width5, row.toFloat() *h -height5, 0f)
+        
+
+        Updates for KMP build        
+        {
+number3dBufferList!!.set(index++, col.toFloat() *w -width5, row.toFloat() *h -height5, 0f)
 }
 
 }
@@ -145,9 +165,11 @@ open fun updateSize()
 
 open fun onHealthChange(newX2: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newX2 = newX2
+
+        Updates for KMP build        
+        {
+    //var newX2 = newX2
 super.onHealthChange(newX2)
 this.updateColor()
 this.updateSize()
@@ -158,18 +180,14 @@ this.updateSize()
 
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
     var openGLESGraphics: OpenGLESGraphics = graphics as OpenGLESGraphics
 

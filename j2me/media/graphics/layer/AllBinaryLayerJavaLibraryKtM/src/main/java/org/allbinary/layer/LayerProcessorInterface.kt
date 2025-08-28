@@ -32,17 +32,26 @@ open fun getLayerManager()
         //nullable = true from not(false or (false and true)) = true
 : LayerManager
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

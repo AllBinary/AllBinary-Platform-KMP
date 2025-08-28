@@ -60,16 +60,22 @@ open public class AbPath
     private val abPathUtil: PathUtil = PathUtil.getInstance()!!
 public constructor        ()
             : super()
-        {init()
+        
+
+        Updates for KMP build        
+        {
+init()
 }
 
 
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (aPath: String)
             : super()
-        {
+        
 
-                    var aPath = aPath
+        Updates for KMP build        
+        {
+var aPath = aPath
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -93,12 +99,12 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
 
 public constructor        (aPath: String, name: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var aPath = aPath
-
-
-                    var name = name
+var aPath = aPath
+var name = name
 
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
@@ -132,7 +138,11 @@ this.path= abPathUtil!!.adjustEnd(abPathUtil!!.adjust(this.getPath(aPath)))
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.schema= EMPTY_STRING
+
+
+        Updates for KMP build        
+        {
+this.schema= EMPTY_STRING
 this.setPath(abPathData!!.SEPARATOR)
 this.nameP= EMPTY_STRING
 }
@@ -140,9 +150,11 @@ this.nameP= EMPTY_STRING
 
 open fun getSchema(aPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var aPath = aPath
+        Updates for KMP build        
+        {
+var aPath = aPath
 
     var beginIndex: Int = aPath!!.indexOf(commonSeps!!.COLON)!!
 
@@ -171,7 +183,11 @@ this.hasSchema= false
 
 open fun hasSchema()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -183,9 +199,11 @@ open fun hasSchema()
             
 open fun getPath(aPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var aPath = aPath
+        Updates for KMP build        
+        {
+var aPath = aPath
 
     var filePathData: FilePathData = FilePathData.getInstance()!!
 
@@ -213,7 +231,11 @@ open fun getPath(aPath: String)
                                     beginIndex++
 
         while(tempPath[beginIndex] == abPathData!!.SEPARATORCHAR || tempPath[beginIndex] == filePathData!!.SEPARATORCHAR)
-        {beginIndex++
+        
+
+        Updates for KMP build        
+        {
+beginIndex++
 numberOfSeps++
 
     
@@ -246,16 +268,22 @@ tempPath= tempPath!!.substring(beginIndex, tempPath!!.length)
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+    //var name = name
 this.nameP= name
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -264,7 +292,11 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -289,7 +321,11 @@ stringBuffer!!.append(this.nameP)
 
 open fun toFileSystemString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     
                         if(this.hasSchema())
                         
@@ -327,7 +363,11 @@ stringBuffer!!.append(this.nameP)
 
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -337,9 +377,11 @@ open fun getPath()
 
 open fun setPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var path = path
+
+        Updates for KMP build        
+        {
+var path = path
 this.path= path
 }
 

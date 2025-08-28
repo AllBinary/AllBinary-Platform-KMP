@@ -23,7 +23,11 @@ open public class BasicGameInfoFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicGameInfoFactory{
+: BasicGameInfoFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,14 +44,20 @@ open fun getInstance()
     var total: Int= 0
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun init(total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var total = total
+
+        Updates for KMP build        
+        {
+var total = total
 currentReleaseIndex= 0
 currentDestroyIndex= 0
 this.total= total
@@ -56,7 +66,11 @@ this.total= total
 
 open fun isPeaked()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.currentDestroyIndex >= this.total)
                         
@@ -83,7 +97,11 @@ open fun isPeaked()
 
 open fun howManyLeft()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

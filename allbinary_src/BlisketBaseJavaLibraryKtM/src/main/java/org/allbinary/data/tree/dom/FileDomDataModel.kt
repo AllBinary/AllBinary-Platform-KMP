@@ -40,9 +40,11 @@ open public class FileDomDataModel
     private var file: AbFile
 public constructor        (file: AbFile)
             : super()
-        {
+        
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 this.file= file
 }
 
@@ -51,9 +53,11 @@ this.file= file
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var tableMappingInterface: TableMappingInterface = FileTableMapping(this.file) as TableMappingInterface
 

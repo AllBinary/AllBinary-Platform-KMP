@@ -33,7 +33,11 @@ open public class OrderIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "orderId"
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())

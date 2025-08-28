@@ -45,9 +45,11 @@ open public class KeyValuePersistance : BasicPersitance {
         
 protected constructor        (recordId: String)                        
 
-                            : super(recordId){
+                            : super(recordId)
 
-                    var recordId = recordId
+        Updates for KMP build        
+        {
+    //var recordId = recordId
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,9 +61,11 @@ protected constructor        (recordId: String)
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 this.loadAll(abeClientInformation, 1)
 }
 
@@ -70,12 +74,12 @@ this.loadAll(abeClientInformation, 1)
             
 open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var size = size
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var size = size
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
@@ -111,7 +115,11 @@ open fun loadAll(abeClientInformation: AbeClientInformationInterface, size: Int)
 
 
         while(recordEnum!!.hasNextElement())
+        
+
+        Updates for KMP build        
         {
+
     var id: Int = recordEnum!!.nextRecordId()!!
 
 stringBuffer!!.delete(0, stringBuffer!!.length())
@@ -133,7 +141,11 @@ hashtable= Hashtable<String, String>()
 
                         for (index in 0 until size)
 
-        {name= inputStream!!.readUTF()
+        
+
+        Updates for KMP build        
+        {
+name= inputStream!!.readUTF()
 inputStream!!.readUTF()
 value= inputStream!!.readUTF()
 hashtable.put(name, value)
@@ -147,7 +159,11 @@ this.idList!!.add(smallIntegerSingletonFactory!!.getInstance(id))
 }
 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -176,12 +192,12 @@ recordStore!!.closeRecordStore()
             
 open fun save(abeClientInformation: AbeClientInformationInterface, hashtable: Hashtable<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var hashtable = hashtable
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var hashtable = hashtable
 
     var recordStore: RecordStore = NullRecordStore.NULL_RECORD_STORE
 
@@ -218,7 +234,11 @@ recordStore= RecordStore.openRecordStore(this.getRecordId(abeClientInformation),
 
                         for (index in 0 until size)
 
-        {outputStream!!.writeUTF(objectArray[index]!! as String)
+        
+
+        Updates for KMP build        
+        {
+outputStream!!.writeUTF(objectArray[index]!! as String)
 outputStream!!.writeUTF(commonSeps!!.EQUALS)
 anyType= objectArray[index]!! as Object
 value= hashtable.get(anyType as Object) as String
@@ -230,7 +250,11 @@ outputStream!!.writeUTF(value)
 
 recordStore!!.addRecord(savedGameBytes, 0, savedGameBytes!!.size)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -257,9 +281,11 @@ recordStore!!.closeRecordStore()
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     var hashtable: Hashtable<Any, Any> = this.valueList!!.objectArray[index]!! as Hashtable<Any, Any>
 

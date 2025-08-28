@@ -40,9 +40,11 @@ open public class AdConfiguration
     val ADMOB: String
 public constructor        (advertIdArray: Array<Any?>)
             : super()
-        {
+        
 
-                    var advertIdArray = advertIdArray
+        Updates for KMP build        
+        {
+var advertIdArray = advertIdArray
 this.INNERACTIVE= advertIdArray[0]!! as String
 this.ADMOB= advertIdArray[1]!! as String
 this.LEADBOLT= advertIdArray[2]!! as String
@@ -51,7 +53,11 @@ this.LEADBOLT= advertIdArray[2]!! as String
 
 open fun getValidAdSpots()
         //nullable = true from not(false or (false and true)) = true
-: Array<Direction?>{
+: Array<Direction?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,36 +67,50 @@ open fun getValidAdSpots()
 
 open fun process(gameState: GameState)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameState = gameState
+
+        Updates for KMP build        
+        {
+var gameState = gameState
 }
 
 
 open fun process(state: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var state = state
+
+        Updates for KMP build        
+        {
+var state = state
 }
 
 
 open fun setShowAds()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setShowAds(showAds: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var showAds = showAds
+
+        Updates for KMP build        
+        {
+var showAds = showAds
 }
 
 
 open fun isShowAds()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

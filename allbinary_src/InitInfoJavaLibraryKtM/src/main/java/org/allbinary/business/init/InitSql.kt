@@ -97,36 +97,44 @@ open public class InitSql
     private val INSERT_END: String = "')"
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
             : super()
-        {
+        
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 this.setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface)
 }
 
 
 open fun setTable(tableName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var tableName = tableName
+
+        Updates for KMP build        
+        {
+var tableName = tableName
 this.tableName= tableName
 }
 
 
 open fun setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface: DbConnectionInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+
+        Updates for KMP build        
+        {
+var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 this.databaseConnectionInfoInterface= databaseConnectionInfoInterface
 }
 
 
 open fun createTable(tableData: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var tableData = tableData
+        Updates for KMP build        
+        {
+var tableData = tableData
 
         try {
             
@@ -142,7 +150,11 @@ this.executeSQLStatement(tableData)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -163,7 +175,11 @@ this.executeSQLStatement(tableData)
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var sqlStatement: String = sqlStrings!!.DROP_TABLE +tableName
 
 
@@ -175,7 +191,11 @@ open fun dropTable()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -196,9 +216,11 @@ open fun dropTable()
 
 open fun getRow(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var keysAndValues = keysAndValues
+        Updates for KMP build        
+        {
+var keysAndValues = keysAndValues
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -228,7 +250,11 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyArray[i]!! as String
 
 
@@ -269,7 +295,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        {result= HashMap<Any, Any>()
+        
+
+        Updates for KMP build        
+        {
+result= HashMap<Any, Any>()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
 
@@ -279,7 +309,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
                         for (index in 1 until columnCount)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
 
 
@@ -319,7 +353,11 @@ result.put(columnName, field)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -341,15 +379,13 @@ result.put(columnName, field)
 
 open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var key = key
 
 
-                    var value = value
-
-
-                    var updatedKeyValuePairs = updatedKeyValuePairs
+        Updates for KMP build        
+        {
+var key = key
+var value = value
+var updatedKeyValuePairs = updatedKeyValuePairs
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -371,7 +407,11 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = columnArray[i]!!.toString()!!
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
@@ -427,7 +467,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -443,9 +487,11 @@ this.executeSQLStatement(sqlStatement)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -463,7 +509,11 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
                         for (i in 0 until size -1)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: String = this.getValue(values.get(i) as String)!!
 
 stringBuffer!!.append(value)
@@ -489,7 +539,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -506,9 +560,11 @@ this.executeSQLStatement(sqlStatement)
 
 open fun getValue(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(value))
@@ -538,9 +594,11 @@ open fun getValue(value: String)
             
 open fun executeSQLStatement(statement: String)
         //nullable = true from not(false or (false and false)) = true
-: ResultSet{
+: ResultSet
 
-                    var statement = statement
+        Updates for KMP build        
+        {
+var statement = statement
 
         try {
             
@@ -568,7 +626,11 @@ stmt.close()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rset
 } catch(e: SQLException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -583,7 +645,11 @@ stmt.close()
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -605,7 +671,11 @@ stmt.close()
             
 open fun createConnection()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -622,7 +692,11 @@ open fun createConnection()
                         }
                             
 } catch(se: SQLException)
-            {PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", se)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(this.commonStrings!!.EXCEPTION, INIT_SQL, "createConnection()", se)
 
 
 
@@ -636,7 +710,11 @@ open fun createConnection()
             
 open fun initialize()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
         try {
@@ -647,7 +725,11 @@ PreLogUtil.put(StringBuilder().
                             append("Loading DbConnnectionInfo: ")!!.append(this.databaseConnectionInfoInterface!!.::class.toString()!!)!!.append(" Driver: ")!!.append(jdbcDriver)!!.toString(), INIT_SQL, "initialize()")
 Class.forName(jdbcDriver)!!.newInstance()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -677,7 +759,11 @@ Class.forName(jdbcDriver)!!.newInstance()
                                 
 this.createConnection()
 } catch(se: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -697,7 +783,11 @@ this.createConnection()
 
 open fun getDatabaseConnectionInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: DatabaseConnectionInfoInterface{
+: DatabaseConnectionInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

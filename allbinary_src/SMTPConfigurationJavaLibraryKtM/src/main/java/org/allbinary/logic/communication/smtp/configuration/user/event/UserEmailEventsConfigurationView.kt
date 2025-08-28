@@ -49,9 +49,11 @@ open public class UserEmailEventsConfigurationView
     private var userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as UserEmailEventsConfigurationInterface
 
     var childNodeList: NodeList = node.getChildNodes()!!
@@ -68,7 +70,11 @@ this.userEmailEventsConfigurationInterface= UserEmailEventsConfiguration() as Us
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userEmailConfigurationNode: Node = emailEventConfigurationNodeVector!!.get(index) as Node
 
 
@@ -81,16 +87,22 @@ this.userEmailEventsConfigurationInterface!!.addUserEmailEventConfiguration(user
 
 public constructor        (userEmailEventsConfigurationInterface: UserEmailEventsConfigurationInterface)
             : super()
-        {
+        
 
-                    var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
+        Updates for KMP build        
+        {
+var userEmailEventsConfigurationInterface = userEmailEventsConfigurationInterface
 this.userEmailEventsConfigurationInterface= userEmailEventsConfigurationInterface
 }
 
 
 open fun getUserEmailEventsConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailEventsConfigurationInterface{
+: UserEmailEventsConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,9 +114,11 @@ open fun getUserEmailEventsConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var userEmailConfigurationMapping: UserEmailEventsConfigurationMapping = UserEmailEventsConfigurationMapping(this.userEmailEventsConfigurationInterface)
 
@@ -139,7 +153,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var eventName: String = eventNameArray[index]!! as String
 
 

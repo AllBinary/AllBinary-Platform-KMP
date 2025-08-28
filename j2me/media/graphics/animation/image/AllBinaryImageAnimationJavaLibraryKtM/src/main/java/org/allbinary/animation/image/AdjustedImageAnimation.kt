@@ -37,18 +37,14 @@ open public class AdjustedImageAnimation : ImageAnimation {
     private var dy: Int= 0
 public constructor        (image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, animationBehavior){
+                            : super(image, animationBehavior)
 
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,41 +57,45 @@ this.init(dx, dy)
             
 open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 this.setDx(dx)
 this.setDy(dy)
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 super.paint(graphics, x +this.dx, y +this.dy)
 }
 
 override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dx = dx
+
+        Updates for KMP build        
+        {
+var dx = dx
 this.dx= dx
 }
 
 override fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,15 +104,21 @@ override fun getDx()
 
 override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dy = dy
+
+        Updates for KMP build        
+        {
+var dy = dy
 this.dy= dy
 }
 
 override fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

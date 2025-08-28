@@ -42,7 +42,11 @@ open public class WebAppUrlGlobals : UrlGlobalsInterface {
 
 open fun isTestingMode()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,7 +56,11 @@ open fun isTestingMode()
 
 open fun getWebappPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,9 +71,11 @@ open fun getWebappPath()
 
 open fun setWebappPath(path: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var path = path
+
+        Updates for KMP build        
+        {
+var path = path
 path= path
 isWebappPathSet= true
 }
@@ -73,7 +83,11 @@ isWebappPathSet= true
 
 open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -85,7 +99,11 @@ open fun getTestHtmlPath()
             
 open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var mainPath: String = InitInfo.getInstance()!!.getMainPath()!!
 
 

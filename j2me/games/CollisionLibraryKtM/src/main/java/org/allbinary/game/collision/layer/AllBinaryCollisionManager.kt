@@ -40,7 +40,11 @@ open public class AllBinaryCollisionManager
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryCollisionManager{
+: AllBinaryCollisionManager
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,22 +55,24 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, startIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-
-
-                    var startIndex = startIndex
+        Updates for KMP build        
+        {
+var layerManager = layerManager
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+var startIndex = startIndex
 
     var size: Int = layerManager!!.getSize()!!
 
@@ -76,7 +82,11 @@ open fun process(layerManager: LayerManager, collidableInterfaceCompositeInterfa
 
                         for (index in startIndex +1 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface = layerManager!!.getLayerAt(index) as CollidableInterfaceCompositeInterface
 
 this.collide(layerManager, collidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2)
@@ -89,15 +99,13 @@ this.collide(layerManager, collidableInterfaceCompositeInterface, collidableInte
             
 open fun collide(layerManager: LayerManager, collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface, collidableInterfaceCompositeInterface2: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
-
-
-                    var collidableInterfaceCompositeInterface2 = collidableInterfaceCompositeInterface2
+        Updates for KMP build        
+        {
+var layerManager = layerManager
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+var collidableInterfaceCompositeInterface2 = collidableInterfaceCompositeInterface2
 
     var collidableBase2: CollidableBaseBehavior = collidableInterfaceCompositeInterface2!!.getCollidableInferface()!!
 

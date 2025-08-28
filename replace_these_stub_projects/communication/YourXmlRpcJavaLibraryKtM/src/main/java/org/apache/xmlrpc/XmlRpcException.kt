@@ -16,12 +16,12 @@ open public class XmlRpcException : Exception {
         
 public constructor        (code: Int, message: String)                        
 
-                            : super(message){
+                            : super(message)
 
-                    var code = code
-
-
-                    var message = message
+        Updates for KMP build        
+        {
+var code = code
+var message = message
 
 
                             //For kotlin this is before the body of the constructor.

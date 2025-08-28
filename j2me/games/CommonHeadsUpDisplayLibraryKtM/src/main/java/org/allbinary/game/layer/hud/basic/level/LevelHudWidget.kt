@@ -52,15 +52,13 @@ open public class LevelHudWidget : BasicHud
     private val primitiveLongUtil: PrimitiveLongUtil
 public constructor        (maxlevel: Int, location: Int, direction: Int)                        
 
-                            : this(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4){
+                            : this(maxlevel, location, direction, MyFont.getInstance()!!.getSize() *4)
 
-                    var maxlevel = maxlevel
-
-
-                    var location = location
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var maxlevel = maxlevel
+var location = location
+var direction = direction
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,18 +67,14 @@ public constructor        (maxlevel: Int, location: Int, direction: Int)
 
 public constructor        (maxlevel: Int, location: Int, direction: Int, maxWidth: Int)                        
 
-                            : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
+                            : super(location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY)
 
-                    var maxlevel = maxlevel
-
-
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxWidth = maxWidth
+        Updates for KMP build        
+        {
+var maxlevel = maxlevel
+var location = location
+var direction = direction
+var maxWidth = maxWidth
 
 
                             //For kotlin this is before the body of the constructor.
@@ -102,16 +96,22 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
+
+
+        Updates for KMP build        
+        {
+levelNumberCharArray= this.primitiveLongUtil!!.getCharArray(this.level)
 levelNumberTotalDigits= this.primitiveLongUtil!!.getCurrentTotalDigits()
 }
 
 
 open fun setLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 this.level= level
 this.update()
 }
@@ -119,14 +119,22 @@ this.update()
 
 open fun nextLevel()
         //nullable = true from not(false or (false and true)) = true
-{this.level++
+
+
+        Updates for KMP build        
+        {
+this.level++
 this.update()
 }
 
 
 open fun previousLevel()
         //nullable = true from not(false or (false and true)) = true
-{this.level--
+
+
+        Updates for KMP build        
+        {
+this.level--
 
     
                         if(this.level < 0)
@@ -142,7 +150,11 @@ this.update()
 
 open fun isComplete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.level <= maxlevel)
                         
@@ -168,17 +180,21 @@ open fun isComplete()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics, levelString, 0, levelString!!.size, levelNumberCharArray, 0, levelNumberTotalDigits, this.offset)
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 

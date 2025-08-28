@@ -39,9 +39,11 @@ open public class TransformInfoInterfaceView
     private var transformInfoInterface: TransformInfoInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        {
+        
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
 }
 
@@ -50,9 +52,11 @@ this.transformInfoInterface= transformInfoInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 

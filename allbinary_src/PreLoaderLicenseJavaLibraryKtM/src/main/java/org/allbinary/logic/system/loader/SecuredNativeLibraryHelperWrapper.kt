@@ -35,9 +35,11 @@ open public class SecuredNativeLibraryHelperWrapper : NativeLibraryHelperWrapper
     private var securedNativeLibraryInterface: SecuredNativeLibraryInterface
 public constructor        (securedNativeLibraryInterface: SecuredNativeLibraryInterface)                        
 
-                            : super(securedNativeLibraryInterface!!.getLibraryName()){
+                            : super(securedNativeLibraryInterface!!.getLibraryName())
 
-                    var securedNativeLibraryInterface = securedNativeLibraryInterface
+        Updates for KMP build        
+        {
+    //var securedNativeLibraryInterface = securedNativeLibraryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,9 +52,11 @@ this.securedNativeLibraryInterface= securedNativeLibraryInterface
             
 open fun unlock(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 
 
 

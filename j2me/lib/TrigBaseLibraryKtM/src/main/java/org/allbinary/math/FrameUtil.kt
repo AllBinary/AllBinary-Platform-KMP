@@ -37,7 +37,11 @@ open public class FrameUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FrameUtil{
+: FrameUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,17 +52,21 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getFrameForAngle(angle: Short, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var angle = angle
-
-
-                    var angleIncrement = angleIncrement
+        Updates for KMP build        
+        {
+    //var angle = angle
+    //var angleIncrement = angleIncrement
 
 
 
@@ -69,12 +77,12 @@ open fun getFrameForAngle(angle: Short, angleIncrement: Int)
 
 open fun getFrameAngle(frame: Int, angleIncrement: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var frame = frame
-
-
-                    var angleIncrement = angleIncrement
+        Updates for KMP build        
+        {
+    //var frame = frame
+    //var angleIncrement = angleIncrement
 
     var frameAngle: Int = angleIncrement *frame -90
 
@@ -88,9 +96,11 @@ open fun getFrameAngle(frame: Int, angleIncrement: Int)
 
 open fun adjustAngleToFrameAngle(currentAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var currentAngle = currentAngle
+        Updates for KMP build        
+        {
+var currentAngle = currentAngle
 
     var angleFactory: AngleFactory = AngleFactory.getInstance()!!
 
@@ -102,7 +112,11 @@ open fun adjustAngleToFrameAngle(currentAngle: Int)
                                     currentAngle= (currentAngle -angleFactory!!.TOTAL_ANGLE)
 
         while(currentAngle > 359)
-        {currentAngle= (currentAngle -angleFactory!!.TOTAL_ANGLE)
+        
+
+        Updates for KMP build        
+        {
+currentAngle= (currentAngle -angleFactory!!.TOTAL_ANGLE)
 }
 
 
@@ -116,7 +130,11 @@ open fun adjustAngleToFrameAngle(currentAngle: Int)
                                     currentAngle= (currentAngle +angleFactory!!.TOTAL_ANGLE)
 
         while(currentAngle < 0)
-        {currentAngle= (currentAngle +angleFactory!!.TOTAL_ANGLE)
+        
+
+        Updates for KMP build        
+        {
+currentAngle= (currentAngle +angleFactory!!.TOTAL_ANGLE)
 }
 
 

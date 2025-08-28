@@ -41,26 +41,24 @@ open public class InputProcessor
 
 open fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 }
 
 
 open fun keyReleased(canvas: Canvas, keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var canvas = canvas
 
 
-                    var keyCode = keyCode
-
-
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var canvas = canvas
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 }
 
 

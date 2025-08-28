@@ -41,7 +41,11 @@ open public class LayerManagerLogging : LayerManagerLoggingBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LayerManagerLogging{
+: LayerManagerLogging
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,30 +85,34 @@ open fun getInstance()
                 @Throws(Exception::class)
             override fun append(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
 stringBuilder!!.delete(0, stringBuilder!!.length())
 logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.toString(), this, APPEND)
 }
 
 override fun append(layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerInterface = layerInterface
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
+    //var index = index
 stringBuilder!!.delete(0, stringBuilder!!.length())
 logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(APPEND_)!!.append(layerInterface!!.getName())!!.append(_AT_)!!.append(index)!!.toString(), this, APPEND)
 }
 
 override fun remove(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+    //var layerInterface = layerInterface
 
     
                         if(layerInterface == 
@@ -127,15 +135,13 @@ logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(ATTEMPT_REMOVE_)!
 
 override fun remove(layerManager: LayerManager, layerInterface: AllBinaryLayer, result: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var layerInterface = layerInterface
-
-
-                    var result = result
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var layerInterface = layerInterface
+    //var result = result
 
     
                         if(layerInterface == 
@@ -178,9 +184,11 @@ LayerManagerLogging.removeFailed= true
 
 open fun log(layerManager: LayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
 stringBuilder!!.delete(0, stringBuilder!!.length())
 
     var size: Int = layerManager!!.getSize()!!
@@ -199,7 +207,11 @@ stringBuilder!!.append(size)!!.append(commonSeps!!.COLON_SEP)
 
                         for (index in 0 until size)
 
-        {allBinaryLayer= (layerManager!!.getLayerAt(index) as AllBinaryLayer)
+        
+
+        Updates for KMP build        
+        {
+allBinaryLayer= (layerManager!!.getLayerAt(index) as AllBinaryLayer)
 stringBuilder!!.append(allBinaryLayer!!.getName())!!.append(commonSeps!!.COMMA)
 }
 
@@ -208,7 +220,11 @@ logUtil!!.put(stringBuilder!!.toString(), this, REMOVE)
 
 override fun clear()
         //nullable = true from not(false or (false and true)) = true
-{stringBuilder!!.delete(0, stringBuilder!!.length())
+
+
+        Updates for KMP build        
+        {
+stringBuilder!!.delete(0, stringBuilder!!.length())
 logUtil!!.put(stringBuilder!!.append(this.hashCode())!!.append(CLEAR)!!.toString(), this, CLEAR)
 }
 

@@ -39,7 +39,11 @@ open public class DownKeyEventHandler : DownKeyEventHandlerBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DownKeyEventHandler{
+: DownKeyEventHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +57,11 @@ open fun getInstance()
 
 open fun getInstance(deviceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: DownKeyEventHandlerBase{
+: DownKeyEventHandlerBase
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+var deviceId = deviceId
 
     var playerInputId: Int = playerInputIdFactory!!.getPlayerForDevice(deviceId)!!
 
@@ -69,9 +75,11 @@ open fun getInstance(deviceId: Int)
 
 open fun getInstanceForPlayer(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-: DownKeyEventHandlerBase{
+: DownKeyEventHandlerBase
 
-                    var playerInputId = playerInputId
+        Updates for KMP build        
+        {
+var playerInputId = playerInputId
 
 
 
@@ -79,27 +87,41 @@ open fun getInstanceForPlayer(playerInputId: Int)
                         return instanceArray[playerInputId]!!
 }
 
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{super.removeAllListeners()
+
+
+        Updates for KMP build        
+        {
+super.removeAllListeners()
 
 
 
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-        {instanceArray[index]!!.removeAllListeners()
+        
+
+        Updates for KMP build        
+        {
+instanceArray[index]!!.removeAllListeners()
 }
 
 }
 
 override fun removeListenerSingleThreaded(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+var eventListenerInterface = eventListenerInterface
 super.removeListenerSingleThreaded(eventListenerInterface)
 
 
@@ -107,7 +129,11 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-        {instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
+        
+
+        Updates for KMP build        
+        {
+instanceArray[index]!!.removeListenerSingleThreaded(eventListenerInterface)
 }
 
 }
@@ -115,9 +141,11 @@ super.removeListenerSingleThreaded(eventListenerInterface)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeListener(eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventListenerInterface = eventListenerInterface
+
+        Updates for KMP build        
+        {
+var eventListenerInterface = eventListenerInterface
 super.removeListener(eventListenerInterface)
 
 
@@ -125,7 +153,11 @@ super.removeListener(eventListenerInterface)
 
                         for (index in instanceArray!!.size -1 downTo 0)
 
-        {instanceArray[index]!!.removeListener(eventListenerInterface)
+        
+
+        Updates for KMP build        
+        {
+instanceArray[index]!!.removeListener(eventListenerInterface)
 }
 
 }

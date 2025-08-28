@@ -41,17 +41,21 @@ open public class TimeCreatedView
     private var timeCreated: TimeCreated
 public constructor        (timeCreated: TimeCreated)
             : super()
-        {
+        
 
-                    var timeCreated = timeCreated
+        Updates for KMP build        
+        {
+var timeCreated = timeCreated
 this.setTimeCreated(timeCreated)
 }
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.setTimeCreated(TimeCreated(DomNodeHelper.getTextNodeValue(node)))
 }
 
@@ -60,9 +64,11 @@ this.setTimeCreated(TimeCreated(DomNodeHelper.getTextNodeValue(node)))
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -73,7 +79,11 @@ open fun toXmlNode(document: Document)
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
-: TimeCreated{
+: TimeCreated
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,9 +93,11 @@ open fun getTimeCreated()
 
 open fun setTimeCreated(timeCreated: TimeCreated)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeCreated = timeCreated
+
+        Updates for KMP build        
+        {
+var timeCreated = timeCreated
 this.timeCreated= timeCreated
 }
 

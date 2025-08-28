@@ -49,12 +49,12 @@ open public class NameSpaceRequestParam
     private var value: String
 public constructor        (nameSpace: String, value: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var nameSpace = nameSpace
-
-
-                    var value = value
+var nameSpace = nameSpace
+var value = value
 this.nameSpaceVector= Vector()
 this.nameSpacePropertiesHashMap= HashMap<Any, Any>()
 this.value= value
@@ -108,7 +108,11 @@ this.value= value
 
 
         while(index < size)
+        
+
+        Updates for KMP build        
         {
+
     var nameSpaceWithProperties: String = nameSpaceWithPropertiesVector!!.get(index++) as String
 
 list.clear()
@@ -182,7 +186,11 @@ packageIndex++
 
 open fun getPackages()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
@@ -201,9 +209,11 @@ open fun getPackages()
 
 open fun getPackageProperties(packageIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var packageIndex = packageIndex
+        Updates for KMP build        
+        {
+var packageIndex = packageIndex
 
     var packagePropertiesHashMap: HashMap<Any, Any> = this.nameSpacePropertiesHashMap!!.get(packageIndex.toString()) as HashMap<Any, Any>
 
@@ -237,7 +247,11 @@ open fun getPackageProperties(packageIndex: Int)
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
@@ -258,9 +272,11 @@ open fun getValue()
             
 open fun generatePackagePropertiesHashMap(properties: String)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var properties = properties
+        Updates for KMP build        
+        {
+var properties = properties
 
     var propertiesTokenizer: Tokenizer = Tokenizer(NameSpaceRequestParamData.PROPERTIESSEPARATOR)
 
@@ -284,7 +300,11 @@ open fun generatePackagePropertiesHashMap(properties: String)
 
 
         while(index < size)
+        
+
+        Updates for KMP build        
         {
+
     var property: String = propertyVector!!.get(index) as String
 
 list.clear()
@@ -296,7 +316,11 @@ list.clear()
 
 
         while(index2 < propertyNameValueVector!!.size())
+        
+
+        Updates for KMP build        
         {
+
     var propertyName: String = propertyNameValueVector!!.get(index2++) as String
 
 

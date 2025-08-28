@@ -52,18 +52,14 @@ open public class GameConfiguration
     private var modifiable: Boolean = BooleanFactory.getInstance()!!.TRUE
 public constructor        (name: String, defaultValue: Integer, minValue: Integer, maxValue: Integer)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var defaultValue = defaultValue
-
-
-                    var minValue = minValue
-
-
-                    var maxValue = maxValue
+    //var name = name
+    //var defaultValue = defaultValue
+    //var minValue = minValue
+    //var maxValue = maxValue
 this.setName(name)
 this.setDefaultValue(defaultValue)
 this.value= this.getDefaultValue()
@@ -77,9 +73,11 @@ GameConfigurationSingleton.getInstance()!!.getHashtable()!!.put(this.getName(), 
             
 open fun setValue(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+    //var value = value
 
     
                         if(this.value != value)
@@ -99,7 +97,11 @@ GameFeatureEventHandler.getInstance()!!.fireEvent(GameFeatureEvent(this, StringM
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,16 +111,22 @@ open fun getValue()
 
 open fun setMaxValue(maxValue: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxValue = maxValue
+
+        Updates for KMP build        
+        {
+    //var maxValue = maxValue
 this.maxValue= maxValue
 }
 
 
 open fun getMaxValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -128,16 +136,22 @@ open fun getMaxValue()
 
 open fun setMinValue(minValue: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minValue = minValue
+
+        Updates for KMP build        
+        {
+    //var minValue = minValue
 this.minValue= minValue
 }
 
 
 open fun getMinValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -147,16 +161,22 @@ open fun getMinValue()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+    //var name = name
 this.name= name
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -166,16 +186,22 @@ open fun getName()
 
 open fun setDefaultValue(defaultValue: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var defaultValue = defaultValue
+
+        Updates for KMP build        
+        {
+    //var defaultValue = defaultValue
 this.defaultValue= defaultValue
 }
 
 
 open fun getDefaultValue()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -187,12 +213,20 @@ open fun getDefaultValue()
             
 open fun setDefault()
         //nullable = true from not(false or (false and true)) = true
-{this.setValue(this.getDefaultValue())
+
+
+        Updates for KMP build        
+        {
+this.setValue(this.getDefaultValue())
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Name: ")
@@ -217,16 +251,22 @@ stringBuffer!!.append(this.isModifiable())
 
 open fun setModifiable(modifiable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var modifiable = modifiable
+
+        Updates for KMP build        
+        {
+var modifiable = modifiable
 this.modifiable= modifiable
 }
 
 
 open fun isModifiable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

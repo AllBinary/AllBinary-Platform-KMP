@@ -44,16 +44,22 @@ open public class LayerBounds
     var rectangle: Rectangle
 protected constructor        (rectangle: Rectangle)
             : super()
-        {
+        
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 this.rectangle= rectangle
 }
 
 
 open fun getRectangleP()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle{
+: Rectangle
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,24 +69,30 @@ open fun getRectangleP()
 
 open fun visit(boundsVisitorInterface: BoundsVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var boundsVisitorInterface = boundsVisitorInterface
+
+        Updates for KMP build        
+        {
+var boundsVisitorInterface = boundsVisitorInterface
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onBoundsChangeEvent(boundsChangeEvent: BoundsChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var boundsChangeEvent = boundsChangeEvent
+
+        Updates for KMP build        
+        {
+var boundsChangeEvent = boundsChangeEvent
 this.rectangle= boundsChangeEvent!!.getRectangle()
 }
 

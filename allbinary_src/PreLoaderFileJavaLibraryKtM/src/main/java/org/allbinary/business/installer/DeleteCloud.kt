@@ -43,20 +43,22 @@ open public class DeleteCloud
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun delete(prePath: String, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var prePath = prePath
-
-
-                    var current = current
-
-
-                    var total = total
+        Updates for KMP build        
+        {
+var prePath = prePath
+var current = current
+var total = total
 
         try {
             
@@ -115,7 +117,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
 
                         for (index in start until end)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextFile: AbFile = fileBasicArrayList!!.get(index) as AbFile
 
 
@@ -130,7 +136,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "initialize()")
                                     }
                                 
 } catch(e: Exception)
-            {}
+            
+
+        Updates for KMP build        
+        {
+}
 
 }
 
@@ -144,7 +154,11 @@ logUtil!!.put("Deleted Files From Cloud", this, "initialize()")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {logUtil!!.put("Unable to copy installer files into cloud", this, "initialize()", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Unable to copy installer files into cloud", this, "initialize()", e)
 
 
 

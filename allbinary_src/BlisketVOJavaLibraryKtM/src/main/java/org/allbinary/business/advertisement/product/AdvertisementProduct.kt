@@ -42,12 +42,20 @@ open public class AdvertisementProduct
     private var constraint: TwoDimensionalConstraintInterface
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +65,11 @@ open fun getType()
 
 open fun getLink()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +79,11 @@ open fun getLink()
 
 open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,7 +93,11 @@ open fun getNumber()
 
 open fun getTwoDimensionalConstraint()
         //nullable = true from not(false or (false and true)) = true
-: TwoDimensionalConstraintInterface{
+: TwoDimensionalConstraintInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

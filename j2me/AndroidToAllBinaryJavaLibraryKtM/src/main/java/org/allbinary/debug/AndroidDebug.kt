@@ -47,21 +47,33 @@ open public class AndroidDebug
     private var bufferSize: Int = 32 *1024 *1024
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-{this.setStartTime(System.currentTimeMillis())
+
+
+        Updates for KMP build        
+        {
+this.setStartTime(System.currentTimeMillis())
 Debug.startMethodTracing("trace", bufferSize)
 setRunning(true)
 }
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-{startTime= Long.MAX_VALUE
+
+
+        Updates for KMP build        
+        {
+startTime= Long.MAX_VALUE
 Debug.stopMethodTracing()
 setRunning(false)
 }
 
 override fun getMaxTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,15 +83,21 @@ override fun getMaxTime()
 
 open fun setStartTime(startTime: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var startTime = startTime
+
+        Updates for KMP build        
+        {
+var startTime = startTime
 this.startTime= startTime
 }
 
 override fun getStartTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,15 +107,21 @@ override fun getStartTime()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 this.running= running
 }
 
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -32,7 +32,11 @@ open public class HtmlAnchor
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

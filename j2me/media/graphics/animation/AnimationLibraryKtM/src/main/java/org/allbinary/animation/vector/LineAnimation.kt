@@ -42,21 +42,23 @@ open public class LineAnimation : Animation
     private var tempLine: Array<IntArray?> = NullUtil.getInstance()!!.NULL_INT_ARRAY_ARRAY
 
     private var line: Array<IntArray?> = Array(2) { IntArray(2) }
-public constructor        (basicColor: BasicColor){
+public constructor        (basicColor: BasicColor)
 
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.setBasicColorP(basicColor)
 }
 
 
 open fun init(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 this.newLine[0]!![0]= x
 this.newLine[0]!![1]= y
 this.newLine[1]!![0]= x
@@ -68,15 +70,13 @@ this.newLine= this.tempLine
 
 override fun setPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+var x = x
+var y = y
+var z = z
 this.newLine[0]!![0]= this.line[1]!![0]!!
 this.newLine[0]!![1]= this.line[1]!![1]!!
 this.newLine[1]!![0]= x
@@ -88,15 +88,13 @@ this.newLine= this.tempLine
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 
     var currentLine: Array<IntArray?> = this.line
 
@@ -106,7 +104,11 @@ graphics.drawLine(currentLine[0]!![0]!!, currentLine[0]!![1]!!, currentLine[1]!!
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -40,9 +40,11 @@ open public class MediaData
             
 open fun get(a_Name: String)
         //nullable = true from not(false or (false and false)) = true
-: MediaData{
+: MediaData
 
-                    var a_Name = a_Name
+        Updates for KMP build        
+        {
+var a_Name = a_Name
 
     var mediaData: MediaData = MediaData.hashMap!!.get(a_Name as Object) as MediaData
 
@@ -74,7 +76,11 @@ open fun get(a_Name: String)
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: MediaData{
+: MediaData
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,7 +90,11 @@ open fun getDefault()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,9 +111,11 @@ open fun toHashMap()
     private var extension: String
 protected constructor        (a_Name: String)
             : super()
-        {
+        
 
-                    var a_Name = a_Name
+        Updates for KMP build        
+        {
+var a_Name = a_Name
 this.name= a_Name
 this.extension= "." +this.name
 this.type= MediaTypeData.getInstance()!!.NOT_RESIZABLE_MEDIA
@@ -113,7 +125,11 @@ MediaData.hashMap!!.put(a_Name, this)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -123,7 +139,11 @@ open fun getName()
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -133,7 +153,11 @@ open fun getType()
 
 open fun getExtension()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -143,9 +167,11 @@ open fun getExtension()
 
 open fun isConvertableTo(mediaData: MediaData)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var mediaData = mediaData
+        Updates for KMP build        
+        {
+var mediaData = mediaData
 
     
                         if(this == MediaDataFactory.getInstance()!!.GIF && mediaData == MediaDataFactory.getInstance()!!.JPG)
@@ -168,7 +194,11 @@ open fun isConvertableTo(mediaData: MediaData)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

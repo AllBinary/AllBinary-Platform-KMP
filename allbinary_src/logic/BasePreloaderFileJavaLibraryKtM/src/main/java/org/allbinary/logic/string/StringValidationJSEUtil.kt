@@ -35,9 +35,11 @@ open public class StringValidationJSEUtil
             
 open fun isBlank(string: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var string = string
+        Updates for KMP build        
+        {
+var string = string
 
     var len: Int = string.length!!
 
@@ -47,7 +49,11 @@ open fun isBlank(string: String)
 
                         for (i in 0 until len)
 
+        
+
+        Updates for KMP build        
         {
+
     var c: Char = string[i]!!
 
 
@@ -76,7 +82,11 @@ open fun isBlank(string: String)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

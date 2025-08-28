@@ -33,12 +33,12 @@ import org.allbinary.layer.AllBinaryLayerFactoryInterface
 
 open public class HealLayerCircularStaticPool : AllBinaryLayerCircularPool {
         
-public constructor        (allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int){
+public constructor        (allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int)
 
-                    var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
-
-
-                    var total = total
+        Updates for KMP build        
+        {
+var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
+var total = total
 super.init(allbinaryLayerFactoryInterface, total)
 }
 
@@ -47,9 +47,11 @@ super.init(allbinaryLayerFactoryInterface, total)
             
 open fun visit(sourceLayerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sourceLayerInterface = sourceLayerInterface
+
+        Updates for KMP build        
+        {
+var sourceLayerInterface = sourceLayerInterface
 
     var healLayer: HealLayer = this.getNextInstance() as HealLayer
 

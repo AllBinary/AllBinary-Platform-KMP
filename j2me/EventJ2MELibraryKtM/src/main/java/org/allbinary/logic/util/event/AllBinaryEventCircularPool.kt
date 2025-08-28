@@ -30,9 +30,11 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class AllBinaryEventCircularPool : BaseCircularPool {
         
-public constructor        (max: Int){
+public constructor        (max: Int)
 
-                    var max = max
+        Updates for KMP build        
+        {
+var max = max
 this.OBJECT_ARRAY= arrayOfNulls(max)
 this.circularIndexUtil= CircularIndexUtil.getInstance(max)
 }
@@ -40,9 +42,11 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(max)
 
 open fun init(allBinaryEventObjectFactoryInterface: AllBinaryEventObjectFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryEventObjectFactoryInterface = allBinaryEventObjectFactoryInterface
+
+        Updates for KMP build        
+        {
+var allBinaryEventObjectFactoryInterface = allBinaryEventObjectFactoryInterface
 this.circularIndexUtil!!.setIndex(0)
 
     var size: Int = this.circularIndexUtil!!.getSize()!!
@@ -53,7 +57,11 @@ this.circularIndexUtil!!.setIndex(0)
 
                         for (index in 0 until size)
 
-        {OBJECT_ARRAY[index]= allBinaryEventObjectFactoryInterface!!.getInstance()
+        
+
+        Updates for KMP build        
+        {
+OBJECT_ARRAY[index]= allBinaryEventObjectFactoryInterface!!.getInstance()
 }
 
 }

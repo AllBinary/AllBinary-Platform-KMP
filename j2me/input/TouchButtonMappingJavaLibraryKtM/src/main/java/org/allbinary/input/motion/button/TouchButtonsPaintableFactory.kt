@@ -37,9 +37,11 @@ open public class TouchButtonsPaintableFactory
             
 open fun getInstance(basicColor: BasicColor)
         //nullable =  from not(true or (false and false)) = 
-: Paintable{
+: Paintable
 
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 
 
 

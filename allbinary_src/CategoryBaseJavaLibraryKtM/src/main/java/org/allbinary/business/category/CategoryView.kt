@@ -45,16 +45,22 @@ open public class CategoryView
     private var categoryInterface: CategoryInterface
 public constructor        (categoryInterface: CategoryInterface)
             : super()
-        {
+        
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 this.categoryInterface= categoryInterface
 }
 
 
 open fun getCategoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: CategoryInterface{
+: CategoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,9 +72,11 @@ open fun getCategoryInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(CategoryData.getInstance()!!.NAME)!!
 
@@ -93,7 +101,11 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: Any = childCategoryVector!!.get(i)!!
 
 

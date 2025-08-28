@@ -39,7 +39,11 @@ open public class HealLayer : AllBinaryLayer
         
 public constructor        ()                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition()){
+                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, 0, 0), ViewPosition())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -47,16 +51,20 @@ public constructor        ()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 override fun visit(healthInterface: HealthInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var healthInterface = healthInterface
+
+        Updates for KMP build        
+        {
+var healthInterface = healthInterface
 
     
                         if(healthInterface!!.isAlive())

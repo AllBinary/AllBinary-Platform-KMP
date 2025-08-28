@@ -40,7 +40,11 @@ open public class GameNotificationEventHandler : BasicEventHandler {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameNotificationEventHandler{
+: GameNotificationEventHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,14 +53,22 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
     var enabled: Boolean = true
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllListeners()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var eventListenerInterface: EventListenerInterface = NullEventListener.NULL_EVENT_LISTENER
 
 
@@ -87,12 +99,12 @@ super.removeAllListeners()
                 @Throws(Exception::class)
             override fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var eventObject = eventObject
 
 
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+var eventObject = eventObject
+var eventListenerInterface = eventListenerInterface
 
     
                         if(!enabled)

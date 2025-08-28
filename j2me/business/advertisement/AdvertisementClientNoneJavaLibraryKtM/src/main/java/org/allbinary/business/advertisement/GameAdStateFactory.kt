@@ -25,7 +25,11 @@ open public class GameAdStateFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameAdStateFactory{
+: GameAdStateFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,7 +50,11 @@ open fun getInstance()
 
 open fun getCurrentInstance()
         //nullable = true from not(false or (false and true)) = true
-: GameAdState{
+: GameAdState
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,9 +66,11 @@ open fun getCurrentInstance()
             
 open fun getInstance(softwareInformation: SoftwareInformation)
         //nullable =  from not(true or (false and false)) = 
-: GameAdState{
+: GameAdState
 
-                    var softwareInformation = softwareInformation
+        Updates for KMP build        
+        {
+    //var softwareInformation = softwareInformation
 this.gameAdState= gameAdStateArray[0]!!
 
 
@@ -72,7 +82,11 @@ this.gameAdState= gameAdStateArray[0]!!
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

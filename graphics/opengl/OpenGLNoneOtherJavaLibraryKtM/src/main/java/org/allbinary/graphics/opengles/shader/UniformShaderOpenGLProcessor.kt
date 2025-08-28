@@ -31,23 +31,23 @@ open public class UniformShaderOpenGLProcessor : OpenGLTextureProcessor {
         
 
     private val shaderComposite: ShaderComposite
-public constructor        (shaderComposite: ShaderComposite){
+public constructor        (shaderComposite: ShaderComposite)
 
-                    var shaderComposite = shaderComposite
+        Updates for KMP build        
+        {
+    //var shaderComposite = shaderComposite
 this.shaderComposite= shaderComposite
 }
 
 override fun process(gl: GL10, unused: Any, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var unused = unused
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var unused = unused
+    //var index = index
 }
 
 

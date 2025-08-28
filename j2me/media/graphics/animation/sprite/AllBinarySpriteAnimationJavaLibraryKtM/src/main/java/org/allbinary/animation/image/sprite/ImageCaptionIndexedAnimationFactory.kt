@@ -74,36 +74,20 @@ open public class ImageCaptionIndexedAnimationFactory
     private val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int)                        
 
-                            : this(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, AnimationBehaviorFactory.getInstance()){
+                            : this(captionImage, spriteMovieImage, soundInterface, frameWidth, frameHeight, captionDx, captionDy, dx, dy, time, AnimationBehaviorFactory.getInstance())
 
-                    var captionImage = captionImage
-
-
-                    var spriteMovieImage = spriteMovieImage
-
-
-                    var soundInterface = soundInterface
-
-
-                    var frameWidth = frameWidth
-
-
-                    var frameHeight = frameHeight
-
-
-                    var captionDx = captionDx
-
-
-                    var captionDy = captionDy
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var time = time
+        Updates for KMP build        
+        {
+    //var captionImage = captionImage
+    //var spriteMovieImage = spriteMovieImage
+    //var soundInterface = soundInterface
+    //var frameWidth = frameWidth
+    //var frameHeight = frameHeight
+    //var captionDx = captionDx
+    //var captionDy = captionDy
+    //var dx = dx
+    //var dy = dy
+    //var time = time
 
 
                             //For kotlin this is before the body of the constructor.
@@ -112,39 +96,21 @@ public constructor        (captionImage: Image, spriteMovieImage: Image, soundIn
 
 public constructor        (captionImage: Image, spriteMovieImage: Image, soundInterface: Sound, frameWidth: Int, frameHeight: Int, captionDx: Int, captionDy: Int, dx: Int, dy: Int, time: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var captionImage = captionImage
-
-
-                    var spriteMovieImage = spriteMovieImage
-
-
-                    var soundInterface = soundInterface
-
-
-                    var frameWidth = frameWidth
-
-
-                    var frameHeight = frameHeight
-
-
-                    var captionDx = captionDx
-
-
-                    var captionDy = captionDy
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var time = time
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var captionImage = captionImage
+    //var spriteMovieImage = spriteMovieImage
+    //var soundInterface = soundInterface
+    //var frameWidth = frameWidth
+    //var frameHeight = frameHeight
+    //var captionDx = captionDx
+    //var captionDy = captionDy
+    //var dx = dx
+    //var dy = dy
+    //var time = time
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.captionImage= captionImage
 this.spriteMovieImage= spriteMovieImage
 this.frameWidth= frameWidth
@@ -162,9 +128,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.captionImage, this.captionImage!!.getWidth(), this.captionImage!!.getHeight(), this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 
@@ -203,9 +171,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 this.scaleProperties= scaleProperties
 }
 

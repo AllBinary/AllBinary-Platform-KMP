@@ -38,7 +38,11 @@ open public class GameTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameTypeFactory{
+: GameTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

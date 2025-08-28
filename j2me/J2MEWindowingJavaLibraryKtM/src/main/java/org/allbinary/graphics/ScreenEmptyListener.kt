@@ -38,14 +38,20 @@ open public class ScreenEmptyListener
             }            
         override fun onFullScreen(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isFullScreen = isFullScreen
+
+        Updates for KMP build        
+        {
+var isFullScreen = isFullScreen
 }
 
 override fun onFullScreenDisplay()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

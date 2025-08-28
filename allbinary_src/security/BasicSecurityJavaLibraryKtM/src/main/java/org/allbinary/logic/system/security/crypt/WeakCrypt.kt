@@ -48,14 +48,20 @@ open public class WeakCrypt
     private var abCrypt: AbCrypt = AbCrypt(KeySpecFactory.getInstance()!!.DES)
 public constructor        (key: Int)
             : super()
-        {
+        
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
         try {
             this.abCrypt!!.init(keys[key]!!)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "SuperCrypt(key)", e)
@@ -66,9 +72,11 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "SuperCrypt(key)", e)
 
 open fun encrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             
@@ -80,7 +88,11 @@ open fun encrypt(value: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DatabaseEncoder.encode(crypted)
 } catch(e: Exception)
-            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -93,9 +105,11 @@ open fun encrypt(value: String)
 
 open fun decrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             
@@ -107,7 +121,11 @@ open fun decrypt(value: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return decrypted.decodeToString()
 } catch(e: Exception)
-            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 

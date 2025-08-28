@@ -44,15 +44,13 @@ open public class IndependentVectorExplosionRotationAnimationFactory
     private var vectorAnimationFactoryInterface: VectorAnimationFactoryInterface
 public constructor        (vectorInfo: VectorInfo, basicColor: BasicColor, vectorAnimationFactoryInterface: VectorAnimationFactoryInterface)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var vectorInfo = vectorInfo
-
-
-                    var basicColor = basicColor
-
-
-                    var vectorAnimationFactoryInterface = vectorAnimationFactoryInterface
+var vectorInfo = vectorInfo
+var basicColor = basicColor
+var vectorAnimationFactoryInterface = vectorAnimationFactoryInterface
 this.vectorInfo= vectorInfo
 this.basicColor= basicColor
 this.vectorAnimationFactoryInterface= vectorAnimationFactoryInterface
@@ -64,7 +62,11 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{framePoints= VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)
+
+
+        Updates for KMP build        
+        {
+framePoints= VectorRotationGenerator.getInstance()!!.getInstance(this.vectorInfo)
 }
 
 
@@ -73,9 +75,11 @@ open fun init()
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
 
     var frame: Int = 0
 

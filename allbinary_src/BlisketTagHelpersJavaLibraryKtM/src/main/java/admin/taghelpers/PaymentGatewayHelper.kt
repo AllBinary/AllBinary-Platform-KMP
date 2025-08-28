@@ -48,19 +48,23 @@ open public class PaymentGatewayHelper : BasicTable {
     private val httpServletRequest: HttpServletRequest
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
         try {
             this.weblisketSession= WeblisketSession(hashMap, pageContext)
 httpServletRequest= pageContext!!.getRequest() as HttpServletRequest
 this.portion= Portion(hashMap)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
@@ -80,7 +84,11 @@ this.portion= Portion(hashMap)
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
@@ -106,7 +114,11 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success +"<br/>"
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to add"
 
 
@@ -130,7 +142,11 @@ PaymentGatewayEntityFactory.getInstance()!!.add(paymentGatewayInterface)
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
@@ -172,7 +188,11 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success +"<br/>"
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to update payment gateway information"
 
 
@@ -196,7 +216,11 @@ PaymentGatewayEntityFactory.getInstance()!!.update(paymentGatewayInterface)
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayInterfaceFactory().
@@ -235,7 +259,11 @@ stringBuffer!!.append(gatewayName)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success +"<br/>"
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to remove payment gateway from table"
 
 
@@ -259,7 +287,11 @@ stringBuffer!!.append(gatewayName)
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = PaymentGatewayEntityFactory.getInstance()!!.dropTable()!!
@@ -279,7 +311,11 @@ open fun drop()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to drop payment transaction result table"
 
 
@@ -303,7 +339,11 @@ open fun drop()
 
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = PaymentGatewayEntityFactory.getInstance()!!.createTable()!!
@@ -323,7 +363,11 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to create payment transaction result table"
 
 
@@ -347,7 +391,11 @@ open fun create()
 
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Restore Successful"
@@ -370,7 +418,11 @@ open fun restore()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to restore backup"
 
 
@@ -394,7 +446,11 @@ open fun restore()
 
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Restore Successful"
@@ -417,7 +473,11 @@ open fun backup()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to make backup"
 
 

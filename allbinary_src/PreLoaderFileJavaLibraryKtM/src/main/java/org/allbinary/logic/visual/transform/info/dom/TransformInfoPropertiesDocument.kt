@@ -50,9 +50,11 @@ open public class TransformInfoPropertiesDocument
     private val document: Document
 public constructor        (filePath: String)
             : super()
-        {
+        
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+    //var filePath = filePath
 
     var xmlFile: AbFile = AbFile(filePath)
 
@@ -62,7 +64,11 @@ this.document= DomDocumentFileHelper.create(xmlFile)
 
 open fun toTransformInfoPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
         try {
             
     var transformInfoPropertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -100,7 +106,11 @@ open fun toTransformInfoPropertiesHashMap()
 
                         for (index in 0 until size)
 
-        {node= transformInfoNodeVector!!.get(index) as Node
+        
+
+        Updates for KMP build        
+        {
+node= transformInfoNodeVector!!.get(index) as Node
 transformInfoProperties= TransformInfoPropertiesFactory.getInstance()!!.getInstance(node)
 transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transformInfoProperties)
 }
@@ -111,7 +121,11 @@ transformInfoPropertiesHashMap!!.put(transformInfoProperties!!.getName(), transf
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return transformInfoPropertiesHashMap
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         

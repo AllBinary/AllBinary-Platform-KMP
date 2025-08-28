@@ -47,9 +47,11 @@ open public class BillingAddressView : HttpStoreComponentView
     var streetAddress: StreetAddress
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,7 +62,11 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 
 open fun getRequest()
         //nullable = true from not(false or (false and true)) = true
-: HttpServletRequest{
+: HttpServletRequest
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,9 +78,11 @@ open fun getRequest()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -87,7 +95,11 @@ formNode!!.appendChild(streetAddress!!.toXmlNode(document))
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return formNode
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.XSLLOGGINGERROR))
                         
@@ -107,7 +119,11 @@ formNode!!.appendChild(streetAddress!!.toXmlNode(document))
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-{this.addDomNodeInterface(this as DomNodeInterface)
+
+
+        Updates for KMP build        
+        {
+this.addDomNodeInterface(this as DomNodeInterface)
 this.addDomNodeInterface(StatesView() as DomNodeInterface)
 }
 
@@ -116,7 +132,11 @@ this.addDomNodeInterface(StatesView() as DomNodeInterface)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.addDomNodeInterfaces()
 
@@ -125,7 +145,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         

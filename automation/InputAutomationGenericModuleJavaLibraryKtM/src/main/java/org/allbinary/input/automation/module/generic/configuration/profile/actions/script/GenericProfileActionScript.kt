@@ -59,12 +59,12 @@ open public class GenericProfileActionScript : DefaultMutableTreeNode
     private var profileActionConditionInterfaceVector: Vector
 public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel, node: Node)                        
 
-                            : super(NAME){
+                            : super(NAME)
 
-                    var genericProfileActionJPanel = genericProfileActionJPanel
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+var genericProfileActionJPanel = genericProfileActionJPanel
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -90,7 +90,11 @@ this.setProfileActionConditionInterfaceVector(Vector())
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var actionConditionNode: Node = nodeList!!.item(index)!!
 
 
@@ -117,9 +121,11 @@ this.setProfileActionConditionInterfaceVector(Vector())
                             
 }
 
-public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel){
+public constructor        (genericProfileActionJPanel: GenericProfileActionJPanel)
 
-                    var genericProfileActionJPanel = genericProfileActionJPanel
+        Updates for KMP build        
+        {
+var genericProfileActionJPanel = genericProfileActionJPanel
 this.genericProfileActionJPanel= genericProfileActionJPanel
 this.setProfileActionConditionInterfaceVector(Vector())
 }
@@ -127,9 +133,11 @@ this.setProfileActionConditionInterfaceVector(Vector())
 
 open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionScriptNodeInterface = profileActionScriptNodeInterface
+
+        Updates for KMP build        
+        {
+var profileActionScriptNodeInterface = profileActionScriptNodeInterface
 logUtil!!.put(this.commonStrings!!.START, this, "addCondition")
 this.getProfileActionConditionInterfaceVector()!!.add(profileActionScriptNodeInterface)
 this.add(profileActionScriptNodeInterface)
@@ -138,9 +146,11 @@ this.add(profileActionScriptNodeInterface)
 
 open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionScriptNodeInterface = profileActionScriptNodeInterface
+
+        Updates for KMP build        
+        {
+var profileActionScriptNodeInterface = profileActionScriptNodeInterface
 logUtil!!.put(this.commonStrings!!.START, this, "removeCondition")
 this.getProfileActionConditionInterfaceVector()!!.remove(profileActionScriptNodeInterface)
 this.remove(profileActionScriptNodeInterface)
@@ -149,7 +159,11 @@ this.remove(profileActionScriptNodeInterface)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
@@ -163,7 +177,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
 
 open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,9 +191,11 @@ open fun getProfileActionConditionInterfaceVector()
 
 open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
+
+        Updates for KMP build        
+        {
+var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
 this.profileActionConditionInterfaceVector= profileActionConditionInterfaceVector
 }
 
@@ -184,9 +204,11 @@ this.profileActionConditionInterfaceVector= profileActionConditionInterfaceVecto
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(GenericProfileActionData.SCRIPT)!!
 
@@ -202,7 +224,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = vector.get(index) as ProfileActionScriptConditionInterface
 
 node.appendChild(profileActionConditionInterface!!.toXmlNode(document))

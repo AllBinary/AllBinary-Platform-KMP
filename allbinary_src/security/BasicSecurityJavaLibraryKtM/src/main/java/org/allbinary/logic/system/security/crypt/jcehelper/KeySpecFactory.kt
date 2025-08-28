@@ -42,7 +42,11 @@ open public class KeySpecFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: KeySpecFactory{
+: KeySpecFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,17 +63,21 @@ open fun getInstance()
     val BLOWFISH: String = "Blowfish"
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(algorithm: String, keyData: ByteArray)
         //nullable =  from not(true or (false and false)) = 
-: KeySpec{
+: KeySpec
 
-                    var algorithm = algorithm
-
-
-                    var keyData = keyData
+        Updates for KMP build        
+        {
+var algorithm = algorithm
+var keyData = keyData
 
         try {
             
@@ -107,7 +115,11 @@ open fun getInstance(algorithm: String, keyData: ByteArray)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)

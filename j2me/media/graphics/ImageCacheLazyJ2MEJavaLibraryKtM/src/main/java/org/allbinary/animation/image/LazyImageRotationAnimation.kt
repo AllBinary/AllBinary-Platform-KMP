@@ -68,21 +68,15 @@ open public class LazyImageRotationAnimation : RotationAnimation {
     var scaleProperties: ScaleProperties = ScaleProperties.instance
 public constructor        (layoutIndex: Int, instanceId: Int, scaleProperties: ScaleProperties, animationInterfaceFactoryInterface: BaseImageAnimationFactory, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var layoutIndex = layoutIndex
-
-
-                    var instanceId = instanceId
-
-
-                    var scaleProperties = scaleProperties
-
-
-                    var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var layoutIndex = layoutIndex
+    //var instanceId = instanceId
+    //var scaleProperties = scaleProperties
+    //var animationInterfaceFactoryInterface = animationInterfaceFactoryInterface
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -100,15 +94,13 @@ NULL_INDEX_ANIMATION= object: NullIndexedAnimation(animationBehavior)
                                 
 open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 }
 
                                 }
@@ -120,15 +112,21 @@ animation= object: IndexedAnimation(animationBehavior)
 
 open override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 this.index= index
 }
 
 open override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,45 +135,47 @@ open override fun getFrame()
 
 open override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
         try {
             ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
 animation= NULL_INDEX_ANIMATION
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }
 
 open override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
         try {
             ImageCacheFactory.getInstance()!!.insertFirst(this@LazyImageRotationAnimation)
 animation= NULL_INDEX_ANIMATION
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }
@@ -187,7 +187,11 @@ animation= NULL_INDEX_ANIMATION
 
 open fun setRealAnimation()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var animation: IndexedAnimation = this.animation
@@ -196,25 +200,33 @@ this.animationInterfaceFactoryInterface!!.setInitialScale(scaleProperties)
 this.animation= this.animationInterfaceFactoryInterface!!.getInstance(this.instanceId) as IndexedAnimation
 this.animation.setState(animation)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, SET_REAL_ANIMATION, e)
 }
 
 }
 
 override fun setScale(scaleX: Float, scaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var scaleX = scaleX
 
 
-                    var scaleY = scaleY
+        Updates for KMP build        
+        {
+    //var scaleX = scaleX
+    //var scaleY = scaleY
 this.animation.setScale(scaleX, scaleY)
 }
 
 override fun getAnimationBehavior()
         //nullable = true from not(false or (false and true)) = true
-: AnimationBehavior{
+: AnimationBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -225,58 +237,72 @@ override fun getAnimationBehavior()
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 this.animation.set(gl)
 }
 
 override fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var alpha = alpha
+
+        Updates for KMP build        
+        {
+    //var alpha = alpha
 this.animation.setAlpha(alpha)
 }
 
 override fun setDx(dx: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dx = dx
+
+        Updates for KMP build        
+        {
+    //var dx = dx
 this.animation.setDx(dx)
 }
 
 override fun setDy(dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dy = dy
+
+        Updates for KMP build        
+        {
+    //var dy = dy
 this.animation.setDy(dy)
 }
 
 override fun setMaxScale(maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var maxScaleX = maxScaleX
 
 
-                    var maxScaleY = maxScaleY
+        Updates for KMP build        
+        {
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
 this.animation.setMaxScale(maxScaleX, maxScaleY)
 }
 
 override fun changeBasicColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
 this.animation.changeBasicColor(basicColor)
 }
 
 override fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -285,7 +311,11 @@ override fun getBasicColorP()
 
 override fun getChangeBasicColor()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -294,7 +324,11 @@ override fun getChangeBasicColor()
 
 override fun getChangeColor()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -303,7 +337,11 @@ override fun getChangeColor()
 
 override fun getColor()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -312,7 +350,11 @@ override fun getColor()
 
 override fun getDx()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -321,7 +363,11 @@ override fun getDx()
 
 override fun getDy()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -330,7 +376,11 @@ override fun getDy()
 
 override fun isThreed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -341,25 +391,39 @@ override fun isThreed()
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.animation.nextFrame()
+
+
+        Updates for KMP build        
+        {
+this.animation.nextFrame()
 }
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.animation.reset()
+
+
+        Updates for KMP build        
+        {
+this.animation.reset()
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 this.animation.setFrame(index)
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -370,7 +434,11 @@ override fun getFrame()
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -379,7 +447,11 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -388,12 +460,20 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.animation.previousFrame()
+
+
+        Updates for KMP build        
+        {
+this.animation.previousFrame()
 }
 
 override fun isLastFrame()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -402,15 +482,21 @@ override fun isLastFrame()
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 this.animation.setSequence(sequence)
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -419,7 +505,11 @@ override fun getSequence()
 
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -429,20 +519,22 @@ override fun getWidth()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
         try {
             this.animation.paint(graphics, x, y)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 }
@@ -450,30 +542,34 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
 open fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
         try {
             this.animation.paintThreed(graphics, x, y, z)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, this.commonStrings!!.PROCESS, e)
 }
 
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
 

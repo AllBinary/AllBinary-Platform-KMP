@@ -36,9 +36,11 @@ open public class AlwaysActionScriptConditionJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface
-public constructor        (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface){
+public constructor        (alwaysActionScriptConditionInterface: AlwaysActionScriptConditionInterface)
 
-                    var alwaysActionScriptConditionInterface = alwaysActionScriptConditionInterface
+        Updates for KMP build        
+        {
+var alwaysActionScriptConditionInterface = alwaysActionScriptConditionInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.alwaysActionScriptConditionInterface= alwaysActionScriptConditionInterface
@@ -48,7 +50,11 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.alwaysActionScriptConditionInterface!!.isIsOn())
                         
@@ -68,7 +74,11 @@ this.alwaysActionScriptConditionInterface!!.log()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.alwaysJComboBox!!.getSelectedIndex() == 0)
                         
@@ -88,7 +98,11 @@ this.alwaysActionScriptConditionInterface!!.log()
 
 open fun getAlwaysActionJDialog()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JDialog{
+: javax.swing.JDialog
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -98,16 +112,22 @@ open fun getAlwaysActionJDialog()
 
 open fun setAlwaysActionJDialog(alwaysActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var alwaysActionJDialog = alwaysActionJDialog
+
+        Updates for KMP build        
+        {
+var alwaysActionJDialog = alwaysActionJDialog
 this.alwaysActionJDialog= alwaysActionJDialog
 }
 
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{alwaysActionJDialog= javax.swing.JDialog()
+
+
+        Updates for KMP build        
+        {
+alwaysActionJDialog= javax.swing.JDialog()
 titleJLabel= javax.swing.JLabel()
 okJButton= javax.swing.JButton()
 jLabel2= javax.swing.JLabel()
@@ -122,9 +142,11 @@ okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 okJButtonActionPerformed(evt)
 }
 
@@ -145,9 +167,11 @@ alwaysActionJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 alwaysActionJButtonActionPerformed(evt)
 }
 
@@ -165,9 +189,11 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.update()
 this.getAlwaysActionJDialog()!!.setVisible(false)
 }
@@ -175,9 +201,11 @@ this.getAlwaysActionJDialog()!!.setVisible(false)
 
 open fun alwaysActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.getAlwaysActionJDialog()!!.setVisible(true)
 }
 

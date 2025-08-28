@@ -42,12 +42,12 @@ open public class CommonGameInitialization : BaseGameInitialization {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 protected constructor        (resourceInitializationArray: Array<ResourceInitialization?>, portion: Int)                        
 
-                            : super(resourceInitializationArray, portion){
+                            : super(resourceInitializationArray, portion)
 
-                    var resourceInitializationArray = resourceInitializationArray
-
-
-                    var portion = portion
+        Updates for KMP build        
+        {
+    //var resourceInitializationArray = resourceInitializationArray
+var portion = portion
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,15 +58,13 @@ protected constructor        (resourceInitializationArray: Array<ResourceInitial
                 @Throws(Exception::class)
             override fun init(abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var commandListener = commandListener
-
-
-                    var level = level
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var commandListener = commandListener
+    //var level = level
 super.init(abeClientInformation, commandListener, level)
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
@@ -99,7 +97,11 @@ super.resourceInitialization(level)
             
 open fun initGame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)

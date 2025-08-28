@@ -39,7 +39,11 @@ open public class OpenGLFeatureUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLFeatureUtil{
+: OpenGLFeatureUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,7 +56,11 @@ open fun getInstance()
     private val anyThreed: Boolean
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var openGLConfiguration: OpenGLConfiguration = OpenGLConfiguration.getInstance()!!
 
 
@@ -67,7 +75,11 @@ this.anyThreed= openGLConfiguration!!.isOpenGL() && (features.isFeature(openGLFe
 
 open fun isAnyThreed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

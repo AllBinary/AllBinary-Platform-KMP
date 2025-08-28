@@ -39,7 +39,11 @@ open public class ImageCreationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCreationUtil{
+: ImageCreationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,19 +54,23 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
-: Image{
+: Image
 
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var width = width
+    //var height = height
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(this::class.toString()!!, width, height)!!
 
@@ -78,18 +86,14 @@ open fun getInstance(width: Int, height: Int)
             
 open fun createImage(width: Int, height: Int, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var maxScaleX = maxScaleX
-
-
-                    var maxScaleY = maxScaleY
+        Updates for KMP build        
+        {
+    //var width = width
+    //var height = height
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(this::class.toString()!!, (width *maxScaleX).toInt() +1, (height *maxScaleY).toInt() +1)!!
 

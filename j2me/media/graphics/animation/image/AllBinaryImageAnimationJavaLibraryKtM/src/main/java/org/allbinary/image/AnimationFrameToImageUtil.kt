@@ -40,7 +40,11 @@ open public class AnimationFrameToImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnimationFrameToImageUtil{
+: AnimationFrameToImageUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,15 +63,13 @@ open fun getInstance()
             
 open fun getInstanceTranslate(width: Int, height: Int, animationInterface: Animation)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var animationInterface = animationInterface
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.toString()!!, ((width *3) shr 1), ((height *3) shr 1))!!
 
@@ -95,15 +97,13 @@ graphics.translate( -tranlateX,  -tranlateY)
             
 open fun getInstance(width: Int, height: Int, animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Image{
+: Image
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var animationInterface = animationInterface
 
     var image: Image = GameFeatureImageCacheFactory.getInstance()!!.get(instance::class.toString()!!, width, height)!!
 

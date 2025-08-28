@@ -30,19 +30,23 @@ import org.allbinary.logic.util.event.handler.BasicEventHandler
 
 open public class CapitalEventHandler : BasicEventHandler {
         
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun process(eventObject: AllBinaryEventObject, eventListenerInterface: EventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var eventObject = eventObject
 
 
-                    var eventListenerInterface = eventListenerInterface
+        Updates for KMP build        
+        {
+var eventObject = eventObject
+var eventListenerInterface = eventListenerInterface
 eventListenerInterface = eventListenerInterfaceeventListenerInterface as CapitalEventListenerInterface
 eventListenerInterface.
                     onCapitalChangeEvent(eventObject as CapitalEvent)

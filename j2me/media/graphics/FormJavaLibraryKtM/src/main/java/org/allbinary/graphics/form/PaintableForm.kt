@@ -42,24 +42,16 @@ open public class PaintableForm : CustomForm {
     var formType: FormType = FormTypeFactory.getInstance()!!.NULL_FORM_TYPE
 public constructor        (title: String, items: Array<CustomItem?>, rectangle: Rectangle, formType: FormType, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(title, items, backgroundBasicColor, foregroundBasicColor){
+                            : super(title, items, backgroundBasicColor, foregroundBasicColor)
 
-                    var title = title
-
-
-                    var items = items
-
-
-                    var rectangle = rectangle
-
-
-                    var formType = formType
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var title = title
+    //var items = items
+    //var rectangle = rectangle
+    //var formType = formType
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,7 +61,11 @@ this.setSelectedIndex(0)
         try {
             this.init(rectangle, formType)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 }
@@ -79,12 +75,12 @@ this.setSelectedIndex(0)
             
 open fun init(rectangle: Rectangle, formType: FormType)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var rectangle = rectangle
 
 
-                    var formType = formType
+        Updates for KMP build        
+        {
+    //var rectangle = rectangle
+    //var formType = formType
 this.rectangle= rectangle
 
     var point: GPoint = this.rectangle.getPoint()!!
@@ -96,7 +92,11 @@ this.formType= formType
 
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

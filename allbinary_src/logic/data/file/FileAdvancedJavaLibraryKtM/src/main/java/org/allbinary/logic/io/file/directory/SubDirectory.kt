@@ -42,7 +42,11 @@ open public class SubDirectory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SubDirectory{
+: SubDirectory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,9 +56,11 @@ open fun getInstance()
 
 open fun toString(files: BasicArrayList)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var files = files
+        Updates for KMP build        
+        {
+var files = files
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -70,7 +76,11 @@ open fun toString(files: BasicArrayList)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var file: AbFile = files.get(index) as AbFile
 
 stringBuffer!!.append(file.getPath())
@@ -90,17 +100,21 @@ stringBuffer!!.append(NEW_LINE)
     private val directory: Directory = Directory.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun search(fileFilter: FileFilter, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var fileFilter = fileFilter
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var fileFilter = fileFilter
+var file = file
 
 
 
@@ -111,9 +125,11 @@ open fun search(fileFilter: FileFilter, file: AbFile)
 
 open fun search(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
 
@@ -124,12 +140,12 @@ open fun search(file: AbFile)
 
 open fun search(searchValue: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var searchValue = searchValue
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var searchValue = searchValue
+var file = file
 
 
 
@@ -140,12 +156,12 @@ open fun search(searchValue: String, file: AbFile)
 
 open fun search(level: Int, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var level = level
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var level = level
+var file = file
 
 
 

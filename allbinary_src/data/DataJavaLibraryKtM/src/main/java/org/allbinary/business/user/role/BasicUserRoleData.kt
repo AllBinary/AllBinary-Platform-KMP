@@ -38,7 +38,11 @@ open public class BasicUserRoleData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -54,42 +54,30 @@ open public class PlayerTopViewCharacterBehavior : TopViewCharacterBehavior {
             
 open fun terrainEvent(layer: AllBinaryLayer, direction: Direction, x: Int, y: Int, geographicMapInterfaceArray: Array<BasicGeographicMap?>, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var direction = direction
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var direction = direction
+    //var x = x
+    //var y = y
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var geographicMapCellPosition = geographicMapCellPosition
 TrackingEventHandler.getInstance()!!.fireEvent(TrackingEventCircularStaticPool.getInstance()!!.getInstance(layer))
 }
 
 
 open fun terrainMove(layer: AllBinaryLayer, geographicMapInterfaceArray: Array<BasicGeographicMap?>, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var geographicMapInterfaceArray = geographicMapInterfaceArray
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var geographicMapInterfaceArray = geographicMapInterfaceArray
+    //var x = x
+    //var y = y
 
     var basicGeographicMapUtil: BasicGeographicMapUtil = BasicGeographicMapUtil.getInstance()!!
 
@@ -99,29 +87,25 @@ basicGeographicMapUtil!!.setPosition(geographicMapInterfaceArray, x, y)
 
 open fun moveIfOnScreen(layer: AllBinaryLayer, ax: Int, ay: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layer = layer
 
 
-                    var ax = ax
-
-
-                    var ay = ay
+        Updates for KMP build        
+        {
+    //var layer = layer
+    //var ax = ax
+    //var ay = ay
 }
 
 
 open fun isTiledLayerMoveable(terrainTiledLayer: AllBinaryTiledLayer, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var terrainTiledLayer = terrainTiledLayer
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var terrainTiledLayer = terrainTiledLayer
+    //var x = x
+    //var y = y
 
 
 

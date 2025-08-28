@@ -39,15 +39,13 @@ open public class BufferedImageInfoFactory
 
 open fun getInstance(width: Int, height: Int, type: Int)
         //nullable =  from not(true or (false and false)) = 
-: BufferedImageInfo{
+: BufferedImageInfo
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var type = type
 
     var stringbuffer: StringMaker = StringMaker()
 
@@ -83,7 +81,11 @@ hashMap!!.put(key, bufferedImageInfo)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

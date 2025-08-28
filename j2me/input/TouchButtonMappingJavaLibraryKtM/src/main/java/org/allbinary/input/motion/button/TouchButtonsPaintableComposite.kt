@@ -59,12 +59,12 @@ open public class TouchButtonsPaintableComposite : ProcessPaintable
     private var timeHelper: TimeDelayHelper = TimeDelayHelper(250)
 
     private var released: Boolean = true
-public constructor        (inputMappingInterface: InputMappingInterface, basicColor: BasicColor){
+public constructor        (inputMappingInterface: InputMappingInterface, basicColor: BasicColor)
 
-                    var inputMappingInterface = inputMappingInterface
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var inputMappingInterface = inputMappingInterface
+    //var basicColor = basicColor
 this.inputMappingInterface= inputMappingInterface
 CompleteMotionGestureInputEventHandler.getInstance()!!.addListener(this)
 this.touchButtonsPaintable= TouchButtonsMappingPaintable(basicColor)
@@ -72,9 +72,11 @@ this.touchButtonsPaintable= TouchButtonsMappingPaintable(basicColor)
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -88,9 +90,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
     private val IGNORE: String = "Ignoring: Until Released"
 override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var completeMotionGestureInputEvent = completeMotionGestureInputEvent
+
+        Updates for KMP build        
+        {
+    //var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 
         try {
             logUtil!!.put(commonStrings!!.START, this, "onCompleteMotionGestureInputEvent")
@@ -154,14 +158,22 @@ logUtil!!.put(StringMaker().
                             append("GameKey: ")!!.append(StringUtil.getInstance()!!.toString(gameKey))!!.append(" MotionGestureInput: ")!!.append(StringUtil.getInstance()!!.toString(motionGestureInput))!!.toString(), this, METHOD_NAME)
 this.inputMappingInterface!!.process(gameKey, motionGestureInput)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, METHOD_NAME, e)
 }
 
 }
 
 override fun process()
         //nullable = true from not(false or (false and true)) = true
-{CompleteMotionGestureInputEventHandler.getInstance()!!.removeListener(this)
+
+
+        Updates for KMP build        
+        {
+CompleteMotionGestureInputEventHandler.getInstance()!!.removeListener(this)
 }
 
 

@@ -37,18 +37,14 @@ open public class AdjustedRightToLeftImageAnimation : RightToLeftImageAnimation 
     private var dy: Int= 0
 public constructor        (image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, animationBehavior){
+                            : super(image, animationBehavior)
 
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,27 +57,25 @@ this.init(dx, dy)
             
 open fun init(dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var dx = dx
 
 
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var dx = dx
+    //var dy = dy
 this.dx= dx
 this.dy= dy
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 super.paint(graphics, x +this.dx, y +this.dy)
 }
 

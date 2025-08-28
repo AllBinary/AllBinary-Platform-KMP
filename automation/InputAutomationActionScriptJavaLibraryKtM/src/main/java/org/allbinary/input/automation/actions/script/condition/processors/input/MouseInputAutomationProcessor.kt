@@ -43,9 +43,11 @@ open public class MouseInputAutomationProcessor
             
 open fun process(mouseActionScriptInputInterface: MouseActionScriptInputInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mouseActionScriptInputInterface = mouseActionScriptInputInterface
+
+        Updates for KMP build        
+        {
+var mouseActionScriptInputInterface = mouseActionScriptInputInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -85,7 +87,11 @@ Thread.sleep(mouseActionScriptInputInterface!!.getTime())
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

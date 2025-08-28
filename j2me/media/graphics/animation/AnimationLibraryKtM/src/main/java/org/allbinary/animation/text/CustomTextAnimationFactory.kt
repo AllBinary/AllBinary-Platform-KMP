@@ -59,18 +59,14 @@ open public class CustomTextAnimationFactory
     var scaleProperties: ScaleProperties
 public constructor        (text: String, fontSize: Int, dx: Int, dy: Int)                        
 
-                            : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
+                            : this(text, fontSize, AnimationBehaviorFactory.getInstance())
 
-                    var text = text
-
-
-                    var fontSize = fontSize
-
-
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var text = text
+    //var fontSize = fontSize
+    //var dx = dx
+    //var dy = dy
 
 
                             //For kotlin this is before the body of the constructor.
@@ -81,21 +77,15 @@ this.dy= dy
 
 public constructor        (text: String, fontSize: Int, dx: Int, dy: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(text, fontSize, animationBehaviorFactory){
+                            : this(text, fontSize, animationBehaviorFactory)
 
-                    var text = text
-
-
-                    var fontSize = fontSize
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var text = text
+    //var fontSize = fontSize
+    //var dx = dx
+    //var dy = dy
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -106,12 +96,12 @@ this.dy= dy
 
 public constructor        (text: String, fontSize: Int)                        
 
-                            : this(text, fontSize, AnimationBehaviorFactory.getInstance()){
+                            : this(text, fontSize, AnimationBehaviorFactory.getInstance())
 
-                    var text = text
-
-
-                    var fontSize = fontSize
+        Updates for KMP build        
+        {
+    //var text = text
+    //var fontSize = fontSize
 
 
                             //For kotlin this is before the body of the constructor.
@@ -120,15 +110,13 @@ public constructor        (text: String, fontSize: Int)
 
 public constructor        (text: String, fontSize: Int, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var text = text
-
-
-                    var fontSize = fontSize
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var text = text
+    //var fontSize = fontSize
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.scaleProperties= ScaleProperties()
 this.text= text
 this.scaleProperties!!.scaleHeight= fontSize.toInt() -(fontSize /4)
@@ -141,9 +129,11 @@ this.font= Font.getFont(Font.FACE_SYSTEM, Font.STYLE_PLAIN, this.initScaleHeight
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var customTextAnimation: CustomTextAnimation
 
@@ -171,15 +161,21 @@ customTextAnimation!!.setBasicColorP(basicColor)
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -189,7 +185,11 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -37,7 +37,11 @@ open public class UnitTechnologySingletonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UnitTechnologySingletonFactory{
+: UnitTechnologySingletonFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,12 +62,20 @@ open fun getInstance()
     private var speed: Int= 0
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.setDamage(0)
+
+
+        Updates for KMP build        
+        {
+this.setDamage(0)
 this.setHealth(0)
 this.setReload(0)
 this.setRepair(0)
@@ -73,7 +85,11 @@ this.setSpeed(0)
 
 open fun getDamage()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,16 +99,22 @@ open fun getDamage()
 
 open fun setDamage(damage: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var damage = damage
+
+        Updates for KMP build        
+        {
+var damage = damage
 this.damage= damage
 }
 
 
 open fun getHealth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,16 +124,22 @@ open fun getHealth()
 
 open fun setHealth(health: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var health = health
+
+        Updates for KMP build        
+        {
+var health = health
 this.health= health
 }
 
 
 open fun getReload()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,16 +149,22 @@ open fun getReload()
 
 open fun setReload(reload: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var reload = reload
+
+        Updates for KMP build        
+        {
+var reload = reload
 this.reload= reload
 }
 
 
 open fun getRepair()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -140,16 +174,22 @@ open fun getRepair()
 
 open fun setRepair(repair: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var repair = repair
+
+        Updates for KMP build        
+        {
+var repair = repair
 this.repair= repair
 }
 
 
 open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -159,9 +199,11 @@ open fun getSpeed()
 
 open fun setSpeed(speed: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var speed = speed
+
+        Updates for KMP build        
+        {
+var speed = speed
 this.speed= speed
 }
 

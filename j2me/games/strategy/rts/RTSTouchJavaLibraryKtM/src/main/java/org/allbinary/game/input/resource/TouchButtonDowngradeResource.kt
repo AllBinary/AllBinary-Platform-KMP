@@ -37,7 +37,11 @@ open public class TouchButtonDowngradeResource : TouchButtonResource {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchButtonResource{
+: TouchButtonResource
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super("/touch_button_downgrade_64_by_64.png", "/touch_button_downgrade_hint_64_by_64.png"){
+                            : super("/touch_button_downgrade_64_by_64.png", "/touch_button_downgrade_hint_64_by_64.png")
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     

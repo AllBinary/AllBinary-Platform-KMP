@@ -39,12 +39,12 @@ open public class LurchRotationAI : LurchAI {
     private var rotationAnimationInterface: IndexedAnimation
 public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,14 +58,22 @@ this.update()
 
 override fun reverse()
         //nullable = true from not(false or (false and true)) = true
-{super.reverse()
+
+
+        Updates for KMP build        
+        {
+super.reverse()
 this.update()
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(currentRelativeAngle == 0)
                         

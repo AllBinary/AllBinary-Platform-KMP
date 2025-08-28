@@ -33,7 +33,11 @@ open public class PaymentIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "paymentId"
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())

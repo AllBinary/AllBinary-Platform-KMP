@@ -37,7 +37,11 @@ open public class ExceptionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ExceptionUtil{
+: ExceptionUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,16 +54,22 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val NONE: String = "No Stack Trace"
 
 open fun getStackTrace(e: Throwable)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var e = e
+        Updates for KMP build        
+        {
+var e = e
 e.printStackTrace()
 
 

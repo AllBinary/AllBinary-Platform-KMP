@@ -40,7 +40,11 @@ open public class CellPositionsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CellPositionsUtil{
+: CellPositionsUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,21 +63,15 @@ open fun getInstance()
             
 open fun getAll(geographicMapInterface: BasicGeographicMap, topRightGeographicMapCellPosition: GeographicMapCellPosition, columns: Int, rows: Int, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var topRightGeographicMapCellPosition = topRightGeographicMapCellPosition
-
-
-                    var columns = columns
-
-
-                    var rows = rows
-
-
-                    var reusableList = reusableList
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var topRightGeographicMapCellPosition = topRightGeographicMapCellPosition
+    //var columns = columns
+    //var rows = rows
+    //var reusableList = reusableList
 reusableList!!.clear()
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
@@ -103,13 +101,21 @@ reusableList!!.clear()
 
                         for (rowIndex in 0 until rows)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (columnIndex in 0 until columns)
 
+        
+
+        Updates for KMP build        
         {
+
     var geographicMapCellPosition: GeographicMapCellPosition = geographicMapCellPositionFactory!!.getInstance(topRightGeographicMapCellPosition!!.getColumn() +columnIndex, topRightGeographicMapCellPosition!!.getRow() +rowIndex)!!
 
 reusableList!!.add(geographicMapCellPosition)
@@ -131,15 +137,13 @@ reusableList!!.add(geographicMapCellPosition)
             
 open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, occupyList: BasicArrayList, reusableList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var occupyList = occupyList
-
-
-                    var reusableList = reusableList
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var occupyList = occupyList
+    //var reusableList = reusableList
 reusableList!!.clear()
 
 
@@ -147,7 +151,11 @@ reusableList!!.clear()
 
                         for (index in occupyList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var layerGeographicMapCellPosition: GeographicMapCellPosition = occupyList!!.get(index) as GeographicMapCellPosition
 
 
@@ -159,7 +167,11 @@ reusableList!!.clear()
 
                         for (index2 in surroundingGeographicMapCellPositionList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var geographicMapCellPosition: GeographicMapCellPosition = surroundingGeographicMapCellPositionList!!.get(index2) as GeographicMapCellPosition
 
 
@@ -196,15 +208,13 @@ reusableList!!.clear()
             
 open fun getAllSurrounding(geographicMapInterface: BasicGeographicMap, layerGeographicMapCellPosition: GeographicMapCellPosition, reusableSurroundingList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var layerGeographicMapCellPosition = layerGeographicMapCellPosition
-
-
-                    var reusableSurroundingList = reusableSurroundingList
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var layerGeographicMapCellPosition = layerGeographicMapCellPosition
+    //var reusableSurroundingList = reusableSurroundingList
 reusableSurroundingList!!.clear()
 
     var geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
@@ -224,7 +234,11 @@ reusableSurroundingList!!.clear()
 
                         for (index in 0 until 8)
 
-        {column= layerGeographicMapCellPosition!!.getColumn() +surroundArray[index]!![0]
+        
+
+        Updates for KMP build        
+        {
+column= layerGeographicMapCellPosition!!.getColumn() +surroundArray[index]!![0]
 row= layerGeographicMapCellPosition!!.getRow() +surroundArray[index]!![1]
 
     

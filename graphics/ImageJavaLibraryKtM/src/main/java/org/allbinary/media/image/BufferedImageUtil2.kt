@@ -25,7 +25,11 @@ open public class BufferedImageUtil2
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BufferedImageUtil2{
+: BufferedImageUtil2
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -44,9 +48,11 @@ open fun getInstance()
 
 open fun createSpriteImage(bufferedImageArray: Array<BufferedImage?>)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var bufferedImageArray = bufferedImageArray
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
 
     var columns: Int = bufferedImageArray!!.size
                 
@@ -96,7 +102,11 @@ rows= (bufferedImageArray!!.size /columns)
 
                         for (index in 0 until bufferedImageArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(index /max != 0 && index % max == 0)
                         

@@ -48,16 +48,22 @@ open public class WaypointBase
     private val sound: Sound
 public constructor        (sound: Sound)
             : super()
-        {
+        
 
-                    var sound = sound
+        Updates for KMP build        
+        {
+    //var sound = sound
 this.sound= sound
 }
 
 
 open fun getSound()
         //nullable = true from not(false or (false and true)) = true
-: Sound{
+: Sound
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,16 +77,22 @@ open fun getSound()
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 this.allBinaryGameLayerManager= allBinaryGameLayerManager
 }
 
 
 open fun getConnectedWaypointList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,9 +102,11 @@ open fun getConnectedWaypointList()
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -101,9 +115,11 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: PathFindingInfo{
+: PathFindingInfo
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 
@@ -116,15 +132,13 @@ open fun getPathFindingInfo(geographicMapCellPosition: GeographicMapCellPosition
             
 open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, pathFindingInfo: PathFindingInfo, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var pathFindingInfo = pathFindingInfo
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var pathFindingInfo = pathFindingInfo
+    //var multipassState = multipassState
 
 
 
@@ -137,9 +151,11 @@ open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition, path
             
 open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 
@@ -152,9 +168,11 @@ open fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
             
 open fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 
@@ -167,20 +185,30 @@ open fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellP
             
 open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unitLayer = unitLayer
+
+        Updates for KMP build        
+        {
+    //var unitLayer = unitLayer
 }
 
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

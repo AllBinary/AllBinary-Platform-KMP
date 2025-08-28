@@ -40,9 +40,11 @@ open public class NullServiceReference
         
 open fun getProperty(key: String)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
 
 
@@ -53,7 +55,11 @@ open fun getProperty(key: String)
 
 open fun getPropertyKeys()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+: Array<String?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,9 +69,11 @@ open fun getPropertyKeys()
 
 open fun compareTo(o: Any)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var o = o
+        Updates for KMP build        
+        {
+var o = o
 
 
 

@@ -51,7 +51,11 @@ open public class AllMotionRecognizer : MotionRecognizer {
     private val touchButtonRecognizer: TouchButtonRecognizer
 
     private val id: Int
-public constructor        (){this.id= index++
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.id= index++
 this.motionGestureRecognizer= MotionGestureRecognizer(id)
 this.touchButtonRecognizer= TouchButtonRecognizer()
 }
@@ -60,18 +64,14 @@ this.touchButtonRecognizer= TouchButtonRecognizer()
                 @Throws(Exception::class)
             override fun processStartMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
+    //var modifiers = modifiers
 
     
                         if(this.touchButtonRecognizer!!.pressTouchButtonInput(x, y, deviceId))
@@ -101,18 +101,14 @@ this.motionGestureRecognizer!!.processPressedMotionEvent(point, deviceId, modifi
                 @Throws(Exception::class)
             override fun processEndMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
+    //var modifiers = modifiers
 
     
                         if(this.touchButtonRecognizer!!.releaseTouchButtonInput(x, y, deviceId))
@@ -150,18 +146,14 @@ this.motionGestureRecognizer!!.processReleasedMotionEvent(point, deviceId, modif
                 @Throws(Exception::class)
             override fun processDraggedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
+    //var modifiers = modifiers
 
     
                         if(touchButtonProcessing)
@@ -196,18 +188,14 @@ this.motionGestureRecognizer!!.processDraggedMotionEvent(point, deviceId, modifi
             
 open fun processMovedMotionEvent(x: Int, y: Int, deviceId: Int, modifiers: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var deviceId = deviceId
-
-
-                    var modifiers = modifiers
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var deviceId = deviceId
+    //var modifiers = modifiers
 
     
                         if(x != lastX || y != lastY)
@@ -229,7 +217,11 @@ this.motionGestureRecognizer!!.processMovedMotionEvent(point, deviceId, modifier
 
 open fun getMotionGestureRecognizer()
         //nullable = true from not(false or (false and true)) = true
-: MotionGestureRecognizer{
+: MotionGestureRecognizer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -44,9 +44,11 @@ open public class TextAnimation : IndexedAnimation {
     private var anchor: Int = Anchor.TOP_LEFT
 public constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,12 +57,12 @@ public constructor        (animationBehavior: AnimationBehavior)
 
 public constructor        (text: String, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var text = text
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var text = text
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -72,19 +74,21 @@ this.setText(text)
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
 
     var height: Int = this.getHeight()!!
@@ -99,7 +103,11 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 
                         for (index in 0 until size)
 
-        {graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
+        
+
+        Updates for KMP build        
+        {
+graphics.drawString(textArray[index]!!, x, y +(index *height), anchor)
 }
 
 }
@@ -107,9 +115,11 @@ this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.ge
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var text = text
+
+        Updates for KMP build        
+        {
+var text = text
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -131,7 +141,11 @@ open fun setText(text: String)
 
 
         while(index >= 0)
-        {startIndex= index
+        
+
+        Updates for KMP build        
+        {
+startIndex= index
 index= text.indexOf('\n', startIndex)
 endIndex= index
 
@@ -178,7 +192,11 @@ index++
 
                         for (index in 0 until size)
 
-        {textArray[index]= list.get(index) as String
+        
+
+        Updates for KMP build        
+        {
+textArray[index]= list.get(index) as String
 }
 
 this.textArray= list.toArray() as Array<String?>
@@ -195,7 +213,11 @@ this.textArray= list.toArray() as Array<String?>
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
-: Array<String?>{
+: Array<String?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -205,7 +227,11 @@ open fun getText()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var myFont: MyFont = MyFont.getInstance()!!
 
 

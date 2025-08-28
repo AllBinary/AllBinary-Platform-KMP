@@ -47,9 +47,11 @@ open public class ResourceRelativeRelationshipFactory
                 @Throws(Exception::class)
             override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 this.setInitialized(true)
 }
 
@@ -57,9 +59,11 @@ this.setInitialized(true)
                 @Throws(Exception::class)
             override fun getResourceRelativeRelationshipList(resource: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var resource = resource
+        Updates for KMP build        
+        {
+var resource = resource
 
 
 
@@ -71,12 +75,12 @@ this.setInitialized(true)
                 @Throws(Exception::class)
             override fun addResourceRelativeRelationship(resource: String, hardPoint: RelativeRelationship)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var resource = resource
 
 
-                    var hardPoint = hardPoint
+        Updates for KMP build        
+        {
+var resource = resource
+var hardPoint = hardPoint
 
     var list: BasicArrayList = this.getResourceRelativeRelationshipList(resource)!!
 
@@ -97,9 +101,11 @@ this.hashtable.put(resource, list)
 
 override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var level = level
+        Updates for KMP build        
+        {
+var level = level
 
 
 
@@ -109,7 +115,11 @@ override fun isLoadingLevel(level: Int)
 
 override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -119,16 +129,22 @@ override fun isFeature()
 
 open fun setInitialized(initialized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var initialized = initialized
+
+        Updates for KMP build        
+        {
+var initialized = initialized
 this.initialized= initialized
 }
 
 
 open fun isInitialized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

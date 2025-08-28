@@ -53,9 +53,11 @@ open public class ImageComparisonWorker : BasicEventHandler
     private var running: Boolean= false
 
     private var index2: Int= 0
-public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface){
+public constructor        (imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)
 
-                    var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
+        Updates for KMP build        
+        {
+    //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
 this.imageComparatorConstraintsInterface= imageComparatorConstraintsInterface
 this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
 }
@@ -64,7 +66,11 @@ this.imageComparator= ImageComparator(imageComparatorConstraintsInterface)
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,9 +81,11 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 this.running= running
 }
 
@@ -85,9 +93,11 @@ this.running= running
 
 open fun onCaptureEvent(capturedImageWorkerResultsEvent: CapturedImageWorkerResultsEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var capturedImageWorkerResultsEvent = capturedImageWorkerResultsEvent
+
+        Updates for KMP build        
+        {
+    //var capturedImageWorkerResultsEvent = capturedImageWorkerResultsEvent
 this.bufferedImageVector!!.add(capturedImageWorkerResultsEvent)
 
     
@@ -104,16 +114,22 @@ this.bufferedImageVector!!.add(capturedImageWorkerResultsEvent)
 
 open fun onEvent(allBinaryEventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryEventObject = allBinaryEventObject
+
+        Updates for KMP build        
+        {
+    //var allBinaryEventObject = allBinaryEventObject
 this.onCaptureEvent(allBinaryEventObject as CapturedImageWorkerResultsEvent)
 }
 
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
@@ -170,7 +186,11 @@ logUtil!!.put(message, this, this.commonStrings!!.RUN)
 this.setRunning(false)
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }

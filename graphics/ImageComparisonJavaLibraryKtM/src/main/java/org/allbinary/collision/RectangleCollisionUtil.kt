@@ -37,12 +37,12 @@ open public class RectangleCollisionUtil
             
 open fun isCollision(rectangle: Rectangle, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectangle = rectangle
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+var rectangle = rectangle
+var point = point
 
     
                         if(point.getX() > (rectangle.x.toInt() +rectangle.getWidth()) || point.getY() > (rectangle.y.toInt() +rectangle.getHeight()) || point.getX() < rectangle.x || point.getY() < rectangle.y)
@@ -70,12 +70,12 @@ open fun isCollision(rectangle: Rectangle, point: GPoint)
 
 open fun isCollision(rectangle1: Rectangle, rectangle2: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectangle1 = rectangle1
-
-
-                    var rectangle2 = rectangle2
+        Updates for KMP build        
+        {
+var rectangle1 = rectangle1
+var rectangle2 = rectangle2
 
 
 
@@ -86,30 +86,18 @@ open fun isCollision(rectangle1: Rectangle, rectangle2: Rectangle)
 
 open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectX1 = rectX1
-
-
-                    var rectY1 = rectY1
-
-
-                    var rectX2 = rectX2
-
-
-                    var rectY2 = rectY2
-
-
-                    var rect2X1 = rect2X1
-
-
-                    var rect2Y1 = rect2Y1
-
-
-                    var rect2X2 = rect2X2
-
-
-                    var rect2Y2 = rect2Y2
+        Updates for KMP build        
+        {
+var rectX1 = rectX1
+var rectY1 = rectY1
+var rectX2 = rectX2
+var rectY2 = rectY2
+var rect2X1 = rect2X1
+var rect2Y1 = rect2Y1
+var rect2X2 = rect2X2
+var rect2Y2 = rect2Y2
 
     
                         if(rect2X1 >= rectX2 || rect2Y1 >= rectY2 || rect2X2 <= rectX1 || rect2Y2 <= rectY1)
@@ -138,7 +126,11 @@ open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

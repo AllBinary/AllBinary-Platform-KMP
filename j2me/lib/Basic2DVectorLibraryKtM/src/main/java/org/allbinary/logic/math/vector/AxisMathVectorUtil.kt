@@ -38,7 +38,11 @@ open public class AxisMathVectorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AxisMathVectorUtil{
+: AxisMathVectorUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,12 +61,12 @@ open fun getInstance()
 
 open fun calculateX(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var magnitude = magnitude
-
-
-                    var angle = angle
+        Updates for KMP build        
+        {
+var magnitude = magnitude
+var angle = angle
 
 
 
@@ -73,12 +77,12 @@ open fun calculateX(magnitude: Long, angle: Int)
 
 open fun calculateY(magnitude: Long, angle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var magnitude = magnitude
-
-
-                    var angle = angle
+        Updates for KMP build        
+        {
+var magnitude = magnitude
+var angle = angle
 
 
 
@@ -89,12 +93,12 @@ open fun calculateY(magnitude: Long, angle: Int)
 
 open fun calculateZ(magnitude: Long, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var magnitude = magnitude
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+var magnitude = magnitude
+var otherAngle = otherAngle
 
 
 

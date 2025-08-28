@@ -38,18 +38,22 @@ open public class BufferedLineReader
     private val tmpIn: BufferedReader
 public constructor        (file: AbFile)
             : super()
-        {
+        
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 this.tmpIn= BufferedReader(FileReader(AbFileNativeUtil.get(file)))
 }
 
 
 open fun readUpToLines(readAheadIndex: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var readAheadIndex = readAheadIndex
+
+        Updates for KMP build        
+        {
+var readAheadIndex = readAheadIndex
 }
 
 
@@ -57,7 +61,11 @@ open fun readUpToLines(readAheadIndex: Long)
             
 open fun readLine()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,7 +75,11 @@ open fun readLine()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,7 +89,11 @@ open fun getSize()
 
 open fun getCurrent()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

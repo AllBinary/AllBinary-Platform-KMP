@@ -34,16 +34,22 @@ open public class InputAutomationRobotChangeEvent
     private var inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper
 public constructor        (inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
             : super()
-        {
+        
 
-                    var inputAutomationRobotInterfaceWrapper = inputAutomationRobotInterfaceWrapper
+        Updates for KMP build        
+        {
+var inputAutomationRobotInterfaceWrapper = inputAutomationRobotInterfaceWrapper
 this.setInputAutomationRobotInterfaceWrapper(inputAutomationRobotInterfaceWrapper)
 }
 
 
 open fun getInputAutomationRobotInterfaceWrapper()
         //nullable = true from not(false or (false and true)) = true
-: InputAutomationRobotInterfaceWrapper{
+: InputAutomationRobotInterfaceWrapper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +59,11 @@ open fun getInputAutomationRobotInterfaceWrapper()
 
 open fun setInputAutomationRobotInterfaceWrapper(inputAutomationRobotInterfaceWrapper: InputAutomationRobotInterfaceWrapper)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputAutomationRobotInterfaceWrapper = inputAutomationRobotInterfaceWrapper
+
+        Updates for KMP build        
+        {
+var inputAutomationRobotInterfaceWrapper = inputAutomationRobotInterfaceWrapper
 this.inputAutomationRobotInterfaceWrapper= inputAutomationRobotInterfaceWrapper
 }
 

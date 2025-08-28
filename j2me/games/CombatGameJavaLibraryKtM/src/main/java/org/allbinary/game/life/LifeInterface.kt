@@ -32,29 +32,50 @@ open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Short
 
+        Updates for KMP build        
+        
+
 open fun set(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun add(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun deaths(lives: Short)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getMaxlives()
         //nullable = true from not(false or (false and true)) = true
 : Short
 
+        Updates for KMP build        
+        
+
 open fun isAlive()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

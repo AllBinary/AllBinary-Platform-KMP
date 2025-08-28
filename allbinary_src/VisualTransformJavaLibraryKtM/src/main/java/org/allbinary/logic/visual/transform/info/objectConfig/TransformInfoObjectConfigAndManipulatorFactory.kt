@@ -43,7 +43,11 @@ open public class TransformInfoObjectConfigAndManipulatorFactory : TransformInfo
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformInfoObjectConfigAndManipulatorFactory{
+: TransformInfoObjectConfigAndManipulatorFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,22 +58,24 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, objectConfigFileAbPath: AbPath)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface{
+: TransformInfoObjectConfigInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var objectConfigFileAbPath = objectConfigFileAbPath
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+    //var objectConfigFileAbPath = objectConfigFileAbPath
 
         try {
             
@@ -82,7 +88,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getInstance(abeClientInformation, transformInfoInterface, DomDocumentHelper.create(data))
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -104,12 +114,12 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface{
+: TransformInfoObjectConfigInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var transformInfoInterface = transformInfoInterface
 
         try {
             
@@ -140,7 +150,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed To Get Instance: "
 
 
@@ -176,15 +190,13 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, document: Document)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoObjectConfigInterface{
+: TransformInfoObjectConfigInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+    //var document = document
 
         try {
             
@@ -215,7 +227,11 @@ open fun getInstance(abeClientInformation: AbeClientInformationInterface, transf
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed To Get Instance: "
 
 

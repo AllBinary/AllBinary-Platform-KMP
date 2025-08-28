@@ -44,12 +44,12 @@ open public class BasicTextEmailHelper : TagHelper {
     private var hashMap: HashMap<Any, Any>
 
     private var pageContext: PageContext
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.pageContext= pageContext
 this.hashMap= hashMap
 }
@@ -59,7 +59,11 @@ this.hashMap= hashMap
             
 open fun send()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var adminEmailSubject: String = hashMap!!.get("Subject") as String
 
 

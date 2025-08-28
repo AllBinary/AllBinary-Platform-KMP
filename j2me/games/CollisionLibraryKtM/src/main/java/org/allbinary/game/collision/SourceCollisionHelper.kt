@@ -32,9 +32,11 @@ open public class SourceCollisionHelper : CollisionHelper {
         
 public constructor        (layerInterface: AllBinaryLayer)                        
 
-                            : super(layerInterface){
+                            : super(layerInterface)
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -43,9 +45,11 @@ public constructor        (layerInterface: AllBinaryLayer)
 
 override fun isCollidable(layerInterface: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     
                         if(this.sourceLayerInterface != layerInterface)

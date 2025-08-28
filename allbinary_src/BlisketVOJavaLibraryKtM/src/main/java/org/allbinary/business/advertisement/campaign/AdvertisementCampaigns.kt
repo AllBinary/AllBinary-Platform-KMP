@@ -39,27 +39,33 @@ open public class AdvertisementCampaigns
     private var advertisementsVector: Vector
 public constructor        (vector: Vector)
             : super()
-        {
+        
 
-                    var vector = vector
+        Updates for KMP build        
+        {
+var vector = vector
 this.advertisementsVector= advertisementsVector
 }
 
 
 open fun add(advertisementInterface: AdvertisementInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var advertisementInterface = advertisementInterface
+
+        Updates for KMP build        
+        {
+var advertisementInterface = advertisementInterface
 this.advertisementsVector!!.add(advertisementInterface)
 }
 
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementInterface{
+: AdvertisementInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -70,7 +76,11 @@ open fun get(index: Int)
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,7 +90,11 @@ open fun size()
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,9 +104,11 @@ open fun isEnabled()
 
 open fun search(advertisementSearchInterface: AdvertisementSearchInterface)
         //nullable = true from not(false or (false and false)) = true
-: AdvertisementsInterface{
+: AdvertisementsInterface
 
-                    var advertisementSearchInterface = advertisementSearchInterface
+        Updates for KMP build        
+        {
+var advertisementSearchInterface = advertisementSearchInterface
 
 
 

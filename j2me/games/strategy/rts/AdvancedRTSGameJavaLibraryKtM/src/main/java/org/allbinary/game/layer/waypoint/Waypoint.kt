@@ -64,12 +64,12 @@ open public class Waypoint : WaypointBase
     private var paths: Array<Array<BasicArrayList?>?>
 public constructor        (ownerLayer: PathFindingLayerInterface, sound: Sound)                        
 
-                            : super(sound){
+                            : super(sound)
 
-                    var ownerLayer = ownerLayer
-
-
-                    var sound = sound
+        Updates for KMP build        
+        {
+    //var ownerLayer = ownerLayer
+    //var sound = sound
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,9 +82,11 @@ this.ownerLayer= ownerLayer
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
@@ -117,19 +119,31 @@ this.paths= Array(tiledLayer!!.getColumns()) { arrayOfNulls<BasicArrayList?>(til
 
 open fun releaseCachedPaths()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (columnIndex in paths.size  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (rowIndex in paths.size  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var pathsList: BasicArrayList = this.paths[columnIndex]!![rowIndex]!!
 
 
@@ -153,9 +167,11 @@ open fun releaseCachedPaths()
                 @Throws(Exception::class)
             override fun getPathsListFromCacheOnly(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
 
 
@@ -167,9 +183,11 @@ open fun releaseCachedPaths()
                 @Throws(Exception::class)
             override fun getPathsList(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var pathsList: BasicArrayList = this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!!.getRow()]!!
 
@@ -195,9 +213,11 @@ this.paths[geographicMapCellPosition!!.getColumn()]!![geographicMapCellPosition!
 
 open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var startGeographicMapCellPosition = startGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var startGeographicMapCellPosition = startGeographicMapCellPosition
 
     var endGeographicMapCellPosition: GeographicMapCellPosition = BasicArrayListUtil.getInstance()!!.getRandom(this.endList) as GeographicMapCellPosition
 
@@ -212,7 +232,11 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
 
                         for (index in this.endList!!.size() -1 downTo 0)
 
-        {endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+endGeographicMapCellPosition= this.endList!!.get(index) as GeographicMapCellPosition
 
     
                         if(startGeographicMapCellPosition != endGeographicMapCellPosition)
@@ -241,9 +265,11 @@ open fun getEndGeographicMapCellPosition(startGeographicMapCellPosition: Geograp
             
 open fun createPaths(startGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var startGeographicMapCellPosition = startGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var startGeographicMapCellPosition = startGeographicMapCellPosition
 
     
                         if(this.endList!!.size() == 0)
@@ -353,9 +379,11 @@ customMapArray[endGeographicMapCellPosition!!.getRow()]!![endGeographicMapCellPo
 
 open fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -364,22 +392,32 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
             
 open fun onBuildingEvent(event: RTSLayerEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var event = event
+
+        Updates for KMP build        
+        {
+    //var event = event
 
 
 
 
                         for (columnIndex in paths.size  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (rowIndex in paths.size  - 1  downTo 0)
 
-        {this.paths[columnIndex]!![rowIndex]= 
+        
+
+        Updates for KMP build        
+        {
+this.paths[columnIndex]!![rowIndex]= 
                                         null
                                     
 }
@@ -391,7 +429,11 @@ open fun onBuildingEvent(event: RTSLayerEvent)
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.getConnectedWaypointList()!!.clear()
+
+
+        Updates for KMP build        
+        {
+this.getConnectedWaypointList()!!.clear()
 this.releaseCachedPaths()
 }
 
@@ -400,9 +442,11 @@ this.releaseCachedPaths()
             
 open fun visit(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unitLayer = unitLayer
+
+        Updates for KMP build        
+        {
+    //var unitLayer = unitLayer
 
     
                         if(unitLayer!!.getGroupInterface()[0] != this.ownerLayer!!.getGroupInterface()[0])
@@ -429,7 +473,11 @@ open fun visit(unitLayer: PathFindingLayerInterface)
 
 
         while(this.getConnectedWaypointList()!!.size() > 0)
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: CollidableDestroyableDamageableLayer = this.getConnectedWaypointList()!!.get(0) as CollidableDestroyableDamageableLayer
 
 

@@ -36,9 +36,11 @@ open public class PrimitiveArrayToString
             
 open fun toString(floats: FloatArray)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var floats = floats
+        Updates for KMP build        
+        {
+var floats = floats
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -48,7 +50,11 @@ open fun toString(floats: FloatArray)
 
                         for (index in 0 until floats.size)
 
-        {stringBuffer!!.append(floats[index]!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(floats[index]!!)
 }
 
 

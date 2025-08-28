@@ -28,35 +28,35 @@ open public class CustomItem
         }
             protected constructor        (label: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var label = label
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+var label = label
+var backgroundBasicColor = backgroundBasicColor
+var foregroundBasicColor = foregroundBasicColor
 }
 
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 }
 
 
 open fun isFocusable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +66,11 @@ open fun isFocusable()
 
 open fun getLabel()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -76,15 +80,21 @@ open fun getLabel()
 
 open fun setLabel(label: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var label = label
+
+        Updates for KMP build        
+        {
+var label = label
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,15 +104,21 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 }
 
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,15 +128,21 @@ open fun getValue()
 
 open fun setValue(value: Float)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 }
 
 
 open fun getMinimumWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,7 +152,11 @@ open fun getMinimumWidth()
 
 open fun getMinimumHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

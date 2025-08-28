@@ -58,12 +58,12 @@ open public class BasicOptionItemsRequestHelper : ModifyTable {
     private var timeEntered: String
 
     private var lastModified: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
 this.getFormData()
 }
@@ -71,7 +71,11 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.optionItem= Vector()
+
+
+        Updates for KMP build        
+        {
+this.optionItem= Vector()
 this.optionValue= Vector()
 this.id= request.getParameter(BasicItemData.ID)
 this.optionOneTitle= request.getParameter(BasicOptionItemData.OPTION_ONE_TITLE)
@@ -102,7 +106,11 @@ this.lastModified= request.getParameter(EntryData.getInstance()!!.LASTMODIFIED)
 
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
 values.put(BasicItemData.ID, id)
@@ -143,7 +151,11 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var calendar: Calendar = Calendar.getInstance()!!
@@ -166,7 +178,11 @@ values.add(id)
 
                         for (index in 0 until size)
 
-        {values.add(this.optionValue!!.get(index))
+        
+
+        Updates for KMP build        
+        {
+values.add(this.optionValue!!.get(index))
 values.add(this.optionItem!!.get(index))
 }
 
@@ -191,7 +207,11 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to insert " +id +" into items table"
 
 
@@ -215,7 +235,11 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance()!!.delete(id)
 
@@ -236,7 +260,11 @@ open fun delete()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to delete"
 
 
@@ -260,7 +288,11 @@ open fun delete()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Update Pricing Successful"
@@ -284,7 +316,11 @@ BasicOptionItemsEntityFactory.getInstance()!!.getBasicOptionItemsEntityInstance(
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to update: " +id
 
 

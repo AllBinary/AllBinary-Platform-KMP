@@ -39,9 +39,11 @@ open public class ClassLoaderUtil
             
 open fun getName(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
     var classLoader: ClassLoader = anyType!!::class.java.classLoader!!
 
@@ -70,7 +72,11 @@ open fun getName(anyType: Any)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

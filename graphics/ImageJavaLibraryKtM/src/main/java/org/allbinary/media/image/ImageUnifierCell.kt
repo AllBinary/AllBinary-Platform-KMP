@@ -38,12 +38,12 @@ open public class ImageUnifierCell
     private var height: Integer
 public constructor        (width: Integer, height: Integer)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var width = width
-
-
-                    var height = height
+var width = width
+var height = height
 this.setWidth(width)
 this.setHeight(height)
 }
@@ -51,7 +51,11 @@ this.setHeight(height)
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,16 +65,22 @@ open fun getWidth()
 
 open fun setWidth(width: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var width = width
+
+        Updates for KMP build        
+        {
+var width = width
 this.width= width
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,9 +90,11 @@ open fun getHeight()
 
 open fun setHeight(height: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 this.height= height
 }
 

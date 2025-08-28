@@ -46,7 +46,11 @@ open public class AssignWaypointsUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AssignWaypointsUtil{
+: AssignWaypointsUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,12 +72,12 @@ open fun getInstance()
 
 open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unitLayer = unitLayer
 
 
-                    var ownerAdvancedRTSGameLayer = ownerAdvancedRTSGameLayer
+        Updates for KMP build        
+        {
+var unitLayer = unitLayer
+var ownerAdvancedRTSGameLayer = ownerAdvancedRTSGameLayer
 
         try {
             
@@ -88,7 +92,11 @@ open fun set(unitLayer: UnitLayer, ownerAdvancedRTSGameLayer: AdvancedRTSGameLay
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var waypointLayer: RTSLayer = list.get(index) as RTSLayer
 
 WAYPOINT_EVENT.setRtsLayer(waypointLayer)
@@ -111,7 +119,11 @@ unitWaypointBehavior!!.onWaypointEvent(WAYPOINT_EVENT)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "set", e)

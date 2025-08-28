@@ -38,21 +38,15 @@ open public class AllBinaryAdjustedSpriteRotationAnimation : AllBinarySpriteRota
     private var dy: Int
 public constructor        (sprite: Sprite, image: Image, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(sprite, image, animationBehavior){
+                            : super(sprite, image, animationBehavior)
 
-                    var sprite = sprite
-
-
-                    var image = image
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var sprite = sprite
+    //var image = image
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,15 +57,13 @@ this.dy= dy
 
 override fun paint(g: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var g = g
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var g = g
+    //var x = x
+    //var y = y
 this.sprite.setPosition(x +this.dx, y +this.dy)
 this.paint(g)
 }

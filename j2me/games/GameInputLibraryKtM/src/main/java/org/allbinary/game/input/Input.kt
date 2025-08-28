@@ -38,12 +38,12 @@ open public class Input
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (id: Int, name: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var id = id
-
-
-                    var name = name
+var id = id
+var name = name
 this.setId(id)
 this.setName(name)
 }
@@ -51,7 +51,11 @@ this.setName(name)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,16 +65,22 @@ open fun getId()
 
 open fun setId(key: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var key = key
+
+        Updates for KMP build        
+        {
+var key = key
 this.id= key
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,15 +90,21 @@ open fun getName()
 
 open fun setName(keyName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyName = keyName
+
+        Updates for KMP build        
+        {
+var keyName = keyName
 this.name= keyName
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Name: ")

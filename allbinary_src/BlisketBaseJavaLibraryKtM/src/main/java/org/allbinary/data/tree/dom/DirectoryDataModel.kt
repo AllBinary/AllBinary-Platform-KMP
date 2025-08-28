@@ -48,9 +48,11 @@ open public class DirectoryDataModel
     private var transformDocumentInterface: TransformDocumentInterface
 public constructor        (file: AbFile)
             : super()
-        {
+        
 
-                    var file = file
+        Updates for KMP build        
+        {
+    //var file = file
 this.fileBasicArrayList= Directory.getInstance()!!.search(file)
 this.transformDocumentInterface= TransformDocumentFactory.getInstance() as TransformDocumentInterface
 }
@@ -60,7 +62,11 @@ this.transformDocumentInterface= TransformDocumentFactory.getInstance() as Trans
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,7 +78,11 @@ open fun getTypeId()
             
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,16 +92,22 @@ open fun getTransformInfoInterface()
 
 open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var transformDocumentInterface = transformDocumentInterface
+
+        Updates for KMP build        
+        {
+var transformDocumentInterface = transformDocumentInterface
 this.transformDocumentInterface= transformDocumentInterface
 }
 
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,9 +119,11 @@ open fun getTransformDocumentInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+    //var document = document
 
     var dirNode: Node = document.createElement("dir")!!
 
@@ -124,7 +142,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
-        {nextFile= this.fileBasicArrayList!!.get(index) as AbFile
+        
+
+        Updates for KMP build        
+        {
+nextFile= this.fileBasicArrayList!!.get(index) as AbFile
 fileNode= FileDomDataModel(nextFile).
                             toXmlNode(document)
 dirNode!!.appendChild(fileNode)
@@ -142,7 +164,11 @@ dirNode!!.appendChild(fileNode)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -154,7 +180,11 @@ open fun toXmlDoc()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var node: Node = this.toXmlNode(this.getTransformDocumentInterface()!!.getDoc())!!
 
 this.getTransformDocumentInterface()!!.getBaseNode()!!.appendChild(node)

@@ -61,9 +61,11 @@ open public class UpdateFileValidationView : DownloadableInventoryItemView
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -73,7 +75,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var command: String = this.getRequestHashMap()!!.get(GLOBALS2.ADMINCOMMAND) as String
@@ -107,7 +113,11 @@ open fun isValid()
 
 this.itemInterface= inventoryEntity!!.getItem(id)
 } catch(e: MoneyException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
@@ -397,7 +407,11 @@ this.downloadableItem= DownloadableItem(hashMap)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -418,7 +432,11 @@ this.downloadableItem= DownloadableItem(hashMap)
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -428,9 +446,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -441,7 +461,11 @@ open fun toValidationInfoNode(document: Document)
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -651,7 +675,11 @@ stringBuffer!!.append("<br/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -674,12 +702,12 @@ stringBuffer!!.append("<br/>")
             
 open fun isValid(fileName: String, size: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var fileName = fileName
-
-
-                    var size = size
+        Updates for KMP build        
+        {
+var fileName = fileName
+var size = size
 
     var fileData: FileData = FileData.getInstance()!!
 
@@ -790,15 +818,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.IS_VALID)
 
 open fun validationInfo(stringBuffer: StringMaker, fileName: String, size: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var stringBuffer = stringBuffer
 
 
-                    var fileName = fileName
-
-
-                    var size = size
+        Updates for KMP build        
+        {
+var stringBuffer = stringBuffer
+var fileName = fileName
+var size = size
 
     var fileData: FileData = FileData.getInstance()!!
 

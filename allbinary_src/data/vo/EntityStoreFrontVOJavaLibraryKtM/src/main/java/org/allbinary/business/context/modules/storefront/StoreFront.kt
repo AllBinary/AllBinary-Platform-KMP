@@ -147,14 +147,20 @@ open public class StoreFront
     private val ONE_EMPTY_STRING_ARRAY: Array<String?> = StringUtil.getInstance()!!.ONE_EMPTY_STRING_ARRAY
 public constructor        ()
             : super()
-        {this.contextConfigurationInterface= ContextConfiguration()
+        
+
+        Updates for KMP build        
+        {
+this.contextConfigurationInterface= ContextConfiguration()
 }
 
 public constructor        (request: HttpServletRequest)
             : super()
-        {
+        
 
-                    var request = request
+        Updates for KMP build        
+        {
+    //var request = request
 this.getFormData(RequestParams(request).
                             toHashMap())
 
@@ -171,9 +177,11 @@ this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getIn
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+    //var hashMap = hashMap
 this.getFormData(hashMap)
 
     var domDocumentString: String = hashMap!!.get(StoreFrontData.getInstance()!!.CONFIGURATION) as String
@@ -197,9 +205,11 @@ this.setContextConfigurationInterface(ContextConfigurationInterfaceFactory.getIn
 
 open fun isColumn(columnName: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var columnName = columnName
+        Updates for KMP build        
+        {
+var columnName = columnName
 
     
                         if(columnName!!.compareTo(StoreFrontData.getInstance()!!.NAME) == 0 || columnName!!.compareTo(UserData.MAINEMAIL) == 0)
@@ -229,12 +239,12 @@ open fun isColumn(columnName: String)
             
 open fun createPath(key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath
 
-                    var key = key
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var key = key
+var hashMap = hashMap
 
 
 
@@ -247,15 +257,13 @@ open fun createPath(key: String, hashMap: HashMap<Any, Any>)
             
 open fun createPath(append: String, key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath
 
-                    var append = append
-
-
-                    var key = key
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var append = append
+var key = key
+var hashMap = hashMap
 
 
 
@@ -266,12 +274,12 @@ open fun createPath(append: String, key: String, hashMap: HashMap<Any, Any>)
 
 open fun get(key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var key = key
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var key = key
+var hashMap = hashMap
 
 
 
@@ -282,15 +290,13 @@ open fun get(key: String, hashMap: HashMap<Any, Any>)
 
 open fun create(append: String, key: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var append = append
-
-
-                    var key = key
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var append = append
+var key = key
+var hashMap = hashMap
 
     var path: String = hashMap!!.get(key as Object) as String
 
@@ -340,9 +346,11 @@ open fun create(append: String, key: String, hashMap: HashMap<Any, Any>)
             
 open fun getFormData(storeHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeHashMap = storeHashMap
+
+        Updates for KMP build        
+        {
+var storeHashMap = storeHashMap
 
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
 
@@ -378,7 +386,11 @@ this.lastModified= storeHashMap!!.get(EntryData.getInstance()!!.LASTMODIFIED) as
 
 open fun isNameValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(!StringValidationUtil.getInstance()!!.isValidRequired(this.name, MINSTORENAMELENGTH, MAXCHAR))
                         
@@ -449,7 +461,11 @@ this.name= Replace(hashMap).
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var valid: Boolean = Boolean.TRUE
 
 valid= this.isNameValid()
@@ -699,7 +715,11 @@ valid= this.isNameValid()
 
 open fun nameValidationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
 
@@ -731,7 +751,11 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
@@ -972,7 +996,11 @@ stringBuffer!!.append(" and > 0 characters.<br>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -993,7 +1021,11 @@ stringBuffer!!.append(" and > 0 characters.<br>")
 
 open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1003,7 +1035,11 @@ open fun getTestHtmlPath()
 
 open fun getCurrentHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = EMPTY_STRING
 
 
@@ -1030,7 +1066,11 @@ open fun getCurrentHostName()
 
 open fun getCurrentHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = EMPTY_STRING
 
 
@@ -1057,7 +1097,11 @@ open fun getCurrentHostNamePath()
 
 open fun getCurrentHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = EMPTY_STRING
 
 
@@ -1084,7 +1128,11 @@ open fun getCurrentHomeHostName()
 
 open fun getCurrentHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var location: String = EMPTY_STRING
 
 
@@ -1111,7 +1159,11 @@ open fun getCurrentHomeHostNamePath()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1121,7 +1173,11 @@ open fun getName()
 
 open fun getBasketName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1131,7 +1187,11 @@ open fun getBasketName()
 
 open fun getHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1141,7 +1201,11 @@ open fun getHomeHostName()
 
 open fun getHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1151,7 +1215,11 @@ open fun getHomeHostNamePath()
 
 open fun getHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1161,7 +1229,11 @@ open fun getHostName()
 
 open fun getHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1171,7 +1243,11 @@ open fun getHostNamePath()
 
 open fun getTestHomeHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1181,7 +1257,11 @@ open fun getTestHomeHostName()
 
 open fun getTestHomeHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1191,7 +1271,11 @@ open fun getTestHomeHostNamePath()
 
 open fun getTestHostName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1201,7 +1285,11 @@ open fun getTestHostName()
 
 open fun getTestHostNamePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1211,7 +1299,11 @@ open fun getTestHostNamePath()
 
 open fun getStaticPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1221,7 +1313,11 @@ open fun getStaticPath()
 
 open fun getCategoryPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1231,7 +1327,11 @@ open fun getCategoryPath()
 
 open fun getInventoryControl()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1243,7 +1343,11 @@ open fun getInventoryControl()
             
 open fun getSubStores()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
         try {
             
     var tokenizer: Tokenizer = Tokenizer(CommonSeps.getInstance()!!.SEMICOLON)
@@ -1257,7 +1361,11 @@ open fun getSubStores()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return subStoreVector
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -1268,7 +1376,11 @@ open fun getSubStores()
 
 open fun getTagLocation()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1278,7 +1390,11 @@ open fun getTagLocation()
 
 open fun getPackageLocation()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1288,7 +1404,11 @@ open fun getPackageLocation()
 
 open fun getFtp()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1298,7 +1418,11 @@ open fun getFtp()
 
 open fun getFtpUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1308,7 +1432,11 @@ open fun getFtpUserName()
 
 open fun getFtpPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1318,7 +1446,11 @@ open fun getFtpPassword()
 
 open fun getTestFtp()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1328,7 +1460,11 @@ open fun getTestFtp()
 
 open fun getTestFtpUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1338,7 +1474,11 @@ open fun getTestFtpUserName()
 
 open fun getTestFtpPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1348,7 +1488,11 @@ open fun getTestFtpPassword()
 
 open fun getFtpPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1358,7 +1502,11 @@ open fun getFtpPath()
 
 open fun getTestFtpPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1368,7 +1516,11 @@ open fun getTestFtpPath()
 
 open fun getTimeCreated()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1378,7 +1530,11 @@ open fun getTimeCreated()
 
 open fun getLastModified()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -1388,27 +1544,33 @@ open fun getLastModified()
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.name= value
 }
 
 
 open fun setBasketName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.basketName= value
 }
 
 
 open fun setHomeHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.homeHostName= value
 }
 
@@ -1417,18 +1579,22 @@ this.homeHostName= value
             
 open fun setHomeHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.homeHostNamePath= AbPath(value)
 }
 
 
 open fun setHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.hostName= value
 }
 
@@ -1437,18 +1603,22 @@ this.hostName= value
             
 open fun setHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.hostNamePath= AbPath(value)
 }
 
 
 open fun setTestHomeHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testHomeHostName= value
 }
 
@@ -1457,18 +1627,22 @@ this.testHomeHostName= value
             
 open fun setTestHomeHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testHomeHostNamePath= AbPath(value)
 }
 
 
 open fun setTestHostName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testHostName= value
 }
 
@@ -1477,9 +1651,11 @@ this.testHostName= value
             
 open fun setTestHostNamePath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testHostNamePath= AbPath(value)
 }
 
@@ -1488,9 +1664,11 @@ this.testHostNamePath= AbPath(value)
             
 open fun setImagePath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.imagePath= AbPath(value)
 }
 
@@ -1499,9 +1677,11 @@ this.imagePath= AbPath(value)
             
 open fun setStaticPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.staticPath= AbPath(value)
 }
 
@@ -1510,126 +1690,154 @@ this.staticPath= AbPath(value)
             
 open fun setCategoryPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.categoryPath= AbPath(value)
 }
 
 
 open fun setSubStores(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.subStores= value
 }
 
 
 open fun setTagLocation(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.tagLocation= value
 }
 
 
 open fun setPackageLocation(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.packageLocation= value
 }
 
 
 open fun setInventoryControl(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.inventoryControl= value
 }
 
 
 open fun getPackageLocation(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.packageLocation= value
 }
 
 
 open fun setFtp(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftp= value
 }
 
 
 open fun setFtpUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftpUserName= value
 }
 
 
 open fun setFtpPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.ftpPassword= value
 }
 
 
 open fun setTestFtp(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testFtp= value
 }
 
 
 open fun setTestFtpUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testFtpUserName= value
 }
 
 
 open fun setTestFtpPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.testFtpPassword= value
 }
 
 
 open fun setTimeCreated(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.timeCreated= value
 }
 
 
 open fun setLastModified(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.lastModified= value
 }
 
@@ -1638,9 +1846,11 @@ this.lastModified= value
             
 open fun setFtpPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+    //var value = value
 this.ftpPath= AbPath(value)
 }
 
@@ -1649,9 +1859,11 @@ this.ftpPath= AbPath(value)
             
 open fun setTestFtpPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+    //var value = value
 this.testFtpPath= AbPath(value)
 }
 
@@ -1660,7 +1872,11 @@ this.testFtpPath= AbPath(value)
             
 open fun createDirectories()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var storeAbPath: AbPath = AbPath(URLGLOBALS.getWebappPath() +this.getCurrentHomeHostNamePath())
 
 
@@ -1714,12 +1930,12 @@ open fun createDirectories()
             
 open fun install(current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var current = current
 
 
-                    var total = total
+        Updates for KMP build        
+        {
+    //var current = current
+    //var total = total
 
         try {
             
@@ -1849,7 +2065,11 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -1871,18 +2091,14 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             
 open fun installViews(fromDirectoryAbPath: AbPath, toDirectoryAbPath: AbPath, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromDirectoryAbPath = fromDirectoryAbPath
 
 
-                    var toDirectoryAbPath = toDirectoryAbPath
-
-
-                    var current = current
-
-
-                    var total = total
+        Updates for KMP build        
+        {
+    //var fromDirectoryAbPath = fromDirectoryAbPath
+    //var toDirectoryAbPath = toDirectoryAbPath
+    //var current = current
+    //var total = total
 FileUtil.getInstance()!!.copyDirectoryPortion(fromDirectoryAbPath, toDirectoryAbPath, true, false, current, total)
 }
 
@@ -1891,15 +2107,13 @@ FileUtil.getInstance()!!.copyDirectoryPortion(fromDirectoryAbPath, toDirectoryAb
             
 open fun installResources(fromDirectoryAbPath: AbPath, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromDirectoryAbPath = fromDirectoryAbPath
 
 
-                    var current = current
-
-
-                    var total = total
+        Updates for KMP build        
+        {
+    //var fromDirectoryAbPath = fromDirectoryAbPath
+    //var current = current
+    //var total = total
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -1926,15 +2140,13 @@ FileUtil.getInstance()!!.copyDirectoryPortion(installCategoryAbPath, categoryAbP
             
 open fun installMedia(fromDirectoryAbPath: AbPath, current: Int, total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var fromDirectoryAbPath = fromDirectoryAbPath
 
 
-                    var current = current
-
-
-                    var total = total
+        Updates for KMP build        
+        {
+    //var fromDirectoryAbPath = fromDirectoryAbPath
+    //var current = current
+    //var total = total
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -1957,7 +2169,11 @@ FileUtil.getInstance()!!.copyDirectoryPortion(viewStoreImagesDirectoryAbPath, st
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var dataVector: Vector = Vector()
 
 dataVector!!.add(this.name)
@@ -2010,7 +2226,11 @@ dataVector!!.add(time)
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var storeFrontData: StoreFrontData = StoreFrontData.getInstance()!!
 
 
@@ -2063,7 +2283,11 @@ dataHashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2073,7 +2297,11 @@ open fun getKey()
 
 open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: ContextConfigurationInterface{
+: ContextConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -2083,9 +2311,11 @@ open fun getContextConfigurationInterface()
 
 open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var contextConfigurationInterface = contextConfigurationInterface
+
+        Updates for KMP build        
+        {
+    //var contextConfigurationInterface = contextConfigurationInterface
 this.contextConfigurationInterface= contextConfigurationInterface
 }
 

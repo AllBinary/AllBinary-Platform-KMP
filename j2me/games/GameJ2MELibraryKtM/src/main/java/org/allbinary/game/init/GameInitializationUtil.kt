@@ -45,7 +45,11 @@ open public class GameInitializationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameInitializationUtil{
+: GameInitializationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,15 +70,13 @@ open fun getInstance()
             
 open fun initDemo(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var canvas = canvas
-
-
-                    var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var canvas = canvas
+    //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
 
     var mainFeatureFactory: MainFeatureFactory = MainFeatureFactory.getInstance()!!
 
@@ -130,15 +132,13 @@ GameInitializedEventHandler.getInstance()!!.fireEvent(EVENT)
             
 open fun initGame(abeClientInformation: AbeClientInformationInterface, canvas: MyCanvas, gameInitializationInterfaceFactoryInterface: BasicBuildGameInitializerFactory)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var canvas = canvas
-
-
-                    var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var canvas = canvas
+    //var gameInitializationInterfaceFactoryInterface = gameInitializationInterfaceFactoryInterface
 
     
                         if(ChangedGameFeatureListener.getInstance()!!.isChanged(MainFeatureFactory.getInstance()!!.STATIC))

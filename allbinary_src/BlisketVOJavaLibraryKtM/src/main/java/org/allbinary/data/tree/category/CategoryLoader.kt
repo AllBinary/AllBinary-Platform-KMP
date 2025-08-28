@@ -47,9 +47,11 @@ open public class CategoryLoader : CategoryModifierTree
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (categoryFactoryInterface: CategoryFactoryInterface)                        
 
-                            : super(categoryFactoryInterface){
+                            : super(categoryFactoryInterface)
 
-                    var categoryFactoryInterface = categoryFactoryInterface
+        Updates for KMP build        
+        {
+var categoryFactoryInterface = categoryFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,9 +71,11 @@ public constructor        (categoryFactoryInterface: CategoryFactoryInterface)
 
 open fun getDoc(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: Document{
+: Document
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
         try {
             
@@ -140,7 +144,11 @@ this.save(categoryInterface)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -149,7 +157,11 @@ this.save(categoryInterface)
         try {
             categoryInterface!!.log()
 } catch(e2: Exception)
-            {logUtil!!.put("Could Not Log Category", this, "getDoc", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Could Not Log Category", this, "getDoc", e)
 }
 
 logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
@@ -169,9 +181,11 @@ logUtil!!.put(this.commonStrings!!.FAILURE, this, "getDoc", e)
 
 open fun get(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
         try {
             
@@ -186,7 +200,11 @@ open fun get(categoryInterface: CategoryInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addProperties(categoryInterface, categoryNode!!.getChildNodes())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -208,9 +226,11 @@ open fun get(categoryInterface: CategoryInterface)
 
 open fun get(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -225,7 +245,11 @@ open fun get(document: Document)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addProperties(loadedCategoryInterface, categoryNode!!.getChildNodes())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -247,9 +271,11 @@ open fun get(document: Document)
 
 open fun getAll(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
         try {
             
@@ -261,7 +287,11 @@ open fun getAll(categoryInterface: CategoryInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getAll(document)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -283,9 +313,11 @@ open fun getAll(categoryInterface: CategoryInterface)
 
 open fun getAll(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -300,7 +332,11 @@ open fun getAll(document: Document)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.addProperties(loadedCategoryInterface, categoryNode!!.getChildNodes())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -322,12 +358,12 @@ open fun getAll(document: Document)
 
 open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var parentCategoryInterface = parentCategoryInterface
-
-
-                    var categoryNodeList = categoryNodeList
+        Updates for KMP build        
+        {
+var parentCategoryInterface = parentCategoryInterface
+var categoryNodeList = categoryNodeList
 
         try {
             
@@ -343,7 +379,11 @@ open fun getAll(parentCategoryInterface: CategoryInterface, categoryNodeList: No
 
                         for (index in 0 until categoryNodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var categoryNode: Node = categoryNodeList!!.item(index)!!
 
 
@@ -371,7 +411,11 @@ parentCategoryInterface!!.addChild(categoryInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return parentCategoryInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -393,12 +437,12 @@ parentCategoryInterface!!.addChild(categoryInterface)
 
 open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeList: NodeList)
         //nullable = true from not(false or (false and false)) = true
-: CategoryInterface{
+: CategoryInterface
 
-                    var loadedCategoryInterface = loadedCategoryInterface
-
-
-                    var categoryNodeList = categoryNodeList
+        Updates for KMP build        
+        {
+var loadedCategoryInterface = loadedCategoryInterface
+var categoryNodeList = categoryNodeList
 
         try {
             
@@ -414,7 +458,11 @@ open fun addProperties(loadedCategoryInterface: CategoryInterface, categoryNodeL
 
                         for (index in 0 until categoryNodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var categoryNode: Node = categoryNodeList!!.item(index)!!
 
 
@@ -442,7 +490,11 @@ loadedCategoryInterface!!.addChildProperty(categoryPropertiesInterface)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return loadedCategoryInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         

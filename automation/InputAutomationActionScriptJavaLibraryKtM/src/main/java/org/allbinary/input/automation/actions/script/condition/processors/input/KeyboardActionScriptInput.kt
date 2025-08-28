@@ -52,9 +52,11 @@ open public class KeyboardActionScriptInput : BasicProfileActionScriptInput
 
 open fun getText(integerArray: Array<Integer?>)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var integerArray = integerArray
+        Updates for KMP build        
+        {
+var integerArray = integerArray
 
     var index: Int = 0
 
@@ -63,7 +65,11 @@ open fun getText(integerArray: Array<Integer?>)
 
 
         while(index < integerArray!!.size)
+        
+
+        Updates for KMP build        
         {
+
     var nextInteger: Integer = integerArray[index]!!
 
 
@@ -106,9 +112,11 @@ index++
     private var delayBetweenKeys: Int= 0
 public constructor        (node: Node)                        
 
-                            : super(NAME, node){
+                            : super(NAME, node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -136,7 +144,11 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var childNode: Node = nodeList!!.item(index)!!
 
 
@@ -228,7 +240,11 @@ this.keyboardActionScriptInputJPanel= KeyboardActionScriptInputJPanel(this)
 
 public constructor        ()                        
 
-                            : super(NAME){
+                            : super(NAME)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -249,7 +265,11 @@ this.keyboardActionScriptInputJPanel= KeyboardActionScriptInputJPanel(this)
 
 open fun getDelayBetweenKeys()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -259,16 +279,22 @@ open fun getDelayBetweenKeys()
 
 open fun setDelayBetweenKeys(delayBetweenKeys: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var delayBetweenKeys = delayBetweenKeys
+
+        Updates for KMP build        
+        {
+var delayBetweenKeys = delayBetweenKeys
 this.delayBetweenKeys= delayBetweenKeys
 }
 
 
 open fun isPress()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -278,16 +304,22 @@ open fun isPress()
 
 open fun setPress(press: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var press = press
+
+        Updates for KMP build        
+        {
+var press = press
 this.press= press
 }
 
 
 open fun isRelease()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -297,16 +329,22 @@ open fun isRelease()
 
 open fun setRelease(release: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var release = release
+
+        Updates for KMP build        
+        {
+var release = release
 this.release= release
 }
 
 
 open fun isNormal()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -316,14 +354,22 @@ open fun isNormal()
 
 open fun setNormal()
         //nullable = true from not(false or (false and true)) = true
-{this.setPress(true)
+
+
+        Updates for KMP build        
+        {
+this.setPress(true)
 this.setRelease(true)
 }
 
 
 open fun getKeyArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Integer?>{
+: Array<Integer?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -333,9 +379,11 @@ open fun getKeyArray()
 
 open fun setKeyArray(keyArray: Array<Integer?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyArray = keyArray
+
+        Updates for KMP build        
+        {
+var keyArray = keyArray
 
     
                         if(keyArray != 
@@ -348,13 +396,21 @@ this.keyArray= keyArray
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-{this.keyboardActionScriptInputJPanel!!.getKeyActionJDialog()!!.setVisible(true)
+
+
+        Updates for KMP build        
+        {
+this.keyboardActionScriptInputJPanel!!.getKeyActionJDialog()!!.setVisible(true)
 }
 
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -364,9 +420,11 @@ open fun getText()
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var text = text
+
+        Updates for KMP build        
+        {
+var text = text
 logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "setText")
 
     var integerArray: Array<Integer?> = this.integerArrayValue(text)!!
@@ -377,9 +435,11 @@ this.setKeyArray(integerArray)
 
 open fun integerArrayValue(text: String)
         //nullable = true from not(false or (false and false)) = true
-: Array<Integer?>{
+: Array<Integer?>
 
-                    var text = text
+        Updates for KMP build        
+        {
+var text = text
 logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue")
 
     var vector: Vector = Vector()
@@ -389,7 +449,11 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +text, this, "integerArrayValue
 
 
         while(index < text.length)
+        
+
+        Updates for KMP build        
         {
+
     var aChar: Char = text[index]!!
 
 
@@ -448,7 +512,11 @@ index++
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
@@ -457,7 +525,11 @@ open fun toHashMap()
 
                         for (index in 0 until this.getKeyArray()!!.length)
 
-        {hashMap!!.put(KeyboardActionScriptInputData.KEY +index, Integer.toString(this.getKeyArray()[index]!!))
+        
+
+        Updates for KMP build        
+        {
+hashMap!!.put(KeyboardActionScriptInputData.KEY +index, Integer.toString(this.getKeyArray()[index]!!))
 }
 
 hashMap!!.put(KeyboardActionScriptInputData.DELAY_BETWEEN_KEYS, Integer.toString(this.getDelayBetweenKeys()))
@@ -476,9 +548,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = super.toXmlNode(document)!!
 
@@ -495,21 +569,31 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, KeyboardActionS
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 KeyboardInputAutomationProcessor.process(this)
 }
 
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.toString(), this, "log")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.toString(), this, "log")
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())

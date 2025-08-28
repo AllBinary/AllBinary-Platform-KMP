@@ -46,7 +46,11 @@ open public class VectorRotationGenerator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VectorRotationGenerator{
+: VectorRotationGenerator
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,14 +65,20 @@ open fun getInstance()
     private val vectorAnimationUtil: VectorAnimationUtil = VectorAnimationUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(vectorRotationInfo: VectorInfo)
         //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>{
+: Array<Array<IntArray?>?>
 
-                    var vectorRotationInfo = vectorRotationInfo
+        Updates for KMP build        
+        {
+var vectorRotationInfo = vectorRotationInfo
 
 
 
@@ -81,18 +91,14 @@ open fun getInstance(vectorRotationInfo: VectorInfo)
 
 open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: Int)
         //nullable =  from not(true or (false and false)) = 
-: Array<Array<IntArray?>?>{
+: Array<Array<IntArray?>?>
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var points = points
-
-
-                    var frames = frames
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var points = points
+var frames = frames
 
         try {
             
@@ -120,7 +126,11 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 
                         for (index in 0 until size)
 
-        {pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
+        
+
+        Updates for KMP build        
+        {
+pointBasicArrayList!!.add(pointFactory!!.getInstance(points[index]!![0]!!, points[index]!![1]!!))
 }
 
 
@@ -129,7 +139,11 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
 
                         for (index in 0 until totalAngle)
 
-        {pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.angleFactory!!.getInstance(index)))
+        
+
+        Updates for KMP build        
+        {
+pointsBasicArrayList!!.add(getInstance(width, height, pointBasicArrayList, this.angleFactory!!.getInstance(index)))
 }
 
 
@@ -141,7 +155,11 @@ open fun getInstance(width: Int, height: Int, points: Array<IntArray?>, frames: 
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return newPoints
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
@@ -159,18 +177,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
             
 open fun getInstance(width: Int, height: Int, pointBasicArrayList: BasicArrayList, angle: Angle)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
+: BasicArrayList
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var pointBasicArrayList = pointBasicArrayList
-
-
-                    var angle = angle
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var pointBasicArrayList = pointBasicArrayList
+var angle = angle
 
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(pointBasicArrayList)
 

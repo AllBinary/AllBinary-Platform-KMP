@@ -35,23 +35,31 @@ open public class AbFileInputStream : InputStream {
         
 
     private var fileInputStream: FileInputStream
-public constructor        (fileInputStream: FileInputStream){
+public constructor        (fileInputStream: FileInputStream)
 
-                    var fileInputStream = fileInputStream
+        Updates for KMP build        
+        {
+var fileInputStream = fileInputStream
 this.fileInputStream= fileInputStream
 }
 
 override fun mark(readlimit: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var readlimit = readlimit
+
+        Updates for KMP build        
+        {
+var readlimit = readlimit
 this.fileInputStream!!.mark(readlimit)
 }
 
 override fun markSupported()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,14 +71,22 @@ override fun markSupported()
             @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.fileInputStream!!.reset()
+
+
+        Updates for KMP build        
+        {
+this.fileInputStream!!.reset()
 }
 
 
                 @Throws(IOException::class)
             override fun available()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,13 +95,21 @@ override fun reset()
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.fileInputStream!!.close()
+
+
+        Updates for KMP build        
+        {
+this.fileInputStream!!.close()
 }
 
 
 open fun getChannel()
         //nullable = true from not(false or (false and true)) = true
-: FileChannel{
+: FileChannel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,7 +120,11 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun read()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -107,9 +135,11 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun read(b: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var b = b
+        Updates for KMP build        
+        {
+var b = b
 
 
 
@@ -121,15 +151,13 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun read(buffer: ByteArray, offset: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var buffer = buffer
-
-
-                    var offset = offset
-
-
-                    var count = count
+        Updates for KMP build        
+        {
+var buffer = buffer
+var offset = offset
+var count = count
 
 
 
@@ -141,9 +169,11 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun skip(n: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var n = n
+        Updates for KMP build        
+        {
+var n = n
 
 
 

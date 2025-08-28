@@ -37,7 +37,11 @@ open public class HtmlMetaAttributeDataFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HtmlMetaAttributeDataFactory{
+: HtmlMetaAttributeDataFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     var NAME: HtmlMetaAttributeData = HtmlMetaAttributeData(0, "HTMLMETA_ATTRIBUTE_NAME")

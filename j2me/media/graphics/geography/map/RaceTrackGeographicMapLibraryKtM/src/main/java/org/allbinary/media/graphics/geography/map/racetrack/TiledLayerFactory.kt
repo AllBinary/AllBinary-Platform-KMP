@@ -39,9 +39,11 @@ open public class TiledLayerFactory
         
 open fun getInstance(raceTrackData: RaceTrackData)
         //nullable =  from not(true or (false and false)) = 
-: TiledLayer{
+: TiledLayer
 
-                    var raceTrackData = raceTrackData
+        Updates for KMP build        
+        {
+var raceTrackData = raceTrackData
 
 
 
@@ -52,9 +54,11 @@ open fun getInstance(raceTrackData: RaceTrackData)
 
 open fun getMiniInstance(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
-: TiledLayer{
+: TiledLayer
 
-                    var raceTrackData = raceTrackData
+        Updates for KMP build        
+        {
+var raceTrackData = raceTrackData
 
 
 

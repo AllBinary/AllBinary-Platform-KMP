@@ -48,15 +48,13 @@ open public class AllBinaryFlickerAndroidImageRotationAnimationFactory
     val animationBehaviorFactory: AnimationBehaviorFactory
 public constructor        (image: Image, width: Int, height: Int)                        
 
-                            : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), AnimationBehaviorFactory.getInstance()){
+                            : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,18 +63,14 @@ public constructor        (image: Image, width: Int, height: Int)
 
 public constructor        (image: Image, width: Int, height: Int, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory){
+                            : this(image, width, height, (AngleFactory.getInstance()!!.TOTAL_ANGLE /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort(), animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -85,18 +79,14 @@ public constructor        (image: Image, width: Int, height: Int, animationBehav
 
 public constructor        (image: Image, width: Int, height: Int, angleIncrement: Short)                        
 
-                            : this(image, width, height, angleIncrement, AnimationBehaviorFactory.getInstance()){
+                            : this(image, width, height, angleIncrement, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var angleIncrement = angleIncrement
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
+    //var height = height
+    //var angleIncrement = angleIncrement
 
 
                             //For kotlin this is before the body of the constructor.
@@ -105,21 +95,15 @@ public constructor        (image: Image, width: Int, height: Int, angleIncrement
 
 public constructor        (image: Image, width: Int, height: Int, angleIncrement: Short, animationBehaviorFactory: AnimationBehaviorFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var image = image
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var angleIncrement = angleIncrement
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+    //var image = image
+    //var width = width
+    //var height = height
+    //var angleIncrement = angleIncrement
+    //var animationBehaviorFactory = animationBehaviorFactory
 this.setImage(image)
 this.angleIncrement= angleIncrement
 this.animationBehaviorFactory= animationBehaviorFactory
@@ -129,9 +113,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var image: Image = ImageCopyUtil.getInstance()!!.createImage(this.getImage())!!
 
@@ -145,7 +131,11 @@ this.animationBehaviorFactory= animationBehaviorFactory
 
 open fun getAngleIncrement()
         //nullable = true from not(false or (false and true)) = true
-: Short{
+: Short
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -155,16 +145,22 @@ open fun getAngleIncrement()
 
 open fun setImage(image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var image = image
+
+        Updates for KMP build        
+        {
+var image = image
 this.image= image
 }
 
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image{
+: Image
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -174,9 +170,11 @@ open fun getImage()
 
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

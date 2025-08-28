@@ -38,7 +38,11 @@ open public class HttpRequestUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HttpRequestUtil{
+: HttpRequestUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,14 +53,20 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getLastSeparatorIndex(requestPath: String)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var requestPath = requestPath
+        Updates for KMP build        
+        {
+var requestPath = requestPath
 
     var beginIndex: Int = requestPath!!.lastIndexOf(AbPathData.getInstance()!!.SEPARATOR)!!
 
@@ -81,9 +91,11 @@ open fun getLastSeparatorIndex(requestPath: String)
             
 open fun generateFileName(requestPath: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var requestPath = requestPath
+        Updates for KMP build        
+        {
+var requestPath = requestPath
 
     var beginIndex: Int = this.getLastSeparatorIndex(requestPath)!!
 

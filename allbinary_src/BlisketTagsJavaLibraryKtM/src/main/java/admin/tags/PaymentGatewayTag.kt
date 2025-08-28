@@ -36,7 +36,11 @@ open public class PaymentGatewayTag : TableTag {
         
 
     val logUtil: LogUtil = LogUtil.getInstance()!!
-public constructor        (){this.setTagHelperFactory(PaymentGatewayHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(PaymentGatewayHelperFactory())
 this.setTagRequestHelperFactory(PaymentGatewayHelperFactory())
 }
 
@@ -45,7 +49,11 @@ this.setTagRequestHelperFactory(PaymentGatewayHelperFactory())
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var anyType: Any = PaymentGatewayHelperFactory().
@@ -68,14 +76,22 @@ open fun process()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: LicensingException)
-            {logUtil!!.put("LicensingException", this, commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("LicensingException", this, commonStrings!!.PROCESS, e)
 
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -97,7 +113,11 @@ open fun process()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -162,7 +182,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

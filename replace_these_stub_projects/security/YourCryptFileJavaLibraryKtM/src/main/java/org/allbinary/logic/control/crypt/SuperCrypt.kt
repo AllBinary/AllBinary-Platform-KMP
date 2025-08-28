@@ -24,17 +24,21 @@ open public class SuperCrypt
         }
             public constructor        (key: Int)
             : super()
-        {
+        
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 }
 
 
 open fun encrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -45,9 +49,11 @@ open fun encrypt(value: String)
 
 open fun decrypt(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
 
 

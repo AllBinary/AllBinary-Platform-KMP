@@ -63,12 +63,12 @@ open public class QuoteRequest
     private var comments: String
 public constructor        (userName: String, request: HttpServletRequest)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var userName = userName
-
-
-                    var request = request
+var userName = userName
+var request = request
 
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
@@ -93,9 +93,11 @@ this.setComments(request.getParameter(quoteRequestData!!.COMMENTS) as String)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
@@ -120,7 +122,11 @@ this.setComments(hashMap!!.get(quoteRequestData!!.COMMENTS) as String)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var valid: Boolean = Boolean.TRUE
@@ -197,7 +203,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -218,7 +228,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -295,7 +309,11 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -316,7 +334,11 @@ open fun validationInfo()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var values: Vector = Vector()
 
 values.add(id)
@@ -346,7 +368,11 @@ values.add(time)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
 
@@ -377,54 +403,66 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.userName= value
 }
 
 
 open fun setProjectInfo(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.projectInfo= value
 }
 
 
 open fun setUserComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.userComments= value
 }
 
 
 open fun setBudget(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.budget= value
 }
 
 
 open fun setTimeFrame(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.timeFrame= value
 }
 
 
 open fun setComments(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.comments= value
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
@@ -440,7 +478,11 @@ this.comments= value
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -450,7 +492,11 @@ open fun getUserName()
 
 open fun getProjectInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -460,7 +506,11 @@ open fun getProjectInfo()
 
 open fun getUserComments()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -470,7 +520,11 @@ open fun getUserComments()
 
 open fun getBudget()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -480,7 +534,11 @@ open fun getBudget()
 
 open fun getTimeFrame()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -490,7 +548,11 @@ open fun getTimeFrame()
 
 open fun getComments()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

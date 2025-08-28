@@ -52,9 +52,11 @@ open public class GenericProfileDataWorkerType
 
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: GenericProfileDataWorkerType{
+: GenericProfileDataWorkerType
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var name: String = DomNodeHelper.getTextNodeValue(node)!!
 
@@ -71,9 +73,11 @@ open fun getInstance(node: Node)
     private var name: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.setName(name)
 hashMap!!.put(this.getName(), this)
 }
@@ -81,7 +85,11 @@ hashMap!!.put(this.getName(), this)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,9 +99,11 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
@@ -102,9 +112,11 @@ this.name= name
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileDataWorkerData.NAME, name)!!
 
@@ -117,7 +129,11 @@ open fun toXmlNode(document: Document)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

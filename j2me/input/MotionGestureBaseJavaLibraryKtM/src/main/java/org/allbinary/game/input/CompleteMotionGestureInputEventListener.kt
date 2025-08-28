@@ -25,16 +25,20 @@ open public class CompleteMotionGestureInputEventListener
             }            
         override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 }
 
 override fun onCompleteMotionGestureInputEvent(completeMotionGestureInputEvent: CompleteMotionGestureInputEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var completeMotionGestureInputEvent = completeMotionGestureInputEvent
+
+        Updates for KMP build        
+        {
+    //var completeMotionGestureInputEvent = completeMotionGestureInputEvent
 }
 
 

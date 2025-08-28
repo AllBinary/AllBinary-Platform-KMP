@@ -43,7 +43,11 @@ open public class BasicEmailQueue : BasicQueue
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicEmailQueue{
+: BasicEmailQueue
+
+        Updates for KMP build        
+        {
+
     
                         if(BasicEmailQueue.basicEmailQueue == 
                                     null
@@ -65,7 +69,11 @@ open fun getInstance()
         }
             
     val logUtil: LogUtil = LogUtil.getInstance()!!
-private constructor        (){}
+private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
@@ -73,9 +81,11 @@ private constructor        (){}
 
 open fun offer(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var emailInterface = emailInterface
+        Updates for KMP build        
+        {
+var emailInterface = emailInterface
 this.offer(emailInterface as Object)
 this.post(emailInterface)
 
@@ -89,9 +99,11 @@ this.post(emailInterface)
 
 open fun remove(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var emailInterface = emailInterface
+
+        Updates for KMP build        
+        {
+var emailInterface = emailInterface
 this.remove(emailInterface as Object)
 }
 
@@ -99,7 +111,11 @@ this.remove(emailInterface as Object)
 
 open fun remove()
         //nullable = true from not(false or (false and true)) = true
-: EmailInterface{
+: EmailInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,9 +128,11 @@ open fun remove()
 
 open fun post(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var emailInterface = emailInterface
+
+        Updates for KMP build        
+        {
+var emailInterface = emailInterface
 
     
                         if(this.send(emailInterface))
@@ -133,7 +151,11 @@ processAllUnsent()
 
 open fun processAllUnsent()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var size: Int = queueVector!!.size()!!
 
 
@@ -142,7 +164,11 @@ open fun processAllUnsent()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var emailInterface: EmailInterface = queueVector!!.get(index) as EmailInterface
 
 
@@ -163,9 +189,11 @@ processAllUnsent()
 
 open fun send(emailInterface: EmailInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var emailInterface = emailInterface
+        Updates for KMP build        
+        {
+var emailInterface = emailInterface
 
         try {
             
@@ -193,7 +221,11 @@ Transport.send(emailInterface!!.getMimeMessage())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
                         

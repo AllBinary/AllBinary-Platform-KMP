@@ -33,9 +33,11 @@ open public class CapitalEvent : AllBinaryEventObject {
     private var value: Int= 0
 public constructor        (anyType: Any)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,7 +46,11 @@ public constructor        (anyType: Any)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("CapitalEvent: Value: \n")
@@ -59,7 +65,11 @@ stringBuffer!!.append(this.getValue())
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,9 +79,11 @@ open fun getValue()
 
 open fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.value= value
 }
 

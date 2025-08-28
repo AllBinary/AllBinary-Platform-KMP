@@ -49,12 +49,12 @@ open public class CustomUriResolver
     private var basicURIResolver: BasicUriResolver
 public constructor        (path: String, basicURIResolver: BasicUriResolver)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var path = path
-
-
-                    var basicURIResolver = basicURIResolver
+var path = path
+var basicURIResolver = basicURIResolver
 this.path= path
 this.basicURIResolver= basicURIResolver
 }
@@ -64,12 +64,12 @@ this.basicURIResolver= basicURIResolver
             
 open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
-: Source{
+: Source
 
-                    var href = href
-
-
-                    var base = base
+        Updates for KMP build        
+        {
+var href = href
+var base = base
 
         try {
             
@@ -91,13 +91,21 @@ open fun resolve(href: String, base: String)
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(fileAbPath))
 } catch(e: TransformerException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw TransformerException(e)
@@ -107,7 +115,11 @@ open fun resolve(href: String, base: String)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

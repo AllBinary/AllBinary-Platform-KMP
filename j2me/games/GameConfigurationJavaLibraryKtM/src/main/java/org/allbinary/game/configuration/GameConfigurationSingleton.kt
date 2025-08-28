@@ -39,7 +39,11 @@ open public class GameConfigurationSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationSingleton{
+: GameConfigurationSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,16 +58,22 @@ open fun getInstance()
     private var hashtable: Hashtable<Any, Any>
 private constructor        ()
             : super()
-        {list= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+list= BasicArrayList()
 hashtable= Hashtable<Any, Any>()
 }
 
 
 open fun getInstance(name: String)
         //nullable =  from not(true or (false and false)) = 
-: GameConfiguration{
+: GameConfiguration
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
 
@@ -74,7 +84,11 @@ open fun getInstance(name: String)
 
 open fun getOptionsBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -84,16 +98,22 @@ open fun getOptionsBasicArrayList()
 
 open fun add(gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameConfiguration = gameConfiguration
+
+        Updates for KMP build        
+        {
+var gameConfiguration = gameConfiguration
 list.add(gameConfiguration)
 }
 
 
 open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -54,9 +54,11 @@ open public class TimeIntervalActionScriptCondition : BasicProfileActionScriptCo
     private var timeHelper: TimeDelayHelper
 public constructor        (node: Node)                        
 
-                            : super(TimeIntervalActionScriptCondition.NAME, node){
+                            : super(TimeIntervalActionScriptCondition.NAME, node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -80,7 +82,11 @@ public constructor        (node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var childNode: Node = nodeList!!.item(index)!!
 
 
@@ -121,7 +127,11 @@ this.init()
 
 public constructor        ()                        
 
-                            : super(TimeIntervalActionScriptCondition.NAME){
+                            : super(TimeIntervalActionScriptCondition.NAME)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -132,19 +142,31 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.timeIntervalActionScriptConditionJPanel= TimeIntervalActionScriptConditionJPanel(this)
+
+
+        Updates for KMP build        
+        {
+this.timeIntervalActionScriptConditionJPanel= TimeIntervalActionScriptConditionJPanel(this)
 }
 
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-{this.timeIntervalActionScriptConditionJPanel!!.getTimeIntervalActionJDialog()!!.setVisible(true)
+
+
+        Updates for KMP build        
+        {
+this.timeIntervalActionScriptConditionJPanel!!.getTimeIntervalActionJDialog()!!.setVisible(true)
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(TimeIntervalActionScriptConditionData.TIME, Integer.toString(this.timeHelper!!.delay))
@@ -161,9 +183,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = super.toXmlNode(document)!!
 
@@ -178,13 +202,21 @@ node.appendChild(ModDomHelper.createNodeWithValueNodes(document, TimeIntervalAct
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, "log")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Time Interval: " +this.timeHelper!!.delay, this, "log")
 }
 
 
 open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper{
+: TimeDelayHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -194,9 +226,11 @@ open fun getTimeDelayHelper()
 
 open fun setTimeDelayHelper(timeHelper: TimeDelayHelper)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeHelper = timeHelper
+
+        Updates for KMP build        
+        {
+    //var timeHelper = timeHelper
 this.timeHelper= timeHelper
 }
 
@@ -205,9 +239,11 @@ this.timeHelper= timeHelper
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
     var timeHelper: TimeDelayHelper = this.getTimeDelayHelper()!!
 

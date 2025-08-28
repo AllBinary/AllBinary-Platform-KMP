@@ -43,9 +43,11 @@ open public class MultipartRequestParams : RequestParams {
     private var special: Boolean = false
 public constructor        (request: HttpServletRequest)                        
 
-                            : super(){
+                            : super()
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,9 +57,11 @@ this.processMultipartRequest(request)
 
 public constructor        (pageContext: PageContext)                        
 
-                            : super(){
+                            : super()
 
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -68,15 +72,21 @@ this.processMultipartRequest(pageContext!!.getRequest() as HttpServletRequest)
 
 open fun setSpecial()
         //nullable = true from not(false or (false and true)) = true
-{this.special= true
+
+
+        Updates for KMP build        
+        {
+this.special= true
 }
 
 
 open fun processMultipartRequest(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var request = request
+
+        Updates for KMP build        
+        {
+var request = request
 
         try {
             
@@ -114,7 +124,11 @@ open fun processMultipartRequest(request: HttpServletRequest)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var fileItem: FileItem = fileItemArray[index]!! as FileItem
 
 
@@ -151,7 +165,11 @@ this.setMap(specialRequest)
                                     }
                                 
 } catch(e: InvalidContentTypeException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUEST))
                         
@@ -163,7 +181,11 @@ this.setMap(specialRequest)
 super.setMap(request.getParameterMap())
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPREQUESTERROR))
                         
@@ -182,7 +204,11 @@ super.setMap(request.getParameterMap())
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     
                         if(this.special)
                         

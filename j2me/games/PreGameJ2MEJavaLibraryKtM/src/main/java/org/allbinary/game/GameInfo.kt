@@ -61,18 +61,14 @@ open public class GameInfo
     private var currentLevel: Int
 public constructor        (gameType: GameType, gameMode: GameMode, highestLevel: Int, currentLevel: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var gameType = gameType
-
-
-                    var gameMode = gameMode
-
-
-                    var highestLevel = highestLevel
-
-
-                    var currentLevel = currentLevel
+    //var gameType = gameType
+    //var gameMode = gameMode
+    //var highestLevel = highestLevel
+    //var currentLevel = currentLevel
 this.gameType= gameType
 this.gameMode= gameMode
 this.setHighestLevel(highestLevel)
@@ -82,21 +78,15 @@ this.playerType= PlayerTypesFactory.getInstance()!!.PLAYER_TYPE_ONE
 
 public constructor        (gameType: GameType, gameMode: GameMode, playerType: PlayerType, highestLevel: Int, currentLevel: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var gameType = gameType
-
-
-                    var gameMode = gameMode
-
-
-                    var playerType = playerType
-
-
-                    var highestLevel = highestLevel
-
-
-                    var currentLevel = currentLevel
+var gameType = gameType
+var gameMode = gameMode
+var playerType = playerType
+var highestLevel = highestLevel
+var currentLevel = currentLevel
 this.gameType= gameType
 this.gameMode= gameMode
 this.setHighestLevel(highestLevel)
@@ -107,7 +97,11 @@ this.playerType= playerType
 
 open fun getGameType()
         //nullable = true from not(false or (false and true)) = true
-: GameType{
+: GameType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,7 +111,11 @@ open fun getGameType()
 
 open fun getGameMode()
         //nullable = true from not(false or (false and true)) = true
-: GameMode{
+: GameMode
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,7 +125,11 @@ open fun getGameMode()
 
 open fun getPlayerType()
         //nullable = true from not(false or (false and true)) = true
-: PlayerType{
+: PlayerType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,7 +139,11 @@ open fun getPlayerType()
 
 open fun getHighestLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -147,16 +153,22 @@ open fun getHighestLevel()
 
 open fun setHighestLevel(highestLevel: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var highestLevel = highestLevel
+
+        Updates for KMP build        
+        {
+    //var highestLevel = highestLevel
 this.highestLevel= highestLevel
 }
 
 
 open fun getCurrentLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -170,9 +182,11 @@ open fun getCurrentLevel()
 
 open fun setCurrentLevel(currentLevel: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var currentLevel = currentLevel
+
+        Updates for KMP build        
+        {
+    //var currentLevel = currentLevel
 this.currentLevel= currentLevel
 logUtil!!.put(StringMaker().
                             append(NEW_LEVEL)!!.append(this.getCurrentLevel())!!.toString(), this, SET_CURRENT_LEVEL)
@@ -185,7 +199,11 @@ logUtil!!.put(StringMaker().
 
 open fun nextGameLevel()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getCurrentLevel() < this.getHighestLevel())
                         
@@ -201,7 +219,11 @@ logUtil!!.put(StringMaker().
 
 open fun previousGameLevel()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getCurrentLevel() > 1)
                         this.currentLevel--
@@ -210,7 +232,11 @@ open fun previousGameLevel()
 
 open fun isLastLevel()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getCurrentLevel() >= this.getHighestLevel())
                         
@@ -237,7 +263,11 @@ open fun isLastLevel()
 
 open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 hashtable.put(this.gameInfoData!!.GAME_TYPE, this.getGameType()!!.toString())
@@ -254,7 +284,11 @@ hashtable.put(this.gameInfoData!!.CURRENT_LEVEL, this.currentLevel.toString())
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

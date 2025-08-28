@@ -42,9 +42,11 @@ open public class GeographicMapCellType
     private val type: Int
 public constructor        (type: Int)
             : super()
-        {
+        
 
-                    var type = type
+        Updates for KMP build        
+        {
+    //var type = type
 this.type= type
 
     
@@ -84,7 +86,11 @@ this.type= type
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +99,11 @@ open fun getType()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

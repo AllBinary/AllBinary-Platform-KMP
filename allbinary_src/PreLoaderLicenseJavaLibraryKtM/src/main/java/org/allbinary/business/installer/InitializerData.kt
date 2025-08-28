@@ -38,7 +38,11 @@ open public class InitializerData
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InitializerData{
+: InitializerData
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,7 +141,11 @@ open fun getInstance()
 
 open fun getJdbcDriverSolutionInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("The following describes the possible problems and solutions regarding the Jdbc Driver error(s):<p/>")

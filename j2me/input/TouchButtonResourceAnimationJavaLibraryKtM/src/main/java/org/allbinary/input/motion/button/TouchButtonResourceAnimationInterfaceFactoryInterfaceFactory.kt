@@ -44,7 +44,11 @@ open public class TouchButtonResourceAnimationInterfaceFactoryInterfaceFactory :
         
 public constructor        ()                        
 
-                            : super("TouchButton Animations"){
+                            : super("TouchButton Animations")
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -52,9 +56,11 @@ public constructor        ()
 
 public constructor        (name: String)                        
 
-                            : super(name){
+                            : super(name)
 
-                    var name = name
+        Updates for KMP build        
+        {
+    //var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,9 +71,11 @@ public constructor        (name: String)
                 @Throws(Exception::class)
             override fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+    //var level = level
 this.init(ImageCacheFactory.getInstance(), level)
 }
 
@@ -75,12 +83,12 @@ this.init(ImageCacheFactory.getInstance(), level)
                 @Throws(Exception::class)
             override fun init(imageCache: ImageCache, level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageCache = imageCache
 
 
-                    var level = level
+        Updates for KMP build        
+        {
+    //var imageCache = imageCache
+    //var level = level
 
     
                         if(this.isInitialized())
@@ -235,9 +243,11 @@ super.init(level)
 
 override fun isLoadingLevel(level: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var level = level
+        Updates for KMP build        
+        {
+    //var level = level
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
 
@@ -267,7 +277,11 @@ override fun isLoadingLevel(level: Int)
 
 override fun isFeature()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(!Features.getInstance()!!.isDefault(OpenGLFeatureFactory.getInstance()!!.OPENGL))
                         

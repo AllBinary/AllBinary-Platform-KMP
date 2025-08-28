@@ -35,9 +35,11 @@ open public class J2MEGameKey : Input {
             
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var keyCode = keyCode
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 
     var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
 
@@ -71,12 +73,12 @@ open fun getString(keyCode: Int)
         }
             protected constructor        (key: Int, keyName: String)                        
 
-                            : super(key, keyName){
+                            : super(key, keyName)
 
-                    var key = key
-
-
-                    var keyName = keyName
+        Updates for KMP build        
+        {
+var key = key
+var keyName = keyName
 
 
                             //For kotlin this is before the body of the constructor.
@@ -100,7 +102,11 @@ inputFactory!!.add(id, this)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

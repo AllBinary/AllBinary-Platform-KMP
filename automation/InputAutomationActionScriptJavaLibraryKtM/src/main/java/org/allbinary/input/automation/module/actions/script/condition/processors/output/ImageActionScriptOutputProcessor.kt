@@ -43,12 +43,12 @@ open public class ImageActionScriptOutputProcessor
             
 open fun process(imageActionScriptOutputInterface: ImageActionScriptOutputInterface, frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageActionScriptOutputInterface = imageActionScriptOutputInterface
 
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+    //var imageActionScriptOutputInterface = imageActionScriptOutputInterface
+    //var frame = frame
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -71,7 +71,11 @@ logUtil!!.put("Start - Processing at: " +imageActionScriptOutputInterface!!.toSt
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var imageType: InputImageType = vector.get(index) as InputImageType
 
 
@@ -88,7 +92,11 @@ imageIOInterface!!.save(frame)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

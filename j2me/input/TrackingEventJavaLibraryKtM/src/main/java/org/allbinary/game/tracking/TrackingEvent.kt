@@ -35,7 +35,11 @@ open public class TrackingEvent : AllBinaryEventObject {
     private var layerInterface: AllBinaryLayer = AllBinaryLayer.NULL_ALLBINARY_LAYER
 public constructor        ()                        
 
-                            : super(TrackingEventHandler.getInstance()){
+                            : super(TrackingEventHandler.getInstance())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -43,9 +47,11 @@ public constructor        ()
 
 public constructor        (allBinaryLayerInterface: AllBinaryLayer)                        
 
-                            : super(allBinaryLayerInterface){
+                            : super(allBinaryLayerInterface)
 
-                    var allBinaryLayerInterface = allBinaryLayerInterface
+        Updates for KMP build        
+        {
+var allBinaryLayerInterface = allBinaryLayerInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,16 +62,22 @@ this.setLayerInterface(allBinaryLayerInterface)
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.setSource(anyType)
 }
 
 
 open fun getLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,24 +87,32 @@ open fun getLayerInterface()
 
 open fun setLayerInterface(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
 
 open fun setLayerInterfaceForCircularStaticPool(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 this.layerInterface= layerInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("TrackingEvent: \n")

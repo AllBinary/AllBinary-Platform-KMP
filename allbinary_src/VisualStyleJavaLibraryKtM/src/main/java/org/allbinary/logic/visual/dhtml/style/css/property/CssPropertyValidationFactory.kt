@@ -40,9 +40,11 @@ open public class CssPropertyValidationFactory
             
 open fun getInstance(node: Node)
         //nullable =  from not(true or (false and false)) = 
-: ValidationInterface{
+: ValidationInterface
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
 
@@ -54,7 +56,11 @@ open fun getInstance(node: Node)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

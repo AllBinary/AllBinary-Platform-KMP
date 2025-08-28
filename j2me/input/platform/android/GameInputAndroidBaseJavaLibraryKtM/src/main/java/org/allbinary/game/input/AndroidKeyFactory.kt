@@ -263,7 +263,11 @@ open public class AndroidKeyFactory : ActivityFractureUtil {
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put("Start/End", this, commonStrings!!.INIT)
@@ -272,9 +276,11 @@ logUtil!!.put("Start/End", this, commonStrings!!.INIT)
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == ENTER)
@@ -311,9 +317,11 @@ open fun isSubmission(input: Input)
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -324,9 +332,11 @@ open fun isDelete(input: Input)
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DEL)
@@ -350,9 +360,11 @@ open fun isBackSpace(input: Input)
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_LEFT)
@@ -376,9 +388,11 @@ open fun isLeft(input: Input)
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_RIGHT)
@@ -402,9 +416,11 @@ open fun isRight(input: Input)
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_UP)
@@ -428,9 +444,11 @@ open fun isUp(input: Input)
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_DOWN)
@@ -454,9 +472,11 @@ open fun isDown(input: Input)
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_CENTER)

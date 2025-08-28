@@ -37,9 +37,11 @@ open public class TransformInfoHttpSearch : TransformInfoHttp {
         
 public constructor        (searchRequest: SearchRequest)                        
 
-                            : super(searchRequest!!.getPropertiesHashMap(), searchRequest!!.getPageContext()){
+                            : super(searchRequest!!.getPropertiesHashMap(), searchRequest!!.getPageContext())
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 
 
                             //For kotlin this is before the body of the constructor.
@@ -71,7 +73,11 @@ this.setTemplateFile(dataFileName)
             
 open fun getPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())
@@ -90,7 +96,11 @@ stringBuffer!!.append(AbPathData.getInstance()!!.SEPARATOR)
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,7 +112,11 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,7 +128,11 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -32,17 +32,21 @@ open public class EndGamePaintable : Paintable {
         
 
     private var gameCanvas: AllBinaryGameCanvas
-public constructor        (gameCanvas: AllBinaryGameCanvas){
+public constructor        (gameCanvas: AllBinaryGameCanvas)
 
-                    var gameCanvas = gameCanvas
+        Updates for KMP build        
+        {
+var gameCanvas = gameCanvas
 this.gameCanvas= gameCanvas
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 gameCanvas!!.paintGameOver(graphics)
 }
 

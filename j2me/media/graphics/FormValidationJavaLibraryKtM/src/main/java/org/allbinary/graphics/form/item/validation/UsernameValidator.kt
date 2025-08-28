@@ -31,18 +31,14 @@ open public class UsernameValidator : TextFieldItemValidator {
         
 public constructor        (textFieldItem: TextFieldItem, min: Int, max: Int, allowOnEmpty: Boolean)                        
 
-                            : super(textFieldItem, min, max, allowOnEmpty){
+                            : super(textFieldItem, min, max, allowOnEmpty)
 
-                    var textFieldItem = textFieldItem
-
-
-                    var min = min
-
-
-                    var max = max
-
-
-                    var allowOnEmpty = allowOnEmpty
+        Updates for KMP build        
+        {
+var textFieldItem = textFieldItem
+var min = min
+var max = max
+var allowOnEmpty = allowOnEmpty
 
 
                             //For kotlin this is before the body of the constructor.

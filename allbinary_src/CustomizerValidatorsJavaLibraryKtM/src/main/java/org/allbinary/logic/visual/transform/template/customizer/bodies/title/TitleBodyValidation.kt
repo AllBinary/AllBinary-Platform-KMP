@@ -53,7 +53,11 @@ open public class TitleBodyValidation : Validation
     private var body: String
 
     private var titleValidation: TitleNotRequiredValidation
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
                         
@@ -69,9 +73,11 @@ this.body= stringUtil!!.EMPTY_STRING
 this.titleValidation= TitleNotRequiredValidation()
 }
 
-public constructor        (document: Document){
+public constructor        (document: Document)
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -90,7 +96,11 @@ public constructor        (document: Document){
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var aBodyNode: Node = nodeList!!.item(index)!!
 
 
@@ -122,9 +132,11 @@ this.titleValidation= TitleNotRequiredValidation(titleNode)
 
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor        (hashMap: HashMap<Any, Any>)
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -142,9 +154,11 @@ this.getFormData(hashMap)
             
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashMap = hashMap
+
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.body= hashMap!!.get(BodyData.getInstance()!!.NAME) as String
 this.titleValidation= TitleNotRequiredValidation(hashMap)
 }
@@ -152,7 +166,11 @@ this.titleValidation= TitleNotRequiredValidation(hashMap)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var isValid: Boolean = Boolean.TRUE
@@ -199,7 +217,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return isValid
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -220,7 +242,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -241,7 +267,11 @@ stringBuffer!!.append(AbSqlData.MAXBLOB)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -262,7 +292,11 @@ stringBuffer!!.append(AbSqlData.MAXBLOB)
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -272,9 +306,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -287,9 +323,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

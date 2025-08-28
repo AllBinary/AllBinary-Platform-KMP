@@ -22,7 +22,11 @@ open public class GameStatisticsFactory : BaseGameStatistics {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameStatisticsFactory{
+: GameStatisticsFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,9 +44,11 @@ open fun getInstance()
     private var stringBuffer: StringMaker = StringMaker()
 override fun add(string: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var string = string
+
+        Updates for KMP build        
+        {
+var string = string
 
     
                         if(this.stringBuffer!!.length() > 12000)
@@ -58,7 +64,11 @@ this.stringBuffer!!.append(string)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

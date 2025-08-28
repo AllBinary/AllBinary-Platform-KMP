@@ -46,7 +46,11 @@ open public class Validation
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -57,9 +61,11 @@ open fun isValid()
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -71,7 +77,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -82,7 +92,11 @@ open fun toValidationInfoDoc()
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

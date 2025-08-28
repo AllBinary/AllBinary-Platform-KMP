@@ -49,7 +49,11 @@ open public class GeographicMapCellPathHistoryInfo
 
 open fun getPreviousGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,16 +63,22 @@ open fun getPreviousGeographicMapCellPosition()
 
 open fun setPreviousGeographicMapCellPosition(previousGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var previousGeographicMapCellPosition = previousGeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var previousGeographicMapCellPosition = previousGeographicMapCellPosition
 this.previousGeographicMapCellPosition= previousGeographicMapCellPosition
 }
 
 
 open fun getPreviousOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,16 +88,22 @@ open fun getPreviousOnPathGeographicMapCellPosition()
 
 open fun setPreviousOnPathGeographicMapCellPosition(previousOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var previousOnPathGeographicMapCellPosition = previousOnPathGeographicMapCellPosition
 this.previousOnPathGeographicMapCellPosition= previousOnPathGeographicMapCellPosition
 }
 
 
 open fun getNextUnvisitedOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,16 +113,22 @@ open fun getNextUnvisitedOnPathGeographicMapCellPosition()
 
 open fun setNextUnvisitedOnPathGeographicMapCellPosition(nextUnvisitedOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var nextUnvisitedOnPathGeographicMapCellPosition = nextUnvisitedOnPathGeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var nextUnvisitedOnPathGeographicMapCellPosition = nextUnvisitedOnPathGeographicMapCellPosition
 this.nextUnvisitedOnPathGeographicMapCellPosition= nextUnvisitedOnPathGeographicMapCellPosition
 }
 
 
 open fun getNextOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -116,16 +138,22 @@ open fun getNextOnPathGeographicMapCellPosition()
 
 open fun setNextOnPathGeographicMapCellPosition(nextOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var nextOnPathGeographicMapCellPosition = nextOnPathGeographicMapCellPosition
 this.nextOnPathGeographicMapCellPosition= nextOnPathGeographicMapCellPosition
 }
 
 
 open fun getNextChosenOnPathGeographicMapCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -135,9 +163,11 @@ open fun getNextChosenOnPathGeographicMapCellPosition()
 
 open fun setNextChosenOnPathGeographicMapCellPosition(nextChosenOnPathGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var nextChosenOnPathGeographicMapCellPosition = nextChosenOnPathGeographicMapCellPosition
 this.nextChosenOnPathGeographicMapCellPosition= nextChosenOnPathGeographicMapCellPosition
 }
 

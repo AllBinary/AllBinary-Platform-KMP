@@ -50,7 +50,11 @@ open public class LicenseInitInfoUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseInitInfoUtil{
+: LicenseInitInfoUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,9 +82,11 @@ open fun getInstance()
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var filePath = filePath
+
+        Updates for KMP build        
+        {
+var filePath = filePath
 this.filePath= filePath
 }
 
@@ -90,9 +96,11 @@ this.filePath= filePath
 
 open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var initData = initData
+
+        Updates for KMP build        
+        {
+var initData = initData
 
     
                         if(this.filePath == 
@@ -124,7 +132,11 @@ dataOutputStream!!.writeInt(numberOfLicenseServers)
 
                         for (index in 0 until numberOfLicenseServers)
 
+        
+
+        Updates for KMP build        
         {
+
     var licenseServerCrypted: ByteArray = WeakCrypt(3).
                             encrypt(initData!!.getServer(index))!!.encodeToByteArray()!!
 
@@ -132,7 +144,11 @@ dataOutputStream!!.writeUTF(DatabaseEncoder.encode(licenseServerCrypted))
 }
 
 } catch(e: Exception)
-            {logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Command Failed: " +INITFILENAME, this, "write", e)
 FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
 
@@ -148,7 +164,11 @@ FileStreamFactory.getInstance()!!.delete(this.filePath, INITFILENAME)
 
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo{
+: LicenseInitInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -161,9 +181,11 @@ open fun read()
 
 open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
-: LicenseInitInfo{
+: LicenseInitInfo
 
-                    var initializeCounter = initializeCounter
+        Updates for KMP build        
+        {
+var initializeCounter = initializeCounter
 
     var METHOD_NAME: String = "readAgain"
 
@@ -223,7 +245,11 @@ initInfo!!.setLicenseId(WeakCrypt(1).
 
                         for (index in 0 until numberOfLicenseServers)
 
-        {decodedByteArray= DatabaseEncoder.decode(iData!!.readUTF())
+        
+
+        Updates for KMP build        
+        {
+decodedByteArray= DatabaseEncoder.decode(iData!!.readUTF())
 licenseServerDecoded= decodedByteArray.decodeToString()
 initInfo!!.setServer(WeakCrypt(3).
                             decrypt(licenseServerDecoded), index)
@@ -247,7 +273,11 @@ logUtil!!.put(NEXT_FILE +initInfo!!.getServer(index), this, METHOD_NAME)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put("Command Failed: " +INITFILENAME, this, METHOD_NAME, e)
 Thread.sleep(2000)
@@ -266,7 +296,11 @@ Thread.sleep(2000)
                                     }
                                 
 } catch(se: Exception)
-            {logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", se)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("LicenseInitInfo Read Retry: " +INITFILENAME, this, "readAgain()", se)
 }
 
 
@@ -280,7 +314,11 @@ Thread.sleep(2000)
 
 open fun getFilePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

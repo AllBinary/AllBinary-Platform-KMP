@@ -30,13 +30,19 @@ import org.allbinary.logic.util.visitor.Visitor
 
 open public class AllCommandsVisitor : Visitor {
         
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun visit(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
 

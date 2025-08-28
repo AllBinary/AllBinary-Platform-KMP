@@ -48,18 +48,22 @@ open public class AbCrypt
     private var algorithm: String
 public constructor        (algorithm: String)
             : super()
-        {
+        
 
-                    var algorithm = algorithm
+        Updates for KMP build        
+        {
+    //var algorithm = algorithm
 this.algorithm= algorithm
 }
 
 
 open fun init(keyAsString: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyAsString = keyAsString
+
+        Updates for KMP build        
+        {
+    //var keyAsString = keyAsString
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -69,7 +73,11 @@ open fun init(keyAsString: String)
         try {
             Security.addProvider(BouncyCastleProvider())
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 
@@ -89,16 +97,22 @@ open fun init(keyAsString: String)
 
 this.secretComposite= SecretComposite(secretKey, cipher, key)
 } catch(e: Exception)
-            {PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("init Failed", this, commonStrings!!.INIT, e)
 }
 
 }
 
 override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
         try {
             
@@ -107,7 +121,11 @@ override fun encrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.secretComposite!!.encrypt(array)
 } catch(e: Exception)
-            {PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Encrypt Failed", this, "encrypt", e)
 
 
 
@@ -119,9 +137,11 @@ override fun encrypt(array: ByteArray)
 
 override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
         try {
             
@@ -130,7 +150,11 @@ override fun decrypt(array: ByteArray)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.secretComposite!!.decrypt(array)
 } catch(e: Exception)
-            {PreLogUtil.put("decrypt Failed", this, "decrypt", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("decrypt Failed", this, "decrypt", e)
 
 
 

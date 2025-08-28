@@ -33,9 +33,11 @@ open public class BillingAddressesEntity : StreetAddressesEntity {
     private val TABLENAME: String = "billing"
 public constructor        (userName: String)                        
 
-                            : super(userName){
+                            : super(userName)
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
 
                             //For kotlin this is before the body of the constructor.

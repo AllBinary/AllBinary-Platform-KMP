@@ -38,12 +38,12 @@ open public class ConstructorUtil
             
 open fun viewAll(myClass: KClass<*>, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var myClass = myClass
-
-
-                    var lineBreak = lineBreak
+        Updates for KMP build        
+        {
+    //var myClass = myClass
+    //var lineBreak = lineBreak
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -58,7 +58,11 @@ stringBuffer!!.append(lineBreak)
 
                         for (index in 0 until constructor.size)
 
-        {stringBuffer!!.append(ConstructorUtil.view(constructor[index]!!, lineBreak))
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(ConstructorUtil.view(constructor[index]!!, lineBreak))
 }
 
 
@@ -71,12 +75,12 @@ stringBuffer!!.append(lineBreak)
 
 open fun view(constructor: Constructor, lineBreak: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var constructor = constructor
-
-
-                    var lineBreak = lineBreak
+        Updates for KMP build        
+        {
+    //var constructor = constructor
+    //var lineBreak = lineBreak
 
     
                         if(constructor != 
@@ -100,7 +104,11 @@ stringBuffer!!.append(constructor.getName())
 
                         for (index in 0 until classes.size)
 
-        {stringBuffer!!.append(commonSeps!!.SPACE)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(commonSeps!!.SPACE)
 stringBuffer!!.append(classes[index]!!.getName())
 stringBuffer!!.append(commonSeps!!.COLON)
 stringBuffer!!.append(index)
@@ -125,7 +133,11 @@ stringBuffer!!.append(lineBreak)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

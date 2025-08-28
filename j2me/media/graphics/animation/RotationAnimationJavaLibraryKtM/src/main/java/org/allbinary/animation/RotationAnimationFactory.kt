@@ -42,18 +42,22 @@ open public class RotationAnimationFactory
     private var angleIncrement: Short
 public constructor        ()
             : super()
-        {this.totalAngle= AngleFactory.getInstance()!!.TOTAL_ANGLE
+        
+
+        Updates for KMP build        
+        {
+this.totalAngle= AngleFactory.getInstance()!!.TOTAL_ANGLE
 this.angleIncrement= (totalAngle /GameConfigurationCentral.getInstance()!!.getGameControlFidelity()).toShort()
 }
 
 public constructor        (totalAngle: Short, angleIncrement: Short)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var totalAngle = totalAngle
-
-
-                    var angleIncrement = angleIncrement
+var totalAngle = totalAngle
+var angleIncrement = angleIncrement
 this.totalAngle= totalAngle
 this.angleIncrement= angleIncrement
 }
@@ -62,9 +66,11 @@ this.angleIncrement= angleIncrement
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 
@@ -76,9 +82,11 @@ this.angleIncrement= angleIncrement
                 @Throws(Exception::class)
             override fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
 
 
 
@@ -88,9 +96,11 @@ this.angleIncrement= angleIncrement
 
 override fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

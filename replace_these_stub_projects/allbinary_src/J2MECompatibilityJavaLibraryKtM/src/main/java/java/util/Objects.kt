@@ -21,9 +21,11 @@ open public class Objects
             
 open fun <T> requireNonNull(value: T)
         //nullable = true from not(false or (false and false)) = true
-: T{
+: T
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var value = value
 
     
                         if(value == 
@@ -52,12 +54,12 @@ open fun <T> requireNonNull(value: T)
 
 open fun <T> requireNonNull(value: T, message: String)
         //nullable = true from not(false or (false and false)) = true
-: T{
+: T
 
-                    var value = value
-
-
-                    var message = message
+        Updates for KMP build        
+        {
+    //var value = value
+var message = message
 
     
                         if(value == 

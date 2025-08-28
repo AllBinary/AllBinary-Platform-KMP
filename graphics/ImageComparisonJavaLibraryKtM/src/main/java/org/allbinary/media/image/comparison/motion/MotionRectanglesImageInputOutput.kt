@@ -55,16 +55,22 @@ open public class MotionRectanglesImageInputOutput
     private val NUMBER_OF_IMAGES: Int = 1
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun save(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -106,12 +112,12 @@ this.save(motionRectangles, frame)
             
 open fun save(motionRectangles: MotionRectangles, frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var motionRectangles = motionRectangles
 
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var motionRectangles = motionRectangles
+var frame = frame
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -163,7 +169,11 @@ logUtil!!.put("Motion Image File Path 2: " +filePathStringBuffer3!!.toString(), 
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-        {bufferedImageCacheables[index]= poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
+        
+
+        Updates for KMP build        
+        {
+bufferedImageCacheables[index]= poolInterface!!.remove(bufferedImageInfo) as BufferedImageCacheable
 }
 
 bufferedImageCacheables[0]!!.getBufferedImage()!!.setData(imageComparisonInfo!!.getBufferedImages()[1]!!.getData())
@@ -186,7 +196,11 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-        {bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()
+        
+
+        Updates for KMP build        
+        {
+bufferedImageGraphicsArray[index]= bufferedImageCacheables[index]!!.getBufferedImage()!!.getGraphics()
 }
 
 
@@ -201,7 +215,11 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
                         for (index2 in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var motionRectangle: MotionRectangle = rectangelList!!.get(index2) as MotionRectangle
 
 
@@ -213,7 +231,11 @@ bufferedImageGraphicsArray= arrayOfNulls(NUMBER_OF_IMAGES)
 
                         for (index in 0 until NUMBER_OF_IMAGES)
 
-        {bufferedImageGraphicsArray[index]!!.setColor(Color.ORANGE)
+        
+
+        Updates for KMP build        
+        {
+bufferedImageGraphicsArray[index]!!.setColor(Color.ORANGE)
 bufferedImageGraphicsArray[index]!!.drawRect(rectangle.x, rectangle.y, rectangle.width, rectangle.height)
 }
 

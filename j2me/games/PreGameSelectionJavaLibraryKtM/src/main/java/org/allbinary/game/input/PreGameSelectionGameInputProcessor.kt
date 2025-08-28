@@ -76,7 +76,11 @@ open public class PreGameSelectionGameInputProcessor : Processor
                                 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.setRunning(true)
 SecondaryPlayerQueueFactory.getInstance()!!.add(SelectSound.getInstance())
@@ -84,7 +88,11 @@ gameCanvas!!.setGameState(nextGameState)
 GameKeyEventHandler.getInstance()!!.removeListener(getPlayerGameInput())
 this.setRunning(false)
 } catch(e: Exception)
-            {this.setRunning(false)
+            
+
+        Updates for KMP build        
+        {
+this.setRunning(false)
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -95,18 +103,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 
                                 }
                             
-public constructor        (gameCanvas: AllBinaryGameCanvas, preGameSelectorPaintable: PreGameSelectorPaintable, nextGameState: GameState, lockedIndex: Int){
+public constructor        (gameCanvas: AllBinaryGameCanvas, preGameSelectorPaintable: PreGameSelectorPaintable, nextGameState: GameState, lockedIndex: Int)
 
-                    var gameCanvas = gameCanvas
-
-
-                    var preGameSelectorPaintable = preGameSelectorPaintable
-
-
-                    var nextGameState = nextGameState
-
-
-                    var lockedIndex = lockedIndex
+        Updates for KMP build        
+        {
+var gameCanvas = gameCanvas
+var preGameSelectorPaintable = preGameSelectorPaintable
+var nextGameState = nextGameState
+var lockedIndex = lockedIndex
 this.gameCanvas= gameCanvas
 this.preGameSelectorPaintable= preGameSelectorPaintable
 this.nextGameState= nextGameState
@@ -119,7 +123,11 @@ this.lockedIndex= lockedIndex
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{this.getPlayerGameInput()!!.update()
+
+
+        Updates for KMP build        
+        {
+this.getPlayerGameInput()!!.update()
 }
 
 
@@ -127,9 +135,11 @@ open fun process()
             
 open fun onInput(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+var list = list
 
     var size: Int = list.size()!!
 
@@ -139,7 +149,11 @@ open fun onInput(list: BasicArrayList)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: Any = list.get(index)!!
 
 
@@ -214,7 +228,11 @@ list.clear()
 
 open fun getPreGameSelectorPaintable()
         //nullable = true from not(false or (false and true)) = true
-: PreGameSelectorPaintable{
+: PreGameSelectorPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -226,20 +244,30 @@ open fun getPreGameSelectorPaintable()
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+var layerManager = layerManager
 }
 
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -249,7 +277,11 @@ open fun getName()
 
 open fun getPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
-: PlayerGameInput{
+: PlayerGameInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -39,13 +39,21 @@ open public class GyroSensorFactory
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{GyroSensorFactory.allBinaryGyroSensor= NoGyroSensor()
+
+
+        Updates for KMP build        
+        {
+GyroSensorFactory.allBinaryGyroSensor= NoGyroSensor()
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryOrientationSensor{
+: AllBinaryOrientationSensor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

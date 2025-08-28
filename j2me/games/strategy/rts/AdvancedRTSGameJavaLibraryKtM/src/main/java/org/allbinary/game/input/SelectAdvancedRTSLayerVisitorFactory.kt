@@ -39,7 +39,11 @@ open public class SelectAdvancedRTSLayerVisitorFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SelectAdvancedRTSLayerVisitorFactory{
+: SelectAdvancedRTSLayerVisitorFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,14 +54,20 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(selectedRTSLayersPlayerGameInput: SelectedRTSLayersPlayerGameInput)
         //nullable =  from not(true or (false and false)) = 
-: Visitor{
+: Visitor
 
-                    var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
+        Updates for KMP build        
+        {
+var selectedRTSLayersPlayerGameInput = selectedRTSLayersPlayerGameInput
 
 
 

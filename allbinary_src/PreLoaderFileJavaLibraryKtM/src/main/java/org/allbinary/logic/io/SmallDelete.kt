@@ -45,9 +45,11 @@ open public class SmallDelete
     private var string: String
 public constructor        (fileName: String)
             : super()
-        {
+        
 
-                    var fileName = fileName
+        Updates for KMP build        
+        {
+var fileName = fileName
 this.fileName= fileName
 string= FileUtil.getInstance()!!.readAsString(fileName)
 }
@@ -55,12 +57,12 @@ string= FileUtil.getInstance()!!.readAsString(fileName)
 
 open fun deleteAtStart(start: String, end: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var start = start
-
-
-                    var end = end
+        Updates for KMP build        
+        {
+var start = start
+var end = end
 
         try {
             
@@ -98,7 +100,11 @@ idOutData!!.writeBytes(text)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         
@@ -119,15 +125,13 @@ idOutData!!.writeBytes(text)
 
 open fun deleteBetween(start: String, end: String, newText: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var start = start
-
-
-                    var end = end
-
-
-                    var newText = newText
+        Updates for KMP build        
+        {
+var start = start
+var end = end
+var newText = newText
 
         try {
             
@@ -168,7 +172,11 @@ idOutData!!.writeBytes(newStart +newText +text)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return false
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.IDLOGGING))
                         

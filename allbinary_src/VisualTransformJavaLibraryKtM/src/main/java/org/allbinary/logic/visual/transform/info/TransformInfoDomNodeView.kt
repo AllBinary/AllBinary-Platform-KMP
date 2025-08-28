@@ -36,12 +36,12 @@ open public class TransformInfoDomNodeView : TransformInfoDomNode
         
 public constructor        (transformInfoInterface: TransformInfoInterface, mapping: String)                        
 
-                            : super(transformInfoInterface, mapping){
+                            : super(transformInfoInterface, mapping)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var mapping = mapping
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var mapping = mapping
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,9 +50,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface, mappi
 
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,12 +63,12 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 public constructor        (name: String, mappedName: String)                        
 
-                            : super(name, mappedName){
+                            : super(name, mappedName)
 
-                    var name = name
-
-
-                    var mappedName = mappedName
+        Updates for KMP build        
+        {
+var name = name
+var mappedName = mappedName
 
 
                             //For kotlin this is before the body of the constructor.
@@ -76,9 +78,11 @@ public constructor        (name: String, mappedName: String)
 public constructor        (name: String)                        
 
                             : super(name, 
-                            null){
+                            null)
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -90,9 +94,11 @@ public constructor        (name: String)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 

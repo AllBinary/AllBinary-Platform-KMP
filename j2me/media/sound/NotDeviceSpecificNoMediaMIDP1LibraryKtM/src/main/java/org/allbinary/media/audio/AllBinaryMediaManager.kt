@@ -45,7 +45,11 @@ open public class AllBinaryMediaManager
 
 open fun isMuted()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,15 +59,21 @@ open fun isMuted()
 
 open fun setMuted(aMuted: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aMuted = aMuted
+
+        Updates for KMP build        
+        {
+var aMuted = aMuted
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,9 +85,11 @@ open fun update()
             
 open fun init(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var soundsFactoryInterface = soundsFactoryInterface
+
+        Updates for KMP build        
+        {
+var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -95,9 +107,11 @@ Sounds(soundsFactoryInterface).
             
 open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var soundsFactoryInterface = soundsFactoryInterface
+
+        Updates for KMP build        
+        {
+var soundsFactoryInterface = soundsFactoryInterface
 Sounds(soundsFactoryInterface).
                             stopAll()
 Sounds(soundsFactoryInterface).
@@ -108,12 +122,12 @@ System.gc()
 
 open fun createPlayer(stream: InputStream, type: String)
         //nullable = true from not(false or (false and false)) = true
-: Player{
+: Player
 
-                    var stream = stream
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+var stream = stream
+var type = type
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -131,9 +145,11 @@ logUtil!!.put(commonString!!.START, THIS, "creatPlayer(InputStream)")
 
 open fun createPlayer(locator: String)
         //nullable = true from not(false or (false and false)) = true
-: Player{
+: Player
 
-                    var locator = locator
+        Updates for KMP build        
+        {
+var locator = locator
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -152,23 +168,23 @@ logUtil!!.put(commonString!!.START, THIS, "creatPlayer(locator)")
 
 open fun playTone(frequency: Int, time: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var frequency = frequency
 
 
-                    var time = time
-
-
-                    var volume = volume
+        Updates for KMP build        
+        {
+var frequency = frequency
+var time = time
+var volume = volume
 }
 
 
 open fun getSupportedContentTypes(protocol: String)
         //nullable = true from not(false or (false and false)) = true
-: Array<String?>{
+: Array<String?>
 
-                    var protocol = protocol
+        Updates for KMP build        
+        {
+var protocol = protocol
 
 
 
@@ -179,9 +195,11 @@ open fun getSupportedContentTypes(protocol: String)
 
 open fun getSupportedProtocols(content_type: String)
         //nullable = true from not(false or (false and false)) = true
-: Array<String?>{
+: Array<String?>
 
-                    var content_type = content_type
+        Updates for KMP build        
+        {
+var content_type = content_type
 
 
 
@@ -193,7 +211,11 @@ open fun getSupportedProtocols(content_type: String)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

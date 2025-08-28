@@ -32,18 +32,20 @@ import org.allbinary.logic.system.security.licensing.LicensingException
 
 open public class DynamicInitDb : InitDb {
         
-public constructor        (abeClientInformation: AbeClientInformationInterface){
+public constructor        (abeClientInformation: AbeClientInformationInterface)
 
-                    var abeClientInformation = abeClientInformation
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 this.setHelper(InitDbHelperFactory.getInstance(abeClientInformation))
 }
 
-public constructor        (abeClientInformation: AbeClientInformationInterface, databaseConnectionInfoInterface: DatabaseConnectionInfoInterface){
+public constructor        (abeClientInformation: AbeClientInformationInterface, databaseConnectionInfoInterface: DatabaseConnectionInfoInterface)
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 this.setHelper(InitDbHelperFactory.getInstance(abeClientInformation, databaseConnectionInfoInterface))
 }
 

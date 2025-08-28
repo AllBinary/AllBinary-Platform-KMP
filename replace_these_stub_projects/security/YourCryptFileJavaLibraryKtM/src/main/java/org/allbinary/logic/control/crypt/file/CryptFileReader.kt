@@ -20,12 +20,12 @@ open public class CryptFileReader
         
 public constructor        (decryptedExtension: String, encryptedExtension: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var decryptedExtension = decryptedExtension
-
-
-                    var encryptedExtension = encryptedExtension
+var decryptedExtension = decryptedExtension
+var encryptedExtension = encryptedExtension
 }
 
 
@@ -33,9 +33,11 @@ public constructor        (decryptedExtension: String, encryptedExtension: Strin
             
 open fun get(fileAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var fileAbPath = fileAbPath
+        Updates for KMP build        
+        {
+var fileAbPath = fileAbPath
 
 
 
@@ -48,9 +50,11 @@ open fun get(fileAbPath: AbPath)
             
 open fun getInputStream(fileAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: InputStream{
+: InputStream
 
-                    var fileAbPath = fileAbPath
+        Updates for KMP build        
+        {
+var fileAbPath = fileAbPath
 
 
 

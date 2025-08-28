@@ -54,12 +54,12 @@ open public class BasicProfileActionScriptInput : BasicProfileActionScriptProces
     private var time: Int= 0
 public constructor        (label: String, node: Node)                        
 
-                            : super(label, node){
+                            : super(label, node)
 
-                    var label = label
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+    //var label = label
+    //var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -98,9 +98,11 @@ this.setInputRobotInterface(InputRobotFactory.getInstance()!!.get(inputTypeStrin
 
 public constructor        (label: String)                        
 
-                            : super(label){
+                            : super(label)
 
-                    var label = label
+        Updates for KMP build        
+        {
+    //var label = label
 
 
                             //For kotlin this is before the body of the constructor.
@@ -125,7 +127,11 @@ this.setTime(0)
 
 open fun getTime()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -135,16 +141,22 @@ open fun getTime()
 
 open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var time = time
+
+        Updates for KMP build        
+        {
+var time = time
 this.time= time
 }
 
 
 open fun BasicProfileActionScriptInput_toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(GenericProfileActionScriptInputData.TYPE, this.getInputRobotInterface()!!.getName())
@@ -162,9 +174,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = ModDomHelper.createNodeWithValueNodes(document, GenericProfileActionScriptInputData.NAME, this.BasicProfileActionScriptInput_toHashMap())!!
 
@@ -178,16 +192,22 @@ open fun toXmlNode(document: Document)
 
 open fun setInputRobotInterface(inputRobotInterface: InputRobotInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputRobotInterface = inputRobotInterface
+
+        Updates for KMP build        
+        {
+var inputRobotInterface = inputRobotInterface
 this.inputRobotInterface= inputRobotInterface
 }
 
 
 open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputRobotInterface{
+: InputRobotInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -196,7 +216,11 @@ open fun getInputRobotInterface()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(super.toString())

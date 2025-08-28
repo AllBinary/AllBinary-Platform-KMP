@@ -60,33 +60,19 @@ open public class HighScoreTextBox : CustomTextBox {
     var submitted: Boolean = false
 public constructor        (highScoresFactoryInterface: HighScoresFactoryInterface, highScoresHelper: HighScoresHelperBase, abeClientInformation: AbeClientInformationInterface, gameInfo: GameInfo, cmdListener: CommandListener, name: String, highScore: HighScore, backgrounBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor){
+                            : super(cmdListener, "New High Score Enter Name:", name, 12, TextField.ANY, backgrounBasicColor, foregroundBasicColor)
 
-                    var highScoresFactoryInterface = highScoresFactoryInterface
-
-
-                    var highScoresHelper = highScoresHelper
-
-
-                    var abeClientInformation = abeClientInformation
-
-
-                    var gameInfo = gameInfo
-
-
-                    var cmdListener = cmdListener
-
-
-                    var name = name
-
-
-                    var highScore = highScore
-
-
-                    var backgrounBasicColor = backgrounBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var highScoresFactoryInterface = highScoresFactoryInterface
+    //var highScoresHelper = highScoresHelper
+    //var abeClientInformation = abeClientInformation
+    //var gameInfo = gameInfo
+    //var cmdListener = cmdListener
+    //var name = name
+    //var highScore = highScore
+    //var backgrounBasicColor = backgrounBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -126,9 +112,11 @@ highScoreUtil= HighScoreUtil(highScoresFactoryInterface, highScoresHelper, abeCl
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
 this.removeAllCommands()
 PostGameCommandFactory.getInstance()!!.addCommands(this)
 this.addCommand(HighScoreUtil.SUBMIT_TEXTBOX_COMMAND)
@@ -137,14 +125,22 @@ this.setCommandListener(cmdListener)
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{this.virtualKeyboardEventHandler!!.open()
+
+
+        Updates for KMP build        
+        {
+this.virtualKeyboardEventHandler!!.open()
 this.paintable= NullPaintable.getInstance()
 super.open()
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.virtualKeyboardEventHandler!!.close()
+
+
+        Updates for KMP build        
+        {
+this.virtualKeyboardEventHandler!!.close()
 this.paintable= this.pleaseWait
 this.repaintBehavior!!.onChangeRepaint(this)
 super.close()
@@ -171,7 +167,11 @@ this.repaintBehavior!!.onChangeRepaint(this)
                 @Throws(Exception::class)
             override fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var name: String = this.getTextFieldItem()!!.getString()!!
 
 this.highScoreUtil!!.update(name)
@@ -180,9 +180,11 @@ super.update()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics)
 this.paintable.paint(graphics)
 }
@@ -190,12 +192,20 @@ this.paintable.paint(graphics)
 
 open fun saveHighScore()
         //nullable = true from not(false or (false and true)) = true
-{this.highScoreUtil!!.saveHighScore()
+
+
+        Updates for KMP build        
+        {
+this.highScoreUtil!!.saveHighScore()
 }
 
 override fun submit()
         //nullable = true from not(false or (false and true)) = true
-{this.highScoreUtil!!.submit(this)
+
+
+        Updates for KMP build        
+        {
+this.highScoreUtil!!.submit(this)
 }
 
 

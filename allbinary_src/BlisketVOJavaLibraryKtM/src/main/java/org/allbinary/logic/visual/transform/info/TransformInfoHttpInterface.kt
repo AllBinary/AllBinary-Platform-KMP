@@ -35,13 +35,22 @@ open fun getWeblisketSession()
         //nullable = true from not(false or (false and true)) = true
 : WeblisketSessionInterface
 
+        Updates for KMP build        
+        
+
 open fun getPageContext()
         //nullable = true from not(false or (false and true)) = true
 : PageContext
 
+        Updates for KMP build        
+        
+
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
 : HashMap<Any, Any>
+
+        Updates for KMP build        
+        
 
 }
                 

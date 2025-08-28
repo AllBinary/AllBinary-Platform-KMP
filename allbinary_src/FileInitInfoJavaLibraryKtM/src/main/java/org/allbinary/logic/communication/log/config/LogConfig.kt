@@ -61,18 +61,14 @@ open public class LogConfig
     private var fileName: String
 public constructor        (aName: String, aDescription: String, aPath: String, aFileName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var aName = aName
-
-
-                    var aDescription = aDescription
-
-
-                    var aPath = aPath
-
-
-                    var aFileName = aFileName
+var aName = aName
+var aDescription = aDescription
+var aPath = aPath
+var aFileName = aFileName
 this.isEnabled= false
 this.name= aName
 this.description= aDescription
@@ -82,9 +78,11 @@ this.fileName= aFileName
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var enabledValueNode: Node = DomSearchHelper.getNode(EntryData.getInstance()!!.ENABLE, node.getChildNodes())!!
 
@@ -112,7 +110,11 @@ this.fileName= DomNodeHelper.getTextNodeValue(fileValueNode)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,7 +124,11 @@ open fun getName()
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,19 +138,31 @@ open fun isEnabled()
 
 open fun enable()
         //nullable = true from not(false or (false and true)) = true
-{this.isEnabled= true
+
+
+        Updates for KMP build        
+        {
+this.isEnabled= true
 }
 
 
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-{this.isEnabled= false
+
+
+        Updates for KMP build        
+        {
+this.isEnabled= false
 }
 
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -154,7 +172,11 @@ open fun getDescription()
 
 open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,36 +186,44 @@ open fun getFileName()
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.name= value
 }
 
 
 open fun setDescription(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.description= value
 }
 
 
 open fun setPath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.path= value
 }
 
 
 open fun setFileName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.fileName= value
 }
 
@@ -202,7 +232,11 @@ this.fileName= value
             
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getWebappPath())
@@ -226,7 +260,11 @@ stringBuffer!!.append(this.getFileName())
             
 open fun getTypeVector()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
     var logKeyVector: BasicArrayList = BasicArrayList()
 
 
@@ -250,7 +288,11 @@ open fun getTypeVector()
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = logConfigTypeNodeVector!!.elementAt(i) as Node
 
 

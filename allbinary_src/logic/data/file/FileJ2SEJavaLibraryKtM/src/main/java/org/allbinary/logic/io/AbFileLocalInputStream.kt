@@ -33,9 +33,11 @@ open public class AbFileLocalInputStream : AbFileInputStream {
         
 public constructor        (file: AbFile)                        
 
-                            : super(AbFileNativeUtil.get(file)){
+                            : super(AbFileNativeUtil.get(file))
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
                             //For kotlin this is before the body of the constructor.

@@ -58,21 +58,15 @@ open public class AllBinaryHTMLImageRotationAnimation : ImageBaseRotationAnimati
     private var alphaProcessor: AlphaBaseProcessor = AlphaBaseProcessor.getInstance()!!
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, angleInfo, totalAngle, animationBehavior){
+                            : super(image, angleInfo, totalAngle, animationBehavior)
 
-                    var originalImage = originalImage
-
-
-                    var image = image
-
-
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var image = image
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -88,9 +82,11 @@ this.canvasSurfaceArray[1]= this.getCanvasSurface(this.twoImages[1]!!)
 
 open fun getCanvasSurface(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: CanvasSurface{
+: CanvasSurface
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
     var htmlImage: PlaynMutableImage = image as PlaynMutableImage
 
@@ -111,9 +107,11 @@ canvasSurface!!.translate(originalImage!!.getWidth() /2, originalImage!!.getHeig
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
 
     var changed: Boolean = false
 
@@ -143,9 +141,11 @@ super.setBasicColorP(basicColor)
 
 open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var alpha = alpha
+
+        Updates for KMP build        
+        {
+    //var alpha = alpha
 
     var changed: Boolean = false
 
@@ -174,21 +174,33 @@ this.updateImage()
 
 open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{super.nextRotation()
+
+
+        Updates for KMP build        
+        {
+super.nextRotation()
 this.updateImage()
 }
 
 
 open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{super.previousRotation()
+
+
+        Updates for KMP build        
+        {
+super.previousRotation()
 this.updateImage()
 }
 
 
 open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var canvasSurface: CanvasSurface = this.canvasSurfaceArray[this.bufferedImageIndex]!!
 
 canvasSurface!!.save()
@@ -202,9 +214,11 @@ this.swap()
 
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 super.setFrame(index)
 this.updateImage()
 }
@@ -212,7 +226,11 @@ this.updateImage()
 
 open fun swap()
         //nullable = true from not(false or (false and true)) = true
-{this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
+
+
+        Updates for KMP build        
+        {
+this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 
     
                         if(this.bufferedImageIndex == 0)
@@ -232,15 +250,13 @@ open fun swap()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 graphics.drawImage(this.imageToShow, x, y, anchor)
 }
 

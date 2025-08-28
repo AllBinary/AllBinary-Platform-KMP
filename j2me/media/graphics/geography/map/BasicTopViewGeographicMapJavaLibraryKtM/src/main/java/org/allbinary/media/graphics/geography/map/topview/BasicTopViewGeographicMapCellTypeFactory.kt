@@ -56,7 +56,11 @@ open public class BasicTopViewGeographicMapCellTypeFactory : GeographicMapCellTy
     val OTHER_CELL_TYPE: BasicTopViewGeographicMapCellType
 
     private val maxTileId: Int
-private constructor        (){this.maxTileId= 9
+private constructor        ()
+
+        Updates for KMP build        
+        {
+this.maxTileId= 9
 
     var basicTopViewGeographicMapStrings: BasicTopViewGeographicMapStrings = BasicTopViewGeographicMapStrings.getInstance()!!
 
@@ -93,12 +97,12 @@ this.STAIRS_DOWN_CELL_TYPE= STAIRS_DOWN_CELL_TYPE
 this.OTHER_CELL_TYPE= OTHER_CELL_TYPE
 }
 
-public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int){
+public constructor        (tileTypeToTileIdsMap: Hashtable<Any, Any>, maxTileId: Int)
 
-                    var tileTypeToTileIdsMap = tileTypeToTileIdsMap
-
-
-                    var maxTileId = maxTileId
+        Updates for KMP build        
+        {
+    //var tileTypeToTileIdsMap = tileTypeToTileIdsMap
+    //var maxTileId = maxTileId
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -176,7 +180,11 @@ this.maxTileId= maxTileId
 
                         for (index in 0 until size)
 
-        {key= keyArray[index]!! as String
+        
+
+        Updates for KMP build        
+        {
+key= keyArray[index]!! as String
 idsWithTypeList= tileTypeToTileIdsMap!!.get(key) as BasicArrayList
 
     
@@ -298,7 +306,11 @@ type= this.maxTileId -2
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -308,7 +320,11 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -318,7 +334,11 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -328,9 +348,11 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cellType = cellType
+        Updates for KMP build        
+        {
+var cellType = cellType
 
     
                         if(this.FLOOR_CELL_TYPE.isType(cellType))
@@ -353,7 +375,11 @@ open fun isPath(cellType: GeographicMapCellType)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

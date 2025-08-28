@@ -60,12 +60,12 @@ open public class TransformHttpRequestDocument
     private var document: Document
 public constructor        (pageContext: PageContext, weblisketSession: WeblisketSession)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var pageContext = pageContext
-
-
-                    var weblisketSession = weblisketSession
+var pageContext = pageContext
+var weblisketSession = weblisketSession
 
         try {
             
@@ -95,7 +95,11 @@ document.appendChild(contentTypeNode)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -114,9 +118,11 @@ document.appendChild(contentTypeNode)
 
 public constructor        (searchRequest: SearchRequest)
             : super()
-        {
+        
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 
         try {
             
@@ -137,7 +143,11 @@ languageTypeNode!!.appendChild(localTypeNode)
 contentTypeNode!!.appendChild(languageTypeNode)
 document.appendChild(contentTypeNode)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -157,7 +167,11 @@ document.appendChild(contentTypeNode)
 
 open fun getBaseNode()
         //nullable = true from not(false or (false and true)) = true
-: Node{
+: Node
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -167,7 +181,11 @@ open fun getBaseNode()
 
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -179,7 +197,11 @@ open fun getDoc()
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

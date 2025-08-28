@@ -47,7 +47,11 @@ open public class QuoteRequestEntity : AbSqlBean
     private val tableName: String = "quoterequest"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -57,9 +61,11 @@ this.setTableName(tableName)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
         try {
             super.insert(values)
@@ -73,7 +79,11 @@ open fun insert(values: Vector)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -91,12 +101,12 @@ open fun insert(values: Vector)
             
 open fun get(userName: String, id: Int)
         //nullable = true from not(false or (false and false)) = true
-: QuoteRequest{
+: QuoteRequest
 
-                    var userName = userName
-
-
-                    var id = id
+        Updates for KMP build        
+        {
+var userName = userName
+var id = id
 
     var row: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -134,9 +144,11 @@ row.put(QuoteRequestData.getInstance()!!.ID, id.toString())
 
 open fun getIds(userName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
 
 
@@ -147,12 +159,12 @@ open fun getIds(userName: String)
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var key = key
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+var key = key
+var value = value
 
         try {
             super.deleteWhere(key, value)
@@ -166,7 +178,11 @@ open fun deleteWhere(key: String, value: String)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -182,7 +198,11 @@ open fun deleteWhere(key: String, value: String)
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var quoteRequestData: QuoteRequestData = QuoteRequestData.getInstance()!!
 
 
@@ -219,7 +239,11 @@ stringBuffer!!.append(this.sqlStrings!!.END)
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -229,7 +253,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var result: String = dropTable.toCharArray()
 
 
@@ -242,12 +270,12 @@ open fun dropTable()
 
 open fun update(userName: String, updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var userName = userName
 
 
-                    var updatedValues = updatedValues
+        Updates for KMP build        
+        {
+var userName = userName
+var updatedValues = updatedValues
 super.updateWhere(UserData.USERNAME, userName, updatedValues)
 }
 

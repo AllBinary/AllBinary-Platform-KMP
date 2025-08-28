@@ -37,18 +37,22 @@ open public class SingleSensorGameUpdateProcessor : SensorGameUpdateProcessor {
                 @Throws(Exception::class)
             override fun process(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 }
 
 
                 @Throws(Exception::class)
             override fun sendNotifications(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 }
 
 

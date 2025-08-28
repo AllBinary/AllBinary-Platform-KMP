@@ -34,12 +34,12 @@ open public class SimultaneousCompoundRotationAnimationInterfaceFactory : Compou
         
 public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<AnimationInterfaceFactoryInterface?>, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory){
+                            : super(basicAnimationInterfaceFactoryInterfaceArray, animationBehaviorFactory)
 
-                    var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var basicAnimationInterfaceFactoryInterfaceArray = basicAnimationInterfaceFactoryInterfaceArray
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,9 +48,11 @@ public constructor        (basicAnimationInterfaceFactoryInterfaceArray: Array<A
 
 override fun createArray(size: Int)
         //nullable = true from not(false or (false and false)) = true
-: Array<Animation?>{
+: Array<Animation?>
 
-                    var size = size
+        Updates for KMP build        
+        {
+    //var size = size
 
 
 
@@ -60,9 +62,11 @@ override fun createArray(size: Int)
 
 override fun getInstance(animationInterfaceArray: Array<Animation?>)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterfaceArray = animationInterfaceArray
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
 
 
 

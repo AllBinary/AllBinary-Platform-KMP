@@ -35,12 +35,20 @@ open public class ExitCloseListener
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onClose()
         //nullable = true from not(false or (false and true)) = true
-{System.exit( -1)
+
+
+        Updates for KMP build        
+        {
+System.exit( -1)
 }
 
 

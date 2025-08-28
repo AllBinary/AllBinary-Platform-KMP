@@ -18,70 +18,56 @@ open public class OpenGLBitmap : PlatformBitmapBase {
         
 
     val bitmap: Bitmap
-public constructor        (bitmap: Any){
+public constructor        (bitmap: Any)
 
-                    var bitmap = bitmap
+        Updates for KMP build        
+        {
+    //var bitmap = bitmap
 this.bitmap= bitmap as Bitmap
 }
 
 
 open fun getPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pixels = pixels
 
 
-                    var offset = offset
-
-
-                    var stride = stride
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var pixels = pixels
+var offset = offset
+var stride = stride
+var x = x
+var y = y
+var width = width
+var height = height
 this.bitmap.getPixels(pixels, offset, stride, x, y, width, height)
 }
 
 
 open fun setPixels(pixels: IntArray, offset: Int, stride: Int, x: Int, y: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var pixels = pixels
 
 
-                    var offset = offset
-
-
-                    var stride = stride
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var pixels = pixels
+var offset = offset
+var stride = stride
+var x = x
+var y = y
+var width = width
+var height = height
 this.bitmap.setPixels(pixels, offset, stride, x, y, width, height)
 }
 
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +77,11 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -101,7 +91,11 @@ open fun getHeight()
 
 open fun recycle()
         //nullable = true from not(false or (false and true)) = true
-{this.bitmap.recycle()
+
+
+        Updates for KMP build        
+        {
+this.bitmap.recycle()
 }
 
 

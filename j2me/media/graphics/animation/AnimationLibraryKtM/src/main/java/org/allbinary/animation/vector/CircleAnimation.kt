@@ -40,26 +40,24 @@ open public class CircleAnimation : Animation
     var width: Int
 
     var height: Int
-public constructor        (widthAndHeight: Int, basicColor: BasicColor){
+public constructor        (widthAndHeight: Int, basicColor: BasicColor)
 
-                    var widthAndHeight = widthAndHeight
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var widthAndHeight = widthAndHeight
+var basicColor = basicColor
 this.width= widthAndHeight
 this.height= widthAndHeight
 this.setBasicColorP(basicColor)
 }
 
-public constructor        (width: Int, height: Int, basicColor: BasicColor){
+public constructor        (width: Int, height: Int, basicColor: BasicColor)
 
-                    var width = width
-
-
-                    var height = height
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var width = width
+var height = height
+var basicColor = basicColor
 this.width= width
 this.height= height
 this.setBasicColorP(basicColor)
@@ -67,19 +65,21 @@ this.setBasicColorP(basicColor)
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 this.basicSetColorUtil!!.setBasicColorP(graphics, this.getBasicColorP(), this.getColor())
 graphics.drawArc(x, y, width, height, 0, TOTAL_ANGLE)
 }

@@ -32,19 +32,23 @@ open public class IndexedAnimationBehaviorFactory : AnimationBehaviorFactory {
     var frameDelayTime: Long
 
     var loopTotal: Int
-public constructor        (loopTotal: Int, frameDelayTime: Long){
+public constructor        (loopTotal: Int, frameDelayTime: Long)
 
-                    var loopTotal = loopTotal
-
-
-                    var frameDelayTime = frameDelayTime
+        Updates for KMP build        
+        {
+    //var loopTotal = loopTotal
+    //var frameDelayTime = frameDelayTime
 this.loopTotal= loopTotal
 this.frameDelayTime= frameDelayTime
 }
 
 override fun getOrCreateInstance()
         //nullable = true from not(false or (false and true)) = true
-: AnimationBehavior{
+: AnimationBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

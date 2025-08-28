@@ -62,9 +62,11 @@ open public class TransformInfoObjectConfig
     private var outputTypeName: String
 public constructor        (transformInfoInterface: Object)
             : super()
-        {
+        
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 this.ownerTransformInfoInterface= transformInfoInterface
 this.createDocument()
 
@@ -102,12 +104,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterfa
 
 public constructor        (transformInfoInterface: Object, document: Object)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var document = document
+var transformInfoInterface = transformInfoInterface
+var document = document
 this.ownerTransformInfoInterface= transformInfoInterface
 this.document= document
 
@@ -159,15 +161,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterfa
 
 public constructor        (transformInfoInterface: Object, name: Object, type: Object)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var name = name
-
-
-                    var type = type
+var transformInfoInterface = transformInfoInterface
+var name = name
+var type = type
 this.ownerTransformInfoInterface= transformInfoInterface
 this.createDocument()
 
@@ -214,7 +214,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "Constructor(TransformInfoInterfa
 
 open fun createDocument()
         //nullable = true from not(false or (false and true)) = true
-{this.document= DomDocumentHelper.create()
+
+
+        Updates for KMP build        
+        {
+this.document= DomDocumentHelper.create()
 
     var objectConfigNode: Node = document.createElement(TransformInfoObjectConfigData.getInstance()!!.NAME)!!
 
@@ -224,7 +228,11 @@ this.document.appendChild(objectConfigNode)
 
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -236,7 +244,11 @@ open fun getTransformInfoInterface()
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -246,18 +258,22 @@ open fun toXmlDoc()
 
 open fun setDocument(document: Document)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var document = document
+
+        Updates for KMP build        
+        {
+var document = document
 this.document= document
 }
 
 
 open fun containsView(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     var objectConfigNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
 
@@ -273,7 +289,11 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
 
                         for (index in 0 until numberOfViews)
 
+        
+
+        Updates for KMP build        
         {
+
     var viewNode: Node = viewNodeList!!.item(index)!!
 
 
@@ -309,7 +329,11 @@ open fun containsView(transformInfoInterface: TransformInfoInterface)
             
 open fun getTemplateAttributes()
         //nullable = true from not(false or (false and true)) = true
-: NamedNodeMap{
+: NamedNodeMap
+
+        Updates for KMP build        
+        {
+
     var componentNode: Node = this.document.getElementsByTagName(TransformInfoObjectConfigData.getInstance()!!.NAME)!!.item(0)!!
 
 
@@ -324,7 +348,11 @@ open fun getTemplateAttributes()
             
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var attrNode: Attr = this.getTemplateAttributes()!!.getNamedItem(TransformInfoObjectConfigData.getInstance()!!.NAME) as Attr
 
 
@@ -339,9 +367,11 @@ open fun getName()
             
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 
     var attrNode: Attr = this.getTemplateAttributes()!!.getNamedItem(TransformInfoObjectConfigData.getInstance()!!.NAME) as Attr
 
@@ -353,9 +383,11 @@ attrNode!!.setValue(name)
             
 open fun getNodeVector(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var nodeName = nodeName
+        Updates for KMP build        
+        {
+var nodeName = nodeName
 
     var componentsNodeList: NodeList = this.document.getElementsByTagName(nodeName)!!
 
@@ -408,9 +440,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "getNodeVector(nodename)")
             
 open fun getTransformDomNodes(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var nodeName = nodeName
+        Updates for KMP build        
+        {
+var nodeName = nodeName
 
     var viewVector: Vector = Vector()
 
@@ -426,7 +460,11 @@ open fun getTransformDomNodes(nodeName: String)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var viewNode: Node = viewNodeVector!!.get(index) as Node
 
 viewVector!!.add(TransformInfoDomNode(viewNode))
@@ -444,9 +482,11 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
 open fun getTransforms(nodeName: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var nodeName = nodeName
+        Updates for KMP build        
+        {
+var nodeName = nodeName
 
     var viewVector: Vector = Vector()
 
@@ -462,7 +502,11 @@ open fun getTransforms(nodeName: String)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var viewNode: Node = viewNodeVector!!.get(index) as Node
 
 viewVector!!.add(TransformInfoDomNode(viewNode).
@@ -481,9 +525,11 @@ viewVector!!.add(TransformInfoDomNode(viewNode).
             
 open fun getTransformsGroup(group: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var group = group
+        Updates for KMP build        
+        {
+var group = group
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -521,7 +567,11 @@ open fun getTransformsGroup(group: String)
 
                         for (index in 0 until length)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = componentsNodeList!!.item(index)!!
 
 
@@ -571,7 +621,11 @@ break;
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var viewNode: Node = viewNodeVector!!.get(index) as Node
 
 viewVector!!.add(TransformInfoDomNode(viewNode))
@@ -620,7 +674,11 @@ viewVector!!.add(TransformInfoDomNode(viewNode))
             
 open fun getTransformDomNodes()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -632,7 +690,11 @@ open fun getTransformDomNodes()
             
 open fun getTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -644,7 +706,11 @@ open fun getTransforms()
             
 open fun getGroupTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -656,7 +722,11 @@ open fun getGroupTransforms()
             
 open fun getParentTransforms()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -666,7 +736,11 @@ open fun getParentTransforms()
 
 open fun getRootNode()
         //nullable = true from not(false or (false and true)) = true
-: Node{
+: Node
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -676,9 +750,11 @@ open fun getRootNode()
 
 open fun setOutputTypeName(outputTypeName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var outputTypeName = outputTypeName
+
+        Updates for KMP build        
+        {
+var outputTypeName = outputTypeName
 this.outputTypeName= outputTypeName
 }
 
@@ -687,7 +763,11 @@ this.outputTypeName= outputTypeName
             
 open fun getOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -699,7 +779,11 @@ open fun getOutputTypeName()
             
 open fun getInputOutputTypeName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var node: Node = DomSearchHelper.getNode(InputOutputTypeData.getInstance()!!.NAME, this.getRootNode()!!.getChildNodes())!!
 
 
@@ -714,7 +798,11 @@ open fun getInputOutputTypeName()
             
 open fun getInputOutputTypeFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var node: Node = DomSearchHelper.getNode(InputOutputTypeData.getInstance()!!.FILE, this.getRootNode()!!.getChildNodes())!!
 
 
@@ -729,7 +817,11 @@ open fun getInputOutputTypeFile()
             
 open fun getImportUriPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var node: Node = DomSearchHelper.getNode(XslData.getInstance()!!.ROOT_IMPORT_URI, this.getRootNode()!!.getChildNodes())!!
 
 
@@ -741,7 +833,11 @@ open fun getImportUriPath()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -768,7 +864,11 @@ override fun toString()
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         

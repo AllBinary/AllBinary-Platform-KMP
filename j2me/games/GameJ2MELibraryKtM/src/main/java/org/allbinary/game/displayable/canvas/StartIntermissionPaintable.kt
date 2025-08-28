@@ -63,39 +63,29 @@ open public class StartIntermissionPaintable : InitUpdatePaintable {
     val lastWidth: IntArray
 public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor)                        
 
-                            : this(gameCanvas, stringArray, lineArray, basicColor, Font.getDefaultFont()){
+                            : this(gameCanvas, stringArray, lineArray, basicColor, Font.getDefaultFont())
 
-                    var gameCanvas = gameCanvas
-
-
-                    var stringArray = stringArray
-
-
-                    var lineArray = lineArray
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var gameCanvas = gameCanvas
+    //var stringArray = stringArray
+    //var lineArray = lineArray
+    //var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font){
+public constructor        (gameCanvas: AllBinaryGameCanvas, stringArray: Array<String?>, lineArray: IntArray, basicColor: BasicColor, font: Font)
 
-                    var gameCanvas = gameCanvas
-
-
-                    var stringArray = stringArray
-
-
-                    var lineArray = lineArray
-
-
-                    var basicColor = basicColor
-
-
-                    var font = font
+        Updates for KMP build        
+        {
+    //var gameCanvas = gameCanvas
+    //var stringArray = stringArray
+    //var lineArray = lineArray
+    //var basicColor = basicColor
+    //var font = font
 this.gameCanvas= gameCanvas
 this.stringArray= stringArray
 this.lastWidth= IntArray(this.stringArray!!.size)
@@ -110,9 +100,11 @@ this.font= font
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var existingFont: Font = graphics.getFont()!!
 
@@ -130,7 +122,11 @@ basicSetColorUtil!!.setBasicColorP(graphics, this.basicColor, this.color)
 
                         for (index in this.stringArray!!.size -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(hasChanged)
                         
@@ -153,7 +149,11 @@ fontDebugFactory!!.setFont(existingFont, graphics)
     private val EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var level: Int = gameCanvas!!.getLayerManager()!!.getGameInfo()!!.getCurrentLevel()!!
 
 this.stringArray[0]= StringMaker().
@@ -164,23 +164,33 @@ this.stringArray[0]= StringMaker().
 
                         for (index in this.stringArray!!.size -1 downTo 1)
 
-        {this.stringArray[index]= this.EMPTY_STRING
+        
+
+        Updates for KMP build        
+        {
+this.stringArray[index]= this.EMPTY_STRING
 }
 
 }
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 }
 
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -57,12 +57,12 @@ open public class BasicProfileActionScriptCondition : ProfileActionScriptItem
     private var profileActionConditionInterfaceVector: Vector
 public constructor        (label: String, node: Node)                        
 
-                            : super(label, node){
+                            : super(label, node)
 
-                    var label = label
-
-
-                    var node = node
+        Updates for KMP build        
+        {
+var label = label
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -77,7 +77,11 @@ this.init()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var actionItemNode: Node = nodeList!!.item(index)!!
 
 
@@ -124,9 +128,11 @@ this.init()
             
 open fun addProcessorNodes(node: Node)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var node = node
+
+        Updates for KMP build        
+        {
+var node = node
 
     var nodeList: NodeList = node.getChildNodes()!!
 
@@ -136,7 +142,11 @@ open fun addProcessorNodes(node: Node)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var processorActionItemNode: Node = nodeList!!.item(index)!!
 
 
@@ -163,9 +173,11 @@ open fun addProcessorNodes(node: Node)
 
 public constructor        (label: String)                        
 
-                            : super(label){
+                            : super(label)
 
-                    var label = label
+        Updates for KMP build        
+        {
+var label = label
 
 
                             //For kotlin this is before the body of the constructor.
@@ -176,7 +188,11 @@ this.init()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.setProfileActionProcessorInterfaceVector(Vector())
+
+
+        Updates for KMP build        
+        {
+this.setProfileActionProcessorInterfaceVector(Vector())
 this.setProfileActionConditionInterfaceVector(Vector())
 this.getJPopupMenu()!!.add(this.getConditionJPopupMenu())
 this.getJPopupMenu()!!.add(this.getInputJPopupMenu())
@@ -186,7 +202,11 @@ this.getJPopupMenu()!!.add(this.getOutputJPopupMenu())
 
 open fun getConditionJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
-: JMenu{
+: JMenu
+
+        Updates for KMP build        
+        {
+
     var jMenu: JMenu = JMenu(NEW_CONDITION)
 
 
@@ -214,7 +234,11 @@ jMenu!!.add(jMenuItemTimeInterval)
 
 open fun getInputJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
-: JMenu{
+: JMenu
+
+        Updates for KMP build        
+        {
+
     var jMenu: JMenu = JMenu(NEW_INPUT)
 
 
@@ -242,7 +266,11 @@ jMenu!!.add(jMenuItemJoystick)
 
 open fun getOutputJPopupMenu()
         //nullable = true from not(false or (false and true)) = true
-: JMenu{
+: JMenu
+
+        Updates for KMP build        
+        {
+
     var jMenu: JMenu = JMenu(NEW_OUTPUT)
 
 
@@ -260,9 +288,11 @@ jMenu!!.add(jMenuItemImage)
 
 open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionProcessorInterface = profileActionProcessorInterface
+
+        Updates for KMP build        
+        {
+var profileActionProcessorInterface = profileActionProcessorInterface
 logUtil!!.put(this.commonStrings!!.START, this, "addInput")
 this.getProfileActionProcessorInterfaceVector()!!.add(profileActionProcessorInterface)
 this.add(profileActionProcessorInterface)
@@ -271,9 +301,11 @@ this.add(profileActionProcessorInterface)
 
 open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionProcessorInterface = profileActionProcessorInterface
+
+        Updates for KMP build        
+        {
+var profileActionProcessorInterface = profileActionProcessorInterface
 logUtil!!.put(this.commonStrings!!.START, this, "removeInput")
 this.getProfileActionProcessorInterfaceVector()!!.remove(profileActionProcessorInterface)
 this.remove(profileActionProcessorInterface)
@@ -282,9 +314,11 @@ this.remove(profileActionProcessorInterface)
 
 open fun removeCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionScriptNodeInterface = profileActionScriptNodeInterface
+
+        Updates for KMP build        
+        {
+var profileActionScriptNodeInterface = profileActionScriptNodeInterface
 logUtil!!.put(this.commonStrings!!.START, this, "removeCondition")
 this.getProfileActionConditionInterfaceVector()!!.remove(profileActionScriptNodeInterface)
 this.remove(profileActionScriptNodeInterface)
@@ -293,9 +327,11 @@ this.remove(profileActionScriptNodeInterface)
 
 open fun addCondition(profileActionScriptNodeInterface: ProfileActionScriptNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionScriptNodeInterface = profileActionScriptNodeInterface
+
+        Updates for KMP build        
+        {
+var profileActionScriptNodeInterface = profileActionScriptNodeInterface
 logUtil!!.put(this.commonStrings!!.START, this, "addCondition")
 this.getProfileActionConditionInterfaceVector()!!.add(profileActionScriptNodeInterface)
 this.add(profileActionScriptNodeInterface)
@@ -306,9 +342,11 @@ this.add(profileActionScriptNodeInterface)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(GenericProfileActionScriptConditionData.NAME)!!
 
@@ -324,7 +362,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileActionConditionInterface: ProfileActionScriptConditionInterface = profileActionConditionInterfaceVector!!.get(index) as ProfileActionScriptConditionInterface
 
 node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
@@ -342,7 +384,11 @@ node.appendChild(profileActionConditionInterface!!.toXmlNode(document))
 
                         for (index in 0 until size2)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileActionProcessorInterface: ProfileActionScriptProcessorInterface = profileActionProcessorInterfaceVector!!.get(index) as ProfileActionScriptProcessorInterface
 
 node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
@@ -358,7 +404,11 @@ node.appendChild(profileActionProcessorInterface!!.toXmlNode(document))
 
 open fun getProfileActionConditionInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -368,18 +418,22 @@ open fun getProfileActionConditionInterfaceVector()
 
 open fun setProfileActionConditionInterfaceVector(profileActionConditionInterfaceVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
+
+        Updates for KMP build        
+        {
+var profileActionConditionInterfaceVector = profileActionConditionInterfaceVector
 this.profileActionConditionInterfaceVector= profileActionConditionInterfaceVector
 }
 
 
 open fun actionPerformed(actionEvent: ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var actionEvent = actionEvent
+
+        Updates for KMP build        
+        {
+var actionEvent = actionEvent
 
         try {
             super.actionPerformed(actionEvent)
@@ -465,7 +519,11 @@ this.updateTree()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put("Error", this, "actionPerformed", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Error", this, "actionPerformed", e)
 }
 
 }
@@ -473,7 +531,11 @@ this.updateTree()
 
 open fun getProfileActionProcessorInterfaceVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -483,16 +545,22 @@ open fun getProfileActionProcessorInterfaceVector()
 
 open fun setProfileActionProcessorInterfaceVector(profileActionProcessorInterfaceVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var profileActionProcessorInterfaceVector = profileActionProcessorInterfaceVector
+
+        Updates for KMP build        
+        {
+var profileActionProcessorInterfaceVector = profileActionProcessorInterfaceVector
 this.profileActionProcessorInterfaceVector= profileActionProcessorInterfaceVector
 }
 
 
 open fun updateTree()
         //nullable = true from not(false or (false and true)) = true
-{JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.updateJTree()
+
+
+        Updates for KMP build        
+        {
+JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.updateJTree()
 
     var treePath: TreePath = TreePath(this)
 
@@ -504,9 +572,11 @@ JTreeInterfaceFactory.getInstance()!!.getJTreeInterface()!!.getActionScriptJTree
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
     var profileActionConditionInterfaceVector: Vector = this.getProfileActionConditionInterfaceVector()!!
 
@@ -519,7 +589,11 @@ open fun shouldProcess(frame: Long)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileActionScriptConditionInterface: ProfileActionScriptConditionInterface = profileActionConditionInterfaceVector!!.get(index) as ProfileActionScriptConditionInterface
 
 
@@ -549,9 +623,11 @@ open fun shouldProcess(frame: Long)
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 logUtil!!.put(StringMaker().
                             append("Start - Processing ")!!.append(this.getProfileActionProcessorInterfaceVector()!!.size())!!.append(" inputs")!!.toString(), this, commonStrings!!.PROCESS)
 
@@ -566,7 +642,11 @@ logUtil!!.put(StringMaker().
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileActionScriptProcessorInterface: ProfileActionScriptProcessorInterface = profileActionProcessorInterfaceVector!!.get(index) as ProfileActionScriptProcessorInterface
 
 profileActionScriptProcessorInterface!!.process(frame)

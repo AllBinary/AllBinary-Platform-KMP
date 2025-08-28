@@ -43,7 +43,11 @@ open public class ReleaseTouchInputToGameKeyEventAction : GameKeyCompleteMotionG
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameKeyCompleteMotionGestureInputEvent{
+: GameKeyCompleteMotionGestureInputEvent
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,7 +60,11 @@ open fun getInstance()
     private val NONE: GameKey = GameKeyFactory.getInstance()!!.NONE
 private constructor        ()                        
 
-                            : super("Release Action", TouchMotionGestureFactory.getInstance()!!.RELEASED, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping()){
+                            : super("Release Action", TouchMotionGestureFactory.getInstance()!!.RELEASED, PlatformInputMappingFactory.getInstance()!!.getPersistentInputMappingInstance()!!.getInputMapping())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -65,7 +73,11 @@ private constructor        ()
             this.setGameKey(NONE)
 this.setGameKeyEvent(GameKeyEventFactory.getInstance()!!.getInstance(this, NONE))
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
@@ -75,7 +87,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

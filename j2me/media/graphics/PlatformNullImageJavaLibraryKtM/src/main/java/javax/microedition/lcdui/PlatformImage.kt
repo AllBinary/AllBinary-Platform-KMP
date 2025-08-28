@@ -39,9 +39,11 @@ open public class PlatformImage
         
 open fun getImage(graphicsSurface2: Any)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var graphicsSurface2 = graphicsSurface2
+        Updates for KMP build        
+        {
+    //var graphicsSurface2 = graphicsSurface2
 
 
 
@@ -52,12 +54,12 @@ open fun getImage(graphicsSurface2: Any)
 
 open fun getWidth(graphicsSurface2: Any, width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var graphicsSurface2 = graphicsSurface2
-
-
-                    var width = width
+        Updates for KMP build        
+        {
+    //var graphicsSurface2 = graphicsSurface2
+    //var width = width
 
 
 
@@ -68,12 +70,12 @@ open fun getWidth(graphicsSurface2: Any, width: Int)
 
 open fun getHeight(graphicsSurface2: Any, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var graphicsSurface2 = graphicsSurface2
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var graphicsSurface2 = graphicsSurface2
+    //var height = height
 
 
 
@@ -84,12 +86,12 @@ open fun getHeight(graphicsSurface2: Any, height: Int)
 
 open fun getWidth(image: Image, width: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var image = image
-
-
-                    var width = width
+        Updates for KMP build        
+        {
+    //var image = image
+    //var width = width
 
 
 
@@ -100,12 +102,12 @@ open fun getWidth(image: Image, width: Int)
 
 open fun getHeight(image: Image, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var image = image
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var image = image
+    //var height = height
 
 
 
@@ -116,18 +118,14 @@ open fun getHeight(image: Image, height: Int)
 
 open fun getGraphics(graphicsSurface: Any, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-: javax.microedition.lcdui.Graphics{
+: javax.microedition.lcdui.Graphics
 
-                    var graphicsSurface = graphicsSurface
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var image = image
+        Updates for KMP build        
+        {
+    //var graphicsSurface = graphicsSurface
+    //var width = width
+    //var height = height
+    //var image = image
 
 
 
@@ -137,125 +135,79 @@ open fun getGraphics(graphicsSurface: Any, width: Int, height: Int, image: Image
 
 open fun drawImage(image: Image, x: Int, y: Int, anchor: Int, g2: javax.microedition.lcdui.Graphics, g: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var anchor = anchor
-
-
-                    var g2 = g2
-
-
-                    var g = g
+        Updates for KMP build        
+        {
+    //var image = image
+    //var x = x
+    //var y = y
+var anchor = anchor
+    //var g2 = g2
+    //var g = g
 }
 
 
 open fun drawRegion(image: Image, x_src: Int, y_src: Int, width: Int, height: Int, transform: Int, x_dst: Int, y_dst: Int, anchor: Int, g: javax.microedition.lcdui.Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var x_src = x_src
-
-
-                    var y_src = y_src
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var transform = transform
-
-
-                    var x_dst = x_dst
-
-
-                    var y_dst = y_dst
-
-
-                    var anchor = anchor
-
-
-                    var g = g
+        Updates for KMP build        
+        {
+    //var image = image
+    //var x_src = x_src
+    //var y_src = y_src
+    //var width = width
+    //var height = height
+    //var transform = transform
+    //var x_dst = x_dst
+    //var y_dst = y_dst
+    //var anchor = anchor
+    //var g = g
 }
 
 
 open fun getRGB(argb: IntArray, offset: Int, scanlength: Int, x: Int, y: Int, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var argb = argb
 
 
-                    var offset = offset
-
-
-                    var scanlength = scanlength
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var image = image
+        Updates for KMP build        
+        {
+    //var argb = argb
+    //var offset = offset
+    //var scanlength = scanlength
+    //var x = x
+    //var y = y
+    //var width = width
+    //var height = height
+    //var image = image
 }
 
 
 open fun setRGB(argb: IntArray, offset: Int, scanlength: Int, x: Int, y: Int, width: Int, height: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var argb = argb
 
 
-                    var offset = offset
-
-
-                    var scanlength = scanlength
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var image = image
+        Updates for KMP build        
+        {
+    //var argb = argb
+    //var offset = offset
+    //var scanlength = scanlength
+    //var x = x
+    //var y = y
+    //var width = width
+    //var height = height
+    //var image = image
 }
 
 
 open fun getData(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: IntArray{
+: IntArray
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
 

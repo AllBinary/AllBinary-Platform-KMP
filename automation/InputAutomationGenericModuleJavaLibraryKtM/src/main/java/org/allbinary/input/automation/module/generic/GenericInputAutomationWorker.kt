@@ -56,18 +56,14 @@ open public class GenericInputAutomationWorker : AbstractInputAutomationWorker {
     private var genericProfile: GenericProfile
 public constructor        (inputAutomationActionInterface: InputAutomationActionInterface, genericProfile: GenericProfile, motionRectangleConstraintsInterface: MotionRectangleConstraintsInterface, imageComparatorConstraintsInterface: ImageComparatorConstraintsInterface)                        
 
-                            : super(inputAutomationActionInterface){
+                            : super(inputAutomationActionInterface)
 
-                    var inputAutomationActionInterface = inputAutomationActionInterface
-
-
-                    var genericProfile = genericProfile
-
-
-                    var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
-
-
-                    var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
+        Updates for KMP build        
+        {
+    //var inputAutomationActionInterface = inputAutomationActionInterface
+    //var genericProfile = genericProfile
+    //var motionRectangleConstraintsInterface = motionRectangleConstraintsInterface
+    //var imageComparatorConstraintsInterface = imageComparatorConstraintsInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -90,7 +86,11 @@ this.setGenericProfile(genericProfile)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
 logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.commonStrings!!.CONSTRUCTOR)
@@ -121,7 +121,11 @@ logUtil!!.put("Adding Listener: " +genericProfileDataWorkerType, this, this.comm
             
 open fun processDataWorkerResults()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, this.PROCESS_DATA_WORKER_RESULTS)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, this.PROCESS_DATA_WORKER_RESULTS)
 this.waitForDataWorkers()
 
     var cacheInterface: J2SECacheInterface = CapturedBufferedImagesCacheSingleton.getInstance() as J2SECacheInterface
@@ -162,7 +166,11 @@ logUtil!!.put("Processing " +set.size() +"Actions", this, this.PROCESS_DATA_WORK
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var actionNameString: String = actionNameArray[index]!! as String
 
 logUtil!!.put("Processing Action: " +actionNameString, this, this.PROCESS_DATA_WORKER_RESULTS)
@@ -197,7 +205,11 @@ lastFrame= getFrame()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.PROCESS)
 this.startDataWorkers()
 this.processDataWorkerResults()
 }
@@ -205,7 +217,11 @@ this.processDataWorkerResults()
 
 open fun getGenericProfile()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfile{
+: GenericProfile
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,16 +231,22 @@ open fun getGenericProfile()
 
 open fun setGenericProfile(genericProfile: GenericProfile)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var genericProfile = genericProfile
+
+        Updates for KMP build        
+        {
+    //var genericProfile = genericProfile
 this.genericProfile= genericProfile
 }
 
 
 open fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -234,9 +256,11 @@ open fun getFrame()
 
 open fun setFrame(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+    //var frame = frame
 this.frame= frame
 }
 

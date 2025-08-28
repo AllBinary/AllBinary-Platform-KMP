@@ -39,7 +39,11 @@ open public class SpecialCharacterUtil
             
 open fun getHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
 

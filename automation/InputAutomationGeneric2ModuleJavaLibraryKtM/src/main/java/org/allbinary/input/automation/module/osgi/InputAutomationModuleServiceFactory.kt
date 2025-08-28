@@ -46,17 +46,21 @@ open public class InputAutomationModuleServiceFactory
     private var inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getService(bundle: Bundle, registration: ServiceRegistration)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var bundle = bundle
-
-
-                    var registration = registration
+        Updates for KMP build        
+        {
+var bundle = bundle
+var registration = registration
 logUtil!!.put(this.commonStrings!!.START, this, "getService")
 
 
@@ -68,21 +72,23 @@ logUtil!!.put(this.commonStrings!!.START, this, "getService")
 
 open fun ungetService(bundle: Bundle, registration: ServiceRegistration, service: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var bundle = bundle
 
 
-                    var registration = registration
-
-
-                    var service = service
+        Updates for KMP build        
+        {
+var bundle = bundle
+var registration = registration
+var service = service
 }
 
 
 open fun getInputAutomationModuleInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputAutomationModuleFactoryInterface?>{
+: Array<InputAutomationModuleFactoryInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,9 +98,11 @@ open fun getInputAutomationModuleInterfaceArray()
 
 open fun setInputAutomationModuleInterfaceArray(inputAutomationModuleInterfaceArray: Array<InputAutomationModuleFactoryInterface?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
+
+        Updates for KMP build        
+        {
+var inputAutomationModuleInterfaceArray = inputAutomationModuleInterfaceArray
 this.inputAutomationModuleInterfaceArray= inputAutomationModuleInterfaceArray
 }
 

@@ -31,40 +31,54 @@ open public class PaintableComposite : Paintable {
         
 
     private var paintableArray: Array<PaintableInterface?>
-public constructor        (paintableArray: Array<PaintableInterface?>){
+public constructor        (paintableArray: Array<PaintableInterface?>)
 
-                    var paintableArray = paintableArray
+        Updates for KMP build        
+        {
+    //var paintableArray = paintableArray
 this.paintableArray= paintableArray
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
 
 
 
                         for (index in paintableArray!!.size -1 downTo 0)
 
-        {this.paintableArray[index]!!.paint(graphics)
+        
+
+        Updates for KMP build        
+        {
+this.paintableArray[index]!!.paint(graphics)
 }
 
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
 
 
 
                         for (index in paintableArray!!.size -1 downTo 0)
 
-        {this.paintableArray[index]!!.paintThreed(graphics)
+        
+
+        Updates for KMP build        
+        {
+this.paintableArray[index]!!.paintThreed(graphics)
 }
 
 }

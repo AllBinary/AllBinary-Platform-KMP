@@ -47,12 +47,12 @@ open public class PlayerGameInput : GameInput
     private val playerInputId: Int
 public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int)                        
 
-                            : this(gameKeyEventList, BasicArrayList(), playerInputId){
+                            : this(gameKeyEventList, BasicArrayList(), playerInputId)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var playerInputId = playerInputId
+        Updates for KMP build        
+        {
+    //var gameKeyEventList = gameKeyEventList
+    //var playerInputId = playerInputId
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,15 +61,13 @@ public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int)
 
 public constructor        (gameKeyEventList: BasicArrayList, removalGameKeyEventList: BasicArrayList, playerInputId: Int)                        
 
-                            : super(gameKeyEventList, removalGameKeyEventList){
+                            : super(gameKeyEventList, removalGameKeyEventList)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var removalGameKeyEventList = removalGameKeyEventList
-
-
-                    var playerInputId = playerInputId
+        Updates for KMP build        
+        {
+    //var gameKeyEventList = gameKeyEventList
+    //var removalGameKeyEventList = removalGameKeyEventList
+    //var playerInputId = playerInputId
 
 
                             //For kotlin this is before the body of the constructor.
@@ -80,9 +78,11 @@ this.playerInputId= playerInputId
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+    //var gameKeyEvent = gameKeyEvent
 super.add(gameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
@@ -90,9 +90,11 @@ this.addForRemoval(gameKeyEvent)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+    //var gameKeyEvent = gameKeyEvent
 super.add(gameKeyEvent)
 }
 
@@ -100,9 +102,11 @@ super.add(gameKeyEvent)
 
 open fun onDownKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+    //var gameKeyEvent = gameKeyEvent
 super.add(gameKeyEvent)
 this.addForRemoval(gameKeyEvent)
 }
@@ -111,9 +115,11 @@ this.addForRemoval(gameKeyEvent)
 
 open fun onDownKeyEvent(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+    //var gameKeyEvent = gameKeyEvent
 PreLogUtil.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(gameKeyEvent!!.toString())!!.toString(), this, gameInputStrings!!.ON_DOWN_GAME_KEY)
 }
@@ -121,9 +127,11 @@ PreLogUtil.put(StringMaker().
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+    //var gameKeyEvent = gameKeyEvent
 this.addForRemoval(gameKeyEvent)
 }
 
@@ -131,23 +139,31 @@ this.addForRemoval(gameKeyEvent)
 
 open fun onUpKeyEvent(gameKeyEvent: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+    //var gameKeyEvent = gameKeyEvent
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 
 open fun getPlayerInputId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

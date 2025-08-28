@@ -31,9 +31,11 @@ open public class BasicArrayListPool : AbstractArrayListPool {
         
 public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
-                            : super(cacheableInterfaceFactoryInterface){
+                            : super(cacheableInterfaceFactoryInterface)
 
-                    var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -43,7 +45,11 @@ public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfac
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.buffers.clear()
+
+
+        Updates for KMP build        
+        {
+this.buffers.clear()
 }
 
 
@@ -51,9 +57,11 @@ open fun clear()
             
 open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: CacheableInterface{
+: CacheableInterface
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
     var size: Int = this.buffers.size()!!
 
@@ -86,16 +94,22 @@ open fun remove(key: Any)
             
 open fun addAll(usedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var usedList = usedList
+
+        Updates for KMP build        
+        {
+var usedList = usedList
 
 
 
 
                         for (index in usedList!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var anyType: CacheableInterface = usedList!!.objectArray[index]!! as CacheableInterface
 
 this.add(anyType)
@@ -109,16 +123,22 @@ usedList!!.clear()
             
 open fun releaseUsedBackToPool(usedList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var usedList = usedList
+
+        Updates for KMP build        
+        {
+var usedList = usedList
 
 
 
 
                         for (index in usedList!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var list: BasicArrayListCacheable = usedList!!.objectArray[index]!! as BasicArrayListCacheable
 
 

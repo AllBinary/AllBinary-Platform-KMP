@@ -72,9 +72,11 @@ open public class UnitRTSFormInput : RTSFormInput {
     val newUnitGameNotificationEvent: GameNotificationEvent
 public constructor        (groupInterface: Array<Group?>)                        
 
-                            : super(groupInterface){
+                            : super(groupInterface)
 
-                    var groupInterface = groupInterface
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -95,9 +97,11 @@ this.getHashtable()!!.put(WorkWaypoint.ID, smallIntegerSingletonFactory!!.getIns
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 super.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
@@ -114,21 +118,15 @@ this.newUnitGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.getF
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedRtsLayer = associatedRtsLayer
 
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerManager = layerManager
-
-
-                    var item = item
-
-
-                    var itemIndex = itemIndex
+        Updates for KMP build        
+        {
+    //var associatedRtsLayer = associatedRtsLayer
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerManager = layerManager
+    //var item = item
+    //var itemIndex = itemIndex
 super.process(layerManager)
 
     var geographicMapCellPositionArea: GeographicMapCellPositionArea = associatedRtsLayer!!.geographicMapCellPositionArea
@@ -177,21 +175,15 @@ this.attemptBuild(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, thi
             
 open fun attemptBuild(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, layerInterface: RTSLayer, itemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedRtsLayer = associatedRtsLayer
 
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerManager = layerManager
-
-
-                    var layerInterface = layerInterface
-
-
-                    var itemIndex = itemIndex
+        Updates for KMP build        
+        {
+    //var associatedRtsLayer = associatedRtsLayer
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerManager = layerManager
+    //var layerInterface = layerInterface
+    //var itemIndex = itemIndex
 
     var cost: Int = layerInterface!!.getCost()!!
 

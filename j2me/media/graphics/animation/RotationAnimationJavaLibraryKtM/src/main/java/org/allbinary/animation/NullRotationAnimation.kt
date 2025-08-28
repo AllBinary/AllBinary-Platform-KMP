@@ -17,15 +17,13 @@ open public class NullRotationAnimation : RotationAnimation {
         
  constructor        (angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, totalAngle, animationBehavior){
+                            : super(angleInfo, totalAngle, animationBehavior)
 
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -34,9 +32,11 @@ open public class NullRotationAnimation : RotationAnimation {
 
  constructor        (animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,7 +47,11 @@ open public class NullRotationAnimation : RotationAnimation {
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

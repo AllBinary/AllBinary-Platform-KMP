@@ -60,9 +60,11 @@ open public class ProgressCanvas : RunnableCanvas
                                 
 open override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 paint2(graphics)
 }
 
@@ -96,27 +98,33 @@ paint2(graphics)
             
 open override fun process()
         //nullable = true from not(false or (false and true)) = true
-{pathFindingThreadPool!!.runAPriorityTask()
+
+
+        Updates for KMP build        
+        {
+pathFindingThreadPool!!.runAPriorityTask()
 }
 
                                 }
                             
 
     var inGameProcessor: Processor = Processor.getInstance()!!
- constructor        (){this.paintable= NullPaintable.getInstance()
+ constructor        ()
+
+        Updates for KMP build        
+        {
+this.paintable= NullPaintable.getInstance()
 this.backgroundBasicColor= BasicColorFactory.getInstance()!!.WHITE
 this.gauge= CustomGaugeItem.NULL_GAUGE_ITEM
 }
 
- constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor){
+ constructor        (title: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)
 
-                    var title = title
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var title = title
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 this.backgroundBasicColor= backgroundBasicColor
 this.gauge= CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, maxValue.toInt(), 0, backgroundBasicColor, foregroundBasicColor)
 }
@@ -124,9 +132,11 @@ this.gauge= CustomGaugeItem(StringUtil.getInstance()!!.EMPTY_STRING, maxValue.to
 
 open fun init(gameMidlet: AllBinaryMidlet)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameMidlet = gameMidlet
+
+        Updates for KMP build        
+        {
+var gameMidlet = gameMidlet
 this.allbinaryMidlet= gameMidlet
 }
 
@@ -135,22 +145,30 @@ this.allbinaryMidlet= gameMidlet
             
 open fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
 }
 
 
 open fun getMaxValue()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -160,7 +178,11 @@ open fun getMaxValue()
 
 open fun start()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.START_METHOD_NAME)
 this.setBackground(true)
 this.gauge.setHeight(30)
 this.gauge.setLabel(commonStrings!!.PLEASE_WAIT)
@@ -178,9 +200,11 @@ this.inProgress= true
 
 open fun startBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var background = background
+
+        Updates for KMP build        
+        {
+var background = background
 logUtil!!.put(commonStrings!!.START, this, START_BACKGROUND)
 
     var myFont: MyFont = MyFont.getInstance()!!
@@ -197,7 +221,11 @@ this.paintable= GAUGE_PAINTABLE
 
 open fun endActual()
         //nullable = true from not(false or (false and true)) = true
-{this.allbinaryMidlet!!.commandAction(GameCommandsFactory.getInstance()!!.SHOW_GAME_CANVAS, NullCanvas.NULL_CANVAS)
+
+
+        Updates for KMP build        
+        {
+this.allbinaryMidlet!!.commandAction(GameCommandsFactory.getInstance()!!.SHOW_GAME_CANVAS, NullCanvas.NULL_CANVAS)
 this.inProgress= false
 this.inGame()
 }
@@ -205,13 +233,21 @@ this.inGame()
 
 open fun inGame()
         //nullable = true from not(false or (false and true)) = true
-{this.inGameProcessor= IN_GAME_PROCESSOR
+
+
+        Updates for KMP build        
+        {
+this.inGameProcessor= IN_GAME_PROCESSOR
 }
 
 
 open fun end()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.END_METHOD_NAME)
 this.gauge.setValue(this.getMaxValue())
 this.endActual()
 this.paintable= NullPaintable.getInstance()
@@ -220,14 +256,22 @@ this.paintable= NullPaintable.getInstance()
 
 open fun endFromInitialLazyLoadingComplete()
         //nullable = true from not(false or (false and true)) = true
-{this.gauge.setValue(this.getMaxValue())
+
+
+        Updates for KMP build        
+        {
+this.gauge.setValue(this.getMaxValue())
 this.inGameProcessor= IN_GAME_PROCESSOR
 }
 
 
 open fun endIfPaintedSinceStart()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
     val ADD_PORTION: String = "addPortion"
@@ -236,15 +280,13 @@ open fun endIfPaintedSinceStart()
 
 open fun addEarlyPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var value = value
+var text = text
+var index = index
 this.setText(StringMaker().
                             append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index)!!.toString())!!.toString())
 this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
@@ -253,15 +295,13 @@ this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 
 open fun addPortion(value: Int, text: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var value = value
+var text = text
+var index = index
 this.setText(StringMaker().
                             append(text)!!.append(SmallIntegerSingletonFactory.getInstance()!!.getInstance(index)!!.toString())!!.toString())
 PreLogUtil.put(this.text, this, ADD_PORTION)
@@ -271,12 +311,12 @@ this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 
 open fun addPortion(value: Int, text: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var text = text
+        Updates for KMP build        
+        {
+var value = value
+var text = text
 
     
                         if(this.text != text)
@@ -293,27 +333,33 @@ this.gauge.setValue(this.gauge.getValue() +this.getMaxValue() /value)
 
 open fun setValue(value: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.value= value.toFloat()
 this.gauge.setValue(value.toFloat())
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.paintable.paint(graphics)
 }
 
 
 open fun paint2(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -325,15 +371,21 @@ hasPainted= true
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -343,16 +395,22 @@ open fun getValue()
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var text = text
+
+        Updates for KMP build        
+        {
+var text = text
 this.text= text
 }
 
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -362,16 +420,22 @@ open fun getText()
 
 open fun setBackground(background: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var background = background
+
+        Updates for KMP build        
+        {
+var background = background
 this.background= background
 }
 
 
 open fun isBackground()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -68,9 +68,11 @@ open public class PathFinder : GeographicPathFinderBase {
             
 open fun init(geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapInterface = geographicMapInterface
+
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 this.geographicMapInterface= geographicMapInterface
 
     var tiledLayer: AllBinaryTiledLayer = this.geographicMapInterface!!.getAllBinaryTiledLayer()!!
@@ -97,13 +99,21 @@ this.costArray= Array(tiledLayer!!.getColumns()) { arrayOfNulls<PathFindingNodeC
 
                         for (column in 0 until sizeX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in 0 until sizeY)
 
+        
+
+        Updates for KMP build        
         {
+
     var geographicMapCellType: GeographicMapCellType = this.geographicMapInterface!!.getCellTypeAt(basicGeographicMapCellPositionFactory!!.getInstance(column, row))!!
 
 
@@ -121,15 +131,13 @@ costArray[column]!![row]= node
 
 open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var startPathFindingNodeList = startPathFindingNodeList
-
-
-                    var endPathFindingNodeList = endPathFindingNodeList
-
-
-                    var totalPaths = totalPaths
+        Updates for KMP build        
+        {
+var startPathFindingNodeList = startPathFindingNodeList
+var endPathFindingNodeList = endPathFindingNodeList
+var totalPaths = totalPaths
 
         try {
             
@@ -138,7 +146,11 @@ open fun search(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.search(startPathFindingNodeList!!.get(0) as PathFindingNode, endPathFindingNodeList!!.get(0) as PathFindingNode)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
@@ -156,18 +168,14 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "search", e)
             
 open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, totalPaths: Int, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var startPathFindingNodeList = startPathFindingNodeList
-
-
-                    var endPathFindingNodeList = endPathFindingNodeList
-
-
-                    var totalPaths = totalPaths
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+var startPathFindingNodeList = startPathFindingNodeList
+var endPathFindingNodeList = endPathFindingNodeList
+var totalPaths = totalPaths
+    //var multipassState = multipassState
 
     
                         if(multipassState!!.step == 0)
@@ -211,12 +219,12 @@ open fun searchN(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
             
 open fun search(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var startPathFindingNode = startPathFindingNode
-
-
-                    var endPathFindingNode = endPathFindingNode
+        Updates for KMP build        
+        {
+    //var startPathFindingNode = startPathFindingNode
+    //var endPathFindingNode = endPathFindingNode
 
     var list: BasicArrayList = this.findPath(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition)!!
 
@@ -236,15 +244,13 @@ pathList!!.add(list)
             
 open fun searchStart(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var startPathFindingNode = startPathFindingNode
 
 
-                    var endPathFindingNode = endPathFindingNode
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+    //var startPathFindingNode = startPathFindingNode
+    //var endPathFindingNode = endPathFindingNode
+    //var multipassState = multipassState
 this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition, multipassState)
 }
 
@@ -253,15 +259,13 @@ this.findPathStart(startPathFindingNode!!.geographicMapCellPosition, endPathFind
             
 open fun searchN(startPathFindingNode: PathFindingNode, endPathFindingNode: PathFindingNode, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var startPathFindingNode = startPathFindingNode
-
-
-                    var endPathFindingNode = endPathFindingNode
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+    //var startPathFindingNode = startPathFindingNode
+    //var endPathFindingNode = endPathFindingNode
+    //var multipassState = multipassState
 
     var list: BasicArrayList = this.findPathEnd(startPathFindingNode!!.geographicMapCellPosition, endPathFindingNode!!.geographicMapCellPosition, multipassState)!!
 
@@ -298,12 +302,12 @@ multipassState!!.step= 0
             
 open fun findPath(start: GeographicMapCellPosition, target: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var start = start
-
-
-                    var target = target
+        Updates for KMP build        
+        {
+    //var start = start
+    //var target = target
 this.openPriorityQueue!!.clear()
 this.closedSet!!.clear()
 
@@ -332,13 +336,21 @@ this.closedSet!!.clear()
 
                         for (column in 0 until sizeX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in 0 until sizeY)
 
-        {discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
+        
+
+        Updates for KMP build        
+        {
+discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
 node.pathFindingNodeCostInfo!!.totalCost= 0
 node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
@@ -364,7 +376,11 @@ openPriorityQueue!!.add(startNode)
 
 
         do
-        {current= openPriorityQueue!!.poll()
+        
+
+        Updates for KMP build        
+        {
+current= openPriorityQueue!!.poll()
 closedSet!!.add(current)
 
     
@@ -394,13 +410,21 @@ closedSet!!.add(current)
 
                         for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && this.geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
                         
@@ -469,15 +493,13 @@ neighbor.parent= current
             
 open fun findPathStart(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var start = start
 
 
-                    var target = target
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+    //var start = start
+    //var target = target
+    //var multipassState = multipassState
 this.openPriorityQueue!!.clear()
 this.closedSet!!.clear()
 
@@ -506,13 +528,21 @@ this.closedSet!!.clear()
 
                         for (column in 0 until sizeX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in 0 until sizeY)
 
-        {discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
+        
+
+        Updates for KMP build        
+        {
+discoveryCalculation= mathUtil!!.abs(column -targetColumn) +mathUtil!!.abs(row -targetRow)
 node= costArray[column]!![row]!!
 node.pathFindingNodeCostInfo!!.totalCost= 0
 node.pathFindingNodeCostInfo!!.costToEnd= discoveryCalculation
@@ -532,15 +562,13 @@ multipassState!!.step++
             
 open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCellPosition, multipassState: MultipassState)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var start = start
-
-
-                    var target = target
-
-
-                    var multipassState = multipassState
+        Updates for KMP build        
+        {
+    //var start = start
+    //var target = target
+    //var multipassState = multipassState
 
     var basicGeographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory = geographicMapInterface!!.getGeographicMapCellPositionFactory()!!
 
@@ -558,7 +586,11 @@ open fun findPathEnd(start: GeographicMapCellPosition, target: GeographicMapCell
 
 
         do
-        {current= openPriorityQueue!!.poll()
+        
+
+        Updates for KMP build        
+        {
+current= openPriorityQueue!!.poll()
 closedSet!!.add(current)
 
     
@@ -588,13 +620,21 @@ closedSet!!.add(current)
 
                         for (column in current.geographicMapCellPosition!!.getColumn() -1 until current.geographicMapCellPosition!!.getColumn() +2)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in current.geographicMapCellPosition!!.getRow() -1 until current.geographicMapCellPosition!!.getRow() +2)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(column > 0 && row > 0 && column < allBinaryTiledLayer!!.getColumns() && row < allBinaryTiledLayer!!.getRows() && this.geographicMapInterface!!.isOnMap(basicGeographicMapCellPositionFactory!!.getInstance(column, row)))
                         
@@ -675,12 +715,12 @@ total++
 
 open fun extractPath(start: GeographicMapCellPosition, current: PathFindingNodeCost)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var start = start
-
-
-                    var current = current
+        Updates for KMP build        
+        {
+    //var start = start
+var current = current
 
     var path: BasicArrayList = BasicArrayList()
 
@@ -688,7 +728,11 @@ open fun extractPath(start: GeographicMapCellPosition, current: PathFindingNodeC
         while(current.parent != 
                                     null
                                 )
-        {path.add(current.geographicMapCellPosition)
+        
+
+        Updates for KMP build        
+        {
+path.add(current.geographicMapCellPosition)
 current= current.parent as PathFindingNodeCost
 }
 

@@ -39,9 +39,11 @@ open public class StoreThemeCategoriesView
     private var categoryInterface: StoreThemeCategoryInterface
 public constructor        (categoryInterface: StoreThemeCategoryInterface)
             : super()
-        {
+        
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 this.categoryInterface= categoryInterface
 }
 
@@ -50,9 +52,11 @@ this.categoryInterface= categoryInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = StoreThemeCategoryView(categoryInterface).
                             toXmlNode(document)!!
@@ -70,7 +74,11 @@ open fun toXmlNode(document: Document)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var childCategoryInterface: CategoryInterface = childArray[i]!! as CategoryInterface
 
 

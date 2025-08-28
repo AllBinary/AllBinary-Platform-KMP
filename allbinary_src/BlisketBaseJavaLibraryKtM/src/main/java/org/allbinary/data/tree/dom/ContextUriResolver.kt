@@ -50,9 +50,11 @@ open public class ContextUriResolver
     private var basicURIResolver: BasicUriResolver
 public constructor        (basicURIResolver: BasicUriResolver)
             : super()
-        {
+        
 
-                    var basicURIResolver = basicURIResolver
+        Updates for KMP build        
+        {
+var basicURIResolver = basicURIResolver
 this.basicURIResolver= basicURIResolver
 }
 
@@ -61,12 +63,12 @@ this.basicURIResolver= basicURIResolver
             
 open fun resolve(href: String, base: String)
         //nullable = true from not(false or (false and false)) = true
-: Source{
+: Source
 
-                    var href = href
-
-
-                    var base = base
+        Updates for KMP build        
+        {
+var href = href
+var base = base
 
         try {
             
@@ -108,13 +110,21 @@ logUtil!!.put(stringBuffer!!.toString(), this, "resolve")
                         return StreamSource(CryptFileReader(TransformInfoTemplateData.getInstance()!!.UNCRYPTED_EXTENSION, TransformInfoTemplateData.getInstance()!!.ENCRYPTED_EXTENSION).
                             getInputStream(fileAbPath))
 } catch(e: TransformerException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw TransformerException(e)
@@ -124,7 +134,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "resolve")
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -132,7 +146,11 @@ override fun toString()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.INSTALLPATH +"/{import url}"
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

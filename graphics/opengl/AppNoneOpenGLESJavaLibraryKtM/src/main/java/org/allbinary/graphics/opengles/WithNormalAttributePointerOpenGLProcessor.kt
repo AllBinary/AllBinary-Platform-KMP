@@ -37,7 +37,11 @@ open public class WithNormalAttributePointerOpenGLProcessor : ObjectThreedOpenGL
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WithNormalAttributePointerOpenGLProcessor{
+: WithNormalAttributePointerOpenGLProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,16 +50,20 @@ open fun getInstance()
 
 
         }
-            public constructor        (){}
+            public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun process(gl: GL10, aObject3d: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var aObject3d = aObject3d
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var aObject3d = aObject3d
 
 
 

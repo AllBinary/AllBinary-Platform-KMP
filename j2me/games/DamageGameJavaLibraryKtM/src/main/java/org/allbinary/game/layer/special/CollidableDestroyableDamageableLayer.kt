@@ -86,15 +86,13 @@ open public class CollidableDestroyableDamageableLayer : CollidableCompositeLaye
     var allBinaryGameLayerManagerP: AllBinaryGameLayerManager = AllBinaryGameLayerManager.NULL_ALLBINARY_LAYER_MANAGER
 public constructor        (groupInterface: Array<Group?>, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(layerInfo, viewPosition){
+                            : super(layerInfo, viewPosition)
 
-                    var groupInterface = groupInterface
-
-
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -107,18 +105,14 @@ this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
 
 public constructor        (groupInterface: Array<Group?>, name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, layerInfo, viewPosition){
+                            : super(name, layerInfo, viewPosition)
 
-                    var groupInterface = groupInterface
-
-
-                    var name = name
-
-
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var groupInterface = groupInterface
+    //var name = name
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -134,7 +128,11 @@ this.pickupBehavior= PickupBehavior.NULL_PICKUP_BEHAVIOR
             
 open fun initPosition()
         //nullable = true from not(false or (false and true)) = true
-{this.setPosition(this.initX, this.initY, this.initZ)
+
+
+        Updates for KMP build        
+        {
+this.setPosition(this.initX, this.initY, this.initZ)
 }
 
 
@@ -142,15 +140,13 @@ open fun initPosition()
             
 open fun initPosition(x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var x = x
+    //var y = y
+    //var z = z
 this.initX= x
 this.initY= y
 this.initZ= z
@@ -158,9 +154,11 @@ this.initZ= z
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 super.paint(graphics)
 }
 
@@ -168,12 +166,12 @@ super.paint(graphics)
                 @Throws(Exception::class)
             override fun damage(damage: Int, damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var damage = damage
 
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+    //var damage = damage
+    //var damageType = damageType
 
 
 
@@ -184,9 +182,11 @@ super.paint(graphics)
                 @Throws(Exception::class)
             override fun getDamage(damageType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var damageType = damageType
+        Updates for KMP build        
+        {
+    //var damageType = damageType
 
 
 
@@ -197,7 +197,11 @@ super.paint(graphics)
                 @Throws(Exception::class)
             override fun isDestroyed()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception(commonStrings!!.NOT_IMPLEMENTED)
@@ -205,7 +209,11 @@ super.paint(graphics)
 
 override fun getGroupInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<Group?>{
+: Array<Group?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,9 +223,11 @@ override fun getGroupInterface()
 
 open fun setGroupInterface(teamInterface: Array<Group?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var teamInterface = teamInterface
+
+        Updates for KMP build        
+        {
+    //var teamInterface = teamInterface
 this.groupInterface= teamInterface
 }
 
@@ -226,9 +236,11 @@ this.groupInterface= teamInterface
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 
     
@@ -249,7 +261,11 @@ this.allBinaryGameLayerManagerP= allBinaryGameLayerManager
 
 open fun isReadyForExplosion()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -259,16 +275,22 @@ open fun isReadyForExplosion()
 
 open fun setReadyForExplosion(isReadyForExplosion: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isReadyForExplosion = isReadyForExplosion
+
+        Updates for KMP build        
+        {
+    //var isReadyForExplosion = isReadyForExplosion
 this.readyForExplosion= isReadyForExplosion
 }
 
 
 open fun getInitWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -278,7 +300,11 @@ open fun getInitWidth()
 
 open fun getInitHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -288,7 +314,11 @@ open fun getInitHeight()
 
 open fun getInitX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -298,7 +328,11 @@ open fun getInitX()
 
 open fun getInitY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -309,108 +343,132 @@ open fun getInitY()
                 @Throws(Exception::class)
             override fun up()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun down()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun right()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun left()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun strafeLeft()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun strafeRight()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun fire(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
                 @Throws(Exception::class)
             override fun special1(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
                 @Throws(Exception::class)
             override fun special2(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
                 @Throws(Exception::class)
             override fun special3(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
                 @Throws(Exception::class)
             override fun special4(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
                 @Throws(Exception::class)
             override fun special5(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
 }
 
 
@@ -418,9 +476,11 @@ open fun getInitY()
             
 open fun up(yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var yAnalogValue = yAnalogValue
+
+        Updates for KMP build        
+        {
+    //var yAnalogValue = yAnalogValue
 }
 
 
@@ -428,9 +488,11 @@ open fun up(yAnalogValue: Int)
             
 open fun down(yAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var yAnalogValue = yAnalogValue
+
+        Updates for KMP build        
+        {
+    //var yAnalogValue = yAnalogValue
 }
 
 
@@ -438,9 +500,11 @@ open fun down(yAnalogValue: Int)
             
 open fun right(xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var xAnalogValue = xAnalogValue
+
+        Updates for KMP build        
+        {
+    //var xAnalogValue = xAnalogValue
 }
 
 
@@ -448,9 +512,11 @@ open fun right(xAnalogValue: Int)
             
 open fun left(xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var xAnalogValue = xAnalogValue
+
+        Updates for KMP build        
+        {
+    //var xAnalogValue = xAnalogValue
 }
 
 
@@ -458,15 +524,13 @@ open fun left(xAnalogValue: Int)
             
 open fun rightTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
-
-
-                    var xAnalogValue = xAnalogValue
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+    //var xAnalogValue = xAnalogValue
 }
 
 
@@ -474,28 +538,32 @@ open fun rightTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKey
             
 open fun leftTrigger(layerManager: AllBinaryLayerManager, gameKeyEvent: GameKeyEvent, xAnalogValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerManager = layerManager
 
 
-                    var gameKeyEvent = gameKeyEvent
-
-
-                    var xAnalogValue = xAnalogValue
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var gameKeyEvent = gameKeyEvent
+    //var xAnalogValue = xAnalogValue
 }
 
 
 open fun onDestroyed(destroyedEvent: DestroyedEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var destroyedEvent = destroyedEvent
+
+        Updates for KMP build        
+        {
+    //var destroyedEvent = destroyedEvent
 }
 
 override fun getPickupBehavior()
         //nullable = true from not(false or (false and true)) = true
-: PickupBehavior{
+: PickupBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -504,9 +572,11 @@ override fun getPickupBehavior()
 
 override fun setPickupBehavior(pickupBehavior: PickupBehavior)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pickupBehavior = pickupBehavior
+
+        Updates for KMP build        
+        {
+    //var pickupBehavior = pickupBehavior
 this.pickupBehavior= pickupBehavior
 }
 
@@ -515,24 +585,32 @@ this.pickupBehavior= pickupBehavior
             
 open fun addPart(pickedUpLayerInterfaceFactoryInterface: PickedUpLayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+    //var pickedUpLayerInterfaceFactoryInterface = pickedUpLayerInterfaceFactoryInterface
 }
 
 
 open fun setPartInterfaceArray(partInterfaceArray: Array<PartInterface?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var partInterfaceArray = partInterfaceArray
+
+        Updates for KMP build        
+        {
+    //var partInterfaceArray = partInterfaceArray
 this.partInterfaceArrayP= partInterfaceArray
 }
 
 
 open fun getPartInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<PartInterface?>{
+: Array<PartInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -543,9 +621,11 @@ open fun getPartInterfaceArray()
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
 
 
@@ -554,9 +634,11 @@ open fun getPartInterfaceArray()
 
 override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-{
 
-                    var stringBuffer = stringBuffer
+
+        Updates for KMP build        
+        {
+    //var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
@@ -578,7 +660,11 @@ stringBuffer!!.append(commonSeps!!.NEW_LINE)
 
                         for (index in 0 until size)
 
-        {stringBuffer!!.append(groupInterfaceArray[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(groupInterfaceArray[index]!!.toString())
 stringBuffer!!.append(commonSeps!!.COMMA)
 }
 
@@ -613,7 +699,11 @@ stringBuffer!!.append(initZ)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 this.toString(stringBuffer)

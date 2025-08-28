@@ -48,27 +48,17 @@ open public class BaseRaceTrackGeographicMap : BasicGeographicMap
     private var miniGeographicMap: BasicGeographicMap
 public constructor        (raceTrackInfo: RaceTrackInfo, raceTrackData: RaceTrackData, tiledLayer: AllBinaryTiledLayer, miniGeographicMap: BasicGeographicMap, geographicMapCellPositionFactoryInterface: GeographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory: GeographicMapCellPositionBaseFactory, geographicMapCellTypeFactory: GeographicMapCellTypeFactory)                        
 
-                            : super(raceTrackInfo!!.getId(), raceTrackInfo!!.getName(), raceTrackData!!.getCellTypeIdToGeographicMapCellTypeArray(), tiledLayer, raceTrackInfo!!.getForegroundBasicColor(), raceTrackInfo!!.getBackgroundBasicColor(), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory){
+                            : super(raceTrackInfo!!.getId(), raceTrackInfo!!.getName(), raceTrackData!!.getCellTypeIdToGeographicMapCellTypeArray(), tiledLayer, raceTrackInfo!!.getForegroundBasicColor(), raceTrackInfo!!.getBackgroundBasicColor(), geographicMapCellPositionFactoryInterface, geographicMapCellPositionBaseFactory, geographicMapCellTypeFactory)
 
-                    var raceTrackInfo = raceTrackInfo
-
-
-                    var raceTrackData = raceTrackData
-
-
-                    var tiledLayer = tiledLayer
-
-
-                    var miniGeographicMap = miniGeographicMap
-
-
-                    var geographicMapCellPositionFactoryInterface = geographicMapCellPositionFactoryInterface
-
-
-                    var geographicMapCellPositionBaseFactory = geographicMapCellPositionBaseFactory
-
-
-                    var geographicMapCellTypeFactory = geographicMapCellTypeFactory
+        Updates for KMP build        
+        {
+    //var raceTrackInfo = raceTrackInfo
+    //var raceTrackData = raceTrackData
+    //var tiledLayer = tiledLayer
+    //var miniGeographicMap = miniGeographicMap
+    //var geographicMapCellPositionFactoryInterface = geographicMapCellPositionFactoryInterface
+    //var geographicMapCellPositionBaseFactory = geographicMapCellPositionBaseFactory
+    //var geographicMapCellTypeFactory = geographicMapCellTypeFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -123,7 +113,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR)
 
 open fun getRaceTrackInfo()
         //nullable = true from not(false or (false and true)) = true
-: RaceTrackInfo{
+: RaceTrackInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -133,25 +127,33 @@ open fun getRaceTrackInfo()
 
 open fun setRaceTrackInfo(aRaceTrackInfo: RaceTrackInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aRaceTrackInfo = aRaceTrackInfo
+
+        Updates for KMP build        
+        {
+var aRaceTrackInfo = aRaceTrackInfo
 raceTrackInfo= aRaceTrackInfo
 }
 
 
 open fun setMiniBasicGeographicMap(miniBasicGeographicMap: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var miniBasicGeographicMap = miniBasicGeographicMap
+
+        Updates for KMP build        
+        {
+var miniBasicGeographicMap = miniBasicGeographicMap
 this.miniGeographicMap= miniBasicGeographicMap
 }
 
 
 open fun getMiniBasicGeographicMap()
         //nullable = true from not(false or (false and true)) = true
-: BasicGeographicMap{
+: BasicGeographicMap
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -161,7 +163,11 @@ open fun getMiniBasicGeographicMap()
 
 open fun getRaceTrackData()
         //nullable = true from not(false or (false and true)) = true
-: RaceTrackData{
+: RaceTrackData
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,9 +177,11 @@ open fun getRaceTrackData()
 
 open fun setRaceTrackData(raceTrackData: RaceTrackData)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var raceTrackData = raceTrackData
+
+        Updates for KMP build        
+        {
+var raceTrackData = raceTrackData
 this.raceTrackData= raceTrackData
 }
 

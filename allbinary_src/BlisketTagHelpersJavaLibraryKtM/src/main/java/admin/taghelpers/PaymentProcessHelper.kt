@@ -35,12 +35,12 @@ open public class PaymentProcessHelper : TagHelper {
         
 
     private var paymentProcessorComponent: PaymentProcessorComponent
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 
     var transformInfoInterface: TransformInfoHttpInterface = TransformInfoHttpFactory.getInstance(propertiesHashMap, pageContext) as TransformInfoHttpInterface
 
@@ -52,7 +52,11 @@ this.paymentProcessorComponent= PaymentProcessorComponent(transformInfoInterface
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

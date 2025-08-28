@@ -38,7 +38,11 @@ open public class TrackballMotionGestureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TrackballMotionGestureFactory{
+: TrackballMotionGestureFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +61,11 @@ open fun getInstance()
     val DOWN: MotionGestureInput
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var MAX: Int = InputFactory.getInstance()!!.MAX
 
 LEFT= MotionGestureInput(MAX -26, "L Trackball")

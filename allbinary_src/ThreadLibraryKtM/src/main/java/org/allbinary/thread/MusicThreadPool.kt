@@ -42,7 +42,11 @@ open public class MusicThreadPool : ThreadPool {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadPool{
+: ThreadPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,12 +57,12 @@ open fun getInstance()
         }
             public constructor        (poolName: String, numThreads: Int)                        
 
-                            : super(poolName, numThreads){
+                            : super(poolName, numThreads)
 
-                    var poolName = poolName
-
-
-                    var numThreads = numThreads
+        Updates for KMP build        
+        {
+    //var poolName = poolName
+    //var numThreads = numThreads
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,9 +71,11 @@ open fun getInstance()
 
 override fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+var task = task
 logUtil!!.put(StringMaker().
                             append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, this.threadPoolStrings!!.ADD_TASK)
 super.runTask(task)
@@ -77,18 +83,22 @@ super.runTask(task)
 
 override fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+var task = task
 logUtil!!.put(StringMaker().
                             append(this.threadPoolStrings!!.START_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 }
 
 override fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+var task = task
 logUtil!!.put(StringMaker().
                             append(this.threadPoolStrings!!.COMPLETE_TASK)!!.append(StringUtil.getInstance()!!.toString(task))!!.append(System.currentTimeMillis())!!.toString(), this, commonStrings!!.RUN)
 }

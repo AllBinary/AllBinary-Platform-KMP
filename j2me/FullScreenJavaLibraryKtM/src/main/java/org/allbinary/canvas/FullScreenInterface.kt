@@ -32,9 +32,15 @@ open fun isFullScreenMode()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -42,11 +48,17 @@ open fun stopWaiting()
         //nullable = true from not(false or (false and true)) = true
 
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun waitOnNotify(wait: Int)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

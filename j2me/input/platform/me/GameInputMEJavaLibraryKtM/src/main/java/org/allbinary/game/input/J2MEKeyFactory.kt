@@ -37,7 +37,11 @@ open public class J2MEKeyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: J2MEKeyFactory{
+: J2MEKeyFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,14 +52,22 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val gameKeyFactory: GameKeyFactory = GameKeyFactory.getInstance()!!
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var gameKeyArray: Array<GameKey?> = arrayOf(gameKeyFactory!!.DOWN,gameKeyFactory!!.FIRE,gameKeyFactory!!.GAME_A,gameKeyFactory!!.GAME_B,gameKeyFactory!!.GAME_C,gameKeyFactory!!.GAME_D,gameKeyFactory!!.KEY_NUM0,gameKeyFactory!!.KEY_NUM1,gameKeyFactory!!.KEY_NUM2,gameKeyFactory!!.KEY_NUM3,gameKeyFactory!!.KEY_NUM4,gameKeyFactory!!.KEY_NUM5,gameKeyFactory!!.KEY_NUM6,gameKeyFactory!!.KEY_NUM7,gameKeyFactory!!.KEY_NUM8,gameKeyFactory!!.KEY_NUM9,gameKeyFactory!!.KEY_POUND,gameKeyFactory!!.KEY_STAR,gameKeyFactory!!.LEFT,gameKeyFactory!!.LEVEL_DOWN,gameKeyFactory!!.LEVEL_UP,gameKeyFactory!!.NONE,gameKeyFactory!!.RIGHT,gameKeyFactory!!.UP)
 
 
@@ -67,7 +79,11 @@ open fun init()
 
                         for (index in gameKeyArray!!.size  - 1  downTo 0)
 
-        {inputFactory!!.add(gameKeyArray[index]!!.getId(), gameKeyArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+inputFactory!!.add(gameKeyArray[index]!!.getId(), gameKeyArray[index]!!)
 }
 
 }
@@ -75,9 +91,11 @@ open fun init()
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.FIRE)
@@ -101,9 +119,11 @@ open fun isSubmission(input: Input)
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.GAME_D)
@@ -127,9 +147,11 @@ open fun isDelete(input: Input)
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -140,9 +162,11 @@ open fun isBackSpace(input: Input)
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.UP)
@@ -166,9 +190,11 @@ open fun isUp(input: Input)
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.DOWN)
@@ -192,9 +218,11 @@ open fun isDown(input: Input)
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.LEFT)
@@ -218,9 +246,11 @@ open fun isLeft(input: Input)
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.RIGHT)
@@ -244,9 +274,11 @@ open fun isRight(input: Input)
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == gameKeyFactory!!.FIRE)

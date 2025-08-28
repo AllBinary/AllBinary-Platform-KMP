@@ -46,9 +46,11 @@ open public class StoreFrontInventoryStatistics
     private var totalInventorySaleValueMoney: Money
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        {
+        
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 this.totalInventorySaleValueMoney= Money()
 
     var inventoryEntityInterface: InventoryEntityInterface = InventoryEntityFactory.getInstance()!!.getInventoryEntityInstance()!!
@@ -65,7 +67,11 @@ this.totalInventorySaleValueMoney= Money()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var itemInterface: ItemInterface = itemVector!!.get(index) as ItemInterface
 
 
@@ -84,7 +90,11 @@ this.totalInventorySaleValueMoney!!.add(itemPriceMoney!!.toString())
 
 open fun getNumber()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,7 +104,11 @@ open fun getNumber()
 
 open fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Money{
+: Money
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,7 +118,11 @@ open fun getTotal()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.NUMBEROFITEMS, this.getNumber()!!.toString())
@@ -119,7 +137,11 @@ hashMap!!.put(StoreFrontInventoryStatisticsData.getInstance()!!.TOTALVALUE, this
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -129,7 +151,11 @@ open fun toVector()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

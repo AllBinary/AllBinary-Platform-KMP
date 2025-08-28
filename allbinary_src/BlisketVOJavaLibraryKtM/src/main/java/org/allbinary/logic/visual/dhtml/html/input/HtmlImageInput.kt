@@ -32,7 +32,11 @@ open public class HtmlImageInput
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -33,29 +33,50 @@ open fun isTesting()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun getTesting()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getTestHtmlPath()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun getMainPath()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun setTesting(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setTestHtmlPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setMainPath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -63,13 +84,22 @@ open fun isTestingValid(testing: String)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun isTestHtmlPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun isMainPathValid(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

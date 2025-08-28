@@ -53,17 +53,21 @@ open public class StaticPathGenerator
             
 open fun init(geographicMapInterface: BasicGeographicMap, totalPaths: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapInterface = geographicMapInterface
 
 
-                    var totalPaths = totalPaths
+        Updates for KMP build        
+        {
+var geographicMapInterface = geographicMapInterface
+var totalPaths = totalPaths
 }
 
 protected constructor        ()
             : super()
-        {PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
+        
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Using Static Path Finding", this, CommonStrings.getInstance()!!.CONSTRUCTOR)
 }
 
 
@@ -71,12 +75,12 @@ protected constructor        ()
             
 open fun getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory: BasicGeographicMapCellPositionFactory, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapCellPositionFactory = geographicMapCellPositionFactory
-
-
-                    var pathList = pathList
+        Updates for KMP build        
+        {
+    //var geographicMapCellPositionFactory = geographicMapCellPositionFactory
+    //var pathList = pathList
 
     var list: BasicArrayList = BasicArrayList()
 
@@ -95,7 +99,11 @@ open fun getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(
 
                         for (index in 0 until size)
 
-        {basicGeographicMapCellPosition= pathList!!.get(index) as CellPosition
+        
+
+        Updates for KMP build        
+        {
+basicGeographicMapCellPosition= pathList!!.get(index) as CellPosition
 geographicMapCellPosition= geographicMapCellPositionFactory!!.getInstance(basicGeographicMapCellPosition!!.getColumn(), basicGeographicMapCellPosition!!.getRow())
 list.add(geographicMapCellPosition)
 }
@@ -112,18 +120,14 @@ list.add(geographicMapCellPosition)
             
 open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCellHistory: GeographicMapCellHistory, pathFindingInfo: PathFindingInfo, totalPaths: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
+: BasicArrayList
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var geographicMapCellHistory = geographicMapCellHistory
-
-
-                    var pathFindingInfo = pathFindingInfo
-
-
-                    var totalPaths = totalPaths
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var geographicMapCellHistory = geographicMapCellHistory
+    //var pathFindingInfo = pathFindingInfo
+    //var totalPaths = totalPaths
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -170,7 +174,11 @@ open fun getInstance(geographicMapInterface: BasicGeographicMap, geographicMapCe
 
                         for (index in 0 until size)
 
-        {pathList= this.getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory, basicList!!.get(index) as BasicArrayList)
+        
+
+        Updates for KMP build        
+        {
+pathList= this.getGeographicMapCellPositionListFromBasicGeographicMapCellPositionList(geographicMapCellPositionFactory, basicList!!.get(index) as BasicArrayList)
 list.add(pathList)
 }
 
@@ -187,7 +195,11 @@ logUtil!!.put(StringMaker().
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return list
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 
 
 

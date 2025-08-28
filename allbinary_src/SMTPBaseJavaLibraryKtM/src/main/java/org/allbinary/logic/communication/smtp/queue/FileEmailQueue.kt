@@ -35,7 +35,11 @@ open public class FileEmailQueue
     private var domDocumentQueueInterface: DomDocumentQueueInterface
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

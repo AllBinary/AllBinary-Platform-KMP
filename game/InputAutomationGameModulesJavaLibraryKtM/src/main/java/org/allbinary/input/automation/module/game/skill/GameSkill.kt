@@ -41,12 +41,12 @@ open public class GameSkill
 
 open fun getInstance(gameSkillType: GameSkillType, extra: String)
         //nullable =  from not(true or (false and false)) = 
-: GameSkill{
+: GameSkill
 
-                    var gameSkillType = gameSkillType
-
-
-                    var extra = extra
+        Updates for KMP build        
+        {
+var gameSkillType = gameSkillType
+var extra = extra
 
 
 
@@ -73,15 +73,13 @@ open fun getInstance(gameSkillType: GameSkillType, extra: String)
     private val TIME_LABEL: String = "Time: "
 public constructor        (gameSkillType: GameSkillType, extra: String, time: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var gameSkillType = gameSkillType
-
-
-                    var extra = extra
-
-
-                    var time = time
+var gameSkillType = gameSkillType
+var extra = extra
+var time = time
 this.setGameSkillType(gameSkillType)
 this.setExtra(extra)
 this.setTime(time)
@@ -93,7 +91,11 @@ hashMap!!.put(StringBuilder().
 
 open fun getGameSkillType()
         //nullable = true from not(false or (false and true)) = true
-: GameSkillType{
+: GameSkillType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,16 +105,22 @@ open fun getGameSkillType()
 
 open fun setGameSkillType(gameSkillType: GameSkillType)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameSkillType = gameSkillType
+
+        Updates for KMP build        
+        {
+var gameSkillType = gameSkillType
 this.gameSkillType= gameSkillType
 }
 
 
 open fun getExtra()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -122,16 +130,22 @@ open fun getExtra()
 
 open fun setExtra(extra: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var extra = extra
+
+        Updates for KMP build        
+        {
+var extra = extra
 this.extra= extra
 }
 
 
 open fun getTime()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -141,25 +155,33 @@ open fun getTime()
 
 open fun setTime(time: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var time = time
+
+        Updates for KMP build        
+        {
+var time = time
 this.time= time
 }
 
 
 open fun addProperty(gameSkillPropertyInterface: GameSkillPropertyInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameSkillPropertyInterface = gameSkillPropertyInterface
+
+        Updates for KMP build        
+        {
+var gameSkillPropertyInterface = gameSkillPropertyInterface
 this.vector.add(gameSkillPropertyInterface)
 }
 
 
 open fun getProperties()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -168,7 +190,11 @@ open fun getProperties()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(GAME_SKILL_LABEL)

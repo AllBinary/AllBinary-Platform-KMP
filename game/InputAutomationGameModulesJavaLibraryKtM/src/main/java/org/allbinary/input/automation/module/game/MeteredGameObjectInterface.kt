@@ -32,13 +32,22 @@ open fun getRatios()
         //nullable = true from not(false or (false and true)) = true
 : Array<Double?>
 
+        Updates for KMP build        
+        
+
 open fun isGood()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
 
+        Updates for KMP build        
+        
+
 open fun isDropping()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -34,27 +34,17 @@ open public class ScoreHudWidget : NumberStringHud {
         
 public constructor        (maxscore: Int, location: Int, direction: Int, maxHeight: Int, maxWidth: Int, bufferZone: Int, basicColor: BasicColor)                        
 
-                            : super("Pts ", maxscore, location, direction, maxHeight, maxWidth, bufferZone, basicColor){
+                            : super("Pts ", maxscore, location, direction, maxHeight, maxWidth, bufferZone, basicColor)
 
-                    var maxscore = maxscore
-
-
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxHeight = maxHeight
-
-
-                    var maxWidth = maxWidth
-
-
-                    var bufferZone = bufferZone
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var maxscore = maxscore
+var location = location
+var direction = direction
+var maxHeight = maxHeight
+var maxWidth = maxWidth
+var bufferZone = bufferZone
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,18 +53,14 @@ public constructor        (maxscore: Int, location: Int, direction: Int, maxHeig
 
 public constructor        (maxscore: Int, location: Int, direction: Int, maxWidth: Int)                        
 
-                            : this(maxscore, location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY){
+                            : this(maxscore, location, direction, 14, maxWidth, 2, BasicColorFactory.getInstance()!!.GREY)
 
-                    var maxscore = maxscore
-
-
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var maxWidth = maxWidth
+        Updates for KMP build        
+        {
+var maxscore = maxscore
+var location = location
+var direction = direction
+var maxWidth = maxWidth
 
 
                             //For kotlin this is before the body of the constructor.
@@ -83,15 +69,13 @@ public constructor        (maxscore: Int, location: Int, direction: Int, maxWidt
 
 public constructor        (maxscore: Int, location: Int, direction: Int)                        
 
-                            : this(maxscore, location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, BasicColorFactory.getInstance()!!.GREY){
+                            : this(maxscore, location, direction, 14, MyFont.getInstance()!!.getSize() *5, 2, BasicColorFactory.getInstance()!!.GREY)
 
-                    var maxscore = maxscore
-
-
-                    var location = location
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var maxscore = maxscore
+var location = location
+var direction = direction
 
 
                             //For kotlin this is before the body of the constructor.

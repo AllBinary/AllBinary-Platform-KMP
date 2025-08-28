@@ -37,26 +37,24 @@ open public class LockablePaintable : ItemPaintable {
     private val animation: Animation = FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(LockedResources.getInstance()!!.LOCKED_DEMO_GAME_FEATURE_RESOURCE)!!.getInstance(0)!!
 
     private val lockedIndex: Int
-public constructor        (lockedIndex: Int){
+public constructor        (lockedIndex: Int)
 
-                    var lockedIndex = lockedIndex
+        Updates for KMP build        
+        {
+var lockedIndex = lockedIndex
 this.lockedIndex= lockedIndex
 }
 
 override fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var currentIndex = currentIndex
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var currentIndex = currentIndex
+var x = x
+var y = y
 
     
                         if(LockedUtil.getInstance()!!.isLockedFeature() && currentIndex >= this.getLockedIndex())
@@ -71,7 +69,11 @@ override fun paint(graphics: Graphics, currentIndex: Int, x: Int, y: Int)
 
 open fun getLockedIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -81,7 +83,11 @@ open fun getLockedIndex()
 
 open fun getAnimation()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

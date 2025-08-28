@@ -67,24 +67,16 @@ open public class TechnologyRTSInterfaceImageItem : CustomImageItem {
     private val DOLLAR: String = "$"
 public constructor        (label: String, img: Image, layout: Int, altText: String, basicColor: BasicColor, rtsInterface: RTSInterface)                        
 
-                            : super(label, img, layout, altText, basicColor){
+                            : super(label, img, layout, altText, basicColor)
 
-                    var label = label
-
-
-                    var img = img
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var basicColor = basicColor
-
-
-                    var rtsInterface = rtsInterface
+        Updates for KMP build        
+        {
+var label = label
+var img = img
+var layout = layout
+var altText = altText
+var basicColor = basicColor
+var rtsInterface = rtsInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -121,7 +113,11 @@ this.update()
 
 open fun getRtsInterface()
         //nullable = true from not(false or (false and true)) = true
-: RTSInterface{
+: RTSInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -131,22 +127,24 @@ open fun getRtsInterface()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.costString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())
+
+
+        Updates for KMP build        
+        {
+this.costString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getUpgradeCost())
 this.levelString= this.primitiveLongUtil!!.getCharArray(this.getRtsInterface()!!.getLevel())
 }
 
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 super.paint(graphics, x, y)
 
     var xa: Int = x +2

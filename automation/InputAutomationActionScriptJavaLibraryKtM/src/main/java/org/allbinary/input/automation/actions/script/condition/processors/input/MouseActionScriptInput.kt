@@ -58,9 +58,11 @@ open public class MouseActionScriptInput : BasicProfileActionScriptInput
     private var mouseActionScriptInputJPanel: MouseActionScriptInputJPanel
 public constructor        (node: Node)                        
 
-                            : super(NAME, node){
+                            : super(NAME, node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -86,7 +88,11 @@ this.point= Point()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var childNode: Node = nodeList!!.item(index)!!
 
 
@@ -158,7 +164,11 @@ this.mouseActionScriptInputJPanel= MouseActionScriptInputJPanel(this)
 
 public constructor        ()                        
 
-                            : super(NAME){
+                            : super(NAME)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -170,16 +180,22 @@ this.mouseActionScriptInputJPanel= MouseActionScriptInputJPanel(this)
 
 open fun setPoint(point: Point)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var point = point
+
+        Updates for KMP build        
+        {
+var point = point
 this.point= point
 }
 
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: Point{
+: Point
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -189,7 +205,11 @@ open fun getPoint()
 
 open fun getButtonClicks()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -199,22 +219,32 @@ open fun getButtonClicks()
 
 open fun setButtonClicks(buttons: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var buttons = buttons
+
+        Updates for KMP build        
+        {
+var buttons = buttons
 this.buttons= buttons
 }
 
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-{this.mouseActionScriptInputJPanel!!.getMouseActionJDialog()!!.setVisible(true)
+
+
+        Updates for KMP build        
+        {
+this.mouseActionScriptInputJPanel!!.getMouseActionJDialog()!!.setVisible(true)
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(MouseActionScriptInputData.BUTTONS, Integer.toString(this.getButtonClicks()))
@@ -231,9 +261,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = super.toXmlNode(document)!!
 
@@ -259,16 +291,22 @@ mouseNode!!.appendChild(ModDomHelper.createNodeWithValueNodes(document, MouseAct
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 MouseInputAutomationProcessor.process(this)
 }
 
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var buttonStringBuffer: StringMaker = StringMaker()
 
 buttonStringBuffer!!.append("1: ")

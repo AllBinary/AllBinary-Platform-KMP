@@ -59,12 +59,12 @@ open public class BasketRequestHelper : TagHelper {
     private var num: String
 
     private val MAX: Int = 200
-public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var propertiesHashMap = propertiesHashMap
+var pageContext = pageContext
 this.propertiesHashMap= propertiesHashMap
 this.pageContext= pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
@@ -94,14 +94,22 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request.getParameter(BasicItemData.ID)
+
+
+        Updates for KMP build        
+        {
+this.id= request.getParameter(BasicItemData.ID)
 this.num= request.getParameter(BasketData.ITEMTOTALINBASKET)
 }
 
 
 open fun addItemToBasket()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -149,7 +157,11 @@ basket.addItem(id, num)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -170,7 +182,11 @@ basket.addItem(id, num)
 
 open fun removeItemFromBasket()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -201,7 +217,11 @@ basket.removeItem(id)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -222,7 +242,11 @@ basket.removeItem(id)
 
 open fun adjustBasket()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
@@ -250,7 +274,11 @@ open fun adjustBasket()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return Boolean.TRUE
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         

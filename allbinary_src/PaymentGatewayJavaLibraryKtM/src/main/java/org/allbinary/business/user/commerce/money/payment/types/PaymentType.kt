@@ -43,9 +43,11 @@ open public class PaymentType
     private val paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface
 protected constructor        (basicPaymentType: BasicPaymentType)
             : super()
-        {
+        
 
-                    var basicPaymentType = basicPaymentType
+        Updates for KMP build        
+        {
+var basicPaymentType = basicPaymentType
 this.basicPaymentType= basicPaymentType
 this.paymentTransactionInterfaceFactoryInterface= 
                                         null
@@ -58,15 +60,13 @@ PaymentTypeUtil.getInstance()!!.add(this)
 
 protected constructor        (basicPaymentType: BasicPaymentType, paymentTransactionInterfaceFactoryInterface: PaymentTransactionInterfaceFactoryInterface, paymentProcessorInterfaceFactoryInterface: PaymentProcessorInterfaceFactoryInterface)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var basicPaymentType = basicPaymentType
-
-
-                    var paymentTransactionInterfaceFactoryInterface = paymentTransactionInterfaceFactoryInterface
-
-
-                    var paymentProcessorInterfaceFactoryInterface = paymentProcessorInterfaceFactoryInterface
+var basicPaymentType = basicPaymentType
+var paymentTransactionInterfaceFactoryInterface = paymentTransactionInterfaceFactoryInterface
+var paymentProcessorInterfaceFactoryInterface = paymentProcessorInterfaceFactoryInterface
 this.basicPaymentType= basicPaymentType
 this.paymentTransactionInterfaceFactoryInterface= paymentTransactionInterfaceFactoryInterface
 this.paymentProcessorInterfaceFactoryInterface= paymentProcessorInterfaceFactoryInterface
@@ -78,7 +78,11 @@ PaymentTypeUtil.getInstance()!!.add(this)
             
 open fun getPaymentTransactionInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentTransactionInterfaceFactoryInterface{
+: PaymentTransactionInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
     
                         if(this.paymentTransactionInterfaceFactoryInterface == 
                                     null
@@ -104,7 +108,11 @@ open fun getPaymentTransactionInterfaceFactoryInterface()
             
 open fun getPaymentProcessorInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentProcessorInterfaceFactoryInterface{
+: PaymentProcessorInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
     
                         if(this.paymentProcessorInterfaceFactoryInterface == 
                                     null
@@ -128,7 +136,11 @@ open fun getPaymentProcessorInterfaceFactoryInterface()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 vector.addAll(this.getBasicPaymentType()!!.toVector())
@@ -164,7 +176,11 @@ vector.addAll(this.getBasicPaymentType()!!.toVector())
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
@@ -200,7 +216,11 @@ hashMap!!.putAll(this.getBasicPaymentType()!!.toHashMap())
 
 open fun getBasicPaymentType()
         //nullable = true from not(false or (false and true)) = true
-: BasicPaymentType{
+: BasicPaymentType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

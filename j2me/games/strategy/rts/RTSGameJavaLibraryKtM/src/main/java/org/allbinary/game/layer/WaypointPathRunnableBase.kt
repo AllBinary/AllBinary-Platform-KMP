@@ -59,7 +59,11 @@ open public class WaypointPathRunnableBase
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,9 +73,11 @@ open fun isRunning()
 
 open fun setRunning(isRunning: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isRunning = isRunning
+
+        Updates for KMP build        
+        {
+    //var isRunning = isRunning
 this.running= isRunning
 }
 
@@ -80,17 +86,21 @@ this.running= isRunning
             
 open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var thread = thread
+
+        Updates for KMP build        
+        {
+    //var thread = thread
 }
 
 
 open fun setTargetLayer(waypointLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var waypointLayer = waypointLayer
+
+        Updates for KMP build        
+        {
+    //var waypointLayer = waypointLayer
 this.targetLayer= waypointLayer
 this.setPriority()
 }
@@ -98,7 +108,11 @@ this.setPriority()
 
 open fun setPriority()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var pathFindingLayer: AllBinaryLayer = this.pathFindingLayer as AllBinaryLayer
 
 
@@ -126,7 +140,11 @@ this.priority= distanceCategory
 
 open fun getTargetLayer()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingLayerInterface{
+: PathFindingLayerInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,16 +154,22 @@ open fun getTargetLayer()
 
 open fun setUnitLayer(unitLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var unitLayer = unitLayer
+
+        Updates for KMP build        
+        {
+var unitLayer = unitLayer
 this.pathFindingLayer= unitLayer
 }
 
 
 open fun getPriority()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -155,7 +179,11 @@ open fun getPriority()
 
 open fun isDone()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -165,12 +193,20 @@ open fun isDone()
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -28,9 +28,11 @@ open public class ImageIOUtil
             
 open fun read(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
 
@@ -43,15 +45,13 @@ open fun read(file: AbFile)
             
 open fun write(renderedImage: RenderedImage, name: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var renderedImage = renderedImage
-
-
-                    var name = name
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var renderedImage = renderedImage
+var name = name
+var file = file
 
 
 

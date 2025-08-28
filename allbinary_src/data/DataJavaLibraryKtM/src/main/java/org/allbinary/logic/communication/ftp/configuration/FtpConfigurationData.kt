@@ -46,7 +46,11 @@ open public class FtpConfigurationData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -83,9 +83,11 @@ open public class ProductListing
     private val INVENTORY: String = ".InventoryView"
 public constructor        (searchRequest: SearchRequest)
             : super()
-        {
+        
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 this.searchRequest= searchRequest
 this.storeFronts= StoreFrontsEntity()
 this.staticPages= StaticPagesEntity()
@@ -97,9 +99,11 @@ this.inventory= InventoryEntity()
             
 open fun getHashSet(storeFront: StoreFrontInterface)
         //nullable = true from not(false or (false and false)) = true
-: HashSet{
+: HashSet
 
-                    var storeFront = storeFront
+        Updates for KMP build        
+        {
+var storeFront = storeFront
 
     var inventoryColumnUtil: InventoryColumnUtil = InventoryColumnUtil.getInstance()!!
 
@@ -118,7 +122,11 @@ open fun getHashSet(storeFront: StoreFrontInterface)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var subStore: String = subStoreVector!!.get(index) as String
 
 
@@ -145,12 +153,12 @@ keywords.addAll(substoreKeywords)
             
 open fun savePage(file: String, data: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var file = file
 
 
-                    var data = data
+        Updates for KMP build        
+        {
+var file = file
+var data = data
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.STATICPAGEGENERATIONLOGGING))
@@ -211,18 +219,14 @@ StreamUtil.getInstance()!!.close(idOutData)
             
 open fun create(keywordData: String, keywordFilenameHashMap: HashMap<Any, Any>, vector: Vector, staticPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keywordData = keywordData
 
 
-                    var keywordFilenameHashMap = keywordFilenameHashMap
-
-
-                    var vector = vector
-
-
-                    var staticPath = staticPath
+        Updates for KMP build        
+        {
+var keywordData = keywordData
+var keywordFilenameHashMap = keywordFilenameHashMap
+var vector = vector
+var staticPath = staticPath
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -256,7 +260,11 @@ this.searchRequest!!.setFileBaseName(pageName)
 
                         for (index in 0 until productListingPages!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(productListingPages[index] == 
                                     null
@@ -321,12 +329,12 @@ this.savePage(file, productListingPages[index]!!)
 
 open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFilenameHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var storeFront = storeFront
 
 
-                    var keywordFilenameHashMap = keywordFilenameHashMap
+        Updates for KMP build        
+        {
+var storeFront = storeFront
+var keywordFilenameHashMap = keywordFilenameHashMap
 
     var keywordHashSet: Set = keywordFilenameHashMap!!.keys!!
 
@@ -343,7 +351,11 @@ open fun addStaticPageInfoToDatabase(storeFront: StoreFrontInterface, keywordFil
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var insertVector: Vector = Vector()
 
 
@@ -365,7 +377,11 @@ this.staticPages!!.insert(insertVector)
             
 open fun generateAll()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var storeFront: StoreFrontInterface = this.searchRequest!!.getStoreFront()!!
@@ -431,7 +447,11 @@ stringBuffer!!.append(" Store Not Found")
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var keywordData: String = keywordArray[index]!! as String
 
 
@@ -458,7 +478,11 @@ stringBuffer!!.append(INVENTORY)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -471,9 +495,11 @@ stringBuffer!!.append(INVENTORY)
             
 open fun generateAll(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var storeName = storeName
+        Updates for KMP build        
+        {
+var storeName = storeName
 
         try {
             
@@ -510,7 +536,11 @@ stringBuffer!!.append("<br />")
 
                         for (index in 0 until size)
 
-        {storeName= storeFrontVector!!.get(index) as String
+        
+
+        Updates for KMP build        
+        {
+storeName= storeFrontVector!!.get(index) as String
 this.searchRequest!!.setStoreFront(this.storeFronts!!.getStoreFrontInterface(storeName))
 stringBuffer!!.append(this.generateAll())
 stringBuffer!!.append("<br />")
@@ -538,7 +568,11 @@ stringBuffer!!.append("All Static Pages Generated<br/>")
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e

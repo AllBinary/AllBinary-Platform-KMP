@@ -48,15 +48,13 @@ open public class TerrainPatrolAI : PacePatrolAI {
     private val CLIFF: BasicTerrainInfo = BasicTerrainInfo(DOWN)
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(hashtable, ownerLayerInterface, gameInput){
+                            : super(hashtable, ownerLayerInterface, gameInput)
 
-                    var hashtable = hashtable
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+    //var hashtable = hashtable
+    //var ownerLayerInterface = ownerLayerInterface
+    //var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,14 +65,22 @@ this.terrainEventListener!!.onTerrainEvent(TerrainEventCircularStaticPool.getIns
 
 override fun update()
         //nullable = true from not(false or (false and true)) = true
-{super.update()
+
+
+        Updates for KMP build        
+        {
+super.update()
 this.changeDirectionIfCliffReached()
 }
 
 
 open fun changeDirectionIfCliffReached()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var list: BasicArrayList = this.terrainEventListener!!.getList()!!
 
 
@@ -86,7 +92,11 @@ open fun changeDirectionIfCliffReached()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var terrainEvent: TerrainEvent = list.remove(index) as TerrainEvent
 
 

@@ -55,12 +55,12 @@ open public class ThreadPool
     private var runningTask: Boolean= false
 public constructor        (poolName: String, numThreads: Int)                        
 
-                            : this(poolName, numThreads, 5){
+                            : this(poolName, numThreads, 5)
 
-                    var poolName = poolName
-
-
-                    var numThreads = numThreads
+        Updates for KMP build        
+        {
+    //var poolName = poolName
+    //var numThreads = numThreads
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,15 +69,13 @@ public constructor        (poolName: String, numThreads: Int)
 
 public constructor        (poolName: String, numThreads: Int, priority: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var poolName = poolName
-
-
-                    var numThreads = numThreads
-
-
-                    var priority = priority
+    //var poolName = poolName
+    //var numThreads = numThreads
+    //var priority = priority
 }
 
 
@@ -87,7 +85,11 @@ public constructor        (poolName: String, numThreads: Int, priority: Int)
             
 open fun runAPriorityTask()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(!currentPriorityRunnable!!.isDone())
                         
@@ -120,7 +122,11 @@ currentPriorityRunnable!!.run()
             
 open fun runATask()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var runnable: Runnable = this.getTask()!!
 
 
@@ -139,7 +145,11 @@ open fun runATask()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(!this.isAlive)
                         
@@ -155,9 +165,11 @@ taskQueue= BasicArrayList()
 
 open fun runTaskWithPriority(task: PriorityRunnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+    //var task = task
 
     
                         if(!this.isAlive)
@@ -189,7 +201,11 @@ open fun runTaskWithPriority(task: PriorityRunnable)
 
                         for (index in 0 until size)
 
-        {runnable= this.taskQueue!!.get(index) as PriorityRunnable
+        
+
+        Updates for KMP build        
+        {
+runnable= this.taskQueue!!.get(index) as PriorityRunnable
 
     
                         if(runnable.getPriority() > task.getPriority())
@@ -232,9 +248,11 @@ this.taskQueue!!.add(index, task)
 
 open fun runTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+    //var task = task
 
     
                         if(!isAlive)
@@ -263,7 +281,11 @@ open fun runTask(task: Runnable)
 
 open fun getTask()
         //nullable = true from not(false or (false and true)) = true
-: Runnable{
+: Runnable
+
+        Updates for KMP build        
+        {
+
     
                         if(taskQueue!!.isEmpty())
                         
@@ -287,14 +309,22 @@ open fun getTask()
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{taskQueue!!.clear()
+
+
+        Updates for KMP build        
+        {
+taskQueue!!.clear()
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(isAlive)
                         
@@ -310,13 +340,21 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 open fun join()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         
         //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
         synchronized(this) 
 
         //mutex.withLock
-        {isAlive= false
+        
+
+        Updates for KMP build        
+        {
+isAlive= false
 taskQueue!!.clear()
 this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 }
@@ -326,7 +364,11 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 open fun isBusy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(!this.isAlive)
                         
@@ -375,12 +417,20 @@ open fun isBusy()
 
 open fun threadStarted()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun threadStopped()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.numThreads == 1)
                         
@@ -396,17 +446,21 @@ this.currentPriorityRunnable= threadObjectUtil!!.NULL_PRIORITY_RUNNABLE
 
 open fun startTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+    //var task = task
 }
 
 
 open fun completedTask(task: Runnable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var task = task
+
+        Updates for KMP build        
+        {
+    //var task = task
 }
 
 

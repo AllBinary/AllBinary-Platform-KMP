@@ -44,7 +44,11 @@ open public class LogFormatUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogFormatUtil{
+: LogFormatUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,23 +77,23 @@ open fun getInstance()
     private val SPECIAL_MESSAGE: String = "> "
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun get(className: String, functionName: String, specialMessage: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var className = className
-
-
-                    var functionName = functionName
-
-
-                    var specialMessage = specialMessage
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+    //var className = className
+    //var functionName = functionName
+    //var specialMessage = specialMessage
+    //var exception = exception
 
     var stringBuffer: StringMaker = get(className, functionName)!!
 
@@ -107,15 +111,13 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
 open fun get(className: String, functionName: String, specialMessage: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var className = className
-
-
-                    var functionName = functionName
-
-
-                    var specialMessage = specialMessage
+        Updates for KMP build        
+        {
+    //var className = className
+    //var functionName = functionName
+    //var specialMessage = specialMessage
 
     var stringBuffer: StringMaker = get(className, functionName)!!
 
@@ -132,12 +134,12 @@ stringBuffer!!.append(this.commonSeps!!.NEW_LINE)
 
 open fun get(className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: StringMaker{
+: StringMaker
 
-                    var className = className
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+    //var className = className
+    //var functionName = functionName
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -163,9 +165,11 @@ stringBuffer!!.append(functionName)
 
 open fun get(exception: Any)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var exception = exception
+        Updates for KMP build        
+        {
+    //var exception = exception
 
     
                         if(exception != nullUtil!!.NULL_OBJECT)

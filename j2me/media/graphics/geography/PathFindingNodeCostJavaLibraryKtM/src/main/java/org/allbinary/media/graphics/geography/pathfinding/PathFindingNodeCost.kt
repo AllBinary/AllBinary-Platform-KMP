@@ -39,15 +39,13 @@ open public class PathFindingNodeCost : PathFindingNode
     var pathFindingNodeCostInfo: PathFindingNodeCostInfo
 public constructor        (parent: PathFindingNodeCost, geographicMapCellPosition: GeographicMapCellPosition, pathFindingNodeCostInfo: PathFindingNodeCostInfo)                        
 
-                            : super(parent, geographicMapCellPosition){
+                            : super(parent, geographicMapCellPosition)
 
-                    var parent = parent
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var pathFindingNodeCostInfo = pathFindingNodeCostInfo
+        Updates for KMP build        
+        {
+    //var parent = parent
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -86,7 +84,11 @@ this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 
 open fun getPathFindingNodeCostInfo()
         //nullable = true from not(false or (false and true)) = true
-: PathFindingNodeCostInfo{
+: PathFindingNodeCostInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,17 +98,21 @@ open fun getPathFindingNodeCostInfo()
 
 open fun setPathFindingNodeCostInfo(pathFindingNodeCostInfo: PathFindingNodeCostInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathFindingNodeCostInfo = pathFindingNodeCostInfo
+
+        Updates for KMP build        
+        {
+var pathFindingNodeCostInfo = pathFindingNodeCostInfo
 this.pathFindingNodeCostInfo= pathFindingNodeCostInfo
 }
 
 override fun compareTo(pathFindingNodeCost: PathFindingNodeCost)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var pathFindingNodeCost = pathFindingNodeCost
+        Updates for KMP build        
+        {
+var pathFindingNodeCost = pathFindingNodeCost
 
 
 
@@ -116,7 +122,11 @@ override fun compareTo(pathFindingNodeCost: PathFindingNodeCost)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.toString()!!)
@@ -131,7 +141,11 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
         while(pathFindingNode != 
                                     null
                                 )
-        {stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
 stringBuffer!!.append(commonSeps!!.SPACE)
 pathFindingNode= pathFindingNode!!.parent
 }

@@ -89,33 +89,33 @@ open public class TransformInfo
     private var data: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.setName(name)
 }
 
 public constructor        (name: String, objectFileName: String, objectConfigFileName: String, templateFileName: String, dataFileName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var objectFileName = objectFileName
-
-
-                    var objectConfigFileName = objectConfigFileName
-
-
-                    var templateFileName = templateFileName
-
-
-                    var dataFileName = dataFileName
+var name = name
+var objectFileName = objectFileName
+var objectConfigFileName = objectConfigFileName
+var templateFileName = templateFileName
+var dataFileName = dataFileName
 this.setName(name)
 this.setObjectFile(objectFileName)
 this.setObjectConfigFile(objectConfigFileName)
@@ -128,9 +128,11 @@ this.setDataFile(dataFileName)
             
 open fun override(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashMap = hashMap
+
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 
@@ -425,7 +427,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "TransformInfoInterface(HashMap)"
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Name: ")
@@ -454,25 +460,33 @@ stringBuffer!!.append("TransformInfoInterface(HashMap)")
 
 open fun setName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.name= value
 }
 
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.storeName= value
 }
 
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -482,36 +496,44 @@ open fun getStoreName()
 
 open fun setObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.anyType= anyType
 }
 
 
 open fun setObjectFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.objectFileName= value
 }
 
 
 open fun setTemplate(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.template= value
 }
 
 
 open fun setTemplateFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.templateFileName= value
 }
 
@@ -520,9 +542,11 @@ this.templateFileName= value
             
 open fun setObjectConfigFileName(value: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.objectConfigFileName= value
 }
 
@@ -531,9 +555,11 @@ this.objectConfigFileName= value
             
 open fun setObjectConfigFile(value: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.objectConfigFileName= value
 this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.getInstance()!!.getInstance(abeClientInformation, this, this.getObjectConfigFilePath()))
 }
@@ -543,9 +569,11 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
             
 open fun setObjectConfig(value: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
     var document: Document = DomDocumentHelper.create(value)!!
 
@@ -555,25 +583,33 @@ this.setObjectConfigInterface(TransformInfoObjectConfigAndManipulatorFactory.get
 
 open fun setDataFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.dataFileName= value
 }
 
 
 open fun setData(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.data= value
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -583,7 +619,11 @@ open fun getName()
 
 open fun getObject()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -593,7 +633,11 @@ open fun getObject()
 
 open fun getObjectFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -603,7 +647,11 @@ open fun getObjectFile()
 
 open fun getTemplate()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -613,7 +661,11 @@ open fun getTemplate()
 
 open fun getTemplateFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -625,7 +677,11 @@ open fun getTemplateFile()
             
 open fun getTemplateFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -637,7 +693,11 @@ open fun getTemplateFilePath()
             
 open fun getObjectConfigFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -649,7 +709,11 @@ open fun getObjectConfigFilePath()
             
 open fun getDataFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -659,7 +723,11 @@ open fun getDataFilePath()
 
 open fun getObjectConfigFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -669,7 +737,11 @@ open fun getObjectConfigFile()
 
 open fun getData()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
 
 
@@ -705,7 +777,11 @@ open fun getData()
                                 
 this.data= fileData
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -769,7 +845,11 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -792,7 +872,11 @@ stringBuffer!!.append(this.getDataFilePath()!!.toFileSystemString())
             
 open fun getDataDocument()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var localData: String = this.getData()!!
 
 
@@ -837,7 +921,11 @@ open fun getDataDocument()
 
 open fun getDataFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -847,7 +935,11 @@ open fun getDataFile()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var transformInfoData: TransformInfoData = TransformInfoData.getInstance()!!
 
 
@@ -882,7 +974,11 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: java.util.Vector{
+: java.util.Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 vector.add(this.name)
@@ -915,7 +1011,11 @@ vector.add(time)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -925,13 +1025,21 @@ open fun getKey()
 
 open fun setChild()
         //nullable = true from not(false or (false and true)) = true
-{this.isChild= true
+
+
+        Updates for KMP build        
+        {
+this.isChild= true
 }
 
 
 open fun isChild()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -941,7 +1049,11 @@ open fun isChild()
 
 open fun getObjectConfigInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoObjectConfigInterface{
+: TransformInfoObjectConfigInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -951,9 +1063,11 @@ open fun getObjectConfigInterface()
 
 open fun setObjectConfigInterface(objectConfigInterface: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var objectConfigInterface = objectConfigInterface
+
+        Updates for KMP build        
+        {
+var objectConfigInterface = objectConfigInterface
 this.objectConfigInterface= objectConfigInterface
 }
 

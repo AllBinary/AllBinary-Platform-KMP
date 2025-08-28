@@ -51,15 +51,21 @@ open public class AdminConfiguration
     private var contextConfigurationInterface: ContextConfigurationInterface
 public constructor        ()
             : super()
-        {logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
+        
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.contextConfigurationInterface= ContextConfigurationInterfaceFactory.getInstance()!!.getInstance(AdminConfigurationData.CONTEXTNAME)
 }
 
 public constructor        (request: HttpServletRequest)
             : super()
-        {
+        
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.getFormData(RequestParams(request).
                             toHashMap())
@@ -67,9 +73,11 @@ this.getFormData(RequestParams(request).
 
 public constructor        (storeHashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var storeHashMap = storeHashMap
+        Updates for KMP build        
+        {
+var storeHashMap = storeHashMap
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CONSTRUCTOR)
 this.getFormData(storeHashMap)
 }
@@ -79,9 +87,11 @@ this.getFormData(storeHashMap)
             
 open fun getFormData(storeHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeHashMap = storeHashMap
+
+        Updates for KMP build        
+        {
+var storeHashMap = storeHashMap
 logUtil!!.put(commonStrings!!.START, this, "getFormData")
 this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as ContextConfigurationInterface)
 }
@@ -92,7 +102,11 @@ this.setContextConfigurationInterface(ContextConfiguration(storeHashMap) as Cont
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var contextConfigurationDomDocumentMapping: ContextConfigurationDomDocumentMapping = ContextConfigurationDomDocumentMapping(this.getContextConfigurationInterface())
 
 
@@ -104,7 +118,11 @@ cryptFileWriter!!.write(ContextConfigurationPathUtil.getAbPath(AdminConfiguratio
 
 open fun getContextConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: ContextConfigurationInterface{
+: ContextConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,9 +132,11 @@ open fun getContextConfigurationInterface()
 
 open fun setContextConfigurationInterface(contextConfigurationInterface: ContextConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var contextConfigurationInterface = contextConfigurationInterface
+
+        Updates for KMP build        
+        {
+var contextConfigurationInterface = contextConfigurationInterface
 this.contextConfigurationInterface= contextConfigurationInterface
 }
 

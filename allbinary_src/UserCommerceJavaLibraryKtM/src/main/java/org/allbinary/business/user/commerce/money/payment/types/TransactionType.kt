@@ -34,18 +34,22 @@ open public class TransactionType
     private var name: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun isEqual(transactionType: TransactionType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var transactionType = transactionType
+        Updates for KMP build        
+        {
+var transactionType = transactionType
 
     
                         if(this.toString()!!.compareTo(transactionType!!.toString()) == 0)
@@ -62,7 +66,11 @@ open fun isEqual(transactionType: TransactionType)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

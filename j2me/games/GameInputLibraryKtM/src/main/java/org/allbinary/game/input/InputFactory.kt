@@ -41,7 +41,11 @@ open public class InputFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputFactory{
+: InputFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +70,11 @@ open fun getInstance()
     val NO_INPUT: Input = Input(0, commonStrings!!.UNKNOWN)
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var size: Int = inputIntegerArray!!.size
                 
 
@@ -76,7 +84,11 @@ private constructor        ()
 
                         for (index in 0 until size)
 
-        {inputIntegerArray[index]= NO_INPUT
+        
+
+        Updates for KMP build        
+        {
+inputIntegerArray[index]= NO_INPUT
 }
 
 }
@@ -84,21 +96,23 @@ private constructor        ()
 
 open fun add(id: Int, input: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var id = id
 
 
-                    var input = input
+        Updates for KMP build        
+        {
+var id = id
+var input = input
 this.inputIntegerArray[id]= input
 }
 
 
 open fun getInstance(id: Int)
         //nullable =  from not(true or (false and false)) = 
-: Input{
+: Input
 
-                    var id = id
+        Updates for KMP build        
+        {
+var id = id
 
     
                         if(id < 0)

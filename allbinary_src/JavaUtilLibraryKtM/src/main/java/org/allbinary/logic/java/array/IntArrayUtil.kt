@@ -36,9 +36,11 @@ open public class IntArrayUtil
             
 open fun toString(array: IntArray)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -48,7 +50,11 @@ open fun toString(array: IntArray)
 
                         for (index in 0 until array.size)
 
-        {stringBuffer!!.append(array[index]!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(array[index]!!)
 
     
                         if(index < array.size)
@@ -70,9 +76,11 @@ open fun toString(array: IntArray)
 
 open fun toString(array: Array<IntArray?>)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -82,14 +90,22 @@ open fun toString(array: Array<IntArray?>)
 
                         for (index in 0 until array.size)
 
-        {stringBuffer!!.append("{")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append("{")
 
 
 
 
                         for (index2 in 0 until array[index]!!.length)
 
-        {stringBuffer!!.append(array[index]!![index2]!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(array[index]!![index2]!!)
 
     
                         if(index2 < array[index]!!.length -1)
@@ -123,9 +139,11 @@ stringBuffer!!.append("}")
 
 open fun toString(array: Array<Array<IntArray?>?>)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -135,21 +153,33 @@ open fun toString(array: Array<Array<IntArray?>?>)
 
                         for (index in 0 until array.size)
 
-        {stringBuffer!!.append("{")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append("{")
 
 
 
 
                         for (index2 in 0 until array[index]!!.length)
 
-        {stringBuffer!!.append("{")
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append("{")
 
 
 
 
                         for (index3 in 0 until array[index]!![index2]!!.length)
 
-        {stringBuffer!!.append(array[index]!![index2]!![index3]!!)
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(array[index]!![index2]!![index3]!!)
 
     
                         if(index3 < array[index]!![index2]!!.length -1)
@@ -196,7 +226,11 @@ stringBuffer!!.append("}")
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

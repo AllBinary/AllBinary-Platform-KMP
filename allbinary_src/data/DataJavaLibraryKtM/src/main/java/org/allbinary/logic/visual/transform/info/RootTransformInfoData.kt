@@ -38,7 +38,11 @@ open public class RootTransformInfoData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

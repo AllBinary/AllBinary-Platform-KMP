@@ -40,7 +40,11 @@ open public class KeyCharDefaultComboBoxModelFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DefaultComboBoxModel{
+: DefaultComboBoxModel
+
+        Updates for KMP build        
+        {
+
     var defaultComboBoxModel: DefaultComboBoxModel = DefaultComboBoxModel()
 
 
@@ -52,7 +56,11 @@ open fun getInstance()
 
                         for (index in 0 until keyArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nextKey: Integer = keyArray[index]!!
 
 
@@ -75,7 +83,11 @@ defaultComboBoxModel!!.addElement(Character.toString(keyChar))
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

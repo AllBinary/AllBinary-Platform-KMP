@@ -46,9 +46,11 @@ open public class GameAdState
     private val advertisements: Advertisements = Advertisements()
 public constructor        (adConfiguration: AdConfiguration)
             : super()
-        {
+        
 
-                    var adConfiguration = adConfiguration
+        Updates for KMP build        
+        {
+var adConfiguration = adConfiguration
 this.adConfiguration= adConfiguration
 VirtualKeyboardEventHandler.getInstance()!!.addListener(this)
 }
@@ -56,29 +58,41 @@ VirtualKeyboardEventHandler.getInstance()!!.addListener(this)
 
 open fun initViewArray(viewArray: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var viewArray = viewArray
+
+        Updates for KMP build        
+        {
+var viewArray = viewArray
 }
 
 
 open fun init(anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 this.init()
 }
 
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isShowingAt()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,9 +102,11 @@ open fun isShowingAt()
 
 open fun isShowingAt(location: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var location = location
+        Updates for KMP build        
+        {
+var location = location
 
 
 
@@ -101,18 +117,28 @@ open fun isShowingAt(location: Int)
 
 open fun show()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun hide()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
@@ -120,53 +146,73 @@ ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
                 @Throws(Exception::class)
             override fun onVirtualKeyboardEvent(virtualKeyboardEvent: VirtualKeyboardEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var virtualKeyboardEvent = virtualKeyboardEvent
+
+        Updates for KMP build        
+        {
+var virtualKeyboardEvent = virtualKeyboardEvent
 }
 
 
 open fun processAdState(gameState: GameState, gameType: GameType)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameState = gameState
 
 
-                    var gameType = gameType
+        Updates for KMP build        
+        {
+var gameState = gameState
+var gameType = gameType
 }
 
 
 open fun processPageAdState()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun playingAdState()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun notPlayingAdState()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setGameIsReady(gameIsReady: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameIsReady = gameIsReady
+
+        Updates for KMP build        
+        {
+var gameIsReady = gameIsReady
 }
 
 
 open fun isGameIsReady()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -176,7 +222,11 @@ open fun isGameIsReady()
 
 open fun getAdvertisements()
         //nullable = true from not(false or (false and true)) = true
-: Advertisements{
+: Advertisements
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -186,7 +236,11 @@ open fun getAdvertisements()
 
 open fun getAdConfiguration()
         //nullable = true from not(false or (false and true)) = true
-: AdConfiguration{
+: AdConfiguration
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -198,7 +252,11 @@ open fun getAdConfiguration()
 
 open fun isOkayToShowPageAd()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -208,16 +266,22 @@ open fun isOkayToShowPageAd()
 
 open fun setOkayToShowAds(okayToShowAds: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var okayToShowAds = okayToShowAds
+
+        Updates for KMP build        
+        {
+var okayToShowAds = okayToShowAds
 this.okayToShowAds= okayToShowAds
 }
 
 
 open fun isOkayToShowAds()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -227,7 +291,11 @@ open fun isOkayToShowAds()
 
 open fun isEnabled()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

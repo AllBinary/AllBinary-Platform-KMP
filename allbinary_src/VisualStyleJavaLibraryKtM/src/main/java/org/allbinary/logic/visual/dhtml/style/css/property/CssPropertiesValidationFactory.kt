@@ -42,9 +42,11 @@ open public class CssPropertiesValidationFactory
             
 open fun getInstance(nodeList: NodeList)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: Vector
 
-                    var nodeList = nodeList
+        Updates for KMP build        
+        {
+var nodeList = nodeList
 
     var propertiesVector: Vector = Vector()
 
@@ -54,7 +56,11 @@ open fun getInstance(nodeList: NodeList)
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = nodeList!!.item(index)!!
 
 
@@ -81,9 +87,11 @@ propertiesVector!!.add(cssPropertyValidationInterface)
 
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: Vector{
+: Vector
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     var styles: Vector = Vector()
 
@@ -98,7 +106,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

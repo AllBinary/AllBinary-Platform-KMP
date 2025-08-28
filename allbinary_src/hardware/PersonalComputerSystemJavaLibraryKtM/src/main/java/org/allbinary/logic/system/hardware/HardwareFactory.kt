@@ -41,9 +41,11 @@ open public class HardwareFactory
             
 open fun getInstance(os: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
-: HardwareInterface{
+: HardwareInterface
 
-                    var os = os
+        Updates for KMP build        
+        {
+var os = os
 
         try {
             
@@ -80,7 +82,11 @@ open fun getInstance(os: GenericOperatingSystem)
 
                             throw Exception("No Hardware Imp for: " +os.getName())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -92,7 +98,11 @@ open fun getInstance(os: GenericOperatingSystem)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

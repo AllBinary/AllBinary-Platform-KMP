@@ -49,7 +49,11 @@ open public class IdGeneratorEntity : AbSqlBean
     val VALUE: String = "VALUE"
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -63,9 +67,11 @@ super.setTableName(tableName)
             
 open fun get(name: String)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
     var keysAndValues: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -99,15 +105,21 @@ keysAndValues!!.put(NAME, name)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+var values = values
 
         try {
             super.insert(values)
 logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.FAILURE, this, INSERT, e)
 }
 
 }
@@ -115,15 +127,21 @@ logUtil!!.put(this.commonStrings!!.SUCCESS, this, INSERT)
 
 open fun delete(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             super.deleteWhere(NAME, value)
 logUtil!!.put(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.FAILURE, this, commonStrings!!.delete, e)
 }
 
 }
@@ -131,12 +149,12 @@ logUtil!!.put(this.commonStrings!!.SUCCESS, this, commonStrings!!.delete)
 
 open fun update(name: String, value: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var name = name
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+var name = name
+var value = value
 
     var map: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -148,16 +166,22 @@ this.update(map)
 
 open fun update(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashMap = hashMap
+
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 super.updateWhere(NAME, hashMap!!.get(NAME as Object) as String, hashMap)
 }
 
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var returnStr: String = super.createTable(tableData)!!
 
 
@@ -170,7 +194,11 @@ open fun createTable()
 
 open fun dropTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

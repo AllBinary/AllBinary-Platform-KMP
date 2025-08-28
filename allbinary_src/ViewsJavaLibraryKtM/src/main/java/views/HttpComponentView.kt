@@ -54,9 +54,11 @@ open public class HttpComponentView : TransformInfoHttpComposite
     private var transformDocumentInterface: TransformDocumentInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -79,7 +81,11 @@ this.setTransformDocumentInterface(TransformHttpRequestDocumentFactory.getInstan
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,7 +95,11 @@ open fun getTypeId()
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,18 +109,22 @@ open fun getTransformDocumentInterface()
 
 open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var transformDocumentInterface = transformDocumentInterface
+
+        Updates for KMP build        
+        {
+var transformDocumentInterface = transformDocumentInterface
 this.transformDocumentInterface= transformDocumentInterface
 }
 
 
 open fun addDomNodeInterface(domNodeInterface: DomNodeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var domNodeInterface = domNodeInterface
+
+        Updates for KMP build        
+        {
+var domNodeInterface = domNodeInterface
 this.domNodeInterfaceVector!!.add(domNodeInterface)
 }
 
@@ -119,7 +133,11 @@ this.domNodeInterfaceVector!!.add(domNodeInterface)
             
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
         try {
             
     var size: Int = domNodeInterfaceVector!!.size!!
@@ -130,7 +148,11 @@ open fun toXmlDoc()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var domNodeInterface: DomNodeInterface = domNodeInterfaceVector!!.get(index) as DomNodeInterface
 
 this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!.toXmlNode(this.transformDocumentInterface!!.getDoc()))
@@ -142,7 +164,11 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.getTransformDocumentInterface()!!.getDoc()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -164,7 +190,11 @@ this.transformDocumentInterface!!.getBaseNode()!!.appendChild(domNodeInterface!!
             
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var document: Document = this.getTransformInfoInterface()!!.getDataDocument()!!
 
 
@@ -206,7 +236,11 @@ open fun getDoc()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.toXmlDoc()
 
@@ -222,7 +256,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         

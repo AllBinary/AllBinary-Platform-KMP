@@ -37,24 +37,32 @@ open public class ThirdPartyStore
     private val name: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun authorize(clientInformationInterface: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var clientInformationInterface = clientInformationInterface
+
+        Updates for KMP build        
+        {
+var clientInformationInterface = clientInformationInterface
 }
 
 
 open fun isAuthorized()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,16 +72,22 @@ open fun isAuthorized()
 
 open fun setAuthorized(authorized: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var authorized = authorized
+
+        Updates for KMP build        
+        {
+var authorized = authorized
 this.authorized= authorized
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

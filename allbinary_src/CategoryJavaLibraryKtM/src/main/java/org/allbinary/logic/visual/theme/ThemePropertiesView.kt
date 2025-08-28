@@ -39,9 +39,11 @@ open public class ThemePropertiesView
     private var themeInterface: ThemeInterface
 public constructor        (themeInterface: ThemeInterface)
             : super()
-        {
+        
 
-                    var themeInterface = themeInterface
+        Updates for KMP build        
+        {
+var themeInterface = themeInterface
 this.themeInterface= themeInterface
 }
 
@@ -50,9 +52,11 @@ this.themeInterface= themeInterface
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, ThemeData.getInstance()!!.NAME, this.themeInterface!!.toHashMap())!!
 

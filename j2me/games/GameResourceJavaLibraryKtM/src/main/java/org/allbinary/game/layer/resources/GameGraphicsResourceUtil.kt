@@ -46,7 +46,11 @@ open public class GameGraphicsResourceUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameGraphicsResourceUtil{
+: GameGraphicsResourceUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,11 +69,19 @@ open fun getInstance()
     private var name: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             this.name= this.getString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
@@ -82,7 +94,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
             
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var graphicsFeatureFactory: GraphicsFeatureFactory = GraphicsFeatureFactory.getInstance()!!
 
 
@@ -139,9 +155,11 @@ open fun getString()
             
 open fun getString(graphicsFeature: GraphicsFeature)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var graphicsFeature = graphicsFeature
+        Updates for KMP build        
+        {
+var graphicsFeature = graphicsFeature
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -230,7 +248,11 @@ stringBuffer!!.append(SPRITE)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

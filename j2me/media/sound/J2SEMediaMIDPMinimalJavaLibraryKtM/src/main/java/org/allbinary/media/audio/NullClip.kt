@@ -56,32 +56,34 @@ open public class NullClip
                 @Throws(LineUnavailableException::class)
             override fun open(format: AudioFormat, data: ByteArray, offset: Int, bufferSize: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var format = format
 
 
-                    var data = data
-
-
-                    var offset = offset
-
-
-                    var bufferSize = bufferSize
+        Updates for KMP build        
+        {
+var format = format
+var data = data
+var offset = offset
+var bufferSize = bufferSize
 }
 
 
                 @Throws(LineUnavailableException::class, IOException::class)
             override fun open(stream: AudioInputStream)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var stream = stream
+
+        Updates for KMP build        
+        {
+var stream = stream
 }
 
 override fun getFrameLength()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,7 +92,11 @@ override fun getFrameLength()
 
 override fun getMicrosecondLength()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,54 +105,80 @@ override fun getMicrosecondLength()
 
 override fun setFramePosition(frames: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frames = frames
+
+        Updates for KMP build        
+        {
+var frames = frames
 }
 
 override fun setMicrosecondPosition(microseconds: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var microseconds = microseconds
+
+        Updates for KMP build        
+        {
+var microseconds = microseconds
 }
 
 override fun setLoopPoints(start: Int, end: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var start = start
 
 
-                    var end = end
+        Updates for KMP build        
+        {
+var start = start
+var end = end
 }
 
 override fun loop(count: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var count = count
+
+        Updates for KMP build        
+        {
+var count = count
 }
 
 override fun drain()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun flush()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun start()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun stop()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -155,7 +187,11 @@ override fun isRunning()
 
 override fun isActive()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,7 +200,11 @@ override fun isActive()
 
 override fun getFormat()
         //nullable = true from not(false or (false and true)) = true
-: AudioFormat{
+: AudioFormat
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -173,7 +213,11 @@ override fun getFormat()
 
 override fun getBufferSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -182,7 +226,11 @@ override fun getBufferSize()
 
 override fun available()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -191,7 +239,11 @@ override fun available()
 
 override fun getFramePosition()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -200,7 +252,11 @@ override fun getFramePosition()
 
 override fun getLongFramePosition()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -209,7 +265,11 @@ override fun getLongFramePosition()
 
 override fun getMicrosecondPosition()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -218,7 +278,11 @@ override fun getMicrosecondPosition()
 
 override fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -227,7 +291,11 @@ override fun getLevel()
 
 override fun getLineInfo()
         //nullable = true from not(false or (false and true)) = true
-: Info{
+: Info
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -238,15 +306,27 @@ override fun getLineInfo()
                 @Throws(LineUnavailableException::class)
             override fun open()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun isOpen()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -255,7 +335,11 @@ override fun isOpen()
 
 override fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>{
+: Array<Control?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -264,9 +348,11 @@ override fun getControls()
 
 override fun isControlSupported(control: Type)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var control = control
+        Updates for KMP build        
+        {
+var control = control
 
 
 
@@ -276,9 +362,11 @@ override fun isControlSupported(control: Type)
 
 override fun getControl(control: Type)
         //nullable = true from not(false or (false and false)) = true
-: Control{
+: Control
 
-                    var control = control
+        Updates for KMP build        
+        {
+var control = control
 
 
 
@@ -288,16 +376,20 @@ override fun getControl(control: Type)
 
 override fun addLineListener(listener: LineListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var listener = listener
+
+        Updates for KMP build        
+        {
+var listener = listener
 }
 
 override fun removeLineListener(listener: LineListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var listener = listener
+
+        Updates for KMP build        
+        {
+var listener = listener
 }
 
 

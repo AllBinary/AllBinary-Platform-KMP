@@ -38,7 +38,11 @@ open public class GyroSensorUpdateProcessor : Processor {
                 @Throws(Exception::class)
             override fun process()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

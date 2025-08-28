@@ -37,7 +37,11 @@ open public class GameSpeed
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameSpeed{
+: GameSpeed
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +58,11 @@ open fun getInstance()
         
 open fun getSpeed()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var speedGameConfiguration: GameConfiguration = GameConfigurationCentral.getInstance()!!.SPEED
 
 
@@ -67,7 +75,11 @@ open fun getSpeed()
 
 open fun getDelay()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var speedGameConfiguration: GameConfiguration = GameConfigurationCentral.getInstance()!!.SPEED
 
 

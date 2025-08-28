@@ -30,19 +30,23 @@ import org.allbinary.util.CircularIndexUtil
 
 open public class AllBinaryLayerCircularPool : BaseCircularPool {
         
-protected constructor        (){}
+protected constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun init(allbinaryLayerFactoryInterface: AllBinaryLayerFactoryInterface, total: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
 
 
-                    var total = total
+        Updates for KMP build        
+        {
+var allbinaryLayerFactoryInterface = allbinaryLayerFactoryInterface
+var total = total
 this.circularIndexUtil= CircularIndexUtil.getInstance(total)
 OBJECT_ARRAY= arrayOfNulls(total)
 
@@ -51,7 +55,11 @@ OBJECT_ARRAY= arrayOfNulls(total)
 
                         for (localIndex in 0 until total)
 
-        {OBJECT_ARRAY[localIndex]= allbinaryLayerFactoryInterface!!.getInstance()
+        
+
+        Updates for KMP build        
+        {
+OBJECT_ARRAY[localIndex]= allbinaryLayerFactoryInterface!!.getInstance()
 }
 
 }

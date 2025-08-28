@@ -38,12 +38,12 @@ open public class ImageProcessorInput
     private var files: Array<File?>
 public constructor        (files: Array<File?>, bufferedImageArray: Array<BufferedImage?>)                        
 
-                            : super(){
+                            : super()
 
-                    var files = files
-
-
-                    var bufferedImageArray = bufferedImageArray
+        Updates for KMP build        
+        {
+var files = files
+var bufferedImageArray = bufferedImageArray
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,7 +55,11 @@ this.files= files
 
 open fun getBufferedImageArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,7 +69,11 @@ open fun getBufferedImageArray()
 
 open fun getFiles()
         //nullable = true from not(false or (false and true)) = true
-: Array<File?>{
+: Array<File?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

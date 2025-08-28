@@ -63,12 +63,12 @@ open public class BasicAI : ArtificialIntelligence
     private var lastKey: Int =  -1
 
     private val gameKeyEventFactory: GameKeyEventFactory = GameKeyEventFactory.getInstance()!!
-public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput){
+public constructor        (ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)
 
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 this.ownerLayerInterface= ownerLayerInterface
 this.gameInput= gameInput
 }
@@ -77,9 +77,11 @@ this.gameInput= gameInput
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
 
 
@@ -91,9 +93,11 @@ this.gameInput= gameInput
             
 open fun processAI(key: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var key = key
+
+        Updates for KMP build        
+        {
+var key = key
 
     
                         if(key !=  -1)
@@ -108,16 +112,22 @@ open fun processAI(key: Int)
 
 open fun setLastKey(lastKey: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var lastKey = lastKey
+
+        Updates for KMP build        
+        {
+var lastKey = lastKey
 this.lastKey= lastKey
 }
 
 
 open fun getLastKey()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,7 +137,11 @@ open fun getLastKey()
 
 open fun getOwnerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -137,7 +151,11 @@ open fun getOwnerLayerInterface()
 
 open fun getGameInput()
         //nullable = true from not(false or (false and true)) = true
-: GameInput{
+: GameInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -147,7 +165,11 @@ open fun getGameInput()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -156,7 +178,11 @@ open fun getName()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
@@ -172,7 +198,11 @@ stringBuffer!!.append(CanvasUtil.getKeyName(this.getLastKey()))
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

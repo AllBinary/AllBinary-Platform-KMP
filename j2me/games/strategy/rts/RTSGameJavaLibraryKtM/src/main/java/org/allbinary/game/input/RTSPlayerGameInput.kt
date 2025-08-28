@@ -80,27 +80,17 @@ open public class RTSPlayerGameInput : PlayerGameInput {
     private val layerPositionFinderInterface: LayerPositionFinderInterface
 public constructor        (gameCanvas: AllBinaryGameCanvas, inputList: BasicArrayList, playerInputId: Int, towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerPositionFinderInterface: LayerPositionFinderInterface, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
-                            : super(inputList, playerInputId){
+                            : super(inputList, playerInputId)
 
-                    var gameCanvas = gameCanvas
-
-
-                    var inputList = inputList
-
-
-                    var playerInputId = playerInputId
-
-
-                    var towerInfoPaintable = towerInfoPaintable
-
-
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerPositionFinderInterface = layerPositionFinderInterface
-
-
-                    var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
+        Updates for KMP build        
+        {
+    //var gameCanvas = gameCanvas
+    //var inputList = inputList
+    //var playerInputId = playerInputId
+    //var towerInfoPaintable = towerInfoPaintable
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerPositionFinderInterface = layerPositionFinderInterface
+    //var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -137,9 +127,11 @@ this.layerPositionFinderInterface= layerPositionFinderInterface
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 this.selectedRTSLayerPlayerGameInput!!.setAllBinaryGameLayerManager(allBinaryGameLayerManager)
 
     
@@ -157,15 +149,21 @@ this.selectedRTSLayerPlayerGameInput!!.setAllBinaryGameLayerManager(allBinaryGam
 
 open fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var displayChangeEvent = displayChangeEvent
+
+        Updates for KMP build        
+        {
+var displayChangeEvent = displayChangeEvent
 
         try {
             logUtil!!.put(commonStrings!!.START, this, "onDisplayChangeEvent")
 this.getRTSLayerInfoPaintable()!!.update()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDisplayChangeEvent", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onDisplayChangeEvent", e)
 }
 
 }
@@ -175,7 +173,11 @@ this.getRTSLayerInfoPaintable()!!.update()
             
 open fun left()
         //nullable = true from not(false or (false and true)) = true
-{this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Canvas.LEFT)
+
+
+        Updates for KMP build        
+        {
+this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Canvas.LEFT)
 }
 
 
@@ -183,13 +185,21 @@ open fun left()
             
 open fun right()
         //nullable = true from not(false or (false and true)) = true
-{this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Canvas.RIGHT)
+
+
+        Updates for KMP build        
+        {
+this.rtsPlayerLayerInterface!!.getCurrentScrollSelectionForm()!!.processInput(Canvas.RIGHT)
 }
 
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-{this.inputProcessorArray[Canvas.LEFT]= RTSPlayerLeftGameInputProcessor(this)
+
+
+        Updates for KMP build        
+        {
+this.inputProcessorArray[Canvas.LEFT]= RTSPlayerLeftGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_NUM0]= this.inputProcessorArray[Canvas.LEFT]!!
 this.inputProcessorArray[Canvas.RIGHT]= RTSPlayerRightGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_POUND]= this.inputProcessorArray[Canvas.RIGHT]!!
@@ -209,9 +219,11 @@ GameInputProcessorUtil.init(this.removeInputProcessorArray)
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+var layerManager = layerManager
 
         try {
             this.processMotionInput(layerManager)
@@ -227,7 +239,11 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var gameKeyEvent: GameKeyEvent = inputList!!.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
@@ -252,7 +268,11 @@ this.removeInputProcessorArray[key]!!.process(layerManager, gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
 }
 
 }
@@ -262,9 +282,11 @@ this.removeInputProcessorArray[key]!!.process(layerManager, gameKeyEvent)
             
 open fun processMotionInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
 }
 
 
@@ -272,9 +294,11 @@ open fun processMotionInput(layerManager: AllBinaryLayerManager)
             
 open fun select(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+    //var motionGestureEvent = motionGestureEvent
 
     var point: GPoint = motionGestureEvent!!.getCurrentPoint()!!
 
@@ -342,21 +366,23 @@ logUtil!!.put(StringMaker().
             
 open fun setSelectedRTSLayer(rtsLayer: RTSLayer, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var rtsLayer = rtsLayer
 
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
+var geographicMapCellPosition = geographicMapCellPosition
 this.getSelectedBuildingPlayerGameInput()!!.setSelectedRTSLayer(rtsLayer)
 }
 
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var geographicMapCellPosition: GeographicMapCellPosition = this.getSelectedRtsFormInput()!!.getSelectedGeographicCellPosition()!!
 
@@ -390,7 +416,11 @@ graphics.setColor(BasicColorFactory.getInstance()!!.GREEN.toInt())
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: RTSLayer = list.get(index) as RTSLayer
 
 width= rtsLayer!!.getWidth()
@@ -422,12 +452,20 @@ graphics.drawRect(point.getX() -allBinaryTiledLayer!!.getXP(), point.getY() -all
 
 open fun updatePaintable()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getSelectedBuildingPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
-: SelectedRTSLayersPlayerGameInput{
+: SelectedRTSLayersPlayerGameInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -437,7 +475,11 @@ open fun getSelectedBuildingPlayerGameInput()
 
 open fun getSelectedRtsFormInput()
         //nullable = true from not(false or (false and true)) = true
-: RTSFormInput{
+: RTSFormInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -447,9 +489,11 @@ open fun getSelectedRtsFormInput()
 
 open fun setSelectedRtsFormInput(selectedRtsFormInput: RTSFormInput)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedRtsFormInput = selectedRtsFormInput
+
+        Updates for KMP build        
+        {
+var selectedRtsFormInput = selectedRtsFormInput
 logUtil!!.put(StringMaker().
                             append("RTSFormInput: ")!!.append(StringUtil.getInstance()!!.toString(selectedRtsFormInput))!!.toString(), this, "setSelectedRtsFormInput")
 this.selectedRtsFormInput= selectedRtsFormInput
@@ -458,7 +502,11 @@ this.selectedRtsFormInput= selectedRtsFormInput
 
 open fun getRtsPlayerLayerInterface()
         //nullable = true from not(false or (false and true)) = true
-: RTSPlayerLayerInterface{
+: RTSPlayerLayerInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -468,7 +516,11 @@ open fun getRtsPlayerLayerInterface()
 
 open fun getRTSLayerInfoPaintable()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayerInfoPaintable{
+: RTSLayerInfoPaintable
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -478,7 +530,11 @@ open fun getRTSLayerInfoPaintable()
 
 open fun getMotionGestureInputList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -488,7 +544,11 @@ open fun getMotionGestureInputList()
 
 open fun getGameCanvas()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryGameCanvas{
+: AllBinaryGameCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -498,7 +558,11 @@ open fun getGameCanvas()
 
 open fun isIsSingleKeyProcessing()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -508,7 +572,11 @@ open fun isIsSingleKeyProcessing()
 
 open fun getScrollPlayerGameInput()
         //nullable = true from not(false or (false and true)) = true
-: ScrollMapPlayerGameInput{
+: ScrollMapPlayerGameInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

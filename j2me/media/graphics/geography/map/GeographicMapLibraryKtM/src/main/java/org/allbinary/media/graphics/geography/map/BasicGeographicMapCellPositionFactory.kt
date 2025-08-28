@@ -50,9 +50,11 @@ open public class BasicGeographicMapCellPositionFactory
     private val tiledLayer: AllBinaryTiledLayer
 protected constructor        (geographicMapInterface: BasicGeographicMap)
             : super()
-        {
+        
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
 this.geographicMapInterface= geographicMapInterface
 this.geographicMapCellPositionFactoryInterface= this.geographicMapInterface!!.getGeographicMapCellPositionFactoryInterface()
 this.tiledLayer= this.geographicMapInterface!!.getAllBinaryTiledLayer()
@@ -68,7 +70,11 @@ this.init()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var tiledLayer: AllBinaryTiledLayer = this.tiledLayer
 
 
@@ -89,13 +95,21 @@ open fun init()
 
                         for (column in 0 until columns)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in 0 until rows)
 
-        {this.createInstance(column, row, width, height)
+        
+
+        Updates for KMP build        
+        {
+this.createInstance(column, row, width, height)
 }
 
 }
@@ -107,9 +121,11 @@ open fun init()
             
 open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMapCellPositionFactoryInitVisitorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCelPositionFactoryInitVisitorInterface = geographicMapCelPositionFactoryInitVisitorInterface
+
+        Updates for KMP build        
+        {
+    //var geographicMapCelPositionFactoryInitVisitorInterface = geographicMapCelPositionFactoryInitVisitorInterface
 
     var tiledLayer: AllBinaryTiledLayer = this.tiledLayer
 
@@ -130,20 +146,32 @@ open fun visit(geographicMapCelPositionFactoryInitVisitorInterface: GeographicMa
 
                         for (column in 0 until columns)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (row in 0 until rows)
 
-        {cellPosition= this.getInstance(column, row)
+        
+
+        Updates for KMP build        
+        {
+cellPosition= this.getInstance(column, row)
 geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosition)
 }
 
 }
 
 } catch(e: Exception)
-            {logUtil!!.put(StringMaker().
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(StringMaker().
                             append("[")!!.append(rows)!!.append("][")!!.append(columns)!!.append("]")!!.toString(), this, "visit", e)
 
 
@@ -158,12 +186,12 @@ geographicMapCelPositionFactoryInitVisitorInterface!!.visit(tiledLayer, cellPosi
             
 open fun getInstance(i_column: Int, i_row: Int)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var i_column = i_column
-
-
-                    var i_row = i_row
+        Updates for KMP build        
+        {
+    //var i_column = i_column
+    //var i_row = i_row
 
 
 
@@ -176,9 +204,11 @@ open fun getInstance(i_column: Int, i_row: Int)
             
 open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var anotherMapGeographicMapCellPosition = anotherMapGeographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var anotherMapGeographicMapCellPosition = anotherMapGeographicMapCellPosition
 
 
 
@@ -191,18 +221,14 @@ open fun getInstance(anotherMapGeographicMapCellPosition: GeographicMapCellPosit
             
 open fun createInstance(i_column: Int, i_row: Int, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var i_column = i_column
-
-
-                    var i_row = i_row
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var i_column = i_column
+    //var i_row = i_row
+    //var width = width
+    //var height = height
 
     var cellPosition: GeographicMapCellPosition = geographicMapCellPositionArray[i_row]!![i_column]!!
 
@@ -228,7 +254,11 @@ geographicMapCellPositionArray[i_row]!![i_column]= cellPosition
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -238,7 +268,11 @@ open fun getColumns()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

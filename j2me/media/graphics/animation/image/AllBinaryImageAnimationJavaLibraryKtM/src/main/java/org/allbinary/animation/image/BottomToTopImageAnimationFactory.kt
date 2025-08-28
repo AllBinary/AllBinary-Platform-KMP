@@ -33,9 +33,11 @@ open public class BottomToTopImageAnimationFactory : BaseImageAnimationFactory {
         
 public constructor        (image: Image)                        
 
-                            : this(image, AnimationBehaviorFactory.getInstance()){
+                            : this(image, AnimationBehaviorFactory.getInstance())
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,12 +46,12 @@ public constructor        (image: Image)
 
 public constructor        (image: Image, animationBehaviorFactory: AnimationBehaviorFactory)                        
 
-                            : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory){
+                            : super(image, image.getWidth(), image.getHeight(), animationBehaviorFactory)
 
-                    var image = image
-
-
-                    var animationBehaviorFactory = animationBehaviorFactory
+        Updates for KMP build        
+        {
+    //var image = image
+    //var animationBehaviorFactory = animationBehaviorFactory
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,9 +62,11 @@ public constructor        (image: Image, animationBehaviorFactory: AnimationBeha
                 @Throws(Exception::class)
             override fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
     var scaledImage: Image = animationFactoryImageScaleUtil!!.createImage(this.getImage(), this.animationFactoryInitializationVisitor!!.width, this.animationFactoryInitializationVisitor!!.height, this.scaleProperties!!.scaleWidth, this.scaleProperties!!.scaleHeight)!!
 

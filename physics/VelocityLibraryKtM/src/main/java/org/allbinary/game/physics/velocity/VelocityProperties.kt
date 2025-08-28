@@ -33,19 +33,23 @@ open public class VelocityProperties : BasicVelocityProperties
     private var maxForwardVelocity: Int= 0
 
     private var maxReverseVelocity: Int= 0
-public constructor        (maxForwardVelocity: Int, maxReverseVelocity: Int){
+public constructor        (maxForwardVelocity: Int, maxReverseVelocity: Int)
 
-                    var maxForwardVelocity = maxForwardVelocity
-
-
-                    var maxReverseVelocity = maxReverseVelocity
+        Updates for KMP build        
+        {
+var maxForwardVelocity = maxForwardVelocity
+var maxReverseVelocity = maxReverseVelocity
 this.setMaxForwardVelocity(maxForwardVelocity)
 this.setMaxReverseVelocity(maxReverseVelocity)
 }
 
 override fun getMaxForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,15 +58,21 @@ override fun getMaxForwardVelocity()
 
 override fun setMaxForwardVelocity(maxForwardVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxForwardVelocity = maxForwardVelocity
+
+        Updates for KMP build        
+        {
+var maxForwardVelocity = maxForwardVelocity
 this.maxForwardVelocity= maxForwardVelocity
 }
 
 override fun getMaxReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,50 +81,80 @@ override fun getMaxReverseVelocity()
 
 override fun setMaxReverseVelocity(maxReverseVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxReverseVelocity = maxReverseVelocity
+
+        Updates for KMP build        
+        {
+var maxReverseVelocity = maxReverseVelocity
 this.maxReverseVelocity= maxReverseVelocity
 }
 
 override fun limitMaxXYForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxXYVelocity(this.getMaxForwardVelocity())
+
+
+        Updates for KMP build        
+        {
+this.limitMaxXYVelocity(this.getMaxForwardVelocity())
 }
 
 override fun limitMaxXYReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxXYVelocity(this.getMaxReverseVelocity())
+
+
+        Updates for KMP build        
+        {
+this.limitMaxXYVelocity(this.getMaxReverseVelocity())
 }
 
 
 open fun limitMaxYForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxYVelocity(this.getMaxForwardVelocity())
+
+
+        Updates for KMP build        
+        {
+this.limitMaxYVelocity(this.getMaxForwardVelocity())
 }
 
 
 open fun limitMaxYReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxYVelocity(this.getMaxReverseVelocity())
+
+
+        Updates for KMP build        
+        {
+this.limitMaxYVelocity(this.getMaxReverseVelocity())
 }
 
 
 open fun limitMaxXForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxXVelocity(this.getMaxForwardVelocity())
+
+
+        Updates for KMP build        
+        {
+this.limitMaxXVelocity(this.getMaxForwardVelocity())
 }
 
 
 open fun limitMaxXReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxXVelocity(this.getMaxReverseVelocity())
+
+
+        Updates for KMP build        
+        {
+this.limitMaxXVelocity(this.getMaxReverseVelocity())
 }
 
 
 open fun isOverXYMaxForwardVelocity()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,7 +164,11 @@ open fun isOverXYMaxForwardVelocity()
 
 open fun isOverXYMaxReverseVelocity()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -133,15 +177,21 @@ open fun isOverXYMaxReverseVelocity()
 
 override fun limitXYToForwardAndReverseMaxVelocity()
         //nullable = true from not(false or (false and true)) = true
-{this.limitMaxXYForwardVelocity()
+
+
+        Updates for KMP build        
+        {
+this.limitMaxXYForwardVelocity()
 this.limitMaxXYReverseVelocity()
 }
 
 override fun limitMaxXYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxVelocity = maxVelocity
+
+        Updates for KMP build        
+        {
+var maxVelocity = maxVelocity
 this.limitMaxXVelocity(maxVelocity)
 this.limitMaxYVelocity(maxVelocity)
 }
@@ -149,9 +199,11 @@ this.limitMaxYVelocity(maxVelocity)
 
 open fun limitMaxPositiveYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxVelocity = maxVelocity
+
+        Updates for KMP build        
+        {
+var maxVelocity = maxVelocity
 
     
                         if(this.velocityYBasicDecimal!!.getUnscaled() > maxVelocity)
@@ -166,9 +218,11 @@ open fun limitMaxPositiveYVelocity(maxVelocity: Int)
 
 open fun limitMaxNegativeYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxVelocity = maxVelocity
+
+        Updates for KMP build        
+        {
+var maxVelocity = maxVelocity
 
     
                         if(this.velocityYBasicDecimal!!.getUnscaled() <  -maxVelocity)
@@ -183,9 +237,11 @@ open fun limitMaxNegativeYVelocity(maxVelocity: Int)
 
 open fun limitMaxYVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxVelocity = maxVelocity
+
+        Updates for KMP build        
+        {
+var maxVelocity = maxVelocity
 this.limitMaxPositiveYVelocity(maxVelocity)
 this.limitMaxNegativeYVelocity(maxVelocity)
 }
@@ -193,9 +249,11 @@ this.limitMaxNegativeYVelocity(maxVelocity)
 
 open fun limitMaxXVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxVelocity = maxVelocity
+
+        Updates for KMP build        
+        {
+var maxVelocity = maxVelocity
 
     
                         if(this.velocityXBasicDecimal!!.getUnscaled() > maxVelocity)
@@ -219,9 +277,11 @@ open fun limitMaxXVelocity(maxVelocity: Int)
 
 open fun isOverXYMaxVelocity(maxVelocity: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var maxVelocity = maxVelocity
+        Updates for KMP build        
+        {
+var maxVelocity = maxVelocity
 
     
                         if(this.velocityXBasicDecimal!!.getUnscaled() > maxVelocity)
@@ -283,30 +343,26 @@ open fun isOverXYMaxVelocity(maxVelocity: Int)
 
 override fun setVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+var magnitude = magnitude
+var angle = angle
+var otherAngle = otherAngle
 super.setVelocity(magnitude, angle, otherAngle)
 this.limitXYToForwardAndReverseMaxVelocity()
 }
 
 override fun addVelocity(magnitude: Long, angle: Int, otherAngle: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var magnitude = magnitude
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
+        Updates for KMP build        
+        {
+var magnitude = magnitude
+var angle = angle
+var otherAngle = otherAngle
 super.addVelocity(magnitude, angle, otherAngle)
 this.limitXYToForwardAndReverseMaxVelocity()
 }

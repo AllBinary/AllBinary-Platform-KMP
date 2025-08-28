@@ -38,7 +38,11 @@ open public class PaymentGatewaysData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

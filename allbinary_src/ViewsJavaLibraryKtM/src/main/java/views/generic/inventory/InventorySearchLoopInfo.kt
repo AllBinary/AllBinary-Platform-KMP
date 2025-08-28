@@ -52,7 +52,11 @@ open public class InventorySearchLoopInfo
     private val LAST: String = " last: "
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CURRENT)

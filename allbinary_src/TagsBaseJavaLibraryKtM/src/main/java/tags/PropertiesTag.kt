@@ -34,7 +34,11 @@ open public class PropertiesTag : CommandTag {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private var propertiesHashMap: HashMap<Any, Any>
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         
@@ -49,7 +53,11 @@ this.propertiesHashMap= HashMap<Any, Any>()
 
 open fun getPropertiesHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +67,11 @@ open fun getPropertiesHashMap()
 
 open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         

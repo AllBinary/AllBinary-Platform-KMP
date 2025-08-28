@@ -32,9 +32,15 @@ open fun getEventHandler()
         //nullable = true from not(false or (false and true)) = true
 : BasicEventHandlerInterface
 
+        Updates for KMP build        
+        
+
 open fun setEventHandler(basicEventHandlerInterface: BasicEventHandlerInterface)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

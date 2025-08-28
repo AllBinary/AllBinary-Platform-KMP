@@ -41,7 +41,11 @@ open public class InputAutomationModuleFactoryInterface
         
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,7 +55,11 @@ open fun getName()
 
 open fun getConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,7 +69,11 @@ open fun getConfigurationJPanel()
 
 open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +85,11 @@ open fun getHelpSet()
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RunnableInterface{
+: RunnableInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

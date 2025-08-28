@@ -39,19 +39,23 @@ open public class UserRole
     private var userFactoryInterface: UserFactoryInterface
 protected constructor        (aBasicUserRole: BasicUserRole, aUserFactoryInterface: UserFactoryInterface)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var aBasicUserRole = aBasicUserRole
-
-
-                    var aUserFactoryInterface = aUserFactoryInterface
+var aBasicUserRole = aBasicUserRole
+var aUserFactoryInterface = aUserFactoryInterface
 this.basicUserRole= aBasicUserRole
 this.userFactoryInterface= aUserFactoryInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,7 +65,11 @@ override fun toString()
 
 open fun getBasicUserRole()
         //nullable = true from not(false or (false and true)) = true
-: BasicUserRole{
+: BasicUserRole
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -73,7 +81,11 @@ open fun getBasicUserRole()
             
 open fun getUserFactory()
         //nullable = true from not(false or (false and true)) = true
-: UserFactoryInterface{
+: UserFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,7 +95,11 @@ open fun getUserFactory()
 
 open fun getSessionTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +109,11 @@ open fun getSessionTimeout()
 
 open fun getSessionInactivityTimeout()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -41,7 +41,11 @@ open public class CanvasTrimUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CanvasTrimUtil{
+: CanvasTrimUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,24 +68,16 @@ open fun getInstance()
             
 open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftReduction: Int, cutCanvasFromTopReduction: Int, cutCanvasFromRightReduction: Int, cutCanvasFromBottomReduction: Int, visitor: ImageProcessedVisitor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageProcessorInput = imageProcessorInput
 
 
-                    var cutCanvasFromLeftReduction = cutCanvasFromLeftReduction
-
-
-                    var cutCanvasFromTopReduction = cutCanvasFromTopReduction
-
-
-                    var cutCanvasFromRightReduction = cutCanvasFromRightReduction
-
-
-                    var cutCanvasFromBottomReduction = cutCanvasFromBottomReduction
-
-
-                    var visitor = visitor
+        Updates for KMP build        
+        {
+    //var imageProcessorInput = imageProcessorInput
+    //var cutCanvasFromLeftReduction = cutCanvasFromLeftReduction
+    //var cutCanvasFromTopReduction = cutCanvasFromTopReduction
+    //var cutCanvasFromRightReduction = cutCanvasFromRightReduction
+    //var cutCanvasFromBottomReduction = cutCanvasFromBottomReduction
+    //var visitor = visitor
 
     var bufferedImageArray: Array<BufferedImage?> = imageProcessorInput!!.getBufferedImageArray()!!
 
@@ -101,7 +97,11 @@ open fun process(imageProcessorInput: ImageProcessorInput, cutCanvasFromLeftRedu
 
                         for (index in 0 until size)
 
-        {bufferedImage= bufferedImageArray[index]!!
+        
+
+        Updates for KMP build        
+        {
+bufferedImage= bufferedImageArray[index]!!
 subBufferedImageArray[index]= bufferedImage!!.getSubimage(cutCanvasFromLeftReduction, cutCanvasFromTopReduction, bufferedImage!!.getWidth() -cutCanvasFromLeftReduction -cutCanvasFromRightReduction, bufferedImage!!.getHeight() -cutCanvasFromTopReduction -cutCanvasFromBottomReduction)
 visitor.visit(subBufferedImageArray[index]!!, stringUtil!!.EMPTY_STRING, index)
 }

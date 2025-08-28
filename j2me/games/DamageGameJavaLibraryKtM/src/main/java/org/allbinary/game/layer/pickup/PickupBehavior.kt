@@ -53,21 +53,23 @@ open public class PickupBehavior
     private val ownerLayerInterface: CollidableCompositeLayer
 public constructor        (ownerLayerInterface: CollidableCompositeLayer, countedIndex: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var countedIndex = countedIndex
+    //var ownerLayerInterface = ownerLayerInterface
+    //var countedIndex = countedIndex
 this.ownerLayerInterface= ownerLayerInterface
 this.countedIndex= countedIndex
 }
 
 override fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pickupProcessorInterface = pickupProcessorInterface
+
+        Updates for KMP build        
+        {
+    //var pickupProcessorInterface = pickupProcessorInterface
 
         try {
             
@@ -83,7 +85,11 @@ override fun doPickup(pickupProcessorInterface: PickupProcessorInterface)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
@@ -93,9 +99,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 
 override fun doPickup(pickupLayerInterface: PickedUpLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pickupLayerInterface = pickupLayerInterface
+
+        Updates for KMP build        
+        {
+var pickupLayerInterface = pickupLayerInterface
 
         try {
             
@@ -143,7 +151,11 @@ collidableDestroyableDamageableLayer!!.addPart(pickedUpLayerInterfaceFactoryInte
                             
 pickupLayerInterface!!.setPickedUp()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
@@ -154,9 +166,11 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, "doPickup", e)
 
 open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface
 
     var partIndex: Int = countedPickedUpLayerInterfaceFactoryInterface!!.getId() +this.countedIndex
 
@@ -166,12 +180,12 @@ this.add(countedPickedUpLayerInterfaceFactoryInterface, partIndex)
 
 open fun add(countedPickedUpLayerInterfaceFactoryInterface: CountedPickedUpLayerInterfaceFactoryInterface, partIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface
 
 
-                    var partIndex = partIndex
+        Updates for KMP build        
+        {
+    //var countedPickedUpLayerInterfaceFactoryInterface = countedPickedUpLayerInterfaceFactoryInterface
+    //var partIndex = partIndex
 
     var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayerInterface as CollidableDestroyableDamageableLayer
 
@@ -184,9 +198,11 @@ countedLayerInterfaceFactory!!.setTotal(countedLayerInterfaceFactory!!.getTotal(
 
 open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: Array<PickedUpLayerType?>)
         //nullable = true from not(false or (false and false)) = true
-: CountedLayerInterfaceFactoryPart{
+: CountedLayerInterfaceFactoryPart
 
-                    var pickedUpLayerTypeArray = pickedUpLayerTypeArray
+        Updates for KMP build        
+        {
+var pickedUpLayerTypeArray = pickedUpLayerTypeArray
 
     var collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer = this.ownerLayerInterface as CollidableDestroyableDamageableLayer
 
@@ -209,7 +225,11 @@ open fun getFirstAvailableCountedLayerInterfaceFactory(pickedUpLayerTypeArray: A
 
                         for (index in this.countedIndex until size)
 
-        {nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
+        
+
+        Updates for KMP build        
+        {
+nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
 countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCountedPickedUpLayerInterfaceFactory()
 
 
@@ -217,7 +237,11 @@ countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCoun
 
                         for (index2 in pickedUpLayerTypeArray!!.size  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(countedPickedUpLayerInterfaceFactory!!.getPickedUpLayerType() == pickedUpLayerTypeArray[index2])
                         
@@ -254,9 +278,11 @@ countedPickedUpLayerInterfaceFactory= nextCountedLayerInterfaceFactory!!.getCoun
             
 open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: CountedLayerInterfaceFactoryPart{
+: CountedLayerInterfaceFactoryPart
 
-                    var slotIndex = slotIndex
+        Updates for KMP build        
+        {
+var slotIndex = slotIndex
 
     var currentSlot: Int = 0
 
@@ -279,7 +305,11 @@ open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
 
                         for (index in this.countedIndex until size)
 
-        {nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
+        
+
+        Updates for KMP build        
+        {
+nextCountedLayerInterfaceFactory= collidableDestroyableDamageableLayer!!.getPartInterfaceArray()[index]!! as CountedLayerInterfaceFactoryPart
 
     
                         if(nextCountedLayerInterfaceFactory!!.getTotal() > 0)
@@ -318,7 +348,11 @@ open fun getCountedLayerInterfaceFactoryForSlot(slotIndex: Int)
 
 open fun getCountedIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

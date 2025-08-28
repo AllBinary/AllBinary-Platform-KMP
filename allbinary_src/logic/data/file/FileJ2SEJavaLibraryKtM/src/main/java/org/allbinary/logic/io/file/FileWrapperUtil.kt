@@ -37,9 +37,11 @@ open public class FileWrapperUtil
             
 open fun wrapFiles(files: Array<Any?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<AbFile?>{
+: Array<AbFile?>
 
-                    var files = files
+        Updates for KMP build        
+        {
+var files = files
 
         try {
             
@@ -51,7 +53,11 @@ open fun wrapFiles(files: Array<Any?>)
 
                         for (index in files.size -1 downTo 0)
 
-        {abFileArray[index]= AbFile(files[index]!! as File)
+        
+
+        Updates for KMP build        
+        {
+abFileArray[index]= AbFile(files[index]!! as File)
 }
 
 
@@ -60,7 +66,11 @@ open fun wrapFiles(files: Array<Any?>)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abFileArray
 } catch(e: Exception)
-            {PreLogUtil.put("Exception Wrapping Files", "FileWrapperUtil", "wrapFiles", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Exception Wrapping Files", "FileWrapperUtil", "wrapFiles", e)
 
 
 
@@ -73,9 +83,11 @@ open fun wrapFiles(files: Array<Any?>)
 
 open fun wrapFile(file: File)
         //nullable = true from not(false or (false and false)) = true
-: AbFile{
+: AbFile
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
         try {
             
@@ -84,7 +96,11 @@ open fun wrapFile(file: File)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbFile(file)
 } catch(e: Exception)
-            {PreLogUtil.put("Exception Wrapping File", "FileWrapperUtil", "wrapFile", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Exception Wrapping File", "FileWrapperUtil", "wrapFile", e)
 
 
 

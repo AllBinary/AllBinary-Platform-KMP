@@ -40,18 +40,14 @@ open public class ImmediateCommandFormInputProcessor : CommandFormInputProcessor
     var gameCommandCanvas: GameCommandCanvas
 public constructor        (gameKeyEventList: BasicArrayList, playerInputId: Int, gameCommandCanvas: GameCommandCanvas, form: ScrollSelectionForm)                        
 
-                            : super(gameKeyEventList, playerInputId, gameCommandCanvas, form){
+                            : super(gameKeyEventList, playerInputId, gameCommandCanvas, form)
 
-                    var gameKeyEventList = gameKeyEventList
-
-
-                    var playerInputId = playerInputId
-
-
-                    var gameCommandCanvas = gameCommandCanvas
-
-
-                    var form = form
+        Updates for KMP build        
+        {
+var gameKeyEventList = gameKeyEventList
+var playerInputId = playerInputId
+var gameCommandCanvas = gameCommandCanvas
+var form = form
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,9 +58,11 @@ this.gameCommandCanvas= gameCommandCanvas
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 
         try {
             super.onPressGameKeyEvent(gameKeyEvent)
@@ -79,7 +77,11 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_PRESS_GAME_KEY, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_PRESS_GAME_KEY, e)
 }
 
 }
@@ -87,9 +89,11 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 
         try {
             super.onDownGameKeyEvent(gameKeyEvent)
@@ -104,7 +108,11 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_DOWN_GAME_KEY, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_DOWN_GAME_KEY, e)
 }
 
 }
@@ -112,9 +120,11 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 
         try {
             super.onUpGameKeyEvent(gameKeyEvent)
@@ -129,16 +139,22 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_UP_GAME_KEY, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.ON_UP_GAME_KEY, e)
 }
 
 }
 
 override fun onMotionGestureEvent(motionGestureEvent: MotionGestureEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureEvent = motionGestureEvent
+
+        Updates for KMP build        
+        {
+var motionGestureEvent = motionGestureEvent
 
         try {
             super.onMotionGestureEvent(motionGestureEvent)
@@ -153,7 +169,11 @@ this.gameCommandCanvas!!.repaintBehavior!!.onChangeRepaint(this.getCanvas())
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMotionGestureEvent", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onMotionGestureEvent", e)
 }
 
 }

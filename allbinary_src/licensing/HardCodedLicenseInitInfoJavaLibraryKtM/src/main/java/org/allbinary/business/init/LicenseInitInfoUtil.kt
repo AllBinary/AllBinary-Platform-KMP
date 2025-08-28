@@ -37,7 +37,11 @@ open public class LicenseInitInfoUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LicenseInitInfoUtil{
+: LicenseInitInfoUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,14 +62,20 @@ open fun getInstance()
 
 open fun setFilePath(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var filePath = filePath
+
+        Updates for KMP build        
+        {
+var filePath = filePath
 }
 
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
@@ -73,9 +83,11 @@ private constructor        ()
 
 open fun write(initData: LicenseInitInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var initData = initData
+
+        Updates for KMP build        
+        {
+var initData = initData
 }
 
 
@@ -84,7 +96,11 @@ open fun write(initData: LicenseInitInfo)
 
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-: LicenseInitInfo{
+: LicenseInitInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,9 +113,11 @@ open fun read()
 
 open fun readAgain(initializeCounter: Int)
         //nullable = true from not(false or (false and false)) = true
-: LicenseInitInfo{
+: LicenseInitInfo
 
-                    var initializeCounter = initializeCounter
+        Updates for KMP build        
+        {
+var initializeCounter = initializeCounter
 
     var licenseInitInfo: LicenseInitInfo = LicenseInitInfo()
 

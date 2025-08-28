@@ -35,11 +35,19 @@ open public class TerrainEventFactory
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryEventObject{
+: AllBinaryEventObject
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

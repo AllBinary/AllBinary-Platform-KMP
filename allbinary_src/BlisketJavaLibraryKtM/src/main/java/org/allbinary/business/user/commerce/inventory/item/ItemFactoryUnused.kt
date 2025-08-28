@@ -42,9 +42,11 @@ open public class ItemFactoryUnused
             
 open fun getInstance(hashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: TableMappingInterface{
+: TableMappingInterface
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
 
 
@@ -57,9 +59,11 @@ open fun getInstance(hashMap: HashMap<Any, Any>)
             
 open fun getInstance(request: HttpServletRequest)
         //nullable =  from not(true or (false and false)) = 
-: TableMappingInterface{
+: TableMappingInterface
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 
 
 
@@ -72,7 +76,11 @@ open fun getInstance(request: HttpServletRequest)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -37,15 +37,21 @@ open public class AllBinaryLayerFactory
     private val rectangle: Rectangle
 public constructor        (rectangle: Rectangle)
             : super()
-        {
+        
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 this.rectangle= rectangle
 }
 
 override fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -31,23 +31,23 @@ open public class StringLocationPaintable : LocationPaintable {
         
 
     private val value: String
-public constructor        (value: String){
+public constructor        (value: String)
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var value = value
 this.value= value
 }
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 graphics.drawString(this.value, x, y, 0)
 }
 

@@ -41,15 +41,13 @@ open public class Rectangle
     private var height: Int
 public constructor        (point: GPoint, width: Int, height: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var point = point
-
-
-                    var width = width
-
-
-                    var height = height
+var point = point
+var width = width
+var height = height
 this.point= point
 this.width= width
 this.height= height
@@ -58,7 +56,11 @@ this.height= height
 
 open fun getPoint()
         //nullable = true from not(false or (false and true)) = true
-: GPoint{
+: GPoint
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,16 +70,22 @@ open fun getPoint()
 
 open fun setPoint(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var point = point
+
+        Updates for KMP build        
+        {
+    //var point = point
 this.point= point
 }
 
 
 open fun getMaxX()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,7 +95,11 @@ open fun getMaxX()
 
 open fun getMaxY()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -97,7 +109,11 @@ open fun getMaxY()
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -107,16 +123,22 @@ open fun getWidth()
 
 open fun setWidth(width: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var width = width
+
+        Updates for KMP build        
+        {
+var width = width
 this.width= width
 }
 
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -126,15 +148,21 @@ open fun getHeight()
 
 open fun setHeight(height: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var height = height
+
+        Updates for KMP build        
+        {
+var height = height
 this.height= height
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.getPoint()!!.toString())

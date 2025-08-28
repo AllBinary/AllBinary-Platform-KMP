@@ -56,14 +56,20 @@ open public class TitleView
     private var title: String
 public constructor        ()
             : super()
-        {this.title= NAME
+        
+
+        Updates for KMP build        
+        {
+this.title= NAME
 }
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var titleTextNode: Node = DomSearchHelper.getNode(TitleData.getInstance()!!.TEXT, node.getChildNodes())!!
 
@@ -93,9 +99,11 @@ this.title= DomNodeHelper.getTextNodeValue(valueNode)
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -111,7 +119,11 @@ this.getFormData(hashMap)
 
 open fun getTitle()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,9 +133,11 @@ open fun getTitle()
 
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashMap = hashMap
+
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
 
     
@@ -139,7 +153,11 @@ this.title= hashMap!!.get(TitleData.getInstance()!!.TEXT) as String
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTitle())
@@ -155,9 +173,11 @@ hashMap!!.put(TitleData.getInstance()!!.TEXT, this.getTitle())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var hashMap: HashMap<Any, Any> = this.toHashMap()!!
 

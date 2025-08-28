@@ -42,7 +42,11 @@ open public class SystemHardwareFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SystemHardwareFactory{
+: SystemHardwareFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,7 +58,11 @@ open fun getInstance()
 
 open fun static_toString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var osBuffer: StringMaker = StringMaker()
 
 osBuffer!!.append("Hardware Info: \n")
@@ -89,14 +97,20 @@ osBuffer!!.append("Hardware Info: \n")
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(operatingSystemInterface: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
-: HardwareInterface{
+: HardwareInterface
 
-                    var operatingSystemInterface = operatingSystemInterface
+        Updates for KMP build        
+        {
+var operatingSystemInterface = operatingSystemInterface
 
         try {
             
@@ -110,7 +124,11 @@ open fun getInstance(operatingSystemInterface: GenericOperatingSystem)
                                 
 logUtil!!.put("Found Hardware", this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.CONSTRUCTOR, e)
 }
 
 

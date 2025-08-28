@@ -58,18 +58,14 @@ open public class MeteredGameObject
     private val IS_DROPPPING_LABEL: String = "isDropping: "
 public constructor        (bufferedImage: Array<BufferedImage?>, minX: Object, maxX: Object, y: Object)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var bufferedImage = bufferedImage
-
-
-                    var minX = minX
-
-
-                    var maxX = maxX
-
-
-                    var y = y
+var bufferedImage = bufferedImage
+var minX = minX
+var maxX = maxX
+var y = y
 this.setRatios(arrayOfNulls(bufferedImage!!.size))
 this.setMinX(minX)
 this.setMaxX(maxX)
@@ -81,7 +77,11 @@ this.setSize(maxX -minX)
 
                         for (index in 0 until bufferedImage!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var nominator: Double = GraphicsAnalysisUtil.getNominator(bufferedImage[index]!!, this.getMinX(), this.getMaxX(), this.getY())!!
 
 this.getRatios()[index]= Double(nominator /this.getSize())
@@ -120,7 +120,11 @@ this.getRatios()[index]= Double(nominator /this.getSize())
 
 open fun isGood()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -130,16 +134,22 @@ open fun isGood()
 
 open fun setGood(good: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var good = good
+
+        Updates for KMP build        
+        {
+var good = good
 this.good= good
 }
 
 
 open fun isDropping()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -149,16 +159,22 @@ open fun isDropping()
 
 open fun setDropping(dropping: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var dropping = dropping
+
+        Updates for KMP build        
+        {
+var dropping = dropping
 this.dropping= dropping
 }
 
 
 open fun getRatios()
         //nullable = true from not(false or (false and true)) = true
-: Array<Double?>{
+: Array<Double?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -167,7 +183,11 @@ open fun getRatios()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(CommonSeps.getInstance()!!.NEW_LINE)
@@ -178,7 +198,11 @@ stringBuffer!!.append(RATIOS_LABEL)
 
                         for (index in 0 until this.getRatios()!!.length)
 
-        {stringBuffer!!.append(this.getRatios()[index]!!.toString())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(this.getRatios()[index]!!.toString())
 
     
                         if(index < this.getRatios()!!.length -1)
@@ -206,16 +230,22 @@ stringBuffer!!.append(this.isDropping())
 
 open fun setRatios(ratios: Array<Double?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var ratios = ratios
+
+        Updates for KMP build        
+        {
+var ratios = ratios
 this.ratios= ratios
 }
 
 
 open fun getMinX()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -225,16 +255,22 @@ open fun getMinX()
 
 open fun setMinX(minX: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var minX = minX
+
+        Updates for KMP build        
+        {
+var minX = minX
 this.minX= minX
 }
 
 
 open fun getMaxX()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -244,16 +280,22 @@ open fun getMaxX()
 
 open fun setMaxX(maxX: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxX = maxX
+
+        Updates for KMP build        
+        {
+var maxX = maxX
 this.maxX= maxX
 }
 
 
 open fun getY()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -263,16 +305,22 @@ open fun getY()
 
 open fun setY(y: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var y = y
+
+        Updates for KMP build        
+        {
+var y = y
 this.y= y
 }
 
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -282,9 +330,11 @@ open fun getSize()
 
 open fun setSize(size: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var size = size
+
+        Updates for KMP build        
+        {
+var size = size
 this.size= size
 }
 

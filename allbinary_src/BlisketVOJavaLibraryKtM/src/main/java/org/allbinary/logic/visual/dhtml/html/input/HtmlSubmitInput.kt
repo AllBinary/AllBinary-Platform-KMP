@@ -30,18 +30,14 @@ open public class HtmlSubmitInput : HtmlValueInput {
         
 public constructor        (before: String, name: String, value: String, after: String)                        
 
-                            : super(before, HtmlInputData.getInstance()!!.SUBMIT, name, value, after){
+                            : super(before, HtmlInputData.getInstance()!!.SUBMIT, name, value, after)
 
-                    var before = before
-
-
-                    var name = name
-
-
-                    var value = value
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var name = name
+var value = value
+var after = after
 
 
                             //For kotlin this is before the body of the constructor.

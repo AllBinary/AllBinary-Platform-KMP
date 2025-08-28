@@ -35,15 +35,24 @@ open fun addProcessor(profileActionProcessorInterface: ProfileActionScriptProces
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun removeProcessor(profileActionProcessorInterface: ProfileActionScriptProcessorInterface)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
 open fun shouldProcess(frame: Long)
         //nullable = true from not(false or (false and false)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 }
                 

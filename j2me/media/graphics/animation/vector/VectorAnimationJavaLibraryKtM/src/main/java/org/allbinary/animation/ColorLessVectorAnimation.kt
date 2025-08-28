@@ -32,12 +32,12 @@ open public class ColorLessVectorAnimation : VectorAnimation {
         
 public constructor        (currentPoints: Array<Array<IntArray?>?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
+                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -46,12 +46,12 @@ public constructor        (currentPoints: Array<Array<IntArray?>?>, animationBeh
 
 public constructor        (currentPoints: Array<IntArray?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior){
+                            : super(currentPoints, BasicColorFactory.getInstance()!!.WHITE, animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,15 +60,13 @@ public constructor        (currentPoints: Array<IntArray?>, animationBehavior: A
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 this.paintVectors(graphics, x, y)
 }
 

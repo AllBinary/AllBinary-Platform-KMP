@@ -53,7 +53,11 @@ open public class ThreadFactoryUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadFactoryUtil{
+: ThreadFactoryUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,9 +76,11 @@ open fun getInstance()
 
 open fun getInstance(runnable: GameCanvasRunnableInterface)
         //nullable =  from not(true or (false and false)) = 
-: Thread{
+: Thread
 
-                    var runnable = runnable
+        Updates for KMP build        
+        {
+    //var runnable = runnable
 
 
 
@@ -85,9 +91,11 @@ open fun getInstance(runnable: GameCanvasRunnableInterface)
 
 open fun getInstance(runnable: ABRunnable)
         //nullable =  from not(true or (false and false)) = 
-: Thread{
+: Thread
 
-                    var runnable = runnable
+        Updates for KMP build        
+        {
+    //var runnable = runnable
 
 
 
@@ -98,12 +106,12 @@ open fun getInstance(runnable: ABRunnable)
 
 open fun getInstance(runnable: Runnable, type: Int)
         //nullable =  from not(true or (false and false)) = 
-: Thread{
+: Thread
 
-                    var runnable = runnable
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+    //var runnable = runnable
+    //var type = type
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -159,9 +167,11 @@ logUtil!!.put(thread.toString(), this, commonStrings!!.CONSTRUCTOR)
 
 open fun start(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var thread = thread
+
+        Updates for KMP build        
+        {
+    //var thread = thread
 thread.start()
 }
 

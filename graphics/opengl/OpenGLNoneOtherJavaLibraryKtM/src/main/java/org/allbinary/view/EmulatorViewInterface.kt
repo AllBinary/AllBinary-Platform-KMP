@@ -20,13 +20,22 @@ open fun setMidlet(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun onEmulatorInitComplete(midletActivity: Any)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun onSetDisplayable(displayable: Displayable)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

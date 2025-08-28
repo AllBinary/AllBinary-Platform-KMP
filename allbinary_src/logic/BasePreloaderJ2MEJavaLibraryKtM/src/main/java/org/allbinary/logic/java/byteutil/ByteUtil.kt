@@ -41,7 +41,11 @@ open public class ByteUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ByteUtil{
+: ByteUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,17 +56,21 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun xor(array: ByteArray, mask: Byte)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
-
-
-                    var mask = mask
+        Updates for KMP build        
+        {
+    //var array = array
+    //var mask = mask
 
     var bytes: ByteArray = ByteArray(array.size)
 
@@ -78,7 +86,11 @@ open fun xor(array: ByteArray, mask: Byte)
 
 
         while(index < size)
-        {currentByte= array[index]!!
+        
+
+        Updates for KMP build        
+        {
+currentByte= array[index]!!
 bytes[index]= (currentByte xor mask) as Byte
 index++
 }
@@ -93,9 +105,11 @@ index++
 
 open fun not(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+    //var array = array
 
     var bytes: ByteArray = ByteArray(array.size)
 
@@ -108,7 +122,11 @@ open fun not(array: ByteArray)
 
 
         while(index < size)
-        {bytes[index]= array[index].inv() as Byte
+        
+
+        Updates for KMP build        
+        {
+bytes[index]= array[index].inv() as Byte
 index++
 }
 
@@ -122,12 +140,12 @@ index++
 
 open fun xorByte(array: ByteArray, index: Int)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+    //var array = array
+    //var index = index
 
     var mask: Byte = 0
 
@@ -173,12 +191,12 @@ open fun xorByte(array: ByteArray, index: Int)
 
 open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newByteArray = newByteArray
-
-
-                    var oldByteArray = oldByteArray
+        Updates for KMP build        
+        {
+    //var newByteArray = newByteArray
+    //var oldByteArray = oldByteArray
 
     
                         if(newByteArray!!.size != oldByteArray!!.size)
@@ -206,7 +224,11 @@ open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(newByteArray[index] != oldByteArray[index])
                         
@@ -231,18 +253,14 @@ open fun compare(newByteArray: ByteArray, oldByteArray: ByteArray)
 
 open fun compare(newByteArray: ByteArray, newSize: Int, oldByteArray: ByteArray, stats: IntArray)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var newByteArray = newByteArray
-
-
-                    var newSize = newSize
-
-
-                    var oldByteArray = oldByteArray
-
-
-                    var stats = stats
+        Updates for KMP build        
+        {
+    //var newByteArray = newByteArray
+    //var newSize = newSize
+    //var oldByteArray = oldByteArray
+    //var stats = stats
 
     
                         if(newSize != oldByteArray!!.size)
@@ -274,7 +292,11 @@ stats[1]= 0
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(newByteArray[index] != oldByteArray[index])
                         

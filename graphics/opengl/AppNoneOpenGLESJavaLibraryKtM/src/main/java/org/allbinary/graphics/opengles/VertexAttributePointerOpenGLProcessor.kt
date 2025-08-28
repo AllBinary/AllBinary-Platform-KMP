@@ -37,7 +37,11 @@ open public class VertexAttributePointerOpenGLProcessor : ObjectThreedOpenGLProc
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: VertexAttributePointerOpenGLProcessor{
+: VertexAttributePointerOpenGLProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -46,16 +50,20 @@ open fun getInstance()
 
 
         }
-            public constructor        (){}
+            public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun process(gl: GL10, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var anyType = anyType
 
 
 

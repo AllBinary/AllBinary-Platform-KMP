@@ -56,9 +56,11 @@ open public class BasicColor
     private val basicColorUtil: BasicColorUtil = BasicColorUtil.getInstance()!!
 public constructor        (value: Int)                        
 
-                            : this(value, StringUtil.getInstance()!!.EMPTY_STRING){
+                            : this(value, StringUtil.getInstance()!!.EMPTY_STRING)
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var value = value
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,12 +69,12 @@ public constructor        (value: Int)
 
 public constructor        (alphaValue: Int, value: Int)                        
 
-                            : this(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING){
+                            : this(alphaValue, value, StringUtil.getInstance()!!.EMPTY_STRING)
 
-                    var alphaValue = alphaValue
-
-
-                    var value = value
+        Updates for KMP build        
+        {
+    //var alphaValue = alphaValue
+    //var value = value
 
 
                             //For kotlin this is before the body of the constructor.
@@ -81,12 +83,12 @@ public constructor        (alphaValue: Int, value: Int)
 
  constructor        (value: Int, name: String)                        
 
-                            : this(BasicColorUtil.getInstance()!!.ALPHA, value, name){
+                            : this(BasicColorUtil.getInstance()!!.ALPHA, value, name)
 
-                    var value = value
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+    //var value = value
+    //var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -95,15 +97,13 @@ public constructor        (alphaValue: Int, value: Int)
 
  constructor        (alphaValue: Int, value: Int, name: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var alphaValue = alphaValue
-
-
-                    var value = value
-
-
-                    var name = name
+    //var alphaValue = alphaValue
+    //var value = value
+    //var name = name
 this.name= name
 
     var tempValue: Int= 0
@@ -160,21 +160,15 @@ this.value= tempValue
 
 public constructor        (alphaValue: Int, r: Int, g: Int, b: Int, name: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var alphaValue = alphaValue
-
-
-                    var r = r
-
-
-                    var g = g
-
-
-                    var b = b
-
-
-                    var name = name
+    //var alphaValue = alphaValue
+    //var r = r
+    //var g = g
+    //var b = b
+    //var name = name
 this.name= name
 this.alpha= alphaValue.toShort()
 this.alphaComponent= (alphaValue.toFloat()) /255
@@ -202,7 +196,11 @@ this.value= ((alphaValue shl 24) and ALPHA_MASK) +((redInt shl 16) and 0x00FF000
 
 open fun intValue()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -212,7 +210,11 @@ open fun intValue()
 
 open fun toInt()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -221,7 +223,11 @@ open fun toInt()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("BasicColor: ")
@@ -245,7 +251,11 @@ stringBuffer!!.append(this.value)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -255,7 +265,11 @@ open fun getName()
 
 open fun getRedComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -265,7 +279,11 @@ open fun getRedComponent()
 
 open fun getGreenComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -275,7 +293,11 @@ open fun getGreenComponent()
 
 open fun getBlueComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -285,7 +307,11 @@ open fun getBlueComponent()
 
 open fun getAlphaComponent()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

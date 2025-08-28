@@ -45,15 +45,13 @@ open public class IconLayer : AllBinaryLayer {
     private var animationInterface: Animation
 public constructor        (animationInterface: Animation, width: Int, height: Int)                        
 
-                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition()){
+                            : super(Rectangle(PointFactory.getInstance()!!.ZERO_ZERO, width, height), ViewPosition())
 
-                    var animationInterface = animationInterface
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
+var width = width
+var height = height
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,24 +61,32 @@ this.animationInterface= animationInterface
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.animationInterface!!.paint(graphics, x, y)
 }
 
 override fun paintThreed(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.animationInterface!!.paintThreed(graphics, x, y, z)
 }
 
 
 open fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

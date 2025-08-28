@@ -38,7 +38,11 @@ open public class OpenGLESImageExclusionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLESImageExclusionUtil{
+: OpenGLESImageExclusionUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,9 +63,11 @@ open fun getInstance()
 
 open fun isCustomScaling(image: Image)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var image = image
+        Updates for KMP build        
+        {
+    //var image = image
 
     
                         if(image.getName()!!.startsWith(EXCLUSION) || image.getName()!!.startsWith(GREEN_BUTTON))

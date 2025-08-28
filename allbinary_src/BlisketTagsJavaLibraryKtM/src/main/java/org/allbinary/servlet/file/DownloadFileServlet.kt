@@ -65,12 +65,12 @@ open public class DownloadFileServlet : HttpServlet {
             
 open fun processRequest(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 
     var inputStream: InputStream = 
                 null
@@ -198,7 +198,11 @@ StreamUtil.getInstance()!!.get(inputStream, response.getOutputStream(), ByteArra
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -230,12 +234,12 @@ response.sendError(HttpServletResponse.SC_NOT_FOUND)
             
 open fun doGet(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 processRequest(request, response)
 }
 
@@ -244,19 +248,23 @@ processRequest(request, response)
             
 open fun doPost(request: HttpServletRequest, response: HttpServletResponse)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var request = request
 
 
-                    var response = response
+        Updates for KMP build        
+        {
+var request = request
+var response = response
 processRequest(request, response)
 }
 
 
 open fun getServletInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

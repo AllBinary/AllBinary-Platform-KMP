@@ -35,9 +35,15 @@ open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
 : Animation
 
+        Updates for KMP build        
+        
+
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

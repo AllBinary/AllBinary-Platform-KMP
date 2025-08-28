@@ -39,7 +39,11 @@ open public class SmallIntegerSingletonFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SmallIntegerSingletonFactory{
+: SmallIntegerSingletonFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,19 +69,23 @@ open fun getInstance()
 
 open fun init(value: Int, negativeValue: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var value = value
 
 
-                    var negativeValue = negativeValue
+        Updates for KMP build        
+        {
+var value = value
+var negativeValue = negativeValue
 
 
 
 
                         for (index in value -1 downTo lastMin)
 
-        {INTEGER_ARRAY[index +NEGATIVE_MAX]= Integer(index)
+        
+
+        Updates for KMP build        
+        {
+INTEGER_ARRAY[index +NEGATIVE_MAX]= Integer(index)
 }
 
 
@@ -86,7 +94,11 @@ open fun init(value: Int, negativeValue: Int)
 
                         for (index in negativeValue -1 downTo lastNegativeMin)
 
-        {INTEGER_ARRAY[index]= Integer( -index)
+        
+
+        Updates for KMP build        
+        {
+INTEGER_ARRAY[index]= Integer( -index)
 }
 
 
@@ -113,7 +125,11 @@ MIN= value
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(lastMin < POSITIVE_MAX || lastNegativeMin < NEGATIVE_MAX)
                         
@@ -124,7 +140,11 @@ open fun init()
 
                         for (index in POSITIVE_MAX -1 downTo lastMin)
 
-        {INTEGER_ARRAY[index +NEGATIVE_MAX]= Integer(index)
+        
+
+        Updates for KMP build        
+        {
+INTEGER_ARRAY[index +NEGATIVE_MAX]= Integer(index)
 }
 
 
@@ -133,7 +153,11 @@ open fun init()
 
                         for (index in NEGATIVE_MAX -1 downTo lastNegativeMin)
 
-        {INTEGER_ARRAY[index]= Integer( -index)
+        
+
+        Updates for KMP build        
+        {
+INTEGER_ARRAY[index]= Integer( -index)
 }
 
 lastMin= POSITIVE_MAX
@@ -145,14 +169,20 @@ lastNegativeMin= NEGATIVE_MAX
 
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInstance(index: Int)
         //nullable =  from not(true or (false and false)) = 
-: Integer{
+: Integer
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -163,9 +193,11 @@ open fun getInstance(index: Int)
 
 open fun getInstanceNoThrow(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Integer{
+: Integer
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     
                         if(index +NEGATIVE_MAX > this.INTEGER_ARRAY.size -1)
@@ -189,9 +221,11 @@ open fun getInstanceNoThrow(index: Int)
 
 open fun createInstance(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Integer{
+: Integer
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     var integer: Integer = getInstance(index)!!
 
@@ -216,9 +250,11 @@ open fun createInstance(index: Int)
 
 open fun getString(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
     var i: Int = index +NEGATIVE_MAX
 

@@ -34,13 +34,22 @@ open fun getTransactionResultInterface(orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 : TransactionResultInterface
 
+        Updates for KMP build        
+        
+
 open fun remove(userName: String, orderNumber: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun add(userName: String, orderNumber: String, resultInterface: TransactionResultInterface)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -39,12 +39,12 @@ open public class AnalogControllerVisitor
         
 open fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var analogLocationInputProcessor = analogLocationInputProcessor
+        Updates for KMP build        
+        {
+var allbinaryLayerManager = allbinaryLayerManager
+var analogLocationInputProcessor = analogLocationInputProcessor
 }
 
 

@@ -38,16 +38,22 @@ open public class ContextConfigurationTableMapping
     private var contextConfigurationInterface: ContextConfigurationInterface
 public constructor        (contextConfigurationInterface: ContextConfigurationInterface)
             : super()
-        {
+        
 
-                    var contextConfigurationInterface = contextConfigurationInterface
+        Updates for KMP build        
+        {
+var contextConfigurationInterface = contextConfigurationInterface
 this.contextConfigurationInterface= contextConfigurationInterface
 }
 
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
@@ -62,7 +68,11 @@ open fun toHashMap()
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,7 +84,11 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 

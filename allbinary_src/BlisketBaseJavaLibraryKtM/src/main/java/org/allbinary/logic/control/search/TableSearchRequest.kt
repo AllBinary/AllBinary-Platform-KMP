@@ -47,18 +47,14 @@ open public class TableSearchRequest
     private var searchParams: SearchParams
 public constructor        (keywords: String, searchParams: SearchParams, xslFile: String, contentType: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var keywords = keywords
-
-
-                    var searchParams = searchParams
-
-
-                    var xslFile = xslFile
-
-
-                    var contentType = contentType
+var keywords = keywords
+var searchParams = searchParams
+var xslFile = xslFile
+var contentType = contentType
 this.keywords= keywords
 this.searchParams= searchParams
 this.xslFile= xslFile
@@ -69,52 +65,66 @@ this.contentType= contentType
 
 open fun setKeywords(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.keywords= value
 }
 
 
 open fun setParams(searchParams: SearchParams)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var searchParams = searchParams
+
+        Updates for KMP build        
+        {
+var searchParams = searchParams
 this.searchParams= searchParams
 }
 
 
 open fun setXslFile(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.xslFile= value
 }
 
 
 open fun setFileBaseName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.pageName= value
 }
 
 
 open fun setContentType(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.contentType= value
 }
 
 
 open fun getKeywords()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,7 +134,11 @@ open fun getKeywords()
 
 open fun getParams()
         //nullable = true from not(false or (false and true)) = true
-: SearchParams{
+: SearchParams
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,7 +150,11 @@ open fun getParams()
             
 open fun getXslFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var path: String = URLGLOBALS.getMainPath() +FREEBLISKET_PATH_GLOBALS.getInstance()!!.XSLPATH +this.xslFile
 
 
@@ -149,7 +167,11 @@ open fun getXslFile()
 
 open fun getFileBaseName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -159,7 +181,11 @@ open fun getFileBaseName()
 
 open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -171,9 +197,11 @@ open fun getContentType()
             
 open fun getFileBaseNameNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 

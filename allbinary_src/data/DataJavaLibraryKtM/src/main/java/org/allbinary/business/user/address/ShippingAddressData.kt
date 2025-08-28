@@ -66,7 +66,11 @@ open public class ShippingAddressData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

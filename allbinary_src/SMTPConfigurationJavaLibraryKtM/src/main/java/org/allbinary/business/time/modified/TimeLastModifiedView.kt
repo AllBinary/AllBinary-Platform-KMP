@@ -41,17 +41,21 @@ open public class TimeLastModifiedView
     private var timeLastModified: TimeLastModified
 public constructor        (timeLastModified: TimeLastModified)
             : super()
-        {
+        
 
-                    var timeLastModified = timeLastModified
+        Updates for KMP build        
+        {
+var timeLastModified = timeLastModified
 this.setTimeLastModified(timeLastModified)
 }
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.setTimeLastModified(TimeLastModified(DomNodeHelper.getTextNodeValue(node)))
 }
 
@@ -60,9 +64,11 @@ this.setTimeLastModified(TimeLastModified(DomNodeHelper.getTextNodeValue(node)))
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -73,7 +79,11 @@ open fun toXmlNode(document: Document)
 
 open fun getTimeLastModified()
         //nullable = true from not(false or (false and true)) = true
-: TimeLastModified{
+: TimeLastModified
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,9 +93,11 @@ open fun getTimeLastModified()
 
 open fun setTimeLastModified(timeLastModified: TimeLastModified)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeLastModified = timeLastModified
+
+        Updates for KMP build        
+        {
+var timeLastModified = timeLastModified
 this.timeLastModified= timeLastModified
 }
 

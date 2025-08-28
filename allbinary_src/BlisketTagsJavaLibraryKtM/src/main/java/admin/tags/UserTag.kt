@@ -37,16 +37,22 @@ open public class UserTag : TableTag {
     private var role: String
 
     private var enable: String
-public constructor        (){this.setTagHelperFactory(UserHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(UserHelperFactory())
 this.setTagRequestHelperFactory(UserHelperFactory())
 }
 
 
 open fun setRole(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.role= value
 this.getPropertiesHashMap()!!.put(UserRoleData.NAME, this.role)
 }
@@ -54,9 +60,11 @@ this.getPropertiesHashMap()!!.put(UserRoleData.NAME, this.role)
 
 open fun setEnable(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.enable= value
 this.getPropertiesHashMap()!!.put(EntryData.getInstance()!!.ENABLE, this.enable)
 }
@@ -66,7 +74,11 @@ this.getPropertiesHashMap()!!.put(EntryData.getInstance()!!.ENABLE, this.enable)
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -87,7 +99,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

@@ -46,7 +46,11 @@ open public class TransformGeneratorUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TransformGeneratorUtil{
+: TransformGeneratorUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,22 +63,24 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoInterface: TransformInfoInterface, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var ownerTransformInfoInterface = ownerTransformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoInterface = transformInfoInterface
+    //var ownerTransformInfoInterface = ownerTransformInfoInterface
 
         try {
             
@@ -115,7 +121,11 @@ open fun generate(abeClientInformation: AbeClientInformationInterface, transform
 StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
                             process(result)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -137,15 +147,13 @@ StoreFileGenerator(componentInterface!!.getTransformInfoInterface()).
             
 open fun generate(abeClientInformation: AbeClientInformationInterface, transformInfoDomNode: TransformInfoDomNode, ownerTransformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var abeClientInformation = abeClientInformation
 
 
-                    var transformInfoDomNode = transformInfoDomNode
-
-
-                    var ownerTransformInfoInterface = ownerTransformInfoInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var transformInfoDomNode = transformInfoDomNode
+    //var ownerTransformInfoInterface = ownerTransformInfoInterface
 generate(abeClientInformation, transformInfoDomNode!!.getTransformInfoInterface(), ownerTransformInfoInterface)
 }
 

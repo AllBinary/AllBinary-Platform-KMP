@@ -33,12 +33,12 @@ open public class SpecialDemoGameMidlet : DemoGameMidlet {
         
 public constructor        (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType)                        
 
-                            : super(clientInformationFactory){
+                            : super(clientInformationFactory)
 
-                    var clientInformationFactory = clientInformationFactory
-
-
-                    var licenseLoadingType = licenseLoadingType
+        Updates for KMP build        
+        {
+    //var clientInformationFactory = clientInformationFactory
+    //var licenseLoadingType = licenseLoadingType
 
 
                             //For kotlin this is before the body of the constructor.
@@ -47,18 +47,14 @@ public constructor        (clientInformationFactory: ClientInformationFactory, l
 
 public constructor        (clientInformationFactory: ClientInformationFactory, licenseLoadingType: LicenseLoadingType, demoSetup: DemoSetup, licenseCheckRunnable: RunnableInterface)                        
 
-                            : super(clientInformationFactory){
+                            : super(clientInformationFactory)
 
-                    var clientInformationFactory = clientInformationFactory
-
-
-                    var licenseLoadingType = licenseLoadingType
-
-
-                    var demoSetup = demoSetup
-
-
-                    var licenseCheckRunnable = licenseCheckRunnable
+        Updates for KMP build        
+        {
+    //var clientInformationFactory = clientInformationFactory
+    //var licenseLoadingType = licenseLoadingType
+    //var demoSetup = demoSetup
+    //var licenseCheckRunnable = licenseCheckRunnable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -68,11 +64,19 @@ public constructor        (clientInformationFactory: ClientInformationFactory, l
 
 open fun initView()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun preInit()
         //nullable = true from not(false or (false and true)) = true
-{LicenseServerInitFileUtil().
+
+
+        Updates for KMP build        
+        {
+LicenseServerInitFileUtil().
                             init()
 }
 

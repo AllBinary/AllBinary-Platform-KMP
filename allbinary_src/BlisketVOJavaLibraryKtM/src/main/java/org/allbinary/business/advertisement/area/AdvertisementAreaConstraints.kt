@@ -44,9 +44,11 @@ open public class AdvertisementAreaConstraints
     private var twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface
 public constructor        (document: Document)
             : super()
-        {
+        
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = DomSearchHelper.getNode(AdvertisementAreaData.getInstance()!!.NAME, document.getChildNodes())!!
 
@@ -57,25 +59,33 @@ this.twoDimensionConstraintsInterface= TwoDimensionalConstraint(node)
 
 open fun setDisplayInBrowserContraints(displayInBrowserContraintsInterface: DisplayInBrowserContraintsInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var displayInBrowserContraintsInterface = displayInBrowserContraintsInterface
+
+        Updates for KMP build        
+        {
+var displayInBrowserContraintsInterface = displayInBrowserContraintsInterface
 this.displayInBrowserContraintsInterface= displayInBrowserContraintsInterface
 }
 
 
 open fun getTwoDimensionContraints(twoDimensionConstraintsInterface: TwoDimensionalConstraintInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var twoDimensionConstraintsInterface = twoDimensionConstraintsInterface
+
+        Updates for KMP build        
+        {
+var twoDimensionConstraintsInterface = twoDimensionConstraintsInterface
 this.twoDimensionConstraintsInterface= twoDimensionConstraintsInterface
 }
 
 
 open fun getDisplayInBrowserContraints()
         //nullable = true from not(false or (false and true)) = true
-: DisplayInBrowserContraintsInterface{
+: DisplayInBrowserContraintsInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -85,7 +95,11 @@ open fun getDisplayInBrowserContraints()
 
 open fun getTwoDimensionContraints()
         //nullable = true from not(false or (false and true)) = true
-: TwoDimensionalConstraintInterface{
+: TwoDimensionalConstraintInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

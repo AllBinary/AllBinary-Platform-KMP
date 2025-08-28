@@ -36,15 +36,13 @@ open public class ArrayAI : BasicAI {
     private val artificialIntelligenceInterfaceArray: Array<ArtificialIntelligenceInterface?>
 public constructor        (artificialIntelligenceInterface: Array<ArtificialIntelligenceInterface?>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(ownerLayerInterface, gameInput){
+                            : super(ownerLayerInterface, gameInput)
 
-                    var artificialIntelligenceInterface = artificialIntelligenceInterface
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var artificialIntelligenceInterface = artificialIntelligenceInterface
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -56,9 +54,11 @@ this.artificialIntelligenceInterfaceArray= artificialIntelligenceInterface
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
     var size: Int = this.artificialIntelligenceInterfaceArray!!.size
                 
@@ -69,7 +69,11 @@ this.artificialIntelligenceInterfaceArray= artificialIntelligenceInterface
 
                         for (index in 0 until size)
 
-        {this.artificialIntelligenceInterfaceArray[index]!!.processAI(allBinaryLayerManager)
+        
+
+        Updates for KMP build        
+        {
+this.artificialIntelligenceInterfaceArray[index]!!.processAI(allBinaryLayerManager)
 }
 
 }
@@ -77,7 +81,11 @@ this.artificialIntelligenceInterfaceArray= artificialIntelligenceInterface
 
 open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<ArtificialIntelligenceInterface?>{
+: Array<ArtificialIntelligenceInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

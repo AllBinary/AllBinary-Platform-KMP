@@ -35,17 +35,21 @@ open public class FrictionProperties
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun friction(velocityProperties: VelocityProperties, nominator: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var velocityProperties = velocityProperties
 
 
-                    var nominator = nominator
+        Updates for KMP build        
+        {
+var velocityProperties = velocityProperties
+var nominator = nominator
 DragVelocityBehavior.instance.reduce(velocityProperties, nominator, FrictionData.getFrictionDenominator())
 }
 

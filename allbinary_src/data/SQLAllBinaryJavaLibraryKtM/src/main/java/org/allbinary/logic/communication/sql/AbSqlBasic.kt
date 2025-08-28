@@ -95,9 +95,11 @@ open public class AbSqlBasic
     private val LOAD_JDBC_DRIVER_FAILED_LABEL: String = "Load JDBC Driver Failed: "
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
             : super()
-        {
+        
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+    //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 this.databaseConnectionInfoInterface= databaseConnectionInfoInterface
 this.connectAttemptCounter= 0
 this.conn= 
@@ -110,9 +112,11 @@ this.conn=
             
 open fun executeSQLStatement(statement: String)
         //nullable = true from not(false or (false and false)) = true
-: ResultSet{
+: ResultSet
 
-                    var statement = statement
+        Updates for KMP build        
+        {
+    //var statement = statement
 
         try {
             initialize()
@@ -137,7 +141,11 @@ sqlConnectionPool!!.add(this.getDatabaseConnectionInfoInterface()!!.getUrl(), te
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rset
 } catch(e: SQLException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -161,9 +169,11 @@ this.conn=
 
 open fun create(databaseName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var databaseName = databaseName
+        Updates for KMP build        
+        {
+    //var databaseName = databaseName
 
         try {
             this.executeSQLStatement(sqlStrings!!.CREATE_DATABASE +databaseName)
@@ -182,7 +192,11 @@ open fun create(databaseName: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return databaseName +sqlStrings!!.CREATE_RETURN
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -203,11 +217,19 @@ open fun create(databaseName: String)
 
 open fun createConnection()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.conn= sqlConnectionPool!!.get(this.getDatabaseConnectionInfoInterface()!!.getUrl())
 } catch(se: SQLException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -230,7 +252,11 @@ this.initialize()
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -248,7 +274,11 @@ this.initialize()
 
 open fun initialize()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -263,7 +293,11 @@ open fun initialize()
 
 jdbcDriverClass!!.newInstance()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -279,7 +313,11 @@ jdbcDriverClass!!.newInstance()
                     
 this.createConnection()
 } catch(se: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -295,7 +333,11 @@ this.createConnection()
 
 open fun getDatabaseConnectionInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: DatabaseConnectionInfoInterface{
+: DatabaseConnectionInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -305,9 +347,11 @@ open fun getDatabaseConnectionInfoInterface()
 
 open fun setDatabaseConnectionInfoInterface(databaseConnectionInfoInterface: DbConnectionInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+
+        Updates for KMP build        
+        {
+    //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 this.databaseConnectionInfoInterface= databaseConnectionInfoInterface
 }
 

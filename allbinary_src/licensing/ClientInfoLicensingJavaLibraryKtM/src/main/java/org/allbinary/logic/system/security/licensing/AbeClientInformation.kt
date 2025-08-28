@@ -40,18 +40,14 @@ open public class AbeClientInformation : ClientInformation {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (name: String, version: String, specialName: String, shortName: String)                        
 
-                            : super(name, version, specialName, shortName){
+                            : super(name, version, specialName, shortName)
 
-                    var name = name
-
-
-                    var version = version
-
-
-                    var specialName = specialName
-
-
-                    var shortName = shortName
+        Updates for KMP build        
+        {
+    //var name = name
+    //var version = version
+    //var specialName = specialName
+    //var shortName = shortName
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,7 +56,11 @@ public constructor        (name: String, version: String, specialName: String, s
 
 override fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.setOperatingSystemInterface(OperatingSystemFactory.getInstance()!!.getOperatingSystemInstance())
 
@@ -89,7 +89,11 @@ this.setLicenseId(NONE)
 PreLogUtil.put(StringMaker().
                             append("Special Name: ")!!.append(this.getSpecialName())!!.toString(), this, commonStrings!!.CONSTRUCTOR)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
 

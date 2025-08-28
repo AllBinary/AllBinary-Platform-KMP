@@ -52,7 +52,11 @@ open public class DisplayInfoSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: DisplayInfoSingleton{
+: DisplayInfoSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +107,11 @@ open fun getInstance()
     private var ratio: Float = 1.0f
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     
                         if(AndroidUtil.isAndroid())
                         
@@ -122,7 +130,11 @@ private constructor        ()
 
 open fun getLastHalf()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -132,7 +144,11 @@ open fun getLastHalf()
 
 open fun getLast()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -142,7 +158,11 @@ open fun getLast()
 
 open fun getFull()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -152,7 +172,11 @@ open fun getFull()
 
 open fun getScaleLargestTo()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -162,9 +186,11 @@ open fun getScaleLargestTo()
 
 open fun setScaleLargestTo(scaleLargestTo: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleLargestTo = scaleLargestTo
+
+        Updates for KMP build        
+        {
+    //var scaleLargestTo = scaleLargestTo
 this.scaleLargestTo= scaleLargestTo.toFloat()
 }
 
@@ -181,15 +207,13 @@ this.scaleLargestTo= scaleLargestTo.toFloat()
 
 open fun setLastSize(aLastWidth: Int, aLastHeight: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var aLastWidth = aLastWidth
 
 
-                    var aLastHeight = aLastHeight
-
-
-                    var reason = reason
+        Updates for KMP build        
+        {
+    //var aLastWidth = aLastWidth
+    //var aLastHeight = aLastHeight
+    //var reason = reason
 
     
                         if(this.full[WIDTH] != aLastWidth || this.full[HEIGHT] != aLastHeight)
@@ -204,15 +228,13 @@ open fun setLastSize(aLastWidth: Int, aLastHeight: Int, reason: String)
 
 open fun setLastSizeForce(aLastWidth: Int, aLastHeight: Int, reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var aLastWidth = aLastWidth
 
 
-                    var aLastHeight = aLastHeight
-
-
-                    var reason = reason
+        Updates for KMP build        
+        {
+var aLastWidth = aLastWidth
+var aLastHeight = aLastHeight
+    //var reason = reason
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -318,12 +340,12 @@ this.add(SET_LAST_SIZE_METHOD_NAME)
 
 open fun isPortrait(lastWidth: Int, lastHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var lastWidth = lastWidth
-
-
-                    var lastHeight = lastHeight
+        Updates for KMP build        
+        {
+var lastWidth = lastWidth
+var lastHeight = lastHeight
 
     
                         if(lastHeight > lastWidth)
@@ -351,7 +373,11 @@ open fun isPortrait(lastWidth: Int, lastHeight: Int)
 
 open fun isPortrait()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -371,9 +397,11 @@ open fun isPortrait()
 
 open fun add(reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var reason = reason
+
+        Updates for KMP build        
+        {
+    //var reason = reason
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -386,7 +414,11 @@ list.add(reason)
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -399,7 +431,11 @@ open fun process()
                                 
 list.clear()
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
 
 }
@@ -407,7 +443,11 @@ list.clear()
 
 open fun processForced()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var swtJOGLProcessor: SWTJOGLProcessor = SWTJOGLProcessor.getInstance()!!
@@ -417,7 +457,11 @@ DisplayChangeEventHandler.getInstance()!!.fireEvent(displayChangeEvent)
 LastDisplayChangeEventHandler.getInstance()!!.fireEvent(displayChangeEvent)
 swtJOGLProcessor!!.onSurfaceChanged()
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, FIRE_METHOD_NAME, e)
 }
 
 }
@@ -425,12 +469,12 @@ swtJOGLProcessor!!.onSurfaceChanged()
 
 open fun update(displayable: Displayable, reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var displayable = displayable
 
 
-                    var reason = reason
+        Updates for KMP build        
+        {
+    //var displayable = displayable
+    //var reason = reason
 
     var aLastWidth: Int = displayable.getWidth()!!
 
@@ -571,7 +615,11 @@ this.add(commonStrings!!.UPDATE)
     private val LAST_HALF: String = "lastHalf"
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 
@@ -584,9 +632,11 @@ override fun toString()
 
 open fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-: String{
+: String
 
-                    var stringBuffer = stringBuffer
+        Updates for KMP build        
+        {
+    //var stringBuffer = stringBuffer
 stringBuffer!!.append(DISPLAY_INFO)
 stringBuffer!!.append(FULL)
 stringBuffer!!.append(commonLabels!!.WIDTH_LABEL)
@@ -621,7 +671,11 @@ stringBuffer!!.append(lastHalf[HEIGHT]!!)
 
 open fun getTop()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -631,7 +685,11 @@ open fun getTop()
 
 open fun getLeft()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -641,7 +699,11 @@ open fun getLeft()
 
 open fun getLastWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -651,7 +713,11 @@ open fun getLastWidth()
 
 open fun getLastHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -661,7 +727,11 @@ open fun getLastHeight()
 
 open fun getLastHalfWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -671,7 +741,11 @@ open fun getLastHalfWidth()
 
 open fun getLastHalfHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -681,16 +755,22 @@ open fun getLastHalfHeight()
 
 open fun setScalableListener(scalableListener: BaseScalable)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scalableListener = scalableListener
+
+        Updates for KMP build        
+        {
+var scalableListener = scalableListener
 this.scalableListener= scalableListener
 }
 
 
 open fun getScalableListener()
         //nullable = true from not(false or (false and true)) = true
-: ScalableListener{
+: ScalableListener
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -700,7 +780,11 @@ open fun getScalableListener()
 
 open fun getRatio()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -710,7 +794,11 @@ open fun getRatio()
 
 open fun getDisplayRatio()
         //nullable = true from not(false or (false and true)) = true
-: Float{
+: Float
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -720,19 +808,23 @@ open fun getDisplayRatio()
 
 open fun setOffset(left: Int, top: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var left = left
 
 
-                    var top = top
+        Updates for KMP build        
+        {
+var left = left
+var top = top
 this.left= left
 }
 
 
 open fun getxOffset()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -742,7 +834,11 @@ open fun getxOffset()
 
 open fun getyOffset()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

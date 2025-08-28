@@ -38,7 +38,11 @@ open public class OpenGLESGraphicsFactory
         
 open fun getOpenGLESGraphicsInstance()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLESGraphics{
+: OpenGLESGraphics
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

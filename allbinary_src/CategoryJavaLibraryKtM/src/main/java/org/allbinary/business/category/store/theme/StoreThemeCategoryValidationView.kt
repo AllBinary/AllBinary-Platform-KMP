@@ -34,9 +34,11 @@ open public class StoreThemeCategoryValidationView : StoreThemeCategoryView
         
 public constructor        (categoryInterface: StoreThemeCategoryInterface)                        
 
-                            : super(categoryInterface as StoreThemeCategoryInterface){
+                            : super(categoryInterface as StoreThemeCategoryInterface)
 
-                    var categoryInterface = categoryInterface
+        Updates for KMP build        
+        {
+var categoryInterface = categoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,7 +50,11 @@ public constructor        (categoryInterface: StoreThemeCategoryInterface)
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +66,11 @@ open fun isValid()
             
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,9 +82,11 @@ open fun toValidationInfoDoc()
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -87,7 +99,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

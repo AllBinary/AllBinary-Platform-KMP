@@ -37,9 +37,11 @@ open public class PaymentGatewayViewAbstract : TransformInfoHttpComposite {
     private var paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,9 +52,11 @@ this.getFormData(this.getPageContext()!!.getRequest() as HttpServletRequest)
 
 open fun getFormData(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var request = request
+
+        Updates for KMP build        
+        {
+var request = request
 
     var storeName: String = this.getWeblisketSession()!!.getStoreName()!!
 
@@ -65,7 +69,11 @@ this.setPaymentGatewayPrimaryKey(PaymentGatewayPrimaryKey(storeName, gatewayName
 
 open fun getPaymentGatewayPrimaryKey()
         //nullable = true from not(false or (false and true)) = true
-: PaymentGatewayPrimaryKey{
+: PaymentGatewayPrimaryKey
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,9 +83,11 @@ open fun getPaymentGatewayPrimaryKey()
 
 open fun setPaymentGatewayPrimaryKey(paymentGatewayPrimaryKey: PaymentGatewayPrimaryKey)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var paymentGatewayPrimaryKey = paymentGatewayPrimaryKey
+
+        Updates for KMP build        
+        {
+var paymentGatewayPrimaryKey = paymentGatewayPrimaryKey
 this.paymentGatewayPrimaryKey= paymentGatewayPrimaryKey
 }
 

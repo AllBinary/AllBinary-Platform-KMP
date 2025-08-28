@@ -41,12 +41,12 @@ open public class ValidationViewHelper : ViewHelper
     private var viewInterface: ValidationComponentInterface
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)                        
 
-                            : super(hashMap, pageContext){
+                            : super(hashMap, pageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,7 +66,11 @@ viewInterface= this.getViewObject() as ValidationComponentInterface
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -83,7 +87,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.isValid()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -104,7 +112,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -112,7 +124,11 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.validationInfo()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -133,7 +149,11 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -141,7 +161,11 @@ open fun toValidationInfoDoc()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.toValidationInfoDoc()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -162,9 +186,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -173,7 +199,11 @@ open fun toValidationInfoNode(document: Document)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return viewInterface!!.toValidationInfoNode(document)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         

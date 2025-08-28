@@ -49,25 +49,25 @@ open public class ColorsView
     val delta: Int = 20
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getColorNode(document: Document, redIndex: Int, greenIndex: Int, blueIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var redIndex = redIndex
-
-
-                    var greenIndex = greenIndex
-
-
-                    var blueIndex = blueIndex
+        Updates for KMP build        
+        {
+var document = document
+var redIndex = redIndex
+var greenIndex = greenIndex
+var blueIndex = blueIndex
 
     var hexColorStringBuffer: StringMaker = StringMaker()
 
@@ -116,9 +116,11 @@ hexColorStringBuffer!!.append(blueIndex, HEXRADIX.toString())
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = ModDomHelper.createNameValueNodes(document, ColorsData.getInstance()!!.NAME, "RGB Colors In Hex")!!
 
@@ -132,7 +134,11 @@ node.appendChild(blackNode)
 
                         for (index in 0 until MAX)
 
+        
+
+        Updates for KMP build        
         {
+
     var hexColorStringBuffer: StringMaker = StringMaker()
 
 
@@ -181,19 +187,31 @@ node.appendChild(whiteNode)
 
                         for (blueIndex in MAX /2 until MAX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (greenIndex in 0 until MAX /2)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (redIndex in 0 until MAX /2)
 
-        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        
+
+        Updates for KMP build        
+        {
+node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
@@ -206,19 +224,31 @@ node.appendChild(whiteNode)
 
                         for (redIndex in MAX /2 until MAX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (greenIndex in 0 until MAX /2)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (blueIndex in 0 until MAX /2)
 
-        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        
+
+        Updates for KMP build        
+        {
+node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
@@ -231,19 +261,31 @@ node.appendChild(whiteNode)
 
                         for (greenIndex in MAX /2 until MAX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (redIndex in 0 until MAX /2)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (blueIndex in 0 until MAX /2)
 
-        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        
+
+        Updates for KMP build        
+        {
+node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }
@@ -256,19 +298,31 @@ node.appendChild(whiteNode)
 
                         for (greenIndex in 0 until MAX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (redIndex in 0 until MAX)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (blueIndex in 0 until MAX)
 
-        {node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
+        
+
+        Updates for KMP build        
+        {
+node.appendChild(this.getColorNode(document, redIndex, greenIndex, blueIndex))
 }
 
 }

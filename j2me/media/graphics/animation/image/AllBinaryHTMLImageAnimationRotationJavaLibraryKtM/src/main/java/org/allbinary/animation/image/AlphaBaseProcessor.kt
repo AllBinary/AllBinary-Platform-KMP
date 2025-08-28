@@ -39,7 +39,11 @@ open public class AlphaBaseProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AlphaBaseProcessor{
+: AlphaBaseProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,18 +60,14 @@ open fun getInstance()
         
 open fun setAlpha(imageModifierUtil: ImageModifierUtil, originalImage: Image, imageToShow: Image, alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageModifierUtil = imageModifierUtil
 
 
-                    var originalImage = originalImage
-
-
-                    var imageToShow = imageToShow
-
-
-                    var alpha = alpha
+        Updates for KMP build        
+        {
+    //var imageModifierUtil = imageModifierUtil
+    //var originalImage = originalImage
+    //var imageToShow = imageToShow
+    //var alpha = alpha
 }
 
 

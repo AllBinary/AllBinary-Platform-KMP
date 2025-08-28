@@ -38,7 +38,11 @@ open public class ImageCompleteUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCompleteUtil{
+: ImageCompleteUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,12 +61,12 @@ open fun getInstance()
             
 open fun waitFor(image: Image, name: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var image = image
 
 
-                    var name = name
+        Updates for KMP build        
+        {
+var image = image
+var name = name
 }
 
 

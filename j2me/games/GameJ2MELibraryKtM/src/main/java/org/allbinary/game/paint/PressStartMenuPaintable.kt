@@ -49,7 +49,11 @@ open public class PressStartMenuPaintable : Paintable {
     private val KEY_START: String = "Press or Click F2 To Begin"
 
     private val MENU_START: String = "Press Start From The Menu To Begin"
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     
                         if(TouchScreenFactory.getInstance()!!.isTouch())
                         
@@ -78,9 +82,11 @@ public constructor        (){
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     
                         if(timeDelayHelper!!.isTime())
@@ -129,16 +135,22 @@ graphics.drawString(startString, displayInfo!!.getLastHalfWidth() -beginWidth, d
 
 open fun setFlash(flash: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var flash = flash
+
+        Updates for KMP build        
+        {
+var flash = flash
 this.flash= flash
 }
 
 
 open fun isFlash()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

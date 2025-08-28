@@ -33,9 +33,11 @@ open public class InputAutomationRobotServiceConsumer : InputAutomationServiceCo
         
 public constructor        (bundleContext: BundleContext)                        
 
-                            : super(InputAutomationRobotServiceInterface::class.toString()!!, bundleContext, InputAutomationRobotOSGIServiceVisitor()){
+                            : super(InputAutomationRobotServiceInterface::class.toString()!!, bundleContext, InputAutomationRobotOSGIServiceVisitor())
 
-                    var bundleContext = bundleContext
+        Updates for KMP build        
+        {
+var bundleContext = bundleContext
 
 
                             //For kotlin this is before the body of the constructor.

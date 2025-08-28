@@ -41,9 +41,11 @@ open public class RTSLayerFormFactory
         
 open fun getInstance(rtsLayer: RTSLayer)
         //nullable =  from not(true or (false and false)) = 
-: ScrollSelectionForm{
+: ScrollSelectionForm
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 
 
 

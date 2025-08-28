@@ -34,9 +34,15 @@ open fun getBaseNode()
         //nullable = true from not(false or (false and true)) = true
 : Node
 
+        Updates for KMP build        
+        
+
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document
+
+        Updates for KMP build        
+        
 
 }
                 

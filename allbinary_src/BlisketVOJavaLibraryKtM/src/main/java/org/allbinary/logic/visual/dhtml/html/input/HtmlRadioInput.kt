@@ -33,18 +33,14 @@ open public class HtmlRadioInput : HtmlValueInput {
     private val CHECKED: String = "checked"
 public constructor        (before: String, name: String, value: String, after: String)                        
 
-                            : super(before, HtmlInputData.getInstance()!!.RADIO, name, value, after){
+                            : super(before, HtmlInputData.getInstance()!!.RADIO, name, value, after)
 
-                    var before = before
-
-
-                    var name = name
-
-
-                    var value = value
-
-
-                    var after = after
+        Updates for KMP build        
+        {
+var before = before
+var name = name
+var value = value
+var after = after
 
 
                             //For kotlin this is before the body of the constructor.
@@ -54,7 +50,11 @@ public constructor        (before: String, name: String, value: String, after: S
 
 open fun setSelected()
         //nullable = true from not(false or (false and true)) = true
-{super.addAttribute(CHECKED, BooleanFactory.getInstance()!!.TRUE_STRING)
+
+
+        Updates for KMP build        
+        {
+super.addAttribute(CHECKED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 

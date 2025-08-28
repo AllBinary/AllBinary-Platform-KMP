@@ -36,7 +36,11 @@ open public class ImageColorResults
     private var colorAverage: ColorAverage
 public constructor        ()
             : super()
-        {this.setColorRange(ColorRange())
+        
+
+        Updates for KMP build        
+        {
+this.setColorRange(ColorRange())
 this.getColorRange()!!.setMaxRed( -1)
 this.getColorRange()!!.setMaxGreen( -1)
 this.getColorRange()!!.setMaxBlue( -1)
@@ -49,7 +53,11 @@ this.setColorAverage(ColorAverage())
 
 open fun getColorRange()
         //nullable = true from not(false or (false and true)) = true
-: ColorRange{
+: ColorRange
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,16 +67,22 @@ open fun getColorRange()
 
 open fun setColorRange(colorRange: ColorRange)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorRange = colorRange
+
+        Updates for KMP build        
+        {
+var colorRange = colorRange
 this.colorRange= colorRange
 }
 
 
 open fun getColorAverage()
         //nullable = true from not(false or (false and true)) = true
-: ColorAverage{
+: ColorAverage
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,9 +92,11 @@ open fun getColorAverage()
 
 open fun setColorAverage(colorAverage: ColorAverage)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var colorAverage = colorAverage
+
+        Updates for KMP build        
+        {
+var colorAverage = colorAverage
 this.colorAverage= colorAverage
 }
 

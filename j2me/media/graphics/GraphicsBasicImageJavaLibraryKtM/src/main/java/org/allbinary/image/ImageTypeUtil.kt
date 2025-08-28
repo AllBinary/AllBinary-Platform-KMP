@@ -38,7 +38,11 @@ open public class ImageTypeUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageTypeUtil{
+: ImageTypeUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +61,11 @@ open fun getInstance()
     private val list: BasicArrayList = BasicArrayList()
 private constructor        ()
             : super()
-        {list.add(JPG)
+        
+
+        Updates for KMP build        
+        {
+list.add(JPG)
 list.add(GIF)
 list.add(PNG)
 }
@@ -65,9 +73,11 @@ list.add(PNG)
 
 open fun isSupported(mediaFileType: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var mediaFileType = mediaFileType
+        Updates for KMP build        
+        {
+var mediaFileType = mediaFileType
 mediaFileType= mediaFileType!!.lowercase()
 
 
@@ -75,7 +85,11 @@ mediaFileType= mediaFileType!!.lowercase()
 
                         for (index in list.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = list.get(index) as String
 
 

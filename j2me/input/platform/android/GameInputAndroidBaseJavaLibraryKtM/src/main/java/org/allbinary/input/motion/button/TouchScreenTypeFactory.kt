@@ -41,7 +41,11 @@ open public class TouchScreenTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TouchScreenTypeFactory{
+: TouchScreenTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,9 +62,11 @@ open fun getInstance()
         
 open fun update(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 

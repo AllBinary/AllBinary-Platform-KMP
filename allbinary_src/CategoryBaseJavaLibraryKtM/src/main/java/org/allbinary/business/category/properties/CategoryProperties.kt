@@ -58,32 +58,42 @@ open public class CategoryProperties
     private var category: String
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.category= name
 }
 
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.category= CategoryUtil.getNameFromNode(node)
 }
 
 public constructor        (categoryPropertiesHashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var categoryPropertiesHashMap = categoryPropertiesHashMap
+        Updates for KMP build        
+        {
+var categoryPropertiesHashMap = categoryPropertiesHashMap
 this.category= .toCharArray()
 }
 
 
 open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +103,11 @@ open fun isRealRoot()
 
 open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +117,11 @@ open fun isRoot()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,7 +131,11 @@ open fun getKey()
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -125,9 +147,11 @@ open fun getValue()
             
 open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath
 
-                    var categoryHierarchyInterface = categoryHierarchyInterface
+        Updates for KMP build        
+        {
+var categoryHierarchyInterface = categoryHierarchyInterface
 
     var abPathData: AbPathData = AbPathData.getInstance()!!
 
@@ -152,7 +176,11 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         while(nextParentCategoryInterface != 
                                     null
                                 )
+        
+
+        Updates for KMP build        
         {
+
     
                         if(nextParentCategoryInterface!!.getProperties()!!.isRealRoot())
                         
@@ -219,7 +247,11 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)!!.append(this.getValue())
 
                         for (index in 0 until size)
 
-        {pathStringBuffer!!.append(list.get(index) as String)
+        
+
+        Updates for KMP build        
+        {
+pathStringBuffer!!.append(list.get(index) as String)
 }
 
 pathStringBuffer!!.append(abPathData!!.SEPARATOR)
@@ -242,7 +274,11 @@ pathStringBuffer!!.append(abPathData!!.SEPARATOR)
 
 open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -254,7 +290,11 @@ open fun getFileName()
             
 open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception("Not Root")
@@ -263,16 +303,22 @@ open fun getWebAppPath()
 
 open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.category= value
 }
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var returnBoolean: Boolean = Boolean.FALSE
 
 
@@ -294,7 +340,11 @@ open fun isValid()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var categoryHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
@@ -308,7 +358,11 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var categoryVector: Vector = Vector()
 
 categoryVector!!.add(category)
@@ -324,7 +378,11 @@ categoryVector!!.add(category)
             
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -336,9 +394,11 @@ open fun toValidationInfoDoc()
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -351,7 +411,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

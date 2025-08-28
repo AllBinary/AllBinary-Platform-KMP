@@ -40,9 +40,11 @@ open public class InsertTemplateCustomizerTransformInfoObjectConfig : NoTemplate
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: Object)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,12 +53,12 @@ public constructor        (transformInfoInterface: Object)
 
 public constructor        (transformInfoInterface: Object, document: Object)                        
 
-                            : super(transformInfoInterface, document){
+                            : super(transformInfoInterface, document)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var document = document
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var document = document
 
 
                             //For kotlin this is before the body of the constructor.
@@ -66,15 +68,13 @@ this.setDocument(this.generate(this.toXmlDoc()))
 
 public constructor        (transformInfoInterface: Object, name: Object, type: Object)                        
 
-                            : super(transformInfoInterface, name, type){
+                            : super(transformInfoInterface, name, type)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var name = name
-
-
-                    var type = type
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var name = name
+var type = type
 
 
                             //For kotlin this is before the body of the constructor.
@@ -87,9 +87,11 @@ this.setDocument(this.generate(this.toXmlDoc()))
             
 open fun set(aParentViewName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aParentViewName = aParentViewName
+
+        Updates for KMP build        
+        {
+var aParentViewName = aParentViewName
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))

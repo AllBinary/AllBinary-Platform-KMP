@@ -30,7 +30,11 @@ open public class E
         
 open fun newInstance()
         //nullable = true from not(false or (false and true)) = true
-: E{
+: E
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

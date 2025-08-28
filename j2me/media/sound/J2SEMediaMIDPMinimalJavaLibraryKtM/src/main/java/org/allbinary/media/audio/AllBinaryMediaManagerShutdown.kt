@@ -41,9 +41,11 @@ open public class AllBinaryMediaManagerShutdown
             
 open fun shutdown(soundsFactoryInterface: SoundsFactoryInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var soundsFactoryInterface = soundsFactoryInterface
+
+        Updates for KMP build        
+        {
+var soundsFactoryInterface = soundsFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 

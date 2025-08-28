@@ -46,15 +46,13 @@ open public class ModDomHelper
             
 open fun createTextNode(document: Document, name: String, text: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var name = name
-
-
-                    var text = text
+        Updates for KMP build        
+        {
+var document = document
+var name = name
+var text = text
 
     var newValueNode: Node = document.createElement(name)!!
 
@@ -74,12 +72,12 @@ newValueNode!!.appendChild(newValueTextNode)
             
 open fun createValueNode(document: Document, text: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var text = text
+        Updates for KMP build        
+        {
+var document = document
+var text = text
 
 
 
@@ -92,12 +90,12 @@ open fun createValueNode(document: Document, text: String)
             
 open fun createNameNode(document: Document, text: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var text = text
+        Updates for KMP build        
+        {
+var document = document
+var text = text
 
 
 
@@ -110,12 +108,12 @@ open fun createNameNode(document: Document, text: String)
             
 open fun createIndexNode(document: Document, index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var document = document
+var index = index
 
 
 
@@ -129,18 +127,14 @@ open fun createIndexNode(document: Document, index: Int)
             
 open fun createNameValueNodes(document: Document, elementName: String, nameText: String, valueText: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var elementName = elementName
-
-
-                    var nameText = nameText
-
-
-                    var valueText = valueText
+        Updates for KMP build        
+        {
+var document = document
+var elementName = elementName
+var nameText = nameText
+var valueText = valueText
 
     var newNode: Node = document.createElement(elementName)!!
 
@@ -158,15 +152,13 @@ newNode!!.appendChild(ModDomHelper.createValueNode(document, valueText))
             
 open fun createNameValueNodes(document: Document, elementNameAndNameText: String, valueText: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var elementNameAndNameText = elementNameAndNameText
-
-
-                    var valueText = valueText
+        Updates for KMP build        
+        {
+var document = document
+var elementNameAndNameText = elementNameAndNameText
+var valueText = valueText
 
     var newNode: Node = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, elementNameAndNameText, valueText)!!
 
@@ -182,18 +174,14 @@ open fun createNameValueNodes(document: Document, elementNameAndNameText: String
             
 open fun createNameValueIndexNodes(document: Document, elementNameAndNameText: String, index: Int, valueText: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var elementNameAndNameText = elementNameAndNameText
-
-
-                    var index = index
-
-
-                    var valueText = valueText
+        Updates for KMP build        
+        {
+var document = document
+var elementNameAndNameText = elementNameAndNameText
+var index = index
+var valueText = valueText
 
     var newNode: Node = ModDomHelper.createNameValueNodes(document, elementNameAndNameText, valueText)!!
 
@@ -210,15 +198,13 @@ newNode!!.appendChild(ModDomHelper.createIndexNode(document, index))
             
 open fun createNameValueNodes(document: Document, rootNode: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var rootNode = rootNode
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var document = document
+var rootNode = rootNode
+var hashMap = hashMap
 
     var node: Node = document.createElement(rootNode)!!
 
@@ -234,15 +220,13 @@ open fun createNameValueNodes(document: Document, rootNode: String, hashMap: Has
             
 open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var node = node
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var document = document
+var node = node
+var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -262,7 +246,11 @@ open fun createNameValueNodes(document: Document, node: Node, hashMap: HashMap<A
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var objectKey: Any = keyArray[i]!!
 
 
@@ -328,18 +316,14 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
             
 open fun createNameValueNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var rootNodeName = rootNodeName
-
-
-                    var duplicateNodeName = duplicateNodeName
-
-
-                    var valueVector = valueVector
+        Updates for KMP build        
+        {
+var document = document
+var rootNodeName = rootNodeName
+var duplicateNodeName = duplicateNodeName
+var valueVector = valueVector
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -355,7 +339,11 @@ open fun createNameValueNodes(document: Document, rootNodeName: String, duplicat
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: String = stringUtil!!.getInstance(valueVector!!.get(i) as String)!!
 
 node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, value))
@@ -373,18 +361,14 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, duplicateNodeName, 
             
 open fun createNameValueIndexNodes(document: Document, rootNodeName: String, duplicateNodeName: String, valueVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var rootNodeName = rootNodeName
-
-
-                    var duplicateNodeName = duplicateNodeName
-
-
-                    var valueVector = valueVector
+        Updates for KMP build        
+        {
+var document = document
+var rootNodeName = rootNodeName
+var duplicateNodeName = duplicateNodeName
+var valueVector = valueVector
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -400,7 +384,11 @@ open fun createNameValueIndexNodes(document: Document, rootNodeName: String, dup
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: String = stringUtil!!.getInstance(valueVector!!.get(index) as String)!!
 
 node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeName, index, value))
@@ -418,15 +406,13 @@ node.appendChild(ModDomHelper.createNameValueIndexNodes(document, duplicateNodeN
             
 open fun createNodeWithValueNodes(document: Document, rootNode: String, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var rootNode = rootNode
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var document = document
+var rootNode = rootNode
+var hashMap = hashMap
 
     var node: Node = document.createElement(rootNode)!!
 
@@ -442,15 +428,13 @@ open fun createNodeWithValueNodes(document: Document, rootNode: String, hashMap:
             
 open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var node = node
-
-
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var document = document
+var node = node
+var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -470,7 +454,11 @@ open fun createNodeWithValueNodes(document: Document, node: Node, hashMap: HashM
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = keyArray[i]!! as String
 
 
@@ -493,7 +481,11 @@ node.appendChild(ModDomHelper.createTextNode(document, name, value))
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

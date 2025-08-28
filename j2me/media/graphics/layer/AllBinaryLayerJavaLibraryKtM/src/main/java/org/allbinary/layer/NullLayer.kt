@@ -36,7 +36,11 @@ open public class NullLayer : Layer {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullLayer{
+: NullLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -47,7 +51,11 @@ open fun getInstance()
         }
             private constructor        ()                        
 
-                            : super(0, 0){
+                            : super(0, 0)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -55,9 +63,11 @@ open fun getInstance()
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 

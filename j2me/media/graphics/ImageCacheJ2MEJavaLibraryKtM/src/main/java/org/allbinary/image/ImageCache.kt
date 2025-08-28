@@ -48,29 +48,33 @@ open public class ImageCache : ImageCacheBase {
         }
             
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun addListener(renderer: Any)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var renderer = renderer
+
+        Updates for KMP build        
+        {
+var renderer = renderer
 }
 
 
                 @Throws(Exception::class)
             override fun get(caller: String, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var caller = caller
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var caller = caller
+    //var width = width
+    //var height = height
 
     var foundIndex: Int = this.getIndex(width, height)!!
 
@@ -132,9 +136,11 @@ listOfList[foundIndex]!!.add(image)
                 @Throws(Exception::class)
             override fun get(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var key = key
+        Updates for KMP build        
+        {
+    //var key = key
 
     var image: Image = this.getImage(key)!!
 
@@ -168,7 +174,11 @@ listOfList[foundIndex]!!.add(image)
         try {
             image= this.createImage(key, inputStream)
 } catch(e: Exception)
-            {logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Exception: Trying Again After GC", this, commonStrings!!.GET, e)
 logUtil!!.put(StringMaker().
                             append("InputStream: ")!!.append(StringUtil.getInstance()!!.toString(inputStream))!!.toString(), this, commonStrings!!.GET)
 System.gc()
@@ -195,17 +205,29 @@ this.hashtable.put(key, image)
             
 open fun loadImageForAnimation()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun runTask()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isLazy()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

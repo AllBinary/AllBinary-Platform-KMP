@@ -38,7 +38,11 @@ open public class RaceTrackRoadsGeographicMapCellHistoryFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GeographicMapCellHistory{
+: GeographicMapCellHistory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,7 +53,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -36,21 +36,15 @@ open public class AdjustedVectorAnimation : VectorAnimation {
     private var dy: Int
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, basicColor, animationBehavior){
+                            : super(currentPoints, basicColor, animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -61,21 +55,15 @@ this.dy= dy
 
 public constructor        (currentPoints: Array<IntArray?>, basicColor: BasicColor, dx: Int, dy: Int, animationBehavior: AnimationBehavior)                        
 
-                            : super(currentPoints, basicColor, animationBehavior){
+                            : super(currentPoints, basicColor, animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
-
-
-                    var dx = dx
-
-
-                    var dy = dy
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
+    //var dx = dx
+    //var dy = dy
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -86,15 +74,13 @@ this.dy= dy
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 super.paint(graphics, x +this.dx, y +this.dy)
 }
 

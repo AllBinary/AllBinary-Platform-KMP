@@ -34,25 +34,39 @@ open public class GameCanvasPauseRunnable : GameRunnable {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 
     private val allBinaryGameCanvas: AllBinaryGameCanvas
-public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas){
+public constructor        (allBinaryGameCanvas: AllBinaryGameCanvas)
 
-                    var allBinaryGameCanvas = allBinaryGameCanvas
+        Updates for KMP build        
+        {
+var allBinaryGameCanvas = allBinaryGameCanvas
 this.allBinaryGameCanvas= allBinaryGameCanvas
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             override fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             allBinaryGameCanvas!!.processSleep()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)

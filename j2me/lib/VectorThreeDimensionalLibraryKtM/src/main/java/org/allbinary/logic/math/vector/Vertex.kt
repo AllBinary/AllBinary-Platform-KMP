@@ -42,15 +42,13 @@ open public class Vertex
     var z: BasicDecimal = BasicDecimal()
 public constructor        (x: Int, y: Int, z: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+var x = x
+var y = y
+var z = z
 this.x.set(x)
 this.y.set(y)
 this.z.set(z)
@@ -58,23 +56,31 @@ this.z.set(z)
 
 public constructor        (x: Int, y: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var x = x
-
-
-                    var y = y
+var x = x
+var y = y
 this.x.set(x)
 this.y.set(y)
 }
 
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

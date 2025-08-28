@@ -33,7 +33,11 @@ open public class QuoteRequestIdGenerator : UniqueIdGenerator {
         
 
     private val IDFILE: String = "quoterequestId"
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(URLGLOBALS.getMainPath())

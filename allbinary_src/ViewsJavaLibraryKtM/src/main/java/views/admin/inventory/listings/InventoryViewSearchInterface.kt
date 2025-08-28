@@ -34,11 +34,17 @@ open fun searchSingleStaticPage()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun searchSingleDynamicPage()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -46,11 +52,17 @@ open fun search()
         //nullable = true from not(false or (false and true)) = true
 : Array<String?>
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun getProduct(product: String)
         //nullable = true from not(false or (false and false)) = true
 : String
+
+        Updates for KMP build        
+        
 
 }
                 

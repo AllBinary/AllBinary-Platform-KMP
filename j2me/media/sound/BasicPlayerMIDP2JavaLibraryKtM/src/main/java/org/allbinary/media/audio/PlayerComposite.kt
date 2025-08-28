@@ -53,21 +53,23 @@ open public class PlayerComposite
     private val timeElapsedHelper: TimeDelayHelper = TimeDelayHelper(0)
 public constructor        (player: Player)
             : super()
-        {
+        
 
-                    var player = player
+        Updates for KMP build        
+        {
+var player = player
 this.player= player
 this.timeElapsedHelper!!.delay= 570
 }
 
 public constructor        (player: Player, repeatTime: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var player = player
-
-
-                    var repeatTime = repeatTime
+var player = player
+var repeatTime = repeatTime
 this.player= player
 this.timeElapsedHelper!!.delay= repeatTime
 }
@@ -76,37 +78,53 @@ this.timeElapsedHelper!!.delay= repeatTime
 
 open fun addPlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerListener = playerListener
+
+        Updates for KMP build        
+        {
+var playerListener = playerListener
 this.player.addPlayerListener(playerListener)
 }
 
 
 open fun removePlayerListener(playerListener: PlayerListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerListener = playerListener
+
+        Updates for KMP build        
+        {
+var playerListener = playerListener
 this.player.removePlayerListener(playerListener)
 }
 
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.player.close()
+
+
+        Updates for KMP build        
+        {
+this.player.close()
 }
 
 
 open fun deallocate()
         //nullable = true from not(false or (false and true)) = true
-{this.player.deallocate()
+
+
+        Updates for KMP build        
+        {
+this.player.deallocate()
 }
 
 
 open fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -116,7 +134,11 @@ open fun getContentType()
 
 open fun getDuration()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -126,7 +148,11 @@ open fun getDuration()
 
 open fun getMediaTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,7 +162,11 @@ open fun getMediaTime()
 
 open fun getTimeBase()
         //nullable = true from not(false or (false and true)) = true
-: TimeBase{
+: TimeBase
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -150,9 +180,11 @@ open fun getTimeBase()
 
 open fun setTimeBase(timeBase: TimeBase)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeBase = timeBase
+
+        Updates for KMP build        
+        {
+var timeBase = timeBase
 player = this.playerplayer as TimeBaseInterface
 player.
                     setTimeBase(timeBase)
@@ -161,11 +193,19 @@ player.
 
 open fun prefetch()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.prefetch()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "prefetch", e)
 }
 
 }
@@ -173,11 +213,19 @@ open fun prefetch()
 
 open fun realize()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.realize()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "realize", e)
 }
 
 }
@@ -185,7 +233,11 @@ open fun realize()
 
 open fun getState()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -195,18 +247,22 @@ open fun getState()
 
 open fun setLoopCount(count: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var count = count
+
+        Updates for KMP build        
+        {
+var count = count
 this.player.setLoopCount(count)
 }
 
 
 open fun setMediaTime(now: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var now = now
+        Updates for KMP build        
+        {
+var now = now
 
         try {
             
@@ -215,7 +271,11 @@ open fun setMediaTime(now: Long)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.player.setMediaTime(now)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "setMediaTime", e)
 
 
 
@@ -230,7 +290,11 @@ open fun setMediaTime(now: Long)
 
 open fun start()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -242,7 +306,11 @@ open fun start()
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.START_METHOD_NAME, e)
 }
 
 }
@@ -250,11 +318,19 @@ open fun start()
 
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.player.stop()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "stop", e)
 }
 
 }
@@ -262,9 +338,11 @@ open fun stop()
 
 open fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
-: Control{
+: Control
 
-                    var controlType = controlType
+        Updates for KMP build        
+        {
+var controlType = controlType
 
 
 
@@ -275,7 +353,11 @@ open fun getControl(controlType: String)
 
 open fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>{
+: Array<Control?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -285,12 +367,12 @@ open fun getControls()
 
 open fun setVolume(leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var leftVolume = leftVolume
 
 
-                    var rightVolume = rightVolume
+        Updates for KMP build        
+        {
+    //var leftVolume = leftVolume
+    //var rightVolume = rightVolume
 player = this.playerplayer as Controllable2
 player.
                     setVolume(leftVolume, rightVolume)
@@ -299,7 +381,11 @@ player.
 
 open fun getPlayerP()
         //nullable = true from not(false or (false and true)) = true
-: Player{
+: Player
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -32,9 +32,11 @@ open public class AbDataOutputStream : DataOutputStream {
         
 public constructor        (out: OutputStream)                        
 
-                            : super(out){
+                            : super(out)
 
-                    var out = out
+        Updates for KMP build        
+        {
+var out = out
 
 
                             //For kotlin this is before the body of the constructor.

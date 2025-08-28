@@ -44,15 +44,21 @@ open public class ContextConfiguration
     private var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor        ()
             : super()
-        {logUtil!!.put(commonStrings!!.START, this, "ContextConfiguration")
+        
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, "ContextConfiguration")
 this.setEmailServerConfigurationInterface(EmailServerConfiguration() as EmailServerConfigurationInterface)
 }
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 logUtil!!.put(commonStrings!!.START, this, "ContextConfiguration(HashMap)")
 this.setEmailServerConfigurationInterface(EmailServerConfiguration(hashMap) as EmailServerConfigurationInterface)
 }
@@ -60,7 +66,11 @@ this.setEmailServerConfigurationInterface(EmailServerConfiguration(hashMap) as E
 
 open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: EmailServerConfigurationInterface{
+: EmailServerConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,9 +80,11 @@ open fun getEmailServerConfigurationInterface()
 
 open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var emailServerConfigurationInterface = emailServerConfigurationInterface
+
+        Updates for KMP build        
+        {
+var emailServerConfigurationInterface = emailServerConfigurationInterface
 this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 

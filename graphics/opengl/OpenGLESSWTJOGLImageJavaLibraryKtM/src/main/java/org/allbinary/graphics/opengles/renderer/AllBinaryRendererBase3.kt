@@ -46,12 +46,18 @@ open public class AllBinaryRendererBase3
             
 open fun update(gl: GL10)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
         while(list.size() > 0)
+        
+
+        Updates for KMP build        
         {
+
     var openGLESImage: OpenGLESImage = list.remove(0) as OpenGLESImage
 
 
@@ -72,9 +78,11 @@ open fun update(gl: GL10)
 
 open fun add(image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var image = image
+
+        Updates for KMP build        
+        {
+    //var image = image
 this.list.add(image)
 }
 

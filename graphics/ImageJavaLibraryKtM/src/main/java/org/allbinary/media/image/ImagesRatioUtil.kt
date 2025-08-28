@@ -41,7 +41,11 @@ open public class ImagesRatioUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImagesRatioUtil{
+: ImagesRatioUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,19 +58,23 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 
 open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var bufferedImageArray = bufferedImageArray
-
-
-                    var totalImages = totalImages
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
+    //var totalImages = totalImages
 
     var end: Int = totalImages
 
@@ -83,7 +91,11 @@ open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
                         for (index in 1 until end)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(ratio != (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight()))
                         
@@ -108,12 +120,12 @@ open fun isEqual(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
 open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
         //nullable = true from not(false or (false and false)) = true
-: Double{
+: Double
 
-                    var bufferedImageArray = bufferedImageArray
-
-
-                    var totalImages = totalImages
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
+    //var totalImages = totalImages
 
     var ratio: Double = 0
 
@@ -130,7 +142,11 @@ open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
 
                         for (index in 0 until end)
 
-        {ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight())
+        
+
+        Updates for KMP build        
+        {
+ratio += (bufferedImageArray[index]!!.getWidth().toDouble() /bufferedImageArray[index]!!.getHeight())
 }
 
 
@@ -145,12 +161,12 @@ open fun getAverage(bufferedImageArray: Array<BufferedImage?>, totalImages: Int)
             
 open fun fudge(bufferedImage: BufferedImage, ratio: Double)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var bufferedImage = bufferedImage
-
-
-                    var ratio = ratio
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
+var ratio = ratio
 
     var imageRatio: Double = (bufferedImage!!.getWidth().toDouble() /bufferedImage!!.getHeight())
 
@@ -207,7 +223,11 @@ logUtil!!.put("Draw some columns to fill in gap", this, "fudge")
 
                         for (index in 0 until point.x)
 
-        {g.drawImage(firstColumnBufferedImage, index, 0, 
+        
+
+        Updates for KMP build        
+        {
+g.drawImage(firstColumnBufferedImage, index, 0, 
                             null)
 g.drawImage(lastColumnBufferedImage, newWidth -index, 0, 
                             null)
@@ -234,7 +254,11 @@ logUtil!!.put("Draw some rows to fill in gap", this, "fudge")
 
                         for (index in 0 until point.y)
 
-        {g.drawImage(firstRowBufferedImage, 0, index, 
+        
+
+        Updates for KMP build        
+        {
+g.drawImage(firstRowBufferedImage, 0, index, 
                             null)
 g.drawImage(lastRowBufferedImage, 0, newHeight -index, 
                             null)
@@ -257,15 +281,13 @@ g.drawImage(bufferedImage, point.x, point.y, bufferedImage!!.getWidth(), buffere
             
 open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, ratio: Double)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
 
-                    var bufferedImageArray = bufferedImageArray
-
-
-                    var totalImages = totalImages
-
-
-                    var ratio = ratio
+        Updates for KMP build        
+        {
+    //var bufferedImageArray = bufferedImageArray
+    //var totalImages = totalImages
+    //var ratio = ratio
 
     var end: Int = totalImages
 
@@ -282,7 +304,11 @@ open fun fudge(bufferedImageArray: Array<BufferedImage?>, totalImages: Int, rati
 
                         for (index in 0 until end)
 
-        {fudgedBufferedImageArray[index]= fudge(bufferedImageArray[index]!!, ratio)
+        
+
+        Updates for KMP build        
+        {
+fudgedBufferedImageArray[index]= fudge(bufferedImageArray[index]!!, ratio)
 }
 
 

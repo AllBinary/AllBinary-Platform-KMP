@@ -40,15 +40,21 @@ open public class CreditCardType
     private var name: String
 public constructor        (cardType: String)
             : super()
-        {
+        
 
-                    var cardType = cardType
+        Updates for KMP build        
+        {
+var cardType = cardType
 this.name= cardType
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

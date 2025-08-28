@@ -43,7 +43,11 @@ open public class CamelCaseUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CamelCaseUtil{
+: CamelCaseUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,12 +68,12 @@ open fun getInstance()
             
 open fun getAsCamelCase(string: String, stringBuilder: StringMaker)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var string = string
-
-
-                    var stringBuilder = stringBuilder
+        Updates for KMP build        
+        {
+    //var string = string
+    //var stringBuilder = stringBuilder
 
     
                         if(string == 
@@ -108,7 +112,11 @@ tokenizer.getTokens(string, list)
 
                         for (i in 0 until size)
 
-        {word= list.get(i) as String
+        
+
+        Updates for KMP build        
+        {
+word= list.get(i) as String
 word= if(stringValidationUtil!!.isEmpty(word)) {
                             
                             word

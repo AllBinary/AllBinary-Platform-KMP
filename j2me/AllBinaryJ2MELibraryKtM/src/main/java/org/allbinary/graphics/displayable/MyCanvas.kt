@@ -64,18 +64,22 @@ open public class MyCanvas : Canvas
     private var isPaused: Boolean= false
 public constructor        ()                        
 
-                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayList()){
+                            : this(CommonStrings.getInstance()!!.UNKNOWN, BasicArrayList())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (name: String, childNameList: BasicArrayList){
+public constructor        (name: String, childNameList: BasicArrayList)
 
-                    var name = name
-
-
-                    var childNameList = childNameList
+        Updates for KMP build        
+        {
+    //var name = name
+    //var childNameList = childNameList
 logUtil!!.put(commonStrings!!.CONSTRUCTOR, this, commonStrings!!.CONSTRUCTOR)
 displayInfoSingleton!!.update(this, canvasStrings!!.CONSTRUCTOR)
 this.name= name
@@ -85,28 +89,34 @@ this.commandStack= Stack()
 
 override fun setFullScreenMode(mode: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var mode = mode
+
+        Updates for KMP build        
+        {
+var mode = mode
 super.setFullScreenMode(mode)
 displayInfoSingleton!!.update(this, canvasStrings!!.SET_FULL_SCREEN_MODE)
 }
 
 override fun sizeChanged(w: Int, h: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var w = w
 
 
-                    var h = h
+        Updates for KMP build        
+        {
+var w = w
+var h = h
 displayInfoSingleton!!.update(this, canvasStrings!!.SIZE_CHANGED)
 }
 
 
 open fun getCommandStack()
         //nullable = true from not(false or (false and true)) = true
-: Stack<Any>{
+: Stack<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -117,9 +127,11 @@ open fun getCommandStack()
 
 open fun isCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var command = command
+        Updates for KMP build        
+        {
+var command = command
 
 
 
@@ -130,9 +142,11 @@ open fun isCommand(command: Command)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun addCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 
     
                         if(!this.commandStack!!.contains(command))
@@ -148,9 +162,11 @@ super.addCommand(command)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeCommand(command: Command)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var command = command
+
+        Updates for KMP build        
+        {
+var command = command
 commandStack!!.removeElement(command)
 super.removeCommand(command)
 }
@@ -158,7 +174,11 @@ super.removeCommand(command)
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun removeAllCommands()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var size: Int = commandStack!!.size!!
 
 
@@ -167,7 +187,11 @@ override fun removeAllCommands()
 
                         for (index in 0 until size)
 
-        {super.removeCommand(commandStack!!.pop() as Command)
+        
+
+        Updates for KMP build        
+        {
+super.removeCommand(commandStack!!.pop() as Command)
 }
 
 }
@@ -176,9 +200,11 @@ override fun removeAllCommands()
     private var listener: CommandListener = NullCommandListener.NULL_COMMAND_LISTENER
 override fun setCommandListener(l: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var l = l
+
+        Updates for KMP build        
+        {
+var l = l
 super.setCommandListener(l)
 listener= l
 }
@@ -186,7 +212,11 @@ listener= l
 
 open fun getCustomCommandListener()
         //nullable = true from not(false or (false and true)) = true
-: CommandListener{
+: CommandListener
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -197,7 +227,11 @@ open fun getCustomCommandListener()
 
 open fun isPaused()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -207,14 +241,22 @@ open fun isPaused()
 
 open fun removePauseCommand()
         //nullable = true from not(false or (false and true)) = true
-{this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
+
+
+        Updates for KMP build        
+        {
+this.removeCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun pause()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.PAUSE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.PAUSE)
 this.removePauseCommand()
 this.addCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.setPaused(true)
@@ -224,7 +266,11 @@ this.setPaused(true)
 
 open fun unPause()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.UN_PAUSE)
 this.removeCommand(MyCommandsFactory.getInstance()!!.RESUME_COMMAND)
 this.addCommand(MyCommandsFactory.getInstance()!!.PAUSE_COMMAND)
 this.setPaused(false)
@@ -235,30 +281,40 @@ this.setPaused(false)
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{displayInfoSingleton!!.process()
+
+
+        Updates for KMP build        
+        {
+displayInfoSingleton!!.process()
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun hasChild(displayable: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var displayable = displayable
+        Updates for KMP build        
+        {
+var displayable = displayable
 
 
 
@@ -269,98 +325,102 @@ open fun hasChild(displayable: MyCanvas)
 
 open fun destroy()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put("Destroyed MyCanvas", this, "destroy")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Destroyed MyCanvas", this, "destroy")
 }
 
 
 open fun setPaused(isPaused: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isPaused = isPaused
+
+        Updates for KMP build        
+        {
+var isPaused = isPaused
 this.isPaused= isPaused
 }
 
 
 open fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+var keyCode = keyCode
+var deviceId = deviceId
 }
 
 
 open fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+var keyCode = keyCode
+var deviceId = deviceId
 }
 
 
 open fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+var keyCode = keyCode
+var deviceId = deviceId
 }
 
 
     private val touchME: TouchJ2ME = TouchJ2ME()
 override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 touchME!!.pointerDragged(x, y)
 }
 
 override fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 touchME!!.pointerPressed(x, y)
 }
 
 override fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 touchME!!.pointerReleased(x, y)
 }
 
 
 open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var nextSongSound = nextSongSound
 
 
-                    var leftVolume = leftVolume
-
-
-                    var rightVolume = rightVolume
+        Updates for KMP build        
+        {
+    //var nextSongSound = nextSongSound
+    //var leftVolume = leftVolume
+    //var rightVolume = rightVolume
 }
 
 

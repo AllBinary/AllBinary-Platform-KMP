@@ -38,7 +38,11 @@ open public class OpenGLVersionValidator
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLVersionValidator{
+: OpenGLVersionValidator
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,9 +59,11 @@ open fun getInstance()
         
 open fun isAvailable(glVersionRequired: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var glVersionRequired = glVersionRequired
+        Updates for KMP build        
+        {
+    //var glVersionRequired = glVersionRequired
 
 
 
@@ -68,12 +74,12 @@ open fun isAvailable(glVersionRequired: String)
 
 open fun setShaderComposite(shaderComposite: ShaderComposite, anyType: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var shaderComposite = shaderComposite
 
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+    //var shaderComposite = shaderComposite
+    //var anyType = anyType
 }
 
 

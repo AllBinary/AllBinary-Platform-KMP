@@ -41,7 +41,11 @@ open public class SWTProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: SWTProcessor{
+: SWTProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,16 +56,22 @@ open fun getInstance()
         }
             protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     var runnable: Runnable = NullRunnable.getInstance()!!
 
 open fun process(display: Display)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var display = display
+
+        Updates for KMP build        
+        {
+    //var display = display
 display.sleep()
 }
 

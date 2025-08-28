@@ -37,7 +37,11 @@ open public class InputFeatureFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InputFeatureFactory{
+: InputFeatureFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     val REMOVE_DUPLICATE_KEY_PRESSES: InputFeature = InputFeature("Remove Duplicate Key Presses")
@@ -63,7 +71,11 @@ open fun getInstance()
 
 open fun isSingleKeyProcessing()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     var features: Features = Features.getInstance()!!
 
 

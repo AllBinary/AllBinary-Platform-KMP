@@ -37,21 +37,15 @@ open public class RectangleCollisionPointUtil
             
 open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectX1 = rectX1
-
-
-                    var rectY1 = rectY1
-
-
-                    var rectX2 = rectX2
-
-
-                    var rectY2 = rectY2
-
-
-                    var list = list
+        Updates for KMP build        
+        {
+var rectX1 = rectX1
+var rectY1 = rectY1
+var rectX2 = rectX2
+var rectY2 = rectY2
+var list = list
 
     var rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
 
@@ -64,7 +58,11 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        {point= list.objectArray[index]!! as GPoint
+        
+
+        Updates for KMP build        
+        {
+point= list.objectArray[index]!! as GPoint
 
     
                         if(!rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, point.getX(), point.getY()))
@@ -90,27 +88,17 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
 open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, list: BasicArrayList, xCellSize: Int, yCellSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectX1 = rectX1
-
-
-                    var rectY1 = rectY1
-
-
-                    var rectX2 = rectX2
-
-
-                    var rectY2 = rectY2
-
-
-                    var list = list
-
-
-                    var xCellSize = xCellSize
-
-
-                    var yCellSize = yCellSize
+        Updates for KMP build        
+        {
+var rectX1 = rectX1
+var rectY1 = rectY1
+var rectX2 = rectX2
+var rectY2 = rectY2
+var list = list
+var xCellSize = xCellSize
+var yCellSize = yCellSize
 
     var rectangleCollisionUtil: RectangleCollisionUtil = RectangleCollisionUtil.getInstance()!!
 
@@ -123,7 +111,11 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
 
                         for (index in list.size()!!  - 1  downTo 0)
 
-        {point= list.objectArray[index]!! as GPoint
+        
+
+        Updates for KMP build        
+        {
+point= list.objectArray[index]!! as GPoint
 
     
                         if(!rectangleCollisionUtil!!.isInside(rectX1, rectY1, rectX2, rectY2, point.getX() *xCellSize, point.getY() *yCellSize))
@@ -150,7 +142,11 @@ open fun allPointsInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, lis
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

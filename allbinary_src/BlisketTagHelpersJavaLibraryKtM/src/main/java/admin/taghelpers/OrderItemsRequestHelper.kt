@@ -46,12 +46,12 @@ open public class OrderItemsRequestHelper : TagHelper {
     private var groupId: String
 
     private var status: String
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
 this.getFormData()
 }
@@ -59,7 +59,11 @@ this.getFormData()
 
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.id= request.getParameter(OrderData.ID)
+
+
+        Updates for KMP build        
+        {
+this.id= request.getParameter(OrderData.ID)
 this.groupId= request.getParameter(ShippingMethodData.GROUP)
 this.status= request.getParameter(OrderHistoryData.STATUS)
 }
@@ -67,9 +71,11 @@ this.status= request.getParameter(OrderHistoryData.STATUS)
 
 open fun setOrderStatus(newStatus: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var newStatus = newStatus
+        Updates for KMP build        
+        {
+var newStatus = newStatus
 
         try {
             
@@ -97,7 +103,11 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, newStatus)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to view order table"
 
 
@@ -121,7 +131,11 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, newStatus)
 
 open fun setOrderStatus()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Status successfully set to: " +this.status
@@ -142,7 +156,11 @@ OrderItemsEntityFactory.getInstance()!!.setStatus(id, groupId, this.status)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to view order table"
 
 

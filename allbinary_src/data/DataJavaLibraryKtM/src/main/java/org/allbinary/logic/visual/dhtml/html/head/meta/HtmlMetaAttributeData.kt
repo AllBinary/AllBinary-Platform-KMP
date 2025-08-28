@@ -36,12 +36,12 @@ open public class HtmlMetaAttributeData
     private var name: String
 public constructor        (id: Int, value: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var id = id
-
-
-                    var value = value
+var id = id
+var value = value
 this.name= value
 this.id= id
 }
@@ -49,9 +49,11 @@ this.id= id
 
 open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData?)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var htmlMetaAttributeData = htmlMetaAttributeData
+        Updates for KMP build        
+        {
+var htmlMetaAttributeData = htmlMetaAttributeData
 
     
                         if(htmlMetaAttributeData!!.id == this.id)
@@ -78,7 +80,11 @@ open fun equals(htmlMetaAttributeData: HtmlMetaAttributeData?)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -38,7 +38,11 @@ open public class ScaleBaseProcessor
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ScaleBaseProcessor{
+: ScaleBaseProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,30 +59,18 @@ open fun getInstance()
         
 open fun update(originalImage: Image, originalImageArray: Array<Image?>, imageToShowArray: Array<Image?>, index: Int, scaleX: Float, scaleY: Float, maxScaleX: Float, maxScaleY: Float)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImage = originalImage
 
 
-                    var originalImageArray = originalImageArray
-
-
-                    var imageToShowArray = imageToShowArray
-
-
-                    var index = index
-
-
-                    var scaleX = scaleX
-
-
-                    var scaleY = scaleY
-
-
-                    var maxScaleX = maxScaleX
-
-
-                    var maxScaleY = maxScaleY
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var originalImageArray = originalImageArray
+    //var imageToShowArray = imageToShowArray
+    //var index = index
+    //var scaleX = scaleX
+    //var scaleY = scaleY
+    //var maxScaleX = maxScaleX
+    //var maxScaleY = maxScaleY
 }
 
 

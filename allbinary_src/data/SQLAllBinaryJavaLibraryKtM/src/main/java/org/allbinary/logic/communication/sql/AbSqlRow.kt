@@ -71,9 +71,11 @@ open public class AbSqlRow : AbSqlColumn {
     private val INSERT_END: String = "')"
 public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)                        
 
-                            : super(databaseConnectionInfoInterface){
+                            : super(databaseConnectionInfoInterface)
 
-                    var databaseConnectionInfoInterface = databaseConnectionInfoInterface
+        Updates for KMP build        
+        {
+    //var databaseConnectionInfoInterface = databaseConnectionInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -84,9 +86,11 @@ public constructor        (databaseConnectionInfoInterface: DbConnectionInfo)
 
 open fun getValue(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var value = value
 
     
                         if(StringValidationUtil.getInstance()!!.isEmpty(value))
@@ -115,15 +119,13 @@ open fun getValue(value: String)
 
 open fun updateWhere(key: String, value: String, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var key = key
 
 
-                    var value = value
-
-
-                    var updatedKeyValuePairs = updatedKeyValuePairs
+        Updates for KMP build        
+        {
+    //var key = key
+    //var value = value
+    //var updatedKeyValuePairs = updatedKeyValuePairs
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -145,7 +147,11 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = keyArray[i]!!.toString()!!
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
@@ -203,7 +209,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -222,12 +232,12 @@ this.executeSQLStatement(sqlStatement)
 
 open fun updateWhere(whereKeyValuePairs: HashMap<Any, Any>, updatedKeyValuePairs: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var whereKeyValuePairs = whereKeyValuePairs
 
 
-                    var updatedKeyValuePairs = updatedKeyValuePairs
+        Updates for KMP build        
+        {
+    //var whereKeyValuePairs = whereKeyValuePairs
+    //var updatedKeyValuePairs = updatedKeyValuePairs
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -249,7 +259,11 @@ stringBuffer!!.append(this.sqlStrings!!.SET)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = keyArray[i]!!.toString()!!
 
 stringBuffer!!.append(this.commonSeps!!.SPACE)
@@ -314,7 +328,11 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (i in 0 until size2)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyArray2[i]!! as String
 
 
@@ -355,7 +373,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -376,12 +398,12 @@ this.executeSQLStatement(sqlStatement)
 
 open fun deleteWhere(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var key = key
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var key = key
+    //var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -409,7 +431,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -426,9 +452,11 @@ this.executeSQLStatement(sqlStatement)
 
 open fun deleteWhere(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keysAndValues = keysAndValues
+
+        Updates for KMP build        
+        {
+    //var keysAndValues = keysAndValues
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -454,7 +482,11 @@ stringBuffer!!.append(this.sqlStrings!!.WHERE)
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyArray[i]!! as String
 
 
@@ -489,7 +521,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -505,9 +541,11 @@ this.executeSQLStatement(sqlStatement)
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var values = values
+
+        Updates for KMP build        
+        {
+    //var values = values
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -522,7 +560,11 @@ stringBuffer!!.append(this.sqlStrings!!.VALUES)
 
                         for (i in 0 until values.size -1)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: String = this.getValue(values.get(i) as String)!!
 
 value= Replace(this.sqlStrings!!.ESCAPE, this.sqlStrings!!.DOUBLE_ESCAPE).
@@ -552,7 +594,11 @@ this.executeSQLStatement(sqlStatement)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -568,9 +614,11 @@ this.executeSQLStatement(sqlStatement)
 
 open fun getRow(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var keysAndValues = keysAndValues
+        Updates for KMP build        
+        {
+    //var keysAndValues = keysAndValues
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -600,7 +648,11 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyArray[index]!! as String
 
 
@@ -641,7 +693,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        {result= HashMap<Any, Any>()
+        
+
+        Updates for KMP build        
+        {
+result= HashMap<Any, Any>()
 
     var columnCount: Int = resultSetMetaData!!.getColumnCount()!!
 
@@ -651,7 +707,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
                         for (index in 1 until columnCount)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
 
 
@@ -691,7 +751,11 @@ result.put(columnName, field)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return null
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -712,9 +776,11 @@ result.put(columnName, field)
 
 open fun getRows(keysAndValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var keysAndValues = keysAndValues
+        Updates for KMP build        
+        {
+    //var keysAndValues = keysAndValues
 
 
 
@@ -725,12 +791,12 @@ open fun getRows(keysAndValues: HashMap<Any, Any>)
 
 open fun getRows(keysAndValues: HashMap<Any, Any>, more: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var keysAndValues = keysAndValues
-
-
-                    var more = more
+        Updates for KMP build        
+        {
+    //var keysAndValues = keysAndValues
+    //var more = more
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -758,7 +824,11 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: String = keyArray[index]!! as String
 
 
@@ -800,7 +870,11 @@ stringBuffer!!.append(more)
 
 
         while(rset.next())
+        
+
+        Updates for KMP build        
         {
+
     var result: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
@@ -812,7 +886,11 @@ stringBuffer!!.append(more)
 
                         for (index in 1 until columnCount)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
 
 
@@ -842,7 +920,11 @@ rows.add(result)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -863,7 +945,11 @@ rows.add(result)
 
 open fun getAllRows()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.sqlStrings!!.SELECT_ALL_FROM)
@@ -893,7 +979,11 @@ stringBuffer!!.append(this.getTableName())
 
 
         while(rset.next())
+        
+
+        Updates for KMP build        
         {
+
     var result: HashMap<Any, Any> = HashMap<Any, Any>()
 
 
@@ -905,7 +995,11 @@ stringBuffer!!.append(this.getTableName())
 
                         for (index in 1 until columnCount)
 
+        
+
+        Updates for KMP build        
         {
+
     var columnName: String = resultSetMetaData!!.getColumnName(index)!!
 
 
@@ -932,7 +1026,11 @@ rows.add(result)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -953,18 +1051,14 @@ rows.add(result)
 
 open fun getRowsWhereBetween(whereKeyValuePairs: HashMap<Any, Any>, betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var whereKeyValuePairs = whereKeyValuePairs
-
-
-                    var betweenColumn = betweenColumn
-
-
-                    var smallest = smallest
-
-
-                    var largest = largest
+        Updates for KMP build        
+        {
+    //var whereKeyValuePairs = whereKeyValuePairs
+    //var betweenColumn = betweenColumn
+    //var smallest = smallest
+    //var largest = largest
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -998,7 +1092,11 @@ stringBuffer!!.append(sqlStrings!!.WHERE)
 
                         for (index in 0 until size)
 
-        {key= keyArray[index]!! as String
+        
+
+        Updates for KMP build        
+        {
+key= keyArray[index]!! as String
 value= whereKeyValuePairs!!.get(key) as String
 stringBuffer!!.append(key)
 stringBuffer!!.append(sqlStrings!!.EQUAL_QUOTE)
@@ -1051,7 +1149,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        {result= HashMap<Any, Any>()
+        
+
+        Updates for KMP build        
+        {
+result= HashMap<Any, Any>()
 columnNames= Vector()
 columnCount= resultSetMetaData!!.getColumnCount()
 
@@ -1060,7 +1162,11 @@ columnCount= resultSetMetaData!!.getColumnCount()
 
                         for (index in 1 until columnCount)
 
-        {columnName= resultSetMetaData!!.getColumnName(index)
+        
+
+        Updates for KMP build        
+        {
+columnName= resultSetMetaData!!.getColumnName(index)
 field= rset.getString(columnName)
 result.put(columnName, field)
 }
@@ -1083,7 +1189,11 @@ rows.add(result)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -1104,15 +1214,13 @@ rows.add(result)
 
 open fun getRowsWhereBetween(betweenColumn: String, smallest: String, largest: String)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var betweenColumn = betweenColumn
-
-
-                    var smallest = smallest
-
-
-                    var largest = largest
+        Updates for KMP build        
+        {
+    //var betweenColumn = betweenColumn
+    //var smallest = smallest
+    //var largest = largest
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -1168,7 +1276,11 @@ stringBuffer!!.append(sqlStrings!!.CLOSE_QUOTE)
 
 
         while(rset.next())
-        {result= HashMap<Any, Any>()
+        
+
+        Updates for KMP build        
+        {
+result= HashMap<Any, Any>()
 columnNames= Vector()
 columnCount= resultSetMetaData!!.getColumnCount()
 
@@ -1177,7 +1289,11 @@ columnCount= resultSetMetaData!!.getColumnCount()
 
                         for (index in 1 until columnCount)
 
-        {columnName= resultSetMetaData!!.getColumnName(index)
+        
+
+        Updates for KMP build        
+        {
+columnName= resultSetMetaData!!.getColumnName(index)
 field= rset.getString(columnName)
 result.put(columnName, field)
 }
@@ -1200,7 +1316,11 @@ rows.add(result)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return rows
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         

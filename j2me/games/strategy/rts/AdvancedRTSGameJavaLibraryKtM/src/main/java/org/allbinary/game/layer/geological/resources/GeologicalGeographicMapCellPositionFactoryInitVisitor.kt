@@ -44,12 +44,12 @@ open public class GeologicalGeographicMapCellPositionFactoryInitVisitor
             
 open fun visit(tiledLayer: AllBinaryTiledLayer, cellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var tiledLayer = tiledLayer
 
 
-                    var cellPosition = cellPosition
+        Updates for KMP build        
+        {
+var tiledLayer = tiledLayer
+var cellPosition = cellPosition
 cellPosition = cellPositioncellPosition as GeologicalGeographicMapCellPosition
 cellPosition.
                     getGeologicalResource()!!.init()

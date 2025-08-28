@@ -40,12 +40,12 @@ open public class PathFindingNode
     var geographicMapCellPosition: GeographicMapCellPosition
 public constructor        (parent: PathFindingNode, geographicMapCellPosition: GeographicMapCellPosition)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var parent = parent
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+var parent = parent
+var geographicMapCellPosition = geographicMapCellPosition
 this.setParent(parent)
 this.setGeographicMapCellPosition(geographicMapCellPosition)
 
@@ -67,24 +67,32 @@ this.setGeographicMapCellPosition(geographicMapCellPosition)
 
 open fun setParent(parent: PathFindingNode)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var parent = parent
+
+        Updates for KMP build        
+        {
+var parent = parent
 this.parent= parent
 }
 
 
 open fun setGeographicMapCellPosition(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+
+        Updates for KMP build        
+        {
+var geographicMapCellPosition = geographicMapCellPosition
 this.geographicMapCellPosition= geographicMapCellPosition
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this::class.toString()!!)
@@ -98,7 +106,11 @@ stringBuffer!!.append(this.geographicMapCellPosition!!.toString())
         while(pathFindingNode != 
                                     null
                                 )
-        {stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.append(pathFindingNode!!.geographicMapCellPosition!!.toString())
 stringBuffer!!.append(CommonSeps.getInstance()!!.SPACE)
 pathFindingNode= pathFindingNode!!.parent
 }

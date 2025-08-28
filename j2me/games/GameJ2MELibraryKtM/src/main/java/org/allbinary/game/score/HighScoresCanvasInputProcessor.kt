@@ -37,9 +37,11 @@ open public class HighScoresCanvasInputProcessor : PlayerGameInput {
     private val highScoresCanvas: HighScoresCanvas
 public constructor        (highScoresCanvas: HighScoresCanvas)                        
 
-                            : super(BasicArrayList(),  -1){
+                            : super(BasicArrayList(),  -1)
 
-                    var highScoresCanvas = highScoresCanvas
+        Updates for KMP build        
+        {
+var highScoresCanvas = highScoresCanvas
 
 
                             //For kotlin this is before the body of the constructor.
@@ -50,19 +52,29 @@ this.highScoresCanvas= highScoresCanvas
 
 open fun open()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onPressGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 super.onPressGameKeyEvent(gameKeyEvent)
 this.update()
 }
@@ -70,9 +82,11 @@ this.update()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onDownGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 super.onDownGameKeyEvent(gameKeyEvent)
 this.update()
 }
@@ -80,9 +94,11 @@ this.update()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun onUpGameKeyEvent(gameKeyEvent: GameKeyEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKeyEvent = gameKeyEvent
+
+        Updates for KMP build        
+        {
+var gameKeyEvent = gameKeyEvent
 super.onUpGameKeyEvent(gameKeyEvent)
 this.update()
 }
@@ -90,15 +106,21 @@ this.update()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 }
 
 
 open fun getHighScoresCanvas()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresCanvas{
+: HighScoresCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

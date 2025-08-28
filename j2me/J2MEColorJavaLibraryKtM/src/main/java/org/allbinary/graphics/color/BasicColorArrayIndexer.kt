@@ -37,9 +37,11 @@ open public class BasicColorArrayIndexer
     private var circularIndexUtil: CircularIndexUtil
 public constructor        (basicColorArray: Array<BasicColor?>)
             : super()
-        {
+        
 
-                    var basicColorArray = basicColorArray
+        Updates for KMP build        
+        {
+var basicColorArray = basicColorArray
 this.basicColorArray= basicColorArray
 this.circularIndexUtil= CircularIndexUtil.getInstance(this.basicColorArray!!.size)
 }
@@ -47,13 +49,21 @@ this.circularIndexUtil= CircularIndexUtil.getInstance(this.basicColorArray!!.siz
 
 open fun next()
         //nullable = true from not(false or (false and true)) = true
-{this.circularIndexUtil!!.next()
+
+
+        Updates for KMP build        
+        {
+this.circularIndexUtil!!.next()
 }
 
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,7 +73,11 @@ open fun get()
 
 open fun getBasicColorArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<BasicColor?>{
+: Array<BasicColor?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

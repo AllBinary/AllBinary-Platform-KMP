@@ -39,19 +39,23 @@ open public class HealthBarAnimationInterfaceFactory
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(layerInterface: AllBinaryLayer, location: Int)
         //nullable =  from not(true or (false and false)) = 
-: HealthBarAnimation{
+: HealthBarAnimation
 
-                    var layerInterface = layerInterface
-
-
-                    var location = location
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
+var location = location
 
 
 
@@ -64,9 +68,11 @@ open fun getInstance(layerInterface: AllBinaryLayer, location: Int)
             
 open fun getInstance(instanceId: Int)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var instanceId = instanceId
+        Updates for KMP build        
+        {
+    //var instanceId = instanceId
 
 
 
@@ -79,9 +85,11 @@ open fun getInstance(instanceId: Int)
             
 open fun getInstance(animationInterface: Animation)
         //nullable =  from not(true or (false and false)) = 
-: Animation{
+: Animation
 
-                    var animationInterface = animationInterface
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
 
 
 
@@ -92,9 +100,11 @@ open fun getInstance(animationInterface: Animation)
 
 open fun setInitialScale(scaleProperties: ScaleProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var scaleProperties = scaleProperties
+
+        Updates for KMP build        
+        {
+    //var scaleProperties = scaleProperties
 }
 
 

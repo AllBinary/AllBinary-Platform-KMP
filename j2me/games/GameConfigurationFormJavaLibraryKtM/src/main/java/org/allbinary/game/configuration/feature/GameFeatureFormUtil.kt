@@ -48,7 +48,11 @@ open public class GameFeatureFormUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameFeatureFormUtil{
+: GameFeatureFormUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,15 +71,13 @@ open fun getInstance()
 
 open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: Int)
         //nullable = true from not(false or (false and false)) = true
-: ChoiceGroup{
+: ChoiceGroup
 
-                    var hashtable = hashtable
-
-
-                    var name = name
-
-
-                    var option = option
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var name = name
+var option = option
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -103,7 +105,11 @@ open fun getChoiceGroup(hashtable: Hashtable<Any, Any>, name: String, option: In
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var gameFeature: Feature = list.objectArray[index]!! as Feature
 
 stringMaker!!.delete(0, stringMaker!!.length())
@@ -130,15 +136,13 @@ choiceGroup!!.append(gameFeature!!.toString(), NullCanvas.NULL_IMAGE)
 
 open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, option: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var form = form
 
 
-                    var hashtable = hashtable
-
-
-                    var option = option
+        Updates for KMP build        
+        {
+var form = form
+var hashtable = hashtable
+var option = option
 
     var stringMaker: StringMaker = StringMaker()
 
@@ -160,7 +164,11 @@ open fun addChoiceGroup(form: CommandForm, hashtable: Hashtable<Any, Any>, optio
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = objectArray[index]!! as String
 
 stringMaker!!.delete(0, stringMaker!!.length())
@@ -175,9 +183,11 @@ form.append(this.getChoiceGroup(hashtable, name, option))
             
 open fun setDefault(form: CommandForm)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var form = form
+
+        Updates for KMP build        
+        {
+var form = form
 
     var size: Int = form.size()!!
 
@@ -187,7 +197,11 @@ open fun setDefault(form: CommandForm)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var item: Item = form.get(index)!!
 
 

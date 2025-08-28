@@ -60,7 +60,11 @@ open public class LoggingInitInfo
 
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var path: String = URLGLOBALS.getWebappPath() +PACKAGE
 
 
@@ -85,11 +89,19 @@ open fun getDoc()
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             hasRead= false
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -103,7 +115,11 @@ open fun write()
 
 open fun read()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var document: Document = LoggingInitInfo.getDoc()!!
@@ -127,7 +143,11 @@ LoggingInitInfo.logConfigInfoList= BasicArrayList()
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var node: Node = logConfigNodeVector!!.elementAt(i) as Node
 
 
@@ -137,7 +157,11 @@ LoggingInitInfo.logConfigInfoList!!.add(logConfigInfo)
 }
 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -149,9 +173,11 @@ LoggingInitInfo.logConfigInfoList!!.add(logConfigInfo)
 
 open fun setHasRead(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 LoggingInitInfo.hasRead= value
 }
 
@@ -161,7 +187,11 @@ LoggingInitInfo.hasRead= value
 
 open fun updateIfNeeded()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(!hasRead)
                         
@@ -191,9 +221,11 @@ hasRead= true
 
 open fun set(logConfigInfoVector: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var logConfigInfoVector = logConfigInfoVector
+
+        Updates for KMP build        
+        {
+var logConfigInfoVector = logConfigInfoVector
 LoggingInitInfo.logConfigInfoList= logConfigInfoVector
 }
 
@@ -202,7 +234,11 @@ LoggingInitInfo.logConfigInfoList= logConfigInfoVector
             
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{LoggingInitInfo.updateIfNeeded()
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+LoggingInitInfo.updateIfNeeded()
 
 
 
@@ -215,7 +251,11 @@ open fun get()
             
 open fun getTypeNameList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{LoggingInitInfo.updateIfNeeded()
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+LoggingInitInfo.updateIfNeeded()
 
     var allLogTypeVector: BasicArrayList = BasicArrayList()
 
@@ -228,7 +268,11 @@ open fun getTypeNameList()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var logConfigInfo: LogConfig = LoggingInitInfo.logConfigInfoList!!.objectArray[index]!! as LogConfig
 
 
@@ -257,7 +301,11 @@ open fun getTypeNameList()
             
 open fun getTypeList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{LoggingInitInfo.updateIfNeeded()
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+LoggingInitInfo.updateIfNeeded()
 
     var allLogTypeVector: BasicArrayList = BasicArrayList()
 
@@ -270,7 +318,11 @@ open fun getTypeList()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var logConfigInfo: LogConfig = LoggingInitInfo.logConfigInfoList!!.objectArray[index]!! as LogConfig
 
 
@@ -298,12 +350,20 @@ open fun getTypeList()
         }
             public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -311,7 +371,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -325,7 +389,11 @@ open fun isValid()
             
 open fun getNumberOfLogConfigs()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -334,7 +402,11 @@ open fun getNumberOfLogConfigs()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var document: Document = LoggingInitInfo.getDoc()!!
@@ -345,7 +417,11 @@ override fun toString()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return DomDocumentHelper.toString(document)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

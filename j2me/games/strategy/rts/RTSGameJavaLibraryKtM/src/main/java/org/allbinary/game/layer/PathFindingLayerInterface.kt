@@ -39,17 +39,29 @@ open fun getEndGeographicMapCellPositionList()
         //nullable = true from not(false or (false and true)) = true
 : BasicArrayList
 
+        Updates for KMP build        
+        
+
 open fun shouldHandleStartSameAsEnd()
         //nullable = true from not(false or (false and true)) = true
 : Boolean
+
+        Updates for KMP build        
+        
 
 open fun getGeographicMapCellPositionArea()
         //nullable = true from not(false or (false and true)) = true
 : GeographicMapCellPositionArea
 
+        Updates for KMP build        
+        
+
 open fun getHudPaintable()
         //nullable = true from not(false or (false and true)) = true
 : SelectionHudPaintable
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -57,19 +69,31 @@ open fun handleCost(ownerLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getParentLayer()
         //nullable = true from not(false or (false and true)) = true
 : PathFindingLayerInterface
 
+        Updates for KMP build        
+        
+
 open fun getRTSLayer2LogHelper()
         //nullable = true from not(false or (false and true)) = true
 : RTSLayer2LogHelper
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
 open fun setTarget(targetGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

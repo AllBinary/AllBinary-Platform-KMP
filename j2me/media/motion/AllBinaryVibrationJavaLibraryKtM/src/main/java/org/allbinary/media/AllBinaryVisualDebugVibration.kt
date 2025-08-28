@@ -44,15 +44,13 @@ open public class AllBinaryVisualDebugVibration : AllBinaryVibrationME {
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(Integer.MAX_VALUE)
 override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var duration = duration
 
 
-                    var type = type
-
-
-                    var volume = volume
+        Updates for KMP build        
+        {
+    //var duration = duration
+    //var type = type
+    //var volume = volume
 this.timeDelayHelper!!.delay= duration
 }
 
@@ -63,9 +61,11 @@ this.timeDelayHelper!!.delay= duration
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     
                         if(timeDelayHelper!!.isTime())

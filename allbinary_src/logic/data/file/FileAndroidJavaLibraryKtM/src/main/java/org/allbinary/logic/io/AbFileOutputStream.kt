@@ -35,35 +35,49 @@ import org.allbinary.logic.io.file.AbFileNativeUtil
 
 open public class AbFileOutputStream : OutputStream {
         
-public constructor        (name: String){
+public constructor        (name: String)
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.fileOutputStream= FileOutputStream(name)
 }
 
 
     private var fileOutputStream: FileOutputStream
-public constructor        (file: AbFile){
+public constructor        (file: AbFile)
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 this.fileOutputStream= FileOutputStream(AbFileNativeUtil.get(file))
 }
 
-public constructor        (fileOutputStream: FileOutputStream){
+public constructor        (fileOutputStream: FileOutputStream)
 
-                    var fileOutputStream = fileOutputStream
+        Updates for KMP build        
+        {
+var fileOutputStream = fileOutputStream
 this.fileOutputStream= fileOutputStream
 }
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{this.fileOutputStream!!.close()
+
+
+        Updates for KMP build        
+        {
+this.fileOutputStream!!.close()
 }
 
 
 open fun getChannel()
         //nullable = true from not(false or (false and true)) = true
-: FileChannel{
+: FileChannel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,9 +88,11 @@ open fun getChannel()
                 @Throws(IOException::class)
             override fun write(buffer: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var buffer = buffer
+
+        Updates for KMP build        
+        {
+var buffer = buffer
 this.fileOutputStream!!.write(buffer)
 }
 
@@ -84,15 +100,13 @@ this.fileOutputStream!!.write(buffer)
                 @Throws(IOException::class)
             override fun write(buffer: ByteArray, offset: Int, count: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var buffer = buffer
 
 
-                    var offset = offset
-
-
-                    var count = count
+        Updates for KMP build        
+        {
+var buffer = buffer
+var offset = offset
+var count = count
 this.fileOutputStream!!.write(buffer, offset, count)
 }
 
@@ -100,9 +114,11 @@ this.fileOutputStream!!.write(buffer, offset, count)
                 @Throws(IOException::class)
             override fun write(b: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var b = b
+
+        Updates for KMP build        
+        {
+var b = b
 this.fileOutputStream!!.write(b)
 }
 

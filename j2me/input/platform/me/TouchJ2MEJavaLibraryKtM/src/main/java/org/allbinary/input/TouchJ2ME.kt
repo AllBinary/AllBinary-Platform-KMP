@@ -44,7 +44,11 @@ open public class TouchJ2ME
     private var motionRecognizer: AllMotionRecognizer = AllMotionRecognizer()
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var motionGesturesHandler: BasicMotionGesturesHandler = motionRecognizer!!.getMotionGestureRecognizer()!!.getMotionGesturesHandler()!!
 
 motionGesturesHandler!!.addListener(GameMotionGestureListener(MotionGestureReceiveInterfaceFactory.getInstance()))
@@ -53,17 +57,21 @@ motionGesturesHandler!!.addListener(GameMotionGestureListener(MotionGestureRecei
 
 open fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
         try {
             motionRecognizer!!.processDraggedMotionEvent(x, y, DEVICE_ID, 0)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerDragged", e)
@@ -74,17 +82,21 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerDragged", e)
 
 open fun pointerPressed(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
         try {
             motionRecognizer!!.processStartMotionEvent(x, y, DEVICE_ID, 0)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerPressed", e)
@@ -95,17 +107,21 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerPressed", e)
 
 open fun pointerReleased(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
         try {
             motionRecognizer!!.processEndMotionEvent(x, y, DEVICE_ID, 0)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "pointerReleased", e)

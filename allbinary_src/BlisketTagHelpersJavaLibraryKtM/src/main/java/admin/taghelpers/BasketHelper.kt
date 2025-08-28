@@ -48,12 +48,12 @@ open public class BasketHelper : TagHelper {
     private var pageContext: PageContext
 
     private val MAX: Int = 200
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.propertiesHashMap= hashMap
 this.pageContext= pageContext
 
@@ -76,7 +76,11 @@ this.weblisketSession= WeblisketSession(hashMap, pageContext)
 
 open fun isBasketEmpty()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var basket: BasketInterface = this.weblisketSession!!.getOrder()!!.getBasket()!!
@@ -104,7 +108,11 @@ open fun isBasketEmpty()
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         

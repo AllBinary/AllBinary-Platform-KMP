@@ -44,11 +44,19 @@ open public class GameRunnable
     var wait: Long = WAIT.toLong()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{DisplayInfoSingleton.getInstance()!!.process()
+
+
+        Updates for KMP build        
+        {
+DisplayInfoSingleton.getInstance()!!.process()
 }
 
 
@@ -56,7 +64,11 @@ override fun run()
             
 open fun processLoopSleep()
         //nullable = true from not(false or (false and true)) = true
-{Thread.sleep(wait)
+
+
+        Updates for KMP build        
+        {
+Thread.sleep(wait)
 }
 
 

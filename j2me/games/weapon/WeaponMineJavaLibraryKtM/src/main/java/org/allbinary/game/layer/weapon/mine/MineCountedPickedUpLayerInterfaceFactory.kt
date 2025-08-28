@@ -50,13 +50,21 @@ open public class MineCountedPickedUpLayerInterfaceFactory : CountedPickedUpLaye
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{pickedUpLayerInterfaceFactoryInterface= MineCountedPickedUpLayerInterfaceFactory()
+
+
+        Updates for KMP build        
+        {
+pickedUpLayerInterfaceFactoryInterface= MineCountedPickedUpLayerInterfaceFactory()
 }
 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PickedUpLayerInterfaceFactoryInterface{
+: PickedUpLayerInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -69,7 +77,11 @@ open fun getInstance()
     private val weaponLayerCircularStaticPool: WeaponLayerCircularPool = MineLayerCircularStaticPool.getInstance()!!
 private constructor        ()                        
 
-                            : super(PickedUpLayerTypeFactory.getInstance()!!.MINE, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_ICON_RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_RESOURCE)!!.getInstance(0)){
+                            : super(PickedUpLayerTypeFactory.getInstance()!!.MINE, IconLayerFactory.getInstance(FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_ICON_RESOURCE)!!.getInstance(0), 10, 10), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(MineWeaponResources.getInstance()!!.DROP_RESOURCE)!!.getInstance(0))
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -77,7 +89,11 @@ private constructor        ()
 
 override fun getTotal()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,18 +108,14 @@ override fun getTotal()
                 @Throws(Exception::class)
             override fun getInstance(hashtable: Hashtable<Any, Any>, x: Int, y: Int, z: Int)
         //nullable =  from not(true or (false and false)) = 
-: AllBinaryLayer{
+: AllBinaryLayer
 
-                    var hashtable = hashtable
-
-
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var hashtable = hashtable
+    //var x = x
+    //var y = y
+    //var z = z
 
     var sourceLayerInterface: AllBinaryLayer = hashtable.get(smallIntegerSingletonFactory!!.getInstance(0) as Object) as AllBinaryLayer
 

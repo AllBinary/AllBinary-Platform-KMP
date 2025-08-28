@@ -39,7 +39,11 @@ open public class PCKeyFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PCKeyFactory{
+: PCKeyFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -216,9 +220,11 @@ open fun getInstance()
 
 open fun isSubmission(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == ENTER)
@@ -242,9 +248,11 @@ open fun isSubmission(input: Input)
 
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DEL)
@@ -268,9 +276,11 @@ open fun isDelete(input: Input)
 
 open fun isBackSpace(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == BACK_SPACE)
@@ -294,9 +304,11 @@ open fun isBackSpace(input: Input)
 
 open fun isUp(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_UP || input == DPAD_UP2)
@@ -320,9 +332,11 @@ open fun isUp(input: Input)
 
 open fun isDown(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_DOWN || input == DPAD_DOWN2)
@@ -346,9 +360,11 @@ open fun isDown(input: Input)
 
 open fun isLeft(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_LEFT || input == DPAD_LEFT2)
@@ -372,9 +388,11 @@ open fun isLeft(input: Input)
 
 open fun isRight(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == DPAD_RIGHT || input == DPAD_RIGHT2)
@@ -398,9 +416,11 @@ open fun isRight(input: Input)
 
 open fun isEnter(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
     
                         if(input == ENTER)

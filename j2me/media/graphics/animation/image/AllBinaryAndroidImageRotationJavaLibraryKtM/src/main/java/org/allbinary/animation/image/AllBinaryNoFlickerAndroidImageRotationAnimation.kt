@@ -59,21 +59,15 @@ open public class AllBinaryNoFlickerAndroidImageRotationAnimation : ImageBaseRot
     private var bufferedImageIndex: Int= 0
 protected constructor        (originalImage: Image, image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, angleInfo, totalAngle, animationBehavior){
+                            : super(image, angleInfo, totalAngle, animationBehavior)
 
-                    var originalImage = originalImage
-
-
-                    var image = image
-
-
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var image = image
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -90,9 +84,11 @@ this.twoImages[1]= ImageCopyUtil.getInstance()!!.createImage(image)
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
 
     var changed: Boolean = false
 
@@ -123,9 +119,11 @@ this.updateImage()
 
 open fun setAlpha(alpha: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var alpha = alpha
+
+        Updates for KMP build        
+        {
+    //var alpha = alpha
 
     var changed: Boolean = false
 
@@ -155,7 +153,11 @@ this.updateImage()
 
 open fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{super.nextRotation()
+
+
+        Updates for KMP build        
+        {
+super.nextRotation()
 matrix.setRotate(this.increment, this.halfWidth, this.halfHeight)
 this.updateImage()
 }
@@ -163,7 +165,11 @@ this.updateImage()
 
 open fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{super.previousRotation()
+
+
+        Updates for KMP build        
+        {
+super.previousRotation()
 matrix.setRotate( -this.increment, this.halfWidth, this.halfHeight)
 this.updateImage()
 }
@@ -171,16 +177,22 @@ this.updateImage()
 
 open fun updateImage()
         //nullable = true from not(false or (false and true)) = true
-{androidImageUtil!!.rotate(this.twoImages[this.bufferedImageIndex]!!, originalImage, matrix, imageModifierUtil!!.paint)
+
+
+        Updates for KMP build        
+        {
+androidImageUtil!!.rotate(this.twoImages[this.bufferedImageIndex]!!, originalImage, matrix, imageModifierUtil!!.paint)
 this.swap()
 }
 
 
 open fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 
     var currentFrame: Int = this.circularIndexUtil!!.getIndex()!!
 
@@ -196,7 +208,11 @@ this.updateImage()
 
 open fun swap()
         //nullable = true from not(false or (false and true)) = true
-{this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
+
+
+        Updates for KMP build        
+        {
+this.imageToShow= this.twoImages[this.bufferedImageIndex]!!
 
     
                         if(this.bufferedImageIndex == 0)
@@ -216,15 +232,13 @@ open fun swap()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var graphics = graphics
+var x = x
+var y = y
 graphics.drawImage(this.imageToShow, x, y, anchor)
 }
 

@@ -38,30 +38,48 @@ open public class ShakeAnimationListener
         
 open fun onSmallShakeEvent()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onMediumShakeEvent()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onLargeShakeEvent()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun onShakeEvent(shakeEvent: ShakeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var shakeEvent = shakeEvent
+
+        Updates for KMP build        
+        {
+var shakeEvent = shakeEvent
 }
 
 
 open fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

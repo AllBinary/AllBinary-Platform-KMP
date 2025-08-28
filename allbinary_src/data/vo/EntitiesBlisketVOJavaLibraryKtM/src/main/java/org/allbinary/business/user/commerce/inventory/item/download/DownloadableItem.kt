@@ -67,9 +67,11 @@ open public class DownloadableItem
     private val retries: String
 public constructor        (id: String)
             : super()
-        {
+        
 
-                    var id = id
+        Updates for KMP build        
+        {
+var id = id
 
     var EMPTY_STRING: String = StringUtil.getInstance()!!.EMPTY_STRING
 
@@ -95,9 +97,11 @@ this.retries= EMPTY_STRING
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.id= hashMap!!.get(DownloadItemData.ID) as String
 this.basicItemId= hashMap!!.get(BasicItemData.ID) as String
 this.enabled= hashMap!!.get(EntryData.getInstance()!!.ENABLE) as String
@@ -173,7 +177,11 @@ this.retries= hashMap!!.get(DownloadItemData.RETRIES) as String
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var calendar: Calendar = Calendar.getInstance()!!
 
 
@@ -208,7 +216,11 @@ values.add(time)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
 values.put(DownloadItemData.ID, this.getId())
@@ -243,7 +255,11 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun getId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -253,7 +269,11 @@ open fun getId()
 
 open fun getSystem()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -263,7 +283,11 @@ open fun getSystem()
 
 open fun getPlatform()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -273,7 +297,11 @@ open fun getPlatform()
 
 open fun getSpecialName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -283,7 +311,11 @@ open fun getSpecialName()
 
 open fun getVersion()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -293,7 +325,11 @@ open fun getVersion()
 
 open fun getChanges()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -303,7 +339,11 @@ open fun getChanges()
 
 open fun getLicenseFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -313,7 +353,11 @@ open fun getLicenseFile()
 
 open fun getFile()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -323,7 +367,11 @@ open fun getFile()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -333,7 +381,11 @@ open fun getSize()
 
 open fun getValidTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -343,7 +395,11 @@ open fun getValidTime()
 
 open fun getRetries()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -82,21 +82,15 @@ open public class SelectedRTSLayersPlayerGameInput : PlayerGameInput {
     private val downgradeGameNotificationEvent: GameNotificationEvent
 public constructor        (towerInfoPaintable: RTSLayerInfoPaintable, rtsPlayerLayerInterface: RTSPlayerLayerInterface, list: BasicArrayList, playerInputId: Int, selectRTSLayerVisitorFactoryInterface: SelectRTSLayerVisitorFactoryInterface)                        
 
-                            : super(list, playerInputId){
+                            : super(list, playerInputId)
 
-                    var towerInfoPaintable = towerInfoPaintable
-
-
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var list = list
-
-
-                    var playerInputId = playerInputId
-
-
-                    var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
+        Updates for KMP build        
+        {
+var towerInfoPaintable = towerInfoPaintable
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+var list = list
+var playerInputId = playerInputId
+var selectRTSLayerVisitorFactoryInterface = selectRTSLayerVisitorFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -121,9 +115,11 @@ this.downgradeGameNotificationEvent= GameNotificationEvent(this, RTSGameStrings.
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 
     var geographicMapCompositeInterface: GeographicMapCompositeInterface = allBinaryGameLayerManager as GeographicMapCompositeInterface
 
@@ -138,9 +134,11 @@ this.downgradeGameNotificationEvent!!.setBasicColorP(geographicMapInterface!!.ge
 
 open fun isSelected(rtsLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rtsLayer = rtsLayer
+        Updates for KMP build        
+        {
+var rtsLayer = rtsLayer
 
     
                         if(this.getSelectedBasicArrayList()!!.contains(rtsLayer))
@@ -170,7 +168,11 @@ open fun isSelected(rtsLayer: RTSLayer)
             
 open fun upgrade()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var anyChanged: Boolean = false
 
 
@@ -179,7 +181,11 @@ open fun upgrade()
 
                         for (index in this.getSelectedBasicArrayList()!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
 
 
@@ -251,7 +257,11 @@ getPlayerGameInput.
             
 open fun downgrade()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var anyChanged: Boolean = false
 
 
@@ -260,7 +270,11 @@ open fun downgrade()
 
                         for (index in this.getSelectedBasicArrayList()!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
 
 
@@ -308,7 +322,11 @@ getPlayerGameInput.
 
 open fun initInputProcessors()
         //nullable = true from not(false or (false and true)) = true
-{this.inputProcessorArray[Canvas.KEY_NUM1]= SelectedRTSLayersPlayerUpgradeGameInputProcessor(this)
+
+
+        Updates for KMP build        
+        {
+this.inputProcessorArray[Canvas.KEY_NUM1]= SelectedRTSLayersPlayerUpgradeGameInputProcessor(this)
 this.inputProcessorArray[Canvas.KEY_NUM3]= SelectedRTSLayersPlayerDowngradeGameInputProcessor(this)
 GameInputProcessorUtil.init(this.inputProcessorArray)
 }
@@ -318,9 +336,11 @@ GameInputProcessorUtil.init(this.inputProcessorArray)
             
 open fun processInput(key: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var key = key
+
+        Updates for KMP build        
+        {
+var key = key
 
     
                         if(this.getSelectedBasicArrayList() != 
@@ -340,9 +360,11 @@ open fun processInput(key: Int)
             
 open fun processInput(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+var layerManager = layerManager
 
         try {
             
@@ -357,7 +379,11 @@ open fun processInput(layerManager: AllBinaryLayerManager)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var gameKeyEvent: GameKeyEvent = list.get(index) as GameKeyEvent
 
 key= gameKeyEvent!!.getKey()
@@ -379,7 +405,11 @@ this.processInput(key)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, gameInputStrings!!.PROCESS_INPUT, e)
 }
 
 }
@@ -387,7 +417,11 @@ this.processInput(key)
 
 open fun getSelectedBasicArrayList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -397,9 +431,11 @@ open fun getSelectedBasicArrayList()
 
 open fun addSelectedRTSLayer(selectedLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedLayer = selectedLayer
+
+        Updates for KMP build        
+        {
+var selectedLayer = selectedLayer
 this.paintSelectedRTSLayersList= BasicArrayListUtil.getInstance()!!.getImmutableInstance()
 
     
@@ -432,9 +468,11 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 
 open fun setSelectedRTSLayer(selectedLayer: RTSLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedLayer = selectedLayer
+
+        Updates for KMP build        
+        {
+var selectedLayer = selectedLayer
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -487,7 +525,11 @@ this.paintSelectedRTSLayersList= this.selectedRTSLayersList
 
 open fun getLastSelectedRtsLayer()
         //nullable = true from not(false or (false and true)) = true
-: RTSLayer{
+: RTSLayer
+
+        Updates for KMP build        
+        {
+
     
                         if(this.isAnyRTSLayerSelected())
                         
@@ -514,7 +556,11 @@ open fun getLastSelectedRtsLayer()
 
 open fun selectAllPreselected()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Select all Preselected: ")
@@ -526,7 +572,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selectAllPreselected")
 
                         for (index in this.preSelectedRTSLayersList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
 
 rtsLayer!!.select()
@@ -537,7 +587,11 @@ rtsLayer!!.select()
 
 open fun deselectAllPreselected()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append("Deselect all Preselected: ")
@@ -549,7 +603,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "deselectAllPreselected")
 
                         for (index in this.preSelectedRTSLayersList!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: RTSLayer = this.preSelectedRTSLayersList!!.get(index) as RTSLayer
 
 rtsLayer!!.deselect()
@@ -561,13 +619,21 @@ this.preSelectedRTSLayersList!!.clear()
 
 open fun deselectAll()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.getSelectedBasicArrayList()!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var rtsLayer: RTSLayer = this.getSelectedBasicArrayList()!!.get(index) as RTSLayer
 
 rtsLayer!!.deselect()
@@ -578,7 +644,11 @@ rtsLayer!!.deselect()
 
 open fun isAnyRTSLayerSelected()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getSelectedBasicArrayList()!!.size() == 0)
                         
@@ -601,7 +671,11 @@ open fun isAnyRTSLayerSelected()
 
 open fun getPaintSelectedRTSLayersList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -611,7 +685,11 @@ open fun getPaintSelectedRTSLayersList()
 
 open fun getPreSelectedRTSLayersList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

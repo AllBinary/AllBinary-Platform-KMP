@@ -40,9 +40,11 @@ open public class UserView : HttpStoreComponentView {
     var user: UserInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -52,7 +54,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-{this.addDomNodeInterface(UserDomNode(this.user) as DomNodeInterface)
+
+
+        Updates for KMP build        
+        {
+this.addDomNodeInterface(UserDomNode(this.user) as DomNodeInterface)
 }
 
 
@@ -60,7 +66,11 @@ open fun addDomNodeInterfaces()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.addDomNodeInterfaces()
 
@@ -69,7 +79,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERERROR))
                         

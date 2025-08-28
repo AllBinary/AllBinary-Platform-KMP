@@ -41,15 +41,13 @@ open public class PathFinderGraphVisitorBase
             
 open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graph = graph
 
 
-                    var startPathFindingNodeList = startPathFindingNodeList
-
-
-                    var endPathFindingNodeList = endPathFindingNodeList
+        Updates for KMP build        
+        {
+    //var graph = graph
+    //var startPathFindingNodeList = startPathFindingNodeList
+    //var endPathFindingNodeList = endPathFindingNodeList
 
 
 
@@ -61,15 +59,13 @@ open fun visit(graph: Any, startPathFindingNodeList: BasicArrayList, endPathFind
             
 open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeList: BasicArrayList, pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var startPathFindingNodeList = startPathFindingNodeList
 
 
-                    var endPathFindingNodeList = endPathFindingNodeList
-
-
-                    var pathList = pathList
+        Updates for KMP build        
+        {
+    //var startPathFindingNodeList = startPathFindingNodeList
+    //var endPathFindingNodeList = endPathFindingNodeList
+    //var pathList = pathList
 
 
 
@@ -79,9 +75,11 @@ open fun fixPath(startPathFindingNodeList: BasicArrayList, endPathFindingNodeLis
 
 open fun isValid(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var graphPath = graphPath
+        Updates for KMP build        
+        {
+    //var graphPath = graphPath
 
 
 
@@ -91,9 +89,11 @@ open fun isValid(graphPath: Any)
 
 open fun getInvalidReason(graphPath: Any)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var graphPath = graphPath
+        Updates for KMP build        
+        {
+    //var graphPath = graphPath
 
 
 

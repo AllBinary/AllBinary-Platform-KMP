@@ -23,7 +23,11 @@ open public class ThreadObjectUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ThreadObjectUtil{
+: ThreadObjectUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -42,9 +46,11 @@ open fun getInstance()
 
 open fun notifyObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 anyType!!.notify()
 }
 
@@ -53,9 +59,11 @@ anyType!!.notify()
             
 open fun waitObject(anyType: Object)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var anyType = anyType
+
+        Updates for KMP build        
+        {
+var anyType = anyType
 anyType!!.wait()
 }
 
@@ -64,12 +72,12 @@ anyType!!.wait()
             
 open fun waitObject(anyType: Object, delay: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var anyType = anyType
 
 
-                    var delay = delay
+        Updates for KMP build        
+        {
+var anyType = anyType
+var delay = delay
 anyType!!.wait(delay)
 }
 

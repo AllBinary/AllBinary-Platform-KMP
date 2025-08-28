@@ -72,9 +72,11 @@ open public class DownloadableInventoryItemView : HttpStoreComponentView
     private var requestHashMap: HashMap<Any, Any>
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -85,12 +87,12 @@ this.getFormData()
 
 public constructor        (transformInfoInterface: TransformInfoInterface, empty: String)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
-
-
-                    var empty = empty
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
+var empty = empty
 
 
                             //For kotlin this is before the body of the constructor.
@@ -101,7 +103,11 @@ this.request= this.getPageContext()!!.getRequest() as HttpServletRequest
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,7 +119,11 @@ open fun getTypeId()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{this.setRequestHashMap(MultipartRequestParams(request).
+
+
+        Updates for KMP build        
+        {
+this.setRequestHashMap(MultipartRequestParams(request).
                             toHashMap())
 this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
 }
@@ -121,7 +131,11 @@ this.id= this.getRequestHashMap()!!.get(BasicItemData.ID) as String
 
 open fun addDomNodeInterfaces()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 
@@ -143,7 +157,11 @@ this.addDomNodeInterface(BasicItemView(itemInterface, vector))
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             this.addDomNodeInterfaces()
 
@@ -152,7 +170,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return super.view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -174,9 +196,11 @@ open fun view()
             
 open fun processFile(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fileItem = fileItem
+
+        Updates for KMP build        
+        {
+    //var fileItem = fileItem
 
     var fileName: String = fileItem!!.getName()!!
 
@@ -209,9 +233,11 @@ FileUtil.getInstance()!!.write(ByteArrayInputStream(byteArray), file)
             
 open fun unzip(fileItem: FileItem)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var fileItem = fileItem
+
+        Updates for KMP build        
+        {
+    //var fileItem = fileItem
 
     var fileName: String = fileItem!!.getName()!!
 
@@ -234,7 +260,11 @@ ZipFileUtil.getInstance()!!.unzip(fullPath, file, fileName)
 
 open fun getItemFilePath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var storeFrontInterface: StoreFrontInterface = StoreFrontFactory.getInstance(this.getWeblisketSession()!!.getStoreName())!!
 
 
@@ -261,16 +291,22 @@ stringBuffer!!.append(filePathData!!.SEPARATOR)
 
 open fun setRequestHashMap(requestHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var requestHashMap = requestHashMap
+
+        Updates for KMP build        
+        {
+var requestHashMap = requestHashMap
 this.requestHashMap= requestHashMap
 }
 
 
 open fun getRequestHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -280,7 +316,11 @@ open fun getRequestHashMap()
 
 open fun getDownloadableItem()
         //nullable = true from not(false or (false and true)) = true
-: DownloadableItem{
+: DownloadableItem
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

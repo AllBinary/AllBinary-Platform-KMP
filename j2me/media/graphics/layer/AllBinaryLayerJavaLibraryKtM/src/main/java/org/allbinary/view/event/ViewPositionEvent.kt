@@ -31,9 +31,11 @@ open public class ViewPositionEvent : AllBinaryEventObject {
         
 public constructor        (anyType: Any)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
+        Updates for KMP build        
+        {
+var anyType = anyType
 
 
                             //For kotlin this is before the body of the constructor.

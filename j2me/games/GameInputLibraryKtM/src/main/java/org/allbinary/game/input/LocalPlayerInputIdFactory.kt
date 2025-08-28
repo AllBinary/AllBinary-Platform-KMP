@@ -40,7 +40,11 @@ open public class LocalPlayerInputIdFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LocalPlayerInputIdFactory{
+: LocalPlayerInputIdFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,13 +69,21 @@ open fun getInstance()
     private var totalDevicesMapped: Int = 0
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index in deviceIdToplayerId!!.size -1 downTo 0)
 
-        {deviceIdToplayerId[index]=  -1
+        
+
+        Updates for KMP build        
+        {
+deviceIdToplayerId[index]=  -1
 }
 
 }
@@ -79,9 +91,11 @@ private constructor        ()
 
 open fun getDeviceId(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var playerInputId = playerInputId
+        Updates for KMP build        
+        {
+var playerInputId = playerInputId
 
 
 
@@ -92,9 +106,11 @@ open fun getDeviceId(playerInputId: Int)
 
 open fun getPlayerForDevice(deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+var deviceId = deviceId
 
     var index: Int= 0
 
@@ -129,7 +145,11 @@ open fun getPlayerForDevice(deviceId: Int)
 
                         for (index in totalDevicesMapped -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.playerIdToDeviceId[index] == deviceId)
                         
@@ -178,7 +198,11 @@ logUtil!!.put(StringMaker().
 
 open fun getTotalDevicesInPlay()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var total: Int = 0
 
 
@@ -187,7 +211,11 @@ open fun getTotalDevicesInPlay()
 
                         for (index in totalDevicesMapped -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.playersInPlay[index] == true)
                         
@@ -208,9 +236,11 @@ open fun getTotalDevicesInPlay()
 
 open fun isPlayerInPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var playerInputId = playerInputId
+        Updates for KMP build        
+        {
+var playerInputId = playerInputId
 
 
 
@@ -221,9 +251,11 @@ open fun isPlayerInPlay(playerInputId: Int)
 
 open fun setPlayerInPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerInputId = playerInputId
+
+        Updates for KMP build        
+        {
+var playerInputId = playerInputId
 logUtil!!.put(StringMaker().
                             append("Setting PlayerInPlay with playerInputId: ")!!.append(playerInputId)!!.toString(), this, "setPlayerInPlay")
 playersInPlay[playerInputId]= true
@@ -232,9 +264,11 @@ playersInPlay[playerInputId]= true
 
 open fun setPlayerOutOfPlay(playerInputId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var playerInputId = playerInputId
+
+        Updates for KMP build        
+        {
+var playerInputId = playerInputId
 logUtil!!.put(StringMaker().
                             append("Setting PlayerOutOfPlay with playerInputId: ")!!.append(playerInputId)!!.toString(), this, "setPlayerOutOfPlay")
 playersInPlay[playerInputId]= false
@@ -243,7 +277,11 @@ playersInPlay[playerInputId]= false
 
 open fun getPlayersInPlay()
         //nullable = true from not(false or (false and true)) = true
-: BooleanArray{
+: BooleanArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -33,7 +33,11 @@ open public class StoreAdminUser : User {
         
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -41,9 +45,11 @@ public constructor        ()
 
 public constructor        (userHashMap: HashMap<Any, Any>)                        
 
-                            : super(userHashMap){
+                            : super(userHashMap)
 
-                    var userHashMap = userHashMap
+        Updates for KMP build        
+        {
+var userHashMap = userHashMap
 
 
                             //For kotlin this is before the body of the constructor.
@@ -53,9 +59,11 @@ public constructor        (userHashMap: HashMap<Any, Any>)
 
 open fun validateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weblisketSession = weblisketSession
+
+        Updates for KMP build        
+        {
+var weblisketSession = weblisketSession
 super.validateSession(weblisketSession)
 this.updateSession(weblisketSession)
 }
@@ -63,9 +71,11 @@ this.updateSession(weblisketSession)
 
 open fun updateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weblisketSession = weblisketSession
+
+        Updates for KMP build        
+        {
+var weblisketSession = weblisketSession
 weblisketSession!!.setStoreName(this.getPermissions())
 }
 

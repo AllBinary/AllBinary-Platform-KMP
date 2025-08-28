@@ -48,12 +48,12 @@ open public class CollidableBaseBehavior
     val ownerLayer: CollidableCompositeLayer
 public constructor        (ownerLayer: CollidableCompositeLayer, collidable: Boolean)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var ownerLayer = ownerLayer
-
-
-                    var collidable = collidable
+var ownerLayer = ownerLayer
+var collidable = collidable
 this.ownerLayer= ownerLayer
 this.collidable= collidable
 }
@@ -61,11 +61,19 @@ this.collidable= collidable
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,15 +83,21 @@ override fun getName()
 
 open fun setCollidable(collidable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidable = collidable
+
+        Updates for KMP build        
+        {
+var collidable = collidable
 this.collidable= collidable
 }
 
 override fun isCollidable()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,9 +108,11 @@ override fun isCollidable()
                 @Throws(Exception::class)
             override fun collide(allbinaryCollidableLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allbinaryCollidableLayer = allbinaryCollidableLayer
+
+        Updates for KMP build        
+        {
+var allbinaryCollidableLayer = allbinaryCollidableLayer
 
 
 
@@ -108,9 +124,11 @@ override fun isCollidable()
     private val layerCollisionUtil: LayerCollisionUtil = LayerCollisionUtil.getInstance()!!
 override fun isCollision(collisionLayer: CollidableCompositeLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collisionLayer = collisionLayer
+        Updates for KMP build        
+        {
+var collisionLayer = collisionLayer
 
 
 
@@ -121,9 +139,11 @@ override fun isCollision(collisionLayer: CollidableCompositeLayer)
 
 open fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
 
@@ -136,9 +156,11 @@ open fun isCollision(collidableInterfaceCompositeInterface: CollidableInterfaceC
             
 open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompositeInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
+
+        Updates for KMP build        
+        {
+var collidableInterfaceCompositeInterface = collidableInterfaceCompositeInterface
 
 
 
@@ -148,16 +170,20 @@ open fun collide(collidableInterfaceCompositeInterface: CollidableInterfaceCompo
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 }
 
 override fun getCollisionTypeWith(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: CollisionType{
+: CollisionType
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
 
 

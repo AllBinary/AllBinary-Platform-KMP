@@ -34,13 +34,22 @@ open fun setMidlet(midlet: MIDlet)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getMidlet()
         //nullable = true from not(false or (false and true)) = true
 : AllBinaryMidlet
 
+        Updates for KMP build        
+        
+
 open fun getDisplayable()
         //nullable = true from not(false or (false and true)) = true
 : Displayable
+
+        Updates for KMP build        
+        
 
 }
                 

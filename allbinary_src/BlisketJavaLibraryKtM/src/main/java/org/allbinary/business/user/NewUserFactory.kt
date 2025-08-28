@@ -44,7 +44,11 @@ open public class NewUserFactory
             
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: UserInterface{
+: UserInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,9 +60,11 @@ open fun getInstance()
             
 open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: UserInterface{
+: UserInterface
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     var httpTransformInfoInterface: TransformInfoHttpInterface = transformInfoInterface as TransformInfoHttpInterface
 
@@ -85,12 +91,12 @@ hashMap!!.put(UserRoleData.NAME.toString(), role)
             
 open fun getInstance(httpServletRequest: HttpServletRequest, propertiesHashMap: HashMap<Any, Any>)
         //nullable =  from not(true or (false and false)) = 
-: UserInterface{
+: UserInterface
 
-                    var httpServletRequest = httpServletRequest
-
-
-                    var propertiesHashMap = propertiesHashMap
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
+var propertiesHashMap = propertiesHashMap
 
     
                         if(propertiesHashMap != 
@@ -128,7 +134,11 @@ requestHashMap!!.put(UserRoleData.NAME.toString(), roleString)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

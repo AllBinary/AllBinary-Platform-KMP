@@ -30,9 +30,11 @@ open public class SensorFeature : Feature {
         
  constructor        (name: String)                        
 
-                            : super(name){
+                            : super(name)
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.

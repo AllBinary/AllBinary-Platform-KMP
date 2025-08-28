@@ -44,7 +44,11 @@ open public class Directory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Directory{
+: Directory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,14 +59,20 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun create(directoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var directoryAbPath = directoryAbPath
+        Updates for KMP build        
+        {
+var directoryAbPath = directoryAbPath
 
 
 
@@ -75,18 +85,22 @@ open fun create(directoryAbPath: AbPath)
             
 open fun remove(existingDirectoryAbPath: AbPath)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var existingDirectoryAbPath = existingDirectoryAbPath
+
+        Updates for KMP build        
+        {
+var existingDirectoryAbPath = existingDirectoryAbPath
 this.remove(existingDirectoryAbPath!!.toFileSystemString())
 }
 
 
 open fun create(directory: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var directory = directory
+        Updates for KMP build        
+        {
+var directory = directory
 
         try {
             
@@ -120,7 +134,11 @@ open fun create(directory: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {PreLogUtil.put("Error Creating Directories: " +directory, this, "create", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put("Error Creating Directories: " +directory, this, "create", e)
 
 
 
@@ -135,9 +153,11 @@ open fun create(directory: String)
             
 open fun remove(existingDirectory: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var existingDirectory = existingDirectory
+
+        Updates for KMP build        
+        {
+var existingDirectory = existingDirectory
 
     var existingDirectoryFile: AbFile = FileFactory.getInstance()!!.getInstance(existingDirectory)!!
 
@@ -183,12 +203,12 @@ open fun remove(existingDirectory: String)
 
 open fun search(fileFilter: FileFilter, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var fileFilter = fileFilter
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var fileFilter = fileFilter
+var file = file
 
 
 
@@ -199,15 +219,13 @@ open fun search(fileFilter: FileFilter, file: AbFile)
 
 open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var fileFilter = fileFilter
-
-
-                    var file = file
-
-
-                    var isRecursiveSearch = isRecursiveSearch
+        Updates for KMP build        
+        {
+var fileFilter = fileFilter
+var file = file
+var isRecursiveSearch = isRecursiveSearch
 
     var fileList: BasicArrayList = BasicArrayList()
 
@@ -265,7 +283,11 @@ open fun search(fileFilter: FileFilter, file: AbFile, isRecursiveSearch: Boolean
 
                         for (index in 0 until size)
 
-        {fileList!!.add(files[index]!!)
+        
+
+        Updates for KMP build        
+        {
+fileList!!.add(files[index]!!)
 
     
                         if(isRecursiveSearch)
@@ -291,9 +313,11 @@ fileList!!.addAll(recursiveFileList)
 
 open fun search(file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
 
@@ -304,12 +328,12 @@ open fun search(file: AbFile)
 
 open fun search(file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var file = file
-
-
-                    var isRecursiveSearch = isRecursiveSearch
+        Updates for KMP build        
+        {
+    //var file = file
+    //var isRecursiveSearch = isRecursiveSearch
 
     var fileList: BasicArrayList = BasicArrayList()
 
@@ -363,7 +387,11 @@ open fun search(file: AbFile, isRecursiveSearch: Boolean)
 
                         for (index in 0 until files.size)
 
-        {fileList!!.add(files[index]!!)
+        
+
+        Updates for KMP build        
+        {
+fileList!!.add(files[index]!!)
 
     
                         if(isRecursiveSearch)
@@ -389,12 +417,12 @@ fileList!!.addAll(recursiveFileList)
 
 open fun search(searchValue: String, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var searchValue = searchValue
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var searchValue = searchValue
+var file = file
 
 
 
@@ -405,15 +433,13 @@ open fun search(searchValue: String, file: AbFile)
 
 open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var searchValue = searchValue
-
-
-                    var file = file
-
-
-                    var isRecursiveSearch = isRecursiveSearch
+        Updates for KMP build        
+        {
+    //var searchValue = searchValue
+    //var file = file
+    //var isRecursiveSearch = isRecursiveSearch
 
     var fileList: BasicArrayList = BasicArrayList()
 
@@ -467,7 +493,11 @@ open fun search(searchValue: String, file: AbFile, isRecursiveSearch: Boolean)
 
                         for (index in 0 until files.size)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(files[index]!!.getPath()!!.indexOf(searchValue) >= 0)
                         
@@ -501,12 +531,12 @@ fileList!!.addAll(recursiveFileList)
 
 open fun search(level: Int, file: AbFile)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var level = level
-
-
-                    var file = file
+        Updates for KMP build        
+        {
+var level = level
+var file = file
 
 
 
@@ -517,15 +547,13 @@ open fun search(level: Int, file: AbFile)
 
 open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var level = level
-
-
-                    var file = file
-
-
-                    var isRecursiveSearch = isRecursiveSearch
+        Updates for KMP build        
+        {
+var level = level
+var file = file
+var isRecursiveSearch = isRecursiveSearch
 
     var fileList: BasicArrayList = BasicArrayList()
 
@@ -579,7 +607,11 @@ open fun search(level: Int, file: AbFile, isRecursiveSearch: Boolean)
 
                         for (index in 0 until files.size)
 
-        {fileList!!.add(files[index]!!)
+        
+
+        Updates for KMP build        
+        {
+fileList!!.add(files[index]!!)
 
     
                         if(level <= 0)

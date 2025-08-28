@@ -48,9 +48,11 @@ open public class GenericProfile
     private var genericProfileActions: GenericProfileActions
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.setName(DomNodeHelper.getTextNodeValue(node))
 this.vector= Vector()
 
@@ -63,7 +65,11 @@ logUtil!!.put("Name: " +this.getName() +" Child Nodes: " +nodeList!!.getLength()
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var profileNode: Node = nodeList!!.item(index)!!
 
 
@@ -85,9 +91,11 @@ this.vector.add(genericProfileDataWorkerType)
 
 public constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 this.setName(name)
 this.vector= Vector()
 }
@@ -95,7 +103,11 @@ this.vector= Vector()
 
 open fun getGenericProfileDataWorkerTypeVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -105,9 +117,11 @@ open fun getGenericProfileDataWorkerTypeVector()
 
 open fun add(genericProfileDataWorkerType: GenericProfileDataWorkerType)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var genericProfileDataWorkerType = genericProfileDataWorkerType
+
+        Updates for KMP build        
+        {
+var genericProfileDataWorkerType = genericProfileDataWorkerType
 
     
                         if(!this.vector.contains(genericProfileDataWorkerType))
@@ -117,9 +131,11 @@ open fun add(genericProfileDataWorkerType: GenericProfileDataWorkerType)
 
 open fun remove(genericProfileDataWorkerType: GenericProfileDataWorkerType)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var genericProfileDataWorkerType = genericProfileDataWorkerType
+
+        Updates for KMP build        
+        {
+var genericProfileDataWorkerType = genericProfileDataWorkerType
 this.vector.remove(genericProfileDataWorkerType)
 }
 
@@ -128,9 +144,11 @@ this.vector.remove(genericProfileDataWorkerType)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = ModDomHelper.createTextNode(document, GenericProfileData.NAME, name)!!
 
@@ -143,7 +161,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var genericProfileDataWorkerType: GenericProfileDataWorkerType = vector.get(index) as GenericProfileDataWorkerType
 
 node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
@@ -159,7 +181,11 @@ node.appendChild(genericProfileDataWorkerType!!.toXmlNode(document))
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -169,16 +195,22 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 
 open fun getGenericProfileActions()
         //nullable = true from not(false or (false and true)) = true
-: GenericProfileActions{
+: GenericProfileActions
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -188,9 +220,11 @@ open fun getGenericProfileActions()
 
 open fun setGenericProfileActions(genericProfileActions: GenericProfileActions)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var genericProfileActions = genericProfileActions
+
+        Updates for KMP build        
+        {
+var genericProfileActions = genericProfileActions
 this.genericProfileActions= genericProfileActions
 }
 

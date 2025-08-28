@@ -48,7 +48,11 @@ open public class GenericConfigData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

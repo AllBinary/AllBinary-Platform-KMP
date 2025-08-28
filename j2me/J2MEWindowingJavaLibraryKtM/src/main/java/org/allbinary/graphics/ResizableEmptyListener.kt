@@ -38,9 +38,11 @@ open public class ResizableEmptyListener
             }            
         override fun onResizable(isResizable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isResizable = isResizable
+
+        Updates for KMP build        
+        {
+var isResizable = isResizable
 }
 
 

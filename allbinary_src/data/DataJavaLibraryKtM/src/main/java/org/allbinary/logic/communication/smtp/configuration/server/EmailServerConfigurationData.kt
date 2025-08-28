@@ -44,7 +44,11 @@ open public class EmailServerConfigurationData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

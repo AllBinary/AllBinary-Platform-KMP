@@ -34,13 +34,22 @@ open fun getDoc(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : Document
 
+        Updates for KMP build        
+        
+
 open fun get(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
 
+        Updates for KMP build        
+        
+
 open fun getAll(categoryInterface: CategoryInterface)
         //nullable = true from not(false or (false and false)) = true
 : CategoryInterface
+
+        Updates for KMP build        
+        
 
 }
                 

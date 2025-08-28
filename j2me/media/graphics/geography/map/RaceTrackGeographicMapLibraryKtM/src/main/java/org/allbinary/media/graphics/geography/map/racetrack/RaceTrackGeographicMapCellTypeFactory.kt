@@ -37,7 +37,11 @@ open public class RaceTrackGeographicMapCellTypeFactory : GeographicMapCellTypeF
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RaceTrackGeographicMapCellTypeFactory{
+: RaceTrackGeographicMapCellTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,7 +72,11 @@ open fun getInstance()
     val DEFAULT_FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
 
     var FINISH_LINE_ROAD_CELL_TYPE: RaceTrackGeographicMapCellType
-public constructor        (){
+public constructor        ()
+
+        Updates for KMP build        
+        {
+
     var raceTrackGeographicMapCellTypes: RaceTrackGeographicMapCellTypes = RaceTrackGeographicMapCellTypes.getInstance()!!
 
 BOTTOM_LEFT_TURN_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.BOTTOM_LEFT_TURN_ROAD_CELL_TYPE
@@ -84,7 +92,11 @@ DEFAULT_FINISH_LINE_ROAD_CELL_TYPE= raceTrackGeographicMapCellTypes!!.DEFAULT_FI
 
 open fun getStartType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,7 +106,11 @@ open fun getStartType()
 
 open fun getEndType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -104,7 +120,11 @@ open fun getEndType()
 
 open fun getEmptyType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,9 +134,11 @@ open fun getEmptyType()
 
 open fun isPath(cellType: GeographicMapCellType)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var cellType = cellType
+        Updates for KMP build        
+        {
+    //var cellType = cellType
 
     
                         if(cellType != this.EMPTY_CELL_TYPE && cellType != this.EASY_CELL_TYPE)

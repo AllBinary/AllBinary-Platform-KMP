@@ -38,9 +38,11 @@ open public class TimeIntervalActionScriptConditionJPanel : javax.swing.JPanel {
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     private var timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface
-public constructor        (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface){
+public constructor        (timeIntervalActionScriptConditionInterface: TimeIntervalActionScriptConditionInterface)
 
-                    var timeIntervalActionScriptConditionInterface = timeIntervalActionScriptConditionInterface
+        Updates for KMP build        
+        {
+var timeIntervalActionScriptConditionInterface = timeIntervalActionScriptConditionInterface
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR)
 initComponents()
 this.timeIntervalActionScriptConditionInterface= timeIntervalActionScriptConditionInterface
@@ -50,21 +52,33 @@ this.set()
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-{this.getTimeIntervalJTextField()!!.setText(this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay.toString())
+
+
+        Updates for KMP build        
+        {
+this.getTimeIntervalJTextField()!!.setText(this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay.toString())
 this.timeIntervalActionScriptConditionInterface!!.log()
 }
 
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= Integer(Integer.valueOf(this.getTimeIntervalJTextField()!!.getText()))
+
+
+        Updates for KMP build        
+        {
+this.timeIntervalActionScriptConditionInterface!!.getTimeDelayHelper()!!.delay= Integer(Integer.valueOf(this.getTimeIntervalJTextField()!!.getText()))
 this.timeIntervalActionScriptConditionInterface!!.log()
 }
 
 
 open fun getTimeIntervalJTextField()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JTextField{
+: javax.swing.JTextField
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -74,16 +88,22 @@ open fun getTimeIntervalJTextField()
 
 open fun setTimeIntervalJTextField(timeIntervalJTextField: javax.swing.JTextField)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeIntervalJTextField = timeIntervalJTextField
+
+        Updates for KMP build        
+        {
+var timeIntervalJTextField = timeIntervalJTextField
 this.timeIntervalJTextField= timeIntervalJTextField
 }
 
 
 open fun getTimeIntervalActionJDialog()
         //nullable = true from not(false or (false and true)) = true
-: javax.swing.JDialog{
+: javax.swing.JDialog
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,16 +113,22 @@ open fun getTimeIntervalActionJDialog()
 
 open fun setTimeIntervalActionJDialog(timeIntervalActionJDialog: javax.swing.JDialog)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var timeIntervalActionJDialog = timeIntervalActionJDialog
+
+        Updates for KMP build        
+        {
+var timeIntervalActionJDialog = timeIntervalActionJDialog
 this.timeIntervalActionJDialog= timeIntervalActionJDialog
 }
 
 
 open fun initComponents()
         //nullable = true from not(false or (false and true)) = true
-{timeIntervalActionJDialog= javax.swing.JDialog()
+
+
+        Updates for KMP build        
+        {
+timeIntervalActionJDialog= javax.swing.JDialog()
 titleJLabel= javax.swing.JLabel()
 okJButton= javax.swing.JButton()
 jLabel2= javax.swing.JLabel()
@@ -117,9 +143,11 @@ okJButton!!.addActionListener(object: java.awt.event.ActionListener()
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 okJButtonActionPerformed(evt)
 }
 
@@ -139,9 +167,11 @@ timeIntervalActionJButton!!.addActionListener(object: java.awt.event.ActionListe
                                 
 open override fun actionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 timeIntervalActionJButtonActionPerformed(evt)
 }
 
@@ -159,9 +189,11 @@ layout.setVerticalGroup(layout.createParallelGroup(javax.swing.GroupLayout.Align
 
 open fun okJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.update()
 this.getTimeIntervalActionJDialog()!!.setVisible(false)
 }
@@ -169,9 +201,11 @@ this.getTimeIntervalActionJDialog()!!.setVisible(false)
 
 open fun timeIntervalActionJButtonActionPerformed(evt: java.awt.event.ActionEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var evt = evt
+
+        Updates for KMP build        
+        {
+var evt = evt
 this.getTimeIntervalActionJDialog()!!.setVisible(true)
 }
 

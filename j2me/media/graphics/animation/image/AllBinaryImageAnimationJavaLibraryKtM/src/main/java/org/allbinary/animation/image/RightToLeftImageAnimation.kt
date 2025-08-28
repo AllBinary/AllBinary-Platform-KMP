@@ -39,12 +39,12 @@ open public class RightToLeftImageAnimation : ImageSegmentAnimation {
     private var currentWidth: Int= 0
 public constructor        (image: Image, animationBehavior: AnimationBehavior)                        
 
-                            : super(image, animationBehavior){
+                            : super(image, animationBehavior)
 
-                    var image = image
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var image = image
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -54,21 +54,31 @@ this.setFrame(this.getSize() -1)
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{super.previousFrame()
+
+
+        Updates for KMP build        
+        {
+super.previousFrame()
 this.update()
 }
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{super.nextFrame()
+
+
+        Updates for KMP build        
+        {
+super.nextFrame()
 this.update()
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 super.setFrame(index)
 this.update()
 }
@@ -76,7 +86,11 @@ this.update()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.startWidth= this.getDrawWidth() *this.getFrame() /this.getSize()
+
+
+        Updates for KMP build        
+        {
+this.startWidth= this.getDrawWidth() *this.getFrame() /this.getSize()
 this.currentWidth= this.getDrawWidth() -this.startWidth
 }
 
@@ -84,15 +98,13 @@ this.currentWidth= this.getDrawWidth() -this.startWidth
     private var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 graphics.drawRegion(this.getImage(), this.startWidth, this.getStartY(), this.currentWidth, this.getDrawHeight(), Sprite.TRANS_NONE, x +this.startWidth, y, anchor)
 }
 

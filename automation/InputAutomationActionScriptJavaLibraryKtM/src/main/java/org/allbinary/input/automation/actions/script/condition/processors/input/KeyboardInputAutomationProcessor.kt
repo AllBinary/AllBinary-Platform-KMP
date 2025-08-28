@@ -46,9 +46,11 @@ open public class KeyboardInputAutomationProcessor
             
 open fun process(keyActionScriptInputInterface: KeyboardActionScriptInputInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyActionScriptInputInterface = keyActionScriptInputInterface
+
+        Updates for KMP build        
+        {
+var keyActionScriptInputInterface = keyActionScriptInputInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -73,7 +75,11 @@ logUtil!!.put(CommonLabels.getInstance()!!.START +keyActionScriptInputInterface!
 
                         for (index in 0 until keyActionScriptInputInterface!!.getKeyArray()!!.length)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(keyActionScriptInputInterface!!.isPress())
                         
@@ -91,7 +97,11 @@ Thread.sleep(keyActionScriptInputInterface!!.getTime())
 
                         for (index in keyActionScriptInputInterface!!.getKeyArray()!!.length -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(keyActionScriptInputInterface!!.isRelease())
                         
@@ -112,7 +122,11 @@ Thread.sleep(keyActionScriptInputInterface!!.getTime())
 
                         for (index in 0 until keyActionScriptInputInterface!!.getKeyArray()!!.length)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(keyActionScriptInputInterface!!.isPress())
                         
@@ -139,7 +153,11 @@ Thread.sleep(keyActionScriptInputInterface!!.getTime())
 
 
         while(!timeHelper!!.isTime() || toLong > 6000)
-        {toLong++
+        
+
+        Updates for KMP build        
+        {
+toLong++
 Thread.sleep(50)
 }
 
@@ -154,7 +172,11 @@ Thread.sleep(50)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

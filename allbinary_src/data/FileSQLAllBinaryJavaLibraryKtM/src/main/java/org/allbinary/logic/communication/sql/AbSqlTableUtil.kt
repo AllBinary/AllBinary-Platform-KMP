@@ -57,7 +57,11 @@ open public class AbSqlTableUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbSqlTableUtil{
+: AbSqlTableUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -127,12 +131,12 @@ open fun getInstance()
 
 open fun getOutputStream(backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
-: OutputStream{
+: OutputStream
 
-                    var backupPath = backupPath
-
-
-                    var tableName = tableName
+        Updates for KMP build        
+        {
+var backupPath = backupPath
+var tableName = tableName
 
         try {
             
@@ -173,7 +177,11 @@ backupFile!!.createNewFile()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return outputStream
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -195,15 +203,13 @@ backupFile!!.createNewFile()
 
 open fun backupFile(path: AbPath, backupPath: String, tableName: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var path = path
-
-
-                    var backupPath = backupPath
-
-
-                    var tableName = tableName
+        Updates for KMP build        
+        {
+var path = path
+var backupPath = backupPath
+var tableName = tableName
 
         try {
             
@@ -253,7 +259,11 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return true
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -274,9 +284,11 @@ FileUtil.getInstance()!!.copy(path, backupAbPath)
 
 open fun convertNewLines(value: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -288,7 +300,11 @@ open fun convertNewLines(value: String)
 
 
         while(index < value.length)
-        {index= value.indexOf(specialCharArray[0]!!, lastIndex)
+        
+
+        Updates for KMP build        
+        {
+index= value.indexOf(specialCharArray[0]!!, lastIndex)
 
     
                         if(index !=  -1)
@@ -332,9 +348,11 @@ lastIndex= index +1
 
 open fun backupTable(abSqlTable: AbSqlTable)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abSqlTable = abSqlTable
+        Updates for KMP build        
+        {
+var abSqlTable = abSqlTable
 
     var tableName: String = abSqlTable!!.getTableName()!!
 
@@ -387,7 +405,11 @@ open fun backupTable(abSqlTable: AbSqlTable)
 
 
         while(rset.next())
-        {stringBuffer!!.delete(0, stringBuffer!!.length())
+        
+
+        Updates for KMP build        
+        {
+stringBuffer!!.delete(0, stringBuffer!!.length())
 stringBuffer!!.append(QUERY_START)
 
 
@@ -395,7 +417,11 @@ stringBuffer!!.append(QUERY_START)
 
                         for (i in 1 until colNum)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: String = rset.getString(i)!!
 
 stringBuffer!!.append(this.convertNewLines(value))
@@ -426,7 +452,11 @@ StreamUtil.getInstance()!!.close(outputStream)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TABLE_LABEL +tableName +BACKUP_SUCCESS
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         
@@ -448,12 +478,12 @@ StreamUtil.getInstance()!!.close(outputStream)
 
 open fun restoreTable(abSqlTable: AbSqlTable, portion: Portion)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abSqlTable = abSqlTable
-
-
-                    var portion = portion
+        Updates for KMP build        
+        {
+var abSqlTable = abSqlTable
+var portion = portion
 
     var tableName: String = abSqlTable!!.getTableName()!!
 
@@ -543,7 +573,11 @@ bufferedLineReader!!.readUpToLines(start)
         while(bufferedLineReader!!.getCurrent() < end && (line= bufferedLineReader!!.readLine()) != 
                                     null
                                 )
+        
+
+        Updates for KMP build        
         {
+
     
                         if(line.length > 1)
                         
@@ -564,7 +598,11 @@ stringBuffer!!.append(PORTION_RESTORED)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGINGERROR))
                         

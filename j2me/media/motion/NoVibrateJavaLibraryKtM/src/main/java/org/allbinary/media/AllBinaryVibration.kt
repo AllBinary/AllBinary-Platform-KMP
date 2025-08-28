@@ -38,7 +38,11 @@ open public class AllBinaryVibration : AllBinaryVibrationME {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AllBinaryVibrationME{
+: AllBinaryVibrationME
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,7 +52,11 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(GameConfigurationCentral.getInstance()!!.VIBRATION.getValue()!!.toInt() == 0)
                         
@@ -66,19 +74,21 @@ open fun init()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun vibrate(duration: Int, type: Int, volume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var duration = duration
 
 
-                    var type = type
-
-
-                    var volume = volume
+        Updates for KMP build        
+        {
+var duration = duration
+var type = type
+var volume = volume
 }
 
 

@@ -37,7 +37,11 @@ open public class FileFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileFactory{
+: FileFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,9 +60,11 @@ open fun getInstance()
             
 open fun getInstance(filePath: String)
         //nullable =  from not(true or (false and false)) = 
-: AbFile{
+: AbFile
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var filePath = filePath
 
 
 
@@ -71,12 +77,12 @@ open fun getInstance(filePath: String)
             
 open fun getInstance(file: AbFile, childFilePath: String)
         //nullable =  from not(true or (false and false)) = 
-: AbFile{
+: AbFile
 
-                    var file = file
-
-
-                    var childFilePath = childFilePath
+        Updates for KMP build        
+        {
+var file = file
+var childFilePath = childFilePath
 
 
 
@@ -89,9 +95,11 @@ open fun getInstance(file: AbFile, childFilePath: String)
             
 open fun isFile(path: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
     var file: AbFile = AbFile(path)
 

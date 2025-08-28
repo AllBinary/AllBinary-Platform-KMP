@@ -34,7 +34,11 @@ open public class OptimizedTickableLayerProcessor : LayerProcessor {
         
 public constructor        ()                        
 
-                            : super(OptimizedTickableLayerManager()){
+                            : super(OptimizedTickableLayerManager())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -44,15 +48,13 @@ public constructor        ()
                 @Throws(Exception::class)
             override fun process(allBinaryLayerManager: AllBinaryLayerManager, layerInterface: AllBinaryLayer, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allBinaryLayerManager = allBinaryLayerManager
 
 
-                    var layerInterface = layerInterface
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
+var layerInterface = layerInterface
+var index = index
 
     var tickableInterface: AllBinaryGameLayer = layerInterface as AllBinaryGameLayer
 
@@ -61,9 +63,11 @@ tickableInterface!!.processTick(allBinaryLayerManager)
 
 override fun isProcessorLayer(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     
                         if(layerInterface!!.implmentsTickableInterface())

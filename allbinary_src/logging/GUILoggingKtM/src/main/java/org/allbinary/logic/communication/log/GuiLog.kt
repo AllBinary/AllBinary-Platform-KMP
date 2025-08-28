@@ -42,7 +42,11 @@ open public class GuiLog
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GuiLog{
+: GuiLog
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,15 +59,21 @@ open fun getInstance()
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun showDialog(msg: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var msg = msg
+
+        Updates for KMP build        
+        {
+var msg = msg
 
     var error: JDialog = JDialog()
 
@@ -111,15 +121,13 @@ error.show()
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var anyType = anyType
+var functionName = functionName
 
 
 
@@ -132,18 +140,14 @@ open fun put(specialMessage: String, anyType: Any, functionName: String)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var specialMessage = specialMessage
-
-
-                    var anyType = anyType
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var anyType = anyType
+var functionName = functionName
+var exception = exception
 
         try {
             
@@ -157,7 +161,11 @@ System.out.println(data)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 
 
@@ -171,15 +179,13 @@ System.out.println(data)
 
 open fun put(specialMessage: String, className: String, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var specialMessage = specialMessage
-
-
-                    var className = className
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var className = className
+var functionName = functionName
 
 
 
@@ -192,18 +198,14 @@ open fun put(specialMessage: String, className: String, functionName: String)
 
 open fun put(specialMessage: String, className: String, functionName: String, exception: Exception)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var specialMessage = specialMessage
-
-
-                    var className = className
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+var specialMessage = specialMessage
+var className = className
+var functionName = functionName
+var exception = exception
 
         try {
             
@@ -217,7 +219,11 @@ System.out.println(data)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return data
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, "put", e)
 
 
 

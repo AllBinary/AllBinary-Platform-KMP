@@ -34,9 +34,11 @@ open public class AbFileOutputStream : FileOutputStream {
         
 public constructor        (name: String)                        
 
-                            : super(name){
+                            : super(name)
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -45,12 +47,12 @@ public constructor        (name: String)
 
 public constructor        (name: String, append: Boolean)                        
 
-                            : super(name, append){
+                            : super(name, append)
 
-                    var name = name
-
-
-                    var append = append
+        Updates for KMP build        
+        {
+var name = name
+var append = append
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,9 +61,11 @@ public constructor        (name: String, append: Boolean)
 
 public constructor        (file: AbFile)                        
 
-                            : super(AbFileNativeUtil.get(file)){
+                            : super(AbFileNativeUtil.get(file))
 
-                    var file = file
+        Updates for KMP build        
+        {
+var file = file
 
 
                             //For kotlin this is before the body of the constructor.
@@ -70,12 +74,12 @@ public constructor        (file: AbFile)
 
 public constructor        (file: AbFile, append: Boolean)                        
 
-                            : super(AbFileNativeUtil.get(file), append){
+                            : super(AbFileNativeUtil.get(file), append)
 
-                    var file = file
-
-
-                    var append = append
+        Updates for KMP build        
+        {
+var file = file
+var append = append
 
 
                             //For kotlin this is before the body of the constructor.

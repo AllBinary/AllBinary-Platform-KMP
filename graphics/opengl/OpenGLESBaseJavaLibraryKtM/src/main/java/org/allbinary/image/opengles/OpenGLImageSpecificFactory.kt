@@ -40,7 +40,11 @@ open public class OpenGLImageSpecificFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OpenGLImageSpecificFactory{
+: OpenGLImageSpecificFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
 
 open fun setImageFactory(imageFactory: OpenGLImageFactory)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageFactory = imageFactory
+
+        Updates for KMP build        
+        {
+var imageFactory = imageFactory
 this.imageFactory= imageFactory
 PreLogUtil.put(StringMaker().
                             append("Selected Image Factory: ")!!.append(StringUtil.getInstance()!!.toString(this.imageFactory))!!.toString(), this, "setImageFactory")
@@ -72,7 +78,11 @@ PreLogUtil.put(StringMaker().
 
 open fun getImageFactory()
         //nullable = true from not(false or (false and true)) = true
-: OpenGLImageFactory{
+: OpenGLImageFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

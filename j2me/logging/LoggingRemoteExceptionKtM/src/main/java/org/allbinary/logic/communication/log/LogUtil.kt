@@ -48,7 +48,11 @@ open public class LogUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: LogUtil{
+: LogUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,16 +69,22 @@ open fun getInstance()
     var abeClientInformation: AbeClientInformationInterface
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val stringBuffer: StringMaker = StringMaker()
 
 open fun put(log: Log)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var log = log
+
+        Updates for KMP build        
+        {
+var log = log
 
     
                         if(log == 
@@ -108,32 +118,26 @@ this.put(specialMessage, anyType, functionName, exception)
 
 open fun put(specialMessage: String, anyType: Any, functionName: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
 
 
-                    var anyType = anyType
-
-
-                    var functionName = functionName
+        Updates for KMP build        
+        {
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
 }
 
 
 open fun put(specialMessage: String, anyType: Any, functionName: String, exception: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var specialMessage = specialMessage
 
 
-                    var anyType = anyType
-
-
-                    var functionName = functionName
-
-
-                    var exception = exception
+        Updates for KMP build        
+        {
+    //var specialMessage = specialMessage
+    //var anyType = anyType
+    //var functionName = functionName
+    //var exception = exception
 
     
                         if(exception != 
@@ -221,7 +225,11 @@ hashtable.put("message", stringBuffer!!.toString())
 XmlRpcRemoteLogClient(abeClientInformation).
                             get(hashtable)
 } catch(e: Throwable)
-            {System.out.println("Exception")
+            
+
+        Updates for KMP build        
+        {
+System.out.println("Exception")
 e.printStackTrace()
 }
 

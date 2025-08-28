@@ -34,15 +34,21 @@ open public class PaymentTransactionKeys
     private var key: String
 protected constructor        (value: String)
             : super()
-        {
+        
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 this.key= value
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

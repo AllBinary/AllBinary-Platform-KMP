@@ -61,9 +61,11 @@ open public class AbstractInputAutomationWorker
     private var captureThread: Thread
 public constructor        (inputAutomationActionInterface: InputAutomationActionInterface)
             : super()
-        {
+        
 
-                    var inputAutomationActionInterface = inputAutomationActionInterface
+        Updates for KMP build        
+        {
+var inputAutomationActionInterface = inputAutomationActionInterface
 }
 
 
@@ -71,16 +73,22 @@ public constructor        (inputAutomationActionInterface: InputAutomationAction
             
 open fun setThread(thread: Thread)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var thread = thread
+
+        Updates for KMP build        
+        {
+var thread = thread
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,9 +99,11 @@ open fun isRunning()
 
 open fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 this.running= running
 }
 
@@ -101,7 +111,11 @@ this.running= running
 
 open fun isAnyDataWorkerRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(captureThread != 
                                     null
@@ -129,7 +143,11 @@ open fun isAnyDataWorkerRunning()
 
 open fun startDataWorkers()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(!isAnyDataWorkerRunning())
                         
@@ -148,9 +166,17 @@ captureThread!!.start()
 
 open fun waitForDataWorkers()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         while(isAnyDataWorkerRunning())
-        {logUtil!!.put("Waiting", this, this.commonStrings!!.RUN)
+        
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Waiting", this, this.commonStrings!!.RUN)
 Thread.sleep(250)
 }
 
@@ -161,7 +187,11 @@ Thread.sleep(250)
             
 open fun stopDataWorkers()
         //nullable = true from not(false or (false and true)) = true
-{this.getCaptureWorker()!!.setRunning(false)
+
+
+        Updates for KMP build        
+        {
+this.getCaptureWorker()!!.setRunning(false)
 }
 
 
@@ -169,7 +199,11 @@ open fun stopDataWorkers()
             
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -178,7 +212,11 @@ open fun process()
 
 open fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.RUN)
 this.setRunning(true)
@@ -187,7 +225,11 @@ this.setRunning(true)
 
 
         while(this.isRunning())
-        {timeHelper!!.setStartTime()
+        
+
+        Updates for KMP build        
+        {
+timeHelper!!.setStartTime()
 this.process()
 this.index++
 logUtil!!.put(CommonLabels.getInstance()!!.ELAPSED +timeHelper!!.getElapsed() +" Index: " +this.index, this, this.commonStrings!!.RUN)
@@ -197,7 +239,11 @@ this.stopDataWorkers()
 this.waitForDataWorkers()
 logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, this.commonStrings!!.RUN, e)
 }
 
 }
@@ -205,7 +251,11 @@ logUtil!!.put(this.commonStrings!!.END, this, this.commonStrings!!.RUN)
 
 open fun getInputAutomationActionInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputAutomationActionInterface{
+: InputAutomationActionInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -215,16 +265,22 @@ open fun getInputAutomationActionInterface()
 
 open fun setInputAutomationActionInterface(inputAutomationActionInterface: InputAutomationActionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputAutomationActionInterface = inputAutomationActionInterface
+
+        Updates for KMP build        
+        {
+var inputAutomationActionInterface = inputAutomationActionInterface
 this.inputAutomationActionInterface= inputAutomationActionInterface
 }
 
 
 open fun getCaptureWorker()
         //nullable = true from not(false or (false and true)) = true
-: CaptureWorkerInterface{
+: CaptureWorkerInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -234,16 +290,22 @@ open fun getCaptureWorker()
 
 open fun setCaptureWorker(captureWorkerInterface: CaptureWorkerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var captureWorkerInterface = captureWorkerInterface
+
+        Updates for KMP build        
+        {
+var captureWorkerInterface = captureWorkerInterface
 this.captureWorkerInterface= captureWorkerInterface
 }
 
 
 open fun getImageComparisonWorker()
         //nullable = true from not(false or (false and true)) = true
-: ImageComparisonWorker{
+: ImageComparisonWorker
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -253,16 +315,22 @@ open fun getImageComparisonWorker()
 
 open fun setImageComparisonWorker(imageComparisonWorker: ImageComparisonWorker)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageComparisonWorker = imageComparisonWorker
+
+        Updates for KMP build        
+        {
+var imageComparisonWorker = imageComparisonWorker
 this.imageComparisonWorker= imageComparisonWorker
 }
 
 
 open fun getMotionRectanglesWorker()
         //nullable = true from not(false or (false and true)) = true
-: MotionRectanglesWorker{
+: MotionRectanglesWorker
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -272,9 +340,11 @@ open fun getMotionRectanglesWorker()
 
 open fun setMotionRectanglesWorker(motionRectanglesWorker: MotionRectanglesWorker)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionRectanglesWorker = motionRectanglesWorker
+
+        Updates for KMP build        
+        {
+var motionRectanglesWorker = motionRectanglesWorker
 this.motionRectanglesWorker= motionRectanglesWorker
 }
 

@@ -37,15 +37,13 @@ open public class AutomaticCacheInterfaceFactory
             
 open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface, cacheType: CacheType, cachePolicy: CachePolicy)
         //nullable =  from not(true or (false and false)) = 
-: AutomaticCacheInterface{
+: AutomaticCacheInterface
 
-                    var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
-
-
-                    var cacheType = cacheType
-
-
-                    var cachePolicy = cachePolicy
+        Updates for KMP build        
+        {
+var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
+var cacheType = cacheType
+var cachePolicy = cachePolicy
 
 
 
@@ -56,7 +54,11 @@ open fun getInstance(cacheableInterfaceFactoryInterface: CacheableInterfaceFacto
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -38,9 +38,11 @@ open public class PaymentFactory
             
 open fun getInstance(request: ServletRequest)
         //nullable =  from not(true or (false and false)) = 
-: PaymentInterface{
+: PaymentInterface
 
-                    var request = request
+        Updates for KMP build        
+        {
+var request = request
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -52,7 +54,11 @@ open fun getInstance(request: ServletRequest)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return org.allbinary.business.user.commerce.money.payment.Payment(request) as PaymentInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -77,7 +83,11 @@ open fun getInstance(request: ServletRequest)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

@@ -44,7 +44,11 @@ open public class BasicTable
             
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -55,7 +59,11 @@ open fun drop()
             
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -66,7 +74,11 @@ open fun create()
             
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -77,7 +89,11 @@ open fun restore()
             
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

@@ -36,27 +36,45 @@ open fun setInputStream(inputStream: InputStream)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun setURIResolver(uriResolver: URIResolver)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun getStreamSource()
         //nullable = true from not(false or (false and true)) = true
 : StreamSource
 
+        Updates for KMP build        
+        
+
 open fun getInputStream()
         //nullable = true from not(false or (false and true)) = true
 : InputStream
 
+        Updates for KMP build        
+        
+
 open fun getURIResolver()
         //nullable = true from not(false or (false and true)) = true
 : URIResolver
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
 open fun translate(xmlDocumentStr: String)
         //nullable = true from not(false or (false and false)) = true
 : String
+
+        Updates for KMP build        
+        
 
 }
                 

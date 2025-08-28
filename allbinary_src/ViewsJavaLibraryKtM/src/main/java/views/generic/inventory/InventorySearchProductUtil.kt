@@ -52,7 +52,11 @@ open public class InventorySearchProductUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: InventorySearchProductUtil{
+: InventorySearchProductUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -77,15 +81,13 @@ open fun getInstance()
             
 open fun getProduct(abeClientInformation: AbeClientInformationInterface, searchRequest: SearchRequest, product: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var searchRequest = searchRequest
-
-
-                    var product = product
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+var searchRequest = searchRequest
+var product = product
 
         try {
             
@@ -131,7 +133,11 @@ viewDocumentInterface!!.getBaseNode()!!.appendChild(BasicItemView(itemInterface,
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PRODUCTSEARCHLOGGINGERROR))
                         

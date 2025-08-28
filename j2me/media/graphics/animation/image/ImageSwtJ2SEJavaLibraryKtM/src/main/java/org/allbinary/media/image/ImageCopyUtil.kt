@@ -57,7 +57,11 @@ open public class ImageCopyUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ImageCopyUtil{
+: ImageCopyUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -70,7 +74,11 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -91,9 +99,11 @@ private constructor        ()
             
 open fun createImageForRotation(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
 
     
                         if(features.isFeature(openGLFeatureFactory!!.OPENGL))
@@ -127,9 +137,11 @@ image= openGLUtil!!.add(image)
             
 open fun createImage(originalImage: Image)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
 
     
                         if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
@@ -205,15 +217,13 @@ image= openGLUtil!!.add(image)
             
 open fun createImage(originalImage: Image, width: Int, height: Int)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var width = width
+    //var height = height
 
 
 
@@ -226,18 +236,14 @@ open fun createImage(originalImage: Image, width: Int, height: Int)
             
 open fun createImage(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var mutable = mutable
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var width = width
+    //var height = height
+    //var mutable = mutable
 
     var originalImage2: Image = originalImage
 
@@ -366,18 +372,14 @@ image= openGLUtil!!.add(image)
             
 open fun createImage2(originalImage: Image, width: Int, height: Int, mutable: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
-
-
-                    var width = width
-
-
-                    var height = height
-
-
-                    var mutable = mutable
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var width = width
+    //var height = height
+    //var mutable = mutable
 
     var originalImage2: Image = originalImage
 
@@ -582,15 +584,13 @@ image= openGLUtil!!.add(image)
             
 open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var originalImage = originalImage
-
-
-                    var canvasScale = canvasScale
-
-
-                    var resize = resize
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var canvasScale = canvasScale
+    //var resize = resize
 
     
                         if(!features.isFeature(gameFeatureFactory!!.POST_IMAGE_LOADING_MODIFICATION))
@@ -676,7 +676,11 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
                         for (i in 0 until height)
 
-        {originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
+        
+
+        Updates for KMP build        
+        {
+originalImageData!!.getPixels(0, i, width, originalPixelArray, (i *width))
 }
 
 
@@ -685,13 +689,21 @@ open fun createImage(originalImage: Image, canvasScale: Float, resize: Boolean)
 
                         for (index in halfWidthDelta until width)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in halfHeightDelta until height)
 
-        {newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta) +((index2 -halfHeightDelta) *width)]!!
+        
+
+        Updates for KMP build        
+        {
+newPixelArray[index +(index2 *width)]= originalPixelArray[(index -halfWidthDelta) +((index2 -halfHeightDelta) *width)]!!
 }
 
 }

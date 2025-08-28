@@ -45,9 +45,11 @@ open public class StoreFrontUsersStatistics
     private var totalUsersByRoleHashMap: HashMap<Any, Any>
 public constructor        (storeFrontInterface: StoreFrontInterface)
             : super()
-        {
+        
 
-                    var storeFrontInterface = storeFrontInterface
+        Updates for KMP build        
+        {
+var storeFrontInterface = storeFrontInterface
 this.totalUsersByRoleHashMap= HashMap<Any, Any>()
 
     var userEntityInterface: UserEntityInterface = UserEntityFactory.getInstance()!!
@@ -65,7 +67,11 @@ this.totalNumberOfUsers= userVector!!.size as Long
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface
 
 
@@ -82,9 +88,11 @@ totalUsersByRoleHashMap!!.put(nextUserRole, currentNumberOfUsersForRole)
 
 open fun getNewTotal(userRole: UserRole)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var userRole = userRole
+        Updates for KMP build        
+        {
+var userRole = userRole
 
     var numberOfUsersForRoleLong: Long = totalUsersByRoleHashMap!!.get(userRole as Object) as Long
 
@@ -109,7 +117,11 @@ open fun getNewTotal(userRole: UserRole)
 
 open fun getNumberOfUsers()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -119,9 +131,11 @@ open fun getNumberOfUsers()
 
 open fun getNumberOfUsersByRole(role: String)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var role = role
+        Updates for KMP build        
+        {
+var role = role
 
     var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(role as Object) as Long
 
@@ -135,7 +149,11 @@ open fun getNumberOfUsersByRole(role: String)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.getNumberOfUsers()!!.toString())
@@ -158,7 +176,11 @@ hashMap!!.put(StoreFrontUsersStatisticsData.getInstance()!!.NUMBEROFUSERS, this.
 
                         for (index in 0 until size)
 
-        {nextUserRole= userRoleArray[index]!! as UserRole
+        
+
+        Updates for KMP build        
+        {
+nextUserRole= userRoleArray[index]!! as UserRole
 
     var totalForRole: Long = this.totalUsersByRoleHashMap!!.get(nextUserRole as Object) as Long
 
@@ -175,7 +197,11 @@ hashMap!!.put(nextUserRole!!.toString(), totalForRole!!.toString())
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -185,7 +211,11 @@ open fun toVector()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

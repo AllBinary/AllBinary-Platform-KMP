@@ -46,7 +46,11 @@ open public class FeaturedResourceFactory
     private val list: BasicArrayList = BasicArrayList()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     private val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -73,9 +77,11 @@ public constructor        ()
             
 open fun init(level: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var level = level
+
+        Updates for KMP build        
+        {
+var level = level
 
     var size: Int = this.list.size()!!
 
@@ -85,7 +91,11 @@ open fun init(level: Int)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var featureInterface: GameFeatureControlledInterface = this.list.objectArray[index]!! as GameFeatureControlledInterface
 
 
@@ -144,15 +154,21 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 }
 
 
 open fun add(featureInterface: GameFeatureControlledInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var featureInterface = featureInterface
+
+        Updates for KMP build        
+        {
+var featureInterface = featureInterface
 logUtil!!.put(StringMaker().
                             append(CommonLabels.getInstance()!!.START_LABEL)!!.append(StringUtil.getInstance()!!.toString(featureInterface))!!.toString(), this, commonStrings!!.ADD)
 this.list.add(featureInterface)
@@ -161,7 +177,11 @@ this.list.add(featureInterface)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

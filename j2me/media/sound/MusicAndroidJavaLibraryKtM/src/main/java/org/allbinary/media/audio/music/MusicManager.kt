@@ -68,12 +68,12 @@ open public class MusicManager
     private val currentIntent: Intent
 public constructor        (musicServiceClass: KClass<*>, songList: BasicArrayList)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var musicServiceClass = musicServiceClass
-
-
-                    var songList = songList
+    //var musicServiceClass = musicServiceClass
+    //var songList = songList
 PreLogUtil.put(commonStateStrings!!.CONTEXT +resourceUtil!!.getContext(), this, commonStrings!!.CONSTRUCTOR)
 this.musicServiceClass= musicServiceClass
 currentIntent= Intent(resourceUtil!!.getContext(), musicServiceClass::class.java)
@@ -83,15 +83,13 @@ this.songList= songList
 
 open fun nextSong(nextSongSound: Sound, leftVolume: Int, rightVolume: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var nextSongSound = nextSongSound
 
 
-                    var leftVolume = leftVolume
-
-
-                    var rightVolume = rightVolume
+        Updates for KMP build        
+        {
+var nextSongSound = nextSongSound
+    //var leftVolume = leftVolume
+    //var rightVolume = rightVolume
 
     
                         if(nextSongSound == 
@@ -112,13 +110,21 @@ this.reset()
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.timeDelayHelper!!.delay= 0
+
+
+        Updates for KMP build        
+        {
+this.timeDelayHelper!!.delay= 0
 }
 
 
 open fun process()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.songList!!.size() == 0)
                         
@@ -171,13 +177,21 @@ open fun process()
 
 open fun show()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.songList!!.size()!!  - 1  downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var sound: Sound = this.songList!!.get(index) as Sound
 
 
@@ -192,7 +206,11 @@ PreLogUtil.put(StringBuilder().
 
 open fun startNewSong()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
 
@@ -221,7 +239,11 @@ this.currentIntent!!.putExtra(musicStrings!!.LEFT_VOLUME, leftVolume)
 this.currentIntent!!.putExtra(musicStrings!!.RIGHT_VOLUME, rightVolume)
 this.resourceUtil!!.getContext()!!.startService(this.currentIntent)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var resource: String = StringUtil.getInstance()!!.EMPTY_STRING
 
 
@@ -245,7 +267,11 @@ PreLogUtil.put(commonStrings!!.EXCEPTION_LABEL +resource, this, commonStrings!!.
             
 open fun stop()
         //nullable = true from not(false or (false and true)) = true
-{this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
+
+
+        Updates for KMP build        
+        {
+this.resourceUtil!!.getContext()!!.stopService(this.currentIntent)
 }
 
 

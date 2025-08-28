@@ -21,21 +21,15 @@ open public class CustomImageItem : CustomItem {
     var yOffset: Int = 0
 public constructor        (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor)                        
 
-                            : super(label, basicColor, basicColor){
+                            : super(label, basicColor, basicColor)
 
-                    var label = label
-
-
-                    var image = image
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var label = label
+var image = image
+var layout = layout
+var altText = altText
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,24 +38,16 @@ public constructor        (label: String, image: Image, layout: Int, altText: St
 
 public constructor        (label: String, image: Image, layout: Int, altText: String, basicColor: BasicColor, yOffset: Int)                        
 
-                            : super(label, basicColor, basicColor){
+                            : super(label, basicColor, basicColor)
 
-                    var label = label
-
-
-                    var image = image
-
-
-                    var layout = layout
-
-
-                    var altText = altText
-
-
-                    var basicColor = basicColor
-
-
-                    var yOffset = yOffset
+        Updates for KMP build        
+        {
+var label = label
+var image = image
+var layout = layout
+var altText = altText
+var basicColor = basicColor
+var yOffset = yOffset
 
 
                             //For kotlin this is before the body of the constructor.
@@ -71,7 +57,11 @@ public constructor        (label: String, image: Image, layout: Int, altText: St
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image{
+: Image
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

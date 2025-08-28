@@ -37,7 +37,11 @@ open public class ResizableListenerHandler
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ResizableListenerHandler{
+: ResizableListenerHandler
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,17 +58,21 @@ open fun getInstance()
         
 open fun setListener(resizableListenerInterface: ResizableListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var resizableListenerInterface = resizableListenerInterface
+
+        Updates for KMP build        
+        {
+var resizableListenerInterface = resizableListenerInterface
 }
 
 
 open fun fire(isFullScreen: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isFullScreen = isFullScreen
+
+        Updates for KMP build        
+        {
+var isFullScreen = isFullScreen
 }
 
 
@@ -73,9 +81,11 @@ open fun fire(isFullScreen: Boolean)
 
 open fun fireEvent(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 }
 
 

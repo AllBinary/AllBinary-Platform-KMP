@@ -119,18 +119,14 @@ open public class GameCommandCanvas : MyCanvas
     private var isSingleKeyRepeatableProcessing: Boolean = Features.getInstance()!!.isFeature(InputFeatureFactory.getInstance()!!.SINGLE_KEY_REPEAT_PRESS)!!
 public constructor        (cmdListener: CommandListener, name: String, backgroundBasicColor: BasicColor, foregroundBasicColor: BasicColor)                        
 
-                            : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST){
+                            : super(name, CanvasStrings.getInstance()!!.EMPTY_CHILD_NAME_LIST)
 
-                    var cmdListener = cmdListener
-
-
-                    var name = name
-
-
-                    var backgroundBasicColor = backgroundBasicColor
-
-
-                    var foregroundBasicColor = foregroundBasicColor
+        Updates for KMP build        
+        {
+    //var cmdListener = cmdListener
+    //var name = name
+    //var backgroundBasicColor = backgroundBasicColor
+    //var foregroundBasicColor = foregroundBasicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -151,7 +147,11 @@ this.initCommands(cmdListener)
             this.initMenu()
 repaintProcessor!!.process()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -164,17 +164,21 @@ repaintProcessor!!.process()
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+    //var eventObject = eventObject
 ForcedLogUtil.log(EventStrings.getInstance()!!.PERFORMANCE_MESSAGE, this)
 }
 
 override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var displayChangeEvent = displayChangeEvent
+
+        Updates for KMP build        
+        {
+    //var displayChangeEvent = displayChangeEvent
 
         try {
             logUtil!!.put(commonStrings!!.START, this, canvasStrings!!.ON_DISPLAY_CHANGE_EVENT)
@@ -184,7 +188,11 @@ override fun onDisplayChangeEvent(displayChangeEvent: DisplayChangeEvent)
 this.menuForm!!.init(rectangle, FormTypeFactory.getInstance()!!.VERTICAL_CENTER_FORM)
 this.update()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "onResize", e)
 }
 
 }
@@ -192,9 +200,11 @@ this.update()
 
 open fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+    //var cmdListener = cmdListener
 this.removeAllCommands()
 this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
 this.setCommandListener(cmdListener)
@@ -205,7 +215,11 @@ this.setCommandListener(cmdListener)
             
 open fun initMenu()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var form: ScrollSelectionForm = this.createForm()!!
 
 this.menuForm= form
@@ -227,7 +241,11 @@ this.repaintBehavior!!.onChangeRepaint(this)
             
 open fun createForm()
         //nullable = true from not(false or (false and true)) = true
-: ScrollSelectionForm{
+: ScrollSelectionForm
+
+        Updates for KMP build        
+        {
+
     var items: Array<CustomItem?> = CommandTextItemArrayFactory(AllCommandsVisitor()).
                             getInstance(this.getCommandStack() as Vector<Any>, this.backgroundBasicColor, this.foregroundBasicColor)!!
 
@@ -244,9 +262,11 @@ open fun createForm()
 
 open fun createRectangle(size: Int)
         //nullable = true from not(false or (false and false)) = true
-: Rectangle{
+: Rectangle
 
-                    var size = size
+        Updates for KMP build        
+        {
+    //var size = size
 
     var displayInfo: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 
@@ -268,7 +288,11 @@ open fun createRectangle(size: Int)
 
 override fun open()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, "open")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, "open")
 BasicMotionGesturesHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.addListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.addListener(this)
@@ -276,7 +300,11 @@ DisplayChangeEventHandler.getInstance()!!.addListener(this)
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CLOSE)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, commonStrings!!.CLOSE)
 BasicMotionGesturesHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 GameKeyEventHandler.getInstance()!!.removeListener(this.getMenuInputProcessor())
 DisplayChangeEventHandler.getInstance()!!.removeListener(this)
@@ -287,12 +315,20 @@ DisplayChangeEventHandler.getInstance()!!.removeListener(this)
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.repaintProcessor!!.process()
+
+
+        Updates for KMP build        
+        {
+this.repaintProcessor!!.process()
 }
 
 override fun getSourceId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -301,36 +337,42 @@ override fun getSourceId()
 
 override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyCode = keyCode
+
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
 override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyCode = keyCode
+
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
 override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyCode = keyCode
+
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
 override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 logUtil!!.put(StringMaker().
                             append(CommonSeps.getInstance()!!.SPACE)!!.append(keyCode)!!.toString(), this, gameInputStrings!!.KEY_PRESSED)
 this.addGameKeyEvent(keyCode, 0, false)
@@ -338,23 +380,23 @@ this.addGameKeyEvent(keyCode, 0, false)
 
 override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 this.removeGameKeyEvent(keyCode, deviceId, false)
 }
 
 override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
 
     
                         if(this.isSingleKeyRepeatableProcessing)
@@ -369,15 +411,13 @@ override fun keyRepeated(keyCode: Int, deviceId: Int)
 
 open fun addGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
-
-
-                    var repeated = repeated
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
+    //var repeated = repeated
 
         try {
             
@@ -403,7 +443,11 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -411,15 +455,13 @@ downGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
 
 open fun removeGameKeyEvent(keyCode: Int, deviceId: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
-
-
-                    var repeated = repeated
+        Updates for KMP build        
+        {
+    //var keyCode = keyCode
+    //var deviceId = deviceId
+    //var repeated = repeated
 
         try {
             
@@ -445,16 +487,22 @@ upGameKeyEventHandler!!.getInstance(deviceId)!!.fireEvent(gameKeyEvent)
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.REMOVE_KEY_EVENT, e)
 }
 
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 this.menuPaintable!!.paint(graphics)
 this.repaintBehavior!!.repaint(this)
 }
@@ -462,16 +510,22 @@ this.repaintBehavior!!.repaint(this)
 
 open fun setMenuInputProcessor(menuInputProcessor: BasicMenuInputProcessor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var menuInputProcessor = menuInputProcessor
+
+        Updates for KMP build        
+        {
+    //var menuInputProcessor = menuInputProcessor
 this.menuInputProcessor= menuInputProcessor
 }
 
 
 open fun getMenuInputProcessor()
         //nullable = true from not(false or (false and true)) = true
-: BasicMenuInputProcessor{
+: BasicMenuInputProcessor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -32,24 +32,32 @@ open public class FormPaintable : Paintable {
         
 
     private val form: PaintableForm
-public constructor        (form: PaintableForm){
+public constructor        (form: PaintableForm)
 
-                    var form = form
+        Updates for KMP build        
+        {
+var form = form
 this.form= form
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.form.paint(graphics)
 }
 
 
 open fun getForm()
         //nullable = true from not(false or (false and true)) = true
-: PaintableForm{
+: PaintableForm
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

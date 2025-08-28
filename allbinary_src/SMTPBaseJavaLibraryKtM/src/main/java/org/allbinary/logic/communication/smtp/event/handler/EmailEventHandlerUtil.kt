@@ -48,7 +48,11 @@ open public class EmailEventHandlerUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: EmailEventHandlerUtil{
+: EmailEventHandlerUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,15 +64,13 @@ open fun getInstance()
             
 open fun getUserEmailEventListenerVector(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userInterface: UserInterface)
         //nullable = true from not(false or (false and false)) = true
-: Vector{
+: Vector
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var userEmailEventNameData = userEmailEventNameData
-
-
-                    var userInterface = userInterface
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var userEmailEventNameData = userEmailEventNameData
+    //var userInterface = userInterface
 
     var userConfigurationInterface: UserConfigurationInterface = userInterface!!.getUserConfigurationInterface()!!
 
@@ -98,22 +100,24 @@ vector.add(userEmailEventListenerInterface)
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getEventHandler(abeClientInformation: AbeClientInformationInterface, userEmailEventNameData: UserEmailEventNameData, userVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-: UserEmailEventHandler{
+: UserEmailEventHandler
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var userEmailEventNameData = userEmailEventNameData
-
-
-                    var userVector = userVector
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var userEmailEventNameData = userEmailEventNameData
+    //var userVector = userVector
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -142,7 +146,11 @@ userEmailEventHandler!!.addListener(LogUserEmailEventListenerModule())
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var userInterface: UserInterface = userVector!!.get(index) as UserInterface
 
 

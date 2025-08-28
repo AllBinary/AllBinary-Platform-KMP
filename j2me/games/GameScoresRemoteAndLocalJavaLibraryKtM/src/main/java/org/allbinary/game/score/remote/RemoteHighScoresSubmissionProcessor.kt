@@ -51,21 +51,23 @@ open public class RemoteHighScoresSubmissionProcessor
     private val noCrypt: NoCrypt = NoCrypt()
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun process(remoteHighScores: RemoteHighScores, abeClientInformation: AbeClientInformationInterface, highScore: HighScore)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var remoteHighScores = remoteHighScores
 
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var highScore = highScore
+        Updates for KMP build        
+        {
+    //var remoteHighScores = remoteHighScores
+    //var abeClientInformation = abeClientInformation
+    //var highScore = highScore
 
         try {
             logUtil!!.put("Begin Remote HighScores Submission", this, commonStrings!!.PROCESS)
@@ -100,7 +102,11 @@ remoteHighScores!!.update(resultHashtable)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.PROCESS, e)
 }
 
 }

@@ -99,15 +99,21 @@ open public class LinuxHardware
     private val MINHARDWARE: Int = 5
 public constructor        (path: String)
             : super()
-        {
+        
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 this.init(path)
 }
 
 public constructor        ()
             : super()
-        {this.init(PCIFILE)
+        
+
+        Updates for KMP build        
+        {
+this.init(PCIFILE)
 
     
                         if(componentInterfaceVector!!.size < MINHARDWARE)
@@ -151,9 +157,11 @@ componentInterfaceVector!!.add(cpu)
             
 open fun init(filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var filePath = filePath
+
+        Updates for KMP build        
+        {
+var filePath = filePath
 
     var lineNumberReader: LineNumberReader = 
                 null
@@ -163,7 +171,11 @@ open fun init(filePath: String)
         try {
             init(lineNumberReader, filePath)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(LogConfigTypes.LOGGING.contains(LogConfigTypeFactory.getInstance()!!.OS))
                         
@@ -185,12 +197,12 @@ open fun init(filePath: String)
             
 open fun init(lineNumberReader: LineNumberReader, filePath: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var lineNumberReader = lineNumberReader
 
 
-                    var filePath = filePath
+        Updates for KMP build        
+        {
+var lineNumberReader = lineNumberReader
+var filePath = filePath
 
         try {
             componentInterfaceVector= Vector()
@@ -273,7 +285,11 @@ lineNumberReader= LineNumberReader(FileReader(file.getPath()))
                                  && nextLine != 
                                     null
                                 )
+        
+
+        Updates for KMP build        
         {
+
     
                         if(this.isNextHardware(nextLine))
                         
@@ -289,7 +305,11 @@ nextLine= lineNumberReader!!.readLine()
 
 
         while(this.isNextHardware(nextLine))
+        
+
+        Updates for KMP build        
         {
+
     var componentData: StringMaker = StringMaker()
 
 
@@ -311,7 +331,11 @@ nextLine= lineNumberReader!!.readLine()
         while(lineNumberReader != 
                                     null
                                 )
-        {componentData!!.append(nextLine)
+        
+
+        Updates for KMP build        
+        {
+componentData!!.append(nextLine)
 componentData!!.append("\n")
 nextLine= lineNumberReader!!.readLine()
 
@@ -378,9 +402,11 @@ lineNumberReader!!.close()
 
 open fun getMultimedia(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: MediaInterface{
+: MediaInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -391,9 +417,11 @@ open fun getMultimedia(index: Int)
 
 open fun getBridge(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: BridgeInterface{
+: BridgeInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -404,9 +432,11 @@ open fun getBridge(index: Int)
 
 open fun getCpu(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: CpuInterface{
+: CpuInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -417,9 +447,11 @@ open fun getCpu(index: Int)
 
 open fun getEthernet(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: EthernetInterface{
+: EthernetInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -430,9 +462,11 @@ open fun getEthernet(index: Int)
 
 open fun getFireWire(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: FireWireInterface{
+: FireWireInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -443,9 +477,11 @@ open fun getFireWire(index: Int)
 
 open fun getHardDriveController(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardDriveControllerInterface{
+: HardDriveControllerInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -456,9 +492,11 @@ open fun getHardDriveController(index: Int)
 
 open fun getHardDrive(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardDriveInterface{
+: HardDriveInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -469,9 +507,11 @@ open fun getHardDrive(index: Int)
 
 open fun getMachineAccessControlAddress(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: MachineAccessControlAddressInterface{
+: MachineAccessControlAddressInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -482,9 +522,11 @@ open fun getMachineAccessControlAddress(index: Int)
 
 open fun getMonitor(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: MonitorInterface{
+: MonitorInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -495,9 +537,11 @@ open fun getMonitor(index: Int)
 
 open fun getUsb(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: UsbInterface{
+: UsbInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -508,9 +552,11 @@ open fun getUsb(index: Int)
 
 open fun getVideo(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: VideoInterface{
+: VideoInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -521,9 +567,11 @@ open fun getVideo(index: Int)
 
 open fun getComponent(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HardwareComponentInterface{
+: HardwareComponentInterface
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -533,7 +581,11 @@ open fun getComponent(index: Int)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var hardwareBuffer: StringMaker = StringMaker()
 
 
@@ -545,7 +597,11 @@ override fun toString()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var componentInterface: HardwareComponentInterface = componentInterfaceVector!!.get(index) as HardwareComponentInterface
 
 hardwareBuffer!!.append("Component ")
@@ -565,9 +621,11 @@ hardwareBuffer!!.append("\n")
 
 open fun compareTo(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var hardwareInterface = hardwareInterface
+        Updates for KMP build        
+        {
+var hardwareInterface = hardwareInterface
 
 
 
@@ -578,9 +636,11 @@ open fun compareTo(hardwareInterface: HardwareInterface)
 
 open fun difference(hardwareInterface: HardwareInterface)
         //nullable = true from not(false or (false and false)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
 
-                    var hardwareInterface = hardwareInterface
+        Updates for KMP build        
+        {
+var hardwareInterface = hardwareInterface
 
 
 
@@ -591,9 +651,11 @@ open fun difference(hardwareInterface: HardwareInterface)
 
 open fun isNextHardware(nextLine: String)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var nextLine = nextLine
+        Updates for KMP build        
+        {
+var nextLine = nextLine
 
     
                         if(nextLine != 

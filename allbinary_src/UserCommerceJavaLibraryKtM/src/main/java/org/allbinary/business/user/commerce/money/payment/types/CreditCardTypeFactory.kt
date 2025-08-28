@@ -37,7 +37,11 @@ open public class CreditCardTypeFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: CreditCardTypeFactory{
+: CreditCardTypeFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

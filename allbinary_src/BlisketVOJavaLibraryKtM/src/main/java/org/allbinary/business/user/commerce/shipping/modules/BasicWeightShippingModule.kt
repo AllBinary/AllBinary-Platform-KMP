@@ -43,14 +43,20 @@ open public class BasicWeightShippingModule
     private val description: String = "We will soon provide a variety of shipping methods."
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getCost(order: OrderInterface)
         //nullable = true from not(false or (false and false)) = true
-: Money{
+: Money
 
-                    var order = order
+        Updates for KMP build        
+        {
+var order = order
 
     var basket: BasketInterface = order.getBasket()!!
 
@@ -70,7 +76,11 @@ money.add("3.50")
 
 open fun getDescription()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,7 +90,11 @@ open fun getDescription()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

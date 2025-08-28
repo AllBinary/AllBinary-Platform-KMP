@@ -60,7 +60,11 @@ open public class BasicWorkFlow
     private var storeName: String
 public constructor        ()
             : super()
-        {this.workFlowName= StringUtil.getInstance()!!.EMPTY_STRING
+        
+
+        Updates for KMP build        
+        {
+this.workFlowName= StringUtil.getInstance()!!.EMPTY_STRING
 this.workFlowDoc= DomDocumentHelper.create()
 
     var workFlowNode: Node = this.workFlowDoc!!.createElement(WorkFlowData.getInstance()!!.WORKFLOW)!!
@@ -70,12 +74,12 @@ this.workFlowDoc!!.appendChild(workFlowNode)
 
 public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+var hashMap = hashMap
+var pageContext = pageContext
 
     var weblisketSession: WeblisketSession = WeblisketSession(hashMap, pageContext)
 
@@ -90,9 +94,11 @@ this.workFlowDoc= DomDocumentHelper.create(requestHashMap!!.get(WorkFlowData.get
 
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.workFlowName= hashMap!!.get(WorkFlowData.getInstance()!!.NAME) as String
 this.storeName= hashMap!!.get(StoreFrontData.getInstance()!!.NAME) as String
 this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstance()!!.DATA) as String)
@@ -101,7 +107,11 @@ this.workFlowDoc= DomDocumentHelper.create(hashMap!!.get(WorkFlowData.getInstanc
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -111,7 +121,11 @@ open fun getName()
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -121,7 +135,11 @@ open fun getStoreName()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -133,7 +151,11 @@ open fun getKey()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var values: Vector = Vector()
 
 values.add(this.workFlowName)
@@ -161,7 +183,11 @@ values.add(time)
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(WorkFlowData.getInstance()!!.NAME, this.workFlowName)
@@ -186,9 +212,11 @@ hashMap!!.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
         try {
             
@@ -213,7 +241,11 @@ open fun toXmlNode(document: Document)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var name: String = nameArray[index]!! as String
 
 
@@ -228,7 +260,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -249,7 +285,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, name, value))
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
         try {
             
 
@@ -257,7 +297,11 @@ open fun toXmlDoc()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.workFlowDoc
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -278,7 +322,11 @@ open fun toXmlDoc()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var returnBoolean: Boolean = Boolean.TRUE
@@ -300,7 +348,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return returnBoolean
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -321,7 +373,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringBuffer: StringMaker = StringMaker()
@@ -338,7 +394,11 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         
@@ -359,7 +419,11 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -369,9 +433,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 

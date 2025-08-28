@@ -40,12 +40,12 @@ open public class ImageArraySpecialAnimation : ImageArrayAnimation
     private val timeDelayHelper: TimeDelayHelper = TimeDelayHelper(270)
 public constructor        (imageArray: Array<Image?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(imageArray, animationBehavior){
+                            : super(imageArray, animationBehavior)
 
-                    var imageArray = imageArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,7 +58,11 @@ this.reset()
 
 open fun getLoopCount()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,18 +71,30 @@ open fun getLoopCount()
 
 override fun setLastFrame()
         //nullable = true from not(false or (false and true)) = true
-{this.circularIndexUtil!!.setIndex(this.circularIndexUtil!!.getSize() -1)
+
+
+        Updates for KMP build        
+        {
+this.circularIndexUtil!!.setIndex(this.circularIndexUtil!!.getSize() -1)
 }
 
 override fun reset()
         //nullable = true from not(false or (false and true)) = true
-{this.setFrame(this.getSize() -1)
+
+
+        Updates for KMP build        
+        {
+this.setFrame(this.getSize() -1)
 loopCount= 0
 }
 
 override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.getFrame() > 0)
                         
@@ -110,7 +126,11 @@ override fun nextFrame()
     private val loopCountTotal: Int = 1
 override fun isComplete()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(loopCount < loopCountTotal || this.getFrame() != 0)
                         
@@ -136,15 +156,13 @@ override fun isComplete()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+var x = x
+var y = y
 x= DisplayInfoSingleton.getInstance()!!.getLastHalfWidth() -(this.getImage(this.circularIndexUtil!!.getIndex())!!.getWidth() shr 1)
 y= 5
 super.paint(graphics, x, y)

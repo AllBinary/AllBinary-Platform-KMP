@@ -38,26 +38,24 @@ open public class AbstractInputAutomationFactory : InputAutomationModuleFactoryI
     private var jPanel: JPanel
 
     private var helpSet: HelpSet
-public constructor        (name: String, jPanel: JPanel, helpSet: HelpSet){
+public constructor        (name: String, jPanel: JPanel, helpSet: HelpSet)
 
-                    var name = name
-
-
-                    var jPanel = jPanel
-
-
-                    var helpSet = helpSet
+        Updates for KMP build        
+        {
+var name = name
+var jPanel = jPanel
+var helpSet = helpSet
 this.name= name
 this.jPanel= jPanel
 this.helpSet= helpSet
 }
 
-public constructor        (name: String, jPanel: JPanel){
+public constructor        (name: String, jPanel: JPanel)
 
-                    var name = name
-
-
-                    var jPanel = jPanel
+        Updates for KMP build        
+        {
+var name = name
+var jPanel = jPanel
 this.name= name
 this.jPanel= jPanel
 
@@ -69,7 +67,11 @@ this.helpSet= JavaHelpUtil.getInstance()!!.getHelpSet(url)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,7 +81,11 @@ open fun getName()
 
 open fun getConfigurationJPanel()
         //nullable = true from not(false or (false and true)) = true
-: JPanel{
+: JPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,7 +95,11 @@ open fun getConfigurationJPanel()
 
 open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

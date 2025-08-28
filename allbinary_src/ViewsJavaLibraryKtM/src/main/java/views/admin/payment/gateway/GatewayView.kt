@@ -39,9 +39,11 @@ open public class GatewayView : PaymentGatewayViewAbstract {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface){
+                            : super(transformInfoInterface)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -51,9 +53,11 @@ public constructor        (transformInfoInterface: TransformInfoInterface)
 
 open fun getFormData(request: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var request = request
+
+        Updates for KMP build        
+        {
+var request = request
 super.getFormData(request)
 
     
@@ -71,7 +75,11 @@ super.getFormData(request)
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var paymentGatewayInterface: PaymentGatewayInterface = PaymentGatewayEntityFactory.getInstance()!!.getPaymentGatewayInterface(this.getPaymentGatewayPrimaryKey()!!.getStoreName(), BasicPaymentTypeUtil.getInstance()!!.get(this.getPaymentGatewayPrimaryKey()!!.getName()))!!
@@ -83,7 +91,11 @@ open fun view()
                         return PaymentGatewayComponent(this.getTransformInfoInterface(), paymentGatewayInterface).
                             view()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         

@@ -44,15 +44,13 @@ open public class MultiKeyPressesAI : KeyPressesAI {
     private val gameTickTimeDelayHelper: GameTickTimeDelayHelper = GameTickTimeDelayHelperFactory.getInstance()!!
 public constructor        (hashtable: Hashtable<Any, Any>, ownerLayerInterface: AllBinaryLayer, gameInput: GameInput)                        
 
-                            : super(hashtable, ownerLayerInterface, gameInput){
+                            : super(hashtable, ownerLayerInterface, gameInput)
 
-                    var hashtable = hashtable
-
-
-                    var ownerLayerInterface = ownerLayerInterface
-
-
-                    var gameInput = gameInput
+        Updates for KMP build        
+        {
+var hashtable = hashtable
+var ownerLayerInterface = ownerLayerInterface
+var gameInput = gameInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,9 +62,11 @@ this.update()
                 @Throws(Exception::class)
             override fun processAI(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 }
 
 
@@ -76,7 +76,11 @@ this.update()
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var gameInput: GameInput = this.getGameInput()!!
 
 
@@ -97,7 +101,11 @@ open fun update()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: Int = keys[index]!!.toInt()!!
 
 
@@ -121,7 +129,11 @@ open fun update()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var key: Int = keys[index]!!.toInt()!!
 
 
@@ -144,7 +156,11 @@ open fun update()
                 @Throws(Exception::class)
             override fun toggle()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.toggleTimeHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
@@ -160,7 +176,11 @@ this.update()
                 @Throws(Exception::class)
             override fun disable()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.toggleTimeHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         
@@ -176,7 +196,11 @@ this.update()
                 @Throws(Exception::class)
             override fun enable()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     
                         if(this.toggleTimeHelper!!.isTime(this.gameTickTimeDelayHelper!!.startTime))
                         

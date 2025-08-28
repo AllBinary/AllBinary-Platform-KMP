@@ -65,9 +65,11 @@ open public class RTSFormInput
     private var selectedStickyItem: CustomItem
 public constructor        (groupInterfaceArray: Array<Group?>)
             : super()
-        {
+        
 
-                    var groupInterfaceArray = groupInterfaceArray
+        Updates for KMP build        
+        {
+    //var groupInterfaceArray = groupInterfaceArray
 this.groupInterfaceArray= groupInterfaceArray
 this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getInstance()!!.DOWN)
 
@@ -88,9 +90,11 @@ this.hashtable.put(DirectionFactory.getInstance()!!.NAME, DirectionFactory.getIn
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 }
 
 
@@ -98,18 +102,14 @@ open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLa
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedRtsLayer = associatedRtsLayer
 
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerManager = layerManager
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+    //var associatedRtsLayer = associatedRtsLayer
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerManager = layerManager
+    //var point = point
 
     var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)!!
 
@@ -155,9 +155,11 @@ this.process(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, item, in
             
 open fun process(layerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerManager = layerManager
+
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
 this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
 }
 
@@ -166,21 +168,15 @@ this.setAllBinaryGameLayerManager(layerManager as AllBinaryGameLayerManager)
             
 open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedRtsLayer = associatedRtsLayer
 
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerManager = layerManager
-
-
-                    var item = item
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+    //var associatedRtsLayer = associatedRtsLayer
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerManager = layerManager
+    //var item = item
+    //var index = index
 }
 
 
@@ -188,18 +184,14 @@ open fun process(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlaye
             
 open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var associatedRtsLayer = associatedRtsLayer
-
-
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerManager = layerManager
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+    //var associatedRtsLayer = associatedRtsLayer
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var layerManager = layerManager
+    //var point = point
 
     var index: Int = this.getIndexAt(rtsPlayerLayerInterface, point)!!
 
@@ -250,21 +242,15 @@ this.processSticky(associatedRtsLayer, rtsPlayerLayerInterface, layerManager, it
             
 open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RTSPlayerLayerInterface, layerManager: AllBinaryLayerManager, item: CustomItem, index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedRtsLayer = associatedRtsLayer
 
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var layerManager = layerManager
-
-
-                    var item = item
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var associatedRtsLayer = associatedRtsLayer
+var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+var layerManager = layerManager
+var item = item
+var index = index
 }
 
 
@@ -272,12 +258,12 @@ open fun processSticky(associatedRtsLayer: RTSLayer, rtsPlayerLayerInterface: RT
             
 open fun getItemAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: CustomItem{
+: CustomItem
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var point = point
 logUtil!!.put(StringMaker().
                             append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
@@ -295,12 +281,12 @@ logUtil!!.put(StringMaker().
             
 open fun getIndexAt(rtsPlayerLayerInterface: RTSPlayerLayerInterface, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var rtsPlayerLayerInterface = rtsPlayerLayerInterface
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+    //var rtsPlayerLayerInterface = rtsPlayerLayerInterface
+    //var point = point
 logUtil!!.put(StringMaker().
                             append("Point: ")!!.append(StringUtil.getInstance()!!.toString(point))!!.toString(), this, "getItemAt")
 
@@ -318,15 +304,13 @@ logUtil!!.put(StringMaker().
             
 open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable =  from not(true or (false and false)) = 
-: RTSLayer{
+: RTSLayer
 
-                    var layerManager = layerManager
-
-
-                    var aItem = aItem
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var layerManager = layerManager
+    //var aItem = aItem
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var item: LayerInterfaceFactoryImageItem = aItem as LayerInterfaceFactoryImageItem
 
@@ -362,7 +346,11 @@ open fun getInstance(layerManager: AllBinaryLayerManager, aItem: CustomItem, geo
 
 open fun getSelectedGeographicCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -372,9 +360,11 @@ open fun getSelectedGeographicCellPosition()
 
 open fun setSelectedGeographicCellPosition(selectedGeographicCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedGeographicCellPosition = selectedGeographicCellPosition
+
+        Updates for KMP build        
+        {
+var selectedGeographicCellPosition = selectedGeographicCellPosition
 logUtil!!.put(StringMaker().
                             append("Selected GeographicMapCellPosition: ")!!.append(selectedGeographicCellPosition!!.toString())!!.toString(), this, "setSelectedGeographicCellPosition")
 this.selectedGeographicCellPosition= selectedGeographicCellPosition
@@ -383,7 +373,11 @@ this.selectedGeographicCellPosition= selectedGeographicCellPosition
 
 open fun isStickyItemSelected()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -393,16 +387,22 @@ open fun isStickyItemSelected()
 
 open fun setStickyItemSelected(stickyItemSelected: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var stickyItemSelected = stickyItemSelected
+
+        Updates for KMP build        
+        {
+var stickyItemSelected = stickyItemSelected
 this.stickyItemSelected= stickyItemSelected
 }
 
 
 open fun getSelectedStickyItem()
         //nullable = true from not(false or (false and true)) = true
-: CustomItem{
+: CustomItem
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -412,16 +412,22 @@ open fun getSelectedStickyItem()
 
 open fun setSelectedStickyItem(selectedStickyItem: CustomItem)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedStickyItem = selectedStickyItem
+
+        Updates for KMP build        
+        {
+var selectedStickyItem = selectedStickyItem
 this.selectedStickyItem= selectedStickyItem
 }
 
 
 open fun getSelectedStickyItemIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -431,16 +437,22 @@ open fun getSelectedStickyItemIndex()
 
 open fun setSelectedStickyItemIndex(selectedStickyItemIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var selectedStickyItemIndex = selectedStickyItemIndex
+
+        Updates for KMP build        
+        {
+var selectedStickyItemIndex = selectedStickyItemIndex
 this.selectedStickyItemIndex= selectedStickyItemIndex
 }
 
 
 open fun getHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

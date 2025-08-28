@@ -51,18 +51,14 @@ open public class InputProbability
     private val timeDelayHelper: TimeDelayHelper
 public constructor        (likelyhoodIntegerArray: Array<Array<Integer?>?>, repeatLikelyhoodIntegerArray: Array<Integer?>, max: Int, timeDelayHelper: TimeDelayHelper)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var likelyhoodIntegerArray = likelyhoodIntegerArray
-
-
-                    var repeatLikelyhoodIntegerArray = repeatLikelyhoodIntegerArray
-
-
-                    var max = max
-
-
-                    var timeDelayHelper = timeDelayHelper
+var likelyhoodIntegerArray = likelyhoodIntegerArray
+var repeatLikelyhoodIntegerArray = repeatLikelyhoodIntegerArray
+var max = max
+var timeDelayHelper = timeDelayHelper
 this.likelyhoodIntegerArray= likelyhoodIntegerArray
 this.repeatLikelyhoodIntegerArray= repeatLikelyhoodIntegerArray
 this.max= max
@@ -72,7 +68,11 @@ this.timeDelayHelper= timeDelayHelper
 
 open fun getLikelyhoodIntegerArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Array<Integer?>?>{
+: Array<Array<Integer?>?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +82,11 @@ open fun getLikelyhoodIntegerArray()
 
 open fun getRepeatLikelyhoodIntegerArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<Integer?>{
+: Array<Integer?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +96,11 @@ open fun getRepeatLikelyhoodIntegerArray()
 
 open fun getMax()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,7 +110,11 @@ open fun getMax()
 
 open fun getTimeDelayHelper()
         //nullable = true from not(false or (false and true)) = true
-: TimeDelayHelper{
+: TimeDelayHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,7 +124,11 @@ open fun getTimeDelayHelper()
 
 open fun toHashtable()
         //nullable = true from not(false or (false and true)) = true
-: Hashtable<Any, Any>{
+: Hashtable<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashtable: Hashtable<Any, Any> = Hashtable<Any, Any>()
 
 hashtable.put(INPUT_PROBABILITY, this)

@@ -55,9 +55,11 @@ open public class CustomUriTransformView
     private var transformDocumentInterface: TransformDocumentInterface
 public constructor        (transformInfoInterface: TransformInfoInterface)
             : super()
-        {
+        
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEW))
@@ -76,7 +78,11 @@ this.setTransformDocumentInterface(TransformDocumentFactory.getInstance())
 
 open fun getTypeId()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,7 +92,11 @@ open fun getTypeId()
 
 open fun getTransformInfoInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformInfoInterface{
+: TransformInfoInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,16 +106,22 @@ open fun getTransformInfoInterface()
 
 open fun setTransformInfoInterface(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var transformInfoInterface = transformInfoInterface
+
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 this.transformInfoInterface= transformInfoInterface
 }
 
 
 open fun getTransformDocumentInterface()
         //nullable = true from not(false or (false and true)) = true
-: TransformDocumentInterface{
+: TransformDocumentInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -115,16 +131,22 @@ open fun getTransformDocumentInterface()
 
 open fun setTransformDocumentInterface(transformDocumentInterface: TransformDocumentInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var transformDocumentInterface = transformDocumentInterface
+
+        Updates for KMP build        
+        {
+var transformDocumentInterface = transformDocumentInterface
 this.transformDocumentInterface= transformDocumentInterface
 }
 
 
 open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -136,7 +158,11 @@ open fun toXmlDoc()
             
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
     var document: Document = this.getTransformInfoInterface()!!.getDataDocument()!!
 
 
@@ -165,7 +191,11 @@ open fun getDoc()
             
 open fun view()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = DomDocumentHelper.toString(this.getDoc())!!
@@ -180,7 +210,11 @@ open fun view()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VIEWERROR))
                         

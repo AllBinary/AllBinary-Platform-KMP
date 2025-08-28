@@ -47,7 +47,11 @@ open public class TransformDocument
     private var document: Document
 public constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
         try {
             this.document= DomDocumentHelper.create()
 
@@ -65,7 +69,11 @@ document.appendChild(this.baseNode)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -85,7 +93,11 @@ document.appendChild(this.baseNode)
 
 open fun getBaseNode()
         //nullable = true from not(false or (false and true)) = true
-: Node{
+: Node
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,7 +107,11 @@ open fun getBaseNode()
 
 open fun getDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -107,7 +123,11 @@ open fun getDoc()
             
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

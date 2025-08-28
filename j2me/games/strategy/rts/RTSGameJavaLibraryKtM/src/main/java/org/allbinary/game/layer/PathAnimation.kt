@@ -49,12 +49,12 @@ open public class PathAnimation : Animation {
     private val pathFindingLayer: PathFindingLayerInterface
 
     var allBinaryGameLayerManager: AllBinaryGameLayerManager
-public constructor        (pathFindingLayer: PathFindingLayerInterface, linePathAnimation: LinePathAnimation){
+public constructor        (pathFindingLayer: PathFindingLayerInterface, linePathAnimation: LinePathAnimation)
 
-                    var pathFindingLayer = pathFindingLayer
-
-
-                    var linePathAnimation = linePathAnimation
+        Updates for KMP build        
+        {
+    //var pathFindingLayer = pathFindingLayer
+    //var linePathAnimation = linePathAnimation
 this.pathFindingLayer= pathFindingLayer
 this.linePathAnimation= linePathAnimation
 }
@@ -64,9 +64,11 @@ this.linePathAnimation= linePathAnimation
             
 open fun setAllBinaryGameLayerManager(allBinaryGameLayerManager: AllBinaryGameLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
+
+        Updates for KMP build        
+        {
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
 this.allBinaryGameLayerManager= allBinaryGameLayerManager
 }
 
@@ -75,7 +77,11 @@ this.allBinaryGameLayerManager= allBinaryGameLayerManager
             
 open fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
     private val startColor: BasicColor = BasicColorFactory.getInstance()!!.RED
@@ -86,15 +92,13 @@ open fun nextFrame()
 
 open fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
         try {
             
@@ -150,7 +154,11 @@ open fun paint(graphics: Graphics, x: Int, y: Int)
 
                         for (index in 0 until size -1)
 
+        
+
+        Updates for KMP build        
         {
+
     
                         if(index == start)
                         
@@ -190,7 +198,11 @@ this.linePathAnimation!!.paint(graphics, point, nextPoint, tiledLayer)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put("Cleared Target", this, "paint")
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Cleared Target", this, "paint")
 }
 
 }

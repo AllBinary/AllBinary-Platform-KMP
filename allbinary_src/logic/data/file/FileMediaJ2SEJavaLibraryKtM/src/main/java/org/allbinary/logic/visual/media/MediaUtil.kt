@@ -33,7 +33,11 @@ open public class MediaUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MediaUtil{
+: MediaUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -43,9 +47,11 @@ open fun getInstance()
 
 open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
 
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+    //var bufferedImage = bufferedImage
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -65,7 +71,11 @@ open fun getImageBufferPropertyHashMap(bufferedImage: BufferedImage)
 
                         for (index in 0 until propertyStringArray!!.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var propertyObject: Any = bufferedImage!!.getProperty(propertyStringArray[index]!!)!!
 
 hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
@@ -87,31 +97,27 @@ hashMap!!.put(propertyStringArray[index]!!, propertyObject!!.toString())
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun saveImageFile(originalImageFile: AbFile, newImageFileName: String, category: String, mediaData: MediaData, newWidth: Int, newHeight: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImageFile = originalImageFile
 
 
-                    var newImageFileName = newImageFileName
-
-
-                    var category = category
-
-
-                    var mediaData = mediaData
-
-
-                    var newWidth = newWidth
-
-
-                    var newHeight = newHeight
+        Updates for KMP build        
+        {
+var originalImageFile = originalImageFile
+var newImageFileName = newImageFileName
+var category = category
+var mediaData = mediaData
+var newWidth = newWidth
+var newHeight = newHeight
 
     
                         if(originalImageFile == 

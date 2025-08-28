@@ -39,7 +39,11 @@ open public class AnalogInputBuilder
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AnalogInputBuilder{
+: AnalogInputBuilder
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,12 +60,12 @@ open fun getInstance()
         
 open fun disable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var inputProcessorArray = inputProcessorArray
 
 
-                    var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        Updates for KMP build        
+        {
+    //var inputProcessorArray = inputProcessorArray
+    //var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 inputProcessorArray[Canvas.UP]= SpecialUpGameInputProcessor(collidableDestroyableDamageableLayer)
 inputProcessorArray[Canvas.DOWN]= SpecialDownGameInputProcessor(collidableDestroyableDamageableLayer)
 inputProcessorArray[Canvas.RIGHT]= SpecialRightGameInputProcessor(collidableDestroyableDamageableLayer)
@@ -73,12 +77,12 @@ inputProcessorArray[Canvas.KEY_NUM5]= Special3GameInputProcessor(collidableDestr
 
 open fun enable(inputProcessorArray: Array<GameInputProcessor?>, collidableDestroyableDamageableLayer: CollidableDestroyableDamageableLayer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var inputProcessorArray = inputProcessorArray
 
 
-                    var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
+        Updates for KMP build        
+        {
+    //var inputProcessorArray = inputProcessorArray
+    //var collidableDestroyableDamageableLayer = collidableDestroyableDamageableLayer
 inputProcessorArray[Canvas.UP]= SpecialAnalogUpGameInputProcessor(collidableDestroyableDamageableLayer)
 inputProcessorArray[Canvas.DOWN]= SpecialAnalogDownGameInputProcessor(collidableDestroyableDamageableLayer)
 inputProcessorArray[Canvas.RIGHT]= SpecialAnalogRightGameInputProcessor(collidableDestroyableDamageableLayer)

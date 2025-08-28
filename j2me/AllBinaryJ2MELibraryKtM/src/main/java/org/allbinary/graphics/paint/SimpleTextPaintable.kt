@@ -37,12 +37,12 @@ open public class SimpleTextPaintable : Paintable {
     private var text: String
 
     private var basicColor: BasicColor
-public constructor        (text: String, basicColor: BasicColor){
+public constructor        (text: String, basicColor: BasicColor)
 
-                    var text = text
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var text = text
+    //var basicColor = basicColor
 this.text= text
 this.basicColor= basicColor
 }
@@ -53,9 +53,11 @@ this.basicColor= basicColor
     private val displayInfoSingleton: DisplayInfoSingleton = DisplayInfoSingleton.getInstance()!!
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 
     var myFont: MyFont = MyFont.getInstance()!!
 
@@ -71,16 +73,22 @@ graphics.drawString(this.text, (width shr 1) -topScoresWidth, myFont!!.DEFAULT_C
 
 override fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+    //var basicColor = basicColor
 this.basicColor= basicColor
 }
 
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,16 +98,22 @@ open fun getBasicColorP()
 
 open fun setText(text: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var text = text
+
+        Updates for KMP build        
+        {
+    //var text = text
 this.text= text
 }
 
 
 open fun getText()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

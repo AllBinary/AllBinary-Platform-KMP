@@ -107,15 +107,21 @@ open public class User
     private var userConfigurationInterface: UserConfigurationInterface
 public constructor        ()
             : super()
-        {this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance()
+        
+
+        Updates for KMP build        
+        {
+this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance()
 this.password= Password(StringUtil.getInstance()!!.EMPTY_STRING)
 }
 
 public constructor        (request: HttpServletRequest)
             : super()
-        {
+        
 
-                    var request = request
+        Updates for KMP build        
+        {
+    //var request = request
 this.getFormData(RequestParams(request).
                             toHashMap())
 this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())
@@ -123,9 +129,11 @@ this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(t
 
 public constructor        (userHashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var userHashMap = userHashMap
+        Updates for KMP build        
+        {
+    //var userHashMap = userHashMap
 this.getFormData(userHashMap)
 this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(this.getRole())
 }
@@ -135,9 +143,11 @@ this.userConfigurationInterface= UserConfigurationInterfaceFactory.getInstance(t
             
 open fun getFormData(userHashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userHashMap = userHashMap
+
+        Updates for KMP build        
+        {
+    //var userHashMap = userHashMap
 this.userName= UserName(userHashMap).
                             get()
 
@@ -204,7 +214,11 @@ this.enable= stringUtil!!.getInstance(userHashMap!!.get(EntryData.getInstance()!
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var valid: Boolean = Boolean.TRUE
@@ -263,7 +277,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.VALIDATIONERROR))
                         
@@ -287,7 +305,11 @@ logUtil!!.put("Failed to validate form", this, commonStrings!!.IS_VALID, e)
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var stringValidationUtil: StringValidationUtil = StringValidationUtil.getInstance()!!
@@ -330,7 +352,11 @@ stringBuffer!!.append(this.password.getValidationInfo())
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -351,217 +377,273 @@ stringBuffer!!.append(this.password.getValidationInfo())
 
 open fun setUserName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.userName= value
 }
 
 
 open fun setPrefixName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.prefixName= value
 }
 
 
 open fun setFirstName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.firstName= value
 }
 
 
 open fun setLastName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.lastName= value
 }
 
 
 open fun setMiddleName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.middleName= value
 }
 
 
 open fun setSuffixName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.suffixName= value
 }
 
 
 open fun setCompany(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.company= value
 }
 
 
 open fun setPositionAtCompany(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.positionAtCompany= value
 }
 
 
 open fun setMainEmail(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.mainEmail= value
 }
 
 
 open fun setSecondaryEmail(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.secondaryEmail= value
 }
 
 
 open fun setHomePhone(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.homePhone= value
 }
 
 
 open fun setCellPhone(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.cellPhone= value
 }
 
 
 open fun setWorkPhone(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.workPhone= value
 }
 
 
 open fun setOtherContact(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.otherContact= value
 }
 
 
 open fun setElectronicContact(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.electronicDevice= value
 }
 
 
 open fun setFax(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.fax= value
 }
 
 
 open fun setRole(role: UserRole)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var role = role
+
+        Updates for KMP build        
+        {
+var role = role
 this.role= role
 }
 
 
 open fun setPermissions(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.permissions= value
 }
 
 
 open fun setEncryption(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.encryption= value
 }
 
 
 open fun setSecret(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.secret= value
 }
 
 
 open fun setPassword(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.password.set(value)
 }
 
 
 open fun enable()
         //nullable = true from not(false or (false and true)) = true
-{this.setEnable("Yes")
+
+
+        Updates for KMP build        
+        {
+this.setEnable("Yes")
 }
 
 
 open fun disable()
         //nullable = true from not(false or (false and true)) = true
-{this.setEnable("No")
+
+
+        Updates for KMP build        
+        {
+this.setEnable("No")
 }
 
 
 open fun setEnable(enable: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var enable = enable
+
+        Updates for KMP build        
+        {
+var enable = enable
 this.enable= enable
 }
 
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -571,7 +653,11 @@ open fun getUserName()
 
 open fun getPrefixName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -581,7 +667,11 @@ open fun getPrefixName()
 
 open fun getFirstName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -591,7 +681,11 @@ open fun getFirstName()
 
 open fun getLastName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -601,7 +695,11 @@ open fun getLastName()
 
 open fun getMiddleName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -611,7 +709,11 @@ open fun getMiddleName()
 
 open fun getSuffixName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -621,7 +723,11 @@ open fun getSuffixName()
 
 open fun getCompany()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -631,7 +737,11 @@ open fun getCompany()
 
 open fun getPositionAtCompany()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -641,7 +751,11 @@ open fun getPositionAtCompany()
 
 open fun getMainEmail()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -651,7 +765,11 @@ open fun getMainEmail()
 
 open fun getSecondaryEmail()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -661,7 +779,11 @@ open fun getSecondaryEmail()
 
 open fun getHomePhone()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -671,7 +793,11 @@ open fun getHomePhone()
 
 open fun getCellPhone()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -681,7 +807,11 @@ open fun getCellPhone()
 
 open fun getWorkPhone()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -691,7 +821,11 @@ open fun getWorkPhone()
 
 open fun getOtherContact()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -701,7 +835,11 @@ open fun getOtherContact()
 
 open fun getElectronicContact()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -711,7 +849,11 @@ open fun getElectronicContact()
 
 open fun getFax()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -721,7 +863,11 @@ open fun getFax()
 
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: UserRole{
+: UserRole
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -731,7 +877,11 @@ open fun getRole()
 
 open fun getPermissions()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -741,7 +891,11 @@ open fun getPermissions()
 
 open fun getEncryption()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -751,7 +905,11 @@ open fun getEncryption()
 
 open fun getSecret()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -761,7 +919,11 @@ open fun getSecret()
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -773,7 +935,11 @@ open fun getPassword()
             
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var values: Vector = Vector()
 
 values.add(userName)
@@ -822,7 +988,11 @@ values.add(time)
             
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var values: HashMap<Any, Any> = HashMap<Any, Any>()
 
 values.put(UserData.USERNAME, userName)
@@ -878,7 +1048,11 @@ values.put(EntryData.getInstance()!!.LASTMODIFIED, time)
 
 open fun toPasswordHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -888,9 +1062,11 @@ open fun toPasswordHashMap()
 
 open fun validateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weblisketSession = weblisketSession
+
+        Updates for KMP build        
+        {
+var weblisketSession = weblisketSession
 weblisketSession!!.setAuthenticated()
 weblisketSession!!.setRole(this.getRole())
 weblisketSession!!.setUserName(this.getUserName())
@@ -899,15 +1075,21 @@ weblisketSession!!.setUserName(this.getUserName())
 
 open fun updateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weblisketSession = weblisketSession
+
+        Updates for KMP build        
+        {
+var weblisketSession = weblisketSession
 }
 
 
 open fun isSessionValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -919,7 +1101,11 @@ open fun isSessionValid()
             
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -929,7 +1115,11 @@ open fun getKey()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -939,9 +1129,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -952,7 +1144,11 @@ open fun toValidationInfoNode(document: Document)
 
 open fun getUserConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserConfigurationInterface{
+: UserConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -962,9 +1158,11 @@ open fun getUserConfigurationInterface()
 
 open fun setUserConfigurationInterface(userConfigurationInterface: UserConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userConfigurationInterface = userConfigurationInterface
+
+        Updates for KMP build        
+        {
+var userConfigurationInterface = userConfigurationInterface
 this.userConfigurationInterface= userConfigurationInterface
 }
 

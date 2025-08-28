@@ -20,9 +20,11 @@ open public class AndroidGameKey : Input {
             
 open fun getString(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var keyCode = keyCode
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 
     var input: Input = InputFactory.getInstance()!!.getInstance(keyCode)!!
 
@@ -56,12 +58,12 @@ open fun getString(keyCode: Int)
         }
              constructor        (keyCode: Int, name: String)                        
 
-                            : super(keyCode, name){
+                            : super(keyCode, name)
 
-                    var keyCode = keyCode
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+var keyCode = keyCode
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.
@@ -74,7 +76,11 @@ inputFactory!!.inputIntegerArray[this.getId()]= this
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

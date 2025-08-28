@@ -32,12 +32,12 @@ open public class MotionGestureInput : Input {
         
 public constructor        (id: Int, name: String)                        
 
-                            : super(id, name){
+                            : super(id, name)
 
-                    var id = id
-
-
-                    var name = name
+        Updates for KMP build        
+        {
+var id = id
+var name = name
 
 
                             //For kotlin this is before the body of the constructor.

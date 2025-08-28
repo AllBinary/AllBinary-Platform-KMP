@@ -44,7 +44,11 @@ open public class MakeCountedPartsSingletonArrayFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MakeCountedPartsSingletonArrayFactory{
+: MakeCountedPartsSingletonArrayFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,9 +71,11 @@ open fun getInstance()
             
 open fun getInstance(partInterfaceArray: Array<PartInterface?>)
         //nullable =  from not(true or (false and false)) = 
-: Array<PartInterface?>{
+: Array<PartInterface?>
 
-                    var partInterfaceArray = partInterfaceArray
+        Updates for KMP build        
+        {
+    //var partInterfaceArray = partInterfaceArray
 list= BasicArrayList()
 
 
@@ -77,7 +83,11 @@ list= BasicArrayList()
 
                         for (index in 0 until partInterfaceArray!!.size)
 
-        {list.add(partInterfaceArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+list.add(partInterfaceArray[index]!!)
 }
 
 
@@ -95,7 +105,11 @@ list= BasicArrayList()
 
                         for (index in 0 until size)
 
-        {layerInterfaceFactoryInterface= countedBasicArrayList!!.objectArray[index]!! as CountedPickedUpLayerInterfaceFactory
+        
+
+        Updates for KMP build        
+        {
+layerInterfaceFactoryInterface= countedBasicArrayList!!.objectArray[index]!! as CountedPickedUpLayerInterfaceFactory
 list.add(CountedLayerInterfaceFactoryPart(0, layerInterfaceFactoryInterface))
 }
 
@@ -123,7 +137,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE)
 
                         for (index in 0 until newSize)
 
-        {newPartInterfaceArray[index]= list.get(index) as PartInterface
+        
+
+        Updates for KMP build        
+        {
+newPartInterfaceArray[index]= list.get(index) as PartInterface
 }
 
 

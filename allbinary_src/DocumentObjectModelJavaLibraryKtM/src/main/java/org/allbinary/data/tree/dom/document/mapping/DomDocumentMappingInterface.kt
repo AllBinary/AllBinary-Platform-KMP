@@ -35,6 +35,9 @@ open fun toXmlDoc()
         //nullable = true from not(false or (false and true)) = true
 : Document
 
+        Updates for KMP build        
+        
+
 }
                 
             

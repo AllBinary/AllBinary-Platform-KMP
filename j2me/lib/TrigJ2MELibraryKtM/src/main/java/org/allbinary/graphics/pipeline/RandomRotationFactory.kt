@@ -40,7 +40,11 @@ open public class RandomRotationFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RandomRotationFactory{
+: RandomRotationFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,12 +67,12 @@ open fun getInstance()
             
 open fun getInstance(vector: BasicArrayList, howMuch: Int)
         //nullable =  from not(true or (false and false)) = 
-: BasicArrayList{
+: BasicArrayList
 
-                    var vector = vector
-
-
-                    var howMuch = howMuch
+        Updates for KMP build        
+        {
+var vector = vector
+var howMuch = howMuch
 
     var graphicsPipe: BasicGraphicsPipeline = BasicGraphicsPipeline(vector)
 
@@ -84,9 +88,11 @@ graphicsPipe!!.rotate(angleFactory!!.getInstance(getNextRandomAngle(howMuch)))
 
 open fun getNextRandomAngle(howMuch: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var howMuch = howMuch
+        Updates for KMP build        
+        {
+var howMuch = howMuch
 
 
 

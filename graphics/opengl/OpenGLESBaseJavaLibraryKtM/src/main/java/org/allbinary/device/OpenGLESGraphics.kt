@@ -27,21 +27,29 @@ open public class OpenGLESGraphics : Graphics
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
     var gl: GL10 = NullGL10.NULL_GL10
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun update(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 }
 
 override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 }
 
 
@@ -49,29 +57,49 @@ override fun set(gl: GL)
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setOrthoginalMode()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setCameraMode()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getGl10()
         //nullable = true from not(false or (false and true)) = true
-: GL10{
+: GL10
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,12 +108,12 @@ open fun getGl10()
 
 override fun setFont(font: Font, fontDebug: FontDebugBase)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var font = font
 
 
-                    var fontDebug = fontDebug
+        Updates for KMP build        
+        {
+    //var font = font
+    //var fontDebug = fontDebug
 
 
 

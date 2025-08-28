@@ -58,12 +58,12 @@ open public class BillingAddressHelper : Table {
     private var streetAddress: StreetAddress
 
     private val portion: Portion
-public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext){
+public constructor        (hashMap: HashMap<Any, Any>, pageContext: PageContext)
 
-                    var hashMap = hashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var hashMap = hashMap
+var pageContext = pageContext
 this.request= pageContext!!.getRequest() as HttpServletRequest
 this.weblisketSession= WeblisketSession(hashMap, pageContext)
 this.portion= Portion(hashMap)
@@ -73,7 +73,11 @@ this.getAddressForm()
 
 open fun getAddressForm()
         //nullable = true from not(false or (false and true)) = true
-{this.userName= request.getParameter(UserData.USERNAME)
+
+
+        Updates for KMP build        
+        {
+this.userName= request.getParameter(UserData.USERNAME)
 
     
                         if(this.userName == 
@@ -91,7 +95,11 @@ this.streetAddress= StreetAddress(this.request)
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = BillingAddressesEntity(stringUtil!!.EMPTY_STRING).
@@ -112,7 +120,11 @@ open fun drop()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to drop Admin table"
 
 
@@ -136,7 +148,11 @@ open fun drop()
 
 open fun create()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = BillingAddressesEntity(stringUtil!!.EMPTY_STRING).
@@ -157,7 +173,11 @@ open fun create()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to create user table"
 
 
@@ -181,7 +201,11 @@ open fun create()
 
 open fun restore()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Restore Successful"
@@ -207,7 +231,11 @@ open fun restore()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to restore backup"
 
 
@@ -231,7 +259,11 @@ open fun restore()
 
 open fun backup()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Backup Successful"
@@ -254,7 +286,11 @@ open fun backup()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to make backup"
 
 
@@ -278,7 +314,11 @@ open fun backup()
 
 open fun insert()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully Added Billing Address"
@@ -299,7 +339,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to add Billing Address"
 
 
@@ -323,7 +367,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully Updated Billing Address"
@@ -344,7 +392,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed update of a User Billing Address Table"
 
 
@@ -368,7 +420,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
 open fun setToShippingAddress()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var shippingAddressesEntityFactory: ShippingAddressesEntityFactory = ShippingAddressesEntityFactory.getInstance()!!
@@ -402,7 +458,11 @@ open fun setToShippingAddress()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return StringUtil.getInstance()!!.EMPTY_STRING
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to Set Billing address to Shipping Address"
 
 
@@ -426,7 +486,11 @@ open fun setToShippingAddress()
 
 open fun delete()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully Removed Billing Address"
@@ -447,7 +511,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to remove Billing Address"
 
 
@@ -471,7 +539,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
 
 open fun set()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var success: String = "Successfully Set Billing Address"
@@ -492,7 +564,11 @@ BillingAddressesEntityFactory.getInstance()!!.getInstance(this.weblisketSession!
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return success
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to set billing Address"
 
 

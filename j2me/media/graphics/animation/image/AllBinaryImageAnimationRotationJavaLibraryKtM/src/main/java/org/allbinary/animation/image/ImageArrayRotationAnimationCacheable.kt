@@ -33,12 +33,12 @@ open public class ImageArrayRotationAnimationCacheable : AdjustedImageArrayRotat
         
 public constructor        (anyType: Any, animationBehavior: AnimationBehavior)                        
 
-                            : super(anyType, animationBehavior){
+                            : super(anyType, animationBehavior)
 
-                    var anyType = anyType
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var anyType = anyType
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -48,7 +48,11 @@ public constructor        (anyType: Any, animationBehavior: AnimationBehavior)
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,7 +61,11 @@ open fun getKey()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

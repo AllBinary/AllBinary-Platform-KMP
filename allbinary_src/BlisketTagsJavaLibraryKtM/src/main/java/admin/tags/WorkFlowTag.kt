@@ -29,7 +29,11 @@ import admin.taghelpers.WorkFlowHelperFactory
 
 open public class WorkFlowTag : TableTag {
         
-public constructor        (){this.setTagHelperFactory(WorkFlowHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(WorkFlowHelperFactory())
 this.setTagRequestHelperFactory(WorkFlowHelperFactory())
 }
 

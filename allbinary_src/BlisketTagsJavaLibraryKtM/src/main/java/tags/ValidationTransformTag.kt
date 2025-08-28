@@ -44,7 +44,11 @@ open public class ValidationTransformTag : TransformTag {
     private var logic: Boolean
 public constructor        ()                        
 
-                            : super(ValidatedViewHelperFactory()){
+                            : super(ValidatedViewHelperFactory())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -54,9 +58,11 @@ this.logic= true
 
 open fun setXsl(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.xslFile= value
 this.setTemplateFile(this.xslFile)
 }
@@ -64,9 +70,11 @@ this.setTemplateFile(this.xslFile)
 
 open fun setLogic(logic: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var logic = logic
+
+        Updates for KMP build        
+        {
+var logic = logic
 this.logic= logic
 }
 
@@ -75,7 +83,11 @@ this.logic= logic
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var helperClass: KClass<*> = this.getHelper()!!.::class!!
@@ -94,7 +106,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -116,7 +132,11 @@ open fun isValid()
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var addressHelperClass: KClass<*> = this.getHelper()!!.::class!!
@@ -135,7 +155,11 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return result
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -157,7 +181,11 @@ open fun validationInfo()
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             
     
@@ -273,7 +301,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
                         }
                             
 } catch(e: LicensingException)
-            {AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagLicensingRedirect(this.pageContext, e)
 
 
 
@@ -281,7 +313,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
                         return SKIP_BODY
 }
  catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 
@@ -294,7 +330,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "doStartTag")
 
 open fun doEndTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.JSPTAG))
                         

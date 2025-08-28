@@ -45,12 +45,20 @@ open public class RootCategoryPropertiesAbstract
     private val fileName: String = category +AbPathData.getInstance()!!.EXTENSION_SEP +CategoryData.getInstance()!!.UNCRYPTED_EXTENSION
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +68,11 @@ open fun getKey()
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,9 +84,11 @@ open fun getValue()
             
 open fun setValue(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -86,9 +100,11 @@ open fun setValue(value: String)
             
 open fun setRootFilePath(value: AbPath)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -100,9 +116,11 @@ open fun setRootFilePath(value: AbPath)
             
 open fun setRootFilePath(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -114,7 +132,11 @@ open fun setRootFilePath(value: String)
             
 open fun getRootFilePath()
         //nullable = true from not(false or (false and true)) = true
-: AbPath{
+: AbPath
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception("No Value Allowed")
@@ -125,7 +147,11 @@ open fun getRootFilePath()
             
 open fun isRealRoot()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception("No A Real Root")
@@ -136,7 +162,11 @@ open fun isRealRoot()
             
 open fun isRoot()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception("Root but not implemented")
@@ -147,9 +177,11 @@ open fun isRoot()
             
 open fun getWebAppPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var categoryHierarchyInterface = categoryHierarchyInterface
+        Updates for KMP build        
+        {
+var categoryHierarchyInterface = categoryHierarchyInterface
 
 
 
@@ -159,9 +191,11 @@ open fun getWebAppPath(categoryHierarchyInterface: CategoryHierarchyInterface)
 
 open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
         //nullable = true from not(false or (false and false)) = true
-: AbPath{
+: AbPath
 
-                    var categoryHierarchyInterface = categoryHierarchyInterface
+        Updates for KMP build        
+        {
+var categoryHierarchyInterface = categoryHierarchyInterface
 
 
 
@@ -172,7 +206,11 @@ open fun getPath(categoryHierarchyInterface: CategoryHierarchyInterface)
 
 open fun getFileName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -182,7 +220,11 @@ open fun getFileName()
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -192,7 +234,11 @@ open fun isValid()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var categoryHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
@@ -206,7 +252,11 @@ categoryHashMap!!.put(CategoryData.getInstance()!!.NAME, this.category)
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var categoryVector: Vector = Vector()
 
 categoryVector!!.add(category)
@@ -222,7 +272,11 @@ categoryVector!!.add(category)
             
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -234,9 +288,11 @@ open fun toValidationInfoDoc()
             
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -249,7 +305,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

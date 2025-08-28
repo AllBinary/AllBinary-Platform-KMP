@@ -44,21 +44,15 @@ open public class GameNotificationEvent : AllBinaryEventObject {
     private val removeable: Boolean
 public constructor        (anyType: Any, string: String, seconds: Integer, basicColor: BasicColor, permanent: Boolean)                        
 
-                            : super(anyType){
+                            : super(anyType)
 
-                    var anyType = anyType
-
-
-                    var string = string
-
-
-                    var seconds = seconds
-
-
-                    var basicColor = basicColor
-
-
-                    var permanent = permanent
+        Updates for KMP build        
+        {
+var anyType = anyType
+var string = string
+var seconds = seconds
+var basicColor = basicColor
+var permanent = permanent
 
 
                             //For kotlin this is before the body of the constructor.
@@ -72,7 +66,11 @@ this.removeable= permanent
 
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +80,11 @@ open fun getString()
 
 open fun getSeconds()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -92,7 +94,11 @@ open fun getSeconds()
 
 open fun getBasicColorP()
         //nullable = true from not(false or (false and true)) = true
-: BasicColor{
+: BasicColor
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,7 +108,11 @@ open fun getBasicColorP()
 
 open fun getPermanent()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -112,18 +122,22 @@ open fun getPermanent()
 
 open fun setString(string: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var string = string
+
+        Updates for KMP build        
+        {
+var string = string
 this.string= string
 }
 
 
 open fun setBasicColorP(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 this.basicColor= basicColor
 }
 

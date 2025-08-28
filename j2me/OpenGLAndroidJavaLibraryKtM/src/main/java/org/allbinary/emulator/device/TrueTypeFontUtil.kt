@@ -52,7 +52,11 @@ open public class TrueTypeFontUtil : TrueTypeFontUtilBase {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TrueTypeFontUtil{
+: TrueTypeFontUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,7 +75,11 @@ open fun getInstance()
     var fontImage: OpenGLESImage = OpenGLESImage.NULL_OPENGL_IMAGE
 private constructor        ()                        
 
-                            : super(1){
+                            : super(1)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -80,7 +88,11 @@ private constructor        ()
 
 open fun saveFontAtlasAsFile()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -100,7 +112,11 @@ logUtil!!.put(path, this, commonStrings!!.CONSTRUCTOR)
 
 bitmap.compress(Bitmap.CompressFormat.PNG, 100, fos)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
@@ -111,18 +127,14 @@ PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.EXCEPTION, e)
 
 open fun getFontBitmap(gl: GL10, filename: String, cellSize: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-: Image{
+: Image
 
-                    var gl = gl
-
-
-                    var filename = filename
-
-
-                    var cellSize = cellSize
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var filename = filename
+    //var cellSize = cellSize
+    //var basicColor = basicColor
 
     
                         if(this.fontImage == 
@@ -185,7 +197,11 @@ paint.setColor(basicColor!!.toInt())
 
                         for (index in 0 until size)
 
-        {characterArray[0]= pattern[index]
+        
+
+        Updates for KMP build        
+        {
+characterArray[0]= pattern[index]
 paint.getTextBounds(characterArray, 0, 1, bounds)
 _characterWidth[index]= bounds.right
 
@@ -296,12 +312,12 @@ this.fontImage= this.preResourceImageUtil!!.encapsulate(image) as OpenGLESImage
 
 open fun getFontWidths(filename: String, fontSize: Int)
         //nullable = true from not(false or (false and false)) = true
-: IntArray{
+: IntArray
 
-                    var filename = filename
-
-
-                    var fontSize = fontSize
+        Updates for KMP build        
+        {
+    //var filename = filename
+    //var fontSize = fontSize
 
     var typeface: Typeface = Typeface.DEFAULT
 
@@ -320,7 +336,11 @@ paint.setARGB(255, 255, 255, 255)
 
                         for (index in 0 until size)
 
-        {characterArray[0]= pattern[index]
+        
+
+        Updates for KMP build        
+        {
+characterArray[0]= pattern[index]
 paint.getTextBounds(characterArray, 0, 1, bounds)
 
     

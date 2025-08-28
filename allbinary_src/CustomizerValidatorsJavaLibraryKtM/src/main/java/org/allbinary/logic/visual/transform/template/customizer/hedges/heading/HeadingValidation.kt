@@ -48,13 +48,19 @@ open public class HeadingValidation : Validation
     private var title: TitleValidation
 
     private var logo: LogoValidation
-public constructor        (){this.title= TitleValidation()
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.title= TitleValidation()
 this.logo= LogoValidation()
 }
 
-public constructor        (document: Document){
+public constructor        (document: Document)
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var headingNodeList: NodeList = document.getElementsByTagName(HeadingData.NAME)!!
 
@@ -68,9 +74,11 @@ this.title= TitleValidation(titleNode)
 this.logo= LogoValidation(logoNode)
 }
 
-public constructor        (hashMap: HashMap<Any, Any>){
+public constructor        (hashMap: HashMap<Any, Any>)
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.getFormData(hashMap)
 }
 
@@ -79,9 +87,11 @@ this.getFormData(hashMap)
             
 open fun getFormData(hashMap: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var hashMap = hashMap
+
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 this.title= TitleValidation(hashMap)
 this.logo= LogoValidation(hashMap)
 }
@@ -89,7 +99,11 @@ this.logo= LogoValidation(hashMap)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
         try {
             
     var valid: Boolean = Boolean.TRUE
@@ -156,7 +170,11 @@ open fun isValid()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return valid
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -177,7 +195,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var valid: Boolean = Boolean.TRUE
@@ -233,7 +255,11 @@ open fun validationInfo()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return stringBuffer!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLTAGSERROR))
                         
@@ -254,7 +280,11 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -264,9 +294,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -279,9 +311,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(HeadingData.NAME)!!
 

@@ -40,15 +40,13 @@ open public class SecretComposite : BaseSecretComposite {
     private val secretKey: SecretKey
 
     private var key: ByteArray
-public constructor        (secretKey: SecretKey, cipher: Cipher, key: ByteArray){
+public constructor        (secretKey: SecretKey, cipher: Cipher, key: ByteArray)
 
-                    var secretKey = secretKey
-
-
-                    var cipher = cipher
-
-
-                    var key = key
+        Updates for KMP build        
+        {
+    //var secretKey = secretKey
+    //var cipher = cipher
+    //var key = key
 this.secretKey= secretKey
 this.cipher= cipher
 this.key= key
@@ -58,9 +56,11 @@ this.key= key
                 @Throws(Exception::class)
             override fun encrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 array= this.mutilate(array)
 cipher.init(Cipher.ENCRYPT_MODE, secretKey)
 
@@ -74,9 +74,11 @@ cipher.init(Cipher.ENCRYPT_MODE, secretKey)
                 @Throws(Exception::class)
             override fun decrypt(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 cipher.init(Cipher.DECRYPT_MODE, secretKey)
 
 
@@ -88,16 +90,22 @@ cipher.init(Cipher.DECRYPT_MODE, secretKey)
 
 open fun mutilate(array: ByteArray)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var array = array
+        Updates for KMP build        
+        {
+var array = array
 
 
 
 
                         for (index in 0 until key.size)
 
+        
+
+        Updates for KMP build        
         {
+
     var value: Byte = key[index]!!
 
 

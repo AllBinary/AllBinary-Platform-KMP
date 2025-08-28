@@ -52,9 +52,11 @@ open public class EditValidationView : DownloadableInventoryItemView
     private var downloadItemId: String
 public constructor        (transformInfoInterface: TransformInfoInterface)                        
 
-                            : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING){
+                            : super(transformInfoInterface, StringUtil.getInstance()!!.EMPTY_STRING)
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -67,7 +69,11 @@ this.getFormData()
             
 open fun getFormData()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = RequestParams(request).
                             toHashMap()!!
 
@@ -94,7 +100,11 @@ this.downloadItemId= hashMap!!.get(DownloadItemData.ID) as String
             
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(id == 
                                     null
@@ -175,7 +185,11 @@ this.downloadableItem= vector.get(0) as DownloadableItem
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -185,9 +199,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -200,7 +216,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

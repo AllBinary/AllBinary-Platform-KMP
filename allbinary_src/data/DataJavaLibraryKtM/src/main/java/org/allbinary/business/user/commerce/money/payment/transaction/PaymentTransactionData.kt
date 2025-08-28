@@ -38,7 +38,11 @@ open public class PaymentTransactionData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

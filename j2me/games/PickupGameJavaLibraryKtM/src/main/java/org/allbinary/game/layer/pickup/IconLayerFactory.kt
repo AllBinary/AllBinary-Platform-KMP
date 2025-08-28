@@ -38,15 +38,13 @@ open public class IconLayerFactory
             
 open fun getInstance(animationInterface: Animation, width: Int, height: Int)
         //nullable =  from not(true or (false and false)) = 
-: IconLayer{
+: IconLayer
 
-                    var animationInterface = animationInterface
-
-
-                    var width = width
-
-
-                    var height = height
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
+var width = width
+var height = height
 
 
 

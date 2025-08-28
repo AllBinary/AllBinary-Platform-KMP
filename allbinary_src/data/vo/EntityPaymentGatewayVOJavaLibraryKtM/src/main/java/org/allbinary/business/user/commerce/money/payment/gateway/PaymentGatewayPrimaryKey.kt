@@ -40,12 +40,12 @@ open public class PaymentGatewayPrimaryKey
     private var name: String
 public constructor        (storeName: String, gatewayName: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var storeName = storeName
-
-
-                    var gatewayName = gatewayName
+var storeName = storeName
+var gatewayName = gatewayName
 this.setStoreName(storeName)
 this.setName(gatewayName)
 }
@@ -53,7 +53,11 @@ this.setName(gatewayName)
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -63,16 +67,22 @@ open fun getStoreName()
 
 open fun setStoreName(storeName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var storeName = storeName
+
+        Updates for KMP build        
+        {
+var storeName = storeName
 this.storeName= storeName
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,15 +92,21 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(PaymentGatewayPrimaryKey::class.toString()!!)

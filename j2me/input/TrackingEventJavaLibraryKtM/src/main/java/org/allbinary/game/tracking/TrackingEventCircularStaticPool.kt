@@ -39,7 +39,11 @@ open public class TrackingEventCircularStaticPool
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TrackingEventCircularStaticPool{
+: TrackingEventCircularStaticPool
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,7 +62,11 @@ open fun getInstance()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{EVENT_POOL.init(TrackingEventFactory())
+
+
+        Updates for KMP build        
+        {
+EVENT_POOL.init(TrackingEventFactory())
 }
 
 
@@ -67,9 +75,11 @@ open fun init()
 
 open fun getInstance(layerInterface: AllBinaryLayer)
         //nullable =  from not(true or (false and false)) = 
-: TrackingEvent{
+: TrackingEvent
 
-                    var layerInterface = layerInterface
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     var trackingEvent: TrackingEvent = EVENT_POOL.getNextInstance() as TrackingEvent
 

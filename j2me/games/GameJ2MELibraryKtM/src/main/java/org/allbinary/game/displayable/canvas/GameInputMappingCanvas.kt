@@ -83,18 +83,14 @@ open public class GameInputMappingCanvas : GameCommandCanvas
     private var selectedInput: Input = NONE
 public constructor        (abeClientInformation: AbeClientInformationInterface, commandListener: CommandListener, allBinaryGameLayerManager: AllBinaryGameLayerManager, helpPaintable: HelpPaintable)                        
 
-                            : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor()){
+                            : super(commandListener, NAME, allBinaryGameLayerManager!!.getBackgroundBasicColor(), allBinaryGameLayerManager!!.getForegroundBasicColor())
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var commandListener = commandListener
-
-
-                    var allBinaryGameLayerManager = allBinaryGameLayerManager
-
-
-                    var helpPaintable = helpPaintable
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var commandListener = commandListener
+    //var allBinaryGameLayerManager = allBinaryGameLayerManager
+    //var helpPaintable = helpPaintable
 
 
                             //For kotlin this is before the body of the constructor.
@@ -123,7 +119,11 @@ this.colorFillPaintable= ColorFillPaintableFactory.getInstance()!!.getInstance(a
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{super.close()
+
+
+        Updates for KMP build        
+        {
+super.close()
 this.paintable.process()
 this.selectedGameKey= NONE
 this.selectedInput= NONE
@@ -132,9 +132,11 @@ this.update()
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+var cmdListener = cmdListener
 this.removeAllCommands()
 this.addCommand(GameCommandsFactory.getInstance()!!.CLOSE_AND_SHOW_GAME_CANVAS)
 this.addCommand(GameInputMappingCanvas.DEFAULT)
@@ -144,36 +146,42 @@ this.setCommandListener(cmdListener)
 
 override fun keyPressed(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyCode = keyCode
+
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 this.keyPressed(keyCode, 0)
 }
 
 override fun keyReleased(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyCode = keyCode
+
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 this.keyReleased(keyCode, 0)
 }
 
 override fun keyRepeated(keyCode: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var keyCode = keyCode
+
+        Updates for KMP build        
+        {
+var keyCode = keyCode
 this.keyRepeated(keyCode, 0)
 }
 
 override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var deviceId = deviceId
+        Updates for KMP build        
+        {
+var keyCode = keyCode
+var deviceId = deviceId
 this.addGameKeyEvent(keyCode, false)
 super.keyPressed(keyCode, 0)
 }
@@ -183,12 +191,12 @@ super.keyPressed(keyCode, 0)
 
 open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
 
 
-                    var repeated = repeated
+        Updates for KMP build        
+        {
+var keyCode = keyCode
+var repeated = repeated
 
         try {
             logUtil!!.put(StringMaker().
@@ -201,7 +209,11 @@ open fun addGameKeyEvent(keyCode: Int, repeated: Boolean)
 
 this.process(gameKey, input)
 } catch(e: Exception)
-            {logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put("Key Event Error", this, this.gameInputStrings!!.ADD_KEY_EVENT, e)
 }
 
 }
@@ -210,12 +222,12 @@ this.process(gameKey, input)
                 @Throws(Exception::class)
             override fun process(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameKey = gameKey
 
 
-                    var input = input
+        Updates for KMP build        
+        {
+    //var gameKey = gameKey
+    //var input = input
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -243,9 +255,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.PROCESS)
 
 open fun setSelectedAction(gameKey: GameKey)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameKey = gameKey
+
+        Updates for KMP build        
+        {
+var gameKey = gameKey
 logUtil!!.put(StringMaker().
                             append("Selected GameKey: ")!!.append(this.stringUtil!!.toString(gameKey))!!.toString(), this, "setSelectedAction")
 this.selectedGameKey= gameKey
@@ -259,12 +273,12 @@ this.repaintBehavior!!.onChangeRepaint(this)
             
 open fun gameActionCrud(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameKey = gameKey
 
 
-                    var input = input
+        Updates for KMP build        
+        {
+    //var gameKey = gameKey
+    //var input = input
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -326,12 +340,12 @@ this.repaintBehavior!!.onChangeRepaint(this)
             
 open fun addNewMapping(gameKey: GameKey, input: Input)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameKey = gameKey
 
 
-                    var input = input
+        Updates for KMP build        
+        {
+    //var gameKey = gameKey
+    //var input = input
 
     var METHOD_NAME: String = "addNewMapping"
 
@@ -371,7 +385,11 @@ this.setSelectedAction(gameKey)
             
 open fun deleteCurrentMapping()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var METHOD_NAME: String = "deleteCurrentMapping"
 
 
@@ -409,7 +427,11 @@ this.update()
             
 open fun setDefault()
         //nullable = true from not(false or (false and true)) = true
-{inputMapping!!.setDefault(abeClientInformation)
+
+
+        Updates for KMP build        
+        {
+inputMapping!!.setDefault(abeClientInformation)
 this.helpPaintable!!.update(NONE, NONE)
 this.repaintBehavior!!.onChangeRepaint(this)
 }
@@ -418,16 +440,22 @@ this.repaintBehavior!!.onChangeRepaint(this)
                 @Throws(Exception::class)
             override fun update()
         //nullable = true from not(false or (false and true)) = true
-{inputMapping!!.update(abeClientInformation)
+
+
+        Updates for KMP build        
+        {
+inputMapping!!.update(abeClientInformation)
 this.helpPaintable!!.update(this.selectedGameKey, this.selectedInput)
 this.repaintBehavior!!.onChangeRepaint(this)
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.colorFillPaintable!!.paint(graphics)
 this.helpPaintable!!.paint(graphics)
 this.paintable.paint(graphics)

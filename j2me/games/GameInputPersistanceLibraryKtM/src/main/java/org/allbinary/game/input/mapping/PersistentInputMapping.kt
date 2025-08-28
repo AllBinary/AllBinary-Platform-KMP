@@ -62,21 +62,31 @@ open public class PersistentInputMapping
     private val inputPersistance: InputPersistance
 protected constructor        ()
             : super()
-        {inputPersistance= InputPersistance(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
+        
+
+        Updates for KMP build        
+        {
+inputPersistance= InputPersistance(GamePersistanceStrings.getInstance()!!.SAVED_INPUT_CONFIGURATION_RECORD_ID)
 }
 
 protected constructor        (name: String)
             : super()
-        {
+        
 
-                    var name = name
+        Updates for KMP build        
+        {
+var name = name
 inputPersistance= InputPersistance(name)
 }
 
 
 open fun getTotalMapped()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -86,7 +96,11 @@ open fun getTotalMapped()
 
 open fun isDefaultNew()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -96,7 +110,11 @@ open fun isDefaultNew()
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping{
+: InputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -108,9 +126,11 @@ open fun getDefault()
             
 open fun setDefault(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 this.getInputMapping()!!.removeAll()
 this.getInputMapping()!!.add(this.getDefault())
 this.save(abeClientInformation)
@@ -121,9 +141,11 @@ this.save(abeClientInformation)
             
 open fun update(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 this.inputPersistance!!.deleteAll(abeClientInformation)
 this.save(abeClientInformation)
 }
@@ -135,9 +157,11 @@ this.save(abeClientInformation)
             
 open fun save(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 inputPersistance!!.save(abeClientInformation, this.getInputMapping()!!.getHashtable())
 inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
 
@@ -158,15 +182,21 @@ inputMappingEvent!!.setInputToGameKeyMapping(this.getInputMapping())
             
 open fun init(abeClientInformation: AbeClientInformationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var abeClientInformation = abeClientInformation
+
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
 logUtil!!.put(commonStrings!!.START, this, commonStrings!!.INIT)
 
         try {
             inputPersistance!!.loadAll(abeClientInformation)
 } catch(e: Exception)
-            {PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+PreLogUtil.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 inputPersistance!!.deleteRecoreStore(abeClientInformation)
 this.setDefault(abeClientInformation)
 inputPersistance!!.loadAll(abeClientInformation)
@@ -187,7 +217,11 @@ inputPersistance!!.loadAll(abeClientInformation)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var hashtable: Hashtable<Any, Any> = list.objectArray[index]!! as Hashtable<Any, Any>
 
 
@@ -195,7 +229,11 @@ inputPersistance!!.loadAll(abeClientInformation)
 
 
         while(enumeration.hasMoreElements())
+        
+
+        Updates for KMP build        
         {
+
     var mappedToInput: Input = enumeration.nextElement()!! as Input
 
 
@@ -220,16 +258,22 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.INIT)
 
 open fun setInputMappingEventListenerInterface(inputMappingEventListenerInterface: InputMappingEventListenerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputMappingEventListenerInterface = inputMappingEventListenerInterface
+
+        Updates for KMP build        
+        {
+var inputMappingEventListenerInterface = inputMappingEventListenerInterface
 this.inputMappingEventListenerInterface= inputMappingEventListenerInterface
 }
 
 
 open fun getInputMappingEventListenerInterface()
         //nullable = true from not(false or (false and true)) = true
-: InputMappingEventListenerInterface{
+: InputMappingEventListenerInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -239,7 +283,11 @@ open fun getInputMappingEventListenerInterface()
 
 open fun getInputMapping()
         //nullable = true from not(false or (false and true)) = true
-: InputToGameKeyMapping{
+: InputToGameKeyMapping
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -251,9 +299,11 @@ open fun getInputMapping()
             
 open fun isDelete(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 
@@ -265,9 +315,11 @@ open fun isDelete(input: Input)
             
 open fun isSystemInput(input: Input)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var input = input
+        Updates for KMP build        
+        {
+var input = input
 
 
 

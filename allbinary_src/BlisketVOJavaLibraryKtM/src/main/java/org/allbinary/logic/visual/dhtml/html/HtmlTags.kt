@@ -35,15 +35,21 @@ open public class HtmlTags
     private var htmlTagVector: Vector
 public constructor        ()
             : super()
-        {htmlTagVector= Vector()
+        
+
+        Updates for KMP build        
+        {
+htmlTagVector= Vector()
 }
 
 
 open fun get(index: Int)
         //nullable = true from not(false or (false and false)) = true
-: HtmlTag{
+: HtmlTag
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
 
 
@@ -54,16 +60,22 @@ open fun get(index: Int)
 
 open fun add(htmlTag: HtmlTag)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var htmlTag = htmlTag
+
+        Updates for KMP build        
+        {
+var htmlTag = htmlTag
 htmlTagVector!!.add(htmlTag)
 }
 
 
 open fun size()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

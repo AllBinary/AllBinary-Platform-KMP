@@ -42,7 +42,11 @@ open public class HardwareFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: HardwareFactory{
+: HardwareFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,16 +59,22 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getInstance(os: GenericOperatingSystem)
         //nullable =  from not(true or (false and false)) = 
-: HardwareInterface{
+: HardwareInterface
 
-                    var os = os
+        Updates for KMP build        
+        {
+var os = os
 
         try {
             
@@ -85,7 +95,11 @@ open fun getInstance(os: GenericOperatingSystem)
 
                             throw Exception("No Hardware Imp for: " +os.getName())
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put("Ignoring Exception Returning NoHardware", this, commonStrings!!.GET_INSTANCE, e)

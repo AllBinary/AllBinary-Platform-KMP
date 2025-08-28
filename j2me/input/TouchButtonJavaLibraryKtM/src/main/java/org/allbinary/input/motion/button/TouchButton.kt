@@ -69,51 +69,33 @@ open public class TouchButton : Paintable {
     var hintAnimationY: Int= 0
 public constructor        (touchButtonInput: TouchButtonInput, touchButtonResource: TouchButtonResource, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)                        
 
-                            : this(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder){
+                            : this(touchButtonInput, FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.RESOURCE)!!.getInstance(0), FeaturedAnimationInterfaceFactoryInterfaceFactory.getInstance()!!.get(touchButtonResource!!.HINT)!!.getInstance(0), rawRectangle, cellPosition, xBorder, yBorder)
 
-                    var touchButtonInput = touchButtonInput
-
-
-                    var touchButtonResource = touchButtonResource
-
-
-                    var rawRectangle = rawRectangle
-
-
-                    var cellPosition = cellPosition
-
-
-                    var xBorder = xBorder
-
-
-                    var yBorder = yBorder
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
+var touchButtonResource = touchButtonResource
+var rawRectangle = rawRectangle
+var cellPosition = cellPosition
+var xBorder = xBorder
+var yBorder = yBorder
 
 
                             //For kotlin this is before the body of the constructor.
                     
 }
 
-public constructor        (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int){
+public constructor        (touchButtonInput: TouchButtonInput, animationInterface: Animation, hintAnimationInterface: Animation, rawRectangle: Rectangle, cellPosition: CellPosition, xBorder: Int, yBorder: Int)
 
-                    var touchButtonInput = touchButtonInput
-
-
-                    var animationInterface = animationInterface
-
-
-                    var hintAnimationInterface = hintAnimationInterface
-
-
-                    var rawRectangle = rawRectangle
-
-
-                    var cellPosition = cellPosition
-
-
-                    var xBorder = xBorder
-
-
-                    var yBorder = yBorder
+        Updates for KMP build        
+        {
+var touchButtonInput = touchButtonInput
+var animationInterface = animationInterface
+var hintAnimationInterface = hintAnimationInterface
+var rawRectangle = rawRectangle
+var cellPosition = cellPosition
+var xBorder = xBorder
+var yBorder = yBorder
 this.touchButtonInput= touchButtonInput
 this.animationInterface= animationInterface
 this.hintAnimationInterface= hintAnimationInterface
@@ -129,24 +111,32 @@ logUtil!!.put(StringMaker().
 
 open fun paintHint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.hintAnimationInterface!!.paint(graphics, animationX, this.hintAnimationY)
 }
 
 override fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 this.animationInterface!!.paint(graphics, animationX, animationY)
 }
 
 
 open fun updateRectangle()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var x: Int = this.rawRectangle!!.getWidth() *cellPositionP!!.getColumn()
@@ -162,7 +152,11 @@ this.animationX= point.getX()
 this.animationY= point.getY()
 this.hintAnimationY= animationY -32
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, "updateRectangle", e)
 }
 
 }
@@ -170,7 +164,11 @@ this.hintAnimationY= animationY -32
 
 open fun getCellPosition()
         //nullable = true from not(false or (false and true)) = true
-: CellPosition{
+: CellPosition
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -180,7 +178,11 @@ open fun getCellPosition()
 
 open fun getRectangle()
         //nullable = true from not(false or (false and true)) = true
-: Rectangle{
+: Rectangle
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -190,7 +192,11 @@ open fun getRectangle()
 
 open fun getTouchButtonInput()
         //nullable = true from not(false or (false and true)) = true
-: TouchButtonInput{
+: TouchButtonInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -199,7 +205,11 @@ open fun getTouchButtonInput()
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 

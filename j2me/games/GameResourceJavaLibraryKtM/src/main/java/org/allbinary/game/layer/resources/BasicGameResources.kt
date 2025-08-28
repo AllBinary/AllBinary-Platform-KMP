@@ -49,17 +49,21 @@ open public class BasicGameResources
     var RESOURCE_DESTROY: String = StringUtil.getInstance()!!.EMPTY_STRING
 protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun init(ROOT: String, SIZE: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var ROOT = ROOT
 
 
-                    var SIZE = SIZE
+        Updates for KMP build        
+        {
+var ROOT = ROOT
+var SIZE = SIZE
 
         try {
             
@@ -84,7 +88,11 @@ open fun init(ROOT: String, SIZE: Array<String?>)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
@@ -97,7 +105,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
             
 open fun getString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -109,12 +121,12 @@ open fun getString()
             
 open fun init(ROOT: String, sizeString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var ROOT = ROOT
 
 
-                    var sizeString = sizeString
+        Updates for KMP build        
+        {
+var ROOT = ROOT
+var sizeString = sizeString
 
     var DESTROY: String = "_destroy"
 

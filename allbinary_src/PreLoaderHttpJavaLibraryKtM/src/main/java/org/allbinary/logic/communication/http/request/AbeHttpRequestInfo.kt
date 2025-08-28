@@ -58,9 +58,11 @@ open public class AbeHttpRequestInfo
     private var requestedFilePath: String
 public constructor        (hashMap: HashMap<Any, Any>)
             : super()
-        {
+        
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -74,9 +76,11 @@ this.requestedFilePath= stringUtil!!.getInstance(hashMap!!.get(abeHttpRequestInf
 
 public constructor        (httpServletRequest: HttpServletRequest)
             : super()
-        {
+        
 
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
 
     var stringUtil: StringUtil = StringUtil.getInstance()!!
 
@@ -86,7 +90,11 @@ this.httpUserAgent= stringUtil!!.EMPTY_STRING
 
 
         while(enumuration.hasMoreElements())
+        
+
+        Updates for KMP build        
         {
+
     var key: String = enumuration.nextElement()!! as String
 
 
@@ -108,7 +116,11 @@ this.remotePort= Integer.toString(httpServletRequest!!.getRemotePort())
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(abeHttpRequestInfoData!!.HTTP_USER_AGENT, this.httpUserAgent)
@@ -127,7 +139,11 @@ hashMap!!.put(abeHttpRequestInfoData!!.REQUEST_FILE_PATH, this.requestedFilePath
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 vector.add(this.httpUserAgent)
@@ -145,7 +161,11 @@ vector.add(this.requestedFilePath)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

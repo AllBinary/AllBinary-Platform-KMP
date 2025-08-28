@@ -49,24 +49,16 @@ open public class PlatformTextureBaseFactory
 
 open fun load(gl: GL10, target: Int, level: Int, image: Image, border: Int, flip: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gl = gl
 
 
-                    var target = target
-
-
-                    var level = level
-
-
-                    var image = image
-
-
-                    var border = border
-
-
-                    var flip = flip
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var target = target
+    //var level = level
+    //var image = image
+    //var border = border
+    //var flip = flip
 }
 
 

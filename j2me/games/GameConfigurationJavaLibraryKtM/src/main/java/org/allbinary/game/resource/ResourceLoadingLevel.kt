@@ -36,12 +36,12 @@ open public class ResourceLoadingLevel
     private val level: Int
  constructor        (name: String, level: Int)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var level = level
+var name = name
+var level = level
 this.name= name
 this.level= level
 }
@@ -49,7 +49,11 @@ this.level= level
 
 open fun getLevel()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,7 +63,11 @@ open fun getLevel()
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

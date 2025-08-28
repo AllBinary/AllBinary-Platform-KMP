@@ -40,18 +40,14 @@ open public class ImageBaseRotationAnimation : RotationAnimation {
     private val image: Image
 public constructor        (image: Image, angleInfo: AngleInfo, totalAngle: Short, animationBehavior: AnimationBehavior)                        
 
-                            : super(angleInfo, totalAngle, animationBehavior){
+                            : super(angleInfo, totalAngle, animationBehavior)
 
-                    var image = image
-
-
-                    var angleInfo = angleInfo
-
-
-                    var totalAngle = totalAngle
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var image = image
+    //var angleInfo = angleInfo
+    //var totalAngle = totalAngle
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -63,7 +59,11 @@ this.image= image
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -72,14 +72,20 @@ this.image= image
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,22 +96,24 @@ override fun getSequence()
     var anchor: Int = Anchor.TOP_LEFT
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 graphics.drawImage(this.image, x, y, anchor)
 }
 
 
 open fun getImage()
         //nullable = true from not(false or (false and true)) = true
-: Image{
+: Image
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -114,7 +122,11 @@ open fun getImage()
 
 override fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -124,14 +136,22 @@ override fun getWidth()
 
 open fun close()
         //nullable = true from not(false or (false and true)) = true
-{DisposalUtil.getInstance()!!.dispose(this.image)
+
+
+        Updates for KMP build        
+        {
+DisposalUtil.getInstance()!!.dispose(this.image)
 }
 
 
                 @Throws(Throwable::class)
             override fun finalize()
         //nullable = true from not(false or (false and true)) = true
-{DisposalUtil.getInstance()!!.dispose(this.image)
+
+
+        Updates for KMP build        
+        {
+DisposalUtil.getInstance()!!.dispose(this.image)
 }
 
 

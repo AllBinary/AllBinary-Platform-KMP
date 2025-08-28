@@ -45,12 +45,12 @@ open public class BasicDirectionAIHelper
     private var angleInfo: AngleInfo
 public constructor        (name: String, angleInfo: AngleInfo)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var name = name
-
-
-                    var angleInfo = angleInfo
+var name = name
+var angleInfo = angleInfo
 this.setName(name)
 this.setAngleInfo(angleInfo)
 }
@@ -58,9 +58,11 @@ this.setAngleInfo(angleInfo)
 
 open fun turnAI(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
     var keyDirection: Int =  -1
 
@@ -131,9 +133,11 @@ open fun turnAI(frame: Int)
 
 open fun getAIKeyPressed(frame: Integer)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
     
                         if(this.angleInfo!!.getAngle() != this.angleInfo!!.getAngleIncrementInfo()!!.getFrameAngle(frame.toInt()))
@@ -161,9 +165,11 @@ open fun getAIKeyPressed(frame: Integer)
 
 open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var geographicMapDirectionData = geographicMapDirectionData
+        Updates for KMP build        
+        {
+var geographicMapDirectionData = geographicMapDirectionData
 
     var keyDirection: Int =  -1
 
@@ -219,7 +225,11 @@ open fun getAIKeyPressedFromDirection(geographicMapDirectionData: Direction)
 
 open fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo{
+: AngleInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -229,16 +239,22 @@ open fun getAngleInfoP()
 
 open fun setAngleInfo(angleInfo: AngleInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angleInfo = angleInfo
+
+        Updates for KMP build        
+        {
+var angleInfo = angleInfo
 this.angleInfo= angleInfo
 }
 
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -248,9 +264,11 @@ open fun getName()
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 

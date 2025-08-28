@@ -37,7 +37,11 @@ open public class RectangleCollisionUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: RectangleCollisionUtil{
+: RectangleCollisionUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -48,35 +52,27 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1: Int, rect2Y1: Int, rect2X2: Int, rect2Y2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectX1 = rectX1
-
-
-                    var rectY1 = rectY1
-
-
-                    var rectX2 = rectX2
-
-
-                    var rectY2 = rectY2
-
-
-                    var rect2X1 = rect2X1
-
-
-                    var rect2Y1 = rect2Y1
-
-
-                    var rect2X2 = rect2X2
-
-
-                    var rect2Y2 = rect2Y2
+        Updates for KMP build        
+        {
+    //var rectX1 = rectX1
+    //var rectY1 = rectY1
+    //var rectX2 = rectX2
+    //var rectY2 = rectY2
+    //var rect2X1 = rect2X1
+    //var rect2Y1 = rect2Y1
+    //var rect2X2 = rect2X2
+    //var rect2Y2 = rect2Y2
 
     
                         if(rect2X1 >= rectX2 || rect2Y1 >= rectY2 || rect2X2 <= rectX1 || rect2Y2 <= rectY1)
@@ -104,24 +100,16 @@ open fun isCollision(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, rect2X1
 
 open fun isInside(rectX1: Int, rectY1: Int, rectX2: Int, rectY2: Int, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectX1 = rectX1
-
-
-                    var rectY1 = rectY1
-
-
-                    var rectX2 = rectX2
-
-
-                    var rectY2 = rectY2
-
-
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var rectX1 = rectX1
+    //var rectY1 = rectY1
+    //var rectX2 = rectX2
+    //var rectY2 = rectY2
+    //var x = x
+    //var y = y
 
     
                         if(x >= rectX2 || y >= rectY2 || x <= rectX1 || y <= rectY1)

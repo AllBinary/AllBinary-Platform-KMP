@@ -40,18 +40,14 @@ open public class GameScrollMenuPaintable : BasicGameDemoPaintable
         
 public constructor        (mainDemoStatePaintable: Paintable, ownershipPaintable: Paintable, helpPaintableInterface: Paintable, basicColor: BasicColor)                        
 
-                            : super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface){
+                            : super(mainDemoStatePaintable, ownershipPaintable, helpPaintableInterface)
 
-                    var mainDemoStatePaintable = mainDemoStatePaintable
-
-
-                    var ownershipPaintable = ownershipPaintable
-
-
-                    var helpPaintableInterface = helpPaintableInterface
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var mainDemoStatePaintable = mainDemoStatePaintable
+var ownershipPaintable = ownershipPaintable
+var helpPaintableInterface = helpPaintableInterface
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -62,25 +58,31 @@ ColorChangeEventHandler.getInstance()!!.addListener(this)
 
 override fun setState(state: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var state = state
+
+        Updates for KMP build        
+        {
+var state = state
 this.setCurrentStatePaintable(this.getMainDemoStatePaintable())
 }
 
 override fun onEvent(eventObject: AllBinaryEventObject)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var eventObject = eventObject
+
+        Updates for KMP build        
+        {
+var eventObject = eventObject
 }
 
 
 open fun setColor(basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var basicColor = basicColor
+
+        Updates for KMP build        
+        {
+var basicColor = basicColor
 
     var mainGameDemoStatePaintable: MainGameDemoStatePaintable = this.getMainDemoStatePaintable() as MainGameDemoStatePaintable
 
@@ -98,7 +100,11 @@ scrollSelectionForm!!.setButtonBasicColor(basicColor)
 
                         for (index in scrollSelectionForm!!.size() -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var item: TextItem = scrollSelectionForm!!.get(index) as TextItem
 
 

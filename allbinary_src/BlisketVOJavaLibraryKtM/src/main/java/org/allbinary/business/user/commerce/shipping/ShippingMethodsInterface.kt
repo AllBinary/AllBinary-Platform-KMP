@@ -34,17 +34,26 @@ open fun get()
         //nullable = true from not(false or (false and true)) = true
 : Vector
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun getShippingInterface(name: String)
         //nullable = true from not(false or (false and false)) = true
 : ShippingInterface
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
 : ShippingInterface
+
+        Updates for KMP build        
+        
 
 }
                 

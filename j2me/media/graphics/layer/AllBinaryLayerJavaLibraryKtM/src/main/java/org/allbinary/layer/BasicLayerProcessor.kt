@@ -45,14 +45,20 @@ open public class BasicLayerProcessor
     private val list: BasicArrayList = BasicArrayList()
 protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun add(layerInterface: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layerInterface = layerInterface
+
+        Updates for KMP build        
+        {
+var layerInterface = layerInterface
 
     
                         if(!list.contains(layerInterface))
@@ -69,9 +75,11 @@ open fun add(layerInterface: AllBinaryLayer)
             
 open fun process(allBinaryLayerManager: AllBinaryLayerManager)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var allBinaryLayerManager = allBinaryLayerManager
+
+        Updates for KMP build        
+        {
+var allBinaryLayerManager = allBinaryLayerManager
 
 
 
@@ -81,7 +89,11 @@ open fun process(allBinaryLayerManager: AllBinaryLayerManager)
 
 open fun getList()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

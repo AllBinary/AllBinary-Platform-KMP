@@ -31,7 +31,11 @@ open public class AbFileItemFactory : DefaultFileItemFactory {
         
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     

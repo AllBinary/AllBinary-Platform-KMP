@@ -50,7 +50,11 @@ open public class StreetAddressesEntity : AbSqlBean
     private var userName: String
 public constructor        ()                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -58,9 +62,11 @@ public constructor        ()
 
 public constructor        (userName: String)                        
 
-                            : super(UserDbInitInfo()){
+                            : super(UserDbInitInfo())
 
-                    var userName = userName
+        Updates for KMP build        
+        {
+var userName = userName
 
 
                             //For kotlin this is before the body of the constructor.
@@ -71,9 +77,11 @@ this.userName= userName
 
 open fun remove(index: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+var index = index
 
         try {
             
@@ -92,7 +100,11 @@ super.deleteWhere(whereHashMap)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -108,21 +120,23 @@ super.deleteWhere(whereHashMap)
 
 open fun add(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var address = address
+
+        Updates for KMP build        
+        {
+var address = address
 this.add(address, TableDataFactory.getInstance()!!.INTEGER_MAX_VALUE_STRING)
 }
 
 
 open fun add(address: StreetAddress, index: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var address = address
 
 
-                    var index = index
+        Updates for KMP build        
+        {
+var address = address
+var index = index
 
         try {
             
@@ -158,7 +172,11 @@ this.setDefault(getLastId())
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -174,9 +192,11 @@ this.setDefault(getLastId())
 
 open fun update(address: StreetAddress)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var address = address
+
+        Updates for KMP build        
+        {
+var address = address
 
         try {
             
@@ -199,7 +219,11 @@ this.setDefault(address.getId())
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -215,7 +239,11 @@ this.setDefault(address.getId())
 
 open fun getLastId()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -225,7 +253,11 @@ open fun getLastId()
 
 open fun get()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
         try {
             
     var streetAddressVector: Vector = Vector()
@@ -246,7 +278,11 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var addressHashMap: HashMap<Any, Any> = addressList!!.get(index) as HashMap<Any, Any>
 
 
@@ -271,7 +307,11 @@ keyAndValue!!.put(UserData.USERNAME, userName)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streetAddressVector
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -292,9 +332,11 @@ keyAndValue!!.put(UserData.USERNAME, userName)
 
 open fun get(index: Integer)
         //nullable = true from not(false or (false and false)) = true
-: StreetAddress{
+: StreetAddress
 
-                    var index = index
+        Updates for KMP build        
+        {
+var index = index
 
         try {
             
@@ -330,7 +372,11 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -351,7 +397,11 @@ keyAndValue!!.put(StreetAddressData.ID, index.toString())
 
 open fun getDefault()
         //nullable = true from not(false or (false and true)) = true
-: StreetAddress{
+: StreetAddress
+
+        Updates for KMP build        
+        {
+
         try {
             
     var addressHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -408,7 +458,11 @@ addressHashMap= super.getRow(updateKeyAndValue)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -429,9 +483,11 @@ addressHashMap= super.getRow(updateKeyAndValue)
 
 open fun setDefault(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 
         try {
             
@@ -470,7 +526,11 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
                                     }
                                 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.SQLLOGGING))
                         
@@ -486,7 +546,11 @@ super.updateWhere(whereKeyAndValue, updateKeyAndValue)
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -496,7 +560,11 @@ open fun getUserName()
 
 open fun createTableStatement()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(this.getTableName())!!.append(this.sqlStrings!!.START)!!.append(StreetAddressData.ID)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_AUTO_INCREMENT_NOT_NULL)!!.append(UserData.USERNAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StreetAddressData.DEFAULT)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StreetAddressData.NAME)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN_NOT_NULL)!!.append(StreetAddressData.STREET)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.CITY)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.STATE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.CODE)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(StreetAddressData.COUNTRY)!!.append(this.sqlTypeStrings!!.MAX_CHAR_COLUMN)!!.append(EntryData.getInstance()!!.TIMECREATED)!!.append(this.sqlTypeStrings!!.MAX_BIG_INT_UNSIGNED_NOT_NULL)!!.append(this.sqlStrings!!.PRIMARY_KEY)!!.append(StreetAddressData.ID)!!.append(this.sqlStrings!!.END)
@@ -510,7 +578,11 @@ stringBuffer!!.append(this.sqlStrings!!.CREATE_TABLE)!!.append(this.getTableName
 
 open fun createTable()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -520,7 +592,11 @@ open fun createTable()
 
 open fun drop()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -41,30 +41,42 @@ open public class BasicTextEmailTag : CustomTagSupport {
     private var subject: String
 
     private var body: String
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun setSubject(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.subject= value
 }
 
 
 open fun setBody(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.body= value
 }
 
 
 open fun send()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
         try {
             
     var propertiesHashMap: HashMap<Any, Any> = HashMap<Any, Any>()
@@ -87,7 +99,11 @@ method.invoke(anyType,
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return "Email Sent"
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var error: String = "Failed to Send Email."
 
 
@@ -113,7 +129,11 @@ method.invoke(anyType,
             
 open fun doStartTag()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
         try {
             this.pageContext!!.getOut()!!.print(this.send())
 
@@ -122,7 +142,11 @@ open fun doStartTag()
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return SKIP_BODY
 } catch(e: Exception)
-            {AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
+            
+
+        Updates for KMP build        
+        {
+AbResponseHandler.sendJspTagRedirect(this.pageContext, e)
 
 
 

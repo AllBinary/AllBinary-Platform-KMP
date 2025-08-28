@@ -62,7 +62,11 @@ open public class PaymentTransactionInterfaceRequestFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PaymentTransactionInterfaceRequestFactory{
+: PaymentTransactionInterfaceRequestFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,7 +79,11 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
     val commonStrings: CommonStrings = CommonStrings.getInstance()!!
@@ -84,9 +92,11 @@ private constructor        ()
             
 open fun getInstance(transformInfoInterface: TransformInfoInterface)
         //nullable =  from not(true or (false and false)) = 
-: PaymentTransactionInterface{
+: PaymentTransactionInterface
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
         try {
             
@@ -165,7 +175,11 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
                         }
                             
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         
@@ -187,9 +201,11 @@ orderReview!!.setPaymentInfo(orderPaymentInfo)
             
 open fun generateFromTestData(transformInfoInterface: TransformInfoInterface)
         //nullable = true from not(false or (false and false)) = true
-: PaymentTransactionInterface{
+: PaymentTransactionInterface
 
-                    var transformInfoInterface = transformInfoInterface
+        Updates for KMP build        
+        {
+var transformInfoInterface = transformInfoInterface
 
         try {
             
@@ -330,7 +346,11 @@ orderReview!!.setPaymentInfo(payment)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return paymentTransactionInterface
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.PAYMENTERROR))
                         

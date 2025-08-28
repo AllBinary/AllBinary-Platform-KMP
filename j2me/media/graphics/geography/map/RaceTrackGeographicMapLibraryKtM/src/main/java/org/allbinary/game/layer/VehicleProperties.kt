@@ -37,12 +37,12 @@ open public class VehicleProperties
     private var vehicleFrictionProperties: VehicleFrictionProperties
 public constructor        (velocityProperties: VelocityProperties, vehicleFrictionProperties: VehicleFrictionProperties)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var velocityProperties = velocityProperties
-
-
-                    var vehicleFrictionProperties = vehicleFrictionProperties
+var velocityProperties = velocityProperties
+var vehicleFrictionProperties = vehicleFrictionProperties
 this.velocityProperties= velocityProperties
 this.setVehicleFrictionProperties(vehicleFrictionProperties)
 }
@@ -50,7 +50,11 @@ this.setVehicleFrictionProperties(vehicleFrictionProperties)
 
 open fun getVehicleFrictionProperties()
         //nullable = true from not(false or (false and true)) = true
-: VehicleFrictionProperties{
+: VehicleFrictionProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,16 +64,22 @@ open fun getVehicleFrictionProperties()
 
 open fun setVehicleFrictionProperties(vehicleFrictionProperties: VehicleFrictionProperties)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var vehicleFrictionProperties = vehicleFrictionProperties
+
+        Updates for KMP build        
+        {
+var vehicleFrictionProperties = vehicleFrictionProperties
 this.vehicleFrictionProperties= vehicleFrictionProperties
 }
 
 
 open fun getVelocityProperties()
         //nullable = true from not(false or (false and true)) = true
-: VelocityProperties{
+: VelocityProperties
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -35,18 +35,22 @@ open public class HtmlTag
     var otherAttributes: HashMap<Any, Any>
 public constructor        ()
             : super()
-        {this.otherAttributes= HashMap<Any, Any>()
+        
+
+        Updates for KMP build        
+        {
+this.otherAttributes= HashMap<Any, Any>()
 }
 
 
 open fun addAttribute(key: String, value: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var key = key
 
 
-                    var value = value
+        Updates for KMP build        
+        {
+var key = key
+var value = value
 this.otherAttributes!!.put(key, value)
 }
 

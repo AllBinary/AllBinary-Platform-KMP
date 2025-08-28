@@ -33,6 +33,9 @@ open fun onImageComparisonResultsEvent(imageComparisonResultsEvent: ImageCompari
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 }
                 
             

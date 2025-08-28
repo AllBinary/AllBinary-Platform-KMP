@@ -46,7 +46,11 @@ open public class TagWorkFlowFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: TagWorkFlowFactory{
+: TagWorkFlowFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,22 +63,24 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class, LicensingException::class)
             
 open fun getInstance(abeClientInformation: AbeClientInformationInterface, propertiesHashMap: HashMap<Any, Any>, pageContext: PageContext)
         //nullable =  from not(true or (false and false)) = 
-: WorkFlowInterface{
+: WorkFlowInterface
 
-                    var abeClientInformation = abeClientInformation
-
-
-                    var propertiesHashMap = propertiesHashMap
-
-
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+    //var abeClientInformation = abeClientInformation
+    //var propertiesHashMap = propertiesHashMap
+    //var pageContext = pageContext
 
         try {
             
@@ -96,7 +102,11 @@ params[1]= pageContext as Object
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return AbeFactory.getInstance()!!.getInstance(abeClientInformation, workFlowClassName, classes, params) as WorkFlowInterface
 } catch(e: LicensingException)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         
@@ -124,7 +134,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, commonStrings!!.GET_INSTANCE, e)
                             throw e
 }
  catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.TAGHELPERFACTORYERROR))
                         

@@ -43,12 +43,12 @@ open public class StraightMultiProjectileWeaponPart : BasicWeaponPart {
     private val total: Int
 public constructor        (animationInterface: Animation, weaponLayerCircularStaticPool: WeaponLayerCircularPool)                        
 
-                            : super(animationInterface){
+                            : super(animationInterface)
 
-                    var animationInterface = animationInterface
-
-
-                    var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
+    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
 
 
                             //For kotlin this is before the body of the constructor.
@@ -59,27 +59,17 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
 public constructor        (animationInterface: Animation, sourceLayerInterface: AllBinaryLayer, weaponLayerCircularStaticPool: WeaponLayerCircularPool, total: Int, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface, relativeRelationship: RelativeRelationship)                        
 
-                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship){
+                            : super(animationInterface, sourceLayerInterface, weaponProperties, scoreableInterface, relativeRelationship)
 
-                    var animationInterface = animationInterface
-
-
-                    var sourceLayerInterface = sourceLayerInterface
-
-
-                    var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
-
-
-                    var total = total
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
-
-
-                    var relativeRelationship = relativeRelationship
+        Updates for KMP build        
+        {
+    //var animationInterface = animationInterface
+    //var sourceLayerInterface = sourceLayerInterface
+    //var weaponLayerCircularStaticPool = weaponLayerCircularStaticPool
+    //var total = total
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
+    //var relativeRelationship = relativeRelationship
 
 
                             //For kotlin this is before the body of the constructor.
@@ -94,21 +84,15 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
                 @Throws(Exception::class)
             override fun process(allbinaryLayerManager: AllBinaryLayerManager, angle: Short, otherAngle: Short, weaponProperties: WeaponProperties, scoreableInterface: ScoreableInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var angle = angle
-
-
-                    var otherAngle = otherAngle
-
-
-                    var weaponProperties = weaponProperties
-
-
-                    var scoreableInterface = scoreableInterface
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var angle = angle
+    //var otherAngle = otherAngle
+    //var weaponProperties = weaponProperties
+    //var scoreableInterface = scoreableInterface
 
     var sourceLayerInterface: AllBinaryLayer = this.getOwnerLayerInterface()!!
 
@@ -151,7 +135,11 @@ this.weaponLayerCircularStaticPool= weaponLayerCircularStaticPool
 
                         for (index in 0 until total)
 
-        {sine= (next *noDecimalTrigTable!!.sin(angle.toInt())).toLong()
+        
+
+        Updates for KMP build        
+        {
+sine= (next *noDecimalTrigTable!!.sin(angle.toInt())).toLong()
 beamX= (sine /noDecimalTrigTable!!.SCALE).toInt()
 cosine= (next *noDecimalTrigTable!!.cos(angle.toInt())).toLong()
 beamY=  -(cosine /noDecimalTrigTable!!.SCALE).toInt()

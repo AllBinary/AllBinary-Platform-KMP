@@ -32,32 +32,56 @@ open fun setSmtpServer(value: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getSmtpServer()
         //nullable = true from not(false or (false and true)) = true
 : String
+
+        Updates for KMP build        
+        
 
 open fun getAccountName()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun setAccountName(accountName: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
 : String
 
+        Updates for KMP build        
+        
+
 open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun log()
         //nullable = true from not(false or (false and true)) = true
 
+
+        Updates for KMP build        
+        
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
 : String
+
+        Updates for KMP build        
+        
 
 }
                 

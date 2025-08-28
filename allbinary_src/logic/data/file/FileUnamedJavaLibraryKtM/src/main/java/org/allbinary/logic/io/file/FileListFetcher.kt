@@ -43,7 +43,11 @@ open public class FileListFetcher
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FileListFetcher{
+: FileListFetcher
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -62,9 +66,11 @@ open fun getInstance()
 
 open fun getFiles(path: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var path = path
+        Updates for KMP build        
+        {
+var path = path
 
         try {
             
@@ -76,7 +82,11 @@ open fun getFiles(path: String)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            {e.printStackTrace()
+            
+
+        Updates for KMP build        
+        {
+e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
@@ -90,12 +100,12 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
 open fun getFiles(path: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var path = path
-
-
-                    var includeExtension = includeExtension
+        Updates for KMP build        
+        {
+    //var path = path
+    //var includeExtension = includeExtension
 
         try {
             
@@ -114,7 +124,11 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            {e.printStackTrace()
+            
+
+        Updates for KMP build        
+        {
+e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 
@@ -128,15 +142,13 @@ System.out.println("Error: " +e +"\nMsg: " +e.message)
 
 open fun getFiles(path: String, pathIncludes: String, includeExtension: String)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var path = path
-
-
-                    var pathIncludes = pathIncludes
-
-
-                    var includeExtension = includeExtension
+        Updates for KMP build        
+        {
+    //var path = path
+    //var pathIncludes = pathIncludes
+    //var includeExtension = includeExtension
 
         try {
             
@@ -155,7 +167,11 @@ includeExtensionBasicArrayList!!.add(includeExtension)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return files
 } catch(e: Exception)
-            {e.printStackTrace()
+            
+
+        Updates for KMP build        
+        {
+e.printStackTrace()
 System.out.println("Error: " +e +"\nMsg: " +e.message)
 }
 

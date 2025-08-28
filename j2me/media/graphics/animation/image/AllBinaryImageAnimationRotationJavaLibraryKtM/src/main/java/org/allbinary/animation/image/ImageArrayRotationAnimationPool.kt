@@ -39,7 +39,11 @@ open public class ImageArrayRotationAnimationPool : BasicArrayListResetablePool 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PoolInterface{
+: PoolInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,9 +54,11 @@ open fun getInstance()
         }
             public constructor        (cacheableInterfaceFactoryInterface: CacheableInterfaceFactoryInterface)                        
 
-                            : super(cacheableInterfaceFactoryInterface){
+                            : super(cacheableInterfaceFactoryInterface)
 
-                    var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
+        Updates for KMP build        
+        {
+var cacheableInterfaceFactoryInterface = cacheableInterfaceFactoryInterface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,9 +70,11 @@ open fun getInstance()
             
 open fun remove(key: Any)
         //nullable = true from not(false or (false and false)) = true
-: CacheableInterface{
+: CacheableInterface
 
-                    var key = key
+        Updates for KMP build        
+        {
+var key = key
 
     var cacheableInterface: CacheableInterface = super.remove(key)!!
 

@@ -42,7 +42,11 @@ open public class MirrorImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MirrorImageUtil{
+: MirrorImageUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,20 +61,22 @@ open fun getInstance()
     private val imageUtil: ImageUtil = ImageUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getImage(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: BufferedImage{
+: BufferedImage
 
-                    var bufferedImage = bufferedImage
-
-
-                    var verticle = verticle
-
-
-                    var horizontal = horizontal
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
+var verticle = verticle
+var horizontal = horizontal
 logUtil!!.put("Starting", this, "getImage")
 
     var newBufferedImage: BufferedImage = this.imageUtil!!.create(bufferedImage!!.getWidth(
@@ -131,15 +137,13 @@ g.dispose()
 
 open fun getImages(bufferedImage: BufferedImage, verticle: Boolean, horizontal: Boolean)
         //nullable = true from not(false or (false and false)) = true
-: Array<BufferedImage?>{
+: Array<BufferedImage?>
 
-                    var bufferedImage = bufferedImage
-
-
-                    var verticle = verticle
-
-
-                    var horizontal = horizontal
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
+var verticle = verticle
+var horizontal = horizontal
 
     var width: Int = bufferedImage!!.getWidth()!!
 
@@ -179,7 +183,11 @@ logUtil!!.put("numberOfFramesPerOrientation: " +numberOfFramesPerOrientation +" 
 
                         for (index in 0 until numberOfFramesPerOrientation)
 
+        
+
+        Updates for KMP build        
         {
+
     var x: Int = index *cellWidth
 
 bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeight)
@@ -191,7 +199,11 @@ bufferedImageArray[index]= bufferedImage!!.getSubimage(x, y, cellWidth, cellHeig
 
                         for (index in 0 until numberOfFramesPerOrientation)
 
-        {bufferedImageArray[index +numberOfFramesPerOrientation]= this.getImage(bufferedImageArray[index]!!, verticle, horizontal)
+        
+
+        Updates for KMP build        
+        {
+bufferedImageArray[index +numberOfFramesPerOrientation]= this.getImage(bufferedImageArray[index]!!, verticle, horizontal)
 }
 
 

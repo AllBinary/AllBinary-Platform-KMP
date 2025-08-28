@@ -40,12 +40,12 @@ open public class SimultaneousCompoundRotationAnimation : RotationAnimation {
     private var animationInterfaceArray: Array<RotationAnimation?>
 public constructor        (animationInterfaceArray: Array<RotationAnimation?>, animationBehavior: AnimationBehavior)                        
 
-                            : super(animationBehavior){
+                            : super(animationBehavior)
 
-                    var animationInterfaceArray = animationInterfaceArray
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -55,23 +55,33 @@ this.animationInterfaceArray= animationInterfaceArray
 
 override fun setFrame(frameIndex: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frameIndex = frameIndex
+
+        Updates for KMP build        
+        {
+    //var frameIndex = frameIndex
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.setFrame(frameIndex)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.setFrame(frameIndex)
 }
 
 }
 
 override fun getFrame()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -82,7 +92,11 @@ override fun getFrame()
                 @Throws(Exception::class)
             override fun getAnimationSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -91,7 +105,11 @@ override fun getFrame()
 
 override fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -100,13 +118,21 @@ override fun getSize()
 
 override fun previousFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.previousFrame()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.previousFrame()
 }
 
 }
@@ -115,53 +141,83 @@ override fun previousFrame()
                 @Throws(Exception::class)
             override fun nextFrame()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.nextFrame()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.nextFrame()
 }
 
 }
 
 override fun previousRotation()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.previousRotation()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.previousRotation()
 }
 
 }
 
 override fun nextRotation()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.nextRotation()
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.nextRotation()
 }
 
 }
 
 override fun setSequence(sequence: IntArray)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var sequence = sequence
+
+        Updates for KMP build        
+        {
+    //var sequence = sequence
 }
 
 override fun getSequence()
         //nullable = true from not(false or (false and true)) = true
-: IntArray{
+: IntArray
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -170,110 +226,136 @@ override fun getSequence()
 
 override fun paint(graphics: Graphics, x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.paint(graphics, x, y)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.paint(graphics, x, y)
 }
 
 }
 
 override fun paintThreed(graphics: Graphics, x: Int, y: Int, z: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var x = x
-
-
-                    var y = y
-
-
-                    var z = z
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var x = x
+    //var y = y
+    //var z = z
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.paintThreed(graphics, x, y, z)
 }
 
 }
 
 override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var direction = direction
+
+        Updates for KMP build        
+        {
+    //var direction = direction
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.setFrame(direction)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.setFrame(direction)
 }
 
 }
 
 override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+    //var angle = angle
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.setFrame(angle)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.setFrame(angle)
 }
 
 }
 
 override fun adjustFrame(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newAngle = newAngle
+
+        Updates for KMP build        
+        {
+    //var newAngle = newAngle
 this.adjustFrame(newAngle!!.getValue())
 }
 
 override fun adjustFrame(angle: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+    //var angle = angle
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.adjustFrame(angle)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.adjustFrame(angle)
 }
 
 }
 
 override fun getAngleInfoP()
         //nullable = true from not(false or (false and true)) = true
-: AngleInfo{
+: AngleInfo
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -283,7 +365,11 @@ override fun getAngleInfoP()
 
 open fun getAnimationInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<RotationAnimation?>{
+: Array<RotationAnimation?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -293,9 +379,11 @@ open fun getAnimationInterfaceArray()
 
 open fun setAnimationInterfaceArray(animationInterfaceArray: Array<RotationAnimation?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var animationInterfaceArray = animationInterfaceArray
+
+        Updates for KMP build        
+        {
+    //var animationInterfaceArray = animationInterfaceArray
 this.animationInterfaceArray= animationInterfaceArray
 }
 
@@ -303,16 +391,22 @@ this.animationInterfaceArray= animationInterfaceArray
                 @Throws(Exception::class)
             override fun set(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+    //var gl = gl
 
 
 
 
                         for (index in this.animationInterfaceArray!!.size  - 1  downTo 0)
 
-        {this.animationInterfaceArray[index]!!.set(gl)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterfaceArray[index]!!.set(gl)
 }
 
 }

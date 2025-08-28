@@ -23,7 +23,11 @@ open public class MathUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: MathUtil{
+: MathUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -40,15 +44,21 @@ open fun getInstance()
         
 open fun getTotalDigits(digits: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var digits = digits
+        Updates for KMP build        
+        {
+var digits = digits
 
     var total: Int = 0
 
 
         while(digits > 0)
-        {digits= digits /10
+        
+
+        Updates for KMP build        
+        {
+digits= digits /10
 total++
 }
 
@@ -62,9 +72,11 @@ total++
 
 open fun sqrt(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var value = value
+        Updates for KMP build        
+        {
+    //var value = value
 
     
                         if(value <= 1)
@@ -86,7 +98,11 @@ open fun sqrt(value: Int)
 
 
         do
-        {accumulated= result
+        
+
+        Updates for KMP build        
+        {
+accumulated= result
 result= (accumulated +(value /accumulated)) shr 1
 }
 
@@ -102,9 +118,11 @@ result= (accumulated +(value /accumulated)) shr 1
 
 open fun abs(value: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -122,9 +140,11 @@ open fun abs(value: Int)
 
 open fun abs(value: Long)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var value = value
+        Updates for KMP build        
+        {
+var value = value
 
 
 
@@ -142,12 +162,12 @@ open fun abs(value: Long)
 
 open fun min(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var value = value
-
-
-                    var value2 = value2
+        Updates for KMP build        
+        {
+var value = value
+var value2 = value2
 
 
 
@@ -165,12 +185,12 @@ open fun min(value: Int, value2: Int)
 
 open fun max(value: Int, value2: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var value = value
-
-
-                    var value2 = value2
+        Updates for KMP build        
+        {
+var value = value
+var value2 = value2
 
 
 

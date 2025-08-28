@@ -40,12 +40,12 @@ open public class TransformStoreDocumentFactory
             
 open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSession)
         //nullable =  from not(true or (false and false)) = 
-: TransformDocumentInterface{
+: TransformDocumentInterface
 
-                    var pageContext = pageContext
-
-
-                    var weblisketSession = weblisketSession
+        Updates for KMP build        
+        {
+var pageContext = pageContext
+var weblisketSession = weblisketSession
 
 
 
@@ -58,9 +58,11 @@ open fun getInstance(pageContext: PageContext, weblisketSession: WeblisketSessio
             
 open fun getInstance(searchRequest: SearchRequest)
         //nullable =  from not(true or (false and false)) = 
-: TransformDocumentInterface{
+: TransformDocumentInterface
 
-                    var searchRequest = searchRequest
+        Updates for KMP build        
+        {
+var searchRequest = searchRequest
 
 
 
@@ -72,7 +74,11 @@ open fun getInstance(searchRequest: SearchRequest)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

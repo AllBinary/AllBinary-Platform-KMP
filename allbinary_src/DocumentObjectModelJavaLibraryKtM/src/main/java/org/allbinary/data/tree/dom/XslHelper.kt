@@ -48,7 +48,11 @@ open public class XslHelper
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: XslHelper{
+: XslHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,22 +63,24 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource, streamResult: StreamResult)
         //nullable = true from not(false or (false and false)) = true
-: OutputStream{
+: OutputStream
 
-                    var xsltStreamSource = xsltStreamSource
-
-
-                    var xmlStreamSource = xmlStreamSource
-
-
-                    var streamResult = streamResult
+        Updates for KMP build        
+        {
+    //var xsltStreamSource = xsltStreamSource
+    //var xmlStreamSource = xmlStreamSource
+    //var streamResult = streamResult
 
         try {
             
@@ -90,7 +96,11 @@ transformer.transform(xmlStreamSource, streamResult)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streamResult!!.getOutputStream()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -103,18 +113,14 @@ transformer.transform(xmlStreamSource, streamResult)
             
 open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStreamSource: StreamSource, streamResult: StreamResult)
         //nullable = true from not(false or (false and false)) = true
-: OutputStream{
+: OutputStream
 
-                    var resolver = resolver
-
-
-                    var xsltStreamSource = xsltStreamSource
-
-
-                    var xmlStreamSource = xmlStreamSource
-
-
-                    var streamResult = streamResult
+        Updates for KMP build        
+        {
+    //var resolver = resolver
+    //var xsltStreamSource = xsltStreamSource
+    //var xmlStreamSource = xmlStreamSource
+    //var streamResult = streamResult
 
         try {
             
@@ -131,7 +137,11 @@ transformer.transform(xmlStreamSource, streamResult)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return streamResult!!.getOutputStream()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -144,12 +154,12 @@ transformer.transform(xmlStreamSource, streamResult)
             
 open fun translate(xsltStreamSource: StreamSource, xmlDocument: Document)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var xsltStreamSource = xsltStreamSource
-
-
-                    var xmlDocument = xmlDocument
+        Updates for KMP build        
+        {
+    //var xsltStreamSource = xsltStreamSource
+    //var xmlDocument = xmlDocument
 
         try {
             
@@ -161,7 +171,11 @@ open fun translate(xsltStreamSource: StreamSource, xmlDocument: Document)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.translate(xsltStreamSource, StreamSource(StringBufferInputStream(DomDocumentHelper.toString(xmlDocument))), StreamResult(outputStream))!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -174,12 +188,12 @@ open fun translate(xsltStreamSource: StreamSource, xmlDocument: Document)
             
 open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var xsltStreamSource = xsltStreamSource
-
-
-                    var xmlStreamSource = xmlStreamSource
+        Updates for KMP build        
+        {
+    //var xsltStreamSource = xsltStreamSource
+    //var xmlStreamSource = xmlStreamSource
 
         try {
             
@@ -191,7 +205,11 @@ open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.translate(xsltStreamSource, xmlStreamSource, StreamResult(outputStream))!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -204,15 +222,13 @@ open fun translate(xsltStreamSource: StreamSource, xmlStreamSource: StreamSource
             
 open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStreamSource: StreamSource)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var resolver = resolver
-
-
-                    var xsltStreamSource = xsltStreamSource
-
-
-                    var xmlStreamSource = xmlStreamSource
+        Updates for KMP build        
+        {
+    //var resolver = resolver
+    //var xsltStreamSource = xsltStreamSource
+    //var xmlStreamSource = xmlStreamSource
 
         try {
             
@@ -224,7 +240,11 @@ open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStr
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return this.translate(resolver, xsltStreamSource, xmlStreamSource, StreamResult(outputStream))!!.toString()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e
@@ -237,21 +257,23 @@ open fun translate(resolver: URIResolver, xsltStreamSource: StreamSource, xmlStr
             
 open fun export(outputFile: File, xsltFilePath: String, xmlDocument: Document)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var outputFile = outputFile
 
 
-                    var xsltFilePath = xsltFilePath
-
-
-                    var xmlDocument = xmlDocument
+        Updates for KMP build        
+        {
+    //var outputFile = outputFile
+    //var xsltFilePath = xsltFilePath
+    //var xmlDocument = xmlDocument
 
         try {
             outputFile!!.createNewFile()
 this.translate(StreamSource(xsltFilePath), StreamSource(StringBufferInputStream(DomDocumentHelper.toString(xmlDocument))), StreamResult(outputFile))
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw e

@@ -38,9 +38,11 @@ open public class NoBasicConstantVelocityMovement : BasicConstantVelocityMovemen
                 @Throws(Exception::class)
             override fun process(layer: AllBinaryGameLayer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var layer = layer
+
+        Updates for KMP build        
+        {
+var layer = layer
 }
 
 

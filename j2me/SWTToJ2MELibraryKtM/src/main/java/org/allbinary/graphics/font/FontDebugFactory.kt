@@ -39,7 +39,11 @@ open public class FontDebugFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FontDebugFactory{
+: FontDebugFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,12 +60,12 @@ open fun getInstance()
         
 open fun setFont(font: Font, graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var font = font
 
 
-                    var graphics = graphics
+        Updates for KMP build        
+        {
+    //var font = font
+    //var graphics = graphics
 graphics.setFont(font)
 }
 

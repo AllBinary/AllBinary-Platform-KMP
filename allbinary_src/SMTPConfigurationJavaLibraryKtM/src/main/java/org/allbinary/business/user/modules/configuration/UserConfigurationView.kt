@@ -46,9 +46,11 @@ open public class UserConfigurationView
     private var userConfigurationInterface: UserConfigurationInterface
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 this.userConfigurationInterface= UserConfiguration() as UserConfigurationInterface
 
     var childNodeList: NodeList = node.getChildNodes()!!
@@ -81,16 +83,22 @@ this.userConfigurationInterface!!.setTimeLastModified(timeLastModifiedView!!.get
 
 public constructor        (userConfigurationInterface: UserConfigurationInterface)
             : super()
-        {
+        
 
-                    var userConfigurationInterface = userConfigurationInterface
+        Updates for KMP build        
+        {
+var userConfigurationInterface = userConfigurationInterface
 this.userConfigurationInterface= userConfigurationInterface
 }
 
 
 open fun getUserConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserConfigurationInterface{
+: UserConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -102,9 +110,11 @@ open fun getUserConfigurationInterface()
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(UserConfigurationData.NAME)!!
 

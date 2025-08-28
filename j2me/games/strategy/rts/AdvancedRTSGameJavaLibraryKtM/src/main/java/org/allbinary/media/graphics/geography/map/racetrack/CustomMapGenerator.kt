@@ -40,9 +40,11 @@ open public class CustomMapGenerator : CustomMapGeneratorBase {
     private val raceTrackGeographicMap: RaceTrackGeographicMap
 
     private val geographicMapCellTypeFactory: GeographicMapCellTypeFactory
-public constructor        (raceTrackGeographicMap: RaceTrackGeographicMap){
+public constructor        (raceTrackGeographicMap: RaceTrackGeographicMap)
 
-                    var raceTrackGeographicMap = raceTrackGeographicMap
+        Updates for KMP build        
+        {
+    //var raceTrackGeographicMap = raceTrackGeographicMap
 this.raceTrackGeographicMap= raceTrackGeographicMap
 this.geographicMapCellTypeFactory= this.raceTrackGeographicMap!!.getGeographicMapCellTypeFactory()
 
@@ -67,7 +69,11 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
                 @Throws(Exception::class)
             override fun copyMapIntoCustomMap()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var mapArray: Array<IntArray?> = raceTrackGeographicMap!!.getRaceTrackData()!!.getMapArray()!!
 
 
@@ -79,13 +85,21 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
                         for (index in mapArray!!.size -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index2 in startIndex2 downTo 0)
 
-        {this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray[index]!![index2]!!)
+        
+
+        Updates for KMP build        
+        {
+this.customMapArray[index]!![index2]= this.getCustomType(index2, index, mapArray[index]!![index2]!!)
 }
 
 }
@@ -98,15 +112,13 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
                 @Throws(Exception::class)
             override fun getCustomType(column: Int, row: Int, currentType: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var column = column
-
-
-                    var row = row
-
-
-                    var currentType = currentType
+        Updates for KMP build        
+        {
+    //var column = column
+    //var row = row
+    //var currentType = currentType
 
     var emptyType: Int = geographicMapCellTypeFactory!!.getEmptyType()!!
 
@@ -149,7 +161,11 @@ this.customMapArray= Array(mapArray!!.size) { IntArray(mapArray[0]!!.length) }
 
 override fun getCustomMapArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<IntArray?>{
+: Array<IntArray?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

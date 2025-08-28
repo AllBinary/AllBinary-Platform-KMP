@@ -42,15 +42,13 @@ open public class LapWidget : BasicHud {
     private var string: String = StringUtil.getInstance()!!.EMPTY_STRING
 public constructor        (location: Int, direction: Int, basicColor: BasicColor)                        
 
-                            : super(location, direction, 15, 40, 2, basicColor){
+                            : super(location, direction, 15, 40, 2, basicColor)
 
-                    var location = location
-
-
-                    var direction = direction
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+var location = location
+var direction = direction
+var basicColor = basicColor
 
 
                             //For kotlin this is before the body of the constructor.
@@ -60,9 +58,11 @@ public constructor        (location: Int, direction: Int, basicColor: BasicColor
 
 open fun update(lapInfo: LapInfo)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var lapInfo = lapInfo
+
+        Updates for KMP build        
+        {
+var lapInfo = lapInfo
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -77,9 +77,11 @@ this.string= stringBuffer!!.toString()
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 super.paint(graphics, this.string)
 }
 

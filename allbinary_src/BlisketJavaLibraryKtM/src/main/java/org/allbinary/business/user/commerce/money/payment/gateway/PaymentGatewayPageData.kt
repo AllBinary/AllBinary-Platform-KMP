@@ -66,12 +66,12 @@ open public class PaymentGatewayPageData
     val FINISH: String
 public constructor        (location: String, paymentMethod: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var location = location
-
-
-                    var paymentMethod = paymentMethod
+var location = location
+var paymentMethod = paymentMethod
 
     var paymentMethodString: String = PaymentGatewayPageData.NAME +paymentMethod
 

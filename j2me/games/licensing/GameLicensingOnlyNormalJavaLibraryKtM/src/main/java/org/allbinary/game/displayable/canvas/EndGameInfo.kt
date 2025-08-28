@@ -43,17 +43,21 @@ open public class EndGameInfo
     private var winStr: String = this.gameOverStr
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun update(gameInfo: GameInfo, myCanvas: MyCanvas)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameInfo = gameInfo
 
 
-                    var myCanvas = myCanvas
+        Updates for KMP build        
+        {
+    //var gameInfo = gameInfo
+    //var myCanvas = myCanvas
 this.setGameOverStr(this.NORMAL_GAME_OVER)
 this.setWinStr(this.NORMAL_GAME_OVER_WIN)
 }
@@ -61,7 +65,11 @@ this.setWinStr(this.NORMAL_GAME_OVER_WIN)
 
 open fun getGameOverStr()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -71,16 +79,22 @@ open fun getGameOverStr()
 
 open fun setGameOverStr(gameOverStr: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gameOverStr = gameOverStr
+
+        Updates for KMP build        
+        {
+var gameOverStr = gameOverStr
 this.gameOverStr= gameOverStr
 }
 
 
 open fun getWinStr()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,9 +104,11 @@ open fun getWinStr()
 
 open fun setWinStr(winStr: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var winStr = winStr
+
+        Updates for KMP build        
+        {
+var winStr = winStr
 this.winStr= winStr
 }
 

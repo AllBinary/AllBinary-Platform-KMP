@@ -34,9 +34,11 @@ open public class NativeLibraryClassLoader : ClassLoader {
     private var message: String = "This Class Loader Does Not Load Classes - Only For Loading and Unloading of Native Libraries"
 public constructor        (parent: ClassLoader)                        
 
-                            : super(parent){
+                            : super(parent)
 
-                    var parent = parent
+        Updates for KMP build        
+        {
+var parent = parent
 
 
                             //For kotlin this is before the body of the constructor.

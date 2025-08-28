@@ -40,12 +40,12 @@ open public class BasicErrorNodeUtil
             
 open fun get(document: Document, errorText: String)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
-
-
-                    var errorText = errorText
+        Updates for KMP build        
+        {
+var document = document
+var errorText = errorText
 
         try {
             
@@ -58,7 +58,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstan
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return node
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
 
 
                             throw Exception("Error Node Creation Failure")
@@ -70,7 +74,11 @@ node.appendChild(ModDomHelper.createNameValueNodes(document, ErrorData.getInstan
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

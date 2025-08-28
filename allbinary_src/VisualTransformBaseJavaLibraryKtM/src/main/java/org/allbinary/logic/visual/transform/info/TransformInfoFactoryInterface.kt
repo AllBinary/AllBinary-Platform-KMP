@@ -36,6 +36,9 @@ open fun getInstance(databaseHashMap: HashMap<Any, Any>, propertiesHashMap: Hash
         //nullable =  from not(true or (false and false)) = 
 : TransformInfoInterface
 
+        Updates for KMP build        
+        
+
 }
                 
             

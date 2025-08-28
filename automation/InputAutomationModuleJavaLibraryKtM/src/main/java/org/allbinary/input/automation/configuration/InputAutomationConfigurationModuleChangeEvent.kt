@@ -35,16 +35,22 @@ open public class InputAutomationConfigurationModuleChangeEvent
     private var inputAutomationModuleConfiguration: InputAutomationModuleConfiguration
 public constructor        (inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
             : super()
-        {
+        
 
-                    var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
+        Updates for KMP build        
+        {
+var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 this.setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration)
 }
 
 
 open fun getInputAutomationModuleConfiguration()
         //nullable = true from not(false or (false and true)) = true
-: InputAutomationModuleConfiguration{
+: InputAutomationModuleConfiguration
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -54,9 +60,11 @@ open fun getInputAutomationModuleConfiguration()
 
 open fun setInputAutomationModuleConfiguration(inputAutomationModuleConfiguration: InputAutomationModuleConfiguration)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
+
+        Updates for KMP build        
+        {
+var inputAutomationModuleConfiguration = inputAutomationModuleConfiguration
 this.inputAutomationModuleConfiguration= inputAutomationModuleConfiguration
 }
 

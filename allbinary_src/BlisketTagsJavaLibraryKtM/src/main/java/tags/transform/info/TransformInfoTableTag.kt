@@ -30,7 +30,11 @@ import taghelpers.transform.info.TransformInfoHelperFactory
 
 open public class TransformInfoTableTag : TableTag {
         
-public constructor        (){this.setTagHelperFactory(TransformInfoHelperFactory())
+public constructor        ()
+
+        Updates for KMP build        
+        {
+this.setTagHelperFactory(TransformInfoHelperFactory())
 }
 
 

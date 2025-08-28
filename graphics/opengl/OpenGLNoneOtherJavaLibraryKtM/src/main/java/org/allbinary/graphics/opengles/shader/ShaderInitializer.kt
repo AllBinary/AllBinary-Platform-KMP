@@ -39,7 +39,11 @@ open public class ShaderInitializer
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ShaderInitializer{
+: ShaderInitializer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -58,15 +62,13 @@ open fun getInstance()
 
 open fun init(gl: GL10, shader: Array<Shader?>, attributeArray: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var gl = gl
-
-
-                    var shader = shader
-
-
-                    var attributeArray = attributeArray
+        Updates for KMP build        
+        {
+    //var gl = gl
+    //var shader = shader
+    //var attributeArray = attributeArray
 
 
 

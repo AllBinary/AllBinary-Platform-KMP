@@ -39,11 +39,17 @@ open fun get(name: String, propertiesHashMap: HashMap<Any, Any>, pageContext: Pa
         //nullable = true from not(false or (false and false)) = true
 : TransformInfoInterface
 
+        Updates for KMP build        
+        
+
                 @Throws(Exception::class)
             
 open fun getObjectConfigs(storeName: Object)
         //nullable = true from not(false or (false and false)) = true
 : Vector
+
+        Updates for KMP build        
+        
 
                 @Throws(Exception::class)
             
@@ -51,17 +57,29 @@ open fun getNames(storeName: String)
         //nullable = true from not(false or (false and false)) = true
 : Vector
 
+        Updates for KMP build        
+        
+
 open fun delete(name: String)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 open fun insert(values: Vector)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun update(updatedValues: HashMap<Any, Any>)
         //nullable = true from not(false or (false and false)) = true
 
+
+        Updates for KMP build        
+        
 
 }
                 

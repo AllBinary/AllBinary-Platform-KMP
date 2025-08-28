@@ -38,7 +38,11 @@ open public class StoreRoleFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: StoreRoleFactory{
+: StoreRoleFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,7 +59,11 @@ open fun getInstance()
     private val wholesaleRoles: Vector<Any> = Vector<Any>()
 private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var basicUserRoleFactory: BasicUserRoleFactory = BasicUserRoleFactory.getInstance()!!
 
 roles.add(basicUserRoleFactory!!.CUSTOMER)
@@ -68,7 +76,11 @@ wholesaleRoles!!.add(basicUserRoleFactory!!.WHOLESALECUSTOMER)
 
 open fun getRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -78,7 +90,11 @@ open fun getRoles()
 
 open fun getSubscriberRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -88,7 +104,11 @@ open fun getSubscriberRoles()
 
 open fun getWholesaleRoles()
         //nullable = true from not(false or (false and true)) = true
-: Vector<Any>{
+: Vector<Any>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

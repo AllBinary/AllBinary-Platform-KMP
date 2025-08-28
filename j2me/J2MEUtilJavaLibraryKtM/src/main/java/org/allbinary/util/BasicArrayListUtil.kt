@@ -43,7 +43,11 @@ open public class BasicArrayListUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: BasicArrayListUtil{
+: BasicArrayListUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +57,11 @@ open fun getInstance()
 
 open fun main(args: Array<String?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var args = args
+
+        Updates for KMP build        
+        {
+var args = args
 
     var commonPhoneStrings: CommonPhoneStrings = CommonPhoneStrings.getInstance()!!
 
@@ -89,9 +95,11 @@ System.out.println(list)
 
 open fun getRandom(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Any{
+: Any
 
-                    var list = list
+        Updates for KMP build        
+        {
+var list = list
 
     var i_random: Int = this.getRandomIndex(list)!!
 
@@ -105,9 +113,11 @@ open fun getRandom(list: BasicArrayList)
 
 open fun getRandomIndex(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var list = list
+        Updates for KMP build        
+        {
+var list = list
 
 
 
@@ -118,9 +128,11 @@ open fun getRandomIndex(list: BasicArrayList)
 
 open fun reverse(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+    //var list = list
 
     var lastMinusOneIndex: Int = list.size() -2
 
@@ -139,7 +151,11 @@ open fun reverse(list: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {secondSwapIndex= lastMinusOneIndex -index
+        
+
+        Updates for KMP build        
+        {
+secondSwapIndex= lastMinusOneIndex -index
 temp= list.remove(index)
 list.add(index, list.remove(secondSwapIndex))
 list.add(secondSwapIndex +1, temp)
@@ -150,9 +166,11 @@ list.add(secondSwapIndex +1, temp)
 
 open fun log(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var list = list
+        Updates for KMP build        
+        {
+var list = list
 
     var size: Int = list.size()!!
 
@@ -167,7 +185,11 @@ stringBuffer!!.append(size)
 
                         for (index in size -1 downTo 0)
 
+        
+
+        Updates for KMP build        
         {
+
     var usedList: BasicArrayList = list.objectArray[index]!! as BasicArrayList
 
 stringBuffer!!.append(" s: ")
@@ -184,7 +206,11 @@ stringBuffer!!.append(usedList!!.size())
 
 open fun getImmutableInstance()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

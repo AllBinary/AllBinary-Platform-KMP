@@ -39,12 +39,12 @@ open public class AllAnalogControllerVisitor : AnalogControllerVisitor {
             }            
         override fun process(allbinaryLayerManager: AllBinaryLayerManager, analogLocationInputProcessor: AnalogLocationInputProcessor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var allbinaryLayerManager = allbinaryLayerManager
 
 
-                    var analogLocationInputProcessor = analogLocationInputProcessor
+        Updates for KMP build        
+        {
+    //var allbinaryLayerManager = allbinaryLayerManager
+    //var analogLocationInputProcessor = analogLocationInputProcessor
 
     var analogLocationInputList: BasicArrayList = AnalogLocationInputFactory.getInstance()!!.getList()!!
 
@@ -57,7 +57,11 @@ open public class AllAnalogControllerVisitor : AnalogControllerVisitor {
 
                         for (index in analogLocationInputList!!.size() -1 downTo 0)
 
-        {analogLocationInput= analogLocationInputList!!.get(index) as AnalogLocationInput
+        
+
+        Updates for KMP build        
+        {
+analogLocationInput= analogLocationInputList!!.get(index) as AnalogLocationInput
 analogLocationInputProcessor!!.process(allbinaryLayerManager, analogLocationInput)
 }
 

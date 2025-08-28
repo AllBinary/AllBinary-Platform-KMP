@@ -35,19 +35,31 @@ open public class GenericInputAutomationAction
         
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun test()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getInputRobotInterfaceArray()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputRobotInterface?>{
+: Array<InputRobotInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

@@ -46,7 +46,11 @@ open public class AbFileUploadFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbFileUploadFactory{
+: AbFileUploadFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,16 +63,22 @@ open fun getInstance()
     val logUtil: LogUtil = LogUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-: List{
+: List
 
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
 
         try {
             
@@ -82,7 +92,11 @@ open fun getFileItemStreamList(httpServletRequest: HttpServletRequest)
 
 
         while(iterator.hasNext())
+        
+
+        Updates for KMP build        
         {
+
     var fileItemStream: FileItemStream = iterator.next()!!
 
 HttpFileUploadUtil.log(fileItemStream)
@@ -98,7 +112,11 @@ items.add(fileItem)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return items
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.HTTPERROR))
                         
@@ -123,9 +141,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "get()", e)
             
 open fun getFileItemList(httpServletRequest: HttpServletRequest)
         //nullable = true from not(false or (false and false)) = true
-: List{
+: List
 
-                    var httpServletRequest = httpServletRequest
+        Updates for KMP build        
+        {
+var httpServletRequest = httpServletRequest
 
         try {
             
@@ -137,7 +157,11 @@ open fun getFileItemList(httpServletRequest: HttpServletRequest)
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return abFileUpload!!.parseRequest(httpServletRequest)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 

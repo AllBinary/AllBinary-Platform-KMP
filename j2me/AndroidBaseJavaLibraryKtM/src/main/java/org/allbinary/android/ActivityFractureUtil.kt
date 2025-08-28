@@ -41,9 +41,11 @@ open public class ActivityFractureUtil
             
 open fun process(activity: Activity)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var activity = activity
+
+        Updates for KMP build        
+        {
+var activity = activity
 }
 
 

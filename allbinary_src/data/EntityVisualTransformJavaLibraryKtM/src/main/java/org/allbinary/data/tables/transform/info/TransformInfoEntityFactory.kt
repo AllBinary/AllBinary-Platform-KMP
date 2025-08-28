@@ -40,15 +40,13 @@ open public class TransformInfoEntityFactory
             
 open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: TransformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface: TransformInfoObjectConfigAndManipulatorFactoryBase, transformInfoFactoryInterface: TransformInfoFactoryInterface)
         //nullable =  from not(true or (false and false)) = 
-: TransformInfoEntity{
+: TransformInfoEntity
 
-                    var transformInfoObjectConfigGeneratorFactoryInterface = transformInfoObjectConfigGeneratorFactoryInterface
-
-
-                    var transformInfoObjectConfigAndManipulatorFactoryInterface = transformInfoObjectConfigAndManipulatorFactoryInterface
-
-
-                    var transformInfoFactoryInterface = transformInfoFactoryInterface
+        Updates for KMP build        
+        {
+var transformInfoObjectConfigGeneratorFactoryInterface = transformInfoObjectConfigGeneratorFactoryInterface
+var transformInfoObjectConfigAndManipulatorFactoryInterface = transformInfoObjectConfigAndManipulatorFactoryInterface
+var transformInfoFactoryInterface = transformInfoFactoryInterface
 
     var logUtil: LogUtil = LogUtil.getInstance()!!
 
@@ -60,7 +58,11 @@ open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: Transfo
                         //if statement needs to be on the same line and ternary does not work the same way.
                         return TransformInfoEntity(transformInfoObjectConfigGeneratorFactoryInterface, transformInfoObjectConfigAndManipulatorFactoryInterface, transformInfoFactoryInterface)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -85,7 +87,11 @@ open fun getInstance(transformInfoObjectConfigGeneratorFactoryInterface: Transfo
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

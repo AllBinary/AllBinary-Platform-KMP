@@ -34,9 +34,15 @@ open fun getDisplayInBrowserContraints()
         //nullable = true from not(false or (false and true)) = true
 : DisplayInBrowserContraintsInterface
 
+        Updates for KMP build        
+        
+
 open fun getTwoDimensionContraints()
         //nullable = true from not(false or (false and true)) = true
 : TwoDimensionalConstraintInterface
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -47,9 +47,11 @@ open public class BasicWeblisketSession
     private var pageContext: PageContext
 public constructor        (pageContext: PageContext)
             : super()
-        {
+        
 
-                    var pageContext = pageContext
+        Updates for KMP build        
+        {
+var pageContext = pageContext
 this.pageContext= pageContext
 
     var request: HttpServletRequest = pageContext!!.getRequest() as HttpServletRequest
@@ -60,16 +62,22 @@ this.session= request.getSession(true)
 
 open fun setRole(aRole: BasicUserRole)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var aRole = aRole
+
+        Updates for KMP build        
+        {
+var aRole = aRole
 session.setAttribute(BasicUserRoleData.NAME.toString(), aRole)
 }
 
 
 open fun getRole()
         //nullable = true from not(false or (false and true)) = true
-: BasicUserRole{
+: BasicUserRole
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,67 +87,87 @@ open fun getRole()
 
 open fun setPassword(password: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var password = password
+
+        Updates for KMP build        
+        {
+var password = password
 session.setAttribute(UserData.PASSWORD, password)
 }
 
 
 open fun setUserName(userName: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userName = userName
+
+        Updates for KMP build        
+        {
+var userName = userName
 session.setAttribute(UserData.USERNAME, userName)
 }
 
 
 open fun setPaymentMethod(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 session.setAttribute(PaymentGatewayData.NAME.toString(), value)
 }
 
 
 open fun setAuthenticated()
         //nullable = true from not(false or (false and true)) = true
-{session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
+
+
+        Updates for KMP build        
+        {
+session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.TRUE_STRING)
 }
 
 
 open fun setAttempts(value: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 session.setAttribute(WeblisketSessionData.ATTEMPTS, value)
 }
 
 
 open fun setTimeout(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.session.setAttribute(WeblisketSessionData.TIMEOUT, value)
 }
 
 
 open fun setStoreName(value: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 this.session.setAttribute(StoreFrontData.getInstance()!!.NAME, value)
 }
 
 
 open fun getWebAppPath()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -149,7 +177,11 @@ open fun getWebAppPath()
 
 open fun getUserName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -159,7 +191,11 @@ open fun getUserName()
 
 open fun getPassword()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -169,7 +205,11 @@ open fun getPassword()
 
 open fun getPaymentMethod()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -179,7 +219,11 @@ open fun getPaymentMethod()
 
 open fun getAuthentication()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -189,7 +233,11 @@ open fun getAuthentication()
 
 open fun getAttempts()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -199,7 +247,11 @@ open fun getAttempts()
 
 open fun getTimeout()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -209,7 +261,11 @@ open fun getTimeout()
 
 open fun getStoreName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -219,16 +275,22 @@ open fun getStoreName()
 
 open fun setAuthenticated(value: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var value = value
+
+        Updates for KMP build        
+        {
+var value = value
 session.setAttribute(WeblisketSessionData.AUTHENTICATED, BooleanFactory.getInstance()!!.FALSE_STRING)
 }
 
 
 open fun clear()
         //nullable = true from not(false or (false and true)) = true
-{this.session.removeAttribute(WeblisketSessionData.AUTHENTICATED)
+
+
+        Updates for KMP build        
+        {
+this.session.removeAttribute(WeblisketSessionData.AUTHENTICATED)
 this.session.removeAttribute(WeblisketSessionData.TIMEOUT)
 this.session.removeAttribute(BasicUserRoleData.NAME.toString())
 this.session.removeAttribute(UserData.USERNAME)
@@ -237,7 +299,11 @@ this.session.removeAttribute(UserData.USERNAME)
 
 open fun getCreationTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -247,7 +313,11 @@ open fun getCreationTime()
 
 open fun getLastAccessedTime()
         //nullable = true from not(false or (false and true)) = true
-: Long{
+: Long
+
+        Updates for KMP build        
+        {
+
     var lastAccessedTime: Long = session.getLastAccessedTime()!!
 
 

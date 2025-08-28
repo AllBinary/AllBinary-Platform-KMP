@@ -22,7 +22,11 @@ open public class AndroidAPI9KeyFactory : AndroidKeyFactory {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AndroidAPI9KeyFactory{
+: AndroidAPI9KeyFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -31,7 +35,11 @@ open fun getInstance()
 
 
         }
-            protected constructor        (){KEYCODE_BUTTON_L1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L1, "BUTTON L1")
+            protected constructor        ()
+
+        Updates for KMP build        
+        {
+KEYCODE_BUTTON_L1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_L1, "BUTTON L1")
 KEYCODE_BUTTON_R1= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_R1, "BUTTON R1")
 KEYCODE_BUTTON_THUMBR= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBR, "BUTTON THUMBR")
 KEYCODE_BUTTON_THUMBL= AndroidGameKey(KeyEvent.KEYCODE_BUTTON_THUMBL, "BUTTON THUMBL")

@@ -51,7 +51,11 @@ open public class InputAutomationRobotBundleActivator
     private var serviceFactory: ServiceFactory
 public constructor        ()
             : super()
-        {this.init()
+        
+
+        Updates for KMP build        
+        {
+this.init()
 }
 
 
@@ -59,7 +63,11 @@ public constructor        ()
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -70,9 +78,11 @@ open fun init()
             
 open fun registerAsService(bundleContext: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var bundleContext = bundleContext
+
+        Updates for KMP build        
+        {
+var bundleContext = bundleContext
 OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAutomationRobotServiceInterface::class.toString()!!)
 }
 
@@ -81,9 +91,11 @@ OSGIActivatorUtil.registerAsService(bundleContext, getServiceFactory(), InputAut
             
 open fun getInputAutomationRobotChangeListener(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-: InputAutomationRobotChangeListener{
+: InputAutomationRobotChangeListener
 
-                    var context = context
+        Updates for KMP build        
+        {
+var context = context
 
     var serviceReference: ServiceReference = context.getServiceReference(InputAutomationRobotChangeListener::class.toString()!!)!!
 
@@ -127,9 +139,11 @@ open fun getInputAutomationRobotChangeListener(context: BundleContext)
 
 open fun addRobots(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var context = context
+
+        Updates for KMP build        
+        {
+var context = context
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "addRobots")
@@ -149,7 +163,11 @@ open fun addRobots(context: BundleContext)
 
                         for (index in 0 until this.getInputRobotInterface()!!.length)
 
+        
+
+        Updates for KMP build        
         {
+
     var inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent = InputAutomationRobotUtil.getChangeEvent(this.getInputRobotInterface()[index]!!)!!
 
 inputAutomationRobotChangeListener!!.onAdd(inputAutomationRobotChangeEvent)
@@ -159,7 +177,11 @@ inputAutomationRobotChangeListener!!.onAdd(inputAutomationRobotChangeEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "addModules")
 }
 
 }
@@ -167,9 +189,11 @@ inputAutomationRobotChangeListener!!.onAdd(inputAutomationRobotChangeEvent)
 
 open fun removeRobots(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var context = context
+
+        Updates for KMP build        
+        {
+var context = context
 
         try {
             logUtil!!.put(this.commonStrings!!.START, this, "removeRobots")
@@ -189,7 +213,11 @@ open fun removeRobots(context: BundleContext)
 
                         for (index in 0 until this.getInputRobotInterface()!!.length)
 
+        
+
+        Updates for KMP build        
         {
+
     var inputAutomationRobotChangeEvent: InputAutomationRobotChangeEvent = InputAutomationRobotUtil.getChangeEvent(this.getInputRobotInterface()[index]!!)!!
 
 inputAutomationRobotChangeListener!!.onRemove(inputAutomationRobotChangeEvent)
@@ -199,7 +227,11 @@ inputAutomationRobotChangeListener!!.onRemove(inputAutomationRobotChangeEvent)
                                     }
                                 
 } catch(e: Exception)
-            {logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeRobots")
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.EXCEPTION, this, "removeRobots")
 }
 
 }
@@ -209,9 +241,11 @@ inputAutomationRobotChangeListener!!.onRemove(inputAutomationRobotChangeEvent)
             
 open fun start(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var context = context
+
+        Updates for KMP build        
+        {
+var context = context
 logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.START)
 this.addRobots(context)
 this.registerAsService(context)
@@ -222,9 +256,11 @@ this.registerAsService(context)
             
 open fun stop(context: BundleContext)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var context = context
+
+        Updates for KMP build        
+        {
+var context = context
 logUtil!!.put("Stop", this, this.commonStrings!!.START)
 this.removeRobots(context)
 }
@@ -232,7 +268,11 @@ this.removeRobots(context)
 
 open fun getServiceFactory()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -242,16 +282,22 @@ open fun getServiceFactory()
 
 open fun setServiceFactory(serviceObject: ServiceFactory)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var serviceObject = serviceObject
+
+        Updates for KMP build        
+        {
+var serviceObject = serviceObject
 this.serviceFactory= serviceObject
 }
 
 
 open fun getInputRobotInterface()
         //nullable = true from not(false or (false and true)) = true
-: Array<InputRobotInterface?>{
+: Array<InputRobotInterface?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -261,9 +307,11 @@ open fun getInputRobotInterface()
 
 open fun setInputRobotInterface(inputRobotInterface: Array<InputRobotInterface?>)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var inputRobotInterface = inputRobotInterface
+
+        Updates for KMP build        
+        {
+var inputRobotInterface = inputRobotInterface
 this.inputRobotInterface= inputRobotInterface
 }
 

@@ -33,13 +33,22 @@ open fun getCurrentScrollSelectionForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm
 
+        Updates for KMP build        
+        
+
 open fun setCurrentScrollSelectionForm(currentScrollSelectionForm: ScrollSelectionForm)
         //nullable = true from not(false or (false and false)) = true
 
 
+        Updates for KMP build        
+        
+
 open fun getBuildingScrollSelectionForm()
         //nullable = true from not(false or (false and true)) = true
 : ScrollSelectionForm
+
+        Updates for KMP build        
+        
 
 }
                 

@@ -36,15 +36,27 @@ open public class NoPlayer : BasicPlayer {
     val NO_PLAYER: NoPlayer = NoPlayer()
 
         }
-            public constructor        (){}
+            public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 override fun getContentType()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -53,9 +65,11 @@ override fun getContentType()
 
 override fun getControl(controlType: String)
         //nullable = true from not(false or (false and false)) = true
-: Control{
+: Control
 
-                    var controlType = controlType
+        Updates for KMP build        
+        {
+var controlType = controlType
 
 
 
@@ -65,7 +79,11 @@ override fun getControl(controlType: String)
 
 override fun getControls()
         //nullable = true from not(false or (false and true)) = true
-: Array<Control?>{
+: Array<Control?>
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

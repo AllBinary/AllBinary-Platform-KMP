@@ -41,7 +41,11 @@ open public class NoMagneticFieldSensor : AllBinaryMagneticFieldSensor
             
 open fun getOrientation()
         //nullable = true from not(false or (false and true)) = true
-: Orientation{
+: Orientation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -50,7 +54,11 @@ open fun getOrientation()
 
 override fun onSensorChange()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

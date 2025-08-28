@@ -43,7 +43,11 @@ open public class ChoiceGroupImageUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ChoiceGroupImageUtil{
+: ChoiceGroupImageUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,7 +64,11 @@ open fun getInstance()
         
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var features: Features = Features.getInstance()!!
 
 
@@ -87,7 +95,11 @@ open fun init()
 
                         for (index in 0 until size)
 
-        {imageArray[index]= preResourceImageUtil!!.encapsulate(imageArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+imageArray[index]= preResourceImageUtil!!.encapsulate(imageArray[index]!!)
 }
 
 choiceGroupFactory!!.init(imageArray)
@@ -99,9 +111,11 @@ choiceGroupFactory!!.init(imageArray)
 
 open fun update(gl: GL)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gl = gl
+
+        Updates for KMP build        
+        {
+var gl = gl
 
     var features: Features = Features.getInstance()!!
 
@@ -129,7 +143,11 @@ open fun update(gl: GL)
 
                         for (index in 0 until size)
 
-        {preResourceImageUtil!!.update(gl, imageArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+preResourceImageUtil!!.update(gl, imageArray[index]!!)
 }
 
 
@@ -141,9 +159,11 @@ choiceGroupFactory!!.init(imageArray)
 
 open fun update(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 
     var features: Features = Features.getInstance()!!
 
@@ -171,7 +191,11 @@ open fun update(graphics: Graphics)
 
                         for (index in 0 until size)
 
-        {preResourceImageUtil!!.update(graphics, imageArray[index]!!)
+        
+
+        Updates for KMP build        
+        {
+preResourceImageUtil!!.update(graphics, imageArray[index]!!)
 }
 
 

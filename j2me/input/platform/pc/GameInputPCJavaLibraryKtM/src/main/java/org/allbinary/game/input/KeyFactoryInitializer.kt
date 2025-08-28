@@ -40,7 +40,11 @@ open public class KeyFactoryInitializer : Init {
     val logUtil: LogUtil = LogUtil.getInstance()!!
 override fun init()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.INIT)
 SmallIntegerSingletonFactory.getInstance()!!.init(0x2D0, 6)
 }
 

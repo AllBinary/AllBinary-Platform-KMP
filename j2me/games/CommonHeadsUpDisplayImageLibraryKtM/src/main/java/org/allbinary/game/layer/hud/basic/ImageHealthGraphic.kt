@@ -38,18 +38,14 @@ open public class ImageHealthGraphic : HealthGraphic {
     private var image: Array<Image?>
 public constructor        (animationInterface: AnimationInterface, healthInterface: HealthInterface, location: Int, direction: Int)                        
 
-                            : super(animationInterface, healthInterface, location, direction){
+                            : super(animationInterface, healthInterface, location, direction)
 
-                    var animationInterface = animationInterface
-
-
-                    var healthInterface = healthInterface
-
-
-                    var location = location
-
-
-                    var direction = direction
+        Updates for KMP build        
+        {
+var animationInterface = animationInterface
+var healthInterface = healthInterface
+var location = location
+var direction = direction
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +60,11 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
                         for (numOfHealth in 0 until max)
 
-        {image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
+        
+
+        Updates for KMP build        
+        {
+image[numOfHealth]= imageCacheFactory!!.get(this, numOfHealth +1 *10, 10)
 }
 
 
@@ -73,13 +73,21 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
                         for (numOfHealth in 0 until max)
 
+        
+
+        Updates for KMP build        
         {
+
 
 
 
                         for (index in 0 until numOfHealth)
 
-        {this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth *10, 0)
+        
+
+        Updates for KMP build        
+        {
+this.animationInterface!!.paint(image[numOfHealth]!!.getGraphics(), numOfHealth *10, 0)
 }
 
 }
@@ -89,9 +97,11 @@ image= arrayOfNulls(this.healthInterface!!.getMaxHealth())
 
 open fun paint(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+var graphics = graphics
 graphics.drawImage(this.image[max]!!, x, y, Anchor.TOP_LEFT)
 }
 

@@ -30,7 +30,11 @@ open public class ToastUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: ToastUtil{
+: ToastUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,18 +53,14 @@ open fun getInstance()
 
 open fun makeToast(view: View, context: Context, message: String, time: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var view = view
 
 
-                    var context = context
-
-
-                    var message = message
-
-
-                    var time = time
+        Updates for KMP build        
+        {
+    //var view = view
+    //var context = context
+var message = message
+    //var time = time
 
 open class MakeToast
             : Object
@@ -71,19 +71,29 @@ open class MakeToast
     val string: String
 public constructor        (string: String)
             : super()
-        {
+        
 
-                    var string = string
+        Updates for KMP build        
+        {
+var string = string
 this.string= string
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             Toast.makeText(context, string, time)!!.show()
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)

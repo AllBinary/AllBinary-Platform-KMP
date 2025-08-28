@@ -39,7 +39,11 @@ open public class NullGameCanvas : AllBinaryGameCanvas {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: NullGameCanvas{
+: NullGameCanvas
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,9 +53,11 @@ open fun getInstance()
 
 open fun getInstance(gameLayerManager: AllBinaryGameLayerManager)
         //nullable =  from not(true or (false and false)) = 
-: NullGameCanvas{
+: NullGameCanvas
 
-                    var gameLayerManager = gameLayerManager
+        Updates for KMP build        
+        {
+    //var gameLayerManager = gameLayerManager
 
     var nullGameCanvas: NullGameCanvas = NullGameCanvas(gameLayerManager)
 
@@ -72,9 +78,11 @@ nullGameCanvas!!.setTitle(NO_GAME)
         }
             protected constructor        (gameLayerManager: AllBinaryGameLayerManager)                        
 
-                            : super(gameLayerManager){
+                            : super(gameLayerManager)
 
-                    var gameLayerManager = gameLayerManager
+        Updates for KMP build        
+        {
+    //var gameLayerManager = gameLayerManager
 
 
                             //For kotlin this is before the body of the constructor.
@@ -82,13 +90,21 @@ nullGameCanvas!!.setTitle(NO_GAME)
 super.setWait(1200)
 }
 
-private constructor        (){super.setWait(1200)
+private constructor        ()
+
+        Updates for KMP build        
+        {
+super.setWait(1200)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isGameOver()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,16 +115,22 @@ override fun isGameOver()
     private var running: Boolean = true
 override fun setRunning(running: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var running = running
+
+        Updates for KMP build        
+        {
+var running = running
 this.running= running
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun isRunning()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -118,20 +140,30 @@ override fun isRunning()
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun pause()
         //nullable = true from not(false or (false and true)) = true
-{this.setPaused(true)
+
+
+        Updates for KMP build        
+        {
+this.setPaused(true)
 }
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 override fun unPause()
         //nullable = true from not(false or (false and true)) = true
-{this.setPaused(false)
+
+
+        Updates for KMP build        
+        {
+this.setPaused(false)
 }
 
 override fun initCommands(cmdListener: CommandListener)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var cmdListener = cmdListener
+
+        Updates for KMP build        
+        {
+    //var cmdListener = cmdListener
 this.removeAllCommands()
 this.setCommandListener(cmdListener)
 }
@@ -140,33 +172,49 @@ this.setCommandListener(cmdListener)
                 @Throws(Exception::class)
             override fun buildGame(isProgress: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var isProgress = isProgress
+
+        Updates for KMP build        
+        {
+    //var isProgress = isProgress
 }
 
 override fun draw(graphics: Graphics)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var graphics = graphics
+
+        Updates for KMP build        
+        {
+    //var graphics = graphics
 }
 
 override fun run()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             logUtil!!.put(commonStrings!!.START_RUNNABLE, this, commonStrings!!.RUN)
 logUtil!!.put(commonStrings!!.END_RUNNABLE, this, commonStrings!!.RUN)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.RUN, e)
 }
 
 }
 
 override fun getType()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

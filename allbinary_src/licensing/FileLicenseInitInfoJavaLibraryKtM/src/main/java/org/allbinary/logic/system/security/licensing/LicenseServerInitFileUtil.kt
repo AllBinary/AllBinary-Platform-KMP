@@ -46,7 +46,11 @@ open public class LicenseServerInitFileUtil
             
 open fun nullOutputStream()
         //nullable = true from not(false or (false and true)) = true
-: OutputStream{
+: OutputStream
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -56,27 +60,31 @@ open fun nullOutputStream()
                 @Throws(IOException::class)
             override fun write(b: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var b = b
+
+        Updates for KMP build        
+        {
+var b = b
 }
 
                 @Throws(IOException::class)
             override fun write(b: ByteArray, off: Int, len: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var b = b
 
 
-                    var off = off
-
-
-                    var len = len
+        Updates for KMP build        
+        {
+var b = b
+var off = off
+var len = len
 }
 override fun close()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
                                 }
                             
@@ -98,7 +106,11 @@ override fun close()
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
         try {
             
     var filePath: String = LicenseInitInfoUtil.getInstance()!!.INITFILENAME
@@ -119,7 +131,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
                         }
                             
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
 }
@@ -127,7 +143,11 @@ LicenseInitInfoUtil.getInstance()!!.setFilePath(StringUtil.getInstance()!!.EMPTY
 
 open fun write()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var fileOutputStream: OutputStream = NULL_OUTPUT_STREAM
 
 
@@ -154,7 +174,11 @@ fileOutputStream= fileStreamFactory!!.getFileOutputStreamInstance(StringUtil.get
 
 
         while(true)
-        {b= inputStream!!.read()
+        
+
+        Updates for KMP build        
+        {
+b= inputStream!!.read()
 
     
                         if(b ==  -1)
@@ -173,7 +197,11 @@ index++
 logUtil!!.put("Wrote Bytes: " +index, this, commonStrings!!.INIT)
 fileOutputStream!!.flush()
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.INIT, e)
 }
 
          finally {

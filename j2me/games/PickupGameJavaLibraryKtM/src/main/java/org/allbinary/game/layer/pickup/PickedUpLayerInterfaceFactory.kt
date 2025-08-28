@@ -41,15 +41,13 @@ open public class PickedUpLayerInterfaceFactory
     private val animationInterface: Animation
 protected constructor        (pickeUpLayerType: PickedUpLayerType, iconLayer: IconLayer, animationInterface: Animation)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var pickeUpLayerType = pickeUpLayerType
-
-
-                    var iconLayer = iconLayer
-
-
-                    var animationInterface = animationInterface
+var pickeUpLayerType = pickeUpLayerType
+var iconLayer = iconLayer
+var animationInterface = animationInterface
 this.pickedUpLayerType= pickeUpLayerType
 this.animationInterface= animationInterface
 this.iconLayer= iconLayer
@@ -57,7 +55,11 @@ this.iconLayer= iconLayer
 
 override fun getIconLayer()
         //nullable = true from not(false or (false and true)) = true
-: AllBinaryLayer{
+: AllBinaryLayer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -66,7 +68,11 @@ override fun getIconLayer()
 
 override fun getAnimationInterface()
         //nullable = true from not(false or (false and true)) = true
-: Animation{
+: Animation
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,7 +81,11 @@ override fun getAnimationInterface()
 
 override fun getPickedUpLayerType()
         //nullable = true from not(false or (false and true)) = true
-: PickedUpLayerType{
+: PickedUpLayerType
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

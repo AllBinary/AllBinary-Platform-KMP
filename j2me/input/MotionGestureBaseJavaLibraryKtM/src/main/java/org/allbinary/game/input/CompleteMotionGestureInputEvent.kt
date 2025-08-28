@@ -49,12 +49,12 @@ open public class CompleteMotionGestureInputEvent : AllBinaryEventObject
     private var motionGestureInput: MotionGestureInput = TouchMotionGestureFactory.getInstance()!!.NO_MOTION
 public constructor        (name: String, motionGestureInput: MotionGestureInput)                        
 
-                            : super(motionGestureInput){
+                            : super(motionGestureInput)
 
-                    var name = name
-
-
-                    var motionGestureInput = motionGestureInput
+        Updates for KMP build        
+        {
+var name = name
+var motionGestureInput = motionGestureInput
 
 
                             //For kotlin this is before the body of the constructor.
@@ -64,7 +64,11 @@ this.setName(name)
         try {
             this.setMotionGestureInput(motionGestureInput)
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "InputToGameKeyEventAction", e)
@@ -75,15 +79,21 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "InputToGameKeyEventAction", e)
 
 open fun setName(name: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var name = name
+
+        Updates for KMP build        
+        {
+var name = name
 this.name= name
 }
 
 override fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,16 +103,22 @@ override fun getName()
 
 open fun setMotionGestureInput(motionGestureInput: MotionGestureInput)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var motionGestureInput = motionGestureInput
+
+        Updates for KMP build        
+        {
+var motionGestureInput = motionGestureInput
 this.motionGestureInput= motionGestureInput
 }
 
 
 open fun getMotionGestureInput()
         //nullable = true from not(false or (false and true)) = true
-: MotionGestureInput{
+: MotionGestureInput
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

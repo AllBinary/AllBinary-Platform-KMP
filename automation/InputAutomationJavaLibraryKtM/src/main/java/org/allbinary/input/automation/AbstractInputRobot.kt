@@ -41,16 +41,22 @@ open public class AbstractInputRobot
     private var helpSet: HelpSet
 public constructor        (helpSet: HelpSet)
             : super()
-        {
+        
 
-                    var helpSet = helpSet
+        Updates for KMP build        
+        {
+var helpSet = helpSet
 this.setHelpSet(helpSet)
 }
 
 
 open fun getHelpSet()
         //nullable = true from not(false or (false and true)) = true
-: HelpSet{
+: HelpSet
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -60,9 +66,11 @@ open fun getHelpSet()
 
 open fun mouseMove(point: Point)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var point = point
+
+        Updates for KMP build        
+        {
+var point = point
 this.mouseMove(point.x, point.y)
 logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse")
 }
@@ -72,15 +80,13 @@ logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y, this, "moveMouse"
             
 open fun mouseMoveToTarget(rectangle: Rectangle, x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var rectangle = rectangle
 
 
-                    var x = x
-
-
-                    var y = y
+        Updates for KMP build        
+        {
+var rectangle = rectangle
+var x = x
+var y = y
 
     var point: Point = PointHelper.getCenterPoint(rectangle)!!
 
@@ -93,21 +99,23 @@ logUtil!!.put("Moved Mouse To: x: " +point.x +" y: " +point.y +" in the middle o
             
 open fun mouseMoveToTarget(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rectangle = rectangle
+
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 this.mouseMoveToTarget(rectangle, 0, 0)
 }
 
 
 open fun mouseMove(x: Integer, y: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var x = x
 
 
-                    var y = y
+        Updates for KMP build        
+        {
+var x = x
+var y = y
 
 
 
@@ -117,9 +125,11 @@ open fun mouseMove(x: Integer, y: Integer)
 
 open fun setHelpSet(helpSet: HelpSet)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var helpSet = helpSet
+
+        Updates for KMP build        
+        {
+var helpSet = helpSet
 this.helpSet= helpSet
 }
 

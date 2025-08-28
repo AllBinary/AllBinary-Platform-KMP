@@ -41,7 +41,11 @@ open public class AboutPaintableFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AboutPaintableFactory{
+: AboutPaintableFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -52,7 +56,11 @@ open fun getInstance()
         }
             private constructor        ()
             : super()
+        
+
+        Updates for KMP build        
         {
+
     var INFO: Array<String?> = arrayOf("Built with the","AllBinary Platform",StringUtil.getInstance()!!.EMPTY_STRING,"Comments or Questions:","support@allbinary.com")
 
 

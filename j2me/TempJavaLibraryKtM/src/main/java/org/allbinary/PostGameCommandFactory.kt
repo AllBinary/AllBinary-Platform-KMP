@@ -38,7 +38,11 @@ open public class PostGameCommandFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: PostGameCommandFactory{
+: PostGameCommandFactory
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()
@@ -54,9 +58,11 @@ open fun getInstance()
         
 open fun addCommands(canvas: Canvas)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var canvas = canvas
+
+        Updates for KMP build        
+        {
+var canvas = canvas
 }
 
 

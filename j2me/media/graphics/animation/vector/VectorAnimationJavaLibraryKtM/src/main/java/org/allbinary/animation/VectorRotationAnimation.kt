@@ -36,15 +36,13 @@ open public class VectorRotationAnimation : VectorBaseRotationAnimation {
         
 public constructor        (currentPoints: Array<Array<IntArray?>?>, basicColor: BasicColor, animationBehavior: AnimationBehavior)                        
 
-                            : super(AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /currentPoints!!.size).toShort()), currentPoints, basicColor, animationBehavior){
+                            : super(AngleInfo.getInstance((AngleFactory.getInstance()!!.TOTAL_ANGLE /currentPoints!!.size).toShort()), currentPoints, basicColor, animationBehavior)
 
-                    var currentPoints = currentPoints
-
-
-                    var basicColor = basicColor
-
-
-                    var animationBehavior = animationBehavior
+        Updates for KMP build        
+        {
+    //var currentPoints = currentPoints
+    //var basicColor = basicColor
+    //var animationBehavior = animationBehavior
 
 
                             //For kotlin this is before the body of the constructor.
@@ -54,9 +52,11 @@ this.angleInfo!!.adjustAngle(this.getFrame())
 
 override fun setFrame(direction: Direction)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var direction = direction
+
+        Updates for KMP build        
+        {
+    //var direction = direction
 
     var angle: Angle = directionUtil!!.getFrameAngle(direction)!!
 
@@ -65,17 +65,21 @@ this.adjustFrame(angle)
 
 override fun setFrame(angle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var angle = angle
+
+        Updates for KMP build        
+        {
+    //var angle = angle
 this.adjustFrame(angle)
 }
 
 override fun setFrame(index: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var index = index
+
+        Updates for KMP build        
+        {
+    //var index = index
 super.setFrame(index)
 this.angleInfo!!.adjustAngle(this.getFrame())
 }
@@ -84,17 +88,21 @@ this.angleInfo!!.adjustAngle(this.getFrame())
     private val frameUtil: FrameUtil = FrameUtil.getInstance()!!
 override fun adjustFrame(newAngle: Short)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newAngle = newAngle
+
+        Updates for KMP build        
+        {
+    //var newAngle = newAngle
 this.setFrame(frameUtil!!.getFrameForAngle(newAngle, this.angleInfo!!.getAngleIncrementInfo()!!.getAngleIncrement().toInt()))
 }
 
 override fun adjustFrame(newAngle: Angle)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var newAngle = newAngle
+
+        Updates for KMP build        
+        {
+    //var newAngle = newAngle
 this.adjustFrame(newAngle!!.getValue())
 }
 

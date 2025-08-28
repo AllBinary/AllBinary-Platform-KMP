@@ -37,7 +37,11 @@ open public class GameTickDisplayInfoSingleton
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameTickDisplayInfoSingleton{
+: GameTickDisplayInfoSingleton
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -64,7 +68,11 @@ open fun getInstance()
 
 open fun update()
         //nullable = true from not(false or (false and true)) = true
-{this.lastWidth= displayInfoSingleton!!.getLastWidth()
+
+
+        Updates for KMP build        
+        {
+this.lastWidth= displayInfoSingleton!!.getLastWidth()
 this.lastHeight= displayInfoSingleton!!.getLastHeight()
 this.lastHalfWidth= displayInfoSingleton!!.getLastHalfWidth()
 this.lastHalfHeight= displayInfoSingleton!!.getLastHalfHeight()
@@ -73,7 +81,11 @@ this.lastHalfHeight= displayInfoSingleton!!.getLastHalfHeight()
 
 open fun getLastWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -83,7 +95,11 @@ open fun getLastWidth()
 
 open fun getLastHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -93,7 +109,11 @@ open fun getLastHeight()
 
 open fun getLastHalfWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -103,7 +123,11 @@ open fun getLastHalfWidth()
 
 open fun getLastHalfHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

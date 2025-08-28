@@ -42,7 +42,11 @@ open public class FeaturedResourceRelativeRelationshipFactory : FeaturedResource
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: FeaturedResourceRelativeRelationshipFactory{
+: FeaturedResourceRelativeRelationshipFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -51,19 +55,23 @@ open fun getInstance()
 
 
         }
-            private constructor        (){}
+            private constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var resource = resource
-
-
-                    var layer = layer
+        Updates for KMP build        
+        {
+var resource = resource
+var layer = layer
 
     var featureReleaseList: BasicArrayList = this.getList()!!
 
@@ -76,7 +84,11 @@ open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var featureInterface: ResourceRelativeRelationshipFactoryInterface = featureReleaseList!!.objectArray[index]!! as ResourceRelativeRelationshipFactoryInterface
 
 
@@ -119,12 +131,12 @@ open fun getRelativeRelationshipList(resource: String, layer: AllBinaryLayer)
             
 open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var list = list
-
-
-                    var layer = layer
+        Updates for KMP build        
+        {
+var list = list
+var layer = layer
 
     var newList: BasicArrayList = BasicArrayList()
 
@@ -137,7 +149,11 @@ open fun duplicate(list: BasicArrayList, layer: AllBinaryLayer)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var relativeRelationship: RelativeRelationship = list.objectArray[index]!! as RelativeRelationship
 
 newList!!.add(RelativeLayerRelationship(layer, PointFactory.getInstance()!!.getInstance(relativeRelationship!!.getX(), relativeRelationship!!.getY()), BasicArrayListUtil.getInstance()!!.getImmutableInstance()))

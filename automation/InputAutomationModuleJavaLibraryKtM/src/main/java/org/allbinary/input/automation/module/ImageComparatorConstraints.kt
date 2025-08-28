@@ -48,9 +48,11 @@ open public class ImageComparatorConstraints
     private var doImageComparisonEveryNthFrame: Int
 public constructor        (doImageComparisonEveryNthFrame: Int)
             : super()
-        {
+        
 
-                    var doImageComparisonEveryNthFrame = doImageComparisonEveryNthFrame
+        Updates for KMP build        
+        {
+var doImageComparisonEveryNthFrame = doImageComparisonEveryNthFrame
 this.doImageComparisonEveryNthFrame= doImageComparisonEveryNthFrame
 this.setAvoidVector(Vector())
 }
@@ -58,7 +60,11 @@ this.setAvoidVector(Vector())
 
 open fun getAvoidVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -68,15 +74,13 @@ open fun getAvoidVector()
 
 open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var frame = frame
-
-
-                    var point = point
-
-
-                    var color = color
+        Updates for KMP build        
+        {
+var frame = frame
+var point = point
+var color = color
 
 
 
@@ -86,9 +90,11 @@ open fun isColorAllowed(frame: Int, point: GPoint, color: Color)
 
 open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var rectangle = rectangle
+        Updates for KMP build        
+        {
+var rectangle = rectangle
 
     var isCollsionWithAvoidRectangles: Boolean = false
 
@@ -104,7 +110,11 @@ open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
 
 
@@ -128,9 +138,11 @@ open fun isCollisionWithAvoidRectangles(rectangle: Rectangle)
 
 open fun isCollisionWithAvoidRectangles(point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var point = point
+        Updates for KMP build        
+        {
+var point = point
 
     var isCollsionWithAvoidRectangles: Boolean = false
 
@@ -146,7 +158,11 @@ open fun isCollisionWithAvoidRectangles(point: GPoint)
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
 
 
@@ -173,16 +189,22 @@ break;
 
 open fun setAvoidVector(avoidVector: Vector)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var avoidVector = avoidVector
+
+        Updates for KMP build        
+        {
+var avoidVector = avoidVector
 this.avoidVector= avoidVector
 }
 
 
 open fun getMaxNonMatchingPixelDeltas()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -192,18 +214,22 @@ open fun getMaxNonMatchingPixelDeltas()
 
 open fun setMaxNonMatchingPixelDeltas(maxNonMatchingPixelDeltas: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var maxNonMatchingPixelDeltas = maxNonMatchingPixelDeltas
+
+        Updates for KMP build        
+        {
+var maxNonMatchingPixelDeltas = maxNonMatchingPixelDeltas
 this.maxNonMatchingPixelDeltas= maxNonMatchingPixelDeltas
 }
 
 
 open fun isFrameAllowed(frame: Int)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var frame = frame
+        Updates for KMP build        
+        {
+var frame = frame
 
     var remainder: Int = ((frame +1) % this.doImageComparisonEveryNthFrame)
 
@@ -237,9 +263,11 @@ logUtil!!.put(" Frame: " +frame +" remainder: " +remainder +" this.doImageCompar
             
 open fun isImageValid(bufferedImage: BufferedImage)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var bufferedImage = bufferedImage
+        Updates for KMP build        
+        {
+var bufferedImage = bufferedImage
 
 
 
@@ -249,7 +277,11 @@ open fun isImageValid(bufferedImage: BufferedImage)
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var avoidVector: Vector = this.getAvoidVector()!!
 
 
@@ -261,7 +293,11 @@ open fun log()
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var avoidRectangle: Rectangle = avoidVector!!.get(index) as Rectangle
 
 logUtil!!.put("Avoid Rectangle: " +avoidRectangle, this, "log")

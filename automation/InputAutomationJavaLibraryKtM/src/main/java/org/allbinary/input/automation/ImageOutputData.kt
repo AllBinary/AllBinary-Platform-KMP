@@ -41,7 +41,11 @@ open public class ImageOutputData
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

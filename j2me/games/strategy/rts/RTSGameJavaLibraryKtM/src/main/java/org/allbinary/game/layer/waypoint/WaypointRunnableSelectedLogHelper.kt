@@ -40,7 +40,11 @@ open public class WaypointRunnableSelectedLogHelper : WaypointRunnableLogHelper 
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: WaypointRunnableSelectedLogHelper{
+: WaypointRunnableSelectedLogHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -61,9 +65,11 @@ open fun getInstance()
 
 open fun start(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathFindingLayerInterface = pathFindingLayerInterface
+
+        Updates for KMP build        
+        {
+    //var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
                             append(pathFindingLayerInterface!!.getName())!!.append(commonStrings!!.START_RUNNABLE)!!.toString(), this, commonStrings!!.RUN)
 }
@@ -71,9 +77,11 @@ logUtil!!.put(StringMaker().
 
 open fun end(pathFindingLayerInterface: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var pathFindingLayerInterface = pathFindingLayerInterface
+
+        Updates for KMP build        
+        {
+    //var pathFindingLayerInterface = pathFindingLayerInterface
 logUtil!!.put(StringMaker().
                             append(pathFindingLayerInterface!!.getName())!!.append(commonStrings!!.END_RUNNABLE)!!.toString(), this, commonStrings!!.RUN)
 }

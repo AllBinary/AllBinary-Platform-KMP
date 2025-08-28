@@ -48,15 +48,13 @@ open public class OnDemandLoader
     private val resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory
 public constructor        (onDemandResourcesFactory: OnDemandResourcesFactory, gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory: GameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var onDemandResourcesFactory = onDemandResourcesFactory
-
-
-                    var gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory = gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory
-
-
-                    var resourceAnimationInterfaceFactoryInterfaceFactory = resourceAnimationInterfaceFactoryInterfaceFactory
+var onDemandResourcesFactory = onDemandResourcesFactory
+var gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory = gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory
+var resourceAnimationInterfaceFactoryInterfaceFactory = resourceAnimationInterfaceFactoryInterfaceFactory
 this.onDemandResourcesFactory= onDemandResourcesFactory
 this.gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory= gameLayerPlacementInterfaceBasicArrayListFactoryInterfaceFactory
 this.resourceAnimationInterfaceFactoryInterfaceFactory= resourceAnimationInterfaceFactoryInterfaceFactory
@@ -67,15 +65,13 @@ this.resourceAnimationInterfaceFactoryInterfaceFactory= resourceAnimationInterfa
             
 open fun init(imageCache: ImageCache, level: Int, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageCache = imageCache
 
 
-                    var level = level
-
-
-                    var loadingString = loadingString
+        Updates for KMP build        
+        {
+    //var imageCache = imageCache
+    //var level = level
+    //var loadingString = loadingString
 
     var resourceLoadingLevelFactory: ResourceLoadingLevelFactory = ResourceLoadingLevelFactory.getInstance()!!
 
@@ -120,12 +116,12 @@ this.initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface, imageCache
             
 open fun initAll(imageCache: ImageCache, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageCache = imageCache
 
 
-                    var loadingString = loadingString
+        Updates for KMP build        
+        {
+    //var imageCache = imageCache
+    //var loadingString = loadingString
 
     var index: Int = 0
 
@@ -141,7 +137,11 @@ open fun initAll(imageCache: ImageCache, loadingString: String)
 
                         for (onDemandIndex in onDemandResourcesFactory!!.size()!!  - 1  downTo 0)
 
-        {onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
+        
+
+        Updates for KMP build        
+        {
+onDemandResources= onDemandResourcesFactory!!.remove(onDemandIndex)
 
     
                         if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)
@@ -160,18 +160,14 @@ open fun initAll(imageCache: ImageCache, loadingString: String)
             
 open fun initLevel(layerPlacementInterfaceBasicArrayListFactoryInterface: LayerPlacementInterfaceBasicArrayListFactoryInterface, imageCache: ImageCache, level: Int, loadingString: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var layerPlacementInterfaceBasicArrayListFactoryInterface = layerPlacementInterfaceBasicArrayListFactoryInterface
 
 
-                    var imageCache = imageCache
-
-
-                    var level = level
-
-
-                    var loadingString = loadingString
+        Updates for KMP build        
+        {
+    //var layerPlacementInterfaceBasicArrayListFactoryInterface = layerPlacementInterfaceBasicArrayListFactoryInterface
+    //var imageCache = imageCache
+    //var level = level
+    //var loadingString = loadingString
 
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
@@ -195,7 +191,11 @@ PreLogUtil.put(StringMaker().
 
                         for (onDemandIndex in onDemandArray!!.size  - 1  downTo 0)
 
-        {onDemandResources= onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
+        
+
+        Updates for KMP build        
+        {
+onDemandResources= onDemandResourcesFactory!!.remove(onDemandArray[onDemandIndex]!!)
 
     
                         if(onDemandResources != OnDemandResources.NULL_ON_DEMAND_RESOURCES)

@@ -56,9 +56,11 @@ open public class ImageActionScriptOutput : BasicProfileActionScriptOutput
     private var actionScriptOutputJPanel: ImageActionScriptOutputJPanel
 public constructor        (node: Node)                        
 
-                            : super(NAME, node){
+                            : super(NAME, node)
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
 
                             //For kotlin this is before the body of the constructor.
@@ -83,7 +85,11 @@ logUtil!!.put(this.commonStrings!!.START, this, this.commonStrings!!.CONSTRUCTOR
 
                         for (index in 0 until nodeList!!.getLength()!!)
 
+        
+
+        Updates for KMP build        
         {
+
     var childNode: Node = nodeList!!.item(index)!!
 
 
@@ -148,7 +154,11 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 
 public constructor        ()                        
 
-                            : super(NAME){
+                            : super(NAME)
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -160,7 +170,11 @@ this.actionScriptOutputJPanel= ImageActionScriptOutputJPanel(this)
 
 open fun getActionScriptOutputJPanel()
         //nullable = true from not(false or (false and true)) = true
-: ImageActionScriptOutputJPanel{
+: ImageActionScriptOutputJPanel
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -170,7 +184,11 @@ open fun getActionScriptOutputJPanel()
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(ImageActionScriptOutputData.DISPLAY, Boolean.toString(this.isDisplay()))
@@ -188,9 +206,11 @@ logUtil!!.put("HashMap: " +hashMap!!.toString(), this, "toHashMap()")
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = super.toXmlNode(document)!!
 
@@ -211,22 +231,32 @@ node.appendChild(newNode)
             
 open fun process(frame: Long)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var frame = frame
+
+        Updates for KMP build        
+        {
+var frame = frame
 ImageActionScriptOutputProcessor.process(this, frame)
 }
 
 
 open fun showDialog()
         //nullable = true from not(false or (false and true)) = true
-{this.actionScriptOutputJPanel!!.getCapturedImageActionJDialog()!!.setVisible(true)
+
+
+        Updates for KMP build        
+        {
+this.actionScriptOutputJPanel!!.getCapturedImageActionJDialog()!!.setVisible(true)
 }
 
 
 open fun isSaved()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -236,16 +266,22 @@ open fun isSaved()
 
 open fun setSaved(saved: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var saved = saved
+
+        Updates for KMP build        
+        {
+var saved = saved
 this.saved= saved
 }
 
 
 open fun isDisplay()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -255,16 +291,22 @@ open fun isDisplay()
 
 open fun setDisplay(display: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var display = display
+
+        Updates for KMP build        
+        {
+var display = display
 this.display= display
 }
 
 
 open fun future_toString()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(" Is Save: ")
@@ -283,13 +325,21 @@ stringBuffer!!.append(this.getImageTypes()!!.toString())
 
 open fun log()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(this.future_toString(), this, "log")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(this.future_toString(), this, "log")
 }
 
 
 open fun getImageTypes()
         //nullable = true from not(false or (false and true)) = true
-: ImageTypes{
+: ImageTypes
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -299,9 +349,11 @@ open fun getImageTypes()
 
 open fun setImageTypes(imageTypes: ImageTypes)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageTypes = imageTypes
+
+        Updates for KMP build        
+        {
+var imageTypes = imageTypes
 this.imageTypes= imageTypes
 }
 

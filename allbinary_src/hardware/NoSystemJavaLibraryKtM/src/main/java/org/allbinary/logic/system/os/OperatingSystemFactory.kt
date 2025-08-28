@@ -42,7 +42,11 @@ open public class OperatingSystemFactory
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: OperatingSystemFactory{
+: OperatingSystemFactory
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -57,13 +61,21 @@ open fun getInstance()
     private var genericOperatingSystem: GenericOperatingSystem = NoOperatingSystem.NO_OPERATING_SYSTEM
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 @Synchronized //TWB - This is not allowed for Kotlin native. Instead use Coroutine logic instead.
 
 open fun getOperatingSystemInstance()
         //nullable = true from not(false or (false and true)) = true
-: GenericOperatingSystem{
+: GenericOperatingSystem
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 
@@ -75,7 +87,11 @@ open fun getOperatingSystemInstance()
 System.out.println(osString)
 logUtil!!.put(osString, this, commonStrings!!.GET_INSTANCE)
 } catch(e: Exception)
-            {logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
+            
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.EXCEPTION, this, commonStrings!!.GET_INSTANCE, e)
 }
 
 

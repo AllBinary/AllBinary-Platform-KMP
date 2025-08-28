@@ -50,15 +50,13 @@ open public class CollidableCompositeLayer : AllBinaryGameLayer
     private var collidableInferface: CollidableBaseBehavior
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
-                            : super(layerInfo, viewPosition){
+                            : super(layerInfo, viewPosition)
 
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
-
-
-                    var collidableInferface = collidableInferface
+        Updates for KMP build        
+        {
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
+    //var collidableInferface = collidableInferface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -69,18 +67,14 @@ this.setCollidableInferface(collidableInferface)
 
 public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition, collidableInferface: CollidableBaseBehavior)                        
 
-                            : super(name, layerInfo, viewPosition){
+                            : super(name, layerInfo, viewPosition)
 
-                    var name = name
-
-
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
-
-
-                    var collidableInferface = collidableInferface
+        Updates for KMP build        
+        {
+    //var name = name
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
+    //var collidableInferface = collidableInferface
 
 
                             //For kotlin this is before the body of the constructor.
@@ -91,12 +85,12 @@ this.setCollidableInferface(collidableInferface)
 
 public constructor        (layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(layerInfo, viewPosition){
+                            : super(layerInfo, viewPosition)
 
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -106,15 +100,13 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 
 public constructor        (name: String, layerInfo: Rectangle, viewPosition: ViewPosition)                        
 
-                            : super(name, layerInfo, viewPosition){
+                            : super(name, layerInfo, viewPosition)
 
-                    var name = name
-
-
-                    var layerInfo = layerInfo
-
-
-                    var viewPosition = viewPosition
+        Updates for KMP build        
+        {
+    //var name = name
+    //var layerInfo = layerInfo
+    //var viewPosition = viewPosition
 
 
                             //For kotlin this is before the body of the constructor.
@@ -124,9 +116,11 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 
 public constructor        (layerInfo: Rectangle)                        
 
-                            : super(layerInfo){
+                            : super(layerInfo)
 
-                    var layerInfo = layerInfo
+        Updates for KMP build        
+        {
+    //var layerInfo = layerInfo
 
 
                             //For kotlin this is before the body of the constructor.
@@ -137,7 +131,11 @@ collidableInferface= CollidableNeverCollideBehaviorFactory.getInstance()
 
 open fun getArtificialIntelligenceInterface()
         //nullable = true from not(false or (false and true)) = true
-: ArtificialIntelligenceInterface{ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
+: ArtificialIntelligenceInterface
+
+        Updates for KMP build        
+        {
+ForcedLogUtil.log(commonStrings!!.NOT_IMPLEMENTED, this)
 
 
 
@@ -147,7 +145,11 @@ open fun getArtificialIntelligenceInterface()
 
 override fun getCollidableInferface()
         //nullable = true from not(false or (false and true)) = true
-: CollidableBaseBehavior{
+: CollidableBaseBehavior
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -157,15 +159,21 @@ override fun getCollidableInferface()
 
 open fun setCollidableInferface(collidableInferface: CollidableBaseBehavior)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var collidableInferface = collidableInferface
+
+        Updates for KMP build        
+        {
+    //var collidableInferface = collidableInferface
 this.collidableInferface= collidableInferface
 }
 
 override fun implmentsCollidableInterface()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -174,9 +182,11 @@ override fun implmentsCollidableInterface()
 
 override fun toString(stringBuffer: StringMaker)
         //nullable = true from not(false or (true and false)) = true
-{
 
-                    var stringBuffer = stringBuffer
+
+        Updates for KMP build        
+        {
+    //var stringBuffer = stringBuffer
 
     var commonSeps: CommonSeps = CommonSeps.getInstance()!!
 
@@ -187,7 +197,11 @@ stringBuffer!!.append(this.getCollidableInferface()!!.toString())
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 this.toString(stringBuffer)

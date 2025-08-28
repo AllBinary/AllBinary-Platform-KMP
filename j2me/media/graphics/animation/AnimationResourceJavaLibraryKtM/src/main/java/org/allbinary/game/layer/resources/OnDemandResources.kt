@@ -43,42 +43,48 @@ open public class OnDemandResources
     val logUtil: LogUtil = LogUtil.getInstance()!!
 protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun waitFor()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun init(imageCache: ImageCache, resourceAnimationInterfaceFactoryInterfaceFactory: BaseResourceAnimationInterfaceFactoryInterfaceFactory, portion: Int, loadingString: String, index: Int)
         //nullable = true from not(false or (false and false)) = true
-: Int{
+: Int
 
-                    var imageCache = imageCache
-
-
-                    var resourceAnimationInterfaceFactoryInterfaceFactory = resourceAnimationInterfaceFactoryInterfaceFactory
-
-
-                    var portion = portion
-
-
-                    var loadingString = loadingString
-
-
-                    var index = index
+        Updates for KMP build        
+        {
+var imageCache = imageCache
+var resourceAnimationInterfaceFactoryInterfaceFactory = resourceAnimationInterfaceFactoryInterfaceFactory
+var portion = portion
+var loadingString = loadingString
+var index = index
 
 
 

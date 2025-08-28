@@ -36,7 +36,11 @@ open public class SubscriberUser : User {
     private var subscription: Subscription
 public constructor        ()                        
 
-                            : super(){
+                            : super()
+
+        Updates for KMP build        
+        {
+
 
                             //For kotlin this is before the body of the constructor.
                     
@@ -45,9 +49,11 @@ this.subscription= Subscription()
 
 public constructor        (userHashMap: HashMap<Any, Any>)                        
 
-                            : super(userHashMap){
+                            : super(userHashMap)
 
-                    var userHashMap = userHashMap
+        Updates for KMP build        
+        {
+var userHashMap = userHashMap
 
 
                             //For kotlin this is before the body of the constructor.
@@ -58,9 +64,11 @@ this.subscription= Subscription()
 
 open fun validateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weblisketSession = weblisketSession
+
+        Updates for KMP build        
+        {
+var weblisketSession = weblisketSession
 super.validateSession(weblisketSession)
 this.updateSession(weblisketSession)
 }
@@ -68,16 +76,22 @@ this.updateSession(weblisketSession)
 
 open fun updateSession(weblisketSession: WeblisketSessionInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var weblisketSession = weblisketSession
+
+        Updates for KMP build        
+        {
+var weblisketSession = weblisketSession
 weblisketSession!!.setStoreName(this.getPermissions())
 }
 
 
 open fun isSessionValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

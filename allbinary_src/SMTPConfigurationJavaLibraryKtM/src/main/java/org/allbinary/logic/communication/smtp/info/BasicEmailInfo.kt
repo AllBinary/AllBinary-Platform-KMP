@@ -44,12 +44,12 @@ open public class BasicEmailInfo
     var emailServerConfigurationInterface: EmailServerConfigurationInterface
 public constructor        (subject: String, textBody: String)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var subject = subject
-
-
-                    var textBody = textBody
+var subject = subject
+var textBody = textBody
 
     
                         if(org.allbinary.logic.communication.log.config.type.LogConfigTypes.LOGGING.contains(org.allbinary.logic.communication.log.config.type.LogConfigTypeFactory.getInstance()!!.EMAILLOGGING))
@@ -69,7 +69,11 @@ this.textBody= textBody
 
 open fun getSubject()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -79,7 +83,11 @@ open fun getSubject()
 
 open fun getTextBody()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -89,7 +97,11 @@ open fun getTextBody()
 
 open fun getEmailServerConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: EmailServerConfigurationInterface{
+: EmailServerConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -99,15 +111,21 @@ open fun getEmailServerConfigurationInterface()
 
 open fun setEmailServerConfigurationInterface(emailServerConfigurationInterface: EmailServerConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var emailServerConfigurationInterface = emailServerConfigurationInterface
+
+        Updates for KMP build        
+        {
+var emailServerConfigurationInterface = emailServerConfigurationInterface
 this.emailServerConfigurationInterface= emailServerConfigurationInterface
 }
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
     var stringBuffer: StringMaker = StringMaker()
 
 stringBuffer!!.append(this.getEmailServerConfigurationInterface()!!.toString())
@@ -128,7 +146,11 @@ stringBuffer!!.append(this.getTextBody())
             
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

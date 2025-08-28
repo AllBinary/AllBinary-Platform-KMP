@@ -46,7 +46,11 @@ open public class Waypoint2SelectedLogHelper : Waypoint2LogHelper {
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: Waypoint2LogHelper{
+: Waypoint2LogHelper
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -87,15 +91,13 @@ open fun getInstance()
 
 open fun initRange(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, closeRange: Int, sensorRange: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var closeRange = closeRange
-
-
-                    var sensorRange = sensorRange
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var closeRange = closeRange
+    //var sensorRange = sensorRange
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -110,24 +112,16 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: initRange")
 
 open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int, isShorterThanCurrentTargetDistance: Boolean, isCurrentTargetDestroyed: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
-
-
-                    var layerInterface = layerInterface
-
-
-                    var anotherTargetDistance = anotherTargetDistance
-
-
-                    var isShorterThanCurrentTargetDistance = isShorterThanCurrentTargetDistance
-
-
-                    var isCurrentTargetDestroyed = isCurrentTargetDestroyed
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
+    //var layerInterface = layerInterface
+    //var anotherTargetDistance = anotherTargetDistance
+    //var isShorterThanCurrentTargetDistance = isShorterThanCurrentTargetDistance
+    //var isCurrentTargetDestroyed = isCurrentTargetDestroyed
 
     
                         if(waypointBehaviorBase!!.isWaypointListEmptyOrOnlyTargets() && waypointBehaviorBase!!.isInSensorRange(layerInterface as CollidableDestroyableDamageableLayer, anotherTargetDistance))
@@ -156,18 +150,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, PROCESS_POSSIBLE_TARGET)
 
 open fun processPossibleTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
-
-
-                    var layerInterface = layerInterface
-
-
-                    var anotherTargetDistance = anotherTargetDistance
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
+    //var layerInterface = layerInterface
+    //var anotherTargetDistance = anotherTargetDistance
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -184,18 +174,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget2
 
 open fun processPossibleTargetCloser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
-
-
-                    var layerInterface = layerInterface
-
-
-                    var anotherTargetDistance = anotherTargetDistance
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
+    //var layerInterface = layerInterface
+    //var anotherTargetDistance = anotherTargetDistance
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -212,18 +198,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processPossibleTarget3
 
 open fun setTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase, layerInterface: PathFindingLayerInterface, anotherTargetDistance: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
-
-
-                    var layerInterface = layerInterface
-
-
-                    var anotherTargetDistance = anotherTargetDistance
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
+    //var layerInterface = layerInterface
+    //var anotherTargetDistance = anotherTargetDistance
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -242,21 +224,23 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTarget")
 
 open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put("Target Destroyed", this, "selected: setTargetPath")
 }
 
 
 open fun setTargetPath(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -271,18 +255,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: setTargetPath")
 
 open fun processWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase, targetLayer: PathFindingLayerInterface, size: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
-
-
-                    var targetLayer = targetLayer
-
-
-                    var size = size
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
+    //var targetLayer = targetLayer
+    //var size = size
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -303,12 +283,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 
 open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, waypointBehaviorBase: WaypointBehaviorBase)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var waypointBehaviorBase = waypointBehaviorBase
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var waypointBehaviorBase = waypointBehaviorBase
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -325,12 +305,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 
 open fun processWaypointTracked(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -343,12 +323,12 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processWaypoint")
 
 open fun processWaypointTrackedWithoutProgress(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var reason = reason
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var reason = reason
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(reason)!!.toString(), this, "turnTo")
 }
@@ -356,18 +336,22 @@ logUtil!!.put(StringMaker().
 
 open fun wander(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(associatedAdvancedRTSGameLayer!!.getName(), this, "wander")
 }
 
 
 open fun targetDestroyed(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Target Destroyed")!!.toString(), this, "selected: processTargeting")
 }
@@ -375,15 +359,13 @@ logUtil!!.put(StringMaker().
 
 open fun processTargeting(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var dx = dx
+    //var dy = dy
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -400,15 +382,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 
 open fun processTargetingNonWayPoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, dx: Int, dy: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var dx = dx
-
-
-                    var dy = dy
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var dx = dx
+    //var dy = dy
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -425,18 +405,14 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: processTargeting")
 
 open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, waypointLayer: PathFindingLayerInterface, reason: String)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var unitWaypointBehavior2 = unitWaypointBehavior2
-
-
-                    var waypointLayer = waypointLayer
-
-
-                    var reason = reason
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var unitWaypointBehavior2 = unitWaypointBehavior2
+    //var waypointLayer = waypointLayer
+    //var reason = reason
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -453,15 +429,13 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
 
 open fun removeWaypoint(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, unitWaypointBehavior2: WaypointBehaviorBase, list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var unitWaypointBehavior2 = unitWaypointBehavior2
-
-
-                    var list = list
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var unitWaypointBehavior2 = unitWaypointBehavior2
+    //var list = list
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -476,9 +450,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: removeWaypoint")
 
 open fun removeWaypointClear(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Clearing removed waypoint")!!.toString(), this, "selected: removeWaypoint")
 }
@@ -486,9 +462,11 @@ logUtil!!.put(StringMaker().
 
 open fun clearTarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" Cleared Target")!!.toString(), this, "selected: clearTarget")
 }
@@ -496,12 +474,12 @@ logUtil!!.put(StringMaker().
 
 open fun addWaypointFromUser(associatedAdvancedRTSGameLayer: PathFindingLayerInterface, advancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 
 
-                    var advancedRTSGameLayer = advancedRTSGameLayer
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+    //var advancedRTSGameLayer = advancedRTSGameLayer
 
     var stringBuffer: StringMaker = StringMaker()
 
@@ -526,9 +504,11 @@ logUtil!!.put(stringBuffer!!.toString(), this, "selected: onWaypointEvent")
 
 open fun targetMovedSoRetarget(associatedAdvancedRTSGameLayer: PathFindingLayerInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
+
+        Updates for KMP build        
+        {
+    //var associatedAdvancedRTSGameLayer = associatedAdvancedRTSGameLayer
 logUtil!!.put(StringMaker().
                             append(associatedAdvancedRTSGameLayer!!.getName())!!.append(" - target moved so retargeting")!!.toString(), this, "turnTo")
 }

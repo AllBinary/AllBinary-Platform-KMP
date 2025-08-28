@@ -33,9 +33,11 @@ open public class ImmutableBasicArrayList : BasicArrayList {
     private val IMMUTABLE: String = "Immutable"
 public constructor        (size: Int)                        
 
-                            : super(size){
+                            : super(size)
 
-                    var size = size
+        Updates for KMP build        
+        {
+var size = size
 
 
                             //For kotlin this is before the body of the constructor.
@@ -44,9 +46,11 @@ public constructor        (size: Int)
 
 override fun add(e: Any)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var e = e
+        Updates for KMP build        
+        {
+var e = e
 ForcedLogUtil.log(IMMUTABLE, this)
 
 
@@ -57,12 +61,12 @@ ForcedLogUtil.log(IMMUTABLE, this)
 
 override fun add(index: Int, element: Any)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var index = index
 
 
-                    var element = element
+        Updates for KMP build        
+        {
+var index = index
+var element = element
 ForcedLogUtil.log(IMMUTABLE, this)
 }
 

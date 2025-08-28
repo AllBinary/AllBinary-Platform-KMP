@@ -48,23 +48,23 @@ open public class BasicPaymentType
     private var paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface
 protected constructor        (paymentMethod: String)
             : super()
-        {
+        
 
-                    var paymentMethod = paymentMethod
+        Updates for KMP build        
+        {
+var paymentMethod = paymentMethod
 this.init(paymentMethod)
 }
 
 protected constructor        (paymentMethod: String, paymentGatewayInterfaceFactoryInterface: PaymentGatewayInterfaceFactoryInterface, paymentGatewayDomNodeFactoryInterface: PaymentGatewayDomNodeFactoryInterface)
             : super()
+        
+
+        Updates for KMP build        
         {
-
-                    var paymentMethod = paymentMethod
-
-
-                    var paymentGatewayInterfaceFactoryInterface = paymentGatewayInterfaceFactoryInterface
-
-
-                    var paymentGatewayDomNodeFactoryInterface = paymentGatewayDomNodeFactoryInterface
+var paymentMethod = paymentMethod
+var paymentGatewayInterfaceFactoryInterface = paymentGatewayInterfaceFactoryInterface
+var paymentGatewayDomNodeFactoryInterface = paymentGatewayDomNodeFactoryInterface
 this.init(paymentMethod)
 this.paymentGatewayInterfaceFactoryInterface= paymentGatewayInterfaceFactoryInterface
 this.paymentGatewayDomNodeFactoryInterface= paymentGatewayDomNodeFactoryInterface
@@ -73,9 +73,11 @@ this.paymentGatewayDomNodeFactoryInterface= paymentGatewayDomNodeFactoryInterfac
 
 open fun init(paymentMethod: String)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var paymentMethod = paymentMethod
+
+        Updates for KMP build        
+        {
+var paymentMethod = paymentMethod
 
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
@@ -96,7 +98,11 @@ BasicPaymentTypeUtil.getInstance()!!.add(this)
 
 open fun getName()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -106,7 +112,11 @@ open fun getName()
 
 open fun getValue()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -118,7 +128,11 @@ open fun getValue()
             
 open fun getPaymentGatewayInterfaceFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentGatewayInterfaceFactoryInterface{
+: PaymentGatewayInterfaceFactoryInterface
+
+        Updates for KMP build        
+        {
+
     
                         if(this.paymentGatewayInterfaceFactoryInterface == 
                                     null
@@ -144,7 +158,11 @@ open fun getPaymentGatewayInterfaceFactoryInterface()
             
 open fun getPaymentGatewayDomNodeFactoryInterface()
         //nullable = true from not(false or (false and true)) = true
-: PaymentGatewayDomNodeFactoryInterface{
+: PaymentGatewayDomNodeFactoryInterface
+
+        Updates for KMP build        
+        {
+
     
                         if(this.paymentGatewayDomNodeFactoryInterface == 
                                     null
@@ -168,7 +186,11 @@ open fun getPaymentGatewayDomNodeFactoryInterface()
 
 open fun getKey()
         //nullable = true from not(false or (false and true)) = true
-: Any{
+: Any
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -178,7 +200,11 @@ open fun getKey()
 
 open fun toVector()
         //nullable = true from not(false or (false and true)) = true
-: Vector{
+: Vector
+
+        Updates for KMP build        
+        {
+
     var vector: Vector = Vector()
 
 vector.add(this.name)
@@ -193,7 +219,11 @@ vector.add(this.value)
 
 open fun toHashMap()
         //nullable = true from not(false or (false and true)) = true
-: HashMap<Any, Any>{
+: HashMap<Any, Any>
+
+        Updates for KMP build        
+        {
+
     var hashMap: HashMap<Any, Any> = HashMap<Any, Any>()
 
 hashMap!!.put(PaymentGatewayData.NAME.toString(), this.name)
@@ -207,7 +237,11 @@ hashMap!!.put(PaymentGatewayData.VALUE.toString(), this.value)
 
 override fun toString()
         //nullable =  from not(false or (true and true)) = 
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

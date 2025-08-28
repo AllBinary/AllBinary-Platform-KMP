@@ -62,7 +62,11 @@ open public class GeographicMapCellHistory
     private var halfWidth: Int = 0
 public constructor        ()
             : super()
-        {this.list= BasicArrayList()
+        
+
+        Updates for KMP build        
+        {
+this.list= BasicArrayList()
 this.visitedList= BasicArrayList()
 this.init()
 }
@@ -70,7 +74,11 @@ this.init()
 
 open fun getTotalVisited()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -80,7 +88,11 @@ open fun getTotalVisited()
 
 open fun getTotalNotVisited()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -90,7 +102,11 @@ open fun getTotalNotVisited()
 
 open fun getSize()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -100,9 +116,11 @@ open fun getSize()
 
 open fun track(list: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var list = list
+
+        Updates for KMP build        
+        {
+    //var list = list
 
     var size: Int = list.size()!!
 
@@ -117,7 +135,11 @@ this.visitedList!!.ensureCapacity(size)
 
                         for (index in 0 until size)
 
-        {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 this.track(geographicMapCellPosition)
 }
 
@@ -126,9 +148,11 @@ this.track(geographicMapCellPosition)
 
 open fun track(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     
                         if(!this.list.contains(geographicMapCellPosition))
@@ -144,7 +168,11 @@ this.visitedList!!.add(booleanFactory!!.FALSE)
 
 open fun getTracked()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -154,7 +182,11 @@ open fun getTracked()
 
 open fun getVisited()
         //nullable = true from not(false or (false and true)) = true
-: BasicArrayList{
+: BasicArrayList
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -164,9 +196,11 @@ open fun getVisited()
 
 open fun getAfterIfNotLast(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+var geographicMapCellPosition = geographicMapCellPosition
 
     var localList: BasicArrayList = this.list
 
@@ -196,7 +230,11 @@ open fun getAfterIfNotLast(geographicMapCellPosition: GeographicMapCellPosition)
 
 open fun getFirstUnvisited()
         //nullable = true from not(false or (false and true)) = true
-: GeographicMapCellPosition{
+: GeographicMapCellPosition
+
+        Updates for KMP build        
+        {
+
     var localList: BasicArrayList = this.list
 
 
@@ -214,7 +252,11 @@ open fun getFirstUnvisited()
 
                         for (index in 0 until size)
 
-        {value= this.visitedList!!.get(index) as Boolean
+        
+
+        Updates for KMP build        
+        {
+value= this.visitedList!!.get(index) as Boolean
 
     
                         if(value == booleanFactory!!.FALSE)
@@ -240,7 +282,11 @@ open fun getFirstUnvisited()
 
 open fun getFirstUnvisitedIndex()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
     var localVisitedList: BasicArrayList = this.visitedList
 
 
@@ -255,7 +301,11 @@ open fun getFirstUnvisitedIndex()
 
                         for (index in 0 until size)
 
-        {value= this.visitedList!!.get(index) as Boolean
+        
+
+        Updates for KMP build        
+        {
+value= this.visitedList!!.get(index) as Boolean
 
     
                         if(value == booleanFactory!!.FALSE)
@@ -281,9 +331,11 @@ open fun getFirstUnvisitedIndex()
 
 open fun getInPathButNotTracked(pathList: BasicArrayList)
         //nullable = true from not(false or (false and false)) = true
-: BasicArrayList{
+: BasicArrayList
 
-                    var pathList = pathList
+        Updates for KMP build        
+        {
+var pathList = pathList
 
     var inPathButNotTrackedList: BasicArrayList = BasicArrayList()
 
@@ -302,7 +354,11 @@ open fun getInPathButNotTracked(pathList: BasicArrayList)
 
                         for (index in 0 until size)
 
-        {geographicMapCellPosition= pathList!!.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+geographicMapCellPosition= pathList!!.get(index) as GeographicMapCellPosition
 
     
                         if(!localList!!.contains(geographicMapCellPosition))
@@ -324,9 +380,11 @@ open fun getInPathButNotTracked(pathList: BasicArrayList)
 
 open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var index: Int = this.list.indexOf(geographicMapCellPosition)!!
 
@@ -368,9 +426,11 @@ open fun isVisited(geographicMapCellPosition: GeographicMapCellPosition)
 
 open fun visit(geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var index: Int = this.list.indexOf(geographicMapCellPosition)!!
 
@@ -420,7 +480,11 @@ this.totalVisited++
             
 open fun isAllVisited()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.totalVisited == this.getSize() -1)
                         
@@ -449,7 +513,11 @@ open fun isAllVisited()
             
 open fun isAllVisited2()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
     
                         if(this.totalVisited == this.getSize())
                         
@@ -478,9 +546,11 @@ open fun isAllVisited2()
             
 open fun isVisited(basicDecimal: BasicDecimal)
         //nullable = true from not(false or (false and false)) = true
-: Boolean{
+: Boolean
 
-                    var basicDecimal = basicDecimal
+        Updates for KMP build        
+        {
+    //var basicDecimal = basicDecimal
 
     var size: Int = this.getSize()!!
 
@@ -519,7 +589,11 @@ open fun isVisited(basicDecimal: BasicDecimal)
             
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{
+
+
+        Updates for KMP build        
+        {
+
     var localVisitedList: BasicArrayList = this.visitedList
 
 
@@ -534,7 +608,11 @@ open fun reset()
 
                         for (index in size -1 downTo 0)
 
-        {localVisitedList!!.set(index, localFalseBoolean)
+        
+
+        Updates for KMP build        
+        {
+localVisitedList!!.set(index, localFalseBoolean)
 }
 
 this.totalVisited= 0
@@ -543,15 +621,13 @@ this.totalVisited= 0
 
 open fun paintNotVisited(graphics: Graphics, tiledLayer: AllBinaryTiledLayer, point: GPoint)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var tiledLayer = tiledLayer
-
-
-                    var point = point
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var tiledLayer = tiledLayer
+    //var point = point
 
     var x: Int = point.getX() -tiledLayer!!.getXP()
 
@@ -581,12 +657,12 @@ this.animation.paint(graphics, x +halfWidth, y +(height))
 
 open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeographicMap)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var graphics = graphics
 
 
-                    var geographicMapInterface = geographicMapInterface
+        Updates for KMP build        
+        {
+    //var graphics = graphics
+    //var geographicMapInterface = geographicMapInterface
 
         try {
             graphics.setColor(RED)
@@ -608,7 +684,11 @@ open fun paintNotVisited(graphics: Graphics, geographicMapInterface: BasicGeogra
 
                         for (index in size  - 1  downTo 0)
 
-        {geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
+        
+
+        Updates for KMP build        
+        {
+geographicMapCellPosition= list.get(index) as GeographicMapCellPosition
 isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
 
     
@@ -622,7 +702,11 @@ isCellVisitedBoolean= localVisitedList!!.get(index) as Boolean
 }
 
 } catch(e: Exception)
-            {
+            
+
+        Updates for KMP build        
+        {
+
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 
 logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintNotVisited", e)
@@ -633,7 +717,11 @@ logUtil!!.put(commonStrings!!.EXCEPTION, this, "paintNotVisited", e)
 
 open fun init()
         //nullable = true from not(false or (false and true)) = true
-{this.list.clear()
+
+
+        Updates for KMP build        
+        {
+this.list.clear()
 this.visitedList!!.clear()
 this.totalVisited= 0
 }

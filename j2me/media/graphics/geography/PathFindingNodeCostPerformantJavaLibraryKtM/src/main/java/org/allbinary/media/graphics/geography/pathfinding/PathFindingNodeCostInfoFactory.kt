@@ -32,45 +32,39 @@ import org.allbinary.media.graphics.geography.map.racetrack.RaceTrackGeographicM
 
 open public class PathFindingNodeCostInfoFactory : PathFindingNodeCostInfoFactoryBase {
         
-public constructor        (max: Int){
+public constructor        (max: Int)
 
-                    var max = max
+        Updates for KMP build        
+        {
+var max = max
 }
 
 
                 @Throws(Exception::class)
             override fun create(geographicMapInterface: BasicGeographicMap, goingToGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition, costFromStart: Long, costToEnd: Long)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var geographicMapInterface = geographicMapInterface
 
 
-                    var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
-
-
-                    var costFromStart = costFromStart
-
-
-                    var costToEnd = costToEnd
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var goingToGeographicMapCellPosition = goingToGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
+    //var costFromStart = costFromStart
+    //var costToEnd = costToEnd
 }
 
 
                 @Throws(Exception::class)
             override fun getTotalCost(geographicMapInterface: BasicGeographicMap, comingFromGeographicMapCellPosition: GeographicMapCellPosition, geographicMapCellPosition: GeographicMapCellPosition)
         //nullable = true from not(false or (false and false)) = true
-: Long{
+: Long
 
-                    var geographicMapInterface = geographicMapInterface
-
-
-                    var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
-
-
-                    var geographicMapCellPosition = geographicMapCellPosition
+        Updates for KMP build        
+        {
+    //var geographicMapInterface = geographicMapInterface
+    //var comingFromGeographicMapCellPosition = comingFromGeographicMapCellPosition
+    //var geographicMapCellPosition = geographicMapCellPosition
 
     var geographicMapCellType: GeographicMapCellType = geographicMapInterface!!.getCellTypeAt(comingFromGeographicMapCellPosition)!!
 

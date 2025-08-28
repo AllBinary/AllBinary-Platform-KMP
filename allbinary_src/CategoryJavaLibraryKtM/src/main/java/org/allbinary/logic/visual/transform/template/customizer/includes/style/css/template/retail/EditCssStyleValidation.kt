@@ -38,13 +38,19 @@ open public class EditCssStyleValidation : CssStyleValidation
                 , ValidationInterface
                 , DomNodeInterface {
         
-public constructor        (){}
+public constructor        ()
+
+        Updates for KMP build        
+        {
+}
 
 public constructor        (document: Document)                        
 
-                            : super(document){
+                            : super(document)
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
                             //For kotlin this is before the body of the constructor.
@@ -53,9 +59,11 @@ public constructor        (document: Document)
 
 public constructor        (hashMap: HashMap<Any, Any>)                        
 
-                            : super(hashMap){
+                            : super(hashMap)
 
-                    var hashMap = hashMap
+        Updates for KMP build        
+        {
+var hashMap = hashMap
 
 
                             //For kotlin this is before the body of the constructor.
@@ -65,7 +73,11 @@ public constructor        (hashMap: HashMap<Any, Any>)
 
 open fun isValid()
         //nullable = true from not(false or (false and true)) = true
-: Boolean{
+: Boolean
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,7 +87,11 @@ open fun isValid()
 
 open fun validationInfo()
         //nullable = true from not(false or (false and true)) = true
-: String{
+: String
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -85,7 +101,11 @@ open fun validationInfo()
 
 open fun toValidationInfoDoc()
         //nullable = true from not(false or (false and true)) = true
-: Document{
+: Document
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -95,9 +115,11 @@ open fun toValidationInfoDoc()
 
 open fun toValidationInfoNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
 
 
@@ -110,9 +132,11 @@ open fun toValidationInfoNode(document: Document)
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var node: Node = document.createElement(StylesData.getInstance()!!.NAME)!!
 
@@ -131,7 +155,11 @@ styleNode!!.appendChild(ColorsView().
 
                         for (i in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var styleDomNodeInterface: DomNodeInterface = cssStyleElementVector!!.get(i) as DomNodeInterface
 
 styleNode!!.appendChild(styleDomNodeInterface!!.toXmlNode(document))

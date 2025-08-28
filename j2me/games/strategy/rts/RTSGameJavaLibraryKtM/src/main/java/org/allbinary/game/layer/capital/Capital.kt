@@ -34,12 +34,20 @@ open public class Capital
     private var value: Int= 0
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getTotalMoney()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -49,18 +57,22 @@ open fun getTotalMoney()
 
 open fun removeMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 this.value -= points
 }
 
 
 open fun addMoney(points: Int)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var points = points
+
+        Updates for KMP build        
+        {
+var points = points
 this.value += points
 }
 

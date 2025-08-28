@@ -51,9 +51,11 @@ open public class DocumentToNode
             
 open fun convertDocumentToNodeString(documentString: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var documentString = documentString
+        Updates for KMP build        
+        {
+var documentString = documentString
 documentString= remove(documentString, XMLJSPROOTSTART, XMLEND)
 documentString= remove(documentString, XMLJSPROOTENDSTART, XMLEND)
 
@@ -69,9 +71,11 @@ documentString= remove(documentString, XMLJSPROOTENDSTART, XMLEND)
 
 open fun removeXmlDefinitionFromDocumentString(documentString: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var documentString = documentString
+        Updates for KMP build        
+        {
+var documentString = documentString
 
 
 
@@ -82,21 +86,23 @@ open fun removeXmlDefinitionFromDocumentString(documentString: String)
 
 open fun remove(documentString: String, start: String, end: String)
         //nullable = true from not(false or (false and false)) = true
-: String{
+: String
 
-                    var documentString = documentString
-
-
-                    var start = start
-
-
-                    var end = end
+        Updates for KMP build        
+        {
+var documentString = documentString
+var start = start
+var end = end
 
     var startIndex: Int= 0
 
 
         while((startIndex= documentString!!.indexOf(start)) !=  -1)
+        
+
+        Updates for KMP build        
         {
+
     
                         if(startIndex >= 0)
                         
@@ -139,7 +145,11 @@ open fun remove(documentString: String, start: String, end: String)
         }
             private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 }

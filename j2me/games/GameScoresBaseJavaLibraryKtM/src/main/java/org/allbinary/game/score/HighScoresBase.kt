@@ -37,16 +37,20 @@ open public class HighScoresBase
     var commonStrings: CommonStrings = CommonStrings.getInstance()!!
 protected constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameInfo = gameInfo
 
 
-                    var highScoresResultsListener = highScoresResultsListener
+        Updates for KMP build        
+        {
+    //var gameInfo = gameInfo
+    //var highScoresResultsListener = highScoresResultsListener
 
 
 
@@ -55,15 +59,13 @@ override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: High
 
 override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: HighScoresResultsListener, preload: Boolean)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameInfo = gameInfo
 
 
-                    var highScoresResultsListener = highScoresResultsListener
-
-
-                    var preload = preload
+        Updates for KMP build        
+        {
+    //var gameInfo = gameInfo
+    //var highScoresResultsListener = highScoresResultsListener
+    //var preload = preload
 
 
 
@@ -72,7 +74,11 @@ override fun fetchHighScores(gameInfo: GameInfo, highScoresResultsListener: High
 
 override fun createHighScoresHelper()
         //nullable = true from not(false or (false and true)) = true
-: HighScoresHelperBase{
+: HighScoresHelperBase
+
+        Updates for KMP build        
+        {
+
 
 
                             throw RuntimeException()

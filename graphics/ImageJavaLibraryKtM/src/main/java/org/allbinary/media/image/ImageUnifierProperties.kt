@@ -40,12 +40,20 @@ open public class ImageUnifierProperties
     private var imageUnifierCell: ImageUnifierCell
 public constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
 open fun getWidth()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,7 +63,11 @@ open fun getWidth()
 
 open fun getHeight()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -65,7 +77,11 @@ open fun getHeight()
 
 open fun getRows()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -75,16 +91,22 @@ open fun getRows()
 
 open fun setRows(rows: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var rows = rows
+
+        Updates for KMP build        
+        {
+var rows = rows
 this.rows= rows
 }
 
 
 open fun getColumns()
         //nullable = true from not(false or (false and true)) = true
-: Integer{
+: Integer
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -94,16 +116,22 @@ open fun getColumns()
 
 open fun setColumns(columns: Integer)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var columns = columns
+
+        Updates for KMP build        
+        {
+var columns = columns
 this.columns= columns
 }
 
 
 open fun getImageUnifierCell()
         //nullable = true from not(false or (false and true)) = true
-: ImageUnifierCell{
+: ImageUnifierCell
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -113,9 +141,11 @@ open fun getImageUnifierCell()
 
 open fun setImageUnifierCell(imageUnifierCell: ImageUnifierCell)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var imageUnifierCell = imageUnifierCell
+
+        Updates for KMP build        
+        {
+var imageUnifierCell = imageUnifierCell
 this.imageUnifierCell= imageUnifierCell
 }
 

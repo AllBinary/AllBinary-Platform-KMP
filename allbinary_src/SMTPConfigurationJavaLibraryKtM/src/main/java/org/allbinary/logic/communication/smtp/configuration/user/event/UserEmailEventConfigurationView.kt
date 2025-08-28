@@ -42,9 +42,11 @@ open public class UserEmailEventConfigurationView
     private var userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface
 public constructor        (node: Node)
             : super()
-        {
+        
 
-                    var node = node
+        Updates for KMP build        
+        {
+var node = node
 
     var childNodeList: NodeList = node.getChildNodes()!!
 
@@ -64,9 +66,11 @@ this.setUserEmailEventConfigurationInterface(UserEmailEventConfiguration(hashMap
 
 public constructor        (userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
             : super()
-        {
+        
 
-                    var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
+        Updates for KMP build        
+        {
+var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 this.setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterface)
 }
 
@@ -75,9 +79,11 @@ this.setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterfac
             
 open fun toXmlNode(document: Document)
         //nullable = true from not(false or (false and false)) = true
-: Node{
+: Node
 
-                    var document = document
+        Updates for KMP build        
+        {
+var document = document
 
     var userEmailEventConfigurationMapping: UserEmailEventConfigurationMapping = UserEmailEventConfigurationMapping(this.getUserEmailEventConfigurationInterface())
 
@@ -97,7 +103,11 @@ open fun toXmlNode(document: Document)
 
 open fun getUserEmailEventConfigurationInterface()
         //nullable = true from not(false or (false and true)) = true
-: UserEmailEventConfigurationInterface{
+: UserEmailEventConfigurationInterface
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -107,9 +117,11 @@ open fun getUserEmailEventConfigurationInterface()
 
 open fun setUserEmailEventConfigurationInterface(userEmailEventConfigurationInterface: UserEmailEventConfigurationInterface)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
+
+        Updates for KMP build        
+        {
+var userEmailEventConfigurationInterface = userEmailEventConfigurationInterface
 this.userEmailEventConfigurationInterface= userEmailEventConfigurationInterface
 }
 

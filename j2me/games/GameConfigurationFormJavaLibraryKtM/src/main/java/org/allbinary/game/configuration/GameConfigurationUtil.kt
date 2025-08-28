@@ -44,7 +44,11 @@ open public class GameConfigurationUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: GameConfigurationUtil{
+: GameConfigurationUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -67,12 +71,12 @@ open fun getInstance()
             
 open fun change(gameOptionsForm: GameOptionsForm, gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameOptionsForm = gameOptionsForm
 
 
-                    var gauge = gauge
+        Updates for KMP build        
+        {
+var gameOptionsForm = gameOptionsForm
+var gauge = gauge
 this.update(gauge)
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
@@ -94,9 +98,11 @@ this.updateChallange(gameOptionsForm, gameConfiguration)
             
 open fun update(gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gauge = gauge
+
+        Updates for KMP build        
+        {
+var gauge = gauge
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
 
@@ -127,9 +133,11 @@ gameConfiguration!!.setValue(value)
             
 open fun setDefault(gauge: GameConfigurationGauge)
         //nullable = true from not(false or (false and false)) = true
-{
 
-                    var gauge = gauge
+
+        Updates for KMP build        
+        {
+var gauge = gauge
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
 
@@ -153,12 +161,12 @@ gameConfiguration!!.setValue(gameConfiguration!!.getDefaultValue())
             
 open fun updateChallange(gameOptionsForm: GameOptionsForm, gameConfiguration: GameConfiguration)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var gameOptionsForm = gameOptionsForm
 
 
-                    var gameConfiguration = gameConfiguration
+        Updates for KMP build        
+        {
+var gameOptionsForm = gameOptionsForm
+var gameConfiguration = gameConfiguration
 
     var gameConfigurationSingleton: GameConfigurationSingleton = GameConfigurationSingleton.getInstance()!!
 
@@ -184,7 +192,11 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
                         for (index in 0 until size)
 
+        
+
+        Updates for KMP build        
         {
+
     var item: Item = gameOptionsForm!!.get(index)!!
 
 
@@ -252,7 +264,11 @@ gameConfigurationCentral!!.SPEED_CHALLENGE_LEVEL.setValue(gameConfiguration!!.ge
 
 open fun updateCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
-{logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
+
+
+        Updates for KMP build        
+        {
+logUtil!!.put(commonStrings!!.START, this, "updateCompetitionValue")
 
     var gameConfigurationCentral: GameConfigurationCentral = GameConfigurationCentral.getInstance()!!
 
@@ -263,7 +279,11 @@ COMPETITION_VALUE= (COMPETITION_VALUE shr 2)
 
 open fun getCompetitionValue()
         //nullable = true from not(false or (false and true)) = true
-: Int{
+: Int
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.

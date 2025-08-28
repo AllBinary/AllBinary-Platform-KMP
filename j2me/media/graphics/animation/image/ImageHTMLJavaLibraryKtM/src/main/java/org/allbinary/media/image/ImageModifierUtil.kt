@@ -42,7 +42,11 @@ open public class ImageModifierUtil
 
 open fun getInstanceOrCreate()
         //nullable = true from not(false or (false and true)) = true
-: ImageModifierUtil{
+: ImageModifierUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -59,60 +63,50 @@ open fun getInstanceOrCreate()
         
 open fun setColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unusedOriginalImage = unusedOriginalImage
 
 
-                    var image = image
-
-
-                    var imageIndex = imageIndex
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var unusedOriginalImage = unusedOriginalImage
+    //var image = image
+    //var imageIndex = imageIndex
+    //var basicColor = basicColor
 }
 
 
 open fun changeColor(unusedOriginalImage: Image, image: Image, imageIndex: Int, basicColor: BasicColor)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var unusedOriginalImage = unusedOriginalImage
 
 
-                    var image = image
-
-
-                    var imageIndex = imageIndex
-
-
-                    var basicColor = basicColor
+        Updates for KMP build        
+        {
+    //var unusedOriginalImage = unusedOriginalImage
+    //var image = image
+    //var imageIndex = imageIndex
+    //var basicColor = basicColor
 }
 
 
 open fun setAlpha(originalImage: Image, image: Image, imageIndex: Int, alphaInt: Int)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var originalImage = originalImage
 
 
-                    var image = image
-
-
-                    var imageIndex = imageIndex
-
-
-                    var alphaInt = alphaInt
+        Updates for KMP build        
+        {
+    //var originalImage = originalImage
+    //var image = image
+    //var imageIndex = imageIndex
+    //var alphaInt = alphaInt
 }
 
 
 open fun getImageArray(originalImageArray: Array<Image?>)
         //nullable = true from not(false or (false and false)) = true
-: Array<Image?>{
+: Array<Image?>
 
-                    var originalImageArray = originalImageArray
+        Updates for KMP build        
+        {
+    //var originalImageArray = originalImageArray
 
 
 
@@ -123,21 +117,23 @@ open fun getImageArray(originalImageArray: Array<Image?>)
 
 open fun handleImage(imageArray: Array<Image?>, index: Int, image: Image)
         //nullable = true from not(false or (false and false)) = true
-{
-
-                    var imageArray = imageArray
 
 
-                    var index = index
-
-
-                    var image = image
+        Updates for KMP build        
+        {
+    //var imageArray = imageArray
+    //var index = index
+    //var image = image
 }
 
 
 open fun reset()
         //nullable = true from not(false or (false and true)) = true
-{}
+
+
+        Updates for KMP build        
+        {
+}
 
 
 }

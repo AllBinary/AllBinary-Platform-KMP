@@ -42,7 +42,11 @@ open public class AbCryptUtil
 
 open fun getInstance()
         //nullable =  from not(true or (false and true)) = 
-: AbCryptUtil{
+: AbCryptUtil
+
+        Updates for KMP build        
+        {
+
 
 
                         //if statement needs to be on the same line and ternary does not work the same way.
@@ -55,19 +59,23 @@ open fun getInstance()
     private val streamUtil: StreamUtil = StreamUtil.getInstance()!!
 private constructor        ()
             : super()
-        {}
+        
+
+        Updates for KMP build        
+        {
+}
 
 
                 @Throws(Exception::class)
             
 open fun decrypt(inputStream: InputStream, key: String)
         //nullable = true from not(false or (false and false)) = true
-: ByteArray{
+: ByteArray
 
-                    var inputStream = inputStream
-
-
-                    var key = key
+        Updates for KMP build        
+        {
+    //var inputStream = inputStream
+    //var key = key
 
     var outputStream: ByteArrayOutputStream = 
                 null

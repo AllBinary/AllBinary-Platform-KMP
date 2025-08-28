@@ -45,21 +45,15 @@ open public class NotificationBuilderAPI23 : NotificationBuilder {
             }            
         override fun build(context: Context, command: Command, message: String, integer: Integer, pendingIntent: PendingIntent)
         //nullable = true from not(false or (false and false)) = true
-: Parcelable{
+: Parcelable
 
-                    var context = context
-
-
-                    var command = command
-
-
-                    var message = message
-
-
-                    var integer = integer
-
-
-                    var pendingIntent = pendingIntent
+        Updates for KMP build        
+        {
+var context = context
+var command = command
+var message = message
+var integer = integer
+var pendingIntent = pendingIntent
 
     var notification: Notification = Builder(context).
                             setSmallIcon(integer.toInt())!!.setTicker(message)!!.setWhen(System.currentTimeMillis())!!.setContentTitle(command.getLabel())!!.setContentText(message)!!.setContentIntent(pendingIntent)!!.build()!!
