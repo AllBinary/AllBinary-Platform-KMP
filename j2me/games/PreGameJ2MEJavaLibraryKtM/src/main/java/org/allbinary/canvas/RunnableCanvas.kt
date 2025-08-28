@@ -374,39 +374,6 @@ open fun waitOnNotify(wait: Long)
 }
 
 
-open fun keyPressed(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
-
-
-                    var deviceId = deviceId
-}
-
-
-open fun keyRepeated(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
-
-
-                    var deviceId = deviceId
-}
-
-
-open fun keyReleased(keyCode: Int, deviceId: Int)
-        //nullable = true from not(false or (false and false)) = true
-{
-
-                    var keyCode = keyCode
-
-
-                    var deviceId = deviceId
-}
-
-
     private val PAUSE_SLEEP: String = "pause sleep"
 
                 @Throws(Exception::class)

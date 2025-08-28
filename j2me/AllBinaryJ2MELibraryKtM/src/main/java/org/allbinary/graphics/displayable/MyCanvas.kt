@@ -282,6 +282,39 @@ this.isPaused= isPaused
 }
 
 
+open fun keyPressed(keyCode: Int, deviceId: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var keyCode = keyCode
+
+
+                    var deviceId = deviceId
+}
+
+
+open fun keyRepeated(keyCode: Int, deviceId: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var keyCode = keyCode
+
+
+                    var deviceId = deviceId
+}
+
+
+open fun keyReleased(keyCode: Int, deviceId: Int)
+        //nullable = true from not(false or (false and false)) = true
+{
+
+                    var keyCode = keyCode
+
+
+                    var deviceId = deviceId
+}
+
+
     private val touchME: TouchJ2ME = TouchJ2ME()
 override fun pointerDragged(x: Int, y: Int)
         //nullable = true from not(false or (false and false)) = true

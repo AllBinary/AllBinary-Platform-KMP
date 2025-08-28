@@ -30,6 +30,7 @@ import javax.microedition.khronos.opengles.GL10
 import javax.microedition.lcdui.Image
 import javax.microedition.lcdui.NullCanvas
 import javax.microedition.lcdui.OpenGLESPostLoadPlatformImage
+import javax.microedition.lcdui.PostLoadImageProcessor
 import org.allbinary.graphics.GraphicsStrings
 import org.allbinary.graphics.OpenGLBitmap
 import org.allbinary.logic.communication.log.LogUtil
@@ -68,8 +69,7 @@ open public class OpenGLESImage : Image
     val openGLESImageProperties: OpenGLESImageProperties = OpenGLESImageProperties()
 public constructor        (image: Image, bitmapFactory: PlatformBitmapBaseFactory, textureFactory: PlatformTextureBaseFactory)                        
 
-                            : super(image.getName(), 
-                            null){
+                            : super(image.getName(), PostLoadImageProcessor.NULL_POST_LOAD_IMAGE_PROCESSOR){
 
                     var image = image
 

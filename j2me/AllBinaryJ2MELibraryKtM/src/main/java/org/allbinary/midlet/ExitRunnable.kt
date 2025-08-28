@@ -27,7 +27,6 @@
         import kotlin.Array
         import kotlin.reflect.KClass
         
-import javax.microedition.lcdui.Displayable
 import javax.microedition.lcdui.NullCanvas
 import org.allbinary.canvas.Processor
 import org.allbinary.logic.communication.log.LogUtil

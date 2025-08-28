@@ -323,8 +323,7 @@ override fun keyRepeated(keyCode: Int)
 this.keyRepeated(keyCode, 0)
 }
 
-
-open fun keyPressed(keyCode: Int, deviceId: Int)
+override fun keyPressed(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -337,8 +336,7 @@ logUtil!!.put(StringMaker().
 this.addGameKeyEvent(keyCode, 0, false)
 }
 
-
-open fun keyReleased(keyCode: Int, deviceId: Int)
+override fun keyReleased(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
@@ -349,8 +347,7 @@ open fun keyReleased(keyCode: Int, deviceId: Int)
 this.removeGameKeyEvent(keyCode, deviceId, false)
 }
 
-
-open fun keyRepeated(keyCode: Int, deviceId: Int)
+override fun keyRepeated(keyCode: Int, deviceId: Int)
         //nullable = true from not(false or (false and false)) = true
 {
 
